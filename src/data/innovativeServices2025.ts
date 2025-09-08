@@ -1,5 +1,4 @@
-import React from 'react';
-export interface InnovativeService {
+export type InnovativeService = {
 
   id: string;
   title: string;

@@ -1,5 +1,5 @@
-import React from 'react';
-export interface InnovativeITInfrastructureService {
+export type InnovativeITInfrastructureService = {
+
   id: string;
   title: string;
   description: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServiceVariant } from '../types/service-variants';
-export interface AIEmergingTechService {
+export type AIEmergingTechService = {
   id: string;
   name: string;
   tagline: string;

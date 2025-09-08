@@ -1,5 +1,5 @@
 export const metaverseDigitalRealityServices2026 = [] as [];
-export interface MetaverseDigitalRealityService2026 {
+export type MetaverseDigitalRealityService2026 = {
   id: string;
   name: string;
   tagline: string;

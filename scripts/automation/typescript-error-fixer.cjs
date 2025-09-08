@@ -16,612 +16,495 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const glob = require('glob');
 
 class TypeScriptErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportFile = path.join(this.projectRoot, 'typescript-error-fixer-report.json');
-    this.errorsFixed = 0;
-    this.filesProcessed = 0;
-    this.startTime = Date.now();
+    this.logsDir = path.join(this.projectRoot, 'logs');
+    this.fixesApplied = [];
+    this.setupLogging();
   }
 
-  async run() {
-    console.log('🚀 Starting TypeScript Error Fixer...');
+  setupLogging() {
+    this.logger = {
+      info: (msg) => this.log('INFO', msg),
+      warn: (msg) => this.log('WARN', msg),
+      error: (msg) => this.log('ERROR', msg),
+      success: (msg) => this.log('SUCCESS', msg)
+    };
+  }
+
+  log(level, message) {
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${level}] ${message}`;
+    
+    console.log(logEntry);
+    
+    // Write to log file
+    const logFile = path.join(this.logsDir, 'typescript-error-fixer.log');
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+    fs.appendFileSync(logFile, logEntry + '\n');
+  }
+
+  async fixAllTypeScriptErrors() {
+    this.logger.info('Starting TypeScript error fixing process...');
     
     try {
-      // Step 1: Run TypeScript check to get current errors
-      const currentErrors = await this.getCurrentTypeScriptErrors();
+      // Get current TypeScript errors
+      const errors = await this.getTypeScriptErrors();
       
-      // Step 2: Fix errors systematically
-      await this.fixTypeScriptErrors(currentErrors);
+      if (errors.length === 0) {
+        this.logger.success('No TypeScript errors found!');
+        return;
+      }
       
-      // Step 3: Run type check again to verify fixes
-      const remainingErrors = await this.getCurrentTypeScriptErrors();
+      this.logger.info(`Found ${errors.length} TypeScript errors to fix`);
       
-      // Step 4: Generate report
-      await this.generateReport(currentErrors.length, remainingErrors.length);
+      // Group errors by file
+      const errorsByFile = this.groupErrorsByFile(errors);
       
-      console.log(`✅ TypeScript Error Fixer completed! Fixed ${this.errorsFixed} errors.`);
-      console.log(`📊 Remaining errors: ${remainingErrors.length}`);
+      // Fix errors in each file
+      for (const [filePath, fileErrors] of errorsByFile) {
+        await this.fixErrorsInFile(filePath, fileErrors);
+      }
+      
+      // Verify fixes
+      await this.verifyFixes();
+      
+      this.logger.success(`TypeScript error fixing completed. Applied ${this.fixesApplied.length} fixes.`);
       
     } catch (error) {
-      console.error('❌ Error in TypeScript Error Fixer:', error);
-      await this.generateErrorReport(error);
+      this.logger.error(`Error during TypeScript fixing: ${error.message}`);
     }
   }
 
-  async getCurrentTypeScriptErrors() {
+  async getTypeScriptErrors() {
     try {
-      const output = execSync('npm run type-check 2>&1', { 
+      const result = execSync('npm run type-check', { 
+        cwd: this.projectRoot, 
         encoding: 'utf8',
-        maxBuffer: 10 * 1024 * 1024 // 10MB buffer to handle large error outputs
+        stdio: 'pipe'
       });
-      return this.parseTypeScriptErrors(output);
+      return [];
     } catch (error) {
-      // When the command fails, the errors are in stderr
-      const errorOutput = error.stderr || error.stdout || error.message;
-      return this.parseTypeScriptErrors(errorOutput);
+      const output = error.stdout?.toString() || error.stderr?.toString() || '';
+      return this.parseTypeScriptErrors(output);
     }
   }
 
   parseTypeScriptErrors(output) {
     const errors = [];
+    const lines = output.split('\n');
     
-    console.log(`📊 Parsing TypeScript error output...`);
-    
-    // Split by lines and normalize
-    const lines = output.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Look for error lines that start with src/ and contain error TS
-      if (line.startsWith('src/') && line.includes('error TS')) {
-        console.log(`🔍 Found error line: ${line}`);
-        
-        // Try multiple patterns to handle different error formats
-        
-        // Pattern 1: src/file.tsx(line,col): error TS1234: message
-        let fileMatch = line.match(/src\/([^:]+):(\d+):(\d+):\s+error\s+TS(\d+):\s*(.+)/);
-        
-        if (fileMatch) {
-          const [, filePath, lineNum, colNum, errorCode, message] = fileMatch;
-          
-          errors.push({
-            type: 'typescript',
-            message: message.trim(),
-            fullLine: line,
-            file: `src/${filePath}`,
-            lineNumber: parseInt(lineNum),
-            columnNumber: parseInt(colNum),
-            errorCode: errorCode
-          });
-          
-          console.log(`✅ Parsed error (pattern 1): ${message.trim()}`);
-        } else {
-          // Pattern 2: src/file.tsx(line,col): error TS1234: (wrapped message)
-          fileMatch = line.match(/src\/([^:]+):(\d+):(\d+):\s+error\s+TS(\d+):\s*$/);
-          
-          if (fileMatch && i + 1 < lines.length) {
-            const nextLine = lines[i + 1];
-            if (nextLine.includes('error TS')) {
-              const errorMatch = nextLine.match(/error\s+TS(\d+):\s*(.+)/);
-              if (errorMatch) {
-                const [, errorCode, message] = errorMatch;
-                
-                errors.push({
-                  type: 'typescript',
-                  message: message.trim(),
-                  fullLine: `${line} ${nextLine}`,
-                  file: `src/${fileMatch[1]}`,
-                  lineNumber: parseInt(fileMatch[2]),
-                  columnNumber: parseInt(fileMatch[3]),
-                  errorCode: errorCode
-                });
-                
-                console.log(`✅ Parsed wrapped error: ${message.trim()}`);
-                i++; // Skip next line since we've processed it
-              }
-            }
-          } else {
-            // Pattern 3: Handle cases where the error message is split across multiple lines
-            fileMatch = line.match(/src\/([^:]+):(\d+):(\d+):\s*$/);
-            
-            if (fileMatch) {
-              // Look ahead for the error details
-              let errorDetails = '';
-              let j = i + 1;
-              
-              while (j < lines.length && !lines[j].startsWith('src/')) {
-                if (lines[j].includes('error TS')) {
-                  const errorMatch = lines[j].match(/error\s+TS(\d+):\s*(.+)/);
-                  if (errorMatch) {
-                    const [, errorCode, message] = errorMatch;
-                    errorDetails = message;
-                    
-                    errors.push({
-                      type: 'typescript',
-                      message: message.trim(),
-                      fullLine: `${line} ${lines[j]}`,
-                      file: `src/${fileMatch[1]}`,
-                      lineNumber: parseInt(fileMatch[2]),
-                      columnNumber: parseInt(fileMatch[3]),
-                      errorCode: errorCode
-                    });
-                    
-                    console.log(`✅ Parsed multi-line error: ${message.trim()}`);
-                    i = j; // Skip to the line we processed
-                    break;
-                  }
-                }
-                j++;
-              }
-              
-              if (!errorDetails) {
-                console.log(`⚠️ Could not parse error line: ${line}`);
-              }
-            } else {
-              // Pattern 4: Handle cases where the error is split across multiple lines with different formats
-              // Look for src/file.tsx(line,col): followed by error TS on next line
-              fileMatch = line.match(/src\/([^:]+):(\d+):(\d+):\s*$/);
-              
-              if (fileMatch) {
-                // Look ahead for the error details
-                let j = i + 1;
-                let foundError = false;
-                
-                while (j < lines.length && !lines[j].startsWith('src/') && j < i + 5) {
-                  if (lines[j].includes('error TS')) {
-                    const errorMatch = lines[j].match(/error\s+TS(\d+):\s*(.+)/);
-                    if (errorMatch) {
-                      const [, errorCode, message] = errorMatch;
-                      
-                      errors.push({
-                        type: 'typescript',
-                        message: message.trim(),
-                        fullLine: `${line} ${lines[j]}`,
-                        file: `src/${fileMatch[1]}`,
-                        lineNumber: parseInt(fileMatch[2]),
-                        columnNumber: parseInt(fileMatch[3]),
-                        errorCode: errorCode
-                      });
-                      
-                      console.log(`✅ Parsed split error: ${message.trim()}`);
-                      i = j; // Skip to the line we processed
-                      foundError = true;
-                      break;
-                    }
-                  }
-                  j++;
-                }
-                
-                if (!foundError) {
-                  console.log(`⚠️ Could not parse error line: ${line}`);
-                }
-              } else {
-                // Pattern 5: Handle the actual terminal-wrapped format
-                // Look for src/file.tsx(line,col): followed by error TS on the same line
-                const wrappedMatch = line.match(/src\/([^:]+):(\d+):(\d+):\s*error\s+TS(\d+):\s*(.+)/);
-                
-                if (wrappedMatch) {
-                  const [, filePath, lineNum, colNum, errorCode, message] = wrappedMatch;
-                  
-                  errors.push({
-                    type: 'typescript',
-                    message: message.trim(),
-                    fullLine: line,
-                    file: `src/${filePath}`,
-                    lineNumber: parseInt(lineNum),
-                    columnNumber: parseInt(colNum),
-                    errorCode: errorCode
-                  });
-                  
-                  console.log(`✅ Parsed wrapped error (pattern 5): ${message.trim()}`);
-                } else {
-                  console.log(`⚠️ Could not parse error line: ${line}`);
-                }
-              }
-            }
-          }
-        }
+    for (const line of lines) {
+      const match = line.match(/([^:]+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
+      if (match) {
+        errors.push({
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+          fullLine: line
+        });
       }
     }
     
-    console.log(`📊 Total errors parsed: ${errors.length}`);
     return errors;
   }
 
-  async fixTypeScriptErrors(errors) {
-    console.log(`🔧 Fixing ${errors.length} TypeScript errors...`);
-    
-    // Group errors by type for efficient fixing
-    const errorsByType = this.groupErrorsByType(errors);
-    
-    // Fix duplicate identifier errors first (most common)
-    if (errorsByType.duplicateIdentifiers.length > 0) {
-      await this.fixDuplicateIdentifierErrors(errorsByType.duplicateIdentifiers);
-    }
-    
-    // Fix missing export errors
-    if (errorsByType.missingExports.length > 0) {
-      await this.fixMissingExportErrors(errorsByType.missingExports);
-    }
-    
-    // Fix object literal errors
-    if (errorsByType.objectLiteral.length > 0) {
-      await this.fixObjectLiteralErrors(errorsByType.objectLiteral);
-    }
-    
-    // Fix import/export mismatch errors
-    if (errorsByType.importExportMismatch.length > 0) {
-      await this.fixImportExportMismatchErrors(errorsByType.importExportMismatch);
-    }
-    
-    // Fix unused variable errors
-    if (errorsByType.unusedVariables.length > 0) {
-      await this.fixUnusedVariableErrors(errorsByType.unusedVariables);
-    }
-    
-    // Fix other TypeScript errors
-    if (errorsByType.other.length > 0) {
-      await this.fixOtherTypeScriptErrors(errorsByType.other);
-    }
-  }
-
-  groupErrorsByType(errors) {
-    const grouped = {
-      duplicateIdentifiers: [],
-      missingExports: [],
-      objectLiteral: [],
-      importExportMismatch: [],
-      unusedVariables: [],
-      other: []
-    };
+  groupErrorsByFile(errors) {
+    const grouped = new Map();
     
     for (const error of errors) {
-      if (error.message.includes('Duplicate identifier')) {
-        grouped.duplicateIdentifiers.push(error);
-      } else if (error.message.includes('Module has no default export') || 
-                 error.message.includes('has no exported member')) {
-        grouped.missingExports.push(error);
-      } else if (error.message.includes('Object literal may only specify known properties')) {
-        grouped.objectLiteral.push(error);
-      } else if (error.message.includes('Argument of type') && 
-                 error.message.includes('is not assignable to parameter of type')) {
-        grouped.importExportMismatch.push(error);
-      } else if (error.message.includes('is declared but its value is never read')) {
-        grouped.unusedVariables.push(error);
-      } else {
-        grouped.other.push(error);
+      if (!grouped.has(error.file)) {
+        grouped.set(error.file, []);
       }
+      grouped.get(error.file).push(error);
     }
     
     return grouped;
   }
 
-  async fixDuplicateIdentifierErrors(errors) {
-    console.log(`🔧 Fixing ${errors.length} duplicate identifier errors...`);
-    
-    for (const error of errors) {
-      if (error.file) {
-        try {
-          await this.fixDuplicateIdentifiersInFile(error.file);
-          this.errorsFixed++;
-        } catch (fixError) {
-          console.log(`⚠️ Could not fix duplicate identifiers in ${error.file}: ${fixError.message}`);
+  async fixErrorsInFile(filePath, errors) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        this.logger.warn(`File not found: ${filePath}`);
+        return;
+      }
+      
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+      
+      // Sort errors by line number (descending) to avoid line number shifts
+      errors.sort((a, b) => b.line - a.line);
+      
+      for (const error of errors) {
+        const fixResult = await this.fixError(content, error);
+        if (fixResult.fixed) {
+          content = fixResult.content;
+          fixed = true;
+          this.fixesApplied.push({
+            file: filePath,
+            error: error.message,
+            fix: fixResult.description
+          });
         }
       }
+      
+      if (fixed) {
+        // Create backup
+        const backupPath = filePath + '.tsbackup';
+        fs.writeFileSync(backupPath, fs.readFileSync(filePath, 'utf8'));
+        
+        // Write fixed content
+        fs.writeFileSync(filePath, content);
+        this.logger.success(`Fixed errors in ${filePath}`);
+      }
+      
+    } catch (error) {
+      this.logger.error(`Failed to fix errors in ${filePath}: ${error.message}`);
     }
   }
 
-  async fixDuplicateIdentifiersInFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
-      const newLines = [];
-      const seenIdentifiers = new Map();
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('import') && line.includes('{')) {
-          const importMatch = line.match(/import\s*{([^}]+)}\s+from\s+['"]([^'"]+)['"]/);
-          if (importMatch) {
-            const imports = importMatch[1].split(',').map(imp => imp.trim());
-            const uniqueImports = [];
-            const fromPath = importMatch[2];
-            
-            for (const imp of imports) {
-              const cleanImp = imp.replace(/\s+as\s+.+/, '').trim();
-              if (!seenIdentifiers.has(cleanImp)) {
-                seenIdentifiers.set(cleanImp, i);
-                uniqueImports.push(imp);
-              }
-            }
-            
-            if (uniqueImports.length > 0) {
-              const newImportLine = `import { ${uniqueImports.join(', ')} } from '${fromPath}'`;
-              newLines.push(newImportLine);
-            }
+  async fixError(content, error) {
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
+    
+    if (lineIndex < 0 || lineIndex >= lines.length) {
+      return { fixed: false, content, description: 'Line out of range' };
+    }
+    
+    const line = lines[lineIndex];
+    const errorMessage = error.message.toLowerCase();
+    
+    // Fix common TypeScript errors
+    if (errorMessage.includes('type expected')) {
+      return this.fixTypeExpected(lines, lineIndex, error);
+    } else if (errorMessage.includes('identifier expected')) {
+      return this.fixIdentifierExpected(lines, lineIndex, error);
+    } else if (errorMessage.includes('parameter declaration expected')) {
+      return this.fixParameterDeclarationExpected(lines, lineIndex, error);
+    } else if (errorMessage.includes('unexpected token')) {
+      return this.fixUnexpectedToken(lines, lineIndex, error);
+    } else if (errorMessage.includes('jsx expressions must have one parent element')) {
+      return this.fixJSXParentElement(lines, lineIndex, error);
+    } else if (errorMessage.includes('expected corresponding jsx closing tag')) {
+      return this.fixJSXClosingTag(lines, lineIndex, error);
+    }
+    
+    return { fixed: false, content, description: 'No fix available for this error' };
+  }
+
+  fixTypeExpected(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Fix missing type annotations in function parameters
+    const functionParamMatch = line.match(/function\s+\w+\s*\(([^)]*)\)/);
+    if (functionParamMatch) {
+      const params = functionParamMatch[1];
+      if (params && !params.includes(':')) {
+        const newParams = params.split(',').map(p => p.trim()).map(p => p + ': any').join(', ');
+        newLine = line.replace(functionParamMatch[0], line.replace(params, newParams));
+        fixed = true;
+      }
+    }
+    
+    // Fix missing type annotations in arrow functions
+    const arrowFunctionMatch = line.match(/(\w+)\s*:\s*([^=]+)=>/);
+    if (arrowFunctionMatch && !arrowFunctionMatch[2].includes(':')) {
+      const paramName = arrowFunctionMatch[1];
+      newLine = line.replace(arrowFunctionMatch[0], `${paramName}: any =>`);
+      fixed = true;
+    }
+    
+    // Fix missing return type annotations
+    const functionMatch = line.match(/function\s+\w+\s*\([^)]*\)\s*\{/);
+    if (functionMatch && !line.includes(':')) {
+      newLine = line.replace('{', ': any {');
+      fixed = true;
+    }
+    
+    if (fixed) {
+      lines[lineIndex] = newLine;
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Added missing type annotations'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix type expected error' };
+  }
+
+  fixIdentifierExpected(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Fix missing function names
+    if (line.trim().startsWith('function(')) {
+      newLine = line.replace('function(', 'function anonymous(');
+      fixed = true;
+    }
+    
+    // Fix missing variable names
+    if (line.trim().startsWith('const ') && line.includes('=') && !line.match(/const\s+\w+/)) {
+      newLine = line.replace('const ', 'const unnamed_');
+      fixed = true;
+    }
+    
+    // Fix missing interface names
+    if (line.trim().startsWith('interface ')) {
+      const interfaceMatch = line.match(/interface\s+(\w+)/);
+      if (!interfaceMatch) {
+        newLine = line.replace('interface ', 'interface UnnamedInterface ');
+        fixed = true;
+      }
+    }
+    
+    if (fixed) {
+      lines[lineIndex] = newLine;
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Added missing identifiers'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix identifier expected error' };
+  }
+
+  fixParameterDeclarationExpected(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Fix malformed function parameters
+    if (line.includes('function') && line.includes('(') && line.includes(')')) {
+      // Check if parameters are malformed
+      const paramMatch = line.match(/function\s+\w+\s*\(([^)]*)\)/);
+      if (paramMatch) {
+        const params = paramMatch[1];
+        if (params.includes('=') || params.includes(';')) {
+          // Clean up malformed parameters
+          const cleanParams = params.replace(/[=;]/g, '').trim();
+          if (cleanParams) {
+            newLine = line.replace(params, cleanParams);
           } else {
-            newLines.push(line);
+            newLine = line.replace(params, '');
           }
-        } else {
-          newLines.push(line);
+          fixed = true;
         }
       }
-      
-      fs.writeFileSync(filePath, newLines.join('\n'));
-      this.filesProcessed++;
-      
-    } catch (error) {
-      throw new Error(`Failed to fix duplicate identifiers: ${error.message}`);
     }
-  }
-
-  async fixMissingExportErrors(errors) {
-    console.log(`🔧 Fixing ${errors.length} missing export errors...`);
     
-    for (const error of errors) {
-      if (error.file) {
-        try {
-          await this.addMissingExportsToFile(error.file);
-          this.errorsFixed++;
-        } catch (fixError) {
-          console.log(`⚠️ Could not fix missing exports in ${error.file}: ${fixError.message}`);
+    if (fixed) {
+      lines[lineIndex] = newLine;
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed parameter declarations'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix parameter declaration error' };
+  }
+
+  fixUnexpectedToken(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Fix unexpected tokens in JSX
+    if (line.includes('<>') && !line.includes('</>')) {
+      // Find the closing JSX fragment
+      let depth = 0;
+      for (let i = lineIndex; i < lines.length; i++) {
+        const currentLine = lines[i];
+        if (currentLine.includes('<>')) depth++;
+        if (currentLine.includes('</>')) depth--;
+        if (depth === 0) break;
+      }
+      
+      if (depth > 0) {
+        // Add missing closing fragment
+        const lastLine = lines[lines.length - 1];
+        if (!lastLine.includes('</>')) {
+          lines.push('</>');
+          fixed = true;
         }
       }
     }
+    
+    // Fix unexpected tokens in object literals
+    if (line.includes('{') && line.includes('}')) {
+      // Check for malformed object properties
+      const objectMatch = line.match(/\{([^}]*)\}/);
+      if (objectMatch) {
+        const props = objectMatch[1];
+        if (props.includes('=') && !props.includes(':')) {
+          // Convert to proper object syntax
+          const fixedProps = props.split(',').map(p => {
+            const [key, value] = p.split('=');
+            return `${key.trim()}: ${value?.trim() || 'undefined'}`;
+          }).join(', ');
+          
+          newLine = line.replace(props, fixedProps);
+          fixed = true;
+        }
+      }
+    }
+    
+    if (fixed) {
+      lines[lineIndex] = newLine;
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed unexpected tokens'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix unexpected token error' };
   }
 
-  async addMissingExportsToFile(filePath) {
+  fixJSXParentElement(lines, lineIndex, error) {
+    // This is a complex fix that requires analyzing the entire JSX structure
+    let fixed = false;
+    let content = lines.join('\n');
+    
+    // Find JSX content and wrap it in a parent element
+    const jsxMatch = content.match(/(<[^>]+>[\s\S]*<\/[^>]+>)/);
+    if (jsxMatch) {
+      const jsxContent = jsxMatch[1];
+      const wrappedContent = `<div>\n${jsxContent}\n</div>`;
+      content = content.replace(jsxContent, wrappedContent);
+      fixed = true;
+    }
+    
+    if (fixed) {
+      return {
+        fixed: true,
+        content,
+        description: 'Wrapped JSX in parent element'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix JSX parent element error' };
+  }
+
+  fixJSXClosingTag(lines, lineIndex, error) {
+    let fixed = false;
+    let content = lines.join('\n');
+    
+    // Find unclosed JSX tags and add closing tags
+    const openTags = content.match(/<(\w+)[^>]*>/g) || [];
+    const closeTags = content.match(/<\/(\w+)>/g) || [];
+    
+    if (openTags.length > closeTags.length) {
+      // Add missing close tags
+      const missingTags = openTags.slice(closeTags.length).reverse();
+      for (const tag of missingTags) {
+        const tagName = tag.match(/<(\w+)/)?.[1];
+        if (tagName) {
+          content += `\n</${tagName}>`;
+          fixed = true;
+        }
+      }
+    }
+    
+    if (fixed) {
+      return {
+        fixed: true,
+        content,
+        description: 'Added missing JSX closing tags'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix JSX closing tag error' };
+  }
+
+  async verifyFixes() {
+    this.logger.info('Verifying fixes...');
+    
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
+      const remainingErrors = await this.getTypeScriptErrors();
       
-      // Check if file already has exports
-      if (!content.includes('export default') && !content.includes('export {') && !content.includes('export *')) {
-        // Add a default export based on file type
-        const fileName = path.basename(filePath, path.extname(filePath));
-        
-        if (filePath.includes('/pages/') || filePath.includes('/components/')) {
-          // This is likely a React component, add default export
-          content += `\n\nexport default ${fileName};\n`;
-        } else if (filePath.includes('/services/') || filePath.includes('/utils/')) {
-          // This is likely a utility/service file, add named exports
-          content += `\n\nexport { ${fileName} };\n`;
-        }
-        
-        fs.writeFileSync(filePath, content);
-        this.filesProcessed++;
+      if (remainingErrors.length === 0) {
+        this.logger.success('All TypeScript errors have been fixed!');
+      } else {
+        this.logger.warn(`${remainingErrors.length} TypeScript errors remain`);
+        this.logger.info('Remaining errors:');
+        remainingErrors.forEach(error => {
+          this.logger.info(`  ${error.file}:${error.line} - ${error.message}`);
+        });
       }
       
     } catch (error) {
-      throw new Error(`Failed to add missing exports: ${error.message}`);
+      this.logger.error(`Error during verification: ${error.message}`);
     }
   }
 
-  async fixObjectLiteralErrors(errors) {
-    console.log(`🔧 Fixing ${errors.length} object literal errors...`);
-    
-    for (const error of errors) {
-      if (error.file) {
-        try {
-          await this.fixObjectLiteralInFile(error.file);
-          this.errorsFixed++;
-        } catch (fixError) {
-          console.log(`⚠️ Could not fix object literal in ${error.file}: ${fixError.message}`);
-        }
-      }
-    }
-  }
-
-  async fixObjectLiteralInFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Fix Stripe constructor options
-      if (content.includes('advancedFraudSignals')) {
-        content = content.replace(/advancedFraudSignals:\s*false/g, '');
-        modified = true;
-      }
-      
-      // Fix other common object literal issues
-      if (content.includes('exactOptionalPropertyTypes: true')) {
-        // This is a TypeScript config issue, not a runtime issue
-        // We'll skip this for now as it's a configuration setting
-      }
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        this.filesProcessed++;
-      }
-      
-    } catch (error) {
-      throw new Error(`Failed to fix object literal: ${error.message}`);
-    }
-  }
-
-  async fixImportExportMismatchErrors(errors) {
-    console.log(`🔧 Fixing ${errors.length} import/export mismatch errors...`);
-    
-    for (const error of errors) {
-      if (error.file) {
-        try {
-          await this.fixImportExportMismatchInFile(error.file);
-          this.errorsFixed++;
-        } catch (fixError) {
-          console.log(`⚠️ Could not fix import/export mismatch in ${error.file}: ${fixError.message}`);
-        }
-      }
-    }
-  }
-
-  async fixImportExportMismatchInFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Fix headers type issues
-      if (content.includes('headers: Record<string, string> | undefined')) {
-        content = content.replace(
-          /headers:\s*Record<string, string>\s*\|\s*undefined/g,
-          'headers: Record<string, string>'
-        );
-        modified = true;
-      }
-      
-      // Fix other type mismatch issues
-      if (content.includes('Uint8Array<ArrayBufferLike>')) {
-        content = content.replace(
-          /Uint8Array<ArrayBufferLike>/g,
-          'Uint8Array'
-        );
-        modified = true;
-      }
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        this.filesProcessed++;
-      }
-      
-    } catch (error) {
-      throw new Error(`Failed to fix import/export mismatch: ${error.message}`);
-    }
-  }
-
-  async fixUnusedVariableErrors(errors) {
-    console.log(`🔧 Fixing ${errors.length} unused variable errors...`);
-    
-    for (const error of errors) {
-      if (error.file) {
-        try {
-          await this.removeUnusedVariablesFromFile(error.file);
-          this.errorsFixed++;
-        } catch (fixError) {
-          console.log(`⚠️ Could not fix unused variables in ${error.file}: ${fixError.message}`);
-        }
-      }
-    }
-  }
-
-  async removeUnusedVariablesFromFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
-      const newLines = [];
-      
-      for (const line of lines) {
-        // Remove unused imports
-        if (line.includes('import') && line.includes('{')) {
-          const importMatch = line.match(/import\s*{([^}]+)}\s+from/);
-          if (importMatch) {
-            const imports = importMatch[1].split(',').map(imp => imp.trim());
-            const usedImports = [];
-            const fromPath = line.match(/from\s+['"]([^'"]+)['"]/)?.[1] || '';
-            
-            for (const imp of imports) {
-              const cleanImp = imp.replace(/\s+as\s+.+/, '').trim();
-              // Check if the import is actually used in the file
-              if (content.includes(cleanImp) && !line.includes(cleanImp)) {
-                usedImports.push(imp);
-              }
-            }
-            
-            if (usedImports.length > 0) {
-              const newImportLine = `import { ${usedImports.join(', ')} } from '${fromPath}'`;
-              newLines.push(newImportLine);
-            }
-          } else {
-            newLines.push(line);
-          }
-        } else {
-          newLines.push(line);
-        }
-      }
-      
-      fs.writeFileSync(filePath, newLines.join('\n'));
-      this.filesProcessed++;
-      
-    } catch (error) {
-      throw new Error(`Failed to remove unused variables: ${error.message}`);
-    }
-  }
-
-  async fixOtherTypeScriptErrors(errors) {
-    console.log(`🔧 Fixing ${errors.length} other TypeScript errors...`);
-    
-    for (const error of errors) {
-      if (error.file) {
-        try {
-          await this.fixGenericTypeScriptError(error);
-          this.errorsFixed++;
-        } catch (fixError) {
-          console.log(`⚠️ Could not fix generic error in ${error.file}: ${fixError.message}`);
-        }
-      }
-    }
-  }
-
-  async fixGenericTypeScriptError(error) {
-    // Generic error fixing - try common patterns
-    if (error.file) {
-      try {
-        let content = fs.readFileSync(error.file, 'utf8');
-        let modified = false;
-        
-        // Fix common patterns
-        if (error.message.includes('Type') && error.message.includes('is not assignable to')) {
-          // Try to fix type assignment issues
-          // This is a complex issue that may require manual intervention
-          console.log(`⚠️ Complex type assignment issue in ${error.file}, may require manual fix`);
-        }
-        
-        if (modified) {
-          fs.writeFileSync(error.file, content);
-          this.filesProcessed++;
-        }
-        
-      } catch (fileError) {
-        throw new Error(`Failed to fix generic error: ${fileError.message}`);
-      }
-    }
-  }
-
-  async generateReport(initialErrorCount, remainingErrorCount) {
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      initialErrorCount,
-      remainingErrorCount,
-      errorsFixed: this.errorsFixed,
-      filesProcessed: this.filesProcessed,
-      status: 'completed',
-      summary: `Fixed ${this.errorsFixed} TypeScript errors in ${this.filesProcessed} files. Reduced errors from ${initialErrorCount} to ${remainingErrorCount} in ${((Date.now() - this.startTime) / 1000).toFixed(2)} seconds`
+      totalFixes: this.fixesApplied.length,
+      fixesByFile: {},
+      summary: {
+        syntaxErrors: 0,
+        typeErrors: 0,
+        jsxErrors: 0
+      }
     };
     
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    console.log(`📊 Report generated: ${this.reportFile}`);
+    // Group fixes by file
+    for (const fix of this.fixesApplied) {
+      if (!report.fixesByFile[fix.file]) {
+        report.fixesByFile[fix.file] = [];
+      }
+      report.fixesByFile[fix.file].push(fix);
+      
+      // Categorize fixes
+      if (fix.fix.includes('type')) report.summary.typeErrors++;
+      else if (fix.fix.includes('JSX')) report.summary.jsxErrors++;
+      else report.summary.syntaxErrors++;
+    }
+    
+    return report;
   }
 
-  async generateErrorReport(error) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      errorsFixed: this.errorsFixed,
-      filesProcessed: this.filesProcessed,
-      status: 'error',
-      error: error.message,
-      stack: error.stack
-    };
+  async run() {
+    const command = process.argv[2] || 'fix';
     
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    console.log(`❌ Error report generated: ${this.reportFile}`);
+    switch (command) {
+      case 'fix':
+        await this.fixAllTypeScriptErrors();
+        break;
+      case 'report':
+        const report = this.generateReport();
+        console.log(JSON.stringify(report, null, 2));
+        break;
+      case 'status':
+        const errors = await this.getTypeScriptErrors();
+        console.log(`Current TypeScript errors: ${errors.length}`);
+        break;
+      default:
+        console.log('Usage: node typescript-error-fixer.cjs [fix|report|status]');
+        process.exit(1);
+    }
   }
 }
 
-// Run the automation
-const fixer = new TypeScriptErrorFixer();
-fixer.run().catch(console.error);
+// CLI interface
+if (require.main === module) {
+  const fixer = new TypeScriptErrorFixer();
+  fixer.run().catch(error => {
+    console.error('Error:', error.message);
+    process.exit(1);
+  });
+}
+
+module.exports = TypeScriptErrorFixer;

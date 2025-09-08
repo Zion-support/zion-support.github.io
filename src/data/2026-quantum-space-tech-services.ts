@@ -1,5 +1,5 @@
 export const quantumSpaceTechServices2026 = [] as [];
-export interface QuantumSpaceTechService2026 {
+export type QuantumSpaceTechService2026 = {
   id: string;
   name: string;
   tagline: string;

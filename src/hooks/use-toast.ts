@@ -1,6 +1,6 @@
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
-export interface Toast {
+type Toast = {
 
   id: string;
   title?: string;

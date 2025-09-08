@@ -1,7 +1,8 @@
 // Specialized Financial AI Services 2025 - Zion Tech Group
 // Advanced AI-powered financial technology solutions
 
-export interface FinancialAIService {
+export type FinancialAIService = {
+
   id: number;
   name: string;
   category: string;

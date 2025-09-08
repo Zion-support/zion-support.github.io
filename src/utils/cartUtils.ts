@@ -1,4 +1,4 @@
-export const getCartKey = (userId?: string | null) => `cart_${userId || 'guest'}`;
+export type CartItem = {
 
 import type { CartItem } from '@/types/cart';
 

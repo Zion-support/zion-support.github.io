@@ -1,5 +1,4 @@
-import React from 'react';
-export interface ComprehensivePricingItem2027 {
+export type ComprehensivePricingItem2027 = {
 
 export interface PricingTier {
   name: string;

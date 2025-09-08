@@ -4,7 +4,8 @@
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
 
-export interface PricingTier {
+export type PricingTier = {
+
   name: string;
   price: number;
   currency: string;
@@ -15,9 +16,10 @@ export interface PricingTier {
   popular?: boolean;
 }
 
-export interface ServicePricing {
-  id: string;
-  title: string;
+export type ServicePricing = {
+
+  serviceId: string;
+  serviceName: string;
   category: string;
   description: string;
   pricingTiers: PricingTier[];

@@ -1,6 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
-
-export interface EnterpriseITService2029 {
+export type EnterpriseItService2029 = {
   id: string;
   name: string;
   tagline: string;

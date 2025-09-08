@@ -134,7 +134,7 @@ export default function SupportRequests() {
   };
   
   return (
-    <React.Fragment>
+    <Fragment>
       <SEO 
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"

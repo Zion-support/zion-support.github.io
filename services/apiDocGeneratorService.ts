@@ -1,4 +1,4 @@
-export interface APIDocumentation {
+export type APIDocumentation = {
   id: string;
   name: string;
   version: string;
@@ -12,10 +12,8 @@ export interface APIDocumentation {
     totalEndpoints: number;
     coverage: number;
     languages: string[];
-    frameworks: string[];
-  };
-}
-export interface APIEndpoint {
+    frameworks: string[]}}
+export type APIEndpoint = {
   id: string;
   path: string;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';
@@ -27,39 +25,31 @@ export interface APIEndpoint {
   tags: string[];
   deprecated: boolean;
   rateLimit?: RateLimit;
-  authentication?: AuthenticationRequirement;
-}
-export interface APIParameter {
+  authentication?: AuthenticationRequirement}
+export type APIParameter = {
   name: string;
   in: 'path' | 'query' | 'header' | 'cookie';
   required: boolean;
   schema: APISchema;
   description: string;
-  example?: unknown;
-  deprecated?: boolean;
-}
-export interface APIRequestBody {
+  example?;deprecated?: boolean}
+export type APIRequestBody = {
   required: boolean;
   content: Record<string, APIContent>;
-  description?: string;
-}
-export interface APIContent {
+  description?: string}
+export type APIContent = {
   schema: APISchema;
-  example?: unknown;
-  examples?: Record<string, APIExample>;
-}
-export interface APIResponse {
+  example?;examples?: Record<string, APIExample>}
+export type APIResponse = {
   code: string;
   description: string;
   content?: Record<string, APIContent>;
-  headers?: Record<string, APIHeader>;
-}
-export interface APIHeader {
+  headers?: Record<string, APIHeader>}
+export type APIHeader = {
   description: string;
   schema: APISchema;
-  required: boolean;
-}
-export interface APISchema {
+  required: boolean}
+export type APISchema = {
   type?: string;
   format?: string;
   description?: string;
@@ -76,41 +66,34 @@ export interface APISchema {
   minLength?: number;
   maxLength?: number;
   pattern?: string;
-  default?: unknown;
-  nullable?: boolean;
-  $ref?: string;
-}
-export interface APIExample {
+  default?;nullable?: boolean;
+  $ref?: string}
+export type APIExample = {
   id: string;
   name: string;
   summary: string;
   description: string;
   request: ExampleRequest;
   response: ExampleResponse;
-  tags: string[];
-}
-export interface ExampleRequest {
+  tags: string[]}
+export type ExampleRequest = {
   method: string;
   url: string;
   headers: Record<string, string>;
-  body?: unknown;
-}
-export interface ExampleResponse {
+  body?}
+export type ExampleResponse = {
   status: number;
   headers: Record<string, string>;
-  body: unknown;
-}
-export interface RateLimit {
+  body}
+export type RateLimit = {
   requests: number;
   window: string;
-  description?: string;
-}
-export interface AuthenticationRequirement {
+  description?: string}
+export type AuthenticationRequirement = {
   type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
   description: string;
-  required: boolean;
-}
-export interface DocumentationConfig {
+  required: boolean}
+export type DocumentationConfig = {
   outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
   includeExamples: boolean;
   includeSchemas: boolean;

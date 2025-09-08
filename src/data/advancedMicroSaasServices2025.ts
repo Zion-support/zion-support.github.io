@@ -1,5 +1,4 @@
-import React from 'react';
-export interface AdvancedMicroSaasService {
+export type AdvancedMicroSaasService = {
 
   id: string;
   title: string;

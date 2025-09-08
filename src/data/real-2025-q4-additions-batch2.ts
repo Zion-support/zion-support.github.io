@@ -1,4 +1,4 @@
-export interface AdditionalQ42025Service {
+export type AdditionalQ42025Service = {
 	id: string;
 	name: string;
 	tagline: string;

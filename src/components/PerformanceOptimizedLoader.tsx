@@ -1,5 +1,6 @@
-// Removed unused: import React, { memo } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion  } from 'framer-motion.ts';
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg';

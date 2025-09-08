@@ -1,3 +1,4 @@
+import React from 'react';
 export const ADVANCED_INNOVATIVE_SERVICES = [
     // AI-Powered Predictive Maintenance Platform
     {

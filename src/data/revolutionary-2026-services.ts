@@ -1,7 +1,6 @@
 import React from 'react';
 import { ServiceVariant } from '../types/service-variants';
-
-export interface Revolutionary2026Service {
+export type Revolutionary2026Service = {
   id: string;
   name: string;
   tagline: string;

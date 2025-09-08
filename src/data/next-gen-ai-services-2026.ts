@@ -1,7 +1,6 @@
 import React from 'react';
 import { ServiceVariant } from '../types/service-variants';
-
-export interface NextGenAIService2026 {
+export type NextGenAIService2026 = {
   id: string;
   name: string;
   tagline: string;

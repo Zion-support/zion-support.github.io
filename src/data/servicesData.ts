@@ -1,5 +1,4 @@
-import React from 'react';
-export interface InnovativeMicroSaasService {
+export type InnovativeMicroSaasService = {
 
 export const SERVICES: ProductListing[] = [
   {

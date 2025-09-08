@@ -1,14 +1,16 @@
 // Ultimate Zion Tech Group Services 2025
 // Real, Innovative, Market-Ready Micro SAAS, IT Infrastructure, and AI Services
 
-export interface ServiceContact {
+export type ServiceContact = {
+
   phone: string;
   email: string;
   website: string;
   address: string;
 }
 
-export interface MicroSaasService {
+export type MicroSaasService = {
+
   id: number;
   name: string;
   category: string;
@@ -36,7 +38,8 @@ export interface MicroSaasService {
   technicalStack: string[];
 }
 
-export interface ITService {
+export type ITService = {
+
   id: number;
   name: string;
   category: string;
@@ -61,7 +64,8 @@ export interface ITService {
   caseStudies: string[];
 }
 
-export interface AIService {
+export type AIService = {
+
   id: number;
   name: string;
   category: string;

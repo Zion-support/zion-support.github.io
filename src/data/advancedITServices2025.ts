@@ -1,5 +1,5 @@
-import React from 'react';
-export interface AdvancedITService {
+export type AdvancedITService = {
+
   id: string;
   title: string;
   description: string;

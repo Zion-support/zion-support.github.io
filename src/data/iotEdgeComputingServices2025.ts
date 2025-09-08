@@ -1,9 +1,4 @@
-export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
-  address: string;
-}
+export type IoTEdgeService = {
 
 export interface IoTEdgeComputingService {
   id: number;

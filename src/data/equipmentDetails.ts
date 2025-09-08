@@ -1,7 +1,4 @@
-export interface EquipmentSpecification {
-  name: string;
-  value: string;
-}
+export type EquipmentItem = {
 
 export interface EquipmentDetails {
   id: string;

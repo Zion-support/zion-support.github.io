@@ -149,7 +149,7 @@ const TermsOfService = () => {
   ];
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
         <meta name="description" content="Read Zion Tech Group's Terms of Service to understand the legal terms and conditions governing your use of our services." />

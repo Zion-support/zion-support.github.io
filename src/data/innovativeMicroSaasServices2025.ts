@@ -1,5 +1,5 @@
-import React from 'react';
-export interface InnovativeMicroSaasService {
+export type InnovativeMicroSaasService = {
+
   id: string;
   title: string;
   description: string;

@@ -1,8 +1,7 @@
 export default main;
 
 import ethers from 'hardhat';
-
-async function main() {
+async function main(: any) {
   const [deployer] = await ethers.getSigners();
   console.log('Deploying with:', deployer.address);
   const ZION = await ethers.getContractFactory('ZIONToken');

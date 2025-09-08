@@ -1,4 +1,4 @@
-export interface Q4Service {
+export type Q4Service = {
   id: string;
   name: string;
   tagline: string;

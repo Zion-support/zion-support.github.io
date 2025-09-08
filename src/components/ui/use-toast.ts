@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export interface ToastOptions {
+type ToastOptions = {
 
 export interface Toast {
   id: string;

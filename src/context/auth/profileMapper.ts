@@ -1,4 +1,4 @@
-export interface SupabaseUser {
+type SupabaseUser = {
 
   id: string;
   email?: string;
@@ -11,7 +11,7 @@ user_metadata?: {
   updated_at?: string;
 }
 
-export interface Profile {
+type Profile = {
 
   id: string;
   display_name?: string;
@@ -21,7 +21,7 @@ export interface Profile {
   created_at?: string;
   updated_at?: string;
 
-}
+type MappedUser = {
 
 export interface MappedUser {
 

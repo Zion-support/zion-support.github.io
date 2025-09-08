@@ -1,3 +1,4 @@
+import React from 'react';
 // Enhanced IT Services for 2025
 export const enhancedITServices2025 = [
     {

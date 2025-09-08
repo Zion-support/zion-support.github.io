@@ -1,4 +1,4 @@
-export interface Innovative2026AiServiceV3 {
+export type Innovative2026AiServiceV3 = {
   id: string;
   name: string;
   tagline: string;

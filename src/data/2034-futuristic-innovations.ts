@@ -1,4 +1,4 @@
-export interface Service2034 {
+export type Service2034 = {
   id: string;
   name: string;
   description: string;

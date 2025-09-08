@@ -1,3 +1,4 @@
+import React from 'react';
 export const CUTTING_EDGE_SERVICES_2025 = [
     // 1. AI-Powered Quantum Financial Trading Platform
     {

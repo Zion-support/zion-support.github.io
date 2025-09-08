@@ -1,3 +1,4 @@
+import React from 'react';
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     // Blockchain & Web3 Solutions
     {

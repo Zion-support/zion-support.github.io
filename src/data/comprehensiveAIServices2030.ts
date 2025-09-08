@@ -1,9 +1,18 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
 
-export type AIServiceItem = {
-  id: string;
-  title: string;
+export type ServiceContact = {
+
+  phone: string;
+  email: string;
+  website: string;
+  address: string}
+
+export type AIService = {
+
+  id: number;
+  name: string;
+  category: string;
   description: string;
   category: 'AI Analytics' | 'AI Automation' | 'AI Security' | 'AI Healthcare' | 'AI Finance' | 'AI Marketing' | 'AI Operations' | 'AI Research' | 'AI Infrastructure' | 'AI Ethics';
   price: string;

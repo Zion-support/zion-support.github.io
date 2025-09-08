@@ -1,10 +1,11 @@
-export interface ServiceContact {
+export type ServiceContact = {
+
   phone: string;
   email: string;
   website: string;
-  address: string;
-}
-export interface MicroSaasService {
+  address: string}
+export type MicroSaasService = {
+
   id: number;
   name: string;
   category: string;
@@ -24,9 +25,9 @@ export interface MicroSaasService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-  trialPeriod: string;
-}
-export interface ITService {
+  trialPeriod: string}
+export type ITService = {
+
   id: number;
   name: string;
   category: string;
@@ -43,9 +44,9 @@ export interface ITService {
   sla: string;
   certifications: string[];
   deliveryTime: string;
-  support: string;
-}
-export interface AIService {
+  support: string}
+export type AIService = {
+
   id: number;
   name: string;
   category: string;

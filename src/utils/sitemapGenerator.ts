@@ -1,11 +1,11 @@
-export interface SitemapUrl {
+type SitemapUrl = {
   url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 
-export interface SitemapConfig {
+type SitemapConfig = {
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;

@@ -1,6 +1,8 @@
-export interface EmergingTechService {
-  id: number;
-  name: string;
+export type EmergingTechService = {
+
+  id: string;
+  title: string;
+  description: string;
   category: string;
   subcategory: string;
   description: string;

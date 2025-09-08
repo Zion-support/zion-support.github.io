@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect  } from 'react.ts';
 
-export interface User {
+type User = {
 
   id: string;
   email: string;
@@ -13,7 +13,7 @@ export interface User {
   updatedAt?: string;
 }
 
-export interface AuthTokens {
+type AuthTokens = {
 
   accessToken: string | null;
   refreshToken: string | null;

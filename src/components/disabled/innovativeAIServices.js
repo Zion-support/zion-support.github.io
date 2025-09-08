@@ -1,3 +1,4 @@
+import React from 'react';
 export const INNOVATIVE_AI_SERVICES = [
     // AI-Powered Content Generation & Marketing
     {

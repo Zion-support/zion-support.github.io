@@ -1,5 +1,4 @@
-import React from 'react';
-export interface CuttingEdgeMicroSAASService {
+export type CuttingEdgeMicroSAASService = {
   id: string;
   name: string;
   tagline: string;

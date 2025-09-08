@@ -1,3 +1,4 @@
+import React from 'react';
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     // Edge Computing Infrastructure Platform
     {

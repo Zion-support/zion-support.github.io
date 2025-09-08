@@ -1,3 +1,4 @@
+import React from 'react';
 export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Autonomous Business Operations
     {

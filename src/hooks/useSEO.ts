@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useMemo } from 'react';
 
-export interface SEOData {
+type SEOData = {
 
   title: string;
   description: string;
@@ -13,7 +13,7 @@ export interface SEOData {
   structuredData?: object;
 }
 
-export interface UseSEOOptions {
+type UseSEOOptions = {
 
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
@@ -329,7 +329,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
 // Type declarations
 declare global {
-  export interface Window {
+  type Window = {
 
     gtag?: (...args[])  => void;
     dataLayer?[]}

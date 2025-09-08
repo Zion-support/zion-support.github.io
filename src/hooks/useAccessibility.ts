@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export interface UseAccessibilityOptions {
+type UseAccessibilityOptions = {
 
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
@@ -9,7 +9,7 @@ interface AccessibilitySettings {
   focusStyle: 'default' | 'high-visibility' | 'minimal';
 }
 
-export interface AccessibilityFeatures {
+type AccessibilityFeatures = {
 
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',

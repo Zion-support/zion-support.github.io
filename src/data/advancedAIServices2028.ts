@@ -1,5 +1,4 @@
-import React from 'react';
-export interface AdvancedAIService2028 {
+export type AdvancedAIService2028 = {
   id: string;
   title: string;
   description: string;

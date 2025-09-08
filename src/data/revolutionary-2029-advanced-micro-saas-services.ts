@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2029AdvancedMicroSaasService {
+export type Revolutionary2029AdvancedMicroSaasService = {
   id: string;
   name: string;
   tagline: string;

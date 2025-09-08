@@ -1,4 +1,4 @@
-export interface CuttingEdgeMicroSaas2028 {
+export type CuttingEdgeMicroSaas2028 = {
   id: string;
   name: string;
   tagline: string;

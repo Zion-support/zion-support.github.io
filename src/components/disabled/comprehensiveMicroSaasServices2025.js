@@ -1,3 +1,4 @@
+import React from 'react';
 export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Business Intelligence & Analytics
     {

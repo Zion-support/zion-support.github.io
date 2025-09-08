@@ -1,5 +1,4 @@
-import React from 'react';
-export interface EmergingTechService {
+export type EmergingTechService = {
   id: string;
   name: string;
   tagline: string;

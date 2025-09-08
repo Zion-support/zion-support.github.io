@@ -1,3 +1,4 @@
+import React from 'react';
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Financial Services
     {

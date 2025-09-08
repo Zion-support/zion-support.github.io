@@ -3,8 +3,52 @@ import { ProductListing } from "@/types/listings";
 // Innovative Micro SAAS Services 2030 - Zion Tech Group
 // Real, market-ready micro SAAS solutions with transparent pricing
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
-  // AI-Powered Micro SAAS Solutions
+export type ServiceContact = {
+
+  phone: string;
+  email: string;
+  website: string;
+  address: string}
+
+export type MicroSaasService = {
+
+  id: number;
+  name: string;
+  category: string;
+  pricing: string;
+  description: string;
+  price: number;
+  pricingModel: string;
+  userLimit: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  integrations: string[];
+  freeTier: boolean;
+  trialPeriod: string;
+  innovationLevel: string;
+  marketSize: string;
+  growthRate: string;
+  useCases: string[];
+  technologies: string[];
+  compliance: string[]}
+
+// Zion Tech Group Contact Information
+const zionContact: ServiceContact = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
+
+// Innovative Micro SAAS Services 2030
+export const innovativeMicroSaasServices2030: MicroSaasService[] = [
   {
     id: "ai-content-optimization-engine",
     title: "AI Content Optimization Engine",

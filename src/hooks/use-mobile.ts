@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useIsMobile() {
+export function useMobile(: any) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

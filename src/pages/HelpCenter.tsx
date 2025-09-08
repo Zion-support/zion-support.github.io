@@ -133,7 +133,7 @@ export const HelpCenter: React.FC = () => {
 // Removed unused:   const filteredArticles = filteredCategories.flatMap(cat => cat.articles);
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />

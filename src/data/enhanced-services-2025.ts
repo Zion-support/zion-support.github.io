@@ -1,4 +1,5 @@
-export interface EnhancedService {
+export type EnhancedService = {
+
   id: string;
   name: string;
   tagline: string;

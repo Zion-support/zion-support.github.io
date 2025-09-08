@@ -1,3 +1,4 @@
+import React from 'react';
 export const COMPREHENSIVE_IT_SERVICES_2025 = [
     // Cloud Infrastructure & Migration Services
     {

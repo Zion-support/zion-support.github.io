@@ -1,4 +1,4 @@
-export interface RealAdditionService2025Q3 {
+export type RealAdditionService2025Q3 = {
 	id: string;
 	name: string;
 	tagline: string;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export interface User {
+type User = {
 
   id: string;
   email: string;
@@ -11,7 +11,7 @@ export interface User {
   avatarUrl?: string;
 }
 
-export interface AuthState {
+type AuthState = {
 
   user: User | null;
   isAuthenticated: boolean;

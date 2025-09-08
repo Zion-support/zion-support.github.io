@@ -1,4 +1,4 @@
-export interface Listing {
+export type Listing = {
   id: string;
   title: string;
   description: string;
@@ -61,7 +61,8 @@ export interface ListingSearchResult {
   hasMore: boolean;
 }
 
-export interface ListingFormData {
+export type CartItem = {
+  id: string;
   title: string;
   description: string;
   price: number;
@@ -84,14 +85,10 @@ export interface ListingFormData {
   };
 }
 
-export interface ListingStats {
-  totalListings: number;
-  activeListings: number;
-  totalViews: number;
-  totalFavorites: number;
-  averagePrice: number;
-  categoryDistribution: Record<string, number>;
-  availability?: string;
-  aiScore?: number;
-  pricingTier?: string;
+export type WishlistItem = {
+  id: string;
+  userId: string;
+  listingId: string;
+  type: 'product' | 'service' | 'talent';
+  addedAt: string;
 }

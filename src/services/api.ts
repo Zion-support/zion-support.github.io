@@ -51,7 +51,7 @@ class ApiError extends Error {
   }
 }
 
-export interface ApiClientOptions {
+type ApiClientOptions = {
   method?: string;
   body?: string;
   headers?: Record<string, string>;

@@ -1,4 +1,5 @@
-export interface InnovativeMicroSaasService2027 {
+export type InnovativeMicroSaasService2027 = {
+
   id: string;
   title: string;
   description: string;

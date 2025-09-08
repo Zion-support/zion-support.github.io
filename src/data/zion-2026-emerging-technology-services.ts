@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServiceVariant } from '../src/types/service-variants';
 
-export interface Zion2026EmergingTechnologyService {
+export type Zion2026EmergingTechnologyService = {
   id: string;
   name: string;
   tagline: string;

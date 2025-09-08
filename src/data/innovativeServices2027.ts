@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+export type InnovativeService2027 = {
 
 // 2027 Innovative Services - Zion Tech Group
 // Real micro SAAS services, IT services, and AI services with market prices

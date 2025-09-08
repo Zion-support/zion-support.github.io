@@ -1,4 +1,4 @@
-export interface SpecializedIndustrySolution {
+export type SpecializedIndustrySolution = {
   id: string;
   name: string;
   tagline: string;

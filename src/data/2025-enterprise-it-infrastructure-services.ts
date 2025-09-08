@@ -1,5 +1,4 @@
-import React from 'react';
-export interface EnterpriseITInfrastructureService {
+export type EnterpriseITInfrastructureService = {
   id: string;
   name: string;
   tagline: string;

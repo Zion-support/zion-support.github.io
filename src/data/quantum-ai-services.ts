@@ -1,5 +1,4 @@
-import React from 'react';
-export interface QuantumAIService {
+export type QuantumAIService = {
   id: string;
   name: string;
   tagline: string;
