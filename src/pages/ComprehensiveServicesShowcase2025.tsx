@@ -1,60 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Filter,
-  Star,
-  ArrowRight,
-  ChevronDown,
-  Globe,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Lock,
-  Users,
-  TrendingUp,
-  Award,
-  Clock,
-  DollarSign,
-  CheckCircle,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  Target,
-  Lightbulb,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,
-  FileText,
-  MessageCircle,
-  Calendar,
-  Settings,
-  Monitor,
-  Truck,
-  Car,
-  Clipboard,
-  Link,
-  Microscope,
-  X,
-  Atom,
-  Heart} from 'lucide-react';
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
@@ -102,7 +48,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   });
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: ) => {
     setSelectedService(service);
   };
 
@@ -129,6 +75,36 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         duration: 0.5
       }
     }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]:  } = {
+      'AI & Automation': Brain,
+      'AI & Analytics': BarChart3,
+      'AI & Legal': Shield,
+      'AI & Logistics': Truck,
+      'AI & Healthcare': Heart,
+      'AI & Marketing': MessageCircle,
+      'AI & Research': Microscope,
+      'AI & HR': Users,
+      'AI & Manufacturing': Cpu,
+      'AI & Content': FileText,
+      'AI & Transportation': Car,
+      'Quantum Computing': Atom,
+      'Cybersecurity': ShieldCheck,
+      'Edge Computing': Network,
+      'Sustainability': Leaf,
+      'Blockchain': Link,
+      'Metaverse': Globe,
+      'Autonomous Vehicles': Car,
+      'Healthcare': Heart,
+      'Financial Services': DollarSign,
+      'Marketing': MessageCircle,
+      'Project Management': Clipboard,
+      'Business Intelligence': BarChart,
+      'Software Development': Code
+    };
+    return iconMap[category] || Rocket;
   };
 
   return (

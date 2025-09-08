@@ -1,24 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Code, 
-  Shield, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Github,
-  Gitlab,
-  Slack,
-  MessageSquare,
-  BarChart3,
-  Settings,
-  Lock,
-  Globe,
-  Smartphone} from 'lucide-react';
+
 
 const AIAutonomousCodeReviewer: React.FC = () => {
   const features = [
@@ -372,8 +354,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default AIAutonomousCodeReviewer;
+export default AIAutonomousCodeReviewer;>

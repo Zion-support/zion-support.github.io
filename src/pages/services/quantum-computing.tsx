@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock} from 'lucide-react';
+
 
 const QuantumComputing: React.FC = () => {
   const features = [

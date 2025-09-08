@@ -1,41 +1,5 @@
 import { Link } from 'react-router-dom';
-import {
-  Code,
-  Zap,
-  Shield,
-  Cloud,
-  Rocket,
-  Target,
-  TrendingUp,
-  Users,
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  BarChart3,
-  MessageCircle,
-  BookOpen,
-  ShoppingCart,
-  DollarSign,
-  Gauge,
-  HelpCircle,
-  Search,
-  PenTool,
-  Workflow,
-  Atom,
-  Truck,
-  Building,
-  Github,
-  Terminal,
-  Database,
-  Server,
-  Network,
-  Key,
-  Download,
-  Play} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 export default function Developers() {

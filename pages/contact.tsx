@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 export default function ContactPage() {
   return (
@@ -97,21 +96,85 @@ export default function ContactPage() {
                 <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center p-6"
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Hours</h3>
-                <p className="text-gray-600">Mon-Fri: 9AM-6PM<br />24/7 Support Available</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+			{/* Contact Form & Info */}
+			<section className="py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="grid gap-12 lg:grid-cols-2">
+						{/* Contact Form */}
+						<div>
+							<h2 className="text-2xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+							{isSubmitted ? (
+								<div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+									<CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
+									<h3 className="text-lg font-semibold text-green-900 mb-2">Message Sent!</h3>
+									<p className="text-green-700">Thank you for reaching out. We'll get back to you soon.</p>
+								</div>
+							) : (
+								<form onSubmit={handleSubmit} className="space-y-6">
+									<div>
+										<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+											Name *
+										</label>
+										<input
+											type="text"
+											id="name"
+											name="name"
+											required
+											value={formData.name}
+											onChange={handleChange}
+											className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+										/>
+									</div>
+									<div>
+										<label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+											Email *
+										</label>
+										<input
+											type="email"
+											id="email"
+											name="email"
+											required
+											value={formData.email}
+											onChange={handleChange}
+											className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+										/>
+									</div>
+									<div>
+										<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+											Comp </label>
+										<input
+											type="text"
+											id="company"
+											name="company"
+											value={formData.comp}
+											onChange={handleChange}
+											className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+										/>
+									</div>
+									<div>
+										<label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+											Message *
+										</label>
+										<textarea
+											id="message"
+											name="message"
+											rows={4}
+											required
+											value={formData.message}
+											onChange={handleChange}
+											className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+										/>
+									</div>
+									<button
+										type="submit"
+										className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors flex items-center justify-center gap-2"
+									>
+										<Send className="h-4 w-4" />
+										Send Message
+									</button>
+								</form>
+							)}
+						</div>
 
         {/* Contact Form */}
         <section className="py-20 bg-gray-50">
@@ -156,52 +219,31 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="What's this about?"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tell us more about your project..."
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center"
-                  >
-                    Send Message
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </button>
-                </form>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
+			{/* CTA Section */}
+			<section className="py-24 sm:py-32 bg-blue-600">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-white">Let's Build Something Amazing Together</h2>
+						<p className="mt-6 text-lg text-blue-100">
+							Whether you're looking to implement AI solutions, modernize your cloud infrastructure, or strengthen your cybersecurity posture, we're here to help.
+						</p>
+						<div className="mt-10 flex items-center justify-center gap-x-6">
+							<Link
+								to="/services"
+								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+							>
+								View Our Services
+							</Link>
+							<Link
+								to="/about"
+								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
+							>
+								Learn More About Us →
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</
+	)
+}>

@@ -1,42 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  PieChart, 
-  Activity, 
-  Database, 
-  Zap, 
-  Shield, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Globe,
-  Target,
-  Clock,
-  Eye,
-  Download,
-  Filter,
-  Search,
-  Settings,
-  RefreshCw,
-  Calendar,
-  DollarSign,
-  ShoppingCart,
-  Heart,
-  MessageCircle,
-  Bell,
-  Wifi,
-  Cpu,
-  Server,
-  Network,
-  Lock,
-  Key,
-  FileText,
-  BarChart,
-  LineChart,
-  AreaChart} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 const Analytics: React.FC = () => {

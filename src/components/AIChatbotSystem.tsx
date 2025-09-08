@@ -1,31 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles, 
-  X,
-  Settings,
-  Volume2,
-  VolumeX,
-  Mic,
-  MicOff,
-  Paperclip,
-  Image,
-  FileText,
-  Download,
-  Share2,
-  RefreshCw,
-  ThumbsUp,
-  ThumbsDown,
-  Star,
-  Zap,
-  Brain,
-  Globe,
-  Clock,
-  CheckCircle} from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface ChatMessage {
   id: string;
@@ -34,7 +9,7 @@ interface ChatMessage {
   timestamp: Date;
   type: 'text' | 'image' | 'file' | 'system';
   status: 'sending' | 'sent' | 'error';
-  metadata?: {
+metadata?: {
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
@@ -108,7 +83,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     
     const responses = [
       {
-        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about any particular service?",
+        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about  particular service?",
         suggestions: ['AI Consulting details', 'Machine Learning services', 'Data Analytics', 'Process Automation'],
         relatedServices: ['AI Consulting', 'Machine Learning', 'Data Analytics']
       },
@@ -506,6 +481,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </
   );
-};
+};>

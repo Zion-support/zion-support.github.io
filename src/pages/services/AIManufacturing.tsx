@@ -1,4 +1,4 @@
-import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings} from 'lucide-react';
+
 
 export default function AIManufacturing() {
   const features = [

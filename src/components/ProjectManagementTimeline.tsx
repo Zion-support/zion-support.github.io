@@ -1,28 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Calendar, 
-  Clock, 
-  CheckCircle, 
-  Circle, 
-  AlertCircle, 
-  Play,
-  Pause,
-  StopCircle,
-  Users,
-  Target,
-  TrendingUp,
-  FileText,
-  MessageSquare,
-  Link,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  Plus,
-  Edit,
-  Trash2,
-  Eye} from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface Project {
   id: string;
@@ -302,7 +280,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'

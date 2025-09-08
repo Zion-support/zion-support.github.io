@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star} from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface Testimonial {
   id: number;
@@ -134,7 +134,7 @@ const Testimonials: React.FC = () => {
                   {testimonials[currentIndex].role}
                 </p>
                 <p className="text-zion-slate-light text-sm mb-2">
-                  {testimonials[currentIndex].company}
+                  {testimonials[currentIndex].comp}
                 </p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs font-medium">
                   {testimonials[currentIndex].industry}

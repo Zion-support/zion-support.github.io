@@ -327,7 +327,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 // Type declarations
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
+    gtag?: (...args: []) => void;
+    dataLayer?: [];
   }
 }

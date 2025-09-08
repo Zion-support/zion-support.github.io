@@ -1,33 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-  Truck, 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Target, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Cpu,
-  Lock,
-  Globe,
-  Users,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Package,
-  Route,
-  Warehouse,
-  TrendingUp,
-  AlertTriangle,
-  Database,
-  Network,
-  Smartphone,
-  Eye,
-  ShoppingCart,
-  Heart} from 'lucide-react';
+
 
 const AIAutonomousSupplyChain = () => {
   const features = [

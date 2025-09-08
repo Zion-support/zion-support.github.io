@@ -1,21 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Smartphone,
-  Tablet,
-  Monitor,
-  Hand,
-  Gesture,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowDown,
-  Pinch,
-  RotateCw as Rotate,
-  Shake,
-  MousePointer,
-  Clock,
-  DoubleArrow} from 'lucide-react';
+
 
 interface MobileOptimization {
   id: string;
@@ -60,13 +45,48 @@ export function MobileExperienceEnhancer() {
   // Detect device type
   useEffect(() => {
     const detectDevice = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setDeviceType('mobile');
-      } else if (width < 1024) {
-        setDeviceType('tablet');
-      } else {
-        setDeviceType('desktop');
+      const userAgent = navigator.userAgent;
+      const screen = window.screen;
+      
+      let type: 'mobile' | 'tablet' | 'desktop' = 'desktop';
+      let platform: 'ios' | 'android' | 'web' | 'unknown' = 'unknown';
+      
+      // Detect platform
+      if (/iPad|iPhone|iPod/.test(userAgent)) {
+        platform = 'ios';
+        type = /iPad/.test(userAgent) ? 'tablet' : 'mobile';
+      } else if (/Android/.test(userAgent)) {
+        platform = 'android';
+        type = screen.width >= 768 ? 'tablet' : 'mobile';
+      } else if (/Windows|Mac|Linux/.test(userAgent)) {
+        platform = 'web';
+        type = 'desktop';
+      }
+      
+      // Detect mobile by screen size
+      if (screen.width <= 768) {
+        type = screen.width <= 480 ? 'mobile' : 'tablet';
+      }
+      
+      const deviceInfo: DeviceInfo = {
+        type,
+        platform,
+        screenSize: { width: screen.width, height: screen.height },
+        pixelRatio: window.devicePixelRatio || 1,
+        orientation: screen.width > screen.height ? 'landscape' : 'portrait',
+        touchSupport: 'ontouchstart' in window,
+        pwaSupport: 'serviceWorker' in navigator,
+        networkType: (navigator as ).connection?.effectiveType || 'unknown',
+        batteryLevel: 0
+      };
+      
+      setDeviceInfo(deviceInfo);
+      
+      // Get battery level if available
+      if ('getBattery' in navigator) {
+        (navigator as ).getBattery().then((battery: ) => {
+          setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
+        });
       }
     };
 
@@ -858,25 +878,20 @@ export function MobileExperienceEnhancer() {
                       exit={{ opacity: 0, height: 0 }}
                       className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 bg-gray-50 dark:bg-zion-slate-800 rounded-xl"
                     >
-                      {/* Theme Settings */}
-                      <div>
-                        <h4 className="font-medium text-gray-900 dark:text-white mb-3">Theme</h4>
-                        <div className="space-y-2">
-                          {(['light', 'dark', 'auto'] as const).map((theme) => (
-                            <label key={theme} className="flex items-center space-x-2">
-                              <input
-                                type="radio"
-                                name="theme"
-                                value={theme}
-                                checked={mobileTheme === theme}
-                                onChange={(e) => setMobileTheme(e.target.value as 'light' | 'dark' | 'auto')}
-                                className="w-4 h-4 text-zion-green"
-                              />
-                              <span className="text-sm text-gray-700 dark:text-gray-300 capitalize">
-                                {theme}
-                              </span>
-                            </label>
-                          ))}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Touch Sensitivity
+                          </label>
+                          <select
+                            value={settings.touchSensitivity}
+                            onChange={(e) => setSettings(prev => ({ ...prev, touchSensitivity: e.target.value as  }))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
+                          >
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                          </select>
                         </div>
                       </div>
 
@@ -897,7 +912,7 @@ export function MobileExperienceEnhancer() {
                           </label>
                           <select
                             value={settings.hapticIntensity}
-                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as any }))}
+                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as  }))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
                             <option value="light">Light</option>
@@ -910,6 +925,15 @@ export function MobileExperienceEnhancer() {
                           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                             Smartphone Orientation
                           </label>
+                          <select
+                            value={settings.deviceOrientation}
+                            onChange={(e) => setSettings(prev => ({ ...prev, deviceOrientation: e.target.value as  }))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
+                          >
+                            <option value="auto">Auto</option>
+                            <option value="portrait">Portrait</option>
+                            <option value="landscape">Landscape</option>
+                          </select>
                         </div>
                       </div>
                     </motion.div>
@@ -953,6 +977,39 @@ export function MobileExperienceEnhancer() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+
+      {/* Global Mobile Styles */}
+      <style jsx global>{`
+        .mobile-touch-targets button,
+        .mobile-touch-targets a,
+        .mobile-touch-targets input,
+        .mobile-touch-targets select {
+          min-height: 44px !important;
+          min-width: 44px !important;
+        }
+        
+        .mobile-navigation .nav-item {
+          padding: 12px 16px !important;
+          margin: 4px 0 !important;
+        }
+        
+        .mobile-adaptive-layout {
+          --zion-mobile-padding: 16px !important;
+          --zion-mobile-margin: 8px !important;
+        }
+        
+        .mobile-touch-feedback *:active {
+          transform: scale(0.98) !important;
+          transition: transform 0.1s ease !important;
+        }
+        
+        @media (max-width: 768px) {
+          .mobile-adaptive-layout {
+            --zion-container-padding: 16px !important;
+            --zion-section-margin: 24px !important;
+          }
+        }
+      `}</style>
+    </
   );
-}
+}>

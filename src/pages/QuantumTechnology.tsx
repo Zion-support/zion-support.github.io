@@ -1,28 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Cpu, 
-  Zap, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Target,
-  Network,
-  Database,
-  Shield,
-  Globe,
-  Rocket,
-  Lightbulb,
-  Code,
-  BarChart3,
-  Clock,
-  TrendingUp,
-  Users,
-  Monitor,
-  Server,
-  Cloud,
-  Lock} from 'lucide-react';
+
 
 export default function QuantumTechnology() {
   const quantumServices = [

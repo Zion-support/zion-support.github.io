@@ -1,29 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Zap, 
-  Shield, 
-  Users, 
-  TrendingUp, 
-  Globe, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Cpu, 
-  Database, 
-  Cloud,
-  Target,
-  Award,
-  Lightbulb,
-  Crown,
-  Sparkles,
-  ChevronRight,
-  Clock,
-  Check,
-  BarChart3,
-  Lock,
-  Eye} from 'lucide-react';
+
 
 const transformationServices = [
   {
@@ -118,12 +95,33 @@ const testimonials = [
   }
 ];
 
-const stats = [
-  { label: "Transformations Completed", value: "75+", icon: Rocket },
-  { label: "Average ROI", value: "300%", icon: TrendingUp },
-  { label: "Process Efficiency Gain", value: "60%", icon: Zap },
-  { label: "Customer Satisfaction", value: "95%", icon: Users }
-];
+  const testimonials = [
+    {
+      content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
+      name: "Carlos Rodriguez",
+      role: "CEO, InnovateCorp",
+      rating: 5
+    },
+    {
+      content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
+      name: "Lisa Chang",
+      role: "COO, TechFlow Solutions",
+      rating: 5
+    },
+    {
+      content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
+      name: "Marcus Johnson",
+      role: "CTO, DigitalFirst Inc",
+      rating: 5
+    }
+  ];
+
+  const stats = [
+    { number: "85%", label: "Average efficiency improvement" },
+    { number: "3.2x", label: "Faster time to market" },
+    { number: "40%", label: "Cost reduction achieved" },
+    { number: "92%", label: "Customer satisfaction increase" }
+  ];
 
 export default function DigitalTransformation() {
   return (

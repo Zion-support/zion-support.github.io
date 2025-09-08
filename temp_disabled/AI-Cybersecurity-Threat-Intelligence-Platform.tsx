@@ -1,33 +1,6 @@
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Eye, 
-  AlertTriangle, 
-  Zap, 
-  Lock, 
-  Globe,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Database,
-  Activity,
-  Lightbulb,
-  Rocket,
-  Award,
-  Clock,
-  DollarSign,
-  Target,
-  Users,
-  BarChart3,
-  TrendingUp,
-  Brain,
-  Server,
-  Network,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Brain} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
 
 export default function AICybersecurityThreatIntelligencePlatform() {
   const features = [

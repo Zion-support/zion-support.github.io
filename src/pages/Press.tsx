@@ -1,17 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Download, 
-  Mail, 
-  Phone, 
-  Globe, 
-  FileText, 
-  Image, 
-  Video, 
-  Users,
-  Zap,
-  Shield,
-  Brain} from 'lucide-react';
+import { motion } from 'framer-motion';
+
 
 export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -28,17 +16,25 @@ const Press: React.FC = () => {
   const pressReleases = [
     {
       id: 1,
-      title: "Zion Tech Group Secures $50M Series B Funding for AI Expansion",
-      date: "2025-01-20",
-      excerpt: "Funding will accelerate development of next-generation AI solutions and expand market presence in Europe and Asia.",
-      category: "Funding"
+      title: "Zion Tech Group Announces Breakthrough in Quantum AI Technology",
+      date: "2024-01-15",
+      author: "Press Team",
+      category: "press-releases",
+      excerpt: "Revolutionary quantum neural network platform achieves 1000x performance improvement in complex AI computations, opening new possibilities for scientific research and enterprise applications.",
+      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The comp's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
+      featured: true,
+      tags: ["Quantum AI", "Technology Breakthrough", "Innovation"]
     },
     {
       id: 2,
-      title: "Zion Tech Group Appoints Dr. Sarah Chen as Chief AI Officer",
-      date: "2025-01-15",
-      excerpt: "Former Google AI researcher joins leadership team to drive innovation in artificial intelligence and machine learning.",
-      category: "Leadership"
+      title: "Zion Tech Group Secures $50M Series B Funding Round",
+      date: "2024-01-10",
+      author: "Press Team",
+      category: "press-releases",
+      excerpt: "Strategic investment round led by leading venture capital firms to accelerate product development and market expansion in AI and cybersecurity solutions.",
+      content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the comp's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",
+      featured: true,
+      tags: ["Funding", "Investment", "Growth"]
     },
     {
       id: 3,
@@ -46,8 +42,8 @@ const Press: React.FC = () => {
       date: "2023-12-20",
       author: "Press Team",
       category: "awards",
-      excerpt: "Company recognized for exceptional growth and innovation in the technology sector, ranking among the top 100 fastest-growing private companies in America.",
-      content: "Zion Tech Group has been named to the prestigious Inc. 5000 list of America's fastest-growing private companies, ranking in the top 100. This recognition highlights the company's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions. The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.",
+      excerpt: "Comp recognized for exceptional growth and innovation in the technology sector, ranking among the top 100 fastest-growing private companies in America.",
+      content: "Zion Tech Group has been named to the prestigious Inc. 5000 list of America's fastest-growing private companies, ranking in the top 100. This recognition highlights the comp's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions. The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.",
       featured: false,
       tags: ["Award", "Growth", "Recognition"]
     },
@@ -68,7 +64,7 @@ const Press: React.FC = () => {
       date: "2023-12-10",
       author: "Forbes",
       category: "thought-leadership",
-      excerpt: "Company CEO shares insights on the future of AI and its impact on business transformation in exclusive Forbes Technology Council article.",
+      excerpt: "Comp CEO shares insights on the future of AI and its impact on business transformation in exclusive Forbes Technology Council article.",
       content: "Zion Tech Group CEO Kleber Oliveira has been featured in Forbes Technology Council, sharing expert insights on the future of artificial intelligence and its transformative impact on business operations. The article explores how AI is reshaping industries and creating new opportunities for innovation and growth.",
       featured: false,
       tags: ["Thought Leadership", "AI", "Business Transformation"]
@@ -80,7 +76,7 @@ const Press: React.FC = () => {
       author: "Press Team",
       category: "press-releases",
       excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",
-      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
+      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the comp to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
       featured: false,
       tags: ["Global Expansion", "Europe", "Market Growth"]
     }
@@ -316,7 +312,7 @@ const Press: React.FC = () => {
               All Press & Media
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Browse our complete collection of press releases, media coverage, and company updates.
+              Browse our complete collection of press releases, media coverage, and comp updates.
             </p>
           </motion.div>
 
@@ -381,7 +377,7 @@ const Press: React.FC = () => {
               Media Resources
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Access our media kit, company information, and resources for journalists and media professionals.
+              Access our media kit, comp information, and resources for journalists and media professionals.
             </p>
           </motion.div>
 
@@ -401,7 +397,7 @@ const Press: React.FC = () => {
                 <Download className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Media Kit</h3>
-              <p className="text-zion-slate-light text-sm mb-6">Download our comprehensive media kit with company information, logos, and press materials.</p>
+              <p className="text-zion-slate-light text-sm mb-6">Download our comprehensive media kit with comp information, logos, and press materials.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>
@@ -415,8 +411,8 @@ const Press: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Company Fact Sheet</h3>
-              <p className="text-zion-slate-light text-sm mb-6">Key facts, statistics, and company information for media reference.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Comp Fact Sheet</h3>
+              <p className="text-zion-slate-light text-sm mb-6">Key facts, statistics, and comp information for media reference.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>

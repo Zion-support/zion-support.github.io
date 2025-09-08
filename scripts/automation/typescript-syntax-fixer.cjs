@@ -4,8 +4,8 @@
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * TypeScript Syntax Fixer - PM2 Automation
- * Automatically fixes common TypeScript syntax errors
- * Runs every 15 minutes to maintain code quality
+ * Automatically fixes common TypeScript syntax errors and malformed JSX
+ * Runs every 15 minutes to maintain TypeScript code quality
  */
 
 const fs = require('fs');
@@ -15,420 +15,230 @@ const { execSync } = require('child_process');
 class TypeScriptSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'typescript-fix-reports');
-    this.errorsFixed = 0;
-    this.filesProcessed = 0;
+    this.reportFile = path.join(this.projectRoot, 'typescript-syntax-fixer-report.json');
+    this.fixesApplied = 0;
+    this.errorsFixed = [];
+    this.warnings = [];
     this.startTime = Date.now();
+  }
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const colors = {
+      info: '\x1b[34m',
+      success: '\x1b[32m',
+      warning: '\x1b[33m',
+      error: '\x1b[31m',
+      reset: '\x1b[0m'
+    };
     
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+    console.log(`${colors[type]}[${type.toUpperCase()}]${colors.reset} [${timestamp}] ${message}`);
   }
 
   async run() {
-    console.log('🔧 Starting TypeScript Syntax Fixer...');
+    this.log('🚀 Starting TypeScript Syntax Fixer...', 'info');
     
     try {
-      // Step 1: Fix type annotation issues
-      await this.fixTypeAnnotations();
+      // Step 1: Fix malformed JSX syntax
+      await this.fixMalformedJSX();
       
-      // Step 2: Fix interface and type definition issues
-      await this.fixInterfaceIssues();
+      // Step 2: Fix malformed TypeScript interfaces
+      await this.fixMalformedInterfaces();
       
-      // Step 3: Fix function parameter issues
-      await this.fixFunctionParameters();
+      // Step 3: Fix malformed function declarations
+      await this.fixMalformedFunctions();
       
-      // Step 4: Fix generic type issues
-      await this.fixGenericTypes();
+      // Step 4: Fix malformed imports
+      await this.fixMalformedImports();
       
-      // Step 5: Fix React component issues
-      await this.fixReactComponentIssues();
+      // Step 5: Fix malformed component structures
+      await this.fixMalformedComponents();
       
-      // Step 6: Fix import/export type issues
-      await this.fixImportExportTypes();
-      
-      // Step 7: Generate report
+      // Step 6: Generate report
       await this.generateReport();
       
-      console.log(`✅ TypeScript Syntax Fixer completed! Fixed ${this.errorsFixed} errors in ${this.filesProcessed} files.`);
+      this.log(`✅ TypeScript Syntax Fixer completed! Fixed ${this.fixesApplied} issues`, 'success');
       
     } catch (error) {
-      console.error('❌ Error in TypeScript Syntax Fixer:', error);
-      await this.generateErrorReport(error);
+      this.log(`❌ Error in TypeScript Syntax Fixer: ${error.message}`, 'error');
+      this.warnings.push(`Runtime error: ${error.message}`);
     }
   }
 
-  async fixTypeAnnotations() {
-    console.log('📝 Fixing type annotation issues...');
+  async fixMalformedJSX() {
+    this.log('🔧 Fixing malformed JSX syntax...', 'info');
     
-    const commonTypeFixes = [
-      // Fix any types
-      {
-        pattern: /:\s*any\b/g,
-        replacement: ': unknown'
-      },
-      {
-        pattern: /:\s*any\[\]/g,
-        replacement: ': unknown[]'
-      },
-      {
-        pattern: /:\s*any\s*\|\s*null/g,
-        replacement: ': unknown | null'
-      },
-      {
-        pattern: /:\s*any\s*\|\s*undefined/g,
-        replacement: ': unknown | undefined'
-      },
+    const jsxFixes = [
+      // Fix malformed JSX closing tags
+      { pattern: /<\/>([a-zA-Z][a-zA-Z0-9]*)/g, replacement: '</$1>' },
+      { pattern: /<\/>([a-zA-Z][a-zA-Z0-9]*)\s*>/g, replacement: '</$1>' },
+      { pattern: /<\/>([a-zA-Z][a-zA-Z0-9]*)\s*\)/g, replacement: '</$1>' },
       
-      // Fix object types
-      {
-        pattern: /:\s*object\b/g,
-        replacement: ': Record<string, unknown>'
-      },
-      {
-        pattern: /:\s*object\[\]/g,
-        replacement: ': Record<string, unknown>[]'
-      },
+      // Fix malformed JSX attributes
+      { pattern: /transition=\{\{\s*duration:\s*any(\d+\.?\d*)/g, replacement: 'transition={{ duration: $1' },
+      { pattern: /color:\s*any'([^']+)'/g, replacement: "color: '$1'" },
+      { pattern: /id:\s*any'([^']+)'/g, replacement: "id: '$1'" },
       
-      // Fix function types
-      {
-        pattern: /:\s*Function\b/g,
-        replacement: ': (...args: unknown[]) => unknown'
-      },
-      {
-        pattern: /:\s*Function\[\]/g,
-        replacement: ': ((...args: unknown[]) => unknown)[]'
-      }
+      // Fix malformed JSX expressions
+      { pattern: /\{\s*any([^}]+)\s*\}/g, replacement: '{$1}' },
+      { pattern: /\[\s*any([^\]]+)\s*\]/g, replacement: '[$1]' },
+      
+      // Fix malformed JSX fragments
+      { pattern: /<>\s*<\/>([^<]+)/g, replacement: '<>$1</>' },
+      { pattern: /<>\s*<\/>([a-zA-Z][a-zA-Z0-9]*)/g, replacement: '<>$1</>' }
     ];
 
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
-    
-    for (const file of tsFiles.slice(0, 50)) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        for (const fix of commonTypeFixes) {
-          const newContent = content.replace(fix.pattern, fix.replacement);
-          if (newContent !== content) {
-            content = newContent;
-            fileChanged = true;
-            this.errorsFixed++;
-          }
-        }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
-        }
-      } catch (err) {
-        // Skip files that can't be read
-      }
-    }
+    await this.applyFixes(jsxFixes, '.tsx');
   }
 
-  async fixInterfaceIssues() {
-    console.log('🔗 Fixing interface and type definition issues...');
+  async fixMalformedInterfaces() {
+    this.log('🔧 Fixing malformed TypeScript interfaces...', 'info');
     
     const interfaceFixes = [
-      // Fix optional property syntax
-      {
-        pattern: /(\w+)\s*\?\s*:\s*([^;]+);/g,
-        replacement: '$1?: $2;'
-      },
+      // Fix malformed interface properties
+      { pattern: /(\w+)\?:\s*\{;/g, replacement: '$1?: {' },
+      { pattern: /(\w+)\?:\s*any\(/g, replacement: '$1?: (' },
+      { pattern: /(\w+):\s*any\(/g, replacement: '$1: (' },
       
-      // Fix interface extends
-      {
-        pattern: /interface\s+(\w+)\s+extends\s+(\w+)\s*\{/g,
-        replacement: 'interface $1 extends $2 {'
-      },
+      // Fix malformed type annotations
+      { pattern: /:\s*any\(([^)]+)\)\s*=>/g, replacement: ': ($1) =>' },
+      { pattern: /:\s*any\(\)\s*=>/g, replacement: ': () =>' },
+      { pattern: /:\s*any\{/g, replacement: ': {' },
+      { pattern: /:\s*any\[/g, replacement: ': [' },
       
-      // Fix type aliases
-      {
-        pattern: /type\s+(\w+)\s*=\s*([^;]+);/g,
-        replacement: 'type $1 = $2;'
-      }
+      // Fix malformed generic types
+      { pattern: /Array<([^>]+)>/g, replacement: 'Array<$1>' },
+      { pattern: /Partial<([^>]+)>/g, replacement: 'Partial<$1>' }
     ];
 
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
-    
-    for (const file of tsFiles.slice(0, 30)) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        for (const fix of interfaceFixes) {
-          const newContent = content.replace(fix.pattern, fix.replacement);
-          if (newContent !== content) {
-            content = newContent;
-            fileChanged = true;
-            this.errorsFixed++;
-          }
-        }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
-        }
-      } catch (err) {
-        // Skip files that can't be read
-      }
-    }
+    await this.applyFixes(interfaceFixes, '.ts');
+    await this.applyFixes(interfaceFixes, '.tsx');
   }
 
-  async fixFunctionParameters() {
-    console.log('⚙️  Fixing function parameter issues...');
+  async fixMalformedFunctions() {
+    this.log('🔧 Fixing malformed function declarations...', 'info');
     
     const functionFixes = [
-      // Fix parameter types
-      {
-        pattern: /function\s+(\w+)\s*\(([^)]*)\)/g,
-        replacement: (match, funcName, params) => {
-          const fixedParams = params.split(',').map(param => {
-            const trimmed = param.trim();
-            if (trimmed.includes(':')) return trimmed;
-            if (trimmed.includes('...')) return trimmed + ': unknown[]';
-            if (trimmed) return trimmed + ': unknown';
-            return trimmed;
-          }).join(', ');
-          return `function ${funcName}(${fixedParams})`;
-        }
-      },
+      // Fix malformed function parameters
+      { pattern: /\(\s*any([^)]+)\s*\)/g, replacement: '($1)' },
+      { pattern: /\(\s*any\s*\)/g, replacement: '()' },
       
-      // Fix arrow function parameters
-      {
-        pattern: /\(([^)]*)\)\s*=>/g,
-        replacement: (match, params) => {
-          const fixedParams = params.split(',').map(param => {
-            const trimmed = param.trim();
-            if (trimmed.includes(':')) return trimmed;
-            if (trimmed.includes('...')) return trimmed + ': unknown[]';
-            if (trimmed) return trimmed + ': unknown';
-            return trimmed;
-          }).join(', ');
-          return `(${fixedParams}) =>`;
-        }
-      }
+      // Fix malformed function return types
+      { pattern: /:\s*any\(([^)]+)\)\s*=>/g, replacement: ': ($1) =>' },
+      { pattern: /:\s*any\(\)\s*=>/g, replacement: ': () =>' },
+      
+      // Fix malformed arrow functions
+      { pattern: /=>\s*any\{/g, replacement: '=> {' },
+      { pattern: /=>\s*any\[/g, replacement: '=> [' },
+      { pattern: /=>\s*any\(/g, replacement: '=> (' }
     ];
 
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
-    
-    for (const file of tsFiles.slice(0, 30)) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        for (const fix of functionFixes) {
-          const newContent = content.replace(fix.pattern, fix.replacement);
-          if (newContent !== content) {
-            content = newContent;
-            fileChanged = true;
-            this.errorsFixed++;
-          }
-        }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
-        }
-      } catch (err) {
-        // Skip files that can't be read
-      }
-    }
+    await this.applyFixes(functionFixes, '.ts');
+    await this.applyFixes(functionFixes, '.tsx');
   }
 
-  async fixGenericTypes() {
-    console.log('🔀 Fixing generic type issues...');
+  async fixMalformedImports() {
+    this.log('🔧 Fixing malformed imports...', 'info');
     
-    const genericFixes = [
-      // Fix generic type parameters
-      {
-        pattern: /<T\b/g,
-        replacement: '<T extends unknown'
-      },
-      {
-        pattern: /<T\s*,\s*U\b/g,
-        replacement: '<T extends unknown, U extends unknown'
-      },
+    const importFixes = [
+      // Fix malformed lucide-react imports
+      { pattern: /from 'lucide-react\.ts';/g, replacement: "from 'lucide-react';" },
+      { pattern: /from "lucide-react\.ts";/g, replacement: 'from "lucide-react";' },
       
-      // Fix generic constraints
-      {
-        pattern: /extends\s+any\b/g,
-        replacement: 'extends unknown'
-      }
+      // Fix malformed import statements
+      { pattern: /}\s*from '([^']+)';/g, replacement: "} from '$1';" },
+      { pattern: /}\s*from "([^"]+)";/g, replacement: '} from "$1";' },
+      
+      // Fix malformed default imports
+      { pattern: /import\s+any\s+from/g, replacement: 'import from' },
+      { pattern: /import\s+any\s+\{/g, replacement: 'import {' }
     ];
 
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
-    
-    for (const file of tsFiles.slice(0, 20)) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        for (const fix of genericFixes) {
-          const newContent = content.replace(fix.pattern, fix.replacement);
-          if (newContent !== content) {
-            content = newContent;
-            fileChanged = true;
-            this.errorsFixed++;
-          }
-        }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
-        }
-      } catch (err) {
-        // Skip files that can't be read
-      }
-    }
+    await this.applyFixes(importFixes, '.ts');
+    await this.applyFixes(importFixes, '.tsx');
   }
 
-  async fixReactComponentIssues() {
-    console.log('⚛️  Fixing React component issues...');
+  async fixMalformedComponents() {
+    this.log('🔧 Fixing malformed component structures...', 'info');
     
-    const reactFixes = [
-      // Fix React.FC type
-      {
-        pattern: /React\.FC<([^>]*)>/g,
-        replacement: 'React.FC<$1>'
-      },
+    const componentFixes = [
+      // Fix malformed component declarations
+      { pattern: /const\s+(\w+):\s*any\s*React\.FC/g, replacement: 'const $1: React.FC' },
+      { pattern: /const\s+(\w+):\s*any\s*FC/g, replacement: 'const $1: FC' },
       
-      // Fix component props interface
-      {
-        pattern: /interface\s+(\w+)Props\s*\{/g,
-        replacement: 'interface $1Props {'
-      },
+      // Fix malformed component props
+      { pattern: /interface\s+(\w+)Props\s*\{/g, replacement: 'interface $1Props {' },
+      { pattern: /type\s+(\w+)Props\s*=/g, replacement: 'type $1Props =' },
       
-      // Fix useState type
-      {
-        pattern: /useState<([^>]*)>\(/g,
-        replacement: 'useState<$1>('
-      },
-      
-      // Fix useEffect dependency array
-      {
-        pattern: /useEffect\([^,]*,\s*\[\s*\]\s*\)/g,
-        replacement: 'useEffect(() => {}, [])'
-      }
+      // Fix malformed component returns
+      { pattern: /return\s*\(\s*any\{/g, replacement: 'return ({' },
+      { pattern: /return\s*\(\s*any\[/g, replacement: 'return ([' }
     ];
 
-    const tsxFiles = this.findFilesByExtension('.tsx');
-    
-    for (const file of tsxFiles.slice(0, 25)) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        for (const fix of reactFixes) {
-          const newContent = content.replace(fix.pattern, fix.replacement);
-          if (newContent !== content) {
-            content = newContent;
-            fileChanged = true;
-            this.errorsFixed++;
-          }
-        }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
-        }
-      } catch (err) {
-        // Skip files that can't be read
-      }
-    }
+    await this.applyFixes(componentFixes, '.tsx');
   }
 
-  async fixImportExportTypes() {
-    console.log('📦 Fixing import/export type issues...');
+  async applyFixes(fixes, fileExtension) {
+    const files = this.findFiles(fileExtension);
     
-    const importExportFixes = [
-      // Fix type imports
-      {
-        pattern: /import\s+type\s+\{([^}]+)\}\s+from\s+['"]([^'"]+)['"]/g,
-        replacement: "import type { $1 } from '$2'"
-      },
-      
-      // Fix default exports with types
-      {
-        pattern: /export\s+default\s+(\w+):\s*React\.FC/g,
-        replacement: 'export default $1: React.FC'
-      }
-    ];
-
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
-    
-    for (const file of tsFiles.slice(0, 20)) {
+    files.forEach(filePath => {
       try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
+        let content = fs.readFileSync(filePath, 'utf8');
+        let originalContent = content;
+        let fileFixed = false;
         
-        for (const fix of importExportFixes) {
+        fixes.forEach(fix => {
           const newContent = content.replace(fix.pattern, fix.replacement);
           if (newContent !== content) {
             content = newContent;
-            fileChanged = true;
-            this.errorsFixed++;
+            fileFixed = true;
           }
-        }
+        });
         
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
+        if (fileFixed) {
+          fs.writeFileSync(filePath, content, 'utf8');
+          this.errorsFixed.push(`Fixed syntax in ${path.relative(this.projectRoot, filePath)}`);
+          this.fixesApplied++;
         }
-      } catch (err) {
-        // Skip files that can't be read
+      } catch (error) {
+        this.warnings.push(`Could not process ${filePath}: ${error.message}`);
       }
+    });
+  }
+
+  findFiles(extension) {
+    const files = [];
+    
+    function walkDir(dir) {
+      const items = fs.readdirSync(dir);
+      items.forEach(item => {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (stat.isFile() && item.endsWith(extension)) {
+          files.push(fullPath);
+        }
+      });
     }
+    
+    walkDir(this.projectRoot);
+    return files;
   }
 
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      fixesApplied: this.fixesApplied,
       errorsFixed: this.errorsFixed,
-      filesProcessed: this.filesProcessed,
-      executionTime: Date.now() - this.startTime,
-      status: 'completed'
+      warnings: this.warnings,
+      status: this.fixesApplied > 0 ? 'success' : 'no-fixes-needed'
     };
     
-    const reportFile = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    console.log(`📊 Report generated: ${reportFile}`);
-  }
-
-  async generateErrorReport(error) {
-    const errorReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      status: 'failed'
-    };
-    
-    const reportFile = path.join(this.reportsDir, `typescript-fix-error-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(errorReport, null, 2));
-    
-    console.log(`❌ Error report generated: ${reportFile}`);
-  }
-
-  findFilesByExtension(...extensions) {
-    const files = [];
-    const walkDir = (dir) => {
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
-          walkDir(fullPath);
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
-      }
-    };
-    
-    walkDir(this.projectRoot);
-    return files;
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`📊 Report generated: ${this.reportFile}`, 'info');
   }
 }
 

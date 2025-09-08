@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle} from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react.ts';
+
 
 interface PerformanceMetrics {
   fps: number;
@@ -67,56 +66,39 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
             default:
                 return 'bg-green-500 text-white';
         }
-    };
-    const getSeverityColor = (severity) => {
-        switch (severity) {
-            case 'critical':
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-            case 'high':
-                return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300';
-            case 'medium':
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-            default:
-                return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';
-        }
-    };
-    const getTrendIcon = (trend) => {
-        switch (trend) {
-            case 'up':
-                return <TrendingUp className="w-4 h-4 text-red-500"/>;
-            case 'down':
-                return <TrendingUp className="w-4 h-4 text-green-500 rotate-180"/>;
-            default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
-    };
-    const getCategoryIcon = (category) => {
-        switch (category) {
-            case 'Processor':
-                return <Cpu className="w-5 h-5 text-blue-500"/>;
-            case 'Memory':
-                return <HardDrive className="w-5 h-5 text-green-500"/>;
-            case 'Storage':
-                return <HardDrive className="w-5 h-5 text-purple-500"/>;
-            case 'Network':
-                return <Network className="w-5 h-5 text-orange-500"/>;
-            case 'Database':
-                return <Database className="w-5 h-5 text-cyan-500"/>;
-            default:
-                return <Activity className="w-5 h-5 text-gray-500"/>;
-        }
-    };
-    const getUtilizationColor = (utilization) => {
-        if (utilization >= 80)
-            return 'text-red-600';
-        if (utilization >= 60)
-            return 'text-yellow-600';
-        return 'text-green-600';
-    };
-    if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Performance Monitor">
-        <Activity className="w-6 h-6"/>
-      </button>);
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.processingStart && entry.startTime) {
+            const fid = entry.processingStart - entry.startTime;
+            setMetrics(prev => ({ ...prev, fid }));
+          }
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        list.getEntries().forEach((entry: ) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        fcpObserver.disconnect();
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
     }
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">

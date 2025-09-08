@@ -1,26 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  HelpCircle, 
-  MessageCircle, 
-  Mail, 
-  Phone, 
-  Clock, 
-  CheckCircle, 
-  Search, 
-  FileText, 
-  Video, 
-  BookOpen, 
-  HelpCircle, 
-  Star, 
-  MapPin, 
-  Globe, 
-  Calendar,
-  Send,
-  Ticket,
-  Headphones,
-  MessageSquare,
-  VideoCall} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+
 
 const Support: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('general');
@@ -179,36 +160,283 @@ const Support: React.FC = () => {
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
-              Contact Support
-            </Link>
-            <Link
-              to="/docs"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-            >
-              View Documentation
-            </Link>
-          </div>
-        </div>
-      </section>
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Headphones className="w-10 h-10 text-white" /></div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
+                We're Here to Help
+              </h1>
+              
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Get the support you need through multiple channels. Our expert team is ready to help you succeed with Zion Tech Group services.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex items-center gap-2 text-sm text-slate-500">
+                  <Clock className="w-4 h-4" />
+                  <span>24/7 Support Available</span></div>
+                <div className="flex items-center gap-2 text-sm text-slate-500">
+                  <Users className="w-4 h-4" />
+                  <span>Expert Technical Team</span></div>
+              </div>
+            </motion.div></div>
+        </section>
 
-      {/* Contact Information Banner */}
-      <div className="bg-gradient-to-r from-blue-800 to-cyan-800 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-white">
-            <div className="flex items-center gap-4 mb-4 md:mb-0">
-              <Phone className="w-5 h-5 text-blue-300" />
-              <span className="font-semibold">+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-4 mb-4 md:mb-0">
-              <Mail className="w-5 h-5 text-blue-300" />
-              <span className="font-semibold">kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <MapPin className="w-5 h-5 text-blue-300" />
-              <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
+        {/* Support Methods */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                How Can We Help You?
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {supportMethods.map((method, index) => (
+                  <motion.div
+                    key={method.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <method.icon className="w-8 h-8 text-white" /></div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{method.name}</h3>
+                    <p className="text-slate-600 text-sm mb-4">{method.description}</p>
+                    <div className="text-xs text-slate-500 mb-4">
+                      <p>Response: {method.responseTime}</p>
+                      <p>Available: {method.availability}</p></div>
+                    <button className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                      {method.action}
+                    </button>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div></div>
+        </section>
+
+        {/* Quick Actions */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Quick Actions
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {quickActions.map((action, index) => (
+                  <motion.div
+                    key={action.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <action.icon className="w-8 h-8 text-white" /></div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{action.title}</h3>
+                    <p className="text-slate-600 text-sm mb-4">{action.description}</p>
+                    <button className="w-full py-2 px-4 border border-blue-200 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-sm font-medium">
+                      {action.action}
+                    </button>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div></div>
+        </section>
+
+        {/* Support Categories */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Support Categories
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {supportCategories.map((category, index) => (
+                  <motion.div
+                    key={category.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border-2 cursor-pointer ${
+                      selectedCategory === category.id 
+                        ? 'border-blue-500 bg-blue-50' 
+                        : 'border-slate-100 hover:border-blue-200'
+                    }`}
+                    onClick={() => setSelectedCategory(category.id)}
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <category.icon className="w-8 h-8 text-blue-600" /></div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2 text-center">{category.name}</h3>
+                    <p className="text-slate-600 text-sm mb-4 text-center">{category.description}</p>
+                    <div className="text-xs text-slate-500 text-center">
+                      <p>Response: {category.responseTime}</p>
+                      <p>Available: {category.availability}</p></div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div></div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Contact Our Support Team
+              </h2>
+              
+              <div className="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Name *</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your full name"
+                      /></div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Email *</label>
+                      <input
+                        type="email"
+                        required
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="your.email@company.com"
+                      /></div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Company</label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your comp name"
+                      /></div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Support Category *</label>
+                      <select
+                        required
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
+                        {supportCategories.map((category) => (
+                          <option key={category.id} value={category.id}>
+                            {category.name}
+                          </option>
+                        ))}
+                      </select></div>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Subject *</label>
+                    <input
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Brief description of your issue"
+                    /></div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Message *</label>
+                    <textarea
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Please provide detailed information about your issue or question..."
+                    /></div>
+                  
+                  <div className="flex justify-center">
+                    <button
+                      type="submit"
+                      className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+                    >
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </button></div>
+                </form></div>
+            </motion.div></div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Frequently Asked Questions
+              </h2>
+              
+              <div className="space-y-4">
+                {faqItems.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="bg-slate-50 rounded-lg p-6 border border-slate-200"
+                  >
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.question}</h3>
+                    <p className="text-slate-600">{item.answer}</p>
+                    <div className="mt-3">
+                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">
+                        {item.category}
+                      </span></div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div></div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-green-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Still Need Help?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Our support team is committed to helping you succeed. Don't hesitate to reach out.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+                  Contact Support
+                </button>
+                <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule a Call
+                </button>              </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
       </div>
 
       {/* Support Channels */}

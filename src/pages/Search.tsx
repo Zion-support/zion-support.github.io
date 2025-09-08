@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock} from 'lucide-react';
+
 import { useSearchParams } from 'react-router-dom';
 
 export default function SearchPage() {
@@ -205,15 +205,15 @@ export default function SearchPage() {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 500));
     
-    // Filter mock data based on search query
-    const filtered = mockSearchData.filter(item => {
-      const searchTerm = query.toLowerCase();
-      return (
-        item.title.toLowerCase().includes(searchTerm) ||
-        item.description.toLowerCase().includes(searchTerm) ||
-        item.content.toLowerCase().includes(searchTerm) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-      );
+    // Filter results based on search query and category
+    const filteredResults = mockResults.filter(result => {
+      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      
+      const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
+      
+      return matchesQuery && matchesCategory;
     });
 
     // Apply category and type filters
@@ -388,21 +388,18 @@ export default function SearchPage() {
                 </div>
               )}
 
-              {/* Popular Searches */}
-              <div className="mb-12">
-                <h3 className="text-xl font-bold text-white mb-6">Popular Searches</h3>
-                <div className="flex flex-wrap gap-3">
-                  {popularSearches.map((search, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleQuickSearch(search)}
-                      className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-400 rounded-lg hover:from-green-500/30 hover:to-blue-500/30 hover:border-green-400/50 transition-all duration-200"
-                    >
-                      {search}
-                    </button>
-                  ))}
-                </div>
-              </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                      <div className="flex items-center gap-1">
+                        <MapPin className="w-4 h-4" />
+                        {result.location}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Building className="w-4 h-4" />
+                        {result.comp}
+                      </div>
+                      <div className="text-zion-cyan font-medium">{result.price}</div>
+                    </div>
 
               {/* Search Categories */}
               <div>

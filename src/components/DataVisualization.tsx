@@ -1,20 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  Activity, 
-  Users, 
-  DollarSign,
-  Calendar,
-  Target,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Eye,
-  Download,
-  Share2} from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface ChartData {
   labels: string[];
@@ -270,7 +256,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             ].map((chartType) => (
               <button
                 key={chartType.id}
-                onClick={() => setActiveChart(chartType.id as any)}
+                onClick={() => setActiveChart(chartType.id as )}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeChart === chartType.id
                     ? 'bg-zion-cyan text-white'

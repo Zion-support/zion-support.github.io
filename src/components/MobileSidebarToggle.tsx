@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight} from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
+import { Link, useLocation  } from 'react-router-dom.ts';
 
 export const MobileSidebarToggle: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -232,9 +232,9 @@ export const MobileSidebarToggle: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-          </>
+          </
         )}
-      </AnimatePresence>
-    </>
+      ></AnimatePresence>
+    </
   );
-};
+};>

@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Building, 
-  CheckCircle, 
-  ArrowRight, 
-  Search, 
-  Filter,
-  TrendingUp,
-  Users,
-  DollarSign,
-  Clock,
-  MapPin} from 'lucide-react';
+
 
 const CaseStudies: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -275,30 +265,108 @@ const CaseStudies: React.FC = () => {
         </div>
       </section>
 
-      {/* Case Studies Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCaseStudies.map((study, index) => (
-              <motion.div
-                key={study.id}
+        {/* Featured Case Studies */}
+        {filteredCaseStudies.filter(cs => cs.featured).length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Success Stories</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredCaseStudies.filter(cs => cs.featured).map((cs, index) => (
+                <motion.article
+                  key={cs.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
+                        Featured
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+                        {industries.find(i => i.id === cs.industry)?.name}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{cs.title}</h3>
+                    <p className="text-gray-600 mb-3 font-medium">{cs.comp}</p>
+                    <p className="text-gray-600 mb-4">{cs.challenge}</p>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <span className="flex items-center">
+                        <Clock className="h-4 w-4 mr-1" />
+                        {cs.duration}
+                      </span>
+                      <span className="flex items-center">
+                        <Users className="h-4 w-4 mr-1" />
+                        {cs.teamSize}
+                      </span>
+                    </div>
+                    <a
+                      href={`/case-studies/${cs.id}`}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      Read Full Case Study
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* All Case Studies */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {filteredCaseStudies.length} Case Studies Found
+          </h2>
+          <div className="space-y-6">
+            {filteredCaseStudies.filter(cs => !cs.featured).map((cs, index) => (
+              <motion.article
+                key={cs.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
               >
-                {/* Category Badge */}
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-medium rounded-full">
-                    {study.category}
-                  </span>
-                </div>
-
-                {/* Company Info */}
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-3">
-                    <Building className="w-6 h-6 text-white" />
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div className="lg:col-span-2">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                        {industries.find(i => i.id === cs.industry)?.name}
+                      </span>
+                      <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                        {services.find(s => s.id === cs.service)?.name}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{cs.title}</h3>
+                    <p className="text-gray-600 mb-2 font-medium">{cs.comp}</p>
+                    <p className="text-gray-600 mb-3">{cs.challenge}</p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                      <span className="flex items-center">
+                        <Clock className="h-4 w-4 mr-1" />
+                        {cs.duration}
+                      </span>
+                      <span className="flex items-center">
+                        <Users className="h-4 w-4 mr-1" />
+                        {cs.teamSize}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                        <Bookmark className="h-4 w-4" />
+                      </button>
+                      <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                        <Share2 className="h-4 w-4" />
+                      </button>
+                      <a
+                        href={`/case-studies/${cs.id}`}
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                      >
+                        Read Full Case Study
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">{study.company}</h3>

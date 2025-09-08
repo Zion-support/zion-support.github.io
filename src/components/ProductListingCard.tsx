@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react.ts';
+import { useNavigate, Link  } from 'react-router-dom.ts';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { ProductListing  } from '@/types/listings';
+
+import { RatingStars  } from '@/components/RatingStars';
+import { FavoriteButton  } from '@/components/FavoriteButton';
+import { useDispatch  } from 'react-redux.ts';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 // Regular img tag will be used instead of next/image
@@ -22,12 +22,7 @@ interface ProductListingCardProps {
   detailBasePath?: string;
 }
 
-export function ProductListingCard({
-  listing,
-  view = 'grid',
-  onRequestQuote,
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) {
+export function ProductListingCard(...args: []):  {
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -180,11 +175,11 @@ export function ProductListingCard({
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                   Loading...
-                </>
+                </
               ) : (
                 "Add to Cart"
               )}
-            </Button>
+            ></Button>
             {onRequestQuote && (
               <Button 
                 size="sm"

@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Check, Star, Brain, Cpu, Database, Network, Shield, Zap, 
-  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
-  ChevronDown, ChevronUp, Search, Filter, Grid, List} from 'lucide-react';
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
 
@@ -233,19 +230,147 @@ export default function ComprehensivePricing2027() {
                   </div>
                 </div>
 
-                {/* Features */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
-                  <div className="space-y-2">
-                    {service.features.slice(0, 5).map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm text-gray-400">
-                        <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 5 && (
-                      <div className="text-sm text-cyan-400 mt-2">
-                        +{service.features.length - 5} more features
+                        {/* Stats */}
+                        <div className="flex items-center justify-between pt-4 border-t border-zion-purple/20">
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-1">
+                              <Brain className="w-4 h-4 text-zion-cyan" />
+                              <span className="text-sm text-gray-300">{service.aiScore}%</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 text-yellow-500" />
+                              <span className="text-sm text-gray-300">{service.rating}</span>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-xs text-zion-slate-light">{service.availability}</div>
+                          </div>
+                        </div>
+
+                        {/* Expand/Collapse Button */}
+                        <button className="w-full mt-4 p-2 text-zion-cyan hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-colors flex items-center justify-center gap-2">
+                          {expandedService === service.id ? (
+                            <>
+                              <ChevronUp className="w-4 h-4" />
+                              Show Less
+                            </
+                          ) : (
+                            ><>
+                              <ChevronDown className="w-4 h-4" />
+                              View Details
+                            </
+                          )}
+                        ></button>
+
+                        {/* Expanded Content */}
+                        <AnimatePresence>
+                          {expandedService === service.id && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              className="mt-4 pt-4 border-t border-zion-purple/20"
+                            >
+                              {/* Features */}
+                              <div className="mb-4">
+                                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                                <ul className="space-y-1">
+                                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                                    <li key={featureIndex} className="flex items-center gap-2 text-xs text-gray-300">
+                                      <Check className="w-3 h-3 text-green-500 flex-shrink-0" />
+                                      {feature}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+
+                              {/* Benefits */}
+                              <div className="mb-4">
+                                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                                <ul className="space-y-1">
+                                  {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                                    <li key={benefitIndex} className="flex items-center gap-2 text-xs text-gray-300">
+                                      <Zap className="w-3 h-3 text-yellow-500 flex-shrink-0" />
+                                      {benefit}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+
+                              {/* CTA Button */}
+                              <button 
+                                onClick={() => window.open(service.website, '_blank')}
+                                className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+                              >
+                                Get Started
+                              </button>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    ) : (
+                      <div className="flex gap-6">
+                        {/* Service Image */}
+                        <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
+                          <img 
+                            src={service.images[0]} 
+                            alt={service.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-2 right-2 bg-zion-cyan text-black px-2 py-1 rounded-full text-xs font-semibold">
+                            {service.category}
+                          </div>
+                        </div>
+
+                        {/* Service Content */}
+                        <div className="flex-1 space-y-3">
+                          <div className="flex items-start justify-between">
+                            <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                            <div className="text-right">
+                              <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
+                                ${service.price}
+                              </div>
+                              <div className="text-xs text-zion-slate-light">per {service.pricingModel}</div>
+                            </div>
+                          </div>
+                          
+                          <p className="text-gray-300 text-sm">{service.description}</p>
+                          
+                          <div className="flex items-center gap-4 text-sm text-gray-400">
+                            <div className="flex items-center gap-1">
+                              <Brain className="w-4 h-4 text-zion-cyan" />
+                              AI Score: {service.aiScore}%
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 text-yellow-500" />
+                              Rating: {service.rating}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Target className="w-4 h-4 text-green-500" />
+                              {getPriceTier(service.price)}
+                            </div>
+                          </div>
+
+                          <div className="flex items-center justify-between">
+                            <div className="flex flex-wrap gap-2">
+                              {service.tags.slice(0, 4).map((tag, tagIndex) => (
+                                <span 
+                                  key={tagIndex}
+                                  className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            
+                            <button 
+                              onClick={() => window.open(service.website, '_blank')}
+                              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
+                            >
+                              Get Started
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>

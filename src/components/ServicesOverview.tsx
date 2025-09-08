@@ -24,10 +24,12 @@ import {
   MapPin,
   ArrowRight,
   Star,
-  CheckCircle} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from '@/data/innovativeMicroSaasServices2025';
+  CheckCircle,
+  Clock
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
-export function ServicesOverview() {
+export function ServicesOverview(...args: []):  {
   const serviceCategories = [
     {
       id: 'ai-analytics',

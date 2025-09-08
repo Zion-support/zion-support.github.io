@@ -1,4 +1,5 @@
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Search, TrendingUp, Zap, Target, Clock, Briefcase} from 'lucide-react';
+import React from 'react';
+
 
 export default function AIHRTalentAcquisition() {
   const features = [

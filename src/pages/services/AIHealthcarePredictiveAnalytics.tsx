@@ -1,45 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart,
-  Activity,
-  Stethoscope,
-  Pill,
-  Microscope,
-  Shield,
-  Activity as Heartbeat,
-  FileText,
-  UserCheck,
-  Clipboard} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcarePredictiveAnalytics() {
@@ -569,7 +529,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our healthcare experts are here to help you get started and answer any questions
+              Our healthcare experts are here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

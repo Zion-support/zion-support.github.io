@@ -1,28 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import {
-  PenTool,
-  Brain,
-  Target,
-  Zap,
-  BarChart3,
-  Clock,
-  Award,
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  CheckCircle,
-  Eye,
-  Users,
-  FileText,
-  Shield,
-  TrendingUp,
-  Search,
-  Download,
-  Upload,
-  MessageSquare,
-  Image} from 'lucide-react';
+
 
 export default function AIContentCreation() {
   const features = [

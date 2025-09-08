@@ -1,27 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Clock, 
-  FileText,
-  Video,
-  Download,
-  ExternalLink,
-  ChevronDown,
-  ChevronRight,
-  HelpCircle,
-  Settings,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Lock,
-  Users,
-  Globe} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
 import { SEO } from '../components/SEO';
 
 export default function Help() {
@@ -468,7 +448,7 @@ export default function Help() {
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Our support team is ready to assist you with any questions or issues you may have.
+              Our support team is ready to assist you with  questions or issues you may have.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

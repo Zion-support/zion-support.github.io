@@ -1,20 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
-  MessageCircle, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Send, 
-  Heart,
-  Award,
-  TrendingUp,
-  Users,
-  Clock,
-  Flag,
-  Share2,
-  Download,
-  Filter} from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface Feedback {
   id: string;

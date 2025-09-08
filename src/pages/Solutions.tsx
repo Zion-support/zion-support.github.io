@@ -1,38 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Heart, 
-  TrendingUp, 
-  Scale, 
-  Atom, 
-  Factory, 
-  ShoppingCart, 
-  Shield, 
-  Leaf, 
-  Rocket, 
-  GraduationCap,
-  Building,
-  Car,
-  City,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Sparkles,
-  Users,
-  Globe,
-  Cpu,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3,
-  Target,
-  Zap,
-  Brain,
-  Eye,
-  Network,
-  Clock,
-  DollarSign,
-  Search} from 'lucide-react';
+
 
 const solutionCategories = [
   {
@@ -324,7 +292,6 @@ export default function Solutions() {
           </motion.div>
         </div>
       </div>
-    </>);
-};
-
-export default Solutions;
+    </
+  );
+}>

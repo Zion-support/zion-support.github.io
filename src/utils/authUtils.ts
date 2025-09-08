@@ -1,8 +1,8 @@
 export const cleanupAuthState = () => {
-  // Clean up any stored authentication state
+  // Clean up  stored authentication state
   try {
     if (typeof window !== 'undefined') {
-      // Clear any stored tokens or user data
+      // Clear  stored tokens or user data
       localStorage.removeItem('auth');
       sessionStorage.removeItem('auth');
     }
@@ -40,7 +40,7 @@ export const getAuthToken = (): string | null => {
   }
 };
 
-export const getUserData = (): any => {
+export const getUserData = ():  => {
   try {
     if (typeof window !== 'undefined') {
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');

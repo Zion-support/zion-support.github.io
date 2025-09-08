@@ -1,36 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Keyboard, 
-  MousePointer, 
-  Sun, 
-  Moon, 
-  Contrast, 
-  Type, 
-  Move, 
-  Settings, 
-  X, 
-  CheckCircle, 
-  AlertTriangle, 
-  Info,
-  Accessibility,
-  Braille,
-  Headphones,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Zap,
-  Shield,
-  Target,
-  Award,
-  BarChart3,
-  Palette,
-  RotateCcw,
-  Save} from 'lucide-react';
+
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -225,14 +195,14 @@ export default function EnhancedAccessibilityEnhancer() {
   // Initialize voice recognition
   useEffect(() => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      const SpeechRecognition = (window as ).SpeechRecognition || (window as ).webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
       
       recognition.continuous = true;
       recognition.interimResults = true;
       recognition.lang = 'en-US';
 
-      recognition.onresult = (event: any) => {
+      recognition.onresult = (event: ) => {
         let finalTranscript = '';
         for (let i = event.resultIndex; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
@@ -245,8 +215,8 @@ export default function EnhancedAccessibilityEnhancer() {
         }
       };
 
-      recognition.onerror = (event: any) => {
-        // console.error('Speech recognition error:', event.error);
+      recognition.onerror = (event: ) => {
+        console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
 
@@ -796,6 +766,35 @@ export default function EnhancedAccessibilityEnhancer() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+
+      {/* Global Accessibility Styles */}
+      <style jsx global>{`
+        .high-contrast {
+          --zion-bg: #000000 !important;
+          --zion-text: #ffffff !important;
+          --zion-primary: #ffff00 !important;
+          --zion-secondary: #00ffff !important;
+        }
+        
+        .enhanced-focus *:focus {
+          outline: 3px solid #22ddd2 !important;
+          outline-offset: 2px !important;
+        }
+        
+        .keyboard-navigation *:focus {
+          outline: 2px solid #22ddd2 !important;
+        }
+        
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        
+        [data-voice-control="true"] {
+          cursor: pointer;
+        }
+      `}</style>
+    </
   );
-}
+}>

@@ -1,24 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Heart, 
-  Rocket, 
-  Sparkles,
-  BarChart3,
-  Network,
-  Globe,
-  Users,
-  FileText,
-  Phone,
-  Mail,
-  MapPin,
-  Sun} from 'lucide-react';
+
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);

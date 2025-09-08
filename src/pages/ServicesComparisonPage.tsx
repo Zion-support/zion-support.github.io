@@ -224,42 +224,7 @@ export default function ServicesComparisonPage() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-zion-blue mb-4">Need Help Choosing?</h2>
-          <p className="text-zion-slate text-lg mb-8 max-w-2xl mx-auto">
-            Our experts are here to help you find the perfect solution for your business needs and budget.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
-              <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
-              <Mail className="w-5 h-5 mr-2"/>
-              Email kleber@ziontechgroup.com
-            </Button>
-          </div>
-          
-          <div className="text-zion-slate">
-            <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p className="mt-2">
-              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1">
-                ziontechgroup.com <ExternalLink className="w-4 h-4"/>
-              </a>
-              <a
-                href="/request-quote"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                Request Quote
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>);
-}
+      </div>
+    </
+  );
+}>

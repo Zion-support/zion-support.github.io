@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Rocket, MessageCircle, Calendar} from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+
 
 const CTASection: React.FC = () => {
   const features = [

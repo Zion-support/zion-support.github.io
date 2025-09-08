@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle} from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+
 
 interface Service {
   category: string;

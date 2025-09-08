@@ -1,15 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Loader2, 
-  CheckCircle, 
-  AlertCircle, 
-  Zap, 
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network} from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
+
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -17,11 +10,7 @@ interface LoadingSpinnerProps {
   fullScreen?: boolean;
 }
 
-export function LoadingSpinner({ 
-  size = 'md', 
-  text = 'Loading...', 
-  fullScreen = false 
-}: LoadingSpinnerProps) {
+export function LoadingSpinner(...args: []):  {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-16 h-16',
@@ -106,7 +95,7 @@ interface PageLoaderProps {
   pageName?: string;
 }
 
-export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
+export function PageLoader(...args: []):  {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
       <div className="text-center">
@@ -187,7 +176,7 @@ interface SkeletonLoaderProps {
   className?: string;
 }
 
-export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
+export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (

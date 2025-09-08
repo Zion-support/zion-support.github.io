@@ -1,32 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  FileText, 
-  Target, 
-  Zap, 
-  BarChart3, 
-  Clock, 
-  Award, 
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  CheckCircle,
-  Eye,
-  Users,
-  Lock,
-  TrendingUp,
-  Search,
-  Download,
-  Upload,
-  Calendar,
-  AlertTriangle,
-  Trash,
-  ShoppingCart,
-  DollarSign,
-  Heart,
-  GraduationCap} from 'lucide-react';
+
 
 export default function DSRPortal() {
   const features = [

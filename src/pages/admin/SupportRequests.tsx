@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Search} from "lucide-react";
+
 import { SEO } from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
@@ -194,7 +194,7 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: any) => setSearchQuery(e.target.value)}
+                  onChange={(e: ) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
@@ -324,5 +324,8 @@ export default function SupportRequests() {
             </div>
           </TabsContent>
         </Tabs>
-      </div>);
+      </div>
+    </
+  );
 }
+>

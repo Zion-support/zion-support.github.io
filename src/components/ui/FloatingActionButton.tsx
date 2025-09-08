@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, MessageCircle, Phone, Mail, ArrowUp} from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
+
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
 
 interface FloatingActionButtonProps {
   className?: string;

@@ -1,49 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Server, 
-  Rocket, 
-  Zap, 
-  Shield, 
-  Users, 
-  TrendingUp, 
-  BarChart3, 
-  Workflow, 
-  Database, 
-  Cloud, 
-  Lock, 
-  Target, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Leaf,
-  Search,
-  FileText,
-  Scale,
-  Building2,
-  Factory,
-  Heart,
-  Bank,
-  Store,
-  Truck,
-  Flask,
-  Microscope,
-  Satellite,
-  Atom,
-  Network,
-  Wifi,
-  Cpu,
-  Monitor,
-  Smartphone,
-  Activity,
-  Settings,
-  Palette,
-  Clock,
-  CheckCircle} from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+
 import { SEO } from '../components/SEO';
 import { 
   revolutionaryMicroSaasServices2026,
@@ -401,8 +358,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </
   );
-}
+};
+export default ComprehensiveServicesShowcase2026;>

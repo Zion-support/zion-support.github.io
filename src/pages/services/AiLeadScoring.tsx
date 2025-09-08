@@ -1,7 +1,7 @@
 // removed duplicate old section
 
 import { SEO } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database} from 'lucide-react';
+
 
 const AiLeadScoring: React.FC = () => {
   return (

@@ -1,30 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Calculator, 
-  Check, 
-  X, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Cpu, 
-  ShoppingCart,
-  MessageCircle,
-  Users,
-  TrendingUp,
-  Target,
-  Award,
-  Clock,
-  DollarSign,
-  BarChart3,
-  Rocket,
-  Leaf,
-  Lock,
-  Heart,
-  Globe,
-  Atom} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 export default function PricingGuide() {
@@ -126,13 +102,33 @@ export default function PricingGuide() {
                 <div className="mx-auto p-3 rounded-full bg-green-500/20 text-green-400 mb-4">
                   <TrendingUp className="w-8 h-8"/>
                 </div>
-                <CardTitle className="text-white">Cost Savings</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold text-green-400 mb-2">17-33%</p>
-                <p className="text-zion-slate-light">Below market average across all service categories</p>
-              </CardContent>
-            </Card>
+                
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included:</h4>
+                  {plan.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-slate-300">
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                  
+                  {plan.notIncluded.length > 0 && (
+                    <>
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included:</h4>
+                      {plan.notIncluded.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-slate-500">
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </
+                  )}
+                ></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
             <Card className="bg-white/5 border-zion-blue-light text-center">
               <CardHeader>

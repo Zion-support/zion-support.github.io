@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from 'lucide-react';
+
 import { useAccessibility } from '../hooks/useAccessibility';
 interface AccessibilityControlsProps {
   className?: string;

@@ -1,36 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Search, 
-  BookOpen, 
-  Video, 
-  FileText, 
-  MessageCircle, 
-  Mail, 
-  Phone,
-  Clock,
-  Users,
-  Shield,
-  Cloud,
-  Brain,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Download,
-  Play,
-  Star,
-  TrendingUp,
-  Award,
-  Rocket,
-  Leaf,
-  Satellite,
-  Cpu,
-  Truck,
-  BarChart3,
-  Calendar,
-  MapPin} from 'lucide-react';
+
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -191,8 +162,9 @@ export const HelpCenter: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </
   );
 }
 
 export default HelpCenter;
+>

@@ -1,18 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  CheckCircle, 
-  AlertTriangle, 
-  Info, 
-  X, 
-  Bell, 
-  Settings,
-  Volume2,
-  VolumeX,
-  Zap,
-  Star,
-  MessageSquare,
-  Shield} from 'lucide-react';
+import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 
@@ -24,7 +12,7 @@ export interface Notification {
   duration?: number;
   timestamp: Date;
   read: boolean;
-  action?: {
+action?: {
     label: string;
     onClick: () => void;
   };
@@ -231,9 +219,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Expose addNotification method globally for external use
   useEffect(() => {
-    (window as any).addNotification = addNotification;
+    (window as ).addNotification = addNotification;
     return () => {
-      delete (window as any).addNotification;
+      delete (window as ).addNotification;
     };
   }, [addNotification]);
 
@@ -449,15 +437,15 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </
   );
 };
 
 // Hook for using notifications in components
 export const useNotifications = () => {
-  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification(notification);
+  const addNotification = useCallback((notification: anyOmit><Notification, 'id' | 'timestamp' | 'read'>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification(notification);
     }
   }, []);
 
@@ -466,9 +454,9 @@ export const useNotifications = () => {
 
 // Utility functions for common notification types
 export const notificationUtils = {
-  success: (title: string, message: string, options?: Partial<Notification>) => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
+  success: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification({
         type: 'success',
         title,
         message,
@@ -478,9 +466,9 @@ export const notificationUtils = {
     }
   },
 
-  warning: (title: string, message: string, options?: Partial<Notification>) => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification({
         type: 'warning',
         title,
         message,
@@ -490,9 +478,9 @@ export const notificationUtils = {
     }
   },
 
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
+  error: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification({
         type: 'error',
         title,
         message,
@@ -502,9 +490,9 @@ export const notificationUtils = {
     }
   },
 
-  info: (title: string, message: string, options?: Partial<Notification>) => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
+  info: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification({
         type: 'info',
         title,
         message,
@@ -514,9 +502,9 @@ export const notificationUtils = {
     }
   },
 
-  achievement: (title: string, message: string, options?: Partial<Notification>) => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
+  achievement: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification({
         type: 'achievement',
         title,
         message,

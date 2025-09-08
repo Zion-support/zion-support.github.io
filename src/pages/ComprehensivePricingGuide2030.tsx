@@ -1,32 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Check, 
-  Star, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Database, 
-  Cpu, 
-  Globe, 
-  Rocket,
-  TrendingUp,
-  Users,
-  Lock,
-  BarChart3,
-  Network,
-  Server,
-  Code,
-  ShieldCheck,
-  Clock,
-  DollarSign,
-  Zap,
-  Target,
-  ArrowRight} from 'lucide-react';
-import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
+import { Link } from 'react-router-dom';
+
+import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
+import { SEO } from '@/components/SEO';
 
 export default function ComprehensivePricingGuide2030() {
   const [selectedCategory, setSelectedCategory] = useState('all');

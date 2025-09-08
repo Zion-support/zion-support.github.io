@@ -1,52 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  ArrowRight,
-  PanelLeft,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  Satellite,
-  FileText,
-  Linkedin,
-  Twitter,
-  Github,
-  Facebook,
-  Instagram} from 'lucide-react';
+
 
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
@@ -86,7 +40,7 @@ export function EnhancedFooter() {
       ]
     },
     {
-      title: 'Company',
+      title: 'Comp',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Team', href: '/team', icon: Award },
@@ -138,7 +92,7 @@ export function EnhancedFooter() {
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">

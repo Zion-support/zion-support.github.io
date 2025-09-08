@@ -1,5 +1,5 @@
 import { SEO } from '@/components/SEO';
-import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Share2} from 'lucide-react';
+
 
 export default function AIMarketingAutomation() {
   const features = [

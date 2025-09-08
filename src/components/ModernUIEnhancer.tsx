@@ -1,13 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { 
-  Sparkles, 
-  Zap, 
-  Star, 
-  Palette, 
-  Eye, 
-  Layers,
-  Settings} from 'lucide-react';
+import React, { useEffect, useState, useRef } from 'react.ts';
+import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
+
 
 interface UISettings {
   glassmorphism: boolean;
@@ -348,20 +341,48 @@ export const ModernUIEnhancer: React.FC = () => {
           </motion.div>)}
       </AnimatePresence>
 
-      {/* Background Particles */}
-      {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">
-          {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial={{
-                    x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
-                }} animate={{
-                    y: [0, -100, 0],
-                    opacity: [0.2, 0.5, 0.2],
-                }} transition={{
-                    duration: Math.random() * 10 + 10,
-                    repeat: Infinity,
-                    ease: "linear",
-                }}/>))}
-        </div>)}
-    </>);
-};
-export default ModernUIEnhancer;
+      {/* Floating Particles */}
+      {settings.particleEffects && (
+        <div className="fixed inset-0 pointer-events-none z-40">
+          {particles.map((particle) => (
+            <motion.div
+              key={particle.id}
+              className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
+              style={{
+                left: particle.x,
+                top: particle.y,
+              }}
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.6, 1, 0.6],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Floating UI Elements */}
+      {settings.depthLayers && (
+        <div className="fixed top-20 right-20 pointer-events-none z-30">
+          <motion.div
+            className="w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 floating-element"
+            animate={{
+              scale: [1, 1.2, 1],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </div>
+      )}
+    </
+  );
+};>

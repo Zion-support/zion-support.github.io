@@ -1,17 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Accessibility as AccessibilityIcon, 
-  Type, 
-  Eye, 
-  Volume2, 
-  Keyboard, 
-  X,
-  Plus,
-  Minus,
-  Contrast,
-  Sun,
-  Moon} from 'lucide-react';
+
 
 interface AccessibilitySettings {
   fontSize: number;
@@ -97,7 +86,7 @@ export function Accessibility() {
     }
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (key: keyof AccessibilitySettings, value: ) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
@@ -323,6 +312,6 @@ export function Accessibility() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </
   );
-}
+}>

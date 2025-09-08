@@ -1,27 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Check, 
-  Star, 
-  TrendingUp, 
-  Shield, 
-  Zap,
-  Brain,
-  Rocket,
-  Heart,
-  Crown,
-  DollarSign,
-  Clock,
-  Users,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Zap,
-  Shield,
-  Cpu} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_SERVICES_2026, SERVICE_STATISTICS_2026 } from '../data/innovativeServices2026';
 
@@ -463,57 +442,10 @@ export default function ComprehensivePricingGuide2026() {
               </ul>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Need Custom Pricing?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact our sales team for personalized quotes and enterprise solutions
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center gap-3 text-white">
-                <Phone className="w-6 h-6 text-purple-400" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 text-white">
-                <Mail className="w-6 h-6 text-purple-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 text-white">
-                <MapPin className="w-6 h-6 text-purple-400" />
-                <span>Middletown, DE 19709</span>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-8 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg"
-              >
-                Get Custom Quote
-              </Link>
-              <Link
-                to="/request-quote"
-                className="bg-white/10 text-white py-4 px-8 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg border border-white/30"
-              >
-                Request Demo
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </
   );
-}
+};
+
+export default ComprehensivePricingGuide2026;>

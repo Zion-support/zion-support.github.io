@@ -24,7 +24,7 @@ const navigation: NavItem[] = [
   },
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout(...args: []):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const location = useLocation();

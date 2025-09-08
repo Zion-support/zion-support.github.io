@@ -4,19 +4,7 @@ interface AlertProps {
   variant?: 'default' | 'destructive' | 'success' | 'warning';
 }
 
-interface AlertDescriptionProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const variantStyles = {
-  default: 'bg-blue-50 border-blue-200 text-blue-800',
-  destructive: 'bg-red-50 border-red-200 text-red-800',
-  success: 'bg-green-50 border-green-200 text-green-800',
-  warning: 'bg-yellow-50 border-yellow-200 text-yellow-800'
-};
-
-export const Alert: React.FC<AlertProps> = ({ children, className = '', variant = 'default' }) => {
+export function Alert(...args: []):  {
   return (
     <div className={`border rounded-lg p-4 ${variantStyles[variant]} ${className}`}>
       {children}
@@ -24,7 +12,14 @@ export const Alert: React.FC<AlertProps> = ({ children, className = '', variant 
   );
 };
 
-export const AlertDescription: React.FC<AlertDescriptionProps> = ({ children, className = '' }) => {
+interface AlertDescriptionProps extends React.PropsWithChildren<{}> {
+
+  children: React.ReactNode;
+  className?: string;
+
+}
+
+export function AlertDescription(...args: []):  {
   return (
     <div className={`text-sm ${className}`}>
       {children}

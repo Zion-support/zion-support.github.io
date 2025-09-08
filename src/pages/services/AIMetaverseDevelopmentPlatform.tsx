@@ -1,4 +1,5 @@
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye} from 'lucide-react';
+import React from 'react';
+
 import { SEO } from '../../components/SEO';
 
 export default function AIMetaverseDevelopmentPlatform() {
@@ -307,6 +308,6 @@ export default function AIMetaverseDevelopmentPlatform() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

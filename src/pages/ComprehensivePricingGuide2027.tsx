@@ -1,61 +1,10 @@
 import { motion } from 'framer-motion';
-import {
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Brain,
-  Globe,
-  Cpu,
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Users,
-  Target,
-  Award,
-  Sparkles,
-  Rocket,
-  BarChart3,
-  MessageSquare,
-  Mail,
-  Database,
-  Network,
-  Cloud,
-  Smartphone,
-  Palette,
-  Leaf,
-  Code,
-  Wallet,
-  Box,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Phone,
-  Mail as MailIcon,
-  MapPin as MapPinIcon,
-  DollarSign as DollarSignIcon,
-  Star as StarIcon,
-  Award as AwardIcon,
-  Rocket as RocketIcon,
-  Lightbulb as LightbulbIcon,
-  Handshake as HandshakeIcon,
-  Target as TargetIcon2,
-  Users2 as Users2Icon,
-  Briefcase as BriefcaseIcon,
-  Building as BuildingIcon,
-  Truck as TruckIcon,
-  Leaf as LeafIcon2,
-  Gamepad2 as Gamepad2Icon2,
-  Coins as CoinsIcon2,
-  Satellite as SatelliteIcon2,
-  Atom as AtomIcon,
-  Leaf as LeafIcon3,
-  Gamepad2 as Gamepad2Icon3,
-  Coins as CoinsIcon3} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+import { SEO } from '../components/SEO';
+import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
+import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
+import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
 
 const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

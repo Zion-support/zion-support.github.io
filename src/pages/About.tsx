@@ -1,11 +1,19 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import Header from '../layout/Header';
-import Footer from '../layout/Footer';return (
-    <>
-      <SEO 
-        title="About Us - Zion Tech Group""        description="Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions."''      />'      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>"          <p className="text-lg text-gray-600 mb-6">"            Zion Tech Group is a leading technology solutions provider dedicated to helping "            organizations transform their digital infrastructure and achieve their business goals.'
+import React from 'react';
+
+const About: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-24 text-center text-white">
+        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          About Zion Tech Group
+        </h1>
+        <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
+          We are a forward-thinking technology comp dedicated to transforming businesses through innovative AI, cloud, and cybersecurity solutions.
+        </p>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            To democratize cutting-edge technology and make AI, cloud, and cybersecurity solutions accessible to businesses of all sizes.
           </p>
           <p className="text-lg text-gray-600">"            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services."          </p></div>
       </div>

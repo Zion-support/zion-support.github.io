@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const EnhancedNavigation2025: React.FC = () => {
   // Temporarily simplified to avoid build issues
@@ -34,7 +36,7 @@ const EnhancedNavigation2025: React.FC = () => {
 			]
 		},
 		{
-			name: 'Company',
+			name: 'Comp',
 			href: '/about',
 			children: [
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },

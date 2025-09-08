@@ -1,40 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  Lock, 
-  Target, 
-  Zap, 
-  BarChart3, 
-  Clock, 
-  Award, 
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  CheckCircle,
-  Eye,
-  Users,
-  AlertTriangle,
-  TrendingUp,
-  Search,
-  Download,
-  Upload,
-  Calendar,
-  Server,
-  FileText,
-  Code,
-  Monitor,
-  Network,
-  Key,
-  Fingerprint,
-  Smartphone,
-  AlertCircle,
-  CheckSquare,
-  ShoppingCart,
-  DollarSign,
-  Heart,
-  Building} from 'lucide-react';
+
 
 export default function SecurityHeadersCSP() {
   const features = [

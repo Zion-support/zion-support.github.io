@@ -1,20 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Brain,
-  Cloud,
-  Database,
-  Globe,
-  Heart,
-  Lock,
-  Rocket,
-  Search,
-  Shield,
-  Star,
-  TrendingUp,
-  Users,
-  Zap} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 import { 
   ArrowRight, 
@@ -160,6 +146,88 @@ export default function ComprehensiveServicesLanding2030() {
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'rating':
+        return b.rating - a.rating;
+      case 'price':
+        return a.price - b.price;
+      case 'aiScore':
+        return b.aiScore - a.aiScore;
+      default:
+        return 0;
+    }
+  });
+
+  const getCategoryIcon = (category: string) => {
+    const icons: { [key: string]: React.ReactNode } = {
+      'AI & Business Intelligence': <Brain className="w-6 h-6" />,
+      'AI & Healthcare': <Heart className="w-6 h-6" />,
+      'AI & FinTech': <TrendingUp className="w-6 h-6" />,
+      'IT Infrastructure': <Database className="w-6 h-6" />,
+      'Emerging Technology': <Rocket className="w-6 h-6" />,
+      'AI & Research': <Search className="w-6 h-6" />,
+      'AI & Metaverse': <Globe className="w-6 h-6" />,
+      'AI & Space Tech': <Rocket className="w-6 h-6" />,
+      'AI & Development': <Zap className="w-6 h-6" />,
+      'AI & Education': <Users className="w-6 h-6" />,
+      'AI & Entertainment': <Star className="w-6 h-6" />,
+      'Cybersecurity': <Shield className="w-6 h-6" />,
+      'Cloud & DevOps': <Cloud className="w-6 h-6" />,
+      'Quantum Computing': <Zap className="w-6 h-6" />,
+      'IoT & Edge Computing': <Database className="w-6 h-6" />,
+      'Blockchain & Web3': <Lock className="w-6 h-6" />,
+      'Digital Twin': <Globe className="w-6 h-6" />,
+      'Space Technology': <Rocket className="w-6 h-6" />,
+      'Sustainable Technology': <Heart className="w-6 h-6" />
+    };
+    return icons[category] || <Rocket className="w-6 h-6" />;
+  };
+
+  const getCategoryColor = (category: string) => {
+    const colors: { [key: string]: string } = {
+      'AI & Business Intelligence': 'from-purple-500 to-pink-500',
+      'AI & Healthcare': 'from-pink-500 to-red-500',
+      'AI & FinTech': 'from-emerald-500 to-green-500',
+      'IT Infrastructure': 'from-slate-500 to-gray-500',
+      'Emerging Technology': 'from-violet-500 to-purple-500',
+      'AI & Research': 'from-purple-500 to-violet-500',
+      'AI & Metaverse': 'from-purple-500 to-indigo-500',
+      'AI & Space Tech': 'from-indigo-500 to-purple-500',
+      'AI & Development': 'from-cyan-500 to-blue-500',
+      'AI & Education': 'from-blue-500 to-indigo-500',
+      'AI & Entertainment': 'from-purple-500 to-pink-500',
+      'Cybersecurity': 'from-red-500 to-orange-500',
+      'Cloud & DevOps': 'from-blue-500 to-cyan-500',
+      'Quantum Computing': 'from-indigo-500 to-purple-500',
+      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
+      'Blockchain & Web3': 'from-yellow-500 to-orange-500',
+      'Digital Twin': 'from-blue-500 to-indigo-500',
+      'Space Technology': 'from-purple-500 to-pink-500',
+      'Sustainable Technology': 'from-green-500 to-teal-500'
+    };
+    return colors[category] || 'from-gray-500 to-slate-500';
+  };
+
+  const resetFilters = () => {
+    setActiveCategory('all');
+    setSearchTerm('');
+    setSortBy('rating');
+    setPriceRange([0, 50000]);
+    setAiScoreRange([80, 100]);
+  };
+
+  const openServiceModal = (service: ) => {
+    setSelectedService(service);
+    setShowModal(true);
+  };
+
+  const closeServiceModal = () => {
+    setShowModal(false);
+    setSelectedService(null);
+  };
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -353,144 +421,8 @@ export default function ComprehensiveServicesLanding2030() {
               Explore our comprehensive catalog of AI-powered services, enterprise IT solutions, and innovative micro SAAS products.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => {
-              const categoryInfo = categoryData[service.category as keyof typeof categoryData];
-              if (!categoryInfo) return null;
-
-              return (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <RouterLink to={`/services/${service.id}`}>
-                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${categoryInfo.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <categoryInfo.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="text-right">
-                          <div className="text-cyan-400 font-semibold">${service.price?.toLocaleString() || 'Custom'}</div>
-                          <div className="text-xs text-slate-500">{service.category}</div>
-                        </div>
-                      </div>
-                      
-                      <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
-                        {service.name}
-                      </h3>
-                      
-                      <p className="text-slate-400 text-sm mb-4 line-clamp-3">
-                        {service.description}
-                      </p>
-                      
-                      <div className="flex items-center justify-between text-sm">
-                        <div className="flex items-center text-slate-500">
-                          <Star className="w-4 h-4 text-yellow-500 mr-1" />
-                          {service.rating}
-                        </div>
-                        {service.roi && (
-                          <div className="text-green-400 font-semibold">{service.roi}</div>
-                        )}
-                        {service.setupTime && (
-                          <div className="text-slate-500 text-xs">{service.setupTime}</div>
-                        )}
-                      </div>
-                    </div>
-                  </RouterLink>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {filteredServices.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
-              <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
-                  setActiveCategory('all');
-                  setSearchTerm('');
-                }}
-                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-              >
-                Clear filters
-              </button>
-            </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container-responsive text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of organizations already leveraging our AI-powered services to achieve unprecedented growth and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <RouterLink
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-              >
-                Start Your Transformation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </RouterLink>
-              <RouterLink
-                to="/schedule-demo"
-                className="inline-flex items-center px-8 py-4 bg-slate-800/50 hover:bg-slate-700/50 text-white font-semibold rounded-lg border border-slate-600 hover:border-slate-500 transition-all duration-300"
-              >
-                Schedule Demo
-                <MessageCircle className="ml-2 w-5 h-5" />
-              </RouterLink>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-slate-900">
-        <div className="container-responsive">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-slate-400">+1 302 464 0950</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-slate-400">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-slate-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        )}
+      </div>
+    </
   );
-}
+}>

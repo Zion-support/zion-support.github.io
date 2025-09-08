@@ -1,17 +1,6 @@
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  TrendingDown, 
-  Brain, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  Users, 
-  Target, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock} from 'lucide-react';
+
 
 const AICustomerChurnPrediction: React.FC = () => {
   const features = [

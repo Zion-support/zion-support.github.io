@@ -26,24 +26,7 @@ import {
   Info, 
   ArrowRight} from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { 
-  Wrench, 
-  Clock, 
-  Shield, 
-  Users, 
-  CheckCircle, 
-  AlertTriangle,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Server,
-  Network,
-  Database,
-  Monitor,
-  HardDrive,
-  Router
-} from 'lucide-react';
+
 
 export default function OnsiteSupport() {
   const services = [

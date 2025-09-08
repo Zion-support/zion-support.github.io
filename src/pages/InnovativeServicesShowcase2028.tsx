@@ -1,46 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Target, 
-  Award, 
-  Code, 
-  Truck, 
-  Building,
-  Phone,
-  Mail,
-  ExternalLink,
-  Search,
-  Clock,
-  Wifi,
-  Chip,
-  Database as DatabaseIcon,
-  ShieldCheck,
-  Bot,
-  GitFork,
-  Eye as EyeIcon,
-  Sparkles as SparklesIcon} from 'lucide-react';
+import { motion } from 'framer-motion';
+
 import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
 import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';

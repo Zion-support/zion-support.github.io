@@ -1,71 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Twitter, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram, 
-  Youtube,
-  Github,
-  Zap,
-  Brain,
-  Shield,
-  Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
-  FileText,
-  HelpCircle,
-  BarChart3,
-  ArrowUp,
-  Heart,
-  Star,
-  CheckCircle,
-  Award,
-  Lock,
-  Eye,
-  Atom,
-  Code,
-  Database,
-  Network,
-  Server
 
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  Server,
-  ShoppingCart,
-  Smartphone,
-  Database,
-  Clock,
-  Code,
-  BookOpen,
-  Truck,
-  ExternalLink,
-  ChevronDown} from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {
@@ -83,7 +18,7 @@ interface FooterSection {
 
 const footerSections = [
   {
-    title: 'Company',
+    title: 'Comp',
     icon: Globe,
     links: [
       { name: 'About Us', path: '/about', icon: Users },
@@ -352,14 +287,52 @@ export function Footer() {
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                <Zap className="h-6 w-6 text-white" />
+    <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
+      {/* Enhanced Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      
+      {/* Floating Particles */}
+      <div className="absolute inset-0">
+        {[...Array(15)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
+            animate={{
+              x: [0, 50, 0],
+              y: [0, -50, 0],
+              opacity: [0.1, 0.5, 0.1],
+            }}
+            transition={{
+              duration: 4 + i * 0.3,
+              repeat: Infinity,
+              delay: i * 0.2,
+              ease: "easeInOut"
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 mb-12">
+          {/* Comp Section - Takes 2 columns on larger screens */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h3>
+                <p className="text-sm text-gray-400">Innovation Hub</p>
               </div>
               <span className="text-2xl font-bold">Zion Tech Group</span>
             </div>

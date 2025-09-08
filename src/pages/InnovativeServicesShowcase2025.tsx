@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import {
-  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
-  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe} from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 const InnovativeServicesShowcase2025: React.FC = () => {
@@ -360,6 +358,28 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+
+      <section className="py-16 max-w-4xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-zion-slate-dark mb-6">Ready to Transform Your Business?</h2>
+        <p className="text-zion-slate-light text-lg mb-8">
+          Contact us today to learn how our innovative AI services can revolutionize your operations and drive unprecedented growth.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="tel:+13024640950" className="inline-flex items-center px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors">
+            <Phone className="w-5 h-5 mr-2"/> +1 302 464 0950
+          </a>
+          <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan/5 transition-colors">
+            <Mail className="w-5 h-5 mr-2"/> kleber@ziontechgroup.com
+          </a>
+        </div>
+        
+        <div className="text-sm text-zion-slate-light">
+          Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 export default InnovativeServicesShowcase2025;

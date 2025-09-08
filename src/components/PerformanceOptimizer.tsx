@@ -4,14 +4,25 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Alert, AlertDescription } from './ui/alert';
-import { 
-  Activity, 
-  Zap, 
-  Gauge, 
-  TrendingUp, 
-  AlertTriangle,
-  CheckCircle,
-  Clock} from 'lucide-react';
+
+
+// Simple Progress component
+const Progress: React.FC<{ value: number; className?: string }> = ({ value, className = "" }) => (
+  <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
+    <div 
+      className="bg-blue-600 h-2 rounded-full transition-all duration-300" 
+      style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
+    />
+  </div>
+);
+
+interface PerformanceMetrics {
+
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 
 interface PerformanceOptimizerProps {
   enabled: boolean;
@@ -192,13 +203,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const domContentLoaded = performance.timing?.domContentLoadedEventEnd - performance.timing?.navigationStart || 0;
         const windowLoad = performance.timing?.loadEventEnd - performance.timing?.navigationStart || 0;
 
-        setMetrics(prev => ({
-          ...prev,
-          pageLoadTime: loadTime,
-          domContentLoaded,
-          windowLoad,
-          timeToInteractive: loadTime,
-        }));
+    // Cumulative Layout Shift
+    const clsObserver = new PerformanceObserver((list) => {
+      let clsValue = 0;
+      const entries = list.getEntries();
+      entries.forEach((entry: )  => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      performanceDataRef.current.cls = clsValue;
+      console.log('CLS:', clsValue);
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         if (logMetrics) {
           // // console.log('Page Load Time:', loadTime, 'ms');
@@ -375,25 +392,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </div>
   );
 
-    return Math.max(0, Math.round(score))}, [threshold]);
+  // Debounce utility function
+  function debounce<T extends (...args: [])  => any>(
+    func: anyT,
+    wait: number
+  ): (...args: Parameters<T>)  => void {
+    let timeout: anyNodeJS.Timeout;
+    return (...args: Parameters<T>)  => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  }
 
-  // Send metrics to analytics service
-  const sendMetricsToAnalytics = useCallback((metrics: PerformanceMetrics)  => {
-    try {
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as ).gtag) {
-        (window as ).gtag('event', 'performance_metrics', {
-          event_category: 'Performance',
-          event_label: location.pathname,
-          value: calculatePerformanceScore(metrics),
-          custom_parameters: {
-            page_load_time: metrics.pageLoadTime,
-            first_contentful_paint: metrics.firstContentfulPaint,
-            largest_contentful_paint: metrics.largestContentfulPaint,
-            cumulative_layout_shift: metrics.cumulativeLayoutShift,
-            first_input_delay: metrics.firstInputDelay,
-          },
-        })}
+  // Service Worker registration for caching
+  const registerServiceWorker = useCallback(async () => {
+    if ('serviceWorker' in navigator) {
+      try {
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        console.log('SW registered: ', registration);
+      } catch (registrationError) {
+        console.log('SW registration failed: ', registrationError);
+      }
+    }
+  }, []);
 
       // Send to custom analytics endpoint
       fetch('/api/analytics/performance', {

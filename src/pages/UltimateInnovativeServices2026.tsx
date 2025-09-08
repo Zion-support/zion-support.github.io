@@ -1,40 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Atom, 
-  Heart, 
-  Cpu, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Users,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Eye,
-  BarChart3,
-  Target,
-  PieChart,
-  LineChart,
-  Activity,
-  Cloud,
-  Lock,
-  Database,
-  Network,
-  Microscope,
-  Rocket,
-  Lightbulb,
-  Code,
-  Server,
-  Smartphone,
-  Globe2} from 'lucide-react';
+
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
@@ -313,6 +280,86 @@ const UltimateInnovativeServices2026 = () => {
                       <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
                       <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
                     </div>
+
+                    {/* Expand/Collapse Button */}
+                    <button
+                      onClick={() => toggleServiceExpansion(service.id)}
+                      className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
+                    >
+                      {expandedService === service.id ? (
+                        <>
+                          <EyeOff className="w-4 h-4" />
+                          Show Less
+                        </
+                      ) : (
+                        ><>
+                          <Eye className="w-4 h-4" />
+                          Learn More
+                        </
+                      )}
+                    ></button>
+
+                    {/* Expanded Service Details */}
+                    <AnimatePresence>
+                      {expandedService === service.id && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="mt-4 pt-4 border-t border-zion-slate-600/30"
+                        >
+                          {/* Features */}
+                          <div className="mb-4">
+                            <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                            <ul className="space-y-1">
+                              {service.features.slice(0, 5).map((feature, featureIndex) => (
+                                <li key={featureIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">
+                                  <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0" />
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          {/* Benefits */}
+                          <div className="mb-4">
+                            <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                            <ul className="space-y-1">
+                              {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                                <li key={benefitIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">
+                                  <ZapIcon className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0" />
+                                  {benefit}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          {/* Market Info */}
+                          <div className="grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                              <span className="text-zion-slate-400">Market Size:</span>
+                              <div className="text-white font-semibold">{service.marketSize}</div>
+                            </div>
+                            <div>
+                              <span className="text-zion-slate-400">Delivery:</span>
+                              <div className="text-white font-semibold">{service.estimatedDelivery}</div>
+                            </div>
+                          </div>
+
+                          {/* Contact Button */}
+                          <div className="mt-4">
+                            <Link
+                              to="/contact"
+                              className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold"
+                            >
+                              <MessageCircle className="w-4 h-4" />
+                              Get Started
+                            </Link>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                   
                   <div className="mb-6">

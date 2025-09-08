@@ -1,62 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { 
-  Brain, 
-  Rocket, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Globe, 
-  Zap, 
-  TrendingUp,
-  CheckCircle,
-  Star,
-  DollarSign,
-  Users,
-  Target,
-  ArrowRight,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Eye,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Linkedin,
-  Twitter,
-  Github,
-  Atom,
-  PenTool,
-  MessageCircle as MessageCircleIcon,
-  Target as TargetIcon,
-  Search as SearchIcon,
-  Eye as EyeIcon,
-  Database,
-  Network,
-  BarChart3,
-  Server,
-  Code,
-  Truck,
-  DollarSign,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  FileText,
-  Cpu,
-  TrendingDown,
-  Calendar,
-  UserCheck,
-  ShieldCheck,
-  Zap as ZapIcon,
-  ShoppingCart,
-  Gauge} from 'lucide-react';
+
 import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
 
 const EnhancedServicesShowcase2025: React.FC = () => {
@@ -640,11 +585,147 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-5 h-5 text-gray-400" />
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                >
+                  <option value="featured">Featured</option>
+                  <option value="popular">Popular</option>
+                  <option value="new">New</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
+
+              {/* View Mode Toggle */}
+              <div className="flex items-center gap-2 bg-gray-800/50 rounded-lg p-1">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                >
+                  <Grid className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                >
+                  <List className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Results Count */}
+            <div className="mt-4 text-sm text-gray-400">
+              Showing {filteredServices.length} of {enhancedServicesCatalog2025.length} services
+              {selectedCategory !== 'all' && (
+                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></
+              )}
+            ></div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Services Grid/List */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          {/* Results Count */}
+          <div className="mb-8">
+            <p className="text-gray-400">
+              Showing <span className="text-white font-semibold">{filteredServices.length}</span> services
+              {selectedCategory !== 'all' && (
+                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></
+              )}
+            ></p>
+          </div>
+
+          {/* Services Display */}
+          <AnimatePresence mode="wait">
+            {filteredServices.length > 0 ? (
+              <div className={viewMode === 'grid' ? 'grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8' : 'space-y-6'}>
+                {filteredServices.map((service) => (
+                  viewMode === 'grid' ? (
+                    <ServiceCard key={service.id} service={service} />
+                  ) : (
+                    <ServiceList key={service.id} service={service} />
+                  )
+                ))}
+              </div>
+            ) : (
+              <motion.div
+                className="text-center py-16"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Search className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-400 mb-2">No services found</h3>
+                <p className="text-gray-500">Try adjusting your search criteria or browse all services.</p>
+                <Link
+                  to="/services"
+                  className="btn-neon-cyan mt-4 inline-block"
+                >
+                  Browse All Services
+                </Link>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 border-t border-gray-700/50">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our revolutionary AI, quantum computing, and innovative solutions can help you achieve your technology goals and stay ahead of the competition.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span>{contactInfo.phone}</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <MapPin className="w-5 h-5 text-cyan-400" />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="btn-neon-cyan text-lg px-8 py-4"
+              >
+                Schedule a Consultation
+              </Link>
+              <Link
+                to="/pricing"
+                className="btn-neon text-lg px-8 py-4"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 

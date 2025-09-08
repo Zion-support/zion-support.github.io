@@ -16,12 +16,10 @@ export interface Toast {
   duration?: number;
 }
 
-export interface ToastOptions {
-  title: string;
-  description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-  duration?: number;
-}
+export function useToast(...args: []):  {
+  const showToast = (message: anystring, options?: ToastOptions)  => {
+    return toast(message, options)
+  }
 
 export function useToast() {
   const [toasts, setToasts] = useState<Toast[]>([]);

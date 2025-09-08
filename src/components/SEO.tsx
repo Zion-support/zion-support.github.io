@@ -1,8 +1,10 @@
-import { Helmet } from
-  'react-helmet-async';''
-  'interface SEOProps {title?: string;description?: string;'keywords?: string;
-  image?: string;
-  canonical?: string;
+import React, { useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
   ogType?: 'website' | 'article' | 'product' | 'profile' | 'book';

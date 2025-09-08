@@ -1,24 +1,6 @@
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Search, 
-  BookOpen, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Database,
-  BarChart3,
-  FileText,
-  Lightbulb,
-  Target,
-  Award,
-  Rocket} from 'lucide-react';
+
+import { SEO } from '../../components/SEO';
 
 const AIAutonomousResearchAssistant = () => {
   const features = [
@@ -120,8 +102,50 @@ const AIAutonomousResearchAssistant = () => {
     },
     {
       title: "Policy Research",
-      description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",
-      icon: <Target className="w-8 h-8 text-purple-500" />
+      description: "Government policy analysis and regulatory research automation",
+      icon: Globe
+    }
+  ];
+
+  const benefits = [
+    "10x faster research completion time",
+    "Comprehensive coverage of research sources",
+    "Automated citation management and formatting",
+    "Real-time research trend analysis",
+    "Collaborative research workflow optimization",
+    "Access to cutting-edge AI research tools"
+  ];
+
+  const researchCapabilities = [
+    {
+      title: "Natural Language Processing",
+      description: "Advanced NLP for understanding complex research documents and generating insights",
+      icon: Brain
+    },
+    {
+      title: "Machine Learning Analysis",
+      description: "ML algorithms for pattern recognition and predictive research analytics",
+      icon: Cpu
+    },
+    {
+      title: "Semantic Search",
+      description: "Intelligent search that understands context and meaning, not just keywords",
+      icon: Search
+    },
+    {
+      title: "Data Visualization",
+      description: "Interactive charts and graphs for research findings presentation",
+      icon: BarChart3
+    },
+    {
+      title: "Citation Network Analysis",
+      description: "Map research influence and identify key papers in  field",
+      icon: GitFork
+    },
+    {
+      title: "Research Quality Assessment",
+      description: "AI-powered evaluation of research methodology and credibility",
+      icon: Award
     }
   ];
 

@@ -1,26 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Database, 
-  Users, 
-  TrendingUp, 
-  Globe, 
-  Lock,
-  Cloud,
-  Briefcase,
-  Scale,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink} from 'lucide-react';
+
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
 
         {/* Contact Information */}
@@ -222,6 +203,77 @@ import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE
           </div>
         </div>
       </div>
-    </div>);
-};
-export default UltimateServicesShowcase2025;
+
+      {/* Comprehensive Footer */}
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Comp Info */}
+            <div className="lg:col-span-2">
+              <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+              <p className="text-gray-300 mb-6 max-w-md">
+                Leading provider of innovative AI, cybersecurity, and digital transformation solutions. 
+                We help businesses thrive in the digital age with cutting-edge technology and expert guidance.
+              </p>
+              <div className="flex space-x-4">
+                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
+                <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+                <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+
+            {/* Contact Information */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4 text-blue-400" />
+                  <span>{ULTIMATE_CONTACT_INFO_2025.phone}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4 text-blue-400" />
+                  <span>{ULTIMATE_CONTACT_INFO_2025.email}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-blue-400" />
+                  <span className="text-xs">{ULTIMATE_CONTACT_INFO_2025.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400 text-sm">
+                © 2025 Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex space-x-6 mt-4 md:mt-0">
+                <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+                <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Search icon component
+const Search = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+  </svg>
+);

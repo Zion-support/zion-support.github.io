@@ -1,27 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Zap, 
-  Users, 
-  Globe, 
-  Cpu,
-  Lock,
-  Heart,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Code,
-  Database,
-  Network,
-  Code,
-  Palette,
-  Gamepad2} from 'lucide-react';
+
 import { SEO } from "@/components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
 import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";

@@ -1,31 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  BarChart3, 
-  Globe, 
-  Users, 
-  Clock, 
-  Award, 
-  Star,
-  Cpu,
-  Database,
-  Filter,
-  Download,
-  Share2,
-  CheckCircle,
-  Eye,
-  MousePointer,
-  Smartphone,
-  Monitor,
-  ShoppingCart,
-  Building,
-  FileText,
-  MapPin,
-  Cloud} from 'lucide-react';
+
 
 export default function AIPoweredSEO() {
   const features = [

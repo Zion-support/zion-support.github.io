@@ -1,22 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  CheckCircle, 
-  AlertTriangle,
-  Info,
-  Settings,
-  BarChart3,
-  Globe,
-  Smartphone,
-  Monitor,
-  Eye,
-  Clock,
-  Star,
-  ArrowUpRight} from 'lucide-react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface SEOAnalysis {
   score: number;
@@ -264,14 +248,14 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 <span>Analyzing...</span>
-              </>
+              </
             ) : (
-              <>
+              ><>
                 <RefreshCw className="w-4 h-4" />
                 <span>Refresh</span>
-              </>
+              </
             )}
-          </button>
+          ></button>
         </div>
       </div>
 
@@ -491,15 +475,15 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
               </motion.div>
             )}
           </AnimatePresence>
-        </>
+        </
       ) : null}
-    </div>
+    ></div>
   );
 };
 
 // Hook for using SEO optimization
-export const useSEOOptimization = () => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+export const useSEOOptimization: [, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [analysis, setAnalysis] = useState<any>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const optimizePage = useCallback(async () => {

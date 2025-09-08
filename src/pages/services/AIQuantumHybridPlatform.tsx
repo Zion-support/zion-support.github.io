@@ -1,30 +1,6 @@
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Rocket,
-  Target,
-  BarChart3,
-  Cloud,
-  Network,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin} from 'lucide-react';
+
+import { SEO } from '../../components/SEO';
 
 const AIQuantumHybridPlatform: React.FC = () => {
   const features = [

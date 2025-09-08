@@ -1,23 +1,7 @@
-import Head from 'next/head';
-import { AppLayout } from '../src/layout/AppLayout';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { 
-  MapPin, 
-  Clock, 
-  Users, 
-  Heart, 
-  Zap, 
-  Award, 
-  BookOpen, 
-  Coffee, 
-  Laptop, 
-  Globe, 
-  ArrowRight, 
-  CheckCircle,
-  DollarSign,
-  GraduationCap
-} from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+
 
 export default function Careers() {
 	return (
@@ -96,72 +80,10 @@ export default function Careers() {
 								Apply Now
 							</Link>
 						</div>
-
-						{/* Cloud Architect Position */}
-						<div className="p-8 rounded-2xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 bg-gray-800/50 hover:bg-gray-800/80">
-							<div className="flex items-start justify-between mb-6">
-								<div>
-									<h3 className="text-2xl font-semibold text-white mb-2">Cloud Solutions Architect</h3>
-									<p className="text-cyan-400 font-medium">Full-time • Remote</p>
-								</div>
-								<div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-									<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-									</svg>
-								</div>
-							</div>
-							<p className="text-gray-300 mb-6 leading-relaxed">
-								Design and implement scalable cloud infrastructure solutions using AWS, Azure, and Google Cloud Platform.
-							</p>
-							<div className="mb-6">
-								<h4 className="text-white font-semibold mb-3">Requirements:</h4>
-								<ul className="text-gray-400 text-sm space-y-1">
-									<li>• 7+ years cloud architecture experience</li>
-									<li>• AWS/Azure/GCP certifications</li>
-									<li>• Kubernetes and Docker expertise</li>
-									<li>• Infrastructure as Code experience</li>
-								</ul>
-							</div>
-							<Link 
-								href="/contact" 
-								className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-							>
-								Apply Now
-							</Link>
-						</div>
-
-export default function CareersPage() {
-  return (
-    <Layout
-      title="Careers - Zion Tech Group"
-      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
-      keywords="careers, jobs, employment, technology careers, AI jobs, software development"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Join Our Team
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Build the future of technology with us
-              </p>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
+					</div>
+				</div>
+			</section>
+		</
+	)
 }
+>

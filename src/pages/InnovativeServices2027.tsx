@@ -1,31 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Rocket, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Globe, 
-  Star, 
-  ArrowRight,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Users,
-  TrendingUp,
-  Award,
-  Zap,
-  Eye,
-  BarChart3,
-  Smartphone,
-  Building2,
-  Car,
-  Leaf,
-  Satellite,
-  Banknote,
-  Building} from 'lucide-react';
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
 
@@ -217,7 +192,7 @@ export default function InnovativeServices2027() {
               />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
               >
                 <option value="innovation">Sort by Innovation</option>

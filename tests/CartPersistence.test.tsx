@@ -12,10 +12,9 @@ vi.mock('next/router', () => ({
 }));
 
 const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 };
-
-function renderCart(user: any) {
+function renderCart(user: ) {
   return render(
-    <AuthContext.Provider value={{ user, isLoading: false } as any}>
+    <AuthContext.Provider value={{ user, isLoading: false } as }>
       <CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
           <Routes>
@@ -36,7 +35,7 @@ describe('cart persistence', () => {
     expect(screen.getByText('Login to Checkout')).toBeInTheDocument();
 
     rerender(
-      <AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as any}>
+      <AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as }>
         <CartProvider>
           <MemoryRouter initialEntries={['/cart']}>
             <Routes>

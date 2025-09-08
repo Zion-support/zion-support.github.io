@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { X} from 'lucide-react';
+import React, { useState, useRef } from 'react.ts';
+
 export interface Message {
   id: string;
   role: 'user' | 'assistant';
@@ -22,93 +22,28 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>;
   contextHeader?: ReactNode;
 }
-
-export function ChatAssistant({
-  isOpen,
-  onClose,
-  recipient,
-  conversationId,
-  initialMessages = [],
-  onSendMessage,
-  contextHeader
-}: ChatAssistantProps) {
-  const auth = useContext(AuthContext);
-  const isGuest = !auth?.isAuthenticated;
-
-  // Hooks called unconditionally at the top
-  const localStorageKey = `chatHistory-${recipient.id}`; // Key is always generated
-  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<Message[]>(
-    isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users
-    []
-  );
-  const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]);
-  const [loggedInMessages, setLoggedInMessages] = useState<Message[]>(initialMessages);
-
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const guestModalRef = useRef<HTMLDivElement>(null);
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{ message: string, conversationId?: string } | null>(null);
-  const [showGuestModal, setShowGuestModal] = useState(false);
-  const [guestMessage, setGuestMessage] = useState<string | null>(null);
-
-  // Effect for guest user messages
-  useEffect(() => {
-    if (isGuest) {
-      // Priority: initialMessages prop > localStorage > empty array
-      if (initialMessages && initialMessages.length > 0) {
-        setDisplayGuestMessages(initialMessages);
-        setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided
-      } else {
-        setDisplayGuestMessages(storedGuestMessages);
-      }
-    }
-  }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
-
-  // Effect for logged-in user messages
-  useEffect(() => {
-    if (!isGuest) {
-      // Update state if initialMessages prop changes (e.g. new conversation loaded)
-      setLoggedInMessages(initialMessages);
-    }
-  }, [isGuest, initialMessages, recipient.id]);
-
-  // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
-  const setCurrentMessages = (valueOrFn: Message[] | ((val: Message[]) => Message[])) => {
-    if (isGuest) {
-      const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn;
-      setDisplayGuestMessages(newMessages);
-      setStoredGuestMessages(newMessages); // Always update localStorage for guests
-    } else {
-      const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
-      setLoggedInMessages(newMessages);
-    }
-  };
-  
-  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
-
-  useEffect(() => {
-    if (debouncedApiCallParams) {
-      onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId);
-    }
-  }, [debouncedApiCallParams, onSendMessage]);
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return;
-
-    if (!isGuest) { // Logged-in user
-      const newMessage: Message = {
-        id: Date.now().toString(),
-        role: 'user',
-        message: messageContent,
-        timestamp: new Date()
+export function ChatAssistant(...args: []):  {
+  const [isChatOpen, setIsChatOpen] = useState(isOpen);
+  const [messages, setMessages] = useState<any>([]);
+  const [inputMessage, setInputMessage] = useState('');
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const handleSendMessage = async (message: anystring)  => {
+    if (!message.trim()) return;
+    const userMessage: Message = {
+      id: anyDate.now().toString(),
+      role: 'user',
+      message: message.trim(),
+      timestamp: new Date(),
+    };
+    setMessages(prev  => [...prev, userMessage]);
+    setInputMessage('');
+    // Simulate AI response
+    setTimeout(() => {
+      const aiMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        message: 'Thank you for your message! Our team will get back to you soon.',
+        timestamp: new Date(),
       };
       setCurrentMessages((prev: Message[]) => [...prev, newMessage]);
       setPendingApiCallParams({ message: messageContent, conversationId });

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export function BlogSection() {
+export function BlogSection(...args: []):  {
   const blogPosts = [
     {
       id: '1',

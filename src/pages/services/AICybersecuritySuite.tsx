@@ -1,35 +1,5 @@
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
-  Zap, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Server,
-  Globe,
-  Clock,
-  BarChart3,
-  Cpu,
-  Lock,
-  Eye,
-  Target,
-  Rocket,
-  Sparkles,
-  AlertTriangle,
-  Fingerprint,
-  Key,
-  Monitor} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+
 
 export default function AICybersecuritySuite() {
   const features = [

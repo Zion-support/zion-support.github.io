@@ -169,21 +169,63 @@ export function CaseStudiesSection() {
           </div>
         </motion.div>
 
-        {/* Case Studies Grid */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative" onHoverStart={() => setHoveredCase(caseStudy.id)} onHoverEnd={() => setHoveredCase(null)}>
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}>
-                {/* Header */}
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${caseStudy.color} mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
-                    <div className="text-white">
-                      {caseStudy.icon}
-                    </div>
-                  </div>
-                  
-                  <div className="text-right">
-                    <div className="text-zion-cyan text-sm font-medium">{caseStudy.industry}</div>
-                    <div className="text-zion-slate-light text-xs">{caseStudy.company}</div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study, index) => (
+            <motion.div
+              key={study.id}
+              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <div className="relative">
+                <img 
+                  src={study.image} 
+                  alt={study.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-3 left-3">
+                  <span className="px-3 py-1 bg-slate-800/80 text-white text-xs font-semibold rounded-full">
+                    {study.industry}
+                  </span>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">
+                  {study.title}
+                </h3>
+                
+                <p className="text-blue-400 font-semibold mb-3">
+                  {study.comp}
+                </p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Challenge:</h4>
+                  <p className="text-gray-400 text-sm">{study.challenge}</p>
+                </div>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Solution:</h4>
+                  <p className="text-gray-400 text-sm">{study.solution}</p>
+                </div>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Results:</h4>
+                  <ul className="space-y-1">
+                    {study.results.map((result, resultIndex) => (
+                      <li key={resultIndex} className="flex items-center gap-2 text-sm">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <span className="text-gray-300">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="pt-4 border-t border-slate-700">
+                  <div className="text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors duration-200 cursor-pointer">
+                    Read Full Case Study →
                   </div>
                 </div>
                 

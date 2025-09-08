@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, Mail} from 'lucide-react';
+
 
 const NotFound: React.FC = () => {
   return (

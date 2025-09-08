@@ -1,7 +1,117 @@
-import React from 'react';
-
-import Head from 'next/head';
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+export default function PricingPage() {
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: '$99',
+      period: '/month',
+      features: [
+        'AI-Powered Analytics Dashboard',
+        'Basic Cloud Infrastructure',
+        'Email Support',
+        'Standard Security Features',
+        'Monthly Reports',
+        'Up to 5 Users'
+      ],
+      cta: 'Get Started',
+      ctaLink: '/contact',
+      popular: false
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: '$299',
+      period: '/month',
+      features: [
+        'Everything in Starter',
+        'Advanced AI Decision Engine',
+        'Priority Support',
+        'Enhanced Security & Compliance',
+        'Custom Integrations',
+        'Up to 25 Users',
+        'Advanced Analytics',
+        'API Access'
+      ],
+      cta: 'Start Free Trial',
+      ctaLink: '/contact',
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations with complex needs',
+      price: 'Custom',
+      period: '',
+      features: [
+        'Everything in Professional',
+        'Custom AI Solutions',
+        '24/7 Dedicated Support',
+        'Enterprise Security',
+        'Custom Development',
+        'Unlimited Users',
+        'Advanced Compliance',
+        'Dedicated Account Manager',
+        'SLA Guarantees',
+        'On-Premise Options'
+      ],
+      cta: 'Contact Sales',
+      ctaLink: '/contact',
+      popular: false
+    }
+  ];
+  const addOnServices = [
+    {
+      name: 'AI Model Training',
+      description: 'Custom AI model development and training',
+      price: 'From $2,500',
+      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+    },
+    {
+      name: 'Quantum Computing Access',
+      description: 'Access to quantum computing resources',
+      price: 'From $5,000',
+      features: ['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+    },
+    {
+      name: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment',
+      price: 'From $1,500',
+      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+    },
+    {
+      name: 'Cloud Migration',
+      description: 'Complete cloud infrastructure migration',
+      price: 'From $10,000',
+      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
+    }
+  ];
+  const faqs = [
+    {
+      question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cards, bank transfers, and can accommodate custom payment terms for enterprise clients.'
+    },
+    {
+      question: 'Can I change my plan at  time?',
+      answer: 'Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.'
+    },
+    {
+      question: 'Is there a setup fee?',
+      answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation costs.'
+    },
+    {
+      question: 'What kind of support do you provide?',
+      answer: 'We provide email support for all plans, priority support for Professional and Enterprise plans, and 24/7 support for Enterprise clients.'
+    },
+    {
+      question: 'Do you offer discounts for annual payments?',
+      answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
+    },
+    {
+      question: 'Can I cancel my subscription?',
+      answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
+    }
+  ];
   return (
     <>
       {/* Hero Section */}
@@ -302,59 +412,9 @@ import Head from 'next/head';
               </p>
             </div>
           </div>
-
-          <div className="text-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-            >
-              Schedule a Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in the pricing?</h3>
-              <p className="text-gray-600">
-                All our service plans include full platform access, 24/7 support, regular updates, 
-                security patches, and comprehensive documentation. Enterprise plans also include 
-                dedicated account management and custom integrations.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer custom pricing?</h3>
-              <p className="text-gray-600">
-                Yes, we offer custom pricing for enterprise customers with specific requirements. 
-                Contact our sales team to discuss your needs and get a personalized quote.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I switch between plans?</h3>
-              <p className="text-gray-600">
-                Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect 
-                immediately, and we'll prorate any billing adjustments.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Is there a free trial available?</h3>
-              <p className="text-gray-600">
-                Yes, we offer a 14-day free trial for all our services. No credit card required, 
-                and you can cancel at any time during the trial period.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+        </section>
+      </main>
+    </
   );
 }
+>

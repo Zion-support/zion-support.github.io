@@ -1,23 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Atom, 
-  BarChart3, 
-  DollarSign, 
-  Target,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Cpu,
-  Lock,
-  Globe,
-  Users,
-  Clock,
-  Phone,
-  Mail} from 'lucide-react';
+
 
 const AIQuantumFinancialTrading = () => {
   const features = [

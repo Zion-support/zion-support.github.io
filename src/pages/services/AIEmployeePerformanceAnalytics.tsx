@@ -1,41 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Users, 
-  TrendingUp, 
-  BarChart3, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  UserCheck,
-  Shield,
-  Settings,
-  DollarSign,
-  AlertCircle,
-  Calendar,
-  MapPin,
-  GraduationCap,
-  Heart,
-  TrendingDown} from 'lucide-react';
+
 
 export default function AIEmployeePerformanceAnalytics() {
   const features = [

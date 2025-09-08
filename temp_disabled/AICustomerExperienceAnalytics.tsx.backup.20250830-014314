@@ -1,4 +1,5 @@
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target} from 'lucide-react';
+import React from 'react';
+
 
 export default function AISupplyChainOptimization() {
   const features = [

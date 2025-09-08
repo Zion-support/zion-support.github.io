@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle} from "lucide-react";
+
 export function MainNavigation({ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -102,9 +102,54 @@ export function MainNavigation({ className }) {
             </div>
           </div>)}
       </div>
-      
-      <Link to="/solutions" className="text-zion-slate-light hover:text-white transition-colors">
-        Solutions
+      {/* Comp Dropdown */}
+      <div className="relative group">
+        <button onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+          <Building2 className="w-4 h-4" />
+          <span>Company</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        {isCompanyOpen && (
+          <div onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+            <div className="p-4">
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
+                <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>
+                <li><Link to="/news" className="text-zion-slate-light hover:text-zion-cyan transition-colors">News</Link></li>
+                <li><Link to="/events" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Events</Link></li>
+                <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
+                <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+          </div>
+        )}
+      </div>
+      {/* Resources Dropdown */}
+      <div className="relative group">
+        <button onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+          <FileText className="w-4 h-4" />
+          <span>Resources</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        {isResourcesOpen && (
+          <div onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+            <div className="p-4">
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
+                <li><Link to="/docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Documentation</Link></li>
+                <li><Link to="/white-papers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">White Papers</Link></li>
+                <li><Link to="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Webinars</Link></li>
+                <li><Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Training</Link></li>
+                <li><Link to="/research-development" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Research</Link></li>
+              </ul>
+            </div>
+          </div>
+        )}
+      </div>
+      {/* Support */}
+      <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
+        <HelpCircle className="w-4 h-4 mr-1" />
+        Support
       </Link>
       
       <Link to="/services" className="text-zion-slate-light hover:text-white transition-colors">

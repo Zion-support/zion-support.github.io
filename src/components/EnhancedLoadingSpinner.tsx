@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Loader2, Zap, Brain, Cloud} from 'lucide-react';
+
 
 interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
@@ -31,28 +31,45 @@ export default function EnhancedLoadingSpinner({
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />
         
-        {/* Inner spinning ring */}
-        <motion.div
-          className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}
-          animate={{ rotate: -360  }}
-          transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-        />
-        
-        {/* Center dot */}
-        <motion.div
-          className="absolute inset-0 flex items-center justify-center"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <div className="w-2 h-2 bg-blue-600 rounded-full" />
-        </motion.div>
-      </motion.div>
-      
-      {/* Loading text */}
-      <motion.div
-        className={`text-gray-600 font-medium ${textSizes[size]}`}
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        {/* Orbiting particles for futuristic variants */}
+        {variant !== 'default' && (
+          <>
+            <motion.div
+              className="absolute inset-0 w-full h-full"
+              animate={{
+                rotate: 360,
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
+              <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 w-full h-full"
+              animate={{
+                rotate: -360,
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
+              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
+            </motion.div>
+          </
+        )}
+      ></div>
+
+      {/* Loading Text */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className={`${textSizes[size]} text-gray-600 dark:text-gray-300 font-medium text-center`}
       >
         {text}
       </motion.div>

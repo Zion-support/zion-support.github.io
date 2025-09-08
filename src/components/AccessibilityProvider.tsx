@@ -1,20 +1,22 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SkipForward, Volume2, VolumeX, Braille, Sun} from 'lucide-react';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface AccessibilityContextType {
-  highContrast: boolean;
-  toggleHighContrast: () => void;
-  reducedMotion: boolean;
-  toggleReducedMotion: () => void;
-  fontSize: number;
-  increaseFontSize: () => void;
-  decreaseFontSize: () => void;
-  resetFontSize: () => void;
-  showSkipLinks: boolean;
-  setShowSkipLinks: (show: boolean) => void;
-  voiceNavigation: boolean;
-  toggleVoiceNavigation: () => void;
+
+  highContrast: anyboolean;
+  toggleHighContrast: ()  => void;
+  reducedMotion: anyboolean;
+  toggleReducedMotion: ()  => void;
+  fontSize: anynumber;
+  increaseFontSize: ()  => void;
+  decreaseFontSize: ()  => void;
+  resetFontSize: ()  => void;
+  showSkipLinks: anyboolean;
+  setShowSkipLinks: (show: boolean)  => void;
+  voiceNavigation: anyboolean;
+  toggleVoiceNavigation: ()  => void;
+
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
@@ -291,5 +293,5 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isActive]);
 
-  return <>{children}</>;
-};
+  return <>{children}</;
+};>

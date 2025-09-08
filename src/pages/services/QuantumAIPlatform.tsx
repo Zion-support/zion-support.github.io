@@ -1,31 +1,6 @@
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Server,
-  Globe,
-  Clock,
-  BarChart3,
-  Cpu,
-  Lock,
-  Eye,
-  Target,
-  Rocket,
-  Sparkles,
-  Atom,
-  Infinity,
-  CpuIcon} from 'lucide-react';
 
 export default function QuantumAIPlatform() {
   const features = [
@@ -449,8 +424,13 @@ export default function QuantumAIPlatform() {
                       {application}
                     </li>
                   ))}
-                </ul>
-              </motion.div>
+                </div>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <div>
+                  <p className="text-white font-semibold">{testimonial.name}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.comp}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

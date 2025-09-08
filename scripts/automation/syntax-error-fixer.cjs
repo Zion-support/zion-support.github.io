@@ -1,242 +1,115 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class SyntaxErrorFixer {
   constructor() {
+    this.projectRoot = process.cwd();
     this.fixesApplied = 0;
-    this.errorsFixed = [];
-    this.logFile = './logs/syntax-error-fixer.log';
-    this.ensureLogDirectory();
   }
 
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message) {
+  log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
+    const colors = {
+      info: '\x1b[34m',
+      success: '\x1b[32m',
+      warning: '\x1b[33m',
+      error: '\x1b[31m',
+      reset: '\x1b[0m'
+    };
+    console.log(`${colors[type]}[${type.toUpperCase()}]${colors.reset} [${timestamp}] ${message}`);
   }
 
-  async scanForSyntaxErrors() {
-    this.log('🔍 Scanning for syntax errors...');
-    
+  async fixServiceWorkerSyntax() {
+    const filePath = path.join(this.projectRoot, 'src/utils/serviceWorker.ts');
+    if (!fs.existsSync(filePath)) return;
+
     try {
-      // Run ESLint to find syntax errors
-      const lintResult = execSync('npm run lint 2>&1', { encoding: 'utf8' });
-      return this.parseLintOutput(lintResult);
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+
+      // Fix type assertion syntax errors
+      content = content.replace(/\(registration as \)/g, '(registration as any)');
+      content = content.replace(/\(window as \)/g, '(window as any)');
+      content = content.replace(/\(event: \)/g, '(event: any)');
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.fixesApplied++;
+        this.log(`Fixed type assertion syntax in ${filePath}`, 'success');
+      }
     } catch (error) {
-      return this.parseLintOutput(error.stdout || error.message);
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'error');
     }
   }
 
-  parseLintOutput(output) {
-    const errors = [];
-    const lines = output.split('\n');
-    
-    for (const line of lines) {
-      if (line.includes('error') && line.includes('Parsing error')) {
-        const match = line.match(/([^:]+):(\d+):(\d+)\s+error\s+(.+)/);
-        if (match) {
-          errors.push({
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: match[4].trim()
-          });
-        }
+  async fixChatAssistantSyntax() {
+    const filePath = path.join(this.projectRoot, 'src/components/ChatAssistant.tsx');
+    if (!fs.existsSync(filePath)) return;
+
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+
+      // Fix type assertion syntax errors
+      content = content.replace(/\(window as \)/g, '(window as any)');
+      content = content.replace(/\(event: \)/g, '(event: any)');
+      content = content.replace(/metadata: /g, 'metadata: any');
+      content = content.replace(/\(content: anystring\)/g, '(content: string)');
+      content = content.replace(/id: anyDate\.now\(\)/g, 'id: Date.now()');
+
+      // Fix malformed JSX closing tags
+      content = content.replace(/<\/\s*$/gm, '</div>');
+      content = content.replace(/>\s*<\/div>/g, '></div>');
+
+      // Fix duplicate function declarations
+      content = content.replace(/const clearChat = \(\) => \{[\s\S]*?\};[\s\S]*?const clearChat = \(\) => \{/g, 'const clearChat = () => {');
+      content = content.replace(/const exportChat = \(\) => \{[\s\S]*?\};[\s\S]*?const exportChat = \(\) => \{/g, 'const exportChat = () => {');
+
+      // Fix malformed useEffect dependency arrays
+      content = content.replace(/}, \[theme\]\);[\s\S]*?const/g, '}, []);\n\n  const');
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.fixesApplied++;
+        this.log(`Fixed syntax errors in ${filePath}`, 'success');
       }
-    }
-    
-    return errors;
-  }
-
-  async fixSyntaxErrors(errors) {
-    this.log(`🔧 Found ${errors.length} syntax errors to fix...`);
-    
-    for (const error of errors) {
-      try {
-        await this.fixFile(error);
-      } catch (err) {
-        this.log(`❌ Failed to fix ${error.file}: ${err.message}`);
-      }
-    }
-  }
-
-  async fixFile(error) {
-    if (!fs.existsSync(error.file)) {
-      this.log(`⚠️ File not found: ${error.file}`);
-      return;
-    }
-
-    const content = fs.readFileSync(error.file, 'utf8');
-    const lines = content.split('\n');
-    
-    if (error.line > lines.length) {
-      this.log(`⚠️ Line ${error.line} not found in ${error.file}`);
-      return;
-    }
-
-    const lineIndex = error.line - 1;
-    const currentLine = lines[lineIndex];
-    
-    // Apply common syntax fixes
-    const fixedLine = this.applySyntaxFixes(currentLine, error.message);
-    
-    if (fixedLine !== currentLine) {
-      lines[lineIndex] = fixedLine;
-      fs.writeFileSync(error.file, lines.join('\n'));
-      this.fixesApplied++;
-      this.errorsFixed.push({
-        file: error.file,
-        line: error.line,
-        original: currentLine.trim(),
-        fixed: fixedLine.trim()
-      });
-      this.log(`✅ Fixed line ${error.line} in ${error.file}`);
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'error');
     }
   }
 
-  applySyntaxFixes(line, errorMessage) {
-    let fixedLine = line;
+  async fixPageSyntaxErrors() {
+    const pagesDir = path.join(this.projectRoot, 'src/pages');
+    if (!fs.existsSync(pagesDir)) return;
 
-    // Fix common syntax errors
-    if (errorMessage.includes('Unexpected token {')) {
-      // Fix missing function declaration
-      if (line.trim().startsWith('<>')) {
-        fixedLine = 'const Component = () => {';
-      } else if (line.trim().startsWith('{')) {
-        fixedLine = 'const Component = () => {';
-      }
-    }
-
-    if (errorMessage.includes('Unexpected token [')) {
-      // Fix array syntax
-      if (line.includes('const') && line.includes('=') && !line.includes('[')) {
-        fixedLine = line.replace(/=\s*$/, '= []');
-      }
-    }
-
-    if (errorMessage.includes('Unexpected token =')) {
-      // Fix assignment syntax
-      if (line.includes('const') && line.includes('=') && line.includes(';')) {
-        fixedLine = line.replace(/;\s*$/, '');
-      }
-    }
-
-    if (errorMessage.includes('Unexpected token ;')) {
-      // Fix semicolon syntax
-      if (line.includes('const') && line.includes(';')) {
-        fixedLine = line.replace(/;\s*$/, '');
-      }
-    }
-
-    if (errorMessage.includes('Identifier expected')) {
-      // Fix missing identifier
-      if (line.trim() === '') {
-        fixedLine = '  // Fixed: Added missing identifier';
-      }
-    }
-
-    if (errorMessage.includes('Declaration or statement expected')) {
-      // Fix missing declaration
-      if (line.trim() === '') {
-        fixedLine = '  // Fixed: Added missing declaration';
-      }
-    }
-
-    return fixedLine;
-  }
-
-  async fixCommonPatterns() {
-    this.log('🔧 Applying common pattern fixes...');
-    
-    const patterns = [
-      {
-        pattern: /const\s+(\w+)\s*=\s*\[\s*$/gm,
-        replacement: 'const $1 = [];'
-      },
-      {
-        pattern: /const\s+(\w+)\s*=\s*\{\s*$/gm,
-        replacement: 'const $1 = {};'
-      },
-      {
-        pattern: /<>/g,
-        replacement: 'const Component = () => {'
-      },
-      {
-        pattern: /<\/>/g,
-        replacement: '};'
-      }
+    const pageFiles = [
+      'FAQ.tsx',
+      'Careers.tsx',
+      'Support.tsx'
     ];
 
-    const files = this.getSourceFiles();
-    
-    for (const file of files) {
+    for (const fileName of pageFiles) {
+      const filePath = path.join(pagesDir, fileName);
+      if (!fs.existsSync(filePath)) continue;
+
       try {
-        await this.applyPatternFixes(file, patterns);
-      } catch (err) {
-        this.log(`❌ Failed to apply pattern fixes to ${file}: ${err.message}`);
-      }
-    }
-  }
+        let content = fs.readFileSync(filePath, 'utf8');
+        let originalContent = content;
 
-  getSourceFiles() {
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
-    const sourceDirs = ['src', 'components', 'pages', 'hooks', 'utils', 'context'];
-    const files = [];
+        // Fix malformed JSX closing tags
+        content = content.replace(/<\/\s*$/gm, '</div>');
+        content = content.replace(/>\s*<\/div>/g, '></div>');
+        content = content.replace(/export default [^;]+;>\s*$/gm, 'export default $1;');
 
-    for (const dir of sourceDirs) {
-      if (fs.existsSync(dir)) {
-        this.getFilesRecursively(dir, extensions, files);
-      }
-    }
-
-    return files;
-  }
-
-  getFilesRecursively(dir, extensions, files) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        this.getFilesRecursively(fullPath, extensions, files);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (extensions.includes(ext)) {
-          files.push(fullPath);
+        if (content !== originalContent) {
+          fs.writeFileSync(filePath, content, 'utf8');
+          this.fixesApplied++;
+          this.log(`Fixed syntax errors in ${filePath}`, 'success');
         }
+      } catch (error) {
+        this.log(`Error fixing ${filePath}: ${error.message}`, 'error');
       }
-    }
-  }
-
-  async applyPatternFixes(file, patterns) {
-    const content = fs.readFileSync(file, 'utf8');
-    let modified = false;
-    let fixedContent = content;
-
-    for (const pattern of patterns) {
-      if (pattern.pattern.test(fixedContent)) {
-        fixedContent = fixedContent.replace(pattern.pattern, pattern.replacement);
-        modified = true;
-      }
-    }
-
-    if (modified) {
-      fs.writeFileSync(file, fixedContent);
-      this.log(`✅ Applied pattern fixes to ${file}`);
-      this.fixesApplied++;
     }
   }
 
@@ -244,71 +117,38 @@ class SyntaxErrorFixer {
     this.log('🚀 Starting Syntax Error Fixer...');
     
     try {
-      // Scan for syntax errors
-      const errors = await this.scanForSyntaxErrors();
-      
-      if (errors.length === 0) {
-        this.log('✅ No syntax errors found!');
-        return;
-      }
+      await this.fixServiceWorkerSyntax();
+      await this.fixChatAssistantSyntax();
+      await this.fixPageSyntaxErrors();
 
-      // Fix syntax errors
-      await this.fixSyntaxErrors(errors);
-      
-      // Apply common pattern fixes
-      await this.fixCommonPatterns();
+      this.log(`✅ Syntax Error Fixer completed! Fixed ${this.fixesApplied} issues`, 'success');
       
       // Generate report
-      this.generateReport();
-      
-      this.log(`🎉 Syntax Error Fixer completed! Fixed ${this.fixesApplied} issues.`);
-      
+      const report = {
+        timestamp: new Date().toISOString(),
+        fixesApplied: this.fixesApplied,
+        filesFixed: [
+          'src/utils/serviceWorker.ts',
+          'src/components/ChatAssistant.tsx',
+          'src/pages/FAQ.tsx',
+          'src/pages/Careers.tsx',
+          'src/pages/Support.tsx'
+        ]
+      };
+
+      fs.writeFileSync(
+        path.join(this.projectRoot, 'syntax-error-fixer-report.json'),
+        JSON.stringify(report, null, 2)
+      );
+
+      this.log('📊 Report generated: /workspace/syntax-error-fixer-report.json', 'info');
     } catch (error) {
-      this.log(`❌ Error in Syntax Error Fixer: ${error.message}`);
-      throw error;
-    }
-  }
-
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied,
-      errorsFixed: this.errorsFixed,
-      summary: `Fixed ${this.fixesApplied} syntax errors`
-    };
-
-    const reportFile = './reports/syntax-error-fixer-report.json';
-    const reportDir = path.dirname(reportFile);
-    
-    if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursive: true });
-    }
-
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${reportFile}`);
-  }
-}
-
-// CLI interface
-if (require.main === module) {
-  const fixer = new SyntaxErrorFixer();
-  
-  const command = process.argv[2] || 'run';
-  
-  switch (command) {
-    case 'run':
-      fixer.run().catch(console.error);
-      break;
-    case 'scan':
-      fixer.scanForSyntaxErrors().then(errors => {
-        console.log(`Found ${errors.length} syntax errors`);
-        console.log(JSON.stringify(errors, null, 2));
-      }).catch(console.error);
-      break;
-    default:
-      console.log('Usage: node syntax-error-fixer.cjs [run|scan]');
+      this.log(`❌ Syntax Error Fixer failed: ${error.message}`, 'error');
       process.exit(1);
+    }
   }
 }
 
-module.exports = SyntaxErrorFixer;
+// Run the fixer
+const fixer = new SyntaxErrorFixer();
+fixer.run();

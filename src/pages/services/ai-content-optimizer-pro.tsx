@@ -1,25 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Target, 
-  Users, 
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  Clock,
-  Shield,
-  Brain,
-  Search,
-  PenTool,
-  Eye} from 'lucide-react';
+
 
 const AIContentOptimizerPro: React.FC = () => {
   const contactInfo = {
@@ -441,7 +422,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-blue-400 text-sm">{testimonial.company}</p>
+                    <p className="text-blue-400 text-sm">{testimonial.comp}</p>
                   </div>
                 </motion.div>
               ))}
@@ -512,8 +493,8 @@ const AIContentOptimizerPro: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default AIContentOptimizerPro;
+export default AIContentOptimizerPro;>

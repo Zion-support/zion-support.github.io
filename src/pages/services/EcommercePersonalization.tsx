@@ -1,7 +1,7 @@
 // removed duplicate old section
 
 import { SEO } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle} from 'lucide-react';
+
 
 const EcommercePersonalization: React.FC = () => {
   return (

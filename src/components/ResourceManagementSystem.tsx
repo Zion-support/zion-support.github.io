@@ -1,44 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
-  Calendar, 
-  Clock, 
-  Target, 
-  TrendingUp, 
-  AlertCircle,
-  CheckCircle,
-  XCircle,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  BarChart3,
-  PieChart,
-  Activity,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Settings,
-  RefreshCw,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Star,
-  Award,
-  Briefcase,
-  Home,
-  Building,
-  Wifi,
-  Server,
-  Database,
-  Lock} from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 interface Resource {
   id: string;
@@ -222,14 +184,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Calculate resource stats
   const resourceStats = {
-    totalResources: resources.length,
-    availableResources: resources.filter(r => r.status === 'available').length,
-    allocatedResources: resources.filter(r => r.status === 'allocated').length,
-    maintenanceResources: resources.filter(r => r.status === 'maintenance').length,
-    totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
-    currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: (() => {
+    totalResources: anyresources.length,
+    availableResources: resources.filter(r  => r.status === 'available').length,
+    allocatedResources: anyresources.filter(r  => r.status === 'allocated').length,
+    maintenanceResources: anyresources.filter(r  => r.status === 'maintenance').length,
+    totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
+    currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: (()  => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
@@ -309,7 +271,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>
-          <p className="text-zinc-400 text-lg">Monitor and manage all company resources efficiently</p>
+          <p className="text-zinc-400 text-lg">Monitor and manage all comp resources efficiently</p>
         </div>
         
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
@@ -322,7 +284,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'

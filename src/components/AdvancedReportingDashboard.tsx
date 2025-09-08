@@ -1,22 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Download, 
-  Share2, 
-  Users,
-  DollarSign,
-  Activity,
-  Eye,
-  FileText,
-  Clock,
-  Star,
-  Search,
-  ChevronDown,
-  ChevronUp,
-  Shield,
-  Server} from 'lucide-react';
+
 
 interface ReportData {
   id: string;
@@ -254,12 +238,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Calculate report metrics
   const reportMetrics = {
-    totalReports: reports.length,
-    activeReports: reports.filter(r => r.status === 'active').length,
-    totalViews: reports.reduce((sum, r) => sum + r.views, 0),
-    totalDownloads: reports.reduce((sum, r) => sum + r.downloads, 0),
-    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,
-    topCategories: (() => {
+    totalReports: anyreports.length,
+    activeReports: reports.filter(r  => r.status === 'active').length,
+    totalViews: anyreports.reduce((sum, r)  => sum + r.views, 0),
+    totalDownloads: anyreports.reduce((sum, r)  => sum + r.downloads, 0),
+    averageRating: anyreports.reduce((sum, r)  => sum + r.rating, 0) / reports.length || 0,
+    topCategories: (()  => {
       const catCounts = reports.reduce((acc, r) => {
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
@@ -365,7 +349,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
@@ -552,7 +536,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           {/* Sort Options */}
           <select
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
+            onChange={(e) => setSortBy(e.target.value as )}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           >
             <option value="date">Sort by Date</option>

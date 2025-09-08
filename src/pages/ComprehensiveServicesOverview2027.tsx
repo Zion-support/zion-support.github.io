@@ -1,31 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Server, 
-  Shield, 
-  Globe, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Award,
-  ArrowRight,
-  Check,
-  Star,
-  Phone,
-  MapPin,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ShoppingCart,
-  MessageCircle,
-  HelpCircle,
-  FileText,
-  Video,
-  Truck} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -159,20 +135,79 @@ export default function ComprehensiveServicesOverview2027() {
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  const filteredServices = selectedCategory === 'All' 
-    ? allServices 
-    : servicesByCategory[selectedCategory] || [];
+  const ServiceCard = ({ service }: { service:  }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
+    >
+      {service.featured && (
+        <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
+          Featured
+        </div>
+      )}
+      <div className="relative mb-6 overflow-hidden rounded-xl">
+        <img 
+          src={service.images[0]} 
+          alt={service.title}
+          className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-3 left-3 right-3">
+          <div className="flex items-center justify-between">
+            <Badge variant="secondary" className="bg-zion-purple/80 text-white">
+              {service.category}
+            </Badge>
+            <div className="flex items-center space-x-1 text-white">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-sm font-medium">{service.rating}</span>
+              <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="space-y-4">
+        <div>
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+            {service.title}
+          </h3>
+          <p className="text-zion-slate-light text-sm leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <Badge variant="outline" className="text-zion-cyan border-zion-cyan/30">
+              {service.subcategory}
+            </Badge>
+            <Badge variant="outline" className="text-zion-purple border-zion-purple/30">
+              AI Score: {service.aiScore}
+            </Badge>
+          </div>
+        </div>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-zion-slate-light text-sm">Pricing:</span>
+            <span className="text-white font-semibold">{service.pricingModel}</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-zion-slate-light text-sm">Created:</span>
+            <span className="text-white text-sm">{new Date(service.createdAt).toLocaleDateString()}</span>
+          </div>
+        </div>
+        <Button 
+          asChild 
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light"
+        >
+          <Link to={service.href}>
+            Learn More
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+        </Button>
+      </div>
+    </motion.div>
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -218,6 +253,16 @@ export default function ComprehensiveServicesOverview2027() {
                 <Mail className="w-4 h-4 text-cyan-400" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as )}
+                className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
+              >
+                <option value="rating">Sort by Rating</option>
+                <option value="price">Sort by Price</option>
+                <option value="aiScore">Sort by AI Score</option>
+                <option value="newest">Sort by Newest</option>
+              </select>
             </div>
           </motion.div>
         </div>

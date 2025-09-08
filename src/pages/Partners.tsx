@@ -1,20 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Building, 
-  Globe, 
-  Star, 
-  ArrowRight, 
-  Handshake, 
-  Award, 
-  TrendingUp,
-  Shield,
-  Cloud,
-  Brain,
-  Zap,
-  CheckCircle,
-  Phone,
-  Mail} from 'lucide-react';
+
 
 export default function Partners() {
   const partnerCategories = [

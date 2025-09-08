@@ -1,42 +1,6 @@
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Target, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Cpu,
-  Lock,
-  Globe,
-  Users,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Network,
-  Database,
-  Server,
-  Code,
-  TrendingUp,
-  Activity,
-  Fingerprint,
-  Search,
-  Monitor,
-  Truck,
-  Atom,
-  Cloud,
-  Eye,
-  MessageCircle,
-  ShoppingCart,
-  Heart,
-  Leaf,
-  Package,
-  Route,
-  Warehouse,
-  AlertTriangle} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 interface Service {
   id: string;

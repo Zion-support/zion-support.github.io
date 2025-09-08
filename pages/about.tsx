@@ -1,34 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-import Layout from '../components/Layout';
-import { 
-  TrendingUp,
-  Building,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  Star, 
-  DollarSign, 
-  Clock, 
-  BarChart3,
-  Brain,
-  Users,
-  Target,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Shield,
-  Zap,
-  Lock,
-  Cloud,
-  Server
-} from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const team = [
   {
@@ -237,232 +209,32 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mission Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Our Mission
-                </h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  To democratize access to advanced technology solutions by providing affordable, 
-                  scalable, and innovative AI, IT, and Micro SaaS services that empower businesses 
-                  of all sizes to compete and thrive in the digital economy.
-                </p>
-                <p className="text-lg text-gray-300 mb-8">
-                  We believe that every business, regardless of size, should have access to 
-                  cutting-edge technology that can transform their operations and drive growth.
-                </p>
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
-                >
-                  Get in Touch
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="grid grid-cols-2 gap-4"
-              >
-                <div className="bg-gray-800 p-6 rounded-lg">
-                  <Brain className="w-8 h-8 text-blue-400 mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">AI Innovation</h3>
-                  <p className="text-gray-300 text-sm">Leading the way in artificial intelligence solutions</p>
-                </div>
-                <div className="bg-gray-800 p-6 rounded-lg">
-                  <Cloud className="w-8 h-8 text-blue-400 mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Cloud Excellence</h3>
-                  <p className="text-gray-300 text-sm">Expert cloud computing and migration services</p>
-                </div>
-                <div className="bg-gray-800 p-6 rounded-lg">
-                  <Zap className="w-8 h-8 text-blue-400 mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Micro SaaS</h3>
-                  <p className="text-gray-300 text-sm">Custom software solutions for every need</p>
-                </div>
-                <div className="bg-gray-800 p-6 rounded-lg">
-                  <Shield className="w-8 h-8 text-blue-400 mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Security First</h3>
-                  <p className="text-gray-300 text-sm">Enterprise-grade security and compliance</p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The principles that guide everything we do
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-blue-400 mb-4 flex justify-center">
-                    <value.icon className="w-12 h-12" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {value.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Meet Our Team
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The talented individuals behind our success
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {team.map((member, index) => (
-                <motion.div
-                  key={member.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gray-800 rounded-lg p-6 text-center"
-                >
-                  <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-12 h-12 text-gray-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-400 mb-2">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-300 text-sm">
-                    {member.expertise}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Timeline Section */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Journey
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Key milestones in our company's growth
-              </p>
-            </motion.div>
-
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-400"></div>
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`relative mb-8 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}
-                >
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full"></div>
-                  <div className={`bg-gray-800 rounded-lg p-6 max-w-md ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'}`}>
-                    <div className="text-blue-400 font-bold text-lg mb-2">
-                      {milestone.year}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-gray-300">
-                      {milestone.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Work With Us?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Let's discuss how we can help transform your business with our technology solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-                >
-                  Get in Touch
-                </Link>
-                <Link
-                  href="/services"
-                  className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
-                >
-                  View Our Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-<<<<<<< HEAD
+			{/* CTA Section */}
+			<section className="py-24 sm:py-32 bg-blue-600">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-white">Ready to Work With Us?</h2>
+						<p className="mt-6 text-lg text-blue-100">
+							Let's discuss how our expertise can help your business thrive in the digital age.
+						</p>
+						<div className="mt-10 flex items-center justify-center gap-x-6">
+							<Link
+								to="/contact"
+								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+							>
+								Get in Touch
+							</Link>
+							<Link
+								to="/services"
+								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
+							>
+								Explore Our Services <span aria-hidden="true">→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+		</section>
+		</
+	)
 }
-=======
-}
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+>

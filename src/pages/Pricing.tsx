@@ -1,25 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Check, 
-  Star, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket, 
-  Heart, 
-  Cpu,
-  TrendingUp,
-  Code,
-  Server,
-  Smartphone,
-  Database,
-  BookOpen,
-  HelpCircle,
-  Mail,
-  Video,
-  GraduationCap} from 'lucide-react';
+
 
 const Pricing: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');

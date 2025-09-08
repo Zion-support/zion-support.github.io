@@ -1,21 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  MessageCircle, 
-  Headphones, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Clock,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  BarChart3,
-  Globe,
-  Target,
-  Smartphone,
-  Mail,
-  Phone} from 'lucide-react';
+
 
 export default function AICustomerSupport() {
   const features = [
@@ -324,6 +309,6 @@ export default function AICustomerSupport() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

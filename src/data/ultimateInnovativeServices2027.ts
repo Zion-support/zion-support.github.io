@@ -938,7 +938,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
         "Automated insight generation and recommendations",
         "Predictive business intelligence and forecasting",
         "Natural language interface for data exploration",
-        "Scalable analytics infrastructure for any data volume"
+        "Scalable analytics infrastructure for  data volume"
       ]
     }
   },

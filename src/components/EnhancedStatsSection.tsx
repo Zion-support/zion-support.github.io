@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { 
-  Users, 
-  Globe, 
-  TrendingUp, 
-  Star, 
-  Zap, 
-  Shield,
-  Award} from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, useAnimation  } from 'framer-motion.ts';
+import { useInView  } from 'react-intersection-observer.ts';
+
 
 interface Stat {
   id: string;
@@ -77,8 +70,8 @@ const stats: Stat[] = [
   }
 ];
 
-export default function EnhancedStatsSection() {
-  const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({});
+export default function EnhancedStatsSection(...args: []):  {
+  const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,

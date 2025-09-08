@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import type { NextPage } from 'next';
+import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
+
 
 const products = [
   {

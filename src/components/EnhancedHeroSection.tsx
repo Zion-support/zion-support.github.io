@@ -1,19 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Play, 
-  Star, 
-  CheckCircle, 
-  ChevronLeft, 
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target} from 'lucide-react';
+import React, { useState, useEffect, memo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+
 
 interface HeroSlide {
   title: string;
@@ -28,7 +16,7 @@ interface HeroSlide {
   stats: { label: string; value: string; icon: React.ComponentType<any> }[];
 }
 
-export default function EnhancedHeroSection() {
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 

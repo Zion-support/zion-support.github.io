@@ -1,20 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Plus,
-  MessageCircle,
-  Phone,
-  Mail,
-  ArrowUp,
-  Settings,
-  HelpCircle,
-  X,
-  ChevronUp,
-  ChevronDown,
-  Star,
-  Share2,
-  Bookmark,
-  Download} from 'lucide-react';
+
 
 interface FloatingActionButtonProps {
   enabled?: boolean;
@@ -27,15 +13,15 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   // Hide button when scrolling down, show when scrolling up
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const isScrollingDown = scrollTop > (window as any).lastScrollTop;
-
+    const isScrollingDown = scrollTop > (window as ).lastScrollTop;
+    
     if (isScrollingDown && scrollTop > 100) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
     }
-
-    (window as any).lastScrollTop = scrollTop;
+    
+    (window as ).lastScrollTop = scrollTop;
   }, []);
 
   React.useEffect(() => {
@@ -126,7 +112,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
             window.open('https://play.google.com/store/apps/details?id=com.ziontechgroup.app', '_blank');
           } else {
             // Show PWA install prompt
-            const deferredPrompt = (window as any).deferredPrompt;
+            const deferredPrompt = (window as ).deferredPrompt;
             if (deferredPrompt) {
               deferredPrompt.prompt();
             }
@@ -305,6 +291,6 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       >
         <Star className="w-6 h-6 text-white" />
       </motion.button>
-    </>
+    </
   );
-}
+}>

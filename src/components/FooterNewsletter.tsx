@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, Send} from 'lucide-react';
+import React, { useState } from 'react.ts';
+
 
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -65,19 +65,19 @@ export const FooterNewsletter: React.FC = () => {
                 <>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                   Subscribing...
-                </>
+                </
               ) : (
-                <>
+                ><>
                   <Send className="w-4 h-4" />
                   Subscribe
-                </>
+                </
                 )}
-            </button>
+            ></button>
           </form>
         )}
 
         <p className="text-xs text-gray-400 mt-4">
-          We respect your privacy. Unsubscribe at any time.
+          We respect your privacy. Unsubscribe at  time.
         </p>
       </div>
     </div>

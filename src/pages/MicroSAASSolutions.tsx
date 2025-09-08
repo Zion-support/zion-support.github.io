@@ -1,25 +1,5 @@
 import { SEO } from '../components/SEO';
-import { 
-  Code, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Globe, 
-  Building, 
-  Rocket, 
-  Cpu, 
-  BarChart3,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Target,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight} from 'lucide-react';
+
 
 export default function MicroSAASSolutions() {
   const services = [
@@ -347,6 +327,6 @@ export default function MicroSAASSolutions() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

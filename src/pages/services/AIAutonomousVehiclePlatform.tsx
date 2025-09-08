@@ -1,4 +1,5 @@
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star} from 'lucide-react';
+import React from 'react';
+
 import { SEO } from '../../components/SEO';
 
 export default function AIAutonomousVehiclePlatform() {
@@ -307,6 +308,6 @@ export default function AIAutonomousVehiclePlatform() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

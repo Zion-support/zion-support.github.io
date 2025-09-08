@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code} from 'lucide-react';
+
 import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
 
@@ -72,9 +72,10 @@ const searchData: SearchResult[] = [
     description: 'Learn about our mission, values, and commitment to innovation',
     url: '/about',
     type: 'page',
-    category: 'Company',
-    tags: ['About', 'Company', 'Mission', 'Values'],
-    relevance: 85
+    category: 'Comp',
+    tags: ['About', 'Comp', 'Mission', 'Values'],
+    relevance: 85,
+    icon: Building
   },
   {
     id: 'contact',

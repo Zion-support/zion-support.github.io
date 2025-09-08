@@ -1,16 +1,6 @@
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  CheckCircle,
-  AlertTriangle,
-  Scale,
-  Lock,
-  Mail,
-  Phone,
-  MapPin} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
 import { SEO } from '../components/SEO';
 
 export default function Terms() {
@@ -44,7 +34,7 @@ export default function Terms() {
     },
     {
       obligation: 'Account Security',
-      description: 'Maintain the security of your account credentials and notify us of any unauthorized access.'
+      description: 'Maintain the security of your account credentials and notify us of  unauthorized access.'
     },
     {
       obligation: 'Acceptable Use',
@@ -60,7 +50,7 @@ export default function Terms() {
     },
     {
       obligation: 'Confidentiality',
-      description: 'Maintain the confidentiality of any proprietary information shared with you.'
+      description: 'Maintain the confidentiality of  proprietary information shared with you.'
     }
   ];
 
@@ -561,7 +551,7 @@ export default function Terms() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               By using our services, you agree to these terms. 
-              Contact us if you need any clarification or have questions.
+              Contact us if you need  clarification or have questions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

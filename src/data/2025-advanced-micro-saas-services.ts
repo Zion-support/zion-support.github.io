@@ -212,7 +212,7 @@ export const advancedMicroSaasServices2025 = [
   {
     id: 'intelligent-workflow-automation',
     name: 'WorkflowAI Studio',
-    description: 'AI-powered workflow automation platform that intelligently designs, optimizes, and executes business processes across any industry.',
+    description: 'AI-powered workflow automation platform that intelligently designs, optimizes, and executes business processes across  industry.',
     features: [
       'AI-powered process discovery',
       'Intelligent workflow design',

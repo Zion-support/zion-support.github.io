@@ -1,27 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Server,
-  Globe,
-  Clock,
-  BarChart3,
-  Cpu,
-  Lock,
-  Eye,
-  Target,
-  Rocket} from 'lucide-react';
+
 
 export default function AIEnterpriseOrchestrator() {
   const features = [

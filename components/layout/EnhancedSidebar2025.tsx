@@ -1,12 +1,12 @@
-React, { useState, useEffect              } from
-  'react.ts';
-import Link from
-  'next/link.ts';'{ motion, AnimatePresence               } from'
-  'framer-motion.ts';
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star'
-              } from
-  'lucide-react.ts';''
-  'interface SidebarItem {name: string;'href: string;
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+interface SidebarItem {
+  name: string;
+  href: string;
   icon: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
@@ -28,188 +28,123 @@ const sidebarSections = [;
 title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,'
 , color: 'from-cyan-500 to-blue-600, items[, '
   {
-  ';'
-        name: 'AI & Consciousness, '        href: '/ai-services', icon: Brain, 
-,
-  description: 'Advanced AI consciousness and evolution platforms, subItems[,'
-  { name: 'AI Consciousness Evolution, href:,'
-  /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:, /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:,
-  /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:, /ai-creativity-studio' }, { name: 'AI Education Platform, href:,
-  /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:,
-  /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:, /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:,
-  /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:, /ai-legal-contract-analyzer' }'
-  '        ]'      }, {;
-
-        name: 'Quantum Computing, '
-,
-  href: '/quantum-services, icon: Atom,'        description:, Next-generation quantum computing solutions', subItems['
-  '          { name: 'Quantum Cloud Infrastructure, href:,
-  /quantum-cloud-infrastructure
-  ' }, { name: 'Quantum Bio-Computing, href:, /quantum-bio-computing
-  ' }, { name: 'Quantum Energy Platform, href:,
-  /quantum-energy-platform
-  ' }, { name: 'Quantum Materials Discovery, href:, /quantum-materials-discovery
-  ' }, { name: 'Quantum Robotics, href:,
-  /quantum-robotics
-  ' }, { name: 'Quantum Internet Security, href:, /quantum-internet-security
-  ' }, { name: 'Quantum Logistics, href:,
-  /quantum-logistics-optimization
-  ' }, { name: 'Quantum Cybersecurity, href:, /quantum-cybersecurity-platform
-  ' }'        ]
-  '      }, {;'
-
-        name: 'Enterprise IT, '        href: '/enterprise-it', icon: Shield, 
-,
-  description: 'Enterprise-grade IT infrastructure and security, subItems[,'
-  { name: 'Edge Computing Orchestrator, href:,'
-  /edge-computing-orchestration' }, { name: 'Zero Trust Security Platform, href:, /zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform, href:,
-  /blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps, href:, /ai-powered-devops' }, { name: 'Quantum Networking, href:,
-  /quantum-networking' }, { name: 'Autonomous IT Operations, href:, /autonomous-it-operations' }, { name: 'Quantum Data Center, href:,
-  /quantum-data-center' }, { name: 'Quantum Cloud Migration, href:, /quantum-cloud-migration' }'
-  '        ]'      }, {;
-
-        name: 'Micro SAAS, '
-,
-  href: '/micro-saas, icon: Rocket,'        description:, AI-powered micro SAAS solutions', subItems['
-  '          { name: 'AI Content Factory Platform, href:,
-  /ai-content-factory
-  ' }, { name: 'CRM Intelligence & Automation, href:, /crm-intelligence-automation
-  ' }, { name: 'AI Decision Engine Platform, href:,
-  /ai-decision-engine
-  ' }, { name: 'E-commerce Optimization, href:, /ecommerce-optimization-platform
-  ' }, { name: 'AI HR & Talent Platform, href:,
-  /ai-hr-talent-platform
-  ' }, { name: 'Financial Analytics Platform, href:, /financial-analytics-platform
-  ' }, { name: 'Supply Chain Intelligence, href:,
-  /supply-chain-intelligence
-  ' }, { name: 'Marketing Automation Platform, href:, /marketing-automation-platform
-  ' }, { name: 'Project Management AI, href:,
-  /project-management-ai
-  ' }'        ]
-  '      }, {;'
-
-        name: 'Space Technology, '        href: '/space-tech', icon: Globe, 
-,
-  description: 'Cutting-edge space exploration and mining, subItems[,'
-  { name: 'Space Mining Platform, href:,'
-  /space-mining-platform' }, { name: 'Satellite Technology, href:, /satellite-technology' }, { name: 'Space Resource Management, href:,
-  /space-resource-management' }, { name: 'Interplanetary Communication, href:, /interplanetary-communication' }'
-  '        ]'      }, {;
-
-        name: 'Emerging Tech, '
-,
-  href: '/emerging-tech, icon: Sparkles,'        description:, Future technologies and innovations', subItems['
-  '          { name: 'Brain-Computer Interface, href:,
-  /brain-computer-interface
-  ' }, { name: 'Autonomous Vehicle AI, href:, /autonomous-vehicle-ai
-  ' }, { name: 'Advanced Robotics, href:,
-  /advanced-robotics
-  ' }, { name: 'Biotechnology Platform, href:, /biotechnology-platform
-  ' }'        ]
-  '']
-  }, {
-
-title: 'Industry Solutions,'    icon: Target, color:,
-  from-purple-500 to-pink-600', '
-  '    items['      {;
-
-        name: 'Healthcare, href: '
-  '/healthcare-solutions',
-  '        icon: Heart, description:,'
-  AI-powered healthcare diagnostics and solutions
-  ', '        subItems[
-  '          { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics
-  ' },'          { name: 'Medical Imaging AI, href:,'
-  /medical-imaging-ai' }, '
-  '          { name: 'Drug Discovery Platform, href:, /drug-discovery-platform
-  ' }'        ]
-  '      }, {;'
-
-        name: 'Financial Services, '        href: '/financial-solutions', icon: BarChart3, 
-,
-  description: 'Advanced financial intelligence and analytics, subItems[,'
-  { name: 'AI Financial Intelligence, href:,'
-  /ai-financial-intelligence' }, { name: 'Quantum Trading Platform, href:, /quantum-financial-trading' }, { name: 'Risk Assessment AI, href:,
-  /risk-assessment-ai' }'
-  '        ]'      }, {;
-
-        name: 'Manufacturing, '
-,
-  href: '/manufacturing-solutions, icon: Settings,'        description:, Industry 4.0 and smart manufacturing', subItems['
-  '          { name: 'Smart Factory Platform, href:,
-  /smart-factory-platform
-  ' }, { name: 'Predictive Maintenance AI, href:, /predictive-maintenance-ai
-  ' }, { name: 'Quality Control AI, href:,
-  /quality-control-ai
-  ' }'        ]
-  '      }, {;'
-
-        name: 'Retail & E-commerce, '        href: '/retail-solutions', icon: Eye, 
-,
-  description: 'E-commerce optimization and retail intelligence, subItems[,'
-  { name: 'E-commerce Optimization, href:,'
-  /ecommerce-optimization-platform' }, { name: 'Customer Behavior AI, href:, /customer-behavior-ai' }, { name: 'Inventory Management AI, href:,
-  /inventory-management-ai' }'
-  '        ]'      }, {;
-
-        name: 'Government & Defense, '
-,
-  href: '/government-solutions, icon: Shield,'        description:, Secure government and defense solutions', subItems['
-  '          { name: 'Cybersecurity Platform, href:,
-  /quantum-cybersecurity-platform
-  ' }, { name: 'Data Protection AI, href:, /data-protection-ai
-  ' }, { name: 'Threat Detection AI, href:,
-  /threat-detection-ai
-  ' }'        ]
-  '      }, {;'
-
-        name: 'Education, '        href: '/education-solutions', icon: Award, 
-,
-  description: 'AI-powered education and learning platforms, subItems[,'
-  { name: 'AI Education Platform, href:,'
-  /ai-education-platform' }, { name: 'Personalized Learning AI, href:, /personalized-learning-ai' }, { name: 'Student Performance AI, href:,
-  /student-performance-ai' }'
-  '        ]']
-  }, {
-
-title: 'Comp & Resources,'
-  '    icon: Users, color:,'
-  from-green-500 to-emerald-600
-  ', '    items[
-  '      {;'
-
-        name: 'About Us, href: '/about
-  ','        icon: Users, description:,
-  Learn about Zion Tech Group', '
-  '        subItems['          { name: 'Our Mission, href:, '
-  /mission' },'
-  '          { name: 'Leadership Team, href:,
-  /leadership
-  ' }, '          { name: 'Comp History, href:, '
-  /history' },'
-  '          { name: 'Careers, href:,
-  /careers
-  ' }'        ]
-  '      }, {;'
-
-        name: 'Resources, '        href: '/resources', icon: BookOpen, 
-,
-  description: 'Educational content and documentation, subItems[,'
-  { name: 'Documentation, href:,'
-  /docs' }, { name: 'API Reference, href:, /api-docs' }, { name: 'Blog & News, href:,
-  /blog' }, { name: 'Case Studies, href:, /case-studies' }, { name: 'Whitepapers, href:,
-  /whitepapers' }, { name: 'Webinars, href:, /webinars' }'
-  '        ]'      }, {;
-
-        name: 'Support, '
-,
-  href: '/support, icon: HelpCircle,'        description:, Get help and support', subItems['
-  '          { name: 'Contact Support, href:,
-  /contact-support
-  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:,'
-  /training';'},;'          { name: 'Community Forum, href:,
-  /community' },;'          { name: 'Knowledge Base, href: '
-  '/knowledge-base' };'        ];'      };];};
+    title: 'Industry Solutions',
+    icon: Target,
+    color: 'from-purple-500 to-pink-600',
+    items: [
+      {
+        name: 'Healthcare',
+        href: '/healthcare-solutions',
+        icon: Heart,
+        description: 'AI-powered healthcare diagnostics and solutions',
+        subItems: [
+          { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
+          { name: 'Medical Imaging AI', href: '/medical-imaging-ai' },
+          { name: 'Drug Discovery Platform', href: '/drug-discovery-platform' }
+        ]
+      },
+      {
+        name: 'Financial Services',
+        href: '/financial-solutions',
+        icon: BarChart3,
+        description: 'Advanced financial intelligence and analytics',
+        subItems: [
+          { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
+          { name: 'Quantum Trading Platform', href: '/quantum-financial-trading' },
+          { name: 'Risk Assessment AI', href: '/risk-assessment-ai' }
+        ]
+      },
+      {
+        name: 'Manufacturing',
+        href: '/manufacturing-solutions',
+        icon: Settings,
+        description: 'Industry 4.0 and smart manufacturing',
+        subItems: [
+          { name: 'Smart Factory Platform', href: '/smart-factory-platform' },
+          { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' },
+          { name: 'Quality Control AI', href: '/quality-control-ai' }
+        ]
+      },
+      {
+        name: 'Retail & E-commerce',
+        href: '/retail-solutions',
+        icon: Eye,
+        description: 'E-commerce optimization and retail intelligence',
+        subItems: [
+          { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' },
+          { name: 'Customer Behavior AI', href: '/customer-behavior-ai' },
+          { name: 'Inventory Management AI', href: '/inventory-management-ai' }
+        ]
+      },
+      {
+        name: 'Government & Defense',
+        href: '/government-solutions',
+        icon: Shield,
+        description: 'Secure government and defense solutions',
+        subItems: [
+          { name: 'Cybersecurity Platform', href: '/quantum-cybersecurity-platform' },
+          { name: 'Data Protection AI', href: '/data-protection-ai' },
+          { name: 'Threat Detection AI', href: '/threat-detection-ai' }
+        ]
+      },
+      {
+        name: 'Education',
+        href: '/education-solutions',
+        icon: Award,
+        description: 'AI-powered education and learning platforms',
+        subItems: [
+          { name: 'AI Education Platform', href: '/ai-education-platform' },
+          { name: 'Personalized Learning AI', href: '/personalized-learning-ai' },
+          { name: 'Student Performance AI', href: '/student-performance-ai' }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Comp & Resources',
+    icon: Users,
+    color: 'from-green-500 to-emerald-600',
+    items: [
+      {
+        name: 'About Us',
+        href: '/about',
+        icon: Users,
+        description: 'Learn about Zion Tech Group',
+        subItems: [
+          { name: 'Our Mission', href: '/mission' },
+          { name: 'Leadership Team', href: '/leadership' },
+          { name: 'Comp History', href: '/history' },
+          { name: 'Careers', href: '/careers' }
+        ]
+      },
+      {
+        name: 'Resources',
+        href: '/resources',
+        icon: BookOpen,
+        description: 'Educational content and documentation',
+        subItems: [
+          { name: 'Documentation', href: '/docs' },
+          { name: 'API Reference', href: '/api-docs' },
+          { name: 'Blog & News', href: '/blog' },
+          { name: 'Case Studies', href: '/case-studies' },
+          { name: 'Whitepapers', href: '/whitepapers' },
+          { name: 'Webinars', href: '/webinars' }
+        ]
+      },
+      {
+        name: 'Support',
+        href: '/support',
+        icon: HelpCircle,
+        description: 'Get help and support',
+        subItems: [
+          { name: 'Contact Support', href: '/contact-support' },
+          { name: 'Training Programs', href: '/training' },
+          { name: 'Community Forum', href: '/community' },
+          { name: 'Knowledge Base', href: '/knowledge-base' }
+        ]
+      }
+    ]
+  }
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
@@ -365,10 +300,17 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
           {/* Contact CTA */}
           <div className="pt-6 border-t border-gray-800/50">"            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">"              <h4 className="text-sm font-semibold text-white mb-2">Ready to Transform?</h4>"              <p className="text-gray-300 text-xs mb-3">"                Get in touch to discuss your revolutionary technology needs."              </p>"
               <Link
-                href="/contact""                onClick={onClose}"                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"""                Contact Us
-                <ChevronRight className="w-4 h-4" />"              </Link>"            </div>;
-          </div>;
-        </div>;
-      </motion.div>;
-</>;);
-}
+                href="/contact"
+                onClick={onClose}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Us
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </
+  );
+}>

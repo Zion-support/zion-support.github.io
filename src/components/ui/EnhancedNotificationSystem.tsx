@@ -1,6 +1,6 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle} from 'lucide-react';
+import React, { useState, useEffect, createContext, useContext } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 
@@ -10,17 +10,19 @@ export interface Notification {
   title: string;
   message: string;
   duration?: number;
-  action?: {
+action?: {
     label: string;
     onClick: () => void;
   };
 }
 
 interface NotificationContextType {
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
-  clearAll: () => void;
+
+  notifications: anyNotification[];
+  addNotification: (notification: Omit<Notification, 'id'>)  => void;
+  removeNotification: (id: string)  => void;
+  clearAll: ()  => void;
+
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
@@ -197,13 +199,16 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
 // Utility functions for easy notification creation
 export const notify = {
-  success: (title: string, message: string, options?: Partial<Notification>) => {
+  success: (title: string, message: string, options?: Partial<Notification>)  => {
     // This would be used with the context
-    // // console.log('Success notification: ', { title, message, ...options })},
+    console.log('Success notification: ', { title, message, ...options });
+  },
   error: (title: string, message: string, options?: Partial<Notification>)  => {
-    // // console.log('Error notification: ', { title, message, ...options })},
+    console.log('Error notification: ', { title, message, ...options });
+  },
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    // // console.log('Warning notification: ', { title, message, ...options })},
+    console.log('Warning notification: ', { title, message, ...options });
+  },
   info: (title: string, message: string, options?: Partial<Notification>)  => {
     // // console.log('Info notification:', { title, message, ...options })}
 };

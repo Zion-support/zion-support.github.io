@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Calendar, Clock, User, Tag, Search, Filter, 
-  ArrowRight, BookOpen, TrendingUp, Star} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
 
 function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -426,114 +425,11 @@ import { Search } from "lucide-react";
                 </div>
               </div>
             </div>
-          )}
-        
-          {/* Filters and Search */}
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
-                <Input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
-                />
-              </div>
-              
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <SelectValue placeholder="Select Category" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {CATEGORIES.map((category) => (
-                    <SelectItem key={category} value={category} className="text-white">
-                      {category}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-
-          {/* Blog Posts Grid */}
-          {filteredPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <Card 
-                  key={post.id} 
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300"
-                >
-                  <div className="aspect-[16/9] relative overflow-hidden">
-                    <img
-                      src={post.featuredImage}
-                      alt={post.title}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
-                      }}
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                      <div className="text-xs text-zion-slate-light">
-                        {post.publishedDate} • {post.readTime}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {post.title}
-                    </h3>
-                    <p className="text-zion-slate-light mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center">
-                      <img
-                        src={post.author.avatarUrl}
-                        alt={post.author.name}
-                        className="w-8 h-8 rounded-full mr-2"
-                        onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
-                        }}
-                      />
-                      <span className="text-sm text-white">{post.author.name}</span>
-                    </div>
-                  </CardContent>
-                  <CardFooter className="p-6 pt-0">
-                    <Button 
-                      variant="link" 
-                      className="text-zion-cyan p-0 hover:text-zion-purple"
-                      asChild
-                    >
-                      <Link to={`/blog/${post.slug}`}>
-                        Read More →
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              >
-                Clear all filters
-              </Button>
-            </div>
-          )}
+            
+            <p className="text-sm text-slate-400 mt-4">
+              No spam, unsubscribe at  time. We respect your privacy.
+            </p>
+          </motion.div>
         </div>
       </div>
     </>

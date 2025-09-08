@@ -1,23 +1,5 @@
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket,
-  Building,
-  Heart,
-  Crown,
-  Sparkles,
-  ArrowRight,
-  Linkedin,
-  Mail,
-  Phone} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 export default function Leadership() {
@@ -235,15 +217,15 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Company Values */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Comp Values */}
+      <section className="py-16 bg-slate-800/30">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
               Our Values
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              The principles that guide our decisions, shape our culture, and drive our success.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              The principles that guide everything we do and shape our comp culture.
             </p>
           </div>
           
@@ -252,11 +234,88 @@ export default function Leadership() {
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-10 h-10 text-white"/>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-slate-600">
-                  {value.description}
+                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                <p className="text-slate-300">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Achievements
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Milestones that demonstrate our commitment to excellence and innovation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">{achievement.metric}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{achievement.label}</h3>
+                <p className="text-slate-300 text-sm">{achievement.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comp Culture */}
+      <section className="py-16 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Join Our Mission
+            </h2>
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              We're building a team of passionate innovators who believe in the power of technology 
+              to transform businesses and improve lives. If you share our vision, we'd love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/careers"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
+              >
+                View Open Positions
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
+              >
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border border-cyan-400/20">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Connect With Us</h2>
+              <p className="text-slate-300">
+                Ready to discuss how our leadership team can help transform your business?
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-slate-300 text-sm">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
                 </p>
               </div>))}
           </div>

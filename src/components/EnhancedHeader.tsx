@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Rocket, 
-  Users, 
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Satellite, 
-  FileText} from 'lucide-react';
+
 import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export const EnhancedHeader: React.FC = () => {
@@ -693,8 +678,8 @@ export const EnhancedHeader: React.FC = () => {
           )}
         </AnimatePresence>
       </motion.header>
-          </>
-    );
+    </
+  );
 }
 
-export default EnhancedHeader;
+export default EnhancedHeader;>

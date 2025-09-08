@@ -1,26 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Target, 
-  Brain, 
-  Users, 
-  Zap, 
-  BarChart3, 
-  Clock, 
-  Award, 
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  CheckCircle,
-  Eye,
-  Calendar,
-  TrendingUp,
-  Search,
-  Download,
-  Upload,
-  FileText,
-  Workflow} from 'lucide-react';
+
 
 export default function AIProjectManagement() {
   const features = [

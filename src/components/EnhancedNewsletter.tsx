@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield} from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+
 
 interface NewsletterFormData {
   email: string;
@@ -70,7 +70,7 @@ export const EnhancedNewsletter: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Here you would typically send the data to your newsletter service
-      // // console.log('Newsletter subscription: ', formData);
+      console.log('Newsletter subscription: ', formData);
       
       setStatus('success');
       
@@ -319,14 +319,14 @@ export const EnhancedNewsletter: React.FC = () => {
             <>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
               Subscribing...
-            </>
+            </
           ) : (
-            <>
+            ><>
               <Send className="h-5 w-5" />
               Subscribe to Newsletter
-            </>
+            </
           )}
-        </motion.button>
+        ></motion.button>
 
         {/* Error Message */}
         {status === 'error' && (
@@ -345,7 +345,7 @@ export const EnhancedNewsletter: React.FC = () => {
         {/* Privacy Notice */}
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
           By subscribing, you agree to receive marketing emails from Zion Tech Group. 
-          You can unsubscribe at any time. We respect your privacy and will never share your information.
+          You can unsubscribe at  time. We respect your privacy and will never share your information.
         </p>
       </motion.form>
     </div>
