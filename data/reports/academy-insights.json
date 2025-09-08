@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T05:36:53.298Z",
+  "generatedAt": "2025-09-08T06:43:23.099Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -16,6 +16,10 @@
       "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver"
     },
     {
+      "title": "Show HN: Veena Chromatic Tuner",
+      "url": "https://play.google.com/store/apps/details?id=in.magima.digitaltuner&hl=en_US"
+    },
+    {
       "title": "The MacBook has a sensor that knows the exact angle of the screen hinge",
       "url": "https://twitter.com/samhenrigold/status/1964428927159382261"
     },
@@ -24,12 +28,12 @@
       "url": "https://maxleiter.com/blog/formatting"
     },
     {
-      "title": "Everything from 1991 Radio Shack ad I now do with my phone (2014)",
-      "url": "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
-    },
-    {
       "title": "GPT-5 Thinking in ChatGPT (a.k.a. Research Goblin) is good at search",
       "url": "https://simonwillison.net/2025/Sep/6/research-goblin/"
+    },
+    {
+      "title": "Everything from 1991 Radio Shack ad I now do with my phone (2014)",
+      "url": "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
     },
     {
       "title": "Analog optical computer for AI inference and combinatorial optimization",
@@ -40,16 +44,12 @@
       "url": "https://spectrum.ieee.org/esoteric-programming-languages-daniel-temkin"
     },
     {
-      "title": "Default musl allocator considered harmful to performance",
-      "url": "https://nickb.dev/blog/default-musl-allocator-considered-harmful-to-performance/"
-    },
-    {
-      "title": "How many dimensions is this?",
-      "url": "https://lcamtuf.substack.com/p/how-many-dimensions-is-this"
-    },
-    {
       "title": "Creative Technology: The Sound Blaster",
       "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
+    },
+    {
+      "title": "Default musl allocator considered harmful to performance",
+      "url": "https://nickb.dev/blog/default-musl-allocator-considered-harmful-to-performance/"
     }
   ],
   "recommendations": [
