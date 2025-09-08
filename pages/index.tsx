@@ -348,6 +348,44 @@ const Index: NextPage = () => {
                 <h3 className="text-lg font-semibold text-slate-300 mb-2">Privacy</h3>
                 <p className="text-white/70 text-sm">Your data & trust</p>
               </Link>
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📜</span>
+                </div>
+                <h3 className="text-lg font-semibold text-rose-400 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Policy & compliance</p>
+              </Link>
+            </div>
+          </section>
+
+          {/* Quick Links Directory */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-8">🗂️ Quick Links Directory</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Start Here</h3>
+                <ul className="text-white/80 text-sm space-y-2">
+                  <li>• <Link href="/about" className="text-cyan-300 hover:text-cyan-200">About</Link></li>
+                  <li>• <Link href="/services" className="text-cyan-300 hover:text-cyan-200">Services</Link></li>
+                  <li>• <Link href="/contact" className="text-cyan-300 hover:text-cyan-200">Contact</Link></li>
+                </ul>
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-3">Content</h3>
+                <ul className="text-white/80 text-sm space-y-2">
+                  <li>• <Link href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200">Blog</Link></li>
+                  <li>• <Link href="/case-studies" className="text-fuchsia-300 hover:text-fuchsia-200">Case Studies</Link></li>
+                  <li>• <Link href="/resources" className="text-fuchsia-300 hover:text-fuchsia-200">Resources</Link></li>
+                </ul>
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-green-400 mb-3">Docs</h3>
+                <ul className="text-white/80 text-sm space-y-2">
+                  <li>• <Link href="/README.md" className="text-green-300 hover:text-green-200">README</Link></li>
+                  <li>• <Link href="/ARCHITECTURE.md" className="text-green-300 hover:text-green-200">Architecture</Link></li>
+                  <li>• <Link href="/SECURITY.md" className="text-green-300 hover:text-green-200">Security</Link></li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -364,7 +402,7 @@ const Index: NextPage = () => {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -378,7 +416,7 @@ const Index: NextPage = () => {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -392,7 +430,7 @@ const Index: NextPage = () => {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
