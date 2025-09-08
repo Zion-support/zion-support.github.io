@@ -50,76 +50,70 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'All Services', 
-      href: '/services', 
-      icon: Brain, 
-      description: 'Complete Service Catalog',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    { 
-      name: 'AI Business Intelligence', 
+      name: 'AI & Machine Learning', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
-      description: 'Machine Learning & Data Science',
+      description: 'AI Business Intelligence & ML Solutions',
       featured: true,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-purple-500 to-pink-500',
+      subServices: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading' },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' }
+      ]
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
-      icon: Heart, 
-      description: 'Medical AI & Diagnostics',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
-      icon: Zap, 
-      description: 'Next-Gen Computing',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Building2, 
-      description: 'Digital Twin Solutions',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'Data Analytics', 
-      href: '/services/data-analytics', 
-      icon: BarChart3, 
-      description: 'Business Intelligence & Analytics',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'IT Infrastructure', 
-      href: '/services/it-infrastructure', 
-      icon: Server, 
-      description: 'Enterprise IT Solutions',
-      featured: true,
-      color: 'from-gray-500 to-blue-500'
-    },
-    { 
-      name: 'Cloud DevOps', 
+      name: 'Cloud & DevOps', 
       href: '/services/cloud-devops', 
       icon: Cloud, 
-      description: 'Cloud & DevOps Services',
+      description: 'Cloud Infrastructure & DevOps',
       featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
+      subServices: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'IT Consulting', href: '/services/it-consulting' }
+      ]
+    },
+    { 
+      name: 'Cybersecurity', 
+      href: '/services/cybersecurity', 
+      icon: Shield, 
+      description: 'AI-Powered Security Solutions',
+      featured: true,
+      color: 'from-green-500 to-blue-500',
+      subServices: [
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+        { name: 'Security Headers CSP', href: '/services/security-headers-csp' },
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' },
+        { name: 'GDPR DSAR Portal', href: '/services/gdpr-dsar-portal' },
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform' }
+      ]
+    },
+    { 
+      name: 'Emerging Technologies', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum Computing & IoT',
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      subServices: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Sustainable Technology', href: '/services/sustainable-technology' },
+        { name: 'Robotics & Automation', href: '/services/robotics-automation' }
+      ]
     },
     { 
       name: 'Micro SAAS Products', 
@@ -128,172 +122,163 @@ export function AppHeader() {
       description: 'AI automations with transparent pricing',
       featured: true,
       color: 'from-orange-500 to-red-500',
-      price: 'Starting at $99/month',
-      category: 'Micro SaaS'
+      subServices: [
+        { name: 'Micro SaaS Platform', href: '/services/micro-saas' },
+        { name: 'Micro CRM', href: '/services/micro-crm' },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform' },
+        { name: 'Landing Page Generator', href: '/services/landing-page-generator' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
+      ]
+    },
+    { 
+      name: 'Revolutionary 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500',
+      subServices: [
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
+        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
+        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
+        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' }
+      ]
     }
   ];
 
   const solutions = [
-    { 
-      name: 'Enterprise Solutions', 
-      href: '/solutions', 
-      icon: Building, 
-      description: 'Large-scale business solutions',
+    {
+      name: 'Enterprise Solutions',
+      href: '/solutions',
+      icon: Building2,
+      description: 'Large-scale business transformations',
       featured: true,
-      color: 'from-blue-500 to-indigo-500'
+      subSolutions: [
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Cloud Migration', href: '/services/cloud-devops' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
     },
-    { 
-      name: 'Healthcare Solutions', 
-      href: '/solutions', 
-      icon: Heart, 
-      description: 'Healthcare & medical solutions',
+    {
+      name: 'Industry Solutions',
+      href: '/solutions',
+      icon: Building,
+      description: 'Industry-specific solutions',
       featured: true,
-      color: 'from-red-500 to-pink-500'
+      subSolutions: [
+        { name: 'Healthcare Solutions', href: '/solutions#healthcare' },
+        { name: 'Financial Solutions', href: '/solutions#financial' },
+        { name: 'Manufacturing Solutions', href: '/solutions#manufacturing' },
+        { name: 'Retail Solutions', href: '/solutions#retail' }
+      ]
     },
-    { 
-      name: 'Financial Solutions', 
-      href: '/solutions', 
-      icon: DollarSign, 
-      description: 'Fintech & banking solutions',
+    {
+      name: 'AI & Automation',
+      href: '/solutions',
+      icon: Brain,
+      description: 'Intelligent automation solutions',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      subSolutions: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support' }
+      ]
     },
-    { 
-      name: 'Manufacturing Solutions', 
-      href: '/solutions', 
-      icon: Settings, 
-      description: 'Industrial & manufacturing solutions',
+    {
+      name: 'Cybersecurity',
+      href: '/solutions',
+      icon: Shield,
+      description: 'Comprehensive security solutions',
       featured: true,
-      color: 'from-orange-500 to-red-500'
+      subSolutions: [
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-access' },
+        { name: 'Compliance Solutions', href: '/services/ai-compliance-assistant' },
+        { name: 'Incident Response', href: '/services/incident-response-platform' }
+      ]
     },
-    { 
-      name: 'Retail Solutions', 
-      href: '/solutions', 
-      icon: ShoppingCart, 
-      description: 'E-commerce & retail solutions',
+    {
+      name: 'Emerging Technologies',
+      href: '/solutions',
+      icon: Rocket,
+      description: 'Cutting-edge technology solutions',
       featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'Government Solutions', 
-      href: '/solutions', 
-      icon: Shield, 
-      description: 'Public sector solutions',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
-    },
-    { 
-      name: 'Education Solutions', 
-      href: '/solutions', 
-      icon: BookOpen, 
-      description: 'Educational technology solutions',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'Transportation Solutions', 
-      href: '/solutions', 
-      icon: Truck, 
-      description: 'Logistics & transportation solutions',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      subSolutions: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'IoT Solutions', href: '/services/iot-edge-computing' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Space Technology', href: '/services/space-tech' }
+      ]
     }
   ];
 
   const resources = [
     {
-      name: 'AI & Analytics',
-      description: 'Intelligent solutions for data-driven decisions',
-      color: 'from-purple-500 to-pink-600',
-      icon: Brain,
-      services: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & insights' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
-        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Smart lead qualification' },
-        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'Search engine optimization' },
-        { name: 'AI Proofreading Studio', href: '/services/ai-proofreading-studio', description: 'Content quality assurance' }
+      name: 'Learning & Insights',
+      href: '/blog',
+      icon: BookOpen,
+      description: 'Latest industry trends and insights',
+      featured: true,
+      subResources: [
+        { name: 'Blog & Insights', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' }
       ]
     },
     {
-      name: 'Cloud & DevOps',
-      description: 'Modern infrastructure & automation',
-      color: 'from-blue-500 to-cyan-600',
-      icon: Cloud,
-      services: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' },
-        { name: 'API Monitoring SaaS', href: '/services/api-monitoring', description: 'Real-time API monitoring' },
-        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'Machine learning operations' },
-        { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', description: 'Service availability tracking' }
-      ]
-    },
-    {
-      name: 'Digital Innovation',
-      description: 'Cutting-edge technology solutions',
-      color: 'from-green-500 to-emerald-600',
-      icon: Rocket,
-      services: [
-        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual simulation & monitoring' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
-        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Intelligent customer support' },
-        { name: 'RAG Search', href: '/services/rag-search', description: 'Advanced search capabilities' }
-      ]
-    },
-    {
-      name: 'Cybersecurity',
-      description: 'Advanced security & compliance',
-      color: 'from-red-500 to-orange-600',
-      icon: Shield,
-      services: [
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
-        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' },
-        { name: 'Vendor Risk Management', href: '/services/vendor-risk-management', description: 'Third-party risk assessment' },
-        { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', description: 'Compliance monitoring' },
-        { name: 'GDPR Cookie Compliance', href: '/services/gdpr-cookie-compliance', description: 'Privacy compliance' }
-      ]
-    },
-    {
-      name: 'Micro SaaS',
-      description: 'Specialized business automation tools',
-      color: 'from-yellow-500 to-orange-600',
-      icon: Settings,
-      services: [
-        { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', description: 'Referral program management' },
-        { name: 'Employee Scheduling SaaS', href: '/services/employee-scheduling-saas', description: 'Workforce management' },
-        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', description: 'Customer retention analytics' },
-        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' },
-        { name: 'Ecommerce Personalization', href: '/services/ecommerce-personalization', description: 'Customer experience optimization' },
-        { name: 'AI Support Helpdesk', href: '/services/ai-support-helpdesk', description: 'Automated customer support' }
-      ]
-    },
-    {
-      name: 'Documentation',
+      name: 'Documentation & Support',
       href: '/docs',
       icon: Code,
-      description: 'Technical guides and APIs',
-      featured: true
+      description: 'Technical guides and support',
+      featured: true,
+      subResources: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'FAQ & Support', href: '/faq' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'API Reference', href: '/docs#api' }
+      ]
     },
     {
-      name: 'FAQ & Support',
-      href: '/faq',
-      icon: HelpCircle,
-      description: 'Get help and answers',
-      featured: true
-    },
-    {
-      name: 'Pricing Guide 2025',
-      href: '/pricing-guide-2025',
+      name: 'Pricing & Plans',
+      href: '/pricing',
       icon: DollarSign,
       description: 'Complete pricing information',
-      featured: true
+      featured: true,
+      subResources: [
+        { name: 'Pricing Plans', href: '/pricing' },
+        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025' },
+        { name: 'Pricing Guide 2027', href: '/pricing-guide-2027' },
+        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030' }
+      ]
+    },
+    {
+      name: 'Community & Events',
+      href: '/community',
+      icon: Users,
+      description: 'Connect with our community',
+      featured: true,
+      subResources: [
+        { name: 'Community Forum', href: '/community' },
+        { name: 'Developer Hub', href: '/developers' },
+        { name: 'Events & Meetups', href: '/events' },
+        { name: 'Training Programs', href: '/training' }
+      ]
+    },
+    {
+      name: 'Business Resources',
+      href: '/resources',
+      icon: Target,
+      description: 'Business growth resources',
+      featured: true,
+      subResources: [
+        { name: 'Request Quote', href: '/request-quote' },
+        { name: 'Schedule Demo', href: '/schedule-demo' },
+        { name: 'Partnership Program', href: '/partners' },
+        { name: 'Careers', href: '/careers' }
+      ]
     }
   ];
 
