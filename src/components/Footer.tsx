@@ -94,6 +94,15 @@ export function Footer() {
     }
   ];
 
+  const legal = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Service", path: "/terms" },
+    { name: "Cookie Policy", path: "/cookies" },
+    { name: "Security", path: "/security" },
+    { name: "System Status", path: "/status" },
+    { name: "Sitemap", path: "/sitemap" }
+  ];
+
   const socialLinks = [
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },

@@ -1,28 +1,47 @@
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { completeSitemap } from "@/config/sitemap";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+
+const links = [
+	'/', '/about', '/contact', '/blog', '/faq', '/careers', '/partners', '/news',
+	'/solutions', '/research-development', '/request-quote', '/green-it',
+	'/services', '/ai-services', '/it-services', '/micro-saas',
+	'/marketplace', '/marketplace/products', '/marketplace/talent', '/marketplace/equipment',
+	'/talent', '/equipment', '/team', '/help', '/security', '/status',
+	'/privacy', '/terms', '/cookies'
+];
 
 export default function Sitemap() {
-  return (
-    <>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="Sitemap - Zion Tech Group" description="Browse all site pages." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-6">Sitemap</h1>
+				<ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+					{links.map((path) => (
+						<li key={path}>
+							<Link to={path} className="text-zion-cyan hover:underline">{path}</Link>
+						</li>
+					))}
+				</ul>
+			</div>
+		</div>
+	);
+}
 
-import { 
-  Globe, ArrowRight, ExternalLink, Search, 
-  Users, Code, Shield, Brain, Atom, Rocket
-} from &apos;lucide-react';&apos;&apos;
-
-export default function Sitemap() {}
-  const siteStructure = [{
-      title: &quot;Main Pages&quot;,
-      pages: [
-        { nam,e: &quot;Home&quot;, url: &quot;/&quot;, description: &quot;Welcome to Zion Tech Group&quot}, { name: &quot;About&quot;, url: &quot;/about&quot;, description: &quot;Learn about our company and mission&quot}, { name: &quot;Services&quot;, url: &quot;/services&quot;, description: &quot;Our comprehensive technology services&quot}, { name: &quot;Contact&quot;, url: &quot;/contact&quot;, description: &quot;Get in touch with our team&quot}
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase } from 'lucide-react';
+export default function SitemapPage() {
+  const siteStructure = [
+    {
+      title: "Main Pages",
+      icon: Home,
+      links: [
+        { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
+        { name: "About Us", path: "/about", description: "Learn about our company and mission" },
+        { name: "Contact", path: "/contact", description: "Get in touch with our team" },
+        { name: "Services Overview", path: "/services", description: "Explore all our services" }
       ]
     }, {
       title: &quot;AI Services&quot;,

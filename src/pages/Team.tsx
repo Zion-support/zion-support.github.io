@@ -124,10 +124,17 @@ export default function Team() {
   ];
 
   return (
-    <div className="min-h-screen bg-zion-blue-dark text-white">
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
+    <div className="min-h-screen bg-futuristic">
+      {/* SEO and Hero Section */}
+      <SEO title="Our Team - Zion Tech Group" description="Meet the people behind our innovations." />
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -1,19 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-
-export default function Status() {
-  const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
+import React from 'react';
+import { 
+  CheckCircle, 
+  AlertTriangle, 
+  XCircle, 
+  Clock, 
+  Server, 
+  Database, 
+  Globe,
+  Zap,
+  Shield,
+  Activity
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
   const systemStatus = {
     overall: 'operational',
@@ -319,25 +317,130 @@ const Status = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-<<<<<<< HEAD
-      {/* Header Section */}
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
-            System Status
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Real-time status of Zion Tech Group services and infrastructure.
-          </p>
-          
-          {/* Current Time */}
-          <div className="text-lg text-gray-400">
-            Last updated: {currentTime.toLocaleString()}
-=======
-      {/* Header */}
-      <div className="pt-20 pb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <SEO title="System Status - Zion Tech Group" description="Live status and uptime information." />
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              System
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}Status
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real-time status of Zion Tech Group's services and infrastructure
+            </p>
+          </div>
+
+          {/* Overall Status */}
+          <div className="mb-16">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">
+                    {systemStatus.uptime}
+                  </div>
+                  <div className="text-gray-300">Uptime</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">
+                    {systemStatus.responseTime}
+                  </div>
+                  <div className="text-gray-300">Response Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">
+                    {systemStatus.lastIncident}
+                  </div>
+                  <div className="text-gray-300">Last Incident</div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    {getStatusIcon(systemStatus.overall)}
+                  </div>
+                  <div className={`font-semibold ${getStatusColor(systemStatus.overall)}`}>
+                    {systemStatus.overall.charAt(0).toUpperCase() + systemStatus.overall.slice(1)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Services Status */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Service Status</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                    {getStatusIcon(service.status)}
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-300">
+                    <div className="flex justify-between">
+                      <span>Uptime:</span>
+                      <span className="text-green-400">{service.uptime}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Response:</span>
+                      <span className="text-blue-400">{service.responseTime}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Last Check:</span>
+                      <span className="text-gray-400">{service.lastCheck}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Recent Incidents */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Recent Incidents</h2>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              {incidents.length === 0 ? (
+                <div className="text-center text-gray-300">
+                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                  <p className="text-xl">No recent incidents</p>
+                  <p className="text-sm">All systems are operating normally</p>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {incidents.map((incident, index) => (
+                    <div key={index} className="flex items-start space-x-4 p-4 bg-white/5 rounded-lg">
+                      <div className="flex-shrink-0">
+                        {incident.status === 'resolved' ? (
+                          <CheckCircle className="w-6 h-6 text-green-500" />
+                        ) : (
+                          <AlertTriangle className="w-6 h-6 text-yellow-500" />
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="font-semibold text-white">{incident.title}</h3>
+                          <span className="text-sm text-gray-400">{incident.date}</span>
+                        </div>
+                        <p className="text-gray-300 text-sm mb-2">{incident.description}</p>
+                        <div className="flex items-center space-x-4 text-xs text-gray-400">
+                          <span className={`px-2 py-1 rounded ${
+                            incident.status === 'resolved' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
+                          }`}>
+                            {incident.status}
+                          </span>
+                          <span>Duration: {incident.duration}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Status Legend */}
           <div className="text-center">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
               System Status
