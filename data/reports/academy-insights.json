@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T07:07:08.016Z",
+  "generatedAt": "2025-09-08T07:35:39.456Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -32,20 +32,20 @@
       "url": "https://simonwillison.net/2025/Sep/6/research-goblin/"
     },
     {
-      "title": "Everything from 1991 Radio Shack ad I now do with my phone (2014)",
-      "url": "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
+      "title": "Intel Arc Pro B50 GPU Launched at $349 for Compact Workstations",
+      "url": "https://www.guru3d.com/story/intel-arc-pro-b50-gpu-launched-at-for-compact-workstations/"
     },
     {
       "title": "Analog optical computer for AI inference and combinatorial optimization",
       "url": "https://www.nature.com/articles/s41586-025-09430-z"
     },
     {
-      "title": "Creative Technology: The Sound Blaster",
-      "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
+      "title": "Show HN: C++ library for reading MacBook lid angle sensor data",
+      "url": "https://github.com/ufoym/mac-angle"
     },
     {
-      "title": "Forty-Four Esolangs: The Art of Esoteric Code",
-      "url": "https://spectrum.ieee.org/esoteric-programming-languages-daniel-temkin"
+      "title": "Creative Technology: The Sound Blaster",
+      "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
     },
     {
       "title": "How many dimensions is this?",
