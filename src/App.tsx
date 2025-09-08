@@ -2,8 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { ToastProvider, ToastViewport } from "./components/ui/toast";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -22,6 +21,7 @@ import Home from './pages/Home';
 const App = () => {
   return (
     <ThemeProvider defaultTheme="dark">
+      <ToastProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth/*" element={<AuthRoutes />} />
@@ -36,8 +36,8 @@ const App = () => {
         <Route path="/developers/*" element={<DeveloperRoutes />} />
         <Route path="*" element={<ErrorRoutes />} />
       </Routes>
-      <Toaster />
-      <SonnerToaster position="top-right" />
+      <ToastViewport />
+      </ToastProvider>
     </ThemeProvider>
   );
 };
