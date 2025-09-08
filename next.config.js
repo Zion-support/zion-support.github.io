@@ -5,8 +5,11 @@ const nextConfig = {
 	output: 'export',
 	assetPrefix: process.env.ASSET_PREFIX || '',
 	images: {
-		// Using unoptimized to support static hosting/CDN without Next Image optimization
-		unoptimized: true
+		unoptimized: true,
+		domains: ["localhost"]
+	},
+	typescript: {
+		ignoreBuildErrors: true
 	},
 	typescript: {
 		ignoreBuildErrors: true,
@@ -32,4 +35,4 @@ const nextConfig = {
 	}
 };
 
-module.exports = nextConfig
+export default nextConfig;

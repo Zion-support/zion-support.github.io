@@ -1,5 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function UltraFuturisticBackground2030({ children }: { children?: React.ReactNode }) {
-	return <div>{children}</div>;
-}
+const UltraFuturisticBackground2030: React.FC<{ children: ReactNode }> = ({ children }) => <div>{children}</div>;
+export default UltraFuturisticBackground2030;

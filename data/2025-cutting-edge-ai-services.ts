@@ -1,3 +1,2 @@
-export const cuttingEdgeAiServices2025 = [
-  { id: 'stub', name: 'Stub', price: '$0', period: '/mo', features: [] }
-];
+export interface CuttingEdgeAIService2025 { id: string; name: string; }
+export const cuttingEdgeAIServices2025: CuttingEdgeAIService2025[] = [];
