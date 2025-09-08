@@ -968,3 +968,20 @@ fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build
 [2025-09-08T20:39:19.421Z] ✅ Success: Get git status
 [2025-09-08T20:39:19.421Z] 📄 Found 0 conflicted files
 [2025-09-08T20:39:19.422Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:39:19.492Z] ✅ Success: Add resolved files
+[2025-09-08T20:39:19.492Z] 🚀 Commit merge for cursor/add-and-advertise-new-services-then-build-a930: git commit -m "Resolve conflicts and merge cursor/add-and-advertise-new-services-then-build-a930"
+[2025-09-08T20:39:19.540Z] ✅ Success: Commit merge for cursor/add-and-advertise-new-services-then-build-a930
+[2025-09-08T20:39:19.540Z] ✅ Successfully resolved conflicts and merged: cursor/add-and-advertise-new-services-then-build-a930
+[2025-09-08T20:39:19.540Z] 🔄 Attempting to merge branch: cursor/add-and-advertise-new-services-then-build-a975
+[2025-09-08T20:39:19.540Z] 🚀 Fetch origin/cursor/add-and-advertise-new-services-then-build-a975: git fetch origin cursor/add-and-advertise-new-services-then-build-a975
+[2025-09-08T20:39:19.645Z] ❌ Error in Fetch origin/cursor/add-and-advertise-new-services-then-build-a975: Command failed: git fetch origin cursor/add-and-advertise-new-services-then-build-a975
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-a975
+
+[2025-09-08T20:39:19.645Z] ❌ Failed to merge cursor/add-and-advertise-new-services-then-build-a975: Command failed: git fetch origin cursor/add-and-advertise-new-services-then-build-a975
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-a975
+
+[2025-09-08T20:39:19.645Z] 🔧 Attempting to resolve conflicts for: cursor/add-and-advertise-new-services-then-build-a975
+[2025-09-08T20:39:19.645Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:39:19.687Z] ✅ Success: Get git status
+[2025-09-08T20:39:19.687Z] 📄 Found 0 conflicted files
+[2025-09-08T20:39:19.687Z] 🚀 Add resolved files: git add .
