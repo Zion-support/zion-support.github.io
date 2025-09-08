@@ -1,21 +1,31 @@
 export default {
   apps: [
     {
-      name: 'zion-app',
+      name: 'bolt-app-dev',
       script: 'npm',
       args: 'run dev',
-      cwd: '/workspace',
-      watch: false,
+      cwd: './',
       instances: 1,
       autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
         PORT: 3000
-      },
-      env_production: {
+      }
+    },
+    {
+      name: 'bolt-app-preview',
+      script: 'npm',
+      args: 'run preview',
+      cwd: './',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 4173
       }
     }
   ],
@@ -25,8 +35,8 @@ export default {
       user: 'ubuntu',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'git@github.com:your-username/your-repo.git',
-      path: '/workspace',
+      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
+      path: '/var/www/bolt-app',
       'pre-deploy-local': '',
       'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''

@@ -1,367 +1,261 @@
-# 🚀 Zion PM2 Intelligent Automation System
+# PM2 Automation System - GitHub Actions Replacement
 
-A comprehensive and intelligent PM2 automation system designed to revolutionize your development workflow, deployment processes, and application monitoring.
+This document explains how to use the PM2 automation system that replaces the GitHub Actions workflows for CI/CD, dependency management, and monitoring.
 
-## 🌟 Features
+## Overview
 
-### 🎯 **Intelligent Process Management**
-- **Multi-Environment Support**: Development, Staging, and Production environments
-- **Auto-Scaling**: Intelligent load balancing and process scaling
-- **Health Monitoring**: Continuous health checks with auto-recovery
-- **Performance Optimization**: Real-time performance monitoring and optimization recommendations
+The PM2 automation system provides the same functionality as the GitHub Actions workflows but runs locally on your server, giving you more control and reducing external dependencies.
 
-### 🔄 **Smart Automation**
-- **Workflow Manager**: Automated development workflows with file watching
-- **Health Monitor**: Intelligent health monitoring with auto-recovery
-- **Performance Monitor**: Performance analysis and optimization suggestions
-- **Deployment Manager**: Automated deployments with rollback capabilities
+## What's Replaced
 
-### 📊 **Advanced Monitoring**
-- **Real-time Metrics**: CPU, memory, disk, and network monitoring
-- **Performance Analytics**: Response time, error rate, and availability tracking
-- **Intelligent Alerts**: Smart alerting based on configurable thresholds
-- **Comprehensive Logging**: Structured logging with multiple levels
+| GitHub Action | PM2 Equivalent | Description |
+|---------------|----------------|-------------|
+| `ci.yml` | `pm2-automation.sh ci` | Continuous Integration pipeline |
+| `deploy.yml` | `pm2-automation.sh deploy` | Deployment automation |
+| `dependencies.yml` | `pm2-cron.sh deps` | Dependency updates |
+| `security.yml` | `pm2-cron.sh security` | Security scanning |
+| `quality-check.yml` | `pm2-cron.sh quality` | Quality checks |
+| `test.yml` | `pm2-automation.sh test` | Test execution |
 
-## 🏗️ Architecture
+## Quick Start
 
-```
-Zion PM2 Automation System
-├── ecosystem.config.js          # PM2 ecosystem configuration
-├── automation/
-│   ├── workflow-manager.js      # Development workflow automation
-│   ├── health-monitor.js        # Health monitoring & auto-recovery
-│   ├── performance-monitor.js   # Performance monitoring & optimization
-│   └── deployment-manager.js    # Deployment automation
-├── pm2-manager.sh              # Intelligent management script
-└── logs/                       # Comprehensive logging system
-```
-
-## 🚀 Quick Start
-
-### 1. Install Dependencies
-
+### 1. Install PM2 (if not already installed)
 ```bash
-# Install PM2 globally
 npm install -g pm2
-
-# Install project dependencies
-npm run install:all
 ```
 
-### 2. Start the System
+### 2. Start PM2 Services
+```bash
+# Start the application
+pm2 start ecosystem.config.js
+
+# Or use the automation script
+./scripts/pm2-automation.sh start
+```
+
+### 3. Set Up Automated Tasks
+```bash
+# Install the cron jobs
+crontab scripts/crontab-setup.txt
+
+# Or set up PM2 startup
+./scripts/pm2-startup.sh
+```
+
+## Scripts Overview
+
+### `pm2-automation.sh` - Main Automation Script
+This is your primary tool for manual operations and CI/CD tasks.
 
 ```bash
-# Start development environment
-./pm2-manager.sh start dev
+# Run CI pipeline
+./scripts/pm2-automation.sh ci
 
-# Start automation processes
-./pm2-manager.sh automation start
+# Deploy application
+./scripts/pm2-automation.sh deploy
+
+# Run tests
+./scripts/pm2-automation.sh test
+
+# Monitor services
+./scripts/pm2-automation.sh monitor
+
+# Show status
+./scripts/pm2-automation.sh status
+
+# Restart services
+./scripts/pm2-automation.sh restart
+
+# Stop all services
+./scripts/pm2-automation.sh stop
+
+# Start services
+./scripts/pm2-automation.sh start
+```
+
+### `pm2-cron.sh` - Automated Background Tasks
+This script runs automated tasks on schedule.
+
+```bash
+# Update dependencies
+./scripts/pm2-cron.sh deps
+
+# Run security scan
+./scripts/pm2-cron.sh security
+
+# Run quality checks
+./scripts/pm2-cron.sh quality
+
+# Verify build
+./scripts/pm2-cron.sh build
+
+# Check and restart services if needed
+./scripts/pm2-cron.sh restart
+
+# Clean up logs and cache
+./scripts/pm2-cron.sh cleanup
+
+# Run all tasks
+./scripts/pm2-cron.sh all
+```
+
+### `pm2-startup.sh` - System Boot Configuration
+Configures PM2 to start automatically on system boot.
+
+```bash
+./scripts/pm2-startup.sh
+```
+
+## Automated Schedule
+
+The system runs the following tasks automatically:
+
+- **Every Monday at 2 AM**: Dependency updates
+- **Every day at 3 AM**: Security scanning
+- **Every day at 4 AM**: Quality checks
+- **Every 6 hours**: Service health checks
+- **Every Sunday at 1 AM**: Full maintenance
+- **Every day at 5 AM**: Log cleanup
+
+## Configuration Files
+
+### `ecosystem.config.js`
+PM2 ecosystem configuration for your application.
+
+### `scripts/crontab-setup.txt`
+Cron job configuration for automated tasks.
+
+## Monitoring and Logs
+
+### View PM2 Status
+```bash
+pm2 list
+pm2 monit
+```
+
+### View Logs
+```bash
+# PM2 logs
+pm2 logs
+
+# Automation script logs
+tail -f /tmp/pm2-*.log
+
+# Specific task logs
+tail -f /tmp/pm2-deps.log      # Dependency updates
+tail -f /tmp/pm2-security.log  # Security scans
+tail -f /tmp/pm2-quality.log   # Quality checks
+```
+
+## Troubleshooting
+
+### PM2 Not Running
+```bash
+# Start PM2 daemon
+pm2 start
 
 # Check status
-./pm2-manager.sh status
+pm2 ping
 ```
 
-### 3. Monitor Your Application
-
+### Services Not Starting
 ```bash
-# Open PM2 monitoring dashboard
-./pm2-manager.sh monit
+# Check logs
+pm2 logs
 
-# View logs
-./pm2-manager.sh logs
+# Restart services
+pm2 restart all
 
-# Check health
-./pm2-manager.sh health check
+# Reload configuration
+pm2 reload ecosystem.config.js
 ```
 
-## 📋 Available Commands
-
-### 🎮 **PM2 Management**
+### Cron Jobs Not Working
 ```bash
-./pm2-manager.sh start [env]     # Start processes (dev/staging/prod)
-./pm2-manager.sh stop            # Stop all processes
-./pm2-manager.sh restart         # Restart all processes
-./pm2-manager.sh reload          # Reload all processes
-./pm2-manager.sh status          # Show process status
-./pm2-manager.sh logs [app]      # Show logs
-./pm2-manager.sh monit           # Open monitoring dashboard
+# Check cron service
+sudo systemctl status cron
+
+# View cron logs
+sudo tail -f /var/log/syslog | grep CRON
+
+# Test cron job manually
+./scripts/pm2-cron.sh deps
 ```
 
-### 🚀 **Deployment**
+## Migration from GitHub Actions
+
+### Before (GitHub Actions)
+- Workflows triggered on push/PR
+- External service dependency
+- Limited customization
+- GitHub-specific features
+
+### After (PM2 Automation)
+- Local execution
+- Full control over timing
+- Customizable scripts
+- No external dependencies
+- Real-time monitoring
+
+## Security Considerations
+
+- Scripts run with your user permissions
+- Logs are stored locally
+- No external API calls
+- Full audit trail available
+
+## Performance Benefits
+
+- Faster execution (no network latency)
+- No GitHub Actions queue waiting
+- Real-time feedback
+- Resource usage monitoring
+
+## Support and Maintenance
+
+### Regular Maintenance
+- Monitor log files for errors
+- Check PM2 process status
+- Review cron job execution
+- Update scripts as needed
+
+### Backup
+- Keep copies of automation scripts
+- Document any customizations
+- Version control your PM2 configuration
+
+## Example Workflow
+
+### Daily Development
 ```bash
-./pm2-manager.sh deploy dev      # Deploy to development
-./pm2-manager.sh deploy staging  # Deploy to staging
-./pm2-manager.sh deploy prod     # Deploy to production
-./pm2-manager.sh rollback        # Rollback last deployment
+# Start development
+./scripts/pm2-automation.sh start
+
+# Monitor during development
+./scripts/pm2-automation.sh monitor
+
+# Run CI checks
+./scripts/pm2-automation.sh ci
+
+# Deploy when ready
+./scripts/pm2-automation.sh deploy
 ```
 
-### 🤖 **Automation**
-```bash
-./pm2-manager.sh automation start    # Start automation processes
-./pm2-manager.sh automation stop     # Stop automation processes
-./pm2-manager.sh automation restart  # Restart automation processes
-./pm2-manager.sh automation logs     # Show automation logs
-```
-
-### 🏥 **Health & Performance**
-```bash
-./pm2-manager.sh health check        # Run health checks
-./pm2-manager.sh health start        # Start health monitor
-./pm2-manager.sh performance analyze # Run performance analysis
-./pm2-manager.sh performance start   # Start performance monitor
-```
-
-### 🛠️ **Maintenance**
-```bash
-./pm2-manager.sh backup              # Backup PM2 configuration
-./pm2-manager.sh restore [file]      # Restore PM2 configuration
-./pm2-manager.sh cleanup             # Clean up old logs and processes
-./pm2-manager.sh update              # Update PM2 and dependencies
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-
-```bash
-# Logging level
-export LOG_LEVEL=debug  # error, warn, info, debug
-
-# Health monitoring
-export HEALTH_CHECK_INTERVAL=30000  # 30 seconds
-export AUTO_RECOVERY=true
-
-# Performance monitoring
-export MONITORING_INTERVAL=60000    # 1 minute
-export ALERT_THRESHOLD=80          # percentage
-```
-
-### Ecosystem Configuration
-
-The `ecosystem.config.js` file contains comprehensive configuration for:
-
-- **Frontend Development Server**: React + Vite development server
-- **Backend Development Server**: Express.js development server
-- **Production Servers**: Optimized production configurations
-- **Automation Processes**: Workflow, health, and performance monitors
-- **Deployment Configuration**: Production and staging deployment settings
-
-## 📊 Monitoring & Analytics
-
-### Health Monitoring
-
-The health monitor continuously checks:
-- ✅ Application endpoints (frontend/backend)
-- ✅ System resources (CPU, memory, disk)
-- ✅ Network connectivity
-- ✅ PM2 process status
-- 🔄 Auto-recovery from failures
-
-### Performance Monitoring
-
-The performance monitor tracks:
-- 📈 Response times and error rates
-- 💾 Memory and CPU usage
-- 🚀 Application performance metrics
-- 🌐 Network performance
-- 💡 Optimization recommendations
-
-### Workflow Automation
-
-The workflow manager provides:
-- 👀 File watching and change detection
-- 🔍 Automated linting and type checking
-- 🧪 Automated testing
-- 🏗️ Automated builds
-- 📋 Quality checks and reporting
-
-## 🚀 Deployment Workflows
-
-### Development Deployment
-```bash
-# Quick development deployment
-npm run deploy:dev
-
-# Or use the manager script
-./pm2-manager.sh deploy dev
-```
-
-### Staging Deployment
-```bash
-# Deploy to staging environment
-npm run deploy:staging
-
-# Or use the manager script
-./pm2-manager.sh deploy staging
-```
-
-### Production Deployment
-```bash
-# Deploy to production
-npm run deploy:prod
-
-# Or use the manager script
-./pm2-manager.sh deploy prod
-```
-
-### Rollback
-```bash
-# Rollback last deployment
-npm run deploy:rollback
-
-# Or use the manager script
-./pm2-manager.sh rollback
-```
-
-## 📈 Advanced Features
-
-### Auto-Scaling
-
-The system automatically scales processes based on:
-- CPU usage thresholds
-- Memory consumption
-- Response time requirements
-- Load balancing needs
-
-### Intelligent Recovery
-
-- **Auto-Restart**: Failed processes are automatically restarted
-- **Health Checks**: Continuous monitoring with configurable thresholds
-- **Rollback Protection**: Automatic rollback after multiple failures
-- **Resource Management**: Memory and CPU threshold monitoring
-
-### Performance Optimization
-
-- **Real-time Metrics**: Continuous performance measurement
-- **Optimization Recommendations**: AI-powered suggestions for improvements
-- **Resource Monitoring**: Comprehensive system resource tracking
-- **Performance Reports**: Detailed performance analysis and history
-
-## 🔍 Troubleshooting
-
-### Common Issues
-
-1. **PM2 Not Running**
-   ```bash
-   # Check PM2 status
-   pm2 ping
-   
-   # Start PM2 if needed
-   pm2 start ecosystem.config.js
-   ```
-
-2. **Process Failures**
-   ```bash
-   # Check process logs
-   ./pm2-manager.sh logs
-   
-   # Restart processes
-   ./pm2-manager.sh restart
-   ```
-
-3. **High Resource Usage**
-   ```bash
-   # Check performance
-   ./pm2-manager.sh performance analyze
-   
-   # Monitor resources
-   ./pm2-manager.sh monit
-   ```
-
-### Log Files
-
-All logs are stored in the `logs/` directory:
-- `workflow-*.log`: Workflow automation logs
-- `health-*.log`: Health monitoring logs
-- `performance-*.log`: Performance monitoring logs
-- `deployment-*.log`: Deployment logs
-- `pm2-manager.log`: Management script logs
-
-## 🚀 Best Practices
-
-### Development Workflow
-
-1. **Start with Development Environment**
-   ```bash
-   ./pm2-manager.sh start dev
-   ```
-
-2. **Enable Automation**
-   ```bash
-   ./pm2-manager.sh automation start
-   ```
-
-3. **Monitor Performance**
-   ```bash
-   ./pm2-manager.sh performance start
-   ```
-
-### Production Deployment
-
-1. **Test in Staging First**
-   ```bash
-   ./pm2-manager.sh deploy staging
-   ```
-
-2. **Monitor Health**
-   ```bash
-   ./pm2-manager.sh health check
-   ```
-
-3. **Deploy to Production**
-   ```bash
-   ./pm2-manager.sh deploy prod
-   ```
-
-### Maintenance
-
-1. **Regular Backups**
-   ```bash
-   ./pm2-manager.sh backup
-   ```
-
-2. **Cleanup Old Logs**
-   ```bash
-   ./pm2-manager.sh cleanup
-   ```
-
-3. **Update Dependencies**
-   ```bash
-   ./pm2-manager.sh update
-   ```
-
-## 🔮 Future Enhancements
-
-The system is designed for extensibility and future enhancements:
-
-- **AI-Powered Optimization**: Machine learning for performance optimization
-- **Advanced Alerting**: Integration with Slack, email, and PagerDuty
-- **Metrics Dashboard**: Web-based monitoring dashboard
-- **Container Support**: Docker and Kubernetes integration
-- **Multi-Cloud Deployment**: Support for multiple cloud providers
-
-## 📚 Additional Resources
-
-- [PM2 Documentation](https://pm2.keymetrics.io/docs/)
-- [Node.js Performance Best Practices](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
-- [Monitoring and Observability](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
-
-## 🤝 Contributing
-
-This automation system is designed to be extensible. To contribute:
-
-1. Fork the repository
-2. Create a feature branch
-3. Implement your improvements
-4. Add tests and documentation
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-**🚀 Transform your development workflow with intelligent PM2 automation!**
-
-For support and questions, please refer to the troubleshooting section or create an issue in the repository.
+### Automated Maintenance
+The system automatically:
+1. Updates dependencies weekly
+2. Scans for security issues daily
+3. Runs quality checks daily
+4. Monitors service health
+5. Cleans up old logs
+
+## Conclusion
+
+The PM2 automation system provides a robust, local alternative to GitHub Actions with:
+- Full control over execution
+- Real-time monitoring
+- Automated maintenance
+- No external dependencies
+- Customizable workflows
+
+This system ensures your application runs smoothly with automated CI/CD, security scanning, and maintenance tasks running locally on your server.
