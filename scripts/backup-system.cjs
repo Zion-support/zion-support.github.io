@@ -1,21 +1,4 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync } = require("child_process");
-    this.backupDir = path.join(this.projectRoot, "backups")
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 
-#!/usr/bin/env node;
-
-class BackupSystem {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.backupDir = path.join(this.projectRoot, 'backups');
-    this.maxBackups = 10}
 
   async createBackup() {
     console.log('💾 Creating system backup...');

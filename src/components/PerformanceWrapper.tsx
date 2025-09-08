@@ -1,14 +1,35 @@
-import React, { memo, Suspense, lazy, ComponentType, ReactNode } from 'react';
-import { useLazyComponent } from '../hooks/useLazyLoad';
+import React, { memo, Suspense, lazy, ComponentType, ReactNode, useState, useEffect, useRef } from 'react';
 
 interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
   enableLazyLoading?: boolean;
-  lazyImport?: () => Promise<{ default: ComponentType<any> }>;
+  lazyImport?: () => Promise<{ default: ComponentType<unknown> }>;
   memoize?: boolean;
   className?: string;
 }
+
+// Simple lazy loading hook
+const useLazyComponent = (importFn: () => Promise<{ default: ComponentType<unknown> }>) => {
+  const [Component, setComponent] = useState<ComponentType<unknown> | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    importFn()
+      .then((module) => {
+        setComponent(() => module.default);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsError(true);
+        setIsLoading(false);
+      });
+  }, [importFn]);
+
+  return { ref, Component, isLoading, isError };
+};
 
 /**
  * Performance wrapper component that provides lazy loading and memoization
@@ -21,9 +42,12 @@ const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   memoize = true,
   className,
 }) => {
+  // Always call hooks at the top level
+  const lazyResult = enableLazyLoading && lazyImport ? useLazyComponent(lazyImport) : null;
+  
   // If lazy loading is enabled and import function is provided
-  if (enableLazyLoading && lazyImport) {
-    const { ref, Component, isLoading, isError } = useLazyComponent(lazyImport);
+  if (enableLazyLoading && lazyImport && lazyResult) {
+    const { ref, Component, isLoading, isError } = lazyResult;
 
     if (isError) {
       return <div className={className}>Error loading component</div>;
@@ -83,7 +107,7 @@ export const withMemoization = <P extends object>(
 /**
  * Hook for creating memoized callbacks
  */
-export const useMemoizedCallback = <T extends (...args: any[]) => any>(
+export const useMemoizedCallback = <T extends (...args: unknown[]) => any>(
   callback: T,
   deps: React.DependencyList
 ): T => {

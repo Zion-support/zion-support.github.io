@@ -41,7 +41,7 @@ function needsFixing(filePath) {
     }
     
     // Check for merge conflict markers
-    if (content.includes('>>>>>>> origin') || content.includes('<<<<<<< HEAD')) {
+    if (content.includes('
       return true;
     }
     

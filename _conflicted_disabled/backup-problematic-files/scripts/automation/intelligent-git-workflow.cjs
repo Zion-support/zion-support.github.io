@@ -77,40 +77,17 @@ class IntelligentGitWorkflow {
   }
   async runWorkflow() {
     console.log('🚀 Starting intelligent Git workflow...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    try {
-      // Check Git status
-      const status = await this.checkGitStatus();
-      if (status.hasChanges) {
-        console.log('📝 Changes detected, analyzing...');
-        // Analyze changes
-        const changes = await this.analyzeChanges();
-        // Determine if auto-commit should happen
-        if (this.shouldAutoCommit(changes)) {
-          await this.intelligentCommit(changes);
-        }
-      }
-      // Check for merge opportunities
-      if (this.config.autoMerge) {
-        await this.intelligentMerge();
-      }
-      // Update workflow data
-      this.updateWorkflowData();
-      this.saveWorkflowData();
-      console.log('✅ Git workflow completed successfully!');
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
     try {
       const config = await fs.readFile(this.configFile, 'utf8');
       this.config = { ...this.config, ...JSON.parse(config) };
       this.log('✅ Git workflow configuration loaded');
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
     } catch (error) {
       this.log('📝 Using default Git workflow configuration');
       await this.saveConfiguration();
@@ -133,10 +110,10 @@ class IntelligentGitWorkflow {
   async saveConfiguration() {
     try {
       await fs.writeFile(this.configFile, JSON.stringify(this.config, null, 2));
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
     } catch (error) {
       this.log(`❌ Failed to save configuration: ${error.message}`, 'ERROR');
     }
@@ -159,7 +136,7 @@ class IntelligentGitWorkflow {
     }
   }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   shouldAutoCommit(changes) {
     if (!this.config.autoCommit) return false;
     // Don't auto-commit if there are too many changes
@@ -192,7 +169,7 @@ class IntelligentGitWorkflow {
       await this.setupGitConfiguration();
       this.log('🎯 Intelligent Git Workflow is ready');
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   async intelligentCommit(changes) {
     console.log('💾 Performing intelligent commit...');
     try {
@@ -233,7 +210,7 @@ class IntelligentGitWorkflow {
     } catch (error) {
       this.log(`⚠️ Git configuration setup warning: ${error.message}`, 'WARN');
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   generateCommitMessage(changes) {
     const timestamp = new Date().toISOString().split('T')[0];
     // Determine commit type
@@ -355,7 +332,7 @@ class IntelligentGitWorkflow {
         for (const file of files) {
           await this.runGitCommand(`git add ${file}`);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   async intelligentMerge() {
     console.log('🔀 Checking for merge opportunities...');
     try {
@@ -591,8 +568,8 @@ class IntelligentGitWorkflow {
     } catch (error) {
       this.log(`⚠️ Conflict check failed: ${error.message}`, 'WARN');
       return [];
-<<<<<<< HEAD
-=======
+
+
     }
   }
   async resolveConflictsIntelligently(conflicts, workflow) {
@@ -648,10 +625,10 @@ class IntelligentGitWorkflow {
           conflictType = 'start';
           continue;
         } else if (line.startsWith('')) {
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
+
+
+
+
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -981,13 +958,13 @@ class IntelligentGitWorkflow {
       } catch (error) {
         // Skip branches that can't be checked
       }
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
+
+
+
     }
   }
   async resolveConflictsIntelligently(conflicts, workflow) {
@@ -1374,7 +1351,7 @@ class IntelligentGitWorkflow {
       }
     }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     return mergeable;
   }
   async performIntelligentMerge(branch) {
@@ -1442,7 +1419,7 @@ class IntelligentGitWorkflow {
     }
   }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   async resolveFileConflict(filePath) {
     console.log(`🔧 Resolving conflict in ${filePath}...`);
     try {
@@ -1487,7 +1464,7 @@ class IntelligentGitWorkflow {
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
     // Update performance metrics
     const now = new Date().toISOString();
     this.workflowData.performance[now] = {
@@ -1496,36 +1473,36 @@ class IntelligentGitWorkflow {
       merges: this.workflowData.mergeHistory.length,
     };
   }
-<<<<<<< HEAD
-  handleWorkflowError(error) {
-    console.error('🚨 Git workflow error:', error.message);
-=======
 
   handleWorkflowError(error) {
     console.error('🚨 Git workflow error:', error.message);
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  handleWorkflowError(error) {
+    console.error('🚨 Git workflow error:', error.message);
+
+
     // Log error for analysis
     const errorLog = {
       timestamp: new Date().toISOString(),
       error: error.message,
       stack: error.stack,
     };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
     const errorFile = path.join(
       this.projectRoot,
       'logs',
       'git-workflow-errors.json'
     );
     let errors = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
+
 
     try {
       if (fs.existsSync(errorFile)) {
