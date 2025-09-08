@@ -9,19 +9,16 @@ interface PricingSuggestion {
   timestamp: Date
 }
 
-interface AnalyticsData {
-  totalSuggestions: number
-  averageConfidence: number
-  priceAccuracy: number
-}
-
-export function usePricingSuggestionAnalytics() {
-  const [suggestions, setSuggestions] = useState<PricingSuggestion[]>([])
-  const [analytics, setAnalytics] = useState<AnalyticsData>({
+export function usePricingSuggestionAnalytics(days = 30) {
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
     totalSuggestions: 0,
-    averageConfidence: 0,
-    priceAccuracy: 0,
-  })
+    acceptanceRate: 0,
+    averagePriceGap: 0,
+    suggestionsByCategory: [],
+    recentSuggestions: [],
+    isLoading: true,
+    error: null
+  });
 
   const addSuggestion = (suggestion: Omit<PricingSuggestion, 'id' | 'timestamp'>) => {
     const newSuggestion: PricingSuggestion = {
@@ -60,14 +57,15 @@ export function usePricingSuggestionAnalytics() {
     })
   }
 
-  const clearSuggestions = () => {
-    setSuggestions([])
-    setAnalytics({
-      totalSuggestions: 0,
-      averageConfidence: 0,
-      priceAccuracy: 0,
-    })
-  }
+      } catch (error) {
+        console.error("Error fetching pricing suggestion analytics:", error);
+        setAnalytics({
+          ...analytics,
+          isLoading: false,
+          error: "Failed to load pricing analytics data."
+        });
+      }
+    };
 
   return {
     suggestions,

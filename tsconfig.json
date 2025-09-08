@@ -31,10 +31,10 @@
       "@/*": ["./src/*"],
       "axios": ["./src/lib/axios"]
     },
-    "types": ["vite/client", "react"],
+    "typeRoots": ["./src/types"],
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,

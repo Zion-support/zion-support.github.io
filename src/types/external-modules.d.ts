@@ -239,6 +239,12 @@ declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string;
 }
+declare module 'embla-carousel-react';
+declare module 'framer-motion';
+declare module 'i18next';
+declare module 'i18next-browser-languagedetector';
+declare module 'react-helmet-async';
+declare module 'react-hook-form';
 declare module 'react-i18next';
 declare module 'react-dom/client';
 declare module 'react-dom';
