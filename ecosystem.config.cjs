@@ -49,10 +49,10 @@ module.exports = {
       }
     },
 
-    // Weekly security analysis - runs every 7 days (replaces GitHub Actions CodeQL workflow)
+    // Enhanced link checker - runs every 30 minutes
     {
-      name: 'weekly-security-analysis',
-      script: './scripts/automation/weekly-security-analysis.cjs',
+      name: 'enhanced-link-checker',
+      script: './scripts/automation/enhanced-link-checker.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -77,7 +77,7 @@ module.exports = {
       }
     },
 
-    // Continuous build and test - runs every hour
+    // Daily build and test - runs every hour
     {
       name: 'daily-build-test',
       script: './scripts/automation/daily-build-test.cjs',
@@ -91,10 +91,10 @@ module.exports = {
       }
     },
 
-    // Continuous security audit - runs every 4 hours
+    // Enhanced security automation - runs every 4 hours
     {
-      name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
+      name: 'enhanced-security-automation',
+      script: './scripts/automation/enhanced-security-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -105,10 +105,10 @@ module.exports = {
       }
     },
 
-    // Continuous dependency updates - runs every 6 hours
+    // Enhanced CI/CD automation - runs every 6 hours
     {
-      name: 'dependency-updates',
-      script: './scripts/automation/dependency-updates.cjs',
+      name: 'enhanced-ci-cd-automation',
+      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -119,108 +119,10 @@ module.exports = {
       }
     },
 
-    // Continuous performance monitoring - runs every 2 hours
+    // Enhanced testing automation - runs every 2 hours
     {
-      name: 'performance-monitor',
-      script: './scripts/automation/performance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Continuous quality checks - runs every 3 hours
-    {
-      name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '10800000' // 3 hours
-      }
-    },
-
-    // Continuous link integrity checker - runs every 2 hours
-    {
-      name: 'link-integrity',
-      script: './scripts/automation/link-integrity.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Continuous front maximizer - runs every 4 hours
-    {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      }
-    },
-
-    // Continuous sitemap runner - runs every 6 hours
-    {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // Weekly dependency management - runs every 7 days (replaces GitHub Actions dependencies workflow)
-    {
-      name: 'weekly-dependency-manager',
-      script: './scripts/automation/weekly-dependency-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '604800000' // 7 days
-      }
-    },
-
-    // Weekly security analysis - runs every 7 days (replaces GitHub Actions CodeQL workflow)
-    {
-      name: 'weekly-security-analysis',
-      script: './scripts/automation/weekly-security-analysis.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '604800000' // 7 days
-      }
-    },
-
-    // Workflow status monitor - runs every 2 hours (replaces GitHub Actions status workflow)
-    {
-      name: 'workflow-status-monitor',
-      script: './scripts/automation/workflow-status-monitor.cjs',
+      name: 'enhanced-testing-automation',
+      script: './scripts/automation/enhanced-testing-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,

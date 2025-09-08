@@ -7,8 +7,8 @@
 - **Critical Vulnerabilities**: 0 🔴
 - **High Vulnerabilities**: 0 🟠
 - **Outdated Packages**: 0
-- **Security Issues**: 8
-- **Potential Secrets**: 6
+- **Security Issues**: 0
+- **Potential Secrets**: 5
 
 ## Detailed Results
 
