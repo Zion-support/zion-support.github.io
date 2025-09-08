@@ -220,7 +220,29 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
             </div>
           </section>
 
-          {/* Featured Blog Posts */}
+          {/* Featured Guides & Popular Content */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🧭 Featured Guides & Popular Content</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/README.md" className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <h3 className="text-xl font-bold text-cyan-400 mb-2">Getting Started</h3>
+                <p className="text-white/80 text-sm mb-3">Overview, quickstart, and core concepts.</p>
+                <span className="text-cyan-300 text-sm font-semibold">Open Guide →</span>
+              </Link>
+              <Link href="/API.md" className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-2">API Reference</h3>
+                <p className="text-white/80 text-sm mb-3">Endpoints, schemas, and integration notes.</p>
+                <span className="text-fuchsia-300 text-sm font-semibold">View API →</span>
+              </Link>
+              <Link href="/DEPLOYMENT.md" className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <h3 className="text-xl font-bold text-green-400 mb-2">Deployment Playbook</h3>
+                <p className="text-white/80 text-sm mb-3">Production-ready patterns and automation.</p>
+                <span className="text-green-300 text-sm font-semibold">Deploy Now →</span>
+              </Link>
+            </div>
+          </section>
+
+          {/* Revolutionary Platform Advantages */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📝 Featured Blog Posts</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -751,6 +773,11 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                 </div>
                 <h3 className="text-lg font-semibold text-indigo-400 mb-2">Reports & Analytics</h3>
                 <p className="text-white/70 text-sm">Performance data</p>
+              </Link>
+            </div>
+            <div className="mt-6 text-center">
+              <Link href="/reports/updates" className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
+                View All Updates
               </Link>
             </div>
           </section>
