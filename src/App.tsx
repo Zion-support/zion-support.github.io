@@ -4,8 +4,11 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { ConsentProvider } from "./context/ConsentContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import PwaInstallButton from "./components/PwaInstallButton";
+import { CookieBanner } from "./components/CookieBanner";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -19,21 +22,36 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-
-const { lazy } = React;
-const Home = lazy(() => import('./pages/Home'));
-const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = lazy(() => import('./pages/TalentsPage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
-const Analytics = lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = lazy(() => import('./pages/CommunityPage'));
-const Categories = lazy(() => import('./pages/Categories'));
-const Login = lazy(() => import('./pages/Login'));
-const Signup = lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
+import Home from './pages/Home';
+import AIMatcherPage from './pages/AIMatcher';
+import TalentDirectory from './pages/TalentDirectory';
+import TalentsPage from './pages/TalentsPage';
+import MoreTalentsPage from './pages/MoreTalentsPage';
+import AdditionalTalentsPage from './pages/AdditionalTalentsPage';
+import ServicesPage from './pages/ServicesPage';
+import EquipmentPage from './pages/EquipmentPage';
+import EquipmentDetail from './pages/EquipmentDetail';
+import Analytics from './pages/Analytics';
+import MobileLaunchPage from './pages/MobileLaunchPage';
+import CommunityPage from './pages/CommunityPage';
+import Categories from './pages/Categories';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import NewProductsPage from './pages/NewProductsPage';
+import NewServicesPage from './pages/NewServicesPage';
+import Sitemap from './pages/Sitemap';
+import PartnersPage from './pages/Partners';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+import OpenAppRedirect from './pages/OpenAppRedirect';
+import ContactPage from './pages/Contact';
+import ZionHireAI from './pages/ZionHireAI';
+import RequestQuotePage from './pages/RequestQuote';
+import WishlistPage from './pages/Wishlist';
+import CartPage from './pages/Cart';
+import Checkout from './pages/Checkout';
+import PrivacySettings from './pages/PrivacySettings';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -68,7 +86,7 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
-  { path: '/profile/privacy', element: <PrivacyPage /> },
+  { path: '/privacy-settings', element: <PrivacySettings /> },
 ];
 
 // New pages
@@ -238,8 +256,10 @@ const EnhancedLoadingSpinner = () => (
 function App() {
   return (
     <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <React.Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+      <ConsentProvider>
+        <ThemeProvider defaultTheme="dark">
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+          <ErrorBoundary>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
@@ -259,7 +279,10 @@ function App() {
         </React.Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
-      </ThemeProvider>
+          <CookieBanner />
+          <PwaInstallButton />
+        </ThemeProvider>
+      </ConsentProvider>
     </WhitelabelProvider>
   );
 }

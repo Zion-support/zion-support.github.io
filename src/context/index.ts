@@ -7,3 +7,4 @@ export {
 } from './RequestQuoteWizard';
 export { ViewModeProvider, useViewMode } from './ViewModeContext';
 export { CartProvider, useCart } from './CartContext';
+export { ConsentProvider, useConsent } from './ConsentContext';
