@@ -57,8 +57,6 @@
       ]
     }
   ],
-  "buildBreakingFiles": [
-    "pages/index.tsx"
-  ],
-  "generatedAt": "2025-08-20T13:24:22.530Z"
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-20T12:38:52.761Z"
 }
