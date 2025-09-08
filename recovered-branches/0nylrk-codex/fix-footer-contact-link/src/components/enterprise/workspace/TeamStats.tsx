@@ -5,7 +5,7 @@
   CardTitle,;
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
-  return (import React from "react",
+  return (import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress",
 export function TeamStats() {
@@ -37,7 +37,7 @@ export function TeamStats() {
       </CardContent>  );
 }
   )
-import React from "react",;
+import React from "react";;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;

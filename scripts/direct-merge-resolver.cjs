@@ -34,6 +34,7 @@ function resolveMergeConflict(filePath) {;
     }
 ;
     return conflictedFiles;
+    log("4. Continue with your workflow", "blue"),}
 
     log('Error finding conflicted files', 'red');
     return []}
