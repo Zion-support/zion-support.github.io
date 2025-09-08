@@ -113,6 +113,20 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' }
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: Zap,
+      color: 'from-blue-600 to-cyan-600',
+      links: [
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
