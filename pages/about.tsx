@@ -5,10 +5,10 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Zion Tech Group — Autonomous Innovation Hub</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, vision, and autonomous innovation capabilities in cutting-edge technology solutions." />
-        <meta property="og:title" content="About Zion Tech Group — Autonomous Innovation Hub" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission, vision, and autonomous innovation capabilities in cutting-edge technology solutions." />
+        <title>About Zion Tech Group | Autonomous Innovation Hub</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and intelligent automation systems." />
+        <meta property="og:title" content="About Zion Tech Group | Autonomous Innovation Hub" />
+        <meta property="og:description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and intelligent automation systems." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
@@ -19,122 +19,78 @@ export default function AboutPage() {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Pioneering the future of autonomous innovation and intelligent technology solutions.
+              Pioneering the future of autonomous technology and intelligent automation.
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-cyan-400">Our Mission</h2>
+          <section className="mx-auto max-w-6xl space-y-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold mb-6 text-cyan-300">Our Mission</h2>
                 <p className="text-lg text-white/80 leading-relaxed">
-                  To revolutionize technology development through autonomous innovation systems, 
-                  creating intelligent solutions that operate independently and continuously improve 
-                  without human intervention.
+                  Zion Tech Group is dedicated to creating autonomous systems that operate 
+                  independently, continuously improving and adapting to meet the evolving 
+                  needs of our digital world. We believe in the power of intelligent 
+                  automation to solve complex problems and drive innovation.
                 </p>
-                
-                <h3 className="text-2xl font-semibold text-fuchsia-400">Core Values</h3>
-                <ul className="space-y-3 text-white/70">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                    Autonomous Innovation
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                    Continuous Learning
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                    Ethical AI Development
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                    Global Impact
-                  </li>
-                </ul>
               </div>
-              
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-fuchsia-400">Our Vision</h2>
-                <p className="text-lg text-white/80 leading-relaxed">
-                  To create a world where technology systems are self-managing, self-improving, 
-                  and autonomously innovative, enabling human creativity to focus on higher-order 
-                  problem-solving and strategic thinking.
-                </p>
-                
-                <h3 className="text-2xl font-semibold text-cyan-400">Key Capabilities</h3>
-                <ul className="space-y-3 text-white/70">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-fuchsia-400 rounded-full mr-3"></span>
-                    Autonomous Cloud Automations
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-fuchsia-400 rounded-full mr-3"></span>
-                    AI-Powered Content Generation
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-fuchsia-400 rounded-full mr-3"></span>
-                    Self-Healing Systems
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-fuchsia-400 rounded-full mr-3"></span>
-                    Intelligent Process Orchestration
-                  </li>
+              <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-semibold mb-4 text-cyan-300">Core Values</h3>
+                <ul className="space-y-3 text-white/80">
+                  <li>• Autonomous Innovation</li>
+                  <li>• Continuous Learning</li>
+                  <li>• Ethical AI Development</li>
+                  <li>• Global Impact</li>
                 </ul>
               </div>
             </div>
-          </section>
 
-          <section className="max-w-6xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white">
-              Our Innovation Ecosystem
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-xl">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">Autonomous Agents</h3>
-                <p className="text-white/70">
-                  Self-managing AI agents that continuously monitor, optimize, and improve 
-                  technology systems without human intervention.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-xl">
-                <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Cloud Automation</h3>
-                <p className="text-white/70">
-                  Intelligent cloud infrastructure that self-scales, self-heals, and 
-                  autonomously manages resources for optimal performance.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-xl">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">Content Intelligence</h3>
-                <p className="text-white/70">
-                  AI-powered content generation and optimization systems that create 
-                  engaging, relevant content autonomously.
-                </p>
+            <div className="bg-gradient-to-br from-white/5 to-white/10 p-8 rounded-2xl border border-white/10">
+              <h2 className="text-3xl font-bold mb-6 text-center text-cyan-300">What We Do</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-fuchsia-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🤖</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>
+                  <p className="text-white/70">Self-running automation that continuously improves and adapts.</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-fuchsia-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🚀</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Innovation Hub</h3>
+                  <p className="text-white/70">Cutting-edge technology solutions for tomorrow's challenges.</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-fuchsia-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🌐</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
+                  <p className="text-white/70">Solutions that scale across borders and industries.</p>
+                </div>
               </div>
             </div>
-          </section>
 
-          <section className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8 text-white">Join the Future</h2>
-            <p className="text-lg text-white/80 mb-8">
-              Be part of the autonomous innovation revolution. Discover how Zion Tech Group 
-              is shaping the future of technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
-              >
-                Get in Touch
-              </a>
-              <a 
-                href="/automation" 
-                className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-200"
-              >
-                Explore Automation
-              </a>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="bg-gradient-to-br from-fuchsia-500/20 to-cyan-500/20 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-semibold mb-4 text-fuchsia-300">Our Approach</h3>
+                <p className="text-white/80 leading-relaxed">
+                  We combine advanced artificial intelligence with robust automation 
+                  frameworks to create systems that not only solve problems but 
+                  continuously evolve and improve. Our autonomous agents work 
+                  24/7 to ensure optimal performance and innovation.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold mb-6 text-fuchsia-300">The Future</h2>
+                <p className="text-lg text-white/80 leading-relaxed">
+                  As we look ahead, Zion Tech Group is committed to pushing the 
+                  boundaries of what's possible with autonomous technology. We're 
+                  building a future where intelligent systems work seamlessly 
+                  with humans to create a more efficient, innovative world.
+                </p>
+              </div>
             </div>
           </section>
         </main>
