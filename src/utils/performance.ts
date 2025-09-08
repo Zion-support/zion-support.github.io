@@ -244,4 +244,5 @@ export function getMemoryUsage(): { used: number; total: number; limit: number }
     };
   }
   return null;
+}
 

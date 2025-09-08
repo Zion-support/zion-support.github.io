@@ -10,8 +10,4 @@ import { Button } from "@/components/ui/button",    {
           const isSelected = selectedType === type.id,
 
           return (
-            <Button;
-              key={type.id}          return (
-            <Button;
-              key={type.id}
-
+            

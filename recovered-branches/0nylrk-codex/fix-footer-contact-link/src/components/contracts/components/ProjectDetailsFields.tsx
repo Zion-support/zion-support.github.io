@@ -215,3 +215,5 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                     on_select={field.on_change}
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
+  );
+};

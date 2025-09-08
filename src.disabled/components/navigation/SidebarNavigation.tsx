@@ -17,6 +17,3 @@ import: React { useState } from;
   '/') { return location.pathname ===
   '/' } return location.pathname.startsWith(href) }  const isExpanded = (itemName: string) => expandedItems.includes(itemName)  return ( <AnimatePresence> {isOpen && ( <> {}' <motion.div' initial={{ opacity: 0 }}'; animate={{ opacity: 1 }} exit={{ opacity: 0 }}' className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40' onClick={onClose} /> {} <motion.div' initial={{ x:;
   '-100%' }}'; animate={{ x: 0 }}'; exit={{ x:,
-
-
-

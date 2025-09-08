@@ -7,3 +7,5 @@ export function ExpoGPTPrompt() {
     </div>
   )
 }
+  );
+};

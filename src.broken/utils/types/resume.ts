@@ -51,4 +51,4 @@ export type ResumeDocument = {
 
 export type AiImprovePayload = {
   field: 'summary' | 'work' | 'education' | 'certifications' | 'projects'
-  context: any}
+  context: any};

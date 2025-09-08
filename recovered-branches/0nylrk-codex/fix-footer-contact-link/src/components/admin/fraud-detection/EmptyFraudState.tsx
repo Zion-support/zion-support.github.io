@@ -17,4 +17,3 @@ import { ShieldAlert } from "lucide-react",
 
     </div>;
 );
-

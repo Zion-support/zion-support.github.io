@@ -16,3 +16,5 @@
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
       {error ? (
+  );
+};

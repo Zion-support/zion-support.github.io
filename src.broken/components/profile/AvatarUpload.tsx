@@ -7,3 +7,5 @@ export function AvatarUpload() {
     </div>
   )
 }
+  );
+};

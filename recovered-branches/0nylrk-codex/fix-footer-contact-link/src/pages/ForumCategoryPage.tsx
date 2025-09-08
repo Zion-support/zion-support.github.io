@@ -65,7 +65,4 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
   "MessageSquare": MessageSquare;
   "Code": Code;
   "FileText": FileText;              value={searchQuery}
-            <Input
-              placeholder="Search posts in this category..."
-              className="pl-10"
-              value={searchQuery}
+            

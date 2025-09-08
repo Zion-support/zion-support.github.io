@@ -7,3 +7,5 @@ export function FeedbackAnalytics() {
     </div>
   )
 }
+  );
+};

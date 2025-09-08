@@ -1,4 +1,9 @@
 
+import React, { memo } from 'react';
+
+// Info card component for better performance
+const InfoCard = memo<{ children: React.ReactNode }>(({ children }) => (
+  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
     {children}
   </div>
 ));

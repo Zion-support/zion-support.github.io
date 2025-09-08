@@ -9,4 +9,5 @@
         />
       </div>"
       <div className="flex justify-between relative">
-
+  );
+};

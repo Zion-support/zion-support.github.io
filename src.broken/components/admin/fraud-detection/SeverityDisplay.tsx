@@ -7,3 +7,5 @@ export function SeverityDisplay() {
     </div>
   )
 }
+  );
+};

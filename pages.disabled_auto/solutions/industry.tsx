@@ -2,3 +2,5 @@ import type { NextPage } from \'next\'; import MainLayout from \'../../component
 import React from 'react';
 interface IndustryProps {
   // Add props here as needed
+  );
+};

@@ -101,4 +101,3 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array && Array.from(e && e.target.files));
     }
   };
-

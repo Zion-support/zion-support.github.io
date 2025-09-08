@@ -298,3 +298,5 @@ export default function TrainingPage() {}
       </div>
     </Layout>
 }
+  );
+};

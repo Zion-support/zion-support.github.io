@@ -19,4 +19,4 @@ export: interface ComprehensiveService {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-
+}

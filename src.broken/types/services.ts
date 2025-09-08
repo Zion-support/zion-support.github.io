@@ -88,4 +88,4 @@ export interface MicroSAAS extends ServiceSolution {
   apiRateLimit: string,
   dataRetention: string,
   backupFrequency: string,
-  uptime: number}
+  uptime: number};

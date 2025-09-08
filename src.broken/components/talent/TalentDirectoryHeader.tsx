@@ -7,3 +7,5 @@ export function TalentDirectoryHeader() {
     </div>
   )
 }
+  );
+};

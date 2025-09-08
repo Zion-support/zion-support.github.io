@@ -7,3 +7,5 @@ export function EmptyFraudState() {
     </div>
   )
 }
+  );
+};

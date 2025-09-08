@@ -127,4 +127,3 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
         </div>;
 
         <Button
-
