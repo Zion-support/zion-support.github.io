@@ -1,334 +1,354 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🗺️ Starting continuous sitemap runner automation...');
+console.log('🗺️  Starting Sitemap Runner Automation...');
 
-// Get automation interval from environment variable (default: 6 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
-
-async function runSitemapRunner() {
+// Function to check if sitemap exists and is valid
+function checkExistingSitemap() {
   try {
-    console.log(`🗺️ Running sitemap generation at ${new Date().toISOString()}`);
+    console.log('🔍 Checking existing sitemap...');
     
-    // Build the project first
-    console.log('🏗️ Building project for sitemap generation...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
-    } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
-      return;
+    const sitemapFiles = [
+      './public/sitemap.xml',
+      './dist/sitemap.xml',
+      './sitemap.xml'
+    ];
+    
+    for (const sitemapFile of sitemapFiles) {
+      if (fs.existsSync(sitemapFile)) {
+        const stats = fs.statSync(sitemapFile);
+        const content = fs.readFileSync(sitemapFile, 'utf8');
+        
+        return {
+          exists: true,
+          file: sitemapFile,
+          size: stats.size,
+          sizeKB: Math.round(stats.size / 1024 * 100) / 100,
+          lastModified: stats.mtime,
+          isValid: content.includes('<?xml') && content.includes('<urlset'),
+          urlCount: (content.match(/<url>/g) || []).length
+        };
+      }
     }
     
-    // Check if dist folder exists
-    const distPath = path.join(process.cwd(), 'dist');
-    if (!fs.existsSync(distPath)) {
-      console.log('⚠️  Build verification failed: dist folder not found');
-      return;
-    }
-    
-    // Generate sitemap
-    console.log('🗺️ Generating sitemap...');
-    const sitemap = generateSitemap(distPath);
-    
-    if (sitemap.pages.length > 0) {
-      console.log(`✅ Generated sitemap with ${sitemap.pages.length} pages`);
-      
-      // Save sitemap.xml
-      const sitemapXml = generateSitemapXML(sitemap);
-      const sitemapPath = path.join(process.cwd(), 'dist', 'sitemap.xml');
-      fs.writeFileSync(sitemapPath, sitemapXml);
-      console.log(`📄 Sitemap saved to ${sitemapPath}`);
-      
-      // Save sitemap.json for programmatic access
-      const sitemapJsonPath = path.join(process.cwd(), 'dist', 'sitemap.json');
-      fs.writeFileSync(sitemapJsonPath, JSON.stringify(sitemap, null, 2));
-      console.log(`📄 Sitemap JSON saved to ${sitemapJsonPath}`);
-      
-      // Generate robots.txt if it doesn't exist
-      const robotsPath = path.join(process.cwd(), 'dist', 'robots.txt');
-      if (!fs.existsSync(robotsPath)) {
-        const robotsTxt = generateRobotsTxt();
-        fs.writeFileSync(robotsPath, robotsTxt);
-        console.log(`🤖 Robots.txt generated at ${robotsPath}`);
-      }
-      
-      // Generate sitemap index if there are many pages
-      if (sitemap.pages.length > 1000) {
-        const sitemapIndex = generateSitemapIndex(sitemap);
-        const sitemapIndexPath = path.join(process.cwd(), 'dist', 'sitemap-index.xml');
-        fs.writeFileSync(sitemapIndexPath, sitemapIndex);
-        console.log(`📑 Sitemap index generated at ${sitemapIndexPath}`);
-      }
-      
-      // Validate sitemap
-      console.log('🔍 Validating sitemap...');
-      const validationResult = validateSitemap(sitemap);
-      if (validationResult.isValid) {
-        console.log('✅ Sitemap validation passed');
-      } else {
-        console.log(`⚠️  Sitemap validation issues: ${validationResult.issues.join(', ')}`);
-      }
-      
-      // Check for SEO optimization opportunities
-      console.log('🔍 Checking for SEO optimization opportunities...');
-      const seoIssues = checkSEOIssues(sitemap);
-      if (seoIssues.length > 0) {
-        console.log(`⚠️  Found ${seoIssues.length} SEO optimization opportunities:`);
-        seoIssues.forEach(issue => {
-          console.log(`  - ${issue.page}: ${issue.issue}`);
-        });
-      } else {
-        console.log('✅ SEO appears to be well optimized');
-      }
-      
-    } else {
-      console.log('⚠️  No pages found for sitemap generation');
-    }
-    
-    // Generate sitemap report
-    console.log('📊 Generating sitemap runner report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalPages: sitemap.pages.length,
-      sitemapGenerated: sitemap.pages.length > 0,
-      validationPassed: sitemap.pages.length > 0 ? validationSitemap(sitemap).isValid : false,
-      seoIssues: seoIssues ? seoIssues.length : 0,
-      summary: `Sitemap generation completed. Generated ${sitemap.pages.length} pages`,
-      status: 'completed'
+    return {
+      exists: false,
+      file: null,
+      size: 0,
+      sizeKB: 0,
+      lastModified: null,
+      isValid: false,
+      urlCount: 0
     };
-    
-    const reportPath = path.join(process.cwd(), 'sitemap-runner-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Sitemap runner report saved to ${reportPath}`);
-    
-    console.log('✅ Continuous sitemap runner completed successfully');
-    
   } catch (error) {
-    console.error('❌ Continuous sitemap runner failed:', error.message);
-    
-    const errorReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      summary: 'Sitemap runner failed',
-      status: 'error'
+    console.log('⚠️  Could not check existing sitemap:', error.message);
+    return {
+      exists: false,
+      file: null,
+      size: 0,
+      sizeKB: 0,
+      lastModified: null,
+      isValid: false,
+      urlCount: 0
     };
+  }
+}
+
+// Function to generate sitemap from build output
+function generateSitemapFromBuild() {
+  try {
+    console.log('🏗️  Generating sitemap from build output...');
     
-    const reportPath = path.join(process.cwd(), 'sitemap-runner-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
-  }
-}
-
-function generateSitemap(distPath) {
-  const pages = [];
-  const baseUrl = 'https://ziontechgroup.com'; // Update with your actual domain
-  
-  function scanDirectory(dirPath, relativePath = '') {
-    const items = fs.readdirSync(dirPath);
-    items.forEach(item => {
-      const itemPath = path.join(dirPath, item);
-      const stats = fs.statSync(itemPath);
-      
-      if (stats.isDirectory()) {
-        scanDirectory(itemPath, path.join(relativePath, item));
-      } else if (item.endsWith('.html')) {
-        const content = fs.readFileSync(itemPath, 'utf8');
-        const lastModified = stats.mtime;
-        
-        // Extract page information
-        const title = extractTitle(content);
-        const description = extractDescription(content);
-        const keywords = extractKeywords(content);
-        const priority = calculatePriority(relativePath);
-        const changeFreq = calculateChangeFreq(relativePath);
-        
-        pages.push({
-          url: `${baseUrl}/${relativePath}/${item}`.replace(/\/+/g, '/').replace(/\/$/, ''),
-          lastModified: lastModified.toISOString(),
-          title: title,
-          description: description,
-          keywords: keywords,
-          priority: priority,
-          changeFreq: changeFreq,
-          relativePath: relativePath
-        });
-      }
-    });
-  }
-  
-  scanDirectory(distPath);
-  
-  // Sort pages by priority and path
-  pages.sort((a, b) => {
-    if (a.priority !== b.priority) {
-      return b.priority - a.priority;
+    if (!fs.existsSync('./dist')) {
+      console.log('⚠️  Dist directory not found. Building project first...');
+      execSync('npm run build', { stdio: 'inherit' });
     }
-    return a.relativePath.localeCompare(b.relativePath);
-  });
-  
-  return {
-    baseUrl: baseUrl,
-    generatedAt: new Date().toISOString(),
-    totalPages: pages.length,
-    pages: pages
-  };
+    
+    const sitemapUrls = [];
+    
+    function scanDirectory(dir, basePath = '') {
+      const items = fs.readdirSync(dir);
+      
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const relativePath = path.join(basePath, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          scanDirectory(fullPath, relativePath);
+        } else if (item.endsWith('.html')) {
+          // Convert file path to URL
+          let url = relativePath.replace(/\.html$/, '');
+          if (url === 'index') {
+            url = '/';
+          } else {
+            url = `/${url}`;
+          }
+          
+          sitemapUrls.push({
+            url: url,
+            lastmod: stat.mtime.toISOString().split('T')[0],
+            changefreq: 'weekly',
+            priority: url === '/' ? '1.0' : '0.8'
+          });
+        }
+      }
+    }
+    
+    scanDirectory('./dist');
+    
+    return sitemapUrls;
+  } catch (error) {
+    console.log('⚠️  Could not generate sitemap from build:', error.message);
+    return [];
+  }
 }
 
-function extractTitle(content) {
-  const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
-  return titleMatch ? titleMatch[1].trim() : '';
+// Function to generate sitemap from package.json scripts
+function generateSitemapFromScripts() {
+  try {
+    console.log('📜 Checking for sitemap generation scripts...');
+    
+    if (fs.existsSync('./package.json')) {
+      const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+      const scripts = packageJson.scripts || {};
+      
+      // Look for sitemap-related scripts
+      const sitemapScripts = Object.keys(scripts).filter(script => 
+        script.includes('sitemap') || script.includes('generate')
+      );
+      
+      if (sitemapScripts.length > 0) {
+        console.log(`Found sitemap scripts: ${sitemapScripts.join(', ')}`);
+        
+        for (const script of sitemapScripts) {
+          try {
+            console.log(`Running script: ${script}`);
+            execSync(`npm run ${script}`, { stdio: 'inherit' });
+            return true;
+          } catch (error) {
+            console.log(`Script ${script} failed:`, error.message);
+          }
+        }
+      }
+    }
+    
+    return false;
+  } catch (error) {
+    console.log('⚠️  Could not check package.json scripts:', error.message);
+    return false;
+  }
 }
 
-function extractDescription(content) {
-  const descMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i);
-  return descMatch ? descMatch[1].trim() : '';
+// Function to create XML sitemap
+function createXMLSitemap(urls) {
+  try {
+    console.log('📝 Creating XML sitemap...');
+    
+    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    for (const url of urls) {
+      xml += '  <url>\n';
+      xml += `    <loc>https://yourdomain.com${url.url}</loc>\n`;
+      xml += `    <lastmod>${url.lastmod}</lastmod>\n`;
+      xml += `    <changefreq>${url.changefreq}</changefreq>\n`;
+      xml += `    <priority>${url.priority}</priority>\n`;
+      xml += '  </url>\n';
+    }
+    
+    xml += '</urlset>';
+    
+    return xml;
+  } catch (error) {
+    console.log('⚠️  Could not create XML sitemap:', error.message);
+    return null;
+  }
 }
 
-function extractKeywords(content) {
-  const keywordsMatch = content.match(/<meta[^>]*name=["']keywords["'][^>]*content=["']([^"']+)["']/i);
-  return keywordsMatch ? keywordsMatch[1].trim() : '';
-}
-
-function calculatePriority(relativePath) {
-  if (!relativePath || relativePath === '') return 1.0;
-  if (relativePath.includes('index')) return 0.9;
-  if (relativePath.split('/').length === 1) return 0.8;
-  if (relativePath.split('/').length === 2) return 0.7;
-  return 0.6;
-}
-
-function calculateChangeFreq(relativePath) {
-  if (relativePath.includes('blog') || relativePath.includes('news')) return 'weekly';
-  if (relativePath.includes('about') || relativePath.includes('contact')) return 'monthly';
-  return 'yearly';
-}
-
-function generateSitemapXML(sitemap) {
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-  
-  sitemap.pages.forEach(page => {
-    xml += '  <url>\n';
-    xml += `    <loc>${page.url}</loc>\n`;
-    xml += `    <lastmod>${page.lastModified}</loc>\n`;
-    xml += `    <changefreq>${page.changeFreq}</changefreq>\n`;
-    xml += `    <priority>${page.priority}</priority>\n`;
-    xml += '  </url>\n';
-  });
-  
-  xml += '</urlset>';
-  return xml;
-}
-
-function generateRobotsTxt() {
-  return `User-agent: *
+// Function to create robots.txt
+function createRobotsTxt(sitemapUrl) {
+  try {
+    console.log('🤖 Creating robots.txt...');
+    
+    const robotsContent = `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Sitemap
+Sitemap: ${sitemapUrl}
 
-# Crawl-delay: 1
-`;
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/`;
+    
+    return robotsContent;
+  } catch (error) {
+    console.log('⚠️  Could not create robots.txt:', error.message);
+    return null;
+  }
 }
 
-function generateSitemapIndex(sitemap) {
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-  
-  // Split pages into chunks of 1000
-  const chunks = [];
-  for (let i = 0; i < sitemap.pages.length; i += 1000) {
-    chunks.push(sitemap.pages.slice(i, i + 1000));
+// Function to validate sitemap
+function validateSitemap(sitemapContent) {
+  try {
+    console.log('✅ Validating sitemap...');
+    
+    // Basic XML validation
+    if (!sitemapContent.includes('<?xml')) {
+      return { isValid: false, error: 'Missing XML declaration' };
+    }
+    
+    if (!sitemapContent.includes('<urlset')) {
+      return { isValid: false, error: 'Missing urlset element' };
+    }
+    
+    if (!sitemapContent.includes('</urlset>')) {
+      return { isValid: false, error: 'Missing closing urlset tag' };
+    }
+    
+    // Count URLs
+    const urlCount = (sitemapContent.match(/<url>/g) || []).length;
+    if (urlCount === 0) {
+      return { isValid: false, error: 'No URLs found in sitemap' };
+    }
+    
+    return { isValid: true, urlCount: urlCount };
+  } catch (error) {
+    return { isValid: false, error: error.message };
   }
-  
-  chunks.forEach((chunk, index) => {
-    xml += '  <sitemap>\n';
-    xml += `    <loc>https://ziontechgroup.com/sitemap-${index + 1}.xml</loc>\n`;
-    xml += `    <lastmod>${new Date().toISOString()}</lastmod>\n`;
-    xml += '  </sitemap>\n`;
-  });
-  
-  xml += '</sitemapindex>';
-  return xml;
 }
 
-function validateSitemap(sitemap) {
-  const issues = [];
-  
-  // Check for missing titles
-  sitemap.pages.forEach(page => {
-    if (!page.title) {
-      issues.push(`Missing title for ${page.url}`);
+// Function to generate sitemap report
+function generateSitemapReport(existingSitemap, generatedUrls, sitemapContent, robotsContent, validation) {
+  const report = {
+    timestamp: new Date().toISOString(),
+    existingSitemap: existingSitemap,
+    generatedUrls: generatedUrls,
+    sitemapContent: sitemapContent ? 'Generated successfully' : 'Failed to generate',
+    robotsContent: robotsContent ? 'Generated successfully' : 'Failed to generate',
+    validation: validation,
+    summary: {
+      totalUrls: generatedUrls.length,
+      sitemapGenerated: !!sitemapContent,
+      robotsGenerated: !!robotsContent,
+      isValid: validation.isValid,
+      urlCount: validation.urlCount || 0
     }
-  });
-  
-  // Check for missing descriptions
-  sitemap.pages.forEach(page => {
-    if (!page.description) {
-      issues.push(`Missing description for ${page.url}`);
-    }
-  });
-  
-  // Check for duplicate URLs
-  const urls = sitemap.pages.map(p => p.url);
-  const duplicates = urls.filter((url, index) => urls.indexOf(url) !== index);
-  if (duplicates.length > 0) {
-    issues.push(`Duplicate URLs found: ${duplicates.join(', ')}`);
-  }
-  
-  return {
-    isValid: issues.length === 0,
-    issues: issues
   };
+  
+  return report;
 }
 
-function checkSEOIssues(sitemap) {
-  const issues = [];
-  
-  sitemap.pages.forEach(page => {
-    // Check for missing meta descriptions
-    if (!page.description) {
-      issues.push({
-        page: page.url,
-        issue: 'Missing meta description'
+// Main function
+async function runSitemapRunner() {
+  try {
+    console.log('🚀 Starting comprehensive sitemap generation...');
+    
+    // Check existing sitemap
+    const existingSitemap = checkExistingSitemap();
+    
+    if (existingSitemap.exists) {
+      console.log(`📄 Found existing sitemap: ${existingSitemap.file}`);
+      console.log(`Size: ${existingSitemap.sizeKB}KB, URLs: ${existingSitemap.urlCount}`);
+      console.log(`Last modified: ${existingSitemap.lastModified}`);
+      console.log(`Valid: ${existingSitemap.isValid ? 'Yes' : 'No'}`);
+    }
+    
+    // Generate sitemap from build output
+    const generatedUrls = generateSitemapFromBuild();
+    console.log(`🔗 Found ${generatedUrls.length} URLs to include in sitemap`);
+    
+    // Try to generate sitemap from scripts first
+    let sitemapGenerated = generateSitemapFromScripts();
+    
+    let sitemapContent = null;
+    let robotsContent = null;
+    
+    if (!sitemapGenerated) {
+      // Create XML sitemap manually
+      sitemapContent = createXMLSitemap(generatedUrls);
+      
+      if (sitemapContent) {
+        // Save sitemap
+        const sitemapPath = './dist/sitemap.xml';
+        fs.writeFileSync(sitemapPath, sitemapContent);
+        console.log(`💾 Sitemap saved to: ${sitemapPath}`);
+      }
+    }
+    
+    // Create robots.txt
+    robotsContent = createRobotsTxt('https://yourdomain.com/sitemap.xml');
+    
+    if (robotsContent) {
+      const robotsPath = './dist/robots.txt';
+      fs.writeFileSync(robotsPath, robotsContent);
+      console.log(`🤖 Robots.txt saved to: ${robotsPath}`);
+    }
+    
+    // Validate sitemap
+    const validation = validateSitemap(sitemapContent || '');
+    
+    // Generate comprehensive report
+    const sitemapReport = generateSitemapReport(
+      existingSitemap,
+      generatedUrls,
+      sitemapContent,
+      robotsContent,
+      validation
+    );
+    
+    // Save detailed report
+    fs.writeFileSync('./sitemap-runner-report.json', JSON.stringify(sitemapReport, null, 2));
+    
+    // Display summary
+    console.log('\n📊 Sitemap Generation Summary:');
+    console.log(`Total URLs found: ${sitemapReport.summary.totalUrls}`);
+    console.log(`Sitemap generated: ${sitemapReport.summary.sitemapGenerated ? 'Yes' : 'No'}`);
+    console.log(`Robots.txt generated: ${sitemapReport.summary.robotsGenerated ? 'Yes' : 'No'}`);
+    console.log(`Sitemap valid: ${sitemapReport.summary.isValid ? 'Yes' : 'No'}`);
+    console.log(`URLs in sitemap: ${sitemapReport.summary.urlCount}`);
+    
+    if (validation.isValid) {
+      console.log('\n✅ Sitemap generated successfully and is valid!');
+    } else {
+      console.log(`\n❌ Sitemap validation failed: ${validation.error}`);
+    }
+    
+    // Display URLs
+    if (generatedUrls.length > 0) {
+      console.log('\n🔗 URLs included in sitemap:');
+      generatedUrls.forEach(url => {
+        console.log(`  - ${url.url} (Priority: ${url.priority}, Change: ${url.changefreq})`);
       });
     }
     
-    // Check for short descriptions
-    if (page.description && page.description.length < 50) {
-      issues.push({
-        page: page.url,
-        issue: 'Meta description too short (should be 50-160 characters)'
-      });
-    }
+    console.log('\n🗺️  Sitemap Runner Automation completed successfully!');
+    console.log('📄 Detailed report saved to: sitemap-runner-report.json');
     
-    // Check for long descriptions
-    if (page.description && page.description.length > 160) {
-      issues.push({
-        page: page.url,
-        issue: 'Meta description too long (should be 50-160 characters)'
-      });
-    }
+    // Provide recommendations
+    console.log('\n📋 Recommendations:');
+    console.log('1. Update the domain in sitemap.xml and robots.txt');
+    console.log('2. Submit sitemap to search engines');
+    console.log('3. Set up automatic sitemap generation on build');
+    console.log('4. Consider adding image and video sitemaps if applicable');
     
-    // Check for missing keywords
-    if (!page.keywords) {
-      issues.push({
-        page: page.url,
-        issue: 'Missing meta keywords'
-      });
-    }
-  });
-  
-  return issues;
+  } catch (error) {
+    console.error('❌ Error in Sitemap Runner Automation:', error);
+    process.exit(1);
+  }
 }
 
-// Run the sitemap runner immediately
+// Run the automation
 runSitemapRunner();
-
-// Set up continuous execution
-setInterval(runSitemapRunner, AUTOMATION_INTERVAL);
-
-console.log(`🗺️ Sitemap runner automation started. Running every ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-console.log('Press Ctrl+C to stop the automation');

@@ -1,9 +1,11 @@
 module.exports = {
   apps: [
-    // Main automation orchestrator
+    // Main application - using preview for production
     {
-      name: 'automation-orchestrator',
-      script: './automation/intelligent-orchestrator.cjs',
+      name: 'zion-app',
+      script: 'npm',
+      args: 'run preview',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -17,21 +19,8 @@ module.exports = {
         PORT: 3001
       }
     },
-    
-    // Linting automation manager
-    {
-      name: 'lint-automation-manager',
-      script: './automation/lint-automation-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      }
-    },
-    
-    // Linting monitor
+
+    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'lint-monitor',
       script: './automation/lint-monitor.cjs',

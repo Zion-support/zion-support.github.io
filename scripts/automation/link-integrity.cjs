@@ -1,214 +1,327 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🔗 Starting continuous link integrity automation...');
+console.log('🔗 Starting Link Integrity Automation...');
 
-// Get automation interval from environment variable (default: 2 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
-
-async function runLinkIntegrity() {
+// Function to check if a URL is accessible
+function checkUrl(url) {
   try {
-    console.log(`🔗 Running link integrity check at ${new Date().toISOString()}`);
+    const result = execSync(`curl -s -o /dev/null -w "%{http_code}" "${url}"`, { encoding: 'utf8' });
+    return parseInt(result) < 400; // Consider 2xx and 3xx as success
+  } catch (error) {
+    return false;
+  }
+}
+
+// Function to find all HTML files
+function findHtmlFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    // Build the project first
-    console.log('🏗️ Building project for link analysis...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
-    } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
-      return;
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findHtmlFiles(fullPath));
+    } else if (item.endsWith('.html')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Function to extract links from HTML content
+function extractLinks(htmlContent) {
+  const linkRegex = /href=["']([^"']+)["']/g;
+  const links = [];
+  let match;
+  
+  while ((match = linkRegex.exec(htmlContent)) !== null) {
+    links.push(match[1]);
+  }
+  
+  return [...new Set(links)]; // Remove duplicates
+}
+
+// Function to check internal link integrity
+function checkInternalLinks(links, baseDir) {
+  const internalLinks = links.filter(link => !link.startsWith('http'));
+  const brokenInternalLinks = [];
+  
+  for (const link of internalLinks) {
+    if (link.startsWith('#')) {
+      // Skip anchor links
+      continue;
     }
     
-    // Check if dist folder exists
-    const distPath = path.join(process.cwd(), 'dist');
-    if (!fs.existsSync(distPath)) {
-      console.log('⚠️  Build verification failed: dist folder not found');
-      return;
-    }
-    
-    // Install linkinator if not available
-    console.log('📦 Installing linkinator for link checking...');
-    try {
-      execSync('npm install -g linkinator', { stdio: 'pipe' });
-      console.log('✅ Linkinator installed');
-    } catch (error) {
-      console.log('ℹ️  Linkinator already available');
-    }
-    
-    // Check internal links
-    console.log('🔍 Checking internal links...');
-    let internalLinks = [];
-    try {
-      // Start a local server to check internal links
-      const serverProcess = execSync('npx http-server dist -p 5000 -s', { 
-        stdio: 'pipe',
-        detached: true 
-      });
-      
-      // Wait for server to start
-      await new Promise(resolve => setTimeout(resolve, 3000));
-      
-      // Check internal links
-      const internalOutput = execSync('npx linkinator http://localhost:5000 --recurse --concurrency 5 --format json', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      internalLinks = JSON.parse(internalOutput);
-      
-      // Stop the server
-      try {
-        execSync('pkill -f "http-server"', { stdio: 'pipe' });
-      } catch (killError) {
-        // Ignore kill errors
+    if (link.startsWith('/')) {
+      // Absolute path from root
+      const fullPath = path.join(baseDir, link.substring(1));
+      if (!fs.existsSync(fullPath)) {
+        brokenInternalLinks.push({
+          link: link,
+          type: 'internal',
+          reason: 'File not found'
+        });
       }
-      
-      console.log(`✅ Internal link check completed. Found ${internalLinks.links ? internalLinks.links.length : 0} links`);
-    } catch (error) {
-      console.log('⚠️  Internal link check failed:', error.message);
+    } else {
+      // Relative path
+      const fullPath = path.join(baseDir, link);
+      if (!fs.existsSync(fullPath)) {
+        brokenInternalLinks.push({
+          link: link,
+          type: 'internal',
+          reason: 'File not found'
+        });
+      }
+    }
+  }
+  
+  return brokenInternalLinks;
+}
+
+// Function to check external link integrity
+async function checkExternalLinks(links) {
+  const externalLinks = links.filter(link => link.startsWith('http'));
+  const brokenExternalLinks = [];
+  
+  for (const link of externalLinks) {
+    console.log(`🔍 Checking external link: ${link}`);
+    
+    if (!checkUrl(link)) {
+      brokenExternalLinks.push({
+        link: link,
+        type: 'external',
+        reason: 'HTTP error or connection failed'
+      });
+      console.log(`❌ Broken external link: ${link}`);
+    } else {
+      console.log(`✅ Valid external link: ${link}`);
     }
     
-    // Check external links
-    console.log('🔍 Checking external links...');
-    let externalLinks = [];
-    try {
-      // Extract external URLs from the build
-      const externalUrls = extractExternalUrls(distPath);
-      if (externalUrls.length > 0) {
-        console.log(`🔗 Found ${externalUrls.length} external URLs to check`);
-        
-        // Check external links in batches to avoid overwhelming servers
-        const batchSize = 10;
-        for (let i = 0; i < externalUrls.length; i += batchSize) {
-          const batch = externalUrls.slice(i, i + batchSize);
-          console.log(`🔍 Checking batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(externalUrls.length / batchSize)}`);
-          
-          try {
-            const batchOutput = execSync(`npx linkinator ${batch.join(' ')} --concurrency 3 --format json`, { 
-              encoding: 'utf8',
-              stdio: 'pipe'
-            });
-            
-            const batchLinks = JSON.parse(batchOutput);
-            if (batchLinks.links) {
-              externalLinks.push(...batchLinks.links);
-            }
-            
-            // Wait between batches to be respectful
-            await new Promise(resolve => setTimeout(resolve, 2000));
-          } catch (batchError) {
-            console.log(`⚠️  Batch ${Math.floor(i / batchSize) + 1} failed:`, batchError.message);
-          }
+    // Small delay to be respectful to servers
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
+  
+  return brokenExternalLinks;
+}
+
+// Function to check for orphaned files
+function findOrphanedFiles(baseDir) {
+  const orphanedFiles = [];
+  const allFiles = getAllFiles(baseDir);
+  const referencedFiles = new Set();
+  
+  // Get all HTML files to check references
+  const htmlFiles = findHtmlFiles(baseDir);
+  
+  for (const htmlFile of htmlFiles) {
+    const content = fs.readFileSync(htmlFile, 'utf8');
+    const links = extractLinks(content);
+    
+    for (const link of links) {
+      if (!link.startsWith('http') && !link.startsWith('#')) {
+        let filePath = link;
+        if (link.startsWith('/')) {
+          filePath = path.join(baseDir, link.substring(1));
+        } else {
+          filePath = path.join(path.dirname(htmlFile), link);
         }
         
-        console.log(`✅ External link check completed. Found ${externalLinks.length} links`);
-      } else {
-        console.log('ℹ️  No external URLs found to check');
+        if (fs.existsSync(filePath)) {
+          referencedFiles.add(path.relative(baseDir, filePath));
+        }
       }
-    } catch (error) {
-      console.log('⚠️  External link check failed:', error.message);
     }
+  }
+  
+  // Find files that are not referenced
+  for (const file of allFiles) {
+    if (!referencedFiles.has(file) && 
+        !file.endsWith('.html') && 
+        !file.endsWith('.css') && 
+        !file.endsWith('.js') &&
+        !file.includes('node_modules')) {
+      orphanedFiles.push(file);
+    }
+  }
+  
+  return orphanedFiles;
+}
+
+// Function to get all files in directory
+function getAllFiles(dir) {
+  const files = [];
+  
+  try {
+    const items = fs.readdirSync(dir);
     
-    // Combine and analyze results
-    console.log('📊 Analyzing link integrity results...');
-    const allLinks = [
-      ...(internalLinks.links || []),
-      ...externalLinks
-    ];
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files.push(...getAllFiles(fullPath).map(f => path.join(item, f)));
+      } else if (stat.isFile()) {
+        files.push(item);
+      }
+    }
+  } catch (error) {
+    // Directory might not exist
+  }
+  
+  return files;
+}
+
+// Function to check for duplicate content
+function checkDuplicateContent(baseDir) {
+  const duplicates = [];
+  const htmlFiles = findHtmlFiles(baseDir);
+  const contentHashes = new Map();
+  
+  for (const file of htmlFiles) {
+    const content = fs.readFileSync(file, 'utf8');
+    const cleanContent = content.replace(/\s+/g, ' ').trim();
+    const hash = require('crypto').createHash('md5').update(cleanContent).digest('hex');
     
-    const brokenLinks = allLinks.filter(link => link.state === 'BROKEN');
-    const workingLinks = allLinks.filter(link => link.state === 'OK');
-    const unknownLinks = allLinks.filter(link => link.state === 'UNKNOWN');
-    
-    console.log(`📊 Link integrity summary:`);
-    console.log(`  - Total links: ${allLinks.length}`);
-    console.log(`  - Working: ${workingLinks.length}`);
-    console.log(`  - Broken: ${brokenLinks.length}`);
-    console.log(`  - Unknown: ${unknownLinks.length}`);
-    
-    if (brokenLinks.length > 0) {
-      console.log(`⚠️  Broken links found:`);
-      brokenLinks.forEach(link => {
-        console.log(`  - ${link.url} (Status: ${link.status || 'unknown'})`);
+    if (contentHashes.has(hash)) {
+      duplicates.push({
+        file1: contentHashes.get(hash),
+        file2: file,
+        similarity: 'exact'
       });
+    } else {
+      contentHashes.set(hash, file);
+    }
+  }
+  
+  return duplicates;
+}
+
+// Main function
+async function runLinkIntegrity() {
+  try {
+    console.log('📁 Scanning for HTML files...');
+    
+    // Check if dist directory exists
+    if (!fs.existsSync('./dist')) {
+      console.log('⚠️  Dist directory not found. Building project first...');
+      execSync('npm run build', { stdio: 'inherit' });
     }
     
-    // Generate link integrity report
-    console.log('📊 Generating link integrity report...');
+    const baseDir = './dist';
+    const htmlFiles = findHtmlFiles(baseDir);
+    console.log(`📄 Found ${htmlFiles.length} HTML files`);
+    
+    const allLinks = [];
+    const brokenInternalLinks = [];
+    const brokenExternalLinks = [];
+    
+    // Extract links from all HTML files
+    for (const file of htmlFiles) {
+      const content = fs.readFileSync(file, 'utf8');
+      const links = extractLinks(content);
+      
+      for (const link of links) {
+        if (!allLinks.includes(link)) {
+          allLinks.push(link);
+        }
+      }
+    }
+    
+    console.log(`🔗 Found ${allLinks.length} total links to check`);
+    
+    // Check internal links
+    console.log('\n🔍 Checking internal link integrity...');
+    const internalBroken = checkInternalLinks(allLinks, baseDir);
+    brokenInternalLinks.push(...internalBroken);
+    
+    // Check external links
+    console.log('\n🌐 Checking external link integrity...');
+    const externalBroken = await checkExternalLinks(allLinks);
+    brokenExternalLinks.push(...externalBroken);
+    
+    // Check for orphaned files
+    console.log('\n📁 Checking for orphaned files...');
+    const orphanedFiles = findOrphanedFiles(baseDir);
+    
+    // Check for duplicate content
+    console.log('\n🔄 Checking for duplicate content...');
+    const duplicateContent = checkDuplicateContent(baseDir);
+    
+    // Generate comprehensive report
     const report = {
       timestamp: new Date().toISOString(),
       totalLinks: allLinks.length,
-      workingLinks: workingLinks.length,
-      brokenLinks: brokenLinks.length,
-      unknownLinks: unknownLinks.length,
-      brokenLinksDetails: brokenLinks,
-      summary: `Link integrity check completed. ${brokenLinks.length} broken links found`,
-      status: brokenLinks.length > 0 ? 'issues_found' : 'clean'
+      internalLinks: allLinks.filter(link => !link.startsWith('http')).length,
+      externalLinks: allLinks.filter(link => link.startsWith('http')).length,
+      brokenInternalLinks: brokenInternalLinks,
+      brokenExternalLinks: brokenExternalLinks,
+      orphanedFiles: orphanedFiles,
+      duplicateContent: duplicateContent,
+      htmlFilesScanned: htmlFiles.length,
+      summary: {
+        totalBrokenLinks: brokenInternalLinks.length + brokenExternalLinks.length,
+        brokenInternalCount: brokenInternalLinks.length,
+        brokenExternalCount: brokenExternalLinks.length,
+        orphanedFilesCount: orphanedFiles.length,
+        duplicateContentCount: duplicateContent.length
+      }
     };
     
-    const reportPath = path.join(process.cwd(), 'link-integrity-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Link integrity report saved to ${reportPath}`);
+    // Save report
+    fs.writeFileSync('./link-integrity-report.json', JSON.stringify(report, null, 2));
     
-    console.log('✅ Continuous link integrity check completed successfully');
+    // Display summary
+    console.log(`\n📊 Link Integrity Report:`);
+    console.log(`Total links checked: ${report.totalLinks}`);
+    console.log(`Internal links: ${report.internalLinks}`);
+    console.log(`External links: ${report.externalLinks}`);
+    console.log(`Broken internal links: ${report.summary.brokenInternalCount}`);
+    console.log(`Broken external links: ${report.summary.brokenExternalCount}`);
+    console.log(`Orphaned files: ${report.summary.orphanedFilesCount}`);
+    console.log(`Duplicate content: ${report.summary.duplicateContentCount}`);
+    
+    // Display broken links
+    if (brokenInternalLinks.length > 0) {
+      console.log('\n❌ Broken internal links:');
+      brokenInternalLinks.forEach(link => console.log(`  - ${link.link} (${link.reason})`));
+    }
+    
+    if (brokenExternalLinks.length > 0) {
+      console.log('\n❌ Broken external links:');
+      brokenExternalLinks.forEach(link => console.log(`  - ${link.link} (${link.reason})`));
+    }
+    
+    if (orphanedFiles.length > 0) {
+      console.log('\n📁 Orphaned files:');
+      orphanedFiles.forEach(file => console.log(`  - ${file}`));
+    }
+    
+    if (duplicateContent.length > 0) {
+      console.log('\n🔄 Duplicate content found:');
+      duplicateContent.forEach(dup => console.log(`  - ${dup.file1} and ${dup.file2}`));
+    }
+    
+    if (report.summary.totalBrokenLinks === 0 && 
+        report.summary.orphanedFilesCount === 0 && 
+        report.summary.duplicateContentCount === 0) {
+      console.log('\n✅ All links are working and no integrity issues found!');
+    }
+    
+    console.log('\n🔗 Link Integrity Automation completed successfully!');
+    console.log('📄 Detailed report saved to: link-integrity-report.json');
     
   } catch (error) {
-    console.error('❌ Continuous link integrity check failed:', error.message);
-    
-    const errorReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      summary: 'Link integrity check failed',
-      status: 'error'
-    };
-    
-    const reportPath = path.join(process.cwd(), 'link-integrity-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+    console.error('❌ Error in Link Integrity Automation:', error);
+    process.exit(1);
   }
 }
 
-function extractExternalUrls(distPath) {
-  const urls = new Set();
-  
-  function scanDirectory(dirPath) {
-    const items = fs.readdirSync(dirPath);
-    items.forEach(item => {
-      const itemPath = path.join(dirPath, item);
-      const stats = fs.statSync(itemPath);
-      
-      if (stats.isDirectory()) {
-        scanDirectory(itemPath);
-      } else if (item.endsWith('.html') || item.endsWith('.js') || item.endsWith('.css')) {
-        const content = fs.readFileSync(itemPath, 'utf8');
-        
-        // Find external URLs
-        const urlMatches = content.match(/https?:\/\/[^\s"<>{}|\\^`\[\]]+/g);
-        if (urlMatches) {
-          urlMatches.forEach(url => {
-            // Clean up the URL
-            const cleanUrl = url.replace(/[^\w\-._~:/?#[\]@!$&'()*+,;=%]+$/, '');
-            if (cleanUrl.startsWith('http')) {
-              urls.add(cleanUrl);
-            }
-          });
-        }
-      }
-    });
-  }
-  
-  scanDirectory(distPath);
-  return Array.from(urls);
-}
-
-// Run the link integrity check immediately
+// Run the automation
 runLinkIntegrity();
-
-// Set up continuous execution
-setInterval(runLinkIntegrity, AUTOMATION_INTERVAL);
-
-console.log(`🔗 Link integrity automation started. Running every ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-console.log('Press Ctrl+C to stop the automation');

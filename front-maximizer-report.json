@@ -1,14 +1,16 @@
 {
-  "timestamp": "2025-08-29T14:17:38.860Z",
-  "totalOptimizations": 2,
-  "results": [
-    {
-      "type": "css-optimization",
-      "result": "Build failed for CSS analysis"
-    },
-    {
-      "type": "image-optimization",
-      "result": "Found 2 images for potential optimization"
-    }
-  ]
+  "timestamp": "2025-08-29T16:45:05.659Z",
+  "bundleAnalysis": null,
+  "unusedDependencies": null,
+  "imageOptimization": null,
+  "cssOptimization": null,
+  "javascriptOptimization": null,
+  "summary": {
+    "totalBundleSizeMB": 0,
+    "totalFiles": 0,
+    "totalImages": 0,
+    "totalCSSFiles": 0,
+    "totalJSFiles": 0,
+    "optimizationOpportunities": 0
+  }
 }

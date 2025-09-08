@@ -1,294 +1,387 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
-const path = require('path');
+const { execSync } = require('child_process');
+const path = require('path'); // Added missing import for path
 
-console.log('✅ Starting continuous quality checks automation...');
+console.log('✨ Starting Quality Checks Automation...');
 
-// Get automation interval from environment variable (default: 3 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours
+// Function to run linting
+function runLinting() {
+  try {
+    console.log('🧹 Running ESLint...');
+    const result = execSync('npm run lint', { encoding: 'utf8' });
+    return {
+      success: true,
+      output: result,
+      issues: 0
+    };
+  } catch (error) {
+    // ESLint returns non-zero exit code when issues are found
+    const output = error.stdout || error.stderr || '';
+    const issues = (output.match(/error|warning/gi) || []).length;
+    
+    return {
+      success: false,
+      output: output,
+      issues: issues
+    };
+  }
+}
 
+// Function to run TypeScript type checking
+function runTypeChecking() {
+  try {
+    console.log('🔍 Running TypeScript type check...');
+    const result = execSync('npm run type-check', { encoding: 'utf8' });
+    return {
+      success: true,
+      output: result,
+      issues: 0
+    };
+  } catch (error) {
+    const output = error.stdout || error.stderr || '';
+    const issues = (output.match(/error|warning/gi) || []).length;
+    
+    return {
+      success: false,
+      output: output,
+      issues: issues
+    };
+  }
+}
+
+// Function to check code formatting
+function checkCodeFormatting() {
+  try {
+    console.log('🎨 Checking code formatting...');
+    
+    // Check if Prettier is configured
+    if (fs.existsSync('./.prettierrc') || fs.existsSync('./.prettierrc.json')) {
+      const result = execSync('npx prettier --check .', { encoding: 'utf8' });
+      return {
+        success: true,
+        output: result,
+        issues: 0
+      };
+    } else {
+      return {
+        success: true,
+        output: 'Prettier not configured',
+        issues: 0
+      };
+    }
+  } catch (error) {
+    const output = error.stdout || error.stderr || '';
+    const issues = (output.match(/warn|error/gi) || []).length;
+    
+    return {
+      success: false,
+      output: output,
+      issues: issues
+    };
+  }
+}
+
+// Function to check for common code smells
+function checkCodeSmells() {
+  try {
+    console.log('👃 Checking for code smells...');
+    
+    const codeSmells = [];
+    
+    // Check for TODO comments
+    const todoPattern = /TODO|FIXME|HACK|XXX/gi;
+    const files = getAllSourceFiles('./src');
+    
+    for (const file of files) {
+      const content = fs.readFileSync(file, 'utf8');
+      const matches = content.match(todoPattern);
+      
+      if (matches) {
+        const lines = content.split('\n');
+        matches.forEach(match => {
+          lines.forEach((line, index) => {
+            if (line.includes(match)) {
+              codeSmells.push({
+                file: file,
+                line: index + 1,
+                type: 'TODO',
+                content: line.trim()
+              });
+            }
+          });
+        });
+      }
+    }
+    
+    return {
+      success: true,
+      codeSmells: codeSmells,
+      count: codeSmells.length
+    };
+  } catch (error) {
+    return {
+      success: false,
+      codeSmells: [],
+      count: 0,
+      error: error.message
+    };
+  }
+}
+
+// Function to get all source files
+function getAllSourceFiles(dir) {
+  const files = [];
+  
+  try {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files.push(...getAllSourceFiles(fullPath));
+      } else if (item.match(/\.(ts|tsx|js|jsx)$/)) {
+        files.push(fullPath);
+      }
+    }
+  } catch (error) {
+    // Directory might not exist
+  }
+  
+  return files;
+}
+
+// Function to check test coverage
+function checkTestCoverage() {
+  try {
+    console.log('🧪 Checking test coverage...');
+    
+    if (fs.existsSync('./coverage')) {
+      const coverageDir = fs.readdirSync('./coverage');
+      const lcovFile = coverageDir.find(file => file.endsWith('.lcov'));
+      
+      if (lcovFile) {
+        const lcovContent = fs.readFileSync(`./coverage/${lcovFile}`, 'utf8');
+        const lines = lcovContent.split('\n');
+        
+        let totalLines = 0;
+        let coveredLines = 0;
+        
+        lines.forEach(line => {
+          if (line.startsWith('SF:')) {
+            // Source file
+          } else if (line.startsWith('LF:')) {
+            // Lines found
+            totalLines += parseInt(line.split(':')[1]);
+          } else if (line.startsWith('LH:')) {
+            // Lines hit
+            coveredLines += parseInt(line.split(':')[1]);
+          }
+        });
+        
+        const coverage = totalLines > 0 ? Math.round((coveredLines / totalLines) * 100) : 0;
+        
+        return {
+          success: true,
+          totalLines: totalLines,
+          coveredLines: coveredLines,
+          coverage: coverage
+        };
+      }
+    }
+    
+    return {
+      success: false,
+      message: 'No coverage data found'
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message
+    };
+  }
+}
+
+// Function to check for security issues
+function checkSecurityIssues() {
+  try {
+    console.log('🔒 Checking for security issues...');
+    
+    const result = execSync('npm audit --json', { encoding: 'utf8' });
+    const auditData = JSON.parse(result);
+    
+    if (auditData.metadata && auditData.metadata.vulnerabilities) {
+      const vulns = auditData.metadata.vulnerabilities;
+      return {
+        success: true,
+        vulnerabilities: vulns,
+        total: vulns.low + vulns.moderate + vulns.high + vulns.critical
+      };
+    }
+    
+    return {
+      success: true,
+      vulnerabilities: { low: 0, moderate: 0, high: 0, critical: 0 },
+      total: 0
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message
+    };
+  }
+}
+
+// Function to generate quality report
+function generateQualityReport(linting, typeChecking, formatting, codeSmells, testCoverage, security) {
+  const report = {
+    timestamp: new Date().toISOString(),
+    linting: linting,
+    typeChecking: typeChecking,
+    formatting: formatting,
+    codeSmells: codeSmells,
+    testCoverage: testCoverage,
+    security: security,
+    summary: {
+      totalIssues: 0,
+      lintingIssues: linting.issues || 0,
+      typeCheckingIssues: typeChecking.issues || 0,
+      formattingIssues: formatting.issues || 0,
+      codeSmellsCount: codeSmells.count || 0,
+      securityVulnerabilities: security.total || 0,
+      testCoveragePercent: testCoverage.coverage || 0
+    }
+  };
+  
+  report.summary.totalIssues = 
+    report.summary.lintingIssues + 
+    report.summary.typeCheckingIssues + 
+    report.summary.formattingIssues + 
+    report.summary.codeSmellsCount + 
+    report.summary.securityVulnerabilities;
+  
+  return report;
+}
+
+// Function to provide quality recommendations
+function provideQualityRecommendations(report) {
+  console.log('\n📋 Quality Improvement Recommendations:');
+  
+  if (report.summary.lintingIssues > 0) {
+    console.log('\n🧹 Linting issues found:');
+    console.log(`Total: ${report.summary.lintingIssues}`);
+    console.log('Recommendations:');
+    console.log('1. Fix ESLint errors and warnings');
+    console.log('2. Consider using --fix flag for auto-fixable issues');
+    console.log('3. Review ESLint configuration');
+  }
+  
+  if (report.summary.typeCheckingIssues > 0) {
+    console.log('\n🔍 TypeScript issues found:');
+    console.log(`Total: ${report.summary.typeCheckingIssues}`);
+    console.log('Recommendations:');
+    console.log('1. Fix type errors and warnings');
+    console.log('2. Add proper type annotations');
+    console.log('3. Review tsconfig.json configuration');
+  }
+  
+  if (report.summary.formattingIssues > 0) {
+    console.log('\n🎨 Formatting issues found:');
+    console.log(`Total: ${report.summary.formattingIssues}`);
+    console.log('Recommendations:');
+    console.log('1. Run: npx prettier --write .');
+    console.log('2. Configure Prettier in your editor');
+    console.log('3. Use pre-commit hooks for formatting');
+  }
+  
+  if (report.summary.codeSmellsCount > 0) {
+    console.log('\n👃 Code smells detected:');
+    console.log(`Total: ${report.summary.codeSmellsCount}`);
+    console.log('Recommendations:');
+    console.log('1. Address TODO/FIXME comments');
+    console.log('2. Refactor complex code');
+    console.log('3. Remove dead code');
+  }
+  
+  if (report.summary.securityVulnerabilities > 0) {
+    console.log('\n🔒 Security vulnerabilities found:');
+    console.log(`Total: ${report.summary.securityVulnerabilities}`);
+    console.log('Recommendations:');
+    console.log('1. Run: npm audit fix');
+    console.log('2. Update vulnerable packages');
+    console.log('3. Review security advisories');
+  }
+  
+  if (report.summary.testCoveragePercent < 80) {
+    console.log('\n🧪 Test coverage can be improved:');
+    console.log(`Current coverage: ${report.summary.testCoveragePercent}%`);
+    console.log('Recommendations:');
+    console.log('1. Add more unit tests');
+    console.log('2. Test edge cases and error scenarios');
+    console.log('3. Aim for at least 80% coverage');
+  }
+  
+  if (report.summary.totalIssues === 0 && report.summary.testCoveragePercent >= 80) {
+    console.log('\n✅ Excellent code quality! All checks passed.');
+  }
+  
+  console.log('\n📚 General quality tips:');
+  console.log('1. Run quality checks before committing');
+  console.log('2. Use pre-commit hooks for automation');
+  console.log('3. Regular code reviews and refactoring');
+  console.log('4. Follow coding standards and best practices');
+}
+
+// Main function
 async function runQualityChecks() {
   try {
-    console.log(`✅ Running quality checks at ${new Date().toISOString()}`);
+    console.log('🚀 Starting comprehensive quality checks...');
     
-    // Build the project first
-    console.log('🏗️ Building project for quality analysis...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
-    } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
-      return;
-    }
+    // Run various quality checks
+    const linting = runLinting();
+    const typeChecking = runTypeChecking();
+    const formatting = checkCodeFormatting();
+    const codeSmells = checkCodeSmells();
+    const testCoverage = checkTestCoverage();
+    const security = checkSecurityIssues();
     
-    // Run linting
-    console.log('🔍 Running linting checks...');
-    let lintIssues = 0;
-    try {
-      execSync('npm run lint', { stdio: 'pipe' });
-      console.log('✅ Linting passed');
-    } catch (error) {
-      console.log('⚠️  Linting found issues');
-      lintIssues = 1;
-    }
+    // Generate comprehensive report
+    const qualityReport = generateQualityReport(
+      linting,
+      typeChecking,
+      formatting,
+      codeSmells,
+      testCoverage,
+      security
+    );
     
-    // Run type checking
-    console.log('🔍 Running type checking...');
-    let typeIssues = 0;
-    try {
-      execSync('npm run type-check', { stdio: 'pipe' });
-      console.log('✅ Type checking passed');
-    } catch (error) {
-      console.log('⚠️  Type checking found issues');
-      typeIssues = 1;
-    }
+    // Save detailed report
+    fs.writeFileSync('./quality-checks-report.json', JSON.stringify(qualityReport, null, 2));
     
-    // Run tests
-    console.log('🧪 Running tests...');
-    let testIssues = 0;
-    try {
-      execSync('npm test', { stdio: 'pipe' });
-      console.log('✅ Tests passed');
-    } catch (error) {
-      console.log('⚠️  Tests failed');
-      testIssues = 1;
-    }
+    // Display summary
+    console.log('\n📊 Quality Checks Summary:');
+    console.log(`Total issues: ${qualityReport.summary.totalIssues}`);
+    console.log(`Linting issues: ${qualityReport.summary.lintingIssues}`);
+    console.log(`Type checking issues: ${qualityReport.summary.typeCheckingIssues}`);
+    console.log(`Formatting issues: ${qualityReport.summary.formattingIssues}`);
+    console.log(`Code smells: ${qualityReport.summary.codeSmellsCount}`);
+    console.log(`Security vulnerabilities: ${qualityReport.summary.securityVulnerabilities}`);
+    console.log(`Test coverage: ${qualityReport.summary.testCoveragePercent}%`);
     
-    // Check code coverage if available
-    console.log('📊 Checking code coverage...');
-    let coverageIssues = 0;
-    try {
-      if (fs.existsSync('coverage/lcov-report/index.html')) {
-        console.log('✅ Code coverage report found');
-      } else {
-        console.log('ℹ️  No code coverage report found');
-      }
-    } catch (error) {
-      console.log('ℹ️  Code coverage check not available');
-    }
+    // Provide recommendations
+    provideQualityRecommendations(qualityReport);
     
-    // Check for code quality issues
-    console.log('🔍 Scanning for code quality issues...');
-    const qualityIssues = findQualityIssues('./src');
-    if (qualityIssues.length > 0) {
-      console.log(`⚠️  Found ${qualityIssues.length} potential quality issues:`);
-      qualityIssues.forEach(issue => {
-        console.log(`  - ${issue.file}:${issue.line}: ${issue.issue}`);
-      });
-    } else {
-      console.log('✅ No obvious quality issues found');
-    }
-    
-    // Check for duplicate code
-    console.log('🔍 Checking for duplicate code...');
-    const duplicateIssues = findDuplicateCode('./src');
-    if (duplicateIssues.length > 0) {
-      console.log(`⚠️  Found ${duplicateIssues.length} potential duplicate code patterns:`);
-      duplicateIssues.forEach(issue => {
-        console.log(`  - ${issue.file}:${issue.line}: ${issue.issue}`);
-      });
-    } else {
-      console.log('✅ No obvious duplicate code found');
-    }
-    
-    // Check for unused imports
-    console.log('🔍 Checking for unused imports...');
-    const unusedImports = findUnusedImports('./src');
-    if (unusedImports.length > 0) {
-      console.log(`⚠️  Found ${unusedImports.length} potentially unused imports:`);
-      unusedImports.forEach(import => {
-        console.log(`  - ${import.file}:${import.line}: ${import.import}`);
-      });
-    } else {
-      console.log('✅ No obvious unused imports found');
-    }
-    
-    // Generate quality report
-    console.log('📊 Generating quality checks report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      lintIssues: lintIssues,
-      typeIssues: typeIssues,
-      testIssues: testIssues,
-      coverageIssues: coverageIssues,
-      qualityIssues: qualityIssues.length,
-      duplicateIssues: duplicateIssues.length,
-      unusedImports: unusedImports.length,
-      summary: `Quality checks completed. Lint: ${lintIssues}, Type: ${typeIssues}, Tests: ${testIssues}`,
-      status: 'completed'
-    };
-    
-    const reportPath = path.join(process.cwd(), 'quality-checks-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Quality checks report saved to ${reportPath}`);
-    
-    console.log('✅ Continuous quality checks completed successfully');
+    console.log('\n✨ Quality Checks Automation completed successfully!');
+    console.log('📄 Detailed report saved to: quality-checks-report.json');
     
   } catch (error) {
-    console.error('❌ Continuous quality checks failed:', error.message);
-    
-    const errorReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      summary: 'Quality checks failed',
-      status: 'error'
-    };
-    
-    const reportPath = path.join(process.cwd(), 'quality-checks-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+    console.error('❌ Error in Quality Checks Automation:', error);
+    process.exit(1);
   }
 }
 
-function findQualityIssues(srcPath) {
-  const issues = [];
-  
-  if (!fs.existsSync(srcPath)) return issues;
-  
-  function scanDirectory(dirPath) {
-    const items = fs.readdirSync(dirPath);
-    items.forEach(item => {
-      const itemPath = path.join(dirPath, item);
-      const stats = fs.statSync(itemPath);
-      
-      if (stats.isDirectory()) {
-        scanDirectory(itemPath);
-      } else if (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.tsx')) {
-        const content = fs.readFileSync(itemPath, 'utf8');
-        const lines = content.split('\n');
-        
-        lines.forEach((line, index) => {
-          // Check for common quality issues
-          if (line.includes('TODO') || line.includes('FIXME')) {
-            issues.push({
-              file: itemPath,
-              line: index + 1,
-              issue: 'TODO/FIXME comment found'
-            });
-          }
-          
-          if (line.includes('console.log') || line.includes('console.error')) {
-            issues.push({
-              file: itemPath,
-              line: index + 1,
-              issue: 'Console statement found (should be removed in production)'
-            });
-          }
-          
-          if (line.includes('debugger;')) {
-            issues.push({
-              file: itemPath,
-              line: index + 1,
-              issue: 'Debugger statement found'
-            });
-          }
-          
-          if (line.includes('var ') && !line.includes('var ')) {
-            issues.push({
-              file: itemPath,
-              line: index + 1,
-              issue: 'Consider using const/let instead of var'
-            });
-          }
-        });
-      }
-    });
-  }
-  
-  scanDirectory(srcPath);
-  return issues;
-}
-
-function findDuplicateCode(srcPath) {
-  const issues = [];
-  
-  if (!fs.existsSync(srcPath)) return issues;
-  
-  // Simple duplicate code detection (basic implementation)
-  const codeBlocks = new Map();
-  
-  function scanDirectory(dirPath) {
-    const items = fs.readdirSync(dirPath);
-    items.forEach(item => {
-      const itemPath = path.join(dirPath, item);
-      const stats = fs.statSync(itemPath);
-      
-      if (stats.isDirectory()) {
-        scanDirectory(itemPath);
-      } else if (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.tsx')) {
-        const content = fs.readFileSync(itemPath, 'utf8');
-        const lines = content.split('\n');
-        
-        // Look for repeated code blocks
-        for (let i = 0; i < lines.length - 2; i++) {
-          const block = lines.slice(i, i + 3).join('\n');
-          if (block.length > 50) { // Only consider blocks longer than 50 chars
-            if (codeBlocks.has(block)) {
-              issues.push({
-                file: itemPath,
-                line: i + 1,
-                issue: 'Potential duplicate code block'
-              });
-            } else {
-              codeBlocks.set(block, itemPath);
-            }
-          }
-        }
-      }
-    });
-  }
-  
-  scanDirectory(srcPath);
-  return issues;
-}
-
-function findUnusedImports(srcPath) {
-  const issues = [];
-  
-  if (!fs.existsSync(srcPath)) return issues;
-  
-  function scanDirectory(dirPath) {
-    const items = fs.readdirSync(dirPath);
-    items.forEach(item => {
-      const itemPath = path.join(dirPath, item);
-      const stats = fs.statSync(itemPath);
-      
-      if (stats.isDirectory()) {
-        scanDirectory(itemPath);
-      } else if (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.tsx')) {
-        const content = fs.readFileSync(itemPath, 'utf8');
-        const lines = content.split('\n');
-        
-        lines.forEach((line, index) => {
-          // Look for import statements
-          const importMatch = line.match(/import\s+.*?from\s+['"]([^'"]+)['"]/);
-          if (importMatch) {
-            const importPath = importMatch[1];
-            const importName = line.match(/import\s+(\w+)/);
-            
-            if (importName && !content.includes(importName[1])) {
-              issues.push({
-                file: itemPath,
-                line: index + 1,
-                import: importName[1]
-              });
-            }
-          }
-        });
-      }
-    });
-  }
-  
-  scanDirectory(srcPath);
-  return issues;
-}
-
-// Run the quality checks immediately
+// Run the automation
 runQualityChecks();
-
-// Set up continuous execution
-setInterval(runQualityChecks, AUTOMATION_INTERVAL);
-
-console.log(`✅ Quality checks automation started. Running every ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-console.log('Press Ctrl+C to stop the automation');
