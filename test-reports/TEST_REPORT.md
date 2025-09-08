@@ -21,13 +21,9 @@ No unit tests found
 | Performance | ✅ PASS | Hello, this is AnupamAS01!
 ... |
 | Accessibility | ✅ PASS | Lint check failed: Command failed: npm run lint
-sh: 1: eslint: not found
-... |
-| Coverage | ✅ PASS | 
-> bolt.new.zion.app@0.1.0 test
-> vitest --coverage
-
-Coverage generation failed
+Invalid option '--ext' - perhaps you meant '-c'?
+You... |
+| Coverage | ✅ PASS | Coverage generation failed
 ... |
 
 ## Quality Gates
