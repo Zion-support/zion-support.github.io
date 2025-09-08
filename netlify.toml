@@ -1,17 +1,20 @@
 [build]
-  # Skip heavy build; install minimal Node deps non-interactively and deploy prebuilt dist
-  command = "npm ci --ignore-scripts --omit=optional || npm install --ignore-scripts --omit=optional"
-  publish = "dist"
+  # Temporary: skip build and serve prebuilt static output
+  command = "echo 'Skipping build on Netlify; serving prebuilt files'"
+  publish = "out"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
+  PYTHON_VERSION = "3.11"
+  MISE_PYTHON_COMPILE = "false"
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
-  # Avoid optional binary downloads (electron, playwright, cypress)
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
-  PUPPETEER_SKIP_DOWNLOAD = "1"
-  CYPRESS_INSTALL_BINARY = "0"
-  ELECTRON_SKIP_DOWNLOAD = "1"
+  # Disable mise shims entirely during Netlify builds
+  MISE_DISABLE = "1"
+  MISE_SHIMS = "0"
+  # Force mise to use system Python even during Netlify's dependency stage (defensive)
+  MISE_TOOL_VERSIONS__python = "system"
 
 [[plugins]]
   package = "netlify-plugin-compress"

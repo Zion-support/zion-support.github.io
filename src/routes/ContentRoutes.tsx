@@ -1,16 +1,12 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "@/pages/Home";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 export default function ContentRoutes() {
 	return (
 		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/blog" element={<Blog />} />
-			<Route path="/blog/:slug" element={<BlogPost />} />
+			<Route path="/sitemap" element={<div>Sitemap</div>} />
+			<Route path="/sitemap-page" element={<div>Sitemap Page</div>} />
+			<Route path="/search" element={<div>Search</div>} />
 		</Routes>
 	);
 }
-
