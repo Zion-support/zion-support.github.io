@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export: interface APIDocumentation {
   id: string;
    name: string;
@@ -254,3 +255,6 @@ export: interface RateLimit {
     } as APIDocumentation}
 }
 export const apiDocGeneratorService = new APIDocGeneratorService();`
+=======
+export default {};
+>>>>>>> origin/main

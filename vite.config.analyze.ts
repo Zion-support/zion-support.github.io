@@ -52,7 +52,10 @@ export default defineConfig({
             'axios',
             'date-fns',
             'lodash.debounce',
+<<<<<<< HEAD
             'framer-motion',
+=======
+>>>>>>> origin/main
             'clsx',
             'tailwind-merge',
           ],

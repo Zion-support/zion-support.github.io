@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
@@ -13,6 +14,20 @@ import {
   FormControl,
   FormMessage,
 } from '@/components/ui/form';
+=======
+// import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+// import { getStripe } from '@/utils/getStripe';
+// import {
+//   Form,
+//   FormField,
+//   FormItem,
+//   FormLabel,
+//   FormControl,
+//   FormMessage,
+// } from '@/components/ui/form';
+>>>>>>> origin/main
 
 interface CartItem {
   id: string;
@@ -56,6 +71,7 @@ export default function CheckoutPage() {
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
+<<<<<<< HEAD
       const stripe = await getStripe();
       if (stripe && result.clientSecret) {
         const payment = await stripe.confirmCardPayment(result.clientSecret, {
@@ -68,6 +84,24 @@ export default function CheckoutPage() {
         safeStorage.removeItem('cart');
         navigate(`/orders/${result.id}`);
       }
+=======
+      // const stripe = await getStripe();
+      // const stripe = null; // Temporary fallback
+      // if (stripe && result.clientSecret) {
+      //   const payment = await stripe.confirmCardPayment(result.clientSecret, {
+      //     payment_method: {
+      //       card: { token: 'tok_visa' },
+      //       billing_details: { name: data.name, email: data.email },
+      //     },
+      //   });
+      //   if (payment.error) throw payment.error;
+      //   safeStorage.removeItem('cart');
+      //   navigate(`/orders/${result.id}`);
+      // }
+      // Temporary fallback - just clear cart and show success
+      safeStorage.removeItem('cart');
+      navigate('/orders/success');
+>>>>>>> origin/main
     } catch (err) {
       console.error('Payment failed', err);
     }
@@ -77,7 +111,11 @@ export default function CheckoutPage() {
     <div className="container max-w-2xl py-10">
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <div className="grid gap-6">
+<<<<<<< HEAD
         <Form {...form}>
+=======
+        {/* <Form {...form}>
+>>>>>>> origin/main
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
@@ -129,12 +167,53 @@ export default function CheckoutPage() {
                 <span>Subtotal</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
+<<<<<<< HEAD
               <Button className="w-full" type="submit">
                 Pay with Stripe (test)
               </Button>
             </div>
           </form>
         </Form>
+=======
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
+                Pay with Stripe (test)
+              </button>
+            </div>
+          </form>
+        </Form> */}
+        
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">Name</label>
+            <Input {...form.register('name')} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Email</label>
+            <Input type="email" {...form.register('email')} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Address</label>
+            <Input {...form.register('address')} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">City</label>
+            <Input {...form.register('city')} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Country</label>
+            <Input {...form.register('country')} />
+          </div>
+          <div className="border-t pt-4">
+            <div className="flex justify-between font-semibold mb-4">
+              <span>Subtotal</span>
+              <span>${subtotal.toFixed(2)}</span>
+            </div>
+            <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
+              Pay with Stripe (test)
+            </button>
+          </div>
+        </form>
+>>>>>>> origin/main
       </div>
     </div>
   );

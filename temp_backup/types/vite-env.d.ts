@@ -37,8 +37,13 @@ declare module 'lovable-tagger' {
 }
 
 // Add Node.js globals
+<<<<<<< HEAD
 declare var __dirname: string;
 declare var process: {
+=======
+declare const __dirname: string;
+declare const process: {
+>>>>>>> origin/main
   env: {
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';

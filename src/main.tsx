@@ -35,11 +35,19 @@ const handleGlobalError = (error: Error): void => {
 
 // Set up global error handlers
 window.addEventListener('error', (event) => {
+<<<<<<< HEAD
   handleGlobalError(event.error);
 });
 
 window.addEventListener('unhandledrejection', (event) => {
   handleGlobalError(new Error(event.reason));
+=======
+  handleGlobalError(event.error as Error);
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  handleGlobalError(new Error(String(event.reason)));
+>>>>>>> origin/main
 });
 
 try {
@@ -48,7 +56,12 @@ try {
     throw new Error('Root element not found');
   }
 
+<<<<<<< HEAD
   ReactDOM.createRoot(rootElement).render(
+=======
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+>>>>>>> origin/main
     <React.StrictMode>
       <App />
     </React.StrictMode>,
@@ -60,4 +73,8 @@ try {
   }
 } catch (error) {
   handleGlobalError(error as Error);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

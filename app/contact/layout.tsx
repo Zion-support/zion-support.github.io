@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   description: 'Get in touch with Zion Tech Group for AI solutions, micro SaaS development, and IT services. We reply within one business day.',
   keywords: 'contact, AI solutions, micro SaaS, IT services, business consultation'
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 export default function ContactLayout({
   children,
 }: {

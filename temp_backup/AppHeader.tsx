@@ -7,12 +7,21 @@ import { ModeToggle } from '@/components/ModeToggle';
 import { Input } from "@/components/ui/input"; // Added
 import { Menu, X, Search } from 'lucide-react'; // Added Search
 import { MobileMenu } from '@/components/header/MobileMenu';
+<<<<<<< HEAD
 import { useIsMobile } from '@/hooks/use-mobile';
+=======
+// import { useIsMobile } from '@/hooks/use-mobile';
+>>>>>>> origin/main
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+<<<<<<< HEAD
   const isMobile = useIsMobile();
+=======
+  // const isMobile = useIsMobile();
+  const isMobile = false; // Temporary fallback
+>>>>>>> origin/main
   
   // Try to access the messaging context, but provide a fallback value if it's not available
   let unreadCount = 0;

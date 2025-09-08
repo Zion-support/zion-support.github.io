@@ -2,15 +2,27 @@ import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { SERVICES } from "@/data/servicesData";
 import { TrustedBySection } from "@/components/TrustedBySection";
+<<<<<<< HEAD
 import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
 import { Button } from "@/components/ui/button";
+=======
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
+// import { Button } from "@/components/ui/button";
+>>>>>>> origin/main
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 
 import useSWR from 'swr';
+<<<<<<< HEAD
 import { captureException } from "@/utils/sentry";
 import { SkeletonCard } from '@/components/ui';
 import { useDelayedError } from '@/hooks/useDelayedError';
+=======
+// import { captureException } from "@/utils/sentry";
+// import { captureException } from "@/utils/monitoring/sentry.client";
+import { SkeletonCard } from '@/components/ui';
+// import { useDelayedError } from '@/hooks/useDelayedError';
+>>>>>>> origin/main
 
 // Filter options specific to services
 const SERVICE_FILTERS = [
@@ -30,7 +42,12 @@ async function fetchServices(): Promise<ProductListing[]> {
     }
     return (await res.json()) as ProductListing[];
   } catch (err) {
+<<<<<<< HEAD
     captureException(err);
+=======
+    // captureException(err);
+    console.error('Error fetching services:', err);
+>>>>>>> origin/main
     throw err;
   }
 }
@@ -44,7 +61,12 @@ export default function ServicesPage() {
       revalidateOnFocus: false,
     }
   );
+<<<<<<< HEAD
   const delayedError = useDelayedError(error);
+=======
+  // const delayedError = useDelayedError(error);
+  const delayedError = error; // Temporary fallback
+>>>>>>> origin/main
 
   const listings = data || SERVICES;
 
@@ -66,21 +88,34 @@ export default function ServicesPage() {
     return (
       <div data-testid="error-state" className="py-12 text-center space-y-4">
         <p className="text-red-400">Failed to load services. {delayedError?.message}</p>
+<<<<<<< HEAD
         <Button data-testid="retry-button" onClick={() => mutate()}>
           Retry
         </Button>
+=======
+        {/* <Button data-testid="retry-button" onClick={() => mutate()}>
+          Retry
+        </Button> */}
+        <button data-testid="retry-button" onClick={() => mutate()} className="bg-blue-600 text-white py-2 px-4 rounded">
+          Retry
+        </button>
+>>>>>>> origin/main
       </div>
     );
   }
 
   return (
+<<<<<<< HEAD
     <ErrorBoundary>
+=======
+>>>>>>> origin/main
     <>
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
             <Link to="/it-onsite-services">
+<<<<<<< HEAD
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
@@ -90,6 +125,24 @@ export default function ServicesPage() {
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
               </Button>
+=======
+              {/* <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </Button> */}
+              <button className="border border-zion-purple text-zion-cyan hover:bg-zion-purple/10 py-2 px-4 rounded flex items-center">
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </button>
+            </Link>
+            <Link to="/request-quote">
+              {/* <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                Request a Quote
+              </Button> */}
+              <button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-2 px-4 rounded">
+                Request a Quote
+              </button>
+>>>>>>> origin/main
             </Link>
           </div>
         </div>
@@ -111,6 +164,9 @@ export default function ServicesPage() {
       </div>
       <TrustedBySection />
     </>
+<<<<<<< HEAD
     </ErrorBoundary>
+=======
+>>>>>>> origin/main
   );
 }

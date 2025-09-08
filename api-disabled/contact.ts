@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export {};
 ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
@@ -29,3 +30,6 @@ module.exports = {};
       success: false 
     })}
 }
+=======
+module.exports = {};
+>>>>>>> origin/main

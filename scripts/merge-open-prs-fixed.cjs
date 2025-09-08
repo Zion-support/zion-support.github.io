@@ -51,7 +51,11 @@ async function ghRequest(path, method = 'GET', body) {
 
 async function getOpenPRs(owner, repo) {
   try {
+<<<<<<< HEAD
     const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open`);
+=======
+    const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
+>>>>>>> origin/main
     return prs || [];
   } catch (error) {
     console.error('Error fetching PRs:', error.message);
@@ -59,6 +63,27 @@ async function getOpenPRs(owner, repo) {
   }
 }
 
+<<<<<<< HEAD
+=======
+async function readyForReview(owner, repo, number) {
+  try {
+    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, 'POST');
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function updateBranch(owner, repo, number) {
+  try {
+    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/update-branch`, 'PUT');
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+>>>>>>> origin/main
 async function mergePR(owner, repo, number) {
   try {
     const result = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, 'PUT', {
@@ -93,6 +118,7 @@ async function main() {
       console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
       
       if (pr.draft) {
+<<<<<<< HEAD
         console.log('   ⏸️  Skipping draft PR');
         continue;
       }
@@ -100,6 +126,17 @@ async function main() {
       if (pr.mergeable === false) {
         console.log('   ⚠️  PR has merge conflicts, skipping');
         continue;
+=======
+        const readied = await readyForReview(owner, repo, pr.number);
+        console.log(`   📝 Draft -> ready_for_review: ${readied ? 'ok' : 'not permitted'}`);
+      }
+      
+      // Ask GitHub to update the PR branch before merging
+      const updated = await updateBranch(owner, repo, pr.number);
+      if (updated) {
+        console.log('   🔄 Requested update-branch');
+        await new Promise(r => setTimeout(r, 2500));
+>>>>>>> origin/main
       }
       
       const mergeResult = await mergePR(owner, repo, pr.number);

@@ -3,7 +3,11 @@ import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
 import ForumCategories from "@/components/community/ForumCategories";
+=======
+// import ForumCategories from "@/components/community/ForumCategories";
+>>>>>>> origin/main
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
@@ -119,7 +123,11 @@ export default function CommunityPage() {
           <CreatePostButton />
         </div>
         
+<<<<<<< HEAD
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+=======
+        {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+>>>>>>> origin/main
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
@@ -127,7 +135,13 @@ export default function CommunityPage() {
           </TabsList>
           
           <TabsContent value="categories">
+<<<<<<< HEAD
             <ForumCategories />
+=======
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">Forum categories coming soon...</p>
+            </div>
+>>>>>>> origin/main
           </TabsContent>
           
           <TabsContent value="featured">
@@ -145,7 +159,56 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
+<<<<<<< HEAD
         </Tabs>
+=======
+        </Tabs> */}
+        
+        <div className="mb-8">
+          <div className="flex space-x-4 mb-6">
+            <button 
+              className={`px-4 py-2 rounded ${activeTab === 'categories' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+              onClick={() => setActiveTab('categories')}
+            >
+              Categories
+            </button>
+            <button 
+              className={`px-4 py-2 rounded ${activeTab === 'featured' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+              onClick={() => setActiveTab('featured')}
+            >
+              Featured
+            </button>
+            <button 
+              className={`px-4 py-2 rounded ${activeTab === 'recent' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+              onClick={() => setActiveTab('recent')}
+            >
+              Recent
+            </button>
+          </div>
+          
+          {activeTab === 'categories' && (
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">Forum categories coming soon...</p>
+            </div>
+          )}
+          
+          {activeTab === 'featured' && (
+            <div className="space-y-4">
+              {featuredPosts.map((post) => (
+                <PostCard key={post.id} post={post} />
+              ))}
+            </div>
+          )}
+          
+          {activeTab === 'recent' && (
+            <div className="space-y-4">
+              {recentPosts.map((post) => (
+                <PostCard key={post.id} post={post} />
+              ))}
+            </div>
+          )}
+        </div>
+>>>>>>> origin/main
       </div>
     </>
   );

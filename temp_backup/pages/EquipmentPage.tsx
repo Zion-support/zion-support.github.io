@@ -4,15 +4,24 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "@/services/apiClient";
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+=======
+// import { Button } from "@/components/ui/button";
+>>>>>>> origin/main
 import { Loader2, Sparkles } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate, useLocation } from "react-router-dom";
 import useSWRMutation from "swr/mutation";
 import Skeleton from "@/components/ui/skeleton";
+<<<<<<< HEAD
 import { useDelayedError } from '@/hooks/useDelayedError';
 import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+=======
+// import { useDelayedError } from '@/hooks/useDelayedError';
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+>>>>>>> origin/main
 
 // The EQUIPMENT_LISTINGS constant has been removed as it was commented out
 // and the page primarily relies on API calls and dynamic data generation.
@@ -59,7 +68,12 @@ export default function EquipmentPage() {
     queryKey: ['equipment'],
     queryFn: fetchEquipment,
   });
+<<<<<<< HEAD
   const delayedError = useDelayedError(equipmentError);
+=======
+  // const delayedError = useDelayedError(equipmentError);
+  const delayedError = equipmentError; // Temporary fallback
+>>>>>>> origin/main
 
   useEffect(() => {
     if (fetchedEquipment) {
@@ -160,9 +174,18 @@ export default function EquipmentPage() {
     return (
       <div data-testid="error-state-equipment" className="py-12 text-center space-y-4">
         <p className="text-red-400">Failed to load equipment: {delayedError.message}</p>
+<<<<<<< HEAD
         <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
           Retry
         </Button>
+=======
+        {/* <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
+          Retry
+        </Button> */}
+        <button data-testid="retry-button-equipment" onClick={() => refetchEquipment()} className="bg-blue-600 text-white py-2 px-4 rounded">
+          Retry
+        </button>
+>>>>>>> origin/main
       </div>
     );
   }
@@ -171,17 +194,36 @@ export default function EquipmentPage() {
     <>
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex justify-end">
+<<<<<<< HEAD
           <Button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+=======
+          {/* <Button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+>>>>>>> origin/main
             {isFetchingRecommendations ? (
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             ) : (
               <Sparkles className="h-4 w-4 mr-2" />
             )}
             AI Recommendations
+<<<<<<< HEAD
           </Button>
         </div>
       </div>
       <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load equipment content. Please try again later.</p>}>
+=======
+          </Button> */}
+          <button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white py-2 px-4 rounded flex items-center">
+            {isFetchingRecommendations ? (
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            ) : (
+              <Sparkles className="h-4 w-4 mr-2" />
+            )}
+            AI Recommendations
+          </button>
+        </div>
+      </div>
+      {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load equipment content. Please try again later.</p>}> */}
+>>>>>>> origin/main
         {isFetchingRecommendations ? ( // This is the skeleton for AI recommendations, keep as is
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2, 3, 4].map((i) => (
@@ -211,7 +253,11 @@ export default function EquipmentPage() {
             detailBasePath="/equipment"
           />
         )}
+<<<<<<< HEAD
       </ErrorBoundary>
+=======
+      {/* </ErrorBoundary> */}
+>>>>>>> origin/main
     </>
   );
 }

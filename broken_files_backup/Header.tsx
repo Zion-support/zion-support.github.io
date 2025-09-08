@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -112,3 +113,7 @@
     </header>
   )}
 export: default Header}}
+=======
+export {};
+module.exports = {};
+>>>>>>> origin/main
