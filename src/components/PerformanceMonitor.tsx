@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { performanceTracker, PerformanceMetrics } from '../utils/performance';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  bundleSize: number;
-  memoryUsage: number;
-  renderTime: number;
-}
+// Remove duplicate interface - using the one from utils/performance
 
 export const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -15,39 +11,18 @@ export const PerformanceMonitor: React.FC = () => {
     // Only show in development
     if (import.meta.env.MODE !== 'development') return;
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      
-      // Estimate bundle size (this is a rough estimate)
-      const scripts = document.querySelectorAll('script[src]');
-      let bundleSize = 0;
-      scripts.forEach(script => {
-        const src = script.getAttribute('src');
-        if (src && src.includes('assets/')) {
-          // This is a rough estimate - in reality you'd need to fetch the actual file size
-          bundleSize += 200; // Estimated KB per script
-        }
-      });
+    // Subscribe to performance metrics
+    const unsubscribe = performanceTracker.subscribe((metrics) => {
+      setMetrics(metrics);
+    });
 
-      // Memory usage (if available)
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+    // Get current metrics if available
+    const currentMetrics = performanceTracker.getMetrics();
+    if (currentMetrics) {
+      setMetrics(currentMetrics);
+    }
 
-      // Render time (rough estimate)
-      const renderTime = performance.now();
-
-      setMetrics({
-        loadTime,
-        bundleSize,
-        memoryUsage: memoryUsage / 1024 / 1024, // Convert to MB
-        renderTime,
-      });
-    };
-
-    // Measure after component mount
-    const timeoutId = setTimeout(measurePerformance, 1000);
-
-    return () => clearTimeout(timeoutId);
+    return unsubscribe;
   }, []);
 
   if (import.meta.env.MODE !== 'development' || !metrics) {
