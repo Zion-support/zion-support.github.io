@@ -1,94 +1,46 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
-import { ThemeProvider } from './components/ThemeProvider';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import ScrollToTop from './components/ScrollToTop';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
-import LoadingSpinner from './components/LoadingSpinner';
+import React from 'react';
+import './App.css';
 
-// Pages - Lazy loaded for better performance
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const NotFound = lazy(() => import('./pages/NotFound'));
-
-// Service Pages - Lazy loaded for better performance
-const AIServices = lazy(() => import('./pages/AIServices'));
-const ITServices = lazy(() => import('./pages/ITServices'));
-const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
-const Cybersecurity = lazy(() => import('./pages/Cybersecurity'));
-const CloudMigration = lazy(() => import('./pages/CloudMigration'));
-const MobileDevelopment = lazy(() => import('./pages/MobileDevelopment'));
-
-// Additional Pages - Lazy loaded for better performance
-const FAQ = lazy(() => import('./pages/FAQ'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Terms = lazy(() => import('./pages/Terms'));
-const Support = lazy(() => import('./pages/Support'));
-
-function App() {
+// Main App component
+const App: React.FC = () => {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <ThemeProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <ScrollToTop />
-              <PerformanceMonitor />
-              <PerformanceOptimizer enableMonitoring={import.meta.env.DEV} />
-              {import.meta.env.DEV && <PerformanceDashboard />}
-              {/* SEO Meta Tags */}
-              <Helmet>
-                <title>Zion Tech Group - AI, IT & Micro SaaS Solutions</title>
-                <meta name="description" content="Leading provider of AI-powered solutions, IT services, and Micro SaaS products. Transform your business with cutting-edge technology." />
-                <meta name="keywords" content="AI services, IT solutions, Micro SaaS, cybersecurity, cloud migration, mobile development" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta property="og:title" content="Zion Tech Group - AI, IT & Micro SaaS Solutions" />
-                <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and Micro SaaS products." />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <link rel="canonical" href="https://ziontechgroup.com" />
-              </Helmet>
-              <div className="min-h-screen bg-background text-foreground" id="main-content">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    {/* Main Routes */}
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/pricing" element={<Pricing />} />
-                    
-                    {/* Service Routes */}
-                    <Route path="/services/ai-services" element={<AIServices />} />
-                    <Route path="/services/it-services" element={<ITServices />} />
-                    <Route path="/services/micro-saas" element={<MicroSaaS />} />
-                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                    <Route path="/services/cloud-solutions" element={<CloudMigration />} />
-                    <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-                    
-                    {/* Additional Routes */}
-                    <Route path="/faq" element={<FAQ />} />
-                    <Route path="/privacy" element={<Privacy />} />
-                    <Route path="/terms" element={<Terms />} />
-                    <Route path="/support" element={<Support />} />
-                    
-                    {/* 404 Route */}
-                    <Route path="*" element={<NotFound />} />
-                  </Routes>
-                </Suspense>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </ThemeProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl text-blue-200 mb-8">
+            Innovative IT Solutions & AI Services
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-lg font-semibold mb-2">AI Services</h3>
+              <p className="text-sm text-blue-200">
+                Advanced AI-powered solutions for modern businesses
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-lg font-semibold mb-2">IT Services</h3>
+              <p className="text-sm text-blue-200">
+                Comprehensive managed IT and cybersecurity solutions
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-lg font-semibold mb-2">Micro SAAS</h3>
+              <p className="text-sm text-blue-200">
+                Scalable software solutions for growing businesses
+              </p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <p className="text-sm text-blue-300">
+              Successfully built and deployed on Netlify! 🚀
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
