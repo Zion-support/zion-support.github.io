@@ -1,0 +1,9 @@
+
+> operator-reminder-workflow@1.0.0 prebuild
+> echo 'Skipping prebuild checks'
+
+Skipping prebuild checks
+
+> operator-reminder-workflow@1.0.0 build
+> NODE_ENV=production vite build
+
