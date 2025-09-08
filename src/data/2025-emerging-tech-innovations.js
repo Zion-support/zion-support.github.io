@@ -31,7 +31,7 @@ export const emergingTechInnovations2025 = [
             'Machine learning acceleration'
         ],
         integrations: ['AWS Braket', 'Azure Quantum', 'IBM Quantum', 'Google Quantum AI', 'D-Wave Leap'],
-        compliance: ['ISO 27001', 'SOC2', 'FedRAMP', 'GDPR', 'CCPA'],
+        compliance['ISO 27001', 'SOC2', 'FedRAMP', 'GDPR', 'CCPA'],
         website: 'https://ziontechgroup.com/quantum-computing-as-a-service',
         contact: {
             phone: '+1 302 464 0950',
@@ -83,7 +83,7 @@ export const emergingTechInnovations2025 = [
             'Insurance risk assessment'
         ],
         integrations: ['ArcGIS', 'QGIS', 'Google Earth Engine', 'Planet Labs', 'Maxar', 'ESA Copernicus'],
-        compliance: ['ISO 19100', 'OGC standards', 'GDPR', 'CCPA', 'Environmental regulations'],
+        compliance['ISO 19100', 'OGC standards', 'GDPR', 'CCPA', 'Environmental regulations'],
         website: 'https://ziontechgroup.com/satellite-data-analytics-platform',
         contact: {
             phone: '+1 302 464 0950',
@@ -135,7 +135,7 @@ export const emergingTechInnovations2025 = [
             'Autonomous vehicle systems'
         ],
         integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'Siemens MindSphere'],
-        compliance: ['ISO 27001', 'SOC2', 'GDPR', 'CCPA', 'Industry-specific standards'],
+        compliance['ISO 27001', 'SOC2', 'GDPR', 'CCPA', 'Industry-specific standards'],
         website: 'https://ziontechgroup.com/iot-edge-intelligence-platform',
         contact: {
             phone: '+1 302 464 0950',
@@ -187,7 +187,7 @@ export const emergingTechInnovations2025 = [
             'Government services and voting'
         ],
         integrations: ['Ethereum', 'Hyperledger Fabric', 'Solana', 'Polygon', 'AWS Blockchain', 'Azure Blockchain'],
-        compliance: ['GDPR', 'CCPA', 'SOX', 'PCI DSS', 'Industry-specific regulations'],
+        compliance['GDPR', 'CCPA', 'SOX', 'PCI DSS', 'Industry-specific regulations'],
         website: 'https://ziontechgroup.com/enterprise-blockchain-platform',
         contact: {
             phone: '+1 302 464 0950',
@@ -239,7 +239,7 @@ export const emergingTechInnovations2025 = [
             'Research and development'
         ],
         integrations: ['Siemens', 'Rockwell Automation', 'ABB', 'KUKA', 'FANUC', 'Universal Robots'],
-        compliance: ['ISO 13482', 'ANSI/RIA R15.06', 'OSHA standards', 'Industry-specific safety'],
+        compliance['ISO 13482', 'ANSI/RIA R15.06', 'OSHA standards', 'Industry-specific safety'],
         website: 'https://ziontechgroup.com/ai-robotics-automation-platform',
         contact: {
             phone: '+1 302 464 0950',

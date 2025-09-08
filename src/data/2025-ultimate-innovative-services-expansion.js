@@ -56,8 +56,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Quantum advantage guarantee', 'AI model explainability', 'Regulatory compliance automation'],
-        industryFocus: ['Financial Services', 'Investment Management', 'Trading', 'Risk Management'],
-        compliance: ['SOX', 'GLBA', 'PCI-DSS', 'SOC 2 Type II']
+        industryFocus['Financial Services', 'Investment Management', 'Trading', 'Risk Management'],
+        compliance['SOX', 'GLBA', 'PCI-DSS', 'SOC 2 Type II']
     },
     // 2. Autonomous AI Research Assistant Platform
     {
@@ -110,8 +110,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Autonomous discovery algorithms', 'Cross-domain knowledge synthesis', 'Real-time collaboration tools'],
-        industryFocus: ['Research & Development', 'Academia', 'Pharmaceuticals', 'Government', 'Technology'],
-        compliance: ['GDPR', 'HIPAA', 'FERPA', 'SOC 2 Type II']
+        industryFocus['Research & Development', 'Academia', 'Pharmaceuticals', 'Government', 'Technology'],
+        compliance['GDPR', 'HIPAA', 'FERPA', 'SOC 2 Type II']
     },
     // 3. Quantum-Secure IoT Management Platform
     {
@@ -164,8 +164,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Quantum security guarantee', 'AI-powered threat prevention', 'Edge computing optimization'],
-        industryFocus: ['Manufacturing', 'Healthcare', 'Energy', 'Transportation', 'Smart Cities'],
-        compliance: ['ISO 27001', 'SOC 2 Type II', 'GDPR', 'HIPAA']
+        industryFocus['Manufacturing', 'Healthcare', 'Energy', 'Transportation', 'Smart Cities'],
+        compliance['ISO 27001', 'SOC 2 Type II', 'GDPR', 'HIPAA']
     },
     // 4. AI-Powered Autonomous Supply Chain Optimization
     {
@@ -218,8 +218,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Autonomous optimization', 'Real-time adaptation', 'Sustainability tracking'],
-        industryFocus: ['Manufacturing', 'Retail', 'E-commerce', 'Logistics', 'Distribution'],
-        compliance: ['ISO 9001', 'SOC 2 Type II', 'GDPR']
+        industryFocus['Manufacturing', 'Retail', 'E-commerce', 'Logistics', 'Distribution'],
+        compliance['ISO 9001', 'SOC 2 Type II', 'GDPR']
     },
     // 5. Quantum Neural Network Development Platform
     {
@@ -272,8 +272,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Quantum advantage guarantee', 'Hybrid algorithm development', 'Real-time quantum simulation'],
-        industryFocus: ['Research & Development', 'Technology', 'Defense', 'Pharmaceuticals', 'Finance'],
-        compliance: ['ITAR', 'SOC 2 Type II', 'ISO 27001']
+        industryFocus['Research & Development', 'Technology', 'Defense', 'Pharmaceuticals', 'Finance'],
+        compliance['ITAR', 'SOC 2 Type II', 'ISO 27001']
     },
     // 6. AI-Powered Autonomous Business Operations Platform
     {
@@ -326,8 +326,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Autonomous operations', 'AI decision making', 'Multi-department coordination'],
-        industryFocus: ['Manufacturing', 'Retail', 'Services', 'Technology', 'Healthcare'],
-        compliance: ['SOX', 'SOC 2 Type II', 'GDPR', 'HIPAA']
+        industryFocus['Manufacturing', 'Retail', 'Services', 'Technology', 'Healthcare'],
+        compliance['SOX', 'SOC 2 Type II', 'GDPR', 'HIPAA']
     },
     // 7. Quantum-Secure Healthcare Data Platform
     {
@@ -380,8 +380,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Quantum security guarantee', 'AI-powered insights', 'HIPAA compliance automation'],
-        industryFocus: ['Healthcare', 'Pharmaceuticals', 'Research', 'Medical Devices'],
-        compliance: ['HIPAA', 'HITECH', 'SOC 2 Type II', 'ISO 27001']
+        industryFocus['Healthcare', 'Pharmaceuticals', 'Research', 'Medical Devices'],
+        compliance['HIPAA', 'HITECH', 'SOC 2 Type II', 'ISO 27001']
     },
     // 8. AI-Powered Autonomous Marketing Platform
     {
@@ -434,8 +434,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Autonomous campaign management', 'AI content generation', 'Real-time optimization'],
-        industryFocus: ['E-commerce', 'B2B', 'SaaS', 'Marketing Agencies', 'Retail'],
-        compliance: ['GDPR', 'CCPA', 'SOC 2 Type II']
+        industryFocus['E-commerce', 'B2B', 'SaaS', 'Marketing Agencies', 'Retail'],
+        compliance['GDPR', 'CCPA', 'SOC 2 Type II']
     },
     // 9. Quantum-Secure Cloud Infrastructure Platform
     {
@@ -488,8 +488,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Quantum security guarantee', 'AI optimization', 'Multi-cloud management'],
-        industryFocus: ['Technology', 'Finance', 'Healthcare', 'Government', 'Enterprise'],
-        compliance: ['SOC 2 Type II', 'ISO 27001', 'PCI-DSS', 'HIPAA']
+        industryFocus['Technology', 'Finance', 'Healthcare', 'Government', 'Enterprise'],
+        compliance['SOC 2 Type II', 'ISO 27001', 'PCI-DSS', 'HIPAA']
     },
     // 10. AI-Powered Autonomous Legal Platform
     {
@@ -542,8 +542,8 @@ export const ultimateInnovativeServices2025 = [
             enterprise: 'Custom pricing'
         },
         specialFeatures: ['Autonomous legal analysis', 'AI contract drafting', 'Multi-jurisdiction support'],
-        industryFocus: ['Legal Services', 'Corporate', 'Government', 'Technology', 'Finance'],
-        compliance: ['SOC 2 Type II', 'ISO 27001', 'GDPR']
+        industryFocus['Legal Services', 'Corporate', 'Government', 'Technology', 'Finance'],
+        compliance['SOC 2 Type II', 'ISO 27001', 'GDPR']
     }
 ];
 export default ultimateInnovativeServices2025;

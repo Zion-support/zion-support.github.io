@@ -217,9 +217,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
     // Sort reports
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
-      
-      switch (sortBy) {
+      let aValue: any, bValue;switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
           bValue = new Date(b.lastUpdated).getTime();
