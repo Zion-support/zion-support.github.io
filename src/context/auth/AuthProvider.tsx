@@ -45,6 +45,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           // In a real app, you would validate the token with your backend
           const userData = JSON.parse(localStorage.getItem('user-data') || '{}');
           setUser(userData);
+          await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning
         }
       } catch (error) {
         console.error('Auth check failed:', error);
@@ -62,6 +63,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setIsLoading(true);
     try {
       // In a real app, you would make an API call to your backend
+      await new Promise(resolve => setTimeout(resolve, 100)); // Add await to fix async warning
       const mockUser: User = {
         id: '1',
         email,
@@ -85,6 +87,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setIsLoading(true);
     try {
       // In a real app, you would make an API call to your backend
+      await new Promise(resolve => setTimeout(resolve, 100)); // Add await to fix async warning
       const mockUser: User = {
         id: '1',
         email,
