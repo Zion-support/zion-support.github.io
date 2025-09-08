@@ -55,17 +55,70 @@ export default function BlogPage() {
     },
     {
       id: 6,
-      title: "The Impact of Automation on Development",
-      excerpt: "How automation is changing the software development landscape and what developers need to know.",
-      author: "Development Team",
-      date: "2025-01-07",
+      title: "AI Ethics and Responsible Development",
+      excerpt: "Important considerations for building AI systems that are fair, transparent, and beneficial to society.",
+      date: "2025-01-14",
+      category: "AI Ethics",
+      readTime: "8 min read",
+      image: "⚖️"
+    },
+    {
+      id: 7,
+      title: "Edge Computing and IoT Integration",
+      excerpt: "How edge computing is transforming IoT deployments and enabling real-time autonomous decision making.",
+      date: "2025-01-13",
+      category: "Edge Computing",
+      readTime: "6 min read",
+      image: "🌐"
+    },
+    {
+      id: 8,
+      title: "Quantum Computing Applications",
+      excerpt: "Exploring the potential of quantum computing in solving complex problems and advancing AI capabilities.",
+      date: "2025-01-12",
+      category: "Quantum Computing",
       readTime: "9 min read",
-      category: "Development",
-      image: "/api/placeholder/400/250"
+      image: "⚛️"
+    },
+    {
+      id: 9,
+      title: "Cybersecurity in the AI Era",
+      excerpt: "New challenges and solutions for protecting AI systems and autonomous infrastructure from cyber threats.",
+      date: "2025-01-11",
+      category: "Cybersecurity",
+      readTime: "7 min read",
+      image: "🔒"
+    },
+    {
+      id: 10,
+      title: "Sustainable Technology Solutions",
+      excerpt: "How AI and automation are helping organizations reduce their environmental impact and achieve sustainability goals.",
+      date: "2025-01-10",
+      category: "Sustainability",
+      readTime: "5 min read",
+      image: "🌱"
+    },
+    {
+      id: 11,
+      title: "Digital Transformation Strategies",
+      excerpt: "Comprehensive guide to implementing digital transformation initiatives using AI and automation technologies.",
+      date: "2025-01-09",
+      category: "Digital Transformation",
+      readTime: "8 min read",
+      image: "🚀"
+    },
+    {
+      id: 12,
+      title: "The Future of Work",
+      excerpt: "How AI and automation are reshaping the workplace and creating new opportunities for human-AI collaboration.",
+      date: "2025-01-08",
+      category: "Future of Work",
+      readTime: "6 min read",
+      image: "👥"
     }
   ];
 
-  const categories = ["All", "AI & Automation", "Infrastructure", "Content & SEO", "Security", "Performance", "Development"];
+  const categories = ["All", "AI Development", "DevOps", "Cloud", "Machine Learning", "Automation", "AI Ethics", "Edge Computing", "Quantum Computing", "Cybersecurity", "Sustainability", "Digital Transformation", "Future of Work"];
 
   return (
     <>
