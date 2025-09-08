@@ -29,17 +29,18 @@ const Community = React.lazy(() => import('./pages/Community'));
 const Developers = React.lazy(() => import('./pages/Developers'));
 const Demo = React.lazy(() => import('./pages/Demo'));
 
-// New pages
-const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
-const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
-const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
-const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
-const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
+// New comprehensive service platforms
+const AIAutonomousBusinessAutomation = createLazyComponent(() => import('./pages/ai-autonomous-business-automation'));
+const AICybersecurityPlatform = createLazyComponent(() => import('./pages/ai-cybersecurity-platform'));
+const CloudDevOpsPlatform = createLazyComponent(() => import('./pages/cloud-devops-platform'));
+const DataAnalyticsPlatform = createLazyComponent(() => import('./pages/data-analytics-platform'));
+
+// Simple loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  </div>
+);
 
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
@@ -374,58 +375,43 @@ function App() {
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
               
-              {/* 2027 Services Routes */}
-              <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
-              <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027 />} />
-              <Route path="/all-services-2027" element={<AllServices2027 />} />
-              <Route path="/comprehensive-services-overview-2027" element={<ComprehensiveServicesOverview2027 />} />
-              <Route path="/enhanced-innovative-services-showcase-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
-              
-              <Route path="/ai-services" element={<AIServices />} />
-              <Route path="/it-services" element={<ITServices />} />
-              <Route path="/micro-saas" element={<MicroSaaS />} />
-              <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/partners" element={<Partners />} />
-              
-              {/* Missing page routes */}
-              <Route path="/team" element={<Team />} />
-              <Route path="/press" element={<Press />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
-              <Route path="/webinars" element={<Webinars />} />
-              <Route path="/white-papers" element={<WhitePapers />} />
-              
-              {/* Service Routes - only for existing pages */}
-              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-              <Route path="/services/digital-twin" element={<DigitalTwin />} />
-              <Route path="/services/data-analytics" element={<DataAnalytics />} />
-              <Route path="/services/iot-edge" element={<IoTEdge />} />
-              <Route path="/services/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
-              <Route path="/services/healthcare-tech" element={<HealthcareTech />} />
-              <Route path="/services/sustainability" element={<Sustainability />} />
-              <Route path="/services/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
-              <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-              <Route path="/services/ai-business-intelligence-dashboard" element={<AIBusinessIntelligenceDashboard />} />
-              <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
-              <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
-              <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
-              <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
-              <Route path="/services/mobile-feedback-surveys" element={<CustomerFeedbackSurveys />} />
-              <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
-              <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
-              <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
-              
-              {/* Additional Service Routes */}
-              <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-              <Route path="/services/it-consulting" element={<ITConsulting />} />
-              <Route path="/services/onsite-support" element={<OnsiteSupport />} />
-              <Route path="/services/green-it" element={<GreenIT />} />
-              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-              <Route path="/services/space-tech" element={<SpaceTech />} />
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center space-x-8">
+                <a href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Home</a>
+                <div className="relative group">
+                  <button className="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+                    <span>Services</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="p-4 space-y-3">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">AI & Automation</h4>
+                          <a href="/ai-autonomous-business-automation" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm mb-1">Business Automation</a>
+                          <a href="/ai-cybersecurity-platform" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm mb-1">AI Cybersecurity</a>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Platforms</h4>
+                          <a href="/cloud-devops-platform" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm mb-1">Cloud & DevOps</a>
+                          <a href="/data-analytics-platform" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm mb-1">Data Analytics</a>
+                        </div>
+                      </div>
+                      <div className="border-t border-gray-200 dark:border-gray-700 pt-3">
+                        <a href="/comprehensive-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">All Services</a>
+                        <a href="/comprehensive-pricing-guide-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Pricing Guide</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="/about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">About</a>
+                <a href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Contact</a>
+                <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium">
+                  Call Now
+                </a>
+              </nav>
 
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />
@@ -436,15 +422,38 @@ function App() {
                     <Route path="/services/ai-financial-trading-platform" element={<ModernLayout><AIFinancialTradingPlatform /></ModernLayout>} />
                     <Route path="/services/blockchain-enterprise-solutions" element={<ModernLayout><BlockchainEnterpriseSolutions /></ModernLayout>} />
 
-                    {/* New Innovative Micro SAAS Services 2025 */}
-                    <Route path="/services/ai-business-intelligence-dashboard" element={<ModernLayout><AIBusinessIntelligenceDashboard /></ModernLayout>} />
-                    <Route path="/services/ai-customer-support-automation" element={<ModernLayout><AICustomerSupportAutomation /></ModernLayout>} />
-                    <Route path="/services/ai-project-management-platform" element={<ModernLayout><AIProjectManagementPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-marketing-automation-platform" element={<ModernLayout><AIMarketingAutomationPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-workflow-orchestrator" element={<ModernLayout><AIWorkflowOrchestrator /></ModernLayout>} />
-                    <Route path="/services/ai-predictive-maintenance" element={<ModernLayout><AIPredictiveMaintenance /></ModernLayout>} />
-                    <Route path="/services/ai-hr-platform" element={<ModernLayout><AIHRPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-financial-trading-risk-management" element={<ModernLayout><AIFinancialTradingRiskManagement /></ModernLayout>} />
+            {/* Mobile Navigation */}
+            <div className="lg:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <nav className="space-y-3">
+                <a href="/" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2">Home</a>
+                <div className="space-y-2">
+                  <div className="font-medium text-gray-900 dark:text-white">Services</div>
+                  <div className="ml-4 space-y-2">
+                    <div className="mb-2">
+                      <div className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">AI & Automation</div>
+                      <a href="/ai-autonomous-business-automation" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Business Automation</a>
+                      <a href="/ai-cybersecurity-platform" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">AI Cybersecurity</a>
+                    </div>
+                    <div className="mb-2">
+                      <div className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Platforms</div>
+                      <a href="/cloud-devops-platform" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Cloud & DevOps</a>
+                      <a href="/data-analytics-platform" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Data Analytics</a>
+                    </div>
+                    <div className="border-t border-gray-200 dark:border-gray-700 pt-2 mt-2">
+                      <a href="/comprehensive-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">All Services</a>
+                      <a href="/comprehensive-pricing-guide-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Pricing Guide</a>
+                    </div>
+                  </div>
+                </div>
+                <a href="/about" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2">About</a>
+                <a href="/contact" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2">Contact</a>
+                <a href="tel:+13024640950" className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium text-center">
+                  Call +1 302 464 0950
+                </a>
+              </nav>
+            </div>
+          </div>
+        </header>
 
                     {/* Enhanced Innovative Micro SAAS Services 2025 */}
                     <Route path="/services/ai-customer-success-automation" element={<ModernLayout><AICustomerSuccessAutomation /></ModernLayout>} />
@@ -461,8 +470,32 @@ function App() {
                     {/* Comprehensive Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
             
-                    <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
-                    <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+            {/* Our New Innovative Services Routes */}
+            <Route path="/innovative-services-showcase-2029" element={<InnovativeServicesShowcase2029 />} />
+            <Route path="/comprehensive-pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
+            <Route path="/comprehensive-services-2029" element={<ComprehensiveServices2029 />} />
+            <Route path="/innovative-ai-services-2029" element={<InnovativeAIServices2029 />} />
+            
+            {/* New Comprehensive Service Platforms */}
+            <Route path="/ai-autonomous-business-automation" element={<AIAutonomousBusinessAutomation />} />
+            <Route path="/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+            <Route path="/cloud-devops-platform" element={<CloudDevOpsPlatform />} />
+            <Route path="/data-analytics-platform" element={<DataAnalyticsPlatform />} />
+            
+            {/* Fallback Route */}
+            <Route path="*" element={
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">404 - Page Not Found</h1>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">The page you're looking for doesn't exist.</p>
+                  <a href="/" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                    Go Home
+                  </a>
+                </div>
+              </div>
+            } />
+          </Routes>
+        </main>
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
@@ -470,22 +503,17 @@ function App() {
                     <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
 
-                    {/* New Innovative Services 2025 - Additional */}
-                    <Route path="/services/ai-enterprise-workflow-automation" element={<ModernLayout><AIEnterpriseWorkflowAutomation /></ModernLayout>} />
-                    <Route path="/services/ai-quantum-computing-solutions" element={<ModernLayout><AIQuantumComputingSolutions /></ModernLayout>} />
-                    <Route path="/services/ai-cybersecurity-threat-intelligence" element={<ModernLayout><AICybersecurityThreatIntelligence /></ModernLayout>} />
-                    
-                    {/* New Innovative Services 2026 */}
-                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-powered-seo" element={<ModernLayout><AIPoweredSEO /></ModernLayout>} />
-                    
-                    {/* New Innovative Services 2026 - Additional */}
-                    <Route path="/services/ai-content-marketing-studio" element={<ModernLayout><AIContentMarketingStudio /></ModernLayout>} />
-                    <Route path="/services/ai-customer-experience-analytics-platform" element={<ModernLayout><AICustomerExperienceAnalyticsPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-devops-automation-platform" element={<ModernLayout><AIDevOpsAutomationPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-ecommerce-optimization-platform" element={<ModernLayout><AIEcommerceOptimizationPlatform /></ModernLayout>} />
-                    {/* Innovative Services Showcase 2026 */}
-                    <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
+              {/* Services */}
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Services</h4>
+                <ul className="space-y-3 text-sm text-gray-400">
+                  <li><a href="/ai-autonomous-business-automation" className="hover:text-white transition-colors">AI Business Automation</a></li>
+                  <li><a href="/ai-cybersecurity-platform" className="hover:text-white transition-colors">AI Cybersecurity</a></li>
+                  <li><a href="/cloud-devops-platform" className="hover:text-white transition-colors">Cloud & DevOps</a></li>
+                  <li><a href="/data-analytics-platform" className="hover:text-white transition-colors">Data Analytics</a></li>
+                  <li><a href="/comprehensive-services-2029" className="hover:text-white transition-colors">All Services</a></li>
+                </ul>
+              </div>
 
                     {/* Comprehensive Pricing Guide 2026 */}
                     <Route path="/comprehensive-pricing-guide-2026" element={<ModernLayout><ComprehensivePricingGuide2026 /></ModernLayout>} />

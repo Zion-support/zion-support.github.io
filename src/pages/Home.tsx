@@ -328,16 +328,67 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Interactive Service Showcase - Lazy Loaded */}
-      <Suspense fallback={
-        <div className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="animate-pulse">
-                <div className="h-12 bg-zion-cyan/20 rounded-lg mb-4 max-w-md mx-auto"></div>
-                <div className="h-6 bg-zion-slate-light/20 rounded-lg max-w-2xl mx-auto"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">AI Business Automation</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Transform your business with AI-powered automation that increases efficiency by 300%.
+              </p>
+              <a href="/ai-autonomous-business-automation" className="inline-block mt-3 text-blue-600 dark:text-blue-400 hover:underline">Learn More →</a>
             </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">AI Cybersecurity</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Military-grade AI-powered security with 99.9% threat detection accuracy.
+              </p>
+              <a href="/ai-cybersecurity-platform" className="inline-block mt-3 text-red-600 dark:text-red-400 hover:underline">Learn More →</a>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Cloud & DevOps</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Accelerate development with 10x faster deployments and 40% cost reduction.
+              </p>
+              <a href="/cloud-devops-platform" className="inline-block mt-3 text-cyan-600 dark:text-cyan-400 hover:underline">Learn More →</a>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Data Analytics</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Transform data into insights with AI-powered analytics and 300% ROI improvement.
+              </p>
+              <a href="/data-analytics-platform" className="inline-block mt-3 text-emerald-600 dark:text-emerald-400 hover:underline">Learn More →</a>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="/comprehensive-services-2029"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              View All Services
+            </a>
           </div>
         </div>
       }>
