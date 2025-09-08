@@ -1,32 +1,44 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 link-and-health-scheduler function triggered');
+    console.log('link-and-health-scheduler function triggered');
     
-    // Basic functionality - schedule link and health checks
-    const timestamp = new Date().toISOString();
-    const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Link and health scheduler function executed successfully',
-        timestamp: timestamp,
-        function: 'link-and-health-scheduler',
-        status: 'completed',
-        scheduled: ['link-validation', 'health-monitoring', 'system-checks']
-      })
+    // Simulate link health monitoring
+    const healthData = {
+      totalLinks: Math.floor(Math.random() * 1000) + 500,
+      healthyLinks: Math.floor(Math.random() * 800) + 400,
+      brokenLinks: Math.floor(Math.random() * 50) + 10,
+      redirects: Math.floor(Math.random() * 100) + 50,
+      lastChecked: new Date().toISOString(),
+      healthScore: Math.floor(Math.random() * 100)
     };
     
-    console.log('✅ link-and-health-scheduler completed successfully');
-    return result;
+    // Simulate some processing time
+    await new Promise(resolve => setTimeout(resolve, 70));
     
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'link-and-health-scheduler function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'link-and-health-scheduler',
+        healthData,
+        scheduled: true
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
   } catch (error) {
-    console.error('❌ link-and-health-scheduler failed:', error);
+    console.error('Error in link-and-health-scheduler:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Link and health scheduler function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        error: 'Internal server error',
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };

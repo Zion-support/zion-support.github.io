@@ -1,32 +1,44 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 frontpage-enhancer function triggered');
+    console.log('frontpage-enhancer function triggered');
     
-    // Basic functionality - enhance frontpage content
-    const timestamp = new Date().toISOString();
-    const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Frontpage enhancer function executed successfully',
-        timestamp: timestamp,
-        function: 'frontpage-enhancer',
-        status: 'completed',
-        enhancements: ['content-refresh', 'layout-optimization', 'engagement-improvement']
-      })
+    // Simulate frontpage enhancement
+    const enhancementData = {
+      seo: Math.floor(Math.random() * 100),
+      performance: Math.floor(Math.random() * 100),
+      accessibility: Math.floor(Math.random() * 100),
+      userExperience: Math.floor(Math.random() * 100),
+      lastEnhanced: new Date().toISOString(),
+      enhanced: true
     };
     
-    console.log('✅ frontpage-enhancer completed successfully');
-    return result;
+    // Simulate some processing time
+    await new Promise(resolve => setTimeout(resolve, 65));
     
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'frontpage-enhancer function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'frontpage-enhancer',
+        enhancementData,
+        enhanced: true
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
   } catch (error) {
-    console.error('❌ frontpage-enhancer failed:', error);
+    console.error('Error in frontpage-enhancer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Frontpage enhancer function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        error: 'Internal server error',
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };

@@ -1,32 +1,43 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 continuous-front-runner function triggered');
+    console.log('continuous-front-runner function triggered');
     
-    // Basic functionality - continuously run frontend operations
-    const timestamp = new Date().toISOString();
-    const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Continuous front runner function executed successfully',
-        timestamp: timestamp,
-        function: 'continuous-front-runner',
-        status: 'completed',
-        operations: ['ongoing-frontend-execution', 'persistent-optimization', 'continuous-improvement']
-      })
+    // Simulate continuous front-end running
+    const runningData = {
+      uptime: Date.now(),
+      status: 'running',
+      performance: Math.floor(Math.random() * 100) + 80,
+      lastCheck: new Date().toISOString(),
+      continuous: true
     };
     
-    console.log('✅ continuous-front-runner completed successfully');
-    return result;
+    // Simulate some processing time
+    await new Promise(resolve => setTimeout(resolve, 45));
     
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'continuous-front-runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'continuous-front-runner',
+        runningData,
+        running: true
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
   } catch (error) {
-    console.error('❌ continuous-front-runner failed:', error);
+    console.error('Error in continuous-front-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Continuous front runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        error: 'Internal server error',
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };

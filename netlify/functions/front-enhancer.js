@@ -1,32 +1,30 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 front-enhancer function triggered');
+    console.log('front-enhancer function triggered');
     
-    // Basic functionality - enhance frontend features
-    const timestamp = new Date().toISOString();
-    const result = {
+    // Simple response for testing
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Front enhancer function executed successfully',
-        timestamp: timestamp,
-        function: 'front-enhancer',
-        status: 'completed',
-        enhancements: ['ui-improvements', 'performance-optimization', 'user-experience']
-      })
+        message: 'front-enhancer function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'front-enhancer'
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
-    
-    console.log('✅ front-enhancer completed successfully');
-    return result;
-    
   } catch (error) {
-    console.error('❌ front-enhancer failed:', error);
+    console.error('Error in front-enhancer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front enhancer function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        error: 'Internal server error',
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };

@@ -1,31 +1,30 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 homepage_advertiser function triggered');
+    console.log('homepage_advertiser function triggered');
     
-    // Basic functionality - advertise homepage features
-    const timestamp = new Date().toISOString();
-    const result = {
+    // Simple response for testing
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
-        timestamp: timestamp,
-        function: 'homepage_advertiser',
-        status: 'completed'
-      })
+        message: 'homepage_advertiser function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'homepage_advertiser'
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
-    
-    console.log('✅ homepage_advertiser completed successfully');
-    return result;
-    
   } catch (error) {
-    console.error('❌ homepage_advertiser failed:', error);
+    console.error('Error in homepage_advertiser:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Homepage advertiser function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        error: 'Internal server error',
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };

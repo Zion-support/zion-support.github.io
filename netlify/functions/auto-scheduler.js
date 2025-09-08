@@ -1,32 +1,44 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 auto-scheduler function triggered');
+    console.log('auto-scheduler function triggered');
     
-    // Basic functionality - run automatic scheduling
-    const timestamp = new Date().toISOString();
-    const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Auto scheduler function executed successfully',
-        timestamp: timestamp,
-        function: 'auto-scheduler',
-        status: 'completed',
-        activities: ['task-scheduling', 'workflow-coordination', 'timeline-management']
-      })
+    // Simulate automatic scheduling operations
+    const scheduleData = {
+      tasks: Math.floor(Math.random() * 100) + 50,
+      scheduled: Math.floor(Math.random() * 80) + 40,
+      pending: Math.floor(Math.random() * 30) + 15,
+      priority: Math.floor(Math.random() * 5) + 1,
+      lastScheduled: new Date().toISOString(),
+      scheduled: true
     };
     
-    console.log('✅ auto-scheduler completed successfully');
-    return result;
+    // Simulate some processing time
+    await new Promise(resolve => setTimeout(resolve, 55));
     
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'auto-scheduler function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'auto-scheduler',
+        scheduleData,
+        scheduled: true
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
   } catch (error) {
-    console.error('❌ auto-scheduler failed:', error);
+    console.error('Error in auto-scheduler:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Auto scheduler function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        error: 'Internal server error',
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };

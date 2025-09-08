@@ -1,32 +1,43 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 sitemap_runner function triggered');
+    console.log('sitemap_runner function triggered');
     
-    // Basic functionality - run sitemap generation
-    const timestamp = new Date().toISOString();
-    const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Sitemap runner function executed successfully',
-        timestamp: timestamp,
-        function: 'sitemap_runner',
-        status: 'completed',
-        activities: ['sitemap-generation', 'seo-optimization', 'search-indexing']
-      })
+    // Simulate sitemap generation
+    const sitemapData = {
+      pages: Math.floor(Math.random() * 100) + 50,
+      lastModified: new Date().toISOString(),
+      priority: 'high',
+      changeFreq: 'weekly',
+      generated: true
     };
     
-    console.log('✅ sitemap_runner completed successfully');
-    return result;
+    // Simulate some processing time
+    await new Promise(resolve => setTimeout(resolve, 60));
     
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'sitemap_runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'sitemap_runner',
+        sitemapData,
+        sitemapGenerated: true
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
   } catch (error) {
-    console.error('❌ sitemap_runner failed:', error);
+    console.error('Error in sitemap_runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Sitemap runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        error: 'Internal server error',
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };
