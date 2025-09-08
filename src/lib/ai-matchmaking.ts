@@ -65,3 +65,8 @@ export class MockAIMatchmakingService implements AIMatchmakingService {
 }
 
 export const aiMatchmakingService = new MockAIMatchmakingService();
+
+// Convenience function for direct use
+export const findMatches = (criteria: MatchingCriteria): Promise<MatchResult[]> => {
+  return aiMatchmakingService.findMatches(criteria);
+};

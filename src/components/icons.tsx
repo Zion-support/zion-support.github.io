@@ -16,7 +16,12 @@ import {
   Phone,
   Globe,
   Calendar,
-  Briefcase
+  Briefcase,
+  Sparkles,
+  ArrowRight,
+  User,
+  BarChart3,
+  Monitor
 } from 'lucide-react';
 
 // Re-export common icons for easy use
@@ -37,7 +42,12 @@ export {
   Phone,
   Globe,
   Calendar,
-  Briefcase
+  Briefcase,
+  Sparkles,
+  ArrowRight,
+  User,
+  BarChart3,
+  Monitor
 };
 
 // Custom icon components
@@ -46,6 +56,10 @@ export const StarIcon = ({ filled = false, className = '' }: { filled?: boolean;
     className={className} 
     fill={filled ? 'currentColor' : 'none'} 
   />
+);
+
+export const BriefcaseIcon = ({ className = '' }: { className?: string }) => (
+  <Briefcase className={className} />
 );
 
 export const LocationIcon = ({ className = '' }: { className?: string }) => (
