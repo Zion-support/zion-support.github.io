@@ -1,195 +1,235 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Users, Award, Globe, Zap } from 'lucide-react';
+import React, { memo, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const About: React.FC = () => {
-  const values = [
+// Team member card component
+const TeamMember = memo<{ 
+  name: string; 
+  role: string; 
+  expertise: string[];
+  avatar: string;
+}>(({ name, role, expertise, avatar }) => (
+  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+    <div className="text-center">
+      <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+        {avatar}
+      </div>
+      <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
+      <p className="text-blue-300 mb-4">{role}</p>
+      <div className="flex flex-wrap gap-2 justify-center">
+        {expertise.map((skill, index) => (
+          <span 
+            key={index}
+            className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+));
+
+TeamMember.displayName = 'TeamMember';
+
+// Stats counter component
+const StatCounter = memo<{ 
+  value: number; 
+  label: string; 
+  suffix?: string;
+}>(({ value, label, suffix = '' }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const duration = 2000;
+    const steps = 60;
+    const increment = value / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= value) {
+        setCount(value);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [value]);
+
+  return (
+    <div className="text-center">
+      <div className="text-4xl font-bold text-white mb-2">
+        {count}{suffix}
+      </div>
+      <div className="text-blue-300">{label}</div>
+    </div>
+  );
+});
+
+StatCounter.displayName = 'StatCounter';
+
+const About: React.FC = memo(() => {
+  const teamMembers = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation First",
-      description: "We stay at the forefront of technology, constantly exploring new ways to solve complex problems."
+      name: 'Sarah Chen',
+      role: 'AI Research Director',
+      expertise: ['Machine Learning', 'Neural Networks', 'Quantum Computing'],
+      avatar: '👩‍💻'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Client-Centric",
-      description: "Your success is our success. We build lasting partnerships based on trust and results."
+      name: 'Marcus Rodriguez',
+      role: 'CTO & Lead Architect',
+      expertise: ['Cloud Infrastructure', 'DevOps', 'Security'],
+      avatar: '👨‍💼'
     },
     {
-      icon: <Award className="w-8 h-8" />,
-      title: "Excellence",
-      description: "We maintain the highest standards in everything we do, from code quality to customer service."
+      name: 'Dr. Emily Watson',
+      role: 'Quantum Computing Specialist',
+      expertise: ['Quantum Algorithms', 'Physics', 'Research'],
+      avatar: '👩‍🔬'
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Impact",
-      description: "We believe technology should make the world better, one solution at a time."
+      name: 'Alex Thompson',
+      role: 'Micro SaaS Lead',
+      expertise: ['Full-Stack', 'API Design', 'Scalability'],
+      avatar: '👨‍💻'
     }
   ];
 
-  const team = [
+  const values = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      bio: "15+ years in tech leadership, former Google AI researcher"
+      icon: '🚀',
+      title: 'Innovation First',
+      description: 'We pioneer cutting-edge technologies and solutions that transform industries and drive digital evolution.'
     },
     {
-      name: "Michael Chen",
-      role: "CTO",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      bio: "Expert in scalable architecture and cloud technologies"
+      icon: '✅',
+      title: 'Quality Assured',
+      description: 'Every solution undergoes rigorous testing and quality assurance to ensure optimal performance and reliability.'
     },
     {
-      name: "Emily Rodriguez",
-      role: "Head of AI",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      bio: "PhD in Machine Learning, published researcher"
+      icon: '👥',
+      title: 'Expert Team',
+      description: 'Our team of industry experts brings decades of experience in technology, innovation, and business solutions.'
     },
     {
-      name: "David Kim",
-      role: "Lead Developer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      bio: "Full-stack expert with passion for clean code"
+      icon: '🔒',
+      title: 'Security Focused',
+      description: 'We prioritize security and compliance in every solution we deliver, ensuring your data and systems are protected.'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-200 mb-8 max-w-4xl mx-auto">
-            We're a team of passionate technologists dedicated to transforming businesses through innovative AI and IT solutions.
-          </p>
-        </div>
-      </section>
+      <div className="text-center py-20">
+        <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent">
+          About Zion Tech Group
+        </h1>
+        <p className="text-2xl md:text-3xl text-blue-200 mb-4 font-light">
+          Leading the Future of Technology
+        </p>
+        <p className="text-lg text-blue-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          We are a cutting-edge technology company dedicated to transforming businesses through innovative AI solutions, 
+          robust IT infrastructure, and scalable Micro SaaS platforms. Our mission is to empower organizations 
+          with the tools they need to thrive in the digital age.
+        </p>
+      </div>
 
-      {/* Mission Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Our Mission
-              </h2>
-              <p className="text-xl text-blue-200 mb-6">
-                To democratize advanced technology and make it accessible to businesses of all sizes. We believe that every company, regardless of size, should have access to cutting-edge AI and IT solutions that can transform their operations and drive growth.
-              </p>
-              <p className="text-lg text-blue-300 mb-8">
-                Founded in 2020, we've helped over 500 companies leverage technology to achieve their goals. From startups to Fortune 500 companies, we've delivered solutions that matter.
-              </p>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center space-x-2 text-lg font-semibold">
-                <span>Our Story</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-300 mb-2">500+</div>
-                  <div className="text-sm text-blue-200">Projects Delivered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-300 mb-2">50+</div>
-                  <div className="text-sm text-blue-200">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-300 mb-2">99%</div>
-                  <div className="text-sm text-blue-200">Success Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-yellow-300 mb-2">24/7</div>
-                  <div className="text-sm text-blue-200">Support</div>
-                </div>
-              </div>
-            </div>
+      {/* Stats Section */}
+      <div className="max-w-6xl mx-auto px-4 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <StatCounter value={500} label="Projects Delivered" suffix="+" />
+          <StatCounter value={150} label="Happy Clients" suffix="+" />
+          <StatCounter value={8} label="Years Experience" suffix="+" />
+          <StatCounter value={50} label="Team Members" suffix="+" />
+        </div>
+      </div>
+
+      {/* Mission & Vision */}
+      <div className="max-w-6xl mx-auto px-4 mb-20">
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="text-4xl mb-4">🎯</div>
+            <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+            <p className="text-blue-200 leading-relaxed">
+              To empower businesses and organizations with transformative technology solutions that drive growth, 
+              efficiency, and innovation in an ever-evolving digital landscape. We believe technology should 
+              be accessible, powerful, and transformative.
+            </p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="text-4xl mb-4">🔮</div>
+            <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
+            <p className="text-blue-200 leading-relaxed">
+              To be the global leader in AI-powered business solutions, setting the standard for innovation, 
+              quality, and customer success. We envision a future where technology seamlessly integrates 
+              with human potential to create extraordinary outcomes.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Values Section */}
-      <section className="py-20 px-4 bg-black/20">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Our Values
-            </h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              The principles that guide everything we do
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="text-blue-400 mb-4 flex justify-center">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-4">{value.title}</h3>
-                <p className="text-blue-200 text-sm">{value.description}</p>
-              </div>
-            ))}
-          </div>
+      <div className="max-w-6xl mx-auto px-4 mb-20">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Core Values</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {values.map((value, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-3xl mb-4">{value.icon}</div>
+              <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+              <p className="text-blue-200 text-sm leading-relaxed">{value.description}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
       {/* Team Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              The brilliant minds behind our innovative solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                <div className="text-blue-300 mb-3">{member.role}</div>
-                <p className="text-blue-200 text-sm">{member.bio}</p>
-              </div>
-            ))}
-          </div>
+      <div className="max-w-6xl mx-auto px-4 mb-20">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">Meet Our Team</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamMembers.map((member, index) => (
+            <TeamMember
+              key={index}
+              name={member.name}
+              role={member.role}
+              expertise={member.expertise}
+              avatar={member.avatar}
+            />
+          ))}
         </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl p-12 border border-white/20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with our innovative solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center space-x-2 text-lg font-semibold">
-                <span>Start a Project</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <a href="/contact" className="border-2 border-white/30 px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-300 text-lg font-semibold">
-                Contact Us
-              </a>
-            </div>
+      <div className="max-w-4xl mx-auto px-4 text-center mb-20">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-blue-200 mb-8">
+            Let's discuss how our innovative solutions can drive your success.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            >
+              Get in Touch
+            </Link>
+            <Link 
+              to="/services" 
+              className="border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            >
+              View Our Services
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
-};
+});
+
+About.displayName = 'About';
 
 export default About;
