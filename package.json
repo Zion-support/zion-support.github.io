@@ -24,6 +24,8 @@
     "build": "NODE_ENV=production vite build",
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
     "build:preview": "npm run build && npm run preview",
+    "build:prod": "NODE_ENV=production vite build --mode production",
+    "build:staging": "NODE_ENV=production vite build --mode staging",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
@@ -41,7 +43,8 @@
     "clean": "rm -rf dist node_modules/.vite",
     "prebuild": "echo 'Preparing build...' && npm run clean:dist",
     "clean:dist": "rm -rf dist",
-    "postbuild": "echo 'Build completed successfully'"
+    "postbuild": "echo 'Build completed successfully' && npm run build:size",
+    "build:size": "echo 'Bundle size analysis:' && du -sh dist/ && echo 'Gzipped size:' && gzip -c dist/assets/*.js | wc -c | awk '{print $1/1024 \" KB\"}' || echo 'Gzip not available'"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
