@@ -25106,3 +25106,20 @@ fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-7d26
 [2025-09-08T21:34:16.073Z] ✅ Success: Get git status
 [2025-09-08T21:34:16.073Z] 📄 Found 0 conflicted files
 [2025-09-08T21:34:16.073Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:34:16.171Z] ✅ Success: Add resolved files
+[2025-09-08T21:34:16.171Z] 🚀 Commit merge for cursor/fix-netlify-build-and-merge-to-main-7d26: git commit -m "Resolve conflicts and merge cursor/fix-netlify-build-and-merge-to-main-7d26"
+[2025-09-08T21:34:16.243Z] ✅ Success: Commit merge for cursor/fix-netlify-build-and-merge-to-main-7d26
+[2025-09-08T21:34:16.244Z] ✅ Successfully resolved conflicts and merged: cursor/fix-netlify-build-and-merge-to-main-7d26
+[2025-09-08T21:34:16.244Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-7f8b
+[2025-09-08T21:34:16.244Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-7f8b: git fetch origin cursor/fix-netlify-build-and-merge-to-main-7f8b
+[2025-09-08T21:34:16.355Z] ❌ Error in Fetch origin/cursor/fix-netlify-build-and-merge-to-main-7f8b: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-7f8b
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-7f8b
+
+[2025-09-08T21:34:16.355Z] ❌ Failed to merge cursor/fix-netlify-build-and-merge-to-main-7f8b: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-7f8b
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-7f8b
+
+[2025-09-08T21:34:16.355Z] 🔧 Attempting to resolve conflicts for: cursor/fix-netlify-build-and-merge-to-main-7f8b
+[2025-09-08T21:34:16.355Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:34:16.399Z] ✅ Success: Get git status
+[2025-09-08T21:34:16.399Z] 📄 Found 0 conflicted files
+[2025-09-08T21:34:16.399Z] 🚀 Add resolved files: git add .
