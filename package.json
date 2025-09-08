@@ -39,7 +39,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
-    "prebuild": "echo 'Skipping type-check and lint for build'",
+    "prebuild": "echo 'Preparing build...' && npm run clean:dist",
+    "clean:dist": "rm -rf dist",
     "postbuild": "echo 'Build completed successfully'"
   },
   "dependencies": {
