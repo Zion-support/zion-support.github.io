@@ -30,12 +30,6 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
-<<<<<<< HEAD
-    "prebuild": "echo 'Skipping prebuild checks'",
-    "postbuild": "echo 'Build completed successfully' && npm run optimize",
-    "optimize": "node scripts/optimize-build.js",
-    "build:optimize": "npm run build && npm run optimize"
-=======
     "prebuild": "echo 'Skipping type-check and lint for build compatibility'",
     "postbuild": "echo 'Build completed successfully' && npm run optimize && npm run perf:check",
     "health": "node -e \"console.log('✅ Node.js:', process.version); console.log('✅ NPM:', process.env.npm_version || 'unknown'); console.log('✅ Build status: OK');\"",
@@ -50,7 +44,6 @@
     "generate:manifest": "node scripts/generate-manifest.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:robots": "node scripts/generate-robots.js"
->>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
