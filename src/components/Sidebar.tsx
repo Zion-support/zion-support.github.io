@@ -80,35 +80,21 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     },
     {
       name: 'Services',
-      items: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, badge: 'New' },
-        { name: 'IT Services', href: '/it-services', icon: Cpu, badge: null },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, badge: 'Popular' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, badge: null },
-        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield, badge: 'Hot' }
-      ],
-      expandable: true,
-      expandedItems: [
-        {
-          title: 'AI Solutions',
-          items: [
-            { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3 },
-            { name: 'AI Content Creation', href: '/services/ai-content-marketing-suite', icon: PenTool },
-            { name: 'AI Project Management', href: '/services/ai-project-management', icon: Workflow },
-            { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
-            { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart }
-          ]
-        },
-        {
-          title: 'Specialized Services',
-          items: [
-            { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-            { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Cpu },
-            { name: 'Space Technology', href: '/services/space-tech', icon: Satellite },
-            { name: 'Green Technology', href: '/services/sustainable-technology', icon: Leaf },
-            { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp }
-          ]
-        }
+      href: '/services',
+      icon: Zap,
+      description: 'Our technology services',
+      subItems: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Globe },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Rocket },
+        { name: 'New Services 2025', href: '/new-services-2025', icon: Star }
       ]
     },
     {
