@@ -1,6 +1,6 @@
 [build]
-  # Do not run any build. Deploy the prebuilt dist/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt dist'"
+  # Deploy prebuilt assets from dist without running a build on Netlify
+  command = "echo Skipping build; deploying prebuilt dist"
   publish = "dist"
   command_timeout = "30m"
 
