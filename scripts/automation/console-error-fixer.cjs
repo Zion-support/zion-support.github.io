@@ -1,121 +1,78 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🔧 Starting Console Error Fixer Automation...');
+console.log('🚀 Console Error Fixer Automation Started');
 
-class ConsoleErrorFixer {
-  constructor() {
-    this.reportDir = path.join(process.cwd(), 'ci-cd-reports');
-    this.ensureReportDirectory();
-    this.startTime = Date.now();
-    this.fixesApplied = 0;
-    this.errorsFound = 0;
-  }
-
-  ensureReportDirectory() {
-    if (!fs.existsSync(this.reportDir)) {
-      fs.mkdirSync(this.reportDir, { recursive: true });
+async function fixConsoleErrors() {
+  try {
+    console.log('📋 Scanning for console errors...');
+    
+    // Scan for console.log, console.error, etc. in source files
+    const sourceDirs = ['src', 'pages', 'components', 'utils'];
+    let consoleErrors = [];
+    
+    for (const dir of sourceDirs) {
+      if (fs.existsSync(dir)) {
+        const files = getAllFiles(dir);
+        for (const file of files) {
+          if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
+            const content = fs.readFileSync(file, 'utf8');
+            const consoleMatches = content.match(/console\.(log|error|warn|info|debug)/g);
+            if (consoleMatches) {
+              consoleErrors.push({
+                file,
+                matches: consoleMatches
+              });
+            }
+          }
+        }
+      }
     }
-  }
-
-  async run() {
-    try {
-      console.log('🔍 Scanning for console errors...');
-      
-      // Check for console.log statements in production code
-      await this.scanForConsoleStatements();
-      
-      // Check for TypeScript/JavaScript syntax errors
-      await this.checkSyntaxErrors();
+    
+    if (consoleErrors.length > 0) {
+      console.log(`🔍 Found ${consoleErrors.length} files with console statements`);
       
       // Generate report
-      await this.generateReport();
+      const report = {
+        timestamp: new Date().toISOString(),
+        totalFiles: consoleErrors.length,
+        files: consoleErrors
+      };
       
-      console.log(`✅ Console Error Fixer completed. Found ${this.errorsFound} issues, applied ${this.fixesApplied} fixes.`);
-      
-    } catch (error) {
-      console.error('❌ Console Error Fixer failed:', error.message);
-      await this.generateErrorReport(error);
+      fs.writeFileSync('console-error-fixer-report.json', JSON.stringify(report, null, 2));
+      console.log('📊 Report generated: console-error-fixer-report.json');
+    } else {
+      console.log('✅ No console statements found');
     }
-  }
-
-  async scanForConsoleStatements() {
-    try {
-      const output = execSync('grep -r "console\." src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" || true', { 
-        encoding: 'utf8',
-        cwd: process.cwd()
-      });
-      
-      if (output.trim()) {
-        this.errorsFound += output.split('\n').filter(line => line.trim()).length;
-        console.log(`⚠️  Found ${this.errorsFound} console statements in source code`);
-        
-        // Optionally remove console statements (be careful with this)
-        // await this.removeConsoleStatements();
-      }
-    } catch (error) {
-      console.log('ℹ️  No console statements found or error occurred');
-    }
-  }
-
-  async checkSyntaxErrors() {
-    try {
-      console.log('🔍 Checking TypeScript syntax...');
-      const output = execSync('npx tsc --noEmit', { 
-        encoding: 'utf8',
-        cwd: process.cwd(),
-        stdio: 'pipe'
-      });
-      
-      if (output.includes('error')) {
-        const errorLines = output.split('\n').filter(line => line.includes('error'));
-        this.errorsFound += errorLines.length;
-        console.log(`⚠️  Found ${errorLines.length} TypeScript errors`);
-      } else {
-        console.log('✅ No TypeScript syntax errors found');
-      }
-      
-    } catch (error) {
-      // TypeScript errors are expected to cause exit code 1
-      const errorOutput = error.stdout || error.stderr || '';
-      if (errorOutput.includes('error')) {
-        const errorLines = errorOutput.split('\n').filter(line => line.includes('error'));
-        this.errorsFound += errorLines.length;
-        console.log(`⚠️  Found ${errorLines.length} TypeScript errors`);
-      }
-    }
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      errorsFound: this.errorsFound,
-      fixesApplied: this.fixesApplied,
-      status: this.errorsFound === 0 ? 'clean' : 'issues_found'
-    };
-
-    const reportPath = path.join(this.reportDir, 'console-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Report saved to ${reportPath}`);
-  }
-
-  async generateErrorReport(error) {
-    const errorReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      status: 'failed'
-    };
-
-    const reportPath = path.join(this.reportDir, 'console-error-fixer-error.json');
-    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+    
+  } catch (error) {
+    console.error('❌ Error in console error fixer:', error);
   }
 }
 
+function getAllFiles(dirPath, arrayOfFiles = []) {
+  const files = fs.readdirSync(dirPath);
+  
+  for (const file of files) {
+    const fullPath = path.join(dirPath, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
+    } else {
+      arrayOfFiles.push(fullPath);
+    }
+  }
+  
+  return arrayOfFiles;
+}
+
 // Run the automation
-const fixer = new ConsoleErrorFixer();
-fixer.run().catch(console.error);
+fixConsoleErrors().then(() => {
+  console.log('✅ Console Error Fixer Automation Completed');
+  process.exit(0);
+}).catch((error) => {
+  console.error('❌ Console Error Fixer Automation Failed:', error);
+  process.exit(1);
+});

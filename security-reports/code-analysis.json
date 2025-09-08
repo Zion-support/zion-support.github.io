@@ -62,7 +62,7 @@
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
       "file": "/workspace/src/main.jsx",
-      "line": 70
+      "line": 69
     }
   ],
   "summary": {

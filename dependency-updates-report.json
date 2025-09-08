@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-08-29T14:18:19.487Z",
+  "totalChecks": 2,
+  "results": [
+    {
+      "type": "outdated-check",
+      "result": "No outdated packages found"
+    },
+    {
+      "type": "security-check",
+      "result": "Security vulnerabilities checked"
+    }
+  ]
+}
