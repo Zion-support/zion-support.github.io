@@ -1,14 +1,19 @@
 [build]
   # Install Python dependencies first, then Node.js dependencies and build
-  # Use python -m pip to avoid mise shim issues during Netlify dependency phase
-  command = "python -m pip install -r requirements.txt && npm ci && npm run build"
+  # Explicitly use system Python to avoid mise shim issues
+  command = "/usr/bin/python3 -m pip install -r requirements.txt && npm ci && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   MISE_PYTHON_COMPILE = "false"
-  # Force mise to use system Python even during Netlify's dependency stage
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
+  NETLIFY_SKIP_INSTALL = "true"
+  # Disable mise shims entirely during Netlify builds
+  MISE_DISABLE = "1"
+  MISE_SHIMS = "0"
+  # Force mise to use system Python even during Netlify's dependency stage (defensive)
   MISE_TOOL_VERSIONS__python = "system"
 
 [[plugins]]
