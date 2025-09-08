@@ -1,8 +1,12 @@
 [build]
 <<<<<<< HEAD
+  # Build the project on Netlify
+=======
+<<<<<<< HEAD
   # Build the Vite project on Netlify
 =======
   # Build the project on Netlify
+>>>>>>> main
 >>>>>>> main
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
@@ -28,8 +32,11 @@
   command = "npm ci --no-audit --no-fund && npm run build"
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 # Vite/React SPA configuration
 =======
+>>>>>>> main
 # Vite/React SPA configuration
 
 
