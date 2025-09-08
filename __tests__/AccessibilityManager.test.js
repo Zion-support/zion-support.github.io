@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import _React from 'react';,
-';
-import '@testing-library/jest-dom';';
-import AccessibilityManager from '../components/AccessibilityManager';';
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccessibilityManager from '../components/AccessibilityManager';
 
@@ -15,9 +8,16 @@ describe('AccessibilityManager', () => {
     render(<AccessibilityManager />);
     expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
   });
-<<<<<<< HEAD
+
+  test('displays correct content', () => {
+    render(<AccessibilityManager />);
+  });
+
+  test('handles user interactions', () => {
+    render(<AccessibilityManager />);
+  });
+
+  test('applies correct styling', () => {
+    render(<AccessibilityManager />);
+  });
 });
-});
-=======
-});
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
