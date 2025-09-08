@@ -121,11 +121,15 @@ import {
     }
   ];
 
-  const quickActions = [
-    { name: "Request Quote", href: "/request-quote", icon: TrendingUp, color: "from-blue-500 to-cyan-500" },
-    { name: "Get Started", href: "/signup", icon: Rocket, color: "from-purple-500 to-pink-500" },
-    { name: "Browse Marketplace", href: "/marketplace", icon: Store, color: "from-green-500 to-emerald-500" },
-    { name: "Find Experts", href: "/talent", icon: Users, color: "from-orange-500 to-red-500" }
+  const quickLinks = [
+    { name: "Get Started", href: "/get-started", icon: Rocket },
+    { name: "Request Quote", href: "/request-quote", icon: TrendingUp },
+    { name: "Pricing Guide", href: "/pricing", icon: BarChart3 },
+    { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
+    { name: "All Services", href: "/services", icon: Zap },
+    { name: "Support Center", href: "/help", icon: HelpCircle },
+    { name: "Research Hub", href: "/research", icon: Lightbulb },
+    { name: "Innovation Showcase", href: "/comprehensive-services-showcase-2025", icon: Star }
   ];
 
   const socialLinks = [
@@ -137,8 +141,127 @@ import {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 border-t border-zinc-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gradient-to-br from-zion-slate-darker via-zion-blue-dark to-zion-slate-darker border-t border-zion-purple/30 relative">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+          {/* Company Info - Spans 2 columns on large screens */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">
+                <Globe className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <span className="text-2xl font-bold bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+                <div className="text-xs text-zion-cyan font-medium">Innovation • Technology • Growth</div>
+              </div>
+            </div>
+            
+            <p className="text-zinc-300 mb-8 max-w-md leading-relaxed">
+              Transforming businesses through innovative AI, cloud, and technology solutions. 
+              We help organizations of all sizes accelerate their digital transformation journey 
+              with cutting-edge technology and expert guidance.
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
+                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
+                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <a href="tel:+13024640950" className="hover:underline">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <div className="p-2 bg-zion-purple/20 rounded-lg">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <span>Delaware, United States</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="space-y-4">
+              <h4 className="text-white font-semibold text-sm">Follow Us</h4>
+              <div className="flex items-center space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-zion-purple/20 rounded-lg text-zion-slate-light hover:bg-zion-cyan/20 hover:text-zion-cyan transition-all duration-300 hover:scale-110"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Sections - Each spans 1 column */}
+          {footerSections.map((section, index) => (
+            <div key={section.title} className="space-y-4">
+              <div className="flex items-center space-x-2 pb-2 border-b border-zion-purple/20">
+                <section.icon className="w-4 h-4 text-zion-cyan" />
+                <h4 className="text-white font-semibold text-sm">{section.title}</h4>
+              </div>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="flex items-center space-x-2 text-zinc-400 hover:text-zion-cyan transition-colors text-sm group"
+                    >
+                      {link.icon && <link.icon className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity" />}
+                      <span className="hover:underline">{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Quick Links Section */}
+        <div className="border-t border-zion-purple/20 pt-8 mb-8">
+          <div className="flex items-center space-x-2 mb-6">
+            <Zap className="w-5 h-5 text-zion-cyan" />
+            <h4 className="text-white font-semibold">Quick Access</h4>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="flex items-center space-x-2 p-3 bg-zion-purple/10 rounded-lg border border-zion-purple/20 hover:bg-zion-purple/20 hover:border-zion-cyan/30 transition-all duration-300 group"
+              >
+                <link.icon className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform" />
+                <span className="text-zinc-300 group-hover:text-white transition-colors text-sm font-medium">
+                  {link.name}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 mb-12 border border-cyan-500/20">
           <div className="text-center max-w-2xl mx-auto">

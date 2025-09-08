@@ -2,12 +2,38 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  X, ChevronDown, ChevronRight, Home, Brain, Server, Cloud, 
-  Shield, Zap, Rocket, Heart, DollarSign, Building2, ShoppingCart,
-  Building, Users, Handshake, Briefcase, Newspaper, BookOpen, 
-  FileText, Video, GraduationCap, HelpCircle, MessageCircle, 
-  Activity, Code, Settings, Star, TrendingUp, Award, Globe,
-  Lock, Atom, Cpu, Database, Network, Clock, ArrowRight
+  X, 
+  Home, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Atom, 
+  Rocket, 
+  Code, 
+  Target, 
+  Users, 
+  MessageCircle, 
+  BookOpen, 
+  HelpCircle, 
+  DollarSign, 
+  Settings, 
+  User, 
+  Bell, 
+  Search, 
+  Star, 
+  TrendingUp, 
+  Award, 
+  Globe, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  ChevronRight,
+  ChevronDown,
+  Plus,
+  Minus,
+  Lightbulb
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -37,7 +63,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const navigationSections = [
+  const mainNavigation = [
+    { name: 'Home', href: '/', icon: Home, badge: null },
+    { name: 'Services', href: '/services', icon: Zap, badge: 'New', hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', icon: Target, badge: null },
+    { name: 'Research', href: '/research', icon: Lightbulb, badge: 'Hot' },
+    { name: 'About', href: '/about', icon: Users, badge: null },
+    { name: 'Contact', href: '/contact', icon: MessageCircle, badge: null },
+    { name: 'Blog', href: '/blog', icon: BookOpen, badge: null },
+    { name: 'Help Center', href: '/help', icon: HelpCircle, badge: null },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign, badge: null },
+  ];
+
+  const serviceCategories = [
     {
       id: 'main',
       title: 'Main',
@@ -104,9 +142,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const quickActions = [
-    { name: 'Request Demo', href: '/request-demo', icon: Star, color: 'bg-gradient-to-r from-blue-600 to-purple-600' },
-    { name: 'Get Quote', href: '/get-quote', icon: TrendingUp, color: 'bg-gradient-to-r from-green-600 to-emerald-600' },
-    { name: 'Contact Sales', href: '/contact-sales', icon: MessageCircle, color: 'bg-gradient-to-r from-orange-600 to-red-600' }
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, color: 'bg-blue-500' },
+    { name: 'Research Hub', href: '/research', icon: Lightbulb, color: 'bg-purple-500' },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Users, color: 'bg-green-500' },
+    { name: 'Support Chat', href: '/support', icon: HelpCircle, color: 'bg-orange-500' },
+    { name: 'Innovation Showcase', href: '/comprehensive-services-showcase-2025', icon: Star, color: 'bg-cyan-500' },
+    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'bg-indigo-500' }
   ];
 
   const featuredServices = [
