@@ -1,40 +1,42 @@
-# PM2 Automation Setup
+# PM2 Automation System
 
-This document describes the PM2 automation system that has replaced the GitHub Actions workflows.
+This document describes the PM2 automation system that has replaced the GitHub Actions workflows for CI/CD pipeline management.
 
 ## Overview
 
-The following GitHub Actions workflows have been replaced with PM2 automation:
+The PM2 automation system provides the same functionality as the previous GitHub Actions workflows but runs locally with PM2 process management. This gives you more control over your deployment process and reduces dependency on external CI/CD services.
 
-- **CI Workflow** → `ci-automation` (runs every 6 hours)
-- **Deploy Workflow** → `deploy-automation` (runs on demand)
-- **Dependencies Workflow** → `dependency-automation` (runs every Monday at 2 AM)
+## What PM2 Replaces
 
-## PM2 Processes
+The following GitHub Actions workflows have been replaced:
 
-### Current Running Processes
+- **CI Workflow** (`ci.yml`) - Code quality, building, and testing
+- **Deploy Workflow** (`deploy.yml`) - Production deployment
+- **CI/CD Pipeline** (`ci-cd.yml`) - Full CI/CD pipeline with performance testing
+- **Test Workflow** (`test.yml`) - Testing automation
 
-1. **zion-app** - Main application (development mode)
-2. **ci-automation** - Continuous Integration automation
-3. **dependency-automation** - Dependency management automation
-4. **deploy-automation** - Deployment automation
+## Files Created
 
-### Automation Scripts
+1. **`ecosystem.config.js`** - PM2 ecosystem configuration
+2. **`pm2-automation.sh`** - Automation script for CI/CD pipeline
+3. **`PM2_AUTOMATION_README.md`** - This documentation file
 
-- `scripts/ci-automation.sh` - Runs linting, type checking, building, and testing
-- `scripts/deploy-automation.sh` - Handles deployment process
-- `scripts/dependency-automation.sh` - Updates dependencies and runs security audits
+## Prerequisites
 
-## Commands
+- Node.js 18+ installed
+- PM2 installed globally: `npm install -g pm2`
+- Git repository with proper access
 
-### Check Status
+## Quick Start
+
+### 1. Start the PM2 Daemon
 ```bash
-pm2 status
+pm2 start
 ```
 
-### View Logs
+### 2. Run the Full CI/CD Pipeline
 ```bash
-pm2 logs [process-name]
+./pm2-automation.sh main
 ```
 scripts/automation/
 ├── enhanced-error-fixer.cjs          # Main error fixer (highest priority)
@@ -47,63 +49,178 @@ scripts/automation/
 ├── run-all-fixes.sh                 # Comprehensive fixing script
 └── ... (other automation scripts)
 
-### Restart Process
+### 3. Check Status
 ```bash
-pm2 restart [process-name]
+./pm2-automation.sh status
 ```
 
-### Stop Process
+## Available Commands
+
+### Main Operations
+- **`./pm2-automation.sh main`** - Run full CI/CD pipeline (default)
+- **`./pm2-automation.sh production`** - Deploy to production
+- **`./pm2-automation.sh watch`** - Start in development watch mode
+
+### Monitoring & Management
+- **`./pm2-automation.sh health`** - Run health checks
+- **`./pm2-automation.sh monitor`** - Start performance monitoring
+- **`./pm2-automation.sh status`** - Show PM2 status
+- **`./pm2-automation.sh logs`** - Show PM2 logs
+
+### Application Control
+- **`./pm2-automation.sh restart`** - Restart the application
+- **`./pm2-automation.sh stop`** - Stop the application
+- **`./pm2-automation.sh delete`** - Remove from PM2
+
+## What Each Command Does
+
+### Full CI/CD Pipeline (`main`)
+1. ✅ Checks PM2 status
+2. 📦 Installs dependencies (`npm ci`)
+3. 🔍 Runs ESLint (`npm run lint`)
+4. 🔍 Runs TypeScript type checking (`npm run type-check`)
+5. 🔒 Runs security audit (`npm audit`)
+6. 🏗️ Builds the application (`npm run build`)
+7. 🧪 Runs tests (`npm test`)
+8. 🚀 Deploys with PM2
+9. 🏥 Runs health checks
+
+### Production Deployment (`production`)
+1. Runs the full CI/CD pipeline
+2. Switches to production environment
+3. Ensures production settings are applied
+
+### Watch Mode (`watch`)
+1. Starts the application in development mode
+2. Enables file watching for automatic restarts
+3. Perfect for development workflow
+
+## PM2 Ecosystem Configuration
+
+The `ecosystem.config.js` file defines:
+
+- **Application settings**: Name, script, instances, memory limits
+- **Environment variables**: Development vs production
+- **Deployment configuration**: Git integration, deployment paths
+- **Automation scripts**: PM2-specific automation commands
+
+## Environment Variables
+
+- **Development**: `NODE_ENV=development`, `PORT=3000`
+- **Production**: `NODE_ENV=production`, `PORT=3000`
+
+## Memory Management
+
+- **Max Memory Restart**: 1GB
+- **Node Options**: `--max-old-space-size=6144 --openssl-legacy-provider`
+
+## Monitoring & Logs
+
+### View Application Status
 ```bash
-pm2 stop [process-name]
+pm2 status
 ```
 
-### Start Process
+### View Real-time Logs
 ```bash
-pm2 start [process-name]
+pm2 logs
 ```
 
-### Save Configuration
+### Monitor Performance
 ```bash
-pm2 save
+pm2 monit
 ```
 
-### Load Configuration
+### View Specific App Logs
 ```bash
-pm2 resurrect
-```
-
-## Scheduling
-
-- **CI Automation**: Every 6 hours (`0 */6 * * *`)
-- **Dependency Management**: Every Monday at 2 AM (`0 2 * * 1`)
-- **Deploy Automation**: Manual trigger only
-
-## Benefits of PM2 over GitHub Actions
-
-1. **Faster execution** - No need to wait for GitHub Actions queue
-2. **Cost effective** - No GitHub Actions minutes consumed
-3. **Real-time monitoring** - Live process monitoring and logs
-4. **Immediate feedback** - Instant execution and results
-5. **Resource control** - Better resource management and optimization
-
-## Maintenance
-
-The PM2 processes are configured to auto-restart on failure and are saved to persist across server reboots.
-
-To ensure the automation continues working after server restarts:
-```bash
-pm2 startup
-pm2 save
+pm2 logs bolt-new-zion-app
 ```
 
 ## Troubleshooting
 
-If a process fails:
-1. Check logs: `pm2 logs [process-name]`
-2. Restart: `pm2 restart [process-name]`
-3. Check status: `pm2 status`
+### PM2 Not Running
+```bash
+pm2 start
+```
 
-For dependency issues:
-1. Run: `npm ci` to clean install
-2. Check for conflicts: `npm ls`
-3. Update lockfile: `rm package-lock.json && npm install`
+### Application Won't Start
+```bash
+pm2 logs bolt-new-zion-app
+pm2 restart bolt-new-zion-app
+```
+
+### Memory Issues
+```bash
+pm2 restart bolt-new-zion-app
+pm2 reload bolt-new-zion-app
+```
+
+### Reset PM2
+```bash
+pm2 kill
+pm2 start
+```
+
+## Integration with Git Hooks
+
+You can integrate PM2 automation with Git hooks for automatic deployment:
+
+### Pre-commit Hook
+```bash
+#!/bin/bash
+./pm2-automation.sh test:auto
+```
+
+### Post-merge Hook
+```bash
+#!/bin/bash
+./pm2-automation.sh deploy:auto
+```
+
+## Comparison with GitHub Actions
+
+| Feature | GitHub Actions | PM2 Automation |
+|---------|----------------|----------------|
+| **Trigger** | Git events | Manual/scripted |
+| **Environment** | Cloud runners | Local server |
+| **Cost** | Free tier limits | No additional cost |
+| **Control** | Limited | Full control |
+| **Speed** | Depends on queue | Immediate |
+| **Security** | GitHub managed | Self-managed |
+| **Customization** | YAML constraints | Full flexibility |
+
+## Benefits of PM2 Automation
+
+1. **Cost Effective**: No GitHub Actions minutes consumption
+2. **Faster Execution**: No queue waiting, runs immediately
+3. **Full Control**: Complete control over the deployment process
+4. **Local Development**: Can test deployment locally before production
+5. **Process Management**: Built-in process monitoring and restart
+6. **Flexibility**: Easy to modify and extend automation logic
+
+## Security Considerations
+
+- Keep PM2 automation scripts secure
+- Use environment variables for sensitive data
+- Regularly update dependencies
+- Monitor PM2 logs for suspicious activity
+
+## Next Steps
+
+1. **Test the automation**: Run `./pm2-automation.sh main`
+2. **Customize the configuration**: Modify `ecosystem.config.js`
+3. **Set up monitoring**: Use `./pm2-automation.sh monitor`
+4. **Integrate with Git hooks**: Add automation to your Git workflow
+5. **Delete GitHub Actions**: Remove the `.github/workflows/` directory
+
+## Support
+
+For issues with PM2 automation:
+1. Check PM2 status: `pm2 status`
+2. View logs: `pm2 logs`
+3. Check the automation script: `./pm2-automation.sh --help`
+4. Restart PM2: `pm2 kill && pm2 start`
+
+---
+
+**Note**: This system replaces GitHub Actions workflows. Make sure to test thoroughly before deleting the original workflows.
