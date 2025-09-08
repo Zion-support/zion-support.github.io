@@ -82,78 +82,55 @@ import {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-      title: "AI & Technology Services",
-      icon: Brain,
-      links: [
-        { label: "AI Content Hub Pro", path: "/services/ai-content-hub-pro" },
-        { label: "AI Customer Service Automation", path: "/services/ai-customer-service-automation" },
-        { label: "AI Sales Intelligence Platform", path: "/services/ai-sales-intelligence-platform" },
-        { label: "AI Fintech Platform", path: "/services/ai-fintech-platform" },
-        { label: "AI Healthcare Technology", path: "/services/ai-healthcare-tech-platform" },
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
-        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
-      ]
-    },
-    {
-      title: "Specialized IT Services",
-      links: [
-        { label: "Cloud Cost Optimization", path: "/services/cloud-cost-optimization-finops" },
-        { label: "DevOps Automation Platform", path: "/services/devops-automation-cicd-platform" },
-        { label: "Data Analytics Platform", path: "/services/data-analytics-business-intelligence" },
-        { label: "IoT & Edge Computing", path: "/services/iot-edge-computing-platform" },
-        { label: "API Management Platform", path: "/services/api-management-integration-platform" },
-        { label: "Advanced Cybersecurity", path: "/services/advanced-cybersecurity-platform" },
-        { label: "5G Enterprise Networks", path: "/services/5g-enterprise-network-solutions" }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Building,
-      links: [
-        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
-        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/solutions/financial" },
-        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
-        { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
   const footerSections = [
     {
-      title: "Marketplace",
+      title: "AI & Machine Learning",
       links: [
-        { label: "AI & ML Services", href: "/micro-saas-services" },
-        { label: "IT Services", href: "/services" },
-        { label: "Cloud Solutions", href: "/services" },
-        { label: "Cybersecurity", href: "/services" },
-        { label: "DevOps Automation", href: "/services" },
-        { label: "Data Analytics", href: "/services" },
+        { label: "AI Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" },
+        { label: "AI Marketing Automation", path: "/services/ai-marketing-automation" },
+        { label: "AI Workflow Automation", path: "/ai-workflow-automation" },
+        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Content Generation", path: "/services/ai-content-generation-automation" },
+        { label: "AI Code Review", path: "/ai-autonomous-code-review" }
       ]
     },
     {
-      title: "Talent & Resources",
+      title: "Infrastructure & DevOps",
       links: [
-        { label: "AI Engineers", href: "/talent" },
-        { label: "Data Scientists", href: "/talent" },
-        { label: "DevOps Specialists", href: "/talent" },
-        { label: "Full-Stack Developers", href: "/talent" },
-        { label: "Equipment & Tools", href: "/equipment" },
-        { label: "Learning Resources", href: "/blog" },
+        { label: "Cloud DevOps", path: "/cloud-devops" },
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "IoT Data Analytics", path: "/iot-data-analytics" },
+        { label: "IoT Management Platform", path: "/iot-management-platform" },
+        { label: "Blockchain Enterprise", path: "/blockchain-enterprise-solutions" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" }
       ]
     },
     {
-      title: "Enterprise",
+      title: "Business Solutions",
       links: [
-        { label: "Custom Solutions", href: "/enterprise" },
-        { label: "White-Label Platform", href: "/enterprise" },
-        { label: "API Access", href: "/developers" },
-        { label: "Dedicated Support", href: "/enterprise" },
-        { label: "Security & Compliance", href: "/services" },
-        { label: "Migration Services", href: "/services" },
+        { label: "Enterprise Solutions", path: "/enterprise-solutions" },
+        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "SOC2 Compliance", path: "/soc2-compliance-automation" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" }
+      ]
+    },
+    {
+      title: "Emerging Technologies",
+      links: [
+        { label: "Emerging Tech Overview", path: "/emerging-tech" },
+        { label: "Blockchain Solutions", path: "/blockchain-defi-solutions" },
+        { label: "Micro SaaS Services", path: "/micro-saas-services" },
+        { label: "AI Services", path: "/ai-services" },
+        { label: "Services Showcase", path: "/services-showcase" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "New Services", path: "/new-services" }
       ]
     },
     {
@@ -164,18 +141,16 @@ export function Footer() {
       ]
     },
     {
-      title: "Company & Resources",
-      icon: Users,
+      title: "Resources & Support",
       links: [
+        { label: "Blog & Articles", path: "/blog" },
         { label: "Help Center", path: "/help" },
         { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
-=======
-        { label: "Careers", path: "/careers" },
-        { label: "Partners", path: "/partners" },
-        { label: "Blog", path: "/blog" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Help Center", path: "/help" }
+        { label: "Support Center", path: "/support" },
+        { label: "FAQ", path: "/faq" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Events & Webinars", path: "/events" },
+        { label: "Testimonials", path: "/testimonials" }
       ]
     }
   ];
@@ -2138,34 +2113,16 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-400">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>Made with ❤️ in Delaware</span>
-              <span>•</span>
-              <span>AI-Powered Technology</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll to top button */}
-        <motion.button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-zion-cyan text-black rounded-full shadow-lg hover:bg-zion-cyan/80 transition-colors z-50"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <ArrowUpIcon className="w-6 h-6 mx-auto" />
-        </motion.button>
-      </div>
+      {/* Scroll to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
+        aria-label="Scroll to top"
+      >
+        <svg className="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
     </footer>
   );
 }
