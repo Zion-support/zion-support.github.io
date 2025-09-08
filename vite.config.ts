@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// import { fileURLToPath } from 'node:url'
 import path from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 
@@ -14,19 +13,23 @@ export default defineConfig(({ mode }) => ({
       jsxRuntime: 'automatic',
     }),
     // Add bundle analyzer in analyze mode
-    mode === 'analyze' && visualizer({
+    ...(mode === 'analyze' ? [visualizer({
       filename: 'dist/stats.html',
       open: false,
       gzipSize: true,
       brotliSize: true,
       template: 'treemap', // Use treemap for better visualization
-    })
+    })] : [])
   ].filter(Boolean),
   build: {
     // Disable source maps in production for smaller bundle
     sourcemap: false,
     // Use esbuild for faster minification
     minify: 'esbuild',
+    // Increase chunk size warning limit
+    chunkSizeWarningLimit: 1000,
+    // Enable CSS minification
+    cssMinify: true,
     // Optimize chunk splitting
     rollupOptions: {
       onwarn(warning, warn) {
@@ -36,13 +39,46 @@ export default defineConfig(({ mode }) => ({
       },
       output: {
         // Manual chunk splitting for better caching
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
-          utils: ['axios', 'date-fns', 'lodash.debounce'],
-          query: ['@tanstack/react-query'],
-          forms: ['react-hook-form', 'formik', 'yup', 'zod'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('@radix-ui')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('@tanstack/react-query')) {
+              return 'vendor-query';
+            }
+            if (id.includes('react-router-dom')) {
+              return 'vendor-router';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-animation';
+            }
+            if (id.includes('axios') || id.includes('date-fns') || id.includes('lodash')) {
+              return 'vendor-utils';
+            }
+            if (id.includes('react-hook-form') || id.includes('formik') || id.includes('yup') || id.includes('zod')) {
+              return 'vendor-forms';
+            }
+            return 'vendor';
+          }
+          
+          // App chunks for better code splitting
+          if (id.includes('/src/pages/')) {
+            return 'pages';
+          }
+          if (id.includes('/src/components/')) {
+            return 'components';
+          }
+          if (id.includes('/src/utils/')) {
+            return 'utils';
+          }
+          if (id.includes('/src/context/')) {
+            return 'context';
+          }
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -79,6 +115,12 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: true,
     },
+    // Optimize server performance
+    fs: {
+      strict: false,
+    },
+    // Enable compression
+    middlewareMode: false,
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -89,21 +131,20 @@ export default defineConfig(({ mode }) => ({
       'react',
       'react-dom',
       'react-router-dom',
-      'axios',
-      'date-fns',
-      'lodash.debounce',
+      '@tanstack/react-query',
+      'react-helmet-async',
       'framer-motion',
+      'clsx',
+      'tailwind-merge',
     ],
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
-  },
-  // Performance optimizations
-  esbuild: {
-    target: 'esnext',
-    format: 'esm',
+    // Force pre-bundling for better performance
+    force: true,
   },
   // CSS optimizations
   css: {
     devSourcemap: true,
+    postcss: './postcss.config.js',
   },
 }))

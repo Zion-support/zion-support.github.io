@@ -1,4 +1,4 @@
-export function Toaster(_props: { position?: string }): JSX.Element | null {
+export function Toaster(): JSX.Element | null {
   return null;
 }
 

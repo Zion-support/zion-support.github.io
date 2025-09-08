@@ -1,6 +1,6 @@
 [build]
   # Build the project on Netlify
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -10,14 +10,6 @@
   PYTHON_VERSION = "3.11"
   NPM_FLAGS = "--omit=optional"
 
-[context.production.environment]
-  NODE_ENV = "production"
-
-[context.deploy-preview]
-  command = "npm ci --no-audit --no-fund && npm run build"
-
-[context.branch-deploy]
-  command = "npm ci --no-audit --no-fund && npm run build"
 # Vite/React SPA configuration
 
 

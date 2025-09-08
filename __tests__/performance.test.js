@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   test("lighthouse performance audit", async ({ page }) => {
     await page.goto("/");
     // Run lighthouse audit
