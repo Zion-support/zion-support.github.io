@@ -19702,3 +19702,197 @@ fatal: couldn't find remote ref cursor/enhance-ziontechgroup-website-with-new-se
 [2025-09-08T21:26:05.622Z] ✅ Success: Get git status
 [2025-09-08T21:26:05.622Z] 📄 Found 0 conflicted files
 [2025-09-08T21:26:05.622Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:26:05.720Z] ✅ Success: Add resolved files
+[2025-09-08T21:26:05.720Z] 🚀 Commit merge for cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2d7: git commit -m "Resolve conflicts and merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2d7"
+[2025-09-08T21:26:05.794Z] ✅ Success: Commit merge for cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2d7
+[2025-09-08T21:26:05.794Z] ✅ Successfully resolved conflicts and merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2d7
+[2025-09-08T21:26:05.794Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df
+[2025-09-08T21:26:05.794Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df
+[2025-09-08T21:26:06.138Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df
+[2025-09-08T21:26:06.138Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df into main"
+[2025-09-08T21:26:06.582Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df
+[2025-09-08T21:26:06.582Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2df
+[2025-09-08T21:26:06.582Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3
+[2025-09-08T21:26:06.582Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3
+[2025-09-08T21:26:06.917Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3
+[2025-09-08T21:26:06.918Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3 into main"
+[2025-09-08T21:26:07.364Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3
+[2025-09-08T21:26:07.364Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2e3
+[2025-09-08T21:26:07.364Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313
+[2025-09-08T21:26:07.364Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313
+[2025-09-08T21:26:07.703Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313
+[2025-09-08T21:26:07.703Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313 into main"
+[2025-09-08T21:26:08.154Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313
+[2025-09-08T21:26:08.154Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f313
+[2025-09-08T21:26:08.154Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8
+[2025-09-08T21:26:08.154Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8
+[2025-09-08T21:26:08.489Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8
+[2025-09-08T21:26:08.489Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8 into main"
+[2025-09-08T21:26:08.922Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8
+[2025-09-08T21:26:08.922Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f3c8
+[2025-09-08T21:26:08.922Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529
+[2025-09-08T21:26:08.922Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529
+[2025-09-08T21:26:09.263Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529
+[2025-09-08T21:26:09.263Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529 into main"
+[2025-09-08T21:26:09.699Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529
+[2025-09-08T21:26:09.699Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f529
+[2025-09-08T21:26:09.699Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636
+[2025-09-08T21:26:09.699Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636
+[2025-09-08T21:26:10.032Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636
+[2025-09-08T21:26:10.032Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636 into main"
+[2025-09-08T21:26:10.465Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636
+[2025-09-08T21:26:10.465Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f636
+[2025-09-08T21:26:10.466Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874
+[2025-09-08T21:26:10.466Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874
+[2025-09-08T21:26:10.799Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874
+[2025-09-08T21:26:10.800Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874 into main"
+[2025-09-08T21:26:11.239Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874
+[2025-09-08T21:26:11.239Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f874
+[2025-09-08T21:26:11.239Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6
+[2025-09-08T21:26:11.239Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6
+[2025-09-08T21:26:11.591Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6
+[2025-09-08T21:26:11.592Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6 into main"
+[2025-09-08T21:26:12.041Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6
+[2025-09-08T21:26:12.041Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9b6
+[2025-09-08T21:26:13.043Z] 📦 Processing batch 247/509
+[2025-09-08T21:26:13.043Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1
+[2025-09-08T21:26:13.043Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1
+[2025-09-08T21:26:13.403Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1
+[2025-09-08T21:26:13.403Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1 into main"
+[2025-09-08T21:26:13.844Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1
+[2025-09-08T21:26:13.844Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f9d1
+[2025-09-08T21:26:13.844Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21
+[2025-09-08T21:26:13.844Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21
+[2025-09-08T21:26:14.190Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21
+[2025-09-08T21:26:14.190Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21 into main"
+[2025-09-08T21:26:14.702Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21
+[2025-09-08T21:26:14.702Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa21
+[2025-09-08T21:26:14.702Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52
+[2025-09-08T21:26:14.702Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52
+[2025-09-08T21:26:15.069Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52
+[2025-09-08T21:26:15.069Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52 into main"
+[2025-09-08T21:26:15.545Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52
+[2025-09-08T21:26:15.546Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fa52
+[2025-09-08T21:26:15.546Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1
+[2025-09-08T21:26:15.546Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1
+[2025-09-08T21:26:15.913Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1
+[2025-09-08T21:26:15.914Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1 into main"
+[2025-09-08T21:26:16.396Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1
+[2025-09-08T21:26:16.396Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-faa1
+[2025-09-08T21:26:16.396Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac
+[2025-09-08T21:26:16.396Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac
+[2025-09-08T21:26:16.761Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac
+[2025-09-08T21:26:16.761Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac into main"
+[2025-09-08T21:26:17.224Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac
+[2025-09-08T21:26:17.225Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fbac
+[2025-09-08T21:26:17.225Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a
+[2025-09-08T21:26:17.225Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a
+[2025-09-08T21:26:17.605Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a
+[2025-09-08T21:26:17.605Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a into main"
+[2025-09-08T21:26:18.071Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a
+[2025-09-08T21:26:18.071Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fd2a
+[2025-09-08T21:26:18.071Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6
+[2025-09-08T21:26:18.071Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6
+[2025-09-08T21:26:18.459Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6
+[2025-09-08T21:26:18.459Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6 into main"
+[2025-09-08T21:26:18.944Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6
+[2025-09-08T21:26:18.945Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdc6
+[2025-09-08T21:26:18.945Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea
+[2025-09-08T21:26:18.945Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea
+[2025-09-08T21:26:19.295Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea
+[2025-09-08T21:26:19.295Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea into main"
+[2025-09-08T21:26:19.750Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea
+[2025-09-08T21:26:19.750Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fdea
+[2025-09-08T21:26:19.750Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07
+[2025-09-08T21:26:19.750Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07
+[2025-09-08T21:26:20.112Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07
+[2025-09-08T21:26:20.112Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07 --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07 into main"
+[2025-09-08T21:26:20.554Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07
+[2025-09-08T21:26:20.555Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-fe07
+[2025-09-08T21:26:20.555Z] 🔄 Attempting to merge branch: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca
+[2025-09-08T21:26:20.555Z] 🚀 Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca: git fetch origin cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca
+[2025-09-08T21:26:20.902Z] ✅ Success: Fetch origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca
+[2025-09-08T21:26:20.902Z] 🚀 Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca: git merge origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca --no-ff -m "Merge branch cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca into main"
+[2025-09-08T21:26:21.349Z] ✅ Success: Merge cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca
+[2025-09-08T21:26:21.349Z] ✅ Successfully merged: cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-feca
+[2025-09-08T21:26:22.351Z] 📦 Processing batch 248/509
+[2025-09-08T21:26:22.351Z] 🔄 Attempting to merge branch: cursor/ensure-cron-job-reliability-and-deploy-updates-fe91
+[2025-09-08T21:26:22.351Z] 🚀 Fetch origin/cursor/ensure-cron-job-reliability-and-deploy-updates-fe91: git fetch origin cursor/ensure-cron-job-reliability-and-deploy-updates-fe91
+[2025-09-08T21:26:22.682Z] ✅ Success: Fetch origin/cursor/ensure-cron-job-reliability-and-deploy-updates-fe91
+[2025-09-08T21:26:22.683Z] 🚀 Merge cursor/ensure-cron-job-reliability-and-deploy-updates-fe91: git merge origin/cursor/ensure-cron-job-reliability-and-deploy-updates-fe91 --no-ff -m "Merge branch cursor/ensure-cron-job-reliability-and-deploy-updates-fe91 into main"
+[2025-09-08T21:26:23.110Z] ✅ Success: Merge cursor/ensure-cron-job-reliability-and-deploy-updates-fe91
+[2025-09-08T21:26:23.110Z] ✅ Successfully merged: cursor/ensure-cron-job-reliability-and-deploy-updates-fe91
+[2025-09-08T21:26:23.110Z] 🔄 Attempting to merge branch: cursor/ensure-multi-machine-sync-processes-are-error-free-06c0
+[2025-09-08T21:26:23.110Z] 🚀 Fetch origin/cursor/ensure-multi-machine-sync-processes-are-error-free-06c0: git fetch origin cursor/ensure-multi-machine-sync-processes-are-error-free-06c0
+[2025-09-08T21:26:23.441Z] ✅ Success: Fetch origin/cursor/ensure-multi-machine-sync-processes-are-error-free-06c0
+[2025-09-08T21:26:23.441Z] 🚀 Merge cursor/ensure-multi-machine-sync-processes-are-error-free-06c0: git merge origin/cursor/ensure-multi-machine-sync-processes-are-error-free-06c0 --no-ff -m "Merge branch cursor/ensure-multi-machine-sync-processes-are-error-free-06c0 into main"
+[2025-09-08T21:26:23.865Z] ✅ Success: Merge cursor/ensure-multi-machine-sync-processes-are-error-free-06c0
+[2025-09-08T21:26:23.865Z] ✅ Successfully merged: cursor/ensure-multi-machine-sync-processes-are-error-free-06c0
+[2025-09-08T21:26:23.865Z] 🔄 Attempting to merge branch: cursor/establish-neutral-foundation-for-zion-protocol-34cd
+[2025-09-08T21:26:23.865Z] 🚀 Fetch origin/cursor/establish-neutral-foundation-for-zion-protocol-34cd: git fetch origin cursor/establish-neutral-foundation-for-zion-protocol-34cd
+[2025-09-08T21:26:24.180Z] ✅ Success: Fetch origin/cursor/establish-neutral-foundation-for-zion-protocol-34cd
+[2025-09-08T21:26:24.181Z] 🚀 Merge cursor/establish-neutral-foundation-for-zion-protocol-34cd: git merge origin/cursor/establish-neutral-foundation-for-zion-protocol-34cd --no-ff -m "Merge branch cursor/establish-neutral-foundation-for-zion-protocol-34cd into main"
+[2025-09-08T21:26:24.606Z] ✅ Success: Merge cursor/establish-neutral-foundation-for-zion-protocol-34cd
+[2025-09-08T21:26:24.606Z] ✅ Successfully merged: cursor/establish-neutral-foundation-for-zion-protocol-34cd
+[2025-09-08T21:26:24.606Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-0033
+[2025-09-08T21:26:24.606Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-0033: git fetch origin cursor/expand-services-advertise-and-build-project-0033
+[2025-09-08T21:26:24.935Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-0033
+[2025-09-08T21:26:24.935Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-0033: git merge origin/cursor/expand-services-advertise-and-build-project-0033 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-0033 into main"
+[2025-09-08T21:26:25.364Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-0033
+[2025-09-08T21:26:25.364Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-0033
+[2025-09-08T21:26:25.364Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-01d9
+[2025-09-08T21:26:25.364Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-01d9: git fetch origin cursor/expand-services-advertise-and-build-project-01d9
+[2025-09-08T21:26:25.678Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-01d9
+[2025-09-08T21:26:25.678Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-01d9: git merge origin/cursor/expand-services-advertise-and-build-project-01d9 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-01d9 into main"
+[2025-09-08T21:26:26.113Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-01d9
+[2025-09-08T21:26:26.113Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-01d9
+[2025-09-08T21:26:26.113Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-094d
+[2025-09-08T21:26:26.113Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-094d: git fetch origin cursor/expand-services-advertise-and-build-project-094d
+[2025-09-08T21:26:26.439Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-094d
+[2025-09-08T21:26:26.439Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-094d: git merge origin/cursor/expand-services-advertise-and-build-project-094d --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-094d into main"
+[2025-09-08T21:26:26.878Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-094d
+[2025-09-08T21:26:26.878Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-094d
+[2025-09-08T21:26:26.878Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-0b8e
+[2025-09-08T21:26:26.878Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-0b8e: git fetch origin cursor/expand-services-advertise-and-build-project-0b8e
+[2025-09-08T21:26:27.231Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-0b8e
+[2025-09-08T21:26:27.231Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-0b8e: git merge origin/cursor/expand-services-advertise-and-build-project-0b8e --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-0b8e into main"
+[2025-09-08T21:26:27.666Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-0b8e
+[2025-09-08T21:26:27.666Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-0b8e
+[2025-09-08T21:26:27.666Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-134f
+[2025-09-08T21:26:27.666Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-134f: git fetch origin cursor/expand-services-advertise-and-build-project-134f
+[2025-09-08T21:26:27.985Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-134f
+[2025-09-08T21:26:27.985Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-134f: git merge origin/cursor/expand-services-advertise-and-build-project-134f --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-134f into main"
+[2025-09-08T21:26:28.410Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-134f
+[2025-09-08T21:26:28.410Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-134f
+[2025-09-08T21:26:28.410Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-1551
+[2025-09-08T21:26:28.410Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-1551: git fetch origin cursor/expand-services-advertise-and-build-project-1551
+[2025-09-08T21:26:28.718Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-1551
+[2025-09-08T21:26:28.718Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-1551: git merge origin/cursor/expand-services-advertise-and-build-project-1551 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-1551 into main"
+[2025-09-08T21:26:29.147Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-1551
+[2025-09-08T21:26:29.147Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-1551
+[2025-09-08T21:26:29.147Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-1703
+[2025-09-08T21:26:29.147Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-1703: git fetch origin cursor/expand-services-advertise-and-build-project-1703
+[2025-09-08T21:26:29.498Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-1703
+[2025-09-08T21:26:29.498Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-1703: git merge origin/cursor/expand-services-advertise-and-build-project-1703 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-1703 into main"
+[2025-09-08T21:26:29.958Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-1703
+[2025-09-08T21:26:29.958Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-1703
+[2025-09-08T21:26:30.959Z] 📦 Processing batch 249/509
+[2025-09-08T21:26:30.959Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-1750
+[2025-09-08T21:26:30.959Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-1750: git fetch origin cursor/expand-services-advertise-and-build-project-1750
+[2025-09-08T21:26:31.307Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-1750
+[2025-09-08T21:26:31.307Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-1750: git merge origin/cursor/expand-services-advertise-and-build-project-1750 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-1750 into main"
+[2025-09-08T21:26:31.745Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-1750
+[2025-09-08T21:26:31.745Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-1750
+[2025-09-08T21:26:31.745Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-1cb7
+[2025-09-08T21:26:31.745Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-1cb7: git fetch origin cursor/expand-services-advertise-and-build-project-1cb7
+[2025-09-08T21:26:31.853Z] ❌ Error in Fetch origin/cursor/expand-services-advertise-and-build-project-1cb7: Command failed: git fetch origin cursor/expand-services-advertise-and-build-project-1cb7
+fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-project-1cb7
+
+[2025-09-08T21:26:31.853Z] ❌ Failed to merge cursor/expand-services-advertise-and-build-project-1cb7: Command failed: git fetch origin cursor/expand-services-advertise-and-build-project-1cb7
+fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-project-1cb7
+
+[2025-09-08T21:26:31.853Z] 🔧 Attempting to resolve conflicts for: cursor/expand-services-advertise-and-build-project-1cb7
+[2025-09-08T21:26:31.853Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:26:31.918Z] ✅ Success: Get git status
+[2025-09-08T21:26:31.918Z] 📄 Found 0 conflicted files
+[2025-09-08T21:26:31.918Z] 🚀 Add resolved files: git add .
