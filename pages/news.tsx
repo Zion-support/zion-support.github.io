@@ -6,10 +6,6 @@ import {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Calendar, Clock, ArrowRight, Star, Users, 
   Brain, Atom, Shield, Rocket, Globe,
   TrendingUp, Award, Sparkles, ExternalLink
@@ -78,9 +74,7 @@ export default function News() {
 
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   FileText, Calendar, User, Tag, ArrowRight, 
   TrendingUp, Star, Zap, Brain, Atom, Shield
 } from 'lucide-react';
@@ -166,11 +160,8 @@ const categories = [
 export default function News() {
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   return (
     <>
       <Head>
@@ -178,10 +169,6 @@ export default function News() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <meta name="description" content="Stay updated with the latest news, product launches, and industry insights from Zion Tech Group. Discover breakthroughs in AI, quantum computing, and technology innovation." />
         <meta name="keywords" content="news, updates, AI news, quantum computing, technology news, company updates, industry insights" />
         <link rel="canonical" href="https://ziontechgroup.com/news" />
@@ -193,9 +180,7 @@ export default function News() {
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         <meta name="description" content="Stay updated with the latest news, announcements, and insights from Zion Tech Group. AI breakthroughs, quantum computing advances, and technology innovations." />
         <meta name="keywords" content="news, updates, AI technology, quantum computing, enterprise IT, space technology" />
         <link rel="canonical" href="https://ziontechgroup.com/news" />
@@ -210,11 +195,8 @@ export default function News() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -222,10 +204,6 @@ export default function News() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
@@ -243,9 +221,7 @@ export default function News() {
               </p>
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             >
               <div className="flex items-center justify-center space-x-2 mb-6">
                 <FileText className="w-12 h-12 text-blue-400" />
@@ -273,11 +249,8 @@ export default function News() {
               </div>
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </motion.div>
           </div>
         </div>
@@ -288,10 +261,6 @@ export default function News() {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -299,11 +268,7 @@ export default function News() {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -311,10 +276,6 @@ export default function News() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
@@ -357,9 +318,7 @@ export default function News() {
                         <p className="text-gray-400 text-sm">Featured Article</p>
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -429,11 +388,8 @@ export default function News() {
                         </div>
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                       </div>
                     </div>
                   </div>
@@ -441,10 +397,6 @@ export default function News() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               ))}
             </motion.div>
           </div>
@@ -467,9 +419,7 @@ export default function News() {
                 </button>
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </motion.div>
             ))}
 
@@ -515,30 +465,30 @@ export default function News() {
                 </motion.div>
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               ))}
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
+        {/* Newsletter Signup */}
+        <section className="py-20 relative bg-gradient-to-br from-gray-900/30 to-gray-800/30">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* News Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+              viewport={{ once: true }}
+=======
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8">Latest News</h2>
@@ -618,9 +568,7 @@ export default function News() {
 =======
               viewport={{ once: true }}
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Stay Updated
@@ -628,10 +576,6 @@ export default function News() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <p className="text-xl text-gray-300 mb-8">
                 Subscribe to our newsletter for the latest news, product updates, and industry insights.
               </p>
@@ -645,9 +589,7 @@ export default function News() {
                 <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 Subscribe to our newsletter for the latest news, insights, and technology updates
               </p>
@@ -660,11 +602,8 @@ export default function News() {
                 <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105">
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                   Subscribe
                 </button>
               </div>

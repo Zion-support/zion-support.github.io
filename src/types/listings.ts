@@ -1,16 +1,63 @@
+export interface ProductListing {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  subcategory?: string;
+  price: number | null;
+  currency: string;
+  tags: string[];
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
+    email?: string;
+  };
+  images: string[];
+  createdAt: string;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  aiScore?: number;
+  location?: string;
+  availability?: string;
+}
 
-
-   title: string;
-   description: string;
-   price: number;
-   currency: string;
-   category: string;
-   subcategory?: string;
-   tags: string[];
-   images: string[];
-   seller: {  id: string;
-   name: string;
-
-
-
-
+export interface ServiceCategory {
+  label: string;
+  value: string;
+  description?: string;
+  icon?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  price: number;
+  rating: number;
+  image: string;
+  features: string[];
+  addons: string[];
+  featured?: boolean;
+  location?: string;
+  availability?: string;
+  created_at?: string;
+  tags?: string[];
+  author?: string;
+  images?: string[];
+  review_count?: number;
+  ai_score?: number;
+  currency?: string;
+  monthly?: boolean;
+  billing_frequency?: string;
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+}

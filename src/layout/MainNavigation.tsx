@@ -17,50 +17,14 @@ import { useState } from "react";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
+import { useState } from "react";
+=======
 <<<<<<< HEAD
 import { useState, useRef, useEffect } from "react";
 =======
 import { useState } from "react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
-=======
-import { useState } from "react";
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-import { MessageSquare, Sparkles, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
-=======
-import { MessageSquare, ChevronDown, Sparkles, Zap, Shield, Database, Cloud, Code, Users, HardDrive, Lightbulb } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
-=======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useEffect, useRef } from "react";
-=======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-<<<<<<< HEAD
-=======
-import { MessageSquare } from "lucide-react";
-import { useTranslation } from "react-i18next";
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3b60
-=======
-import { MessageSquare } from "lucide-react";
-=======
-import { MessageSquare, Briefcase, Users, Settings, BarChart3 } from "lucide-react";
->>>>>>> origin/cursor/website-audit-and-enhancement-de4e
-import { useTranslation } from "react-i18next";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
-=======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export function MainNavigation(): JSX.Element {
 	return (
@@ -100,12 +64,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const dropdownRef = useRef<HTMLDivElement>(null);
+
 =======
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+<<<<<<< HEAD
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -160,14 +121,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 <<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3b60
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const baseLinks = [
     {
       key: 'home',
@@ -182,12 +136,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
       key: 'services',
 <<<<<<< HEAD
       href: '/services',
@@ -269,6 +218,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path === '/about'
     },
     {
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       key: 'marketplace',
       href: '/marketplace',
       name: 'Marketplace',
@@ -276,19 +226,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
 <<<<<<< HEAD
+      key: 'services',
+      href: '/services',
+      name: 'Services',
+      matches: (path: string) => path.startsWith('/services')
+    },
+    {
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       key: 'services',
@@ -366,6 +310,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       key: 'talent',
       href: '/talent',
       name: 'Talent',
@@ -476,6 +422,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -505,100 +453,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { name: 'Contact', href: '/contact' }
       ]
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       key: 'blog',
       href: '/blog',
       name: 'Blog',
       matches: (path: string) => path.startsWith('/blog')
+<<<<<<< HEAD
 =======
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-=======
-      matches: (path: string) => path.startsWith('/contact')
-=======
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-=======
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about') || path === '/mission' || path === '/team'
-    },
-    {
-      key: 'case-studies',
-      href: '/case-studies',
-      matches: (path: string) => path.startsWith('/case-studies')
-    },
-    {
-      key: 'news',
-      href: '/news',
-      matches: (path: string) => path.startsWith('/news') || path.startsWith('/blog')
-    },
-    {
-      key: 'contact',
-      href: '/contact',
-      matches: (path: string) => path === '/contact'
-=======
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/partners')
-=======
-=======
-      key: 'ai-assistant',
-      href: '/zion-hire-ai',
-      matches: (path: string) => path.startsWith('/zion-hire-ai') || path.startsWith('/hire-ai')
-    },
-    {
-      key: 'community',
-      href: '/community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-=======
-      key: 'community',
-      href: '/community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-=======
-    },
-    {
-      key: 'about',
-      href: '/about',
-      key: 'community',
-      href: '/community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-    },
-    {
-      key: 'contact',
-      href: '/contact',
-=======
-    },
-    {
-      key: 'faq',
-      href: '/faq',
-      matches: (path: string) => path === '/faq'
-    },
-    {
-      key: 'help',
-      href: '/help',
-      matches: (path: string) => path === '/help'
-=======
-      matches: (path: string) => path === '/contact'
-=======
-      matches: (path: string) => path === '/about'
-=======
-    },
-    {
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-    },
-    {
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path === '/about'
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
@@ -777,7 +640,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -808,6 +670,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const toggleDropdown = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
@@ -815,31 +678,21 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
   return (
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
-=======
-    <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
-      <ul className="flex items-center gap-1">
-<<<<<<< HEAD
-        {links.map((link) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-    <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
+    <nav className={cn("navbar ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
         {links.map((link) => (
-    <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
-      <ul className="flex items-center gap-1">
-        {links.map((link) => (
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+          <li key={link.name}>
+            <Link
+              to={link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}
+            >
+              {link.name}
+            </Link>
 =======
     <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
@@ -1017,65 +870,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 {link.name}
               </Link>
             )}
-=======
-<<<<<<< HEAD
-  
-  return (
-    <nav className={cn("navbar ml-6 hidden md:flex", className)}>
-      <ul className="flex items-center gap-1">
-        {links.map((link) => (
-=======
-=======
-  
-  return (
-    <nav className={cn("navbar hidden lg:flex", className)}>
-      <ul className="flex items-center gap-2">
-        {links.map((link) => (
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-          <li key={link.name}>
-            <Link
-              to={link.href}
-              className={cn(
-<<<<<<< HEAD
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-                link.matches(location.pathname)
-                  ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 hover:scale-105",
-                link.matches(location.pathname)
-                  ? "bg-zion-purple/20 text-zion-cyan neon-glow"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover-glow"
-=======
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-                link.matches(location.pathname)
-                  ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
-=======
-                "inline-flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all duration-300 relative group",
-                link.matches(location.pathname)
-                  ? "bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-              )}
-            >
-              {link.name}
-              {link.matches(location.pathname) && (
-                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full"></div>
-              )}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </li>
         ))}
 =======

@@ -1,37 +1,10 @@
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
-import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
-import { TALENT_PROFILES  } from '@/data/talentData';
-import { TalentProfile  } from '@/types/talent';
-import { SkeletonCard  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-// Market insights component for talents
-const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-  <Card className;
-  // Loading state
-  if (loading && talents.length === 0) {
-    return (
-      <div className="container py-8" data-testid="talents-loading">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"><h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            AI & IT Talent Directory
-          </h1>
-          <p className="text-muted-foreground text-lg">
-            Connect with world-class AI and technology professionals
-          </p>
-        </motion.div>
-        <TalentLoadingGrid />
-      </div>
-    )
-  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '@/components/SEO';
+=======
 
 <<<<<<< HEAD
   // Error state
@@ -47,7 +20,16 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     )
   }
 
-  // Main render
+export default TalentsPage;
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import React from 'react';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+
+export default function TalentsPage() {
   return (
     <div className="container py-8">
       {/* Header */}
@@ -134,42 +116,13 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
             </p>
           )}
         </div>
-      )}
-
-      {/* End of Results */}
-      {!hasMore && talents.length > 0 && (
-        <motion.div
-          className="text-center mt-12 py-8 border-t"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}><div className="text-muted-foreground text-lg mb-2">
-            🎉 You've explored all available talents!
-          </div>
-          <div className="text-sm text-muted-foreground">
-            Showing {talents.length} {total && `of ${total}`} AI and technology professionals
-          </div>
-        </motion.div>
-      )}
-
-      {/* Scroll to Top Button */}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}><ArrowUp className="h-5 w-5 text-primary-foreground" />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </div>
-  )
+      </main>
+      <Footer />
+    </>
+  );
+<<<<<<< HEAD
 }
-;
 =======
-    let filteredTalents = allTalents
-    }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

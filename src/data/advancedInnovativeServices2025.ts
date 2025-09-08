@@ -21,8 +21,30 @@ export interface AdvancedInnovativeService2025 {
     phone: string;
     email: string;
     website: string;
+<<<<<<< HEAD
     address: string;
+=======
+<<<<<<< HEAD
+=======
+    address: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   };
+  technology: string[];
+  integrations: string[];
+  compliance: string[];
+  roi: string;
+  competitors: string[];
+  marketTrend: string;
+  innovationLevel: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  aiCapabilities: string[];
+  scalability: string;
+  securityFeatures: string[];
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   deploymentOptions: string[];
   scalability: string;
   securityFeatures: string[];
@@ -30,18 +52,39 @@ export interface AdvancedInnovativeService2025 {
   customDevelopment: boolean;
   trainingIncluded: boolean;
   maintenanceIncluded: boolean;
+<<<<<<< HEAD
 =======
-  websiteUrl: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-  technologyStack: string[];
-  complianceStandards: string[];
-  integrationCapabilities: string[];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] = [
   // AI-Powered Predictive Maintenance Platform
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    id: "ai-business-intelligence-elite-2025",
+    title: "AI Business Intelligence Elite 2025",
+    description: "Next-generation AI-powered business intelligence platform that provides real-time insights, predictive analytics, and autonomous decision-making capabilities for enterprise organizations.",
+    category: "AI & Business Intelligence",
+    subcategory: "Enterprise Analytics",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time data processing and analysis",
+      "Predictive analytics with 95% accuracy",
+      "Natural language query interface",
+      "Automated report generation",
+      "Advanced data visualization",
+      "Multi-source data integration",
+      "AI-powered anomaly detection",
+      "Custom dashboard builder",
+      "Mobile-responsive interface",
+      "API-first architecture"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     id: "ai-business-intelligence-enterprise-2025",
     title: "AI Business Intelligence Enterprise Suite 2025",
     description: "Next-generation AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated decision-making capabilities for enterprise organizations.",
@@ -61,35 +104,69 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       "Advanced security and compliance features",
       "API-first architecture",
       "Real-time collaboration tools"
+<<<<<<< HEAD
 =======
-    id: "ai-autonomous-business-manager-2025",
-    title: "AI Autonomous Business Manager 2025",
-    description: "Next-generation autonomous business management system that operates independently, making strategic decisions and optimizing operations in real-time using advanced AI algorithms.",
-    category: "AI & Autonomous Systems",
-    subcategory: "Business Management",
-    price: 8500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Fully autonomous decision-making engine",
-      "Real-time market analysis and adaptation",
-      "Predictive business strategy optimization",
-      "Automated resource allocation",
-      "Intelligent risk management",
-      "Dynamic pricing optimization",
-      "Competitive intelligence monitoring",
-      "Self-healing business processes"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ],
     benefits: [
       "Reduce operational costs by 45%",
       "Increase decision-making speed by 300%",
+      "Reduce manual reporting time by 80%",
+      "Improve forecast accuracy by 40%",
+<<<<<<< HEAD
       "Enable data-driven culture",
       "Reduce operational costs by 25%",
       "Enhance competitive advantage"
+=======
+<<<<<<< HEAD
+      "Real-time business insights",
+      "Automated data governance"
+=======
+      "Enable data-driven culture",
+      "Reduce operational costs by 25%",
+      "Enhance competitive advantage"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ],
     useCases: [
       "Enterprise organizations",
       "Financial services",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "Healthcare analytics",
+      "Retail intelligence",
+      "Manufacturing optimization"
+    ],
+    targetAudience: [
+      "Chief Data Officers",
+      "Business Intelligence teams",
+      "Data scientists",
+      "Executive leadership",
+      "Analytics managers"
+    ],
+    tags: ["AI", "Business Intelligence", "Analytics", "Predictive Analytics", "Enterprise"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["GPT-4", "Claude 3", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
+    integrations: ["Salesforce", "HubSpot", "Microsoft Dynamics", "SAP", "Oracle", "Tableau"],
+    compliance: ["SOC 2", "GDPR", "CCPA", "HIPAA", "SOX"],
+    roi: "500% within 6 months",
+    competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
+    marketTrend: "AI-powered BI market growing at 25% annually",
+    innovationLevel: "Cutting-edge AI integration with autonomous analytics",
+    aiCapabilities: ["Natural language processing", "Predictive modeling", "Anomaly detection", "Automated insights"],
+    scalability: "Handles 10M+ data points with sub-second response times",
+    securityFeatures: ["End-to-end encryption", "Role-based access control", "Audit logging", "Data masking"]
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Healthcare systems",
       "Manufacturing companies",
       "Retail chains",
@@ -126,26 +203,58 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     customDevelopment: true,
     trainingIncluded: true,
     maintenanceIncluded: true
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   },
 
   // Quantum-Safe Cloud Infrastructure
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    id: "quantum-safe-cloud-infrastructure",
+    title: "Quantum-Safe Cloud Infrastructure Platform",
+    description: "Future-proof cloud infrastructure that implements post-quantum cryptography and quantum-resistant algorithms to protect data against emerging quantum computing threats.",
+    category: "Quantum Technology",
+    subcategory: "Cloud Security",
+    price: 3500,
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     id: "quantum-safe-cloud-infrastructure-2025",
     title: "Quantum-Safe Cloud Infrastructure Platform",
     description: "Future-proof cloud infrastructure that implements post-quantum cryptography to protect against quantum computing threats while providing enterprise-grade performance and scalability.",
     category: "Quantum Technology",
     subcategory: "Cloud Infrastructure",
     price: 8999,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Post-quantum cryptography implementation",
       "Quantum-resistant encryption algorithms",
       "Hybrid classical-quantum security",
-      "Improve market responsiveness by 200%",
-      "Eliminate human bias in strategic decisions",
-      "24/7 autonomous operation",
-      "Continuous learning and improvement"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "Zero-trust architecture",
+      "Multi-cloud deployment",
+      "Automated security compliance",
+      "Real-time threat monitoring",
+      "Quantum key distribution",
+      "Disaster recovery automation",
+      "Performance optimization"
+    ],
+    benefits: [
+      "Future-proof security against quantum threats",
+      "Reduce security risks by 99.9%",
+      "Compliance with emerging quantum standards",
+      "Hybrid security approach",
+      "Automated compliance management"
     ],
     useCases: [
       "E-commerce optimization",
@@ -159,6 +268,73 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       "E-commerce platforms",
       "Financial institutions",
       "Manufacturing companies",
+      "Retail chains",
+      "Food and beverage industry",
+      "Pharmaceutical companies",
+      "Logistics providers"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Operations directors",
+      "Compliance officers",
+      "Procurement teams",
+      "Logistics managers"
+    ],
+    tags: ["Blockchain", "Supply Chain", "Transparency", "IoT", "Compliance", "Sustainability"],
+    estimatedDelivery: "5-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $7,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Ethereum", "Hyperledger Fabric", "IoT sensors", "Smart contracts", "React", "Node.js"],
+    integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "ERP systems"],
+    compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2", "Custom industry standards"],
+    roi: "350% within 8 months",
+    competitors: ["IBM Food Trust", "VeChain", "OriginTrail", "Modum"],
+    marketTrend: "Blockchain supply chain market growing at 45% annually",
+    innovationLevel: "Advanced blockchain integration with IoT and AI",
+    aiCapabilities: ["Predictive analytics", "Risk assessment", "Optimization recommendations", "Anomaly detection"],
+    scalability: "Handles 1M+ transactions per day",
+    securityFeatures: ["Immutable blockchain records", "Smart contract security", "Multi-signature authentication", "Encrypted data"]
+  },
+
+  // AI-Powered Cybersecurity Threat Hunting Platform
+  {
+    id: "ai-cybersecurity-threat-hunting",
+    title: "AI Cybersecurity Threat Hunting Platform",
+    description: "Advanced cybersecurity platform that uses artificial intelligence to proactively hunt, detect, and neutralize sophisticated cyber threats before they can cause damage.",
+    category: "Cybersecurity",
+    subcategory: "Threat Hunting",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered threat detection and analysis",
+      "Proactive threat hunting capabilities",
+      "Behavioral analytics and anomaly detection",
+      "Automated incident response",
+      "Threat intelligence integration",
+      "Advanced malware analysis",
+      "Network traffic analysis",
+      "Endpoint detection and response",
+      "Security orchestration and automation",
+      "Compliance reporting and auditing"
+    ],
+    benefits: [
+      "Detect threats 10x faster than traditional methods",
+      "Reduce false positives by 80%",
+      "Automate 90% of incident response",
+      "24/7 autonomous threat monitoring",
+      "Predictive threat prevention"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Healthcare organizations",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Global edge computing network",
       "Auto-scaling infrastructure",
       "99.99% uptime guarantee",
@@ -255,6 +431,130 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       "Manufacturing companies"
     ],
     targetAudience: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "Chief Information Security Officers",
+      "Security analysts",
+      "Threat hunters",
+      "Incident response teams",
+      "Security architects"
+    ],
+    tags: ["Cybersecurity", "AI", "Threat Hunting", "Incident Response", "Security Automation"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,800 - $9,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Machine learning", "Deep learning", "Natural language processing", "Behavioral analytics", "Python", "TensorFlow"],
+    integrations: ["SIEM systems", "EDR solutions", "Firewalls", "IDS/IPS", "Vulnerability scanners"],
+    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
+    roi: "600% within 6 months",
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    marketTrend: "AI cybersecurity market expected to reach $46B by 2027",
+    innovationLevel: "Advanced AI-driven threat hunting with autonomous response",
+    aiCapabilities: ["Behavioral analysis", "Threat prediction", "Automated response", "Intelligent correlation"],
+    scalability: "Monitors 100K+ endpoints simultaneously",
+    securityFeatures: ["Zero-trust architecture", "Encrypted communications", "Multi-factor authentication", "Audit logging"]
+  },
+
+  // IoT Edge Computing Analytics Platform
+  {
+    id: "iot-edge-computing-analytics",
+    title: "IoT Edge Computing Analytics Platform",
+    description: "Intelligent edge computing platform that processes IoT data locally for real-time analytics, reducing latency and bandwidth costs while providing actionable insights.",
+    category: "Internet of Things",
+    subcategory: "Edge Computing",
+    price: 1600,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Local data processing and analytics",
+      "Real-time decision making",
+      "Edge AI and machine learning",
+      "Bandwidth optimization",
+      "Predictive maintenance",
+      "Device management and monitoring",
+      "Data synchronization",
+      "Custom analytics workflows",
+      "Multi-protocol support",
+      "Scalable edge deployment"
+    ],
+    benefits: [
+      "Reduce latency by 90%",
+      "Lower bandwidth costs by 70%",
+      "Improve operational efficiency by 50%",
+      "Real-time local processing",
+      "Offline operation capability"
+    ],
+    useCases: [
+      "Smart manufacturing",
+      "Connected vehicles",
+      "Smart cities",
+      "Healthcare monitoring",
+      "Energy management"
+    ],
+    targetAudience: [
+      "IoT architects",
+      "Data engineers",
+      "Operations managers",
+      "System integrators",
+      "Technology consultants"
+    ],
+    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Machine Learning", "Predictive Maintenance"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,600 - $5,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Edge AI", "TensorFlow Lite", "MQTT", "CoAP", "Docker", "Kubernetes", "Python"],
+    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers", "Database systems"],
+    compliance: ["ISO 27001", "GDPR", "Industry-specific standards"],
+    roi: "400% within 8 months",
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
+    marketTrend: "Edge computing market growing at 35% annually",
+    innovationLevel: "Advanced edge AI with real-time processing capabilities",
+    aiCapabilities: ["Local machine learning", "Real-time analytics", "Predictive modeling", "Anomaly detection"],
+    scalability: "Supports 10K+ edge devices",
+    securityFeatures: ["Edge-to-cloud encryption", "Secure device authentication", "Data integrity verification", "Access control"]
+  },
+
+  // AI-Powered Customer Experience Optimization Platform
+  {
+    id: "ai-customer-experience-optimization",
+    title: "AI Customer Experience Optimization Platform",
+    description: "Intelligent platform that uses AI to analyze customer behavior, predict needs, and optimize every touchpoint to deliver personalized, seamless customer experiences.",
+    category: "AI & Customer Experience",
+    subcategory: "Personalization",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Customer behavior analysis and prediction",
+      "Personalized content and recommendations",
+      "Omnichannel experience optimization",
+      "Sentiment analysis and monitoring",
+      "Customer journey mapping",
+      "A/B testing automation",
+      "Real-time personalization",
+      "Customer lifetime value optimization",
+      "Churn prediction and prevention",
+      "Voice and text analytics"
+    ],
+    benefits: [
+      "Increase customer satisfaction by 40%",
+      "Improve conversion rates by 35%",
+      "Reduce customer churn by 50%",
+      "Personalized experiences at scale",
+      "Data-driven customer insights"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "CISOs and security teams",
       "IT security managers",
       "Compliance officers",
@@ -387,11 +687,19 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       "Personalized experiences",
       "24/7 customer support",
       "Data-driven insights"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ],
     useCases: [
       "E-commerce businesses",
       "SaaS companies",
       "Financial services",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "Healthcare providers",
       "Retail chains"
     ],
     tags: ["AI", "Autonomous Systems", "Business Intelligence", "Machine Learning", "Automation"],
@@ -403,6 +711,18 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+    technology: ["GPT-4", "Claude 3", "Machine learning", "Natural language processing", "React", "Node.js"],
+    integrations: ["CRM systems", "Marketing automation", "Analytics platforms", "Customer support tools"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "Industry-specific standards"],
+    roi: "350% within 6 months",
+    competitors: ["Segment", "Mixpanel", "Amplitude", "Hotjar"],
+    marketTrend: "AI-powered CX market growing at 40% annually",
+    innovationLevel: "Advanced AI-driven personalization and optimization",
+    aiCapabilities: ["Behavioral prediction", "Sentiment analysis", "Personalization engines", "Churn prediction"],
+    scalability: "Handles 1M+ customer interactions daily",
+    securityFeatures: ["Data encryption", "Privacy compliance", "Access controls", "Audit trails"]
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Healthcare organizations",
       "Retail chains",
       "Service providers"
@@ -438,11 +758,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     customDevelopment: true,
     trainingIncluded: true,
     maintenanceIncluded: true
+<<<<<<< HEAD
 =======
-    websiteUrl: "https://ziontechgroup.com/ai-autonomous-business-manager-2025",
-    technologyStack: ["GPT-5", "Claude 3.5 Sonnet", "Advanced ML Models", "Real-time Analytics", "Blockchain"],
-    complianceStandards: ["GDPR", "SOC2", "ISO 27001", "HIPAA"],
-    integrationCapabilities: ["ERP Systems", "CRM Platforms", "Financial Software", "IoT Devices", "Cloud Services"]
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
   },
 
   // Quantum AI Neural Network Platform
@@ -495,20 +813,29 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/quantum-ai-neural-network-platform",
-    technologyStack: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Quantum Algorithms", "Hybrid Systems"],
-    complianceStandards: ["NIST", "ISO 27001", "Research Ethics", "Data Privacy"],
-    integrationCapabilities: ["Research Platforms", "Scientific Software", "Cloud Computing", "HPC Systems"]
+    technology: ["Quantum algorithms", "Qiskit", "Cirq", "PennyLane", "Hybrid classical-quantum systems"],
+    integrations: ["Python", "Jupyter notebooks", "ML frameworks", "Cloud quantum services"],
+    compliance: ["Research standards", "Academic protocols", "Industry best practices"],
+    roi: "800% within 18 months",
+    competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "D-Wave"],
+    marketTrend: "Quantum ML market expected to reach $8B by 2030",
+    innovationLevel: "Cutting-edge quantum-classical hybrid computing",
+    aiCapabilities: ["Quantum-enhanced ML", "Hybrid optimization", "Quantum neural networks", "Quantum feature selection"],
+    scalability: "Scales with quantum hardware improvements",
+    securityFeatures: ["Quantum-resistant algorithms", "Secure quantum communication", "Encrypted data processing"]
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   },
 
   // Blockchain DeFi Enterprise Platform
   {
-    id: "blockchain-defi-enterprise-platform",
-    title: "Blockchain DeFi Enterprise Platform",
-    description: "Enterprise-grade decentralized finance platform built on blockchain technology, offering secure, transparent, and efficient financial services.",
-    category: "Blockchain & DeFi",
-    subcategory: "Enterprise Solutions",
-    price: 6500,
+<<<<<<< HEAD
+=======
+    id: "autonomous-business-process-automation",
+    title: "Autonomous Business Process Automation Platform",
+    description: "Intelligent platform that autonomously identifies, analyzes, and automates business processes using AI, machine learning, and robotic process automation (RPA) technologies.",
+    category: "AI & Automation",
+    subcategory: "Business Process Automation",
+    price: 2000,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -1301,6 +1628,18 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+    technology: ["GPT-4", "Claude 3", "Natural language processing", "Machine learning", "Document processing"],
+    integrations: ["Document management systems", "Legal research databases", "Case management systems", "Compliance platforms"],
+    compliance: ["SOC 2", "ISO 27001", "Legal industry standards", "Data privacy regulations"],
+    roi: "400% within 6 months",
+    competitors: ["Kira Systems", "Luminance", "eBrevia", "LawGeex"],
+    marketTrend: "Legal AI market growing at 30% annually",
+    innovationLevel: "Advanced AI-powered legal document analysis",
+    aiCapabilities: ["Document understanding", "Legal analysis", "Risk assessment", "Compliance monitoring"],
+    scalability: "Processes 10K+ documents daily",
+    securityFeatures: ["End-to-end encryption", "Access controls", "Audit trails", "Data privacy compliance"]
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     id: "quantum-machine-learning-platform-2025",
     title: "Quantum Machine Learning Platform",
     description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers, enabling breakthroughs in drug discovery, materials science, and optimization.",
@@ -1652,71 +1991,10 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     customDevelopment: true,
     trainingIncluded: true,
     maintenanceIncluded: true
+<<<<<<< HEAD
 =======
-    websiteUrl: "https://ziontechgroup.com/ai-legal-research-compliance-platform",
-    technologyStack: ["NLP", "Machine Learning", "Document Analysis", "Legal AI", "Cloud Computing"],
-    complianceStandards: ["GDPR", "Legal Ethics", "Data Privacy", "Industry Regulations"],
-    integrationCapabilities: ["Legal Management Systems", "Document Management", "Compliance Platforms", "Case Management"]
-  },
-
-  // Quantum Cloud Infrastructure Platform
-  {
-    id: "quantum-cloud-infrastructure",
-    title: "Quantum Cloud Infrastructure Platform",
-    description: "Revolutionary cloud infrastructure platform that integrates quantum computing capabilities with traditional cloud services for unprecedented computational power.",
-    category: "Cloud Computing",
-    subcategory: "Quantum Cloud",
-    price: 20000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Hybrid quantum-classical cloud computing",
-      "Quantum algorithm optimization",
-      "Quantum-safe cloud security",
-      "Scalable quantum resources",
-      "Real-time quantum simulation",
-      "Quantum machine learning services",
-      "Quantum database optimization",
-      "Quantum networking capabilities"
-    ],
-    benefits: [
-      "Provide quantum computing access to any business",
-      "Solve complex problems impossible for classical computers",
-      "Future-proof cloud infrastructure",
-      "Enable breakthrough research and development",
-      "Competitive advantage in computational power"
-    ],
-    useCases: [
-      "Scientific research",
-      "Financial modeling",
-      "Drug discovery",
-      "Materials science",
-      "Financial modeling",
-      "Climate prediction",
-      "Cryptography"
-    ],
-    targetAudience: [
-      "Pharmaceutical companies",
-      "Research institutions",
-      "Financial services",
-      "Technology companies",
-      "Government agencies"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Innovation"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,000 - $50,000/month",
-    roi: "500-800%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/quantum-cloud-infrastructure",
-    technologyStack: ["Quantum Computing", "Cloud Platforms", "Quantum Algorithms", "Hybrid Systems"],
-    complianceStandards: ["ISO 27001", "SOC2", "NIST", "Data Privacy"],
-    integrationCapabilities: ["Cloud Services", "HPC Systems", "Research Platforms", "Enterprise Applications"]
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ecee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   }
 ];
 

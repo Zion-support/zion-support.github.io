@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { completeSitemap } from "@/config/sitemap";
+import { Link } from "react-router-dom";
+
+export default function Sitemap() {
+  return (
+    <>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import { 
   Globe, ArrowRight, ExternalLink, Search, 
@@ -91,12 +105,39 @@ export default function Sitemap() {}
   return (
     <>
       <SEO 
-        title="Sitemap - Zion Tech Group | Complete Site Navigation"
-
-        description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."
-        keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
-
-
+        title="Sitemap - Zion Tech Group"
+        description="Complete site navigation guide for Zion Tech Group. Find all pages, services, and resources organized by category."
+        keywords="sitemap, navigation, site structure, pages, services, Zion Tech Group"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      <SEO
+        title="Sitemap | Zion AI Marketplace"
+        description="Human readable sitemap for all public routes"
+        keywords="sitemap, navigation"
+        canonical="https://ziontechgroup.com/sitemap"
+<<<<<<< HEAD
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+          <ul className="space-y-2">
+            {completeSitemap.map(route => (
+              <li key={route.path}>
+                <Link to={route.path} className="text-zion-cyan hover:underline">
+                  {route.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
       />
 
       
@@ -206,3 +247,13 @@ export default function Sitemap() {}
   )}
 
 
+// Play icon component for demo link
+function Play({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+    </svg>
+  );
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -1,13 +1,53 @@
 {
   "compilerOptions": {
     "target": "ES2020",
+    "useDefineForClassFields": true,
+<<<<<<< HEAD
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
     "lib": [
       "ES2020",
       "DOM",
       "DOM.Iterable"
     ],
-    "allowJs": true,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    "module": "ESNext",
     "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+<<<<<<< HEAD
+
+    /* Linting */
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "strict": false,
+=======
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -28,9 +68,61 @@
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitReturns": true,
+    "baseUrl": ".",
+    "paths": {
+<<<<<<< HEAD
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "@/*": ["./src/*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false
+=======
+      "@/*": [
+        "./src/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/services/*": [
+        "./src/services/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/lib/*": [
+        "./src/lib/*"
+      ],
+      "@/data/*": [
+        "./src/data/*"
+      ]
+    },
     "allowJs": true,
     "incremental": true,
     "typeRoots": [
@@ -70,4 +162,10 @@
     "cypress/**",
     "vitest.config.ts"
   ]
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 }

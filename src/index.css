@@ -2,28 +2,144 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root {
-  --zion-blue: #1e40af;
-  --zion-blue-dark: #1e3a8a;
-  --zion-blue-light: #3b82f6;
-  --zion-cyan: #06b6d4;
-  --zion-cyan-dark: #0891b2;
-  --zion-cyan-light: #22d3ee;
-  --zion-purple: #8b5cf6;
-  --zion-purple-dark: #7c3aed;
-  --zion-purple-light: #a78bfa;
-  --zion-slate: #475569;
-  --zion-slate-dark: #334155;
-  --zion-slate-light: #64748b;
-  --zion-green: #10b981;
-  --zion-orange: #f59e0b;
-  --zion-red: #ef4444;
+<<<<<<< HEAD
+=======
+/* Custom line-clamp utility */
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
 }
 
-/* Custom CSS Variables */
-.bg-background {
-  background-color: #ffffff;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(0, 229, 255, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(0, 229, 255, 0.3);
+  color: #ffffff;
+}
+
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Zion Tech Group Colors */
+@layer base {
+  :root {
+    --zion-blue-dark: #0f172a;
+    --zion-blue: #1e293b;
+    --zion-blue-light: #334155;
+    --zion-purple: #8b5cf6;
+    --zion-purple-light: #a78bfa;
+    --zion-purple-dark: #7c3aed;
+    --zion-cyan: #22d3ee;
+    --zion-cyan-light: #67e8f9;
+    --zion-slate: #64748b;
+    --zion-slate-light: #94a3b8;
+  }
 }
 
 /* Custom Animations */

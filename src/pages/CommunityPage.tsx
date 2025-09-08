@@ -1,5 +1,28 @@
-import React from 'react';
-import { Users, MessageCircle, Calendar, BookOpen, Award, TrendingUp, Globe, Building, Brain, Shield, Zap, Rocket, Star, Heart, Share2, Plus, Search, Filter, Grid, List, Clock, MapPin } from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  MessageCircle, 
+  Calendar, 
+  Award, 
+  TrendingUp, 
+  BookOpen,
+  Video,
+  Globe,
+  Heart,
+  Share2,
+  ThumbsUp,
+  Eye,
+  Clock,
+  MapPin,
+  Tag,
+  Cloud
+} from 'lucide-react';
 
 export default function CommunityPage() {
   const communityStats = [
@@ -235,64 +258,14 @@ export default function CommunityPage() {
         </div>
       </div>
 
-      {/* Upcoming Events */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-white">Upcoming Events</h2>
-          <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
-            View All Events
-          </button>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {upcomingEvents.map((event) => (
-            <div key={event.id} className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-cyan-500/50 transition-all duration-200">
-              <div className="flex items-center justify-between mb-4">
-                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  event.category === 'AI & Technology' ? 'bg-cyan-500/20 text-cyan-400' :
-                  event.category === 'Emerging Tech' ? 'bg-purple-500/20 text-purple-400' :
-                  'bg-red-500/20 text-red-400'
-                }`}>
-                  {event.category}
-                </span>
-                <span className="text-gray-400 text-sm">{event.type}</span>
-              </div>
-              
-              <h3 className="text-lg font-bold text-white mb-3">{event.title}</h3>
-              
-              <div className="space-y-2 mb-4 text-sm text-gray-400">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>{new Date(event.date).toLocaleDateString()}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>{event.time}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4" />
-                  <span>{event.attendees} attending</span>
-                </div>
-              </div>
-              
-              <div className="mb-4">
-                <p className="text-sm text-gray-400 mb-2">Speakers:</p>
-                <div className="flex flex-wrap gap-2">
-                  {event.speakers.map((speaker, index) => (
-                    <span key={index} className="bg-gray-800/50 text-gray-300 px-2 py-1 rounded text-xs">
-                      {speaker}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
-                Register Now
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
+export default CommunityPage;
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import React from 'react';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
 
       {/* Community Categories and Top Contributors */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -392,4 +365,9 @@ export default function CommunityPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -3,7 +3,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+import { SEO } from '../components/SEO';
+import { 
+  Users, 
+  Award, 
+  Heart, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Building, 
+  Rocket, 
+  Cpu, 
+  TrendingUp 
+=======
 <<<<<<< HEAD
+import React from 'react';
 import { 
   Users, 
   Brain, 
@@ -47,197 +61,14 @@ import {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-bd86
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-import { Link } from 'react-router-dom';
-import { 
-  Linkedin, 
-  Twitter, 
-  Mail, 
-  Globe, 
-  Award,
-  Users,
-  Brain,
-  Shield,
-  Cpu,
-  Rocket,
-  Building,
-  Zap
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 } from 'lucide-react';
 
 export default function Team() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const departments = [
-    { id: 'all', name: 'All Departments', count: 45 },
-    { id: 'leadership', name: 'Leadership', count: 8 },
-    { id: 'engineering', name: 'Engineering', count: 18 },
-    { id: 'ai-research', name: 'AI Research', count: 12 },
-    { id: 'sales', name: 'Sales & Business', count: 7 }
-  ];
-
-  const locations = [
-    { id: 'all', name: 'All Locations', count: 45 },
-    { id: 'middletown', name: 'Middletown, DE', count: 25 },
-    { id: 'remote', name: 'Remote', count: 15 },
-    { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 }
-  ];
-
   const teamMembers = [
     {
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-
-export default function Team() {
-  const leadership = [
-    {
-      name: 'Kleber Santos',
-      role: 'Founder & CEO',
-      bio: 'Visionary leader with over 15 years of experience in AI and quantum computing. Former CTO at major tech companies.',
-      image: '/images/team/kleber-santos.jpg',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-      twitter: 'https://twitter.com/kleber_santos'
-    },
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Technology Officer',
-      id: 1,
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer & Chief AI Officer",
-      department: "Executive Leadership",
-      bio: "Dr. Chen is a visionary leader with over 15 years of experience in AI research and enterprise technology. She holds a PhD in Computer Science from MIT and has led breakthrough research in autonomous AI systems.",
-      expertise: ["AI & Machine Learning", "Strategic Leadership", "Research & Development", "Enterprise Technology"],
-      education: "PhD Computer Science, MIT",
-      experience: "15+ years",
-      linkedin: "https://linkedin.com/in/sarah-chen",
-      twitter: "https://twitter.com/sarahchen",
-      email: "sarah.chen@ziontechgroup.com",
-      image: "/images/team/sarah-chen.jpg",
-      achievements: ["Top 100 AI Leaders 2024", "MIT Technology Review Innovator", "Published 50+ Research Papers"],
-      featured: true
-    },
-    {
-      id: 2,
-      name: "James Wilson",
-      role: "Chief Technology Officer",
-      department: "Technology",
-      bio: "James leads our technology strategy and oversees the development of cutting-edge solutions. He has extensive experience in cloud architecture, cybersecurity, and emerging technologies.",
-      expertise: ["Cloud Architecture", "Cybersecurity", "Emerging Technologies", "Technology Strategy"],
-      education: "MS Computer Science, Stanford University",
-      experience: "12+ years",
-      linkedin: "https://linkedin.com/in/jameswilson",
-      twitter: "https://twitter.com/jameswilson",
-      email: "james.wilson@ziontechgroup.com",
-      image: "/images/team/james-wilson.jpg",
-      achievements: ["AWS Community Builder", "Cybersecurity Expert", "Cloud Architecture Specialist"],
-      featured: true
-    },
-    {
-      id: 3,
-      name: "Dr. Michael Rodriguez",
-      role: "Chief Research Officer",
-      department: "Research & Development",
-      bio: "Dr. Rodriguez leads our quantum computing and advanced research initiatives. His work has been published in leading scientific journals and has received international recognition.",
-      expertise: ["Quantum Computing", "Research & Development", "Scientific Innovation", "Academic Collaboration"],
-      education: "PhD Physics, Caltech",
-      experience: "18+ years",
-      linkedin: "https://linkedin.com/in/michaelrodriguez",
-      twitter: "https://twitter.com/mrodriguez",
-      email: "michael.rodriguez@ziontechgroup.com",
-      image: "/images/team/michael-rodriguez.jpg",
-      achievements: ["Nobel Prize Nominee 2023", "Caltech Distinguished Alumnus", "100+ Scientific Publications"],
-      featured: true
-    },
-    {
-      id: 4,
-      name: "Lisa Thompson",
-      role: "Chief Operations Officer",
-      department: "Operations",
-      bio: "Lisa ensures operational excellence across all business functions. She has a proven track record of scaling operations and implementing efficient business processes.",
-      expertise: ["Business Operations", "Process Optimization", "Strategic Planning", "Team Leadership"],
-      education: "MBA, Harvard Business School",
-      experience: "14+ years",
-      linkedin: "https://linkedin.com/in/lisathompson",
-      twitter: "https://twitter.com/lisathompson",
-      email: "lisa.thompson@ziontechgroup.com",
-      image: "/images/team/lisa-thompson.jpg",
-      achievements: ["Fortune 500 Executive", "Operational Excellence Award", "Leadership Excellence"],
-      featured: false
-    },
-    {
-      id: 5,
-      name: "Alex Kim",
-      role: "VP of Engineering",
-      department: "Engineering",
-      bio: "Alex leads our engineering teams and ensures the delivery of high-quality, scalable solutions. He has deep expertise in software architecture and team management.",
-      expertise: ["Software Architecture", "Team Leadership", "Agile Development", "Quality Assurance"],
-      education: "BS Computer Science, UC Berkeley",
-      experience: "10+ years",
-      linkedin: "https://linkedin.com/in/alexkim",
-      twitter: "https://twitter.com/alexkim",
-      email: "alex.kim@ziontechgroup.com",
-      image: "/images/team/alex-kim.jpg",
-      achievements: ["Google Engineering Award", "Open Source Contributor", "Technical Leadership"],
-      featured: false
-    },
-    {
-      id: 6,
-      name: "Dr. Emily Johnson",
-      role: "VP of Healthcare Solutions",
-      department: "Industry Solutions",
-      bio: "Dr. Johnson specializes in healthcare technology solutions and digital transformation. She has worked with major healthcare systems to implement AI-powered solutions.",
-      expertise: ["Healthcare Technology", "Digital Transformation", "AI in Healthcare", "Regulatory Compliance"],
-      education: "MD, Johns Hopkins University",
-      experience: "16+ years",
-      linkedin: "https://linkedin.com/in/emilyjohnson",
-      twitter: "https://twitter.com/emilyjohnson",
-      email: "emily.johnson@ziontechgroup.com",
-      image: "/images/team/emily-johnson.jpg",
-      achievements: ["Healthcare Innovation Award", "Medical Technology Pioneer", "Regulatory Expert"],
-      featured: false
-    },
-    {
-      id: 7,
-      name: "David Park",
-      role: "VP of Emerging Technologies",
-      department: "Innovation",
-      bio: "David explores and develops next-generation technologies including blockchain, IoT, and edge computing. He has a passion for bringing cutting-edge tech to market.",
-      expertise: ["Blockchain", "IoT", "Edge Computing", "Emerging Technologies"],
-      education: "MS Electrical Engineering, Georgia Tech",
-      experience: "11+ years",
-      linkedin: "https://linkedin.com/in/davidpark",
-      twitter: "https://twitter.com/davidpark",
-      email: "david.park@ziontechgroup.com",
-      image: "/images/team/david-park.jpg",
-      achievements: ["Innovation Award", "Patent Holder", "Technology Evangelist"],
-      featured: false
-    },
-    {
-      id: 8,
-      name: "Rachel Martinez",
-      role: "VP of Customer Success",
-      department: "Customer Experience",
-      bio: "Rachel ensures our customers achieve maximum value from our solutions. She has built and led customer success teams at multiple technology companies.",
-      expertise: ["Customer Success", "Customer Experience", "Account Management", "Client Relations"],
-      education: "BS Business Administration, UCLA",
-      experience: "13+ years",
-      linkedin: "https://linkedin.com/in/rachelmartinez",
-      twitter: "https://twitter.com/rachelmartinez",
-      email: "rachel.martinez@ziontechgroup.com",
-      image: "/images/team/rachel-martinez.jpg",
-      achievements: ["Customer Success Excellence", "Client Satisfaction Award", "Team Leadership"],
-      featured: false
-    }
-  ];
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD
       name: 'Kleber',
       role: 'Founder & CEO',
@@ -598,97 +429,164 @@ import { Link } from 'react-router-dom';
 =======
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       id: 1,
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       name: "Dr. Kleber Santos",
-      title: "Chief Executive Officer & Founder",
-      department: "leadership",
-      location: "middletown",
-      avatar: "/team/kleber-santos.jpg",
-      bio: "Visionary leader with over 15 years of experience in AI, quantum computing, and enterprise technology. Founded Zion Tech Group to revolutionize how businesses leverage cutting-edge technology.",
-      expertise: ["AI Strategy", "Quantum Computing", "Enterprise Leadership", "Innovation Management"],
-      education: "Ph.D. Computer Science, MIT",
-      experience: "15+ years",
-      linkedin: "https://linkedin.com/in/kleber-santos",
-      twitter: "https://twitter.com/klebersantos",
-      email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950",
-      featured: true,
-      achievements: [
-        "Named 'AI Innovator of the Year' 2024",
-        "Led 50+ enterprise AI transformations",
-        "Published 25+ research papers",
-        "Speaker at major tech conferences"
-      ]
+      role: "CEO & Founder",
+      description: "Visionary leader with 20+ years in technology innovation and business transformation",
+      expertise: ["AI & Machine Learning", "Quantum Computing", "Strategic Leadership"],
+      image: "/team/kleber-santos.jpg"
     },
     {
-      id: 2,
-      name: "Dr. Sarah Chen",
-      title: "Chief Technology Officer",
-      department: "leadership",
-      location: "middletown",
-      avatar: "/team/sarah-chen.jpg",
-      bio: "Leading expert in artificial intelligence and autonomous systems. Drives technological innovation and oversees all technical initiatives at Zion Tech Group.",
-      expertise: ["AI Architecture", "Autonomous Systems", "Machine Learning", "System Design"],
-      education: "Ph.D. Artificial Intelligence, Stanford",
-      experience: "12+ years",
-      linkedin: "https://linkedin.com/in/sarah-chen",
-      twitter: "https://twitter.com/sarahchen",
-      email: "sarah@ziontechgroup.com",
-      phone: "+1 302 464 0951",
-      featured: true,
-      achievements: [
-        "Former Google AI Research Lead",
-        "100+ AI system deployments",
-        "15 patents in AI technology",
-        "IEEE Fellow"
-      ]
+      name: "Sarah Chen",
+      role: "CTO & Head of Engineering",
+      description: "Technology expert driving innovation in AI, quantum computing, and infrastructure solutions",
+      expertise: ["Software Architecture", "AI Systems", "Cloud Infrastructure"],
+      image: "/team/sarah-chen.jpg"
     },
     {
-      id: 3,
-      name: "Michael Rodriguez",
-      title: "Chief Research Officer",
-      department: "ai-research",
-      location: "middletown",
-      avatar: "/team/michael-rodriguez.jpg",
-      bio: "Pioneering researcher in quantum computing and neural networks. Leads breakthrough research initiatives that push the boundaries of computational technology.",
-      expertise: ["Quantum Computing", "Neural Networks", "Research Strategy", "Academic Collaboration"],
-      education: "Ph.D. Quantum Physics, Caltech",
-      experience: "10+ years",
-      linkedin: "https://linkedin.com/in/michael-rodriguez",
-      twitter: "https://twitter.com/mrodriguez",
-      email: "michael@ziontechgroup.com",
-      phone: "+1 302 464 0952",
-      featured: true,
-      achievements: [
-        "Quantum computing breakthroughs",
-        "Published in Nature & Science",
-        "Collaboration with CERN",
-        "Nobel Prize nominee 2023"
-      ]
+      name: "Marcus Rodriguez",
+      role: "Head of AI & Research",
+      description: "Leading-edge researcher in artificial intelligence and autonomous systems",
+      expertise: ["Machine Learning", "Neural Networks", "AI Ethics"],
+      image: "/team/marcus-rodriguez.jpg"
     },
     {
-      id: 4,
+      name: "Dr. Elena Petrova",
+      role: "Quantum Technology Lead",
+      description: "Quantum physicist specializing in quantum computing and quantum internet infrastructure",
+      expertise: ["Quantum Computing", "Quantum Networks", "Quantum Algorithms"],
+      image: "/team/elena-petrova.jpg"
+    },
+    {
       name: "Alex Thompson",
-      title: "Chief Security Officer",
-      department: "leadership",
-      location: "remote",
-      avatar: "/team/alex-thompson.jpg",
-      bio: "Cybersecurity expert specializing in AI-powered security solutions and compliance automation. Ensures all Zion Tech Group solutions meet the highest security standards.",
-      expertise: ["Cybersecurity", "AI Security", "Compliance", "Risk Management"],
-      education: "M.S. Cybersecurity, Carnegie Mellon",
-      experience: "8+ years",
-      linkedin: "https://linkedin.com/in/alex-thompson",
-      twitter: "https://twitter.com/alexthompson",
-      email: "alex@ziontechgroup.com",
-      phone: "+1 302 464 0953",
-      featured: false,
-      achievements: [
-        "Former NSA cybersecurity analyst",
-        "SOC2 compliance automation expert",
-        "Zero security breaches in 5 years",
-        "CISSP, CISM certified"
-      ]
+      role: "Cybersecurity Director",
+      description: "Security expert ensuring enterprise-grade protection for all client solutions",
+      expertise: ["Zero Trust Security", "Threat Intelligence", "Compliance"],
+      image: "/team/alex-thompson.jpg"
     },
     {
+<<<<<<< HEAD
+      name: "Priya Patel",
+      role: "Head of Industry Solutions",
+      description: "Domain expert in healthcare, finance, and manufacturing technology solutions",
+      expertise: ["Industry 4.0", "Digital Transformation", "Regulatory Compliance"],
+      image: "/team/priya-patel.jpg"
+    }
+  ];
+
+  const values = [
+    {
+      title: "Innovation First",
+      description: "Pushing the boundaries of what's possible with cutting-edge technology",
+      icon: Rocket
+    },
+    {
+      title: "Excellence",
+      description: "Delivering the highest quality solutions and exceptional service",
+      icon: Award
+    },
+    {
+      title: "Collaboration",
+      description: "Working together to achieve extraordinary results for our clients",
+      icon: Users
+    },
+    {
+      title: "Integrity",
+      description: "Maintaining the highest ethical standards in all our interactions",
+      icon: Shield
+    }
+  ];
+
+  const achievements = [
+    {
+      number: "500+",
+      label: "Projects Delivered",
+      description: "Successfully completed projects across diverse industries"
+    },
+    {
+      number: "50+",
+      label: "Team Members",
+      description: "Dedicated professionals with diverse expertise"
+    },
+    {
+      number: "25+",
+      label: "Countries Served",
+      description: "Global reach with local expertise"
+    },
+    {
+      number: "99.9%",
+      label: "Client Satisfaction",
+      description: "Consistently exceeding client expectations"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEO 
+        title="Our Team - Zion Tech Group" 
+        description="Meet the exceptional team of innovators, engineers, and industry experts driving Zion Tech Group's mission to revolutionize technology."
+        tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]}
+        url="https://ziontechgroup.com/team"
+      />
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
+        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Our Team
+            <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
+              Exceptional Talent, Extraordinary Results
+            </span>
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Meet the brilliant minds behind Zion Tech Group - a diverse team of innovators, engineers, 
+            researchers, and industry experts committed to transforming the future of technology.
+          </p>
+        </div>
+      </section>
+
+      {/* Team Members Grid */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Leadership Team
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Our leadership team brings together decades of experience in technology innovation, 
+              business transformation, and industry expertise.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
+                <div className="text-center mb-6">
+                  <div className="w-24 h-24 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
+                    {member.name}
+                  </h3>
+                  <p className="text-zion-cyan font-medium mb-3">
+                    {member.role}
+                  </p>
+                  <p className="text-zion-slate text-sm mb-4">
+                    {member.description}
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-zion-blue-dark mb-3">Areas of Expertise</h4>
+                  <ul className="space-y-2">
+                    {member.expertise.map((skill, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-zion-slate">
+                        <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+=======
       id: 5,
       name: "Jennifer Lee",
       title: "VP of Engineering",
@@ -1095,6 +993,7 @@ import { Link } from 'react-router-dom';
                     View Profile
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
                   </a>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                 </div>
               </div>
             ))}
@@ -1103,6 +1002,18 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
       </section>
 
+<<<<<<< HEAD
+      {/* Values Section */}
+      <section className="py-20 bg-zion-blue-light">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              The core principles that guide our team and drive our success in delivering 
+              innovative technology solutions.
+=======
       {/* Departments */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1165,17 +1076,61 @@ import { Link } from 'react-router-dom';
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               The principles that guide our team and shape our culture of innovation and excellence.
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
+<<<<<<< HEAD
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-zion-slate">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Our Achievements
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Numbers that reflect our team's dedication, expertise, and commitment to excellence.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-zion-cyan mb-2">
+                  {achievement.number}
+                </div>
+                <div className="text-lg font-semibold text-zion-blue-dark mb-2">
+                  {achievement.label}
+                </div>
+                <p className="text-zion-slate text-sm">
+                  {achievement.description}
+                </p>
+=======
               <div key={index} className="text-center group">
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r ${value.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             ))}
           </div>
@@ -1183,6 +1138,25 @@ import { Link } from 'react-router-dom';
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Join Our Team
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Are you passionate about technology innovation? Join our team of experts and help us 
+            shape the future of technology.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              View Open Positions
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">
+              Contact HR
+            </button>
+          </div>
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -1358,6 +1332,8 @@ import { Link } from 'react-router-dom';
               </button>
             </div>
           </motion.div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
       </section>
 =======

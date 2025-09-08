@@ -1,6 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+import { Link } from 'react-router-dom';
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +22,34 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../../components/SEO';
 =======
 import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { 
   Scale, 
   FileText, 
   Search, 
+<<<<<<< HEAD
+  Brain, 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Brain, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Clock,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Rocket,
+  Briefcase,
+  Award,
+  TrendingUp,
+  Gavel,
+  BookOpen
+=======
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
@@ -172,6 +198,7 @@ const AILegalTech: React.FC = () => {
       benefits: ["Contract review automation", "Risk assessment", "Compliance checking"]
 =======
   Brain, 
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   Shield, 
   Zap,
   CheckCircle,
@@ -190,10 +217,60 @@ const AILegalTech = () => {
       icon: Brain,
       title: "AI-Powered Document Review",
       description: "Advanced AI algorithms that automatically analyze legal documents, contracts, and case files for key information and risks."
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     },
     {
       icon: Search,
       title: "Intelligent Legal Research",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      description: "AI-driven research tools that find relevant case law, statutes, and precedents in seconds, not hours.",
+      benefits: ["Case law discovery", "Precedent analysis", "Research automation"]
+    },
+    {
+      icon: BarChart3,
+      title: "Predictive Analytics",
+      description: "Machine learning models that forecast case outcomes, settlement probabilities, and litigation risks.",
+      benefits: ["Case outcome prediction", "Risk assessment", "Strategic planning"]
+    },
+    {
+      icon: Zap,
+      title: "Automated Workflows",
+      description: "Streamlined legal processes that automate routine tasks and ensure consistency across all legal operations.",
+      benefits: ["Document generation", "Process automation", "Quality control"]
+    }
+  ];
+
+  const services = [
+    {
+      title: "Contract Management",
+      description: "AI-powered contract analysis, review, and management for improved efficiency and risk mitigation.",
+      icon: FileText,
+      features: ["Contract review", "Risk assessment", "Compliance checking", "Automated generation"]
+    },
+    {
+      title: "Legal Research",
+      description: "Intelligent research tools that accelerate case preparation and improve legal strategy development.",
+      icon: Search,
+      features: ["Case law research", "Precedent analysis", "Statute interpretation", "Research automation"]
+    },
+    {
+      title: "Litigation Support",
+      description: "Comprehensive support for litigation processes with AI-powered analytics and document management.",
+      icon: Gavel,
+      features: ["Document review", "Evidence analysis", "Case strategy", "Outcome prediction"]
+    },
+    {
+      title: "Compliance Management",
+      description: "Automated compliance monitoring and reporting to ensure regulatory adherence across all legal operations.",
+      icon: Shield,
+      features: ["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit support"]
+>>>>>>> origin/main
+=======
   Shield, 
   Zap, 
   Brain, 
@@ -316,16 +393,33 @@ export default function AILegalTech() {
       title: "Risk Assessment",
       description: "Machine learning models that predict legal risks and compliance issues before they arise."
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       description: "AI-driven legal research tools that quickly find relevant case law, statutes, and precedents across multiple jurisdictions."
     },
     {
       icon: FileText,
       title: "Contract Analysis & Generation",
       description: "Automated contract review, risk assessment, and intelligent contract generation with customizable templates."
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     },
     {
       icon: Shield,
       title: "Compliance Monitoring",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      description: "Automated tracking of regulatory changes and compliance requirements across jurisdictions."
+    },
+    {
+      icon: Clock,
+      title: "E-Discovery",
+      description: "AI-powered document review and analysis for litigation and regulatory investigations."
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       description: "Real-time compliance tracking and automated alerts for regulatory changes and compliance requirements."
     },
     {
@@ -362,17 +456,15 @@ export default function AILegalTech() {
       icon: Shield
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
   const benefits = [
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -508,18 +600,29 @@ export default function AILegalTech() {
       icon: Home
     }
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "Reduce legal document review time by 70-90%",
     "Improve contract accuracy and risk identification",
     "Accelerate due diligence processes",
     "Reduce legal research costs by 50-80%",
     "Enhance compliance monitoring and reporting",
     "Improve client service and response times"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
 <<<<<<< HEAD
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center mr-4">
+                <Scale className="w-8 h-8 text-white" />
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -533,6 +636,7 @@ export default function AILegalTech() {
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
                 <Scale className="w-10 h-10 text-white" />
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -550,6 +654,8 @@ export default function AILegalTech() {
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
+=======
           </motion.div>
 <<<<<<< HEAD
 =======
@@ -974,6 +1080,7 @@ export default function AILegalTech() {
                 Watch Demo
               </button>
             </div>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
         
@@ -984,11 +1091,8 @@ export default function AILegalTech() {
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-amber-400 rounded-full animate-bounce"></div>
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
       </section>
 
@@ -1152,6 +1256,7 @@ export default function AILegalTech() {
               </div>
             ))}
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1176,6 +1281,9 @@ export default function AILegalTech() {
                 </div>
               );
             })}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
           </div>
         </div>
       </section>
@@ -1433,11 +1541,22 @@ export default function AILegalTech() {
                 </ul>
               </div>
             ))}
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Legal Technology Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI is transforming legal practice across different practice areas and firm sizes
+=======
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1446,10 +1565,35 @@ export default function AILegalTech() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how our AI legal tech platform solves real challenges in legal practice.
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
+            {useCases.map((useCase, index) => {
+              const Icon = useCase.icon;
+              return (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                      <p className="text-gray-300">{useCase.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+=======
             {useCases.map((useCase, index) => (
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1481,6 +1625,7 @@ export default function AILegalTech() {
                   ))}
                 </ul>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1497,12 +1642,58 @@ export default function AILegalTech() {
               <div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-amber-400 flex-shrink-0" />
                 <span className="text-gray-300 text-lg">{benefit}</span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Success Metrics Section */}
+      <section className="py-20 bg-indigo-900/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the measurable impact our AI legal tech platform delivers for law firms.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {successMetrics.map((metric, index) => (
+              <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-300">
+                <div className="text-4xl font-bold text-indigo-400 mb-2">{metric.metric}</div>
+                <div className="text-white font-semibold mb-2">{metric.description}</div>
+                <div className="text-gray-400 text-sm">{metric.detail}</div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
+=======
+      {/* Pricing Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Flexible pricing options designed to scale with your legal practice.
+=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -1650,11 +1841,20 @@ export default function AILegalTech() {
 =======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Legal Practice?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            Join forward-thinking legal professionals who have already revolutionized their practice with AI. 
+            Start working smarter today with intelligent legal technology.
+>>>>>>> origin/main
+=======
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -1852,6 +2052,7 @@ export default function AILegalTech() {
             </p>
           </div>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             Join forward-thinking law firms using AI to deliver better client service and improve efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1912,18 +2113,17 @@ export default function AILegalTech() {
           </div>
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
       </section>
     </div>
   );
 <<<<<<< HEAD
+};
+
+export default AILegalTech;
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2109,7 +2309,4 @@ export default AILegalTech;
 }
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
-=======
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

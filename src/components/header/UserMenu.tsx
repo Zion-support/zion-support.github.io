@@ -1,9 +1,38 @@
-import React, { useState, useRef, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Link } from 'react-router-dom';
 import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
-export const UserMenu: React.FC = () => {
+export function UserMenu() {
+  // For now, we'll show a simple login button
+  // In a real app, this would check authentication state
+  return (
+    <div className="flex items-center gap-2">
+      <Link
+        to="/login"
+        className="flex items-center gap-2 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
+      >
+        <LogIn className="w-4 h-4" />
+        <span className="hidden sm:inline">Login</span>
+      </Link>
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/Button';
+import { User, LogOut, Settings, UserPlus } from 'lucide-react';
+
+export function UserMenu() {
+  const { user, logout } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { user, logout } = useAuth();
@@ -106,6 +135,8 @@ export const UserMenu: React.FC = () => {
           </div>
         </div>
       )}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     </div>
   );
 };

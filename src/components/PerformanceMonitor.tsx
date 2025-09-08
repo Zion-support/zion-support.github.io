@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import { useEffect, useRef, useState } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from 'react';
+=======
 import React, { useState, useEffect, useCallback } from 'react';
 =======
 import React, { useEffect, useState, useCallback } from 'react';
@@ -1386,6 +1397,7 @@ const PerformanceMonitor: React.FC = () => {
 =======
 import React, { useEffect, useState, useCallback } from 'react';
 import { Zap, Clock, HardDrive, Wifi, AlertTriangle } from 'lucide-react';
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -1393,6 +1405,26 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
+<<<<<<< HEAD
+  fmp: number | null;
+}
+
+interface PerformanceMonitorProps {
+  onMetrics?: (metrics: PerformanceMetrics) => void;
+  logToConsole?: boolean;
+  sendToAnalytics?: boolean;
+  analyticsEndpoint?: string;
+}
+
+export function PerformanceMonitor({
+  onMetrics,
+  logToConsole = false,
+  sendToAnalytics = false,
+  analyticsEndpoint = '/api/analytics/performance',
+}: PerformanceMonitorProps) {
+  const observerRef = useRef<PerformanceObserver | null>(null);
+  const metricsRef = useRef<PerformanceMetrics>({
+=======
   domLoad: number | null;
   windowLoad: number | null;
   memoryUsage: number | null;
@@ -1420,17 +1452,38 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
+<<<<<<< HEAD
+    fmp: null,
+  });
+
+=======
     domLoad: null,
     windowLoad: null,
     memoryUsage: null,
     networkInfo: null
   });
 
+<<<<<<< HEAD
+  const [isVisible, setIsVisible] = useState(false);
+  const [alerts, setAlerts] = useState<string[]>([]);
+
+  // Get network information
+  const getNetworkInfo = useCallback(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      if (connection) {
+        const effectiveType = connection.effectiveType || 'unknown';
+        const downlink = connection.downlink || 'unknown';
+        const rtt = connection.rtt || 'unknown';
+        return `${effectiveType} (${downlink}Mbps, ${rtt}ms RTT)`;
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   // Measure First Contentful Paint (FCP)
   const measureFCP = () => {
     const paintEntries = performance.getEntriesByType('paint');
@@ -1440,6 +1493,43 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       metricsRef.current.fcp = fcpEntry.startTime;
       if (logToConsole) {
         console.log('FCP:', fcpEntry.startTime, 'ms');
+<<<<<<< HEAD
+      }
+    }
+  };
+
+  // Measure Largest Contentful Paint (LCP)
+  const measureLCP = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        observerRef.current = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            metricsRef.current.lcp = lastEntry.startTime;
+            if (logToConsole) {
+              console.log('LCP:', lastEntry.startTime, 'ms');
+            }
+          }
+        });
+        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      } catch (error) {
+        console.warn('LCP measurement failed:', error);
+      }
+    }
+  };
+
+  // Measure First Input Delay (FID)
+  const measureFID = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (entry.entryType === 'first-input') {
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       }
     }
     return 'unknown';
@@ -1480,23 +1570,107 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
+              const fidEntry = entry as FirstInputEntry;
+              setMetrics(prev => ({ ...prev, fid: Math.round(fidEntry.processingStart - fidEntry.startTime) }));
+            }
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('FID measurement failed:', error);
+      }
+
+      // Cumulative Layout Shift (CLS)
+      try {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (entry.entryType === 'layout-shift') {
+              const clsEntry = entry as LayoutShiftEntry;
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
+                setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }));
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               // Use a safer way to measure FID
               const fid = entry.processingStart ? entry.processingStart - entry.startTime : 0;
 
               metricsRef.current.fid = fid;
               if (logToConsole) {
                 console.log('FID:', fid, 'ms');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               }
             }
           });
         });
+<<<<<<< HEAD
+        observer.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('FID measurement failed:', error);
+      }
+    }
+  };
+
+  // Measure Cumulative Layout Shift (CLS)
+  const measureCLS = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          metricsRef.current.cls = clsValue;
+          if (logToConsole) {
+            console.log('CLS:', clsValue);
+          }
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+=======
         clsObserver.observe({ entryTypes: ['layout-shift'] });
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       } catch (error) {
         console.warn('CLS measurement failed:', error);
       }
     }
+<<<<<<< HEAD
+  };
+
+=======
   }, []);
 
+<<<<<<< HEAD
+  // Measure additional performance metrics
+  const measureAdditionalMetrics = useCallback(() => {
+    // Time to First Byte (TTFB) and other navigation metrics
+    if ('PerformanceObserver' in window) {
+      try {
+        const navigationObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
+          if (navigationEntry) {
+            const nav = navigationEntry as PerformanceNavigationTiming;
+            setMetrics(prev => ({ 
+              ...prev, 
+              ttfb: Math.round(nav.responseStart - nav.requestStart),
+              domLoad: Math.round(nav.domContentLoadedEventEnd - nav.fetchStart),
+              windowLoad: Math.round(nav.loadEventEnd - nav.fetchStart)
+            }));
+          }
+        });
+        navigationObserver.observe({ entryTypes: ['navigation'] });
+      } catch (error) {
+        console.warn('Navigation timing measurement failed:', error);
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   // Measure Time to First Byte (TTFB)
   const measureTTFB = () => {
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -1506,6 +1680,187 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       if (logToConsole) {
         console.log('TTFB:', metricsRef.current.ttfb, 'ms');
+<<<<<<< HEAD
+      }
+    }
+  };
+
+  // Measure First Meaningful Paint (FMP) approximation
+  const measureFMP = () => {
+    // FMP is not directly measurable, but we can approximate it
+    // by looking at the first paint after a significant delay
+    setTimeout(() => {
+      const paintEntries = performance.getEntriesByType('paint');
+      const lastPaintEntry = paintEntries[paintEntries.length - 1];
+      if (lastPaintEntry) {
+        metricsRef.current.fmp = lastPaintEntry.startTime;
+        if (logToConsole) {
+          console.log('FMP (approximate):', lastPaintEntry.startTime, 'ms');
+        }
+      }
+    }, 1000);
+  };
+
+  // Send metrics to analytics endpoint
+  const sendMetricsToAnalytics = async (metrics: PerformanceMetrics) => {
+    if (!sendToAnalytics) return;
+
+    try {
+      await fetch(analyticsEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          metrics,
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent,
+          url: window.location.href,
+        }),
+      });
+    } catch (error) {
+      console.warn('Failed to send performance metrics:', error);
+    }
+  };
+
+  // Get performance grade based on metrics
+  const getPerformanceGrade = (metrics: PerformanceMetrics): string => {
+    let score = 0;
+    let totalMetrics = 0;
+
+    // FCP scoring (0-100)
+    if (metrics.fcp !== null) {
+      totalMetrics++;
+      if (metrics.fcp < 1800) score += 100;
+      else if (metrics.fcp < 3000) score += 75;
+      else if (metrics.fcp < 4000) score += 50;
+      else score += 25;
+    }
+
+    // LCP scoring (0-100)
+    if (metrics.lcp !== null) {
+      totalMetrics++;
+      if (metrics.lcp < 2500) score += 100;
+      else if (metrics.lcp < 4000) score += 75;
+      else if (metrics.lcp < 6000) score += 50;
+      else score += 25;
+    }
+
+    // FID scoring (0-100)
+    if (metrics.fid !== null) {
+      totalMetrics++;
+      if (metrics.fid < 100) score += 100;
+      else if (metrics.fid < 300) score += 75;
+      else if (metrics.fid < 500) score += 50;
+      else score += 25;
+    }
+
+    // CLS scoring (0-100)
+    if (metrics.cls !== null) {
+      totalMetrics++;
+      if (metrics.cls < 0.1) score += 100;
+      else if (metrics.cls < 0.25) score += 75;
+      else if (metrics.cls < 0.4) score += 50;
+      else score += 25;
+    }
+
+    const averageScore = totalMetrics > 0 ? score / totalMetrics : 0;
+
+    if (averageScore >= 90) return 'A';
+    if (averageScore >= 80) return 'B';
+    if (averageScore >= 70) return 'C';
+    if (averageScore >= 60) return 'D';
+    return 'F';
+  };
+
+  useEffect(() => {
+    // Wait for page to load before measuring
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        measureFCP();
+        measureFMP();
+      });
+    } else {
+      measureFCP();
+      measureFMP();
+    }
+
+    // Start measuring LCP, FID, and CLS
+    measureLCP();
+    measureFID();
+    measureCLS();
+
+    // Measure TTFB after a short delay to ensure navigation timing is available
+    setTimeout(measureTTFB, 100);
+
+    // Send metrics after a delay to ensure all measurements are complete
+    const sendMetricsTimer = setTimeout(() => {
+      const metrics = metricsRef.current;
+      const grade = getPerformanceGrade(metrics);
+      
+      if (logToConsole) {
+        console.log('Performance Grade:', grade);
+        console.log('All Metrics:', metrics);
+      }
+
+      // Call callback with metrics
+      if (onMetrics) {
+        onMetrics(metrics);
+      }
+
+      // Send to analytics
+      sendMetricsToAnalytics(metrics);
+    }, 5000);
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+      clearTimeout(sendMetricsTimer);
+    };
+  }, [onMetrics, logToConsole, sendToAnalytics, analyticsEndpoint]);
+
+  // This component doesn't render anything
+  return null;
+}
+
+// Hook for using performance monitoring
+export function usePerformanceMonitoring(options?: Omit<PerformanceMonitorProps, 'onMetrics'>) {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [grade, setGrade] = useState<string>('');
+
+  const handleMetrics = (newMetrics: PerformanceMetrics) => {
+    setMetrics(newMetrics);
+  };
+
+  return {
+    metrics,
+    grade,
+    PerformanceMonitor: () => (
+      <PerformanceMonitor
+        {...options}
+        onMetrics={handleMetrics}
+      />
+    ),
+  };
+}
+
+// Utility function to get current performance metrics
+export function getCurrentPerformanceMetrics(): PerformanceMetrics {
+  const paintEntries = performance.getEntriesByType('paint');
+  const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+  return {
+    fcp: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || null,
+    lcp: null, // LCP requires observer, can't get current value
+    fid: null, // FID requires observer, can't get current value
+    cls: null, // CLS requires observer, can't get current value
+    ttfb: navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null,
+    fmp: paintEntries[paintEntries.length - 1]?.startTime || null,
+  };
+}
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       }
     }
 
@@ -2780,7 +3135,4 @@ export const PerformanceMonitor: React.FC = () => {
 export default PerformanceMonitor;
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-=======
-export default PerformanceMonitor;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

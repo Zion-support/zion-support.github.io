@@ -1,25 +1,38 @@
+<<<<<<< HEAD
 
-
-   title: string;
-   category: &apos;products&apos; | &apos;talent&apos; | &apos;equipment&apos; | &apos;services';
-   description: string;
-   price: number;
-   rating: number;
-   reviews: number;
-   views: number;
-   likes: number;
-   image: string;
-   tags: string[];
-   featured: boolean;
-   seller: { name: string;
-
-  'available' |;
-  'limited' |;
-
-  products', description: 'High-performance computing cluster optimized for AI workloads with GPU acceleration and scalable architecture., price: 25000, rating: 4.9, reviews: 127, views: 2847, likes: 156, image:,
-
+=======
+export interface SearchSuggestion {
   id: string;
   text: string;
+<<<<<<< HEAD
+  type: string;
+}
+
+<<<<<<< HEAD
+export function generateSearchSuggestions(): SearchSuggestion[] {
+  return [
+    { id: '1', text: 'AI Services', type: 'category' },
+    { id: '2', text: 'Cybersecurity', type: 'category' },
+    { id: '3', text: 'Cloud Solutions', type: 'category' },
+    { id: '4', text: 'Data Analytics', type: 'category' },
+    { id: '5', text: 'Web Development', type: 'category' },
+    { id: '6', text: 'IT Consulting', type: 'category' },
+    { id: '7', text: 'Blockchain', type: 'category' },
+    { id: '8', text: 'Process Automation', type: 'category' },
+    { id: '9', text: 'IoT Solutions', type: 'category' },
+    { id: '10', text: 'Quantum Computing', type: 'category' },
+    { id: '11', text: 'AR/VR Development', type: 'category' },
+    { id: '12', text: 'Green Technology', type: 'category' },
+    { id: '13', text: 'Micro SAAS', type: 'service' },
+    { id: '14', text: 'Enterprise Solutions', type: 'service' },
+    { id: '15', text: 'Custom Software', type: 'service' },
+    { id: '16', text: 'Digital Transformation', type: 'service' },
+    { id: '17', text: 'Machine Learning', type: 'technology' },
+    { id: '18', text: 'DevOps', type: 'technology' },
+    { id: '19', text: 'Cybersecurity Audit', type: 'service' },
+    { id: '20', text: 'Cloud Migration', type: 'service' }
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
 
@@ -644,6 +657,46 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "GPU cluster",
     "Edge computing",
     "High performance storage"
+<<<<<<< HEAD
+  ];
+  
+  // Convert strings to SearchSuggestion objects
+  return suggestions.map(text => ({
+    text,
+    type: 'product' // Use a valid type from the updated SearchSuggestion interface
+  }));
+};
+
+// Generate filter options for sidebar
+export const generateFilterOptions = (
+  listings: ProductListing[] = MARKETPLACE_LISTINGS
+): FilterOptions => {
+  // Extract unique categories, locations, and availability options from the provided listings
+  const productTypes = [...new Set(listings.map(listing => listing.category))].sort();
+  const locations = [...new Set(listings.map(listing => listing.location).filter(Boolean))].sort();
+  const availability = [...new Set(listings.map(listing => listing.availability).filter(Boolean))].sort();
+  
+  return {
+    productTypes: productTypes.map(type => ({
+      label: type,
+      value: type
+    })),
+    locations: locations.map(location => ({
+      label: location,
+      value: location
+    })),
+    availabilityOptions: availability.map(item => ({
+      label: item,
+      value: item
+    })),
+    ratingOptions: [1, 2, 3, 4, 5] // Add rating options
+  };
+};
+
+export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8fa6
   ];
 }
 =======
@@ -691,4 +744,5 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     { id: 'c8', text: 'Blockchain', type: 'category' },
   ];
 };
-=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

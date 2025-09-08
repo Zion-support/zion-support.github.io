@@ -53,8 +53,19 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+<<<<<<< HEAD
+        // Enhanced Zion colors for futuristic design
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // Enhanced Zion colors for futuristic design
+<<<<<<< HEAD
+=======
         // Zion color palette (consolidated)
 =======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         'zion-blue': {
           DEFAULT: '#0a0f1f',
           light: '#1e263b',
@@ -83,15 +94,7 @@ const config: Config = {
           neon: '#475569',
           glow: '#334155',
         },
-<<<<<<< HEAD
         // New futuristic colors
-=======
-<<<<<<< HEAD
-        // Futuristic accents
-=======
-        // New futuristic colors
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         'neon-pink': '#ff0080',
         'neon-green': '#00ff41',
         'neon-orange': '#ff6b35',
@@ -100,6 +103,7 @@ const config: Config = {
         'quantum-purple': '#7c3aed',
         'quantum-cyan': '#0891b2',
 <<<<<<< HEAD
+=======
 =======
 =======
         // Custom Zion colors
@@ -135,39 +139,7 @@ const config: Config = {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-        "zion-green": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
-        },
-        "zion-pink": {
-          DEFAULT: "#ec4899",
-          light: "#f472b6",
-          dark: "#be185d",
-        },
-        "zion-amber": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#d97706",
-        },
-=======
-        "zion-neon": {
-          cyan: "#22ddd2",
-          purple: "#8c15e9",
-          blue: "#2e73ea",
-          pink: "#ff0080",
-          green: "#00ff88",
-          yellow: "#ffff00",
-        },
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -202,9 +174,13 @@ const config: Config = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 =======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         'neon-pulse': {
           '0%, 100%': { 
             textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
@@ -236,6 +212,10 @@ const config: Config = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
 =======
         'gradient-x': {
           '0%, 100%': {
@@ -330,7 +310,7 @@ const config: Config = {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -376,72 +356,19 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "fade-in": "fade-in 0.5s ease-out",
-        "slide-in-left": "slide-in-left 0.5s ease-out",
-        "slide-in-right": "slide-in-right 0.5s ease-out",
-        "float": "float 3s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite",
-        "neon-pulse": "neon-pulse 2s ease-in-out infinite",
-        "cyber-scan": "cyber-scan 3s linear infinite",
-        "matrix-rain": "matrix-rain 10s linear infinite",
-        "gradient-shift": "gradient-shift 3s ease infinite",
-        "fade-in-up": "fade-in-up 0.6s ease-out",
-        "fade-in-left": "fade-in-left 0.6s ease-out",
-        "fade-in-right": "fade-in-right 0.6s ease-out",
-        "scale-in": "scale-in 0.6s ease-out",
-=======
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 3s ease-in-out infinite",
-        "neon-pulse": "neon-pulse 2s ease-in-out infinite",
-        "matrix-rain": "matrix-rain 8s linear infinite",
-        "slide-in-left": "slide-in-left 0.5s ease-out",
-        "slide-in-right": "slide-in-right 0.5s ease-out",
-        "fade-in-up": "fade-in-up 0.6s ease-out",
-=======
-        "neon-glow": "neon-glow 2s ease-in-out infinite alternate",
-        "neon-pulse": "neon-pulse 2s ease-in-out infinite",
-        "gradient-shift": "gradient-shift 3s ease infinite",
-        "float": "float 3s ease-in-out infinite",
-        "rotate-slow": "rotate-slow 20s linear infinite",
-        "slide-in-left": "slide-in-left 0.8s ease-out",
-        "slide-in-right": "slide-in-right 0.8s ease-out",
-        "fade-in-up": "fade-in-up 0.8s ease-out",
-=======
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite alternate",
-        "neon-pulse": "neon-pulse 2s ease-in-out infinite",
-        "gradient-shift": "gradient-shift 3s ease infinite",
-=======
-        "fade-in-up": "fade-in-up 0.6s ease-out",
-        "fade-in-down": "fade-in-down 0.6s ease-out",
-        "fade-in-left": "fade-in-left 0.6s ease-out",
-        "fade-in-right": "fade-in-right 0.6s ease-out",
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite",
-        "shimmer": "shimmer 2s linear infinite",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
         'quantum-float': 'quantum-float 6s ease-in-out infinite',
         'holographic-shift': 'holographic-shift 3s ease infinite',
         'matrix-rain': 'matrix-rain 20s linear infinite',
         'neon-flicker': 'neon-flicker 0.15s ease-in-out infinite alternate',
         'quantum-spin': 'quantum-spin 20s linear infinite',
+<<<<<<< HEAD
+=======
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
@@ -449,14 +376,24 @@ const config: Config = {
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 =======
-        "spin-slow": "spin 3s linear infinite",
-        "spin-reverse": "spin-reverse 4s linear infinite",
-        "bounce-slow": "bounce 2s infinite",
-        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite alternate",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+        'gradient-x': 'gradient-x 15s ease infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'holographic-shift': 'holographic-shift 3s ease infinite',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+=======
+        'shimmer': 'shimmer 2s ease infinite',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       },
       backgroundImage: {
         'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -473,10 +410,14 @@ const config: Config = {
         'quantum': '0 0 20px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.3)',
         'holographic': '0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)',
       },
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
       }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   },
   plugins: [

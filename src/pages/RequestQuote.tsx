@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+
+export default function RequestQuote() {
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Request a Quote - Zion Tech Group" 
+        description="Get a customized quote for your AI, IT services, or equipment needs. Our team will provide you with competitive pricing and solutions."
+        keywords="quote request, pricing, AI services, IT services, equipment, Zion Tech Group"
+        canonical="https://ziontechgroup.com/request-quote"
+      />
+      
+      <AppHeader />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import React, { useState } from 'react';
@@ -275,6 +298,23 @@ export default function RequestQuote() {
         canonical="https://ziontechgroup.com/request-quote"
       />
       
+<<<<<<< HEAD
+      <MainNavigation />
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="bg-zion-blue py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Get Your Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Tell us about your project requirements and we'll provide you with a detailed quote tailored to your needs. 
+              Whether it's AI development, IT services, or equipment solutions, we've got you covered.
+<<<<<<< HEAD
+=======
+=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
@@ -283,6 +323,8 @@ export default function RequestQuote() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Request a Quote</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Tell us about your project and we\'ll send a tailored proposal within 24 hours.
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
         </section>
@@ -296,6 +338,53 @@ export default function RequestQuote() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+        </section>
+        
+        {/* Why Choose Zion Section */}
+        <section className="py-20 bg-zion-blue-dark">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion for Your Tech Needs?</h2>
+              <p className="text-zion-slate-light text-xl max-w-2xl mx-auto">
+                We combine cutting-edge technology with proven expertise to deliver exceptional results.
+=======
+        </div>
+      </div>
+    </div>
+=======
+      <main className="flex-1 relative">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20" />
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
+                Get Your Custom Quote
+              </h1>
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">
+                Tell us about your project and we'll provide a detailed, transparent quote 
+                tailored to your specific needs and budget.
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+              </p>
+              
+              {/* Quick Contact */}
+              <div className="bg-zion-blue-dark/50 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/30 max-w-2xl mx-auto">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+                  <div className="flex items-center text-zion-cyan">
+                    <Phone className="h-5 w-5 mr-2" />
+                    <span className="font-medium">+1 (302) 464-0950</span>
+                  </div>
+                  <div className="flex items-center text-zion-cyan">
+                    <Mail className="h-5 w-5 mr-2" />
+                    <span className="font-medium">kleber@ziontechgroup.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<<<<<<< HEAD
+=======
         </section>
         
         {/* Why Choose Zion Section */}
@@ -346,10 +435,14 @@ export default function RequestQuote() {
               </div>
             </div>
           </div>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </section>
       </main>
       
       <Footer />
+<<<<<<< HEAD
+    </div>
+=======
     </>
   );
 }
@@ -525,5 +618,6 @@ export default function RequestQuote() {
         </div>
       </div>
     </>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   );
 }

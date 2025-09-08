@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
 =======
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Zap, Shield, Users, Globe, Star } from 'lucide-react';
@@ -9,11 +18,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, ArrowRight, Check, Zap, Globe, Shield, Cpu, Rocket, Brain, Server, Code, ShieldCheck, Sparkles, Star, Award, TrendingUp, Users, Clock, Target, BarChart3, Bot, CpuIcon, Eye, Layers, Globe2, ZapIcon } from 'lucide-react';
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { GradientHeading } from './GradientHeading';
+<<<<<<< HEAD
+import { Button } from './ui/button';
+
+export const HeroSection: React.FC = () => {
+  const { t } = useTranslation();
+
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Button } from './ui/button';
 
 export const HeroSection: React.FC = () => {
@@ -49,16 +67,22 @@ import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
 
 export function HeroSection() {
-=======
-=======
-=======
-=======
-=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
+<<<<<<< HEAD
+        staggerChildren: 0.3,
+        delayChildren: 0.2
+      }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        staggerChildren: 0.2
+=======
         staggerChildren: 0.2,
         delayChildren: 0.1
 =======
@@ -103,27 +127,46 @@ const HeroSection = () => {
       icon: <Shield className="w-8 h-8" />,
       title: "Quantum-Ready Security",
       description: "Future-proof cybersecurity and encryption"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
-  ];
+  };
 
+<<<<<<< HEAD
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+=======
+<<<<<<< HEAD
+  const itemVariants = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    hidden: { y: 30, opacity: 0 },
+=======
     hidden: { y: 50, opacity: 0 },
 =======
     hidden: { y: 20, opacity: 0 },
 =======
     hidden: { opacity: 0, y: 30 },
-=======
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     visible: {
       opacity: 1,
       y: 0,
       transition: {
+<<<<<<< HEAD
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        duration: 0.8
+=======
         duration: 0.8,
 =======
         duration: 0.6,
@@ -172,16 +215,18 @@ const HeroSection = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
+        duration: 3,
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const floatingVariants = {
     animate: {
       y: [-10, 10, -10],
       transition: {
+<<<<<<< HEAD
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"
+=======
         duration: 4,
         repeat: Infinity,
         ease: "easeInOut"
@@ -203,6 +248,7 @@ const HeroSection = () => {
         duration: 4,
         repeat: Infinity,
         ease: "easeInOut" as const
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       }
     }
   }), []);
@@ -226,6 +272,9 @@ const HeroSection = () => {
     { text: "24/7 expert support available", icon: Shield }
   ];
 
+<<<<<<< HEAD
+  return (
+=======
   const stats = [
     { icon: Users, value: "500+", label: "Happy Clients", color: "from-blue-400 to-cyan-400" },
     { icon: Award, value: "50+", label: "Awards Won", color: "from-yellow-400 to-orange-400" },
@@ -246,6 +295,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-95" />
 =======
   return (
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     <section className="relative overflow-hidden py-20 md:py-32">
     <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background gradient effect */}
@@ -256,6 +306,22 @@ const HeroSection = () => {
       
       {/* Enhanced floating particles with better positioning */}
       <div className="absolute inset-0">
+<<<<<<< HEAD
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse float"></div>
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-pulse delay-1000 float"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse delay-2000 float"></div>
+        <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse delay-3000 float"></div>
+=======
+        <div className="absolute top-20 left-10 w-20 h-20 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-zion-cyan/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-zion-purple/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      </div>
+      
+<<<<<<< HEAD
+      {/* Content */}
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark">
       {/* Advanced Quantum Background */}
       <div className="absolute inset-0">
@@ -366,6 +432,7 @@ const HeroSection = () => {
 
         {/* Neural Network Grid */}
         <div className="absolute inset-0 cyber-grid opacity-10" />
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark">
       {/* Animated Background Elements */}
@@ -482,6 +549,10 @@ const HeroSection = () => {
       {/* Decorative geometric shapes */}
       <div className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"></div>
       <div className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30"></div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       
       <motion.div 
         className="container relative z-10 px-4 mx-auto text-center"
@@ -491,182 +562,28 @@ const HeroSection = () => {
       >
         {/* Enhanced title with better typography */}
         <motion.div variants={itemVariants} className="mb-6">
+<<<<<<< HEAD
           <GradientHeading className="text-5xl md:text-7xl font-bold leading-tight">
             {t('home.hero_title')}
+=======
+<<<<<<< HEAD
+          <GradientHeading className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            {t('home.hero_title') || "The Future of Tech is Here"}
+=======
+          <GradientHeading className="text-5xl md:text-7xl font-bold leading-tight">
+            {t('home.hero_title')}
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </GradientHeading>
         </motion.div>
 
         {/* Enhanced subtitle with better spacing */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 shadow-lg hover:shadow-zion-purple/25 transition-all duration-300"
+<<<<<<< HEAD
 =======
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const floatingVariants = {
-    float: {
-      y: [-10, 10, -10],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  return (
-    <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
-      {/* Enhanced Background with multiple layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
-      
-      {/* Animated mesh gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-transparent to-zion-purple-light/20"></div>
-      
-      {/* Enhanced floating particles with better positioning */}
-      <motion.div 
-        className="absolute inset-0"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div 
-      {/* Enhanced background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark opacity-90"></div>
-      
-      {/* Animated grid background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px',
-          animation: 'grid-move 20s linear infinite'
-        }}></div>
-      </div>
-      
-      {/* Enhanced floating particles with neon effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60 animate-pulse shadow-lg shadow-zion-purple-light/50"></div>
-        <div className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50 animate-pulse shadow-lg shadow-zion-cyan/50"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-60 animate-pulse shadow-lg shadow-zion-purple/50"></div>
-        <div className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-40 animate-pulse shadow-lg shadow-zion-cyan-light/50"></div>
-        <div className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-50 animate-pulse shadow-lg shadow-zion-purple-light/50"></div>
-        <div className="absolute bottom-1/3 right-1/6 w-3 h-3 rounded-full bg-zion-cyan opacity-40 animate-pulse shadow-lg shadow-zion-cyan/50"></div>
-      </div>
-      
-      <div className="container relative z-10 px-4 mx-auto text-center">
-        {/* Enhanced title with neon glow */}
-        <div className="mb-6">
-          <GradientHeading className="text-5xl md:text-7xl font-bold drop-shadow-[0_0_30px_rgba(34,221,210,0.5)]">
-            {t('home.hero_title')}
-          </GradientHeading>
-        </div>
-
-        <p className="text-xl md:text-2xl text-zion-cyan mb-10 max-w-3xl mx-auto font-medium drop-shadow-[0_0_20px_rgba(34,221,210,0.3)]">
-          {t('home.hero_subtitle')}
-        </motion.p>
-
-        <motion.div 
-          className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-=======
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const floatingVariants = {
-    animate: {
-      y: [0, -10, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  return (
-    <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
-      {/* Enhanced background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
-      
-      {/* Animated floating particles with better positioning */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60"
-          variants={floatingVariants}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-40"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "1s" }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-50"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "2s" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "0.5s" }}
-        />
-      </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 opacity-20">
-        <Sparkles className="w-8 h-8 text-zion-cyan" />
-      </div>
-      <div className="absolute top-20 right-20 opacity-20">
-        <Globe className="w-8 h-8 text-zion-purple" />
-      </div>
-      <div className="absolute bottom-20 left-20 opacity-20">
-        <Clock className="w-8 h-8 text-zion-cyan-light" />
-      </div>
-      
-      <motion.div 
-        className="container relative z-10 px-4 mx-auto text-center"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div variants={itemVariants}>
-          <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold leading-tight">
-            {t('home.hero_title')}
-          </GradientHeading>
-        </motion.div>
-
-        <motion.div variants={itemVariants}>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
-            {t('home.hero_subtitle')}
+<<<<<<< HEAD
+        <motion.div variants={itemVariants} className="mb-10">
+          <p className="text-lg sm:text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+            {t('home.hero_subtitle') || "Discover top AI and tech talent, services, and equipment in one place. Powered by cutting-edge AI matching technology."}
           </p>
         </motion.div>
 
@@ -996,6 +913,12 @@ const HeroSection = () => {
               tabIndex={0}
               data-testid="hero-signup-btn"
             >
+              <Sparkles className="w-5 h-5" />
+              {t('auth.signup') || "Get Started"}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         <motion.p 
           variants={itemVariants}
           className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed"
@@ -1034,22 +957,26 @@ const HeroSection = () => {
           >
             <Link to="/signup">
               {t('auth.signup')}
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+<<<<<<< HEAD
 =======
-              <span className="flex items-center gap-2">
-                {t('auth.signup')}
-                <ArrowRight className="w-5 h-5" />
-              </span>
-=======
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-=======
-              {t('auth.signup') || "Get Started"}
-              <ArrowRight className="w-5 h-5" />
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </Link>
           </Button>
           <Link
             id="browse-marketplace"
             to="/marketplace"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 transform hover:scale-105"
+          >
+            <Globe className="w-5 h-5" />
+            {t('home.browse_marketplace') || "Browse Marketplace"}
+            <Zap className="w-4 h-4 group-hover:scale-110 transition-transform" />
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 hover-lift hover-glow shadow-2xl backdrop-blur-sm"
 =======
             className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center backdrop-blur-sm transition-all duration-300"
@@ -1104,6 +1031,17 @@ const HeroSection = () => {
             <div className="w-16 h-8 bg-zion-slate-light/20 rounded"></div>
             <div className="w-16 h-8 bg-zion-slate-light/20 rounded"></div>
             <div className="w-16 h-8 bg-zion-slate-light/20 rounded"></div>
+<<<<<<< HEAD
+          </div>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
+
+export default HeroSection;
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
           </div>
         </motion.div>
 =======
@@ -1954,3 +1892,5 @@ const Play = ({ className }: { className?: string }) => (
     <path d="M8 5v14l11-7z"/>
   </svg>
 );
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

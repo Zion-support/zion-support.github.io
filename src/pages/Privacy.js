@@ -1,14 +1,11 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 <<<<<<< HEAD
-import { Header } from "@/components/header/Header";
-import { Footer } from "@/components/Footer";
-=======
-import { Footer } from "@/components/Footer";
 =======
 <<<<<<< HEAD
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

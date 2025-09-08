@@ -1,5 +1,25 @@
-import { useEffect, useRef, useState  } from 'react.ts';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState, useEffect, useCallback } from 'react';
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+
 interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  tti: number | null;
+  overallScore: number;
+  isLoaded: boolean;
+}
 
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
@@ -14,9 +34,11 @@ interface PerformanceMetrics {
 interface PerformanceObserverEntry {
 
   name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-
+  entryType: string;
+  startTime: number;
+  duration: number;
+  value?: number;
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 }
 
 // Extended interfaces for specific performance entry types
@@ -27,15 +49,39 @@ export interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }
-export function usePerformance(...args: any[]): any {
-  const [metrics, setMetrics] = useState<any>({
+
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+}
+
+// Type guards
+function isLayoutShift(entry: PerformanceEntry): entry is LayoutShift {
+  return entry.entryType === 'layout-shift';
+}
+
+function isPerformanceEventTiming(entry: PerformanceEntry): entry is PerformanceEventTiming {
+  return entry.entryType === 'first-input';
+}
+
+<<<<<<< HEAD
+export function usePerformance() {
+=======
+export const usePerformance = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-    domLoad: null,
-    windowLoad: null
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    tti: null,
+    overallScore: 0,
+    isLoaded: false,
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   });
   const [observers, setObservers] = useState<any>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -112,6 +158,79 @@ export function usePerformance(...args: any[]): any {
       fidObserver.disconnect();
       clsObserver.disconnect();
     };
+  }, []);
+
+<<<<<<< HEAD
+  return metrics;
+}
+=======
+<<<<<<< HEAD
+  const measure = useCallback((name: string, startMark: string, endMark: string) => {
+    if ('performance' in window) {
+      try {
+        performance.measure(name, startMark, endMark);
+        const measure = performance.getEntriesByName(name)[0];
+        return measure ? Math.round(measure.duration) : null;
+      } catch (error) {
+        console.warn('Error measuring performance:', error);
+        return null;
+      }
+    }
+    return null;
+  }, []);
+
+  const clearMarks = useCallback((name?: string) => {
+    if ('performance' in window) {
+      if (name) {
+        performance.clearMarks(name);
+      } else {
+        performance.clearMarks();
+      }
+    }
+  }, []);
+
+  const clearMeasures = useCallback((name?: string) => {
+    if ('performance' in window) {
+      if (name) {
+        performance.clearMeasures(name);
+      } else {
+        performance.clearMeasures();
+      }
+    }
+  }, []);
+
+  return { mark, measure, clearMarks, clearMeasures };
+=======
+    overallScore: 0
+  });
+
+  const [isSupported, setIsSupported] = useState(false);
+
+  // Calculate overall performance score
+  const calculateScore = useCallback((fcp: number, lcp: number, fid: number, cls: number): number => {
+    let score = 100;
+
+    // FCP scoring (0-25 points)
+    if (fcp <= 1800) score -= 0;
+    else if (fcp <= 3000) score -= 10;
+    else score -= 25;
+
+    // LCP scoring (0-25 points)
+    if (lcp <= 2500) score -= 0;
+    else if (lcp <= 4000) score -= 10;
+    else score -= 25;
+
+    // FID scoring (0-25 points)
+    if (fid <= 100) score -= 0;
+    else if (fid <= 300) score -= 10;
+    else score -= 25;
+
+    // CLS scoring (0-25 points)
+    if (cls <= 0.1) score -= 0;
+    else if (cls <= 0.25) score -= 10;
+    else score -= 25;
+
+    return Math.max(0, score);
   }, []);
 
   // Get performance rating
@@ -209,35 +328,5 @@ export function usePerformance(...args: any[]): any {
     resetMetrics,
   };
 }
-
-// Hook for monitoring specific performance events
-export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry)  => void) {
-  useEffect(() => {
-    if (!('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach(callback);
-    });
-
-    try {
-      observer.observe({ entryTypes: any[eventName] });
-    } catch (error) {
-      // // // console.warn(`Error observing ${eventName}:`, error);
-    }
-    return ()  => observer.disconnect();
-  }, [eventName, callback]);
-}
-// Hook for measuring time between renders
-export function useRenderTime(...args: any[]): any {
-  const renderStart = useRef(performance.now());
-  const [renderTime, setRenderTime] = useState(0);
-
-  useEffect(() => {
-    const renderEnd = performance.now();
-    const time = renderEnd - renderStart.current;
-    setRenderTime(time);
-    renderStart.current = renderEnd;
-  });
-
-  return renderTime;
-}
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

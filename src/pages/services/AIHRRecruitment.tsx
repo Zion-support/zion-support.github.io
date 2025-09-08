@@ -10,18 +10,53 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { motion } from 'framer-motion';
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Link } from 'react-router-dom';
 =======
 import { Link } from 'react-router-dom';
 import { 
   Users, 
   Search, 
+<<<<<<< HEAD
+  Briefcase, 
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   Target, 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Brain, 
+<<<<<<< HEAD
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  MessageSquare,
+  FileText,
+  Clock,
+  Award
+} from 'lucide-react';
+
+const AIHRRecruitment = () => {
+=======
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Clock,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Rocket,
+  Briefcase,
+  Award,
+  TrendingUp
+=======
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -112,10 +147,29 @@ import {
 } from 'lucide-react';
 
 const AIHRRecruitment: React.FC = () => {
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Candidate Matching",
+<<<<<<< HEAD
+      description: "Advanced algorithms that automatically match candidates to job requirements based on skills, experience, and cultural fit."
+    },
+    {
+      icon: Search,
+      title: "Intelligent Talent Sourcing",
+      description: "Automated candidate discovery across multiple platforms with AI-driven outreach and engagement strategies."
+    },
+    {
+      icon: MessageSquare,
+      title: "Smart Interview Automation",
+      description: "AI-powered interview scheduling, question generation, and candidate assessment tools."
+    },
+    {
+      icon: FileText,
+      title: "Resume Parsing & Analysis",
+      description: "Automated resume screening with intelligent extraction of skills, experience, and qualifications."
+=======
       description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates for your organization.",
       benefits: ["Skill-based matching", "Cultural fit analysis", "Predictive success modeling"]
     },
@@ -149,10 +203,45 @@ const AIHRRecruitment: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "Intelligent pre-screening to save time and improve quality"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     },
     {
       icon: Shield,
       title: "Bias-Free Hiring",
+<<<<<<< HEAD
+      description: "AI algorithms designed to eliminate unconscious bias and ensure fair, objective candidate evaluation."
+    },
+    {
+      icon: Zap,
+      title: "Predictive Performance Analytics",
+      description: "Data-driven insights to predict candidate success and optimize hiring decisions."
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "High-Volume Recruitment",
+      description: "Handle thousands of applications efficiently with AI-powered screening and ranking.",
+      icon: Users
+    },
+    {
+      title: "Technical Hiring",
+      description: "Assess technical skills through AI-powered coding challenges and technical interviews.",
+      icon: Briefcase
+    },
+    {
+      title: "Cultural Fit Assessment",
+      description: "Evaluate candidate alignment with company values and team dynamics.",
+      icon: Target
+    },
+    {
+      title: "Employee Retention",
+      description: "Predict turnover risk and identify factors that contribute to employee satisfaction.",
+      icon: TrendingUp
+    }
+  ];
+
+=======
       description: "AI algorithms designed to eliminate unconscious bias in recruitment"
 <<<<<<< HEAD
 =======
@@ -1184,6 +1273,7 @@ const AIHRRecruitment = () => {
     }
   ];
 
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const benefits = [
     "Reduce time-to-hire by 60-80%",
     "Improve candidate quality by 40-60%",
@@ -1228,16 +1318,21 @@ const AIHRRecruitment = () => {
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
       </section>
 
       {/* Features Section */}
 <<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Intelligent HR & Recruitment Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform streamlines every aspect of the hiring process while ensuring quality and fairness
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1312,10 +1407,39 @@ const AIHRRecruitment = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform streamlines every aspect of the hiring process while ensuring quality and fairness
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-8 h-8 text-green-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              );
+            })}
+=======
+<<<<<<< HEAD
+            {features.map((feature, index) => (
+<<<<<<< HEAD
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+=======
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               AI-Powered Features That Transform HR
@@ -1394,17 +1518,75 @@ const AIHRRecruitment = () => {
                 </ul>
               </div>
             ))}
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Recruitment Process Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              The AI-Powered Recruitment Journey
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From job posting to onboarding, our AI streamlines every step of your hiring process.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {recruitmentProcess.map((process, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-white font-bold text-xl">{process.step}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{process.title}</h3>
+                <p className="text-gray-300 text-center">{process.description}</p>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+=======
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive HR Solutions
             </h2>
+<<<<<<< HEAD
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI is transforming talent acquisition across industries and company sizes
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => {
+              const Icon = useCase.icon;
+              return (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-green-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                      <p className="text-gray-300">{useCase.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+=======
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               From talent acquisition to employee retention, our AI platform covers every aspect of modern HR management.
             </p>
@@ -1462,11 +1644,15 @@ const AIHRRecruitment = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             ))}
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Benefits Section */}
 =======
 <<<<<<< HEAD
       {/* Benefits Section */}
@@ -1652,10 +1838,25 @@ const AIHRRecruitment = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD
+              Why Choose AI HR & Recruitment?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your hiring process from manual and time-consuming to intelligent and efficient
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-4">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+=======
               Measurable Results
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -1688,10 +1889,18 @@ const AIHRRecruitment = () => {
                 <div className="text-4xl font-bold text-green-400 mb-2">{metric.metric}</div>
                 <div className="text-white font-semibold mb-2">{metric.description}</div>
                 <div className="text-gray-400 text-sm">{metric.detail}</div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-teal-500/10">
+=======
       </section>
 
       {/* Pricing Section */}
@@ -1805,6 +2014,7 @@ const AIHRRecruitment = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1839,6 +2049,73 @@ const AIHRRecruitment = () => {
             Ready to Transform Your Hiring?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
+            Join innovative companies using AI to build better teams and find exceptional talent faster.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-lg hover:bg-green-400/20 transition-all duration-300">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Links */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
+            <p className="text-gray-300">Discover our complete range of AI and technology solutions</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link to="/services/ai-business-intelligence" className="group">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">AI Business Intelligence</h4>
+                    <p className="text-gray-300 text-sm">Transform data into actionable insights</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/services/ai-marketing-automation" className="group">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">AI Marketing Automation</h4>
+                    <p className="text-gray-300 text-sm">Automate marketing with AI intelligence</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/services/ai-legal-tech" className="group">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">AI Legal Tech</h4>
+                    <p className="text-gray-300 text-sm">Streamline legal processes with AI</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AIHRRecruitment;
+=======
             Join thousands of companies that have already revolutionized their recruitment with AI automation.
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
@@ -2491,7 +2768,4 @@ export default AIHRRecruitment;
 }
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
-=======
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

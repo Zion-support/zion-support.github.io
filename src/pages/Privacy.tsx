@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+
+export default function Privacy() {
+  return (
+    <>
+      <SEO
+        title="Privacy Policy"
+        description="Learn how Zion Tech Group handles your data and protects your privacy."
+        canonical="https://ziontechgroup.com/privacy"
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -212,8 +236,293 @@ const Privacy = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Privacy Policy
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
+              Your privacy is important to us. Learn how we collect, use, and protect 
+              your personal information.
+            </p>
+<<<<<<< HEAD
+          </div>
+          <div className="space-y-6 text-zion-slate-light text-lg">
+            <p>
+              We collect personal information you provide when creating an
+              account or using our services. This may include your name, email,
+              and any other details required to deliver our marketplace
+              features.
+            </p>
+            <p>
+              Zion Tech Group uses this data solely to operate and improve our
+              platform. We do not sell your personal information to third
+              parties.
+            </p>
+            <p>
+              If you have questions about our privacy practices, please contact
+              us at
+              {" "}
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="text-zion-cyan hover:underline"
+              >
+                support@ziontechgroup.com
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+=======
+            <div className="flex items-center justify-center gap-4 text-zion-slate-light">
+              <span>Last Updated:</span>
+              <span className="font-semibold">{lastUpdated}</span>
+            </div>
+=======
+import { motion } from 'framer-motion';
+import { Shield, Eye, Lock, Users, Database, Globe, Zap } from 'lucide-react';
+
+const Privacy = () => {
+  const privacySections = [
+    {
+      title: 'Information We Collect',
+      description: 'We collect information you provide directly to us and information we obtain automatically.',
+      items: [
+        'Personal information (name, email, phone number)',
+        'Business information (company name, job title)',
+        'Usage data and analytics',
+        'Technical information (IP address, device information)'
+      ],
+      icon: Database,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'How We Use Information',
+      description: 'We use the information we collect to provide and improve our services.',
+      items: [
+        'Provide and maintain our services',
+        'Communicate with you about our services',
+        'Improve and personalize user experience',
+        'Ensure security and prevent fraud'
+      ],
+      icon: Users,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Information Sharing',
+      description: 'We do not sell, trade, or rent your personal information to third parties.',
+      items: [
+        'Service providers and partners',
+        'Legal requirements and compliance',
+        'Business transfers and mergers',
+        'With your explicit consent'
+      ],
+      icon: Globe,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Data Security',
+      description: 'We implement appropriate security measures to protect your information.',
+      items: [
+        'Encryption of sensitive data',
+        'Regular security assessments',
+        'Access controls and authentication',
+        'Secure data transmission'
+      ],
+      icon: Lock,
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const rights = [
+    {
+      title: 'Access',
+      description: 'Request access to your personal information',
+      icon: Eye
+    },
+    {
+      title: 'Correction',
+      description: 'Request correction of inaccurate information',
+      icon: Shield
+    },
+    {
+      title: 'Deletion',
+      description: 'Request deletion of your personal information',
+      icon: Lock
+    },
+    {
+      title: 'Portability',
+      description: 'Request transfer of your data to another service',
+      icon: Database
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-zion-blue-dark text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue-light/20"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              Privacy{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Policy
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light leading-relaxed mb-8">
+              Your privacy is important to us. Learn how we collect, use, and protect your information.
+            </p>
+            <div className="flex items-center justify-center gap-4 text-zion-slate-light">
+              <Shield className="w-6 h-6" />
+              <span>Last updated: {new Date().toLocaleDateString()}</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Privacy Overview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Our Privacy{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Commitment
+              </span>
+            </h2>
+            <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+              At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
+              of your personal information. This policy explains how we collect, use, and safeguard your data.
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Shield, 
+  Eye, 
+  Lock, 
+  Users, 
+  Globe, 
+  Mail, 
+  Phone, 
+  Calendar,
+  CheckCircle,
+  AlertTriangle
+} from 'lucide-react';
+
+const PrivacyPage = () => {
+  const lastUpdated = "December 15, 2024";
+
+  const dataWeCollect = [
+    {
+      category: "Personal Information",
+      examples: ["Name", "Email address", "Phone number", "Company name", "Job title"],
+      purpose: "To provide our services, communicate with you, and personalize your experience"
+    },
+    {
+      category: "Technical Information",
+      examples: ["IP address", "Browser type", "Device information", "Usage data", "Cookies"],
+      purpose: "To improve our services, ensure security, and provide technical support"
+    },
+    {
+      category: "Usage Information",
+      examples: ["Pages visited", "Features used", "Search queries", "Time spent", "Interactions"],
+      purpose: "To analyze usage patterns, improve user experience, and develop new features"
+    },
+    {
+      category: "Communication Data",
+      examples: ["Support tickets", "Feedback", "Survey responses", "Marketing preferences"],
+      purpose: "To provide customer support, improve our services, and send relevant communications"
+    }
+  ];
+
+  const dataSharing = [
+    {
+      category: "Service Providers",
+      description: "We share data with trusted third-party service providers who help us operate our platform",
+      examples: ["Cloud hosting providers", "Payment processors", "Analytics services", "Customer support tools"]
+    },
+    {
+      category: "Legal Requirements",
+      description: "We may disclose data when required by law or to protect our rights and safety",
+      examples: ["Court orders", "Government requests", "Legal proceedings", "Security investigations"]
+    },
+    {
+      category: "Business Transfers",
+      description: "In the event of a merger, acquisition, or sale of assets, data may be transferred",
+      examples: ["Company restructuring", "Asset sales", "Mergers and acquisitions"]
+    },
+    {
+      category: "With Your Consent",
+      description: "We may share data with third parties when you explicitly consent",
+      examples: ["Marketing partnerships", "Integration services", "Third-party applications"]
+    }
+  ];
+
+  const userRights = [
+    {
+      right: "Access",
+      description: "Request a copy of the personal data we hold about you",
+      icon: <Eye className="h-5 w-5" />
+    },
+    {
+      right: "Correction",
+      description: "Request correction of inaccurate or incomplete data",
+      icon: <CheckCircle className="h-5 w-5" />
+    },
+    {
+      right: "Deletion",
+      description: "Request deletion of your personal data",
+      icon: <AlertTriangle className="h-5 w-5" />
+    },
+    {
+      right: "Portability",
+      description: "Request transfer of your data to another service",
+      icon: <Globe className="h-5 w-5" />
+    },
+    {
+      right: "Restriction",
+      description: "Request limitation of data processing",
+      icon: <Lock className="h-5 w-5" />
+    },
+    {
+      right: "Objection",
+      description: "Object to certain types of data processing",
+      icon: <Shield className="h-5 w-5" />
+    }
+  ];
+
+  const securityMeasures = [
+    "Encryption of data in transit and at rest",
+    "Regular security audits and penetration testing",
+    "Access controls and authentication mechanisms",
+    "Employee training on data protection",
+    "Incident response and breach notification procedures",
+    "Regular backups and disaster recovery planning"
+  ];
+
+  return (
+    <div className="min-h-screen bg-zion-blue-dark text-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
               <Shield className="w-10 h-10 text-white" />
@@ -951,3 +1260,5 @@ export default Privacy;
 };
 
 export default PrivacyPage;
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

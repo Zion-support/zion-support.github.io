@@ -1,5 +1,9 @@
 import React from 'react';
-import { SEOHead } from '../../components/SEOHead';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Cpu, 
   Network, 
@@ -12,6 +16,10 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
+  Award,
+  Rocket,
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { 
   Brain, 
   Zap, 
@@ -26,10 +34,17 @@ import {
   Play,
   Star,
   Award,
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   Globe,
   Lock,
-  Brain
+  Eye,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  BarChart
 } from 'lucide-react';
 
 const AIAutonomousBusinessPlatform: React.FC = () => {
@@ -73,6 +88,11 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
       icon: Users
     },
     {
+      icon: Users,
+      title: "User Experience",
+      description: "Intuitive interfaces and seamless integration that enhance user experience across all  a i autonomous business platform touchpoints."
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   BarChart,
   Rocket,
   Layers,
@@ -142,17 +162,20 @@ const AIAutonomousBusinessPlatform = () => {
       description: "AI-powered supply chain optimization and management",
       icon: Network,
       features: ["Inventory management", "Supplier coordination", "Demand forecasting", "Logistics optimization"]
+<<<<<<< HEAD
 =======
-      title: "Resource Management",
-      description: "Optimize resource allocation and reduce operational costs",
-      icon: BarChart3
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
   const benefits = [
-    "Reduce operational costs by up to 45%",
-    "Increase productivity by 60%",
-    "Improve decision accuracy to 98%",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "Increase efficiency by up to 300%",
+    "Reduce operational costs by 40%",
+    "Improve accuracy and reduce errors",
     "24/7 autonomous operation",
     "Scalable across all business units",
     "Real-time performance monitoring"
@@ -191,6 +214,8 @@ const AIAutonomousBusinessPlatform = () => {
         "Custom development"
       ]
     }
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "Reduce operational costs by up to 70%",
     "Increase productivity by 300%",
     "24/7 autonomous operation",
@@ -210,6 +235,10 @@ const AIAutonomousBusinessPlatform = () => {
     "Professional Services",
     "Education",
     "Government"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   ];
 =======
   };
@@ -223,6 +252,33 @@ const AIAutonomousBusinessPlatform = () => {
       />
       
       {/* Hero Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mb-4">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+               A I Autonomous Business Platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionize your business with our cutting-edge  A I Autonomous Business Platform solution. 
+              Leverage the power of artificial intelligence to automate, optimize, and transform your operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+=======
 import { Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight } from 'lucide-react';
 
 const AIAutonomousBusinessPlatform: React.FC = () => {
@@ -259,6 +315,7 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
               Watch Demo
             </button>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -285,26 +342,9 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
                 Platform Demo
               </button>
             </div>
+<<<<<<< HEAD
 =======
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Cpu className="h-12 w-12 text-cyan-400 mr-3" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
-              AI Autonomous Business Platform
-            </h1>
-          </div>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-            The complete AI-powered business platform that automates, optimizes, and scales your operations. 
-            Built for the future of autonomous business management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Request Demo
-            </button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
           </div>
         </div>
       </section>
@@ -437,11 +477,91 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
               </p>
             </div>
             
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Your Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+              Our AI Autonomous Business Platform is a comprehensive solution that transforms your entire business 
+              into an intelligent, self-operating system
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {platformFeatures.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+=======
+              Experience unprecedented growth and efficiency with our AI Autonomous Business Platform
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-white" />
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+                </div>
+                <p className="text-gray-300">{benefit}</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* Platform Modules */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Integrated Business Modules
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Every aspect of your business is covered with our comprehensive suite of AI-powered modules
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {modules.map((module, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
+                    <module.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{module.title}</h3>
+                    <p className="text-gray-300 text-sm">{module.description}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {module.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -460,49 +580,60 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-gray-300">{benefit}</p>
-=======
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Why Choose Our Platform?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gray-800/50 rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-6">Performance Metrics</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Uptime</span>
-                  <span className="text-cyan-400 font-semibold">99.99%</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Response Time</span>
-                  <span className="text-cyan-400 font-semibold">&lt;100ms</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Scalability</span>
-                  <span className="text-cyan-400 font-semibold">10M+ users</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Security</span>
-                  <span className="text-cyan-400 font-semibold">SOC2 Type II</span>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+=======
+<<<<<<< HEAD
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your business needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border ${plan.popular ? 'border-cyan-500/50 bg-gradient-to-br from-gray-800/80 to-cyan-900/20' : 'border-gray-700/50'}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400' : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/20'}`}>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </button>
+              </div>
+            ))}
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -595,6 +726,7 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
               
             </div>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       {/* Industries Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -616,12 +748,19 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-600">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -656,6 +795,7 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
               </Link>
             </div>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -679,10 +819,10 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
             >
               View Pricing Plans
             </Link>
+<<<<<<< HEAD
 =======
-            <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
-            </button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
@@ -691,3 +831,10 @@ const AIAutonomousBusinessPlatform: React.FC = () => {
 };
 
 export default AIAutonomousBusinessPlatform;
+=======
+<<<<<<< HEAD
+export default AIAutonomousBusinessPlatform;
+=======
+export default AIAutonomousBusinessPlatform;
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

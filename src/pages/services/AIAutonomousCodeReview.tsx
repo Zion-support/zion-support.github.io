@@ -1,5 +1,9 @@
 import React from 'react';
-import { SEOHead } from '../../components/SEOHead';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Code, 
   Shield, 
@@ -9,6 +13,10 @@ import {
   Target,
   CheckCircle,
   Star,
+  Award,
+  Rocket,
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { 
   Brain, 
   Code, 
@@ -22,16 +30,20 @@ import {
   Play,
   Star,
   Award,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   Globe,
   Cpu,
   Database,
   Network,
   Lock,
   Eye,
-  Brain,
-  Eye,
-  Clock,
-  TrendingUp
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  BarChart
 } from 'lucide-react';
 
 const AIAutonomousCodeReview: React.FC = () => {
@@ -53,6 +65,20 @@ const AIAutonomousCodeReview: React.FC = () => {
     },
     {
       icon: Zap,
+      title: "Real-time Processing",
+      description: "Lightning-fast processing capabilities that handle  a i autonomous code review tasks in real-time with minimal latency."
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Monitoring",
+      description: "Comprehensive dashboards and analytics that provide real-time insights into  a i autonomous code review performance."
+    },
+    {
+      icon: Users,
+      title: "User Experience",
+      description: "Intuitive interfaces and seamless integration that enhance user experience across all  a i autonomous code review touchpoints."
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   BarChart,
   Rocket,
   Layers,
@@ -306,10 +332,35 @@ const AIAutonomousCodeReview: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered code review system provides comprehensive analysis across multiple dimensions 
               to ensure your code is secure, efficient, and maintainable
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             {reviewFeatures.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -357,22 +408,34 @@ const AIAutonomousCodeReview: React.FC = () => {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Revolutionary Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-                <div className="bg-cyan-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-8 w-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Transform Your Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented growth and efficiency with our AI-powered  A I Autonomous Code Review solution.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <span className="text-lg text-gray-300">{benefit}</span>
               </div>
             ))}
 =======
@@ -457,6 +520,16 @@ const AIAutonomousCodeReview: React.FC = () => {
             Why Choose AI Code Review?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                <h3 className="text-2xl font-semibold mb-4 text-cyan-400">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  {useCase.description}
+                </p>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -475,60 +548,65 @@ const AIAutonomousCodeReview: React.FC = () => {
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-gray-300">{benefit}</p>
+<<<<<<< HEAD
 =======
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gray-800/50 rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-6">Performance Metrics</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Review Speed</span>
-                  <span className="text-cyan-400 font-semibold">80% faster</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Bug Detection</span>
-                  <span className="text-cyan-400 font-semibold">95% accuracy</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Security Coverage</span>
-                  <span className="text-cyan-400 font-semibold">99.9%</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Supported Languages</span>
-                  <span className="text-cyan-400 font-semibold">12+</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Supported Languages */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Supported Programming Languages
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {supportedLanguages.map((language, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
-                <Code className="h-8 w-8 text-cyan-400 mx-auto mb-2" />
-                <span className="text-white font-medium">{language}</span>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your business needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border ${plan.popular ? 'border-cyan-500/50 bg-gradient-to-br from-gray-800/80 to-cyan-900/20' : 'border-gray-700/50'}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400' : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/20'}`}>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </button>
+              </div>
+            ))}
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -621,6 +699,7 @@ const AIAutonomousCodeReview: React.FC = () => {
               
             </div>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       {/* Integrations Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -642,12 +721,19 @@ const AIAutonomousCodeReview: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white">{integration}</h3>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-600">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Revolutionize Your Code Review?
@@ -682,6 +768,7 @@ const AIAutonomousCodeReview: React.FC = () => {
               </Link>
             </div>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -705,10 +792,10 @@ const AIAutonomousCodeReview: React.FC = () => {
             >
               View Pricing
             </Link>
+<<<<<<< HEAD
 =======
-            <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
-            </button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
@@ -717,3 +804,10 @@ const AIAutonomousCodeReview: React.FC = () => {
 };
 
 export default AIAutonomousCodeReview;
+=======
+<<<<<<< HEAD
+export default AIAutonomousCodeReview;
+=======
+export default AIAutonomousCodeReview;
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

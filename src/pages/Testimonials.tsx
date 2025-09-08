@@ -1,47 +1,94 @@
 import React from 'react';
-import { Star, Quote, Users, Building, CheckCircle, ArrowRight, ArrowLeft, Play, Pause } from 'lucide-react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+import { Star, Quote, Building, User, Award, TrendingUp, Shield, Zap } from 'lucide-react';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      title: "Chief Technology Officer",
-      company: "TechCorp Solutions",
-      companyLogo: "/api/placeholder/60/60",
+      name: 'Sarah Johnson',
+      position: 'CTO',
+      company: 'TechFlow Solutions',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      companyLogo: '🏢',
       rating: 5,
-      content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions helped us reduce operational costs by 40% while improving system reliability. The team's expertise in quantum computing and AI is truly cutting-edge.",
-      project: "AI Infrastructure Modernization",
-      results: ["40% cost reduction", "99.9% uptime", "Improved security posture"],
-      featured: true,
-      videoUrl: "#"
+      content: 'Zion Tech Group transformed our business operations with their AI platform. We\'ve seen a 300% increase in efficiency and our team can now focus on strategic initiatives instead of repetitive tasks.',
+      industry: 'Technology',
+      results: ['300% efficiency increase', '50% cost reduction', 'Improved decision making']
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      companyLogo: '🚀',
+      rating: 5,
+      content: 'Zion Tech Group transformed our business operations with their AI-powered automation platform. We saw a 60% increase in efficiency within the first quarter.',
+      image: '👩‍💼',
+      featured: true
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     },
     {
       id: 2,
-      name: "Michael Chen",
-      title: "VP of Engineering",
-      company: "InnovateTech Inc.",
-      companyLogo: "/api/placeholder/60/60",
+      name: 'Michael Chen',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      position: 'VP of Operations',
+      company: 'Global Manufacturing Inc.',
+      companyLogo: '🏭',
       rating: 5,
-      content: "Working with Zion Tech Group on our quantum computing implementation was a game-changer. Their expertise in quantum algorithms and enterprise integration helped us stay ahead of the competition. Highly recommended!",
-      project: "Quantum Computing Platform",
-      results: ["10x performance improvement", "Advanced risk modeling", "Competitive advantage"],
-      featured: true,
-      videoUrl: "#"
+      content: 'The AI-powered predictive maintenance system from Zion Tech Group has saved us millions in unplanned downtime. Their team\'s expertise in manufacturing AI is unmatched.',
+      industry: 'Manufacturing',
+      results: ['40% reduction in downtime', 'Millions saved in maintenance', 'Predictive insights']
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      position: 'VP of Engineering',
+      company: 'InnovateCorp',
+      companyLogo: '💡',
+      rating: 5,
+      content: 'The quantum computing solutions they implemented for our research division have accelerated our development timeline by 3x. Outstanding technical expertise.',
+      image: '👨‍💻',
+      featured: true
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     },
     {
       id: 3,
-      name: "Dr. Emily Rodriguez",
-      title: "Research Director",
-      company: "BioTech Innovations",
-      companyLogo: "/api/placeholder/60/60",
+      name: 'Dr. Emily Rodriguez',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      position: 'Chief Medical Officer',
+      company: 'HealthTech Innovations',
+      companyLogo: '🏥',
       rating: 5,
-      content: "Zion Tech Group's AI research capabilities are exceptional. They helped us develop cutting-edge machine learning models for drug discovery, accelerating our research timeline significantly.",
-      project: "AI Drug Discovery Platform",
-      results: ["50% faster research", "Improved accuracy", "Scalable platform"],
-      featured: false,
-      videoUrl: "#"
-    },
+      content: 'Zion Tech Group\'s AI diagnostic tools have revolutionized our patient care. The accuracy and speed of their medical AI solutions are truly groundbreaking.',
+      industry: 'Healthcare',
+      results: ['95% diagnostic accuracy', 'Faster patient care', 'Reduced errors']
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      position: 'Head of Research',
+      company: 'BioTech Innovations',
+      companyLogo: '🧬',
+      rating: 5,
+      content: 'Their AI-driven drug discovery platform has revolutionized our research process. We\'ve identified promising compounds in weeks instead of months.',
+      image: '👩‍🔬',
+      featured: true
+    }
+  ];
+
+  const clientTestimonials = [
     {
       id: 4,
       name: "David Thompson",
@@ -75,30 +122,267 @@ export default function Testimonials() {
       company: "Logistics Solutions",
       companyLogo: "/api/placeholder/60/60",
       rating: 5,
-      content: "The AI-powered logistics optimization system from Zion Tech Group revolutionized our operations. We've seen a 35% improvement in delivery efficiency and significant cost savings.",
-      project: "AI Logistics Optimization",
-      results: ["35% efficiency improvement", "Cost reduction", "Better customer satisfaction"],
-      featured: false,
-      videoUrl: "#"
+      content: 'As a startup, we needed cost-effective AI solutions. Zion Tech Group delivered exactly what we needed within our budget and timeline.',
+      image: '👨‍💻'
+    },
+    {
+      id: 7,
+      name: 'Amanda Foster',
+      position: 'Operations Manager',
+      company: 'Logistics Pro',
+      companyLogo: '📦',
+      rating: 5,
+      content: 'Their AI-powered logistics optimization has reduced our delivery times by 25% and cut costs significantly. Exceptional service and results.',
+      image: '👩‍💼'
+    },
+    {
+      id: 8,
+      name: 'James Wilson',
+      position: 'CFO',
+      company: 'Financial Services Inc',
+      companyLogo: '💰',
+      rating: 5,
+      content: 'The financial AI tools they developed have improved our risk assessment accuracy by 40%. Their understanding of financial regulations is impressive.',
+      image: '👨‍💼'
+    },
+    {
+      id: 9,
+      name: 'Maria Garcia',
+      position: 'HR Director',
+      company: 'TalentFirst',
+      companyLogo: '👥',
+      rating: 5,
+      content: 'Their AI recruitment platform has streamlined our hiring process and helped us find better candidates faster. Game-changing technology.',
+      image: '👩‍💼'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    }
+  ];
+
+  const industryTestimonials = [
+    {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      industry: 'Financial Services',
+      testimonials: [
+        {
+          name: 'David Thompson',
+          position: 'Head of Risk Management',
+          company: 'SecureBank',
+          rating: 5,
+          content: 'Their AI risk assessment platform has given us unprecedented insights into market trends and potential risks. It\'s like having a crystal ball for financial markets.',
+          results: ['Real-time risk monitoring', 'Improved compliance', 'Better investment decisions']
+        },
+        {
+          name: 'Lisa Wang',
+          position: 'VP of Digital Innovation',
+          company: 'FinTech Capital',
+          rating: 5,
+          content: 'Zion Tech Group\'s AI solutions have accelerated our digital transformation by 2 years. Their expertise in financial AI is exceptional.',
+          results: ['2-year acceleration', 'Enhanced customer experience', 'Operational efficiency']
+        }
+      ]
+    },
+    {
+      industry: 'Retail & E-commerce',
+      testimonials: [
+        {
+          name: 'Alex Rodriguez',
+          position: 'CEO',
+          company: 'SmartRetail',
+          rating: 5,
+          content: 'The AI-powered inventory management system has eliminated stockouts and reduced waste by 60%. Our customers are happier and our profits are up.',
+          results: ['Eliminated stockouts', '60% waste reduction', 'Increased profits']
+        },
+        {
+          name: 'Jennifer Kim',
+          position: 'Marketing Director',
+          company: 'E-Commerce Plus',
+          rating: 5,
+          content: 'Their AI marketing automation has increased our conversion rates by 150%. The personalized customer experience is game-changing.',
+          results: ['150% conversion increase', 'Personalized marketing', 'Better ROI']
+        }
+      ]
+    },
+    {
+      industry: 'Government & Public Sector',
+      testimonials: [
+        {
+          name: 'Robert Williams',
+          position: 'IT Director',
+          company: 'City of Innovation',
+          rating: 5,
+          content: 'Zion Tech Group helped us modernize our city services with AI. Citizens now get faster responses and we\'ve reduced operational costs significantly.',
+          results: ['Faster citizen services', 'Reduced costs', 'Modernized systems']
+        },
+        {
+          name: 'Maria Garcia',
+          position: 'Chief Data Officer',
+          company: 'State Technology Agency',
+          rating: 5,
+          content: 'Their AI data analytics platform has transformed how we make policy decisions. We now have insights that were previously impossible to obtain.',
+          results: ['Data-driven decisions', 'Policy insights', 'Operational transparency']
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      industry: 'Healthcare',
+      testimonials: [
+        {
+          name: 'Dr. Sarah Williams',
+          position: 'Chief Medical Officer',
+          company: 'HealthTech Medical',
+          content: 'Zion Tech Group\'s AI diagnostic tools have improved our diagnostic accuracy by 35%. Their healthcare expertise is invaluable.'
+        },
+        {
+          name: 'Mark Johnson',
+          position: 'IT Director',
+          company: 'City General Hospital',
+          content: 'The patient management system they built has reduced wait times and improved patient satisfaction significantly.'
+        }
+      ]
+    },
+    {
+      industry: 'Manufacturing',
+      testimonials: [
+        {
+          name: 'Carlos Rodriguez',
+          position: 'Plant Manager',
+          company: 'AutoParts Manufacturing',
+          content: 'Their predictive maintenance AI has prevented costly equipment failures and increased our uptime by 20%.'
+        },
+        {
+          name: 'Jennifer Lee',
+          position: 'Operations Director',
+          company: 'Smart Manufacturing Co',
+          content: 'The quality control AI system has reduced defects by 45% and saved us millions in warranty claims.'
+        }
+      ]
+    },
+    {
+      industry: 'Financial Services',
+      testimonials: [
+        {
+          name: 'Thomas Anderson',
+          position: 'Risk Manager',
+          company: 'Global Bank',
+          content: 'Their fraud detection AI has saved us millions by identifying suspicious transactions in real-time.'
+        },
+        {
+          name: 'Rachel Green',
+          position: 'Investment Director',
+          company: 'Wealth Management Group',
+          content: 'The AI-powered investment analysis tools have improved our portfolio performance by 15%.'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+        }
+      ]
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Happy Clients" },
-    { number: "98%", label: "Client Satisfaction" },
-    { number: "150+", label: "Projects Completed" },
-    { number: "24/7", label: "Support Available" }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    { number: '98%', label: 'Client Satisfaction', icon: Star, color: 'from-yellow-500 to-orange-500' },
+    { number: '300+', label: 'Successful Projects', icon: Award, color: 'from-purple-500 to-pink-500' },
+    { number: '50+', label: 'Industries Served', icon: Building, color: 'from-blue-500 to-cyan-500' },
+    { number: '24/7', label: 'Support Available', icon: Shield, color: 'from-green-500 to-emerald-500' }
   ];
 
-  const industries = [
-    "Healthcare",
-    "Financial Services",
-    "Manufacturing",
-    "Technology",
-    "Retail",
-    "Education",
-    "Government",
-    "Energy"
+  const renderStars = (rating: number) => {
+    return [...Array(5)].map((_, index) => (
+      <Star
+        key={index}
+        className={`w-5 h-5 ${
+          index < rating ? 'text-yellow-400 fill-current' : 'text-gray-600'
+        }`}
+      />
+    ));
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+            Client Success Stories
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover how organizations across industries are transforming their operations with Zion Tech Group's AI solutions.
+          </p>
+        </div>
+
+        {/* Stats Section */}
+        <div className="mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-900/30">
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${stat.color} mb-4`}>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Featured Testimonials */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Featured Success Stories
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredTestimonials.map((testimonial) => (
+              <div key={testimonial.id} className="group">
+                <div className="p-8 rounded-xl border border-gray-700 bg-gray-900/30 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="text-4xl mr-4">{testimonial.companyLogo}</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
+                      <p className="text-cyan-400">{testimonial.position}</p>
+                      <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <div className="flex mb-3">
+                      {renderStars(testimonial.rating)}
+                    </div>
+                    <span className="text-sm text-gray-400">{testimonial.industry} Industry</span>
+                  </div>
+
+                  <blockquote className="mb-6">
+                    <Quote className="w-8 h-8 text-cyan-400/50 mb-3" />
+                    <p className="text-gray-300 leading-relaxed italic">
+                      "{testimonial.content}"
+                    </p>
+                  </blockquote>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:</h4>
+                    <ul className="space-y-2">
+                      {testimonial.results.map((result, index) => (
+                        <li key={index} className="flex items-start">
+                          <TrendingUp className="w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0" />
+                          <span className="text-gray-300 text-sm">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    { number: '98%', label: 'Client Satisfaction' },
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Enterprise Clients' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   return (
@@ -152,10 +436,25 @@ export default function Testimonials() {
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-xl">{testimonial.name.charAt(0)}</span>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
-                    <p className="text-gray-300">{testimonial.title}</p>
-                    <p className="text-cyan-400 font-medium">{testimonial.company}</p>
+                  
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">"{testimonial.content}"</p>
+                  
+                  <div className="text-center">
+                    <button className="px-6 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors duration-300 text-sm">
+                      Read Full Story
+                    </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                   </div>
                 </div>
                 <div className="flex items-center space-x-1">
@@ -169,31 +468,132 @@ export default function Testimonials() {
                 <Quote className="w-8 h-8 text-cyan-500 mb-4" />
                 <p className="text-gray-300 text-lg leading-relaxed">{testimonial.content}</p>
               </div>
+            ))}
+          </div>
+        </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
-              <div className="mb-6">
-                <h4 className="text-cyan-400 font-semibold mb-3">Project: {testimonial.project}</h4>
-                <div className="space-y-2">
-                  {testimonial.results.map((result, index) => (
-                    <div key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      <span>{result}</span>
+        {/* Industry-Specific Testimonials */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Success Across Industries
+          </h2>
+          <div className="space-y-16">
+            {industryTestimonials.map((industry) => (
+              <div key={industry.industry}>
+                <h3 className="text-2xl font-bold text-cyan-400 mb-8 text-center">
+                  {industry.industry}
+                </h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {industry.testimonials.map((testimonial, index) => (
+                    <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-900/30 hover:border-cyan-500/50 transition-all duration-300">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                          <User className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-bold text-white">{testimonial.name}</h4>
+                          <p className="text-cyan-400 text-sm">{testimonial.position}</p>
+                          <p className="text-gray-400 text-xs">{testimonial.company}</p>
+                        </div>
+                      </div>
+
+                      <div className="mb-4">
+                        <div className="flex mb-2">
+                          {renderStars(testimonial.rating)}
+                        </div>
+                      </div>
+
+                      <blockquote className="mb-4">
+                        <p className="text-gray-300 text-sm leading-relaxed italic">
+                          "{testimonial.content}"
+                        </p>
+                      </blockquote>
+
+                      <div>
+                        <h5 className="text-sm font-semibold text-cyan-400 mb-2">Results:</h5>
+                        <ul className="space-y-1">
+                          {testimonial.results.map((result, resultIndex) => (
+                            <li key={resultIndex} className="flex items-start">
+                              <Zap className="w-3 h-3 text-cyan-400 mt-0.5 mr-2 flex-shrink-0" />
+                              <span className="text-gray-300 text-xs">{result}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      </div>
+
+      {/* Industry Testimonials */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Success Across Industries
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See how we've helped organizations in different sectors achieve their goals
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {industryTestimonials.map((industry, index) => (
+              <div key={index}>
+                <h3 className="text-2xl font-bold text-cyan-400 mb-6 text-center">{industry.industry}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {industry.testimonials.map((testimonial, testimonialIndex) => (
+                    <div key={testimonialIndex} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
+                      <div className="flex items-start mb-4">
+                        <div className="text-3xl mr-3">👤</div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
+                          <p className="text-gray-400 text-sm">{testimonial.position}</p>
+                          <p className="text-cyan-400 text-sm font-medium">{testimonial.company}</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-300 text-sm leading-relaxed">"{testimonial.content}"</p>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                     </div>
                   ))}
                 </div>
               </div>
-
-              <div className="flex items-center justify-between">
-                <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
-                  <Play className="w-4 h-4 mr-2" />
-                  Watch Video
-                </button>
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
-                  Read Full Story
-                </button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Join Our Success Stories?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how Zion Tech Group can transform your business with cutting-edge AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Transformation
+              </a>
+              <a
+                href="/case-studies"
+                className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/20 transition-colors"
+              >
+                View More Case Studies
+              </a>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       </div>
 
       {/* All Testimonials */}
@@ -291,21 +691,31 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Share Your Story */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 text-center">
-          <h2 className="text-2xl font-bold mb-6 text-white">Share Your Success Story</h2>
-          <p className="text-gray-300 mb-8">
-            Have you worked with Zion Tech Group? We'd love to hear about your experience and share your story 
-            with others who might benefit from our services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
-              Submit Testimonial
-            </button>
-            <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
-              Contact Us
-            </button>
+      {/* CTA Section */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Join Our Success Stories?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how we can help transform your business with AI and technology solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+                Start Your Project
+              </button>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300"
+              >
+                Schedule Consultation
+              </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+            </div>
           </div>
         </div>
       </div>

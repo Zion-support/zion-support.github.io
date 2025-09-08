@@ -1,3 +1,184 @@
+<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+export default function FAQ() {
+  const faqs = [
+    {
+      question: "What is Zion Tech Group?",
+      answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented AI specialists, innovative companies, and cutting-edge technological solutions in one seamless ecosystem."
+    },
+    {
+      question: "How does the marketplace work?",
+      answer: "Our marketplace allows businesses to find AI talent, services, and equipment, while professionals can showcase their skills and find new opportunities. All transactions are facilitated through our secure platform with built-in project management tools."
+    },
+    {
+      question: "Is Zion really free to use?",
+      answer: "Yes! Zion is completely free for users to join, browse, and connect. We believe in democratizing access to AI and technology solutions. Some premium features may have associated costs, but the core marketplace functionality is free."
+    },
+    {
+      question: "What types of services are available?",
+      answer: "We offer a wide range of services including AI development, machine learning consulting, software development, IT consulting, data analysis, cloud solutions, and specialized equipment rentals. Our platform covers the full spectrum of tech needs."
+    },
+    {
+      question: "How do I get started as a talent provider?",
+      answer: "Simply create an account, complete your profile with your skills and experience, upload your portfolio, and start receiving project requests. Our AI matching system will help connect you with relevant opportunities."
+    },
+    {
+      question: "How do I find the right talent for my project?",
+      answer: "You can browse our talent directory, use our AI matching system, or post a job listing. Our platform provides detailed profiles, reviews, and portfolio samples to help you make informed decisions."
+    },
+    {
+      question: "What payment methods are accepted?",
+      answer: "We support multiple payment methods including credit cards, bank transfers, and digital wallets. All payments are processed securely through our platform with escrow protection for your peace of mind."
+    },
+    {
+      question: "Is my data secure on Zion?",
+      answer: "Absolutely. We use enterprise-grade security measures to protect your data. All communications are encrypted, and we never share your personal information with third parties without your explicit consent."
+    },
+    {
+      question: "Can I work remotely through Zion?",
+      answer: "Yes! Zion is designed for remote work. Our platform includes video conferencing, project management tools, and collaboration features that make remote work seamless and productive."
+    },
+    {
+      question: "What if I have a dispute with a client or provider?",
+      answer: "We have a comprehensive dispute resolution system in place. Our support team will work with both parties to find a fair solution. In rare cases, we can provide mediation services."
+    },
+    {
+      question: "How do you verify talent and service providers?",
+      answer: "We have a multi-step verification process including identity verification, skill assessments, portfolio reviews, and reference checks. We also maintain a rating and review system for ongoing quality assurance."
+    },
+    {
+      question: "Can I use Zion for enterprise-level projects?",
+      answer: "Absolutely! Zion is designed to handle projects of all sizes, from small consulting gigs to large enterprise implementations. We offer enterprise-specific features and dedicated support for large-scale projects."
+    }
+  ];
+
+  const categories = [
+    {
+      title: "Getting Started",
+      description: "Learn the basics of using Zion",
+      icon: "🚀"
+    },
+    {
+      title: "Account & Billing",
+      description: "Manage your account and payments",
+      icon: "💳"
+    },
+    {
+      title: "Finding Work",
+      description: "Tips for talent and service providers",
+      icon: "💼"
+    },
+    {
+      title: "Hiring Talent",
+      description: "Guide for clients and employers",
+      icon: "👥"
+    },
+    {
+      title: "Project Management",
+      description: "Tools and best practices",
+      icon: "📋"
+    },
+    {
+      title: "Safety & Security",
+      description: "Protecting your information",
+      icon: "🔒"
+    }
+  ];
+
+  return (
+    <>
+      <SEO
+        title="FAQ - Frequently Asked Questions | Zion Tech Group"
+        description="Find answers to common questions about using the Zion Tech Group platform. Get help with marketplace features, account management, and more."
+        keywords="FAQ, help, support, Zion Tech Group, marketplace questions"
+        canonical="https://ziontechgroup.com/faq"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Frequently Asked Questions</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Find answers to the most common questions about using the Zion Tech Group platform
+            </p>
+          </div>
+
+          {/* Help Categories */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">How can we help you?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {categories.map((category, index) => (
+                <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors cursor-pointer">
+                  <CardHeader className="text-center">
+                    <div className="text-4xl mb-2">{category.icon}</div>
+                    <CardTitle className="text-white">{category.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-zion-slate-light">{category.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* FAQ Accordion */}
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">Common Questions</h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
+                  <AccordionTrigger className="text-white hover:text-zion-cyan text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-zion-slate-light">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+
+          {/* Contact Support */}
+          <div className="mt-16 text-center">
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12">
+              <h2 className="text-3xl font-bold text-white mb-6">Still need help?</h2>
+              <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+                Can't find the answer you're looking for? Our support team is here to help you get the most out of Zion.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:support@ziontechgroup.com"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white font-medium rounded-lg transition-colors"
+                >
+                  Email Support
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors"
+                >
+                  Contact Form
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -1220,217 +1401,5 @@ export default function FAQ() {
     </>
   );
 }
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { FaqSection } from "@/components/FaqSection";
-import { Footer } from "@/components/Footer";
-
-export default function FAQ() {
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Frequently Asked Questions - Zion Tech Group" 
-        description="Find answers to common questions about Zion Tech Group's AI and tech marketplace services."
-        keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
-        canonical="https://ziontechgroup.com/faq"
-      />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Find answers to the most common questions about Zion Tech Group's marketplace, services, and platform.
-          </p>
-        </div>
-
-        <FaqSection />
-      </div>
-
-      <Footer />
-    </div>
-  );
-}
-=======
-              {faqs.map((category) => (
-                <button
-                  key={category.category}
-                  onClick={() => setActiveCategory(category.category)}
-                  className={`px-6 py-2 rounded-full transition-colors ${
-                    activeCategory === category.category
-                      ? 'bg-zion-purple text-white'
-                      : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
-                  }`}
-                >
-                  {category.category}
-                </button>
-              ))}
-            </div>
-
-      {/* Popular Questions */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-white">Popular Questions</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {popularQuestions.map((item) => (
-            <div key={item.id} className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-cyan-500/50 transition-all duration-200">
-              <h3 className="text-lg font-semibold text-white mb-3">{item.question}</h3>
-              <p className="text-gray-300 text-sm line-clamp-3">{item.answer}</p>
-              <div className="flex items-center justify-between mt-4">
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.slice(0, 2).map((tag, index) => (
-                    <span key={index} className="bg-gray-800/50 text-gray-300 px-2 py-1 rounded text-xs">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              ))}
-            </div>
-
-            {/* Still Have Questions */}
-            <div className="text-center mt-16">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Still have questions?
-              </h3>
-              <p className="text-zion-slate-light mb-6">
-                Can't find what you're looking for? Our support team is here to help.
-=======
-          <div className="mt-12 text-center">
-            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Still have questions?
-              </h2>
-              <p className="text-zion-slate-light mb-6">
-                Can't find the answer you're looking for? Our support team is here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
-                >
-                  Contact Support
-                </a>
-                <a
-                  href="/blog"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors"
-                >
-                  Visit Our Blog
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* FAQ List */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-white">All Questions</h2>
-        <div className="space-y-4">
-          {filteredFAQ.map((item) => (
-            <div key={item.id} className="bg-black/30 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden">
-              <button
-                onClick={() => toggleItem(item.id)}
-                className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/30 transition-colors duration-200"
-              >
-                <h3 className="text-lg font-semibold text-white pr-4">{item.question}</h3>
-                {openItems.includes(item.id) ? (
-                  <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                )}
-              </button>
-              
-              {openItems.includes(item.id) && (
-                <div className="px-6 pb-6">
-                  <div className="border-t border-gray-700 pt-4">
-                    <p className="text-gray-300 mb-4 leading-relaxed">{item.answer}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag, index) => (
-                        <span key={index} className="bg-gray-800/50 text-gray-300 px-2 py-1 rounded text-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Still Have Questions */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Still Have Questions?</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Can't find the answer you're looking for? Our team is here to help. 
-            Contact us directly or explore our resources for more information.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
-              <MessageCircle className="w-4 h-4 mr-2 inline" />
-              Contact Support
-            </button>
-            <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
-              <BookOpen className="w-4 h-4 mr-2 inline" />
-              View Documentation
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Additional Resources */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <h2 className="text-3xl font-bold mb-8 text-white text-center">Additional Resources</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 text-center hover:border-cyan-500/50 transition-all duration-200">
-            <div className="w-16 h-16 bg-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <BookOpen className="w-8 h-8 text-cyan-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Documentation</h3>
-            <p className="text-gray-300 mb-4">Comprehensive guides and technical documentation for all our products and services.</p>
-            <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
-              Browse Docs
-            </button>
-          </div>
-          
-          <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 text-center hover:border-cyan-500/50 transition-all duration-200">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-purple-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Community</h3>
-            <p className="text-gray-300 mb-4">Join our community forum to ask questions and connect with other users.</p>
-            <button className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
-              Join Community
-            </button>
-          </div>
-          
-          <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 text-center hover:border-cyan-500/50 transition-all duration-200">
-            <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <MessageCircle className="w-8 h-8 text-green-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Support</h3>
-            <p className="text-gray-300 mb-4">Get direct support from our technical team for complex issues and custom solutions.</p>
-            <button className="text-green-400 hover:text-green-300 transition-colors duration-200">
-              Contact Support
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-=======
-    </>
-  );
-}
-=======
-    </>
-  );
-}
-=======
-};
-
-export default FAQ;
+>>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

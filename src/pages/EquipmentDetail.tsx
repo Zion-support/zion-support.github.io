@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
 
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -13,6 +21,41 @@ import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
 import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
 
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+import { motion } from 'framer-motion';
+import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+
+  return (
+    <>
+      <SEO 
+        title="Equipment Details - Zion Tech Group"
+        description="View detailed information about our equipment"
+        canonical={`https://ziontechgroup.com/equipment/${id}`}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Equipment Details
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              View detailed information about our equipment
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-white">
+                Equipment ID: {id}
+              </p>
+              <p className="text-white mt-4">
+                Our equipment detail page is coming soon. You'll be able to view comprehensive information about each piece of equipment.
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import React from 'react';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
 
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
@@ -385,4 +428,9 @@ export default function EquipmentDetail() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

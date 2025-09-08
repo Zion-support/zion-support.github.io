@@ -1,4 +1,58 @@
-console.log("main.tsx: Start");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { HelmetProvider } from 'react-helmet-async'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+<<<<<<< HEAD
+import { SkipToContent } from './components/Accessibility'
+import './index.css'
+<<<<<<< HEAD
+
+=======
+
+// Register service worker for PWA functionality
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+<<<<<<< HEAD
+        console.log('SW registered: ', registration);
+        
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available, show update prompt
+                if (confirm('New content is available! Would you like to update?')) {
+                  newWorker.postMessage({ type: 'SKIP_WAITING' });
+                  window.location.reload();
+                }
+              }
+            });
+          }
+        });
+=======
+        // Service Worker registered successfully
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-675b
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+=======
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -72,19 +126,36 @@ if ('serviceWorker' in navigator) {
 	});
 }
 
-function displayFatalError(message: string) {
-	if (rootElement) {
-		rootElement.innerHTML = `
-      <div style="padding:20px;text-align:center;font-family:sans-serif;">
-        <h1>Application Error</h1>
-        <p>${message}</p>
-      </div>`;
-	}
-}
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+=======
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </QueryClientProvider>
+    </HelmetProvider>
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+  </React.StrictMode>
+);
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
 
-try {
-	renderApp();
-} catch (error) {
-	console.error('Global error caught in main.tsx:', error);
-	displayFatalError((error as Error).message);
-}
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

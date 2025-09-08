@@ -1,8 +1,26 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+# Sitemap location
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Sitemaps
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
 
+<<<<<<< HEAD
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin and private areas
+=======
+<<<<<<< HEAD
+=======
 # Crawl-delay for respectful crawling
 =======
 # Sitemap location
@@ -13,13 +31,36 @@ Sitemap: https://ziontechgroup.com/sitemap
 Crawl-delay: 1
 
 # Disallow admin and development areas
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
+<<<<<<< HEAD
+=======
 Disallow: /temp/
 Disallow: /backup/
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+
+# Allow important pages
+<<<<<<< HEAD
+Allow: /
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Allow: /services/
+Allow: /ai-solutions/
+Allow: /about/
+Allow: /contact/
+<<<<<<< HEAD
+Allow: /blog/
+<<<<<<< HEAD
+Allow: /news/
+<<<<<<< HEAD
+=======
 Allow: /case-studies/
 =======
 Disallow: /node_modules/
@@ -94,7 +135,12 @@ Disallow: /
 User-agent: *
 Crawl-delay: 2
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 Allow: /about
 Allow: /contact
 Allow: /services
 Allow: /technologies
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

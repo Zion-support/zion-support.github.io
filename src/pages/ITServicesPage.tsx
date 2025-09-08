@@ -8,21 +8,76 @@ import React, { useState } from 'react';
 <<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
+import { 
+  Server, Cloud, Shield, Database, Wifi, Lock, Brain, Zap, Rocket, Globe, 
+  Building, Users, BarChart3, Palette, Code, Monitor, Smartphone, Tablet, 
+  Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, 
+  Lightbulb, Battery, Leaf, Target, TrendingUp, ArrowRight, CheckCircle, 
+  Star, Clock, DollarSign, Phone, Mail, MapPin, ChevronRight, Settings,
+  Cpu, Network, HardDrive, Router, Firewall, Backup, Recovery, Analytics,
+  Automation, Integration, Migration, Optimization, Maintenance, Support,
+  X
+} from 'lucide-react';
 =======
-import React, { useState } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+<<<<<<< HEAD
 import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react';
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 const ITServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPricing, setSelectedPricing] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<any>(null);
 
-  // IT Services data
+  const serviceCategories = [
+    {
+      id: 'infrastructure',
+      name: 'Infrastructure & Cloud',
+      icon: <Server className="w-6 h-6" />,
+      description: 'Scalable cloud solutions and infrastructure management',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      id: 'security',
+      name: 'Cybersecurity',
+      icon: <Shield className="w-6 h-6" />,
+      description: 'Advanced security and compliance solutions',
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      id: 'ai-ml',
+      name: 'AI & Machine Learning',
+      icon: <Brain className="w-6 h-6" />,
+      description: 'Intelligent automation and data insights',
+      color: 'from-purple-500 to-indigo-500'
+    },
+    {
+      id: 'devops',
+      name: 'DevOps & Automation',
+      icon: <Zap className="w-6 h-6" />,
+      description: 'Streamlined development and deployment',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      id: 'data',
+      name: 'Data & Analytics',
+      icon: <Database className="w-6 h-6" />,
+      description: 'Data management and business intelligence',
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      id: 'digital',
+      name: 'Digital Transformation',
+      icon: <Globe className="w-6 h-6" />,
+      description: 'Modernize your business operations',
+      color: 'from-indigo-500 to-purple-500'
+    }
+  ];
+
   const itServices = [
+    // Infrastructure & Cloud Services
     {
       id: 1,
+<<<<<<< HEAD
+=======
       name: "Cloud Infrastructure Manager",
       category: "Cloud Services",
       subcategory: "Infrastructure Management",
@@ -107,6 +162,7 @@ const ITServicesPage: React.FC = () => {
     // Infrastructure & Cloud Services
     {
       id: 1,
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       name: "Cloud Migration & Strategy",
       category: "infrastructure",
       description: "Comprehensive cloud migration planning and execution for enterprise applications",
@@ -132,11 +188,8 @@ const ITServicesPage: React.FC = () => {
       technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -148,10 +201,6 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       name: "Cybersecurity Defense Suite",
       category: "Security",
       subcategory: "Threat Protection",
@@ -169,9 +218,7 @@ const ITServicesPage: React.FC = () => {
       implementationTime: "3-4 weeks",
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       name: "Managed IT Services",
       category: "infrastructure",
       description: "Complete IT infrastructure management and monitoring for businesses",
@@ -197,11 +244,8 @@ const ITServicesPage: React.FC = () => {
       technologies: ["Monitoring Tools", "Automation", "Cloud Platforms", "Security Tools"],
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -213,10 +257,6 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       name: "Network Performance Monitor",
       category: "Networking",
       subcategory: "Performance Monitoring",
@@ -234,9 +274,7 @@ const ITServicesPage: React.FC = () => {
       implementationTime: "1-2 weeks",
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       name: "Network Infrastructure Design",
       category: "infrastructure",
       description: "Enterprise-grade network architecture and implementation",
@@ -262,11 +300,8 @@ const ITServicesPage: React.FC = () => {
       technologies: ["Cisco", "Juniper", "Aruba", "SD-WAN", "WiFi 6", "5G"],
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -276,10 +311,6 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     {
       id: 4,
       name: "Data Backup & Recovery Pro",
@@ -299,9 +330,7 @@ const ITServicesPage: React.FC = () => {
       implementationTime: "1 week",
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
     // Cybersecurity Services
     {
@@ -331,11 +360,8 @@ const ITServicesPage: React.FC = () => {
       technologies: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "Nmap"],
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -347,10 +373,6 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       name: "DevOps Automation Platform",
       category: "DevOps",
       subcategory: "Automation",
@@ -368,9 +390,7 @@ const ITServicesPage: React.FC = () => {
       implementationTime: "2-3 weeks",
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       name: "Security Operations Center (SOC)",
       category: "security",
       description: "24/7 security monitoring and incident response services",
@@ -396,11 +416,8 @@ const ITServicesPage: React.FC = () => {
       technologies: ["SIEM", "EDR", "SOAR", "Threat Intel", "Analytics"],
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -410,10 +427,6 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     {
       id: 6,
       name: "IT Asset Management System",
@@ -433,9 +446,7 @@ const ITServicesPage: React.FC = () => {
       implementationTime: "1-2 weeks",
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
     // AI & ML Services
     {
@@ -465,11 +476,8 @@ const ITServicesPage: React.FC = () => {
       technologies: ["TensorFlow", "PyTorch", "Azure ML", "AWS SageMaker", "Python"],
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -481,10 +489,6 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       name: "Help Desk & Support Platform",
       category: "Support Services",
       subcategory: "Help Desk",
@@ -502,9 +506,7 @@ const ITServicesPage: React.FC = () => {
       implementationTime: "1-2 weeks",
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       name: "Machine Learning Models",
       category: "ai-ml",
       description: "Custom ML model development and deployment",
@@ -726,11 +728,8 @@ const ITServicesPage: React.FC = () => {
       technologies: ["Cloud", "AI/ML", "IoT", "Automation", "Analytics"],
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -740,70 +739,47 @@ const ITServicesPage: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+  const filteredServices = selectedCategory === 'all' 
+    ? itServices 
+    : itServices.filter(service => service.category === selectedCategory);
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database'];
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
-  const filteredServices = itServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-    
-    return matchesSearch && matchesCategory && matchesPricing;
-  });
-
-  const formatPrice = (price: number, model: string) => {
-    switch (model) {
-      case 'monthly':
-        return `$${price}/month`;
-      case 'yearly':
-        return `$${price * 12}/year`;
-      case 'one-time':
-        return `$${price.toLocaleString()}`;
-      default:
-        return `$${price}`;
-    }
+  const getCategoryColor = (categoryId: string) => {
+    const category = serviceCategories.find(cat => cat.id === categoryId);
+    return category ? category.color : 'from-gray-500 to-gray-600';
   };
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Cloud Services': return <Cloud className="w-6 h-6" />;
-      case 'Security': return <Shield className="w-6 h-6" />;
-      case 'Networking': return <Network className="w-6 h-6" />;
-      case 'Data Management': return <Database className="w-6 h-6" />;
-      case 'DevOps': return <Zap className="w-6 h-6" />;
-      case 'Asset Management': return <HardDrive className="w-6 h-6" />;
-      case 'Support Services': return <MessageSquare className="w-6 h-6" />;
-      case 'Database': return <Database className="w-6 h-6" />;
-      default: return <Server className="w-6 h-6" />;
-    }
-  };
-
-  const getPricingColor = (pricing: string) => {
-    switch (pricing) {
-      case 'Freemium': return 'text-green-400';
-      case 'Subscription': return 'text-blue-400';
-      case 'One-time': return 'text-purple-400';
-      default: return 'text-gray-400';
-    }
+  const getCategoryIcon = (categoryId: string) => {
+    const category = serviceCategories.find(cat => cat.id === categoryId);
+    return category ? category.icon : <Settings className="w-6 h-6" />;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-black via-zion-blue-dark to-black relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-zion-purple/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-zion-cyan/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-4 py-12 relative">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent mb-4">
-            IT Services
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
+            <Server className="w-4 h-4" />
+            Enterprise IT Solutions
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-white to-zion-purple bg-clip-text text-transparent mb-6 animate-neon-pulse">
+            IT Services & Solutions
           </h1>
+<<<<<<< HEAD
+=======
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive IT infrastructure, security, and technical solutions designed to modernize and optimize your business technology operations
           </p>
@@ -885,6 +861,7 @@ const ITServicesPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-white to-zion-purple bg-clip-text text-transparent mb-6 animate-neon-pulse">
             IT Services & Solutions
           </h1>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Comprehensive IT services designed to transform your business operations, 
             enhance security, and drive innovation through cutting-edge technology.
@@ -944,10 +921,123 @@ const ITServicesPage: React.FC = () => {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
 
         {/* Services Grid */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredServices.map((service) => (
+            <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="text-blue-400">
+                    {getCategoryIcon(service.category)}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                    <div className="flex items-center gap-2">
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 bg-current`}>
+                        {service.pricing}
+                      </span>
+                      <span className="px-2 py-1 text-xs font-medium rounded-full text-blue-400 bg-blue-400 bg-opacity-20">
+                        {service.category}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-white mb-2">
+                  {formatPrice(service.price, service.pricingModel)}
+                </div>
+                <div className="text-sm text-gray-400">{service.userLimit}</div>
+                <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.features.slice(0, 3).map((feature, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.targetAudience.slice(0, 2).map((audience, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
+                      {audience}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="border-t border-gray-600 pt-4">
+                <div className="flex items-center justify-between text-sm text-gray-400">
+                  <span>Start your free trial today</span>
+                  <a 
+                    href={service.contactInfo.website}
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Started →
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-16 text-center">
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
+            <p className="text-gray-300 mb-6">
+              Our IT solutions are designed to scale with your business and provide enterprise-grade reliability
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Phone</p>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div>
+                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Email</p>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div>
+                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Address</p>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             {selectedCategory === 'all' ? 'All Services' : `${serviceCategories.find(cat => cat.id === selectedCategory)?.name} Services`}
@@ -1052,11 +1142,20 @@ const ITServicesPage: React.FC = () => {
                   <Phone className="w-5 h-5" />
                   Call Now
                 </a>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
       {/* Service Detail Modal */}
       {selectedService && (
@@ -1142,6 +1241,10 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       )}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     </div>
   );
 };

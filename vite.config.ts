@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node:path'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
+import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
+<<<<<<< HEAD
+=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -14,10 +28,22 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 =======
 import path from 'node:path'
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+<<<<<<< HEAD
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -30,9 +56,28 @@ export default defineConfig({
       '@lib': resolve(__dirname, 'src/lib'),
       '@data': resolve(__dirname, 'src/data'),
     },
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   },
-
   build: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    target: 'es2020',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+<<<<<<< HEAD
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+<<<<<<< HEAD
+        passes: 2,
+      },
+      mangle: {
+        toplevel: true,
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
 =======
         pure_funcs: ['console.log', 'console.info'],
         dead_code: true,
@@ -191,10 +236,63 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2
+      },
+      mangle: {
+        toplevel: true
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     target: 'es2015',
     minify: 'esbuild',
     esbuildOptions: {
       drop: ['console', 'debugger'],
+<<<<<<< HEAD
+    },
+    rollupOptions: {
+      output: {
+        // Optimize chunk splitting for better caching
+        manualChunks: {
+          // Vendor chunks
+          'react-vendor': ['react', 'react-dom'],
+          'animation-vendor': ['framer-motion'],
+          'utils-vendor': ['lucide-react'],
+        },
+        // Optimize asset naming for better caching
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId
+            ? chunkInfo.facadeModuleId.split('/').pop()?.split('.')[0]
+            : 'chunk'
+          return `js/${facadeModuleId}-[hash].js`
+        },
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || []
+          const ext = info[info.length - 1]
+          if (/\.(css)$/.test(assetInfo.name || '')) {
+            return `css/[name]-[hash].${ext}`
+          }
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) {
+            return `images/[name]-[hash].${ext}`
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) {
+            return `fonts/[name]-[hash].${ext}`
+          }
+          return `assets/[name]-[hash].${ext}`
+        },
+      },
+    },
+    // Optimize chunk size warnings
+    chunkSizeWarningLimit: 1000,
+    // Enable source maps for debugging
+    sourcemap: false
+  }
+})
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     },
 =======
     chunkSizeWarningLimit: 500,
@@ -330,3 +428,5 @@ export default defineConfig({
 =======
   },
 });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

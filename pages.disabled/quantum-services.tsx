@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages.disabled/quantum-services.tsx
@@ -18,51 +20,154 @@ import {
   Sparkles, Crown, Infinity, Target as TargetIcon, 
   Award, MessageCircle, ChevronRight, Flame, Brain
 =======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
   Atom, Lock, Database, Cpu, Target, Flame, 
   Zap, Shield, Rocket, ArrowRight, Star,
   CheckCircle, Clock, DollarSign, TrendingUp,
   Globe, Network, Server, Cloud
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
 } from 'lucide-react';
 
 const quantumServices = [
   {
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+<<<<<<< HEAD
+    id: 'quantum-internet-security-platform',
+    name: 'Quantum Internet Security Platform',
+    description: 'Unhackable quantum-secured internet infrastructure with quantum key distribution',
+    features: [
+      'Quantum Key Distribution (QKD)',
+      'Unhackable Encryption',
+      'Quantum Network Infrastructure',
+      'Real-time Security Monitoring',
+      'Global Quantum Network'
+    ],
+    pricing: '$35,000/month',
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     name: 'Quantum Internet Security Platform',
     href: '/quantum-internet-security-platform',
     description: 'Unhackable quantum-secured internet infrastructure with quantum key distribution',
     features: ['Quantum Key Distribution', 'Unhackable Encryption', 'Quantum Network', 'Real-time Security'],
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     isPremium: true,
     badge: 'Premium',
     color: 'from-indigo-500 to-blue-600'
   },
   {
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+<<<<<<< HEAD
+    id: 'quantum-bio-computing-platform',
+    name: 'Quantum Bio-Computing Platform',
+    description: 'Revolutionary quantum molecular simulation for drug discovery and bio-engineering',
+    features: [
+      'Quantum Molecular Simulation',
+      'Drug Discovery Algorithms',
+      'Protein Folding Optimization',
+      'Bio-Engineering Tools',
+      'Quantum Biology Research'
+    ],
+    pricing: '$28,000/month',
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     name: 'Quantum Bio-Computing Platform',
     href: '/quantum-bio-computing-platform',
     description: 'Revolutionary quantum molecular simulation for drug discovery and bio-engineering',
     features: ['Molecular Simulation', 'Drug Discovery', 'Bio-Engineering', 'Quantum Algorithms'],
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     isNew: true,
     badge: 'New',
     color: 'from-green-500 to-emerald-600'
   },
   {
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+<<<<<<< HEAD
+    id: 'brain-computer-interface-platform',
+    name: 'Brain-Computer Interface Platform',
+    description: 'Advanced neural interface development for human-computer symbiosis',
+    features: [
+      'Neural Signal Processing',
+      'Brain-Machine Communication',
+      'Cognitive Enhancement Tools',
+      'Medical Applications',
+      'Research & Development'
+    ],
+    pricing: '$22,000/month',
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     name: 'Brain-Computer Interface Platform',
     href: '/brain-computer-interface-platform',
     description: 'Advanced neural interface development for human-computer interaction',
     features: ['Neural Interface', 'Brain Mapping', 'Cognitive Enhancement', 'Real-time Processing'],
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     isHot: true,
     badge: 'Hot',
     color: 'from-purple-500 to-pink-600'
   },
   {
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+<<<<<<< HEAD
+    id: 'space-mining-platform',
+    name: 'Space Mining Platform',
+    description: 'Autonomous space mining operations with quantum-enhanced robotics',
+    features: [
+      'Autonomous Mining Robots',
+      'Quantum Navigation Systems',
+      'Resource Detection',
+      'Space Infrastructure',
+      'Sustainable Mining'
+    ],
+    pricing: '$45,000/month',
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     name: 'Space Mining Platform',
     href: '/space-mining-platform',
     description: 'Autonomous space mining operations with quantum-enhanced robotics',
     features: ['Autonomous Mining', 'Space Robotics', 'Resource Extraction', 'Quantum Navigation'],
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     isPremium: true,
     badge: 'Premium',
     color: 'from-yellow-500 to-orange-600'
   },
   {
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+<<<<<<< HEAD
+    id: 'quantum-energy-platform',
+    name: 'Quantum Energy Platform',
+    description: 'Quantum energy optimization for sustainable power generation and distribution',
+    features: [
+      'Quantum Energy Optimization',
+      'Smart Grid Management',
+      'Renewable Energy Integration',
+      'Energy Storage Solutions',
+      'Efficiency Analytics'
+    ],
+    pricing: '$32,000/month',
+    isNew: true,
+    badge: 'New',
+    color: 'from-cyan-500 to-teal-600'
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     name: 'Quantum Energy Platform',
     href: '/quantum-energy-platform',
     description: 'Quantum energy optimization for sustainable power generation and distribution',
@@ -70,6 +175,10 @@ const quantumServices = [
     isNew: true,
     badge: 'New',
     color: 'from-cyan-500 to-blue-600'
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
   }
 ];
 
@@ -77,6 +186,27 @@ const benefits = [
   {
     icon: <Atom className="w-8 h-8 text-blue-400" />,
     title: 'Quantum Advantage',
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+<<<<<<< HEAD
+    description: 'Unprecedented computational power and security through quantum mechanics'
+  },
+  {
+    icon: <Zap className="w-8 h-8 text-yellow-400" />,
+    title: 'Lightning Speed',
+    description: 'Quantum processing that solves complex problems in seconds'
+  },
+  {
+    icon: <Shield className="w-8 h-8 text-green-400" />,
+    title: 'Unbreakable Security',
+    description: 'Quantum encryption that provides mathematically proven security'
+  },
+  {
+    icon: <Rocket className="w-8 h-8 text-purple-400" />,
+    title: 'Future Technology',
+    description: 'Cutting-edge solutions that define the next generation of computing'
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
     description: 'Leverage quantum computing for exponential performance improvements'
   },
   {
@@ -93,6 +223,10 @@ const benefits = [
     icon: <Zap className="w-8 h-8 text-yellow-400" />,
     title: 'Lightning Fast',
     description: 'Quantum processing that solves complex problems in seconds'
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
   }
 ];
 
@@ -101,14 +235,29 @@ export default function QuantumServices() {
     <>
       <Head>
         <title>Quantum & Emerging Tech Services - Zion Tech Group</title>
+<<<<<<< HEAD:pages/quantum-services.tsx
         <meta name="description" content="Breakthrough quantum computing and space technology solutions. Quantum-secured infrastructure, bio-computing, and space mining platforms." />
         <meta name="keywords" content="quantum computing, quantum security, bio-computing, space mining, brain-computer interface, quantum energy" />
+=======
+<<<<<<< HEAD
+        <meta name="description" content="Breakthrough quantum computing and space technology solutions. Revolutionary quantum services for the future." />
+        <meta name="keywords" content="quantum computing, quantum security, space mining, brain-computer interface, quantum energy, emerging technology" />
+=======
+        <meta name="description" content="Breakthrough quantum computing and space technology solutions. Quantum-secured infrastructure, bio-computing, and space mining platforms." />
+        <meta name="keywords" content="quantum computing, quantum security, bio-computing, space mining, brain-computer interface, quantum energy" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
         <link rel="canonical" href="https://ziontechgroup.com/quantum-services" />
       </Head>
 
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+<<<<<<< HEAD
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-indigo-900/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
 <<<<<<< HEAD
 =======
@@ -304,22 +453,21 @@ export default function QuantumServices() {
 <<<<<<< HEAD:pages.disabled/quantum-services.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-500/5 to-purple-500/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:pages/quantum-services.tsx
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages.disabled/quantum-services.tsx
@@ -329,6 +477,14 @@ export default function QuantumServices() {
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center"
             >
+<<<<<<< HEAD
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">
+                Quantum & Emerging Tech
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                Breakthrough quantum computing and space technology solutions that push the boundaries of what's possible
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
             >
               <div className="flex items-center justify-center space-x-2 mb-6">
                 <Atom className="w-12 h-12 text-blue-400" />
@@ -339,16 +495,40 @@ export default function QuantumServices() {
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Pioneering the quantum revolution with breakthrough computing, security, and space technology solutions. 
                 Experience the future of technology today.
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
+<<<<<<< HEAD:pages/quantum-services.tsx
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105"
+=======
+<<<<<<< HEAD
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105"
+=======
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105"
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/comprehensive-services-showcase-2025"
+<<<<<<< HEAD:pages/quantum-services.tsx
+                  className="px-8 py-4 border border-blue-500/40 text-blue-300 rounded-xl font-semibold hover:bg-blue-500/10 transition-all duration-200"
+                >
+                  View All Services
+                </Link>
+=======
+<<<<<<< HEAD
+                  className="px-8 py-4 border border-blue-500/50 text-blue-400 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-200"
+                >
+                  View All Services
+                </Link>
+=======
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 text-indigo-300 text-sm font-medium mb-6">
                 <Atom className="w-4 h-4 mr-2" />
                 Quantum Services
@@ -422,14 +602,17 @@ export default function QuantumServices() {
 =======
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD:pages/quantum-services.tsx
+        {/* Services Grid */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages.disabled/quantum-services.tsx
@@ -450,66 +633,13 @@ export default function QuantumServices() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-        {/* Quantum Capabilities */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Quantum Capabilities</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {capabilities.map((capability, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6"
-                  >
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                        {capability.icon}
-                      </div>
-                      <h3 className="text-xl font-bold text-white">{capability.title}</h3>
-                    </div>
-                    
-                    <p className="text-gray-300 mb-4">{capability.description}</p>
-                    
-                    <div className="space-y-2">
-                      {capability.examples.map((example, exampleIndex) => (
-                        <div key={exampleIndex} className="flex items-center text-sm text-gray-400">
-                          <Star className="w-3 h-3 text-indigo-400 mr-2 flex-shrink-0" />
-                          {example}
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Industry Applications */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
+<<<<<<< HEAD:pages/quantum-services.tsx
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16"
@@ -518,7 +648,7 @@ export default function QuantumServices() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Experience the power of quantum computing and emerging technologies that solve previously impossible problems
 =======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -598,6 +728,8 @@ export default function QuantumServices() {
         {/* Benefits Section */}
         <section className="py-20 relative bg-gradient-to-br from-gray-900/30 to-gray-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -678,10 +810,112 @@ export default function QuantumServices() {
         {/* Industry Applications */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages/quantum-services.tsx
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Quantum Services?
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Experience the quantum advantage with our cutting-edge computing and emerging technology solutions
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center group"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+<<<<<<< HEAD
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Our Quantum Services</h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Discover our comprehensive suite of quantum computing and emerging technology solutions
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {quantumServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-200 hover:shadow-2xl hover:shadow-blue-500/10"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-white">{service.name}</h3>
+                    {service.badge && (
+                      <span className={`px-3 py-1 rounded-full text-sm font-bold ${
+                        service.isNew ? 'bg-green-500 text-white' :
+                        service.isHot ? 'bg-red-500 text-white' :
+                        service.isPremium ? 'bg-yellow-500 text-black' :
+                        'bg-blue-500 text-white'
+                      }`}>
+                        {service.badge}
+                      </span>
+                    )}
+                  </div>
+                  
+                  <p className="text-gray-400 mb-6 text-lg">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300">
+                          <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-2xl font-bold text-blue-400">{service.pricing}</div>
+                    <Link
+                      href={`/contact?service=${service.id}`}
+                      className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105 flex items-center"
+                    >
+                      Get Quote
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
 =======
 <<<<<<< HEAD
 =======
@@ -724,10 +958,13 @@ export default function QuantumServices() {
         {/* Quantum Advantages */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
               className="text-center"
             >
               <h2 className="text-3xl font-bold text-white mb-8">Quantum Computing Advantages</h2>
@@ -792,12 +1029,7 @@ export default function QuantumServices() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:pages.disabled/quantum-services.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-            >
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
@@ -807,10 +1039,32 @@ export default function QuantumServices() {
               <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 Join the future of computing with our quantum and emerging technology solutions. 
                 Transform your business with unprecedented performance and security.
+<<<<<<< HEAD:pages/quantum-services.tsx
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
+<<<<<<< HEAD:pages/quantum-services.tsx
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105"
+=======
+<<<<<<< HEAD
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  href="/comprehensive-services-showcase-2025"
+                  className="px-8 py-4 border border-blue-500/50 text-blue-400 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-200"
+                >
+<<<<<<< HEAD:pages/quantum-services.tsx
+                  Explore All Services
+=======
+                  View All Services
+=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Go Quantum?
               </h2>
@@ -845,9 +1099,7 @@ export default function QuantumServices() {
 =======
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7:pages.disabled/quantum-services.tsx
                 </Link>
               </div>
             </motion.div>

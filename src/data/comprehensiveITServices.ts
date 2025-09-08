@@ -47,9 +47,93 @@ export interface ITService {
 
 export const COMPREHENSIVE_IT_SERVICES: ITService[] = [
   {
-    id: 'it-001',
-    title: 'Enterprise Cloud Migration & Optimization',
-    description: 'Complete cloud migration strategy and implementation for enterprise organizations, including multi-cloud optimization and cost management.',
+    id: "ai-network-security-threat-intelligence",
+    title: "AI-Powered Network Security & Threat Intelligence Platform",
+    description: "Advanced network security platform that uses AI and machine learning to detect, prevent, and respond to cyber threats in real-time with predictive analytics and automated incident response.",
+    category: "Cybersecurity & Network Security",
+    subcategory: "AI Security",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered threat detection",
+      "Real-time network monitoring",
+      "Behavioral analysis",
+      "Automated incident response",
+      "Threat intelligence feeds",
+      "Vulnerability assessment",
+      "Penetration testing",
+      "Security analytics dashboard",
+      "Compliance reporting",
+      "24/7 security operations"
+    ],
+    benefits: [
+      "Reduce security incidents by 90%",
+      "Improve threat detection by 95%",
+      "Automate 80% of security responses",
+      "Reduce false positives by 70%",
+      "Compliance with security standards",
+      "Real-time threat visibility"
+    ],
+    useCases: [
+      "Enterprise networks",
+      "Data centers",
+      "Cloud infrastructure",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Network security engineers",
+      "Security analysts",
+      "IT directors",
+      "Compliance officers"
+    ],
+    tags: ["AI", "Cybersecurity", "Network Security", "Threat Intelligence", "Machine Learning", "Automation"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $10,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["TensorFlow", "PyTorch", "Elasticsearch", "Kafka", "React", "Node.js", "Python", "Docker"],
+    integrations: ["SIEM systems", "Firewalls", "IDS/IPS", "Vulnerability scanners", "Security tools"],
+    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
+    roi: "400% within 18 months",
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    marketTrend: "High-growth market with 500% annual expansion",
+    innovationLevel: "Cutting-edge AI technology for advanced cybersecurity",
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Edge"],
+    scalability: "Enterprise-grade platform supporting 100K+ endpoints",
+    securityFeatures: ["Zero-trust architecture", "Encryption", "Multi-factor authentication", "Role-based access control"],
+    customizationOptions: ["Custom AI models", "Integration APIs", "Security policies", "Dashboard customization"],
+    apiAccess: true,
+    mobileSupport: true,
+    whiteLabel: true,
+    multiTenant: true,
+    realTimeAnalytics: true,
+    automationLevel: "AI-driven automation with human oversight",
+    backupRecovery: "Real-time backup with disaster recovery",
+    monitoring: ["Network monitoring", "Threat detection", "Performance metrics", "Security alerts"],
+    supportChannels: ["24/7 security support", "Technical consultation", "Incident response", "Training support"],
+    trainingIncluded: true,
+    documentation: ["Security guides", "API documentation", "Best practices", "Compliance documentation"],
+    communityAccess: true,
+    updatesFrequency: "Daily threat intelligence updates",
+    dataRetention: "Configurable retention with compliance requirements",
+    sla: "99.99% security guarantee",
+    uptime: "99.95%"
+  },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  {
+    id: 'it-002',
+    title: 'Advanced DevOps & CI/CD Pipeline Automation',
+    description: 'Comprehensive DevOps implementation with automated CI/CD pipelines, infrastructure as code, and continuous monitoring.',
     category: 'Infrastructure & Cloud',
     subcategory: 'Cloud Migration',
     price: 25000,
@@ -484,5 +568,7 @@ export const COMPREHENSIVE_IT_SERVICES: ITService[] = [
   }
 ];
 =======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1bbb
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export default COMPREHENSIVE_IT_SERVICES;

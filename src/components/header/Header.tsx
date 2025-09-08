@@ -4,10 +4,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Search, ChevronDown, Globe, Phone, Mail } from "lucide-react";
@@ -16,6 +12,8 @@ import { motion, AnimatePresence } from "framer-motion";
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import React, { useState } from 'react';
 =======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 =======
 =======
@@ -43,104 +41,13 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";
 <<<<<<< HEAD
 import { Menu, X } from 'lucide-react';
 =======
-import { useNavigate } from "react-router-dom";
-import { Menu, X, Search, Sparkles } from "lucide-react";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 import { Menu, X, ChevronDown } from 'lucide-react';
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 =======
 import { Menu, X } from 'lucide-react';
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
-=======
-import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from "react";
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import { Sparkles, Menu, X } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
-=======
-import { Menu, X, Search, Sparkles } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-import { Button } from "@/components/ui/button";
-=======
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-import { 
-  Menu, 
-  X, 
-  Search, 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ChevronDown, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield,
-  Users,
-  Building,
-  Code,
-  Globe
-} from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Shield,
-  ArrowRight,
-  ChevronDown
-} from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Sparkles, Zap, Brain, Shield } from "lucide-react";
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
-=======
-import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Sparkles, Zap, Brain, Shield } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Zap, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart3,
-  Settings,
-  Link as LinkIcon,
-  Bot,
-  Building,
-  Users,
-  HardDrive,
-  Lightbulb
-} from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -162,10 +69,23 @@ export function Header({ onMenuToggle }: HeaderProps) {
   const [query, setQuery] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const searchSuggestions = generateSearchSuggestions();
+  
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+    backgroundColor: '#000000', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : undefined);
+  
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor,
+    color: effectiveTheme.textColor,
+    borderColor: `${effectiveTheme.primaryColor}20`
+  } : {};
+=======
 <<<<<<< HEAD
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -223,6 +143,7 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 <<<<<<< HEAD
 =======
@@ -280,6 +201,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       setIsSearchExpanded(false);
     }
   };
+<<<<<<< HEAD
+
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -523,6 +447,95 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>
       </div>
 
+<<<<<<< HEAD
+      {/* Mobile Search Bar */}
+      <AnimatePresence>
+        {isSearchExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="border-t border-zion-purple/20 bg-zion-blue-dark/95"
+          >
+            <div className="container mx-auto px-4 py-3">
+              <form onSubmit={handleSubmit} className="flex gap-2">
+                <input
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search our services..."
+                  className="flex-1 px-4 py-2 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="border-t border-zion-purple/20 bg-zion-blue-dark/95 lg:hidden overflow-hidden"
+          >
+            <div className="container mx-auto px-4 py-4">
+              <nav className="flex flex-col space-y-1">
+                {[
+                  { path: '/', label: 'Home', icon: '🏠' },
+                  { path: '/services', label: 'Services', icon: '⚡' },
+                  { path: '/about', label: 'About', icon: 'ℹ️' },
+                  { path: '/contact', label: 'Contact', icon: '📞' }
+                ].map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${
+                      isActiveRoute(item.path)
+                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
+                        : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="font-medium">{item.label}</span>
+                  </Link>
+                ))}
+              </nav>
+              <div className="mt-4 pt-4 border-t border-zion-purple/20 space-y-2">
+                {!false && (
+                  <Link
+                    to="/login"
+                    className="block w-full px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Login
+                  </Link>
+                )}
+                <Link
+                  to="/contact"
+                  className="block w-full px-4 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium text-center hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Get Quote
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const isActive = (path: string) => location.pathname === path;
   
   return (
@@ -1135,6 +1148,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Main navigation */}
@@ -1220,210 +1235,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-=======
-        <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6 relative">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-=======
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-  
-  return (
-    <>
-      <header 
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20' 
-            : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
-        }`}
-        style={headerStyle}
-      >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex ml-8 flex-1 items-center space-x-8">
-            <div className="flex items-center space-x-6">
-              <Link 
-                to="/" 
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 font-medium"
-              >
-                Home
-              </Link>
-              
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 font-medium">
-                  <span>Services</span>
-                  <ChevronDown className="h-4 w-4" />
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <h3 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                          <Zap className="h-4 w-4 mr-2" />
-                          Core Services
-                        </h3>
-                        <div className="space-y-2">
-                          <Link to="/services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            IT & AI Services
-                          </Link>
-                          <Link to="/it-onsite-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            Onsite Services
-                          </Link>
-                          <Link to="/equipment" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            Equipment
-                          </Link>
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-zion-purple font-semibold mb-3 flex items-center">
-                          <Sparkles className="h-4 w-4 mr-2" />
-                          Micro SAAS
-                        </h3>
-                        <div className="space-y-2">
-                          <Link to="/micro-saas-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            All Services
-                          </Link>
-                          <Link to="/micro-saas-services?category=AI" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            AI Solutions
-                          </Link>
-                          <Link to="/micro-saas-services?category=IT" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            IT Solutions
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 font-medium">
-                  <span>Solutions</span>
-                  <ChevronDown className="h-4 w-4" />
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <h3 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                          <Brain className="h-4 w-4 mr-2" />
-                          AI & Tech
-                        </h3>
-                        <div className="space-y-2">
-                          <Link to="/zion-hire-ai" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            Zion Hire AI
-                          </Link>
-                          <Link to="/match" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            AI Matcher
-                          </Link>
-                          <Link to="/talent" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            Talent Directory
-                          </Link>
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-zion-purple font-semibold mb-3 flex items-center">
-                          <Shield className="h-4 w-4 mr-2" />
-                          Enterprise
-                        </h3>
-                        <div className="space-y-2">
-                          <Link to="/enterprise" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            Enterprise Solutions
-                          </Link>
-                          <Link to="/partners" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            Partnerships
-                          </Link>
-                          <Link to="/request-quote" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
-                            Get Quote
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <Link 
-                to="/community" 
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 font-medium"
-              >
-                Community
-              </Link>
-              
-              <Link 
-                to="/blog" 
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 font-medium"
-              >
-                Blog
-              </Link>
-            </div>
-          </nav>
-
-          {/* Search Bar */}
-          <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
-            <EnhancedSearchInput
-              value={query}
-              onChange={setQuery}
-              onSelectSuggestion={(text) => {
-                navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("");
-              }}
-              searchSuggestions={searchSuggestions}
-        <nav className="hidden lg:flex ml-8 space-x-1">
-          {navigationItems.map((item) => (
-            <div key={item.label} className="relative group">
-              <Link
-                to={item.href}
-                className="flex items-center gap-2 px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 rounded-lg hover:bg-zion-purple/10"
-              >
-                {item.icon}
-                <span>{item.label}</span>
-                <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
-              </Link>
-              
-              {/* Dropdown Menu */}
-              {item.children && (
-                <div className="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="bg-zion-slate/95 backdrop-blur-xl border border-zion-purple/30 rounded-xl p-4 shadow-2xl shadow-zion-purple/20">
-                    <div className="grid gap-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className="flex items-center gap-3 p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-all duration-200"
-                          onClick={closeMobileMenu}
-                        >
-                          <div className="text-zion-purple-light">{child.icon}</div>
-                          <span>{child.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
-
-        {/* Search Bar */}
-        <div className="hidden md:block flex-1 max-w-md mx-8">
-          <form onSubmit={handleSubmit} className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <input
-              type="text"
-              placeholder="Search AI services, talent, equipment..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-zion-slate/30 border border-zion-purple/30 rounded-lg text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple transition-all duration-200"
-            />
-          </form>
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
 
         </form>
@@ -1588,6 +1401,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 <<<<<<< HEAD
       {/* Mobile Navigation */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
           <div className="px-4 py-4 space-y-3">
@@ -1650,6 +1466,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           </div>
         </div>
       )}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 =======
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
@@ -1951,67 +1769,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-=======
-      
-      {/* Glowing border effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
-=======
-
-      {/* Mobile Search Bar */}
-      {isSearchExpanded && (
-        <div className="md:hidden border-t border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl p-4">
-          <form onSubmit={handleSubmit} className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <input
-              type="text"
-              placeholder="Search AI services, talent, equipment..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-zion-slate/30 border border-zion-purple/30 rounded-lg text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple"
-            />
-          </form>
-        </div>
-      )}
-
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl">
-          <nav className="p-4 space-y-2">
-            {navigationItems.map((item) => (
-              <div key={item.label}>
-                <Link
-                  to={item.href}
-                  className="flex items-center gap-3 p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors"
-                  onClick={closeMobileMenu}
-                >
-                  {item.icon}
-                  <span>{item.label}</span>
-                </Link>
-                
-                {/* Mobile Submenu */}
-                {item.children && (
-                  <div className="ml-6 space-y-1">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.href}
-                        className="flex items-center gap-3 p-2 text-zion-slate-light/80 hover:text-zion-cyan rounded-lg transition-colors"
-                        onClick={closeMobileMenu}
-                      >
-                        <div className="text-zion-purple-light">{child.icon}</div>
-                        <span className="text-sm">{child.label}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-        </div>
-      )}
-<<<<<<< HEAD
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     </header>
 =======
     </>

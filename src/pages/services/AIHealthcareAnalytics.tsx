@@ -1,8 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +88,17 @@ import {
   Microscope,
   FileText,
   AlertTriangle,
+<<<<<<< HEAD
+  CheckSquare,
+  FileCheck,
+  Clock as ClockIcon,
+  DollarSign,
+  Target,
+  Eye,
+  Monitor
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Link } from 'react-router-dom';
 import { 
   Heart, 
@@ -106,19 +115,18 @@ import {
   Target
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 } from 'lucide-react';
 
 export default function AIHealthcareAnalytics() {
   const features = [
     {
 <<<<<<< HEAD
+      icon: Heart,
+      title: "Patient Outcome Prediction",
+      description: "AI models that predict patient outcomes and treatment effectiveness based on medical data."
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD
       icon: Brain,
 <<<<<<< HEAD
@@ -138,6 +146,8 @@ const AIHealthcareAnalytics: React.FC = () => {
       title: "AI-Powered Patient Analytics",
       description: "Advanced machine learning algorithms that analyze patient data to predict outcomes and optimize treatment plans.",
       benefits: ["Predictive modeling", "Treatment optimization", "Risk assessment"]
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     },
     {
       icon: Activity,
@@ -206,6 +216,92 @@ const AIHealthcareAnalytics: React.FC = () => {
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
+<<<<<<< HEAD
+      icon: Users,
+      title: "Care Coordination",
+      description: "AI-powered care coordination that optimizes patient care pathways and resource allocation."
+    }
+  ];
+
+  const benefits = [
+    "Improve patient outcomes by 25-40% with predictive analytics",
+    "Reduce hospital readmissions by 30-50% through risk prediction",
+    "Cut healthcare costs by 20-35% with optimized care pathways",
+    "Enhance diagnostic accuracy by 15-30% with AI assistance",
+    "Increase operational efficiency by 40-60% through automation",
+    "Achieve 95%+ accuracy in patient risk assessment"
+  ];
+
+  const useCases = [
+    {
+      industry: "Hospitals",
+      description: "Patient monitoring, readmission prediction, and resource optimization",
+      metrics: ["Patient Outcomes", "Readmission Rate", "Resource Utilization"]
+    },
+    {
+      industry: "Primary Care",
+      description: "Preventive care, chronic disease management, and early intervention",
+      metrics: ["Prevention Rate", "Disease Progression", "Patient Engagement"]
+    },
+    {
+      industry: "Specialty Clinics",
+      description: "Treatment optimization, outcome prediction, and patient stratification",
+      metrics: ["Treatment Success", "Patient Satisfaction", "Clinical Efficiency"]
+    },
+    {
+      industry: "Health Systems",
+      description: "Population health management, care coordination, and quality improvement",
+      metrics: ["Population Health", "Care Coordination", "Quality Metrics"]
+    }
+  ];
+
+  const pricing = [
+    {
+      name: "Starter",
+      price: "$4,000",
+      period: "/month",
+      description: "Perfect for small healthcare practices starting with AI analytics",
+      features: [
+        "Up to 1,000 patients",
+        "Basic predictive analytics",
+        "Patient monitoring",
+        "Standard reporting",
+        "Email support"
+      ]
+    },
+    {
+      name: "Professional",
+      price: "$12,000",
+      period: "/month",
+      description: "Ideal for growing healthcare organizations with advanced analytics needs",
+      features: [
+        "Up to 10,000 patients",
+        "Advanced AI models",
+        "Real-time monitoring",
+        "Population analytics",
+        "Priority support",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large health systems with complex analytics requirements",
+      features: [
+        "Unlimited patients",
+        "Custom AI models",
+        "White-label solutions",
+        "Dedicated support",
+        "Advanced security",
+        "API access"
+      ]
+    }
+  ];
+
+  return (
+=======
       icon: Zap,
       title: "Clinical Decision Support",
 <<<<<<< HEAD
@@ -648,6 +744,32 @@ const AIHealthcareAnalytics: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-green-900 pt-20">
+      {/* Hero Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
+            <Stethoscope className="w-4 h-4 mr-2" />
+            AI-Powered Healthcare Technology
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">Analytics</span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Revolutionize healthcare delivery with AI-powered analytics. Predict, prevent, and optimize patient care with unprecedented accuracy and insights.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
@@ -668,18 +790,73 @@ const AIHealthcareAnalytics: React.FC = () => {
             <Link
               to="/contact"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             >
               Start Free Trial
             </Link>
             <Link
+<<<<<<< HEAD
               to="/request-quote"
               className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+=======
+<<<<<<< HEAD
+              to="/request-demo"
+              className="px-8 py-3 border border-green-500 text-green-400 font-medium rounded-lg hover:bg-green-500/10 transition-all duration-200"
+=======
+              to="/request-quote"
+              className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             >
               Request Demo
             </Link>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Key Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+            <div className="text-gray-400">Diagnostic Accuracy</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
+            <div className="text-gray-400">Faster Diagnosis</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
+            <div className="text-gray-400">Cost Reduction</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+            <div className="text-gray-400">Monitoring</div>
+          </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Advanced Healthcare Analytics Features
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
+=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -894,6 +1071,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                   ))}
                 </ul>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         {/* Features Grid */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -951,10 +1129,55 @@ const AIHealthcareAnalytics: React.FC = () => {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Measurable Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See the real impact of AI-powered healthcare analytics on patient outcomes and organizational performance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 text-center">
+                <div className="text-4xl font-bold text-red-400 mb-2">{benefit.value}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+>>>>>>> origin/main
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Flexible pricing options designed to scale with your healthcare practice.
+=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -974,6 +1197,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
         {/* Pricing */}
         <div className="mb-20">
@@ -988,10 +1212,32 @@ const AIHealthcareAnalytics: React.FC = () => {
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text-4xl font-bold text-green-400 mb-1">
+                    {plan.price}
+                  </div>
+                  <div className="text-gray-400 mb-4">{plan.period}</div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+                
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIdx) => (
+                    <li key={featureIdx} className="flex items-center space-x-3">
 =======
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -1036,6 +1282,28 @@ const AIHealthcareAnalytics: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        {/* Benefits Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose AI Healthcare Analytics?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                  <benefit.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -1062,6 +1330,10 @@ const AIHealthcareAnalytics: React.FC = () => {
                 >
                   Get Started
                 </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             ))}
           </div>
@@ -1069,6 +1341,17 @@ const AIHealthcareAnalytics: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Healthcare Delivery?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join leading healthcare providers who are already leveraging AI to improve patient outcomes and operational efficiency.
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Healthcare?
@@ -1076,10 +1359,28 @@ const AIHealthcareAnalytics: React.FC = () => {
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
               Join hundreds of healthcare organizations already using our AI-powered analytics platform 
               to improve patient outcomes and operational efficiency.
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
+              >
+                Start Free Trial Today
+              </Link>
+              <Link
+                to="/request-demo"
+                className="px-8 py-3 border border-green-500 text-green-400 font-medium rounded-lg hover:bg-green-500/10 transition-all duration-200"
+              >
+                Schedule Demo
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
@@ -1089,11 +1390,20 @@ const AIHealthcareAnalytics: React.FC = () => {
                 className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
                 Schedule Consultation
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </Link>
             </div>
           </div>
         </div>
       </div>
+=======
+<<<<<<< HEAD
+    </div>
+  );
+}
 =======
 <<<<<<< HEAD
 =======
@@ -1316,7 +1626,4 @@ export default AIHealthcareAnalytics;
 }
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
-=======
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

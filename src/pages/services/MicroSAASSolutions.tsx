@@ -4,8 +4,15 @@ import {
   Code, 
   Zap, 
   Users, 
+<<<<<<< HEAD
   TrendingUp, 
   Shield, 
+  Globe, 
+  Building, 
+  Rocket, 
+  Cpu, 
+  BarChart3 
+=======
   Globe, 
   Shield, 
   TrendingUp, 
@@ -19,35 +26,23 @@ import {
   Key,
   Settings,
   Cloud
-=======
-  ArrowRight,
-  Brain
-=======
-  Building, 
-  Rocket, 
-  Cpu, 
-  BarChart3 
-=======
-  Building, 
-  Rocket, 
-  Cpu, 
-  BarChart3,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Target,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
   const services = [
     {
+<<<<<<< HEAD
+      title: "Custom SAAS Development",
+      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
+      icon: Code,
+      features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       title: "AI-Powered CRM Platform",
       description: "Intelligent customer relationship management with predictive analytics, automated follow-ups, and smart lead scoring.",
       icon: '🧠',
@@ -126,6 +121,65 @@ export default function MicroSAASSolutions() {
       title: "Analytics & Reporting",
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
       icon: TrendingUp,
+<<<<<<< HEAD
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"],
+      price: "From $10,000",
+      delivery: "5-8 weeks"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
+=======
+      title: "AI-Powered Content Generation Platform",
+      description: "Advanced AI content creation tool for blogs, social media, and marketing materials with SEO optimization.",
+      icon: Brain,
+      features: ["GPT-4 integration", "SEO optimization", "Multi-language support", "Brand voice customization"],
+      price: "$99/month",
+      marketPrice: "$199/month",
+      benefits: ["Save 20+ hours/week", "Improve SEO rankings", "Increase engagement by 40%"]
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    },
+    {
+      title: "Multi-tenant Architecture",
+      description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
+      icon: Users,
+<<<<<<< HEAD
+      features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
+=======
+      features: ["AI lead scoring", "Automated follow-ups", "Predictive analytics", "Integration APIs"],
+      price: "$79/month",
+      marketPrice: "$149/month",
+      benefits: ["Increase conversions by 35%", "Reduce manual work by 60%", "Better customer insights"]
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    },
+    {
+      title: "Subscription Management",
+      description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
+      icon: BarChart3,
+<<<<<<< HEAD
+      features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
+=======
+      features: ["Predictive analytics", "Automated insights", "Custom reporting", "Real-time monitoring"],
+      price: "$129/month",
+      marketPrice: "$249/month",
+      benefits: ["Make data-driven decisions", "Identify trends early", "Automated reporting"]
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    },
+    {
+      title: "API Development & Integration",
+      description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
+      icon: Cpu,
+<<<<<<< HEAD
+      features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
+    },
+    {
+      title: "Analytics & Reporting",
+      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
+      icon: TrendingUp,
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
+=======
+      price: "$129/month",
+      marketPrice: "$249/month",
+      status: "Live"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1363
+=======
       price: "$1,500",
       pricingModel: "monthly",
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"],
@@ -172,22 +226,24 @@ export default function MicroSAASSolutions() {
       title: "Analytics & Insights",
       description: "Built-in analytics to track usage, performance, and user behavior.",
       icon: BarChart3
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
-  ];
-
-  const technologies = [
-    "React & Next.js",
-    "Node.js & Express",
-    "Python & Django",
-    "PostgreSQL & MongoDB",
-    "AWS & Azure",
-    "Docker & Kubernetes",
-    "GraphQL APIs",
-    "Real-time WebSockets"
   ];
 
   const benefits = [
     {
+<<<<<<< HEAD
+      title: "Rapid Deployment",
+=======
+<<<<<<< HEAD
+      title: "Rapid Deployment",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      description: "Quick time-to-market with agile development methodologies and pre-built templates",
+      icon: Zap,
+      details: "Deploy in 2-4 weeks vs. 6-12 months traditional development"
+=======
       description: "Quick time-to-market with agile development methodologies and pre-built AI models",
       icon: Zap,
       color: "text-yellow-400"
@@ -222,44 +278,66 @@ export default function MicroSAASSolutions() {
       icon: Clock,
       color: "text-cyan-400"
 =======
-=======
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Rapid Deployment",
-      description: "Quick time-to-market with agile development methodologies and pre-built templates",
-      icon: Zap,
-      details: "Deploy in 2-4 weeks vs. 6-12 months traditional development"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      description: "Quick time-to-market with agile development methodologies",
+      icon: Zap
     },
     {
       title: "Scalability",
-      description: "Built to grow with your business from day one with cloud-native architecture",
-      icon: TrendingUp,
-      details: "Handles 10x growth without infrastructure changes"
+      description: "Built to grow with your business from day one",
+      icon: TrendingUp
     },
     {
       title: "Cost Efficiency",
-      description: "Reduced infrastructure costs with cloud-native solutions and pay-as-you-grow pricing",
-      icon: DollarSign,
-      details: "60% lower total cost of ownership vs. traditional software"
+      description: "Reduced infrastructure costs with cloud-native solutions",
+      icon: BarChart3
     },
     {
-      title: "Enterprise Security",
-      description: "Enterprise-grade security and compliance standards with SOC 2, GDPR, and HIPAA support",
+      title: "Security",
+      description: "Enterprise-grade security and compliance standards",
+<<<<<<< HEAD
+      icon: Shield
+=======
       icon: Shield,
-      details: "Bank-level security with 99.9% uptime guarantee"
+      details: "SOC 2, GDPR, HIPAA compliant"
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock technical support and maintenance",
+      icon: Clock,
+      details: "Always here when you need us"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1363
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
   const industries = [
     {
       name: "Healthcare",
-=======
+<<<<<<< HEAD
       description: "HIPAA-compliant patient management systems",
       icon: Building
+    },
+    {
+      name: "Finance",
+      description: "Regulatory-compliant financial tools",
+      icon: Building
+    },
+    {
+      name: "Education",
+      description: "Learning management and student tracking",
+      icon: Building
+    },
+    {
+      name: "Real Estate",
+      description: "Property management and client portals",
+      icon: Building
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      description: "HIPAA-compliant patient management systems with AI diagnostics support",
+      icon: Building,
+      useCases: ["Patient Portals", "AI Diagnostics", "Compliance Management", "Telemedicine"]
     },
     {
       name: "Finance",
@@ -294,12 +372,61 @@ export default function MicroSAASSolutions() {
       title: "Better User Experience",
       description: "Focused applications that provide superior user experience and satisfaction.",
       icon: Users
-=======
-      icon: Building
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEO 
+        title="Micro SAAS Solutions - Zion Tech Group" 
+        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries."
+        tags={["micro SAAS", "custom software", "subscription management", "multi-tenant", "API development", "business software"]}
+        url="https://ziontechgroup.com/services/micro-saas-solutions"
+      />
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
+        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Micro SAAS Solutions
+            <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
+              Rapid Deployment, Maximum Impact
+            </span>
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Transform your business ideas into powerful, scalable software solutions with our micro SAAS development 
+            services designed for rapid deployment and growth.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Start Your Project
+            </button>
+            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              View Portfolio
+            </button>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <SEO 
+        title="Micro SAAS Solutions - Zion Tech Group" 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries. Starting at $129/month."
+        keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software, AI solutions, cloud software"
+=======
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(138,43,226,0.1),transparent_50%)]"></div>
+      </div>
+=======
         description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries."
         tags={["micro SAAS", "custom software", "subscription management", "multi-tenant", "API development", "business software"]}
         url="https://ziontechgroup.com/services/micro-saas-solutions"
@@ -384,6 +511,78 @@ export default function MicroSAASSolutions() {
             </p>
           </div>
           
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-purple-400">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* Services Grid */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Comprehensive SAAS Development Services
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              From concept to deployment, we provide end-to-end micro SAAS development services that 
+              accelerate your business growth and digital transformation.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
+=======
+<<<<<<< HEAD
+      {/* Services Grid */}
+<<<<<<< HEAD
+      <section id="services" className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Ready-to-Deploy Micro SAAS Solutions
+=======
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Innovative SAAS Solutions
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bfbe
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our cutting-edge micro SAAS platforms designed to revolutionize your business operations
+=======
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -508,6 +707,69 @@ export default function MicroSAASSolutions() {
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
+                  <div className="space-y-2">
+                    {service.benefits.map((benefit, idx) => (
+                      <div key={idx} className="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Emerging Technologies */}
+      <section className="py-20 bg-gray-900/30 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Emerging Technology Solutions
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Stay ahead of the curve with our cutting-edge emerging technology micro SAAS solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {emergingServices.map((service, index) => (
+              <div key={index} className="relative bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-500/30">
+                    {service.status}
+                  </span>
+                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2 text-center">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+                  {service.title}
+                </h3>
+                <p className="text-zion-slate mb-4">
+                  {service.description}
+                </p>
+<<<<<<< HEAD
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-zion-slate">
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+=======
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400">{service.price}</div>
+                  <div className="text-sm text-gray-500 line-through">{service.marketPrice}</div>
+                </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1363
+=======
                 </div>
 
                 {/* Benefits */}
@@ -571,7 +833,8 @@ export default function MicroSAASSolutions() {
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300">{service.description}</p>
-=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             ))}
           </div>
@@ -579,6 +842,97 @@ export default function MicroSAASSolutions() {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-zion-blue-light">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Why Choose Our Micro SAAS Solutions?
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Experience the advantages of rapid development, scalability, and cost-effective solutions 
+              designed for modern business needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-zion-slate">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Solutions */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Tailored micro SAAS solutions designed for the unique requirements and compliance needs of different industries.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <industry.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
+                  {industry.name}
+                </h3>
+                <p className="text-sm text-zion-slate">
+                  {industry.description}
+                </p>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Our SAAS Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver exceptional results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div
+                key={benefit.title}
+                className="glass-card p-6 text-center hover:scale-105 transition-all duration-300 group"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <benefit.icon className={`w-16 h-16 mx-auto mb-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  {benefit.title}
+                </h3>
+<<<<<<< HEAD
+                <p className="text-zion-slate mb-3">
+=======
+                <p className="text-gray-300 leading-relaxed">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bfbe
+                  {benefit.description}
+                </p>
+                <p className="text-sm text-zion-cyan font-medium">
+                  {benefit.details}
+                </p>
+=======
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -860,6 +1214,94 @@ export default function MicroSAASSolutions() {
                 <p className="text-zion-slate text-sm italic">
                   "{testimonial.content}"
                 </p>
+                <div className="space-y-2">
+                  {industry.services.map((service, idx) => (
+                    <div key={idx} className="text-xs text-blue-300 bg-blue-500/10 px-2 py-1 rounded text-center">
+                      {service}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs with our flexible pricing options
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index) => (
+              <div
+                key={tier.name}
+                className={`glass-card p-8 text-center relative ${
+                  tier.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
+                }`}
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-cyan-400">{tier.price}</span>
+                  <span className="text-gray-400">{tier.period}</span>
+                </div>
+                <p className="text-gray-300 mb-8">{tier.description}</p>
+                
+                <ul className="space-y-3 mb-8 text-left">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <a
+                  href="/contact"
+                  className={`w-full futuristic-btn text-center ${
+                    tier.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-600' : ''
+                  }`}
+                >
+                  Get Started
+                </a>
+=======
+      {/* Technologies Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Technology Stack
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Built with modern, scalable technologies that ensure performance and reliability.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-purple-400 text-sm font-medium">{tech}</div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               </div>
             ))}
           </div>
@@ -867,6 +1309,23 @@ export default function MicroSAASSolutions() {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Build Your Micro SAAS Solution?
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Let us help you transform your business idea into a powerful, scalable software solution 
+            that drives growth and innovation.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Start Your Project
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -876,13 +1335,19 @@ export default function MicroSAASSolutions() {
             Let us help you transform your business idea into a powerful, scalable software solution 
             that drives growth and innovation. Get started today with a free consultation.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Your Project
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+              <span className="relative z-10">Start Free Trial</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">
               Schedule Consultation
             </button>
+<<<<<<< HEAD
+          </div>
+=======
+=======
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-card p-12 text-center relative overflow-hidden">
@@ -948,12 +1413,8 @@ export default function MicroSAASSolutions() {
               📍 364 E Main St STE 1008, Middletown DE 19709
             </p>
           </div>
-=======
-          </div>
-          <p className="text-zion-slate-light mt-4">
-            Contact us: <a href="tel:+13024640950" className="text-zion-cyan hover:underline">+1 302 464 0950</a> | 
-            <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline ml-2">kleber@ziontechgroup.com</a>
-          </p>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1363
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
       </section>
     </div>

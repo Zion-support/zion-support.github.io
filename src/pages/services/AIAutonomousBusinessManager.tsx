@@ -1,12 +1,82 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { 
+  Brain, 
+  Users, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Rocket, 
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  BookOpen,
+  Headphones,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Target,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Code,
+  Palette,
+  Heart,
+  Building,
+  Briefcase,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+
+const AIAutonomousBusinessManager: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Intelligent Decision Making",
+      description: "AI-powered business decisions based on real-time data analysis and predictive modeling"
+    },
+    {
+      icon: Users,
+      title: "Team Management",
+      description: "Automated team coordination, task assignment, and performance optimization"
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Analytics",
+      description: "Comprehensive business metrics and KPI tracking with actionable insights"
+    },
+    {
+      icon: Zap,
+      title: "Process Automation",
+      description: "Streamlined workflows and automated business processes for maximum efficiency"
+    },
+    {
+      icon: Shield,
+      title: "Risk Management",
+      description: "Proactive risk identification and mitigation strategies"
+    },
+    {
+      icon: Globe,
+      title: "Global Operations",
+      description: "Multi-location business management with unified oversight"
+=======
 import { motion } from 'framer-motion';
 import { Brain, Zap, Cpu, Target, ArrowRight, CheckCircle, Star, Users, Shield, Globe, BarChart3, TrendingUp, Command, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 =======
 import { Link } from 'react-router-dom';
-=======
-import { SEOHead } from '../../components/SEOHead';
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { 
   Bot, 
   Brain, 
@@ -25,11 +95,24 @@ const AIAutonomousBusinessManager = () => {
   const features = [
     {
       icon: Brain,
-      title: "Intelligent Decision Making",
-      description: "AI-powered decision engine that analyzes data and makes strategic business decisions autonomously"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "AI-Powered Decision Making",
+      description: "Intelligent business decisions based on real-time data analysis"
     },
     {
       icon: TrendingUp,
+      features: ["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk assessment"]
+    },
+    {
+      title: "Strategic Planning",
+      description: "Intelligent strategic planning and execution",
+      icon: Target,
+      features: ["Goal setting", "Strategy formulation", "Execution tracking", "Performance measurement"]
+>>>>>>> origin/cursor/website-audit-and-enhancement-fc31
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       title: "Intelligent Decision Making",
       description: "AI-powered autonomous decision engine that analyzes data and makes strategic business decisions in real-time"
     },
@@ -52,23 +135,75 @@ const AIAutonomousBusinessManager = () => {
       description: "Advanced risk assessment and mitigation strategies using machine learning algorithms"
     },
     {
-      icon: Zap,
-      title: "Real-time Analytics",
-      description: "Instant insights and actionable intelligence from your business data"
+      icon: Users,
+      title: "Team Coordination",
+      description: "Intelligent resource allocation and team management based on skills, availability, and project requirements"
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Monitoring",
+      description: "Real-time KPI tracking and performance optimization across all business operations"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "24/7 autonomous business operations",
+    "Real-time performance monitoring",
+    "Predictive analytics and forecasting",
+    "Automated decision-making processes",
+    "Cost reduction through efficiency gains",
+    "Scalable business management solutions"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "24/7 autonomous operation without human intervention",
     "Reduced operational costs by up to 60%",
     "Improved decision accuracy by 85%",
     "Real-time business intelligence and insights",
     "Scalable operations that grow with your business",
     "Compliance automation and audit trails"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   ];
 
   const useCases = [
     {
+<<<<<<< HEAD
+      title: "Financial Services",
+      description: "Automated trading, risk assessment, and portfolio management",
+      icon: TrendingUp
+=======
+<<<<<<< HEAD
+      industry: "Manufacturing",
+      description: "Automated production planning, quality control, and supply chain management"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    },
+    {
+      industry: "Healthcare",
+      description: "Patient care optimization, resource allocation, and compliance management"
+    },
+    {
+      industry: "Finance",
+      description: "Risk assessment, portfolio management, and regulatory compliance"
+    },
+    {
+      industry: "Retail",
+      description: "Inventory management, customer behavior analysis, and sales optimization"
+    }
+<<<<<<< HEAD
+=======
+  ];
+
+=======
 import { Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight } from 'lucide-react';
 
 const AIAutonomousBusinessManager: React.FC = () => {
@@ -94,11 +229,14 @@ const AIAutonomousBusinessManager: React.FC = () => {
     "Manufacturing Operations",
     "Financial Services",
     "Healthcare Management"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
+=======
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-teal-900/50 to-blue-900/50"></div>
@@ -241,6 +379,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
       />
       
       {/* Hero Section */}
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6">
@@ -261,10 +400,29 @@ const AIAutonomousBusinessManager: React.FC = () => {
               Watch Demo
             </button>
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Intelligent Business Management Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Business Manager provides comprehensive tools to streamline and optimize every aspect of your business operations.
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -273,11 +431,24 @@ const AIAutonomousBusinessManager: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Autonomous Business Manager combines cutting-edge artificial intelligence with deep business expertise to create a truly autonomous business operation
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div key={index} className="group p-6 bg-gray-800/50 border border-gray-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
+=======
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -366,6 +537,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
                 </div>
               </motion.div>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -373,27 +545,30 @@ const AIAutonomousBusinessManager: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+<<<<<<< HEAD
 =======
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Revolutionary AI Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-                <div className="bg-cyan-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-8 w-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Why Choose AI Autonomous Business Management?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented efficiency and growth with our autonomous business management solutions.
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -402,26 +577,54 @@ const AIAutonomousBusinessManager: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience unprecedented efficiency and growth with our autonomous business management solution
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
+<<<<<<< HEAD
                 <div key={index} className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
+=======
+<<<<<<< HEAD
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+=======
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
+<<<<<<< HEAD
                 <div key={index} className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
+=======
+<<<<<<< HEAD
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+=======
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Features
             </h2>
@@ -522,11 +725,28 @@ const AIAutonomousBusinessManager: React.FC = () => {
               </motion.div>
             ))}
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Business Manager is designed to work across various industries, providing tailored solutions for specific business needs.
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -535,11 +755,28 @@ const AIAutonomousBusinessManager: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Autonomous Business Manager is designed to work across various industries, providing tailored solutions for your specific needs
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div key={index} className="p-6 bg-gray-800/50 border border-gray-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-cyan-400">
+                  {useCase.industry}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {useCase.description}
+                </p>
+              </div>
+            ))}
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -662,6 +899,7 @@ const AIAutonomousBusinessManager: React.FC = () => {
               </motion.div>
             ))}
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
@@ -748,16 +986,45 @@ const AIAutonomousBusinessManager: React.FC = () => {
                 </button>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-600">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the future of autonomous business management and experience unprecedented growth and efficiency.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Contact Sales
+            </Link>
+            
+            <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200"
+            >
+              <DollarSign className="w-5 h-5 mr-2" />
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -778,6 +1045,10 @@ const AIAutonomousBusinessManager: React.FC = () => {
               to="/pricing"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
             >
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
               View Pricing
             </Link>
 =======
@@ -794,6 +1065,55 @@ const AIAutonomousBusinessManager: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      {/* Footer */}
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-white">Zion Tech Group</h3>
+              <p className="text-gray-400 text-sm">
+                Leading provider of AI-powered technology solutions and autonomous business management systems.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-md font-semibold mb-4 text-white">Services</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link to="/services" className="hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
+                <li><Link to="/services/cybersecurity" className="hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
+                <li><Link to="/services/quantum-technology" className="hover:text-cyan-400 transition-colors">Quantum Technology</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-md font-semibold mb-4 text-white">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link to="/about" className="hover:text-cyan-400 transition-colors">About</Link></li>
+                <li><Link to="/team" className="hover:text-cyan-400 transition-colors">Team</Link></li>
+                <li><Link to="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-md font-semibold mb-4 text-white">Contact</h4>
+              <div className="space-y-2 text-sm text-gray-400">
+                <p>+1 302 464 0950</p>
+                <p>kleber@ziontechgroup.com</p>
+                <p>Middletown, DE 19709</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
+            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 rounded-3xl p-12 border border-cyan-500/30">
@@ -854,12 +1174,25 @@ const AIAutonomousBusinessManager: React.FC = () => {
         </div>
       </section>
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     </div>
   );
 };
 
+<<<<<<< HEAD
+export default AIAutonomousBusinessManager;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 export default AIAutonomousBusinessManager;
 =======
 export default AIAutonomousBusinessManager;
 =======
 export default AIAutonomousBusinessManager;
+>>>>>>> origin/cursor/website-audit-and-enhancement-fc31
+=======
+export default AIAutonomousBusinessManager;
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import React from 'react';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+
+export default function Partners() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1548,6 +1555,7 @@ import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 
 export default function Partners() {
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   return (
     <>
       <SEO
@@ -1591,11 +1599,12 @@ export default function Partners() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
+}
+=======
 }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

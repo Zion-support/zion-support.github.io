@@ -1,8 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,6 +220,21 @@ const AIAutonomousResearchAssistant = () => {
     {
       icon: Zap,
       title: "Real-time Analysis",
+<<<<<<< HEAD
+      description: "Instant analysis and insights as new data becomes available"
+    },
+    {
+      icon: Globe,
+      title: "Multi-source Integration",
+      description: "Connect to academic databases, research papers, and industry reports"
+    },
+    {
+      icon: BarChart3,
+      title: "Data Visualization",
+      description: "Transform complex research data into clear, actionable visualizations"
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d1
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
 =======
@@ -233,6 +246,8 @@ import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from '
 const AIAutonomousResearchAssistant: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
+=======
       icon: Brain,
       title: "AI-Powered Research",
 <<<<<<< HEAD
@@ -322,6 +337,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
 export default function AIAutonomousResearchAssistant() {
   const features = [
     {
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       icon: Brain,
       title: 'AI-Powered Research',
       description: 'Advanced AI algorithms that autonomously conduct comprehensive research'
@@ -332,6 +348,26 @@ export default function AIAutonomousResearchAssistant() {
       description: 'Smart search and discovery across multiple data sources and databases'
     },
     {
+<<<<<<< HEAD
+      icon: Database,
+      title: "Multi-Source Integration",
+      description: "Seamlessly connects academic databases, research papers, and real-time data sources"
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecasts research trends and identifies emerging opportunities in your field"
+    },
+    {
+      icon: Users,
+      title: "Collaborative Research",
+      description: "Facilitates team collaboration with shared research spaces and real-time updates"
+    },
+    {
+      icon: Globe,
+      title: "Global Knowledge Access",
+      description: "Access to international research databases and cross-cultural insights"
+=======
       icon: BarChart3,
       title: 'Data Analysis',
       description: 'Automated data processing, analysis, and visualization'
@@ -363,10 +399,41 @@ export default function AIAutonomousResearchAssistant() {
       title: "Multi-Domain Expertise",
       description: "Comprehensive research capabilities across scientific, academic, business, and technical domains."
 =======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
   const capabilities = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: "Academic Research",
+      description: "Comprehensive academic research with citation management",
+      icon: BookOpen,
+      features: ["Peer-reviewed papers", "Citation tracking", "Literature synthesis", "Research gaps identification"]
+    },
+    {
+      title: "Market Research",
+      description: "Industry and market analysis with competitive intelligence",
+      icon: BarChart3,
+      features: ["Market trends", "Competitor analysis", "Industry reports", "Market sizing"]
+    },
+    {
+      title: "Technical Research",
+      description: "Deep technical research and technology assessment",
+      icon: Code,
+      features: ["Technology evaluation", "Patent research", "Technical specifications", "Innovation tracking"]
+    },
+    {
+      title: "Business Intelligence",
+      description: "Business research and strategic intelligence gathering",
+      icon: Building,
+      features: ["Company research", "Financial analysis", "Strategic insights", "Risk assessment"]
+=======
       title: 'Literature Review',
       description: 'Automated comprehensive literature reviews across multiple domains',
       features: ['Citation analysis', 'Trend identification', 'Gap analysis', 'Meta-analysis']
@@ -651,6 +718,7 @@ export default function AIAutonomousResearchAssistant() {
       title: "Legal Teams",
       description: "Comprehensive case research and precedent analysis"
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "Automated literature review and synthesis",
     "Intelligent hypothesis generation",
     "Research methodology optimization",
@@ -665,7 +733,11 @@ export default function AIAutonomousResearchAssistant() {
 
   const useCases = [
     {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       industry: "Academic Research",
       description: "Accelerate PhD research, streamline literature reviews, and enhance publication quality",
       benefits: ["50% faster research completion", "Improved citation accuracy", "Enhanced collaboration"]
@@ -684,6 +756,15 @@ export default function AIAutonomousResearchAssistant() {
       industry: "Market Research",
       description: "Industry analysis, consumer behavior research, and competitive intelligence",
       benefits: ["Real-time market insights", "Data-driven decisions", "Competitive advantage"]
+<<<<<<< HEAD
+    }
+  ];
+
+  return (
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
+=======
       title: "Technology",
       icon: Cpu,
       description: "AI, blockchain, IoT, and emerging technologies"
@@ -1203,6 +1284,9 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
               synthesizes information with unprecedented speed and accuracy.
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -1365,6 +1449,28 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
+            ))}
+          </div>
+        </section>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose AI Research Assistant?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the transformative benefits of AI-powered autonomous research.
+=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1410,16 +1516,16 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
               comprehensive data access to deliver unprecedented research capabilities.
 =======
 =======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       {/* Capabilities Section */}
 <<<<<<< HEAD
 =======
@@ -1438,6 +1544,11 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               From initial discovery to final publication, our AI assistant handles every aspect of the research process.
+<<<<<<< HEAD
+            </p>
+          </motion.div>
+          
+=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
 =======
 >>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
@@ -1511,6 +1622,7 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
                 <p className="text-gray-400">{feature.description}</p>
               </div>
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {capabilities.map((capability, index) => (
               <motion.div
@@ -1524,11 +1636,35 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
                 <div className="w-3 h-3 bg-zion-cyan rounded-full flex-shrink-0"></div>
                 <span className="text-zion-slate-light">{capability}</span>
               </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Use Cases Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Research Areas Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Research Domains
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive research support across all major domains and disciplines.
+=======
       {/* Capabilities Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -2223,6 +2359,73 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-3xl p-12"
+          >
+<<<<<<< HEAD
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Applications
+=======
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Revolutionize Your Research?
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Join thousands of researchers who have already transformed their work with our AI-powered 
+              research assistant. Start your free trial today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-zion-purple px-8 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors duration-300">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-purple transition-colors duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </motion.div>
+<<<<<<< HEAD
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
+                <p className="text-zion-slate-light mb-6">{useCase.description}</p>
+                <div className="space-y-2">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center space-x-2">
+                      <Zap className="w-4 h-4 text-zion-cyan" />
+                      <span className="text-zion-slate-light text-sm">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+        </div>
+      </section>
+
+      {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -2246,17 +2449,10 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
               </button>
             </div>
           </motion.div>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </section>
-
-      {/* CTA Section */}
+    </div>
+=======
       <section className="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">
@@ -2372,5 +2568,7 @@ import { Brain, Search, BookOpen, Globe, Database, Users, Zap, Shield, Cpu, Targ
         </section>
       </div>
     </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-803a
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   );
 }

@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+import React, { useEffect, useRef, useState } from 'react';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  threshold?: number;
+  rootMargin?: string;
+  className?: string;
+}
+
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  threshold = 0.1,
+  rootMargin = '50px',
+  className = ''
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasIntersected, setHasIntersected] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasIntersected) {
+          setIsVisible(true);
+          setHasIntersected(true);
+          // Unobserve after first intersection for performance
+          if (ref.current) {
+            observer.unobserve(ref.current);
+          }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, TrendingUp, AlertTriangle, CheckCircle, X, Settings, BarChart3, Cpu, HardDrive, Clock, Download } from 'lucide-react';
+=======
 import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -232,7 +270,12 @@ export const LazyLoad: React.FC<LazyLoadProps> = ({
         const entry = entries[0];
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          setHasIntersected(true);
+          // Unobserve after first intersection for performance
+          if (ref.current) {
+            observer.unobserve(ref.current);
+          }
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         }
       },
       { threshold, rootMargin }
@@ -332,10 +375,56 @@ export const VirtualScroll: React.FC<VirtualScrollProps> = ({
       className="scrollbar-thin scrollbar-thumb-zion-cyan/30 scrollbar-track-zion-blue-light/10"
     >
       {children}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2868
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Image Optimization Component
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  placeholder?: string;
+  lazy?: boolean;
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFlMjYzYiIvPjwvc3ZnPg==',
+  lazy = true
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+  };
+
+  if (hasError) {
+    return (
+      <div
+        className={`bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      >
+        <span className="text-zion-slate-light text-sm">Image failed to load</span>
+=======
   useEffect(() => {
     // Enhanced service worker registration with better error handling
     if ('serviceWorker' in navigator) {
@@ -485,6 +574,7 @@ export const LazyImage: React.FC<{
         }`}
       />
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 // Lazy Image Component
 interface LazyImageProps {
   src: string;
@@ -625,10 +715,71 @@ export const PerformanceMonitor: React.FC = () => {
       <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
       <div>FID: {metrics.fid.toFixed(0)}ms</div>
       <div>CLS: {metrics.cls.toFixed(3)}</div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2868
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Performance Monitoring Hook
+export const usePerformanceMonitor = (componentName: string) => {
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    return () => {
+      const endTime = performance.now();
+      const duration = endTime - startTime;
+      
+      if (duration > 16) { // 60fps threshold
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+      }
+    };
+  }, [componentName]);
+};
+
+// Debounce Hook
+export const useDebounce = <T>(value: T, delay: number): T => {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+};
+
+// Throttle Hook
+export const useThrottle = <T>(value: T, limit: number): T => {
+  const [throttledValue, setThrottledValue] = useState<T>(value);
+  const lastRan = useRef<number>(Date.now());
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      if (Date.now() - lastRan.current >= limit) {
+        setThrottledValue(value);
+        lastRan.current = Date.now();
+      }
+    }, limit - (Date.now() - lastRan.current));
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, limit]);
+
+  return throttledValue;
+};
+=======
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   // Performance monitoring
   const measurePerformance = useCallback(() => {
@@ -990,6 +1141,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return null; // This component doesn't render anything
 };
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 // Resource Preloader
 export const ResourcePreloader: React.FC = () => {
   useEffect(() => {
@@ -1036,28 +1188,9 @@ export const BundleOptimizer: React.FC = () => {
   }, []);
 
   return null;
+<<<<<<< HEAD
 };
 =======
-
-// Main Performance Optimizer Component
-interface PerformanceOptimizerProps {
-  children: ReactNode;
-  enableMonitoring?: boolean;
-  enableOptimizations?: boolean;
-  showMetrics?: boolean;
-}
-
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableMonitoring = true,
-  enableOptimizations = true,
-  showMetrics = false
-}) => {
-  return (
-    <div className="performance-optimizer">
-      {children}
-    </div>
-  );
 };
-
-export default PerformanceOptimizer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2868
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

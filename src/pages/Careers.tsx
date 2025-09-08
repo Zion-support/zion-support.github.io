@@ -1,3 +1,160 @@
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export default function Careers() {
+  // Sample job listings
+  const jobs = {
+    engineering: [
+      {
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
+      },
+      {
+        title: "AI Research Engineer",
+        location: "San Francisco, CA",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
+      },
+      {
+        title: "Full Stack Developer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
+      }
+    ],
+    product: [
+      {
+        title: "Product Manager",
+        location: "New York, NY",
+        type: "Full-time",
+        department: "Product",
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
+      },
+      {
+        title: "UX/UI Designer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Product",
+        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
+      }
+    ],
+    marketing: [
+      {
+        title: "Growth Marketing Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
+      },
+      {
+        title: "Content Strategist",
+        location: "London, UK",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
+      }
+    ],
+    operations: [
+      {
+        title: "Community Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
+      },
+      {
+        title: "Talent Acquisition Specialist",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
+      }
+    ]
+  };
+
+  // Benefits list
+  const benefits = [
+    {
+      title: "Flexible Work",
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      )
+    },
+    {
+      title: "Health & Wellness",
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Continuous Learning",
+      description: "Education stipends and dedicated learning time to help you grow professionally.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
+    },
+    {
+      title: "Competitive Compensation",
+      description: "Salary packages that recognize your value, plus equity options to share in our success.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { 
+  Users, 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Cloud, 
+  Code, 
+  Globe, 
+  Award,
+  Heart,
+  Zap,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  MapPin,
+  DollarSign,
+  GraduationCap,
+  Briefcase,
+  Mail,
+  Linkedin,
+  ExternalLink
+} from 'lucide-react';
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -1287,6 +1444,142 @@ export default function Careers() {
     return matchesDepartment && matchesLocation;
   });
 
+<<<<<<< HEAD
+  const companyValues = [
+    {
+      title: "Innovation First",
+      description: "We push the boundaries of what's possible with cutting-edge technology",
+      icon: Lightbulb
+    },
+    {
+      title: "Excellence",
+      description: "We strive for excellence in everything we do, from code to customer service",
+      icon: Star
+    },
+    {
+      title: "Collaboration",
+      description: "We believe the best solutions come from diverse teams working together",
+      icon: Users
+    },
+    {
+      title: "Impact",
+      description: "We're driven by the positive impact our technology has on businesses and society",
+      icon: Target
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Competitive Compensation",
+      description: "Above-market salaries, equity options, and performance bonuses",
+      icon: DollarSign
+    },
+    {
+      title: "Flexible Work",
+      description: "Remote work options, flexible hours, and work-life balance",
+      icon: Globe
+    },
+    {
+      title: "Professional Growth",
+      description: "Continuous learning, conference attendance, and career development",
+      icon: GraduationCap
+    },
+    {
+      title: "Health & Wellness",
+      description: "Comprehensive health insurance, wellness programs, and mental health support",
+      icon: Heart
+    },
+    {
+      title: "Innovation Time",
+      description: "20% time for personal projects and innovation initiatives",
+      icon: Zap
+    },
+    {
+      title: "Team Culture",
+      description: "Collaborative environment, team events, and strong community",
+      icon: Users
+>>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    }
+  ];
+
+  const cultureValues = [
+    {
+      icon: Brain,
+      title: 'Innovation First',
+      description: 'We encourage creative thinking and novel approaches to solving complex problems.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and diverse perspectives to achieve excellence.',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Zap,
+      title: 'Continuous Learning',
+      description: 'We foster a culture of curiosity and continuous improvement.',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Shield,
+      title: 'Integrity',
+      description: 'We maintain the highest ethical standards in all our work and relationships.',
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const filteredJobs = activeDepartment === 'all' 
+    ? jobOpenings 
+    : jobOpenings.filter(job => job.department === activeDepartment);
+
+  return (
+<<<<<<< HEAD
+    <>
+      <SEO
+        title="Careers at Zion - Join Our Team"
+        description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
+        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
+        canonical="https://ziontechgroup.com/careers"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Join Our Team</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Help us build the future of AI and technology
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Join Our Team
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Be part of a team that's revolutionizing technology and shaping the future of AI, 
+            quantum computing, and digital transformation.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="#openings"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+            >
+              View Openings
+            </a>
+            <a
+              href="/contact"
+              className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+            >
+              Get in Touch
+            </a>
+=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -1300,6 +1593,7 @@ export default function Careers() {
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Be part of a team that's pushing the boundaries of AI, quantum computing, and emerging technologies. 
               Help us build solutions that transform businesses and shape the future of technology.
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 text-zion-cyan">
@@ -1440,6 +1734,26 @@ export default function Careers() {
                   <span className="ml-1 text-xs opacity-75">({location.count})</span>
                 </button>
               ))}
+<<<<<<< HEAD
+            </Tabs>
+          </div>
+          
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+              We're always looking for talented individuals who are passionate about AI and technology. 
+              Send us your resume and let's start a conversation.
+            </p>
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+              Send General Application
+            </Button>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+=======
               {jobTypes.map((type) => (
                 <button
                   key={type.id}
@@ -5765,7 +6079,4 @@ export default Careers;
 
 export default CareersPage;
 >>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
-=======
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -1,4 +1,18 @@
 
+const CACHE_NAME = 'zion-tech-v1';
+<<<<<<< HEAD
+const STATIC_CACHE = 'zion-tech-static-v1';
+const DYNAMIC_CACHE = 'zion-tech-dynamic-v1';
+const API_CACHE = 'zion-tech-api-v1';
+<<<<<<< HEAD
+
+// Files to cache immediately
+const STATIC_FILES = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+=======
+=======
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
 const API_CACHE = 'zion-api-v1';
@@ -13,6 +27,11 @@ const STATIC_ASSETS = [
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   '/offline.html',
   '/css/index.css',
   '/js/index.js',
@@ -27,10 +46,14 @@ const API_CACHE = [
   '/api/services',
   '/api/pricing',
   '/api/contact'
+<<<<<<< HEAD
+=======
 =======
   '/favicon.ico',
   '/logo192.png',
   '/logo512.png'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 ];
 
 const API_ENDPOINTS = [
@@ -54,19 +77,25 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       })
       .then(() => {
-        console.log('Static assets cached');
+        console.log('Static files cached successfully');
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Error caching static assets:', error);
+<<<<<<< HEAD
+        console.error('Failed to cache static files:', error);
 =======
-        console.log('Opened static cache');
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .catch((error) => {
-        console.log('Cache install failed:', error);
+<<<<<<< HEAD
+        console.error('Failed to cache static files:', error);
+=======
+        console.error('Error caching static assets:', error);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       })
   );
 });
@@ -74,6 +103,13 @@ self.addEventListener('install', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
@@ -94,12 +130,9 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-event.waitUntil(caches.keys().then((cacheNames) => {
-      return: Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-
-// Fetch event - implement caching strategies
+// Fetch event - handle different caching strategies
+<<<<<<< HEAD
+=======
 =======
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -114,7 +147,9 @@ event.waitUntil(caches.keys().then((cacheNames) => {
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - implement caching strategies
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -123,12 +158,11 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') {
     return;
   }
-
-  // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
-    return;
-  }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  
   // Handle different types of requests
   if (url.pathname.startsWith('/static/') || url.pathname.startsWith('/assets/')) {
     // Static assets - cache first strategy
@@ -139,6 +173,8 @@ self.addEventListener('fetch', (event) => {
   } else {
     // HTML pages - network first strategy
     event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+<<<<<<< HEAD
+=======
 =======
 
   // Skip chrome-extension and other non-http(s) requests
@@ -150,24 +186,153 @@ self.addEventListener('fetch', (event) => {
   if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
     event.respondWith(handleApiRequest(request));
     return;
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   }
-
-  // Static assets - Cache first with network fallback
-  if (isStaticAsset(request)) {
-    event.respondWith(handleStaticAsset(request));
-    return;
-  }
-
-  // HTML pages - Network first with cache fallback
-  if (request.destination === 'document') {
-    event.respondWith(handleDocumentRequest(request));
-    return;
-  }
-
-  // Default - Network first with cache fallback
-  event.respondWith(handleDefaultRequest(request));
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Handle API requests
+async function handleApiRequest(request) {
+  try {
+    // Try network first
+    const networkResponse = await fetch(request);
+    
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(API_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    // Fallback to cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return offline response
+    return new Response(
+      JSON.stringify({ error: 'Network error, please check your connection' }),
+      {
+        status: 503,
+        statusText: 'Service Unavailable',
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+  }
+}
+
+// Handle static assets
+async function handleStaticAsset(request) {
+  try {
+    // Try cache first
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Fallback to network
+    const networkResponse = await fetch(request);
+    
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(STATIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    // Return offline response for critical assets
+    if (isCriticalAsset(request)) {
+      return new Response(
+        'Offline - Please check your connection',
+        { status: 503, statusText: 'Service Unavailable' }
+      );
+    }
+    
+    throw error;
+  }
+}
+
+// Handle document requests
+async function handleDocumentRequest(request) {
+  try {
+    // Try network first
+    const networkResponse = await fetch(request);
+    
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    // Fallback to cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return offline page
+    return caches.match('/offline.html');
+  }
+}
+
+// Handle default requests
+async function handleDefaultRequest(request) {
+  try {
+    // Try network first
+    const networkResponse = await fetch(request);
+    
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    // Fallback to cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    throw error;
+  }
+}
+
+// Check if request is for a static asset
+function isStaticAsset(request) {
+  const url = new URL(request.url);
+  return (
+    request.destination === 'image' ||
+    request.destination === 'font' ||
+    request.destination === 'style' ||
+    request.destination === 'script' ||
+    url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$/)
+  );
+}
+
+// Check if asset is critical
+function isCriticalAsset(request) {
+  const url = new URL(request.url);
+  return (
+    url.pathname === '/' ||
+    url.pathname === '/index.html' ||
+    url.pathname.includes('main.css') ||
+    url.pathname.includes('bundle.js')
+  );
+}
+
+=======
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   console.log('Background sync triggered:', event.tag);
@@ -177,6 +342,10 @@ self.addEventListener('sync', (event) => {
   }
 });
 
+<<<<<<< HEAD
+// Push notification handling
+self.addEventListener('push', (event) => {
+=======
 async function doBackgroundSync() {
   try {
     // Get offline actions from IndexedDB
@@ -197,6 +366,39 @@ async function doBackgroundSync() {
 
 // Push notification handling
 self.addEventListener('push', (event) => {
+<<<<<<< HEAD
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  console.log('Push notification received:', event);
+  
+  const options = {
+    body: event.data ? event.data.text() : 'New update available!',
+    icon: '/icons/icon-192x192.png',
+    badge: '/icons/icon-72x72.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'Explore',
+        icon: '/icons/icon-72x72.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icons/icon-72x72.png'
+      }
+    ]
+  };
+  
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+<<<<<<< HEAD
+=======
+=======
   if (event.data) {
     const data = event.data.json();
     const options = {
@@ -226,6 +428,8 @@ self.addEventListener('push', (event) => {
       self.registration.showNotification(data.title, options)
     );
   }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 });
 
 // Notification click handling
@@ -241,7 +445,48 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Cache first strategy for static assets
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+// Helper functions
+function isStaticAsset(request) {
+  const url = new URL(request.url);
+  return (
+    url.pathname.startsWith('/css/') ||
+    url.pathname.startsWith('/js/') ||
+    url.pathname.startsWith('/images/') ||
+    url.pathname.startsWith('/icons/') ||
+    url.pathname.startsWith('/fonts/') ||
+    url.pathname.endsWith('.ico') ||
+    url.pathname.endsWith('.png') ||
+    url.pathname.endsWith('.jpg') ||
+    url.pathname.endsWith('.jpeg') ||
+    url.pathname.endsWith('.gif') ||
+    url.pathname.endsWith('.svg') ||
+    url.pathname.endsWith('.woff') ||
+    url.pathname.endsWith('.woff2') ||
+    url.pathname.endsWith('.ttf') ||
+    url.pathname.endsWith('.eot')
+  );
+}
+
+function isAPIRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.startsWith('/api/');
+}
+
+function isPageRequest(request) {
+  const url = new URL(request.url);
+  return (
+    url.pathname === '/' ||
+    url.pathname === '/micro-saas-services' ||
+    url.pathname === '/pricing' ||
+    url.pathname.endsWith('.html')
+  );
+}
+
+// Cache-first strategy for static assets
 async function cacheFirst(request, cacheName) {
   try {
     const cachedResponse = await caches.match(request);
@@ -304,6 +549,10 @@ async function doBackgroundSync() {
   }
 }
 
+// Message handling from clients
+<<<<<<< HEAD
+=======
+=======
 // Helper functions for offline actions (would need IndexedDB implementation)
 async function getOfflineActions() {
   // Implementation would use IndexedDB to store/retrieve offline actions
@@ -321,52 +570,8 @@ async function removeOfflineAction(id) {
 }
 
 // Message handling for communication with main thread
-=======
-// Push notification handling
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/logo192.png',
-      badge: '/logo192.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: 1
-      },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Explore',
-          icon: '/logo192.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/logo192.png'
-        }
-      ]
-    };
-
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
-});
-
-// Notification click handling
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow('/')
-    );
-  }
-});
-
-// Message handling for communication with main thread
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
@@ -375,13 +580,85 @@ self.addEventListener('message', (event) => {
 
 // Error handling
 self.addEventListener('error', (event) => {
-  console.log('Service worker error:', event.error);
+  console.error('Service Worker error:', event.error);
 });
 
 // Unhandled rejection handling
 self.addEventListener('unhandledrejection', (event) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  console.error('Service Worker unhandled rejection:', event.reason);
+});
+
+// Performance monitoring
+let performanceMetrics = {
+  cacheHits: 0,
+  cacheMisses: 0,
+  networkRequests: 0,
+  errors: 0
+};
+
+// Update metrics
+function updateMetrics(type) {
+  switch (type) {
+    case 'cacheHit':
+      performanceMetrics.cacheHits++;
+      break;
+    case 'cacheMiss':
+      performanceMetrics.cacheMisses++;
+      break;
+    case 'networkRequest':
+      performanceMetrics.networkRequests++;
+      break;
+    case 'error':
+      performanceMetrics.errors++;
+      break;
+  }
+  
+  // Store metrics in IndexedDB for analytics
+  storeMetrics(performanceMetrics);
+}
+
+// Store metrics in IndexedDB
+async function storeMetrics(metrics) {
+  try {
+    const db = await openDB('zion-tech-metrics', 1, {
+      upgrade(db) {
+        if (!db.objectStoreNames.contains('metrics')) {
+          db.createObjectStore('metrics', { keyPath: 'id' });
+        }
+      }
+    });
+    
+    await db.put('metrics', {
+      id: 'performance',
+      ...metrics,
+      timestamp: Date.now()
+    });
+  } catch (error) {
+    console.error('Failed to store metrics:', error);
+  }
+}
+
+// IndexedDB helper
+function openDB(name, version, upgradeCallback) {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(name, version);
+    
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => resolve(request.result);
+    request.onupgradeneeded = () => upgradeCallback(request.result);
+  });
+}
+
+<<<<<<< HEAD
+console.log('Zion Tech Group Service Worker loaded successfully');
+=======
+console.log('Zion Tech Group Service Worker loaded successfully');
+=======
   console.error('Service worker unhandled rejection:', event.reason);
 });
-=======
-  console.log('Service worker unhandled rejection:', event.reason);
-});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

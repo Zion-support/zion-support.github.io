@@ -1,17 +1,22 @@
-import { SEOHead } from '../components/SEOHead';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  CheckCircle, 
-  AlertTriangle,
-  Calendar,
-  Mail,
-  Phone
-} from 'lucide-react';
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import TermsOfService from "@/legal/TermsOfService";
 
-const Terms: React.FC = () => {
-  const lastUpdated = "January 15, 2025";
+export default function Terms() {
+  return (
+    <>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Shield, FileText, CheckCircle, AlertTriangle, Users, Globe, Scale } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
   const keyTerms = [
     {
@@ -149,19 +154,32 @@ import TermsOfService from "@/legal/TermsOfService";
 
 export default function Terms() {
   return (
+    <>
+<<<<<<< HEAD
+      <SEO 
+        title="Terms of Service | Zion Tech Group"
+        description="Read Zion Tech Group's terms of service to understand the rules and conditions for using our technology services and solutions."
+        keywords="terms of service, terms and conditions, legal, Zion Tech Group, service agreement"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <SEO
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
         canonical="https://ziontechgroup.com/terms"
+<<<<<<< HEAD
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <TermsOfService />
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
 =======
-=======
-=======
-=======
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <SEOHead 
-        title="Terms of Service - Zion Tech Group"
-        description="Read our terms of service to understand the conditions for using Zion Tech Group services. Clear guidelines for our business relationship."
-        keywords="terms of service, terms and conditions, legal, Zion Tech Group"
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
       />
       
       {/* Hero Section */}
@@ -1049,3 +1067,5 @@ export default Terms;
 };
 
 export default TermsPage;
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

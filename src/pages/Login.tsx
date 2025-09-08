@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '@/components/SEO';
+=======
 
 import React { useState } from 'react';""
 import { motion } from 'framer-motion';""
@@ -38,7 +45,21 @@ import { SEO } from '../components/SEO';""
               Sign in to your Zion Tech Group account&quot;
 
             </p>
-          </motion.div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-white">
+                Our login page is coming soon. You'll be able to securely sign in to your Zion Tech Group account and access all our services.
+              </p>
+            </div>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/Button';
+import { Input } from '@/components/ui/Input';
+import { useAuth } from '@/hooks/useAuth';
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
 
 
@@ -91,13 +112,16 @@ import { SEO } from '../components/SEO';""
           </motion.div>
         </div>
       </div>
-</>
+    </>
+  );
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+};
 
-  )}
-
-
-
-
-
-
-
+export default Login;
+=======
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

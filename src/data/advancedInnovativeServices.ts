@@ -20,17 +20,18 @@ export interface AdvancedInnovativeService {
     email: string;
     website: string;
   };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  websiteUrl: string;
   demoUrl?: string;
   caseStudies?: string[];
   marketTrends?: string[];
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -153,12 +154,19 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrends: ["Growing autonomous vehicle market", "Increasing safety regulations", "Rising demand for efficiency"]
   },
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
-    title: "Quantum Machine Learning Platform - Quantum AI Revolution",
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers.",
-    category: "Quantum Technology",
+    title: "Quantum Machine Learning Platform",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    description: "Revolutionary platform that combines quantum computing with machine learning algorithms for unprecedented computational power and accuracy.",
+    category: "Quantum Computing",
     subcategory: "Machine Learning",
     price: 3500,
     currency: "$",
@@ -183,6 +191,13 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Research breakthrough capabilities"
     ],
     useCases: [
+      "Drug discovery and molecular modeling",
+      "Financial portfolio optimization",
+      "Climate change modeling",
+      "Cryptography and security",
+      "Supply chain optimization"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
@@ -238,101 +253,339 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,500 - $8,000/month",
+<<<<<<< HEAD
 =======
-    marketPrice: "$3,500 - $15,000/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum algorithms"],
-    integrations: ["Classical ML frameworks", "Cloud quantum services", "Research databases"],
-    compliance: ["Research standards", "Academic compliance", "Security protocols"],
-    roi: "800% within 24 months",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
-    demoUrl: "https://ziontechgroup.com/demo/quantum-machine-learning",
-    caseStudies: ["Pharma research 10x speed improvement", "Financial modeling breakthrough"],
-    marketTrends: ["Rapid quantum computing advancement", "Growing investment in quantum", "Increasing research applications"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    websiteUrl: "https://ziontechgroup.com/quantum-ml-platform"
   },
 
-  // AI-Powered Space Technology Platform
+  // Autonomous AI Agents Platform
   {
-    id: "ai-space-technology-platform",
-    title: "AI Space Technology Platform - Intelligent Space Exploration",
-    description: "Advanced AI platform for space exploration, satellite management, and space data analysis using cutting-edge artificial intelligence and machine learning.",
-    category: "AI & Space Technology",
-    subcategory: "Space Exploration",
-    price: 4000,
+    id: "autonomous-ai-agents-platform",
+    title: "Autonomous AI Agents Platform",
+    description: "Next-generation platform for creating, deploying, and managing autonomous AI agents that can operate independently across multiple domains.",
+    category: "Artificial Intelligence",
+    subcategory: "Autonomous Systems",
+    price: 8000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Satellite orbit optimization",
-      "Space debris tracking",
-      "Planetary data analysis",
-      "Mission planning automation",
-      "Real-time space monitoring",
-      "Predictive space weather",
-      "Astronomical data processing",
-      "Space mission simulation",
-      "Integration with space agencies",
-      "Advanced visualization tools"
+      "Multi-agent orchestration",
+      "Autonomous decision making",
+      "Cross-domain learning",
+      "Natural language processing",
+      "Emotional intelligence",
+      "Continuous self-improvement",
+      "API integration framework",
+      "Real-time monitoring"
     ],
     benefits: [
-      "Optimize space missions",
-      "Reduce satellite costs",
-      "Improve space safety",
-      "Accelerate space research",
-      "Enable new space capabilities"
+      "24/7 autonomous operation",
+      "Reduced human intervention",
+      "Scalable AI workforce",
+      "Continuous learning and adaptation",
+      "Multi-domain expertise"
     ],
     useCases: [
-      "Space agencies",
-      "Satellite companies",
-      "Research institutions",
-      "Defense organizations",
-      "Commercial space companies"
+      "Customer service automation",
+      "Process optimization",
+      "Research and development",
+      "Data analysis",
+      "Predictive maintenance"
     ],
     targetAudience: [
-      "Space engineers",
-      "Satellite operators",
-      "Research scientists",
-      "Mission planners",
-      "Space technology consultants"
+      "Enterprise companies",
+      "Service providers",
+      "Research organizations",
+      "Government agencies",
+      "Healthcare providers"
     ],
-    tags: ["AI", "Space Technology", "Satellite Management", "Space Exploration", "Machine Learning"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,000 - $20,000/month",
+    tags: ["AI", "Autonomous Systems", "Machine Learning", "Automation", "Intelligence"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$8,000 - $25,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Machine Learning", "Computer Vision", "Python", "TensorFlow", "Space APIs"],
-    integrations: ["NASA APIs", "ESA systems", "Satellite networks", "Space weather services"],
-    compliance: ["Space regulations", "International standards", "Security protocols"],
-    roi: "700% within 24 months",
-    competitors: ["Maxar", "Planet Labs", "SpaceX", "Blue Origin"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-space-technology",
-    caseStudies: ["Satellite optimization 50% efficiency", "Mission planning automation"],
-    marketTrends: ["Growing commercial space sector", "Increasing satellite launches", "Rising space research funding"]
+    websiteUrl: "https://ziontechgroup.com/autonomous-ai-agents"
   },
 
-  // AI-Powered Biotechnology Platform
+  // Neuromorphic Computing Platform
   {
-    id: "ai-biotechnology-platform",
-    title: "AI Biotechnology Platform - Intelligent Life Sciences",
-    description: "Revolutionary AI platform that accelerates drug discovery, protein folding, and biological research using advanced machine learning and computational biology.",
-    category: "AI & Biotechnology",
-    subcategory: "Life Sciences",
-    price: 3000,
+    id: "neuromorphic-computing-platform",
+    title: "Neuromorphic Computing Platform",
+    description: "Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing and real-time learning capabilities.",
+    category: "Neuromorphic Computing",
+    subcategory: "AI Processing",
+    price: 12000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI-powered drug discovery",
-      "Protein structure prediction",
-      "Genomic data analysis",
-      "Drug interaction modeling",
+      "Spiking neural networks",
+      "Event-driven processing",
+      "Ultra-low power consumption",
+      "Real-time learning",
+      "Pattern recognition",
+      "Adaptive algorithms",
+      "Hardware acceleration",
+      "Bio-inspired architecture"
+    ],
+    benefits: [
+      "100x more energy efficient",
+      "Real-time learning capabilities",
+      "Superior pattern recognition",
+      "Adaptive behavior",
+      "Future-proof technology"
+    ],
+    useCases: [
+      "Edge computing applications",
+      "IoT device intelligence",
+      "Autonomous vehicles",
+      "Robotics",
+      "Sensor networks"
+    ],
+    targetAudience: [
+      "IoT companies",
+      "Automotive industry",
+      "Robotics manufacturers",
+      "Edge computing providers",
+      "Research institutions"
+    ],
+    tags: ["Neuromorphic", "AI", "Edge Computing", "IoT", "Robotics"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$12,000 - $40,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/neuromorphic-computing"
+  },
+
+  // Synthetic Data Generation Platform
+  {
+    id: "synthetic-data-generation-platform",
+    title: "Synthetic Data Generation Platform",
+    description: "Advanced platform for generating high-quality synthetic data that preserves privacy while maintaining statistical properties of real datasets.",
+    category: "Data Science",
+    subcategory: "Data Generation",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "GAN-based data generation",
+      "Privacy-preserving algorithms",
+      "Statistical validation",
+      "Multi-modal data support",
+      "Custom data schemas",
+      "Quality assessment tools",
+      "API for integration",
+      "Compliance reporting"
+    ],
+    benefits: [
+      "Eliminate data privacy concerns",
+      "Accelerate AI model training",
+      "Reduce data collection costs",
+      "Ensure data quality",
+      "Meet compliance requirements"
+    ],
+    useCases: [
+      "AI model training",
+      "Testing and validation",
+      "Research and development",
+      "Compliance testing",
+      "Data augmentation"
+    ],
+    targetAudience: [
+      "AI companies",
+      "Healthcare providers",
+      "Financial institutions",
+      "Research organizations",
+      "Government agencies"
+    ],
+    tags: ["Synthetic Data", "AI", "Privacy", "Data Science", "Compliance"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$3,500 - $12,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/synthetic-data-generation"
+  },
+
+  // Federated Learning Platform
+  {
+    id: "federated-learning-platform",
+    title: "Federated Learning Platform",
+    description: "Distributed machine learning platform that enables collaborative model training across multiple organizations without sharing raw data.",
+    category: "Machine Learning",
+    subcategory: "Collaborative AI",
+    price: 6000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Distributed training",
+      "Privacy-preserving ML",
+      "Model aggregation",
+      "Secure communication",
+      "Performance monitoring",
+      "Multi-party coordination",
+      "API framework",
+      "Compliance tools"
+    ],
+    benefits: [
+      "Collaborate without sharing data",
+      "Maintain data privacy",
+      "Improve model accuracy",
+      "Reduce computational costs",
+      "Enable cross-organization learning"
+    ],
+    useCases: [
+      "Healthcare collaboration",
+      "Financial services",
+      "Research partnerships",
+      "Cross-border projects",
+      "Industry consortia"
+    ],
+    targetAudience: [
+      "Healthcare organizations",
+      "Financial institutions",
+      "Research institutions",
+      "Government agencies",
+      "Multi-national companies"
+    ],
+    tags: ["Federated Learning", "Privacy", "Collaboration", "AI", "Distributed Systems"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$6,000 - $20,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/federated-learning"
+  },
+
+  // Quantum Internet Security Platform
+  {
+    id: "quantum-internet-security-platform",
+    title: "Quantum Internet Security Platform",
+    description: "Future-proof security platform that leverages quantum cryptography to provide unbreakable encryption for the quantum internet era.",
+    category: "Cybersecurity",
+    subcategory: "Quantum Security",
+    price: 18000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum key distribution",
+      "Post-quantum cryptography",
+      "Quantum-resistant algorithms",
+      "Secure communication channels",
+      "Real-time threat detection",
+      "Compliance frameworks",
+      "API security",
+      "Quantum network integration"
+    ],
+    benefits: [
+      "Unbreakable encryption",
+      "Future-proof security",
+      "Quantum-resistant protection",
+      "Regulatory compliance",
+      "Competitive advantage"
+    ],
+    useCases: [
+      "Government communications",
+      "Financial transactions",
+      "Healthcare data",
+      "Critical infrastructure",
+      "Military applications"
+    ],
+    targetAudience: [
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare providers",
+      "Defense contractors",
+      "Critical infrastructure"
+    ],
+    tags: ["Quantum Security", "Cybersecurity", "Encryption", "Internet", "Government"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$18,000 - $60,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/quantum-internet-security"
+  },
+
+  // AI Drug Discovery Platform
+  {
+    id: "ai-drug-discovery-platform",
+    title: "AI Drug Discovery Platform",
+    description: "Revolutionary platform that accelerates drug discovery using artificial intelligence, machine learning, and computational biology.",
+    category: "Healthcare AI",
+    subcategory: "Drug Discovery",
+    price: 25000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Molecular modeling",
+      "Target identification",
+      "Drug repurposing",
       "Clinical trial optimization",
+      "Toxicity prediction",
+      "Biomarker discovery",
+      "API integration",
+      "Regulatory compliance"
+    ],
+    benefits: [
+      "10x faster drug discovery",
+      "Reduce development costs",
+      "Improve success rates",
+      "Accelerate time to market",
+      "Personalized medicine"
+    ],
+    useCases: [
+      "Pharmaceutical research",
+      "Biotech companies",
+      "Academic research",
+      "Clinical trials",
+      "Drug repurposing"
+    ],
+    targetAudience: [
+      "Pharmaceutical companies",
+      "Biotechnology firms",
+      "Research institutions",
+      "Healthcare providers",
+      "Government agencies"
+    ],
+    tags: ["AI", "Drug Discovery", "Healthcare", "Biotechnology", "Research"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$25,000 - $80,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-drug-discovery"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
     integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
     compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -341,16 +594,33 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrend: "Explosive growth with 500% annual increase in quantum computing adoption",
     innovationLevel: "Pioneering quantum-classical hybrid approaches",
     uniqueValue: "First commercial platform combining quantum computing with practical ML applications"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   },
 
   // Autonomous Drone Fleet Management
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
-      "Biomarker identification",
-      "Real-time research collaboration",
-      "Integration with lab equipment",
-      "Advanced bioinformatics tools",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    description: "Intelligent platform for managing autonomous drone fleets across various industries including delivery, surveillance, and inspection.",
+    category: "Autonomous Systems",
+    subcategory: "Drone Management",
+    price: 7000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Fleet orchestration",
+      "Autonomous navigation",
+      "Real-time monitoring",
+      "Predictive maintenance",
+      "Route optimization",
+      "Safety protocols",
+      "API integration",
       "Compliance management"
     ],
     benefits: [
@@ -361,6 +631,13 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Breakthrough discoveries"
     ],
     useCases: [
+      "Package delivery",
+      "Infrastructure inspection",
+      "Agricultural monitoring",
+      "Security surveillance",
+      "Emergency response"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
@@ -393,12 +670,9 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Search and rescue operations",
       "Security and surveillance",
       "Environmental monitoring"
+<<<<<<< HEAD
 =======
-      "Pharmaceutical companies",
-      "Biotech startups",
-      "Research institutions",
-      "Hospitals",
-      "Clinical research organizations"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
     ],
     targetAudience: [
       "Biotech researchers",
@@ -580,11 +854,12 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Data-driven decisions"
     ],
     useCases: [
-      "Hedge funds",
-      "Investment firms",
-      "Trading desks",
-      "Individual traders",
-      "Financial institutions"
+      "Food safety",
+      "Pharmaceutical supply",
+      "Luxury goods",
+      "Electronics",
+      "Automotive industry"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ],
     targetAudience: [
       "Portfolio managers",
@@ -1183,17 +1458,9 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   }
 ];
 
+<<<<<<< HEAD
 export default ADVANCED_INNOVATIVE_SERVICES;
 =======
-    technology: ["Machine Learning", "IoT", "Python", "TensorFlow", "Energy APIs"],
-    integrations: ["Smart meters", "SCADA systems", "Energy management systems", "Weather services"],
-    compliance: ["Energy regulations", "Grid standards", "Environmental compliance"],
-    roi: "550% within 18 months",
-    competitors: ["Schneider Electric", "Siemens", "ABB", "GE Grid Solutions"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-energy-grid",
-    caseStudies: ["Utility 30% cost reduction", "Grid reliability improvement"],
-    marketTrends: ["Smart grid adoption", "Renewable energy growth", "Energy efficiency focus"]
-  }
-];
-
 export default ADVANCED_INNOVATIVE_SERVICES;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -1,6 +1,43 @@
-import * as React from 'react'
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-import { cn    } from '../../utils/cn'
+import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+interface SeparatorProps {
+<<<<<<< HEAD
+  className?: string;
+  orientation?: 'horizontal' | 'vertical';
+}
+
+const Separator: React.FC<SeparatorProps> = ({ 
+  className = '', 
+  orientation = 'horizontal' 
+=======
+  orientation?: 'horizontal' | 'vertical';
+  className?: string;
+}
+
+export const Separator: React.FC<SeparatorProps> = ({ 
+  orientation = 'horizontal', 
+  className = '' 
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+}) => {
+  const baseClasses = 'shrink-0 bg-border';
+  const orientationClasses = orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]';
+  
+  return (
+    <div className={`${baseClasses} ${orientationClasses} ${className}`} />
+  );
+<<<<<<< HEAD
+};
+
+export { Separator };
+=======
+};
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import { cn } from '@/lib/utils';
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
@@ -25,4 +62,9 @@ const Separator = React.forwardRef<
   {/* Removed stray closing parenthesis */}
 Separator.displayName = SeparatorPrimitive.Root.displayName
 
-export { Separator }
+<<<<<<< HEAD
+export { Separator };
+=======
+export { Separator };
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

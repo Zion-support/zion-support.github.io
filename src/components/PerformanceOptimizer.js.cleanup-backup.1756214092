@@ -1,17 +1,45 @@
 <<<<<<< HEAD
+import { jsx as _jsx } from "react/jsx-runtime";
+import { useEffect, useState, useRef, useCallback } from 'react';
+import { motion, useInView } from 'framer-motion';
+export function PerformanceOptimizer({ children, threshold = 0.1, delay = 0, className = '', fallback = null }) {
+=======
+<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useEffect, useState, useRef } from 'react';
 export function PerformanceOptimizer() {
     const [metrics, setMetrics] = useState(null);
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     const [isVisible, setIsVisible] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
     const ref = useRef(null);
-    useEffect(() => {
-        // Only show when explicitly enabled
-        if (localStorage.getItem('showPerformance') === 'true') {
+    const inView = useInView(ref, { threshold });
+    const handleIntersection = useCallback(() => {
+        if (inView && !isVisible) {
             setIsVisible(true);
-            measurePerformance();
+            // Simulate loading delay for better UX
+            setTimeout(() => setIsLoaded(true), delay);
+        }
+    }, [inView, isVisible, delay]);
+    useEffect(() => {
+        handleIntersection();
+    }, [handleIntersection]);
+    // Performance monitoring
+    useEffect(() => {
+        if (typeof window !== 'undefined' && 'performance' in window) {
+            const observer = new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                        console.log('LCP:', entry.startTime);
+                    }
+                }
+            });
+            observer.observe({ entryTypes: ['largest-contentful-paint'] });
+            return () => observer.disconnect();
         }
     }, []);
+<<<<<<< HEAD
+=======
     const measurePerformance = () => {
         if ('PerformanceObserver' in window) {
             // Measure Core Web Vitals
@@ -173,16 +201,10 @@ export const PerformanceOptimizer = ({ children }) => {
             lazyImages.forEach((img) => observer.observe(img));
             return () => observer.disconnect();
         }
-    }, [location.pathname]);
-    return <>{optimizedChildren}</>;
-};
-// Add global performance optimizations
-if (typeof window !== 'undefined') {
-    // Optimize long tasks
-    if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
-        }, { priority: 'background' });
+    }, []);
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    if (!isVisible) {
+        return (_jsx("div", { ref: ref, className: className, children: fallback }));
     }
     // Optimize memory usage
     if ('memory' in performance) {
@@ -194,6 +216,78 @@ if (typeof window !== 'undefined') {
             }
         }
     }
+    return (_jsx(motion.div, { ref: ref, initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, ease: "easeOut" }, className: className, children: children }));
+}
+// Lazy loading wrapper for images
+export function LazyImage({ src, alt, className = '', placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTcwNzJiIi8+PC9zdmc+' }) {
+    const [imageSrc, setImageSrc] = useState(placeholder);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const imgRef = useRef(null);
+    useEffect(() => {
+        const img = imgRef.current;
+        if (!img)
+            return;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setImageSrc(src);
+                    observer.unobserve(img);
+                }
+            });
+        }, { threshold: 0.1 });
+        observer.observe(img);
+        return () => observer.unobserve(img);
+    }, [src]);
+    return (_jsx("img", { ref: imgRef, src: imageSrc, alt: alt, className: `transition-opacity duration-300 ${className} ${isLoaded ? 'opacity-100' : 'opacity-0'}`, onLoad: () => setIsLoaded(true) }));
+}
+// Virtual scrolling for large lists
+export function VirtualList({ items, renderItem, itemHeight, containerHeight, overscan = 5 }) {
+    const [scrollTop, setScrollTop] = useState(0);
+    const containerRef = useRef(null);
+    const visibleStart = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
+    const visibleEnd = Math.min(items.length, Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan);
+    const visibleItems = items.slice(visibleStart, visibleEnd);
+    const totalHeight = items.length * itemHeight;
+    const offsetY = visibleStart * itemHeight;
+    const handleScroll = useCallback((e) => {
+        setScrollTop(e.currentTarget.scrollTop);
+    }, []);
+    return (_jsx("div", { ref: containerRef, style: { height: containerHeight, overflow: 'auto' }, onScroll: handleScroll, children: _jsx("div", { style: { height: totalHeight, position: 'relative' }, children: _jsx("div", { style: { transform: `translateY(${offsetY}px)` }, children: visibleItems.map((item, index) => (_jsx("div", { style: { height: itemHeight }, children: renderItem(item, visibleStart + index) }, visibleStart + index))) }) }) }));
+}
+// Debounced search hook
+export function useDebounce(value, delay) {
+    const [debouncedValue, setDebouncedValue] = useState(value);
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedValue(value);
+        }, delay);
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [value, delay]);
+    return debouncedValue;
+}
+// Intersection observer hook for performance
+export function useIntersectionObserver(options = {}) {
+    const [isIntersecting, setIsIntersecting] = useState(false);
+    const [entry, setEntry] = useState(null);
+    const elementRef = useRef(null);
+    useEffect(() => {
+        const element = elementRef.current;
+        if (!element)
+            return;
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsIntersecting(entry.isIntersecting);
+            setEntry(entry);
+        }, options);
+        observer.observe(element);
+        return () => observer.unobserve(element);
+    }, [options]);
+    return { ref: elementRef, isIntersecting, entry };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 }
 export default PerformanceOptimizer;
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
