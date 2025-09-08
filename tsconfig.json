@@ -20,87 +20,36 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-<<<<<<< HEAD
     "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-=======
-    "jsx": "preserve",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
->>>>>>> origin/main
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": false,
-<<<<<<< HEAD
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
     "strictNullChecks": false,
-=======
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
->>>>>>> origin/main
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "incremental": true,
-    "noEmitOnError": false
+    "exactOptionalPropertyTypes": false
   },
   "include": [
     "src/**/*",
-<<<<<<< HEAD
+    "src/**/*.tsx",
     "src/**/*.ts",
-    "src/**/*.tsx"
-=======
-    "pages/**/*",
-    "*.ts",
-    "*.tsx"
->>>>>>> origin/main
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-<<<<<<< HEAD
     "build",
-    "src.disabled",
-    "src_disabled_*",
-    "tests",
+    "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
   ]
 }
-=======
-    "out",
-    "build",
-    "coverage",
-    "src-disabled",
-    "src.broken",
-    "src_disabled_*",
-    "pages._archive_corrupted",
-    "pages.bak",
-    "*.disabled",
-    "*.backup",
-    "*.bak",
-    "recovered-branches",
-    "backup",
-    "corrupted*",
-    "*_backup*",
-    "temp*",
-    "tmp*",
-    "*.tmp",
-    "*.temp"
-  ]
-}
->>>>>>> origin/main

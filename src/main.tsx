@@ -7,7 +7,7 @@ import './index.css';
 // import './i18n';
 
 // Register service worker
-import { registerServiceWorker } from './serviceWorkerRegistration';
+// import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Error handling function (currently unused but kept for future use)
 // const showApiError = (error: unknown): void => {
@@ -24,7 +24,6 @@ const handleGlobalError = (error: Error): void => {
         <h1>Application Error</h1>
         <p>A critical error occurred while loading the application.</p>
         <p>Error: ${error.message}</p>
-        <p>Please check the console for more details.</p>
         <button onclick="window.location.reload()" style="padding: 10px 20px; margin-top: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
           Reload Page
         </button>
@@ -35,46 +34,29 @@ const handleGlobalError = (error: Error): void => {
 
 // Set up global error handlers
 window.addEventListener('error', (event) => {
-<<<<<<< HEAD
   handleGlobalError(event.error);
 });
 
 window.addEventListener('unhandledrejection', (event) => {
   handleGlobalError(new Error(event.reason));
-=======
-  handleGlobalError(event.error as Error);
 });
 
-window.addEventListener('unhandledrejection', (event) => {
-  handleGlobalError(new Error(String(event.reason)));
->>>>>>> origin/main
-});
+// Get the root element
+const rootElement = document.getElementById('root');
 
-try {
-  const rootElement = document.getElementById('root');
-  if (!rootElement) {
-    throw new Error('Root element not found');
-  }
-
-<<<<<<< HEAD
-  ReactDOM.createRoot(rootElement).render(
-=======
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
->>>>>>> origin/main
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  );
-
-  // Register service worker in production
-  if (import.meta.env.PROD) {
-    registerServiceWorker();
-  }
-} catch (error) {
-  handleGlobalError(error as Error);
-<<<<<<< HEAD
+if (!rootElement) {
+  throw new Error('Root element not found');
 }
-=======
-}
->>>>>>> origin/main
+
+// Create root and render app
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// Register service worker in production
+// if (import.meta.env.PROD) {
+//   registerServiceWorker();
+// }
