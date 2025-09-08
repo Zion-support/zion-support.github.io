@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import ErrorBoundary from "@/components/ErrorBoundary";
@@ -8,7 +8,7 @@ import SavedTalentsPage from "../pages/SavedTalentsPage";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
 
-const TalentProfilePage = React.lazy(() => import("../pages/TalentProfilePage"));
+const TalentProfilePage = lazy(() => import("../pages/TalentProfilePage"));
 
 const TalentRoutes = () => {
   return (
