@@ -8,8 +8,9 @@
 [build.environment]
   NODE_VERSION = "20"
   MISE_PYTHON_COMPILE = "false"
-  # Force mise to use system Python even during Netlify's dependency stage
-  MISE_TOOL_VERSIONS__python = "system"
+  # Trust repo's mise config and pin Python used by mise shim
+  MISE_TRUSTED_CONFIG = "1"
+  MISE_TOOL_VERSIONS__python = "3.11.9"
 
 [[plugins]]
   package = "netlify-plugin-compress"
