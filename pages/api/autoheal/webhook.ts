@@ -12,7 +12,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const { app, severity, message, stack, metadata } = req.body || {};
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`;
-
     const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined });
     const [owner, repo] = REPO.split('/');
 
@@ -26,9 +25,7 @@ Stack:\n\n${stack || 'n/a'}
 
 Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 `;
-
     const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] });
-
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({

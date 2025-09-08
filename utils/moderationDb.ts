@@ -1,62 +1,75 @@
+import fs from 'fs';
+import path from 'path';
+
 export interface ModerationFlag {
   id: string;
-  status: string;
-  content: string;
+  contentId: string;
+  contentType: string;
   reason: string;
+  userEmail: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   createdAt: string;
-  updatedAt: string;
+  adminNotes?: string;
+}
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+const FILE = path.join(DATA_DIR, 'moderation-flags.json');
+
+function load(): ModerationFlag[] {
+  try {
+    if (!fs.existsSync(FILE)) return [];
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return [];
+  }
+}
+
+function save(flags: ModerationFlag[]): void {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(flags, null, 2));
+}
+
+export async function createFlag(init: Partial<ModerationFlag>): Promise<ModerationFlag> {
+  const flags = load();
+  const flag: ModerationFlag = {
+    id: init.id || Date.now().toString(),
+    contentId: init.contentId || '',
+    contentType: init.contentType || 'unknown',
+    reason: init.reason || '',
+    userEmail: init.userEmail || '',
+    status: init.status || 'pending',
+    createdAt: init.createdAt || new Date().toISOString(),
+    adminNotes: init.adminNotes
+  };
+  flags.push(flag);
+  save(flags);
+  return flag;
+}
+
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  return load();
 }
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  // Mock implementation - in a real app, this would query a database
-  return {
-    id,
-    status: 'pending',
-    content: 'Mock content',
-    reason: 'Mock reason',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  };
+  const flags = load();
+  return flags.find(f => f.id === id) || null;
 }
 
 export async function updateFlagStatus(
   id: string, 
-  status: string, 
+  status: ModerationFlag['status'], 
   adminNotes?: string
 ): Promise<ModerationFlag | null> {
-  // Mock implementation - in a real app, this would update a database
-  return {
-    id,
-    status,
-    content: 'Mock content',
-    reason: 'Mock reason',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  };
-}
-
-export async function createFlag(init: any): Promise<ModerationFlag> {
-  // Mock implementation - in a real app, this would create a new flag in database
-  return {
-    id: Math.random().toString(36).substr(2, 9),
-    status: 'pending',
-    content: init.content || 'Mock content',
-    reason: init.reason || 'Mock reason',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  };
-}
-
-export async function readAllFlags(): Promise<ModerationFlag[]> {
-  // Mock implementation - in a real app, this would query the database
-  return [
-    {
-      id: '1',
-      status: 'pending',
-      content: 'Mock content 1',
-      reason: 'Mock reason 1',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    }
-  ];
+  const flags = load();
+  const flagIndex = flags.findIndex(f => f.id === id);
+  if (flagIndex === -1) return null;
+  
+  flags[flagIndex].status = status;
+  if (adminNotes) {
+    flags[flagIndex].adminNotes = adminNotes;
+  }
+  
+  save(flags);
+  return flags[flagIndex];
 }

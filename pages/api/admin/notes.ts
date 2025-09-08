@@ -8,13 +8,10 @@ type Note = {
   authorId: string;
   createdAt: number;
 };
-
 const notesStore: Note[] = [];
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
-
   if (req.method === 'GET') {
     const { targetType, targetId } = req.query;
     if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' });

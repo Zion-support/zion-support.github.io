@@ -2,35 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-export default async function handler(,
-    req: NextApiRequest, r,
-    es: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({,
-    error: 'Method Not Allowed' });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const RATE_LIMIT_MAX_REQUESTS = 15;
-
 const ipToRequests: Record<string, { timestamps: number[] }> = {};
-
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
   const bucket = ipToRequests[ip] || { timestamps: [] };
@@ -54,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(401).json({ error: 'Unauthorized' });
   }
   // Rate limit
-  const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() || req.socket.remoteAddress || 'unknown';
+  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || req.socket.remoteAddress || 'unknown';
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Too Many Requests' });
   }
@@ -76,7 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { role: 'user', content: prompt }
       ]
     });
-
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
   } catch (err: any) {

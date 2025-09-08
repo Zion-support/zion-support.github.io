@@ -6,11 +6,7 @@ const Epub = require('epub-gen');
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '10mb'
-    }
-  }
-};
-
+      sizeLimit: '10mb'}}};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -29,7 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
-
   try {
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);

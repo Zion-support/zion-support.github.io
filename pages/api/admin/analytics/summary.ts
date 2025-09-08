@@ -9,7 +9,6 @@ type EventRow = {
   properties?: Record<string, any>;
   at: string;
 };
-
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');
 
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
@@ -19,8 +18,8 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     const lines = raw.split('\n').filter(Boolean);
     const start = startIso ? new Date(startIso) : null;
     const end = endIso ? new Date(endIso) : null;
-    const rows: EventRow[] = [];
-    for (const line of lines) {
+  const rows: EventRow[] = [];
+  for (const line of lines) {
       try {
         const obj = JSON.parse(line);
         if (!obj.at) continue;
@@ -48,7 +47,6 @@ function featureFromPath(page?: string): string {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
-
   const { start, end, userType } = req.query as { start?: string, end?: string, userType?: string };
 
   const rows = parseLines(start, end).filter((r) => !userType || userType === 'all' || (r.userType || 'guest') === userType);
@@ -75,9 +73,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
-
-  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'];
+  const funnelStages = ['Visit', 'AI Prompt Used', 'Post Created', 'Message Sent'];
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }));
-
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }

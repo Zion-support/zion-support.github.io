@@ -1,9 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
+import path from 'path';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Application } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
-const FILE = 'applications.json';
+
+const FILE = path.join(process.cwd(), 'data', 'applications.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
@@ -19,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'POST') {
     const { jobId, talentSlug, action } = req.body || {};
-    if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
+    if (!jobId || !talentSlug || !['apply', 'skip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' });
       return;
     }
@@ -40,7 +42,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
-      createdAtIso: now};
+      createdAtIso: now
+    };
     apps.push(app);
     writeJsonFile<Application[]>(FILE, apps);
     res.status(201).json({ application: app });

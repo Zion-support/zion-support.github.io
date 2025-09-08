@@ -6,7 +6,7 @@ function randomString(length: number) {
   const cryptoObj = require('crypto');
   const bytes: Buffer = cryptoObj.randomBytes(length);
   for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
-  return res;
+  return res
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
