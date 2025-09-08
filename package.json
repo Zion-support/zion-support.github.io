@@ -40,7 +40,9 @@
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
     "prebuild": "echo 'Skipping prebuild checks'",
-    "postbuild": "echo 'Build completed successfully'"
+    "postbuild": "echo 'Build completed successfully' && npm run optimize",
+    "optimize": "node scripts/optimize-build.js",
+    "build:optimize": "npm run build && npm run optimize"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
