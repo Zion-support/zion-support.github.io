@@ -305,7 +305,7 @@ export function TransactionHistory() {
                           {new Date(
                             transaction.completed_at || 
                             transaction.refunded_at || 
-                            transaction.cancelled_at!
+                            transaction.cancelled_at
                           ).toLocaleDateString()}
                         </span>
                       </div>
