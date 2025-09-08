@@ -44,10 +44,10 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
+      name: 'AI Sales Copilot', 
+      href: '/services/ai-sales-copilot', 
+      icon: Users, 
+      description: 'Intelligent Sales Optimization',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
@@ -60,20 +60,44 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
+      name: 'AI Compliance Assistant', 
+      href: '/services/ai-compliance-assistant', 
+      icon: Shield, 
+      description: 'Automated Regulatory Compliance',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Auto Email Responder', 
+      href: '/services/ai-auto-email-responder', 
+      icon: Mail, 
+      description: 'Intelligent Email Automation',
+      featured: true,
+      color: 'from-green-500 to-cyan-500'
+    },
+    { 
+      name: 'LLM Content Studio', 
+      href: '/services/llm-content-studio', 
+      icon: PenTool, 
+      description: 'AI-Powered Content Creation',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Cloud FinOps Optimizer', 
+      href: '/services/cloud-finops-optimizer', 
+      icon: Cloud, 
+      description: 'Cloud Cost Optimization',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
       name: 'AI Healthcare Platform', 
       href: '/services/ai-healthcare-platform', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
-      description: 'Automated Content Generation',
-      featured: true,
-      color: 'from-blue-500 to-purple-500'
     },
     { 
       name: 'AI Cybersecurity', 
@@ -92,28 +116,20 @@ export function AppHeader() {
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'IoT & Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'Connected Devices & Edge AI',
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
       featured: true,
       color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'Cloud & DevOps', 
-      href: '/services/DevOpsCloud', 
-      icon: Cloud, 
-      description: 'Cloud Infrastructure & Automation',
-      featured: false,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    { 
-      name: 'Digital Twin', 
-      href: '/services/DigitalTwin', 
-      icon: Copy, 
-      description: 'Virtual Replicas & Simulation',
-      featured: false,
-      color: 'from-emerald-500 to-teal-500'
     }
   ];
 
