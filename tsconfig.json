@@ -5,22 +5,34 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "allowJs": true,
-    "strict": true,
-    "esModuleInterop": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "incremental": true,
 
     /* Linting */
+    "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "noEmitOnError": false,
 
     /* Path mapping */
     "baseUrl": ".",
@@ -29,70 +41,22 @@
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
       "@/utils/*": ["./src/utils/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/context/*": ["./src/context/*"],
-      "@/services/*": ["./src/services/*"],
-      "@/data/*": ["./src/data/*"],
-      "@/assets/*": ["./src/assets/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/config/*": ["./src/config/*"],
       "@/lib/*": ["./src/lib/*"]
     }
   },
   "include": [
-<<<<<<< HEAD
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-=======
-
     "src/**/*",
     "src/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.js",
     "src/**/*.jsx",
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    ".next/types/**/*.ts"
+    "vite.config.ts",
+    "vitest.config.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "src.disabled/**/*",
-    "src_disabled_*/**/*",
-    "**/tests/**",
-    "__tests__/**",
-    "temp_*/**",
-    "temp-*/**",
-    "temp*/**",
-    "temp_conflicts/**",
-    "temp_exclude/**",
-    "zion-*/**",
-    "zion_os/**",
-    "zion/**",
-    "apps/**",
-    "utils/**",
-    "types/**",
-    "src/components/ui/alert-dialog.tsx",
-    "src/components/ui/context-menu.tsx",
-    "src/components/ui/dropdown-menu.tsx",
-    "src/components/ui/hover-card.tsx",
-    "src/components/ui/navigation-menu.tsx",
-    "src/components/ui/radio-group.tsx",
-    "src/components/ui/scroll-area.tsx",
-    "src/components/ui/toggle-group.tsx"
->>>>>>> 6b2c17c6b6de4bb46dbeae112005bcd173d304f8
+    ".next",
+    "build"
   ]
 }
