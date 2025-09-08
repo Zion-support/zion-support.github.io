@@ -51,11 +51,29 @@ async function ghRequest(path, method = 'GET', body) {
 
 async function getOpenPRs(owner, repo) {
   try {
-    const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open`);
+    const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
     return prs || [];
   } catch (error) {
     console.error('Error fetching PRs:', error.message);
     return [];
+  }
+}
+
+async function readyForReview(owner, repo, number) {
+  try {
+    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, 'POST');
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function updateBranch(owner, repo, number) {
+  try {
+    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/update-branch`, 'PUT');
+    return true;
+  } catch {
+    return false;
   }
 }
 
@@ -93,13 +111,15 @@ async function main() {
       console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
       
       if (pr.draft) {
-        console.log('   ⏸️  Skipping draft PR');
-        continue;
+        const readied = await readyForReview(owner, repo, pr.number);
+        console.log(`   📝 Draft -> ready_for_review: ${readied ? 'ok' : 'not permitted'}`);
       }
       
-      if (pr.mergeable === false) {
-        console.log('   ⚠️  PR has merge conflicts, skipping');
-        continue;
+      // Ask GitHub to update the PR branch before merging
+      const updated = await updateBranch(owner, repo, pr.number);
+      if (updated) {
+        console.log('   🔄 Requested update-branch');
+        await new Promise(r => setTimeout(r, 2500));
       }
       
       const mergeResult = await mergePR(owner, repo, pr.number);
