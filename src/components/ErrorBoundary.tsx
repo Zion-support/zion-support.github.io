@@ -3,9 +3,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
 }
 
 interface State {
@@ -15,8 +12,6 @@ interface State {
 }
 
 export class ErrorBoundary extends Component<Props, State> {
-  private resetTimeoutId?: number;
-
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -28,86 +23,73 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Store error info for debugging
-    this.setState({ errorInfo });
-
-    // Auto-reset after 5 seconds if resetOnPropsChange is true
-    if (this.props.resetOnPropsChange) {
-      this.resetTimeoutId = window.setTimeout(() => {
-        this.resetError();
-      }, 5000);
-    }
+    this.setState({ error, errorInfo });
   }
-
-  componentDidUpdate(prevProps: Props) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
-
-    if (hasError && resetOnPropsChange && resetKeys) {
-      const hasResetKey = resetKeys.some((key, index) => {
-        return prevProps.resetKeys?.[index] !== key;
-      });
-
-      if (hasResetKey) {
-        this.resetError();
-      }
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
-    }
-  }
-
-  resetError = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-          <div className="text-center text-white p-8 max-w-md">
-            <div className="mb-6">
-              <div className="text-6xl mb-4">⚠️</div>
-              <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
-              <p className="text-xl mb-6">We're sorry, but something unexpected happened.</p>
-            </div>
-            
-            <div className="space-y-4">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Reload Page
-              </button>
-              
-              <button
-                onClick={this.resetError}
-                className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-              >
-                Try Again
-              </button>
-            </div>
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
 
-            {import.meta.env.MODE === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm opacity-75 hover:opacity-100">
+      return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <svg
+                  className="h-8 w-8 text-red-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
+              </div>
+            </div>
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+            </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4">
+                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
                   Error Details (Development)
                 </summary>
-                <pre className="mt-2 text-xs bg-black bg-opacity-20 p-2 rounded overflow-auto max-h-32">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
+                <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-600 overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Stack Trace:</strong>
+                      <pre className="whitespace-pre-wrap">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
               </details>
             )}
+            <div className="mt-6">
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
+                Refresh Page
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -116,3 +98,5 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;
