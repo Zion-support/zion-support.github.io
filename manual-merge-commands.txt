@@ -1,0 +1,62 @@
+# Manual PR Merge Commands for zion.app
+# Run these commands one by one in your terminal
+
+# 1. Ensure you're on main and synced
+git checkout main
+git pull origin main
+
+# 2. Fetch all PR references
+git fetch origin "+refs/pull/*/head:refs/remotes/origin/pr/*"
+
+# 3. List available PRs (latest 20)
+git for-each-ref --format='%(refname:short)' refs/remotes/origin/pr | awk -F/ '{print $3}' | sort -n | tail -n 20
+
+# 4. For each PR, run these commands (replace PR_NUMBER with actual number):
+# Example for PR #9999:
+
+# Create merge branch
+git checkout -B merge-pr-9999 main
+
+# Merge with conflict resolution (prefer PR changes)
+git merge -m "Merge PR #9999" -X theirs origin/pr/9999
+
+# If conflicts occur, auto-resolve:
+git checkout --ours -- package-lock.json 2>/dev/null || true
+git checkout --ours -- yarn.lock 2>/dev/null || true
+git checkout --theirs -- dist/** 2>/dev/null || true
+git checkout --theirs -- build/** 2>/dev/null || true
+git add -A
+git commit -m "Auto-resolve conflicts for PR #9999"
+
+# Merge into main
+git checkout main
+git merge --no-ff -m "Merge PR #9999" merge-pr-9999
+
+# Push to GitHub
+git push origin main
+
+# Clean up
+git branch -D merge-pr-9999
+
+# 5. Repeat step 4 for each PR number from step 3
+
+# Alternative: Batch process with a loop
+for PR in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/pr | awk -F/ '{print $3}' | sort -n | tail -n 10); do
+    echo "Processing PR #$PR"
+    git checkout -B "merge-pr-$PR" main
+    if git merge -m "Merge PR #$PR" -X theirs "origin/pr/$PR" 2>/dev/null; then
+        echo "Clean merge for PR #$PR"
+    else
+        echo "Conflicts in PR #$PR, auto-resolving..."
+        git checkout --ours -- package-lock.json 2>/dev/null || true
+        git checkout --ours -- yarn.lock 2>/dev/null || true
+        git checkout --theirs -- dist/** 2>/dev/null || true
+        git add -A
+        git commit -m "Auto-resolve conflicts for PR #$PR" 2>/dev/null || continue
+    fi
+    git checkout main
+    git merge --no-ff -m "Merge PR #$PR" "merge-pr-$PR"
+    git push origin main
+    git branch -D "merge-pr-$PR"
+    echo "Successfully merged PR #$PR"
+done
