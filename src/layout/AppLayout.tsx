@@ -1,14 +1,13 @@
-import React from 'react';
-import { Header  } from '../components/Header';
-import { Footer  } from '../components/Footer';
-export function AppLayout(...args: any[]): any {
-	return (
-		<div className="min-h-screen bg-black text-white">
-			<Header />
-			<main className="pt-20">
-				{children}
-			</main>
-			<Footer />
-		</div>
-	);
+import React, { ReactNode } from 'react';
+
+interface AppLayoutProps {
+  children: ReactNode;
+}
+
+export function AppLayout({ children }: AppLayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-900">
+      {children}
+    </div>
+  );
 }

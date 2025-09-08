@@ -1,3 +1,2 @@
-export default function initConsoleErrorToast() {
-	// no-op placeholder to avoid build errors
-}
+// Placeholder for console error toast
+console.log('Console error toast loaded');

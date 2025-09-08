@@ -1,22 +1,11 @@
-export const productionLogger = {
-  log: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(...args);
-    }
-  },
-  error: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.error(...args);
-    }
-  },
-  warn: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.warn(...args);
-    }
-  },
-  info: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.info(...args);
-    }
-  }
-};
+export function logInfo(message: string) {
+  console.log(`[INFO] ${message}`);
+}
+
+export function logWarn(message: string) {
+  console.warn(`[WARN] ${message}`);
+}
+
+export function logError(message: string) {
+  console.error(`[ERROR] ${message}`);
+}

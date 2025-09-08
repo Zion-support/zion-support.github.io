@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { captureException } from '@/utils/sentry';
 
 interface ErrorPageProps {
   statusCode?: number;
@@ -11,9 +12,13 @@ export default function ErrorPage({ statusCode = 500, err }: ErrorPageProps) {
 
   useEffect(() => {
     if (err) {
-      console.error('Error occurred:', err);
+      captureException({
+        path: router.asPath,
+        message: err.message,
+        statusCode,
+      });
     }
-  }, [err]);
+  }, [err, router.asPath, statusCode]);
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
