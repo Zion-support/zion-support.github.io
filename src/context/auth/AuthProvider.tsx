@@ -173,6 +173,11 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
               // Show welcome toast when user logs in
               if (event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser);
+                const params = new URLSearchParams(location.search);
+                const next = params.get('next');
+                if (next) {
+                  navigate(decodeURIComponent(next), { replace: true });
+                }
               }
             } else if (error) {
               console.error("Error fetching user profile:", error);
