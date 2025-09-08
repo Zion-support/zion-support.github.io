@@ -25215,3 +25215,38 @@ fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-9402
 [2025-09-08T21:34:19.887Z] ✅ Success: Get git status
 [2025-09-08T21:34:19.887Z] 📄 Found 0 conflicted files
 [2025-09-08T21:34:19.887Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:34:19.985Z] ✅ Success: Add resolved files
+[2025-09-08T21:34:19.985Z] 🚀 Commit merge for cursor/fix-netlify-build-and-merge-to-main-9402: git commit -m "Resolve conflicts and merge cursor/fix-netlify-build-and-merge-to-main-9402"
+[2025-09-08T21:34:20.053Z] ✅ Success: Commit merge for cursor/fix-netlify-build-and-merge-to-main-9402
+[2025-09-08T21:34:20.053Z] ✅ Successfully resolved conflicts and merged: cursor/fix-netlify-build-and-merge-to-main-9402
+[2025-09-08T21:34:20.053Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-94a8
+[2025-09-08T21:34:20.053Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-94a8: git fetch origin cursor/fix-netlify-build-and-merge-to-main-94a8
+[2025-09-08T21:34:20.387Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-94a8
+[2025-09-08T21:34:20.387Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-94a8: git merge origin/cursor/fix-netlify-build-and-merge-to-main-94a8 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-94a8 into main"
+[2025-09-08T21:34:20.821Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-94a8
+[2025-09-08T21:34:20.821Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-94a8
+[2025-09-08T21:34:20.821Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-9518
+[2025-09-08T21:34:20.821Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-9518: git fetch origin cursor/fix-netlify-build-and-merge-to-main-9518
+[2025-09-08T21:34:21.155Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-9518
+[2025-09-08T21:34:21.155Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-9518: git merge origin/cursor/fix-netlify-build-and-merge-to-main-9518 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-9518 into main"
+[2025-09-08T21:34:21.592Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-9518
+[2025-09-08T21:34:21.592Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-9518
+[2025-09-08T21:34:21.592Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-9bcf
+[2025-09-08T21:34:21.592Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-9bcf: git fetch origin cursor/fix-netlify-build-and-merge-to-main-9bcf
+[2025-09-08T21:34:21.906Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-9bcf
+[2025-09-08T21:34:21.906Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-9bcf: git merge origin/cursor/fix-netlify-build-and-merge-to-main-9bcf --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-9bcf into main"
+[2025-09-08T21:34:22.337Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-9bcf
+[2025-09-08T21:34:22.337Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-9bcf
+[2025-09-08T21:34:22.337Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-a154
+[2025-09-08T21:34:22.337Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-a154: git fetch origin cursor/fix-netlify-build-and-merge-to-main-a154
+[2025-09-08T21:34:22.443Z] ❌ Error in Fetch origin/cursor/fix-netlify-build-and-merge-to-main-a154: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-a154
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-a154
+
+[2025-09-08T21:34:22.443Z] ❌ Failed to merge cursor/fix-netlify-build-and-merge-to-main-a154: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-a154
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-a154
+
+[2025-09-08T21:34:22.443Z] 🔧 Attempting to resolve conflicts for: cursor/fix-netlify-build-and-merge-to-main-a154
+[2025-09-08T21:34:22.443Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:34:22.498Z] ✅ Success: Get git status
+[2025-09-08T21:34:22.498Z] 📄 Found 0 conflicted files
+[2025-09-08T21:34:22.498Z] 🚀 Add resolved files: git add .
