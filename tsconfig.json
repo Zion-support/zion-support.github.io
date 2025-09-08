@@ -57,6 +57,13 @@
     "node_modules",
     "dist",
     ".next",
-    "build"
+    "build",
+    "src.disabled",
+    "src_disabled_*",
+    "tests",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }
