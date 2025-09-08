@@ -82,6 +82,8 @@ export default [
       "vite.config*.js",
       "vitest.config*.js",
       "next.config*.js",
+      // Media directory
+      "media/",
     ],
   },
 
