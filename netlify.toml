@@ -1,7 +1,7 @@
 [build]
-  # Deploy prebuilt assets from dist without running a build on Netlify
-  command = "echo Skipping build; deploying prebuilt dist"
-  publish = "dist"
+  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
+  command = "echo 'Skipping build; deploying prebuilt static export'"
+  publish = "out"
   command_timeout = "30m"
 
 [build.environment]
