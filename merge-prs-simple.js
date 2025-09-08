@@ -1,8 +1,13 @@
 const https = require('https');
 
-const GITHUB_TOKEN = 'ghs_P5PGNAKmGFS9f4Cwkibnjvd1cbhA5q2GbUV6';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
+
+if (!GITHUB_TOKEN) {
+  console.error('❌ GITHUB_TOKEN environment variable is required');
+  process.exit(1);
+}
 
 const openPRs = [12265, 12263];
 

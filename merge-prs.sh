@@ -5,9 +5,14 @@
 
 set -e
 
-GITHUB_TOKEN="ghs_9MCqZ1UVpKmpFUYQWtQ92vycUmAt7Y21ivzT"
+GITHUB_TOKEN="${GITHUB_TOKEN}"
 REPO="Zion-Holdings/zion.app"
 API_BASE="https://api.github.com/repos/$REPO"
+
+if [ -z "$GITHUB_TOKEN" ]; then
+    echo "❌ GITHUB_TOKEN environment variable is required"
+    exit 1
+fi
 
 echo "Starting PR merge process..."
 
