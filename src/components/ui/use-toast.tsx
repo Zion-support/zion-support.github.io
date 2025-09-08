@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -124,25 +123,4 @@ export {
   ToastDescription,
   ToastClose,
   ToastAction,
-}
-
-export function toast({
-  title,
-  description,
-  action,
-  variant,
-  ...props
-}: {
-  title?: string
-  description?: string
-  action?: ToastActionElement
-  variant?: "default" | "destructive"
-} & Omit<ToastProps, "title" | "description" | "action" | "variant">) {
-  return {
-    title,
-    description,
-    action,
-    variant,
-    ...props,
-  }
 }

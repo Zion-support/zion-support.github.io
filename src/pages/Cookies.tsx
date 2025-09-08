@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cookie, Shield, Settings, Eye, Database, Globe, Mail, Phone } from 'lucide-react';
 
 export default function Cookies() {}
   return (

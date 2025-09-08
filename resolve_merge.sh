@@ -1,26 +1,15 @@
 #!/bin/bash
 
-# Resolve merge conflicts by accepting main branch changes
 echo "Resolving merge conflicts..."
 
-# Checkout main branch
-git checkout main
+# Add all resolved files
+git add .
 
-# Pull latest changes
-git pull origin main
+# Commit the resolved conflicts
+git commit -m "fix: resolve merge conflicts in Header, FeatureCard, and other components"
 
-# Try to merge with strategy to prefer main branch
-git merge cursor/integrate-build-improve-and-re-verify-1638 -X ours
+# Check status
+git status
 
-# If there are still conflicts, resolve them by keeping main branch version
-if [ $? -ne 0 ]; then
-    echo "Resolving remaining conflicts..."
-    git status --porcelain | grep "^UU" | cut -c4- | xargs -I {} git checkout --ours {}
-    git add .
-    git commit -m "Resolve merge conflicts by keeping main branch changes"
-fi
-
-# Push to main
-git push origin main
-
-echo "Merge completed successfully!"
+echo "Merge conflicts resolved and committed!"
+echo "Now you can proceed with merging to main branch."
