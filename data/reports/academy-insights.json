@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T05:06:53.276Z",
+  "generatedAt": "2025-09-08T05:36:53.298Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -20,12 +20,12 @@
       "url": "https://twitter.com/samhenrigold/status/1964428927159382261"
     },
     {
-      "title": "Everything from 1991 Radio Shack ad I now do with my phone (2014)",
-      "url": "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
-    },
-    {
       "title": "Formatting code should be unnecessary",
       "url": "https://maxleiter.com/blog/formatting"
+    },
+    {
+      "title": "Everything from 1991 Radio Shack ad I now do with my phone (2014)",
+      "url": "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
     },
     {
       "title": "GPT-5 Thinking in ChatGPT (a.k.a. Research Goblin) is good at search",
