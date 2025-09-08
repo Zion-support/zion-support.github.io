@@ -1,20 +1,13 @@
 [build]
-  # Skip building and publish the prebuilt dist directory
-  command = "echo Using prebuilt dist; exit 0"
+  command = "mise install --yes && python -m pip install -r requirements.txt && npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  MISE_PYTHON_COMPILE = "false"
-  # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
-  # Disable mise shims entirely during Netlify builds
-  MISE_DISABLE = "1"
-  MISE_SHIMS = "0"
-  # Force mise to use system Python even during Netlify's dependency stage (defensive)
-  MISE_TOOL_VERSIONS__python = "system"
+  MISE_PYTHON_COMPILE = "false"
 
 [[plugins]]
   package = "netlify-plugin-compress"

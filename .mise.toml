@@ -1,2 +1,9 @@
 [tools]
 python = "3.11.13"
+node = "20"
+
+[env]
+# Ensure pip is available via python -m pip when shims are inactive
+PIP_DEFAULT_TIMEOUT = "100"
+[tools]
+python = "3.11.13"
