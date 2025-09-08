@@ -10,6 +10,14 @@
   PYTHON_VERSION = "3.11"
   NPM_FLAGS = "--omit=optional"
 
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund && npm run build"
 # Vite/React SPA configuration
 
 

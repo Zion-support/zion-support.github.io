@@ -74,7 +74,7 @@ function titleCaseSkill(skill: string): string {
     ["aws lambda", "AWS Lambda"],
     ["azure", "Azure"],
   ]);
-  if (known.has(lower)) return known.get(lower)!;
+  if (known.has(lower)) return known.get(lower);
   return lower
     .split(/\s|\//)
     .map((p) => (p ? p[0].toUpperCase() + p.slice(1) : p))

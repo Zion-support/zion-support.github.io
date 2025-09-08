@@ -1,131 +1,163 @@
-/**
- * Performance monitoring utilities
- */
+// Performance monitoring and optimization utilities
 
-interface PerformanceMetrics {
+export interface PerformanceMetrics {
   loadTime: number;
+  bundleSize: number;
+  memoryUsage: number;
   renderTime: number;
-  memoryUsage?: number;
-  bundleSize?: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  cumulativeLayoutShift?: number;
 }
 
-class PerformanceMonitor {
-  private metrics: PerformanceMetrics[] = [];
-  private startTime: number = 0;
+export class PerformanceTracker {
+  private static instance: PerformanceTracker;
+  private metrics: PerformanceMetrics | null = null;
+  private observers: ((metrics: PerformanceMetrics) => void)[] = [];
 
-  /**
-   * Start performance monitoring
-   */
-  start(): void {
-    this.startTime = performance.now();
-  }
-
-  /**
-   * End performance monitoring and record metrics
-   */
-  end(): PerformanceMetrics {
-    const endTime = performance.now();
-    const loadTime = endTime - this.startTime;
-    
-    const metrics: PerformanceMetrics = {
-      loadTime,
-      renderTime: endTime,
-      memoryUsage: this.getMemoryUsage(),
-    };
-
-    this.metrics.push(metrics);
-    return metrics;
-  }
-
-  /**
-   * Get memory usage if available
-   */
-  private getMemoryUsage(): number | undefined {
-    if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
+  static getInstance(): PerformanceTracker {
+    if (!PerformanceTracker.instance) {
+      PerformanceTracker.instance = new PerformanceTracker();
     }
-    return undefined;
+    return PerformanceTracker.instance;
   }
 
-  /**
-   * Get average performance metrics
-   */
-  getAverageMetrics(): Partial<PerformanceMetrics> {
-    if (this.metrics.length === 0) return {};
+  private constructor() {
+    this.initializeTracking();
+  }
 
-    const total = this.metrics.reduce(
-      (acc, metric) => ({
-        loadTime: acc.loadTime + metric.loadTime,
-        renderTime: acc.renderTime + metric.renderTime,
-        memoryUsage: acc.memoryUsage + (metric.memoryUsage || 0),
-      }),
-      { loadTime: 0, renderTime: 0, memoryUsage: 0 }
-    );
+  private initializeTracking() {
+    if (typeof window === 'undefined') return;
 
-    return {
-      loadTime: total.loadTime / this.metrics.length,
-      renderTime: total.renderTime / this.metrics.length,
-      memoryUsage: total.memoryUsage / this.metrics.length,
+    // Track page load performance
+    window.addEventListener('load', () => {
+      this.captureMetrics();
+    });
+
+    // Track navigation timing
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.metrics = {
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          bundleSize: this.estimateBundleSize(),
+          memoryUsage: this.getMemoryUsage(),
+          renderTime: performance.now(),
+          firstContentfulPaint: this.getFirstContentfulPaint(),
+          largestContentfulPaint: this.getLargestContentfulPaint(),
+          cumulativeLayoutShift: this.getCumulativeLayoutShift(),
+        };
+      }
+    }
+  }
+
+  private estimateBundleSize(): number {
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    
+    scripts.forEach(script => {
+      const src = script.getAttribute('src');
+      if (src && src.includes('assets/')) {
+        // Rough estimation based on common bundle sizes
+        totalSize += 200; // KB
+      }
+    });
+    
+    return totalSize;
+  }
+
+  private getMemoryUsage(): number {
+    if ('memory' in performance) {
+      return (performance as any).memory.usedJSHeapSize / 1024 / 1024; // MB
+    }
+    return 0;
+  }
+
+  private getFirstContentfulPaint(): number | undefined {
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    return fcp ? fcp.startTime : undefined;
+  }
+
+  private getLargestContentfulPaint(): number | undefined {
+    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+    const lcp = lcpEntries[lcpEntries.length - 1];
+    return lcp ? lcp.startTime : undefined;
+  }
+
+  private getCumulativeLayoutShift(): number | undefined {
+    const clsEntries = performance.getEntriesByType('layout-shift');
+    return clsEntries.reduce((total, entry) => {
+      return total + (entry as any).value;
+    }, 0);
+  }
+
+  private captureMetrics() {
+    if (this.metrics) {
+      this.notifyObservers(this.metrics);
+    }
+  }
+
+  public getMetrics(): PerformanceMetrics | null {
+    return this.metrics;
+  }
+
+  public subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
+    this.observers.push(callback);
+    
+    // Return unsubscribe function
+    return () => {
+      const index = this.observers.indexOf(callback);
+      if (index > -1) {
+        this.observers.splice(index, 1);
+      }
     };
   }
 
-  /**
-   * Clear all metrics
-   */
-  clear(): void {
-    this.metrics = [];
+  private notifyObservers(metrics: PerformanceMetrics) {
+    this.observers.forEach(callback => callback(metrics));
   }
 
-  /**
-   * Get all metrics
-   */
-  getAllMetrics(): PerformanceMetrics[] {
-    return [...this.metrics];
+  public logMetrics() {
+    if (this.metrics) {
+      console.group('🚀 Performance Metrics');
+      console.log('Load Time:', `${this.metrics.loadTime.toFixed(2)}ms`);
+      console.log('Bundle Size:', `~${this.metrics.bundleSize}KB`);
+      console.log('Memory Usage:', `${this.metrics.memoryUsage.toFixed(2)}MB`);
+      console.log('Render Time:', `${this.metrics.renderTime.toFixed(2)}ms`);
+      
+      if (this.metrics.firstContentfulPaint) {
+        console.log('First Contentful Paint:', `${this.metrics.firstContentfulPaint.toFixed(2)}ms`);
+      }
+      if (this.metrics.largestContentfulPaint) {
+        console.log('Largest Contentful Paint:', `${this.metrics.largestContentfulPaint.toFixed(2)}ms`);
+      }
+      if (this.metrics.cumulativeLayoutShift) {
+        console.log('Cumulative Layout Shift:', this.metrics.cumulativeLayoutShift.toFixed(4));
+      }
+      
+      console.groupEnd();
+    }
   }
 }
 
-// Singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+// Export singleton instance
+export const performanceTracker = PerformanceTracker.getInstance();
 
-/**
- * Hook for React components to monitor performance
- */
-export const usePerformanceMonitor = () => {
-  const startMonitoring = () => performanceMonitor.start();
-  const endMonitoring = () => performanceMonitor.end();
-  const getMetrics = () => performanceMonitor.getAllMetrics();
-  const clearMetrics = () => performanceMonitor.clear();
-
-  return {
-    startMonitoring,
-    endMonitoring,
-    getMetrics,
-    clearMetrics,
-  };
-};
-
-/**
- * Utility to measure function execution time
- */
-export const measureExecutionTime = async <T>(
-  fn: () => Promise<T> | T,
-  label?: string
-): Promise<{ result: T; executionTime: number }> => {
+// Utility functions
+export const measurePerformance = (fn: () => void, label: string): number => {
   const start = performance.now();
-  const result = await fn();
+  fn();
   const end = performance.now();
-  const executionTime = end - start;
-
-  if (label) {
-    console.log(`${label} executed in ${executionTime.toFixed(2)}ms`);
+  const duration = end - start;
+  
+  if (import.meta.env.MODE === 'development') {
+    console.log(`⏱️ ${label}: ${duration.toFixed(2)}ms`);
   }
-
-  return { result, executionTime };
+  
+  return duration;
 };
 
-/**
- * Utility to debounce function calls for performance
- */
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -138,9 +170,6 @@ export const debounce = <T extends (...args: any[]) => any>(
   };
 };
 
-/**
- * Utility to throttle function calls for performance
- */
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
@@ -155,5 +184,3 @@ export const throttle = <T extends (...args: any[]) => any>(
     }
   };
 };
-
-export default performanceMonitor;
