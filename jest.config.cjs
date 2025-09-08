@@ -3,19 +3,14 @@ module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: [
     '@testing-library/jest-dom',
-    '<rootDir>/src/test/setup.ts' ],
+    '<rootDir>/src/test/setup.ts'
+  ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-<<<<<<< HEAD
-    // Handle image imports
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
-      '<rootDir>/tests/__mocks__/fileMock.js',
-
-    // Fix path mappings with more specific ordering
+    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
     '^@/pages/api/(.*)$': '<rootDir>/pages/api/$1',
     '^@/pages/(.*)$': ['<rootDir>/pages/$1', '<rootDir>/src/pages/$1'],
-    '^@/components/ui/CategoryCard$':
-      '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/components/ui/CategoryCard$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/components/ui/(.*)$': '<rootDir>/src/components/ui/$1',
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/i18n$': '<rootDir>/tests/__mocks__/i18n.js',
@@ -42,21 +37,17 @@ module.exports = {
     '^@/config/(.*)$': '<rootDir>/src/config/$1',
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
-
-    // Special module mocks
     '^msw/node$': require.resolve('msw/node'),
     '^next/router$': 'next-router-mock',
     '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
     'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',
     'react-router$': '<rootDir>/src/stubs/react-router-dom.tsx',
-
-    // Mock heavy libraries not needed for unit tests
     '^@reown/appkit(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@walletconnect/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^uint8arrays/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^multiformats/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^react-markdown$': '<rootDir>/tests/__mocks__/reactMarkdown.js',
-    '^@/pages/(.*)\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/(.*)\\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/Signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/utils/devtools$': '<rootDir>/tests/__mocks__/emptyModule.js',
@@ -65,18 +56,16 @@ module.exports = {
     '^os-utils$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/api/points/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/api/users/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
-    '^@/pages/Login\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/Login\\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/App$': '<rootDir>/src/App.tsx',
     '^@/pages/api/auth/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
-    // Additional aliases for Jest environment
     '^@/hooks$': '<rootDir>/src/hooks/index.ts',
     '^@/i18n/(.*)$': '<rootDir>/src/i18n/$1',
     '^mongoose(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^mongodb(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^bson(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
-    '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1',
-    // Retain original mocks for middleware to avoid heavy imports in Jest
-    '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js' },
+    '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1'
+  },
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
@@ -84,13 +73,17 @@ module.exports = {
     '/build/',
     '/.next/',
     '/out/',
-    '/tests.disabled/' ],
+    '/tests.disabled/'
+  ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest' },
+    '^.+\\.(js|jsx)$': 'babel-jest'
+  },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
   collectCoverage: false,
   verbose: false,
   testEnvironmentOptions: {
-    customExportConditions: ['node', 'node-addons'] } };
+    customExportConditions: ['node', 'node-addons']
+  }
+};
