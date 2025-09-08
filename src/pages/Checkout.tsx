@@ -6,12 +6,12 @@ import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
+import { useAuth } from '@/hooks';
 
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { user } = useAuth();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
   const watchAddr = form.watch(['name', 'address', 'city', 'country']);
@@ -58,7 +58,10 @@ export default function Checkout() {
       const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: total }),
+        body: JSON.stringify({
+          productId: product.id,
+          customerEmail: user?.email,
+        }),
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');

@@ -39,7 +39,8 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
+const CartPage = React.lazy(() => import('./pages/Cart'));
+const OrderSuccess = React.lazy(() => import('./pages/OrderSuccess'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -71,7 +72,8 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/theme-test', element: <ThemeTest /> },
+  { path: '/cart', element: <CartPage /> },
+  { path: '/order/success', element: <OrderSuccess /> },
 ];
 
 // New pages

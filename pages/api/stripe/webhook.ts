@@ -1,22 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function Webhook() {
-  return (
-    <>
-      <Head>
-        <title>Webhook - Zion Tech Group</title>
-        <meta name="description" content="Webhook page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Webhook</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
+  try {
+    const event = req.body;
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object;
+      const orderId = session.metadata?.orderId;
+      if (orderId) {
+        console.log(`Order ${orderId} marked as paid`);
+      }
+    }
+    // Log test events for QA
+    console.log('Stripe webhook event:', event);
+    res.statusCode = 200;
+    res.json({ received: true });
+  } catch (err) {
+    console.error('Webhook error:', err);
+    res.statusCode = 400;
+    res.end('Webhook handler failed');
+  }
 }
