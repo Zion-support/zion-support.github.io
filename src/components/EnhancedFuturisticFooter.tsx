@@ -122,16 +122,25 @@ export function EnhancedFuturisticFooter() {
       title: 'Cybersecurity',
       featured: true,
       links: [
-        { name: 'Cybersecurity Solutions', href: '/services/cybersecurity', featured: true },
-        { name: 'Cloud Computing', href: '/services/cloud', featured: true },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', featured: true },
-        { name: 'Blockchain Solutions', href: '/services/blockchain', featured: true },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', featured: true },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
-        { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
-        { name: 'Zero Trust Security', href: '/services#zero-trust-security', featured: false },
-        { name: 'AI Ethics & Governance', href: '/services#ai-ethics-guardian', featured: false }
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Smart Inventory Optimizer', href: '/services/smart-inventory-optimizer' },
+        { name: 'Smart Supply Chain Visibility', href: '/services/smart-supply-chain-visibility' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
+      links: [
+        { name: 'Smart Contract Lifecycle Manager', href: '/services/smart-contract-lifecycle-manager' },
+        { name: 'Smart Expense Management', href: '/services/smart-expense-management-saas' },
+        { name: 'AI-Powered Project Management', href: '/services/ai-powered-project-management' },
+        { name: 'Smart Customer Support Automation', href: '/services/smart-customer-support-automation' },
+        { name: 'AI-Powered Marketing Attribution', href: '/services/ai-powered-marketing-attribution' },
+        { name: 'Smart Data Governance Suite', href: '/services/smart-data-governance-suite' }
       ]
     },
     {
