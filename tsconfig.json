@@ -5,6 +5,11 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"]
+    },
     "types": ["vite/client", "react", "react-router-dom", "node"],
 
     /* Bundler mode */
@@ -19,32 +24,41 @@
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Path mapping */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/App.css",
-    "src/index.css"
+    "src/**/*",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "src/pages/**/*",
-    "src/routes/**/*",
-    "src/components/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*",
-    "src/services/**/*",
-    "src/data/**/*",
-    "src/types/**/*",
-    "src/utils/**/*",
-    "src/layout/**/*",
-    "src/lib/**/*"
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "src.disabled/**/*",
+    "src_disabled_*/**/*",
+    "**/tests/**",
+    "__tests__/**",
+    "temp_*/**",
+    "temp-*/**",
+    "temp*/**",
+    "temp_conflicts/**",
+    "temp_exclude/**",
+    "zion-*/**",
+    "zion_os/**",
+    "zion/**",
+    "apps/**",
+    "utils/**",
+    "types/**"
   ]
 }
