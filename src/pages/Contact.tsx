@@ -183,8 +183,6 @@ const Contact: React.FC = memo(() => {
           />
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
       {/* Contact Form */}
       <div className="max-w-4xl mx-auto px-4 mb-20">

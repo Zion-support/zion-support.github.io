@@ -1,4 +1,4 @@
-=======import React, { memo } from 'react';
+import React, { memo } from 'react';
 
 // Service card component for better performance
 const ServiceCard = memo<{ title: string; description: string }>(({ title, description }) => (
