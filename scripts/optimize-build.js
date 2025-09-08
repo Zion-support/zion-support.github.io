@@ -1,181 +1,111 @@
 #!/usr/bin/env node
 
-/**
- * Build optimization script
- * Analyzes bundle size and provides optimization recommendations
- */
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.join(__dirname, '..');
 
-// Colors for console output
-const colors = {
-  reset: '\x1b[0m',
-  bright: '\x1b[1m',
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  magenta: '\x1b[35m',
-  cyan: '\x1b[36m',
-};
+console.log('\n🚀 Build Optimization Report');
+console.log('==================================================\n');
 
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
+// Check if dist directory exists
+const distDir = path.join(process.cwd(), 'dist');
+if (!fs.existsSync(distDir)) {
+    console.log('❌ Dist directory not found. Run build first.');
+    process.exit(1);
 }
 
-function analyzeBundleSize() {
-  const distPath = path.join(projectRoot, 'dist');
-  
-  if (!fs.existsSync(distPath)) {
-    log('❌ Dist folder not found. Run npm run build first.', 'red');
-    return;
-  }
+// Analyze bundle sizes
+console.log('📊 Bundle Size Analysis');
+console.log('==================================================\n');
 
-  log('\n📊 Bundle Size Analysis', 'cyan');
-  log('=' .repeat(50), 'cyan');
+const files = fs.readdirSync(distDir);
+const jsFiles = files.filter(file => file.endsWith('.js'));
+const cssFiles = files.filter(file => file.endsWith('.css'));
 
-  const assetsPath = path.join(distPath, 'assets');
-  const files = fs.readdirSync(assetsPath);
-  
-  let totalSize = 0;
-  const fileSizes = [];
+let totalSize = 0;
 
-  files.forEach(file => {
-    const filePath = path.join(assetsPath, file);
+console.log('📁 File Sizes:');
+jsFiles.forEach(file => {
+    const filePath = path.join(distDir, file);
     const stats = fs.statSync(filePath);
     const sizeKB = (stats.size / 1024).toFixed(2);
     totalSize += stats.size;
-    
-    fileSizes.push({
-      name: file,
-      size: stats.size,
-      sizeKB: parseFloat(sizeKB),
-    });
-  });
+    console.log(`  ${file}: ${sizeKB} KB`);
+});
 
-  // Sort by size
-  fileSizes.sort((a, b) => b.size - a.size);
+cssFiles.forEach(file => {
+    const filePath = path.join(distDir, file);
+    const stats = fs.statSync(filePath);
+    const sizeKB = (stats.size / 1024).toFixed(2);
+    totalSize += stats.size;
+    console.log(`  ${file}: ${sizeKB} KB`);
+});
 
-  log('\n📁 File Sizes:', 'yellow');
-  fileSizes.forEach(file => {
-    const sizeColor = file.sizeKB > 100 ? 'red' : file.sizeKB > 50 ? 'yellow' : 'green';
-    log(`  ${file.name}: ${file.sizeKB} KB`, sizeColor);
-  });
+console.log(`\n📈 Total Bundle Size: ${(totalSize / 1024).toFixed(2)} KB (${(totalSize / (1024 * 1024)).toFixed(2)} MB)`);
 
-  const totalSizeKB = (totalSize / 1024).toFixed(2);
-  const totalSizeMB = (totalSize / 1024 / 1024).toFixed(2);
-  
-  log(`\n📈 Total Bundle Size: ${totalSizeKB} KB (${totalSizeMB} MB)`, 'bright');
-  
-  // Recommendations
-  log('\n💡 Optimization Recommendations:', 'magenta');
-  
-  if (totalSize > 500 * 1024) { // > 500KB
-    log('  ⚠️  Bundle size is large. Consider:', 'yellow');
-    log('     - Code splitting with dynamic imports', 'yellow');
-    log('     - Tree shaking unused code', 'yellow');
-    log('     - Using lighter alternatives for heavy dependencies', 'yellow');
-  }
-  
-  if (fileSizes.some(f => f.sizeKB > 100)) {
-    log('  ⚠️  Some files are large. Consider:', 'yellow');
-    log('     - Splitting large chunks', 'yellow');
-    log('     - Lazy loading components', 'yellow');
-    log('     - Optimizing images and assets', 'yellow');
-  }
-
-  // Check for common optimization opportunities
-  const packageJsonPath = path.join(projectRoot, 'package.json');
-  if (fs.existsSync(packageJsonPath)) {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-    
-    log('\n🔍 Dependency Analysis:', 'blue');
-    
-    const heavyDeps = [
-      'react-dom',
-      'react-router-dom',
-      '@tanstack/react-query',
-      'framer-motion',
-      'lucide-react',
-    ];
-    
-    heavyDeps.forEach(dep => {
-      if (dependencies[dep]) {
-        log(`  ✓ ${dep}: ${dependencies[dep]}`, 'green');
-      }
-    });
-  }
-
-  return {
-    totalSize,
-    totalSizeKB: parseFloat(totalSizeKB),
-    totalSizeMB: parseFloat(totalSizeMB),
-    fileSizes,
-  };
+// Optimization recommendations
+console.log('\n💡 Optimization Recommendations:');
+if (totalSize > 500 * 1024) { // 500KB
+    console.log('  ⚠️  Bundle is large. Consider:');
+    console.log('     - Splitting large chunks');
+    console.log('     - Lazy loading components');
+    console.log('     - Optimizing images and assets');
+} else {
+    console.log('  ✅ Bundle size is good');
 }
 
-function checkBuildOptimizations() {
-  log('\n🔧 Build Configuration Check', 'cyan');
-  log('=' .repeat(50), 'cyan');
+// Check dependencies
+console.log('\n🔍 Dependency Analysis:');
+try {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const deps = packageJson.dependencies || {};
+    
+    const importantDeps = ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query', 'framer-motion', 'lucide-react'];
+    importantDeps.forEach(dep => {
+        if (deps[dep]) {
+            console.log(`  ✓ ${dep}: ${deps[dep]}`);
+        }
+    });
+} catch (error) {
+    console.log('  ⚠️  Could not analyze dependencies');
+}
 
-  const viteConfigPath = path.join(projectRoot, 'vite.config.ts');
-  
-  if (fs.existsSync(viteConfigPath)) {
-    const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+// Build configuration check
+console.log('\n🔧 Build Configuration Check');
+console.log('==================================================');
+try {
+    const viteConfig = fs.readFileSync('vite.config.ts', 'utf8');
     
     const checks = [
-      { name: 'Minification enabled', pattern: /minify:\s*['"]esbuild['"]/ },
-      { name: 'Source maps disabled in production', pattern: /sourcemap:\s*false/ },
-      { name: 'CSS code splitting enabled', pattern: /cssCodeSplit:\s*true/ },
-      { name: 'Manual chunk splitting configured', pattern: /manualChunks:/ },
-      { name: 'Bundle analyzer configured', pattern: /visualizer/ },
+        { name: 'Minification enabled', check: viteConfig.includes('minify:') },
+        { name: 'Source maps disabled in production', check: viteConfig.includes('sourcemap: false') },
+        { name: 'CSS code splitting enabled', check: viteConfig.includes('cssCodeSplit: true') },
+        { name: 'Manual chunk splitting configured', check: viteConfig.includes('manualChunks') },
+        { name: 'Bundle analyzer configured', check: viteConfig.includes('visualizer') }
     ];
-
-    checks.forEach(check => {
-      const isConfigured = check.pattern.test(viteConfig);
-      const status = isConfigured ? '✓' : '✗';
-      const color = isConfigured ? 'green' : 'red';
-      log(`  ${status} ${check.name}`, color);
+    
+    checks.forEach(({ name, check }) => {
+        console.log(`  ${check ? '✓' : '⚠️ '} ${name}`);
     });
-  } else {
-    log('  ⚠️  Vite config not found', 'yellow');
-  }
+} catch (error) {
+    console.log('  ⚠️  Could not analyze Vite configuration');
 }
 
-function generateReport() {
-  log('\n🚀 Build Optimization Report', 'bright');
-  log('=' .repeat(50), 'bright');
-  
-  const bundleAnalysis = analyzeBundleSize();
-  checkBuildOptimizations();
-  
-  log('\n📋 Summary:', 'cyan');
-  if (bundleAnalysis) {
-    if (bundleAnalysis.totalSizeKB < 200) {
-      log('  ✅ Bundle size is excellent!', 'green');
-    } else if (bundleAnalysis.totalSizeKB < 500) {
-      log('  ✅ Bundle size is good', 'green');
-    } else {
-      log('  ⚠️  Bundle size could be optimized', 'yellow');
-    }
-  }
-  
-  log('\n🎯 Next Steps:', 'magenta');
-  log('  1. Run npm run build:analyze for detailed bundle analysis', 'blue');
-  log('  2. Consider implementing code splitting for large components', 'blue');
-  log('  3. Use dynamic imports for route-based code splitting', 'blue');
-  log('  4. Optimize images and assets', 'blue');
-  log('  5. Remove unused dependencies', 'blue');
-  
-  log('\n✨ Build optimization complete!', 'green');
+console.log('\n📋 Summary:');
+if (totalSize < 500 * 1024) {
+    console.log('  ✅ Bundle size is good');
+} else {
+    console.log('  ⚠️  Bundle could be optimized');
 }
 
-// Run the analysis
-generateReport();
+console.log('\n🎯 Next Steps:');
+console.log('  1. Run npm run build:analyze for detailed bundle analysis');
+console.log('  2. Consider implementing code splitting for large components');
+console.log('  3. Use dynamic imports for route-based code splitting');
+console.log('  4. Optimize images and assets');
+console.log('  5. Remove unused dependencies');
+
+console.log('\n✨ Build optimization complete!\n');
