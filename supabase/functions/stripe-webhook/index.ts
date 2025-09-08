@@ -1,28 +1,38 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
-  apiVersion: '2023-10-16})
-const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET;
-  ') || '';
-serve(async req => {
-  if (req.method ===;
-  'POST') {
-    const body = await req.text();
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+};
 
-    let event;
-    try {
-      event = stripe.webhooks.constructEvent(body, signature, webhookSecret)} catch (err) {'
-      return new Response(`Webhook Error: ${err.message}` { status: 400 })`
-if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session;
-      const orderId = session.metadata?.orderId;
-      if (orderId) {
-        await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
-      }
-    }
-
-    return new Response(JSON.stringify({ received: true }), { status: 200 });
+serve(async (req) => {
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders });
   }
 
-  return new Response("Not found", { status: 404 });
+  try {
+    const supabaseClient = createClient(
+      Deno.env.get('SUPABASE_URL') ?? '',
+      Deno.env.get('SUPABASE_ANON_KEY') ?? ''
+    );
+
+    const { type, data } = await req.json();
+
+    if (type === 'payment_intent.succeeded') {
+      // Handle successful payment
+      console.log('Payment succeeded:', data.id);
+    }
+
+    return new Response(JSON.stringify({ received: true }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 200,
+    });
+  } catch (error) {
+    console.error('Error processing webhook:', error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 400,
+    });
+  }
 });
