@@ -1,7 +1,11 @@
 [build]
-  # Do not run any build. Deploy the prebuilt static export from dist/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt static export from dist/'"
-  publish = "dist"
+  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
+  command = "echo 'Skipping build; deploying prebuilt static export'"
+  publish = "out"
+  # Skip Netlify build if repo contents (except the prebuilt out/) have not changed
+  # Returning 0 from ignore skips the build, which is desired since we deploy prebuilt assets.
+  # This runs on Netlify and uses their special env vars for commit SHAs.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)out'"
   command_timeout = "30m"
 
 [build.environment]
