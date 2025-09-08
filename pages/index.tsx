@@ -322,11 +322,8 @@ export default function Home() {
               { title: 'Smart Redirect Manager', desc: 'Fixes internal 404s by auto-adding redirects; writes a public report.', href: '/.netlify/functions/redirect-manager' },
               { title: 'A11y Alt-Text Auditor', desc: 'Scans for missing alt text and publishes a report.', href: '/.netlify/functions/a11y-audit-runner' },
               { title: 'Branch Cleanup Runner (daily)', desc: 'Deletes merged or stale ephemeral branches via GitHub API.', href: '/.netlify/functions/branch-cleanup-runner' },
-              { title: 'Redirect Healer', desc: 'Heals broken internal links by auto-adding smart redirects.', href: '/.netlify/functions/redirect-healer' },
-              { title: 'Sitemap Prioritizer', desc: 'Regenerates sitemap with popularity-weighted priorities.', href: '/.netlify/functions/sitemap-prioritizer' },
-              { title: 'OG Coverage Auditor', desc: 'Audits pages for Open Graph tag coverage and publishes a report.', href: '/.netlify/functions/og-coverage-auditor' },
-              { title: 'Performance Budget Reporter', desc: 'Scans public assets and CSS to report on size budgets.', href: '/.netlify/functions/performance-budget-runner' },
-              { title: 'Roadmap Auto‑Builder', desc: 'Synthesizes a roadmap from TODO signals into docs/reports.', href: '/.netlify/functions/roadmap-builder-runner' },
+              { title: 'AI Alt Text Generator', desc: 'Generates descriptive alt text suggestions for site images.', href: '/.netlify/functions/ai-alt-text-generator-runner' },
+              { title: 'Content Keywords Miner', desc: 'Extracts top keywords from pages to inform links and promos.', href: '/.netlify/functions/content-keywords-runner' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
