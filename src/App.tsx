@@ -294,6 +294,17 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
+function App() {
+  return (
+    <EnhancedErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          {/* Skip Link for Accessibility */}
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
+          {header}
+          
             {/* Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
 
@@ -313,7 +324,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
             <EnhancedHeader />
 
             {/* Main Content */}
-            <main className="flex-1">
+            <main id="main-content" className="flex-1">
               <Suspense fallback={<LoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -520,7 +531,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
             />
           </div>
         </Router>
-</ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }
