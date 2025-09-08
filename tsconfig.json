@@ -48,10 +48,23 @@
     ]
   },
   "include": [
-    "src",
-    ".next/types/**/*.ts"
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/pages",
+    "src/components",
+    "src/routes",
+    "src/services",
+    "src/hooks",
+    "src/context",
+    "src/layout",
+    "src/data",
+    "src/types",
+    "src/utils",
+    "src/integrations",
+    "src/lib"
   ]
 }

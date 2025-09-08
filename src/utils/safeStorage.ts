@@ -1,49 +1,24 @@
+// Simple localStorage wrapper with error handling
 export const safeStorage = {
   getItem: (key: string): string | null => {
     try {
       return localStorage.getItem(key);
-    } catch (e) {
-      console.warn('Storage access error:', e);
+    } catch {
       return null;
     }
   },
-  setItem: (key: string, value: string) => {
+  setItem: (key: string, value: string): void => {
     try {
       localStorage.setItem(key, value);
-    } catch (e) {
-      console.warn('Storage access error:', e);
+    } catch {
+      // Ignore errors
     }
   },
-  removeItem: (key: string) => {
+  removeItem: (key: string): void => {
     try {
       localStorage.removeItem(key);
-    } catch (e) {
-      console.warn('Storage access error:', e);
-    }
-  }
-};
-
-export const safeSessionStorage = {
-  getItem: (key: string): string | null => {
-    try {
-      return sessionStorage.getItem(key);
-    } catch (e) {
-      console.warn('Storage access error:', e);
-      return null;
-    }
-  },
-  setItem: (key: string, value: string) => {
-    try {
-      sessionStorage.setItem(key, value);
-    } catch (e) {
-      console.warn('Storage access error:', e);
-    }
-  },
-  removeItem: (key: string) => {
-    try {
-      sessionStorage.removeItem(key);
-    } catch (e) {
-      console.warn('Storage access error:', e);
+    } catch {
+      // Ignore errors
     }
   }
 };
