@@ -55,10 +55,9 @@ const reportWebVitals = (metric: any) => {
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
-import { CartProvider } from './context/CartContext';
-import { UnitProvider } from './context/UnitContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { initGA } from './lib/gtag';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { AppLayout } from '@/layout/AppLayout';
 
   static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
@@ -142,8 +141,31 @@ try {
   });
 }
 
+initGA();
+// Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                <AnalyticsProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <ErrorBoundary>
+                      <AppLayout>
+                        <App />
+                      </AppLayout>
+                      <LanguageDetectionPopup />
+                    </ErrorBoundary>
+                  </LanguageProvider>
+                </AnalyticsProvider>
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 )

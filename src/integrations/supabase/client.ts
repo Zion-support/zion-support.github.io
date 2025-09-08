@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import api from '@/lib/api';
+import { captureException } from '@/lib/sentry';
 
 interface SupabaseClient {
   auth: {
@@ -121,5 +121,6 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
     }
   }
 
+  captureException(lastError);
   throw new Error('Failed to connect to Supabase');
 }

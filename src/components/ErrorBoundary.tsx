@@ -1,30 +1,31 @@
-import React, { Component, ReactNode } from 'react';
-import { toast } from 'react-hot-toast';
+import React from 'react';
+import { captureException } from '@/lib/sentry';
 
 interface Props {
-  children: ReactNode;
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
 }
 
 interface State {
   hasError: boolean;
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends React.Component<Props, State> {
   state: State = { hasError: false };
 
-  static getDerivedStateFromError(): State {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error) {
-    toast.error(error.message || 'An unexpected error occurred');
+  componentDidCatch(error: any, errorInfo: any) {
+    captureException(error);
+    console.error(error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      return null;
+      return this.props.fallback || <div>Something went wrong.</div>;
     }
-
     return this.props.children;
   }
 }
