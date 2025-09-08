@@ -1,152 +1,310 @@
+import React, { useEffect, useRef, useState, ReactNode } from 'react';
+import { motion, useInView } from 'framer-motion';
 
-
-  useEffect(() => {
-    if (!enabled) return;
-
-    // Register service worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
-    }
-
-    // Initialize performance monitoring
-    initializePerformanceMonitoring();
-    
-    // Set up periodic optimization
-    const interval = setInterval(() => {
-      if (enabled) {
-        runOptimizations();
-      }
-    }, 30000); // Every 30 seconds
-
-    return () => clearInterval(interval);
-  }, [enabled]);
-
-  const initializePerformanceMonitoring = () => {
-    if (!('PerformanceObserver' in window)) return;
-
-    // Monitor Core Web Vitals
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {
-          const fid = entry.processingStart - entry.startTime;
-          setMetrics(prev => ({ ...prev, fid }));
-        } else if (entry.entryType === 'layout-shift') {
-          setMetrics(prev => ({ ...prev, cls: prev.cls + (entry as any).value }));
-        }
-      });
-    });
-
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-    // Monitor First Contentful Paint
-    const paintObserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        }
-      });
-    });
-
-    paintObserver.observe({ entryTypes: ['paint'] });
-
-    // Monitor Time to First Byte
-    const navigationObserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-        }
-      });
-    });
-
-    navigationObserver.observe({ entryTypes: ['navigation'] });
-  };
-
-  const runOptimizations = async () => {
-    setIsOptimizing(true);
-    
-    try {
-      // Image optimization
-      await optimizeImages();
-      
-      criticalFonts.forEach(font => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'style';
-        link.href = font;
-        document.head.appendChild(link)})};
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy'}
-        if(!img.decoding) {
-          img.decoding = 'async'}
-      })};
-
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-
-    // Set up intersection observer for lazy loading
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-
-   children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
-  useEffect ( () => {
-    // Preload critical resources;""
-const preloadCriticalResources = () => {""
-      const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {""
-
-        const link = document.createElement ('link') '        link.rel = 'preload'        link.as = 'style'        link.href = font'        document.head.appendChild (link) })}
-    // Optimize images;
-
-
-
-          img.loading = 'lazy'        }'        if (!img.decoding) {'
-          img.decoding = 'async'        }'      })}// Initialize optimizations;'
-
-
-
-    preloadCriticalResources () ;
-    optimizeImages () ;
-
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            if (target.dataset.src) {""
-target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }
-          }""})}, { rootMargin: '50px' }) ';// Observe lazy load elements;""
-    const lazyElements = document.querySelectorAll ('[data - src]) '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
-
-      observer.disconnect () }
-  }, []) 
-  return&apos;&apos; <>{children}</>
-
+interface LazyLoadProps {
+  children: ReactNode;
+  threshold?: number;
+  rootMargin?: string;
+  fallback?: ReactNode;
+  className?: string;
 }
 
-          if (entry.isIntersecting) {
+interface IntersectionObserverProps {
+  children: ReactNode;
+  threshold?: number;
+  rootMargin?: string;
+  triggerOnce?: boolean;
+  className?: string;
+}
 
-    const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
-      observer.disconnect () }
+interface VirtualScrollProps {
+  items: any[];
+  itemHeight: number;
+  containerHeight: number;
+  renderItem: (item: any, index: number) => ReactNode;
+  overscan?: number;
+}
 
-  }, []) 
-  return <>{children}</> }"`"
-"`"
-"`"
+// Lazy Loading Component
+export const LazyLoad: React.FC<LazyLoadProps> = ({
+  children,
+  threshold = 0.1,
+  rootMargin = '50px',
+  fallback = <div className="w-full h-32 bg-zion-blue-light/10 animate-pulse rounded-lg" />,
+  className = ''
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold, rootMargin }
+    );
 
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
+    return () => observer.disconnect();
+  }, [threshold, rootMargin]);
 
+  useEffect(() => {
+    if (isVisible && !isLoaded) {
+      // Simulate loading delay for better UX
+      const timer = setTimeout(() => setIsLoaded(true), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible, isLoaded]);
 
+  if (!isVisible) {
+    return (
+      <div ref={ref} className={className}>
+        {fallback}
+      </div>
+    );
+  }
 
+  if (!isLoaded) {
+    return (
+      <div className={className}>
+        {fallback}
+      </div>
+    );
+  }
+
+  return <div className={className}>{children}</div>;
+};
+
+// Intersection Observer Hook Component
+export const IntersectionObserver: React.FC<IntersectionObserverProps> = ({
+  children,
+  threshold = 0.1,
+  rootMargin = '0px',
+  triggerOnce = true,
+  className = ''
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, {
+    amount: threshold,
+    once: triggerOnce
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+// Virtual Scrolling Component
+export const VirtualScroll: React.FC<VirtualScrollProps> = ({
+  items,
+  itemHeight,
+  containerHeight,
+  renderItem,
+  overscan = 5
+}) => {
+  const [scrollTop, setScrollTop] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const totalHeight = items.length * itemHeight;
+  const visibleItemCount = Math.ceil(containerHeight / itemHeight);
+  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
+  const endIndex = Math.min(
+    items.length - 1,
+    Math.ceil(scrollTop / itemHeight) + visibleItemCount + overscan
+  );
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    setScrollTop(e.currentTarget.scrollTop);
+  };
+
+  const visibleItems = items.slice(startIndex, endIndex + 1);
+
+  return (
+    <div
+      ref={containerRef}
+      style={{ height: containerHeight, overflow: 'auto' }}
+      onScroll={handleScroll}
+      className="scrollbar-thin scrollbar-thumb-zion-cyan/30 scrollbar-track-zion-blue-light/10"
+    >
+      <div style={{ height: totalHeight, position: 'relative' }}>
+        {visibleItems.map((item, index) => (
+          <div
+            key={startIndex + index}
+            style={{
+              position: 'absolute',
+              top: (startIndex + index) * itemHeight,
+              height: itemHeight,
+              width: '100%'
+            }}
+          >
+            {renderItem(item, startIndex + index)}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Image Optimization Component
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  placeholder?: string;
+  lazy?: boolean;
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFlMjYzYiIvPjwvc3ZnPg==',
+  lazy = true
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+  };
+
+  if (hasError) {
+    return (
+      <div
+        className={`bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      >
+        <span className="text-zion-slate-light text-sm">Image failed to load</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
+      {/* Placeholder */}
+      {!isLoaded && (
+        <img
+          src={placeholder}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ width, height }}
+        />
+      )}
+      
+      {/* Actual Image */}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={lazy ? 'lazy' : 'eager'}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+    </div>
+  );
+};
+
+// Performance Monitoring Hook
+export const usePerformanceMonitor = (componentName: string) => {
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    return () => {
+      const endTime = performance.now();
+      const duration = endTime - startTime;
+      
+      if (duration > 16) { // 60fps threshold
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+      }
+    };
+  }, [componentName]);
+};
+
+// Debounce Hook
+export const useDebounce = <T,>(value: T, delay: number): T => {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+};
+
+// Throttle Hook
+export const useThrottle = <T,>(value: T, limit: number): T => {
+  const [throttledValue, setThrottledValue] = useState<T>(value);
+  const lastRan = useRef<number>(Date.now());
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      if (Date.now() - lastRan.current >= limit) {
+        setThrottledValue(value);
+        lastRan.current = Date.now();
+      }
+    }, limit - (Date.now() - lastRan.current));
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, limit]);
+
+  return throttledValue;
+};
+
+// Main Performance Optimizer Component
+interface PerformanceOptimizerProps {
+  children: ReactNode;
+  enableMonitoring?: boolean;
+  enableOptimizations?: boolean;
+  showMetrics?: boolean;
+}
+
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enableMonitoring = true,
+  enableOptimizations = true,
+  showMetrics = false
+}) => {
+  return (
+    <div className="performance-optimizer">
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceOptimizer;

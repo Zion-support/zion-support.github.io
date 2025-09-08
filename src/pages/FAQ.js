@@ -1,6 +1,11 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Header } from "@/components/Header";
+<<<<<<< HEAD
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+=======
+import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 

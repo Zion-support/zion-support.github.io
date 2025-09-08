@@ -5,5 +5,8 @@ node_modules
 .env.local
 .env.*.local
 
-# Local Netlify folder
-.netlify
+# Automation logs and data (continuously changing)
+automation/logs/*.log
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json

@@ -22,7 +22,7 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         (('tags' in service && service.tags) ? service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) : false);
     return matchesCategory && matchesSearch;
   });
 
@@ -198,10 +198,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : '2-4 weeks'}
+                      Delivery: {getServiceProperty(service, 'estimatedDelivery', 'Custom')}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {'supportLevel' in service ? service.supportLevel : 'Standard'} support
+                      {getServiceProperty(service, 'supportLevel', 'Premium')} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -212,12 +212,20 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                {getServiceProperty(service, 'tags') && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {getServiceProperty(service, 'tags').slice(0, 4).map((tag: string, index: number) => (
+                      <span
+                        key={index}
+                        className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
+                      >
                         {tag}
-                      </span>))}
-                  </div>)}
-              </motion.div>))}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
@@ -277,10 +285,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : '2-4 weeks'}
+                      Delivery: {getServiceProperty(service, 'estimatedDelivery', 'Custom')}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {'supportLevel' in service ? service.supportLevel : 'Standard'} support
+                      {getServiceProperty(service, 'supportLevel', 'Premium')} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -291,12 +299,20 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                {getServiceProperty(service, 'tags') && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {getServiceProperty(service, 'tags').slice(0, 4).map((tag: string, index: number) => (
+                      <span
+                        key={index}
+                        className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
+                      >
                         {tag}
-                      </span>))}
-                  </div>)}
-              </motion.div>))}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
