@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { DragDropContext } from "@hello-pangea/dnd";
+import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";

@@ -15,83 +15,120 @@ interface SupabaseClient {
   };
 }
 
-// Mock implementation
-const createMockSupabaseClient = (): SupabaseClient => ({
-  auth: {
-    signUp: async (credentials: any) => {
-      console.log('Mock signUp:', credentials);
-      return { data: { user: { id: '1', email: credentials.email } }, error: null };
-    },
-    signIn: async (credentials: any) => {
-      console.log('Mock signIn:', credentials);
-      return { data: { user: { id: '1', email: credentials.email } }, error: null };
-    },
-    signOut: async () => {
-      console.log('Mock signOut');
-      return { error: null };
-    },
-    user: () => ({ id: '1', email: 'user@example.com' }),
-    onAuthStateChange: (callback: any) => {
-      console.log('Mock onAuthStateChange');
-      return { data: { subscription: { unsubscribe: () => {} } } };
-    },
-  },
-  from: (table: string) => ({
-    select: (columns: string) => ({
-      eq: (column: string, value: any) => ({
-        single: async () => ({ data: null, error: null }),
-        execute: async () => ({ data: [], error: null }),
-      }),
-      execute: async () => ({ data: [], error: null }),
-    }),
-    insert: (data: any) => ({
-      execute: async () => ({ data: null, error: null }),
-    }),
-    update: (data: any) => ({
-      eq: (column: string, value: any) => ({
-        execute: async () => ({ data: null, error: null }),
-      }),
-    }),
-    delete: () => ({
-      eq: (column: string, value: any) => ({
-        execute: async () => ({ data: null, error: null }),
-      }),
-    }),
-  }),
-  storage: {
-    from: (bucket: string) => ({
-      upload: async (path: string, file: File) => ({ data: null, error: null }),
-      download: async (path: string) => ({ data: null, error: null }),
-      remove: async (paths: string[]) => ({ data: null, error: null }),
-    }),
-  },
-});
+// Enhanced network connectivity check with multiple strategies
+export const checkOnline = async (): Promise<boolean> => {
+  // First check navigator.onLine
+  if (typeof navigator !== 'undefined' && !navigator.onLine) {
+    return false;
+  }
 
-// Helper function to access profiles table
-export const getFromProfiles = () => supabase.from('profiles');
-
-// Check if the browser is online. Gracefully handle environments where
-// `navigator` is undefined such as server side rendering or tests.
-export async function checkOnline(): Promise<boolean> {
   try {
-    return typeof navigator !== 'undefined' && navigator.onLine;
+    // Try a lightweight request with timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+    try {
+      const response = await fetch(`${supabaseUrl}/rest/v1/`, {
+        method: 'HEAD',
+        signal: controller.signal,
+        headers: {
+          'apikey': supabaseAnonKey,
+        },
+      });
+      return response.ok;
+    } finally {
+      clearTimeout(timeoutId);
+    }
   } catch {
     return false;
   }
 }
 
-// Helper function for safe fetching with retries. Adds the Supabase API key
-// header while preserving any existing Headers instance passed in `options`.
-// Throws a consistent error message when the request ultimately fails.
-export async function safeFetch(url: string, options: RequestInit = {}) {
-  if (!(await checkOnline())) {
-    throw new Error('Failed to connect to Supabase');
+// Enhanced retry configuration
+const RETRY_COUNT = 3;
+const INITIAL_RETRY_DELAY = 1000;
+const MAX_RETRY_DELAY = 10000;
+
+// Enhanced fetch with improved retry mechanism
+export const safeFetch: typeof fetch = async (input, init) => {
+  let lastError: Error | null = null;
+  let delay = INITIAL_RETRY_DELAY;
+
+  for (let attempt = 0; attempt < RETRY_COUNT; attempt++) {
+    try {
+      if (!(await checkOnline())) {
+        throw new Error('No internet connection');
+      }
+
+      // Add timeout to prevent hanging requests
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000);
+
+      const response = await fetch(input, {
+        ...init,
+        signal: controller.signal,
+        headers: {
+          ...init?.headers,
+          'x-retry-attempt': attempt.toString(),
+        },
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return response;
+    } catch (err: any) {
+      lastError = err;
+      console.error(`Attempt ${attempt + 1} failed:`, err);
+
+      // Don't retry if it's a CORS error
+      if (err.message.includes('CORS')) {
+        throw new Error('CORS error: Unable to access Supabase. Please check your CORS configuration.');
+      }
+
+      // Don't retry if it's an abort error
+      if (err.name === 'AbortError') {
+        throw new Error('Request timeout. Please try again.');
+      }
+
+      // Don't retry on the last attempt
+      if (attempt === RETRY_COUNT - 1) {
+        break;
+      }
+
+      // Wait before retrying with exponential backoff and jitter
+      const jitter = Math.random() * 200;
+      await new Promise(resolve => setTimeout(resolve, Math.min(delay + jitter, MAX_RETRY_DELAY)));
+      delay *= 2;
+    }
   }
 
-  const headers =
-    options.headers instanceof Headers
-      ? options.headers
-      : new Headers(options.headers);
+  // If all retries failed, throw a user-friendly error
+  throw new Error(
+    lastError?.message === 'Failed to fetch'
+      ? 'Unable to connect to Supabase. Please check your internet connection.'
+      : lastError?.message || 'An unexpected error occurred'
+  );
+};
+
+// Create Supabase client with enhanced fetch
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  global: { 
+    fetch: safeFetch,
+    headers: {
+      'X-Client-Info': 'supabase-js-web',
+    }
+  },
+  auth: {
+    persistSession: true,
+    detectSessionInUrl: true,
+    autoRefreshToken: true,
+    storage: window.localStorage,
+  }
+});
 
   if (!headers.has('apikey')) {
     headers.set('apikey', supabaseAnonKey);
