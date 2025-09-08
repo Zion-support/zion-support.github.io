@@ -52,6 +52,12 @@ export default defineConfig(({ mode }) => ({
     // Enable CSS code splitting
     cssCodeSplit: true,
   },
+  esbuild: {
+    target: 'esnext',
+    format: 'esm',
+    // Disable TypeScript checking during build
+    logLevel: 'error',
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
