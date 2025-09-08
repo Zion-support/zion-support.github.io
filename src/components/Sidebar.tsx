@@ -107,16 +107,35 @@ export const Sidebar: React.FC = () => {
       title: 'Main Navigation',
       icon: Home,
       items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
-        { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' },
-        { name: 'Resources', path: '/resources', icon: BookOpen, description: 'Knowledge and insights' },
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our comp' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+        { name: 'Home', href: '/', icon: Home },
+        { name: 'About', href: '/about', icon: Users },
+        { name: 'Services', href: '/services', icon: Zap },
+        { name: 'Contact', href: '/contact', icon: MessageCircle },
+        { name: 'Blog', href: '/blog', icon: BookOpen },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Users },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Help Center', href: '/help', icon: HelpCircle }
       ]
     },
     {
-      title: 'AI & Analytics Services',
+      title: 'Featured Services',
+      featured: true,
+      items: [
+        { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, featured: true },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: PenTool },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users },
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp },
+        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain }
+      ]
+    },
+      ]
+    },
+    {
+      title: 'AI & Machine Learning',
       icon: Brain,
       items: [
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
@@ -140,8 +159,41 @@ export const Sidebar: React.FC = () => {
       title: 'Cybersecurity & Compliance',
       icon: Shield,
       items: [
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' },
-        { name: 'Zero Trust Security', path: '/services/zero-trust-network-access', icon: Shield, description: 'Advanced security framework' }
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield }
+      ]
+      ]
+    },
+    {
+      title: 'Digital Transformation',
+      icon: Zap,
+      items: [
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp },
+        { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
+        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }
+      ]
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Atom,
+      items: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
+        { name: 'Space Technology', href: '/space-tech', icon: Satellite }
       ]
     },
     {
@@ -150,6 +202,8 @@ export const Sidebar: React.FC = () => {
       items: [
         { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' },
         { name: 'Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Data-driven decisions' }
+      ]
+    },
       ]
     },
     {
