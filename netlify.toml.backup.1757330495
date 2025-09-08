@@ -6,10 +6,14 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.11.10"
+=======
   PYTHON_VERSION = "3.12"
   # Ensure mise uses precompiled Python and is verbose for debugging
   MISE_VERBOSE = "1"
   MISE_PYTHON_COMPILE = "false"
+>>>>>>> origin/cursor/build-and-install-project-dependencies-aab2
 
 [[plugins]]
   package = "netlify-plugin-compress"
