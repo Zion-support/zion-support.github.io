@@ -1,26 +1,21 @@
 [build]
-  # Skip building and publish the prebuilt dist directory
-  command = "echo Using prebuilt dist; exit 0"
-  publish = "dist"
+  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
+  command = "echo 'Skipping build; deploying prebuilt static export'"
+  publish = "out"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  MISE_PYTHON_COMPILE = "false"
-  # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
-  # Disable mise shims entirely during Netlify builds
-  MISE_DISABLE = "1"
-  MISE_SHIMS = "0"
-  # Force mise to use system Python even during Netlify's dependency stage (defensive)
-  MISE_TOOL_VERSIONS__python = "system"
+  NETLIFY_SKIP_BUILD = "true"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+# Keep the config minimal to avoid plugin-related build failures
 
 [[redirects]]
   from = "/*"

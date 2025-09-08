@@ -1,0 +1,26 @@
+import React from "react";
+<<<<<<< HEAD
+
+export default function EquipmentDetail() {
+	return (
+		<div className="container mx-auto p-8 text-white">
+			<h1 className="text-2xl font-bold mb-2">Equipment Detail</h1>
+			<p className="text-zion-slate-light">This page is temporarily unavailable.</p>
+		</div>
+	);
+}
+=======
+import { useParams } from "react-router-dom";
+
+export default function EquipmentDetail() {
+  const { id } = useParams();
+  return (
+    <div className="min-h-screen bg-zion-blue text-white p-8">
+      <h1 className="text-2xl font-bold">Equipment Detail</h1>
+      <p className="mt-2 text-zion-slate-light">ID: {id}</p>
+      <p className="mt-4">This is a temporary placeholder to restore the build.</p>
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0e36
