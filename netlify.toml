@@ -1,5 +1,5 @@
 [build]
-  # Deploy prebuilt assets in 'dist' and skip building
+  # Skipping build: deploying prebuilt dist
   command = "echo 'Skipping build: deploying prebuilt dist'"
   publish = "dist"
   functions = "netlify/functions"
@@ -10,9 +10,10 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  # Force npm path and skip dependency installs (we ship prebuilt dist)
-  NPM_FLAGS = "--omit=optional"
+  # Do not install dependencies during deploy; avoids Yarn on Netlify
   NETLIFY_SKIP_INSTALL = "true"
+  NETLIFY_USE_YARN = "false"
+  NPM_FLAGS = "--omit=optional"
 
 
 
