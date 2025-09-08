@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
 // Components
-import ErrorBoundary from './components/ErrorBoundary';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { AppLayout } from './layout/AppLayout';
 import LazyLoad from './components/LazyLoad';
 import LoadingSpinner from './components/LoadingSpinner';
