@@ -5,7 +5,7 @@
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 [[plugins]]
   package = "netlify-plugin-compress"
