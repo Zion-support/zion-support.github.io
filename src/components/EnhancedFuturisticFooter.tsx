@@ -123,8 +123,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
-        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform' },
-        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' }
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' }
       ]
     },
     {

@@ -67,110 +67,23 @@ export function AppHeader() {
   };
 
   const services = [
-    { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'Innovative Services 2026', 
-      href: '/innovative-services-showcase-2026', 
-      icon: Crown, 
-      description: 'Next-Gen AI & IT Solutions',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
-      featured: true,
-      color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
-      icon: Heart, 
-      description: 'Medical AI & Diagnostics',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'Pricing Guide 2026', 
-      href: '/pricing-guide-2026', 
-      icon: DollarSign, 
-      description: 'Complete Pricing & ROI Analysis',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
-    },
-    { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
-      description: 'Content Generation & Optimization',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'Revolutionary Services 2030', 
-      href: '/revolutionary-services-2030', 
-      icon: Rocket, 
-      description: 'Future Technology Solutions',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    }
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
+    { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Zap, description: 'Intelligent process automation' },
+    { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Heart, description: 'AI-powered customer retention' },
+    { name: 'AI Data Governance', href: '/services/ai-data-governance-platform', icon: Shield, description: 'Compliance & data security' },
+    { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Optimize logistics & inventory' },
   ];
 
   const servicesCategories = [
@@ -206,8 +119,9 @@ export function AppHeader() {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'Intelligent process automation' },
-        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform', description: 'AI-powered CX platform' },
-        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'Supply chain optimization' }
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'AI-powered customer retention' },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', description: 'Compliance & data security' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Optimize logistics & inventory' }
       ]
     },
     {

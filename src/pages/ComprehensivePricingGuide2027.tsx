@@ -1,434 +1,361 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '@/components/SEO';
 import { 
+  CheckCircle, 
+  X, 
+  Star, 
+  TrendingUp, 
+  Zap, 
   Brain, 
-  Cloud, 
   Shield, 
+  Cloud, 
   Rocket, 
   Heart, 
-  Globe, 
-  ShoppingCart, 
-  MessageCircle, 
-  Users, 
-  BookOpen, 
-  DollarSign,
-  Zap,
+  ShoppingCart,
   Truck,
-  Star,
-  CheckCircle,
+  Package,
+  Users,
+  MessageCircle,
+  BookOpen,
+  DollarSign,
+  Clock,
+  BarChart3,
+  Lock,
+  Eye,
+  Globe,
+  Award,
   ArrowRight,
   Phone,
   Mail,
   MapPin,
-  TrendingUp,
-  Award,
-  Target,
-  Cpu,
-  Lock,
-  Package,
-  Warehouse,
-  Route,
-  AlertTriangle,
-  RefreshCw,
   Settings
 } from 'lucide-react';
 
 export default function ComprehensivePricingGuide2027() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const contactInfo = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    website: "https://ziontechgroup.com"
+  };
 
   const serviceCategories = [
     {
-      id: 'ai-analytics',
-      name: 'AI & Analytics Services',
+      name: "AI & Machine Learning Solutions",
+      description: "Cutting-edge artificial intelligence services for business transformation",
       icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Cutting-edge artificial intelligence and machine learning solutions',
+      color: "from-purple-600 to-pink-600",
       services: [
         {
-          name: 'AI Business Intelligence',
-          description: 'Machine Learning & Data Science solutions for business insights',
-          monthly: 799,
-          yearly: 7990,
+          name: "AI Business Intelligence",
+          description: "Transform data into actionable insights with machine learning",
+          monthlyPrice: 1299,
+          yearlyPrice: 12990,
           features: [
-            'Predictive Analytics',
-            'Data Visualization',
-            'Machine Learning Models',
-            'Real-time Dashboards',
-            'Custom Reports',
-            'API Access',
-            'Priority Support'
+            "Predictive analytics & ML models",
+            "Real-time dashboards & reporting",
+            "Custom algorithm development",
+            "API access & integrations",
+            "24/7 monitoring & support",
+            "Unlimited data processing"
           ],
-          popular: false,
-          href: '/services/ai-business-intelligence'
+          benefits: ["25% revenue increase", "60% faster decisions", "95% prediction accuracy"]
         },
         {
-          name: 'AI Sales Copilot',
-          description: 'AI-powered sales automation and optimization',
-          monthly: 599,
-          yearly: 5990,
+          name: "AI Sales Copilot",
+          description: "AI-powered sales automation and optimization",
+          monthlyPrice: 799,
+          yearlyPrice: 7990,
           features: [
-            'Lead Scoring',
-            'Sales Forecasting',
-            'Automated Follow-ups',
-            'CRM Integration',
-            'Performance Analytics',
-            'Email Support',
-            'Basic Training'
+            "Intelligent lead scoring",
+            "Automated email campaigns",
+            "Sales forecasting & analytics",
+            "CRM integration",
+            "Performance tracking",
+            "Custom sales workflows"
           ],
-          popular: false,
-          href: '/services/ai-sales-copilot'
+          benefits: ["45% conversion increase", "3x faster deal closure", "Automated follow-ups"]
         },
         {
-          name: 'AI Compliance Assistant',
-          description: 'Regulatory compliance automation and monitoring',
-          monthly: 699,
-          yearly: 6990,
+          name: "AI Workflow Automation",
+          description: "Intelligent business process automation",
+          monthlyPrice: 299,
+          yearlyPrice: 2990,
           features: [
-            'Compliance Monitoring',
-            'Risk Assessment',
-            'Automated Reporting',
-            'Regulatory Updates',
-            'Audit Trails',
-            'Email Support',
-            'Compliance Training'
+            "Visual workflow builder",
+            "AI decision making",
+            "24/7 automation",
+            "Performance analytics",
+            "Team collaboration",
+            "Custom integrations"
           ],
-          popular: false,
-          href: '/services/ai-compliance-assistant'
+          benefits: ["30% cost reduction", "5x faster processes", "Zero manual errors"]
         },
         {
-          name: 'LLM Content Studio',
-          description: 'AI content generation and management platform',
-          monthly: 399,
-          yearly: 3990,
+          name: "AI Customer Success Platform",
+          description: "AI-powered customer retention and expansion",
+          monthlyPrice: 499,
+          yearlyPrice: 4990,
           features: [
-            'Content Generation',
-            'Brand Consistency',
-            'Multi-language Support',
-            'Content Templates',
-            'Basic Analytics',
-            'Email Support',
-            'Content Guidelines'
+            "Predictive churn detection",
+            "Personalized success plans",
+            "Real-time engagement tracking",
+            "Automated workflows",
+            "Success scoring",
+            "Expansion revenue optimization"
           ],
-          popular: false,
-          href: '/services/llm-content-studio'
+          benefits: ["40% churn reduction", "25% CLV increase", "3x efficiency gain"]
         },
         {
-          name: 'AI Workflow Automation',
-          description: 'Intelligent process automation and optimization',
-          monthly: 299,
-          yearly: 2990,
+          name: "AI Data Governance Platform",
+          description: "AI-powered data discovery and compliance",
+          monthlyPrice: 599,
+          yearlyPrice: 5990,
           features: [
-            'Process Mapping',
-            'Smart Automation',
-            'Performance Analytics',
-            'Basic Integrations',
-            'Standard Reports',
-            'Email Support',
-            'Workflow Templates'
+            "AI data discovery",
+            "Compliance automation",
+            "Real-time monitoring",
+            "Role-based access control",
+            "Data lineage tracking",
+            "Multi-framework compliance"
           ],
-          popular: true,
-          href: '/services/ai-workflow-automation'
+          benefits: ["90% compliance risk reduction", "99.9% security uptime", "70% cost reduction"]
         },
         {
-          name: 'AI Customer Experience Platform',
-          description: 'AI-powered customer experience management',
-          monthly: 399,
-          yearly: 3990,
+          name: "AI Supply Chain Optimization",
+          description: "AI-powered supply chain and logistics optimization",
+          monthlyPrice: 799,
+          yearlyPrice: 7990,
           features: [
-            'Personalization',
-            'Sentiment Analysis',
-            'Omnichannel Support',
-            'Customer Journey Mapping',
-            'Basic Analytics',
-            'Email Support',
-            'CX Templates'
+            "Route optimization",
+            "Demand forecasting",
+            "Global supply chain visibility",
+            "Cost optimization",
+            "Real-time tracking",
+            "Performance analytics"
           ],
-          popular: false,
-          href: '/services/ai-customer-experience-platform'
-        },
-        {
-          name: 'AI Supply Chain Optimization',
-          description: 'Intelligent supply chain management and optimization',
-          monthly: 599,
-          yearly: 5990,
-          features: [
-            'Demand Forecasting',
-            'Route Optimization',
-            'Risk Management',
-            'Inventory Optimization',
-            'Basic Analytics',
-            'Email Support',
-            'Supply Chain Templates'
-          ],
-          popular: false,
-          href: '/services/ai-supply-chain-optimization'
+          benefits: ["30% transportation savings", "40% faster delivery", "25% inventory reduction"]
         }
       ]
     },
     {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps',
+      name: "Cloud & DevOps Solutions",
+      description: "Scalable cloud infrastructure and automated deployment",
       icon: Cloud,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Scalable cloud infrastructure and automated deployment solutions',
+      color: "from-blue-600 to-cyan-600",
       services: [
         {
-          name: 'Cloud DevOps',
-          description: 'Infrastructure & Automation solutions',
-          monthly: 899,
-          yearly: 8990,
+          name: "Cloud DevOps",
+          description: "End-to-end cloud infrastructure and CI/CD automation",
+          monthlyPrice: 1499,
+          yearlyPrice: 14990,
           features: [
-            'CI/CD Pipelines',
-            'Infrastructure as Code',
-            'Monitoring & Alerting',
-            'Cloud Migration',
-            'Performance Optimization',
-            'Priority Support',
-            '24/7 Monitoring'
+            "Multi-cloud deployment",
+            "Auto-scaling infrastructure",
+            "CI/CD pipeline automation",
+            "Monitoring & alerting",
+            "Security & compliance",
+            "24/7 support"
           ],
-          popular: false,
-          href: '/services/cloud-devops'
+          benefits: ["99.9% uptime", "50% faster deployments", "Automated scaling"]
         },
         {
-          name: 'Cloud FinOps Optimizer',
-          description: 'Cloud cost optimization and management',
-          monthly: 699,
-          yearly: 6990,
+          name: "Cloud FinOps Optimizer",
+          description: "AI-powered cloud cost optimization",
+          monthlyPrice: 899,
+          yearlyPrice: 8990,
           features: [
-            'Cost Analysis',
-            'Resource Optimization',
-            'Budget Management',
-            'Cost Alerts',
-            'ROI Tracking',
-            'Email Support',
-            'Cost Reports'
+            "Cost analysis & optimization",
+            "Resource management",
+            "Budget tracking & alerts",
+            "ROI optimization",
+            "Cost forecasting",
+            "Automated recommendations"
           ],
-          popular: false,
-          href: '/services/cloud-finops-optimizer'
-        },
-        {
-          name: 'FinOps Advisor',
-          description: 'Financial operations optimization',
-          monthly: 599,
-          yearly: 5990,
-          features: [
-            'Financial Planning',
-            'Cost Control',
-            'ROI Analysis',
-            'Budget Forecasting',
-            'Performance Metrics',
-            'Email Support',
-            'Financial Reports'
-          ],
-          popular: false,
-          href: '/services/finops-advisor'
+          benefits: ["40% cost reduction", "Real-time optimization", "Predictive cost management"]
         }
       ]
     },
     {
-      id: 'digital-solutions',
-      name: 'Digital Solutions',
+      name: "Digital Transformation Solutions",
+      description: "End-to-end business process modernization",
       icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
-      description: 'End-to-end digital transformation and modernization',
+      color: "from-green-600 to-emerald-600",
       services: [
         {
-          name: 'Digital Twin',
-          description: 'Simulation & Monitoring solutions',
-          monthly: 1299,
-          yearly: 12990,
+          name: "Digital Twin",
+          description: "Digital replicas for simulation and optimization",
+          monthlyPrice: 2499,
+          yearlyPrice: 24990,
           features: [
-            'Real-time Monitoring',
-            'Predictive Maintenance',
-            '3D Visualization',
-            'IoT Integration',
-            'Advanced Analytics',
-            'Priority Support',
-            'Custom Dashboards'
+            "3D modeling & simulation",
+            "Real-time monitoring",
+            "Predictive maintenance",
+            "Performance optimization",
+            "IoT integration",
+            "Custom development"
           ],
-          popular: false,
-          href: '/services/digital-twin'
+          benefits: ["30% efficiency improvement", "Predictive maintenance", "Real-time optimization"]
         },
         {
-          name: 'IT Infrastructure',
-          description: 'Enterprise infrastructure solutions',
-          monthly: 999,
-          yearly: 9990,
+          name: "IoT Edge Computing",
+          description: "Intelligent edge computing solutions",
+          monthlyPrice: 1799,
+          yearlyPrice: 17990,
           features: [
-            'Network Design',
-            'Security Implementation',
-            'Performance Optimization',
-            'Hardware Management',
-            'Backup Solutions',
-            'Priority Support',
-            'Infrastructure Planning'
+            "Edge analytics",
+            "Real-time processing",
+            "Device management",
+            "Security & encryption",
+            "Cloud integration",
+            "Custom protocols"
           ],
-          popular: false,
-          href: '/services/it-infrastructure'
-        },
-        {
-          name: 'Data Analytics',
-          description: 'Business intelligence and analytics',
-          monthly: 799,
-          yearly: 7990,
-          features: [
-            'Data Warehousing',
-            'Business Intelligence',
-            'Advanced Analytics',
-            'Data Visualization',
-            'Custom Reports',
-            'Email Support',
-            'Data Strategy'
-          ],
-          popular: false,
-          href: '/services/data-analytics'
+          benefits: ["10x faster processing", "Reduced latency", "Enhanced security"]
         }
       ]
     },
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity & Compliance',
+      name: "Cybersecurity & Compliance",
+      description: "Advanced security and regulatory compliance",
       icon: Shield,
-      color: 'from-red-600 to-orange-600',
-      description: 'Advanced security protocols and compliance solutions',
+      color: "from-red-600 to-orange-600",
       services: [
         {
-          name: 'AI Compliance Copilot',
-          description: 'AI-Powered Security solutions',
-          monthly: 899,
-          yearly: 8990,
+          name: "AI Compliance Assistant",
+          description: "Automated regulatory compliance management",
+          monthlyPrice: 699,
+          yearlyPrice: 6990,
           features: [
-            'Threat Detection',
-            'Compliance Monitoring',
-            'Incident Response',
-            'Security Analytics',
-            'Automated Alerts',
-            'Priority Support',
-            'Security Training'
+            "GDPR, CCPA, HIPAA compliance",
+            "Automated compliance monitoring",
+            "Real-time risk assessment",
+            "Audit trail generation",
+            "Policy management",
+            "Training & awareness"
           ],
-          popular: false,
-          href: '/services/ai-compliance-copilot'
+          benefits: ["90% compliance automation", "Real-time monitoring", "Reduced audit time"]
         },
         {
-          name: 'Zero Trust Architecture',
-          description: 'Advanced security architecture',
-          monthly: 1199,
-          yearly: 11990,
+          name: "Zero Trust Network Architecture",
+          description: "Modern security framework implementation",
+          monthlyPrice: 1999,
+          yearlyPrice: 19990,
           features: [
-            'Identity Verification',
-            'Access Control',
-            'Network Segmentation',
-            'Security Monitoring',
-            'Compliance Reporting',
-            'Priority Support',
-            'Security Assessment'
+            "Identity verification",
+            "Micro-segmentation",
+            "Continuous monitoring",
+            "Threat detection",
+            "Access control",
+            "Security analytics"
           ],
-          popular: false,
-          href: '/services/zero-trust-network-architecture'
+          benefits: ["99.9% security uptime", "Real-time threat detection", "Compliance ready"]
         }
       ]
     },
     {
-      id: 'industry-solutions',
-      name: 'Industry Solutions',
+      name: "Industry-Specific Solutions",
+      description: "Specialized solutions for healthcare and sustainability",
       icon: Heart,
-      color: 'from-pink-600 to-rose-600',
-      description: 'Specialized solutions for specific industries',
+      color: "from-pink-600 to-purple-600",
       services: [
         {
-          name: 'Healthcare Tech',
-          description: 'AI Medicine & Diagnostics',
-          monthly: 1499,
-          yearly: 14990,
+          name: "Healthcare Technology",
+          description: "AI-powered healthcare solutions",
+          monthlyPrice: 2999,
+          yearlyPrice: 29990,
           features: [
-            'Medical Imaging',
-            'Patient Data Management',
-            'Clinical Decision Support',
-            'HIPAA Compliance',
-            'Healthcare Analytics',
-            'Priority Support',
-            'Medical Training'
+            "AI diagnostics",
+            "Patient monitoring",
+            "Electronic health records",
+            "HIPAA compliance",
+            "Telemedicine integration",
+            "Custom development"
           ],
-          popular: false,
-          href: '/services/healthcare-tech'
+          benefits: ["95% diagnostic accuracy", "30% faster diagnosis", "Enhanced patient care"]
         },
         {
-          name: 'Sustainability',
-          description: 'Green IT Solutions',
-          monthly: 799,
-          yearly: 7990,
+          name: "Sustainability Solutions",
+          description: "Green IT and environmental impact reduction",
+          monthlyPrice: 1299,
+          yearlyPrice: 12990,
           features: [
-            'Energy Optimization',
-            'Carbon Tracking',
-            'Green Computing',
-            'Sustainability Reporting',
-            'Environmental Analytics',
-            'Email Support',
-            'Green Certifications'
+            "Carbon footprint tracking",
+            "Energy optimization",
+            "Green procurement",
+            "ESG reporting",
+            "Sustainability analytics",
+            "Compliance management"
           ],
-          popular: false,
-          href: '/services/sustainability'
+          benefits: ["40% energy reduction", "ESG compliance", "Cost savings"]
         }
       ]
     },
     {
-      id: 'micro-saas',
-      name: 'Micro SaaS Solutions',
+      name: "Micro SaaS Solutions",
+      description: "Productized SaaS for specific business needs",
       icon: ShoppingCart,
-      color: 'from-indigo-600 to-purple-600',
-      description: 'Productized SaaS solutions for specific business needs',
+      color: "from-yellow-600 to-orange-600",
       services: [
         {
-          name: 'AI Auto Email Responder',
-          description: 'Faster replies, CRM logging',
-          monthly: 199,
-          yearly: 1990,
+          name: "AI Auto Email Responder",
+          description: "Intelligent email automation platform",
+          monthlyPrice: 199,
+          yearlyPrice: 1990,
           features: [
-            'Smart Responses',
-            'CRM Integration',
-            'Analytics Dashboard',
-            'Email Templates',
-            'Basic Reporting',
-            'Email Support',
-            'Setup Assistance'
+            "Smart response generation",
+            "CRM integration",
+            "Sentiment analysis",
+            "Performance tracking",
+            "Custom templates",
+            "Multi-language support"
           ],
-          popular: false,
-          href: '/services/ai-auto-email-responder'
+          benefits: ["80% faster responses", "Improved satisfaction", "Automated follow-ups"]
         },
         {
-          name: 'Customer Feedback Surveys',
-          description: 'NPS/CSAT with AI insights',
-          monthly: 149,
-          yearly: 1490,
+          name: "Customer Feedback Surveys",
+          description: "AI-powered feedback collection and analysis",
+          monthlyPrice: 149,
+          yearlyPrice: 1490,
           features: [
-            'Survey Creation',
-            'AI Analysis',
-            'Actionable Insights',
-            'Survey Templates',
-            'Basic Analytics',
-            'Email Support',
-            'Survey Best Practices'
+            "Multi-channel surveys",
+            "AI insights & analytics",
+            "Real-time reporting",
+            "Integration APIs",
+            "Custom branding",
+            "Response optimization"
           ],
-          popular: false,
-          href: '/services/mobile-feedback-surveys'
+          benefits: ["3x response rates", "Actionable insights", "Improved NPS scores"]
+        },
+        {
+          name: "LLM Content Studio",
+          description: "AI-powered content generation platform",
+          monthlyPrice: 399,
+          yearlyPrice: 3990,
+          features: [
+            "AI content generation",
+            "Brand voice training",
+            "Multi-format support",
+            "SEO optimization",
+            "Content management",
+            "Performance analytics"
+          ],
+          benefits: ["10x content production", "Consistent brand voice", "SEO optimization"]
         }
       ]
     }
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? serviceCategories.flatMap(cat => cat.services)
-    : serviceCategories.find(cat => cat.id === selectedCategory)?.services || [];
-
-  const getPrice = (service: any) => {
-    return billingCycle === 'monthly' ? service.monthly : service.yearly;
+  const getPrice = (monthlyPrice: number, yearlyPrice: number) => {
+    return billingCycle === 'monthly' ? monthlyPrice : yearlyPrice;
   };
 
-  const getSavings = (monthly: number, yearly: number) => {
-    const monthlyTotal = monthly * 12;
-    const savings = monthlyTotal - yearly;
+  const getSavings = (monthlyPrice: number, yearlyPrice: number) => {
+    const monthlyTotal = monthlyPrice * 12;
+    const savings = monthlyTotal - yearlyPrice;
     return Math.round((savings / monthlyTotal) * 100);
   };
 
@@ -436,11 +363,11 @@ export default function ComprehensivePricingGuide2027() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
-        description="Explore our complete pricing guide for AI services, IT solutions, and micro SaaS platforms. Find the perfect plan for your business needs with transparent pricing."
+        description="Explore our complete pricing for AI services, IT solutions, and micro SaaS platforms. Transparent pricing with flexible plans for every business size."
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
+      <section className="relative py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -448,21 +375,17 @@ export default function ComprehensivePricingGuide2027() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <DollarSign className="w-4 h-4 mr-2" />
-              Complete Pricing Guide
-            </div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Comprehensive Pricing Guide 2027
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Complete Pricing Guide 2027
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transparent pricing for all our AI services, IT solutions, and micro SaaS platforms. 
-              Choose the perfect plan for your business with confidence.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transparent pricing for our comprehensive portfolio of AI-powered services, 
+              IT solutions, and innovative micro SaaS platforms.
             </p>
             
             {/* Billing Toggle */}
-            <div className="flex items-center justify-center mb-8">
-              <span className={`mr-4 text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                 Monthly
               </span>
               <button
@@ -477,11 +400,11 @@ export default function ComprehensivePricingGuide2027() {
                   }`}
                 />
               </button>
-              <span className={`ml-4 text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
                 Yearly
                 {billingCycle === 'yearly' && (
                   <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-600 text-white">
-                    Save up to 17%
+                    Save up to 20%
                   </span>
                 )}
               </span>
@@ -490,144 +413,136 @@ export default function ComprehensivePricingGuide2027() {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-12 bg-gradient-to-r from-slate-800 to-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              All Services
-            </button>
-            {serviceCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center ${
-                  selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-                }`}
-              >
-                <category.icon className="w-4 h-4 mr-2" />
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
+      {/* Services Pricing */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border-2 ${
-                  service.popular 
-                    ? 'border-blue-500 from-blue-900/20 to-blue-800/20' 
-                    : 'border-slate-600'
-                }`}
-              >
-                {service.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">${getPrice(service)}</span>
-                    <span className="text-gray-400 ml-1">
-                      /{billingCycle === 'monthly' ? 'month' : 'year'}
-                    </span>
-                  </div>
-                  {billingCycle === 'yearly' && (
-                    <div className="text-green-400 text-sm mt-1">
-                      Save {getSavings(service.monthly, service.yearly)}% annually
+          {serviceCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={categoryIndex}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+              className="mb-20"
+            >
+              <div className="text-center mb-16">
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} mb-6`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-4xl font-bold text-white mb-4">{category.name}</h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {category.services.map((service, serviceIndex) => (
+                  <motion.div
+                    key={serviceIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
+                    className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300"
+                  >
+                    <div className="mb-6">
+                      <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
+                      <div className="flex items-baseline mb-2">
+                        <span className="text-3xl font-bold text-blue-400">
+                          ${getPrice(service.monthlyPrice, service.yearlyPrice).toLocaleString()}
+                        </span>
+                        <span className="text-gray-400 ml-1">
+                          /{billingCycle === 'monthly' ? 'month' : 'year'}
+                        </span>
+                      </div>
+                      {billingCycle === 'yearly' && (
+                        <div className="text-sm text-green-400 mb-4">
+                          Save {getSavings(service.monthlyPrice, service.yearlyPrice)}% with yearly billing
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="space-y-3">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      service.popular
-                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
-                        : 'bg-slate-600 text-white hover:bg-slate-500'
-                    }`}
-                  >
-                    Get Started
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-2 px-6 border border-slate-500 text-gray-300 rounded-lg hover:bg-slate-700 transition-all duration-300 text-sm"
-                  >
-                    Learn More
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Features</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Business Impact</h4>
+                      <ul className="space-y-2">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-start text-sm text-gray-300">
+                            <TrendingUp className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                      Get Started
+                    </button>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* Enterprise Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Enterprise Solutions */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Need Enterprise Solutions?
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Enterprise Solutions
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              For large organizations with complex requirements, we offer custom enterprise solutions 
-              with dedicated support, custom integrations, and SLA guarantees.
+            <p className="text-xl text-gray-300 mb-8">
+              Custom solutions for large organizations with specific requirements
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
-                Contact Enterprise Sales
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                Schedule Consultation
-              </motion.button>
+            
+            <div className="bg-slate-900 p-8 rounded-xl border border-slate-700">
+              <h3 className="text-2xl font-bold text-white mb-4">Custom Enterprise Packages</h3>
+              <p className="text-gray-300 mb-6">
+                We offer customized enterprise solutions with dedicated support, custom development, 
+                white-label options, and enterprise-grade security.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Dedicated Support</h4>
+                  <p className="text-gray-300 text-sm">24/7 dedicated account management and technical support</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Settings className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Custom Development</h4>
+                  <p className="text-gray-300 text-sm">Tailored solutions built specifically for your business needs</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Enterprise Security</h4>
+                  <p className="text-gray-300 text-sm">Advanced security features and compliance certifications</p>
+                </div>
+              </div>
+              
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Contact Sales Team
+              </button>
             </div>
           </motion.div>
         </div>
@@ -635,94 +550,51 @@ export default function ComprehensivePricingGuide2027() {
 
       {/* Contact Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Questions About Pricing?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our pricing experts are here to help you find the perfect plan for your business needs. 
-                Get personalized recommendations and answers to all your questions.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-white">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-white">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-              </div>
-            </motion.div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us to discuss your specific needs and get a customized quote
+            </p>
             
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Get Pricing Consultation</h3>
-              <form className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Company"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                </div>
-                <div>
-                  <select className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500">
-                    <option value="">Select Service Category</option>
-                    <option value="ai-analytics">AI & Analytics</option>
-                    <option value="cloud-devops">Cloud & DevOps</option>
-                    <option value="digital-solutions">Digital Solutions</option>
-                    <option value="cybersecurity">Cybersecurity & Compliance</option>
-                    <option value="industry-solutions">Industry Solutions</option>
-                    <option value="micro-saas">Micro SaaS Solutions</option>
-                  </select>
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Tell us about your business needs and budget"
-                    rows={4}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  ></textarea>
-                </div>
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Get Pricing Consultation
-                </motion.button>
-              </form>
-            </motion.div>
-          </div>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                <div className="text-white font-medium">{contactInfo.phone}</div>
+              </div>
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <Mail className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                <div className="text-white font-medium">{contactInfo.email}</div>
+              </div>
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <MapPin className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                <div className="text-white font-medium text-sm">{contactInfo.address}</div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href={`mailto:${contactInfo.email}`}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Free Quote
+              </a>
+              <a 
+                href={contactInfo.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+              >
+                Visit Website
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
