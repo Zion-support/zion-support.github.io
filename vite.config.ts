@@ -16,17 +16,21 @@ export default defineConfig({
       output: {
         inlineDynamicImports: false,
       },
-      external: [],
+      external: [], 
     },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src')
     }
   },
   server: {
-    hmr: {
-      clientPort: 443
-    }
-  }
+    port: 3000,
+    host: true,
+    open: true,
+    cors: true,
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  },
 })
