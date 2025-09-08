@@ -1,13 +1,28 @@
+import { checkOnline, safeFetch } from '@/integrations/supabase/client';
+import { afterEach, vi } from 'vitest';
 
-    writable: true});
-  const result = await client.checkOnline();
-  expect(result).toBe(false)});
-// Test that checkOnline returns false when navigator is null;
-it('
-  'checkOnline returns false when navigator is null', async () => {
-  const original = (global as any).navigator;
+let originalNavigator: Navigator | undefined;
 
-  const result = await client.checkOnline();
+afterEach(() => {
+  vi.restoreAllMocks();
+  if (originalNavigator) {
+    Object.defineProperty(globalThis, 'navigator', {
+      value: originalNavigator,
+      writable: true,
+    });
+  } else {
+    delete (globalThis as any).navigator;
+  }
+});
+
+// Test that checkOnline returns false when navigator is offline
+it('checkOnline returns false when navigator is offline', async () => {
+  originalNavigator = globalThis.navigator;
+  Object.defineProperty(globalThis, 'navigator', {
+    value: { onLine: false },
+    writable: true,
+  });
+  const result = await checkOnline();
   expect(result).toBe(false);
   Object.defineProperty(global'navigator { value: original, configurable: true, writable: true })});
 // Test that safeFetch throws custom error when fetch fails;
@@ -25,3 +40,17 @@ it('
 
 
 
+// Test that safeFetch throws custom error when fetch fails
+it('safeFetch throws when fetch rejects', async () => {
+  originalNavigator = globalThis.navigator;
+  Object.defineProperty(globalThis, 'navigator', {
+    value: { onLine: true },
+    writable: true,
+  });
+  // ensure the online check succeeds so safeFetch proceeds to call fetch
+  const fetchSpy = vi.spyOn(globalThis, 'fetch');
+  fetchSpy.mockResolvedValueOnce(new Response());
+  // subsequent fetch call for the actual request will reject
+  fetchSpy.mockRejectedValueOnce(new Error('Network error'));
+  await expect(safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
+});
