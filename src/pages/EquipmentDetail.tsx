@@ -244,14 +244,16 @@ export default function EquipmentDetail() {
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      const next = encodeURIComponent(`/checkout?sku=${id}`);
-      navigate(`/login?next=${next}`);
+      if (equipmentId) {
+        sessionStorage.setItem('intendedProduct', equipmentId);
+      }
+      navigate('/login?next=/checkout');
       return;
     }
 
     setIsAdding(true);
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
