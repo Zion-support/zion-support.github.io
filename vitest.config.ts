@@ -34,6 +34,7 @@ export default defineConfig({
       'tests/storybook/**'
     ]
   }
+<<<<<<< HEAD
 });
 =======
 import { defineConfig } from 'vitest/config'
@@ -98,4 +99,7 @@ export default defineConfig({
     }
   }
 })
+>>>>>>> origin/main
+=======
+});
 >>>>>>> origin/main

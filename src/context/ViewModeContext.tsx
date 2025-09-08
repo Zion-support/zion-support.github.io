@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type ViewMode = 'grid' | 'list' | 'card';
 
 export interface ViewModeContextType {
+=======
+import React, { createContext, useContext, useState } from 'react';
+
+type ViewMode = 'grid' | 'list' | 'card';
+
+interface ViewModeContextType {
+>>>>>>> origin/main
   viewMode: ViewMode;
   setViewMode: (mode: ViewMode) => void;
   toggleViewMode: () => void;
@@ -10,12 +18,35 @@ export interface ViewModeContextType {
 
 const ViewModeContext = createContext<ViewModeContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 export const useViewMode = (): ViewModeContextType => {
+=======
+export const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [viewMode, setViewMode] = useState<ViewMode>('grid');
+
+  const toggleViewMode = () => {
+    setViewMode(prev => prev === 'grid' ? 'list' : 'grid');
+  };
+
+  return (
+    <ViewModeContext.Provider value={{ 
+      viewMode, 
+      setViewMode, 
+      toggleViewMode 
+    }}>
+      {children}
+    </ViewModeContext.Provider>
+  );
+};
+
+export const useViewMode = () => {
+>>>>>>> origin/main
   const context = useContext(ViewModeContext);
   if (!context) {
     throw new Error('useViewMode must be used within a ViewModeProvider');
   }
   return context;
+<<<<<<< HEAD
 };
 
 interface ViewModeProviderProps {
@@ -56,4 +87,6 @@ export const ViewModeProvider: React.FC<ViewModeProviderProps> = ({ children }) 
       {children}
     </ViewModeContext.Provider>
   );
+=======
+>>>>>>> origin/main
 };

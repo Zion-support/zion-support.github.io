@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
@@ -20,16 +21,73 @@ export interface NotificationContextType {
   error: (title: string, message: string, duration?: number) => void;
   warning: (title: string, message: string, duration?: number) => void;
   info: (title: string, message: string, duration?: number) => void;
+=======
+import React, { createContext, useContext, useState } from 'react';
+
+interface Notification {
+  id: string;
+  message: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  duration?: number;
+}
+
+interface NotificationContextType {
+  notifications: Notification[];
+  addNotification: (notification: Omit<Notification, 'id'>) => void;
+  removeNotification: (id: string) => void;
+  clearAll: () => void;
+>>>>>>> origin/main
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 export const useNotifications = (): NotificationContextType => {
+=======
+export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+
+  const addNotification = (notification: Omit<Notification, 'id'>) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    const newNotification = { ...notification, id };
+    setNotifications(prev => [...prev, newNotification]);
+
+    if (notification.duration !== 0) {
+      setTimeout(() => {
+        removeNotification(id);
+      }, notification.duration || 5000);
+    }
+>>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
+  };
+
+  const removeNotification = (id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+  };
+
+  const clearAll = () => {
+    setNotifications([]);
+  };
+
+  return (
+    <NotificationContext.Provider value={{ 
+      notifications, 
+      addNotification, 
+      removeNotification, 
+      clearAll 
+    }}>
+      {children}
+    </NotificationContext.Provider>
+  );
+};
+
+export const useNotifications = () => {
+>>>>>>> origin/main
   const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
+<<<<<<< HEAD
 };
 
 interface NotificationProviderProps {
@@ -96,4 +154,6 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
       {children}
     </NotificationContext.Provider>
   );
+=======
+>>>>>>> origin/main
 };

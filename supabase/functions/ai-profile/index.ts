@@ -212,7 +212,11 @@ async function callOpenAI(payload: {
   try {
     parsed = JSON.parse(content);
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (e) {
+=======
+  } catch {
+>>>>>>> origin/main
 =======
   } catch {
 >>>>>>> origin/main

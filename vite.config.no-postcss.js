@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+>>>>>>> origin/main
 =======
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -10,12 +15,19 @@ export default defineConfig({
   plugins: [react()],
   build: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     outDir: "dist",
   },
   css: {
     postcss: false
   }
 });
+=======
+    outDir: 'dist',
+    sourcemap: false,
+  },
+})
+>>>>>>> origin/main
 =======
     outDir: 'dist',
     sourcemap: false,

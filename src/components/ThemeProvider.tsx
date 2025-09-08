@@ -1,7 +1,10 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 type Theme = 'light' | 'dark' | 'system';
 
+=======
+>>>>>>> origin/main
 export type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextValue {

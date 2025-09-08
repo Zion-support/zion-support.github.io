@@ -1,21 +1,34 @@
+<<<<<<< HEAD
 import React, { memo, Suspense, lazy, ComponentType, ReactNode } from 'react';
 import { useLazyComponent } from '../hooks/useLazyLoad';
+=======
+import React, { memo, Suspense, ReactNode } from 'react';
+>>>>>>> origin/main
 
 interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
   enableLazyLoading?: boolean;
+<<<<<<< HEAD
   lazyImport?: () => Promise<{ default: ComponentType<any> }>;
+=======
+  lazyImport?: () => Promise<{ default: React.ComponentType<any> }>;
+>>>>>>> origin/main
   memoize?: boolean;
   className?: string;
 }
 
 /**
+<<<<<<< HEAD
  * Performance wrapper component that provides lazy loading and memoization
+=======
+ * Performance wrapper component that provides basic performance optimizations
+>>>>>>> origin/main
  */
 const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   children,
   fallback = <div>Loading...</div>,
+<<<<<<< HEAD
   enableLazyLoading = false,
   lazyImport,
   memoize = true,
@@ -99,3 +112,17 @@ export const useMemoizedValue = <T,>(
 ): T => {
   return React.useMemo(factory, deps);
 };
+=======
+  className,
+}) => {
+  return (
+    <div className={className}>
+      <Suspense fallback={fallback}>
+        {children}
+      </Suspense>
+    </div>
+  );
+};
+
+export default memo(PerformanceWrapper);
+>>>>>>> origin/main

@@ -4,7 +4,11 @@ import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ForumCategories from "@/components/community/ForumCategories";
+=======
+// import ForumCategories from "@/components/community/ForumCategories";
+>>>>>>> origin/main
 =======
 // import ForumCategories from "@/components/community/ForumCategories";
 >>>>>>> origin/main
@@ -124,7 +128,11 @@ export default function CommunityPage() {
         </div>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+=======
+        {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+>>>>>>> origin/main
 =======
         {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
 >>>>>>> origin/main
@@ -136,7 +144,13 @@ export default function CommunityPage() {
           
           <TabsContent value="categories">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <ForumCategories />
+=======
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">Forum categories coming soon...</p>
+            </div>
+>>>>>>> origin/main
 =======
             <div className="text-center py-8">
               <p className="text-muted-foreground">Forum categories coming soon...</p>
@@ -160,8 +174,11 @@ export default function CommunityPage() {
             </div>
           </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </Tabs>
 =======
+=======
+>>>>>>> origin/main
         </Tabs> */}
         
         <div className="mb-8">
@@ -208,6 +225,9 @@ export default function CommunityPage() {
             </div>
           )}
         </div>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       </div>
     </>

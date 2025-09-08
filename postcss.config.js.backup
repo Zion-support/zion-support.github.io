@@ -1,7 +1,11 @@
 module.exports = {
   plugins: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     tailwindcss: {},
+=======
+    '@tailwindcss/postcss': {},
+>>>>>>> origin/main
 =======
     '@tailwindcss/postcss': {},
 >>>>>>> origin/main

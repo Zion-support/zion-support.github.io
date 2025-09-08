@@ -76,7 +76,11 @@ Important Constraints: ${optimizationInstructions}
     // The model gpt-3.5-turbo-1106 with response_format: { type: 'json_object' } should return a valid JSON string.
     return JSON.parse(content);
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (e) {
+=======
+  } catch {
+>>>>>>> origin/main
 =======
   } catch {
 >>>>>>> origin/main

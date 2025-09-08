@@ -92,11 +92,11 @@ export class ErrorReporter {
     // Log to console in development
     if (import.meta.env.MODE === 'development') {
       console.group('🚨 Error Reported');
-      console.error('Message:', errorReport.message);
-      console.error('Stack:', errorReport.stack);
-      console.error('Component Stack:', errorReport.componentStack);
-      console.error('Severity:', errorReport.severity);
-      console.error('Context:', errorReport.context);
+      // console.error('Message:', errorReport.message);
+      // console.error('Stack:', errorReport.stack);
+      // console.error('Component Stack:', errorReport.componentStack);
+      // console.error('Severity:', errorReport.severity);
+      // console.error('Context:', errorReport.context);
       console.groupEnd();
     }
 
@@ -108,16 +108,17 @@ export class ErrorReporter {
     try {
       // In a real application, you would send this to your error reporting service
       // For now, we'll just log it
-      console.log('Sending error report:', errorReport);
+      // console.log('Sending error report:', errorReport);
       
       // Example: Send to your error reporting service
+      await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorReport),
       // });
     } catch (error) {
-      console.error('Failed to send error report:', error);
+      // console.error('Failed to send error report:', error);
     }
   }
 

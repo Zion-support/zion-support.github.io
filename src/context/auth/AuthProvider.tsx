@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export interface User {
@@ -20,16 +21,66 @@ export interface AuthContextType extends AuthState {
   logout: () => Promise<void>;
   register: (email: string, password: string, name?: string) => Promise<void>;
   clearError: () => void;
+=======
+import React, { createContext, useContext, useState } from 'react';
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+}
+
+interface AuthContextType {
+  user: User | null;
+  isAuthenticated: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  loading: boolean;
+>>>>>>> origin/main
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 export const useAuth = (): AuthContextType => {
+=======
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const login = async (email: string, password: string) => {
+    setLoading(true);
+    // Simulate login
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setUser({ id: '1', email, name: 'User' });
+    setLoading(false);
+  };
+
+  const logout = () => {
+    setUser(null);
+  };
+
+  return (
+    <AuthContext.Provider value={{ 
+      user, 
+      isAuthenticated: !!user, 
+      login, 
+      logout, 
+      loading 
+    }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+>>>>>>> origin/main
   const context = useContext(AuthContext);
   if (!context) {
     throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
+<<<<<<< HEAD
 };
 
 interface AuthProviderProps {
@@ -179,4 +230,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
+=======
+>>>>>>> origin/main
 };

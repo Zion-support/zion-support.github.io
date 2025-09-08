@@ -1,5 +1,6 @@
 import { useState } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -15,6 +16,24 @@ import { ChatAssistant } from "@/components/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
 import api from '@/lib/api';
+=======
+import { motion } from "framer-motion";
+// import { Header } from "@/components/Header";
+// import { Footer } from "@/components/Footer";
+// import { SEO } from "@/components/SEO";
+// import { GradientHeading } from "@/components/GradientHeading";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Card } from "@/components/ui/card";
+// import { toast } from "@/components/ui/use-toast";
+// import { apiClient } from "@/utils/apiClient";
+// import z from "zod";
+// import { ChatAssistant } from "@/components/ChatAssistant";
+import { Mail, MessageSquare, MapPin, Phone, Clock, CheckCircle } from "lucide-react";
+import { AppLayout } from "@/layout/AppLayout";
+// import api from '@/lib/api';
+>>>>>>> origin/main
 =======
 import { motion } from "framer-motion";
 // import { Header } from "@/components/Header";
@@ -100,18 +119,24 @@ export default function Contact() {
     } catch (error) {
       console.error("Error in AI chat:", error);
 <<<<<<< HEAD
+<<<<<<< HEAD
       toast({
         title: "Chat Error",
         description: "There was an error communicating with our AI assistant. Please try again.",
         variant: "destructive"
       });
 =======
+=======
+>>>>>>> origin/main
       // toast({
       //   title: "Chat Error",
       //   description: "There was an error communicating with our AI assistant. Please try again.",
       //   variant: "destructive"
       // });
       console.error("Chat Error: There was an error communicating with our AI assistant. Please try again.");
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       return Promise.resolve();
     }

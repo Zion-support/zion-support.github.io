@@ -89,7 +89,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main
 =======
 }
 >>>>>>> origin/main

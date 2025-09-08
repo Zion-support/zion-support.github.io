@@ -52,7 +52,11 @@ async function ghRequest(path, method = 'GET', body) {
 async function getOpenPRs(owner, repo) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open`);
+=======
+    const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
+>>>>>>> origin/main
 =======
     const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
 >>>>>>> origin/main
@@ -64,7 +68,10 @@ async function getOpenPRs(owner, repo) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 async function readyForReview(owner, repo, number) {
   try {
     await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, 'POST');
@@ -83,6 +90,9 @@ async function updateBranch(owner, repo, number) {
   }
 }
 
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 async function mergePR(owner, repo, number) {
   try {
@@ -119,6 +129,7 @@ async function main() {
       
       if (pr.draft) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         console.log('   ⏸️  Skipping draft PR');
         continue;
       }
@@ -131,11 +142,20 @@ async function main() {
         console.log(`   📝 Draft -> ready_for_review: ${readied ? 'ok' : 'not permitted'}`);
       }
       
+=======
+        const readied = await readyForReview(owner, repo, pr.number);
+        console.log(`   📝 Draft -> ready_for_review: ${readied ? 'ok' : 'not permitted'}`);
+      }
+      
+>>>>>>> origin/main
       // Ask GitHub to update the PR branch before merging
       const updated = await updateBranch(owner, repo, pr.number);
       if (updated) {
         console.log('   🔄 Requested update-branch');
         await new Promise(r => setTimeout(r, 2500));
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       }
       

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import: { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from 'react-router-dom';import: { Link } from;';
   'react-router-dom';';
 import: {
@@ -234,6 +235,10 @@ const: Footer: React.FC: = () => {
   )
 
 
+=======
+export {};
+module.exports = {};
+>>>>>>> origin/main
 =======
 export {};
 module.exports = {};

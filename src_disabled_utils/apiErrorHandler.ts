@@ -1,6 +1,5 @@
 export function showApiError(error: unknown): void {
-  if (process.env.NODE_ENV !== 'production') {
-    // eslint-disable-next-line no-console
+  if (import.meta.env.DEV) {
     console.error('[API Error]', error);
   }
 }

@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
     "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/12555",
@@ -5474,4 +5475,7 @@
     "auto_merge": null,
     "active_lock_reason": null
   }
+=======
+
+>>>>>>> origin/main
 ]

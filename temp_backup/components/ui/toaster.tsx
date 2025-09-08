@@ -8,6 +8,10 @@ export function HotToasts() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 =======
 
 >>>>>>> origin/main

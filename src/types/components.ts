@@ -17,8 +17,13 @@ export interface LoadingSpinnerProps extends BaseComponentProps {
 
 // Feature card props
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
   id: number;
+=======
+export interface FeatureCardProps extends BaseComponentProps {
+  id: string | number;
+>>>>>>> origin/main
 =======
 export interface FeatureCardProps extends BaseComponentProps {
   id: string | number;
@@ -82,7 +87,7 @@ export interface CardProps extends BaseComponentProps {
 export interface FormProps extends BaseComponentProps {
   onSubmit: (data: Record<string, any>) => void;
   initialValues?: Record<string, any>;
-  validationSchema?: any;
+  validationSchema?: unknown;
   loading?: boolean;
 }
 
@@ -104,7 +109,7 @@ export interface TableProps<T = any> extends BaseComponentProps {
 export interface TableColumn<T = any> {
   key: keyof T | string;
   title: string;
-  render?: (value: any, row: T) => ReactNode;
+  render?: (value: unknown, row: T) => ReactNode;
   sortable?: boolean;
   width?: string | number;
   align?: 'left' | 'center' | 'right';

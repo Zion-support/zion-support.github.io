@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
 const fs = require("fs");
@@ -51,6 +54,9 @@ class AdvancedSourceFixer {
         await this && this.fixFile(fullPath);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
       }
@@ -273,8 +279,12 @@ class AdvancedSourceFixer {}
       /'from' expected/,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       /', ' expected/,      /';' expected/,
 <<<<<<< HEAD
+=======
+      /', ' expected/,      /';' expected/,
+>>>>>>> origin/main
 =======
       /', ' expected/,      /';' expected/,
 >>>>>>> origin/main

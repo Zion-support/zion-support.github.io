@@ -44,10 +44,10 @@ const WalletContext = createContext<WalletContextType | undefined>(undefined);
 const projectId = 'YOUR_PROJECT_ID';
 
 const metadata = {
-  name: 'Zion', // Replace with your project's name
-  description: 'Zion Finance Platform', // Replace with your project's description
-  url: typeof window !== 'undefined' ? window.location.origin : 'https://example.com', // Dynamic URL or placeholder
-  icons: ['https://avatars.githubusercontent.com/u/37784886'], // Replace with your project's icon URLs
+  name: 'Zion',
+  description: 'Zion Finance Platform',
+  url: typeof window !== 'undefined' ? window.location.origin : 'https://example.com',
+  icons: ['https://avatars.githubusercontent.com/u/37784886'],
 };
 
 const ZION_CHAIN_MAP: Record<number, any> = {
@@ -142,10 +142,10 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         await appKit.open(); // Opens the modal
         // State update will be handled by the subscription
       } catch (error) {
-        console.error('Error connecting wallet:', error);
+        // console.error('Error connecting wallet:', error);
       }
     } else {
-        console.error('AppKit not initialized');
+        // console.error('AppKit not initialized');
     }
   }, [appKit]);
 
@@ -155,7 +155,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         await appKit.disconnect();
         // State update will be handled by the subscription
       } catch (error) {
-        console.error('Error disconnecting wallet:', error);
+        // console.error('Error disconnecting wallet:', error);
       }
     }
   }, [appKit]);

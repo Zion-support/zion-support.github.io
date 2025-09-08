@@ -66,7 +66,11 @@ export default function Signup() {
       termsAccepted: false,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
   }) as UseFormReturn<SignupFormValues>;
+=======
+  });
+>>>>>>> origin/main
 =======
   });
 >>>>>>> origin/main

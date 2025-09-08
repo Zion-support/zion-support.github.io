@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main, develop ]
   pull_request:
+<<<<<<< HEAD
     branches: [ main, develop ]
 
 jobs:
@@ -15,6 +16,14 @@ jobs:
       matrix:
         node-version: [20.x]
     
+=======
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+>>>>>>> origin/main
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -22,12 +31,17 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
+<<<<<<< HEAD
         node-version: ${{ matrix.node-version }}
+=======
+        node-version: '20'
+>>>>>>> origin/main
         cache: 'npm'
         
     - name: Install dependencies
       run: npm ci
       
+<<<<<<< HEAD
     - name: Run type checking
       run: npm run type-check
       
@@ -65,18 +79,29 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
+=======
+    - name: Run linting
+      run: npm run lint
+      
+    - name: Run tests
+      run: npm run test
+>>>>>>> origin/main
       
     - name: Build application
       run: npm run build
       
+<<<<<<< HEAD
     - name: Analyze bundle
       run: npm run analyze
       
+=======
+>>>>>>> origin/main
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-files
         path: dist/
+<<<<<<< HEAD
         retention-days: 7
 
   security:
@@ -110,6 +135,17 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
+=======
+        
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+>>>>>>> origin/main
       
     - name: Download build artifacts
       uses: actions/download-artifact@v4
@@ -117,6 +153,7 @@ jobs:
         name: build-files
         path: dist/
         
+<<<<<<< HEAD
     - name: Run performance tests
       run: npm run test:performance
       
@@ -151,11 +188,16 @@ jobs:
       
     - name: Deploy to Netlify Staging
       uses: nwtgck/actions-netlify@v2.0
+=======
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v3.0
+>>>>>>> origin/main
       with:
         publish-dir: './dist'
         production-branch: main
         github-token: ${{ secrets.GITHUB_TOKEN }}
         deploy-message: "Deploy from GitHub Actions"
+<<<<<<< HEAD
         enable-pull-request-comment: false
         enable-commit-comment: true
         overwrites-pull-request-comment: true
@@ -213,3 +255,8 @@ jobs:
         channel: '#deployments'
         webhook_url: ${{ secrets.SLACK_WEBHOOK }}
       if: always()
+=======
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+>>>>>>> origin/main

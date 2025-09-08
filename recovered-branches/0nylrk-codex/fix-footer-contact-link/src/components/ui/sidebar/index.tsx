@@ -1,15 +1,15 @@
-import * as React from &quot;react & quot;
+import * as React from "react & quot;
 ;
 // Export all components from the sidebar subcomponents;
-export * from &quot;./sidebar - context & quot;
-export * from &quot;./sidebar - trigger & quot;
-export * from &quot;./sidebar - main & quot;
-export * from &quot;./sidebar - content & quot;
-export * from &quot;./sidebar - group & quot;
-export * from &quot;./sidebar - menu & quot;
+export * from "./sidebar - context & quot;
+export * from "./sidebar - trigger & quot;
+export * from "./sidebar - main & quot;
+export * from "./sidebar - content & quot;
+export * from "./sidebar - group & quot;
+export * from "./sidebar - menu & quot;
 ;
 // Also export types;
-export type { SafeRef } from &quot;../sidebar.types & quot;
+export type { SafeRef } from "../sidebar.types & quot;
 ;
 
 // Export all components from the sidebar subcomponents

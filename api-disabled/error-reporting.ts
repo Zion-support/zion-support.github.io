@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
     // Validate required fields
     if (!errorReport.error || !errorReport.error.message) {
@@ -158,6 +159,9 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
 // Get error reports (for admin dashboard)
 export async function getErrorReports() {
   return errorReports}
+=======
+module.exports = {};
+>>>>>>> origin/main
 =======
 module.exports = {};
 >>>>>>> origin/main

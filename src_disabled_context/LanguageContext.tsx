@@ -1,14 +1,21 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { _createContext, _useContext, _useState, _useEffect, _ReactNode } from 'react';
+import { _useTranslation } from 'react-i18next';
 
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 
 export interface LanguageContextType {
-  currentLanguage: SupportedLanguage;
+  _currentLanguage: SupportedLanguage;
   changeLanguage: (lang: SupportedLanguage) => Promise<void>;
   isRTL: boolean;
-  direction: 'ltr' | 'rtl';
+  supportedLanguages: { code: SupportedLanguage; name: string; flag: string }[];
 }
+
+const supportedLanguages = [
+  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
+  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
+  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' },
+];
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -22,32 +29,51 @@ export const useLanguage = (): LanguageContextType => {
 
 interface LanguageProviderProps {
   children: ReactNode;
+  authState?: {
+    isAuthenticated: boolean;
+    user: { id?: string } | null;
+  };
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const { i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>('en');
-
-  const isRTL = currentLanguage === 'ar';
-  const direction = isRTL ? 'rtl' : 'ltr';
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
+  children, 
+  authState = { isAuthenticated: false, _user: null } 
+}) => {
+  const { _i18n } = useTranslation();
+  const { _isAuthenticated, _user } = authState;
+  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
+    (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
+  );
+  const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl');
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('preferred-language') as SupportedLanguage;
-    if (savedLanguage && ['en', 'es', 'pt', 'ar'].includes(savedLanguage)) {
-      setCurrentLanguage(savedLanguage);
-      i18n.changeLanguage(savedLanguage);
+    // Set initial language from localStorage or browser
+    const savedLang = localStorage.getItem('zion_language') as SupportedLanguage;
+    if (savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
+      i18n.changeLanguage(savedLang);
+      setCurrentLanguage(savedLang);
     }
   }, [i18n]);
 
-  const changeLanguage = async (lang: SupportedLanguage) => {
+  // Update RTL status when language changes
+  useEffect(() => {
+    setIsRTL(i18n.dir() === 'rtl');
+    document.documentElement.dir = i18n.dir();
+    document.documentElement.lang = currentLanguage;
+
+    // Add RTL class for Tailwind
+    if (i18n.dir() === 'rtl') {
+      document.documentElement.classList.add('rtl');
+    } else {
+      document.documentElement.classList.remove('rtl');
+    }
+  }, [currentLanguage, i18n]);
+
+  const changeLanguage = async (_lang: SupportedLanguage) => {
     try {
       await i18n.changeLanguage(lang);
       setCurrentLanguage(lang);
-      localStorage.setItem('preferred-language', lang);
-      
-      // Update document direction for RTL languages
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.documentElement.lang = lang;
+      localStorage.setItem('zion_language', lang);
     } catch (error) {
       console.error('Failed to change language:', error);
     }
@@ -59,7 +85,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         currentLanguage,
         changeLanguage,
         isRTL,
-        direction,
+        supportedLanguages,
       }}
     >
       {children}

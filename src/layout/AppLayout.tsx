@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface AppConfig {
   name: string;
@@ -41,3 +42,24 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ config, children }) => {
 };
 
 export default AppLayout;
+=======
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+interface AppLayoutProps {
+  children: React.ReactNode;
+  hideFooter?: boolean;
+}
+
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+  return (
+    <div className="flex flex-col min-h-screen bg-background">
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      {!hideFooter && <Footer />}
+    </div>
+  );
+}
+>>>>>>> origin/main

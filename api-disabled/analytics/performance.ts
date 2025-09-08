@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
 ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
@@ -27,6 +28,9 @@ module.exports = {};
     console.error('Error processing performance data:', error);
     res.status(500).json({ error: 'Internal server error' })}
 }
+=======
+module.exports = {};
+>>>>>>> origin/main
 =======
 module.exports = {};
 >>>>>>> origin/main

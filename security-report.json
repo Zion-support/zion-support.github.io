@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 {
   "timestamp": "2025-09-04T21:58:25.812Z",
   "issues": [],
@@ -32,5 +35,9 @@
       "message": "No sensitive environment variables found"
     }
   }
+<<<<<<< HEAD
+}
+>>>>>>> origin/main
+=======
 }
 >>>>>>> origin/main

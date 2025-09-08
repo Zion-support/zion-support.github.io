@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
@@ -18,6 +19,11 @@ import {
 // import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
+=======
+// import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+>>>>>>> origin/main
 // import { getStripe } from '@/utils/getStripe';
 // import {
 //   Form,
@@ -27,6 +33,9 @@ import { useNavigate } from 'react-router-dom';
 //   FormControl,
 //   FormMessage,
 // } from '@/components/ui/form';
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
 interface CartItem {
@@ -72,6 +81,7 @@ export default function CheckoutPage() {
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
 <<<<<<< HEAD
+<<<<<<< HEAD
       const stripe = await getStripe();
       if (stripe && result.clientSecret) {
         const payment = await stripe.confirmCardPayment(result.clientSecret, {
@@ -85,6 +95,8 @@ export default function CheckoutPage() {
         navigate(`/orders/${result.id}`);
       }
 =======
+=======
+>>>>>>> origin/main
       // const stripe = await getStripe();
       // const stripe = null; // Temporary fallback
       // if (stripe && result.clientSecret) {
@@ -101,6 +113,9 @@ export default function CheckoutPage() {
       // Temporary fallback - just clear cart and show success
       safeStorage.removeItem('cart');
       navigate('/orders/success');
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     } catch (err) {
       console.error('Payment failed', err);
@@ -112,7 +127,11 @@ export default function CheckoutPage() {
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <div className="grid gap-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Form {...form}>
+=======
+        {/* <Form {...form}>
+>>>>>>> origin/main
 =======
         {/* <Form {...form}>
 >>>>>>> origin/main
@@ -168,11 +187,16 @@ export default function CheckoutPage() {
                 <span>${subtotal.toFixed(2)}</span>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button className="w-full" type="submit">
+=======
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
+>>>>>>> origin/main
                 Pay with Stripe (test)
-              </Button>
+              </button>
             </div>
           </form>
+<<<<<<< HEAD
         </Form>
 =======
               <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
@@ -180,6 +204,8 @@ export default function CheckoutPage() {
               </button>
             </div>
           </form>
+=======
+>>>>>>> origin/main
         </Form> */}
         
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -213,6 +239,9 @@ export default function CheckoutPage() {
             </button>
           </div>
         </form>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       </div>
     </div>

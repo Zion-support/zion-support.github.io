@@ -8,7 +8,11 @@ import { Input } from "@/components/ui/input"; // Added
 import { Menu, X, Search } from 'lucide-react'; // Added Search
 import { MobileMenu } from '@/components/header/MobileMenu';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useIsMobile } from '@/hooks/use-mobile';
+=======
+// import { useIsMobile } from '@/hooks/use-mobile';
+>>>>>>> origin/main
 =======
 // import { useIsMobile } from '@/hooks/use-mobile';
 >>>>>>> origin/main
@@ -17,7 +21,12 @@ import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isMobile = useIsMobile();
+=======
+  // const isMobile = useIsMobile();
+  const isMobile = false; // Temporary fallback
+>>>>>>> origin/main
 =======
   // const isMobile = useIsMobile();
   const isMobile = false; // Temporary fallback

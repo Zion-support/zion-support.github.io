@@ -87,6 +87,7 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default HireNowCTA;import React, { useState } from 'react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -113,10 +114,18 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 export default HireNowCTA;        e.preventDefault();        if (onHire) {
             onHire(formData);
         }
+=======
+export default HireNowCTA;        e.preventDefault();        if (onHire) {
+            onHire(formData);
+        }
+>>>>>>> origin/main
         // Reset form and close
         setFormData({
             projectDescription: '',
             budget: '',
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
             startDate: '',
 :src/components/profile/HireNowCTA.jsx
@@ -125,6 +134,7 @@ export default HireNowCTA;        e.preventDefault();        if (onHire) {
         setIsFormOpen(false)};
             message: ''
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
         setIsFormOpen(false)
 };    const handleChange = (e) => {
@@ -196,6 +206,10 @@ export default HireNowCTA;        e.preventDefault();        if (onHire) {
 
     </Card>);
 }
+=======
+        setIsFormOpen(false);
+    };
+>>>>>>> origin/main
 =======
         setIsFormOpen(false);
     };

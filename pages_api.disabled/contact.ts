@@ -34,7 +34,7 @@ export default async function handler(
       return res.status(400).json({)
         'message': 'Invalid email format'})}
     // 'TODO': Integrate with email service (SendGrid, AWS SES, etc.)''
-    // For now, we&apos;ll just log the data and return success
+    // For now, we'll just log the data and return success
     console.log('Contact form 'submission': ', {
       ...formData,)
       'timestamp': new Date().toISOString(),''

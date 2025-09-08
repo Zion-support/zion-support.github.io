@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
   const servicePages = [
     '/services/ai-model-development-chat',
@@ -55,6 +56,9 @@ export {};
   res.setHeader('Content-Type', 'text/xml');
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400');
   res.status(200).send(sitemap)}
+=======
+module.exports = {};
+>>>>>>> origin/main
 =======
 module.exports = {};
 >>>>>>> origin/main

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
         </span>
 
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>
@@ -39,6 +40,8 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 }
 
 =======
+=======
+>>>>>>> origin/main
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
@@ -61,5 +64,9 @@ export function Logo({ customLogo, customColor }) {}
         </span>;
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
+<<<<<<< HEAD
+    </Link>;
+>>>>>>> origin/main
+=======
     </Link>;
 >>>>>>> origin/main

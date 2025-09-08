@@ -5,9 +5,9 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
   apiVersion: '2023-10-16'
 });
-
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL') || '',
@@ -32,6 +32,12 @@ serve(async (req) => {
 =======
     const signature = req.headers.get('stripe-signature') || '';
 >>>>>>> origin/main
+=======
+serve(async req => {
+  if (req.method === 'POST') {
+    const body = await req.text();
+    const signature = req.headers.get('stripe-signature') || '';
+>>>>>>> origin/main
 
     let event;
     try {
@@ -44,11 +50,20 @@ serve(async (req) => {
       const session = event.data.object as Stripe.Checkout.Session;
       const orderId = session.metadata?.orderId;
       if (orderId) {
+<<<<<<< HEAD
         const supabase = createClient(
+          Deno.env.get('SUPABASE_URL') || '',
+          Deno.env.get('SUPABASE_ANON_KEY') || ''
+        );
+        await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
+=======
+        // Use service role key for this operation
+        const supabaseAdmin = createClient(
           Deno.env.get('SUPABASE_URL') || '',
           Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
         );
-        await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
+        await supabaseAdmin.from("orders").update({ status: "paid" }).eq("id", orderId);
+>>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
       }
     }
 

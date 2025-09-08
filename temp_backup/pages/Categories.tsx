@@ -2,9 +2,15 @@
 import { useEffect, useState } from "react";
 import { CategoriesSection } from "@/components/CategoriesSection";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import LoaderOverlay from "@/components/LoaderOverlay"; // Assuming a loading spinner component exists
 import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+=======
+// import { GradientHeading } from "@/components/GradientHeading";
+// import LoaderOverlay from "@/components/LoaderOverlay"; // Assuming a loading spinner component exists
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+>>>>>>> origin/main
 =======
 // import { GradientHeading } from "@/components/GradientHeading";
 // import LoaderOverlay from "@/components/LoaderOverlay"; // Assuming a loading spinner component exists
@@ -54,16 +60,24 @@ export default function Categories() {
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
               Browse Categories
             </GradientHeading>
 =======
             {/* <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
               Browse Categories
+=======
+            {/* <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
+              Browse Categories
+>>>>>>> origin/main
             </GradientHeading> */}
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Browse Categories
             </h1>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               Explore our extensive range of AI services and products organized by category.
@@ -71,6 +85,7 @@ export default function Categories() {
             </p>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load content. Please try again later.</p>}>
             {isLoading && (
@@ -80,10 +95,18 @@ export default function Categories() {
           {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load content. Please try again later.</p>}> */}
             {isLoading && (
               <div className="flex justify-center items-center h-64">
+=======
+          {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load content. Please try again later.</p>}> */}
+            {isLoading && (
+              <div className="flex justify-center items-center h-64">
+>>>>>>> origin/main
                 {/* <LoaderOverlay /> */}
                 <div className="text-center py-8">
                   <p className="text-muted-foreground">Loading categories...</p>
                 </div>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
               </div>
             )}
@@ -101,7 +124,11 @@ export default function Categories() {
               <CategoriesSection showTitle={false} categories={categories} />
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </ErrorBoundary>
+=======
+          {/* </ErrorBoundary> */}
+>>>>>>> origin/main
 =======
           {/* </ErrorBoundary> */}
 >>>>>>> origin/main

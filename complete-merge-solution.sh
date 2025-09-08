@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Complete Merge Conflict Resolution and PR Merge Solution"
-echo "=========================================================="
+echo "=="
 echo ""
 
 # Function to resolve merge conflicts in a file
@@ -10,14 +10,14 @@ resolve_conflicts() {
     if [[ -f "$file" ]]; then
         echo "📝 Resolving conflicts in: $file"
         
-        # Keep incoming changes (after =======)
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
+        # Keep incoming changes (after )
+        sed -i '//d' "$file"
+        sed -i '/
         
         # Clean up any remaining conflict markers
-        sed -i '/<<<<<<< /d' "$file"
-        sed -i '/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
+        sed -i '/
+        sed -i '//d' "$file"
+        sed -i '/
         
         echo "✅ Resolved: $file"
         return 0
@@ -35,7 +35,7 @@ resolve_all_conflicts() {
     local conflicted_files=()
     while IFS= read -r -d '' file; do
         conflicted_files+=("$file")
-    done < <(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.sh" -o -name "*.cjs" -o -name "*.xml" \) -exec grep -l "<<<<<<< HEAD" {} \; -print0 2>/dev/null)
+    done < <(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.sh" -o -name "*.cjs" -o -name "*.xml" \) -exec grep -l "
     
     echo "Found ${#conflicted_files[@]} files with conflicts"
     echo ""
@@ -145,7 +145,7 @@ verify_merge_success() {
     echo ""
     
     # Check for remaining conflicts
-    local remaining_conflicts=$(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.sh" -o -name "*.cjs" -o -name "*.xml" \) -exec grep -l "<<<<<<< HEAD" {} \; 2>/dev/null | wc -l)
+    local remaining_conflicts=$(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.sh" -o -name "*.cjs" -o -name "*.xml" \) -exec grep -l "
     
     if [[ $remaining_conflicts -eq 0 ]]; then
         echo "✅ No remaining merge conflicts found"
