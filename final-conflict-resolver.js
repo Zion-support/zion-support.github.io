@@ -90,6 +90,25 @@ if (remaining.length === 0) {
     console.log('⚠️  Some conflicts remain:');
     remaining.forEach(file => console.log(`  - ${file}`));
 }
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🚀 Final comprehensive merge conflict resolution...\n');
+
+// Function to clean merge conflict markers
+function cleanMergeConflicts(content) {
+  return content
+    .replace(/<<<<<<< HEAD[\s\S]*?=======\n?/g, '')
+    .replace(/>>>>>>> [^\n]+/g, '')
+    .replace(/=======\n?[\s\S]*?>>>>>>> [^\n]+/g, '')
+    .replace(/<<<<<<< [^\n]+/g, '')
+    .replace(/=======/g, '')
+    .replace(/>>>>>>> [^\n]+/g, '')
+    .replace(/\n\n\n+/g, '\n\n'); // Clean up excessive newlines
+}
 
 // Function to process a single file
 function processFile(filePath) {
