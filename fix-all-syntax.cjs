@@ -1,8 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 // Common syntax fixes
@@ -77,17 +74,12 @@ function fixFile(filePath) {
     
     if (fixed !== content) {
       fs.writeFileSync(filePath, fixed);
-=======
-=======
->>>>>>> merged-prs-20250907-203621
 function fixApiFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     // Skip if file already looks good,
   if (content.includes('export default function handler') || content.includes('export default async function handler')) {
       return;
-<<<<<<< HEAD
-=======
     }
     // Common patterns to fix,
   const patterns = [
@@ -125,9 +117,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
       return true;
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
     }
     // Common patterns to fix,
   const patterns = [
@@ -163,9 +152,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }`;
       fs.writeFileSync(filePath, newContent);
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       console.log(`Fixed: ${filePath}`);
-=======
 function fixFile(filePath) {
   try {
   // TODO: Implement
@@ -180,6 +167,10 @@ function fixFile(filePath) {
         pattern: /^[\s\n]*\}[\s\S]*$/,
         replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: API endpoint});\n}`},
       // Fix merge conflict markers;
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+      },
+      // Fix merge conflict markers
+      {
       {
         pattern: /,
   replacement: },
@@ -240,7 +231,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }`;
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     return false;
   } catch (error) {
@@ -248,34 +238,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return false;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  return false;
-}
-
-function processDirectory(dir) {
-  let fixedCount = 0;
-  const files = fs.readdirSync(dir);
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
-      if (fixFile(filePath)) {
-
-<<<<<<< HEAD
-  return fixedCount;
-}
-
-<<<<<<< HEAD
-main();
-=======
-=======
->>>>>>> merged-prs-20250907-203621
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -293,20 +255,7 @@ function walkDir(dir) {
 // Start from the API directory,
   walkDir('/workspace/pages/api');
 console.log('Syntax fixing complete!');
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
 console.log('Starting comprehensive syntax fixes...');
 const apiDir = '/workspace/pages/api';
 const fixedCount = processDirectory(apiDir);
 console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621

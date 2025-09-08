@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
@@ -63,6 +64,7 @@ const nextConfig = {
   },
   
   // Headers for security and performance
+  unoptimized: true,
   async headers() {
     return [
       {

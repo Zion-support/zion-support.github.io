@@ -26,7 +26,15 @@ function fixFile(filePath) {
     // Remove all merge conflict markers
     content = content.replace(/<<<<<<< HEAD\n?/g, '');
     content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    content = content.replace(/    
+    // Fix common syntax issues
+    // Remove all merge conflict markers;
+    content = content.replace(/
+
+
+
+
+    content = content.replace(/[^\n]+\n?/g, '');
     
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
@@ -59,4 +67,5 @@ for (const file of filesToFix) {
   }
 }
 
+`;
 console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);

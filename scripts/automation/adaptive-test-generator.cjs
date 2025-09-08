@@ -1,327 +1,277 @@
 
+=======
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""🧪 Starting Adaptive Test Generator...")
+// Get automation interval from environment variable ("default")
+      "testCoverage"
+      "untestedFiles"
+      "testSuggestions"
+      "testPatterns"
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""🧪 Starting Adaptive Test Generator...")
+// Get automation interval from environment variable ("default")
+console.log("🧪 Starting Adaptive Test Generator...")
+      "testCoverage"
+      "untestedFiles"
+      "testSuggestions"
+      "testPatterns"
+    this.reportDir = path.join(process.cwd(), "test-generation-reports"
+  fs.mkdirSync(this.reportDir, { "recursive"})
+  console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}
+      console.log(`" Adaptive test generation completed successfully"`)
+  console.error(" Adaptive test generation "failed": ")
+  console.log(" Analyzing codebase structure...")
+    const srcPath = path.join(process.cwd(), "src"
+  console.log("⚠ Source directory not found")
+  "components"
+      "utilities"
+      "hooks"
+      "types"
+      "services"
+    const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx")]
+  const content = fs.readFileSync(file, "utf8")
+        relativePath.includes("components/")
+        content.includes("export default")
+        (content.includes("function") && content.includes("props")
+  "path"
+          "name"
+          "hasTests"
+        relativePath.includes("utils/")
+        relativePath.includes("helpers/")
+        content.includes("export function")
+        content.includes("export const")
+  "path"
+          "name"
+          "hasTests": this.hasExistingTests(file)})} else if (content.includes("use") && content.includes("export")
+  "path"
+          "name"
+          "hasTests"
+        relativePath.includes("types/")
+        content.includes("interface")
+        content.includes("type ")
+  "path"
+          "name"
+        relativePath.includes("services/")
+        content.includes("api")
+        content.includes("fetch")
+  "path"
+          "name"
+          "hasTests"
+    console.log(" Codebase structure "analysis": ")
+  "components"
+      "utilities"
+      "hooks"
+      "types"
+      "services"
+    this.testMetrics.testPatterns.set("structure")
+  console.log(" Identifying untested components...")
+    const structure = this.testMetrics.testPatterns.get("structure")
+    this.testMetrics.untestedFiles = ["...untestedComponents.map(comp => ({ "type": "component"", "...comp }))", "...untestedUtilities.map(util => ({ "type": "utility"", "...util }))", "...untestedHooks.map(hook => ({ "type": "hook"", "...hook }))", "...untestedServices.map(service => ({ "type": "service"", "...service }))", ""]
+// console.log( Found ${this.testMetrics.untestedFiles.length} untested files")
+  console.log("⚛ Generating component tests...")
+      file => file.type === "component"
+  "type": "
+            "path"
+            "component"
+            "timestamp"
+  "type": "component"
+            "path"
+            "component"
+            "timestamp"
+// console.log( Generated test for "component")
+  console.log(⚠ Failed to generate test for ${component.name  }:")
+  console.log(" Generating utility tests...")
+      file => file.type === "utility"
+  console.log(" Generating utility tests...")
+      file => file.type === "utility"
+  "type": "utility"
+            "path"
+            "utility"
+            "timestamp": new Date().toISOString()}
+});console.log( Generated test for "utility")
+  console.log("� Generating integration tests...")
+    const integrationTests = ["]
+  "name": "App Navigation"", ""description": "Test navigation between main app routes"", ""content": this.generateIntegrationTest("navigation")", "}", "
+  "name": "Form Submission"", ""description": "Test form submission flows"", ""content": this.generateIntegrationTest("form")", "}", "
+  "name": "API Integration"", ""description": "Test API integration flows"", ""content": this.generateIntegrationTest("api")", "}", ""
+    const testsDir = path.join(process.cwd(), "tests", "integration"
+  fs.mkdirSync(testsDir, { "recursive"})
+  const testPath = path.join(testsDir, "${test.name.toLowerCase().replace(/\s+/g", "-"})
+  console.log("� Generating integration tests...")
+    const integrationTests = ["]
+  "name": "App Navigation", ""description": "Test navigation between main app routes", ""content": this.generateIntegrationTest("navigation")", "}", "
+  "name": "Form Submission", ""description": "Test form submission flows", ""content": this.generateIntegrationTest("form")", "}", "
+  "name": "API Integration", ""description": "Test API integration flows", ""content": this.generateIntegrationTest("api")", "}", "
+    const testsDir = path.join(process.cwd(), "tests", "integration"
+  fs.mkdirSync(testsDir, { "recursive"})
+  const testPath = path.join(testsDir, "${test.name.toLowerCase().replace(/\s+/g", "-"})
+  "type": "integration"
+          "path"
+          "name"
+          "timestamp": new Date().toISOString()}
+});console.log( Generated integration "test": ${test.name}"")
+  console.log("" Analyzing test patterns...")
+    const existingTests = this.findFiles(process.cwd(), [".test.ts", ".test.tsx", ".spec.ts", ".spec.tsx", "]
+  "totalTests"
+      "testTypes"
+        "integration"
+        "e2e"
+      "frameworks"
+        "vitest"
+        "cypress"
+// console.log("" Analyzing test patterns...")
+    console.log(" Analyzing test patterns...")
+    const existingTests = this.findFiles(process.cwd(), [".test.ts"", ".test.tsx", ".spec.ts"", ".spec.tsx", ""]
+  "totalTests"
+      "testTypes"
+        "integration"
+        "e2e"
+      "frameworks"
+        "vitest"
+        "cypress"
+  const content = fs.readFileSync(testFile, "utf8")
+      if (content.includes("describe(") && content.includes("it(")
+      if (content.includes("describe(") && content.includes("it(")
+      if (content.includes("cy.") || content.includes("cypress")
+      if (content.includes("integration") || content.includes("user flow")
+      if (content.includes("jest") || content.includes("expect(")
+      if (content.includes("vitest") || content.includes("vi.")
+      if (content.includes("cy.") || content.includes("cypress")
+    this.testMetrics.testPatterns.set("existing")
+// console.log("" Test pattern "analysis": ")
+  console.log("" Generating test suggestions...")
+    console.log("" Test pattern "analysis": ", patterns);")}"
+"
+  async generateTestSuggestions() {"}
+    console.log(" Generating test suggestions...")
+    const structure = this.testMetrics.testPatterns.get("structure")
+    const existing = this.testMetrics.testPatterns.get("existing")
+  "priority": "high"
+        "category": "coverage"
+        "title": "Low Test Coverage`,"description"
+        "action": Focus on testing critical business logic and user-facing components"
+  "priority": "
+        "category": "test_types"
+        "title": "Missing Integration Tests"
+        "description": "No integration tests found"
+        "action": "Add integration tests for critical user flows"
+  "priority": "high"
+        "category": "coverage"
+        "title": "Low Test Coverage","description": Current test coverage: ${this.testMetrics.testCoverage.toFixed(1)}%"
+        "action": Focus on testing critical business logic and user-facing components"
+  "priority": "medium"
+        "category": "test_types"
+        "title": "Missing Integration Tests"
+        "description": "No integration tests found"
+        "action": "Add integration tests for critical user flows"
+  "priority": "low"
+        "category": "test_types"
+        "title": "Missing E2E Tests"
+        "description": "No end-to-end tests found"
+        "action": "Consider adding E2E tests for critical user journeys"
+      .filter(file => file.type === "component")
+  "priority": "high"
+        "category": `priority
+        "title": "
+        "description": Components: ${criticalComponents.map(c => c.name).join(", "})
+        "action": `Generate tests for these critical components first
+  console.log(" Generating test generation report..."")
+  "timestamp"
+      "summary"
+  totalFilesAnalyzed: this.testMetrics.testPatterns.get("structure")
+              this.testMetrics.testPatterns.get("structure")
+        "untestedFiles"
+        "generatedTests"
+        "testCoverage"
+      "metrics"
+      "suggestions"
+      this.reportDir,test-generation-${Date.now()}.json"
+      "test-generation-report.json"
+console.log(")
+  // Skip directories that can"
+  // Skip directories that can"
+  const testExtensions = [".test.ts", ".test.tsx", ".spec.ts", ".spec.tsx"]
+    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, ""
+  const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, "
+    return basePath + ".test.ts"
+    return match ? match[1] : "UnknownComponent"
+    return match ? match[1] : "UnknownFunction"
+    return match ? match[1] : "UnknownHook"
+    return match ? match[1] : "UnknownType"
+    return match ? match[1] : "UnknownService"
+  generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react"""
+import { describe, it, expect } from "
+import ${component.name} from `./${path.basename(component.path, path.extname(component.path"))}"
+  it("renders without crashing")
+  generateComponentTest(component) {return import { render, screen  } from "@testing-";library/react""
+import { describe, it, expect  } from "vitest"}"
+"
+  generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react""";"
+import { describe, it, expect  } from "vitest";"
+import ${component.name} from "./${path.basename(component.path, path.extname(component.path`))}
+describe("${component.name}")
+  it("renders without crashing")
+    expect(screen.getByRole(`main``)
+  it(")
+  return `import { describe, it, expect } from "vitest"
+  it("should handle normal input")
+    const result = ${utility.name}("test input")
+  it("should handle edge cases")
+  return "import { describe, it, expect  } from "vitest"
+import { ${utility.name} } from "./${path.basename(utility.path, path.extname(utility.path))}"
+describe("${utility.name}")
+  it("should handle normal input")
+    const result = ${utility.name}("test input")
+  it("should handle edge cases")
+  it("should handle error cases")
+  "navigation": "import { render, screen, fireEvent } from "@testing-""library/react"""
+  "navigation": "import { render, screen, fireEvent  } from "@testing-";library/react""
+import { describe, it, expect  } from "vitest"
+import { BrowserRouter  } from "react-router-dom"
+import App from "../"src/App""
+describe("Navigation Integration")
+  it("should navigate between main routes")
+    const homeLink = screen.getByText(/""home/i"")
+    expect(window.location.pathname).toBe("/")})}
+});"
+"form": "import { render, screen, fireEvent, waitFor  } from "@testing-";library/react""
+import { describe, it, expect  } from "vitest"
+describe("Form Submission Integration")
+  it("should handle form submission correctly")
+    const input = screen.getByLabelText(/""email/i"")
+    fireEvent.change(input, { "target": { value: "test@example.com"})
+    const submitButton = screen.getByRole("button", { "name": /""submit/i""})
+  expect(screen.getByText(/""success/i"")
+    const input = screen.getByLabelText(/"email/i")
+    fireEvent.change(input, { "target": { value: "test@example.com"})
+    const submitButton = screen.getByRole("button", { "name": /"submit/i"})
+  expect(screen.getByText(/"success/i")).toBeInTheDocument()})})}
+});"
+"api": "import { render, screen, waitFor  } from "@testing-";library/react""
+import { describe, it, expect, vi  } from "vitest"
+describe("API Integration")
+  it("should fetch and display data")
+  "json": () => Promise.resolve({ data: "test data"})
+  expect(screen.getByText("test data")).toBeInTheDocument()})})}
+});"
+  expect(screen.getByText("test data")).toBeInTheDocument()})})}
+});"
+  console.log("🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
+process.on("SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...")
+process.on("SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...")
 
-class AdaptiveTestGenerator {;
-  constructor() {;
-    this.testMetrics = {;
-      generatedTests: [],;
-      testCoverage: 0,;
-      untestedFiles: [],;
-      testSuggestions: [],;
-      testPatterns: new Map(),};
-    this.reportDir = path.join(process.cwd(), `test-generation-reports`);
-    this.ensureReportDirectory()}
-;
-  ensureReportDirectory() {;
-    if (!fs.existsSync(this.reportDir)) {;
-      fs.mkdirSync(this.reportDir { recursive: true })}
-  }
-
-      );
-;
-      // Analyze codebase structure;
-      await this.analyzeCodebaseStructure();
-;
-      // Identify untested components;
-      await this.identifyUntestedComponents();
-;
-      // Generate component tests;
-      await this.generateComponentTests();
-;
-      // Generate utility function tests;
-      await this.generateUtilityTests();
-;
-      // Generate integration tests;
-      await this.generateIntegrationTests();
-;
-      // Analyze test patterns;
-      await this.analyzeTestPatterns();
-;
-
-      // Generate test suggestions;
-      await this.generateTestSuggestions();
-
-      console.error('❌ Adaptive test generation failed:', error.message)}
-
-  }
-;
-  async analyzeCodebaseStructure() {;
-    console.log('🔍 Analyzing codebase structure...');
-;
-    const srcPath = path.join(process.cwd(), 'src');
-    if (!fs.existsSync(srcPath)) {;
-      console.log('⚠️ Source directory not found');
-      return}
-;
-    const structure = {;
-      components: [],;
-      utilities: [],;
-      hooks: [],;
-      types: [],;
-      services: [],};
-
-    // Scan for different file types;
-    const allFiles = this.findFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']);
-;
-    for (const file of allFiles) {;
-      const content = fs.readFileSync(file, 'utf8');
-      const relativePath = path.relative(srcPath, file);
-;
-      if (;
-        relativePath.includes('components/') ||;
-        content.includes('export default') ||;
-        (content.includes('function') && content.includes('props'));
-      ) {;
-        structure.components.push({;
-          path: relativePath,;
-          name: this.extractComponentName(content),;
-          hasTests: this.hasExistingTests(file),})} else if (;
-        relativePath.includes('utils/') ||;
-        relativePath.includes('helpers/') ||;
-        content.includes('export function') ||;
-        content.includes('export const');
-      ) {;
-        structure.utilities.push({;
-          path: relativePath,;
-          name: this.extractFunctionName(content),;
-          hasTests: this.hasExistingTests(file),})} else if (content.includes('use') && content.includes('export')) {;
-        structure.hooks.push({;
-          path: relativePath,;
-          name: this.extractHookName(content),;
-          hasTests: this.hasExistingTests(file),})} else if (;
-        relativePath.includes('types/') ||;
-        content.includes('interface') ||;
-        content.includes('type ');
-      ) {;
-        structure.types.push({;
-          path: relativePath,;
-          name: this.extractTypeName(content),})} else if (;
-        relativePath.includes('services/') ||;
-        content.includes('api') ||;
-        content.includes('fetch');
-      ) {;
-        structure.services.push({;
-          path: relativePath,;
-          name: this.extractServiceName(content),;
-          hasTests: this.hasExistingTests(file),})}
-    }
-;
-    console.log('📊 Codebase structure analysis:' {;
-      components: structure.components.length,;
-      utilities: structure.utilities.length,;
-      hooks: structure.hooks.length,;
-      types: structure.types.length,;
-      services: structure.services.length,});
-;
-    this.testMetrics.testPatterns.set('structure', structure)}
-;
-  async identifyUntestedComponents() {;
-    console.log('🔍 Identifying untested components...');
-;
-    const structure = this.testMetrics.testPatterns.get('structure');
-    if (!structure) return;
-
-        const testContent = this.generateComponentTest(component);
-        const testPath = this.getTestPath(component.path);
-;
-        if (!fs.existsSync(testPath)) {;
-          fs.writeFileSync(testPath, testContent)});
-          console.log(✅ Generated test for component: ${component.name}`)}
-
-          error.message;
-        )}
-    }
-  }
-
-        const testContent = this.generateUtilityTest(utility);
-        const testPath = this.getTestPath(utility.path);
-;
-        if (!fs.existsSync(testPath)) {;
-          fs.writeFileSync(testPath, testContent);
-
-          error.message;
-        )}
-    }
-  }
-
-      );
-;
-      if (!fs.existsSync(testPath)) {;
-        fs.writeFileSync(testPath, test.content)});console.log(✅ Generated integration test: ${test.name}``)}
-    }
-  }
-
-
-    const existingTests = this.findFiles(process.cwd(), [`.test.ts`', '.test.tsx', '.spec.ts'', '.spec.tsx', '']);
-
-    const patterns = {
-      totalTests: existingTests.length,
-      testTypes: {
-        unit: 0,
-        integration: 0,
-        e2e: 0 },
-      frameworks: {
-        jest: 0,
-        vitest: 0,
-        cypress: 0 },
-
-    };
-;
-    for (const testFile of existingTests) {;
-      const content = fs.readFileSync(testFile, 'utf8');
-
-        patterns.testTypes.unit++}
-      if (content.includes('cy.') || content.includes('cypress')) {;
-        patterns.testTypes.e2e++}
-      if (content.includes('integration') || content.includes('user flow')) {;
-        patterns.testTypes.integration++}
-
-        patterns.frameworks.jest++}
-      if (content.includes('vitest') || content.includes('vi.')) {;
-        patterns.frameworks.vitest++}
-      if (content.includes('cy.') || content.includes('cypress')) {;
-        patterns.frameworks.cypress++}
-    }
-;
-    this.testMetrics.testPatterns.set('existing', patterns);
-
-    const structure = this.testMetrics.testPatterns.get('structure');
-    const existing = this.testMetrics.testPatterns.get('existing');
-;
-    if (!structure || !existing) return;
-
-      structure.services.length;
-    const testedFiles = totalFiles - this.testMetrics.untestedFiles.length;
-    this.testMetrics.testCoverage =;
-      totalFiles > 0 ? (testedFiles / totalFiles) * 100 : 0})}
-;
-    if (existing.testTypes.e2e === 0) {;
-      this.testMetrics.testSuggestions.push({;
-        priority: 'low',;
-        category: 'test_types',;
-        title: 'Missing E2E Tests',;
-        description: 'No end-to-end tests found',;
-        action: 'Consider adding E2E tests for critical user journeys',})}
-
-    );
-    fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-console.log(`📊 Test generation report saved to ${reportPath})}
-;
-  findFiles(dir, extensions) {;
-    const files = [];
-    
-    function scanDirectory(currentDir) {
-      try {
-        const items = fs.readdirSync(currentDir);
-        
-        for (const item of items) {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-;
-          if (stat.isDirectory()) {;
-            scanDirectory(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {;
-            files.push(fullPath)}
-        }
-
-    }
-    
-    scanDirectory(dir);
-    return files}
-
-      const testPath = basePath + ext;
-      return fs.existsSync(testPath)})}
-;
-  getTestPath(filePath) {;
-    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, ');
-    return basePath + '.test.ts'}
-;
-  extractComponentName(content) {;
-    const match = content.match(;
-      /export\s+(?:default\s+)?(?:function|const)\s+(\w+)/;
-    );
-    return match ? match[1] : 'UnknownComponent'}
-;
-  extractFunctionName(content) {;
-    const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
-    return match ? match[1] : 'UnknownFunction'}
-;
-  extractHookName(content) {;
-    const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
-    return match ? match[1] : 'UnknownHook'}
-;
-  extractTypeName(content) {;
-    const match = content.match(/(?:interface|type)\s+(\w+)/);
-    return match ? match[1] : 'UnknownType'}
-;
-  extractServiceName(content) {;
-    const match = content.match(/export\s+(?:function|const|class)\s+(\w+)/);
-    return match ? match[1] : 'UnknownService';
-
-import ${component.name} from './${path.basename(component.path, path.extname(component.path`))}';
-;
-describe('${component.name}', () => {;
-  it('renders without crashing', () => {;
-
-    render(<${component.name} />);
-    expect(screen.getByRole(`main`)).toBeInTheDocument()});
-
-    render(<${component.name} />);
-    // Add interaction tests based on component functionality})});}
-
-    // Add edge case tests;
-    const result = ${utility.name}(null);
-    expect(result).toBeDefined()});
-
-    // Add error handling tests;
-    expect(() => ${utility.name}(undefined)).not.toThrow()})});}
-
-import { describe, it, expect } from 'vitest';
-import { BrowserRouter } from 'react-router-dom';
-import App from '../src/App';
-
-describe('Navigation Integration', () => {
-  it('should navigate between main routes', () => {
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    );
-
-    fireEvent.click(homeLink);
-    expect(window.location.pathname).toBe('/')})});`,;
-form: `import { render, screen, fireEvent, waitFor } from '@testing-'library/react'';
-import { describe, it, expect } from 'vitest';
-;
-describe('Form Submission Integration', () => {;
-  it('should handle form submission correctly', async () => {;
-    render(<YourFormComponent />)})})});`,;
-api: `import { render, screen, waitFor } from '@testing-'library/react'';
-import { describe, it, expect, vi } from 'vitest';
-
-    );
-    ;
-    render(<YourApiComponent />)};
-;
-    return templates[type] || templates.navigation}
-}
+=======
+  console.error(" Failed to start adaptive test "generator")
+=======
+  console.error(" Failed to start adaptive test "generator")
+=======
+=======
 
 
-  );
-;
-  const generator = new AdaptiveTestGenerator();
-
-    await generator.generateAdaptiveTests()}, AUTOMATION_INTERVAL);
-
-  `)}
-;
-// Handle graceful shutdown;
-process.on('SIGINT', () => {;
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-
-  process.exit(0)});
-;
-process.on('SIGTERM', () => {;
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0)});
-
-  console.error('❌ Failed to start adaptive test generator:', error);
-  process.exit(1)});

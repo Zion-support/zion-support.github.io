@@ -1,79 +1,72 @@
 export interface MatchingCriteria {
-  skills: string[];
-  location: string;
-  budget: number;
-  timeline: string;
-  projectType: string;
-}
-
-export interface TalentProfile {
-  id: string;
-  name: string;
-  skills: string[];
-  location: string;
-  rate: number;
-  availability: string;
-  rating: number;
-  completedProjects: number;
+  budget?: number;
+  timeline?: string;
+  industry?: string;
+  projectType?: string;
+  requirements?: string[];
+  preferences?: Record<string, any>;
 }
 
 export interface MatchResult {
-  talent: TalentProfile;
+  id: string;
+  name: string;
+  description: string;
   score: number;
   reasons: string[];
+  contact?: {
+    email?: string;
+    phone?: string;
+    website?: string;
+  };
 }
 
-export function matchTalents(criteria: MatchingCriteria, talents: TalentProfile[]): MatchResult[] {
-  return talents.map(talent => {
-    let score = 0;
-    const reasons: string[] = [];
-
-    // Skills matching
-    const skillsMatch = criteria.skills.filter(skill => 
-      talent.skills.some(talentSkill => 
-        talentSkill.toLowerCase().includes(skill.toLowerCase())
-      )
-    );
-    score += (skillsMatch.length / criteria.skills.length) * 40;
-    if (skillsMatch.length > 0) {
-      reasons.push(`Matches ${skillsMatch.length} of ${criteria.skills.length} required skills`);
-    }
-
-    // Location matching
-    if (talent.location.toLowerCase().includes(criteria.location.toLowerCase())) {
-      score += 20;
-      reasons.push('Location match');
-    }
-
-    // Budget matching
-    if (talent.rate <= criteria.budget) {
-      score += 20;
-      reasons.push('Within budget');
-    }
-
-    // Rating bonus
-    score += talent.rating * 2;
-    if (talent.rating >= 4.5) {
-      reasons.push('Highly rated talent');
-    }
-
-    // Experience bonus
-    if (talent.completedProjects > 10) {
-      score += 10;
-      reasons.push('Experienced professional');
-    }
-
-    return {
-      talent,
-      score: Math.min(100, score),
-      reasons
-    };
-  }).sort((a, b) => b.score - a.score);
+export interface AIMatchmakingService {
+  findMatches(criteria: MatchingCriteria): Promise<MatchResult[]>;
+  refineMatches(criteria: MatchingCriteria, feedback: Record<string, number>): Promise<MatchResult[]>;
 }
 
-export function generateMatchingReasons(match: MatchResult): string {
-  if (match.reasons.length === 0) {
-    return 'Basic profile match';
+// Mock implementation for now
+export class MockAIMatchmakingService implements AIMatchmakingService {
+  async findMatches(criteria: MatchingCriteria): Promise<MatchResult[]> {
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    // Return mock results
+    return [
+      {
+        id: '1',
+        name: 'TechCorp Solutions',
+        description: 'Full-stack development company specializing in modern web applications',
+        score: 0.92,
+        reasons: ['Matches budget range', 'Has relevant experience', 'Available timeline'],
+        contact: {
+          email: 'contact@techcorp.com',
+          website: 'https://techcorp.com'
+        }
+      },
+      {
+        id: '2',
+        name: 'Digital Innovations LLC',
+        description: 'Creative digital agency with focus on user experience',
+        score: 0.85,
+        reasons: ['Strong portfolio', 'Good client reviews', 'Flexible timeline'],
+        contact: {
+          email: 'hello@digitalinnovations.com',
+          website: 'https://digitalinnovations.com'
+        }
+      }
+    ];
   }
-  return match.reasons.join(', ');
+
+  async refineMatches(criteria: MatchingCriteria, feedback: Record<string, number>): Promise<MatchResult[]> {
+    // In a real implementation, this would use feedback to improve matching
+    return this.findMatches(criteria);
+  }
 }
+
+export const aiMatchmakingService = new MockAIMatchmakingService();
+
+// Convenience function for direct use
+export const findMatches = (criteria: MatchingCriteria): Promise<MatchResult[]> => {
+  return aiMatchmakingService.findMatches(criteria);
+};

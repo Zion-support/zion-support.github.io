@@ -1,0 +1,500 @@
+[build]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+command = "npm run build"
+publish = "dist"
+
+[build.environment]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  NODE_VERSION = "18"
+=======
+<<<<<<< HEAD
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+command = "npm ci && npm run build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+command = "npm ci && npm run build"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+publish = ".next"
+=======
+publish = "dist"
+>>>>>>> pr-12325
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+publish = "dist"
+
+[build.environment]
+<<<<<<< HEAD
+NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+publish = ".next"
+
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+[build.environment]
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+ursor/automate-test-improve-and-merge-code-646c
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = ".next"
+command = "npm ci && npm run build"
+publish = ".next"
+publish = "dist"
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 79d75ebd63c0929536b7d47cf5dc16d1ef769356
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
+[build.environment]
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+<<<<<<< HEAD
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+<<<<<<< HEAD
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+[functions]
+directory = "netlify/functions"
+
+[[redirects]]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+=======
+<<<<<<< HEAD
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+=======
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+<<<<<<< HEAD
+=======
+from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+
+<<<<<<< HEAD
+=======
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+<<<<<<< HEAD
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
+# Security and caching headers for static assets
+[[headers]]
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+<<<<<<< HEAD
+  for = "/*.css"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static redirects for specific routes
+=======
+# Static redirects for exported site
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+# Static redirects for exported site
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+for = "/*.css"
+[headers.values]
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+X-DNS-Prefetch-Control = "on"
+Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+Cross-Origin-Opener-Policy = "same-origin"
+Cross-Origin-Resource-Policy = "same-origin"
+X-Permitted-Cross-Domain-Policies = "none"
+Origin-Agent-Cluster = "?1"
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
+
+
+
+
+# SPA fallback for client-side routing
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+# Static redirects for specific routes
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
+# Static redirects for exported site
+ursor/automate-test-improve-and-merge-code-646c
+# Static redirects for exported site
+<<<<<<< HEAD
+=======
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+<<<<<<< HEAD
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+=======
+  for = "/*.css"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+# Static redirects for exported site
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+[[redirects]]
+from = "/ai-customer-success-platform"
+to = "/services/ai-customer-success-platform/"
+status = 301
+
+[[redirects]]
+from = "/ai-sales-intelligence-platform"
+to = "/services/ai-sales-intelligence-platform/"
+status = 301
+
+[[redirects]]
+from = "/ai-financial-planning-platform"
+to = "/services/ai-financial-planning-platform/"
+status = 301
+
+[[redirects]]
+from = "/ai-powered-decision-engine"
+to = "/services/ai-powered-decision-engine/"
+status = 301
+
+[[redirects]]
+from = "/intelligent-content-automation-platform"
+to = "/services/intelligent-content-automation-platform/"
+status = 301
+
+[[redirects]]
+from = "/intelligent-hr-analytics-platform"
+to = "/services/intelligent-hr-analytics-platform/"
+status = 301
+
+[[redirects]]
+from = "/smart-crm-intelligence-suite"
+to = "/services/smart-crm-intelligence-suite/"
+status = 301
+
+[[redirects]]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+
+
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+ursor/automate-test-improve-and-merge-code-646c
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
