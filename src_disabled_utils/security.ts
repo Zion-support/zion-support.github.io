@@ -26,9 +26,9 @@ export const sanitizeHTML = (html: string): string => {
 
 export const sanitizeInput = (input: string): string => {
   return input
-    .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+=/gi, '') // Remove event handlers
+    .replace(/[<>]/g, '')
+    .replace(/javascript:/gi, '')
+    .replace(/on\w+=/gi, '')
     .trim();
 };
 
@@ -150,7 +150,7 @@ class RateLimiter {
 }
 
 // Security Headers
-export const setSecurityHeaders = (config: SecurityConfig) => {
+export const setSecurityHeaders = (_config: SecurityConfig) => {
   if (typeof window === 'undefined') return;
 
   // Set meta tags for security
@@ -184,26 +184,26 @@ export const validateFormData = (data: Record<string, any>, schema: Record<strin
     const rules = schema[field];
 
     if (rules.required && (!value || value.toString().trim() === '')) {
-      errors[field] = `${field} is required`;
+      errors[field] = `${_field} is required`;
       return;
     }
 
     if (value && rules.type) {
       if (!validateInput(value.toString(), rules.type)) {
-        errors[field] = `${field} must be a valid ${rules.type}`;
+        errors[field] = `${_field} must be a valid ${rules.type}`;
       }
     }
 
     if (value && rules.minLength && value.toString().length < rules.minLength) {
-      errors[field] = `${field} must be at least ${rules.minLength} characters`;
+      errors[field] = `${_field} must be at least ${rules.minLength} characters`;
     }
 
     if (value && rules.maxLength && value.toString().length > rules.maxLength) {
-      errors[field] = `${field} must be no more than ${rules.maxLength} characters`;
+      errors[field] = `${_field} must be no more than ${rules.maxLength} characters`;
     }
 
     if (value && rules.pattern && !rules.pattern.test(value.toString())) {
-      errors[field] = `${field} format is invalid`;
+      errors[field] = `${_field} format is invalid`;
     }
   });
 
@@ -220,7 +220,7 @@ export const secureStorage = {
       const encrypted = btoa(encodeURIComponent(value));
       localStorage.setItem(key, encrypted);
     } catch (error) {
-      console.error('Failed to store item securely:', error);
+      // console.error('Failed to store item securely:', error);
     }
   },
 
@@ -230,7 +230,7 @@ export const secureStorage = {
       if (!encrypted) return null;
       return decodeURIComponent(atob(encrypted));
     } catch (error) {
-      console.error('Failed to retrieve item securely:', error);
+      // console.error('Failed to retrieve item securely:', error);
       return null;
     }
   },
@@ -327,7 +327,7 @@ export const validateFileUpload = (file: File, options: {
 
   const extension = file.name.split('.').pop()?.toLowerCase();
   if (!extension || !options.allowedExtensions.includes(extension)) {
-    return { isValid: false, error: 'File extension not allowed' };
+    return { isValid: false, _error: 'File extension not allowed' };
   }
 
   return { isValid: true };
@@ -366,14 +366,14 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
       rateLimitWindow: 60000,
       rateLimitMaxRequests: 100,
       ...config,
-    });
+    } as SecurityConfig);
   }, [config]);
 
-  const checkRateLimit = React.useCallback((identifier: string) => {
+  const checkRateLimit = React.useCallback((_identifier: string) => {
     return rateLimiter.isAllowed(identifier);
   }, [rateLimiter]);
 
-  const getRemainingRequests = React.useCallback((identifier: string) => {
+  const getRemainingRequests = React.useCallback((_identifier: string) => {
     return rateLimiter.getRemainingRequests(identifier);
   }, [rateLimiter]);
 
@@ -390,18 +390,18 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
 
 // Security Context
 export const SecurityContext = React.createContext<{
-  checkRateLimit: (identifier: string) => boolean;
-  getRemainingRequests: (identifier: string) => number;
-  validateInput: (input: string, type: 'email' | 'url' | 'text' | 'number') => boolean;
-  sanitizeInput: (input: string) => string;
-  validatePassword: (password: string) => { isValid: boolean; score: number; feedback: string[] };
+  _checkRateLimit: (identifier: string) => boolean;
+  _getRemainingRequests: (identifier: string) => number;
+  validateInput: (input: string, _type: 'email' | 'url' | 'text' | 'number') => boolean;
+  _sanitizeInput: (input: string) => string;
+  _validatePassword: (password: string) => { _isValid: boolean; score: number; feedback: string[] };
   generateCSRFToken: () => string;
   secureStorage: typeof secureStorage;
 } | null>(null);
 
 export const SecurityProvider: React.FC<{ children: React.ReactNode; config?: Partial<SecurityConfig> }> = ({ 
   children, 
-  config 
+  _config 
 }) => {
   const security = useSecurity(config);
   

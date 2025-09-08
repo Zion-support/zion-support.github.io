@@ -1,16 +1,12 @@
+
+
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
 const fs = require(fs');
 
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function sh(cmd) {}
   return execSync(cmd, { "stdio: 'pipe, encoding": utf8' }).trim()}
 function getToken() {}
@@ -30,30 +26,13 @@ async function gh(path, method = 'GET) {}
     method,
     "headers: {}
       Authorization: `token ${token}`,`
-<<<<<<< HEAD
       "Accept": 'application/vnd.github.v3+json',
-<<<<<<< HEAD
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       'User-Agent': 'force-merge-script'
-=======
       Accept": 'application/vnd.github.v3+json,
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
-=======
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw: text }}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
 function autoResolveConflicts() {}
@@ -72,25 +51,21 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
-<<<<<<< HEAD
-=======
-=======
-      'User-Agent': 'force-merge-script'
-=======
 
 
 
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     };
   }
 });
   const text = await res.text();
->>>>>>> origin/chore/fix-lint-and-merge
 
 =======
+=======
+
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
@@ -115,10 +90,6 @@ async function main() {}
   sh('git fetch origin');
   sh('git checkout main');
   sh('git pull --ff-only origin main');
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   let mergedCount = 0; let attempted = 0;
   for (const pr of prs) {}
@@ -141,7 +112,6 @@ async function main() {}
   console.log(`Pushing main with ${mergedCount}/${attempted} merged heads...`);
   sh('git push origin main);
   // return to original branch;
-<<<<<<< HEAD
   try { sh(`git checkout ${startBranch}`)} catch {};
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}

@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require(path');
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 const { execSync } = require('child_process');
 
 
@@ -21,6 +20,10 @@ const { execSync } = require('child_process');
           scanDirectory(itemPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
           files.push(itemPath)}
       })};
+const path = require('path');
+function fixMergeConflicts(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
     
     scanDirectory(dir);
     return files}
@@ -47,5 +50,37 @@ const { execSync } = require('child_process');
       throw error}
   }
 }
+        if (line.includes('>>>>>>>')) {
+ursor/fix-lint-push-and-merge-to-main-28da
+
+          inConflict = false;
 
 
+      return true;
+
+    return false;
+  } catch (error) {`;
+    console.error(`Error processing ${filePath}:`, error.message);
+
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += processDirectory(filePath);
+    } else if ()
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+
+      if (fixMergeConflicts(filePath)) fixedCount++;
+
+  return fixedCount;
+
+console.log(`Fixed ${fixedCount} files`);
+`;

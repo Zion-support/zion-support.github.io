@@ -34,37 +34,27 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Enhanced conflict resolution strategy
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            log_message "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+    if grep -q "/d' "$file"
+            sed -i '/
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
             log_message "📚 Documentation file, keeping both versions where possible..."
             # Remove conflict markers but try to preserve content
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == *".tsx" || "$file" == *".ts" ]]; then
             log_message "📱 TypeScript file detected, keeping incoming version..."
             # For TypeScript files, prefer the incoming version (feature branch)
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         else
             log_message "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         fi
         
         log_message "✅ Resolved conflicts in $file"
@@ -158,9 +148,9 @@ awk '
 ' prs.json | while IFS='|' read -r pr_number branch_name is_draft; do
     if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
         echo ""
-        echo "=========================================="
+        echo ""
         echo "🔄 Processing PR #$pr_number from branch: $branch_name"
-        echo "=========================================="
+        echo ""
         
         # Proceed even if PR is a draft (merge branch directly into main)
         
@@ -170,7 +160,7 @@ awk '
             log_message "❌ PR #$pr_number processing failed"
         fi
         
-        echo "=========================================="
+        echo ""
         echo ""
         
         # Push changes every 3 successful merges to avoid losing work

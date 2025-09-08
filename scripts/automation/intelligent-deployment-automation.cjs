@@ -1,12 +1,15 @@
+
+=======
 #!/usr/bin/env node;
+=======
 #!/usr/bin/env node
 /**
- * Intelligent Deployment Automation
- * Advanced deployment system with blue-green, canary, and rollback capabilities
- * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks
+ * Intelligent Deployment Automation;
+ * Advanced deployment system with blue-green, canary, and rollback capabilities;
+ * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
  */
-
 const pm2 = require('pm2')
+=======
 
 const fs = require('fs')
 const path = require('path')
@@ -23,6 +26,8 @@ const http = require('http')
           healthEndpoint: '/api/health'
           url: process.env.STAGING_URL || 'http://localhost:3001'
           healthEndpoint: '/api/health'
+
+=======
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -55,6 +60,7 @@ const http = require('http')
           status: 'failed'
         this.log(` ${check.name} check failed: ${error.message}`, 'ERROR'`)
       const status = execSync('git status --porcelain', { encoding: 'utf8'})
+=======
 
         throw new Error('Working directory has uncommitted changes')
       if (!await this.fileExists('package.json')
@@ -114,4 +120,12 @@ const http = require('http')
       this.log(' Intelligent Deployment Automation is ready')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
+
+=======
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+=======
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+=======
+=======
+
+

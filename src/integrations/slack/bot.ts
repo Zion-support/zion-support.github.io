@@ -32,9 +32,9 @@ declare const globalThis: {
 
 // Mock App class that mimics the Slack Bolt SDK behavior
 class MockApp {
-  private commandHandlers: Record<string, (args: any) => Promise<void>> = {};
+  private commandHandlers: Record<string, (args: unknown) => Promise<void>> = {};
 
-  command(commandName: string, handler: (args: any) => Promise<void>) {
+  command(commandName: string, handler: (args: unknown) => Promise<void>) {
     this.commandHandlers[commandName] = handler;
     return this;
   }
@@ -62,22 +62,23 @@ async function askZionGPT(prompt: string): Promise<string> {
   return `AI response to: ${prompt}`;
 }
 
-app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
+app.command('/zion', async (args: any) => {
+  const { command, ack, respond } = args as { command: SlackCommand, ack: SlackAck, respond: SlackRespond };
   await ack();
-  const [action, ...args] = command.text.split(/\s+/);
+  const [action, ...commandArgs] = command.text.split(/\s+/);
 
   switch (action) {
     case 'post-job':
       await respond('Please provide job details via the web interface.');
       break;
     case 'suggest-talent': {
-      const query = args.join(' ');
+      const query = commandArgs.join(' ');
       const answer = await askZionGPT(`Suggest talent for ${query}`);
       await respond(answer);
       break;
     }
     case 'track-project': {
-      const project = args.join(' ');
+      const project = commandArgs.join(' ');
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break;
     }

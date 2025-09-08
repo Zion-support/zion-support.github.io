@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/Button";

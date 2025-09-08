@@ -3,6 +3,9 @@
 
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
+  readonly MODE: string;
+  readonly DEV: boolean;
+  readonly PROD: boolean;
   // add more env variables as needed
 }
 
@@ -106,8 +109,8 @@ declare module '@/components/ChatAssistant/ChatMessage' {
 // ProductListingCard type fixes
 declare module '@/components/ProductListingCard' {
   export interface ProductListingCardProps {
-    listing: any;
-    view?: any;  // Made optional to fix the errors
+    listing: unknown;
+    view?: unknown;  // Made optional to fix the errors
     onRequestQuote: (listingId: string) => void;
     key?: string | number;
   }
@@ -127,7 +130,7 @@ declare module '@livekit/components-react' {
   }
   
   export const VideoCall: React.FC<VideoCallProps>;
-  export const LiveKitRoom: React.FC<any>;
+  export const LiveKitRoom: React.FC<unknown>;
 }
 
 declare module '@livekit/components-styles' {

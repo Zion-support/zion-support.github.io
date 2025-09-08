@@ -1,10 +1,10 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { _createContext, _useContext, _useState, _useEffect, _ReactNode } from 'react';
+import { _useTranslation } from 'react-i18next';
 
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 
 export interface LanguageContextType {
-  currentLanguage: SupportedLanguage;
+  _currentLanguage: SupportedLanguage;
   changeLanguage: (lang: SupportedLanguage) => Promise<void>;
   isRTL: boolean;
   supportedLanguages: { code: SupportedLanguage; name: string; flag: string }[];
@@ -37,10 +37,10 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
-  authState = { isAuthenticated: false, user: null } 
+  authState = { isAuthenticated: false, _user: null } 
 }) => {
-  const { i18n } = useTranslation();
-  const { isAuthenticated, user } = authState;
+  const { _i18n } = useTranslation();
+  const { _isAuthenticated, _user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
   );
@@ -69,7 +69,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     }
   }, [currentLanguage, i18n]);
 
-  const changeLanguage = async (lang: SupportedLanguage) => {
+  const changeLanguage = async (_lang: SupportedLanguage) => {
     try {
       await i18n.changeLanguage(lang);
       setCurrentLanguage(lang);

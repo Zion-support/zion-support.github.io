@@ -1,9 +1,4 @@
-#!/usr/bin/env node;
-#!/usr/bin/env node
-/**
- * Enhanced App Improvement Script
- * Comprehensive improvements for the Zion Tech Group application
- */
+
 
 const { execSync } = require('child_process')
 const fs = require('fs')

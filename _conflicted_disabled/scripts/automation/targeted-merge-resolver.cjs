@@ -1,17 +1,7 @@
 <<<<<<< HEAD
-#!/"usr/bin/env"
-const fs = require("fs)
-const path = require(path")
-const { execSync } = require("child_process)
-    this.logsDir = path.join(this.projectRoot, logs")
-  "branchesProcessed
-      conflictsResolved"
-      "mergesSuccessful
-      errors"
-  fs.mkdirSync(this.logsDir, { "recursive})
-  log(message, level = INFO")
 =======
-<<<<<<< HEAD
+=======
+
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -23,15 +13,15 @@ const { execSync } = require("child_process");
       "errors"
   fs.mkdirSync(this.logsDir, { "recursive"})
   log(message, level = "INFO")
->>>>>>> origin/chore/fix-lint-and-merge
+
     console.log(")
-<<<<<<< HEAD
+
 const logFile = path.join(this.logsDir, "targeted-merge.log");
-=======
+
     const logFile = path.join(this.logsDir, targeted-merge.log)
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     fs.appendFileSync(logFile, logEntry + "\n")
-<<<<<<< HEAD:_conflicted_disabled/scripts/automation/targeted-merge-resolver.cjs
+
   this.log(" Starting Targeted Merge Conflict Resolver...")
   // Step "1": Ensure we"
       // Step "3"
@@ -61,7 +51,7 @@ const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
           branch.includes("implement-")
           branch.includes("update-")
           branch.includes("add-")
-=======
+
   this.log( Starting Targeted Merge Conflict Resolver...)
   // Step "1": Ensure we
       // Step 3"
@@ -92,7 +82,7 @@ const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
           branch.includes(implement-")
           branch.includes("update-)
           branch.includes(add-")
->>>>>>> merged-prs-20250907-203621:backup-problematic-files/scripts/automation/targeted-merge-resolver.cjs
+
           branch.includes(")
       return limitedBranches} catch (error) {  throw new Error(`Failed to get priority branches`})
   async processBranch(branchName) {this.log(`� Processing "branch"`})
@@ -117,36 +107,36 @@ const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
       execSync("git add .", { stdio: "pipe"})
       execSync(git merge --continue, { "stdio": pipe})
       return { "success"}
-<<<<<<< HEAD
+
   execSync("git merge --abort", { "stdio": "pipe"   })} catch (abortError) {this.log("⚠ Failed to abort "merge": ${abortError.message}", "WARN")
   execSync("git merge --abort", { "stdio": "pipe" })} catch (abortError) {this.log("⚠ Failed to abort "merge": ${abortError.message}", "WARN")
   "success": false,"error": "Failed to resolve conflicts: ${error.message}"
 const statusOutput = execSync("git status --porcelain");
   "encoding": "utf8"
         .split("\n")
-=======
+
   execSync(git merge --abort, { "stdio": pipe   })} catch (abortError) {this.log("⚠ Failed to abort "merge: ${abortError.message}, "WARN")
   execSync(git merge --abort, { "stdio": pipe })} catch (abortError) {this.log("⚠ Failed to abort "merge: ${abortError.message}, "WARN")
   success: false,"error": Failed to resolve conflicts: ${error.message}
   const statusOutput = execSync("git status --porcelain")
   encoding: "utf8"
         .split(\n)
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
             line.startsWith("UU ")
             line.startsWith(AA )
             line.startsWith("DD ")
-<<<<<<< HEAD
+
   async resolveFileConflicts(filePath) {this.log(" Resolving conflicts "in": ${filePath}")
 const content = fs.readFileSync(filePath, "utf8");
         !content.includes("<<<<<<<")
         !content.includes("")
-=======
+
   async resolveFileConflicts(filePath) {this.log( Resolving conflicts in": ${filePath}")
   const content = fs.readFileSync(filePath, utf8)
         !content.includes("<<<<<<<")
         !content.includes()
         !content.includes(">>>>>>>")
-<<<<<<< HEAD
+
 this.log( Resolved conflicts in")
         "ERROR
   const content = fs.readFileSync(filePath, utf8")
@@ -200,8 +190,8 @@ this.log(� Detailed report saved "to": ${reportPath})
     this.log(� Targeted Merge Resolution "Summary": );this.log(   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Successful Merges: ${report.summary.mergesSuccessful}");this.log("   Errors: ${report.summary.errors}");this.log("   Success Rate: ${report.successRate}%")
 this.log("� Detailed report saved to: ${reportPath}")
 
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
 this.log(" Resolved conflicts "in")
         "ERROR"
 const content = fs.readFileSync(filePath, "utf8");
@@ -251,38 +241,39 @@ this.log("� Detailed report saved "to": ${reportPath}")
 const reportPath = path.join(this.logsDir, "targeted-merge-report.json");
     this.log("� Targeted Merge Resolution "Summary": ");this.log("   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts "Resolved": ${report.summary.conflictsResolved}");this.log("   Successful "Merges": ${report.summary.mergesSuccessful}");this.log("   "Errors": ${report.summary.errors}");this.log("   Success "Rate": ${report.successRate}%")
 this.log("� Detailed report saved "to": ${reportPath}")
-<<<<<<< HEAD
-  console.error(" Fatal "error")
-=======
-<<<<<<< HEAD:_conflicted_disabled/scripts/automation/targeted-merge-resolver.cjs
 
-  console.error(" Fatal "error")
-  console.error(" Fatal "error")
   console.error(" Fatal "error")
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  console.error(" Fatal "error")
+  console.error(" Fatal "error")
+  console.error(" Fatal "error")
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(" Fatal "error")
-  console.error(" Fatal "error")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
+
+
+
+
+
+
+
+
   console.error(" Fatal "error")
-=======
   console.error(" Fatal "error")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621:backup-problematic-files/scripts/automation/targeted-merge-resolver.cjs
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+
+
+
+  console.error(" Fatal "error")
+
+  console.error(" Fatal "error")
+
+
+
+
