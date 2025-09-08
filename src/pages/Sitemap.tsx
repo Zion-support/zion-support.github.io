@@ -32,36 +32,15 @@ export default function Sitemap() {
       title: 'Core Pages',
       icon: Zap,
       links: [
-        { name: 'Home', href: '/', description: 'Main landing page' },
-        { name: 'About', href: '/about', description: 'Company information' },
-        { name: 'Contact', href: '/contact', description: 'Get in touch' },
-        { name: 'Team', href: '/team', description: 'Our leadership team' },
-        { name: 'Careers', href: '/careers', description: 'Job opportunities' },
-        { name: 'Partners', href: '/partners', description: 'Partnership programs' },
-        { name: 'News', href: '/news', description: 'Latest updates' },
-        { name: 'Blog', href: '/blog', description: 'Industry insights' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'Press', href: '/press', description: 'Media resources' },
-        { name: 'White Papers', href: '/white-papers', description: 'Research papers' },
-        { name: 'Webinars', href: '/webinars', description: 'Educational content' },
-        { name: 'Training', href: '/training', description: 'Learning programs' },
-        { name: 'Support', href: '/support', description: 'Technical assistance' },
-        { name: 'Help Center', href: '/help', description: 'Self-service help' },
-        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-        { name: 'Documentation', href: '/documentation', description: 'Technical docs' },
-        { name: 'Developers', href: '/developers', description: 'Developer resources' },
-        { name: 'API', href: '/api', description: 'API documentation' },
-        { name: 'Developer Portal', href: '/developer-portal', description: 'Developer tools' },
-        { name: 'Status', href: '/status', description: 'Service status' },
-        { name: 'Security', href: '/security', description: 'Security information' },
-        { name: 'Privacy', href: '/privacy', description: 'Privacy policy' },
-        { name: 'Terms', href: '/terms', description: 'Terms of service' },
-        { name: 'Cookies', href: '/cookies', description: 'Cookie policy' },
-        { name: 'Pricing', href: '/pricing', description: 'Service pricing' },
-        { name: 'Request Quote', href: '/request-quote', description: 'Get a quote' },
-        { name: 'Dashboard', href: '/dashboard', description: 'User dashboard' },
-        { name: 'Login', href: '/login', description: 'User login' },
-        { name: 'Signup', href: '/signup', description: 'User registration' }
+        { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
+        { name: "About Us", path: "/about", description: "Learn about our company and mission" },
+        { name: "Contact", path: "/contact", description: "Get in touch with our team" },
+        { name: "Services Overview", path: "/services-overview", description: "Explore all our services" },
+        { name: "Services Comparison", path: "/services-comparison", description: "Compare different service tiers" },
+        { name: "Partners", path: "/partners", description: "Strategic partnerships and collaborations" },
+        { name: "Careers", path: "/careers", description: "Join our team of experts" },
+        { name: "Team", path: "/team", description: "Meet our leadership and experts" },
+        { name: "Press", path: "/press", description: "Media resources and press releases" }
       ]
     },
     {
@@ -142,17 +121,11 @@ export default function Sitemap() {
       title: 'Industry Solutions',
       icon: Building,
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Enterprise services' },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Healthcare services' },
-        { name: 'Financial Solutions', href: '/solutions/financial', description: 'Financial services' },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', description: 'Manufacturing services' },
-        { name: 'Retail Solutions', href: '/solutions/retail', description: 'Retail services' },
-        { name: 'Government Solutions', href: '/solutions/government', description: 'Government services' },
-        { name: 'Education Solutions', href: '/solutions/education', description: 'Education services' },
-        { name: 'Space Technology', href: '/space-tech', description: 'Space tech' },
-        { name: 'Quantum Technology', href: '/quantum-technology', description: 'Quantum tech' },
-        { name: 'Green IT', href: '/green-it', description: 'Sustainable technology' },
-        { name: 'Mobile Development', href: '/mobile', description: 'Mobile solutions' }
+        { name: "Pricing Guide", path: "/pricing", description: "Comprehensive pricing information" },
+        { name: "Pricing 2027", path: "/pricing", description: "Current year pricing strategies" },
+        { name: "Pricing 2030", path: "/pricing-2030", description: "Advanced pricing strategies" },
+        { name: "Request Quote", path: "/request-quote", description: "Get custom pricing" },
+        { name: "Marketplace", path: "/marketplace", description: "Explore our solutions" }
       ]
     },
     {
@@ -202,6 +175,23 @@ export default function Sitemap() {
         { name: 'Research & Development', href: '/research-development', description: 'R&D initiatives' }
       ]
     }
+  ];
+
+  const quickLinks = [
+    { name: "Get Started", path: "/contact", description: "Start your project with us", icon: MessageCircle },
+    { name: "Request Quote", path: "/request-quote", description: "Get a custom quote", icon: DollarSign },
+    { name: "Services Overview", path: "/services-overview", description: "Explore all services", icon: Settings },
+    { name: "AI Solutions", path: "/ai-services", description: "Discover AI capabilities", icon: Brain },
+    { name: "Pricing Guide", path: "/pricing", description: "View pricing options", icon: DollarSign },
+    { name: "Support Center", path: "/help", description: "Get help and support", icon: HelpCircle },
+    { name: "Documentation", path: "/docs", description: "Technical resources", icon: BookOpen },
+    { name: "Contact Sales", path: "/contact", description: "Talk to our experts", icon: Phone }
+  ];
+
+  const contactInfo = [
+    { icon: Phone, text: "+1 302 464 0950", href: "tel:+13024640950" },
+    { icon: Mail, text: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
+    { icon: MapPin, text: "364 E Main St STE 1008, Middletown DE 19709", href: "#" }
   ];
 
   return (

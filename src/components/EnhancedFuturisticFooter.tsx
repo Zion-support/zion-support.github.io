@@ -180,32 +180,35 @@ export function EnhancedFuturisticFooter() {
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview', icon: Settings, description: 'Complete service portfolio' },
-    { name: 'Pricing Guide', href: '/pricing', icon: DollarSign, description: 'View our pricing' },
-    { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Find answers' },
-    { name: 'FAQ', href: '/faq', icon: MessageCircle, description: 'Common questions' },
-    { name: 'About Us', href: '/about', icon: Building, description: 'Our story' },
-    { name: 'Contact', href: '/contact', icon: Mail, description: 'Get in touch' },
-    { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
-    { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-    { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation' }
+    { name: 'Services Overview', href: '/services-overview' },
+    { name: 'Pricing Guide', href: '/pricing' },
+    { name: 'Services Comparison', href: '/services-comparison' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' }
   ];
 
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
-    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: true },
-    { name: 'Case Studies', href: '/case-studies', icon: Target, featured: true },
-    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
-    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
-    { name: 'Join Community', href: '/community', icon: Users, featured: false }
+  const companyLinks = [
+    { name: 'About Us', href: '/about', description: 'Our story and mission' },
+    { name: 'Team', href: '/team', description: 'Meet our experts' },
+    { name: 'Careers', href: '/careers', description: 'Join our team' },
+    { name: 'News', href: '/news', description: 'Company updates' },
+    { name: 'Blog', href: '/blog', description: 'Latest insights' },
+    { name: 'Press', href: '/press', description: 'Media resources' },
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
   ];
 
   const supportLinks = [
     { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
     { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+    { name: 'Status Page', href: '/status', description: 'System status' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
     { name: 'Training', href: '/training', description: 'Learning resources' },
+    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
     { name: 'Community', href: '/community', description: 'User community' }
   ];
 
@@ -215,7 +218,8 @@ export function EnhancedFuturisticFooter() {
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
     { name: 'Security', href: '/security', description: 'Security practices' },
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' },
+    { name: 'Sitemap', href: '/sitemap', description: 'Site navigation' }
   ];
 
   // Create missing pages for broken links

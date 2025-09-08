@@ -1,54 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { X, 
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ChevronRight, 
   Home, 
-  Zap, 
+  Settings, 
   Brain, 
   Shield, 
   Cloud, 
-  Atom, 
   Rocket, 
-  Code, 
-  Target, 
   Users, 
-  MessageCircle, 
   BookOpen, 
   HelpCircle, 
-  DollarSign, 
-  Settings, 
-  User, 
-  Bell, 
-  Search, 
-  Star, 
-  TrendingUp, 
-  Award, 
-  Globe, 
   Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  ChevronRight,
-  ChevronDown,
-  Plus,
-  Minus,
-  Lightbulb
+  DollarSign,
+  Star,
+  Zap,
+  Heart,
+  Globe,
+  Cpu,
+  Lock,
+  ShoppingCart,
+  MessageCircle,
+  TrendingUp,
+  Award,
+  Building,
+  FileText,
+  Video,
+  Briefcase,
+  MapPin,
+  Mail,
+  Phone as PhoneIcon
 } from 'lucide-react';
-import { cn } from '../lib/utils';
-
-interface SidebarItem {
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-  children?: SidebarItem[];
-}
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['services', 'solutions']);
 
@@ -60,252 +50,246 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     );
   };
 
-  const isActive = (path: string) => location.pathname === path;
-
-  const mainNavigation = [
-    { name: 'Home', href: '/', icon: Home, badge: null },
-    { name: 'Services', href: '/services', icon: Zap, badge: 'New', hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', icon: Target, badge: null },
-    { name: 'Research', href: '/research', icon: Lightbulb, badge: 'Hot' },
-    { name: 'About', href: '/about', icon: Users, badge: null },
-    { name: 'Contact', href: '/contact', icon: MessageCircle, badge: null },
-    { name: 'Blog', href: '/blog', icon: BookOpen, badge: null },
-    { name: 'Help Center', href: '/help', icon: HelpCircle, badge: null },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign, badge: null },
-  ];
-
-  const serviceCategories = [
+  const navigationSections = [
     {
       id: 'main',
       title: 'Main',
+      icon: Home,
       items: [
-        { name: 'Home', href: '/', icon: Home, badge: null }
+        { name: 'Home', href: '/', icon: Home },
+        { name: 'About Us', href: '/about', icon: Building },
+        { name: 'Contact', href: '/contact', icon: Phone },
+        { name: 'Request Quote', href: '/request-quote', icon: DollarSign }
       ]
     },
     {
       id: 'services',
       title: 'Services',
+      icon: Settings,
       items: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, badge: 'New' },
-        { name: 'IT Services', href: '/it-services', icon: Server, badge: null },
-        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, badge: null },
-        { name: 'Cybersecurity', href: '/security', icon: Shield, badge: 'Hot' },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap, badge: null },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, badge: 'Trending' }
+        { name: 'Services Overview', href: '/services-overview', icon: Settings },
+        { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'IT Services', href: '/it-services', icon: Cpu },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart },
+        { name: 'Services Catalog', href: '/services-catalog', icon: BookOpen },
+        { name: 'Services Comparison', href: '/services-comparison', icon: TrendingUp }
       ]
     },
     {
-      id: 'solutions',
-      title: 'Industry Solutions',
+      id: 'ai-solutions',
+      title: 'AI Solutions',
+      icon: Brain,
       items: [
-        { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, badge: null },
-        { name: 'Financial', href: '/solutions/financial', icon: DollarSign, badge: null },
-        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Building2, badge: null },
-        { name: 'Government', href: '/solutions/government', icon: Shield, badge: null },
-        { name: 'Retail', href: '/solutions/retail', icon: ShoppingCart, badge: null }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: MessageCircle },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText },
+        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform', icon: FileText },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield }
+      ]
+    },
+    {
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps',
+      icon: Cloud,
+      items: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: DollarSign },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', icon: Cpu }
+      ]
+    },
+    {
+      id: 'digital-solutions',
+      title: 'Digital Solutions',
+      icon: Rocket,
+      items: [
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Cpu },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: TrendingUp },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock }
+      ]
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      icon: Shield,
+      items: [
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', icon: Lock },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield },
+        { name: 'Security', href: '/security', icon: Shield }
       ]
     },
     {
       id: 'company',
       title: 'Company',
+      icon: Building,
       items: [
-        { name: 'About Us', href: '/about', icon: Building, badge: null },
-        { name: 'Leadership', href: '/leadership', icon: Users, badge: null },
-        { name: 'Partners', href: '/partners', icon: Handshake, badge: null },
-        { name: 'Careers', href: '/careers', icon: Briefcase, badge: null },
-        { name: 'News', href: '/news', icon: Newspaper, badge: null }
+        { name: 'Team', href: '/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'News', href: '/news', icon: FileText },
+        { name: 'Press', href: '/press', icon: FileText },
+        { name: 'Partners', href: '/partners', icon: Users }
       ]
     },
     {
       id: 'resources',
       title: 'Resources',
+      icon: BookOpen,
       items: [
-        { name: 'Blog', href: '/blog', icon: BookOpen, badge: null },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText, badge: null },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, badge: null },
-        { name: 'Webinars', href: '/webinars', icon: Video, badge: null },
-        { name: 'Training', href: '/training', icon: GraduationCap, badge: null },
-        { name: 'Documentation', href: '/docs', icon: BookOpen, badge: null }
+        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'Training', href: '/training', icon: BookOpen }
       ]
     },
     {
       id: 'support',
       title: 'Support',
+      icon: HelpCircle,
       items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle, badge: null },
-        { name: 'Contact Support', href: '/contact', icon: MessageCircle, badge: null },
-        { name: 'Status Page', href: '/status', icon: Activity, badge: null },
-        { name: 'API Docs', href: '/api-docs', icon: Code, badge: null }
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Support Portal', href: '/support', icon: HelpCircle },
+        { name: 'FAQ', href: '/faq', icon: HelpCircle },
+        { name: 'Documentation', href: '/docs', icon: BookOpen },
+        { name: 'Community', href: '/community', icon: Users },
+        { name: 'Status Page', href: '/status', icon: Zap }
+      ]
+    },
+    {
+      id: 'legal',
+      title: 'Legal',
+      icon: Shield,
+      items: [
+        { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+        { name: 'Terms of Service', href: '/terms', icon: FileText },
+        { name: 'Cookie Policy', href: '/cookies', icon: FileText },
+        { name: 'Accessibility', href: '/accessibility', icon: Heart },
+        { name: 'Compliance', href: '/compliance', icon: Shield }
       ]
     }
   ];
 
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, color: 'bg-blue-500' },
-    { name: 'Research Hub', href: '/research', icon: Lightbulb, color: 'bg-purple-500' },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Users, color: 'bg-green-500' },
-    { name: 'Support Chat', href: '/support', icon: HelpCircle, color: 'bg-orange-500' },
-    { name: 'Innovation Showcase', href: '/comprehensive-services-showcase-2025', icon: Star, color: 'bg-cyan-500' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'bg-indigo-500' }
-  ];
-
-  const featuredServices = [
-    {
-      name: 'AI Autonomous Business Operations',
-      href: '/services/ai-autonomous-business-operations-platform',
-      icon: Brain,
-      description: 'Intelligent automation for enterprise operations',
-      category: 'AI Services'
-    },
-    {
-      name: 'AI Customer Experience Platform',
-      href: '/services/ai-customer-experience-analytics-platform',
-      icon: Users,
-      description: 'Personalized customer experience across all touchpoints',
-      category: 'AI Services'
-    },
-    {
-      name: 'Quantum Edge Computing',
-      href: '/services/quantum-edge-computing-solutions',
-      icon: Atom,
-      description: 'Next-generation computing at the edge',
-      category: 'Emerging Tech'
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
     }
-  ];
+    return location.pathname.startsWith(href);
+  };
 
   return (
-    <>
-      {/* Overlay */}
+    <AnimatePresence>
       {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={onClose}
-        />
-      )}
-
-      {/* Sidebar */}
-      <div className={`
-        fixed top-0 left-0 h-full w-80 bg-white border-r border-gray-200 shadow-xl z-50
-        transform transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:static lg:shadow-none
-      `}>
-        {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-200">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Star className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-lg font-semibold text-gray-900">Navigation</span>
-          </div>
-          <button
+        <>
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
-            className="lg:hidden p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+          />
+          
+          {/* Sidebar */}
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed left-0 top-0 h-full w-80 bg-slate-900 border-r border-slate-700 z-50 overflow-y-auto"
           >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 overflow-y-auto">
-          {/* Quick Actions */}
-          <div className="p-4 border-b border-gray-200">
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">Quick Actions</h3>
-            <div className="space-y-2">
-              {quickActions.map((action) => (
-                <Link
-                  key={action.name}
-                  to={action.href}
-                  className={`${action.color} text-white p-3 rounded-lg flex items-center space-x-3 hover:scale-105 transition-all duration-200`}
+            {/* Header */}
+            <div className="p-6 border-b border-slate-700">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <Zap className="w-5 h-5 text-white" />
+                  </div>
+                  <h2 className="text-xl font-bold text-white">Navigation</h2>
+                </div>
+                <button
                   onClick={onClose}
+                  className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                 >
-                  <action.icon className="w-4 h-4" />
-                  <span className="text-sm font-medium">{action.name}</span>
-                </Link>
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Navigation Sections */}
+            <div className="p-4 space-y-2">
+              {navigationSections.map((section) => (
+                <div key={section.id} className="space-y-1">
+                  <button
+                    onClick={() => toggleSection(section.id)}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
+                      expandedSections.includes(section.id)
+                        ? 'bg-slate-800 text-white'
+                        : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                    }`}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <section.icon className="w-5 h-5" />
+                      <span className="font-medium">{section.title}</span>
+                    </div>
+                    <ChevronRight 
+                      className={`w-4 h-4 transition-transform ${
+                        expandedSections.includes(section.id) ? 'rotate-90' : ''
+                      }`}
+                    />
+                  </button>
+                  
+                  <AnimatePresence>
+                    {expandedSections.includes(section.id) && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="ml-8 space-y-1"
+                      >
+                        {section.items.map((item) => (
+                          <Link
+                            key={item.href}
+                            to={item.href}
+                            onClick={onClose}
+                            className={`block p-2 rounded-lg transition-colors ${
+                              isActive(item.href)
+                                ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+                            }`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <item.icon className="w-4 h-4" />
+                              <span className="text-sm">{item.name}</span>
+                            </div>
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
             </div>
-          </div>
 
-          {/* Navigation Sections */}
-          <div className="p-4">
-            {navigationSections.map((section) => (
-              <div key={section.id} className="mb-6">
-                <button
-                  onClick={() => toggleSection(section.id)}
-                  className="w-full flex items-center justify-between text-left text-sm font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors duration-200"
-                >
-                  {section.title}
-                  {expandedSections.includes(section.id) ? (
-                    <ChevronDown className="w-4 h-4" />
-                  ) : (
-                    <ChevronRight className="w-4 h-4" />
-                  )}
-                </button>
-                
-                {expandedSections.includes(section.id) && (
-                  <div className="space-y-1 ml-2">
-                    {section.items.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className={`
-                          flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-200 group
-                          ${isActive(item.href) 
-                            ? 'bg-blue-50 text-blue-700 border-l-2 border-blue-600' 
-                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                          }
-                        `}
-                        onClick={onClose}
-                      >
-                        <item.icon className={`w-4 h-4 ${isActive(item.href) ? 'text-blue-600' : 'text-gray-400 group-hover:text-gray-600'}`} />
-                        <span className="flex-1">{item.name}</span>
-                        {item.badge && (
-                          <span className={`
-                            px-2 py-1 text-xs font-medium rounded-full
-                            ${item.badge === 'New' ? 'bg-green-100 text-green-800' : ''}
-                            ${item.badge === 'Hot' ? 'bg-red-100 text-red-800' : ''}
-                            ${item.badge === 'Trending' ? 'bg-purple-100 text-purple-800' : ''}
-                          `}>
-                            {item.badge}
-                          </span>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+            {/* Contact Info */}
+            <div className="p-4 border-t border-slate-700 mt-auto">
+              <div className="space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2">
+                  <PhoneIcon className="w-4 h-4" />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <MapPin className="w-4 h-4 mt-0.5" />
+                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                </div>
               </div>
-            ))}
-          </div>
-
-          {/* Featured Services */}
-          <div className="p-4 border-t border-gray-200">
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">Featured Services</h3>
-            <div className="space-y-3">
-              {featuredServices.map((service) => (
-                <Link
-                  key={service.name}
-                  to={service.href}
-                  className="block p-3 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-200 group"
-                  onClick={onClose}
-                >
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg flex items-center justify-center group-hover:from-blue-200 group-hover:to-purple-200 transition-all duration-200">
-                      <service.icon className="w-4 h-4 text-blue-600" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
-                        {service.name}
-                      </p>
-                      <p className="text-xs text-gray-500 mt-1 line-clamp-2">
-                        {service.description}
-                      </p>
-                      <span className="inline-block px-2 py-1 text-xs bg-blue-50 text-blue-700 rounded-full mt-2">
-                        {service.category}
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
             </div>
             
             <div className="mt-4">
