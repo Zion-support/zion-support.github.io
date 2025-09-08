@@ -32,11 +32,7 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild',
     rollupOptions: {
-      output: {
-        inlineDynamicImports: false,
-      },
-      // Bundle axios with the app to avoid missing module errors
-      external: ['@sentry/react']
+      external: ['react-markdown', 'vue'],
     },
   },
   resolve: {
