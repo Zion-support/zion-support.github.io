@@ -1,14 +1,8 @@
-name: Automations
-
-on:
+name: automations
+'on':
+  workflow_dispatch: {}
   schedule:
-    - cron: '0 * * * *'  # Every hour
-  workflow_dispatch:
-  push:
-    paths:
-      - 'scripts/**'
-      - 'requirements.txt'
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
 
@@ -26,5 +20,5 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

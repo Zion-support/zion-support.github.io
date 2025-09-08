@@ -1,16 +1,14 @@
-
-
-name: Front Scheduler
-
-on:
+name: Deployment Expert
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '*/10 * * * *'
-
+    - cron: 0 */6 * * *
 permissions:
   contents: write
   actions: read
-
+concurrency:
+  group: Deployment-Expert
+  cancel-in-progress: true
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -27,12 +25,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
+          cache: npm
       - name: Install dependencies
 
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
           echo "Workflow completed successfully"
-          
+    runs_on: ubuntu-latest

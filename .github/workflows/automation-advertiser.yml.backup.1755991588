@@ -1,10 +1,8 @@
-name: Automation Advertiser
-
-on:
+name: labeler
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '*/10 * * * *'
-
+    - cron: 0 */2 * * *
 permissions:
   contents: read
   actions: read
@@ -30,4 +28,5 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Run workflow
-        run: echo "Workflow completed successfully"
+        run: echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

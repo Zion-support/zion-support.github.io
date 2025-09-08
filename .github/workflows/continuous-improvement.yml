@@ -1,21 +1,27 @@
-name: continuous-improvement.yml (DISABLED - Migrated to PM2)
-
-on:
-  # This workflow is disabled and migrated to PM2 automation
-  # The original workflow was handling automation tasks
-  # Now handled by PM2 processes as configured in ecosystem.config.cjs
-  workflow_dispatch: # Only manual triggers allowed
-  # All automatic triggers removed
-
+name: Continuous Improvement
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 2 * * *
+permissions:
+  contents: write
+  actions: read
+  pull-requests: write
+concurrency:
+  group: continuous-improvement-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   disabled:
     runs-on: ubuntu-latest
     steps:
       - name: Workflow Disabled
         run: |
-          echo "This workflow has been disabled and migrated to PM2 automation."
-          echo "Automation tasks are now handled by PM2 processes running continuously."
-          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
-          echo "To check PM2 status: pm2 status"
-          echo "To view logs: pm2 logs <process-name>"
-          exit 0
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore(automation): CI continuous improvement adjustments" -a || true
+            git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)
+          else
+            echo "No changes to push"
+          fi
+    runs_on: ubuntu-latest

@@ -1,8 +1,5 @@
----
 name: ci-auto-heal
-on:
-  # schedule:
-  #   - cron: '0 */2 * * *' # DISABLED to prevent conflicts with manual fixes
+'on':
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -30,5 +27,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest

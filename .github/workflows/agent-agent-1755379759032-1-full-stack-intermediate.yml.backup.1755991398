@@ -1,14 +1,14 @@
-name: Agent Agent 1755379759032 1 Full Stack Intermediate
-
-on:
+name: Exponential AI Delegation
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '*/10 * * * *'
-
+    - cron: 0 0 * * *
 permissions:
   contents: write
   actions: read
-
+concurrency:
+  group: exponential-ai-delegation-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   main:
     name: Main Job
@@ -24,12 +24,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
+          cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
+      - name: Complete workflow
+        run: |
+          echo "Workflow completed successfully"
+    runs_on: ubuntu-latest

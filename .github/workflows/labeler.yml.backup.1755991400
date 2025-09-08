@@ -1,9 +1,8 @@
----
-name: labeler
-on:
+name: agent-agent-1755379759032-1-full-stack-intermediate
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
@@ -32,6 +31,4 @@ jobs:
 
         run: |
           echo "Workflow Workflow completed successfully"
-        run: |
-          echo "Workflow completed successfully"
-          
+    runs_on: ubuntu-latest

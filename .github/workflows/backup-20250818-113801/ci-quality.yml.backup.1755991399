@@ -1,9 +1,8 @@
----
-name: CI Quality Check
-on:
+name: agent-agent-1755379731008-2-monitoring-expert
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: 0 */2 * * *
 permissions:
   contents: write
 :.github/workflows/backup-20250818-113801/ci-quality.yml
@@ -37,5 +36,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow completed successfully"
-          
+          echo "Workflow Workflow completed successfully"
+    runs_on: ubuntu-latest
