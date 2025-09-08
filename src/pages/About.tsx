@@ -1,17 +1,26 @@
-
-import { AppLayout } from "@/layout/AppLayout";
-
-import { SEO } from "@/components/SEO";
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { 
-  LightBulbIcon, 
-  RocketLaunchIcon, 
-  GlobeAltIcon, 
-  UserGroupIcon,
-  ChartBarIcon,
-  ShieldCheckIcon
-} from '@heroicons/react/24/outline';
+import { SEO } from '@/components/SEO';
+import { Users, 
+  Target, 
+  Award, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Rocket, 
+  Heart,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Lightbulb,
+  Cpu,
+  Brain,
+  Cloud,
+  Lock,
+  Database
+ } from 'lucide-react';
 
 export default function About() {
   return (
@@ -358,24 +367,59 @@ import { Users, Target, Zap, Globe, Award, TrendingUp, Shield, Lightbulb } from 
 const About: React.FC = () => {
   const values = [
     {
-      icon: Innovation,
-      title: "Innovation",
-      description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches to solve complex challenges."
+      icon: Lightbulb,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Excellence,
-      title: "Excellence",
-      description: "We maintain the highest standards in everything we do, from code quality to customer service and project delivery."
+      icon: Award,
+      title: 'Excellence in Execution',
+      description: 'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Collaboration,
-      title: "Collaboration",
-      description: "We believe in the power of teamwork and partnerships to achieve extraordinary results that benefit everyone involved."
+      icon: Users,
+      title: 'Partnership Approach',
+      description: 'We work as an extension of your team, building long-term relationships based on trust and mutual success.',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Integrity,
-      title: "Integrity",
-      description: "We operate with honesty, transparency, and ethical practices in all our business relationships and operations."
+      icon: Shield,
+      title: 'Security & Trust',
+      description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
+      color: 'from-red-500 to-orange-500'
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
+      expertise: ['AI Strategy', 'Digital Transformation', 'Business Innovation'],
+      image: '/images/team/kleber-santos.jpg'
+    },
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'CTO & AI Research Lead',
+      bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.',
+      expertise: ['Machine Learning', 'AI Research', 'Technical Architecture'],
+      image: '/images/team/sarah-chen.jpg'
+    },
+    {
+      name: 'Marcus Rodriguez',
+      role: 'Head of Cloud & DevOps',
+      bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.',
+      expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure'],
+      image: '/images/team/marcus-rodriguez.jpg'
+    },
+    {
+      name: 'Dr. Emily Watson',
+      role: 'Cybersecurity Director',
+      bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
+      expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],
+      image: '/images/team/emily-watson.jpg'
     }
   ];
 
@@ -402,12 +446,14 @@ const About: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { number: "500+", label: "Projects Completed", icon: Target },
-    { number: "50+", label: "Team Members", icon: Users },
-    { number: "25+", label: "Countries Served", icon: Globe },
-    { number: "99%", label: "Client Satisfaction", icon: Award }
-  ];
+    return (
+    <div className="min-h-screen bg-slate-900">
+      <SEO 
+        title="About Us - Zion Tech Group"
+        description="Learn about Zion Tech Group's mission to democratize AI technology and transform businesses through innovative solutions. Meet our expert team and discover our journey."
+        keywords="about Zion Tech Group, AI comp, technology team, comp mission, digital transformation"
+        canonical="https://ziontechgroup.com/about"
+      />
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -729,55 +775,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Us in Shaping the Future
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Whether you're looking to transform your business with AI, explore quantum computing, 
-            or partner with us on innovative projects, we'd love to hear from you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-            >
-              Get in Touch
-            </Link>
-            <Link
-              to="/careers"
-              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
-            >
-              Join Our Team
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
-};
-
-// Icon components
-const Innovation = ({ className }: { className?: string }) => (
-  <Lightbulb className={className} />
-);
-
-const Excellence = ({ className }: { className?: string }) => (
-  <Award className={className} />
-);
-
-const Collaboration = ({ className }: { className?: string }) => (
-  <Users className={className} />
-);
-
-const Integrity = ({ className }: { className?: string }) => (
-  <Shield className={className} />
-);
-
-export default About;
+}

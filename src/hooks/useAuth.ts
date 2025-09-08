@@ -16,8 +16,8 @@ interface AuthState {
   isLoading: boolean;
 }
 
-export const useAuth = () => {
-  const [authState, setAuthState] = useState<AuthState>({
+export function useAuth(...args: any[]) {
+  const [authState, setAuthState] = useState<any>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
@@ -32,12 +32,27 @@ export function useAuth() {
       const storedUser = localStorage.getItem('zion_user');
       if (storedUser) {
         try {
-          setUser(JSON.parse(storedUser));
+          const user = JSON.parse(storedUser);
+          setAuthState({
+            user,
+            isAuthenticated: true,
+            isLoading: false,
+          });
         } catch (error) {
           console.error('Error parsing stored user:', error);
+          setAuthState({
+            user: null,
+            isAuthenticated: false,
+            isLoading: false,
+          });
         }
+      } else {
+        setAuthState({
+          user: null,
+          isAuthenticated: false,
+          isLoading: false,
+        });
       }
-      setLoading(false);
     };
 
     checkAuth();
@@ -69,11 +84,15 @@ export function useAuth() {
       isLoading: false,
     });
     localStorage.setItem('authToken', 'dummy-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    
+    return mockUser;
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken');
   };
 
   const register = async (email: string, password: string, name: string) => {
@@ -87,6 +106,8 @@ export function useAuth() {
     
     setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'dummy-token');
+    
     return mockUser;
   };
 

@@ -58,12 +58,172 @@ export default function Blog() {
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
         canonical="https://ziontechgroup.com/blog"
       />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
+
+      {/* Hero Section */}
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Our Blog
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Insights, trends, and expert perspectives on technology innovation
+          </motion.p>
+          
+          {/* Search Bar */}
+          <motion.div 
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <input
+                type="text"
+                placeholder="Search articles, authors, or topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-2xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 transition-colors duration-300"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Categories Filter */}
+      <section className="py-12 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="flex flex-wrap justify-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {categories.map((category)  => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white shadow-lg'
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white'
+                }`}
+              >
+                <category.icon className="w-4 h-4" />
+                <span>{category.name}</span>
+                <span className="bg-slate-800/50 px-2 py-1 rounded-full text-xs">
+                  {category.count}
+                </span>
+              </button>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Featured Posts */}
+      {!searchQuery && (
+        <section className="py-20 bg-slate-900">
+          <div className="container mx-auto px-4">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Featured Articles
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Our most popular and insightful content on technology trends and innovations
+              </p>
+            </motion.div>
+            
+            <div className="grid lg: grid-cols-3 gap-8">
+              {featuredPosts.map((post, index)  => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
+                    <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                      <div className="text-6xl">📱</div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                          {categories.find(c => c.id === post.category)?.name}
+                        </span>
+                        <span className="text-slate-400 text-sm">•</span>
+                        <span className="text-slate-400 text-sm">{post.readTime}</span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                        {post.title}
+                      </h3>
+                      
+                      <p className="text-slate-300 mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <User className="w-4 h-4 text-cyan-400" />
+                          </div>
+                          <div>
+                            <p className="text-sm text-white font-medium">{post.author}</p>
+                            <p className="text-xs text-slate-400">{post.date}</p>
+                          </div>
+                        </div>
+                        
+                        <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+      {/* Search Results or Recent Posts */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              {searchQuery ? `Search Results for "${searchQuery}"` : 'Recent Articles'}
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              {searchQuery 
+                ? `Found ${searchResults.length} articles matching your search`
+                : 'Stay updated with our latest insights and analysis'
+              }
             </p>
           </div>
           

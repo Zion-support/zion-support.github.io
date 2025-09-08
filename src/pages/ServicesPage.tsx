@@ -29,15 +29,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon,
-  Heart,
-  Smartphone
+  Globe as GlobeIcon
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import { NEXT_GEN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/nextGenInnovativeMicroSaasServices2025";
-import { COMPREHENSIVE_IT_SERVICES_2025 } from "@/data/comprehensiveITServices2025";
-import { COMPREHENSIVE_AI_SERVICES_2025 } from "@/data/comprehensiveAIServices2025";
+import { SEO } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');

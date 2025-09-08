@@ -1,5 +1,14 @@
-    phone: '',
-    company: '',
+import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+const Contact: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('general');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    comp: '',
     phone: '',
     service: '',
     company: '',
@@ -211,20 +220,6 @@ const Contact = () => {
     timeline: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
-    service: '',
-    message: ''
-  });
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -232,35 +227,20 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
-        timeline: ''
-      });
-    }, 3000);
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    }, 2000);
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! We will get back to you within 24 hours.');
+    setFormData({
+      name: '',
+      email: '',
+      comp: '',
+      phone: '',
+      service: '',
+      budget: '',
+      timeline: ''
+    });
   };
 
   const contactMethods = [
@@ -488,13 +468,13 @@ const Contact = () => {
     }
   ];
 
-  return (
-    
-      <SEO 
-        title="Contact Zion - Get in Touch" 
-        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
-        keywords="contact Zion, AI marketplace support, tech platform contact"
-        canonical="https://app.ziontechgroup.com/contact"
+    return (
+    <>
+      <SEO
+        title="Contact Us | Zion Tech Group - Get Expert Consultation"
+        description="Contact Zion Tech Group for expert consultation on AI-powered micro SAAS, cloud infrastructure, data analytics, and security solutions. Get in touch today!"
+        keywords="contact Zion Tech Group, AI services consultation, cloud services support, data analytics help, cybersecurity consultation, micro SAAS support"
+        canonical="https://ziontechgroup.com/contact"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -3195,196 +3175,6 @@ export default Contact;
         />
       )}
     </>
-  );
-}
-                  <label className="block text-zion-slate-light text-sm font-medium mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 resize-none"
-                    placeholder="Tell us about your project, requirements, or any questions you have..."
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Sending Message...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      Send Message
-                    </>
-                  )}
-                </motion.button>
-              </form>
-            </div>
-          </motion.div>
-
-          {/* Contact Information & Map */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="order-1 lg:order-2"
-          >
-            <div className="space-y-8">
-              {/* Office Location */}
-              <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-zion-cyan" />
-                  Our Office
-                </h3>
-                <div className="space-y-3 text-zion-slate-light">
-                  <p className="text-lg font-medium text-white">Zion Tech Group</p>
-                  <p>364 E Main St STE 1008</p>
-                  <p>Middletown, DE 19709</p>
-                  <p>United States</p>
-                </div>
-                <a
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors mt-4"
-                >
-                  <Globe className="w-4 h-4" />
-                  View on Google Maps
-                </a>
-              </div>
-
-              {/* Business Hours */}
-              <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-zion-cyan" />
-                  Business Hours
-                </h3>
-                <div className="space-y-3 text-zion-slate-light">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="text-white">9:00 AM - 6:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="text-white">10:00 AM - 4:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="text-white">By Appointment</span>
-                  </div>
-                  <div className="pt-3 border-t border-zion-purple/20">
-                    <p className="text-zion-cyan text-sm">
-                      Emergency support available 24/7 for critical issues
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Why Choose Us */}
-              <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
-                <div className="space-y-3 text-zion-slate-light">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>10+ years of industry experience</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>500+ successful projects delivered</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>Global team of experts</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>24/7 support and maintenance</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>Competitive pricing and flexible terms</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-20 text-center"
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Let's discuss your requirements and create a customized solution that drives results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
-              >
-                Schedule Free Consultation
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Download Brochure
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
-}
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Don't wait to transform your business with cutting-edge technology
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              to="/get-started" 
-              className="btn-primary text-lg px-8 py-4"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              to="/services" 
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              Explore Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
   );
 };
 

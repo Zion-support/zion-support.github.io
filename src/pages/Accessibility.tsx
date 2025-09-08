@@ -1,5 +1,30 @@
 import React from 'react';
-import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Accessibility, 
+  Eye, 
+  Ear, 
+  Hand, 
+  Brain, 
+  CheckCircle, 
+  AlertTriangle, 
+  Info, 
+  Phone, 
+  Mail, 
+  Globe,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Keyboard,
+  Mouse,
+  Headphones,
+  Volume2,
+  VolumeX,
+  Contrast,
+  Type,
+  ZoomIn,
+  ZoomOut
+} from 'lucide-react';
+import { SEO  } from '../components/SEO';
 
 const Accessibility: React.FC = () => {
   const accessibilityFeatures = [

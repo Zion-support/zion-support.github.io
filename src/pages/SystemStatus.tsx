@@ -268,54 +268,62 @@ export default function SystemStatus() {
         </motion.div>
       </div>
 
-      {/* Service Status Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-              className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
-                    <service.icon className="w-5 h-5 text-cyan-400" />
+      {/* Services Status */}
+      <div className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Service Status
+          </h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-zion-cyan">{service.icon}</div>
+                    <div className="flex items-center gap-2">
+                      {getStatusIcon(service.status)}
+                      <span className="text-sm text-zion-slate-light">Operational</span>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                </div>
-                <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
-                  {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
-                  {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
-                </div>
-              </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                    <p className="text-sm text-gray-400">{service.description}</p>
+                  </div>
+                  
+                  <div className="mt-4">
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
+                      {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
+                      {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+                    </div>
+                  </div>
 
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Uptime</span>
-                  <span className="text-white font-medium">{service.uptime}%</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Response Time</span>
-                  <span className="text-white font-medium">{service.responseTime}ms</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Last Updated</span>
-                  <span className="text-white font-medium text-sm">
-                    {new Date(service.lastUpdated).toLocaleTimeString()}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                  <div className="space-y-3 mt-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400 text-sm">Uptime</span>
+                      <span className="text-white font-medium">{service.uptime}%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400 text-sm">Response Time</span>
+                      <span className="text-white font-medium">{service.responseTime}ms</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400 text-sm">Last Updated</span>
+                      <span className="text-white font-medium text-sm">
+                        {new Date(service.lastUpdated).toLocaleTimeString()}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Incidents */}

@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
+  HelpCircle, 
+  MessageCircle, 
+  Mail, 
+  Phone, 
+  Clock, 
+  CheckCircle, 
   Search, 
   MessageCircle, 
   Phone, 
@@ -19,26 +26,9 @@ import {
   Brain,
   Shield,
   Cpu,
-  Star,
-  ArrowRight,
-  ExternalLink,
-  Download,
-  Calendar,
-  MapPin,
-  Zap,
-  Target,
-  Lightbulb,
-  Code,
-  Database,
-  Network,
-  Cloud,
-  Lock,
-  BarChart3,
-  Palette,
-  Smartphone,
-  Server,
-  CreditCard
+  Star
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export default function Support() {
   const [activeCategory, setActiveCategory] = useState('general');
