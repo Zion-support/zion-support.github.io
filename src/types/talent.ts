@@ -3,9 +3,14 @@
 <<<<<<< HEAD
 export interface TalentProfile {
   id: string;
-  name: string;
-  email: string;
-  avatar?: string;
+  user_id: string;
+  full_name: string;
+  professional_title: string;
+  /** Simplified name for SEO purposes */
+  name?: string;
+  /** Simplified title for SEO purposes */
+  title?: string;
+  profile_picture_url?: string;
   bio?: string;
   skills: string[];
   experience: number;
