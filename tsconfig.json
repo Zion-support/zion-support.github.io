@@ -45,30 +45,18 @@
   "include": [
     "src/**/*",
     "src/**/*.ts",
-    "src/**/*.tsx",
-    "vite.config.ts",
-    "tailwind.config.ts",
-    "vitest.config.ts"
+    "src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
-    "coverage",
+    "src.disabled",
+    "src_disabled_*",
+    "tests",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.stories.ts",
-    "**/*.stories.tsx",
-    "src_disabled_*",
-    "src.disabled",
-    "src.disabled/**/*",
-    "src_disabled_*/**/*",
-    "**/disabled/**/*",
-    "**/*.disabled/**/*",
-    "tests",
-    "__tests__",
-    "supabase/functions"
+    "**/*.spec.tsx"
   ]
 }
