@@ -12,9 +12,6 @@
 
 export function TokenDisplay() {;
 
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const { wallet, loading } = useWallet();
 
 import React from "react",
@@ -119,26 +116,25 @@ function TokenDisplay() {
 ;
   return (
     <Card>;
-      <CardHeader className="flex flex - row items - center justify - between pb - 2">;
+      <CardHeader className="flex flex - row items - center justify - between pb-2">;
         <div>;
-          <CardTitle className="text - xl">ZION$ Balance</CardTitle>;
+          <CardTitle className="text-xl">ZION$ Balance</CardTitle>;
           <CardDescription > Your current token balance</CardDescription>;
         </div>;
-        <BadgeDollarSign className="h - 6 w - 6 text - primary" />;
+        <BadgeDollarSign className="h - 6 w - 6 text-primary" />;
       </CardHeader>;
       <CardContent>;
         {loading ? (
-          <Skeleton className="h - 12 w - 28" />) : (
-          <div className="flex flex - col gap - 2">;
-            <div className="flex items - end">;
-              <span className="text - 3xl font - bold">{wallet?.balance || 0}</span>;
-              <span className="ml - 1 text - muted - foreground">ZION$</span>;
+          <Skeleton className="h - 12 w-28" />) : (
+          <div className="flex flex - col gap-2">;
+            <div className="flex items-end">;
+              <span className="text - 3xl font-bold">{wallet?.balance || 0}</span>;
+              <span className="ml - 1 text - muted-foreground">ZION$</span>;
             </div>;
-            <p className="text - sm text - muted - foreground">;
+            <p className="text - sm text - muted-foreground">;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
-            <div className="mt - 2">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            <div className="mt-2">;
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;

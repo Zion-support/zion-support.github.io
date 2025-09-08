@@ -10,8 +10,4 @@ const AIAutonomousBusinessPlatform.js = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default AIAutonomousBusinessPlatform.js;

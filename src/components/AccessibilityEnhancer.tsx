@@ -67,8 +67,127 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.documentElement.classList.remove('focus-visible');
     }
 
-    // Store settings in localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(updatedSettings));
+    // Color blindness simulation
+    if (newSettings.colorBlindness !== 'normal') {
+      root.classList.add(`color-blind-${newSettings.colorBlindness}`);
+    } else {
+      root.classList.remove('color-blind-protanopia', 'color-blind-deuteranopia', 'color-blind-tritanopia');
+    }
+
+    // Font size
+    root.classList.remove('font-size-normal', 'font-size-large', 'font-size-xlarge');
+    root.classList.add(`font-size-${newSettings.fontSize}`);
+  }, []);
+
+  // Enhanced keyboard navigation
+  const setupKeyboardNavigation = useCallback(() => {
+    if (!settings.keyboardNavigation) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content
+      if (e.key === 'Tab' && e.altKey) {
+        e.preventDefault();
+        const mainContent = document.querySelector('main');
+        if (mainContent) {
+          (mainContent as HTMLElement).focus();
+        }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+      }
+    };
+
+<<<<<<< HEAD
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation')
+};
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown)
+};
+  }, [fontSize]);
+=======
+      // Skip to navigation
+      if (e.key === 'Tab' && e.shiftKey && e.altKey) {
+        e.preventDefault();
+        const navigation = document.querySelector('nav');
+        if (navigation) {
+          (navigation as HTMLElement).focus();
+        }
+      }
+
+      // Skip to footer
+      if (e.key === 'Tab' && e.ctrlKey) {
+        e.preventDefault();
+        const footer = document.querySelector('footer');
+        if (footer) {
+          (footer as HTMLElement).focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [settings.keyboardNavigation]);
+
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string) => {
+    if (!settings.screenReader) return;
+
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }, [settings.screenReader]);
+
+  // Enhanced focus management
+  const setupFocusManagement = useCallback(() => {
+    if (!settings.focusIndicator) return;
+
+    const focusableElements = document.querySelectorAll(
+      'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    );
+
+    focusableElements.forEach(element => {
+      element.addEventListener('focus', () => {
+        element.classList.add('focus-ring');
+        announceToScreenReader(`${element.textContent || element.getAttribute('aria-label') || 'Element'} focused`);
+      });
+
+      element.addEventListener('blur', () => {
+        element.classList.remove('focus-ring');
+      });
+    });
+  }, [settings.focusIndicator, announceToScreenReader]);
+
+  // Apply settings when they change
+  useEffect(() => {
+    applyAccessibilitySettings(settings);
+  }, [settings, applyAccessibilitySettings]);
+
+  // Setup keyboard navigation and focus management
+  useEffect(() => {
+    const cleanupKeyboard = setupKeyboardNavigation();
+    const cleanupFocus = setupFocusManagement();
+
+    return () => {
+      cleanupKeyboard?.();
+      cleanupFocus?.();
+    };
+  }, [setupKeyboardNavigation, setupFocusManagement]);
+
+  // Save settings to localStorage
+  useEffect(() => {
+    localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
   }, [settings]);
 
   // Load saved settings
@@ -303,56 +422,27 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: unknown) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applySettings(newSettings);
-    localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
-    onSettingsChange?.(newSettings);
-  }, [settings, applySettings, onSettingsChange]);
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast')
+};
 
-  const resetSettings = useCallback(() => {
-    setSettings(DEFAULT_SETTINGS);
-    applySettings(DEFAULT_SETTINGS);
-    localStorage.removeItem('zion-accessibility-settings');
-    onSettingsChange?.(DEFAULT_SETTINGS);
-  }, [applySettings, onSettingsChange]);
+  const toggleReducedMotion = () => {
+    setIsReducedMotion(!isReducedMotion);
+    document.documentElement.classList.toggle('reduce-motion')
+};
 
-  const increaseFontSize = useCallback(() => {
-    const newSize = Math.min(settings.fontSize + 2, 24);
-    updateSetting('fontSize', newSize);
-  }, [settings.fontSize, updateSetting]);
+  const increaseFontSize = () => {
+    const newSize = Math.min(fontSize + 2, 24);
+    setFontSize(newSize);
+    document.documentElement.style.setProperty('--font-size', `${newSize}px`)
+};
 
-  const decreaseFontSize = useCallback(() => {
-    const newSize = Math.max(settings.fontSize - 2, 12);
-    updateSetting('fontSize', newSize);
-  }, [settings.fontSize, updateSetting]);
-
-  const toggleHighContrast = useCallback(() => {
-    updateSetting('highContrast', !settings.highContrast);
-  }, [settings.highContrast, updateSetting]);
-
-  const toggleReducedMotion = useCallback(() => {
-    updateSetting('reducedMotion', !settings.reducedMotion);
-  }, [settings.reducedMotion, updateSetting]);
-
-  const toggleScreenReader = useCallback(() => {
-    updateSetting('screenReader', !settings.screenReader);
-  }, [settings.screenReader, updateSetting]);
-
-  const toggleKeyboardNavigation = useCallback(() => {
-    updateSetting('keyboardNavigation', !settings.keyboardNavigation);
-  }, [settings.keyboardNavigation, updateSetting]);
-
-  const toggleFocusIndicator = useCallback(() => {
-    updateSetting('focusIndicator', !settings.focusIndicator);
-  }, [settings.focusIndicator, updateSetting]);
-
-  const tabs = [
-    { id: 'general', label: 'General', icon: Settings },
-    { id: 'visual', label: 'Visual', icon: Eye },
-    { id: 'navigation', label: 'Navigation', icon: Keyboard }
-  ] as const;
+  const decreaseFontSize = () => {
+    const newSize = Math.max(fontSize - 2, 12);
+    setFontSize(newSize);
+    document.documentElement.style.setProperty('--font-size', `${newSize}px`)
+};
 
   return (
   {/* Empty JSX fragment */}
@@ -363,8 +453,29 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         aria-label="Toggle accessibility options"
         title="Accessibility Options"
       >
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
+        Skip to main content
+      </a>
+      
+      {children}
+    </>
+  )
+};
+
+export default AccessibilityEnhancer;
+=======
+      {/* Accessibility Controls Button */}
+      {showControls && (
+        <motion.button
+          className="fixed bottom-4 left-4 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg z-50 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Accessibility Settings"
+          aria-expanded={isOpen}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Accessibility className="w-6 h-6" />
+        </motion.button>
+      )}
 
       {/* Accessibility Panel */}
       <AnimatePresence>

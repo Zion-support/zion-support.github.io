@@ -1,46 +1,5 @@
 
-<<<<<<< HEAD
 
-
-
-=======
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import React from 'react',
-import SEO from '../../components/SEO',
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-import Card from '../../components/ui/Card';
-import Link from 'next/link';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services';
-import { extraServices  } from '../../data/extra-services';
-import { newlyAddedServices  } from '../../data/newly-added-services';
-import { curatedMarketServices  } from '../../data/curated-market-services';
-import { realMarketServices  } from '../../data/real-market-services';
-import { new2025Services  } from '../../data/new-2025-services';
-import { marketValidatedServices  } from '../../data/market-validated-services';
-import { moreRealServices2025  } from '../../data/more-real-services-2025';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
-
-<<<<<<< HEAD
-
-const mapLocalToServiceItem = null;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function ServicesIndexPage () {
- export default function ServicesIndexPage () {}
-  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (}
-}React;
-  useEffect ( () => {
-<<<<<<< HEAD
-
-
-=======
 export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
@@ -55,35 +14,21 @@ body: JSON.stringify ({
 
 
 
-=======
-  service: values.serviceTitle, description: values.projectDescription, timeline: {
-  start: values.timelineStart, end: values.timelineEnd
-}
-budgetRange: values.budgetRange;
-}
-<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
-}</div> </div> </div> </div> <QuoteRequestModal open= {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default /**
+ * ServicesIndexPage - Function description
+ */
+function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   'Content-Type': 'application/json' ;
 };
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
@@ -167,9 +112,7 @@ export default ServicesPage;
 
   handleSubmit
 }/> </div>)
-
-
-=======
+};export default ServicesPage;
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -191,7 +134,7 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 import { Star } from 'lucide-react';
-rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10}),
+
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -230,8 +173,6 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
-
-
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
 
   slug: item.slug
@@ -249,34 +190,52 @@ const ServicesPage: NextPage = () => {
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
-
-=======
-  }
-
-  handleSubmit 
-}/> </div>) 
-};
-export default ServicesPage;
-
-"
-  selected
-}onSubmit= {}
-  handleSubmit
-}/> </div>)
-};export default ServicesPage;
-  handleSubmit
-}/> </div>)
-};export default ServicesPage;
-const mapLocalToServiceItem = (item: any): ServiceItem => ({
-  slug: item.slug,
-  title: item.name,
+    .concat(
       extraServices as any[];
   'Content - Type': 'application / json';
 }
-body: JSON.stringify ({service: values.service_title, description: values.project_description, timeline: {start: values.timeline_start, end: values.timeline_end;
+body: JSON.stringify ({
+  service: values.service_title, description: values.project_description, timeline: {
+  start: values.timeline_start, end: values.timeline_end;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+budget_range: values.budget_range;
+;
+}
+<Head> <title > Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI - assisted summaries." /> </Head>) );
+}</div> </div> </div> </div> <QuoteRequestModal open= {
+  modal_open;
+}on_close= {
+  () => setModalOpen (false);
+}service= {
+  selected;
+}on_submit= {
+  handle_submit;
+}/> </div>);
+}export default ServicesPage;
+const mapLocalToServiceItem = (item: any): ServiceItem => ({
+  slug: item.slug,
+  title: item.name,
+  description: item.description,
+  provider: 'Zion Provider',
+  priceRangeUSD: item.priceRangeUSD,
+  categories: [item.category],
+  rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10}),
+const ServicesPage: NextPage = () => {
+  const [services, set_services] = React.useState < ServiceItem[]>([]);
+  const [filtered, set_filtered] = React.useState < ServiceItem[]>([]);
+  const [filters, set_filters] = React.useState < Filters>({ categories: [] }),
+  const [modal_open, setModalOpen] = React.useState (false);
+  const [selected, set_selected] = React.useState < ServiceItem | null>(null);
+;
+export default /**
+ * ServicesIndexPage - Function description
+ */
+function ServicesIndexPage() {
+  const all = (enhancedRealMicroSaasServices as unknown[]);
+    .concat (
+      extra_services as any[];
+    .concat(;
+      extraServices as any[];
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -288,13 +247,81 @@ body: JSON.stringify ({service: values.service_title, description: values.projec
       verified2025Additions as any[];
       realServicesQ12025 as any[];
 
-<<<<<<< HEAD
+  // Normalize various category labels into our main buckets;
+  const categoryAliases: Record<string, string> = {;
+    'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools';
+  };
+  for (const s of all) {;
+    const service = s as { category?: string };
+    const rawCat = (service && service.category || '').trim();
+    const mapped = categoryAliases[rawCat] || (categories && categories.includes(rawCat) ? rawCat : 'Developer Tools');
+    byCategory[mapped].push(s);
+  }
+
+  React && React.useEffect(() => {;
+    const next = services && services.filter((s) => {;
+      // Category;
+      if (filters && filters.categories.length > 0 && !s && s.categories.some((c) => filters && filters.categories.includes(c))) return false;
+      // Price;
+      const min = s && s.priceFromUSD ?? s && s.priceRangeUSD?.[0];
+      const max = s && s.priceRangeUSD?.[1] ?? s && s.priceFromUSD;
+      if (filters && filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters && filters.priceMin)) return false;
+      if (filters && filters.priceMax !== undefined && (min === undefined ? true : min > filters && filters.priceMax)) return false;
+      // Rating;
+      if (filters && filters.ratingMin !== undefined && (s && s.rating ?? 0) < filters && filters.ratingMin) return false;
+      // Delivery time (not available in data, simulate pass-through);
+      return true;
+
+    });
+    setFiltered(next);
+  }, [filters, services]);
+
+
+  const availableCategories = React && React.useMemo(() => {;
 
     const set = new Set<string>();
     services && services.forEach((s) => s && s.categories.forEach((c) => set && set.add(c)));
     return Array && Array.from(set);
   }, [services]);
 
+
+  const handleRequestQuote = (service: ServiceItem) => {;
+    setSelected(service);
+    setModalOpen(true);
+  };
+
+  const handleSubmit = async (values: QuoteFormValues) => {;
+    const res = await fetch('/api/quote-request', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({;
+        service: values && values.serviceTitle,;
+        description: values && values.projectDescription,;
+        timeline: { start: values && values.timelineStart, end: values && values.timelineEnd },;
+        budgetRange: values && values.budgetRange,;
+        email: values && values.email})}),;
+    if (!res && res.ok) {;
+      const err = await res && res.json().catch(() => ({}));
+      throw new Error(err?.message || 'Failed to submit');
+
+    }
+  }
+    }
+
+  };
+
+
+  return (
+
+
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+
+
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
     <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
       <Head>;
@@ -412,10 +439,8 @@ if ( {) {$2;
               <div className="text-sm text-white / 70">{filtered.length} results</div>;
             </div>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-5">;
-<<<<<<< HEAD
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
-
 
 
             </div>;
@@ -423,29 +448,18 @@ if ( {) {$2;
               {filtered.map ((service) => (<EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}</div>;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
-      </div>;<QuoteRequestModal;
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selected}
-        onSubmit={handleSubmit}
-export default ServicesPage;export default ServicesPage;<QuoteRequestModal;
-const mapLocalToServiceItem = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function ServicesIndexPage () {
-
-<<<<<<< HEAD
+        </div>;
+      </div>;
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
-
-<<<<<<< HEAD
-
 
       />;
     </div>;
@@ -453,16 +467,16 @@ export default function ServicesIndexPage () {
 };
 
 
-
-export default ServicesPage;
-
-=======
 export default ServicesPage;
 
 export default ServicesPage;
 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default ServicesPage;
+export default ServicesPage;
+
+export default ServicesPage;
+
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -474,48 +488,6 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
-<<<<<<< HEAD
-
-
-
-
-
-=======
-    </div>)}export default ServicesPage;handleSubmit;
-}/> </div>)}export default ServicesPage;
-const mapLocalToServiceItem = $2;
-  title: item.name,
-  description: item.description,
-  provider: 'Zion Provider',
-  priceRangeUSD: item.priceRangeUSD,
-  categories: [item.category],
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10}),
-
-const ServicesPage: NextPage = () => {
-  const [services, setServices] = React.useState<ServiceItem[]>([]);
-  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
-  const [filters, setFilters] = React.useState<Filters>({ categories: [] }),
-  const [modalOpen, setModalOpen] = React.useState(false);
-  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
-
-export default function ServicesIndexPage() {
-  const all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
-      extraServices as any[];
-      additionalEnhancedServices as any[];
-      newlyAddedServices as any[];
-      curatedMarketServices as any[];
-      realMarketServices as any[];
-      new2025Services as any[];
-      marketValidatedServices as any[];
-      moreRealServices2025 as any[];
-      realOperationalServices as any[];
-      verified2025Additions as any[];
-      realServicesQ12025 as any[];
-      newVerifiedServicesQ22025 as any[]
-    );
-  const byCategory: Record<string, unknown[]> = {};
-
 
 export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
@@ -664,5 +636,3 @@ export default ServicesPage;
 }
 }
 }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

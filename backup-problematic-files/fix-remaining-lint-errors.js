@@ -60,8 +60,6 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     _,'
 }
 };
-<<<<<<< HEAD
-
         fixedCount++}
     } catch (error) {_;
 
@@ -81,8 +79,3 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
   };
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-
-=======
-
-        fixedCount++}
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -7,8 +7,4 @@ export const Lighthouse.spec = () => {
 pr-12325
 };
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Lighthouse.spec;

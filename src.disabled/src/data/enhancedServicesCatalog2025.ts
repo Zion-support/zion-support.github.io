@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -17,11 +19,4 @@ export default function EnhancedServicesCatalog2025({ }: EnhancedServicesCatalog
     </div>
   );
 
-}
-<<<<<<< HEAD
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

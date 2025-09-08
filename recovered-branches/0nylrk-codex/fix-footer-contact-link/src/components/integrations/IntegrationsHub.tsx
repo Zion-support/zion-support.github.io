@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 import {;
   Card,;
@@ -12,118 +12,27 @@ import {;
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-
-
-=======
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-
-<<<<<<< HEAD
-  CardHeader,
-  CardTitle,;
-
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
 import { ZapierIntegration } from "./ZapierIntegration";
 import { Badge } from "@/components/ui/badge";
-
-
-<<<<<<< HEAD
-
-
-
-=======
-"
-import { WebhookManager } from "./WebhookManager";"
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
-export function IntegrationsHub() {;
-  const [activeTab, setActiveTab] = useState("marketplace");
-
-  return (
-    <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-bold">Integrations Hub</h1>
-          <p className="text-muted-foreground mt-1">
-            Connect your platform with the tools and services you use every day
-          </p>
-        </div>
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
-
-
-<<<<<<< HEAD
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-
-=======
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      </div>      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
               <CardTitle className="text-lg">Status</CardTitle>
-<<<<<<< HEAD
-
-
-
-=======
-              <Badge variant="outline" className="bg-green-100 text-green-800">
-                Healthy
-              </Badge>
-              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
-<Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
               <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
-              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
-<Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
-              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
->>>>>>> origin/cursor/delete-old-data-records-6bba
             </div>
           </CardHeader>
           <CardContent>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-<<<<<<< HEAD
-
-
-
-=======
-                <span className="text-muted-foreground">
-                  Connected Services
-                </span>
-                <span className="text-muted-foreground">Connected Services</span>
-<span className="text-muted-foreground">Connected Services</span>
                 <span className="text-muted-foreground">Connected Services</span>                <span className="text-muted-foreground">Connected Services</span>
-                <span className="text-muted-foreground">Connected Services</span>
-<span className="text-muted-foreground">Connected Services</span>
-                <span className="text-muted-foreground">Connected Services</span>                <span className="text-muted-foreground">Connected Services</span>
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 <span className="font-medium">7 / 12</span>
               </div>
               <div className="flex justify-between text-sm">
@@ -237,27 +146,6 @@ export function IntegrationsHub() {"
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-
-
-
-=======
-
-
-        
-
-
-        
-        
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <Card className="md:col-span-2">
-
-        <Card className="md:col-span-2">
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
           </CardHeader>
@@ -266,21 +154,7 @@ export function IntegrationsHub() {"
               <li className="flex justify-between items-center pb-2 border-b">
                 <div>
                   <p className="font-medium">Slack notification sent</p>
-<<<<<<< HEAD
-
-
-
-=======
-                  <p className="text-muted-foreground">
-                    New job application received
-                  </p>
-                  <p className="text-muted-foreground">New job application received</p>
-<p className="text-muted-foreground">New job application received</p>
                   <p className="text-muted-foreground">New job application received</p>                  <p className="text-muted-foreground">New job application received</p>
-                  <p className="text-muted-foreground">New job application received</p>
-<p className="text-muted-foreground">New job application received</p>
-                  <p className="text-muted-foreground">New job application received</p>                  <p className="text-muted-foreground">New job application received</p>
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 </div>
                 <Badge variant="outline">5m ago</Badge>
               </li>
@@ -301,115 +175,33 @@ export function IntegrationsHub() {"
             </ul>
           </CardContent>
           <CardFooter className="pt-4">
-<<<<<<< HEAD
-
-
-
-=======
             <Button variant="outline" className="w-full">
               View All Activity
             </Button>
           </CardFooter>
         </Card>
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-
+      </div>      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
 
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
-<<<<<<< HEAD
-
-        </TabsList>
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-        <div className="mt-6">
-
-        <div className="mt-6">
-
-          <TabsContent value="marketplace" className="m-0">
-            <IntegrationCards />
-          </TabsContent>
-
-
-<<<<<<< HEAD
-
-
-          <TabsContent value="webhooks" className="m-0">
-
-
-=======
-          <TabsContent value="webhooks" className="m-0">
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        </TabsList>          <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
                 <CardTitle>Webhook Management</CardTitle>
                 <CardDescription>
-
-<<<<<<< HEAD
-
-=======
-                  Set up webhook endpoints to receive real-time updates from
-                  your Zion platform.
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                  Set up webhook endpoints to receive real-time updates from your Zion platform.                  Set up webhook endpoints to receive real-time updates from your Zion platform.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <WebhookManager />
               </CardContent>
-            </Card>
-<<<<<<< HEAD
-
-
-
+            </Card>            <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
                 <CardDescription>
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle>Synchronization Log</CardTitle>
-                <CardDescription>
-
-<<<<<<< HEAD
-                  View the history of synchronization events between
-                  integrations.
-
-=======
-            <Card className="mt-6">
-
-              <CardHeader>
-                <CardTitle>Synchronization Log</CardTitle>
-                <CardDescription>
-
-
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle>Synchronization Log</CardTitle>
-                <CardDescription>
-                  View the history of synchronization events between
-                  integrations.
-                  View the history of synchronization events between integrations.
-
-                  View the history of synchronization events between integrations.
-                  View the history of synchronization events between
-                  integrations.
-
-                  View the history of synchronization events between integrations.
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                  View the history of synchronization events between integrations.                  View the history of synchronization events between integrations.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -540,37 +332,7 @@ export function IntegrationsHub() {"
         </div>
       </Tabs>
     </div>
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
-import { IntegrationCards } from "./IntegrationCards",;"
-import { ZapierIntegration } from "./ZapierIntegration",;"
-import { Badge } from "@/components/ui/badge",;"
-import { WebhookManager } from "./WebhookManager",;"
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;"
-
-=======
-
-
-  )
-export function IntegrationsHub() {;
-  const [activeTab, setActiveTab] = useState("marketplace");
-  return (
-
-  );
-}
-
-
-export function IntegrationsHub() {;
-  const [activeTab, setActiveTab] = useState("marketplace");
-  return (
-
-  );
-}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   )
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -583,13 +345,6 @@ import { WebhookManager } from "./WebhookManager",;
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
-
-<<<<<<< HEAD
-  return (;
-=======
-    <div className="space-y-6">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
       <div className="flex justify-between items-center">;
         <div>;"
           <h1 className="text-3xl font-bold">Integrations Hub</h1>;"
@@ -597,145 +352,61 @@ export function IntegrationsHub() {;
             Connect your platform with the tools and services you use every day;
           </p>;
         </div>;
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="flex gap-2">;
 
           <Button variant="outline">View Documentation</Button>;
           <Button>Connect New Integration</Button>;
         </div>;
       </div>;
-
-<<<<<<< HEAD
-
-
-                  </p>;
-                </div>;"
-                <Badge variant="outline">5m ago</Badge>;
-
-              </li>;
-
-}
-
-
-
-=======
-  return (
-
-                  </p>;
-                </div>;"
-                <Badge variant="outline">5m ago</Badge>;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <Card>;
           <CardHeader className="pb-2">;
             <div className="flex justify-between items-center">;
               <CardTitle className="text-lg">Status</CardTitle>;
-  return (
-
-            <div className="space - y-2">;
-              <div className="flex justify - between text - sm">;
-                <span className="text - muted - foreground">;
-                  Connected Services;
-                </span>;
-                <span className="font - medium">7 / 12</span>;
-              </div>;
-              <div className="flex justify - between text - sm">;
-                <span className="text - muted - foreground">Last Sync</span>;
-                <span className="font - medium">2 mins ago</span>;
-              </div>;
-              <div className="flex justify - between text - sm">;
-                <span className="text - muted - foreground">Pending Webhooks</span>;
-                <span className="font - medium">0</span>;
-              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>;
+              <Badge variant="outline" className="bg-green-100 text-green-800">;  return (
+                Healthy;
+              </Badge>;
             </div>;
           </CardHeader>;
-          <CardContent>;
-            <div className="space-y-2">;
-              <div className="flex justify-between text-sm">;
-                <span className="text-muted-foreground">Connected Services</span>;
-                <span className="font-medium">7 / 12</span>;
-              </div>;
-              <div className="flex justify-between text-sm">;
-                <span className="text-muted-foreground">Last Sync</span>;
-                <span className="font-medium">2 mins ago</span>;
-              </div>;
-              <div className="flex justify-between text-sm">;
-                <span className="text-muted-foreground">Pending Webhooks</span>;
-                <span className="font-medium">0</span>;
-              </div>;
+          <CardContent>;              </div>;
             </div>;
           </CardContent>;
-        </Card>;
-                    New job application received;
+        </Card>;                    New job application received;
                   </p>;
                 </div>;"
                 <Badge variant="outline">5m ago</Badge>;
-              <li className="flex justify - between items - center pb - 2 border - b">;
-                <div>;
-                  <p className="font - medium">Google Calendar sync</p>;
-                  <p className="text - muted - foreground">Interview scheduled</p>;
-                </div>;
-                <Badge variant="outline">1h ago</Badge>;
-              </li>;
-              <li className="flex justify - between items - center">;
-                <div>;
-                  <p className="font - medium">Zapier webhook trigger</p>;
-                  <p className="text - muted - foreground">Contract signed</p>;
-        ;
-        <Card className="md:col-span-2">;
-          <CardHeader className="pb-2">;
-            <CardTitle className="text-lg">Recent Activity</CardTitle>;
-          </CardHeader>;
-          <CardContent className="pb-0">;
-            <ul className="space-y-2 text-sm">;
-              <li className="flex justify-between items-center pb-2 border-b">;
-                <div>;
-                  <p className="font-medium">Slack notification sent</p>;
-                  <p className="text-muted-foreground">New job application received</p>;
-                </div>;
-                <Badge variant="outline">5m ago</Badge>;
-              </li>;
-              <li className="flex justify-between items-center pb-2 border-b">;
-                <div>;
-                  <p className="font-medium">Google Calendar sync</p>;
-                  <p className="text-muted-foreground">Interview scheduled</p>;
-                </div>;
-                <Badge variant="outline">1h ago</Badge>;
-              </li>;
-              <li className="flex justify-between items-center">;
-                <div>;
-                  <p className="font-medium">Zapier webhook trigger</p>;
-                  <p className="text-muted-foreground">Contract signed</p>;
-                </div>;
+              </li>;                </div>;
                 <Badge variant="outline">2h ago</Badge>;
               </li>;
             </ul>;
           </CardContent>;
-      <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
-        <TabsList className="grid grid - cols - 3 md: w-[400px]">;
-          <CardFooter className="pt-4">;
-            <Button variant="outline" className="w-full">View All Activity</Button>;
-          </CardFooter>;
-        </Card>;
-      </div>;
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-        <TabsList className="grid grid-cols-3 md: w-[400px]">;
-  return (
 
-                  </p>;
-                </div>;"
-                <Badge variant="outline">5m ago</Badge>;
+          <CardFooter className="pt-4">;
+            <Button variant="outline" className="w-full">;
 
               View All Activity;
             </Button>;
           </CardFooter>;
         </Card>;
-
-    </div>);
-}
       </div>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+      <Tabs value={active_tab} onValueChange={setActiveTab} className="w-full">;
+        <TabsList className="grid grid - cols-3 md: w-[400px]">;                </CardDescription>;
+              </CardHeader>;
+              <CardContent>;
+                <WebhookManager />;
+              </CardContent>;
+            </Card>;                </CardDescription>;
+              </CardHeader>;
+              <CardContent>;
+                <IntegrationsSyncLog />;
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+        </div>;
+      </Tabs>;
+  );
+}
+;  );  );
+}
+;

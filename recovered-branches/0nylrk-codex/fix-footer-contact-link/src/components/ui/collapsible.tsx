@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -18,31 +17,10 @@ const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
 
 ;
 
-const Collapsible = CollapsiblePrimitive.Root
-const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
-const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
-
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
-
-;
-
-
-<<<<<<< HEAD
-
-
-export { Collapsible, CollapsibleTrigger, CollapsibleContent }
-;
-
-
-
-
-
-=======
-export { Collapsible, CollapsibleTrigger, CollapsibleContent };
 
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
-
+;
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
->>>>>>> origin/cursor/delete-old-data-records-6bba

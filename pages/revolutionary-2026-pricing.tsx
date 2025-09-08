@@ -128,9 +128,7 @@ export default function Revolutionary2026Pricing() {
       animationSpeed={2.5}
       enableHolographic={true}
       enableQuantumEffects={true}
-      enableNeuralNetwork={true}
-    >
-      <div className="min-h-screen">
+      enableNeuralNetwork={true}><div className="min-h-screen">
         <Head>
           <title>Revolutionary 2026 Pricing - Zion Tech Group | Competitive AI, Quantum & Emerging Tech Pricing</title>
           <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2026 services: AI, quantum computing, emerging technologies, and enterprise solutions. Contact: +1 302 464 0950" />
@@ -230,9 +228,7 @@ export default function Revolutionary2026Pricing() {
                         selectedCategory === category.id
                           ? 'bg-purple-600 text-white'
                           : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'
-                      }`}
-                    >
-                      {category.icon} {category.name} ({category.count})
+                      }`}>{category.icon} {category.name} ({category.count})
                     </button>
                   ))}
                 </div>
@@ -247,9 +243,7 @@ export default function Revolutionary2026Pricing() {
                         selectedPriceRange === range.id
                           ? 'bg-blue-600 text-white'
                           : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'
-                      }`}
-                    >
-                      {range.name}
+                      }`}>{range.name}
                     </button>
                   ))}
                 </div>

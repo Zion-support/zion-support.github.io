@@ -1,24 +1,3 @@
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface ProjectDetailsStepProps {
-  }
-  "formData": QuoteFormData;
-  "updateFormData": ("data": Partial<QuoteFormData>) => void;
-}
-<<<<<<< HEAD
-export function ProjectDetailsStep({
-  formData
-  updateFormData
-
-
-=======
-export function ProjectDetailsStep() {
-
 import { QuoteFormData } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -33,18 +12,16 @@ interface ProjectDetailsStepProps {}
 export function ProjectDetailsStep({}
   formData,
   updateFormData,
-}: ProjectDetailsStepProps) {}
-  return ("
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}: ProjectDetailsStepProps) {
+  return (
     <div className="space-y-6">
 
         </h3>
 
       <div>
-
-<<<<<<< HEAD
-
-
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -58,7 +35,6 @@ export function ProjectDetailsStep({}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
-
 
           <div>
             <Label
@@ -148,24 +124,6 @@ id="projectDescription""
         <h3 className="text-xl font-semibold text-white mb-4">"
           Contact Information
         </h3>
-        <div className="grid grid-cols-1 "md":grid-cols-2 gap-4">"
-          <div>
-            <Label htmlFor="name" className="text-zion-slate-light">"
-              Name
-            </Label>
-
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
-
-
-<div>
-<h3 className="text-xl font-semibold text-white mb-4">
-          Contact Information
-        </h3>
-      <div>
-        <h3 className="text-xl font-semibold text-white mb-4">
-          Contact Information
-        </h3>
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>"
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -228,126 +186,7 @@ export function ProjectDetailsStep() {;
               id="name";"
 <<<<<<< HEAD
               placeholder="Your name";
-
-
-
-
-value={formData.contactInfo.name}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-
-
-
-              value={formData.contactInfo.name}
-
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, name: e.target.value } ;
-              })}
-
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-=======
-              placeholder="Your name";"
               value={formData.contactInfo.name}          <div>
-            <Label htmlFor="company" className="text-zion-slate-light">"
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    name: e.target.value,
-                  },
-                })
-              }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          <div>
-
-            <Label htmlFor="company" className="text-zion-slate-light">
-              Company
-            </Label>
-<<<<<<< HEAD
-            <Input
-              id="company"
-              placeholder="Your company name"
-              value={formData.contactInfo.company}
-
-
-
-=======
-            <Input,
-id="company""
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    company: e.target.value,
-                  },
-                })
-              }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="email" className="text-zion-slate-light">
-              Email
-            </Label>
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <Input
-              id="email"
-              type="email"
-              placeholder="Your email address"
-<<<<<<< HEAD
-
-
-              value={formData.contactInfo.email}
-
-=======
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, email: e.target.value } ;
-              })}
-
-
-              value={formData.contactInfo.email}
-onChange={(e) =>
-              value={formData.contactInfo.email}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    email: e.target.value
-                  }
-                })
-              }
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, email: e.target.value } ;
-              })}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    name: e.target.value,
-                  },
-                })
-              }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
-
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -371,27 +210,10 @@ onChange={(e) =>
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
             </Label>
-
             <Input
               id="email"
               type="email"
               placeholder="Your email address"
-
-              value={formData.contactInfo.email}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    email: e.target.value,
-                  },
-                })
-              }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone
             </Label>
@@ -399,10 +221,6 @@ onChange={(e) =>
               id="phone"
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
-<<<<<<< HEAD
-
-
-=======
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -411,8 +229,6 @@ onChange={(e) =>
                   },
                 })
               }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
 </div>"
@@ -487,65 +303,25 @@ id="phone""
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-
-=======
-              className="bg-zion-blue border border-zion-blue-light "focus": border-zion-purple text-white";"
-import { QuoteFormData  } from '@/types / quotes';'
-import { Input  } from '@/components / ui / input';'
-import { Label  } from '@/components / ui / label';'
-import { Textarea  } from '@/components / ui / textarea';'
-              value={formData && formData.contactInfo.email}
-              onChange={(e) => updateFormData({ ;
-                contactInfo: { ...formData && formData.contactInfo, email: e && e.target.value } ;
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            />;
-
-          </div>;
-          <div>;
-            <Label htmlFor="phone" className="text-zion-slate-light">Phone</Label>;
-            <Input
-              id="phone"
-              placeholder="Your phone number"
-              value={formData && formData.contactInfo.phone}
-              onChange={(e) => updateFormData({ ;
-                contactInfo: { ...formData && formData.contactInfo, phone: e && e.target.value } ;
-              })}
-  );
-}
-  )
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
 import { Label  } from '@/components / ui / label';
 import { Textarea  } from '@/components / ui / textarea';
 interface ProjectDetailsStepProps {
-  }
-  "form_data": QuoteFormData;
-  "updateFormData": ("data": Partial < QuoteFormData>) => void;}
+  form_data: QuoteFormData;
+  updateFormData: (data: Partial < QuoteFormData>) => void;}
             />;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
       <div>;
-        <h3 className="text - xl font - semibold text - white mb-4">;"
+        <h3 className="text - xl font - semibold text - white mb-4">;
           Contact Information;
         </h3>;
-        <div className="grid grid - cols - 1 "md":grid - cols - 2 gap-4">;"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
           <div>;
-            <Label html_for="name" className="text - zion - slate-light">;"
+            <Label html_for="name" className="text - zion - slate-light">;
               Name;
             </Label>;
             <Input;
@@ -561,11 +337,11 @@ interface ProjectDetailsStepProps {
                     }
                     "name": e.target.value});
               }
-              className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="company" className="text - zion - slate-light">;"
+            <Label html_for="company" className="text - zion - slate-light">;
               Company;
             </Label>;
             <Input;
@@ -581,11 +357,11 @@ interface ProjectDetailsStepProps {
                     }
                     "company": e.target.value});
               }
-              className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="email" className="text - zion - slate-light">;"
+            <Label html_for="email" className="text - zion - slate-light">;
               Email;
             </Label>;
             <Input;
@@ -629,11 +405,10 @@ interface ProjectDetailsStepProps {
                     }
                     "email": e.target.value});
               }
-              className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-
             <Label html_for="phone" className="text - zion - slate-light">;
               Phone;
             </Label>;
@@ -656,156 +431,6 @@ interface ProjectDetailsStepProps {
         </div>;
       </div>;
 
+    </div>);}
 
   )
-import { QuoteFormData } from "@/types/quotes";""
-import { Input } from "@/components/ui/input";""
-import { Label } from "@/components/ui/label";""
-import { Textarea } from "@/components/ui/textarea";"
-interface ProjectDetailsStepProps {
-  // TODO: Implement
-}
-  formData: QuoteFormData;,
-  updateFormData: (data: Partial<QuoteFormData>) => void;
-"
-    <div className="space-y-6">"
-</div>"
-        <h3 className="text - xl font - semibold text - white mb - 4">;"
-</h3>
-        </h3>;"
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
-</div>
-      <div>
-</div>"
-        <h3 className="text-xl font-semibold text-white mb-4">"
-</h3>
-        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>""
-        <div className="space-y-4">"
-            <Label htmlFor="projectName" className="text-zion-slate-light">"
-
-            <Input;"
-              id="projectName"""
-              placeholder="Enter a name for your project""
-              value={formData.projectName}
-              onChange={(e) => updateFormData({ projectName: e.target.value })}
-
-            <Label;"
-              htmlFor="projectDescription"""
-              className="text-zion-slate-light""
-            >
-
-            <Textarea;"
-              id="projectDescription"""
-              placeholder="Describe your project in detail...""
-              value={formData.projectDescription}
-              onChange={(e) =>
-
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
-            <Label htmlFor="name" className="text-zion-slate-light">"
-
-              id="name"""
-              placeholder="Your name"""
-import { QuoteFormData } from "@/types/quotes",;""
-import { Input } from "@/components/ui/input",;""
-import { Label } from "@/components/ui/label",;""
-import { Textarea } from "@/components/ui/textarea",;"
-interface ProjectDetailsStepProps {;
-    <div className="space-y-6">;"
-      <div>;
-        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>;""
-        <div className="space-y-4">;"
-            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name;"
-              id="projectName";""
-              placeholder="Enter a name for your project";"
-
-          </div>;
-            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description;"
-              id="projectDescription";""
-              placeholder="Describe your project in detail...";"
-              onChange={(e) => updateFormData({ projectDescription: e.target.value })}
-
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;""
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-            <Label htmlFor="name" className="text-zion-slate-light">Name;"
-              id="name";""
-              placeholder="Your name";"
-value={formData.contactInfo.name}
-
-            <Label htmlFor="company" className="text-zion-slate-light">"
-
-              id="company"""
-              placeholder="Your company name""
-              value={formData.contactInfo.company}
-
-            <Label htmlFor="email" className="text-zion-slate-light">"
-
-              id="email"""
-              type="email"""
-              placeholder="Your email address""
-              value={formData.contactInfo.email}
-
-            <Label htmlFor="phone" className="text-zion-slate-light">"
-
-              id="phone"""
-              placeholder="Your phone number""
-              value={formData.contactInfo.phone}
-
-        <h3 className="text - xl font - semibold text - white mb - 4">;"
-        </h3>;"
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
-            <Label html_for="name" className="text - zion - slate - light">;"
-
-            ;
-              value={form_data.contact_info.name}
-              on_change={(e) =>;
-
-            <Label html_for="company" className="text - zion - slate - light">;"
-
-              id="company";""
-              placeholder="Your company name";"
-              value={form_data.contact_info.company}
-
-            <Label html_for="email" className="text - zion - slate - light">;"
-
-              id="email";""
-              type="email";""
-              placeholder="Your email address";"
-              value={form_data.contact_info.email}
-
-            <Label html_for="phone" className="text - zion - slate - light">;"
-
-              id="phone";""
-              placeholder="Your phone number";"
-              value={form_data.contact_info.phone}
-
-    </div>);
-);
-}
-
-  )
-
-</div>;
-  );
-  );
-}
-
-  )
-
-    </div>;
-  );}
-
-}) 
-}/> </div> </div> </div> </div>) 
-});
-
-}
-}
-;
-
-}
-;
-}
-
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba

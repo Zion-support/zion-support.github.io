@@ -11,22 +11,17 @@ class QuickSyntaxFixer {;
   log(message) {;
     console.log(`[QuickSyntaxFixer] ${message}`);
   }
-;
-  fixFile(filePath) {;
-    try {;
-      if (!fs.existsSync(filePath)) {;
-        this.log(`File not "found": ${filePath}`);
+
+  fixFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        this.log(`File not found: ${filePath}`);
         return false;
       }
 ;
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -68,95 +63,7 @@ class QuickSyntaxFixer {;
       if (content !== originalContent) {;
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`"Fixed": ${filePath}`);
-        return true;
-      }
-;
-      return false;
-    } catch (error) {;
-      this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
-;
-  async run() {;
-    this.log('🚀 Starting Quick Syntax Fixer');
-    // Fix critical files first,
-  const criticalFiles = [
-    ];
-    let fixedCount = 0;
-    for (const file of criticalFiles) {;
-      if (this.fixFile(file)) {;
-        fixedCount++;
-      }
-;
-    this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { "fixedFiles": this.fixedFiles };
-  }
-;
-// Run the fixer;
-if (require.main === module) {;
-  const fixer = new QuickSyntaxFixer();
-  fixer.run().catch(console.error);
-}
-module.exports = QuickSyntaxFixer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-      let content = fs.readFileSync(filePath, 'utf8')
-        .replace(/(\w+):\s*([^,]+),/g, '$"1"
-        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
-<<<<<<< HEAD
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-=======
-      let content = fs.readFileSync(filePath, utf8')
-        .replace(/(\w+):\s*([^]+),/g, '$1"
-        .replace(/(\w+):\s*([^]+);\s*}/g, '$"1
-        .replace(/(\w+):\s*([^]+);\s*]/g, '$1"
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-ursor/automate-test-improve-and-merge-code-59d5
-
-
-
-=======
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-      // Fix unterminated string literals
-      fixedContent = fixedContent.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
-        if (!str.includes("'") && !str.endsWith("'")) {
-          return match + "'";
-        }
-        return match;
-      });
-
-      // Fix unterminated template literals
-      fixedContent = fixedContent.replace(/`([^`]*?)(?=\n|$)/g, (match, str) => {
-        if (!str.includes('`') && !str.endsWith('`')) {
-          return match + '`';
-        }
-        return match;
-      });
-
-      // Fix missing semicolons
-      fixedContent = fixedContent.replace(/([^;{}])\n/g, '$1;\n');
-
-      if (fixedContent !== content) {
-        fs.writeFileSync(filePath, fixedContent);
-        this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`, 'SUCCESS');
+        this.log(`Fixed: ${filePath}`);
         return true;
       }
 
@@ -184,8 +91,8 @@ ursor/automate-test-improve-and-merge-code-59d5
       await this.fixFile(file);
     }
 
-    this.log(`\n📊 Fixed Files: ${this.fixedFiles.length}`);
-    this.log(`Errors: ${this.errors.length}`);
+    this.log(`✅ Fixed ${fixedCount} critical files`);
+    return { fixedFiles: this.fixedFiles };
   }
 }
 

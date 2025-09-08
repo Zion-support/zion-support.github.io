@@ -1,8 +1,36 @@
-<<<<<<< HEAD
-
-
-=======
-
+import Layout from '../../components/Layout';
+import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';
+import Layout from '../../components/Layout';
+import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
+const features = [;
+  {}
+    icon: ShoppingCart,;
+    title: 'E-commerce Platforms,',;
+    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;
+  },;
+  {}
+    icon: Users,;
+    title: 'Customer Analytics,',;
+    description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',;
+  },;
+  {}
+    icon: BarChart,;
+    title: 'Inventory Management,',;
+    description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',;
+  },;
+  {}
+    icon: Smartphone,;
+    title: 'Mobile Commerce,',;
+    description: 'Mobile-first shopping experiences with native apps and progressive web applications.'',;
+  },;
+  {}
+    icon: Package,;
+    title: 'Supply Chain Optimization,',;
+    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -712,8 +740,6 @@ export default function RetailSolutionsPage() {
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
-
-<<<<<<< HEAD
                 </ul>;
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -761,7 +787,6 @@ export default function RetailSolutionsPage() {
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
-
             </div>
           </div>
         </section>
@@ -805,10 +830,10 @@ export default function RetailSolutionsPage() {
       </div>
     </Layout>
     </Layout>
-
     </>
-<<<<<<< HEAD
     </>
+    </Layout>
+  );
+};
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Retail;

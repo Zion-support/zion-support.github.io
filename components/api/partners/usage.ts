@@ -1,7 +1,12 @@
-<<<<<<< HEAD
 
 
-=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method Not Allowed" })
+  }
+
 
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import { authenticateRequest, calculateUsageSummary } from \"../../../utils/api/partnerAuth\";
@@ -38,39 +43,19 @@ import {
   calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'GET') {;
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {"
-  if (req && req.method !== \"GET\") {}"
-    res && res.setHeader(\"Allow\", \"GET\");}"
-    return res && res.status(405).json({ error: \"Method Not Allowed\" })
- 
-}
-
-const auth = await authenticateRequest(req);
-
-
-<<<<<<< HEAD
-
+  try {
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method Not Allowed" })
+  }
   const auth = await authenticateRequest(req);
-
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
   if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
- 
+    return res && res.status(401).json({ error: "Unauthorized" })
+  }
+  const summary = await calculateUsageSummary(auth && auth.partner.id);
+  return res && res.status(200).json({ summary })
 }
-  const summary = await calculateUsageSummary(auth.partner.id);
-<<<<<<< HEAD
 
 
 
@@ -107,7 +92,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res.status(200).json({ summary })
 }
-
 
   authenticate_request,
   calculateUsageSummary,
@@ -153,6 +137,8 @@ if ( {) {
   }
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
+}
+
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -173,5 +159,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba

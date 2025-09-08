@@ -1,17 +1,51 @@
-const "UltimateZionServicesShowcase": Reac t.FC = () : JSX.(Element) => {const [selectedCategory, setSelectedCategory] = useState<any>('all')';';'
-  }
-  const [searchTerm, setSearchTerm] = useState<any>('')';'
-';';'
-  const categories = [{ "id": 'all', "name": 'All Services', "icon": '🌟', "color": 'from - purple - 600 to - pink - 600' },';';'
-const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [selectedCategory, setSelectedCategory] = useState<any>('all')const "UltimateZionServicesShowcase": "React.FC = () : JSX.(Element) => {const [selectedCategory", setSelectedCategory] = useState<any>('all')const [searchTerm, setSearchTerm]  = useState<any>('')const categories = [{ "id": 'all', "name": 'All Services', "icon": '🌟', "color": 'from - purple - 600 to - pink - 600' },{ "id": 'quantum - computing', "name": 'Quantum Computing', "icon": '⚛️', "color": 'from - blue - 600 to - cyan - 600' }, { "id": 'blockchain - web3', "name": 'Blockchain & Web3', "icon": '🔗', "color": 'from - green - 600 to - emerald - 600' }, { "id": 'space - tech', "name": 'Space Technology', "icon": '🛰️', "color": 'from - indigo - 600 to - purple - 600' }, { "id": 'biotech-ai', "name": 'Biotech & AI', "icon": '🧬', "color": 'from - red - 600 to - pink - 600' }, { "id": 'emerging - tech', "name": 'Emerging Tech', "icon": '🚀', "color": 'from - orange - 600 to - red - 600' }, { "id": 'micro - saas', "name": 'Micro SAAS', "icon": '💻', "color": 'from - blue - 600 to - indigo - 600' }, { "id": 'it - services', "name": 'IT Services', "icon": '🖥️', "color": 'from - gray - 600 to - slate - 600' }];'
-  const categories = [{ "id": 'all', "name": 'All Services', "icon": '🌟', "color": 'from - purple - 600 to - pink - 600' },{ "id": 'quantum - computing', "name": 'Quantum Computing', "icon": '⚛️', "color": 'from - blue - 600 to - cyan - 600' }, { "id": 'blockchain - web3', "name": 'Blockchain & Web3', "icon": '🔗', "color": 'from - green - 600 to - emerald - 600' }, { "id": 'space - tech', "name": 'Space Technology', "icon": '🛰️', "color": 'from - indigo - 600 to - purple - 600' }, { "id": 'biotech-ai', "name": 'Biotech & AI', "icon": '🧬', "color": 'from - red - 600 to - pink - 600' }, { "id": 'emerging - tech', "name": 'Emerging Tech', "icon": '🚀', "color": 'from - orange - 600 to - red - 600' }, { "id": 'micro - saas', "name": 'Micro SAAS', "icon": '💻', "color": 'from - blue - 600 to - indigo - 600' }, { "id": 'it - services', "name": 'IT Services', "icon": '🖥️', "color": 'from - gray - 600 to - slate - 600' }];service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;'
-      service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () )return matchesCategory && matchesSearch})"transition": "{"staggerChildren": 0.1","delayChildren": "0.2;"
-      "}"
-}const itemVariants = {"hidden": "{ "opacity": 0","y": "2 0;},"visible": {"opacity": 1,"y": 0,"transition": { "duration": 0.5 }}return (<div className="min-h-screen bg-white">;return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate-900 text-white">;"
-"},"visible": "{"opacity": 1","y": "0","transition": "{ "duration": 0.5 "}}return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate-900 text-white">;"
+const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
+  const [searchTerm, setSearchTerm] = useState<any>('');';
+';';
+  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },';';
+const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
+  const [selectedCategory", setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+;
+  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },;
+    { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' }, { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' }, { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' }, { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' }, { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' }, { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' }, { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
+  const categories = [{ "id": 'all', "name": 'All Services', "icon": '🌟', "color": 'from - purple - 600 to - pink - 600' },;
+    { "id": 'quantum - computing', "name": 'Quantum Computing', "icon": '⚛️', "color": 'from - blue - 600 to - cyan - 600' }, { "id": 'blockchain - web3', "name": 'Blockchain & Web3', "icon": '🔗', "color": 'from - green - 600 to - emerald - 600' }, { "id": 'space - tech', "name": 'Space Technology', "icon": '🛰️', "color": 'from - indigo - 600 to - purple - 600' }, { "id": 'biotech-ai', "name": 'Biotech & AI', "icon": '🧬', "color": 'from - red - 600 to - pink - 600' }, { "id": 'emerging - tech', "name": 'Emerging Tech', "icon": '🚀', "color": 'from - orange - 600 to - red - 600' }, { "id": 'micro - saas', "name": 'Micro SAAS', "icon": '💻', "color": 'from - blue - 600 to - indigo - 600' }, { "id": 'it - services', "name": 'IT Services', "icon": '🖥️', "color": 'from - gray - 600 to - slate - 600' };  ];
+;
+      service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
+      service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
+    return matchesCategory && matchesSearch}) ;
+;
+      "transition": "{;
+        "staggerChildren": 0.1",;
+        "delayChildren": "0.2;
+      "}
+};
+  };
+;
+  const itemVariants = {;
+  "hidden": "{ "opacity": 0",;
+  "y": "2 0;
+;
+},;
+    visible: {;      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.5 }}};
+  return (
+    <div className="min-h-screen bg-white">
+;
+  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate-900 text-white">;
+"},;
+    "visible": "{;      "opacity": 1",;
+      "y": "0",;
+      "transition": "{ "duration": 0.5 "}}};
+;
+  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate-900 text-white">;
       {/* Hero Section */}
-      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;"
-        <div  className="max - w-7xl mx-auto text-center">;"
+      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
+        <div  className="max - w-7xl mx-auto text-center">;
           <motion.h1;
             className="text-4xl "md": tex t-6xl font - bold mb-6"            initial = { "opacity": 0","y": "2 0;"
 "}"
@@ -29,42 +63,54 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
             </span>;
           </motion.h1>;
           <motion.p;
-            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = { "opacity": "0","y": "2 0;"
-"}"
-            whileInView = { "opacity": "1","y": "0;"
-"}"
-            transition = { "duration": "0.6","delay": "0.2;"
-"}"
+            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = {;
+  { "opacity": "0",;
+  "y": "2 0;
+"}}
+            whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+            transition = {;
+  { "duration": "0.6",;
+  "delay": "0.2;
+"}}
           >;
             Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions,blockchain innovations, space technology, and AI - powered services designed to transform industries and;
             create unprecedented value for your business.</motion.p>;
           {/* Contact Information */}
           <motion.div;
-            className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-white / 20"            initial = { "opacity": "0","y": "2 0;"
-"}"
-            whileInView = { "opacity": "1","y": "0;"
-"}"
-            transition = { "duration": "0.6","delay": "0.4;"
-"}"
-          >";"
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
+            className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-white / 20"            initial = {;
+  { "opacity": "0",;
+  "y": "2 0;
+"}}
+            whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+            transition = {;
+  { "duration": "0.6",;
+  "delay": "0.4;
+"}}
+          >";
+            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
               🚀 Ready to Transform Your Business?;
-            <div  className="grid grid - cols-1 "md": "gri d - cols - 3 gap-6 text-sm">;"
-              <div  className="text-center">;"
-                <div  className="text-purple - 400 font-semibold text-lg mb-2">📱 Contact Us</div>;"
-                <div  className="text-gray -300">+1 302 464 0950</div>;"
-                <div  className="text-gray-400 text-xs">Available 24 / 7</div>;"
+            <div  className="grid grid - cols-1 "md": "gri d - cols - 3 gap-6 text-sm">;
+              <div  className="text-center">;
+                <div  className="text-purple - 400 font-semibold text-lg mb-2">📱 Contact Us</div>;
+                <div  className="text-gray -300">+1 302 464 0950</div>;
+                <div  className="text-gray-400 text-xs">Available 24 / 7</div>;
               </div>;
-              <div  className="text-center">;"
-                <div  className="text-purple - 400 font-semibold text-lg mb-2">✉️ Email</div>;"
-                <div  className="text-gray -300">kleber@ziontechgroup.com</div>;"
-                <div  className="text-gray-400 text-xs">Response within 2 hours</div>;"
+              <div  className="text-center">;
+                <div  className="text-purple - 400 font-semibold text-lg mb-2">✉️ Email</div>;
+                <div  className="text-gray -300">kleber@ziontechgroup.com</div>;
+                <div  className="text-gray-400 text-xs">Response within 2 hours</div>;
               </div>;
-              <div  className="text-center">;"
-                <div  className="text-purple - 400 font-semibold text-lg mb-2">🌐 Website</div>;"
-                <div  className="text-gray -300">;"
-                  <a href=""https"://ziontechgroup.com" target="_blank" rel="noopener noreferrer";"
-                     className="text-blue-400 "hover": tex t-blue - 300 transition -colors">                    ziontechgroup.com;"
+              <div  className="text-center">;
+                <div  className="text-purple - 400 font-semibold text-lg mb-2">🌐 Website</div>;
+                <div  className="text-gray -300">;
+                  <a href=""https"://ziontechgroup.com" target="_blank" rel="noopener noreferrer";
+                     className="text-blue-400 "hover": tex t-blue - 300 transition -colors">                    ziontechgroup.com;
                   </a>;
                 </div>";"
                 <div className="text-gray-400 text-xs">Live demo available</div>;"
@@ -78,21 +124,27 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
           </motion.div>;
           {/* Search and Filter */"}"
           <motion.div;
-            className="flex flex-col "md": "fle x - row gap-4 justify - center items - center mb-12"            initial = { "opacity": 0","y": "2 0;"
-"}"
-            whileInView = { "opacity": "1","y": "0;"
-"}"
-            transition = { "duration": "0.6","delay": "0.6;"
-"}"
+            className="flex flex-col "md": "fle x - row gap-4 justify - center items - center mb-12"            initial = {;
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
+            whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+            transition = {;
+  { "duration": "0.6",;
+  "delay": "0.6;
+"}}
           >;
             <input;
               type="text";"
               placeholder="Search revolutionary services...";"
               value={searchTerm}
               onChange={ (e) => setSearchTerm(e.target.value) }
-              className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray-400 "focus": "outlin e - none "focus": borde r-purple - 400 "focus": rin g - 2 "focus": rin g - purple - 400 / 20 w-full "md":w-80";"
+              className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray-400 "focus": "outlin e - none "focus": borde r-purple - 400 "focus": rin g - 2 "focus": rin g - purple - 400 / 20 w-full "md":w-80";
             />;
-            <div  className="flex flex-wrap gap-2">;"
+            <div  className="flex flex-wrap gap-2">;
               {categories.map((category) => (<button     key={category.id}
                   onClick={ () => setSelectedCategory(category.id) }';'
                   className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id';';'                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white'';';'
@@ -106,94 +158,132 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
                   <span className="mr-2">{category.icon}</span>;"
   const categories = [{ "id": 'all', "name": 'All Services', "icon": '🌟', "color": 'from - purple - 600 to - pink - 600' },{ "id": 'quantum - computing', "name": 'Quantum Computing', "icon": '⚛️', "color": 'from - blue - 600 to - cyan - 600' }, { "id": 'blockchain - web3', "name": 'Blockchain & Web3', "icon": '🔗', "color": 'from - green - 600 to - emerald - 600' }, { "id": 'space - tech', "name": 'Space Technology', "icon": '🛰️', "color": 'from - indigo - 600 to - purple - 600' }, { "id": 'biotech-ai', "name": 'Biotech & AI', "icon": '🧬', "color": 'from - red - 600 to - pink - 600' }, { "id": 'emerging - tech', "name": 'Emerging Tech', "icon": '🚀', "color": 'from - orange - 600 to - red - 600' }, { "id": 'micro - saas', "name": 'Micro SAAS', "icon": '💻', "color": 'from - blue - 600 to - indigo - 600' }, { "id": 'it - services', "name": 'IT Services', "icon": '🖥️', "color": 'from - gray - 600 to - slate - 600' }];'
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-      service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () )return matchesCategory && matchesSearch}
-    )"transition": {"staggerChildren": 0.1,"delayChildren": 0.2;
-}
-}const itemVariants = {"hidden": { "opacity": 0,"y": 2 0;},"visible": {"opacity": 1,"y": 0,"transition": { "duration": 0.5 }}return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate-900 text-white">;"
+      service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
+    return matchesCategory && matchesSearch}
+    );
+      transition: {
+        staggerChildren: 0.1,;
+        delayChildren: 0.2
+};
+    }
+};
+  const itemVariants = {
+  hidden: { opacity: 0,
+  y: 2 0
+;
+},;
+    visible: {;      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.5 }}};
+  return (
+        <div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 "sm": p x-6 "lg": p x-8">;"
-        <div  className="max - w-7xl mx-auto text-center">;"
-          <motion.h1;
-            className="text-4xl "md": tex t-6xl font-bold mb-6"            initial = { "opacity": 0,"y": 2 0;"
-}
-            whileInView = { "opacity": 1,"y": 0;
-}
-            transition={ "duration": 0.6 }
-          >;
-            Ultimate";"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">";"
-              {" "}Zion Technology;"
-            </span>;
-            <br />";"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;"
-              Services 2025;
-            </span>;
-          </motion.h1>;
-          <motion.p;
-            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = { "opacity": 0,"y": 2 0;"
-}
-            whileInView = { "opacity": 1,"y": 0;
-}
-            transition = { "duration": 0.6,"delay": 0.2;
-}
-          >;
-            Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions,blockchain innovations, space technology, and AI - powered services designed to transform industries and;
-            create unprecedented value for your business.</motion.p>;
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
+        <div  className="max - w-7xl mx-auto text-center">
+          <motion.h1
+            className="text-4xl md: tex t-6xl font-bold mb-6"            initial = {
+  { opacity: 0,
+  y: 2 0
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0
+}}
+            transition={{ duration: 0.6 }}
+          >
+            Ultimate"
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">"
+              {" "}Zion Technology
+            </span>
+            <br  />"
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Services 2025
+            </span>
+          </motion.h1>
+          <motion.p
+            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = {
+  { opacity: 0,
+  y: 2 0
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2
+}}
+          >
+            Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions,
+            blockchain innovations, space technology, and AI - powered services designed to transform industries and
+            create unprecedented value for your business.</motion.p>
           {/* Contact Information */}
-          <motion.div;
-            className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-white / 20"            initial = { "opacity": 0,"y": 2 0;"
-}
-            whileInView = { "opacity": 1,"y": 0;
-}
-            transition = { "duration": 0.6,"delay": 0.4;
-}
-          >";"
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
-              🚀 Ready to Transform Your Business?;
-            <div  className="grid grid - cols - 1 "md": gri d - cols-3 gap-6 text-sm">;"
-              <div  className="text-center">;"
-                <div  className="text-purple - 400 font-semibold text-lg mb-2">📱 Contact Us</div>;"
-                <div  className="text-gray -300">+1 302 464 0950</div>;"
-                <div  className="text-gray-400 text-xs">Available 24 / 7</div>;"
-              </div>;
-              <div  className="text-center">;"
-                <div  className="text-purple - 400 font-semibold text-lg mb-2">✉️ Email</div>;"
-                <div  className="text-gray -300">kleber@ziontechgroup.com</div>;"
-                <div  className="text-gray-400 text-xs">Response within 2 hours</div>;"
-              </div>;
-              <div  className="text-center">;"
-                <div  className="text-purple - 400 font-semibold text-lg mb-2">🌐 Website</div>;"
-                <div  className="text-gray -300">;"
-                  <a href=""https"://ziontechgroup.com" target="_blank" rel="noopener noreferrer";"
-                     className="text-blue - 400 "hover": tex t-blue-300 transition -colors">                    ziontechgroup.com;"
-                  </a>;
-                </div>";"
-                <div className="text-gray-400 text-xs">Live demo available</div>;"
-              </div>;
-            </div>";"
-            <div className="mt-4 text-center">";"
-              <div className="text-gray-400 text-sm">;"
-                📍 364 E Main St STE 1008 Middletown DE 19709;
-              </div>;
-            </div>;
-          </motion.div>;
+          <motion.div
+            className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-white / 20"            initial = {
+  { opacity: 0,
+  y: 2 0
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.4
+}}
+          >"
+            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              🚀 Ready to Transform Your Business?
+            <div  className="grid grid - cols - 1 md: gri d - cols-3 gap-6 text-sm">
+              <div  className="text-center">
+                <div  className="text-purple - 400 font-semibold text-lg mb-2">📱 Contact Us</div>
+                <div  className="text-gray -300">+1 302 464 0950</div>
+                <div  className="text-gray-400 text-xs">Available 24 / 7</div>
+              </div>
+              <div  className="text-center">
+                <div  className="text-purple - 400 font-semibold text-lg mb-2">✉️ Email</div>
+                <div  className="text-gray -300">kleber@ziontechgroup.com</div>
+                <div  className="text-gray-400 text-xs">Response within 2 hours</div>
+              </div>
+              <div  className="text-center">
+                <div  className="text-purple - 400 font-semibold text-lg mb-2">🌐 Website</div>
+                <div  className="text-gray -300">
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer"
+                     className="text-blue - 400 hover: tex t-blue-300 transition -colors">                    ziontechgroup.com
+                  </a>
+                </div>"
+                <div className="text-gray-400 text-xs">Live demo available</div>
+              </div>
+            </div>"
+            <div className="mt-4 text-center">"
+              <div className="text-gray-400 text-sm">
+                📍 364 E Main St STE 1008 Middletown DE 19709
+              </div>
+            </div>
+          </motion.div>
           {/* Search and Filter */}
-          <motion.div;
-            className="flex flex - col "md": fle x - row gap-4 justify - center items-center mb-12"            initial = { "opacity": 0,"y": 2 0;"
-}
-            whileInView = { "opacity": 1,"y": 0;
-}
-            transition = { "duration": 0.6,"delay": 0.6;
-}
-          >;
-            <input;
-              type="text";"
-              placeholder="Search revolutionary services...";"
+          <motion.div
+            className="flex flex - col md: fle x - row gap-4 justify - center items-center mb-12"            initial = {
+  { opacity: 0,
+  y: 2 0
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.6
+}}
+          >
+            <input
+              type="text"
+              placeholder="Search revolutionary services..."
               value={searchTerm}
               onChange={ (e) => setSearchTerm(e.target.value) }
-              className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 "focus": outlin e - none "focus": borde r-purple - 400 "focus": rin g - 2 "focus": rin g - purple-400 / 20 w-full "md":w-80";"
-            />;
-            <div  className="flex flex-wrap gap-2">;"
+              className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 focus: outlin e - none focus: borde r-purple - 400 focus: rin g - 2 focus: rin g - purple-400 / 20 w-full md:w-80"
+            />
+            <div  className="flex flex-wrap gap-2">
               {categories.map((category) => (<button     key={category.id}
                   onClick={ () => setSelectedCategory(category.id) }
                   className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id;`                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white';'
@@ -206,25 +296,27 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
         </div>;
       </section>;
       {/* Services Grid */}
-      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;"
-        <div  className="max-w-7xl mx -auto">;"
+      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
+        <div  className="max-w-7xl mx -auto">;
           <motion.div;
-            className="grid grid - cols-1 "md": gri d - cols - 2 "lg": gri d - cols - 3 gap-8";"
-            variants={containerVariants"}"
-            initial="hidden";"
-            whileInView="visible";"
-            viewport={ "once": "anytru e "}"
+            className="grid grid - cols-1 "md": gri d - cols - 2 "lg": gri d - cols - 3 gap-8";
+            variants={containerVariants"}
+            initial="hidden";
+            whileInView="visible";
+            viewport={{ "once": "anytru e "}}
           >;
             {filteredServices.map((service, index) => (<motion.div;
                 }
                 key={service.id}
                 variants={itemVariants}
-                className="bg-white / 10 backdrop - blur - lg rounded-xl p-6 border border-white / 20 "hover": "borde r-white / 40 transition - all duration - 300 "hover": transform "hover":scale -105 group"              >;"
-                {/* Service Header */"}";"
-                <div className="text-center mb-6">`;`                  <div className={`text-6xl mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>;"      <section className="py-20 px-4 "sm": p x-6 "lg": p x-8">;"
-        <div  className="max-w-7xl mx -auto">;"
-          <motion.div;
-            className="grid grid - cols - 1 "md": gri d - cols - 2 "lg": gri d - cols-3 gap-8";"
+                className="bg-white / 10 backdrop - blur - lg rounded-xl p-6 border border-white / 20 "hover": "borde r-white / 40 transition - all duration - 300 "hover": transform "hover":scale -105 group"              >;
+                {/* Service Header */"}";
+                <div className="text-center mb-6">`;
+                  <div className={`text-6xl mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>;
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
+        <div  className="max-w-7xl mx -auto">
+          <motion.div
+            className="grid grid - cols - 1 md: gri d - cols - 2 lg: gri d - cols-3 gap-8"
             variants={containerVariants}
             initial="hidden";"
             whileInView="visible";"
@@ -234,21 +326,23 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
                 }
                 key={service.id}
                 variants={itemVariants}
-                className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 border border-white / 20 "hover": borde r-white / 40 transition - all duration-300 "hover": transform "hover":scale -105 group"              >;"
-                {/* Service Header */}";"
-                <div className="text-center mb-6">`;`                  <div className={`text-6xl mb-4 group-"hover": scal e-110 transition-transform duration-300`}>;`                    {service.icon}
-                  </div>";"
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"';'
-                  <p className="text-sm text-purple-400 font-medium mb-2">';';'
-                  </div>";"
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}";"
-                  <p className="text-sm text-purple-400 font-medium mb-2">;"
-                  </div>";"
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}";"
-                  <p className="text-sm text-purple-400 font-medium mb-2">;"
-                    {service.category.replace('-',).toUpperCase()}'
-                  </p>";"
-                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">;"
+                className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 border border-white / 20 hover: borde r-white / 40 transition - all duration-300 hover: transform hover:scale -105 group"              >
+                {/* Service Header */}"
+                <div className="text-center mb-6">`
+                  <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>
+                    {service.icon}
+                  </div>"
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"';
+                  <p className="text-sm text-purple-400 font-medium mb-2">';';
+                  </div>";
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}";
+                  <p className="text-sm text-purple-400 font-medium mb-2">;
+                  </div>"
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
+                  <p className="text-sm text-purple-400 font-medium mb-2">
+                    {service.category.replace('-',).toUpperCase()}
+                  </p>"
+                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">
                     {service.innovationLevel}
                   </div>;
                 </div>;
@@ -375,7 +469,7 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
                     📞 <a href=""tel": "+13024640950" className="text-blue-400 "hover": tex t-blue-300">;"
                       +1 302 464 0950;
                     </a> |;
-                    ✉️ <a href=""mailto": klebe r@ziontechgroup.com" className="text-blue-400 "hover": tex t-blue -300">                      kleber@ziontechgroup.com;"
+                    ✉️ <a href=""mailto": klebe r@ziontechgroup.com" className="text-blue-400 "hover": tex t-blue -300">                      kleber@ziontechgroup.com;
                     </a>;
                   </div>;
                 </div>;
@@ -384,35 +478,71 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
         </div>;
       </section>;
       {/* Bottom CTA Section */}
-      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;"
-        <div  className="max - w-4xl mx-auto text-center">;"
+      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
+        <div  className="max - w-4xl mx-auto text-center">;
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = { "opacity": 0","y": "2 0;"
-"}"
-            whileInView = { "opacity": "1","y": "0;"
-"}"
-            transition={ "duration": "0.6 "}"
-          >";"
-            <h2 className="text-3xl "md": "tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = {;
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
+            whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+            transition={{ "duration": "0.6 "}}
+          >";
+            <h2 className="text-3xl "md": "tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
               Ready to Lead the Future?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-8">;"
+            <p className="text-xl text-gray-300 mb-8">;
               Join the revolution and transform your business with cutting - edge technology solutions.Our team of experts is ready to help you implement these game - changing services.</p>;
-            <div  className="flex flex-col "md": fle x - row gap-4 justify -center">;"
-              <button     className="bg-gradient - to - r from - purple - 600 to - pink-600 "hover": fro m - purple - 700 "hover": t o - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform "hover": scal e -105">                🚀 Schedule a Consultation;"
-              </button>";"
-              <button className="bg-white/10 "hover": b g-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">;"
+            <div  className="flex flex-col "md": fle x - row gap-4 justify -center">;
+              <button     className="bg-gradient - to - r from - purple - 600 to - pink-600 "hover": fro m - purple - 700 "hover": t o - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform "hover": scal e -105">                🚀 Schedule a Consultation;
+              </button>";
+              <button className="bg-white/10 "hover": b g-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">;
                 📋 View Full Portfolio;
               </button>;
-            </div>";"
-            <div className="mt-6 text-sm text-gray-400">;"
-                {service.marketSize && (";"
-                  <div className="mb-6">";"
-                    <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>";"
-                    <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">";"
-                      <p className="text-blue-400 text-sm font-semibold">;"
-                        }
-                        Market "Size": {service.marketSize}
+            </div>";
+            <div className="mt-6 text-sm text-gray-400">;
+                {service.marketSize && ("
+                  <div className="mb-6">"
+                    <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>"
+                    <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">"
+                      <p className="text-blue-400 text-sm font-semibold">
+                        Market Size: {service.marketSize}
+                      </p>
+                    </div>
+                  </div>) }
+                {/* Trial and Setup */}"
+                <div className="flex justify-between items-center mb-6 text-sm">"
+                  <div className="text-center">"
+                    <div className="text-purple-400 font-semibold">🆓 Trial</div>"
+                    <div className="text-gray-300">{service.trialDays} days</div>
+                  </div>"
+                  <div className="text-center">"
+                    <div className="text-purple-400 font-semibold">⚡ Setup</div>"
+                    <div className="text-gray-300">{service.setupTime}</div>
+                  </div>
+                </div>
+                {/* Call to Action */}"
+                <div className="text-center">"
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">
+                    🚀 Get Started Today
+                  </button>"
+                  <p className="text-xs text-gray-400 mt-2">
+                    Contact us for a personalized demo
+                  </p>
+                </div>
+                {/* Contact Quick Access */}"
+                <div className="mt-4 text-center">"
+                  <div className="text-xs text-gray-400">"
+                    📞 <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">
+                      +1 302 464 0950
+                    </a> |
+                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue-400 hover: tex t-blue -300">                      kleber@ziontechgroup.com
+                    </a>
+                  </div>
+                </div>
                       </p>;
                     </div>;
                   </div>) }
@@ -442,39 +572,7 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
                     📞 <a href=""tel":+13024640950" className="text-blue-400 "hover": tex t-blue-300">;"
                       +1 302 464 0950;
                     </a> |;
-                    ✉️ <a href=""mailto": klebe r@ziontechgroup.com" className="text-blue-400 "hover": tex t-blue -300">                      kleber@ziontechgroup.com;"
-                    </a>;
-                  </div>;
-                </div>;
-                      </p>;
-                    </div>;
-                  </div>) }{/* Trial and Setup */}";"
-                <div className="flex justify-between items-center mb-6 text-sm">";"
-                  <div className="text-center">";"
-                    <div className="text-purple-400 font-semibold">🆓 Trial</div>";"
-                    <div className="text-gray-300">{service.trialDays} days</div>;"
-                  </div>";"
-                  <div className="text-center">";"
-                    <div className="text-purple-400 font-semibold">⚡ Setup</div>";"
-                    <div className="text-gray-300">{service.setupTime}</div>;"
-                  </div>;
-                </div>;
-                {/* Call to Action */}";"
-                <div className="text-center">";"
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 "hover": fro m-purple-700 "hover": t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform "hover": scal e-105">;"
-                    🚀 Get Started Today;
-                  </button>";"
-                  <p className="text-xs text-gray-400 mt-2">;"
-                    Contact us for a personalized demo;
-                  </p>;
-                </div>;
-                {/* Contact Quick Access */}";"
-                <div className="mt-4 text-center">";"
-                  <div className="text-xs text-gray-400">";"
-                    📞 <a href=""tel":+13024640950" className="text-blue-400 "hover": tex t-blue-300">;"
-                      +1 302 464 0950;
-                    </a> |;
-                    ✉️ <a href=""mailto": klebe r@ziontechgroup.com" className="text-blue-400 "hover": tex t-blue -300">                      kleber@ziontechgroup.com;"
+                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue-400 hover: tex t-blue -300">                      kleber@ziontechgroup.com;
                     </a>;
                   </div>;
                 </div>;
@@ -483,28 +581,32 @@ const "UltimateZionServicesShowcase": React.FC = () : JSX.(Element) => {const [s
         </div>;
       </section>;
       {/* Bottom CTA Section */}
-      <section className="py-20 px-4 "sm": p x-6 "lg": p x-8">;"
-        <div  className="max - w-4xl mx-auto text-center">;"
-          <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = { "opacity": 0,"y": 2 0;"
-}
-            whileInView = { "opacity": 1,"y": 0;
-}
-            transition={ "duration": 0.6 }
-          >";"
-            <h2 className="text-3xl "md": tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
-              Ready to Lead the Future?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8">;"
-              Join the revolution and transform your business with cutting - edge technology solutions.Our team of experts is ready to help you implement these game - changing services.</p>;
-            <div  className="flex flex - col "md": fle x-row gap-4 justify -center">;"
-              <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 "hover": fro m - purple - 700 "hover": t o - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration-300 transform "hover": scal e -105">                🚀 Schedule a Consultation;"
-              </button>";"
-              <button className="bg-white/10 "hover": b g-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">;"
-                📋 View Full Portfolio;
-              </button>;
-            </div>";"
-            <div className="mt-6 text-sm text-gray-400">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
+        <div  className="max - w-4xl mx-auto text-center">
+          <motion.div
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = {
+  { opacity: 0,
+  y: 2 0
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0
+}}
+            transition={{ duration: 0.6 }}
+          >"
+            <h2 className="text-3xl md: tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Ready to Lead the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the revolution and transform your business with cutting - edge technology solutions.Our team of experts is ready to help you implement these game - changing services.</p>
+            <div  className="flex flex - col md: fle x-row gap-4 justify -center">
+              <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 hover: fro m - purple - 700 hover: t o - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration-300 transform hover: scal e -105">                🚀 Schedule a Consultation
+              </button>"
+              <button className="bg-white/10 hover: b g-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+                📋 View Full Portfolio
+              </button>
+            </div>"
+            <div className="mt-6 text-sm text-gray-400">
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>;
               <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
             </div>;

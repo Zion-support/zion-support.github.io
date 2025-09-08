@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {useState, useEffect} from "react";
-import {Company} from "@/components/enterprise/workspace/CompanyDashboard";
-export function useCompanyWorkspace(companySlug?: string) {;
-  const [company, setCompany] = useState<Company | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
 import { useState, useEffect } from "react",
 
@@ -16,74 +7,16 @@ export function useCompanyWorkspace(companySlug?: string) {};
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-<<<<<<< HEAD
-
-
-  useEffect(() => {
-    // In a real app, this would fetch data from an API based on the companySlug
-    // For now, we'll simulate a delay and return mock data
-
-    setIsLoading(true);
-
-
-    setTimeout(() => {
-
-      if (companySlug === "demo" |!companySlug) {
-        // Demo company data
-
-        setCompany({
-=======
-;
-  useEffect(() => {};
-    // In a real app, this would fetch data from an API based on the companySlug;
-    // For now, we'll simulate a delay and return mock data;
-    setIsLoading(true),
-
-
-          id: "company-123";
-          name: "Acme Corporation";
-          logoUrl: "/placeholder && placeholder.svg";
-          theme: {
-
-            primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff"
-            textColor: "#1f2937"}
-          plan: "Business";
-          teamSize: 12;
-          teamLimit: 50;
-          billingCycle: "Annual"
-          workspaceUrl: "acme.zion-ai.com"});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            primaryColor: "#4f46e5",
-            backgroundColor: "#ffffff",
-            textColor: "#1f2937"},
-
-          plan: "Business",
-          teamSize: 12,
-          teamLimit: 50,"
-          billingCycle: "Annual","
-          workspaceUrl: "acme.zion-ai.com"}),
-<<<<<<< HEAD
-
-
-
-
-
-=======
-billingCycle: "Annual",
-          workspaceUrl: "acme && acme.zion-ai && ai.com"});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        setError(null)
+  const [error, setError] = useState<string | null>(null);
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard",
+export function useCompanyWorkspace(companySlug?: string) {
+  const [company, setCompany] = useState<Company | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),        setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
         // For demo purposes, let's assume it exists
-        setCompany({
-<<<<<<< HEAD
-
-
-=======
-
+        setCompany({          theme: {
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
             textColor: "#1f2937"}
@@ -100,12 +33,11 @@ billingCycle: "Annual",
           teamLimit: 10,
           billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai.com`});
-
-        setError(null)
-
       }
       setIsLoading(false)
 
+  return { company, isLoading, error }
+import { useState, useEffect } from './react';
 import { Company } from '@/components / enterprise / workspace / CompanyDashboard';
 export /**;
  * useCompanyWorkspace - Function description;
@@ -169,12 +101,11 @@ if ( {) {}
   }, [companySlug]);
 
   return { company, isLoading, error }
-
-<<<<<<< HEAD
-=======
-}import { useState, useEffect } from "react";"
-export function useCompanyWorkspace() {;
-  }
+}import { useState, useEffect } from "react",;
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
+export function useCompanyWorkspace(companySlug?: string) {;
+  const [company, setCompany] = useState<Company | null>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
   useEffect(() => {;
     // In a real app, this would fetch data from an API based on the companySlug;
@@ -243,12 +174,4 @@ export function useCompanyWorkspace() { return null; }
 pr-12325
 <<<<<<< HEAD
 }
-
-}
-
-
-
-=======
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

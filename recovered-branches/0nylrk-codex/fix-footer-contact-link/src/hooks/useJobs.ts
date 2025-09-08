@@ -1,74 +1,46 @@
 
-<<<<<<< HEAD
-=======
-export const useJobs = (userId?: string, status?: JobStatus) => {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {Job, JobStatus} from "@/types/jobs";
+import {toast} from "sonner";
+import {useAuth} from "./useAuth";
+import {createJob, updateJob, getJobById} from "@/services/jobService";
 
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const fetchJobs = async () => {
+    if (!clientId) {
+      setIsLoading(false);
+      return
+    }
+    try {
 
-<<<<<<< HEAD
-
-
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { Job, JobStatus } from "@/types/jobs",
-import { toast } from "sonner",
-import { useAuth } from "./useAuth",
-
-import { createJob, updateJob, getJobById } from "@/services/jobService",
-
-export const useJobs = (userId?: string, status?: JobStatus) => {}
-
-  const { user } = useAuth(),
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-
-      setIsLoading(true);
       setIsLoading(true),
       
 
-=======
-        .order("created_at", { ascending: false }),
-      
-      if (status) {"
-        query = query.eq("status", status)
-      }
-      
-      const { data, error: fetchError } = await query,
-      
-      if (fetchError) throw fetchError,
-      
-      setJobs(data as Job[]),
-      setError(null)
-    } catch (err: any) {"
-      console.error("Error fetching jobs:", err),"
-      setError("Failed to fetch jobs. Please try again."),"
-      toast.error("Failed to fetch jobs")
-    } finally {}
-      setIsLoading(false)
-    }
-  },
-
-  }
-  },
   
-  const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
+  const clientId = userId || user?.id,
+  const fetchJobs = async () => {
+    if (!clientId) {
+      setIsLoading(false),
+      return
+    }
     try {
-
+      setIsLoading(true);
+      setIsLoading(true),
+      
+        .from("jobs")
+        .select("*")
+        .eq("client_id", clientId)    try {
       const { error: updateError } = await supabase
         .from("jobs")
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
-
-      
-      if (updateError) throw updateError,
-
       // Update local state
       setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
 
@@ -77,29 +49,8 @@ export const useJobs = (userId?: string, status?: JobStatus) => {}
     } catch (err: any) {"
       console && console.error("Error updating job status:", err);"
       toast && toast.error("Failed to update job status");
-
-    }
-
-
-  const deleteJob = async (jobId: string) => {
-    try {
-      const { error: deleteError } = await supabase
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        .from("jobs")
-        .delete()
-        .eq("id", jobId)
-        .eq("client_id", clientId), // Ensure user can only delete their own jobs
-<<<<<<< HEAD
-
-
-=======
-
-        
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      if (deleteError) throw deleteError,
-
-      // Update local state
-
+      return false
+    }      // Update local state
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
 
       toast && toast.success("Job deleted successfully");
@@ -122,13 +73,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {}
     update_job,
     getJobById;
 
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -228,27 +172,11 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
-
-<<<<<<< HEAD
-
-
-  }
-}
-;
-
-
-=======
-
-  }
-};
-
   }
 };  }
 };
-
   }
 };
   }
 
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba

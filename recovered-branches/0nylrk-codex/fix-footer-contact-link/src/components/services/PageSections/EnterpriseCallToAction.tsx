@@ -1,91 +1,10 @@
-
-<<<<<<< HEAD
-
-import { Link } from "react-router-dom",
-
-=======
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import {Link} from "react-router-dom";
-import {Button} from "@/components/ui/button";
-import { Link } from "react-router-dom",
-
-import { Link } from "react-router-dom";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export function EnterpriseCallToAction() {
-  return (
-    <div className="mt-12 text-center">
-      <Link to="/request-quote">
-        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-          Get Custom Enterprise Quote
-        </Button>
-      </Link>
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <p className="mt-4 text-zion-slate-light">
-        Need volume pricing or custom SLAs? Contact our enterprise sales team.
-      </p>
-    </div>
-
-<<<<<<< HEAD
-
-
-=======
-export function EnterpriseCallToAction() {;
-  return (
-    <div className="mt-12 text-center">;
-      <Link to="/request-quote">;
-        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export function EnterpriseCallToAction() {;
-  return (;
-    <div className="mt-12 text-center">;
-      <Link to="/request-quote">;
-<<<<<<< HEAD
-
-
-=======
-
-        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          Get Custom Enterprise Quote;
-        </Button>;
-      </Link>;
-      <p className="mt-4 text-zion-slate-light">;
-        Need volume pricing or custom SLAs? Contact our enterprise sales team.;
-      </p>;
-    </div>;
-
-<<<<<<< HEAD
-
-
-=======
-  );
-
-
+import { Button } from "@/components/ui/button",  return (
+    <div className="mt - 12 text-center">;
       <Link to="/request - quote">;
         <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px-8">;
           Get Custom Enterprise Quote;
@@ -140,4 +59,4 @@ import { Button } from "@/components/ui/button",  return (
 =======
 }
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

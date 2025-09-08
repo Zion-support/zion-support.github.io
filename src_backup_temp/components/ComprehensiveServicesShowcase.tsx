@@ -15,95 +15,101 @@ export default function Page() {const "ComprehensiveServicesShowcase": React.FC 
   }
   const "allServices": Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,...EMERGING_TECH_SERVICES_2025;
   ];
-  // Get unique categories';'
-  // Get unique categories';'
-    return cats}, [allServices])// Get unique innovation levels;
-    return levels}, [allServices])// Filter services;
-    return allServices.filter((service) => {service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           }
-                           service.tags.some(tag => { return tag.toLowerCase().includes(searchTerm.toLowerCase()))return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm])'; }'
-  ';';'
-      case 'AI & Customer Experience':;';';'
-      case 'AI & Supply Chain':;';';'
-      case 'AI & Legal Tech':;';';'
-      case 'AI & Healthcare':;';';'
-      case 'AI & Financial Services':;';';'
-      case 'AI & Content Marketing':;"';'
-        return <Brain className="h-6 w-6" />;';';'
-      case 'Cybersecurity & AI':'';';'
-      case 'Cybersecurity & Quantum':"';'
-        return <Shield className="h-6 w-6" />;';';'
-      case 'Blockchain & Supply Chain':"';'
-        return <Database className="h-6 w-6" />;';';'
-      case 'IoT & Edge Computing':"';'
-        return <Network className="h-6 w-6" />;';';'
-      case 'Quantum Computing':"';'
-        return <Cpu className="h-6 w-6" />;';';'
-      case 'AR/VR & Immersive Tech':"';'
-        return <Eye className="h-6 w-6" />;';';'
-      case '5G & Telecommunications':"';'
-        return <Globe className="h-6 w-6" />;';';'
-      case 'Space Technology':"';'
-        return <Rocket className="h-6 w-6" />;';';'
-      case 'Neuromorphic Computing':"';'
-        return <Brain className="h-6 w-6" />;';';'
-      case 'Digital Twin & Simulation':"';'
-        return <Settings className="h-6 w-6" />;';';'
-      case 'Synthetic Biology':"';'
-        return <Target className="h-6 w-6" />;';';'
-      case 'Brain-Computer Interface':"';'
-        return <Brain className="h-6 w-6" />;';';'
-      case 'Sustainability & Energy':"';'
-        return <Zap className="h-6 w-6" />;';';'
-      case 'Autonomous Vehicles & Fleet Management':";"
-        return <Rocket className="h-6 w-6" />;"
-      "default":";"
-        return <Star className="h-6 w-6" />}';'
-}';';'
-      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm])case 'AI & Customer Experience': ";"
-      case 'AI & Customer Experience':;'
-      case 'AI & Supply Chain':;'
-      case 'AI & Legal Tech':;'
-      case 'AI & Healthcare':;'
-      case 'AI & Financial Services':;'
-      case 'AI & Content Marketing':;";"
-        return <Brain className="h-6 w-6" />;"
-      case 'Cybersecurity & AI':';'
-      case 'Cybersecurity & Quantum':";"
-        return <Shield className="h-6 w-6" />;"
-      case 'Blockchain & Supply Chain':";"
-        return <Database className="h-6 w-6" />;"
-      case 'IoT & Edge Computing':";"
-        return <Network className="h-6 w-6" />;"
-      case 'Quantum Computing':";"
-        return <Cpu className="h-6 w-6" />;"
-      case 'AR/VR & Immersive Tech':";"
-        return <Eye className="h-6 w-6" />;"
-      case '5G & Telecommunications':";"
-        return <Globe className="h-6 w-6" />;"
-      case 'Space Technology':";"
-        return <Rocket className="h-6 w-6" />;"
-      case 'Neuromorphic Computing':";"
-        return <Brain className="h-6 w-6" />;"
-      case 'Digital Twin & Simulation':";"
-        return <Settings className="h-6 w-6" />;"
-      case 'Synthetic Biology':";"
-        return <Target className="h-6 w-6" />;"
-      case 'Brain-Computer Interface':";"
-        return <Brain className="h-6 w-6" />;"
-      case 'Sustainability & Energy':";"
-        return <Zap className="h-6 w-6" />;"
-      case 'Autonomous Vehicles & Fleet Management':";"
-        return <Rocket className="h-6 w-6" />;"
-      "default":";"
-        return <Star className="h-6 w-6" />"}"
-}return 'bg-gradient-to-r from-gray-600 to-slate-600'}  }return (";"
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;"
-      {/* Hero Section */}";"
-      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">";"
-        <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">";"
-          <div className="max-w-4xl mx-auto text-center">";"
-            <h1 className="text-5xl "md": tex t-6xl font-bold mb-6">;"
+  // Get unique categories';
+  // Get unique categories'
+    return cats}, [allServices]) ;
+  // Get unique innovation levels
+    return levels}, [allServices]);  // Filter services
+    return allServices.filter(service => {;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);';
+  ';';
+      case 'AI & Customer Experience':;';';
+      case 'AI & Supply Chain':;';';
+      case 'AI & Legal Tech':;';';
+      case 'AI & Healthcare':;';';
+      case 'AI & Financial Services':;';';
+      case 'AI & Content Marketing':;"';
+        return <Brain className="h-6 w-6"   />;';';
+      case 'Cybersecurity & AI':'';';
+      case 'Cybersecurity & Quantum':"';
+        return <Shield className="h-6 w-6"   />;';';
+      case 'Blockchain & Supply Chain':"';
+        return <Database className="h-6 w-6"   />;';';
+      case 'IoT & Edge Computing':"';
+        return <Network className="h-6 w-6"   />;';';
+      case 'Quantum Computing':"';
+        return <Cpu className="h-6 w-6"   />;';';
+      case 'AR/VR & Immersive Tech':"';
+        return <Eye className="h-6 w-6"   />;';';
+      case '5G & Telecommunications':"';
+        return <Globe className="h-6 w-6"   />;';';
+      case 'Space Technology':"';
+        return <Rocket className="h-6 w-6"   />;';';
+      case 'Neuromorphic Computing':"';
+        return <Brain className="h-6 w-6"   />;';';
+      case 'Digital Twin & Simulation':"';
+        return <Settings className="h-6 w-6"   />;';';
+      case 'Synthetic Biology':"';
+        return <Target className="h-6 w-6"   />;';';
+      case 'Brain-Computer Interface':"';
+        return <Brain className="h-6 w-6"   />;';';
+      case 'Sustainability & Energy':"';
+        return <Zap className="h-6 w-6"   />;';';
+      case 'Autonomous Vehicles & Fleet Management':"
+        return <Rocket className="h-6 w-6"   />;
+      default:"
+        return <Star className="h-6 w-6"   />};'
+};';';
+      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
+;
+      case 'AI & Customer Experience': ";
+      case 'AI & Customer Experience':;
+      case 'AI & Supply Chain':;
+      case 'AI & Legal Tech':;
+      case 'AI & Healthcare':;
+      case 'AI & Financial Services':;
+      case 'AI & Content Marketing':;"
+        return <Brain className="h-6 w-6"   />;
+      case 'Cybersecurity & AI':'
+      case 'Cybersecurity & Quantum':"
+        return <Shield className="h-6 w-6"   />;
+      case 'Blockchain & Supply Chain':"
+        return <Database className="h-6 w-6"   />;
+      case 'IoT & Edge Computing':"
+        return <Network className="h-6 w-6"   />;
+      case 'Quantum Computing':"
+        return <Cpu className="h-6 w-6"   />;
+      case 'AR/VR & Immersive Tech':"
+        return <Eye className="h-6 w-6"   />;
+      case '5G & Telecommunications':"
+        return <Globe className="h-6 w-6"   />;
+      case 'Space Technology':"
+        return <Rocket className="h-6 w-6"   />;
+      case 'Neuromorphic Computing':"
+        return <Brain className="h-6 w-6"   />;
+      case 'Digital Twin & Simulation':"
+        return <Settings className="h-6 w-6"   />;
+      case 'Synthetic Biology':"
+        return <Target className="h-6 w-6"   />;
+      case 'Brain-Computer Interface':"
+        return <Brain className="h-6 w-6"   />;
+      case 'Sustainability & Energy':"
+        return <Zap className="h-6 w-6"   />;
+      case 'Autonomous Vehicles & Fleet Management':"
+        return <Rocket className="h-6 w-6"   />;
+      "default":";
+        return <Star className="h-6 w-6"   />"}
+};
+        return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
+  return (";
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;
+      {/* Hero Section */}";
+      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">";
+        <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">";
+          <div className="max-w-4xl mx-auto text-center">";
+            <h1 className="text-5xl "md": tex t-6xl font-bold mb-6">;
               Innovative Technology Solutions;
             </h1>";"
             <p className="text-xl "md": tex t-2xl text-zion-slate-light mb-8 leading-relaxed">;"
@@ -219,44 +225,53 @@ export default function Page() {const "ComprehensiveServicesShowcase": React.FC 
             {filteredServices.map((service", index)  => (<motion.div;"
                 }
                 key={service.id}
-                initial = { "opacity": "0","y": "2 0;"
-"}"
-                animate = { "opacity": "1","y": "0;"
-"}"
-                transition = { "duration": "0.5","delay": "inde x * 0.1;"
-"}";"
-                className="bg-white rounded-xl shadow-lg "hover": "shado w-xl transition-all duration-300 overflow-hidden border border-gray-100";"
-                {/* Service Header */"}";"
-                <div className="p-6 border-b border-gray-100">";"
-                  <div className="flex items-start justify-between mb-4">";"
-                    <div className="flex items-center gap-3">";"
-                      <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">;"
-      "default":";"
-        return <Star className="h-6 w-6" />}"
-}return 'bg-gradient-to-r from-gray-600 to-slate-600'}  }return (";"
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;"
-      {/* Hero Section */}";"
-      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">";"
-        <div className="container mx-auto px-4 "sm": p x-6 "lg": p x-8">";"
-          <div className="max-w-4xl mx-auto text-center">";"
-            <h1 className="text-5xl "md": tex t-6xl font-bold mb-6">;"
-              Innovative Technology Solutions;
-            </h1>";"
-            <p className="text-xl "md": tex t-2xl text-zion-slate-light mb-8 leading-relaxed">;"
-              Discover our comprehensive portfolio of cutting-edge micro SAAS services,AI solutions, and emerging technology platforms designed to transform your business.</p>";"
-            <div className="flex flex-wrap justify-center gap-4">;"
-              <Link ";"
-                to="/contact";"
-                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg "hover": b g-zion-cyan-light transition-colors";"
-                Get Started";"
-                <ArrowRight className="ml-2 h-5 w-5" />              </Link>;"
-              <Link";"
-                to="/request-quote";"
-                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg "hover": b g-white "hover": tex t-zion-blue-dark transition-colors";"
-                Request Quote;
-              </Link>;
-            </div>;
-          </div>;
+                initial = {;
+  { "opacity": "0",;
+  "y": "2 0;
+"}}
+                animate = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+                transition = {;
+  { "duration": "0.5",;
+  "delay": "inde x * 0.1;
+"}}";
+                className="bg-white rounded-xl shadow-lg "hover": "shado w-xl transition-all duration-300 overflow-hidden border border-gray-100";
+                {/* Service Header */"}";
+                <div className="p-6 border-b border-gray-100">";
+                  <div className="flex items-start justify-between mb-4">";
+                    <div className="flex items-center gap-3">";
+                      <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">;
+      default:"
+        return <Star className="h-6 w-6"   />}
+};
+        return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+      {/* Hero Section */}"
+      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">"
+        <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
+              Innovative Technology Solutions
+            </h1>"
+            <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 leading-relaxed">
+              Discover our comprehensive portfolio of cutting-edge micro SAAS services,
+              AI solutions, and emerging technology platforms designed to transform your business.</p>"
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link "
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover: b g-zion-cyan-light transition-colors"
+                Get Started"
+                <ArrowRight className="ml-2 h-5 w-5"    />              </Link>
+              <Link"
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue-dark transition-colors"
+                Request Quote
+              </Link>
+            </div>
+          </div>
         </div>;
       </section>;
       {/* Contact Information Banner */}";"

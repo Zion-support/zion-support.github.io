@@ -10,6 +10,7 @@ import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SE
 import { ProductListing } from "@/types/listings"; export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [, export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [""","});"})"
 ,"});"})" export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [,"});"})"@/types/listings&apos;&apos, export ;const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [&apos,&apos,",&quot,""export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [""
 """,
-
+<<<<<<< HEAD
 import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [ ,export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""","});"})" ,"});"})" export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [,"});"})"@/types/listings&apos;&apos,export ;const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [&apos,&apos,",&quot,""export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = ["" """,
->>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+>>>>>>> origin/main

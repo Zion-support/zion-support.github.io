@@ -1,96 +1,28 @@
 
-<<<<<<< HEAD
-
-
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
 
-
     "authorization, x-client-info, apikey, content-type"},
-
-
-
-=======
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 serve(async (req: Request) => {
   // Handle CORS
-  if (req && req.method === "OPTIONS") {
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    return new Response(null, {
+  if (req && req.method === "OPTIONS") {const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type"}
+serve(async (req: Request) => {
+  // Handle CORS
+  if (req.method === "OPTIONS") {
       status: 204
       headers: corsHeaders})
   }
   try {
-
-    const supabase = createClient(
-
-<<<<<<< HEAD
-
-    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
-
-
-
-
-
-
-=======
-"
-
-    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
-
-
-    );
-    // Run the database function to create scheduled reminders
-    const { data, error } = await supabase.rpc("create_scheduled_reminders");
-
-      supabaseUrl,
-      supabaseServiceKey
-    );
-    // Run the database function to create scheduled reminders
-    const { data, error } = await supabase.rpc("create_scheduled_reminders");
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    ),
-    
-    // Run the database function to create scheduled reminders"
-    const { data, error } = await supabase.rpc("create_scheduled_reminders"),
-
-    if (error) {
-
-    ),
-    // Run the database function to create scheduled reminders
-    const { data, error } = await supabase.rpc("create_scheduled_reminders"),
-
-<<<<<<< HEAD
-    
-
-
-=======
-);
-    // Run the database function to create scheduled reminders
-    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    if (error) {
-
+    const supabase = createClient(    if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response("
         JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
         {
           }
           "status": 500,
@@ -104,237 +36,41 @@ serve(async (req: Request) => {
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "onboarding_reminder")
-
-=======
-    // Process pending reminder jobs,
-const { "data": pendingJobs, "error": jobsError } = await supabase;
-      .from("scheduled_jobs")"
-      .select("id, payload")"
-      .eq("job_type", "onboarding_reminder")"
-      .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {"
-      }
-      for (const job of pendingJobs) {
-        // Call the send-onboarding-reminder function for each job
-}
-const reminderResponse = await fetch(;
-          `${supabaseUrl}/functions/v1/send-onboarding-reminder`;`          {
-            }
-            "method": "POST";"
-            "headers": {
-              "Content-Type": "application/json","
-              "Authorization": `Bearer ${supabaseServiceKey}`};`            "body": JSON && JSON.stringify(job && job.payload)}
-        );          if (updateError) {
-            }
-            console && console.error("Failed to update job "status":", updateError)"
-          } else {
-            }
-            processedJobs && processedJobs.push(job && job.id)
-          }
-        } else {          // Update job status to failed
-}
-await supabase
-            .from("scheduled_jobs")"
-            .update({
-              }
-              "status": "failed"})"
-            .eq("id", job && job.id)            .eq("id", job && job.id)"
-        }
-      }
-    }
-    return new Response(      {
-        }
-        "status": 500,
-"headers": { "Content-Type": "application/json", ...corsHeaders }"
-    )import { serve } from '"https": //deno.land / std@0.168.0 / http / server.ts';,'
-import { create_client } from '"https": //esm.sh/@supabase / supabase - js@2.7.1';'
-const supabase_url = Deno.env.get ("SUPABASE_URL")!;"
-const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;"
-
-      .lt("scheduled_for", new Date().toISOString()),
-    
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-"
-
-    if (jobsError) {
-
-      console && console.error("Failed to fetch pending jobs:", jobsError);
-      return new Response("
-        JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
-
-
-<<<<<<< HEAD
-=======
-        {
-          status: 500
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
-      )
-    }
-
-
-<<<<<<< HEAD
-
-    const processedJobs = [],
-
-
-
-=======
-    const processedJobs = [],
-
-    const processedJobs = [];
-    
-    const processedJobs = [],
-    
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    if (pendingJobs && pendingJobs.length > 0) {
-
+      .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
           {
             method: "POST";
             headers: {
 
-
-<<<<<<< HEAD
-=======
-"
-              "Content-Type": "application/json","
-              "Authorization": `Bearer ${supabaseServiceKey}`};
-            body: JSON && JSON.stringify(job && job.payload)}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          if (updateError) {
-
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
 
 <<<<<<< HEAD
             body: JSON && JSON.stringify(job && job.payload)}
-        );
-        if (reminderResponse && reminderResponse.ok) {
-
-          `${supabaseUrl}/functions/v1/send-onboarding-reminder`,
-
-=======
-            body: JSON && JSON.stringify(job && job.payload)});
-if (reminderResponse && reminderResponse.ok) {
-          `${supabaseUrl}/functions/v1/send-onboarding-reminder`,
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-              "Authorization": `Bearer ${supabaseServiceKey}`}
-<<<<<<< HEAD
-
-
-=======
-
-            body: JSON.stringify(job.payload)});
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${supabaseServiceKey}`},
-            body: JSON.stringify(job.payload)}
-        ),
-
-        if (reminderResponse.ok) {
-          // Update job status to completed
-          const { error: updateError } = await supabase
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            .from("scheduled_jobs")
-            .update({
-              status: "completed"
-              completed_at: new Date().toISOString()})
-
-<<<<<<< HEAD
-=======
-            .eq("id", job && job.id);
-
-            .eq("id", job.id),
-
-.eq("id", job && job.id);
-            .eq("id", job && job.id);
-
-
-            .eq("id", job.id),
-
-.eq("id", job && job.id);
-          if (updateError) {
-
+        );          if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {}
             processedJobs && processedJobs.push(job && job.id)
           }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+        } else {          // Update job status to failed
           await supabase
 
             .from("scheduled_jobs")
             .update({"
               status: "failed"})
-<<<<<<< HEAD
-
-=======
-
-
+            .eq("id", job && job.id)            .eq("id", job && job.id)
         }
       }
     }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-        message: "Reminders processed successfully",
-        processed_jobs: processedJobs.length,
-        job_ids: processedJobs}),
-
-<<<<<<< HEAD
-
-
-
-=======
-
-        message: "Reminders processed successfully";
-        processed_jobs: processedJobs.length
-        job_ids: processedJobs});
-        message: "Reminders processed successfully",
-        processed_jobs: processedJobs.length,
-        job_ids: processedJobs}),
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      {
-        status: 200
-
+    return new Response(      {
+        status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-
-<<<<<<< HEAD
-  } catch (error) {
-
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-
-
-
-=======
-  } catch (error) {}
-      {}
-        status: 500"
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-  }
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
-
+    )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
+const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
 ;
 const cors_headers = {
@@ -344,19 +80,13 @@ const cors_headers = {
 
 serve (async (req: Request) => {
 
-
-
-=======
-    "authorization, x - client - info, apikey, content - type"}"
-;
-serve (async ("req": Request) => {
   }
 });
-import { serve } from ""https"://deno.land/std@0.168.0/http/server.ts";"
-import { createClient } from ""https"://esm.sh/@supabase/supabase-js@2.7.1";"
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 ;
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;"
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;"
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
 ;
 const corsHeaders = {;
   "Access-Control-Allow-Origin":"*",;"
@@ -492,10 +222,3 @@ serve(async ("req":Request) => {;
     );
   }
 });
-  }
-}),
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

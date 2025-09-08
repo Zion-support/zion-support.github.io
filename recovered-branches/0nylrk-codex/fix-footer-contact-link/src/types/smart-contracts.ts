@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export type BlockchainNetwork = "ethereum" | "polygon" | "none";
+
+export interface SmartContractInfo {;
 
   id: string;
   transactionHash?: string;
@@ -12,61 +10,32 @@ export type BlockchainNetwork = "ethereum" | "polygon" | "none";
   contractType: "escrow" | "milestone" | "simpleAgreement";
   metadataUrl?: string;
   createdAt: string;
-
   createdBy: string
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
-
 ;
-
-  status: "draft" | "deployed" | "executed" | "cancelled";
-
-<<<<<<< HEAD
-}
-
-export interface EscrowContractDetails {
-}
-
+export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}
 
 export interface EscrowContractDetails {;
 
+export interface EscrowContractDetails {
 
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  client: string;
-
+export interface EscrowContractDetails {;
   talent: string;
   amount: number;
   currency: string;
   deliverables: string;
+  completionDeadline: string;
+  arbitrator?: string;
+}
 
 export interface DeploymentOptions {;
 
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
 
   deployToChain: boolean
-
-<<<<<<< HEAD
-=======
-  completion_deadline: string,
-
-  arbitrator?: string;
-
-}
-
+  arbitrator?: string;}
 export interface DeploymentOptions {
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -86,6 +55,7 @@ export interface DeploymentOptions {
 }
 ;
 
+}  arbitrator?: string;
 }
 ;
 export interface DeploymentOptions {;
@@ -102,4 +72,3 @@ export interface DeploymentOptions {;
   deployToChain: boolean;
 }
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba

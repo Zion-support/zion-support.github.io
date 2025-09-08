@@ -3,18 +3,32 @@
 // Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
 
 const { execSync } = require('child_process');
-
-function getRepoFromGit() {}
+function getRepoFromGit() {
   // "Example": https://x-access-token:***@github.com/Zion-Holdings/zion.app;
   const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
   const match = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!match) throw new Error('Unable to parse owner/repo from origin');
-  return { owner: match[1], repo: match[2] };
+  return { "owner": match[1], "repo": match[2] };
 }
-
 function getToken() {
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) {
-    return process.env.GITHUB_TOKEN.trim();
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
+  const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
+  const tokenMatch = remoteUrl.match(/^https:\/\/x-access-token:([^@]+)@github\.com\//);
+  if (!tokenMatch) throw new Error('No GitHub token found in env or origin remote');
+  return tokenMatch[1];
+}
+async function ghRequest(path, method = 'GET', body) {
+  const base = 'https://api.github.com';
+  const token = getToken();
+  const res = await fetch(`${base}${path}`, {
+    method,
+    "headers": {}
+      Authorization: `token ${token}`,`
+      "Accept": 'application/vnd.github.v3+json',
+      'User-Agent': 'merge-open-prs-script',
+      'Content-Type': 'application/json'
+    },
+    "body": body ? JSON.stringify(body) : undefined;
   }
   const origin = getOriginUrl();
   const m = origin.match(/https:\/\/x-access-token:([^@]+)@/);

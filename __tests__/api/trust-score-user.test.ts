@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { describe, it, expect } from 'vitest';
 
 
@@ -24,9 +17,27 @@ describe('Trust Score User API', () => {
 });
 const { describe,it,expect } from "vitest"; describe("Trust Score User API",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
-<<<<<<< HEAD
+import { describe, it, expect } from 'vitest'
+describe('Trust Score User API'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"
+import { describe, it, expect } from 'vitest'
+describe('Trust Score User API'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"
+import { describe, it, expect } from 'vitest';
+describe('Trust Score User API', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+const { describe,it,expect } from "vitest"; describe("Trust Score User API",() => { it("should work",() => { expect(true).toBe(true)})});''"
+import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
 });''
 });''
-=======
-});''
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+ursor/add-new-services-and-deploy-updates-0462
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { describe, it, expect } from 'vitest'
+describe('Trust Score User API'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"

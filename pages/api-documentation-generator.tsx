@@ -38,16 +38,28 @@ export default function APIDocGeneratorPage() {
         <link rel="canonical" href="https://ziontechgroup.com/api-documentation-generator" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6 flex items-center gap-3">
-            <FileCode2 className="w-10 h-10" /> API Documentation Generator
-          </h1>
-
-          <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 mb-8">
-            <div className="grid md:grid-cols-3 gap-4">
-              <div>
-                <label className="block text-slate-300 mb-2">Source path</label>
-                <input value={sourcePath} onChange={(e) => setSourcePath(e.target.value)} className="w-full bg-black/40 border border-slate-700 rounded-lg px-3 py-2 text-white" />
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10"><Code />{service.name}</h1>
+            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-4">What you get</h2>
+              <p className="text-slate-300 mb-6">{service.description}</p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {service.features.slice(0, 12).map((feat, i) => (
+                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">
+              <div className="flex items-end justify-between mb-3">
+                <div>
+                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span>{service.period}</span></div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                </div>
+                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
               <div>
                 <label className="block text-slate-300 mb-2">Output format</label>

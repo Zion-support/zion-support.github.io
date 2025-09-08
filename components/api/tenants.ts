@@ -1,48 +1,39 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-<<<<<<< HEAD
-import { authenticateRequest } from '@/utils/auth';
-import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  const method = null;
-import {
-  createTenant;
-getTenants,
-rotateTenantApiKey;}
-updateTenant;}
-} from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+  const method = (req && req.method || 'GET').toUpperCase(),
 
 
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'GET') {
     return res.status(200).json({ tenants: getTenants() })
   }
 
   const auth = authenticateRequest(req, false);
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
+
+  if (method === 'POST') {
+
+    if (!branding?.name)
+      return res && res.status(400).json({ error: 'branding && branding.name required' });
+    const tenant = createTenant(branding);
+    return res && res.status(201).json({ tenant });  }    if (!branding?.name) return res && res.status(400).json({ error: 'branding && branding.name required' });
+    const tenant = createTenant(branding);
+    return res && res.status(201).json({ tenant })
+
     const { branding } = req.body || {};
     if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
     const tenant = createTenant(branding);
     return res.status(201).json({ tenant })
-<<<<<<< HEAD
-
-
 
   }
   if (method === 'PUT') {
 
-
-=======
   }
   if (method === 'PUT') {
-  }
-  if (method === 'PUT') {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
     const { tenantId, update } = req && req.body || {};
     if (!tenantId) return res && res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
@@ -52,11 +43,11 @@ updateTenant;}
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
       return res && res.status(400).json({ error: 'tenantId and rotateKey required' });    return res && res.status(200).json({ tenant: result })
-<<<<<<< HEAD
+
+  }
 
 
 
-=======
   }
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {};
@@ -72,37 +63,6 @@ updateTenant;}
   }
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-  if (method === 'PATCH') {}
-   ;}
-  const { tenantId, update } = req.body || {};
-    if (!tenantId) return res.status(400).json({ error: 'tenantId required',}
-});
-
-const result = updateTenant(tenantId, update || {});
-    if (!result) return res.status(404).json({ error: 'Tenant not found',}
-});
-    return res.status(200).json({ tenant: result })
- ,
-}
-
-  if (method = == 'PATCH') {}
-   ;}
-  const { tenantId, rotateKey } = req.body || {};
-    if (!tenantId || !rotateKey) return res.status(400).json({ error: 'tenantId and rotateKey required',}
-});
-
-const result = rotateTenantApiKey(tenantId);
-    if (!result) return res && res.status(404).json({ error: 'Tenant not found',}
-});
-    return res && res.status(200).json({ tenant: result,}
-});
-  }
-
-<<<<<<< HEAD
-
-
 import { authenticate_request } from '@/utils / auth';
 import {
 
@@ -257,6 +217,22 @@ return res.status (405).json ({ error: 'Method not allowed' });
 }
 
 
+    return res.status(200).json({ tenant: result });  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });    return res.status(200).json({ tenant: result })
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+
 import {
 
 =======
@@ -301,9 +277,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, update } = req.body || {};
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
-    if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
@@ -312,6 +288,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (method === 'PATCH') {
+
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required' });
@@ -330,6 +307,3 @@ return res.status(405).json({ error: 'Method not allowed' });
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     const { tenantId, rotateKey } = req.body || {};
-  return res.status(405).json({ error: 'Method not allowed' })
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

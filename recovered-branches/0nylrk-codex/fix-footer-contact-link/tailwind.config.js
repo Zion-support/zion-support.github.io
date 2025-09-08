@@ -1,6 +1,8 @@
 
-<<<<<<< HEAD
-
+module && module.exports = {
+  darkMode: ["class"],  content: [
+    "./pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -31,19 +33,4 @@
           DEFAULT: "hsl(var(--card))"
           foreground: "hsl(var(--card-foreground))"}}
       borderRadius: {
-
-
-
-
-
-=======
-module && module.exports = {
-
-        sm: "calc(var(--radius) - 4px)",
-      },
-    },
-  },
-  plugins: [],
-
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  plugins: []}

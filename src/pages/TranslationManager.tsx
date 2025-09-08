@@ -191,8 +191,11 @@ export default function TranslationManager() {
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"/>
                   <Input type="search" placeholder={t('translation.search_placeholder')} className="pl-8" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
                 </div>
-                <Tabs defaultValue="translation" value={selectedNamespace} onValueChange={(value) => setSelectedNamespace(value)} className="w-full sm:w-auto">
-                  <TabsList>
+                <Tabs 
+                  defaultValue="translation" 
+                  value={selectedNamespace}
+                  onValueChange={(value) => setSelectedNamespace(value)}
+                  className="w-full sm:w-auto"><TabsList>
                     <TabsTrigger value="translation">General</TabsTrigger>
                     <TabsTrigger value="admin">Admin</TabsTrigger>
                   </TabsList>
@@ -224,20 +227,32 @@ export default function TranslationManager() {
                                 </div>))}
                             </div>
                             <div className="flex gap-2 mt-4">
-                              <Button size="sm" onClick={() => handleSave(key)} disabled={isSaving}>
-                                {isSaving ? (<React.Fragment>
-                                    <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
+                              <Button 
+                                size="sm" 
+                                onClick={() => handleSave(key)}
+                                disabled={isSaving}>{isSaving ? (
+                                  <>
+                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                     {t('general.saving')}
                                   </React.Fragment>) : (<React.Fragment>
                                     <Check className="mr-2 h-4 w-4"/>
                                     {t('general.save')}
                                   </React.Fragment>)}
                               </Button>
-                              <Button size="sm" variant="outline" onClick={handleCancel}>
-                                {t('general.cancel')}
+                              <Button 
+                                size="sm" 
+                                variant="outline" 
+                                onClick={handleCancel}>{t('general.cancel')}
                               </Button>
-                              <Button size="sm" variant="secondary" onClick={() => handleTranslateKey(key)} disabled={isTranslating}>
-                                {isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate-spin"/>) : (<Globe className="mr-2 h-4 w-4"/>)}
+                              <Button
+                                size="sm"
+                                variant="secondary"
+                                onClick={() => handleTranslateKey(key)}
+                                disabled={isTranslating}>{isTranslating ? (
+                                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                ) : (
+                                  <Globe className="mr-2 h-4 w-4" />
+                                )}
                                 {t('translation.auto_translate')}
                               </Button>
                             </div>
@@ -245,8 +260,9 @@ export default function TranslationManager() {
                             <div className="space-y-2">
                               {supportedLanguages.slice(0, 2).map((lang) => (<div key={lang.code} className="flex items-start gap-2">
                                   <span className="mt-0.5 flex-shrink-0">{lang.flag}</span>
-                                  <span className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>
-                                    {translations[lang.code]?.[key] || t('translation.missing')}
+                                  <span 
+                                    className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}
+                                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>{translations[lang.code]?.[key] || t('translation.missing')}
                                   </span>
                                 </div>))}
                               {getMissingLanguages(key).length > 0 && (<div className="flex items-center gap-2 text-sm text-zion-purple">
@@ -256,9 +272,13 @@ export default function TranslationManager() {
                             </div>
                           </div>)}
                         <div className="p-3 flex items-center justify-end">
-                          {editingKey === key ? null : (<Button size="sm" variant="outline" onClick={() => handleEdit(key)}>
-                              {t('translation.edit')}
-                            </Button>)}
+                          {editingKey === key ? null : (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => handleEdit(key)}>{t('translation.edit')}
+                            </Button>
+                          )}
                         </div>
                       </div>))}
                   </div>)}

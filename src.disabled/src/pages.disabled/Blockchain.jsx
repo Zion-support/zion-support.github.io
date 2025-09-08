@@ -1,5 +1,6 @@
 <<<<<<< HEAD
-
+import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;=======
+=======
 import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;
 
 
@@ -10,4 +11,5 @@ import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockc
 
 export default Blockchain;
 import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;
+>>>>>>> origin/main

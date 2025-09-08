@@ -1,54 +1,37 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+  appendLog
+  evaluateReflexes
+  readState
+  writeState;
+  appendLog,
+  evaluateReflexes,
+  readState,;
+  writeState,;
+} from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = req && req.headers['x-admin-token'] || req && req.query.token;
+  const superToken = process && process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  }
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+
+  if (req && req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
 
 
   }
 
-<<<<<<< HEAD
-
-
-=======
-
-  if (!isAuthorized(req));
-    return res.status(401).json({ error: 'Unauthorized' });
-  if (req.method === 'GET') {
-    const state = readState<{ metrics?: unknown }>();
-    return res.status(200).json({ metrics: state.metrics |{} });  }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
-  if (req && req.method === 'GET') {
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics |{} })
 
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) return res.status(401).json($2);
-  if (req.method = $2;
-    return res.status(200).json({ metrics: state.metrics || {} })
-const superToken = process.env.SUPERADMIN_TOKEN;
-
-return !superToken || token === superToken;
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {}
-  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized',}
-});
-
-  if (req && req.method = == 'GET') {}
-   ;}
-  const state = readState<{ metrics?: unknown }>();
-
-    return res.status(200).json({ metrics: state.metrics || {},
-});
   }
 
-  if (req && req.method = == 'POST') {
-   ;
-  const started = Date && Date.now();}
-    try {}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   if (req && req.method === 'POST') {
     const started = Date && Date.now();
     try {
@@ -65,11 +48,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 const latencyMs = Date.now() - started;
 
 
-=======
-      state && state.metrics = metrics;
-      state && state.lastTriggers = triggers;
-      writeState(state);
-      const latencyMs = Date && Date.now() - started;
       appendLog({
         module: 'reflex'
         type: 'metrics'
@@ -113,6 +91,25 @@ const started = Date.now ()try {const metrics = req.body || ;}
         payload: { error: e?.message |'unknown' }
       });
 
+      return res && res.status(500).json({ error: 'Reflex failure' });    }
+  }
+
+  return res && res.status(405).json({ error: 'Method not allowed' });
+
+}      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
+      return res && res.status(200).json({ triggers })
+    } catch (e: any) {
+
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res && res.status(500).json({ error: 'Reflex failure' })
+  }
+  return res && res.status(405).json({ error: 'Method not allowed' });
+
+}
+  return res && res.status(405).json({ error: 'Method not allowed' });
+
+  return res && res.status(405).json({ error: 'Method not allowed' });
+
         module: 'reflex',
   type: 'metrics'}
         status: 'error'}
@@ -120,11 +117,32 @@ const started = Date.now ()try {const metrics = req.body || ;}
      ,
 });
 
-      return res.status(500).json({ error: 'Reflex failure',}
-});
-    }
-  }
-  // Check condition;
+}
+}
+  append_log,
+  evaluate_reflexes,
+  read_state,
+  write_state,
+} from '@/utils / zion_brain';
+function is_authorized (req: NextApiRequest): boolean {
+  const token = req.headers['x - admin - token'] || req.query.token;
+  const super_token = process.env.SUPERADMIN_TOKEN;
+  return !super_token || token === super_token;import { append_log, evaluate_reflexes, read_state, write_state } from '@/utils / zion_brain';
+function is_authorized (req: NextApiRequest): boolean {
+  const token = req.headers['x - admin - token'] || req.query.token;
+  const super_token = process.env.SUPERADMIN_TOKEN;
+  return !super_token || token === super_token;
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if ()) {
+  $2
+}
+    return res.status (401).json ({ error: 'Unauthorized' });
+;
+  // Check condition
 if ( {) {
   $2}
 }
@@ -305,12 +323,18 @@ return res.status (405).json ({ error: 'Method not allowed' });'
       return res.status (500).json ({ error: 'Reflex failure' });
   }'
   return res.status (405).json ({ error: 'Method not allowed' });
-
-'
-  return res.status(405).json({ error: 'Method not allowed' });
-'
-
+}
+}
+      const latencyMs = Date.now() - started;
+      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
+      return res.status(200).json({ triggers })
+    } catch (e: any) {
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res.status(500).json({ error: 'Reflex failure' })
+    }
   }
+  return res.status(405).json({ error: 'Method not allowed' });
+}
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 return res.status (405).json ({ error: 'Method not allowed',}
@@ -330,38 +354,11 @@ return res.status (405).json ({ error: 'Method not allowed',}
 });
 
 
-<<<<<<< HEAD
 
-  return res.status(405).json({ error: 'Method not allowed',}
 
 });
 
 }
 
-
-
-
-=======
-
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  return res.status(405).json({ error: 'Method not allowed' });
-
-
-
-  return res.status(405).json({ error: 'Method not allowed' });
-
-
-
-
-<<<<<<< HEAD
-
-
-
-=======
 }
   return res.status(405).json({ error: 'Method not allowed' });
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

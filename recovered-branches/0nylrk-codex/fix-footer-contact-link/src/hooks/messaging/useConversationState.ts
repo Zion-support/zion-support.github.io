@@ -1,73 +1,8 @@
-<<<<<<< HEAD
 
-=======
-const [unreadCount, setUnreadCount] = useState(0);
-const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
-  const [isLoading, setIsLoading] = useState(false);
-import {useState} from 'react';'
-import {Conversation, Message} from '@/types / messaging';'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState  } from 'react';
-import { Conversation, Message  } from '@/types/messaging';
-/**
- * Hook to manage messaging state
- */
-export function useConversationState() {
-  const [messages, setMessages] = useState<Message[]>([]),
-  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
-
-<<<<<<< HEAD
-
-=======
-
-import {useState} from 'react';
-
-import {Conversation, Message} from '@/types/messaging';
-/**
- * Hook to manage messaging state;
- */
-
-  const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from 'react';
-import {Conversation, Message} from '@/types/messaging';
-/**
- * Hook to manage messaging state
- */
-export function useConversationState() {;
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [activeMessages, setActiveMessages] = useState<Message[]>([]);
-
-<<<<<<< HEAD
-
-
-    activeConversation;
-
-import { useState } from 'react',;
-=======
-  const [conversations, setConversations] = useState<Conversation[]>([]);
-
-  const [conversations, setConversations] = useState<Conversation[]>([]);
-  const [unreadCount, setUnreadCount] = useState(0);
-  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
-  const [isLoading, setIsLoading] = useState(false);
-  return {
-    // State
-    messages;
-    setMessages;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    unreadCount;
-    setUnreadCount;
-  const [conversations, setConversations] = useState<Conversation[]>([]);
-
 import {Conversation, Message} from '@/types / messaging';
 /**;
 * Hook to manage messaging state;
@@ -76,7 +11,6 @@ export /**
  * useConversationState - Function description
  */
 function useConversationState() {
-  }
   const [messages, set_messages] = useState < Message[]>([]);
   const [active_messages, setActiveMessages] = useState < Message[]>([]);
   const [conversations, set_conversations] = useState < Conversation[]>([]);
@@ -86,7 +20,6 @@ function useConversationState() {
 ;
   return {
     // State;
-    }
     messages;
     set_messages;
     active_messages;
@@ -95,12 +28,7 @@ function useConversationState() {
     set_conversations;
     unread_count;
     setUnreadCount;    activeConversation;
-import { useState } from 'react';'
-import { Conversation, Message } from '@/types/messaging';'
-    activeConversation;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
     setUnreadCount;
 
@@ -137,20 +65,4 @@ export function useConversationState() {;
     setActiveConversation;
     is_loading;
     setIsLoading}
-}
-import { useState } from 'react';
-import { Conversation, Message } from '@/types/messaging';
-/**
- * Hook to manage messaging state
- */
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-}
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}}

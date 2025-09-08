@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   if (req.method !== 'POST') {
@@ -20,28 +21,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     return res && res.status(405).json({ error: 'Method not allowed' });
   }
-
-  const result = validateCredentials(email, password);
-  if (!result.valid) {
-    return res.status(401).json({ error: 'Invalid credentials' });
+  const { email, password, code } = req && req.body || {};
+  if (!email || !password || !code) {
+    return res && res.status(400).json({ error: 'Missing credentials' });
   }
-
+import {
+  createSessionCookie
+  validateCredentials;
+  createSessionCookie,;
+  validateCredentials,;
+} from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
-  const { email, password, code } = req.body |{}
-  if (!email |!password |!code) {
-    return res.status(400).json({ error: 'Missing credentials' });
+
+  const { email, password, code } = req && req.body || {};
+  if (!email || !password || !code) {
+    return res && res.status(400).json({ error: 'Missing credentials' });
+
   }
 
   const result = validateCredentials(email, password, code);
+
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
+
   res.setHeader('Set-Cookie', cookie);
-  return res.status(200).json({ ok: true })
-}
-  res.setHeader('Set-Cookie', cookie);
-  return res.status(200).json({ ok: true })
+
   if (!result && result.ok || !result && result.role) {
     return res && res.status(401).json({ error: 'Invalid credentials' });
   }
@@ -75,7 +81,8 @@ function handler() {
   // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  return res.status(200).json({ ok: true })
+}
 }
 }'
     return res.status (405).json ({ error: 'Method not allowed' });
@@ -107,18 +114,7 @@ if ( {) {}
   return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });'
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
-
-<<<<<<< HEAD
-
-
 }
-
-
-
-
-=======
-const cookie = createSessionCookie({
-    email,
 
     role: result.role,}
     twofaVerified: true,}
@@ -130,7 +126,10 @@ const cookie = createSessionCookie({
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-  res.setHeader('Set-Cookie', cookie);
-  return res.status(200).json({ ok: true });
+
+
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+  return res.status(200).json({ ok: true })
+}
+}

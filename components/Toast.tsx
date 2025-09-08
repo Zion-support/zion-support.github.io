@@ -45,9 +45,11 @@ const ToastContext = createContext<ToastContextType | undefined>(undefined)expor
   title: string;
   message?: string;
   duration?: number;
-  action?: {label: string;}
-    onClick: () => void;}
-}}
+  action?: {
+    label: string;
+    onClick: () => void
+};
+}
 
 interface ToastContextType {
   toasts: Toast[];
@@ -62,13 +64,17 @@ const ToastContext = createContext<ToastContextType | undefined    />(undefined)
   const context = useContext(ToastContext)if (!context) {throw new Error(\"useToast must be used within a ToastProvider\")}
 <<<<<<< HEAD
 
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
->>>>>>> origin/cursor/delete-old-data-records-6bba
- ;
-  return context;
+export const useToast = () => {
+  const context = useContext(ToastContext);
+  if (!context) {
+    throw new Error("useToast must be used within a ToastProvider");
+  }
+  return context
+};
+
+interface ToastProviderProps {
+  children: React.ReactNode;
+  maxToasts?: number;
 }
 
 <<<<<<< HEAD
@@ -181,53 +187,8 @@ const newToast: Toast = {id,duration: 5000,...toast,}setToasts((prev) => ;
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast}    />
     </ToastContext.Provider>
-  )}
-
-interface ToastContainerProps {
-  toasts: Toast[]
-  onRemove: (id: string) => void;}
-
-const ToastContainer: React.FC<ToastContainerProps /> = ({ toasts,onRemove,   }) => {
-
-}
-return (<div className="fixed top-4 right-4 z-50 space-y-2" />;}
-      {toasts.map((toast) => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
-      ))}
-    </div>
   )
-}
-return (<div className=\"fixed top-4 right-4 z-50 space-y-2\"    />;}
-      {toasts.map((toast) => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove}    />
-      ))}
-    </div>
-  )}
-
-interface ToastItemProps {
-  toast: Toast
-  onRemove: (id: string) => void
-const ToastItem: React.FC<ToastItemProps    /> = ({ toast, onRemove    }) => {
-
-  const [isVisible, setIsVisible] = useState(false)
-const [isLeaving, setIsLeaving] = useState(false)
-  useEffect(() => {
-
-    // Trigger entrance animation
-const timer = setTimeout(() => setIsVisible(true), 10);}
-    return () => clearTimeout(timer);}
-  }, [])
-const handleRemove = (
-    setIsLeaving(true)
-    setTimeout(() => onRemove(toast.id), 300)) => {
-  return $3;}
-
-<<<<<<< HEAD
-=======
-=======
-        />;
-      {children}
-      <ToastContainer toasts={toasts} onRemove={removeToast}    />;
-    </ToastContext.Provider>;
-  )}
+};
 
 interface ToastContainerProps {
   toasts: Toast[];
@@ -241,8 +202,9 @@ const ToastContainer: React.FC<ToastContainerProps    /> = ({ toasts,onRemove,  
 return (<div className=\"fixed top-4 right-4 z-50 space-y-2\"    />;}
       {toasts.map((toast) => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove}    />;
       ))}
-    </div>;
-  )}
+    </div>
+  )
+};
 
 interface ToastItemProps {
   toast: Toast;
@@ -268,11 +230,7 @@ const timer = setTimeout(() => setIsVisible(true), 10);}
 
 const handleRemove = (
     setIsLeaving(true);
-    setTimeout(() => onRemove(toast.id), 300)) => {
-  return $3;}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-}
+    setTimeout(() => onRemove(toast.id), 300)
 };
 
 const getToastStyles = (
@@ -297,7 +255,15 @@ const getToastStyles = (
     if (isVisible) {}
       return `${baseStyles} translate-x-0 opacity-100`;
     }
+<<<<<<< HEAD
+    
+    return `${baseStyles} translate-x-full opacity-0`
+};
+=======
 
+    return `${baseStyles} translate-x-full opacity-0`;
+  };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 
     return `${baseStyles} translate-x-full opacity-0`
 };
@@ -670,134 +636,12 @@ fillRule="evenodd""
   )
 };
 
-// Convenience hooks for different toast types,
-export const useToastNotifications = () => {
- ;
-  }
-  const { addToast } = useToast();
-
-  return {
-
-    }
-
-    "success": ("title": string, message?: string, options?: Partial<Toast>) =>
-      addToast({ "type": "success", title, message, ...options }),"
-    "error": ("title": string, message?: string, options?: Partial<Toast>) =>
-      addToast({ "type": "error", title, message, ...options }),"
-    "warning": ("title": string, message?: string, options?: Partial<Toast>) =>
-      addToast({ "type": "warning", title, message, ...options }),"
-    "info": ("title": string, message?: string, options?: Partial<Toast>) =>
-      addToast({ "type": "info", title, message, ...options }),"
-<<<<<<< HEAD
-=======
-=======
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-=======
-<<<<<<< HEAD
-          <div className="ml-4 flex-shrink-0 flex" />;
-=======
-          <div className=\"ml-4 flex-shrink-0 flex\"    />;
->>>>>>> origin/chore/fix-lint-and-merge
-            <button;
-              onClick={handleRemove}
-              className={`inline-flex ${titleColor} hover: opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === \"success\" ? \"green\" : toast.type === \"error\" ? \"red\" : toast.type === \"warning\" ? \"yellow\" : \"blue\"}-50`}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )}
-
-
-// Convenience hooks for different toast types;
-
-export const useToastNotifications = (
- ;) => {
-  return $3;}
-}
-  const { addToast } = useToast();
-
-  return {
-}
-
-    success: (title: string, message?: string, options?: Partial<Toast    />) =>}
-      addToast({ type: \"success\", title, message, ...options }),
-    error: (title: string, message?: string, options?: Partial<Toast    />) =>
-      addToast({ type: \"error\", title, message, ...options }),
-    warning: (title: string, message?: string, options?: Partial<Toast    />) =>
-      addToast({ type: \"warning\", title, message, ...options }),
-    info: (title: string, message?: string, options?: Partial<Toast    />) =>
-      addToast({ type: \"info\", title, message, ...options }),
-<<<<<<< HEAD
-
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-};
-
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const { addToast } = useToast()
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-  const { addToast } = useToast()
-  )
-};
-
 // Convenience hooks for different toast types
 export const useToastNotifications = () => {
   const { addToast } = useToast();
 
   return {
-            >;
-              <span className="sr-only">Close</span>;
-              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">;
-                <path;
-                  fillRule="evenodd";
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z";
-                  clipRule="evenodd";
-                />;
-              </svg>;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  )}// Convenience hooks for different toast types;
-export const useToastNotifications = () => {const { addToast }  = useToast()return {success: (title: string, message?: string, options?: Partial<Toast>) =>;
-      addToast({ type: 'success', title, message, ...options }),error: (title: string, message?: string, options?: Partial<Toast>) =>;
-      addToast({ type: 'error', title, message, ...options }),warning: (title: string, message?: string, options?: Partial<Toast>) =>;
-      addToast({ type: 'warning', title, message, ...options }),info: (title: string, message?: string, options?: Partial<Toast>) =>;
-      addToast({ type: 'info', title, message, ...options }),}
-}success: (title: string, message?: string, options?: Partial<Toast>) =>;
-      addToast({ type: "success", title, message, ...options }),error: (title: string, message?: string, options?: Partial<Toast>) =>;
-      addToast({ type: "error", title, message, ...options }),warning: (title: string, message?: string, options?: Partial<Toast>) =>;
-      addToast({ type: "warning", title, message, ...options }),info: (title: string, message?: string, options?: Partial<Toast>) =>;
 <<<<<<< HEAD
-      addToast({ type: "info", title, message, ...options }),}
-=======
-      addToast({ type: "info", title, message, ...options }),}}
-<<<<<<< HEAD
-=======
->>>>>>> origin/resolved-merge-conflicts
     success: (title: string, message?: string, options?: Partial<Toast>) => 
       addToast({ type: 'success', title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast>) => 
@@ -808,13 +652,15 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
       addToast({ type: 'info', title, message, ...options }),
   }
 };
-<<<<<<< HEAD
-      addToast({ type: "info", title, message, ...options }),}
 =======
-      addToast({ type: "info", title, message, ...options }),}}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    success: (title: string, message?: string, options?: Partial<Toast>) =>
+      addToast({ type: "success", title, message, ...options }),
+    error: (title: string, message?: string, options?: Partial<Toast>) =>
+      addToast({ type: "error", title, message, ...options }),
+    warning: (title: string, message?: string, options?: Partial<Toast>) =>
+      addToast({ type: "warning", title, message, ...options }),
+    info: (title: string, message?: string, options?: Partial<Toast>) =>
+      addToast({ type: "info", title, message, ...options }),
+  };
+};
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

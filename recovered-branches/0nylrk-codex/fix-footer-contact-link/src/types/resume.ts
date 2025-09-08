@@ -7,67 +7,19 @@ export interface ResumeBasicInfo {
   id?: string;
   title: string;
   headline?: string;
-
   summary?: string;
 
 }
-<<<<<<< HEAD
-
-=======
-
-
-}
-
+export interface WorkExperience {
+export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
 
   id?: string;
 
 }
+export interface WorkExperience {
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  id?: string;
-  company_name: string;
-  role_title: string;
-  start_date: Date | string;
-  end_date?: Date | string;
-  is_current: boolean;
-  description?: string;
-  company_logo_url?: string;
-  location?: string;
-}
-
-  id?: string;
-  company_name: string;
-  role_title: string;
-  start_date: Date | string;
-  end_date?: Date | string;
-  is_current: boolean;
-  description?: string;
-  company_logo_url?: string;
-  location?: string;
-}
-
-<<<<<<< HEAD
-
-
-export interface Education {;
-
-
-=======
-  company_logo_url?: string,
-  location?: string;
-
-}
-export interface Education {
-export interface Education {
-  company_logo_url?: string
-
-  location?: string
-}
-export interface Education {
-
-export interface Education {;
+export interface WorkExperience {;
   id?: string;
   institution: string;
   degree: string;
@@ -87,39 +39,38 @@ pr-12325
   end_date?: Date | string;
   is_current: boolean;
   description?: string;
-
+  institution_logo_url?: string;
+  location?: string;
 }
 
+  institution_logo_url?: string,
+  location?: string;
 
-  id?: string;
-
-  id?: string;
-  title: string;
-  description?: string;
-  technologies?: string[];
-  image_url?: string;
-  github_url?: string;
-
-  demo_url?: string;
-  pdf_url?: string;
+}
+export interface Skill {  id?: string;
+  name: string;
+  proficiency?: number;
+  category?: string;
+  years_experience?: number;
 }
 
-  id?: string;
+  category?: string,
+  years_experience?: number;
 
-  id?: string;
+}
+export interface Certification {  id?: string;
+  name: string;
+  proficiency?: number;
+}  id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
   work_experience: WorkExperience[];
   education: Education[];
   skills: Skill[];
   certifications: Certification[];
-
-  portfolio_projects?: PortfolioProject[]
-
-  is_active: boolean
-}
-export interface ResumeBasicInfo {;
-  id?: string,;
+  portfolio_projects?: PortfolioProject[];
+  is_active: boolean;
+}  id?: string,;
   title: string,;
   headline?: string,;
   summary?: string;
@@ -211,10 +162,8 @@ pr-12325
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
-
-  is_active: boolean;
-
+  portfolio_projects?: PortfolioProject[],  is_active: boolean;
 }
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}

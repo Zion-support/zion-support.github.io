@@ -27,35 +27,43 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { Button  } from '@/components/ui/button';
-import { Form  } from '@/components/ui/form';
-import { Certification  } from '@/types/resume';
-import { Loader2 } from 'lucide-react'
-import { useResume  } from '@/hooks/useResume';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { format  } from 'date-fns';
-import { CertificationsList  } from './CertificationsList';
-import { CertificationFormFields  } from './CertificationFormFields';
-
-<<<<<<< HEAD
-
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
 
-=======
-import { CertificationFormValues, certificationSchema } from './types';
-interface CertificationsFormProps {
-  resumeId: string;
-  certifications: Certification[];
-  onComplete: () => void;
+      )}
 
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
+            <CertificationFormFields form={form} />
+
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
+            <div className="flex justify-between pt-2">
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {
+                  if (editingId) {
+
+                    setEditingId(null),
+                    setEditingId(null),
+
+                    form.reset({
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
 
                     setEditingId(null),
                     setEditingId(null),
@@ -117,8 +125,6 @@ interface CertificationsFormProps {
                 </Button>
                 <Button type="button" onClick={onComplete}>"
 >>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                {editingId ? 'Cancel' : 'Back'}
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>

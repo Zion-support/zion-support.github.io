@@ -1,80 +1,25 @@
-<<<<<<< HEAD
 
-
-import { Button } from "@/components/ui/button",
-import {}
-
-
-=======
-
-"
-import React, { useState } from "react","
-import { useForm } from "react-hook-form","
-import { zodResolver } from "@hookform/resolvers/zod","
-import { z } from "zod","
-
-import { Button } from "@/components/ui/button",
-import {}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-<<<<<<< HEAD
-
-
-import { FileText } from "lucide-react",
-
-
-
-=======
-
-import { FileText } from "lucide-react",
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-const formSchema = z.object({
-
+import React, { useState } from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Button} from "@/components/ui/button";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Input} from "@/components/ui/input";
+import {DisputeReason, disputeReasonLabels} from "@/types/disputes";
+import {useDisputes} from "@/hooks/useDisputes";
+import {toast} from "sonner";
+import {FileText} from "lucide-react";
   reason_code: z.string()
 
     .min(1, { message: "Please select a reason for the dispute" })
   description: z.string()"
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
+type DisputeFormProps = {
 
-<<<<<<< HEAD
-
-=======
-projectId: string
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void
-  onCancel?: () => void
-const formSchema = z.object({
-
-  reason_code: z.string()
-
-    .min(1, { message: "Please select a reason for the dispute" })
-  description: z.string()"
-    .min(20, { message: "Description must be at least 20 characters" })
-  attachments: z.array(z.any()).optional()})
-
-projectId: string
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void
-  onCancel?: () => void
-}
-export function DisputeForm({
-  projectId
-  milestoneId
-  onDisputeCreated
-  onCancel
-}: DisputeFormProps) {
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void
@@ -139,88 +84,6 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
-
-
-<<<<<<< HEAD
-
-=======
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      reason_code: ""
-      description: ""
-      attachments: []}})
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Button } from "@/components/ui/button",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { Input } from "@/components/ui/input",;
-import { DisputeReason, disputeReasonLabels } from "@/types/disputes",;
-import { useDisputes } from "@/hooks/useDisputes",;
-import { toast } from "sonner",;
-import { FileText } from "lucide-react",;
-;
-const formSchema = z.object({;
-  reason_code:z.string();
-    .min(1, { message:"Please select a reason for the dispute" }),;
-  description:z.string();
-    .min(20, { message:"Description must be at least 20 characters" }),;
-  attachments:z.array(z.any()).optional()}),;
-;
-type DisputeFormProps = {;
-  projectId:string,;
-  milestoneId?:string,;
-  onDisputeCreated?:(disputeId:string) => void,;
-  onCancel?:() => void;
-},;
-;
-export function DisputeForm({ ;
-  projectId, ;
-  milestoneId, ;
-  onDisputeCreated, ;
-  onCancel ;
-      const newFiles = Array.from(e.target.files)
-      setFiles(prev => [...prev, ...newFiles]);
-      form.setValue("attachments", [...files, ...newFiles])
-    }
-  }
-  const removeFile = (index: number) => {
-    const newFiles = [...files]
-    newFiles.splice(index, 1);
-    setFiles(newFiles);
-    form.setValue("attachments", newFiles)
-  }
-      const newFiles = Array.from(e.target.files),
-      setFiles(prev => [...prev, ...newFiles]),
-      form.setValue("attachments", [...files, ...newFiles])
-    }
-  },
-
-  const removeFile = (index: number) => {
-    const newFiles = [...files],
-    newFiles.splice(index, 1),
-    setFiles(newFiles),
-    form.setValue("attachments", newFiles)
-  },
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -236,48 +99,8 @@ export function DisputeForm({ ;
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        if (onDisputeCreated) {
-          onDisputeCreated(dispute.id)
-        }
-      }
-    } catch (error) {
-
-<<<<<<< HEAD
-
-
-=======
-
-      toast.error("Failed to submit dispute. Please try again.")
-    } finally {
-      setIsSubmitting(false)
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      console.error("Error submitting dispute:", error),
-
-"
-      toast.error("Failed to submit dispute. Please try again.")
-    } finally {}
-      setIsSubmitting(false)
-
-"
-      toast.error("Failed to submit dispute. Please try again.")
-    } finally {}
-      setIsSubmitting(false)
-
-  };
-
-      toast.error("Failed to submit dispute. Please try again.")
-    } finally {
-      setIsSubmitting(false)
-<<<<<<< HEAD
-
-
-=======
-
-  };
+          console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
+        }  };
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   const removeFile = (index: number) => {;
@@ -286,8 +109,8 @@ export function DisputeForm({ ;
 
 <<<<<<< HEAD
     setFiles(newFiles);
-    form && form.setValue("attachments", newFiles);
-  };
+    form && form.setValue("attachments", newFiles)
+};
 
 =======
 
@@ -299,14 +122,8 @@ export function DisputeForm({ ;
       const dispute = await createDispute({;
         project_id: projectId,;
         milestone_id: milestoneId,;
-
-<<<<<<< HEAD
-        reason_code: values && values.reason_code,;
-        description: values && values.description}),;
-=======
         reason_code: values && values.reason_code,,
   description: values && values.description}),;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
       if (dispute && dispute.id) {;
         // Future enhancement: Upload attachments;
@@ -334,117 +151,8 @@ export function DisputeForm({ ;
 
     }
   }
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          <FormField
-            control={form.control}
-
-            name="reason_code"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Reason for dispute</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-
-                      <SelectValue placeholder="Select a reason" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {Object.entries(disputeReasonLabels).map(([value, label]) => (
-                      <SelectItem key={value} value={value}>{label}</SelectItem>
-<<<<<<< HEAD
-
-
-
-=======
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Button } from "@/components/ui/button",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-
-    .min(20, { message: "Description must be at least 20 characters" }),;
-  attachments: z.array(z.any()).optional()}),;
-type DisputeFormProps = {;
-  projectId: string,;
-  milestoneId?: string,;
-  onDisputeCreated?: (disputeId: string) => void,;
-  onCancel?: () => void;
-},;
-
-  const { createDispute } = useDisputes(),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [files, setFiles] = useState<File[]>([]),;
-  const form = useForm<z.infer<typeof formSchema>>({;
-    resolver: zodResolver(formSchema),;
-
-      description: "",;
-      attachments: []}}),;
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files) {;
-      const newFiles = Array.from(e.target.files),;
-
-<<<<<<< HEAD
-      setFiles(prev => [...prev, ...newFiles]),;
-      form.setValue("attachments", [...files, ...newFiles]);
-    }
-  },;
-  const removeFile = (index: number) => {;
-    const newFiles = [...files],;
-    newFiles.splice(index, 1),;
-    setFiles(newFiles),;
-    form.setValue("attachments", newFiles);
-  },;
-  async function onSubmit(values: z.infer<typeof formSchema>) {;
-    try {;
-      setIsSubmitting(true),;
-      const dispute = await createDispute({;
-        project_id: projectId,;
-        milestone_id: milestoneId,;
-        reason_code: values.reason_code,;
-        description: values.description}),;
-      if (dispute && dispute.id) {;
-        // Future enhancement: Upload attachments;
-        // For now we just log the files that would be uploaded;
-        if (files.length > 0) {;
-          // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`);
-        }
-;
-        toast.success("Your dispute has been submitted");
-        if (onDisputeCreated) {;
-          onDisputeCreated(dispute.id);
-        }
-      }
-    } catch (error) {;
-      console.error("Error submitting dispute:", error);
-      toast.error("Failed to submit dispute. Please try again.");
-    } finally {;
-      setIsSubmitting(false);
-    }
-  }
-;
-  return (;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          <FormField
-
+  return (          <FormField
+            control={form && form.control}
             name="reason_code"
             render={({ field }) => (;
               <FormItem>;
@@ -626,105 +334,71 @@ if ( {) {}
       setIsSubmitting (false);
     }
   }
-
+  return (
+    <div className="space-y-6">;
+      <div className="flex items - center space-x-2">;
+        <FileText className="h - 5 w - 5 text-primary" />;
+        <h2 className="text - xl font-semibold">Report an Issue</h2>;
+      </div>;
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
           <FormField;
             control={form.control}"
             name="reason_code";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Reason for dispute</FormLabel>;
-<<<<<<< HEAD
-
-                <Select onValueChange={field.on_change} default_value={field.value}>;
-
-=======
-
+                <Select onValueChange={field.on_change} default_value={field.value}>;                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
 
           />;
 
           <FormField
             control={form && form.control}
             name="description"
-      ;
-      <Form {...form}>;
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
+                    {Object.entries(disputeReasonLabels).map(([value, label]) => (;
+          />;
+          ;
           <FormField;
             control={form.control}
-            name="reason_code";
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Reason for dispute</FormLabel>;
-                <Select onValueChange={field.onChange} defaultValue={field.value}>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-                  <FormControl>;
-                    <SelectTrigger>;"
-
-                      <SelectValue placeholder="Select a reason" />;
-                    </SelectTrigger>;
-                  </FormControl>;
-                  <SelectContent>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                    ))}
+            name="description";
+                    placeholder="Please provide specific details about the issue..."
+                    className="min-h-[150px]"
+                    {Object.entries (disputeReasonLabels).map (([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>))}
                   </SelectContent>;
-
-          <FormField
-            control={form && form.control}
-            name="description"
-<<<<<<< HEAD
-
-=======
-{Object.entries(disputeReasonLabels).map(([value, label]) => (;
-                    {Object.entries(disputeReasonLabels).map(([value, label]) => (;
+                </Select>;
+                <FormMessage />;
+              </FormItem>)}
           />;
-          ;
           <FormField;
             control={form.control}
             name="description";
-            render={({ field }) => (;
-{Object.entries(disputeReasonLabels).map(([value, label]) => (;
-                    {Object.entries(disputeReasonLabels).map(([value, label]) => (;
-          />;
-          ;
-          <FormField;
-            control={form.control}
-            name="description";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            render={({ field }) => (;
+            render={({ field }) => (
               <FormItem>;
-                <FormLabel>Describe the issue in detail</FormLabel>;
+                <FormLabel > Describe the issue in detail</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-
-=======
                   <Textarea;
                     placeholder="Please provide specific details about the issue...";
                     className="min-h-[150px]";
-              <FormItem>;
-                <FormLabel>Describe the issue in detail</FormLabel>;
-                <FormControl>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  <Textarea
-                    placeholder="Please provide specific details about the issue..."
-
-                    className="min-h-[150px]"
-
-
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
 
-<<<<<<< HEAD
-
-
-=======
-                />;
+          />;
+          <FormItem>;
+            <FormLabel>Attachments (optional)</FormLabel>;
+            <FormControl>;
+              <div className="space-y-4">;
+                <Input
+                  type="file" 
+                  multiple 
+                  onChange={handleFileChange}
+                  className="cursor-pointer"                />;
 
                 {files && files.length > 0 && (;"
                   <div className="space-y-2">;"
@@ -738,105 +412,16 @@ if ( {) {}
                             type="button" "
                             variant="ghost" "
                             size="sm" 
-
-<<<<<<< HEAD
-
-
-
-=======
-                          <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>;
-                          <Button ;
-                            type="button" ;
-                            variant="ghost" ;
-                            size="sm" ;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                            onClick={() => removeFile(index)}
-                          >;
-                            Remove;
-                          </Button>;
-
-
-<<<<<<< HEAD
-=======
-              </FormItem>)}
-          />;
-          ;
-
-
-                <Input
-                  type="file" 
-                  multiple 
-                  onChange={handleFileChange}
-                  className="cursor-pointer"
-                />;
-                {files && files.length > 0 && (;
-                  <div className="space-y-2">;
-                    <p className="text-sm font-medium">Selected files:</p>;
-                    <ul className="space-y-1">;
-                      {files && files.map((file, index) => (;"
-                        <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">;
-                          <span>{file && file.name} ({(file && file.size / 1024).toFixed(1)} KB)</span>;
-                          <Button"
-                            type="button" "
-                            variant="ghost" "
-                            size="sm" 
-
-
-                            onClick={() => removeFile(index)}
-                          >;
-                            Remove;
-                          </Button>;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </FormItem>)}
-          />;
-          <FormItem>;
-            <FormLabel > Attachments (optional)</FormLabel>;
-
-                            size="sm";
-                            on_click={() => remove_file (index)}
-                          >;
-                            Remove;
-                          </Button>;
-                        </li>))}
-                    </ul>;
-                  </div>)}
-
-              </div>;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-
-<<<<<<< HEAD
-          ;
-          <div className="flex justify-end space-x-2">;
-            {onCancel && (;
-              <Button type="button" variant="outline" onClick={onCancel}>;
-                Cancel;
-              </Button>;
-            )}
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." :"Submit Dispute"}
             </Button>;
           </div>;
         </form>;
       </Form>;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-            </Button>
+    </div>);
+
+}            </Button>
           </div>
         </form>
       </Form>
     </div>
   )
-
-<<<<<<< HEAD
-
-
-
-
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

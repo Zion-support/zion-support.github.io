@@ -1,7 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
 import { SkillsForm, as, SkillsFormComponent  } from './skills';
 import { SkillsFormProps  } from './skills / types';
 export /**
@@ -11,64 +7,10 @@ function SkillsForm() {
 
   return <SkillsFormComponent {...props} />;
 }
-import {SkillsForm, as, SkillsFormComponent} from './skills';'
-import {SkillsFormProps} from './skills/types';'
-export function SkillsForm(): any ('props': SkillsFormProps) {;
-  }
-  return <SkillsFormComponent {...props} />;
-}
-import {SkillsForm, as, SkillsFormComponent} from './skills';'
-import {SkillsFormProps} from './skills/types';'
-export function SkillsForm() {
-}
-return <SkillsFormComponent {...props} />;
-import { SkillsForm as SkillsFormComponent } from './skills';'
-import { SkillsFormProps } from './skills/types';'
-export function SkillsForm() {;
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {SkillsForm, as, SkillsFormComponent} from './skills';
 import {SkillsFormProps} from './skills/types';
-export function SkillsForm(props: SkillsFormProps) {
-  return <SkillsFormComponent {...props} />
-
-<<<<<<< HEAD
-
-import {SkillsForm, as, SkillsFormComponent} from './skills';
-import {SkillsFormProps} from './skills/types';
-export function SkillsForm(props: SkillsFormProps) {
-  return <SkillsFormComponent {...props} />
-
-=======
-import { SkillsForm, as, SkillsFormComponent } from "./skills";
-
-import { SkillsFormProps } from "./skills/types";
-export function SkillsForm(props: SkillsFormProps) {};
+export function SkillsForm(): any (props: SkillsFormProps) {;
   return <SkillsFormComponent {...props} />;
-}
-;
-
-import { SkillsForm as SkillsFormComponent  } from './skills';
-import { SkillsFormProps } from './skills/types';
-export function SkillsForm(props: SkillsFormProps) {
-  return <SkillsFormComponent {...props} />;
-}
-
-import { SkillsForm as SkillsFormComponent } from './skills',;
-import { SkillsFormProps } from './skills/types';
-export function SkillsForm(props: SkillsFormProps) {;
-  return <SkillsFormComponent {...props} />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
-;
-
-
-<<<<<<< HEAD
-
-
-
-=======
 }
 
 import {SkillsForm, as, SkillsFormComponent} from './skills';
@@ -78,17 +20,8 @@ export function SkillsForm(props: SkillsFormProps) {
 import { SkillsForm as SkillsFormComponent } from './skills',;
 import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {;
-
-
   return <SkillsFormComponent {...props} />;}
 ;
 }
 ;
-import { SkillsForm, as, SkillsFormComponent } from './skills';'
-import { SkillsFormProps } from './skills/types';'
-export function SkillsForm() {
-  }
-  return <SkillsFormComponent {...props} />;
-}
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

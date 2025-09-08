@@ -109,55 +109,122 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
         f.tags.some(tag => { return tag.toLowerCase().includes(searchQuery.toLowerCase())))}
     setFilteredFeedback(filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback])// Handle feedback submission; }
     if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
-    const "feedback": "Feedbac k = {"id": Dat e.now().toString()","customerName": 'Anonymous Customer',"rating": "newFeedbac k.rating","comment": "newFeedbac k.comment","category": "newFeedbac k.category","sentiment": "newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative'","date": "new Date().toISOString().split('T')[0]","helpful": "0","unhelpful": "0","tags": "[]",;"
-  "verified": "fals e;"
-    "}setFeedback(prev  => [feedback, ...prev])setNewFeedback({ "rating": "0", "comment": '', "category": 'overall' })const "feedback": Feedbac k = {"id": Dat e.now().toString(),"customerName": 'Anonymous Customer',"rating": newFeedbac k.rating,"comment": newFeedbac k.comment,"category": newFeedbac k.category,"sentiment": newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',"date": new Date().toISOString().split('T')[0],"helpful": 0,"unhelpful": 0,const "feedback": Feedbac k = {"id": Dat e.now().toString(),"customerName": 'Anonymous Customer',"rating": newFeedbac k.rating,"comment": newFeedbac k.comment,"category": newFeedbac k.category,"sentiment": newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',"date": new Date().toISOString().split('T')[0],"helpful": 0,"unhelpful": 0,"tags": [],;'
-  }
-  "verified": fals e;
-}';'
-';';'
-    setFeedback(prev  => [feedback, ...prev])setNewFeedback({ "rating": 0, "comment": '', "category": 'overall' })setShowFeedbackForm(false)}';'
-';';'
-  // Handle helpful/unhelpful votes';'
-        return {';'
-          ...f,';';'
-          }
-          "helpful": typ e === 'helpful' ? f.helpful + 1 : f.helpful,';';'
-}setFeedback(prev  => [feedback, ...prev])setNewFeedback({ "rating": 0, "comment": '', "category": 'overall' })setShowFeedbackForm(false)}// Handle helpful/unhelpful votes';'
-        return {...f,"helpful": typ e === 'helpful' ? f.helpful + 1 : f.helpful,"unhelpful": typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful}'
-}setFeedback(prev  => [feedback, ...prev])setNewFeedback({ "rating": 0, "comment": '', "category": 'overall' }'
-    )setShowFeedbackForm(false)}// Handle helpful/unhelpful votes';'
-        return {...f,"helpful": "typ e === 'helpful' ? f.helpful + 1 : f.helpful","unhelpful": "typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful"}"helpful": typ e === 'helpful' ? f.helpful + 1 : f.helpful,"unhelpful": typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful}return f}) ) }// Get sentiment color;'
-    switch(sentiment) {case 'positive': "return 'text-green-400 bg-green-400/20';'
-      }
-      case 'negative': return 'text-red-400 bg-red-400/20';'
-      "default": retur n 'text-yellow-400 bg-yellow-400/20'"}  }// Get category color;"
-      "default": retur n 'text-yellow-400 bg-yellow-400/20'}  }// Get category color;';';';'
-'';';'
-  'service': 'text-blue-400 bg-blue-400/20','';';'
-      'product': 'text-green-400 bg-green-400/20','';';'
-      'support': 'text-purple-400 bg-purple-400/20',';';'';';'
-  'overall': 'text-zion-cyan bg-zion-cyan/20';';'
-}';';// Get sentiment color;'
-    switch(sentiment) {case 'positive': return 'text-green-400 bg-green-400/20';'
-      }
-      case 'negative': return 'text-red-400 bg-red-400/20';'
-<<<<<<< HEAD
-      "default": retur n 'text-yellow-400 bg-yellow-400/20'}  }// Get category color;'
-=======
-      "default": retur n 'text-yellow-400 bg-yellow-400/20'}  }// Get category color;;'
->>>>>>> origin/resolved-merge-conflicts
-';'
-  'service': 'text-blue-400 bg-blue-400/20',';'
-      'product': 'text-green-400 bg-green-400/20',';'
-      'support': 'text-purple-400 bg-purple-400/20',;';'
+    const "feedback": "Feedbac k = {;
+  "id": Dat e.now().toString()",;
+      "customerName": 'Anonymous Customer',;
+      "rating": "newFeedbac k.rating",;
+      "comment": "newFeedbac k.comment",;
+      "category": "newFeedbac k.category",;
+      "sentiment": "newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative'",;
+      "date": "new Date().toISOString().split('T')[0]",;
+      "helpful": "0",;
+      "unhelpful": "0",;
+      "tags": "[]",;
+  ;
+  ;
+  "verified": "fals e;
+    "};
+;
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ "rating": "0", "comment": '', "category": 'overall' });
+    const feedback: Feedbac k = {
+  id: Dat e.now().toString(),
+      customerName: 'Anonymous Customer',
+      rating: newFeedbac k.rating,
+      comment: newFeedbac k.comment,
+      category: newFeedbac k.category,
+      sentiment: newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
+      date: new Date().toISOString().split('T')[0],
+      helpful: 0,
+      unhelpful: 0,
+    const feedback: Feedbac k = {;
+  id: Dat e.now().toString(),;
+      customerName: 'Anonymous Customer',;
+      rating: newFeedbac k.rating,;
+      comment: newFeedbac k.comment,;
+      category: newFeedbac k.category,;
+      sentiment: newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',;
+      date: new Date().toISOString().split('T')[0],;
+      helpful: 0,;
+      unhelpful: 0,;
+      tags: [],;
+  ;
+  ;
+  verified: fals e
+};';
+';';
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
+    setShowFeedbackForm(false)};';
+';';
+  // Handle helpful/unhelpful votes'
+        return {;';
+          ...f,;';';
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;';'
+};
+;
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
+    setShowFeedbackForm(false)};
+;
+  // Handle helpful/unhelpful votes';
+        return {;
+          ...f,;
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
+          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful}
+};
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' }
+    );
+    setShowFeedbackForm(false)};
+  // Handle helpful/unhelpful votes'
+        return {;
+          ...f,;
+          "helpful": "typ e === 'helpful' ? f.helpful + 1 : f.helpful",;
+          "unhelpful": "typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful"};
+;
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
+          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
+      return f}) ) };
+  // Get sentiment color
+    switch(sentiment) {;
+      case 'positive': "return 'text-green-400 bg-green-400/20';
+      case 'negative': return 'text-red-400 bg-red-400/20';
+      "default": retur n 'text-yellow-400 bg-yellow-400/20'"}  };
+;
+  // Get category color;
+      default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
+  // Get category color
+  ;';
+  ;';';
+'';';
+  'service': 'text-blue-400 bg-blue-400/20','';';
+      'product': 'text-green-400 bg-green-400/20','';';
+      'support': 'text-purple-400 bg-purple-400/20',;  ;';';
+  ;'';';
   'overall': 'text-zion-cyan bg-zion-cyan/20';'
-}return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'}return ()<div className="w-full max-w-6xl mx-auto p-6">;"
-      {/* Header */}";"
-      <div className="text-center mb-8">";"
-        <h1 className="text-4xl font-bold text-white mb-4">Customer Feedback</h1>";"
-        <p className="text-zinc-400 text-lg">See what our customers are saying about Zion Tech Group</p>;"
-      </div>;
+};';';
+;
+  // Get sentiment color;
+    switch(sentiment) {;
+      case 'positive': return 'text-green-400 bg-green-400/20';
+      case 'negative': return 'text-red-400 bg-red-400/20';
+      default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
+;
+  // Get category color;
+  ;
+  ;
+'
+  'service': 'text-blue-400 bg-blue-400/20','
+      'product': 'text-green-400 bg-green-400/20','
+      'support': 'text-purple-400 bg-purple-400/20',;  ;
+  ;'
+  'overall': 'text-zion-cyan bg-zion-cyan/20'
+};
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
+  return ()
+    <div className="w-full max-w-6xl mx-auto p-6">
+      {/* Header */}"
+      <div className="text-center mb-8">"
+        <h1 className="text-4xl font-bold text-white mb-4">Customer Feedback</h1>"
+        <p className="text-zinc-400 text-lg">See what our customers are saying about Zion Tech Group</p>
+      </div>
       {/* Stats Section */}
       {showStats && (";"
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-4 gap-6 mb-8">;"
@@ -559,9 +626,9 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
 ";"
               <div className="space-y-4">;"
                 {/* Rating */}
-                <div>;
-                  <label className="block text-sm font - medium text-zinc-300 mb-2">Rating</label>;"
-                  <div  className="flex gap-2">;"
+                <div>
+                  <label className="block text-sm font - medium text-zinc-300 mb-2">Rating</label>
+                  <div  className="flex gap-2">
                     {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
                         onClick={ () => setNewFeedback(prev => ({ ...prev,"rating": "sta r;"
 "}))}";"

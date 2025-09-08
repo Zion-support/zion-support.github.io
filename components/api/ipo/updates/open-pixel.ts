@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
 
-=======
-
-}
-import type { NextApiRequest, NextApiResponse } from './next';'
+  const id = String(req.query.id |"");
 
   const id = String(req && req.query.id || "");
 
@@ -13,18 +9,19 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
 
 const id = String(req && req.query.id || "");
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const id = String(req.query.id || "");
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
     const idx = updates && updates.findIndex((x: any) => x && x.id === id);
     if (idx >= 0) {
-<<<<<<< HEAD
-=======
+
   const id = String(req.query.id || '');
   if (id) {
     const updates = readJsonFile('updates.json', [] as any[]);
     const idx = updates.findIndex((x: any) => x.id === id),
     if (idx >= 0) {
+
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile("updates && updates.json", updates);
     }
@@ -44,6 +41,12 @@ const id = String(req && req.query.id || "");
     "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",
 
 
+  );
+  res && res.status(200).send(pixel);
+}
+
+
+
 
   );
   res && res.status(200).send(pixel);
@@ -51,10 +54,6 @@ const id = String(req && req.query.id || "");
   );
   res && res.status(200).send(pixel);
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
 import type { NextApiRequest, NextApiResponse } from './next';
 <<<<<<< HEAD
 
@@ -78,25 +77,9 @@ if ( {) {}
 
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile ("updates.json", updates);
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  const id = String(req.query.id |"");
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const id = String(req.query.id || "");
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const id = String(req.query.id || "");
-  if (id) {
-    const updates = readJsonFile("updates.json", [] as any[]);
-    const idx = updates.findIndex((x: any) => x.id === id);
-    if (idx >= 0) {
-      updates[idx].opens = (updates[idx].opens |0) + 1;
-      writeJsonFile("updates.json", updates);
-
     }
   }
-const pixel = Buffer.from (
+  const pixel = Buffer.from (
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
 
 =======
@@ -115,18 +98,13 @@ const pixel = Buffer.from (
   res.set_header ("Content - Typeimage / gif");
   res.set_header ("
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
-<<<<<<< HEAD
-
   );
+  res.status (200).send (pixel);
+}
+
 res.status (200).send (pixel);
 
 }
 
 
 
-
-=======
-  );
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

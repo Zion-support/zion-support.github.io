@@ -1,51 +1,91 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button    } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Mail    } from 'lucide-react';
 
-
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo)    => void;
-
+interface Props {
+  children: ReactNode
 }
-
 interface State {
-
-
-
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-
-
-
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
-
-export class ErrorBoundary extends Component<Props, State> {
-  public state: State = { hasError: false
-   };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
   }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
-    };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       errorInfo
     });
+  }
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // // // console.error('ErrorBoundary caught an error:', error, errorInfo);
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                <svg
+                  className="w-6 h-6 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
+              <h2 className="text-xl font-semibold text-gray-900">
+                Something went wrong
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-4">
+              We're sorry, but something unexpected happened. Please try
+              refreshing the page.
+            </p>
+            <div className="space-y-3">
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={() =>
+                  this.setState({
+                    hasError: false,
+                    error: undefined,
+                    errorInfo: undefined,
+                  })
+                }
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                Try Again
+              </button>
+            </div>
+            {process.env.NODE_ENV === "development" && this.state.error && (
+              <details className="mt-4 p-4 bg-gray-100 rounded-lg">
+                <summary className="cursor-pointer text-sm font-medium text-gray-700">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+          </div>
+        </div>
+      );
     }
 
     // Log error to external service in production
@@ -58,90 +98,6 @@ export class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
   }
-
-  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)    => {
-    try {
-      // Example: Send to error logging service
-      const errorData = {
-        id: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        // Add  other relevant information
-      };
-
-      // Example: Send to your API endpoint
-      fetch('/api/errors', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorData),
-      }).catch(()    => {
-        // Silently fail if error logging fails
-      });
-    } catch (logError) {
-      // console.error('Failed to log error:', logError);
-    }
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showStack: false
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleCopyError = () => {
-    if (this.state.error && this.state.errorInfo) {
-      const errorText = `
-Error Details:
-Message: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-Error ID: ${this.state.errorId}
-Timestamp: ${new Date().toISOString()}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
-      `.trim();
-
-      navigator.clipboard.writeText(errorText).then(() => {
-        // Show success feedback
-        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
-        if (button) {
-          const originalText = button.innerHTML;
-          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
-          button.classList.add('text-green-600');
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.classList.remove('text-green-600');
-          }, 2000);
-        }
-      }).catch(() => {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = errorText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-      });
-    }
-  };
-
-  private toggleStack = () => {
-    this.setState(prev => ({ showStack: !prev.showStack }));
-  };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -186,48 +142,8 @@ User Agent: ${navigator.userAgent}
             </div>
           </div>
         </div>
-      );
+      )
     }
-
-    return this.props.children}
-  {/* Removed stray closing brace */}
-
-// Hook for functional components to catch errors
-export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [error, setError] = React.useState<any>(null);
-
-  React.useEffect(() => {
-    const handleError = (event: anyErrorEvent)    => {
-      setError(event.error);
-    };
-
-    const handleUnhandledRejection = (event: anyPromiseRejectionEvent)    => {
-      setError(new Error(event.reason));
-    };
-
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-    return () => {
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, []);
-
-  return error;
-};
-
-// Higher-order component for error boundaries
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Partial<Props>
-)    => {
-  const WrappedComponent = (props: anyP)    => (
-    <ErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
-    </ErrorBoundary>
-  );
-
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
-};
+    return this.props.children
+  }
+}

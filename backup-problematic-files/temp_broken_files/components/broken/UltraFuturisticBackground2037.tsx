@@ -5,20 +5,13 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'high';
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
-=======
-interface UltraFuturisticBackground2037Props {
-  intensity?: 'low' | 'medium' | 'high',
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon',
-  children?: React.ReactNode
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
-:components/broken/UltraFuturisticBackground2037.tsx
-export default function UltraFuturisticBackground2037({intensity = 'medium';
-  theme = 'quantum-neon';
+
 ;
 export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
   theme = 'quantum-neon',;
+
   children;
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
@@ -904,7 +897,10 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.moveTo($2);
               ctx.lineTo($2);
               ctx.stroke()
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
             }
           })
         })
@@ -940,18 +936,16 @@ ref={canvasRef}
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
 
-
-=======
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('resize', handleResize)
-      }
-      cancelAnimationFrame(animationFrameId)
-    }
-  }, []),
+        }}      />
+      {children}
+    </div>
+  )
+},
 
   return (
     <div ref = $2;
           filter: theme = $2;
 export default UltraFuturisticBackground2037,
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx

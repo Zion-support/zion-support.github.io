@@ -38,8 +38,4 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Industry;

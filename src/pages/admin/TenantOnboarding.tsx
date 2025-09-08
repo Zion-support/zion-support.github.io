@@ -135,9 +135,11 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
-                      <Select name="industry" value={formData.industry} onValueChange={(value) => handleSelectChange("industry", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select industry"/>
+                      <Select 
+                        name="industry" 
+                        value={formData.industry} 
+                        onValueChange={(value) => handleSelectChange("industry", value)}><SelectTrigger>
+                          <SelectValue placeholder="Select industry" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="technology">Technology</SelectItem>
@@ -154,9 +156,11 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
-                      <Select name="company_size" value={formData.company_size} onValueChange={(value) => handleSelectChange("company_size", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select company size"/>
+                      <Select 
+                        name="company_size" 
+                        value={formData.company_size} 
+                        onValueChange={(value) => handleSelectChange("company_size", value)}><SelectTrigger>
+                          <SelectValue placeholder="Select company size" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="1-10">1-10 employees</SelectItem>
@@ -189,9 +193,11 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
-                      <Select name="theme_preset" value={formData.theme_preset} onValueChange={(value) => handleSelectChange("theme_preset", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select theme"/>
+                      <Select 
+                        name="theme_preset" 
+                        value={formData.theme_preset} 
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}><SelectTrigger>
+                          <SelectValue placeholder="Select theme" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="light">Light</SelectItem>

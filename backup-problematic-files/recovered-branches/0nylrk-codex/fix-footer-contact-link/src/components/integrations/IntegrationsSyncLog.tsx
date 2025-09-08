@@ -53,8 +53,6 @@ export function IntegrationsSyncLog() {;
       default:;
 
         return <Badge variant="outline">Unknown</Badge>;
-<<<<<<< HEAD
-
     }
   },;
   ;

@@ -97,11 +97,18 @@ const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nT
             {exportStatus === 'success' ? (<Button className="w-full bg-green-600 hover:bg-green-700" disabled>
                 <Check aria-hidden="true" className="mr-2 h-4 w-4"/>
                 Tokens Exported
-              </Button>) : (<Button className="w-full" onClick={handleExportTokens} disabled={isExporting}>
-                {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4"/>}
-              </Button>)}
-          </div>) : (<div className="space-y-2">
+              </Button>
+            ) : (
+              <Button 
+                className="w-full" 
+                onClick={handleExportTokens} 
+                disabled={isExporting}>{isExporting ? "Processing..." : "Export Tokens"}
+                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+              </Button>
+            )}
+          </div>
+        ) : (
+          <div className="space-y-2">
             <p className="text-sm text-muted-foreground mb-3">
               Connect your web3 wallet to export tokens to the blockchain.
             </p>

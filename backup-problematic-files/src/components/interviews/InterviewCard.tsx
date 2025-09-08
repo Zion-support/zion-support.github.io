@@ -334,8 +334,5 @@ pr-12325
 }isLoading= {;
 
   isLoading ;
-<<<<<<< HEAD
 }/> </DialogContent> </Dialog> </Card>) ;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}'"

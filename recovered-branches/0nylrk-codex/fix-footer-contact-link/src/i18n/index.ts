@@ -1,54 +1,19 @@
-<<<<<<< HEAD
 
-export default i18n;
-
-
-// Initialize i18next
-i18n
-  .use(LanguageDetector) // Detect user language
-  .use(initReactI18next) // Initialize react-i18next
-
-  .init({
-    resources: {
-      en: {
-        translation: enTranslation
-      }
-      es: {
-        translation: esTranslation
-      }
-      pt: {
-        translation: ptTranslation
-      }
-      ar: {
-        translation: arTranslation
-      }
-    }
-    fallbackLng: 'en', // Default language
-=======
-export default i18n;
-
+import {initReactI18next} from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import enTranslation from './locales/en/translation ;
+import esTranslation from './locales/es/translation ;
+import ptTranslation from './locales/pt/translation ;
+import arTranslation from './locales/ar/translation ;
+    interpolation: {
+      escapeValue: false, // React already escapes by default
     }
     detection: {'
       order: ['localStoragenavigator'];'
       lookupLocalStorage: 'zion_language''
       caches: ['localStorage']
     }});
-
-
-document && document.documentElement.dir = i18n && i18n.dir();
-
-// Listen for language changes to update RTL/LTR direction'
-i18n && i18n.on('languageChanged', (lng) => {}
-  document && document.documentElement.dir = i18n && i18n.dir();
-  
-  // Save language preference to localStorage'
-  localStorage && localStorage.setItem('zion_language', lng);
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-// Initialize i18next;
-i18n;
-
+// For RTL language support
   .use (LanguageDetector) // Detect user language;
   .use (initReactI18next) // Initialize react - i18next;
   .init ({}
@@ -91,11 +56,5 @@ i18n.on ('language_changed', (lng) => {}
   // This will be implemented in the LanguageContext;
 });
 ;
-
-<<<<<<< HEAD
-
-
-
-=======
 export default i18n;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;

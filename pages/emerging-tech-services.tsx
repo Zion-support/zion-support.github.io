@@ -4,7 +4,7 @@ import { useState  } from 'react.ts';
 import { EMERGING_TECH_SERVICES_2027  } from '../data/emergingTechServices2027';
 
 const EmergingTechServices: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 

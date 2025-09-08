@@ -1,19 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "ES2024",
-      "DOM",
-      "DOM.Iterable",
-      "WebWorker",
-      "WebWorker.Iterable"
-    ],
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "es2022", "webworker"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -42,13 +44,12 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "types": [
-      "node"
-    ],
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+    "removeComments": false,
+    "importHelpers": true,
+    "downlevelIteration": true,
     "plugins": [
       {
         "name": "next"
@@ -56,72 +57,77 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ],
-      "@/data/*": [
-        "./data/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ]
+<<<<<<< HEAD
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/types/*"]
     }
+=======
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/types/*": ["./types/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/public/*": ["./public/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": [
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "next-env.d.ts",
-    "dist/types/**/*.ts"
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    "temp_working",
-    "supabase/functions",
-    "src/routes",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src/utils/generateRandomListing.ts",
-    "src/utils/linkChecker.ts",
-    "src/utils/mimeTypeFallback.ts",
-    "src/utils/passwordStrength.tsx",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/seoOptimizer.tsx",
-    "src/utils/serviceWorkerRegistration.ts",
-    "src/utils/unitConversion.ts",
-    "src/utils/withErrorLogging.ts",
-    "src/utils/generateRandomBlogPost.ts",
-    "src/pages/solutions/EnterpriseSolutions.tsx",
-    "src/utils/sitemapGenerator.tsx",
-    "src/pages/zion-hire-ai.tsx",
-    "src/pages/webinars.tsx",
-    "src/routes/*Routes.tsx",
-    "src/pages/services/**"
+    "apps/**",
+    "apps.backup/**",
+    "api-backup/**",
+    "backup-merge-conflicts/**",
+    "browserstack.config.ts",
+    "cypress.config.ts",
+    "jest.config.*",
+    "*.config.ts",
+    "netlify/**",
+    "components.disabled/**",
+    "pages.disabled/**",
+    "pages_backup/**",
+    "pages-*/**",
+    "pages.*/**",
+    "pages_*/**",
+    "pages.broken/**",
+    "pages.corrupted/**",
+    "pages.old/**",
+    "pages._*/**",
+    "pages.__*/**",
+    "backup-pages/**",
+    "src.pages.disabled/**",
+    "lib_backup*/**",
+    "src_backup*/**",
+    "corrupted-files-backup*/**",
+    "performance-reports*/**",
+    "log-analysis-reports*/**",
+    "link-reports*/**",
+    "lint-target*/**",
+    "monitoring*/**",
+    "pm2-automation*/**",
+    "automation/logs*/**",
+    "automation/backup*/**",
+    "performance-*.json",
+    "performance-*.js",
+    "performance-*.cjs",
+    "performance-*.sh",
+    "performance-*.html",
+    "performance-*.md",
+    "performance-*.txt"
   ]
 }

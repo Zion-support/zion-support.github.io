@@ -41,22 +41,131 @@ export default function SearchResultsPage() {
                 <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
               </div>
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/services"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Browse Our Services
-              </Link>
-              <Link
-                href="/contact"
-                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-              >
-                Contact Us
-              </Link>
+            {/* Controls */}
+            <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
+              <div className='flex items-center gap-2 flex-wrap'>
+                <Button
+                  variant='outline'
+                  size='sm'
+                  className='flex items-center gap-2'
+                  data-testid='filter-button'
+                >
+                  <Filter className='h-4 w-4' />                  Filters
+                </Button>
+                <select
+                  value={sortBy}
+                  onChange={e => setSortBy(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+                  data-testid='sort-select'><option value='relevance'>Relevance</option>
+                  <option value='newest'>Newest</option>
+                  <option value='price_asc'>Price: Low to High</option>
+                  <option value='price_desc'>Price: High to Low</option>
+                  <option value='rating'>Highest Rated</option>                </select>
+                <select
+                  value={categoryFilter}
+                  onChange={e => setCategoryFilter(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+                >
+                  <option value='all'>All Categories</option>
+                  {categories.map(c => (                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+                <div className='flex items-center gap-1'>
+                  <input
+                    type='number'
+                    placeholder='Min $'
+                    value={minPrice}
+                    onChange={e => setMinPrice(e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
+                  />
+                  <span>-</span>
+                  <input
+                    type='number'
+                    placeholder='Max $'
+                    value={maxPrice}
+                    onChange={e => setMaxPrice(e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />
+                </div>
+                <select
+                  value={minRating}
+                  onChange={e => setMinRating(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+                >
+                  <option value=''>All Ratings</option>
+                  <option value='4'>4★ & up</option>
+                  <option value='3'>3★ & up</option>
+                  <option value='2'>2★ & up</option>
+                </select>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'outline'}
+                  size='sm'
+                  onClick={() => setViewMode('grid')}
+                  data-testid='view-mode-grid'
+                  className={viewMode === 'grid' ? 'active' : ''}
+                >
+                  <Grid className='h-4 w-4' />
+                </Button>
+                <Button
+                  variant={viewMode === 'list' ? 'default' : 'outline'}
+                  size='sm'
+                  onClick={() => setViewMode('list')}
+                  data-testid='view-mode-list'
+                  className={viewMode === 'list' ? 'active' : ''}
+                >
+                  <List className='h-4 w-4' />                </Button>
+              </div>
             </div>
           </div>
+          {/* Loading State */}
+          {loading && results.length === 0 && (
+            <div className='flex justify-center py-12'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>
+          )}
+          {/* Empty State */}
+          {!loading && filteredResults.length === 0 && (
+            <div data-testid='search-empty-state'>              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
+            </div>
+          )}
+          {/* Results */}
+          {filteredResults.length > 0 && (
+            <div className='space-y-8'>
+              {Object.entries(groupedResults).map(([type, typeResults]) => (
+                <div key={type}>
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults.length})
+                  </h2>
+                  <div
+                    className={
+                      viewMode === 'grid'
+                        ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
+                        : 'space-y-4'
+                    }>{typeResults.map(renderResultCard)}
+                  </div>
+                </div>
+              ))}
+              {/* Load More Button */}
+              {results.length < totalResults && (
+                <div className='flex justify-center py-8'>
+                  <Button
+                    onClick={loadMore}
+                    disabled={loading}
+                    className='flex items-center gap-2'
+                  >
+                    {loading ? (
+                      <>
+                        <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>                        Loading...
+                      </>
+                    ) : (
+                      'Load More Results'
+                    )}
+                  </Button>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </>

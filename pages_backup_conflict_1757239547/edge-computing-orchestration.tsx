@@ -336,9 +336,7 @@ export default function EdgeComputingPage() {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className='text-4xl font-bold text-slate-900 mb-6'>
+              transition={{ duration: 0.6 }}><h2 className='text-4xl font-bold text-slate-900 mb-6'>
                 Why Choose Edge Computing?
               </h2>
               <p className='text-lg text-slate-600 leading-relaxed mb-8'>
@@ -414,9 +412,7 @@ export default function EdgeComputingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300'
-              >
-                <h3 className='text-2xl font-bold text-slate-900 mb-4'>
+                className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300'><h3 className='text-2xl font-bold text-slate-900 mb-4'>
                   {useCase.industry}
                 </h3>
                 <p className='text-slate-600 mb-4 leading-relaxed'>
@@ -560,11 +556,12 @@ export default function EdgeComputingPage() {
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join the edge computing revolution and transform your business with real-time processing capabilities.
+            transition={{ duration: 0.6 }}><h2 className='text-4xl font-bold text-white mb-6'>
+              Ready to Deploy Edge Computing?
+            </h2>
+            <p className='text-xl text-blue-100 mb-8'>
+              Join the edge computing revolution and transform your business
+              with real-time processing capabilities.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a

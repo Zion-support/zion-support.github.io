@@ -6,50 +6,13 @@ import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  active?: boolean;
-  href?: string;
-  target?: string;
-  badge?: React && React.ReactNode;
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-<<<<<<< HEAD
-
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-=======
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-<<<<<<< HEAD
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
+  icon?: React && React.ReactNode;interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
-  badge?: React.ReactNode
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-import React, { forwardRef } from "react",;
-
+  badge?: React.ReactNodeimport React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 
@@ -59,38 +22,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   active?: boolean,;
   href?: string,;
   target?: string,;
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
-const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
-  ({ icon, active, children, href, target, badge, className, ...props }, ref) => {;
-    if (href) {;
-
-import { SafeRef } from '@/types / ref - types';
-interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {}
-
-interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {
-
-  icon?: React.ReactNode;
-  active?: boolean;
-  href?: string;
-  target?: string;
-  badge?: React.ReactNode;
-}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            className
-          )}
-
+  badge?: React.ReactNode;          )}
         >
           <div className="flex items-center gap-2">
 
@@ -101,26 +33,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
         </a>
       )
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          rel={target === "_blank" ? "noopener noreferrer" : undefined}
-          className={cn(;"
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;"
-
-            active && "bg-accent font-medium text-accent-foreground",;
-            className;
-          )}
-        >;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
           <div className="flex items-center gap-2">;
 
             {icon && <span className="text-muted-foreground">{icon}</span>}
@@ -129,117 +41,46 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
           {badge && <span>{badge}</span>}
         </a>;
       );
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
           className={cn (
             "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
             active && "bg - accent font - medium text - accent - foreground",
             class_name)}
         >;
-
+          <div className="flex items - center gap-2">;
+            {icon && <span className="text - muted-foreground">{icon}</span>}
             <span>{children}</span>;
           </div>;
           {badge && <span>{badge}</span>}
         </a>);
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    }
-    return (
-      <button;
-        ref={ref}
-
-<<<<<<< HEAD
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-
-          active && "bg-accent font-medium text-accent-foreground",
           className
         )}
-        {...props}>;
-      ),;
-    }
-;
-    return (;
-      <button;
-        ref={ref}
-        type="button";
-        className={cn(;
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
-          active && "bg-accent font-medium text-accent-foreground",;
-          className;
-        )}
-        {...props}
-
-      >;
-        <div className="flex items-center gap-2">;
-=======
-
-"
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent","
-          active && "bg-accent font-medium text-accent-foreground",
-
-    }
-
+        {...props}>;    }
     return (
       <button;
         ref={ref}
           className;
 
         )}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+        {...props}
+      >;
           {icon && <span className="text-muted-foreground">{icon}</span>}
           <span>{children}</span>;
         </div>;
         {badge && <span>{badge}</span>}
       </button>;
-
-<<<<<<< HEAD
-
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
-          active && "bg-accent font-medium text-accent-foreground"
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
-          className
-        )}
-        {...props}
-      >
-        <div className="flex items-center gap-2">
-          {icon && <span className="text-muted-foreground">{icon}</span>}
-          <span>{children}</span>
-        </div>
-        {badge && <span>{badge}</span>}
-      </button>
-    )
-  }
-
-
-
-=======
-
     );
   }
 "
 SidebarMenuItem.displayName = "SidebarMenuItem",
-
 ),
 ),
 
+SidebarMenuItem.displayName = "SidebarMenuItem",
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  }
+
+SidebarMenuItem.displayName = "SidebarMenuItem",
+
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -252,44 +93,21 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-export { SidebarMenuItem, SidebarMenuGroup },
-),;
-SidebarMenuItem.displayName = "SidebarMenuItem",;
-interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
-
-SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   title: string,;
   children: React && React.ReactNode;
 }
-<<<<<<< HEAD
-
-=======
-interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
-
-  title: string,;
-  children: React && React.ReactNode;
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
+  return (        type="button";
         className={cn (
           "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
           active && "bg - accent font - medium text - accent - foreground",
           class_name)}
         {...props}
       >;
-
+        <div className="flex items - center gap-2">;
+          {icon && <span className="text - muted-foreground">{icon}</span>}
           <span>{children}</span>;
         </div>;
         {badge && <span>{badge}</span>}
@@ -302,7 +120,11 @@ interface SidebarMenuGroupProps extends React.HTMLAttributes < HTMLDivElement> {
   title: string,
   children: React.ReactNode;
 }
-
+const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, ...props }) => {
+  return (
+    <div className="space-y-1" {...props}>;
+      <div className="rounded - md px - 3 py - 2 text - sm font-medium">{title}</div>;
+      <div className="pl-2">{children}</div>;
     </div>);
 }
 ;
@@ -313,14 +135,51 @@ export { SidebarMenuItem, SidebarMenuGroup }
 
 },
 
-
 export { SidebarMenuItem, SidebarMenuGroup };
-
-
-
-
-=======
-
 export { SidebarMenuItem, SidebarMenuGroup };
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export { SidebarMenuItem, SidebarMenuGroup },; interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
+  icon?: React.ReactNode;
+active?: boolean;
+href?: string;
+target?: string;
+badge?: React.ReactNode 
+}const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps> ( ({
+  icon, active, children, href, target, badge, className, ...props 
+}, ref) => {
+  if (href) {
+  return (<a href= {
+  href 
+}target= {
+  target 
+}rel= {
+  target === "blank" ? "noopener noreferrer" : undefined 
+}className= {
+  cn ("flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
+active && "bg-accent font-medium text-accent-foreground";
+className) 
+}> <div className="flex items-center gap-2" > {
+  icon && <span className="text-muted-foreground" > {
+  icon 
+}</span> 
+}<span> {
+  children 
+}</span> </div> {
+  badge && <span> {
+  badge 
+}</span> 
+}</a>) 
+}return (<button) 
+}{
+  ...props 
+}> </div> {
+  badge && <span> {
+  badge 
+}</span> 
+}</button>) 
+});
+</div>) 
+};
+  );
+},;
+export { SidebarMenuItem, SidebarMenuGroup };

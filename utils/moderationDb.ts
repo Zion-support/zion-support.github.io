@@ -1,19 +1,59 @@
+import fs from 'fs';
+import path from 'path';
+
 export interface ModerationFlag {
   id: string;
   contentId: string;
   contentType: string;
   reason: string;
+  userEmail: string;
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   createdAt: string;
-  updatedAt: string;
   adminNotes?: string;
 }
 
-// Mock database - in production, this would connect to a real database
-const flags: ModerationFlag[] = [];
+const DATA_DIR = path.join(process.cwd(), 'data');
+const FILE = path.join(DATA_DIR, 'moderation-flags.json');
+
+function load(): ModerationFlag[] {
+  try {
+    if (!fs.existsSync(FILE)) return [];
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return [];
+  }
+}
+
+function save(flags: ModerationFlag[]): void {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(flags, null, 2));
+}
+
+export async function createFlag(init: Partial<ModerationFlag>): Promise<ModerationFlag> {
+  const flags = load();
+  const flag: ModerationFlag = {
+    id: init.id || Date.now().toString(),
+    contentId: init.contentId || '',
+    contentType: init.contentType || 'unknown',
+    reason: init.reason || '',
+    userEmail: init.userEmail || '',
+    status: init.status || 'pending',
+    createdAt: init.createdAt || new Date().toISOString(),
+    adminNotes: init.adminNotes
+  };
+  flags.push(flag);
+  save(flags);
+  return flag;
+}
+
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  return load();
+}
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find(flag => flag.id === id) || null;
+  const flags = load();
+  return flags.find(f => f.id === id) || null;
 }
 
 export async function updateFlagStatus(
@@ -21,34 +61,15 @@ export async function updateFlagStatus(
   status: ModerationFlag['status'], 
   adminNotes?: string
 ): Promise<ModerationFlag | null> {
-  const flag = flags.find(f => f.id === id);
-  if (!flag) return null;
+  const flags = load();
+  const flagIndex = flags.findIndex(f => f.id === id);
+  if (flagIndex === -1) return null;
   
-  flag.status = status;
-  flag.updatedAt = new Date().toISOString();
+  flags[flagIndex].status = status;
   if (adminNotes) {
-    flag.adminNotes = adminNotes;
+    flags[flagIndex].adminNotes = adminNotes;
   }
   
-  return flag;
-}
-
-export async function readAllFlags(): Promise<ModerationFlag[]> {
-  return [...flags];
-}
-
-export async function createFlag(init: Partial<ModerationFlag>): Promise<ModerationFlag> {
-  const flag: ModerationFlag = {
-    id: init.id || Math.random().toString(36).substr(2, 9),
-    contentId: init.contentId || '',
-    contentType: init.contentType || '',
-    reason: init.reason || '',
-    status: init.status || 'pending',
-    createdAt: init.createdAt || new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    adminNotes: init.adminNotes
-  };
-  
-  flags.push(flag);
-  return flag;
+  save(flags);
+  return flags[flagIndex];
 }

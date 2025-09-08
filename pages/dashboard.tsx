@@ -2,8 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Dashboard = () => {
-  const systemMetrics = [
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const DashboardPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview')
+  
+  const stats = [
     {
       title: 'Uptime',
       value: '99.97%',
@@ -36,32 +41,36 @@ const Dashboard = () => {
 
   const automationStatus = [
     {
-      name: 'Content Generation',
-      status: 'Running',
-      lastRun: '2 min ago',
-      nextRun: '5 min',
-      health: 'excellent'
+      id: 1,
+      name: 'AI Customer Analytics Platform',
+      client: 'E-commerce Retailer',
+      status: 'In Progress',
+      progress: 75,
+      deadline: '2024-02-15'
     },
     {
-      name: 'SEO Optimization',
-      status: 'Running',
-      lastRun: '1 min ago',
-      nextRun: '3 min',
-      health: 'excellent'
+      id: 2,
+      name: 'Micro SaaS Inventory System',
+      client: 'Manufacturing Co.',
+      status: 'Completed',
+      progress: 100,
+      deadline: '2024-01-30'
     },
     {
-      name: 'Performance Monitoring',
-      status: 'Running',
-      lastRun: '30 sec ago',
-      nextRun: '1 min',
-      health: 'excellent'
+      id: 3,
+      name: 'Cloud Migration Project',
+      client: 'Financial Services',
+      status: 'In Progress',
+      progress: 60,
+      deadline: '2024-03-01'
     },
     {
-      name: 'Security Scanning',
-      status: 'Running',
-      lastRun: '5 min ago',
-      nextRun: '10 min',
-      health: 'good'
+      id: 4,
+      name: 'Cybersecurity Assessment',
+      client: 'Healthcare Provider',
+      status: 'Planning',
+      progress: 25,
+      deadline: '2024-02-28'
     }
   ];
 
@@ -73,10 +82,10 @@ const Dashboard = () => {
       status: 'success'
     },
     {
-      type: 'Performance Check',
-      description: 'Lighthouse audit passed with 95/100 score',
-      timestamp: '5 minutes ago',
-      status: 'success'
+      title: 'IT Infrastructure',
+      count: 12,
+      revenue: '$1.2M',
+      icon: <Cloud className="w-6 h-6"  />
     },
     {
       type: 'Security Scan',

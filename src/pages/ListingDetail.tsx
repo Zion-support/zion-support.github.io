@@ -14,22 +14,46 @@ import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { ProfileContact } from "@/components/profile/ProfileContact";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 export default function ListingDetail() {
-    // useParams may be untyped in this environment, so avoid passing a
-    // type argument and cast the result instead to prevent TS2347 errors.
-    const router = useRouter();
-    const id = router.query.id;
-    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-    const [isChatOpen, setIsChatOpen] = useState(false);
-    const { user } = useAuth();
-    // Find the listing from our shared data source - now also checking equipment listings
-    const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
-    if (!listing) {
-        return (<div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+<<<<<<< HEAD
+  const router = null;
+=======
+  const router = useRouter();
+  const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const { user } = useAuth();
+  const { formatPrice } = useCurrency();
+  // Find the listing from our shared data source - now also checking equipment listings
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+  if (!listing) {
+    return (
+      <div className='min-h-screen bg-zion-blue py-12 px-4'>
+        <div className='container mx-auto'>
+          <div className='text-center py-20'>
+            <h1 className='text-3xl font-bold text-white mb-4'>
+              Listing Not Found
+            </h1>
+            <p className='text-zion-slate-light mb-8'>
+              The listing you're looking for doesn't exist or has been removed.
+            </p>
+            <Button
+              asChild
+              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark'><Link href='/marketplace'>Back to Marketplace</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    );  }
+  const handleContact = () => {
+    if (user) {
+      setIsChatOpen(true);
+    } else {
+      setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="text-center py-20">
+            <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
                 <Link href="/marketplace">Back to Marketplace</Link>
@@ -200,5 +224,18 @@ export default function ListingDetail() {
           <ProfileContact email={listing.author.email} // TypeScript now knows this might be undefined
      profileName={listing.author.name} profileType="service"/>
         </DialogContent>
-      </Dialog>;
-  {/* Removed stray closing brace */}
+      </Dialog>
+    </>
+);
+}/>) : (<Button </Button>) ";
+}<Button><MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;
+}";
+}/> </div>) : (<div className=" h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"> <span className=" text-lg font-medium text-zion-purple"> {listing.author.name.charAt (0) ;
+}</span> </div>) ";
+}<div> <p className=" font-medium text-white"> {listing.author.name ";
+}</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> listing.id ;
+}recipientId= {listing.author.id ;
+}isOpen= {isChatOpen ;
+}onClose= {() => setIsChatOpen (false) ";
+}/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
+}'"}

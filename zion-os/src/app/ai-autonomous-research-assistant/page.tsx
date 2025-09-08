@@ -1,14 +1,24 @@
+
 export default function AIAutonomousResearchAssistantPage() {;
   return (;
 
+    <div className="min-h-screen bg-white">;    <div className="min-h-screen bg-white">;
+      {/* Hero Section */}
+      <section className="bg - gradient - to - r from - red - 600 to - pink - 600 text - white py-20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text-center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb-6">;
+            AI Autonomous Research Assistant;
+          </h1>;
           <p className="text - xl md:text - 2xl text - red - 100 max - w-3xl mx-auto">;
-
             Revolutionize your research capabilities with our intelligent, autonomous AI research platform that works 24 / 7 to accelerate discovery and innovation.;
 
           </p>;
         </div>;
       </section>;
-
+      {/* Overview Section */}
+      <section className="py-20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
             <div>;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-6">;
                 Autonomous Research at Scale;
@@ -19,9 +29,7 @@ export default function AIAutonomousResearchAssistantPage() {;
               <p className="text - lg text - gray - 600 mb-6">;
                 The system operates independently, continuously learning from new data, identifying patterns, generating hypotheses, and conducting experiments without human intervention. This enables unprecedented research velocity and discovery potential.;
               </p>;
-
               <p className="text - lg text - gray-600">;
-
                 Whether you're in pharmaceuticals, materials science, financial modeling, or any research - intensive field, our platform can accelerate your breakthroughs by orders of magnitude.;
               </p>;
             </div>;
@@ -56,7 +64,20 @@ export default function AIAutonomousResearchAssistantPage() {;
                     </svg>;
                   </div>;
                   <div>;
-
+                    <h3 className="font - semibold text - gray-900">Multi - Domain</h3>;
+                    <p className="text - gray-600">Works across all research fields</p>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Key Features */}
+      <section className="py - 20 bg - gray-50">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
               Advanced Capabilities;
             </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
@@ -125,7 +146,19 @@ export default function AIAutonomousResearchAssistantPage() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0 - 13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0 - 13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c - 1.746 0 - 3.332.477 - 4.5 1.253" />;
                 </svg>;
               </div>;
-
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Report Generation</h3>;
+              <p className="text - gray-600">;
+                Automatically generates comprehensive research reports, including methodology, results, conclusions, and recommendations.;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Use Cases */}
+      <section className="py - 20 bg-white">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
               Research Applications;
             </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
@@ -138,25 +171,43 @@ export default function AIAutonomousResearchAssistantPage() {;
               <p className="text - gray - 600 mb-4">;
                 Accelerate drug discovery by analyzing molecular structures, predicting drug interactions, and identifying potential therapeutic targets.;
               </p>;
-
+              <ul className="space - y-2 text - gray-600">;
                 <li>• Drug repurposing analysis</li>;
                 <li>• Clinical trial optimization</li>;
                 <li>• Adverse effect prediction</li>;
                 <li>• Biomarker identification</li>;
               </ul>;
-
+            </div>;
+            <div className="border border - gray - 200 rounded - xl p-8">;
+              <h3 className="text - 2xl font - bold text - gray - 900 mb-4">Materials Science</h3>;
+              <p className="text - gray - 600 mb-4">;
+                Discover new materials with desired properties through computational modeling and experimental design optimization.;
+              </p>;
+              <ul className="space - y-2 text - gray-600">;
                 <li>• Novel material discovery</li>;
                 <li>• Property optimization</li>;
                 <li>• Manufacturing process design</li>;
                 <li>• Sustainability analysis</li>;
               </ul>;
-
+            </div>;
+            <div className="border border - gray - 200 rounded - xl p-8">;
+              <h3 className="text - 2xl font - bold text - gray - 900 mb-4">Financial Research</h3>;
+              <p className="text - gray - 600 mb-4">;
+                Develop advanced trading strategies, risk models, and market analysis through pattern recognition and predictive modeling.;
+              </p>;
+              <ul className="space - y-2 text - gray-600">;
                 <li>• Market trend analysis</li>;
                 <li>• Risk assessment models</li>;
                 <li>• Algorithmic trading strategies</li>;
                 <li>• Portfolio optimization</li>;
               </ul>;
-
+            </div>;
+            <div className="border border - gray - 200 rounded - xl p-8">;
+              <h3 className="text - 2xl font - bold text - gray - 900 mb-4">Climate Science</h3>;
+              <p className="text - gray - 600 mb-4">;
+                Model complex climate systems, predict environmental changes, and develop sustainable solutions through advanced data analysis.;
+              </p>;
+              <ul className="space - y-2 text - gray-600">;
                 <li>• Climate modeling</li>;
                 <li>• Impact assessment</li>;
                 <li>• Adaptation strategies</li>;
@@ -166,14 +217,14 @@ export default function AIAutonomousResearchAssistantPage() {;
           </div>;
         </div>;
       </section>;
-
+      {/* Technical Specifications */}
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
             <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
-
+              Technical Architecture;
+            </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
-
               Built on cutting - edge AI and cloud technologies for maximum performance and scalability;
             </p>;
           </div>;
@@ -206,7 +257,8 @@ export default function AIAutonomousResearchAssistantPage() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m - 6 4h12a2 2 0 002 - 2v - 6a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v6a2 2 0 002 2zm10 - 10V7a4 4 0 00 - 8 0v4h8z" />;
                 </svg>;
               </div>;
-
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Enterprise Security</h3>;
+              <p className="text - gray-600">;
                 SOC2 compliant with end - to - end encryption, role - based access control, and comprehensive audit logging for enterprise use.;
 
               </p>;
@@ -214,7 +266,10 @@ export default function AIAutonomousResearchAssistantPage() {;
           </div>;
         </div>;
       </section>;
-
+      {/* CTA Section */}
+      <section className="py - 20 bg - red - 600 text-white">;
+        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
             Ready to Accelerate Your Research?;
           </h2>;
           <p className="text - xl text - red - 100 mb - 8 max - w-2xl mx-auto">;
@@ -224,7 +279,7 @@ export default function AIAutonomousResearchAssistantPage() {;
             <a href="/contact" className="bg - white text - red - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition-colors">;
               Schedule a Demo;
             </a>;
-
+              <a href="/contact" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - red - 600 transition-colors">;
               Get Started Today;
             </a>;
           </div>;

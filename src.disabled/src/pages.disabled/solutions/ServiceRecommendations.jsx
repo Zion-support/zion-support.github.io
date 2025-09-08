@@ -1,5 +1,6 @@
 <<<<<<< HEAD
-
+import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicerecommendations() {}; return null} )}=======import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicerecommendations() {}; return null} )}
+=======
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicerecommendations() {}; return null} )}
 
 
@@ -31,4 +32,4 @@ import _React from "react"; import Link from "next/link"; import { ArrowRight,Ph
 
 export default function Servicerecommendations() {}; return null} )}
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicerecommendations() {}; return null} )}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

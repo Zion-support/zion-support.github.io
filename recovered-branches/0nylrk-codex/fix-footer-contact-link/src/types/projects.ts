@@ -1,27 +1,3 @@
-export type ProjectStatus =
-  | "offer_sent"
-  | "offer_accepted"
-  | "changes_requested"
-  | "in_progress"
-  | "completed"
-  | "canceled";
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export type ProjectStatus =;
-  | 'offer_sent';
-  | 'offer_accepted';
-  | 'changes_requested';
-  | 'in_progress';
-  | 'completed';
-  | 'canceled';
-
-export interface Project {;
-
-<<<<<<< HEAD
 
 export type ProjectStatus =
 export type ProjectStatus = 
@@ -41,10 +17,7 @@ export interface Project {
 
 export interface Project {;
 
-
-=======
-  id: string;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export interface Project {  id: string;
   client_id: string;
   talent_id: string;
   job_id: string;
@@ -55,20 +28,29 @@ export interface Project {;
   status: ProjectStatus;
   created_at: string;
   updated_at: string;
-<<<<<<< HEAD
-
   job?: {
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-  }
-
-<<<<<<< HEAD
-=======
-
+    title: string,
+  description: string
+};
+  talent_profile?: {
+    full_name: string;
+    professional_title?: string;
+    profile_picture_url?: string
+};
+  client_profile?: {
     display_name: string;
-    avatar_url?: string;
-  };
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    avatar_url?: string
+};
+}
+
+export interface ProjectNote {;
+
+export interface ProjectNote {export interface ProjectNote {
+  id: string;
+  project_id: string;
+  user_id: string;
+  content: string;
+  created_at: string;
+  created_by_profile?: {
+  }
 }

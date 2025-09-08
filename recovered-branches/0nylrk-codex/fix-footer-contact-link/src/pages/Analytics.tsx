@@ -1,8 +1,26 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -14,114 +32,13 @@ import {PageViewsChart} from "@/components/analytics/PageViewsChart";
 import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysisChart";
 import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
-
-
-<<<<<<< HEAD
-
-=======
-import React, { useState } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart";
-
-
-import { ExportPanel } from "@/components/analytics/ExportPanel";
-export default function Analytics() { return null; }
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart","
-import { ExportPanel } from "@/components/analytics/ExportPanel",
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const { data: pageViewTrends } = useQuery({
-    queryKey: ['page-views-trend', timeRange],
+  const [timeRange, setTimeRange] = useState('30d');    queryKey: ['page-views-trend', timeRange],
     queryFn: async () => {
       // Get daily page views for trend chart
-
-<<<<<<< HEAD
-
-      const days = parseInt(timeRange.replace('d', '')),
-      const startDate = new Date(),
-      startDate.setDate(startDate.getDate() - days),
-      
-=======
-
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
-
-        .eq('event_typepage_view')
-'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        .gte('created_at', startDate.toISOString()),
-        
-      if (error) throw error,
-      
-<<<<<<< HEAD
-=======
-      // Group by conversion type and date
-      const conversionsByType = $2;
-      data?.forEach(item = $2;
-        const conversionType = $2;
-        if (!conversionsByType[conversionType]) {
-          conversionsByType[conversionType] = {}
-        }
-        if (!conversionsByType[conversionType][date]) {
-          }
-          conversionsByType[conversionType][date] = 0
-        }
-        
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      // Group by date;
-      const viewsByDate = {},
-      data?.forEach(view => {'
-        const date = new Date(view.created_at).toISOString().split('T')[0],
-        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },
-        viewsByDate[date].views++
-      }),
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        const date = new Date(),
-        date.setDate(date.getDate() - i),'
-        const dateStr = date.toISOString().split('T')[0],
-
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        if (viewsByDate[dateStr]) {
-
-          result.push(viewsByDate[dateStr])
-        } else {}
-          result.push({ date: dateStr, views: 0 })
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React, { useState } from "react",;
-
-    queryFn: async () => {
-      // Get daily page views for trend chart
-
-      const days = parseInt(timeRange.replace('d', '')),
-      const startDate = new Date(),
-      startDate.setDate(startDate.getDate() - days),
-
-      const { data, error } = await supabase
-        .from('analytics_events')
-        .select('created_at, path')
-
+        .eq('event_typepage_view')import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
@@ -133,12 +50,6 @@ import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalys
 import { ExportPanel } from "@/components/analytics/ExportPanel",;
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d'),;
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const { data: pageViewTrends } = useQuery({;
 
     queryKey: ['page-views-trend', timeRange];
@@ -148,145 +59,29 @@ export default function Analytics() {;
       const startDate = new Date();
       startDate && startDate.setDate(startDate && startDate.getDate() - days);
 
-
-<<<<<<< HEAD
-
-=======
-        .eq('event_typepage_view');
-
-      // Group by date;
-      const viewsByDate = {};
-      data?.forEach(view => {;
-        const date = new Date(view && view.created_at).toISOString().split('T')[0];
-        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },;
-        viewsByDate[date].views++;
-      });
-
-      // Fill in missing dates;
-
-      const result = [];
-      for (let i = 0, i < days, i++) {;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        const date = new Date(),;
-
+      const { data, error } = await supabase;
+        .from('analytics_events');
+        .select('created_at, path');
+        .eq('event_typepage_view');        const date = new Date(),;
         date.setDate(date.getDate() - i),;
 
         const dateStr = date.toISOString().split('T')[0],;
         if (viewsByDate[dateStr]) {;
           result.push(viewsByDate[dateStr]);
         } else {;
-
-<<<<<<< HEAD
-          result.push({ date: dateStr, views: 0 });
-
-
-=======
-
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range,
-const dates = [];
-      for (let i = 0, i < days, i++) {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        }
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0])'
-      }
-      dates.sort();
-      // Format data for chart,
-return dates.map((date) => {
-        }
-        const result = { date }
-        Object.keys(conversionsByType).forEach((type) => {
-          }
-          result[type] = conversionsByType[type][date] |0
-        });
-return result;
-      })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    }
-  });
-
-        
-
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range,
-const dates = [];
-      for (let i = 0, i < days, i++) {
-        }
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0])'
-      }
-      dates.sort();
-      // Format data for chart,
-return dates.map((date) => {
-        }
-        const result = { date }
-        Object.keys(conversionsByType).forEach((type) => {
-          }
-          result[type] = conversionsByType[type][date] |0
-        });
-return result;
-      })
-    }
-  });
-;      const { data, error } = await supabase;
-        .from('analytics_events');'
-        .select('created_at, metadata');'
-        .eq('event_typeconversion');'
-
-<<<<<<< HEAD
+          result.push({ date: dateStr, views: 0 });        }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
-    }
-
-
-        date && date.setDate(date && date.getDate() - i);
-        const dateStr = date && date.toISOString().split('T')[0];
-
-
-        if (viewsByDate[dateStr]) {;
-          result && result.push(viewsByDate[dateStr]);
-        } else {;
-          result && result.push({ date: dateStr, views: 0 });
-        }
-      }
-
-
-      return result && result.sort((a, b) => a && a.date.localeCompare(b && b.date));
-    }
-  });
-
-  const { data: conversionData } = useQuery({;
-
-
-    queryKey: ['conversion-data', timeRange];
+    }    queryKey: ['conversion-data', timeRange];
     queryFn: async () => {;
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
-<<<<<<< HEAD
-
-
-
-=======
+        
 
         conversionsByType[conversionType][date]++
       });
@@ -311,7 +106,6 @@ return result;
 
         
 
-
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -332,24 +126,10 @@ return result;
       })
     }
   });
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      const { data, error } = await supabase;
+;      const { data, error } = await supabase;
         .from('analytics_events');
         .select('created_at, metadata');
         .eq('event_typeconversion');
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
         .gte('created_at', startDate && startDate.toISOString());
 
       if (error) throw error;
@@ -386,16 +166,8 @@ return result;
       for (let i = 0, i < days, i++) {;
         }
         const date = new Date();
-<<<<<<< HEAD
-        date && date.setDate(date && date.getDate() - i);'
-        dates && dates.push(date && date.toISOString().split('T')[0]);
-
-      }
-
-
-=======
         date && date.setDate(date && date.getDate() - i);
-        dates && dates.push(date && date.toISOString().split('T')[0]);'
+        dates && dates.push(date && date.toISOString().split('T')[0]);
       }
   });
 
@@ -451,9 +223,6 @@ data={pageViewTrends |[]}
           result[type] = conversionsByType[type][date] || 0;
         });
 
-        return result;
-      });
-
   return (
 
     <AnalyticsContainer>;
@@ -475,31 +244,6 @@ data={pageViewTrends |[]}
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
-
-  return (
-        <PageViewsChart
-        />;
-</PageViewsChart>
-        <PageViewsTable />;
-</PageViewsTable>
-      </div>;"
-      <div className="mb-6">;"
-</div>
-        <UserBehaviorStats />;
-</UserBehaviorStats>
-      </div>;"
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;"
-</div>
-        <ConversionAnalysisChart;
-          data={conversionData || []} 
-return (
-
-    }
-
-  return (
-
-    })
-  });
 
   return (
         <PageViewsChart;
@@ -528,7 +272,8 @@ return (
           data={conversionData || []} 
 
           timeRange={timeRange}
-          onTimeRangeChange={setTimeRange} />;
+          onTimeRangeChange={setTimeRange}
+        />;
         <ExportPanel />;
       </div>;
     </AnalyticsContainer>;
@@ -630,14 +375,15 @@ data={pageViewTrends |[]}
       <div className='grid grid-cols-1 'lg':grid-cols-2 gap-6 mb-6'>;'
         <ConversionAnalysisChart ;
           data={conversionData || []} ;
-
-<<<<<<< HEAD
-          timeRange={timeRange}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import React, { useState } from './react';
-
+          timeRange={timeRange}import React, { useState } from './react';
+import { use_query } from '@tanstack / react - query';
+import { supabase } from '@/integrations / supabase / client';
+import { AnalyticsContainer } from '@/components / analytics / AnalyticsContainer';
+import { AnalyticsSummary } from '@/components / analytics / AnalyticsSummary';
+import { PageViewsTable } from '@/components / analytics / PageViewsTable';
+import { UserBehaviorStats } from '@/components / analytics / UserBehaviorStats';
+import { PageViewsChart } from '@/components / analytics / PageViewsChart';
+import { ConversionAnalysisChart } from '@/components / analytics / ConversionAnalysisChart';
 import { ExportPanel } from '@/components / analytics / ExportPanel';
 export default /**;
  * Analytics - Function description;
@@ -812,88 +558,14 @@ if ( {) {
 return (;
     <AnalyticsContainer>;
       <AnalyticsSummary />;
-      <div className='grid grid - cols - 1 'lg':grid - cols - 2 gap - 6 mb-6'>;'
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb-6">;
         <PageViewsChart;
           data={pageViewTrends || []}
           time_range={time_range}
 <<<<<<< HEAD
           onTimeRangeChange={setTimeRange}
         />;
-
-=======
-          onTimeRangeChange={setTimeRange} />;
-
-      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 6">;
-        <ConversionAnalysisChart;
-          data={conversion_data || []}
-          time_range={time_range}
-
-    </AnalyticsContainer>);
-        <ExportPanel />;
-      </div>;
-    </AnalyticsContainer>;
-
-}
-}conversionsByType[conversionType][date]++ 
-});
-//Get all dates in range return result;
-}) 
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
           onTimeRangeChange={setTimeRange}
         />;
-
-      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 6">;
-        <ConversionAnalysisChart;
-          data={conversion_data || []}
-          time_range={time_range}
-
-    </AnalyticsContainer>);
         <ExportPanel />;
       </div>;
-<<<<<<< HEAD
-    </AnalyticsContainer>;
-  ),; export default function Analytics () {
-  const [timeRange, setTimeRange] = useState ('30d');
-data: pageViewTrends 
-}= useQuery ({
-  queryKey: ['page-views-trend', timeRange], queryFn: async () => {
-  //Get daily page views for trend chart const {
-  data, error 
-}= await supabase .from ('analytics events') .select ('created at, path') .eq ('event typepage view') .gte ('created at', startDate.toISOString () );
-if (error) throw error;
-//Group by date 
-}
-=======
-;
-}
-}conversionsByType[conversionType][date]++ 
-});
-//Get all dates in range return result;
-}) 
-}
-
-}/> <ExportPanel /> </div> </AnalyticsContainer>) 
-}
-}
-;
-}
-;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
-      <div className="mb - 6">;"
-
-          data={conversion_data || []}
-
-          onTimeRangeChange={setTimeRange}
-        />;
-</ConversionAnalysisChart>
-
-        <ExportPanel />;
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,3 +1,28 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+<<<<<<< HEAD
+=======
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
@@ -12,17 +37,57 @@ interface PostJobProps {
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default function PostJob({ }: PostJobProps) {
-
+=
+>>>>>>> origin/main
+import React from 'react';
+interface PostJobProps {
+  // Add props here as needed
+}
+>export default function PostJob({ }: PostJobProps) {
   return (
     <div>
       <h1>PostJob</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-
 <<<<<<< HEAD
-
-
+}
+:src.disabled/src/pages.disabled/PostJob.jsx
+}
+=======:src.pages.disabled/PostJob.jsx
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+}
+:src.disabled/src/pages.disabled/PostJob.jsx
+}
+}
+:src.pages.disabled/PostJob.jsx
+>>>>>>> origin/main
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PostJob.jsx
+<<<<<<< HEAD
+=======
+}
+
+
+
+
+
+>>>>>>> origin/main
+
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}
+<<<<<<< HEAD
+=======
+=
+}
+>
+>>>>>>> origin/main

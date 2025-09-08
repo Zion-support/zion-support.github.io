@@ -1528,109 +1528,53 @@ skipLink.className="sr-only "focus": no t-sr-only "focus": absolute "focus":top-
       )}
     </div>
     );
-  );';'
-}';';'
-;';';''
-};&apos};';';';';'
-<<<<<<< HEAD
-  const toggleHighContrast = ('props': any) => {';';';';';'
-    }
-    setHighContrast(!highContrast);',';';';';'
-    ';';';';';'
-      document.documentElement.classList.toggle('high-contrast', !highContrast);'};';';';';'
-  const toggleLargeText = ('props': any) => {';';';';';'
-    }
-    setLargeText(!largeText);',';';';';'
-    ';';';';';'
-      document.documentElement.classList.toggle('large-text', !largeText);'};';';'
-  return (';';';'
-    <'div': classNam e='fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50'>';';';';';';';'
-      <'div': classNam e='flex items-center justify-between mb-2'>';';';';';';';';'
-        <'h3': classNam e='text-sm font-semibold text-gray-900'>Accessibility</h3>';';`;',';';';';'    ';';';';';'
-        <'div': classNam e={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;',';';';';'    ';';';';';'
-    if (typeof document !== 'undefined') {'';';';';';'
-  }
-  const toggleHighContrast = ('props': any) => {setHighContrast(!highContrast);',';';';';'
-    ';';';';';'
-      }
-      document.documentElement.classList.toggle('high-contrast', !highContrast);';';';';';'
-    setHighContrast(!highContrast);`'',';';';';'
-    ';';';';';'
-    if (typeof document !== 'undefined') {''',';';';';'
-=======
-  const toggleHighContrast = ("props": any) => {';';';';';'
-    }
-    setHighContrast(!highContrast);',';';';';'
-    ';';';';';'
-      document.documentElement.classList.toggle('high-contrast', !highContrast);'}};';';';';'
-  const toggleLargeText = ("props": any) => {';';';';';'
-    }
-    setLargeText(!largeText);',';';';';'
-    ';';';';';'
-      document.documentElement.classList.toggle('large-text', !largeText);'}};';';'
-  return (';';';'
-    <"div": classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';';';'
-      <"div": classNam e="flex items-center justify-between mb-2">";";";';';';';';'
-        <"h3": classNam e="text-sm font-semibold text-gray-900">Accessibility</h3>";";`;',';';';';'    ';';';';';'
-        <"div": classNam e={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;',';';';';'    ';';';';';'
-    if (typeof document !== 'undefined') {'';';';';';'
-  }
-  const toggleHighContrast = ("props": any) => {setHighContrast(!highContrast);',';';';';'
-    ';';';';';'
-      }
-      document.documentElement.classList.toggle('high-contrast', !highContrast);';';';';';'
-    setHighContrast(!highContrast);`"',';';';';'
-    ';';';';';'
-    if (typeof document !== 'undefined') {""',';';';';'
->>>>>>> origin/resolved-merge-conflicts
-    ';';';';';'
-      }
-      document.documentElement.classList.toggle('high-contrast', !highContrast)</div>;'
-  )}';'
-}&apos}';';'
-      document.documentElement.classList.toggle('high-contrast', !highContrast)'
+  );';
+}';';
+;';';'
+};&apos};';';';';
+  const toggleHighContrast = (props: any) => {';';';';';
+    setHighContrast(!highContrast);',';';';';
+    ';';';';';
+      document.documentElement.classList.toggle('high-contrast', !highContrast);'}};';';';';
+  const toggleLargeText = (props: any) => {';';';';';
+    setLargeText(!largeText);',';';';';
+    ';';';';';
+      document.documentElement.classList.toggle('large-text', !largeText);'}};';';
+  return (';';';
+    <div: classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';';';
+      <div: classNam e="flex items-center justify-between mb-2">";";";';';';';';
+        <h3: classNam e="text-sm font-semibold text-gray-900">Accessibility</h3>";";`;',';';';';
+    ';';';';';
+        <div: classNam e={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;',';';';';
+    ';';';';';
+    if (typeof document !== 'undefined') {'';';';';';
+  const toggleHighContrast = (props: any) => {setHighContrast(!highContrast);',';';';';
+    ';';';';';
+      document.documentElement.classList.toggle('high-contrast', !highContrast);';';';';';
+    setHighContrast(!highContrast);`"',';';';';
+    ';';';';';
+    if (typeof document !== 'undefined') {""',';';';';
+    ';';';';';
+      document.documentElement.classList.toggle('high-contrast', !highContrast)
     </div>;
   );
 }
-;''
-};&apos};';';'
-<<<<<<< HEAD
-  const toggleHighContrast = ('props': 'any) => {';';';'
-    }
-    setHighContrast(!highContrast);'',';';'
-    ';';';'
-      document.documentElement.classList.toggle('high-contrast', !highContrast);'};';';'
-  const toggleLargeText = ('props': 'any) => {';';';'
-    }
-    setLargeText(!largeText);'',';';'
-    ';';';'
-      document.documentElement.classList.toggle('large-text', !largeText);'};'
-  return (';'
-    <'div': 'classNam e='fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50'>';';';';';'
-      <'div': classNam e='flex items-center justify-between mb-2'>';';';';';';'
-        <'h3': classNam e='text-sm font-semibold text-gray-900'>Accessibility';';`;'',';';';';';'}&apos}';';';';'
-  const toggleHighContrast = (props) => {setHighContrast(!highContrast)',';'
-        <'h3': classNam e='text-sm font-semibold text-gray-900'>Accessibility';';`;'',';';'
-=======
-  const toggleHighContrast = ("props": "any) => {';';';'
-    }
-    setHighContrast(!highContrast);'",';';'
-    ';';';'
-      document.documentElement.classList.toggle('high-contrast', !highContrast);'}};';';'
-  const toggleLargeText = ("props": "any) => {';';';'
-    }
-    setLargeText(!largeText);'",';';'
-    ';';';'
-      document.documentElement.classList.toggle('large-text', !largeText);'}};'
-  return (';'
-    <"div": "classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';'
-      <"div": classNam e="flex items-center justify-between mb-2">";";";';';';'
-        <"h3": classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;'",';';';';';'}&apos}';';';';'
-  const toggleHighContrast = (props) => {setHighContrast(!highContrast)',';'
-        <"h3": classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;'",';';'
->>>>>>> origin/resolved-merge-conflicts
-;';';''
-};&apos};';';';';'
+;'
+};&apos};';';
+  const toggleHighContrast = ("props": "any) => {';';';
+    setHighContrast(!highContrast);'",';';
+    ';';';
+      document.documentElement.classList.toggle('high-contrast', !highContrast);'}};';';
+  const toggleLargeText = ("props": "any) => {';';';
+    setLargeText(!largeText);'",';';
+    ';';';
+      document.documentElement.classList.toggle('large-text', !largeText);'}};
+  return (';
+    <"div": "classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';
+      <"div": classNam e="flex items-center justify-between mb-2">";";";';';';
+        <"h3": classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;'",';';
+;';';'
+};&apos};';';';';
   const toggleHighContrast = (props) => {
     }
     setHighContrast(!highContrast);',';'

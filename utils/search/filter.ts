@@ -16,20 +16,35 @@ export type SearchResult = $2;
   description?: string,
   relevance: number},
 
-function computeRelevanceScore(text: string, keywords: string[], weight = $2;
-  const lower = text.toLowerCase($2);
-  let score = $2;
-  for (const k of keywords) {
-    if (lower.includes(k.toLowerCase())) score += 1 * weight
-  }
-  return score
+export interface SearchResult {
+  id: string;
+  title: string,
+  description: string;
+  type: string;
+  rating?: number;
+  price?: number;
+  location?: string;
+  skills?: string[];
+  keywords?: string[];
+}
+  all: SearchResult[];
+  talent: SearchResult[];
+  jobs: SearchResult[];
+  projects: SearchResult[];
 }
 
-function computeSkillOverlap(skills: string[], wanted: string[]): number {
-  const set = $2;
-  let score = $2;
-  for (const w of wanted) if (set.has(w.toLowerCase())) score += 2,
-  return score
+export interface SearchFilters {
+  keywords?: string[];
+  skills?: string[];
+  location?: string;
+  type?: string;
+  status?: string;
+  minRating?: number;
+  maxRating?: number;
+  priceRange?: {
+    min?: number;
+    max?: number
+};
 }
 
 function budgetScore(candidate?: number, min?: number, max?: number): number {
@@ -40,66 +55,25 @@ function budgetScore(candidate?: number, min?: number, max?: number): number {
   return score
 }
 
-function availabilityMatches(candidate?: string, requested?: string): boolean {
-  if (!requested) return true,
-  if (!candidate) return false,
-  return candidate.toLowerCase() === requested.toLowerCase()
-}
+export function suggestDidYouMean(query: string): string[] {
+  // Simple suggestion logic
+  const suggestions: string[] = [];
 
-function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
-  const level = $2;
-  const order: AccessLevel[] = ['publicmemberadmin'],
-  return order.indexOf(access) >= order.indexOf(level)
-}
+  if (query.includes("react")) {
+    suggestions.push("javascript", "typescript", "node");
+  }
 
-export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {
-  const talent: SearchResult[] = TALENT_PROFILES
-    .filter((p) => availabilityMatches(p.availability, filters.availability))
-    .filter((p) => {
-      if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
-      return true
-    })
-    .filter((p) => {
-      if (filters.minBudgetUsd || filters.maxBudgetUsd) {
-        if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
-        if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false
-      }
-      return true
-    })
-    .map<SearchResult>((p) => {
-      const skillScore = computeSkillOverlap($2);
-      const textScore = computeRelevanceScore($2);
-      const priceScore = budgetScore($2);
-      const relevance = $2;
-      return {
-        type: 'talent',
-        id: p.slug,
-        slug: p.slug,
-        title: p.name,
-        subtitle: p.title,
-        location: p.location,
-        tags: p.skills,
-        hourlyRateUsd: p.hourlyRateUsd,
-        availability: p.availability,
-        verified: true,
-        visibility: 'public',
-        description: p.bio,
-        relevance}
-    })
-    .filter((r) => passesRls(r.visibility, access))
-    .sort((a, b) => b.relevance - a.relevance),
+  if (query.includes("python")) {
+    suggestions.push("django", "flask", "fastapi");
+  }
 
-  const jobs: SearchResult[] = [],
-  const projects: SearchResult[] = [],
-
-  const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance),
-  return { all, talent, jobs, projects }
-}
-
-export function suggestDidYouMean(query: string): string | null {
-  // naive suggestion: if user says devops latam -> normalize to 'DevOps jobs in LATAM'
-  const q = query.toLowerCase($2);
-  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM',
-  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr',
-  return null
+  if (query.includes("frontend")) {
+    suggestions.push("ui", "ux", "design");
+  }
+  
+  return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
+;
+export const sort_results = (results: any[], sort_by: string) =>: any {
+  // Add search sorting functionality here;
+  return results;
 }

@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 
+console && console.log("App optimizer starting...");
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+console && console.log("App optimizer starting...");
+// App optimizer script;
+console.log ("App optimizer starting...");

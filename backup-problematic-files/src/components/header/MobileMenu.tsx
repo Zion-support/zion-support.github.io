@@ -138,13 +138,4 @@ const baseItems = [ {';
   item.name ;
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
-
-=======
-
-
-> <X className="h-5 w-5" />  </div> <Link key= {;"
-
-pr-12325
-
-}</span>) ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}'"

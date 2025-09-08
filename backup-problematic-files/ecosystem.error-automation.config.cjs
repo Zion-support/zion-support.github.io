@@ -1,8 +1,7 @@
-;
-module.exports = {;
-  "apps": [    // Main Error Detection and Fixing Service;
-    {;
-      "name": 'error-detection-service',
+module.exports = {
+  "apps": [    // Main Error Detection and Fixing Service
+    {
+      name: 'error-detection-service',
       "script": 'scripts/pm2/error-detection-service.js',
     // Main application;
     {;
@@ -14,8 +13,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'error-detection-service',
         "SCAN_INTERVAL": '300000', // 5 minutes;
         "AUTO_FIX": 'true',
@@ -34,9 +33,9 @@ module.exports = {;
         "NODE_ENV": 'production',
         "PORT": 3000;
       },
-      "env_production": {;
-        "NODE_ENV": 'production',
-        "PORT": 3000;
+      "env_production": {
+        NODE_ENV: 'production',
+        "PORT": 3000
       }
     },
     // Error Detection and Monitoring System;
@@ -47,17 +46,17 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '512M',
-      "env": {;
-        "NODE_ENV": 'production',
-        "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes;
-        "ERROR_THRESHOLD": '10';
+      "env": {
+        NODE_ENV: 'production',
+        "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
+        "ERROR_THRESHOLD": '10'
       },
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes;
       "log_file": './automation/logs/error-detection-monitor.log',
       "error_file": './automation/logs/error-detection-monitor-error.log',
       "out_file": './automation/logs/error-detection-monitor-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // TypeScript Error Auto-Fixer;
     {;
@@ -67,17 +66,17 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'production',
-        "TYPESCRIPT_FIX_INTERVAL": '600000', // 10 minutes;
-        "AUTO_FIX_ENABLED": 'true';
+      "env": {
+        NODE_ENV: 'production',
+        "TYPESCRIPT_FIX_INTERVAL": '600000', // 10 minutes
+        "AUTO_FIX_ENABLED": 'true'
       },
       "cron_restart": '0 */15 * * *', // Restart every 15 minutes;
       "log_file": './automation/logs/typescript-error-auto-fixer.log',
       "error_file": './automation/logs/typescript-error-auto-fixer-error.log',
       "out_file": './automation/logs/typescript-error-auto-fixer-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // ESLint Error Auto-Fixer;
     {;
@@ -87,17 +86,17 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '512M',
-      "env": {;
-        "NODE_ENV": 'production',
-        "ESLINT_FIX_INTERVAL": '300000', // 5 minutes;
-        "AUTO_FIX_ENABLED": 'true';
+      "env": {
+        NODE_ENV: 'production',
+        "ESLINT_FIX_INTERVAL": '300000', // 5 minutes
+        "AUTO_FIX_ENABLED": 'true'
       },
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes;
       "log_file": './automation/logs/eslint-error-auto-fixer.log',
       "error_file": './automation/logs/eslint-error-auto-fixer-error.log',
       "out_file": './automation/logs/eslint-error-auto-fixer-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // Dependency Error Resolver;
     {;
@@ -107,17 +106,17 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '512M',
-      "env": {;
-        "NODE_ENV": 'production',
-        "DEPENDENCY_CHECK_INTERVAL": '1800000', // 30 minutes;
-        "AUTO_UPDATE_ENABLED": 'true';
+      "env": {
+        NODE_ENV: 'production',
+        "DEPENDENCY_CHECK_INTERVAL": '1800000', // 30 minutes
+        "AUTO_UPDATE_ENABLED": 'true'
       },
       "cron_restart": '0 */30 * * *', // Restart every 30 minutes;
       "log_file": './automation/logs/dependency-error-resolver.log',
       "error_file": './automation/logs/dependency-error-resolver-error.log',
       "out_file": './automation/logs/dependency-error-resolver-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // Build Error Auto-Fixer;
     {;
@@ -127,8 +126,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'syntax-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes;
         "BACKUP_FILES": 'true',
@@ -153,7 +152,7 @@ module.exports = {;
       "error_file": './automation/logs/build-error-auto-fixer-error.log',
       "out_file": './automation/logs/build-error-auto-fixer-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // Code Quality Auto-Enhancer;
     {;
@@ -163,8 +162,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'typescript-error-fixer',
         "FIX_INTERVAL": '900000', // 15 minutes;
         "AUTO_IMPORT_FIX": 'true',
@@ -186,7 +185,7 @@ module.exports = {;
       "error_file": './automation/logs/code-quality-auto-enhancer-error.log',
       "out_file": './automation/logs/code-quality-auto-enhancer-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // Error Prevention Monitor;
     {;
@@ -196,17 +195,17 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '512M',
-      "env": {;
-        "NODE_ENV": 'production',
-        "PREVENTION_CHECK_INTERVAL": '600000', // 10 minutes;
-        "PREVENTIVE_ACTIONS_ENABLED": 'true';
+      "env": {
+        NODE_ENV: 'production',
+        "PREVENTION_CHECK_INTERVAL": '600000', // 10 minutes
+        "PREVENTIVE_ACTIONS_ENABLED": 'true'
       },
       "cron_restart": '0 */15 * * *', // Restart every 15 minutes;
       "log_file": './automation/logs/error-prevention-monitor.log',
       "error_file": './automation/logs/error-prevention-monitor-error.log',
       "out_file": './automation/logs/error-prevention-monitor-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // Error Analytics Dashboard;
     {;
@@ -216,8 +215,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '512M',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'eslint-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes;
         "AUTO_FIX": 'true',
@@ -242,7 +241,7 @@ module.exports = {;
       "error_file": './automation/logs/error-analytics-dashboard-error.log',
       "out_file": './automation/logs/error-analytics-dashboard-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // Intelligent Error Orchestrator;
     {;
@@ -252,8 +251,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'file-extension-normalizer',
         "SCAN_INTERVAL": '1800000', // 30 minutes;
         "AUTO_RENAME": 'true',
@@ -273,8 +272,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'import-cleaner',
         "CLEAN_INTERVAL": '1200000', // 20 minutes;
         "REMOVE_UNUSED": 'true',
@@ -294,8 +293,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'code-quality-monitor',
         "MONITOR_INTERVAL": '300000', // 5 minutes;
         "QUALITY_THRESHOLD": '80',
@@ -315,8 +314,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'build-health-monitor',
         "BUILD_INTERVAL": '1800000', // 30 minutes;
         "AUTO_REBUILD_ON_ERROR": 'true',
@@ -336,8 +335,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'error-report-aggregator',
         "AGGREGATE_INTERVAL": '600000', // 10 minutes;
         "GENERATE_SUMMARY": 'true',
@@ -357,8 +356,8 @@ module.exports = {;
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {;
-        "NODE_ENV": 'development',
+      "env": {
+        NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'intelligent-error-prevention',
         "PREVENTION_INTERVAL": '900000', // 15 minutes;
         "PATTERN_LEARNING": 'true',
@@ -380,15 +379,15 @@ module.exports = {;
       "error_file": './automation/logs/intelligent-error-orchestrator-error.log',
       "out_file": './automation/logs/intelligent-error-orchestrator-out.log',
       "merge_logs": true,
-      "log_date_format": 'YYYY-MM-DD "HH": m"m": ss Z';
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     }
   ],
-  "deploy": {;
-    "production": {;
-      "user": 'ubuntu',
+  "deploy": {
+    production: {
+      user: 'ubuntu',
       "host": 'localhost',
       "ref": 'origin/main',
-      "repo": 'git@github."com": your-username/zion-tech-group.git',
+      "repo": 'git@github.com:your-username/zion-tech-group.git',
       "path": '/var/www/zion-tech-group',
       'pre-deploy-local': '',
       'post-deploy': 'npm install --legacy-peer-deps && pm2 reload ecosystem.error-automation.config.cjs --env production',

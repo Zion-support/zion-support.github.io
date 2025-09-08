@@ -4,19 +4,11 @@
 '"
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'"
 "use client"; ","; "react";"; "framer-motion""""
-
-
-"use client"; ","; "react";"; "framer-motion'''
-
-"use client"; ","; "react";"; "framer-motion'''
-
-"use client"; ","; "react";"; "framer-motion'''
-'"
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'"
-"use client"; ","; "react";"; "framer-motion""""'"
-
+<<<<<<< HEAD
 =======
 
+
+>>>>>>> origin/main
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
 "use client"; ","; "react";"; "framer-motion""""
 

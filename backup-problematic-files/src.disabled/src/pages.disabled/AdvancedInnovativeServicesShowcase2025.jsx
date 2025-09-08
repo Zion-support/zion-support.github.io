@@ -10,8 +10,4 @@ const AdvancedInnovativeServicesShowcase2025 = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default AdvancedInnovativeServicesShowcase2025;

@@ -1,10 +1,5 @@
 <<<<<<< HEAD
-
-
-
-=======
-
-"export\": const INNOVATIVE_IT_SERVICES = [
-export: const INNOVATIVE_IT_SERVICES = [""
 "export": const INNOVATIVE_IT_SERVICES = ["]"
->>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+"export": const INNOVATIVE_IT_SERVICES = ["]"
+>>>>>>> origin/main

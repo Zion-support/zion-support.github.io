@@ -43,20 +43,7 @@ import { PricingSuggestion } from "@/services/pricingSuggestionService",
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface PricingSuggestionBoxProps {
-  suggestion: PricingSuggestion | null;
-    isLoading: boolean;
-onApplySuggestion: () => void;}
-rateType: \"hourly\" | \"fixed\"}
-}
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  rateType}) => {
   if (isLoading) {
 }
 return (;
@@ -112,10 +99,8 @@ interface PricingSuggestionBoxProps {;
     return null
   }
 
-<<<<<<< HEAD
+  }
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"

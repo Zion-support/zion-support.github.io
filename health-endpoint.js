@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { })
+>>>>>>> origin/main
 const http = require(
   http');
 const port = process.env.PORT || 3000;
@@ -26,6 +29,9 @@ server.listen(port, () => {
   console.log(`"Health": endpoint server running on port ${port}`)})
 <<<<<<< HEAD
 const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
-=======
+<<<<<<< HEAD
 const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+const http = require( http'); const port = process.env.PORT || 3000; const server = http.createServer((req,res) => { if (req.url === '/health') { res.writeHead(200,{ 'Content-Type': 'application/json' }); res.end( JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process.uptime() memory: process.memoryUsage() pid: process.pid }) )} else { res.writeHead(404,{ Content-Type': 'text/plain: })'; res.end( 'Not: Found')}'}) server.listen(port,() => { console.log(`Health: endpoint server running on port ${port}`)})
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/main

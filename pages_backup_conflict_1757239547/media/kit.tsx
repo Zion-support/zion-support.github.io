@@ -225,9 +225,7 @@ const KitPage = () => {
             {assets.map(a => (
               <li
                 key={a.filename}
-                className='flex items-center justify-between border rounded p-2'
-              >
-                <span className='text-sm'>{a.filename}</span>
+                className='flex items-center justify-between border rounded p-2'><span className='text-sm'>{a.filename}</span>
                 {a.path ? (
                   <a href={a.path} download className='text-blue-600 text-sm'>
                     Download

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useEffect, useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import {useEffect, useState} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-
-import type { Wallet, TokenTransaction } from '@/types/tokens';
 
 export function useWallet() {;
   }
@@ -38,10 +26,10 @@ const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
       }
       setWallet(null);
       setLoading(false);
-return;
-import {use_auth} from '@/hooks / use_auth';'
-import {supabase} from '@/integrations / supabase / client';'
-import type { Wallet, TokenTransaction } from '@/types / tokens';'
+      return
+import {use_auth} from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';
+import type { Wallet, TokenTransaction } from '@/types / tokens';
 export /**
  * use_wallet - Function description
 import {useEffect, useState} from 'react';
@@ -90,24 +78,9 @@ if ( {) {
         throw error;
       }
       set_wallet (data);
-    } catch ('err': any) {
-      }
-      console.error ('Error fetching 'wallet':', err);'
+    } catch (err: any) {
+      console.error ('Error fetching wallet:', err);
       set_error (err.message);        amount;
-        'transaction_type': 'earn';'
-        'reason': reason |null;
-    'created_at': new Date().toISOString()}
-      ...prev])
-  }
-  async function spendTokens() {
-    }
-
-      set_loading (false);
-    }
-  }
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
         transaction_type: 'earn';
         reason: reason |null;
         created_at: new Date().toISOString()}
@@ -117,11 +90,6 @@ if ( {) {
   async function spendTokens(amount: number, reason?: string) {}
     if (!user?.id) return;
     setWallet(prev =>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
         amount;
 
         transaction_type: 'burn';
@@ -134,15 +102,6 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
-  useEffect(() => {}
-    fetchWallet();
-    fetchTransactions()
-  }, [user?.id]);
-
-
-<<<<<<< HEAD
-  return {
-=======
   async /**
  * fetch_transactions - Function description
  */
@@ -221,32 +180,7 @@ if (return) {
     fetch_wallet ();
     fetch_transactions ();
   }, [user?.id]);
-;import { useEffect, useState } from 'react';'
-import { useAuth } from '@/hooks/useAuth';'
-import { supabase } from '@/integrations/supabase/client',;'
-import type { Wallet, TokenTransaction } from '@/types/tokens',;'
-export function useWallet() {;
-  }
-  return {
-        transaction_type: 'earn';
-        reason: reason |null
-        created_at: new Date().toISOString()}
-      ...prev])
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    wallet;
-    transactions;
-    loading;
-    error;
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useEffect, useState } from 'react',;
-
+;import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 
@@ -371,124 +305,7 @@ export function useWallet() { return null; }
     error,;
     fetchWallet,;
 
-<<<<<<< HEAD
-
-
-    spendTokens}
-
-
-=======
     fetchTransactions;
     earnTokens;
 
-    spendTokens}
-import { useEffect, useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import type { Wallet, TokenTransaction } from '@/types/tokens';
-export function useWallet() {
-  const { user } = useAuth($2);
-  const [wallet, setWallet] = useState<Wallet | null>(null),
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
-  const [loading, setLoading] = useState($2);
-  const [error, setError] = useState<string | null>(null),
-
-  async function fetchWallet() {
-    if (!user?.id) {
-      setWallet($2);
-      setLoading($2);
-      return
-    }
-    try {
-      setLoading($2);
-      const { data, error } = await supabase
-        .from('wallets')
-        .select('*')
-        .eq('user_id', user.id)
-        .single($2);
-      if (error) {
-        throw error
-      }
-
-      setWallet(data)
-    } catch (err: any) {
-      console.error($2);
-      setError(err.message)
-    } finally {
-      setLoading(false)
-    }
-  }
-  async function fetchTransactions() {
-    if (!user?.id) {
-      setTransactions($2);
-      return
-    }
-    try {
-      const { data, error } = await supabase
-        .from('token_transactions')
-        .select('*')
-        .eq('user_id', user.id)
-        .order($2);
-      if (error) throw error,
-      setTransactions((data || []) as TokenTransaction[])
-    } catch (err: any) {
-      console.error('Error fetching transactions:', err)
-    }
-  }
-  async function earnTokens(amount: number, reason?: string) {
-    if (!user?.id) return,
-    setWallet($2);
-    setTransactions($2);
-        user_id: user.id,
-        amount,
-        transaction_type: 'earn',
-        reason: reason || null,
-        created_at: new Date().toISOString()},
-      ...prev])
-  }
-  async function spendTokens(amount: number, reason?: string) {
-    if (!user?.id) return,
-    setWallet(prev =>
-      prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
-    ),
-    setTransactions($2);
-        user_id: user.id,
-        amount,
-        transaction_type: 'burn',
-        reason: reason || null,
-        created_at: new Date().toISOString()},
-      ...prev])
-  }
-  useEffect(() => {
-    fetchWallet($2);
-    fetchTransactions()
-  }, [user?.id]),
-
-  return {
-    wallet,
-    transactions,
-    loading,
-    error,
-    fetchWallet,
-    fetchTransactions,
-    earnTokens,
-    spendTokens}
-}
-    fetchTransactions;
-    earnTokens;
-
-    spendTokens}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    fetch_wallet;
-    fetch_transactions;
-    earn_tokens;
-    spend_tokens}
-<<<<<<< HEAD
-
-
-
-=======
-
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    spendTokens}}

@@ -1,8 +1,13 @@
-export default baseData;
+import React from 'react';
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+}
+<<<<<<< HEAD
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+<=}
 
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { ServiceTypeStep } from '@/components/QuoteRequestForm/ServiceTypeStep';
-import { QuoteFormData } from '@/types/quotes';
+=======
 
 const baseData: QuoteFormData = {
   serviceType: '',
@@ -62,3 +67,6 @@ it('renders results from api', async () => {
   });
 });
 
+>}
+>>>>>>> origin/main
+>

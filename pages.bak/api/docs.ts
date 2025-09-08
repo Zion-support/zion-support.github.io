@@ -3,7 +3,11 @@ type HttpMethod = get' | 'post | put' | 'patch | delete';
 interface ApiParameter {
   "name: string;
   type: string;
-
+  required: boolean,
+  description: string;
+  location: 'query' | 'body' | 'header' | 'path'}
+interface ApiResponse {
+  "status": number,
   description: string;
   schema?: unknown}
 interface ApiExample {
@@ -11,8 +15,8 @@ interface ApiExample {
   request: unknown;
   response: unknown}
 interface Endpoint {
-  "path: string;
-
+  "path": string;
+  method: HttpMethod,
   description: string;
   parameters?: ApiParameter[];
   responses?: ApiResponse[];

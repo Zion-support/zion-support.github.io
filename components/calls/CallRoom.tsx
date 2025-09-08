@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 } from 'livekit-client';
@@ -8,7 +7,12 @@ import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 
-
+  Room
+  RoomEvent
+  RemoteParticipant
+  LocalParticipant
+  createLocalTracks
+  VideoPresets;
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -16,8 +20,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
   createLocalTracks,;
   VideoPresets,;
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+} from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 
@@ -38,27 +41,8 @@ VideoPresets;}
 export type StartMode = 'video' | 'audio';
 
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-import ParticipantTile from ./ParticipantTile';
-import Controls from './Controls;
-export type StartMode = any;
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Room
-  RoomEvent
-  RemoteParticipant
-  LocalParticipant
-  createLocalTracks
-import { Room;
-  RoomEvent;
-  RemoteParticipant;
-  LocalParticipant;
-  createLocalTracks;
-  VideoPresets;
-  Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
-export type StartMode = 'video' | 'audio';
->>>>>>> origin/cursor/delete-old-data-records-6bba
+type Props = {;
+
   projectId: string;
   userId: string;
   displayName: string;
@@ -66,21 +50,7 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
-<<<<<<< HEAD
-
-=======
-  onLeave?: (durationSec: number) => void;
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  onLeave?: (durationSec: number) => void}
-
-
-<<<<<<< HEAD
-
-
-=======
+  onLeave?: (durationSec: number) => void
 };
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function CallRoom(): any ({;
@@ -94,18 +64,14 @@ export default function CallRoom(): any ({;
   onLeave,;}
 }: Props) {;
 
-<<<<<<< HEAD
-
-
-=======
-  projectId;
-userId,
-displayName;
-roomName,
-serverUrl;
-token,
-startMode;}
-onLeave}
+  projectId
+  userId
+  displayName
+  roomName
+  serverUrl
+  token
+  startMode
+  onLeave
 }: Props) {
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -132,31 +98,34 @@ onLeave}
   startMode,
   onLeave
 }: Props) {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+
+
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
-<<<<<<< HEAD
 
-
-
-=======
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 
 import Controls from './Controls';
-export type StartMode = 'video' | 'audio';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
+export type StartMode = 'video' | 'audio'
+};
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
 
-const [participants, setParticipants] = useState<;
-    Array<RemoteParticipant | LocalParticipant>
-  >([]);
-origin/cursor/automate-test-improve-and-merge-code-2533
+  const [room, setRoom] = useState<Room | null>(null);
+  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
     const r = new Room();
@@ -179,9 +148,23 @@ const connect = useCallback(async () => {
     r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r.on(RoomEvent.LocalTrackPublished, () => rebuild());
     r.on(RoomEvent.TrackSubscribed, () => rebuild());
-<<<<<<< HEAD
+    // create local tracks per start mode
+    let localTracks: any[] = [];
+    if (startMode === 'video') {
 
 
+type Props = {;
+  projectId: string,;
+  userId: string,;
+  displayName: string,;
+  roomName: string,;
+  serverUrl: string,;
+  token: string,;
+  startMode: StartMode,;
+  onLeave?: (durationSec: number) => void;
+};
+
+export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -200,7 +183,6 @@ const connect = useCallback(async () => {
         video: VideoPresets && VideoPresets.h720,;
 
 
-
       });
     } else {;
       }
@@ -214,43 +196,51 @@ const connect = useCallback(async () => {
       autoSubscribe: true}),
 
 
+    setRoom(r);
+    await r && r.connect(serverUrl, token, {;
+      autoSubscribe: true,;
+    });
+    // publish local tracks;
+      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
+    } else {
+      localTracks = await createLocalTracks({ audio: true, video: false })
+    }
+setRoom(r);
     setConnectedAt(Date && Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
 
-
-      }
-    };
-
-  }, [connect]);
-
-const handleLeave = (
-    if (room) {
-=======
-
-    // create local tracks per start mode
-    let localTracks: any[] = [],
-    if (startMode === 'video') {
-      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
-    } else {
-      localTracks = await createLocalTracks({ audio: true, video: false })
-
-
-
-});
-    }
-
-    await r.connect(serverUrl, token, {
-      autoSubscribe: true}
-   ,}
-});
+    await r && r.connect(serverUrl, token, {;
+      autoSubscribe: true}),;
     // publish local tracks;
-setRoom(r);
+    for (const t of localTracks) {;
+      await r && r.localParticipant.publishTrack(t);
+    }
+    await r.connect(serverUrl, token, {
+      autoSubscribe: true})
+    // publish local tracks
+    for (const t of localTracks) {
+      await r.localParticipant.publishTrack(t)
+    }
+    setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
-// eslint-disable-next-line react-hooks/exhaustive-deps;
+    // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [serverUrl, token, startMode]);
+
+
+    await r && r.connect(serverUrl, token, {;
+      autoSubscribe: true}),;
+    // publish local tracks;
+    for (const t of localTracks) {;
+      await r && r.localParticipant.publishTrack(t);
+    }
+    setRoom(r);
+    setConnectedAt(Date && Date.now());
+    rebuild(r);
+    // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, [serverUrl, token, startMode]);
 
 const rebuild = (
@@ -258,9 +248,18 @@ const rebuild = (
   const r = current |room;
     if (!r) return;
 
-const list: Array<RemoteParticipant | LocalParticipant    /> = [
-      r.localParticipant,
-      ...Array.from(r.participants.values()),
+  };
+
+  useEffect(() => {;
+    connect();
+
+
+  const rebuild = (current?: Room | null) => {
+    const r = current |room;
+    if (!r) return;
+    const list: Array<RemoteParticipant | LocalParticipant> = [
+      r.localParticipant
+      ...Array.from(r.participants.values())
     ];
     setParticipants(list)) => {
   return $3;}
@@ -271,25 +270,24 @@ const list: Array<RemoteParticipant | LocalParticipant    /> = [
   useEffect(() => {
     connect();
     return () => {
-
-}
-room.disconnect();
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const handleLeave = () => {}
-    if (room) {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
+      if (room) {
+        room.disconnect();
+      }
+    };  }, [connect]);
+  const handleLeave = () => {
+    if (room) {        room.disconnect()
+      }
+    }
+  }, [connect]);
+  const handleLeave = () => {
+    if (room) {
+    }
+  }, [connect]);
 
   const handleLeave = () => {;
-    if (room) {        room && room.disconnect();
-      }
-      room.disconnect()
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    if (room) {;
+      room && room.disconnect();
+      room.disconnect();
     }
   }, [connect]);
 
@@ -320,8 +318,16 @@ const handleLeave = (;
 const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
-<<<<<<< HEAD
-=======
+    onLeave?.(durationSec);  };      room && room.disconnect();
+    }
+
+
+  const gridCols = useMemo(() => {
+    const count = participants.length |1;
+    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
+    onLeave?.(durationSec)
+};      room && room.disconnect();
+    }
 
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;
@@ -346,30 +352,11 @@ export type StartMode = 'video' | 'audio';}export default function CallRoom() {c
       }
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
-    onLeave?.(durationSec)
-};
-
-
-<<<<<<< HEAD
-
-
-const gridCols = useMemo(() => {
-   ;
-=======
   const gridCols = useMemo(() => {
-    const count = participants.length || 1;
-    if (count <= 1) return 'grid-cols-1';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const count = participants.length |1;
+    const count = participants.length |1;
 
-const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
-    onLeave?.(durationSec)const gridCols = useMemo(() => ;
-  const count = participants && participants.length || 1;
-    if (count <= 1) return 'grid-cols-1';
-<<<<<<< HEAD
-
-
+  const gridCols = useMemo(() => {
+    const count = participants.length |1;
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
   const gridCols = useMemo(() => {;
@@ -377,6 +364,11 @@ const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - conne
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
 
+
+        ))}
+      </div>
+    </div>
+  );
 
   Room,
   RoomEvent,
@@ -577,168 +569,5 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
       </div>;
     </div>);
 }
-    const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
-    onLeave?.(durationSec)const gridCols = useMemo(() => {const count = participants && participants.length || 1;
-    if (count <= 1) return 'grid-cols-1';
-    if (count === 2) return 'grid-cols-2';Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit - client';export type StartMode = 'video' | 'audio';type Props = {project_id: string;
-  user_id: string;
-  display_name: string;
-  room_name: string;
-  server_url: string;
-  token: string;
-  start_mode: StartMode;
-  on_leave?: (duration_sec: number) => void;
-}export default /**;
- * CallRoom - Function description;
- */;
-function CallRoom() {const [room, set_room] = useState < Room | null>(null)const [participants, set_participants] = useState<;
-    Array < RemoteParticipant | LocalParticipant>;
-  >([])const [connected_at, setConnectedAt] = useState < number | null>(null)import ParticipantTile from './ParticipantTile';
-export type StartMode = 'video' | 'audio';type Props = {project_id: string,user_id: string,display_name: string,room_name: string,server_url: string,token: string,start_mode: StartMode,on_leave?: (duration_sec: number) => void;
-}export default /**;
- * CallRoom - Function description;
- */;
-function CallRoom() {const [room, set_room] = useState < Room | null>(null)const [participants, set_participants] = useState < Array < RemoteParticipant | LocalParticipant>>([])const [connected_at, setConnectedAt]  = useState < number | null>(null)const connect = useCallback (async () => {const r  = new Room ()r.on (RoomEvent.ParticipantConnected, () => rebuild ())r.on (RoomEvent.ParticipantDisconnected, () => rebuild ())r.on (RoomEvent.ActiveSpeakersChanged, () => rebuild ())r.on (RoomEvent.LocalTrackPublished, () => rebuild ())r.on (RoomEvent.TrackSubscribed, () => rebuild ())// create local tracks per start mode;
-    let local_tracks: any[] = [];
-    // Check condition;
-if ( {) {$2;
-}
-      local_tracks = await createLocalTracks ({audio: true,video: VideoPresets.h720,})} else {local_tracks = await createLocalTracks ({ audio: true, video: false })}
-    await r.connect (server_url, token, {auto_subscribe: true,})// publish local tracks;
-    set_room (r)setConnectedAt (Date.now ())rebuild (r)// eslint - disable - next - line react - hooks / exhaustive - deps  }, [server_url, token, start_mode])} else {local_tracks = await createLocalTracks ({ audio: true, video: false })}
-    await r.connect (server_url, token, {auto_subscribe: true}),// publish local tracks;
-    for (const t of local_tracks) {await r.local_participant.publish_track (t)}
-    set_room (r)setConnectedAt (Date.now ())rebuild (r)// eslint - disable - next - line react - hooks / exhaustive - deps  // eslint - disable - next - line react - hooks / exhaustive - deps;
-  }, [server_url, token, start_mode])const rebuild = (current?: Room | null) =>: any {const r = current || room;
-    // Check condition;
-if (return) {$2;
-}
-    const list: Array < RemoteParticipant | LocalParticipant> = [;
-      r.local_participant,...Array.from (r.participants.values ()),];
-    set_participants (list)}    const list: Array < RemoteParticipant | LocalParticipant> = [r.local_participant, ...Array.from (r.participants.values ())];
-    set_participants (list)}useEffect (() => {connect ()return () => {// Check condition;
-if ( {) {$2;
-}
-        room.disconnect ()}
-    }  }, [connect])const handle_leave = () =>: any {if ( {        room.disconnect ()) {$2;
-}
-      }
-    }
-  }, [connect])const handle_leave = () =>: any {// Check condition;
-if ( {) {$2;
-}
-      room.disconnect ()}
-    const duration_sec = connected_at;
-      ? Math.round ((Date.now () - connected_at) / 1000): 0;
-    on_leave?.(duration_sec)}      room.disconnect ()}
-    const duration_sec = connected_at ? Math.round ((Date.now () - connected_at) / 1000) : 0;
-    on_leave?.(duration_sec)const grid_cols = useMemo (() => {const count = participants.length || 1;
-    // Check condition;
-if (return 'grid - cols - 1') {$2;
-}
-    // Check condition;
-if (return 'grid - cols - 2') {$2;
-}
-    // Check condition;
-if (return 'grid - cols - 2 md:grid - cols - 2') {$2;
-}
-    return 'grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4';
-  }, [participants.length])return (<div className='min - h-screen bg - gray - 950 text - gray - 100 flex flex - col'>;
-      <div className='p - 4 flex items - center justify - between border - b border - gray - 800'>;
-        <div>;
-          <h2 className='text - lg font - semibold'>Project Room: {project_id}</h2>;
-          <p className='text - xs text - gray - 400'>Room {room_name}</p>;
-        </div>;
-        <Controls room={room} on_leave={handle_leave} accent='cyan' />      </div>;
-      <div className={`flex - 1 p - 4 grid gap - 4 ${grid_cols}`}>;
-        {participants.map ((p, idx) => (        <Controls room={room} on_leave={handle_leave} accent="cyan" />;
-      </div>;
-      <div className={`flex - 1 p - 4 grid gap - 4 ${grid_cols}`}>;
-        {participants.map ((p, idx) => (<ParticipantTile;
-            key={String ((p as any).sid || (p as any).identity) + idx}if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
-    if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
-    return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
-  }, [participants.length])return (<div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'>;
-      <div className='p-4 flex items-center justify-between border-b border-gray-800'>;
-        <div>;
-          <h2 className='text-lg font-semibold'>Project Room: {projectId}</h2>;
-          <p className='text-xs text-gray-400'>Room {roomName}</p>;
-        </div>;
-        <Controls room={room} onLeave={handleLeave} accent='cyan' />;
-      </div>;
-      <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>;
-        {participants.map((p, idx) => (<ParticipantTile;
-            key={String((p as any).sid || (p as any).identity) + idx}participant={p}
-            is_local={p instanceof LocalParticipant}
-            display_name={(p as any).name ||;
-              (p instanceof LocalParticipant ? 'You' : undefined)}/>        ))}
-      </div>;
-    </div>)}          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
-      </div>;
-    </div>)/>;
-        ))}
-      </div>;
-    </div>;
-  )}
-          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
-        ))}
-      </div>
-    </div>
-  )
-}
 
-              (p as any).name ||;}
-              (p instanceof LocalParticipant ? 'You' : undefined);}
-            }
-          />        ))}
-      </div>;
-    </div>);'
-}          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
-      </div>;
-    </div>);
-          />
-<<<<<<< HEAD
-
-
-=======
-  return (
-    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'    />
-      <div className='p-4 flex items-center justify-between border-b border-gray-800'    />
-        <div    />
-          <h2 className='text-lg font-semibold'    />Project Room: {projectId}</h2>
-          <p className='text-xs text-gray-400'    />Room {roomName}</p>
-        </div>
-        <Controls room={room} onLeave={handleLeave} accent='cyan'    />
-      </div>
-      <div className={`flex-1 p-4 grid gap-4 ${gridCols},
-}    />
-        {participants.map((p, idx) => (}
-<ParticipantTile;}
-key={String((p as any).sid || (p as any).identity) + idx}
-            participant={p}
-            is_local={p instanceof LocalParticipant}
-            display_name={
-              (p as any).name ||;}
-              (p instanceof LocalParticipant ? 'You' : undefined);}
-            }
-
-             />
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        ))}
-      </div>
-    </div>
   );
-<<<<<<< HEAD
-
-}
-
-
-
-
-
-=======
-        ))}
-      </div>
-  );
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

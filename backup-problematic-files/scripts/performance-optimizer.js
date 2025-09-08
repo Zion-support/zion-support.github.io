@@ -46,11 +46,85 @@ class PerformanceOptimizer {
     }
     return recommendations;
   }
-}
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
   optimizer.analyzeBundle();
   optimizer.generateReport();
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node
+#!/usr/bin/env node
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this && this.optimizations = []} async optimizeImages() {  this && this.optimizations.push('Images optimized')} async optimizeCode() {  this && this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this && this.optimizations }; const reportPath = path && path.join(process && process.cwd(),'performance-reports','optimization-report && report.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2))} } module && module.exports = PerformanceOptimizer;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+class PerformanceOptimizer {
+  constructor() {
+    this && this.metrics = {};
+  }
+  async analyzeBundle() {
+    const buildDir = path && path.join(process && process.cwd(), '.next');
+    if (fs && fs.existsSync(buildDir)) {
+      const stats = this && this.getDirectorySize(buildDir);
+      this && this.metrics.bundleSize = stats;
+      console && console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+    }
+  }
+  getDirectorySize(dirPath) {
+    let totalSize = 0;
+    const files = fs && fs.readdirSync(dirPath);
+    files && files.forEach(file => {
+      const filePath = path && path.join(dirPath, file);
+      const stats = fs && fs.statSync(filePath);
+      if (stats && stats.isDirectory()) {
+        totalSize += this && this.getDirectorySize(filePath);
+      } else {
+        totalSize += stats && stats.size;
+      }
+    });
+    return totalSize;
+  }
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics: this && this.metrics,
+      recommendations: this && this.generateRecommendations()
+    };
+    fs && fs.writeFileSync('performance-report && report.json', JSON && JSON.stringify(report, null, 2));
+    console && console.log('Performance report generated');
+  }
+  generateRecommendations() {
+    const recommendations = [];
+    if (this && this.metrics.bundleSize > 1000000) { // 1MB
+      recommendations && recommendations.push('Consider implementing code splitting');
+      recommendations && recommendations.push('Use dynamic imports for large components');
+      recommendations && recommendations.push('Optimize images and assets');
+    }
+    return recommendations;
+  }
+}
+if (require && require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer && optimizer.analyzeBundle();
+  optimizer && optimizer.generateReport();
 }
 
 const fs = // // require('fs');

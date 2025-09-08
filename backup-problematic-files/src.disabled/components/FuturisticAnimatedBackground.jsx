@@ -10,8 +10,4 @@ const FuturisticAnimatedBackground = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default FuturisticAnimatedBackground;

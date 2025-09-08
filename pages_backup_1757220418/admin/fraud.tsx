@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+
 interface FraudItem {
   id: string,
   userId: string | null,
@@ -9,40 +10,40 @@ interface FraudItem {
   status: string}
 
 export default function FraudAdminPage() {
-  const [items, setItems] = useState<FraudItem[]>([]),
-  const [adminToken, setAdminToken] = useState<string>(''),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<string | null>(null),
+  const [items, setItems] = useState<FraudItem[]>([]);
+  const [adminToken, setAdminToken] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const saved = $2;
-    setAdminToken(saved)
-  }, []),
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved);
+  }, []);
 
   const fetchItems = async () => {
-    setLoading($2);
-    setError($2);
+    setLoading(true);
+    setError(null);
     try {
-      const res = await fetch($2);
-      const json = await res.json($2);
-      if (!res.ok) throw new Error($2);
-      setItems(json.items || [])
+      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || 'Failed to load');
+      setItems(json.items || []);
     } catch (e: any) {
-      setError(e.message || 'Failed to load')
+      setError(e.message || 'Failed to load');
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  },
+  };
 
   useEffect(() => {
-    fetchItems($2);
+    fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken]),
+  }, [adminToken]);
 
   const onSaveToken = () => {
-    localStorage.setItem($2);
-    fetchItems()
-  },
+    localStorage.setItem('admin-token', adminToken);
+    fetchItems();
+  };
 
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
@@ -50,11 +51,11 @@ export default function FraudAdminPage() {
       headers: {
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})},
-      body: JSON.stringify({ fraudId: id, action })}),
-    const json = await res.json($2);
-    if (res.ok) fetchItems($2);
-    else alert(json.error || 'Action failed')
-  },
+      body: JSON.stringify({ fraudId: id, action })});
+    const json = await res.json();
+    if (res.ok) fetchItems();
+    else alert(json.error || 'Action failed');
+  };
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
@@ -121,17 +122,5 @@ export default function FraudAdminPage() {
         </table>
       </div>
     </div>
-  )
-
+  );
 }
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -9,6 +9,7 @@ return (
 =======
     </div>
   );
-}
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main

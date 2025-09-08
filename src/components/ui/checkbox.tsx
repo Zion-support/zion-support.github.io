@@ -1,24 +1,23 @@
-import React from 'react';
+"use client"
 
-interface CheckboxProps extends React.PropsWithChildren<{}> {
+import * as React from "react"
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import { Check } from 'lucide-react'
 
-  checked: anyboolean;
-  onChange: (checked: boolean)    => void;
-  label?: string;
-  disabled?: boolean;
-  className?: string;
-}
+import { cn } from "@/lib/utils"
 
-export function Checkbox(...args: []):  {
-  return (
-    <label className={`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={(e) => onChange(e.target.checked)}
-        disabled={disabled}
-        className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2"
-      />
-      {label && <span className="text-sm text-gray-700">{label}</span>}
-    </label>);
-}
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+></typeof>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+      className
+    )}
+    {...props}><CheckboxPrimitive.Indicator
+      className={cn('flex items-center justify-center text-current')}><Check className='h-3 w-3' />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+))
+
+export { Checkbox }
+;

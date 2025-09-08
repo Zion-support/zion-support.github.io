@@ -102,9 +102,7 @@ export default function ComprehensivePricing2029() {
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
                 className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${
                   billingCycle === 'annual' ? 'bg-purple-600' : ''
-                }`}
-              >
-                <div
+                }`}><div
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
                   }`}

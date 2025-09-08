@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 function runNode() {
 
@@ -29,78 +22,27 @@ const res = spawnSync('node', [abs, ...args], {'
     'stderr': res && res.stderr || '''
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
 exports && exports.handler = async () => {
  ;
   }
   const logs = [];
 
-const step = (name, fn) => {
-    }
-    logs && logs.push(`\n=== ${name} ===`);`    return status;
-  };
-
-return status;
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+    return status
 };
-    return status;
-  };
-  step(''newsroom':generate', () => runNode('automation/newsroom-generator && generator.cjs'));'
-  step(''git':sync', () => runNode('automation/advanced-git-sync && sync.cjs'));'
+
+  step('newsroom:generate', () => runNode('automation/newsroom-generator && generator.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
+
   return {
-    }
-    'statusCode': 200,
-    'headers': { 'content-type': 'text/plain','
-},
-    'body': logs && logs.join('\n')'
+    statusCode: 200,
+    headers: { 'content-type': 'text/plain' },
+    body: logs && logs.join('\n'),
   }
-};
-function runNode() {
-}
-const abs = path && path.resolve(__dirname, '....', relPath),;'
-
-<<<<<<< HEAD
-
-exports && exports.handler = async () => {}
-  const logs = [],
-  const step = (name, fn) => {}`
-    logs && logs.push(`\n=== ${name} ===`),
-    const { status, stdout, stderr } = fn(),
-
-=======
-const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8',;'
-}),
-  return { 'status': res && res.status || 0, 'stdout': res && res.stdout || '', 'stderr': res && res.stderr || '' }'
-}
-
-exports && exports.config = { 'schedule': '0 * * * *','
-},
-
-exports && exports.handler = async () => {
-}
-const logs = [],;
-  const step = (name, fn) => {
-    }
-    logs && logs.push(`\n=== ${name} ===`),`const { status, stdout, stderr } = fn(),;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    if (stdout) logs && logs.push(stdout),
-    if (stderr) logs && logs.push(stderr),
-    logs && logs.push(`exit=${status}`),`return status;
-  },
-
-  step(''newsroom':generate', () => runNode('automation/newsroom-generator && generator.cjs')),'
-  step(''git':sync', () => runNode('automation/advanced-git-sync && sync.cjs')),'
-
- ;
-return { 'statusCode': 200, 'headers': { 'content-type': 'text/plain',;'
-}, 'body': logs && logs.join('\n') },'
-},
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+};function runNode(relPath, args = []) {
+  const abs = path && path.resolve(__dirname, '....', relPath),
 const path = require ('path');
 
 const { spawn_sync } = require ('child_process');
@@ -204,28 +146,10 @@ exports.config = { 'schedule': '0 * * * *','
     logs.push (`exit = ${status}`),`   ;
   return status;
   },
-  step (''newsroom':generate', () => run_node ('automation / newsroom - generator.cjs')),'
-  step (''git':sync', () => run_node ('automation / advanced - git - sync.cjs')),'
-return { 'status_code': 200, 'headers': { 'content - type': 'text / plain',;'
-}, 'body': logs.join ('\n') },'
-},
-const abs = path && path.resolve(__dirname, '..', '..';'
-
-const res = spawnSync('node';'
-    'stdio': 'pipe';'
-    'encoding': 'utf8';'
-    'stdout': res && res.stdout || '';'
-    'stderr': res && res.stderr || '';'
-exports && exports.config = { 'schedule': '0 * * * *';'
-  }
-  step(''newsroom':generate', () => runNode('automation/newsroom-generator && generator.cjs';'
-  step(''git':sync', () => runNode('automation/advanced-git-sync && sync.cjs';'
-    'headers': { 'content-type': 'text/plain';'
-    }
-    'body': logs && logs.join('\n';'
-
-<<<<<<< HEAD
-
+  step ('newsroom:generate', () => run_node ('automation / newsroom - generator.cjs')),
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+},  const res = spawnSync('node';
     stdio: 'pipe';
     encoding: 'utf8';
     stdout: res && res.stdout || '';
@@ -372,26 +296,3 @@ exports.config = { schedule: '0 * * * *';
   step ('newsroom:generate', () => run_node ('automation / newsroom - generator.cjs';
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n';
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-
-=======
-
-
-
-
-
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status
-  },
-
-  step('newsroom:generate', () => runNode('automation/newsroom-generator.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
->>>>>>> origin/cursor/delete-old-data-records-6bba

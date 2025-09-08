@@ -82,7 +82,243 @@
   to = "/quantum-internet-security-platform"
   status = 301
 
-[[redirects]]
-  from = "/browser-automation-cloud/"
-  to = "/browser-automation-cloud"
-  status = 301
+[[scheduled.functions]]
+  name = "fast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "continuous-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "front-visionary-expander"
+  schedule = "*/3 * * * *" # fast refresh for front systems
+
+[[scheduled.functions]]
+  name = "home-visionary-expander"
+  schedule = "*/4 * * * *" # fast refresh for homepage
+
+[[scheduled.functions]]
+  name = "ultrafast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "trigger-all-and-commit"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "front-maximizer"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "continuous-front-runner"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "readme-advertiser"
+  schedule = "13 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "front-ads-promoter"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "ultrafast-front-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+# New ultra-fast tools
+[[scheduled.functions]]
+  name = "features-capabilities-benefits-advertiser"
+  schedule = "*/2 * * * *" # every 2 minutes
+
+[[scheduled.functions]]
+  name = "hyper-front-index-accelerator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "dead-code-scanner"
+  schedule = "0 */6 * * *"
+
+[[scheduled.functions]]
+  name = "external-link-check"
+  schedule = "30 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-index-runner"
+  schedule = "11 */4 * * *"
+
+[[scheduled.functions]]
+  name = "repo-knowledge-graph-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "image-optimizer-runner"
+  schedule = "29 */6 * * *"
+
+[[scheduled.functions]]
+  name = "ai-changelog-runner"
+  schedule = "41 */6 * * *"
+
+[[scheduled.functions]]
+  name = "newsroom-runner"
+  schedule = "37 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-scanner-runner"
+  schedule = "13 */6 * * *"
+
+[[scheduled.functions]]
+  name = "broken-image-scanner-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "external-link-check-runner"
+  schedule = "31 */6 * * *"
+
+[[scheduled.functions]]
+  name = "repo-radar-runner"
+  schedule = "43 */6 * * *"
+
+[[scheduled.functions]]
+  name = "og-image-update-runner"
+  schedule = "47 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-search-index-runner"
+  schedule = "53 */6 * * *"
+
+[[scheduled.functions]]
+  name = "ux-heuristics-audit-runner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "roadmap-synthesizer"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "content-gap-finder"
+  schedule = "*/20 * * * *"
+
+[[scheduled.functions]]
+  name = "todo-summary-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "netlify-auto-healer-runner"
+  schedule = "*/20 * * * *"
+
+# Newly added autonomous cloud automations
+[[scheduled.functions]]
+  name = "component-docs-runner"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "content-gap-analyzer"
+  schedule = "*/20 * * * *"
+
+# New intelligent cloud automations
+[[scheduled.functions]]
+  name = "competitive-intel-radar"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "performance-budget-watcher"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "innovation-lab"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "revenue-optimizer"
+  schedule = "7 * * * *" # hourly
+
+[[scheduled.functions]]
+  name = "seo-content-gap"
+  schedule = "17 */3 * * *" # every 3 hours
+=======
+>>>>>>> origin/main
+
+[[scheduled.functions]]
+  name = "broken-image-scanner"
+  schedule = "45 */12 * * *"
+
+[[scheduled.functions]]
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+<<<<<<< HEAD
+[[scheduled.functions]]
+  name = "internal-link-optimizer"
+  schedule = "*/7 * * * *" # every 7 minutes
+
+[[scheduled.functions]]
+  name = "revenue-ideas-orchestrator"
+  schedule = "13 */2 * * *" # every 2 hours at :13
+
+[[scheduled.functions]]
+  name = "internal-redirect-healer"
+
+# Newly added autonomous scanners
+[[scheduled.functions]]
+  name = "unused-assets-scanner"
+  schedule = "13 */6 * * *" # every 6 hours, offset
+
+[[scheduled.functions]]
+  name = "orphan-routes-detector"
+  schedule = "11 */6 * * *" # every 6 hours, offset
+
+# From main (keep)
+[[scheduled.functions]]
+  name = "autonomous-innovation-generator"
+  schedule = "*/2 * * * *" # every 2 minutes
+
+[[scheduled.functions]]
+  name = "secrets-leak-scanner-runner"
+  schedule = "7 * * * *" # every hour
+
+[[scheduled.functions]]
+  name = "ux-heuristics-runner"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+# Fresh autonomous audits
+[[scheduled.functions]]
+  name = "internal-link-graph-runner"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "anchor-integrity-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "website-search-index-runner"
+  schedule = "29 */4 * * *"
+
+# From feature branch (keep)
+[[scheduled.functions]]
+  name = "automation-guardian-runner"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "auto-discovery-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "cloud-autonomous-orchestrator-runner"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "branch-cleanup-runner"
+  schedule = "0 3 * * *" # daily at 03:00 UTC
+
+[[scheduled.functions]]
+  name = "a11y-audit-runner"
+  schedule = "23 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "internal-link-sentinel-runner"
+  schedule = "7 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "content-freshness-runner"
+  schedule = "5 */12 * * *" # every 12 hours

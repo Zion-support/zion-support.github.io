@@ -28,9 +28,3 @@ export default function Onsitesupport(): any ({ }: OnsitesupportProps) {;
     </div>;
   );
 
-
-=======
-}
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

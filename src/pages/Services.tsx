@@ -1,347 +1,87 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
-import { SEO  } from '@/components/SEO';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Globe, 
-  Cpu, 
-  Zap, 
-  Rocket, 
-  Heart, 
-  Scale, 
-  PenTool, 
-  Users, 
-  Target, 
-  TrendingUp, 
-  Lock, 
-  Server, 
-  Smartphone, 
-  Atom,
-  Leaf,
-  Building,
-  Car,
-  Factory,
-  City,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Sparkles,
-  Flame,
-  Crown,
-  Infinity,
-  Gauge,
-  GitFork,
-  BarChart3,
-  Eye,
-  Network,
-  Smartphone,
-  Server
- } from 'lucide-react';
+import React from "react";
 
-export default function Services(...args: any[]): any {
-  const serviceCategories = [
-    {
-      name: 'AI & Analytics',
-      icon: Brain,
-      description: 'Cutting-edge artificial intelligence and data analytics solutions',
-      color: 'from-purple-600 to-pink-600',
-      services: [
-        {
-          name: 'AI Business Intelligence',
-          description: 'Transform your data into actionable insights with advanced AI algorithms',
-          features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization'],
-          href: '/services/ai-business-intelligence',
-          price: 'From $5,000',
-          rating: 4.9,
-          reviewCount: 127
-        },
-        {
-          name: 'AI Sales Copilot',
-          description: 'AI-powered sales automation and customer relationship management',
-          features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups'],
-          href: '/services/ai-sales-copilot',
-          price: 'From $3,500',
-          rating: 4.8,
-          reviewCount: 89
-        },
-        {
-          name: 'AI Compliance Assistant',
-          description: 'Automated regulatory compliance and risk management solutions',
-          features: ['Regulatory Monitoring', 'Risk Assessment', 'Compliance Reporting', 'Audit Trails'],
-          href: '/services/ai-compliance-assistant',
-          price: 'From $7,500',
-          rating: 4.9,
-          reviewCount: 156
-        },
-        {
-          name: 'AI Workflow Orchestrator',
-          description: 'Intelligent workflow automation with multi-agent coordination and real-time optimization',
-          features: ['Process Orchestration', 'Multi-Agent Systems', 'Dynamic Adaptation', 'Performance Analytics'],
-          href: '/services/ai-workflow-orchestrator',
-          price: 'From $2,500',
-          rating: 4.9,
-          reviewCount: 89
-        },
-        {
-          name: 'AI Data Governance',
-          description: 'AI-powered data classification, compliance automation, and intelligent access control',
-          features: ['Data Classification', 'Compliance Automation', 'Access Control', 'Data Lineage'],
-          href: '/services/ai-data-governance',
-          price: 'From $3,500',
-          rating: 4.8,
-          reviewCount: 134
-        },
-        {
-          name: 'LLM Content Studio',
-          description: 'AI-powered content generation and management platform',
-          features: ['Content Creation', 'Brand Voice Consistency', 'SEO Optimization', 'Multi-language Support'],
-          href: '/services/llm-content-studio',
-          price: 'From $2,500',
-          rating: 4.7,
-          reviewCount: 203
-        }
-      ]
-    },
-    {
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      description: 'Scalable cloud infrastructure and automated deployment solutions',
-      color: 'from-blue-600 to-cyan-600',
-      services: [
-        {
-          name: 'Cloud DevOps',
-          description: 'End-to-end cloud infrastructure and automated deployment solutions',
-          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Auto-scaling'],
-          href: '/services/cloud-devops',
-          price: 'From $8,000',
-          rating: 4.9,
-          reviewCount: 234
-        },
-        {
-          name: 'Cloud FinOps Optimizer',
-          description: 'Cloud cost optimization and financial operations management',
-          features: ['Cost Analysis', 'Resource Optimization', 'Budget Management', 'ROI Tracking'],
-          href: '/services/cloud-finops-optimizer',
-          price: 'From $4,500',
-          rating: 4.8,
-          reviewCount: 167
-        },
-        {
-          name: 'FinOps Advisor',
-          description: 'Strategic financial operations consulting and implementation',
-          features: ['Financial Planning', 'Cost Control', 'Performance Metrics', 'Strategic Guidance'],
-          href: '/services/finops-advisor',
-          price: 'From $6,000',
-          rating: 4.9,
-          reviewCount: 98
-        },
-        {
-          name: 'Edge Computing Platform',
-          description: 'Distributed edge computing with ultra-low latency and real-time analytics',
-          features: ['Edge Nodes', 'Load Balancing', 'Real-time Analytics', 'Global Network'],
-          href: '/services/edge-computing-platform',
-          price: 'From $4,500',
-          rating: 4.8,
-          reviewCount: 76
-        }
-      ]
-    },
-    {
-      name: 'Digital Solutions',
-      icon: Rocket,
-      description: 'Digital transformation and innovative technology solutions',
-      color: 'from-green-600 to-emerald-600',
-      services: [
-        {
-          name: 'Digital Twin',
-          description: 'Real-time digital simulation and monitoring solutions',
-          features: ['3D Modeling', 'Real-time Monitoring', 'Predictive Maintenance', 'Performance Analytics'],
-          href: '/services/digital-twin',
-          price: 'From $15,000',
-          rating: 4.9,
-          reviewCount: 78
-        },
-        {
-          name: 'IT Infrastructure',
-          description: 'Enterprise-grade IT infrastructure and network management',
-          features: ['Network Design', 'Server Management', 'Security Implementation', '24/7 Monitoring'],
-          href: '/services/it-infrastructure',
-          price: 'From $12,000',
-          rating: 4.8,
-          reviewCount: 145
-        },
-        {
-          name: 'Data Analytics',
-          description: 'Comprehensive data analysis and business intelligence solutions',
-          features: ['Data Mining', 'Statistical Analysis', 'Business Intelligence', 'Custom Dashboards'],
-          href: '/services/data-analytics',
-          price: 'From $6,500',
-          rating: 4.7,
-          reviewCount: 189
-        }
-      ]
-    },
-    {
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Advanced security protocols and threat protection systems',
-      color: 'from-red-600 to-orange-600',
-      services: [
-        {
-          name: 'AI Compliance Copilot',
-          description: 'AI-powered cybersecurity and compliance management',
-          features: ['Threat Detection', 'Compliance Monitoring', 'Incident Response', 'Security Audits'],
-          href: '/services/ai-compliance-copilot',
-          price: 'From $9,500',
-          rating: 4.9,
-          reviewCount: 267
-        },
-        {
-          name: 'Zero Trust Architecture',
-          description: 'Advanced zero-trust security implementation and management',
-          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
-          href: '/services/zero-trust-network-architecture',
-          price: 'From $18,000',
-          rating: 4.9,
-          reviewCount: 134
-        }
-      ]
-    },
-    {
-      name: 'Business Tools',
-      icon: ShoppingCart,
-      description: 'Productized SaaS solutions for business automation',
-      color: 'from-indigo-600 to-purple-600',
-      services: [
-        {
-          name: 'Micro SaaS Solutions',
-          description: 'Custom SaaS applications for specific business niches',
-          features: ['Custom Development', 'User Management', 'Analytics Dashboard', 'API Integration'],
-          href: '/services/micro-saas-solutions',
-          price: 'From $10,000',
-          rating: 4.8,
-          reviewCount: 112
-        },
-        {
-          name: 'AI Auto Email Responder',
-          description: 'Intelligent email automation and CRM integration',
-          features: ['Smart Responses', 'CRM Integration', 'Analytics Tracking', 'Custom Templates'],
-          href: '/services/ai-auto-email-responder',
-          price: 'From $2,800',
-          rating: 4.7,
-          reviewCount: 298
-        },
-        {
-          name: 'Customer Feedback Surveys',
-          description: 'AI-powered customer feedback and survey management',
-          features: ['Survey Creation', 'Response Analysis', 'Sentiment Analysis', 'Actionable Insights'],
-          href: '/services/mobile-feedback-surveys',
-          price: 'From $1,500',
-          rating: 4.6,
-          reviewCount: 445
-        },
-        {
-          name: 'AI Customer Success Platform',
-          description: 'Intelligent customer success with predictive analytics and automated engagement',
-          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
-          href: '/services/ai-customer-success-platform',
-          price: 'From $299',
-          rating: 4.9,
-          reviewCount: 234
-        }
-      ]
-    }
-  ];
+// ServiceCard component
+const ServiceCard = ({ 
+  href, 
+  title, 
+  description, 
+  bullets, 
+  icon 
+}: { 
+  href: string; 
+  title: string; 
+  description: string; 
+  bullets: string[]; 
+  icon: string; 
+}) => (
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <div className="text-4xl mb-4">{icon}</div>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <p className="text-gray-600 mb-4">{description}</p>
+    <ul className="space-y-2 mb-4">
+      {bullets.map((bullet, index) => (
+        <li key={index} className="flex items-center text-sm text-gray-600">
+          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+          {bullet}
+        </li>
+      ))}
+    </ul>
+    <a 
+      href={href}
+      className="text-blue-600 hover:text-blue-800 font-medium"
+    >
+      Learn More →
+    </a>
+  </div>
+);
 
-  const emergingTechnologies = [
-    {
-      name: 'Quantum Computing',
-      icon: Cpu,
-      description: 'Next-generation quantum computing solutions for complex problem-solving',
-      href: '/services/quantum-computing',
-      color: 'from-violet-600 to-purple-600'
-    },
-    {
-      name: 'Blockchain Solutions',
-      icon: Lock,
-      description: 'Enterprise blockchain implementation and DeFi solutions',
-      href: '/services/blockchain-enterprise-solutions',
-      color: 'from-blue-600 to-indigo-600'
-    },
-    {
-      name: 'IoT & Edge Computing',
-      icon: Network,
-      description: 'Internet of Things and edge computing infrastructure',
-      href: '/services/iot-edge',
-      color: 'from-green-600 to-teal-600'
-    },
-    {
-      name: 'Healthcare Technology',
-      icon: Heart,
-      description: 'AI-powered healthcare solutions and medical technology',
-      href: '/services/healthcare-tech',
-      color: 'from-red-600 to-pink-600'
-    },
-    {
-      name: 'Sustainability Solutions',
-      icon: Globe,
-      description: 'Green technology and sustainability-focused solutions',
-      href: '/services/sustainability',
-      color: 'from-emerald-600 to-green-600'
-    },
-    {
-      name: 'Space Technology',
-      icon: Rocket,
-      description: 'Advanced space technology and satellite solutions',
-      href: '/services/space-tech',
-      color: 'from-slate-600 to-gray-600'
-    }
-  ];
+// CTA component
+const CTA = () => (
+  <div className="bg-blue-600 text-white p-8 rounded-lg text-center">
+    <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+    <p className="text-xl mb-6">Let's discuss how our AI-powered solutions can drive your success.</p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <a 
+        href="/contact"
+        className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+      >
+        Get Started
+      </a>
+      <a 
+        href="/contact"
+        className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+      >
+        Schedule Consultation
+      </a>
+    </div>
+  </div>
+);
 
-  const whyChooseUs = [
-    {
-      icon: Award,
-      title: 'Proven Expertise',
-      description: '15+ years of technology innovation and successful project delivery'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Certified professionals with advanced degrees and industry certifications'
-    },
-    {
-      icon: Zap,
-      title: 'Rapid Implementation',
-      description: 'Quick turnaround times without compromising quality or security'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'ISO 27001 certified with SOC 2 Type II compliance'
-    },
-    {
-      icon: Globe,
-      title: 'Global Support',
-      description: '24/7 support available across 25+ countries'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Continuous Innovation',
-      description: 'Ongoing R&D investment in emerging technologies'
-    }
-  ];
-
+const Services: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-900">
-      <SEO 
-        title="Our Services - Zion Tech Group"
-        description="Explore Zion Tech Group's comprehensive range of AI solutions, cloud services, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords="AI services, cloud solutions, cybersecurity, digital transformation, technology consulting, Zion Tech Group services"
-        canonical="https://ziontechgroup.com/services"
-      />
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="text-xl font-semibold mb-4">AI Services</h3>
+            <p className="text-gray-600">
+              Cutting-edge AI solutions for your business.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="text-xl font-semibold mb-4">IT Services</h3>
+            <p className="text-gray-600">
+              Comprehensive IT solutions and support.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>
+            <p className="text-gray-600">
+              Scalable cloud infrastructure and services.
+            </p>
+          </div>
+        </div>
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -606,8 +346,6 @@ export default function Services(...args: any[]): any {
       </section>
     </div>
   );
-};return (
-    <>
-      <SEO title="Services - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
-</>);};
+};
+
 export default Services;

@@ -1,55 +1,37 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-categories?: {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-
-    super(props);
-    this.state = { hasError: false ;};
-  }
-
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
- </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;'
-  submitting ? 'Submitting...' : 'Submit Review' ;
-}</button> </form>) ;
-};
-
-<<<<<<< HEAD
-type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-import StarRating from './StarRating';
-export type ReviewFormValues = {
-  projectId: string,
-  fromRole: 'client' | 'talent',
-  fromId: string,
-  rating: number,
-  text: string,
   categories?: {
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
-    wouldWorkWithAgain?: boolean
-  };
-  anonymous?: boolean
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+ </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
+  submitting ? 'Submitting...' : 'Submit Review' ;
+}</button> </form>) ;
 };
 
 type Props = {
@@ -75,9 +57,9 @@ export default ReviewForm
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
-    wouldWorkWithAgain?: boolean;
-  };
-  anonymous?: boolean;
+    wouldWorkWithAgain?: boolean
+};
+  anonymous?: boolean
 };
 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -162,18 +144,6 @@ function handle_submit() {
           text,
           anonymous,
 
-      const res = await fetch('/api/reviews/submit', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' ;}
-        body: JSON.stringify({
-          projectId: initial.projectId;,
-          fromRole: initial.fromRole;,
-          fromId: initial.fromId;,
-rating,
-          text,
-          anonymous,
-origin/cursor/automate-test-improve-and-merge-code-2533
-
           categories: {
             communication
             qualityOfWork
@@ -183,8 +153,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         })
       });
 
-      setMessage('Review submitted! Pending admin approval.');
 
+  async function handleSubmit(): any (e: React && React.FormEvent) {;
+    e && e.preventDefault();
+    setSubmitting(true);
+    setMessage(null),;
+    try {;
+      const res = await fetch('/api/reviews/submit', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          projectId: initial && initial.projectId,;
+          fromRole: initial && initial.fromRole,;
+          fromId: initial && initial.fromId,;
+          rating,;
+          text,;
+          anonymous,;
+          categories: {;
+            communication,;
+            qualityOfWork,;
+            timeliness,;
+            wouldWorkWithAgain,;
+          },;
+        }),;
+      });
+      const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
+
+      setMessage('Review submitted! Pending admin approval.');
+    } catch (err: any) {;
+      setMessage(err && err.message);
+    } finally {;
+      setSubmitting(false);    }
+  }
+  return (
+
+    <form onSubmit={handleSubmit} className='space-y-6'>;
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;
+      </div>;
+
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
+
+      const data = await res.json ();
+      if (throw new Error (data.error || 'Failed to submit')) {
+  $2
+}
       set_message ('Review submitted! Pending admin approval.');
     } catch (err: any) {}
       set_message (err.message);
@@ -196,88 +211,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div>;'
         <label className='block text - sm font - medium mb - 2'>Overall Rating</label>        <StarRating value={rating} on_change={set_rating} />;
       </div>;
-
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      <div>;
+        <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to submit');
-      setMessage('Review submitted! Pending admin approval.')
-    } catch (err: any) {
-      setMessage(err.message)
-    } finally {
-      setSubmitting(false)
-    }
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium mb-2">Overall Rating</label>
-        <StarRating value={rating} onChange={setRating} />
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium mb-2">Your Review</label>
-        <textarea
-          className="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows={5}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          required
-        />
-      </div>
-
-      <div className="flex items-center gap-3">
-        <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
-        <label htmlFor="anonymous">Submit anonymously</label>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Communication</span>
-            <StarRating value={communication || 0} onChange={(v) => setCommunication(v)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Quality of Work</span>
-            <StarRating value={qualityOfWork || 0} onChange={(v) => setQualityOfWork(v)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Timeliness</span>
-            <StarRating value={timeliness || 0} onChange={(v) => setTimeliness(v)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Would Work With Again</span>
-            <input type="checkbox" checked={wouldWorkWithAgain} onChange={(e) => setWouldWorkWithAgain(e.target.checked)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-<<<<<<< HEAD
-=======
-      </div>
-=======
 
     }
   }
   return (
 
-}
 
     }
   }
@@ -297,23 +242,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
-
-    } catch (err: any) {
-      setMessage(err.message);
-    } finally {
-      setSubmitting(false);
-    }
-  }
-  return (
-<form onSubmit={handleSubmit} className='space-y-6'>
-      <div>
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>
-        <StarRating value={rating} onChange={setRating} />
-      </div>
-      <div>
-<label className='block text-sm font-medium mb-2'>Your Review</label>
-origin/cursor/automate-test-improve-and-merge-code-2533
-
         <textarea
 
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -330,28 +258,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           rows={5}
           value={text}
 
-          onChange={e => setText(e.target.value)}
-          required
-        />
-      </div>
-
-<div className='flex items-center gap-3'>
-origin/cursor/automate-test-improve-and-merge-code-2533
 
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
 
+          onChange={e => setAnonymous(e && e.target.checked)}
+        />;
+        <label htmlFor='anonymous'>Submit anonymously</label>;
+
+      <div className='grid md:grid-cols-2 gap-4'>;
+        <div className='enhanced-card'>;
+          <div className='flex items-center justify-between mb-2'>;
+            <span className='text-sm'>Communication</span>;
+
+            <StarRating
+              value={communication |0}
+              onChange={v => setCommunication(v)}
       set_submitting (false);
     }
   }
   return ('
     <form on_submit={handle_submit} className='space - y-6'>;
-      <div>;'"
-        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className="space - y-6">;
-      <div>;"
-        <label className="block text - sm font - medium mb - 2" html_for="input - Overall Rating">Overall Rating</label>;
+      <div>;
+        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className="space-y-6">;
+      <div>;
+        <label className="block text - sm font-medium mb-2" html_for="input - Overall Rating">Overall Rating</label>;
         <StarRating value={rating} on_change={set_rating} />;
       </div>;
       <div>;'
@@ -363,8 +296,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           on_change={e => set_text (e.target.value)}          required;
         />;
       </div>;
-        <textarea;"
-          className="w - full rounded - md border border - gray - 300 p - 3 focus: outline - none focus:ring - 2 focus:ring - blue - 500";
+        <textarea;
+          className="w - full rounded - md border border - gray - 300 p - 3 focus: outline - none focus:ring - 2 focus:ring-blue-500";
           rows={5}
           value={text}
           on_change={(e) => set_text (e.target.value)}
@@ -391,10 +324,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <span className='pill'>Optional</span>;
         </div>;
 
-            />;
-          </div>;'
-          <span className='pill'>Optional</span>;
-        </div>;
+        <div className='enhanced - card'>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - sm'>Quality of Work</span>;
+            <StarRating;
+              value={qualityOfWork || 0}
+              on_change={v => setQualityOfWork (v)}
 
             />;
           </div>;'
@@ -403,78 +338,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
-            <span className='text - sm'>Would Work With Again</span>;
-            <input;
-              type='checkbox';
-              checked={wouldWorkWithAgain}
-              on_change={e => setWouldWorkWithAgain (e.target.checked)}
+            <span className='text - sm'>Timeliness</span>;
+            <StarRating;
+              value={timeliness || 0}
+              on_change={v => set_timeliness (v)}
 
             />;
-          </div>;'
+          </div>;
+          <span className='pill'>Optional</span>;
+        </div>;
+
+              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+            />;
+          </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-      <button
-        type="submit"
-        className="enhanced-button enhanced-button-primary"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        disabled={submitting}
-      >
-        {submitting ? 'Submitting...' : 'Submit Review'}
-      </button>
+      </button>;
 
-      {message && <p className="text-sm">{message}</p>}
-    </form>
+      {message && <p className='text-sm'>{message}</p>}
+    </form>;
   )
 };
 
-export default ReviewForm;
-<<<<<<< HEAD
-=======
-;
-
-      </button>
-
-{message && <p className='text-sm'>{message}</p>}
-    </form>
+export default ReviewForm;    </form>;
   );
-};
-
-export default ReviewForm;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-=======
-              onChange={e => setWouldWorkWithAgain(e.target.checked)}
-            />
-          </div>
-          <span className='pill'>Optional</span>
-        </div>
-      </div>
-
-      <button
-type='submit'
-        className='enhanced-button enhanced-button-primary'
-origin/cursor/automate-test-improve-and-merge-code-2533
 
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
-};
-
-      {message && <p className='text - sm'>{message}</p>}
-    </form>);
-}
-;
-export default ReviewForm;    </form>);
-}
-;
-export default ReviewForm;
-;
 
       </button>;
       {message && <p className='text - sm'>{message}</p>}
@@ -486,7 +378,4 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
+

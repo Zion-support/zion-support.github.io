@@ -7,33 +7,89 @@ import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail  } from 'lucide-reac
 import { Zap, Search, Sun, Moon, User, Menu, X  } from 'lucide-react';'
 interface HeaderProps  {className?: string;
 }
-export function Header() {const router = useRouter()}
-export function Header() {export function Header() {const [isScrolled, setIsScrolled] = useState<any>(false)const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false)';'
-  }
-  const [isSearchOpen, setIsSearchOpen] = useState<any>(false)';';'
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark')';';'
-  const [searchQuery, setSearchQuery] = useState<any>('')export function Header() {const [isScrolled, setIsScrolled] = useState<boolean>(false)const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false)const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false)const [theme, setTheme] = useState<'light' | 'dark'>('dark')const [searchQuery, setSearchQuery] = useState<string>('')export function Header() {const [isScrolled, setIsScrolled]  = useState(false)interface HeaderProps  {className?: "string;"
-"}"
-export function Header() {const [isScrolled", setIsScrolled] = useState(false)const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)const [isSearchOpen, setIsSearchOpen] = useState(false)const [theme, setTheme] = useState<'light' | 'dark'>('dark')const [searchQuery, setSearchQuery] = useState('')const location  = useLocation()useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleTheme = () => {setTheme(theme === 'dark' ? 'light' : 'dark')}const handleSearch = ("e": "React.FormEvent) => {e.preventDefault()if (searchQuery.trim()) {// Add search logic here;"}"
-  }const navigationItems = [;
-    { "name": 'Home', "href": '/' }'
-    { "name": 'Services', "href": '/services' }'
-    { "name": 'New Services 2025', "href": '/new-services-2025' }'
-    { "name": 'AI Services', "href": '/ai-services' }'
-    { "name": 'IT Services', "href": '/it-services' }'
-    { "name": 'Micro SaaS', "href": '/micro-saas' }'
-    { "name": 'Solutions', "href": '/solutions' }'
-    { "name": 'About', "href": '/about' }'
-    { "name": 'Contact', "href": '/contact' }'
-  ];return (<header ;
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ;`          ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg";"
-          : "bg-transparent";"
-      } ${className}`}`    >;
-      <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">;"
-        <div className="flex items-center justify-between h-16 "lg":h-20">;{/* Logo */"}"
-          <Link to="/" className="flex items-center space-x-3 group">;"
-            <div className="w-10 h-10 "lg": "w-12 "lg":h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300">;"
-              <Zap className="w-6 h-6 "lg":w-7 "lg":h-7 text-white" />;"
+export function Header(props: any) {const router = useRouter()
+}
+export function Header(props: any) {
+export function Header(props: any) {
+  const [isScrolled, setIsScrolled] = useState<any>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);';
+  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
+  const [searchQuery, setSearchQuery] = useState<any>('');
+export function Header(props: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
+  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+export function Header({ className = '' }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
+;
+interface HeaderProps {;
+  className?: "string;
+"}
+export function Header({ className = '' }: "HeaderProps) {;
+  const [isScrolled", setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
+;
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setIsScrolled(window.scrollY > 10)
+};
+;
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+;
+  const toggleTheme = () => {;
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+};
+;
+  const handleSearch = ("e": "React.FormEvent) => {;
+    e.preventDefault();
+    if (searchQuery.trim()) {;
+      // Add search logic here;
+      ;
+    "}
+  };
+;
+  const navigationItems = [;
+    { "name": 'Home', "href": '/' }
+    { "name": 'Services', "href": '/services' }
+    { "name": 'New Services 2025', "href": '/new-services-2025' }
+    { "name": 'AI Services', "href": '/ai-services' }
+    { "name": 'IT Services', "href": '/it-services' }
+    { "name": 'Micro SaaS', "href": '/micro-saas' }
+    { "name": 'Solutions', "href": '/solutions' }
+    { "name": 'About', "href": '/about' }
+    { "name": 'Contact', "href": '/contact' }
+  ];
+;
+  return (;
+    <header ;
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
+        isScrolled ;
+          ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg";
+          : "bg-transparent";
+      } ${className}`}
+    >;
+      <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">;
+        <div className="flex items-center justify-between h-16 "lg":h-20">;
+          ;
+          {/* Logo */"}
+          <Link to="/" className="flex items-center space-x-3 group">;
+            <div className="w-10 h-10 "lg": "w-12 "lg":h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300">;
+              <Zap className="w-6 h-6 "lg":w-7 "lg":h-7 text-white" />;
             </div>;
             <div className="hidden "sm":block">;"
               <h1 className="text-xl "lg":text-2xl font-bold text-white group-"hover":text-blue-400 transition-colors">;"
@@ -183,18 +239,86 @@ export function Header() {const [isScrolled", setIsScrolled] = useState(false)co
         )"}"
       </div>;
     </header>;
-import React, { useState } from 'react';'
-import Link from 'next/link';'
-import { motion, AnimatePresence  } from 'framer-motion';'
-import { Menu, X, ChevronDown, Phone, Mail, MapPin  } from 'lucide-react';'
-const Header = () => {const [isMenuOpen, setIsMenuOpen] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const navigation = [;
-    {"name": 'Home',"href": '/'},{"name": 'Services',"href": '/services',"dropdown": [;'
-        { "name": 'AI Services', "href": '/ai-services' },{ "name": 'IT Services', "href": '/it-services' },{ "name": 'Micro SaaS', "href": '/micro-saas' },{ "name": 'Cloud Solutions', "href": '/solutions/cloud-migration' },{ "name": 'Cybersecurity', "href": '/services/cybersecurity' },{ "name": 'Data Analytics', "href": '/services/data-analytics' }]},{"name": 'Solutions',"href": '/solutions',"dropdown": [;'
-        { "name": 'Enterprise Solutions', "href": '/solutions/enterprise' },{ "name": 'Healthcare', "href": '/solutions/healthcare' },{ "name": 'Finance', "href": '/solutions/finance' },{ "name": 'Government', "href": '/solutions/government' },{ "name": 'Retail', "href": '/solutions/retail' },{ "name": 'Education', "href": '/solutions/education' }]},{"name": 'Industries',"href": '/industries',"dropdown": [;'
-        { "name": 'Financial Services', "href": '/industries/financial' },{ "name": 'Healthcare', "href": '/industries/healthcare' },{ "name": 'Manufacturing', "href": '/industries/manufacturing' },{ "name": 'Retail', "href": '/industries/retail' },{ "name": 'Government', "href": '/industries/government' }]},{"name": 'Company',"href": '/about',"dropdown": [;'
-        { "name": 'About Us', "href": '/about' },{ "name": 'Our Team', "href": '/team' },{ "name": 'Careers', "href": '/careers' },{ "name": 'Partners', "href": '/partners' },{ "name": 'Case Studies', "href": '/case-studies' }]},{"name": 'Resources',"href": '/resources',"dropdown": [;'
-        { "name": 'Blog', "href": '/blog' },{ "name": 'White Papers', "href": '/white-papers' },{ "name": 'Webinars', "href": '/webinars' },{ "name": 'Tutorials', "href": '/tutorials' },{ "name": 'API Documentation', "href": '/api-docs' }]},{"name": 'Contact',"href": '/contact'}];'
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)const toggleDropdown = ("name": string) => {setActiveDropdown(activeDropdown === name ? null : name)}return (<header className="bg-white shadow-lg sticky top-0 z-50">;"
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const navigation = [
+    {
+      name: 'Home',
+      href: '/',
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+      ],
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Finance', href: '/solutions/finance' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Education', href: '/solutions/education' },
+      ],
+    },
+    {
+      name: 'Industries',
+      href: '/industries',
+      dropdown: [
+        { name: 'Financial Services', href: '/industries/financial' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Government', href: '/industries/government' },
+      ],
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Case Studies', href: '/case-studies' },
+      ],
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'API Documentation', href: '/api-docs' },
+      ],
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+    },
+  ];
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name)
+};
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">;"
         <div className="container mx-auto px-4">;"
@@ -562,11 +686,14 @@ const router = useRouter()}
               </div>;
             </motion.div>;
           )}
-        </AnimatePresence>;
-      </nav>;
-    </header>;
-  )}
-    )";"
-}";"
-";"
-  )}export default Header;
+        </AnimatePresence>
+      </nav>
+    </header>
+  )
+}
+    );"
+}"
+"
+  )
+};
+export default Header;

@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-
-
-
-=======
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      bundleSize: 0
-      loadTime: 0
-      memoryUsage: 0
-      timestamp: new Date().toISOString()
-    }
+this && this.metrics = {
+      bundleSize: 0,
+      loadTime: 0,
+      memoryUsage: 0,
+      timestamp: new Date().toISOString(),
+    };
   }
   async measureBundleSize() {
     try {
@@ -98,9 +88,13 @@ if ( {) {
     return report;
   }
 }
-<<<<<<< HEAD
-
-
+monitor && monitor.measureBundleSize();
+monitor && monitor.measureMemoryUsage();
+const report = monitor && monitor.generateReport();
+const reportPath = path && path.join(process && process.cwd(), "performance-report && report.json");
+fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
+console && console.log("Performance report generated:", reportPath);
+console.log('Performance report generated:', reportPath);
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();

@@ -1,24 +1,13 @@
 
+
 <<<<<<< HEAD
 interface PerformanceMetrics {;
 
-=======
-loadTime: number;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  loadTime: number;
 import React, { useState, useEffect } from './react';
 ;
 interface PerformanceMetrics {}
   load_time: number;
-
-  loadTime: number;
-import React, { useState, useEffect } from './react';
-
-interface PerformanceMetrics  {load_time: number;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
@@ -26,8 +15,60 @@ interface PerformanceMetrics  {load_time: number;
   timeToInteractive: number;}
 }
 
-<<<<<<< HEAD
 
+const PerformanceDashboard: React.FC = () => {;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {;
+    if (typeof window !== "undefined" && "performance" in window) {;
+      const observer = new PerformanceObserver((list) => {;
+        const entries = list && list.getEntries();
+        const newMetrics: Partial<PerformanceMetrics> = {};
+
+        entries && entries.forEach((entry) => {;
+          if (entry && entry.entryType === "paint") {;
+            if (entry && entry.name === "first-contentful-paint") {;
+              newMetrics && newMetrics.firstContentfulPaint = entry && entry.startTime;
+            }
+          } else if (entry && entry.entryType === "largest-contentful-paint") {;
+            newMetrics && newMetrics.largestContentfulPaint = entry && entry.startTime;
+          } else if (entry && entry.entryType === "layout-shift") {;
+            newMetrics && newMetrics.cumulativeLayoutShift =;
+              (newMetrics && newMetrics.cumulativeLayoutShift || 0) + (entry as any).value;
+          }
+        });
+
+        if (Object && Object.keys(newMetrics).length > 0) {;
+          setMetrics(;
+            (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics,;
+          );
+        }
+      });
+
+      observer && observer.observe({;
+        entryTypes: ["paint", "largest-contentful-paint", "layout-shift"],;
+      });
+
+      // Get load time;
+      window && window.addEventListener("load", () => {;
+        const loadTime =;
+          performance && performance.timing.loadEventEnd - performance && performance.timing.navigationStart;
+        setMetrics((prev) => ({ ...prev, loadTime }) as PerformanceMetrics);
+      });
+
+      return () => observer && observer.disconnect();
+    }
+  }, []);
+
+  const getScoreColor = (;
+    value: number,;
+    thresholds: { good: number; needsImprovement: number },;
+  ) => {;
+    if (value <= thresholds && thresholds.good) return "text-green-600";
+    if (value <= thresholds && thresholds.needsImprovement) return "text-yellow-600";
+
+    return "text-red-600";
   }
 
   if (!metrics) return null;"
@@ -41,10 +82,11 @@ interface PerformanceMetrics  {load_time: number;
     <div className="fixed bottom-4 right-4 z-50">;
       <button
         onClick={() => setIsVisible(!isVisible)}
-=======
-    return \'text-red-600\';
-  }
-  if (!metrics) return null;
+
+        className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors";
+      >;
+        📊 Performance;
+      </button>;
 
   if (!metrics) return null;"
   return (<div className=\"fixed bottom-4 right-4 z-50\"    />;
@@ -53,88 +95,68 @@ interface PerformanceMetrics  {load_time: number;
                 <span;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+          <div className="space-y-3">;
+            {metrics && metrics.loadTime && (;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">Load Time:</span>;
+
+                <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.loadTime.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
 
-<<<<<<< HEAD
 
-=======
-                <span;`
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            {metrics && metrics.firstContentfulPaint && (;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">FCP:</span>;
+
+                <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>;
                   {metrics && metrics.firstContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
 
-<<<<<<< HEAD
 
-=======
-                <span;`
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            {metrics && metrics.largestContentfulPaint && (;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">LCP:</span>;
+
+                <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.largestContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
 
-<<<<<<< HEAD
 
-=======
-                <span;`
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            {metrics && metrics.cumulativeLayoutShift && (;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">CLS:</span>;
+
+                <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { good: 0 && 0.1, needsImprovement: 0 && 0.25 })}`}>;
                   {metrics && metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>;
               </div>;
             )}
 
-                  className={`text-sm font-mono ${getScoreColor(metrics && metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}    />
+          </div>;
 
-                  {metrics && metrics.loadTime.toFixed(0}
-}ms;
-                </span>;
-              </div>;
-            )}
-                <span;
-                  className={`text-sm font-mono ${getScoreColor(metrics && metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}    />
-
-                  {metrics && metrics.firstContentfulPaint.toFixed(0}
-}ms;
-                </span>;
-              </div>;
-            )}
-                <span;
-                  className={`text-sm font-mono ${getScoreColor(metrics && metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}    />
-
-                  {metrics && metrics.largestContentfulPaint.toFixed(0}
-}ms;
-                </span>;
-              </div>;
-            )}
-                <span;
-                  className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { good: 0 && 0.1, needsImprovement: 0 && 0.25 })}`}    />
-
-                  {metrics && metrics.cumulativeLayoutShift.toFixed(3}
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </span>;
-              </div>;
-            )}
+          <div className="mt-4 pt-4 border-t">;
+            <div className="text-xs text-gray-500">;
+              Core Web Vitals monitoring in real-time;
+            </div>;
+          </div>;
+        </div>;
 
       )}
     </div>;
   )}
 
 export default PerformanceDashboard;
-
-<<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {
 
 =======
@@ -192,32 +214,35 @@ if (.length > 0) {) {$2;}
 },) =>: any {// Check condition;}"
 if (return \"text - green - 600\") {$2;}
 }
-    // Check condition;"
-if (return \"text - yellow - 600\") {$2;}
-}"
-    return \'text - red - 600\';
-  }// Check condition;
-if (return null) {$2;}
-}"
-  return (<div className=\"fixed bottom - 4 right-4 z-50\"    />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    // Check condition
+if (return "text - yellow - 600") {
+  $2
+}
+    return "text - red - 600";
+  }
+;
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className="fixed bottom - 4 right-4 z-50">;
       <button;
-        on_click={() =    /> setIsVisible (!is_visible)}"
-        className=\"bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors\">
-
+        on_click={() => setIsVisible (!is_visible)}
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors";
+      >;
         📊 Performance;
 <<<<<<< HEAD
 
 =======
       </button>;
-      {is_visible && (<div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;"
-          <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;"
-          <div className="space-y-3">;"
-            {metrics.load_time && (<div className="flex justify-between items-center">;"
-                <span className="text-sm font-medium">Load "Time":</span>;"
+      {is_visible && (
+        <div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;
+          <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;
+          <div className="space-y-3">;
+            {metrics.load_time && (
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">Load Time:</span>;
                 <span;
                   className={`text - sm font - mono ${getScoreColor (metrics.load_time, { good: 2000, needs_improvement: 4000 })}`}
                 >;
@@ -254,100 +279,6 @@ if (return null) {$2;}
           </div>;
           <div className="mt - 4 pt-4 border-t">;
             <div className="text - xs text-gray-500">;
-      </button>;"
-      {is_visible && (<div className=\"absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border\" />;"
-          <h3 className=\"text - lg font-semibold mb-4\" />Performance Metrics</h3>;"
-          <div className=\"space-y-3\" />;"
-            {metrics.load_time && (<div className=\"flex justify-between items-center\" />;"
-                <span className=\"text-sm font-medium\" />Load Time:</span>;}
-                <span;}
-                  className={`text - sm font - mono ${getScoreColor (metrics.load_time, { good: 2000, needs_improvement: 4000 })}`} />
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      </button>;"
-      {is_visible && (<div className=\"absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border\"    />;"
-          <h3 className=\"text - lg font-semibold mb-4\"    />Performance Metrics</h3>;"
-          <div className=\"space-y-3\"    />;"
-            {metrics.load_time && (<div className=\"flex justify-between items-center\"    />;"
-                <span className=\"text-sm font-medium\"    />Load Time:</span>;}
-                <span;}
-                  className={`text - sm font - mono ${getScoreColor (metrics.load_time, { good: 2000, needs_improvement: 4000 })}`}    />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                  {metrics.load_time.to_fixed (0}
-}ms;
-                </span>
-<<<<<<< HEAD
-
-    </div>
-  );
-}"
-            {metrics.firstContentfulPaint && (<div className=\"flex justify-between items-center\"    />;"
-                <span className=\"text-sm font-medium\"    />FCP:</span>;}
-                <span;}
-                  className={`text - sm font - mono ${getScoreColor (metrics.firstContentfulPaint, { good: 1800, needs_improvement: 3000 })}`}    />
-
-                  {metrics.firstContentfulPaint.to_fixed (0}
-}ms;
-                </span>
-    </div>
-  );
-}"
-            {metrics.largestContentfulPaint && (<div className=\"flex justify-between items-center\"    />;"
-                <span className=\"text-sm font-medium\"    />LCP:</span>;}
-                <span;}
-                  className={`text - sm font - mono ${getScoreColor (metrics.largestContentfulPaint, { good: 2500, needs_improvement: 4000 })}`}    />
-
-                  {metrics.largestContentfulPaint.to_fixed (0}
-}ms;
-                </span>
-    </div>
-  );
-}"
-            {metrics.cumulativeLayoutShift && (<div className=\"flex justify-between items-center\"    />;"
-                <span className=\"text-sm font-medium\"    />CLS:</span>;}
-                <span;}
-                  className={`text - sm font - mono ${getScoreColor (metrics.cumulativeLayoutShift, { good: 0.1, needs_improvement: 0.25 })}`}    />
-
-                  {metrics.cumulativeLayoutShift.to_fixed (3}
-}
-                </span>
-    </div>
-  );
-}
-          </div>;"
-          <div className=\"mt - 4 pt-4 border-t\"    />;"
-            <div className=\"text - xs text-gray-500\"    />;
-
-=======
-              </div>)}
-
-                  className={`text - sm font - mono ${getScoreColor (metrics.firstContentfulPaint, { good: 1800, needs_improvement: 3000 })}`}
-                >
-                  {metrics.firstContentfulPaint.to_fixed (0)}ms
-                </span>
-              </div>)}
-
-                  className={`text - sm font - mono ${getScoreColor (metrics.largestContentfulPaint, { good: 2500, needs_improvement: 4000 })}`}
-                >
-                  {metrics.largestContentfulPaint.to_fixed (0)}ms
-                </span>
-              </div>)}
-
-                  className={`text - sm font - mono ${getScoreColor (metrics.cumulativeLayoutShift, { good: 0.1, needs_improvement: 0.25 })}`}
-                >
-                  {metrics.cumulativeLayoutShift.to_fixed (3)}
-                </span>
-              </div>)}
-
-              Core Web Vitals monitoring in real - time
-            </div>
-          </div>
-    </div>
-  )
->>>>>>> origin/cursor/delete-old-data-records-6bba
               Core Web Vitals monitoring in real - time;
             </div>;
           </div>
@@ -359,14 +290,4 @@ if (return null) {$2;}
 =======
 ;
 export default PerformanceDashboard;
-
-'"`
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    </div>)}
-
-export default PerformanceDashboard;"
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;

@@ -41,8 +41,6 @@ export function KanbanColumn({;
       default:;
 
         return "bg-muted/30";
-<<<<<<< HEAD
-
     }
   },;
   ;

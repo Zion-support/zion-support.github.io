@@ -28,9 +28,3 @@ export default function Infrastructure(): any ({ }: InfrastructureProps) {;
     </div>;
   );
 
-
-=======
-}
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

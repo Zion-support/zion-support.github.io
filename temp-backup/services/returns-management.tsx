@@ -61,8 +61,3 @@ export default function Returnsmanagement({ }: ReturnsmanagementProps) {
 =======
   );
 
-}
-
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

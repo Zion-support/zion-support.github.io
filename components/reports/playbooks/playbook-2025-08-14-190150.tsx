@@ -1,7 +1,9 @@
 
-<<<<<<< HEAD
 
-
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>;
+      <Head>;
+        <title>Playbook — Autonomous Delivery</title>;
         <meta
           name='description'
           content='A practical step-by-step playbook for reliable autonomous delivery.'
@@ -29,13 +31,7 @@
           dangerouslySetInnerHTML={{
             __html:
 
-        <div'
-          className=mt-4
-          dangerouslySetInnerHTML={{}
-            __html:
-
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
-
 
           }}
         />;'
@@ -158,187 +154,42 @@ property='og:description'
         <div;
 className='mt-4'
           dangerouslySetInnerHTML={{
-            __html:
-<<<<<<< HEAD
-
-
-
-=======
-
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
-
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
-
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
-
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
-
-
-
-
-
-
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
-
-
-
-          }}
-        <div;
-          className='mt-4';'
-          dangerouslySetInnerHTML={{"__html":;
-              '<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>','<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>','<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>'}}'
+            __html:          }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;'
           Auto-generated by Cloud Playbook Factory.;
         </p>;
       </main>;
     </div>;
-  )export default function Page() {'<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>';'
-              '<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>';'
-        <div
-}
-className='mt-4''
-          dangerouslySetInnerHTML={{
-            }
-            "__html":
+  );export default function Page() {;
 
-export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
-      <Head    />;
-        <title    />Playbook — Autonomous Delivery</title>;"
-        <meta name=\"description\" content=\"A practical step-by-step playbook for reliable autonomous delivery.\"    />;"
-        <meta property=\"og:title\" content=\"Playbook — Autonomous Delivery\"    />;"
-        <meta property=\"og:description\" content=\"A practical step-by-step playbook for reliable autonomous delivery.\"    />;"
-        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
-      </Head>;"
-      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;}"
-        <h1 className=\"text-3xl font-extrabold\"    />Playbook — Autonomous Delivery</h1>;}"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com</a></p><h2    />Purpose</h2><p    />Operational steps to execute reliably with measurable outcomes.</p><h2    />Checklist</h2><ol    /><li    />Define objectives, KPIs, and guardrails.</li><li    />Inventory data, models, tools, and constraints.</li><li    />Design evaluation and feedback loops upfront.</li><li    />Implement smallest viable slice with telemetry.</li><li    />Iterate, measure, and harden for production.</li></ol><h2    />Notes</h2><p class=\"text-white/75\"    /></p>\" }} />;"
-        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Playbook Factory.</p>;
-      </main>;
-    </div>;
-  )}
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',
 
-export default function Page() {return (import Head from 'next / head';
-
-export default /**;
- * Page - Function description;
- */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'    />;
-    </div>;
-  );
-
-export default function Page() {;
-"
-              '<p    />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p><h2    />Purpose</h2><p    />Operational steps to execute reliably with measurable outcomes.</p><h2    />Checklist</h2><ol    /><li    />Define objectives, KPIs, and guardrails.</li><li    />Inventory data, models, tools, and constraints.</li><li    />Design evaluation and feedback loops upfront.</li><li    />Implement smallest viable slice with telemetry.</li><li    />Iterate, measure, and harden for production.</li></ol><h2    />Notes</h2><p class=\"text-white/75\"    /></p>'}
-}
           }}
         />
-        <p className='mt-6 text-white/60 text-sm'    />
+        <p className='mt-6 text-white/60 text-sm'>
           Auto-generated by Cloud Playbook Factory.
         </p>
       </main>
   );export default function Page() {
-          Auto-generated by Cloud Playbook Factory.
-        </p>
-      </main>
-  );export default function Page() {}
   return (
 
-export default function Page() {}
+export default function Page() {
   return (
-;
+
     </div>;
 
-  );export default function Page() {}
+  );export default function Page() {
   return (
 
 export default function Page() {
-  return (
-pr-12243
-origin/cursor/integrate-build-improve-and-re-verify-2156
-
-export default function Page() {
-export default function Page() {
-
-
-export default function Page() {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
 
 }
 
-<<<<<<< HEAD
-
-=======
 export default function Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Playbook — Autonomous Delivery</title>;
-        <meta name="description" content="A practical step-by-step playbook for reliable autonomous delivery." />;
-        <meta property="og:title" content="Playbook — Autonomous Delivery" />;
-        <meta property="og:description" content="A practical step-by-step playbook for reliable autonomous delivery." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Playbook — Autonomous Delivery</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\"></p>" }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>;
-      </main>;
-    </div>;
-  );
-
-export default function Page() {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 import Head from 'next / head';
-  return (
-
-}
-
-
-      <Head>;
-        <title>Playbook — Autonomous Delivery</title>;
-        <meta name=description content="A practical step-by-step playbook for reliable autonomous delivery." />;
-        <meta property=og:title content="Playbook — Autonomous Delivery" />;
-        <meta property=og:description content="A practical step-by-step playbook for reliable autonomous delivery." />;
-        <meta name=twitter:card content="summary_large_image" />;
-      </Head>;
-      <main className=container mx-auto px-6 py-12 prose prose-invert>;
-        <h1 className="text-3xl font-extrabold">Playbook — Autonomous Delivery</h1>;
-        <div className=mt-4 dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup && ziontechgroup.com\" target=\"_blank\ rel=\noopener\">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\></p> }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>;
-      </main>;
-    </div>;
-  );
-
-export default function Page() {
-}
-
-  return (
-
-export default function Page() {
-}
-return (;
-
-    </div>;
-
-  );
-export default function Page() {
-}
-return (;
-
-export default function Page() {
-}
-return (;
-
-}
-
-}
-export default function Page() {
-
-
-import Head from 'next / head;
 export default /**
  * Page - Function description
  */
@@ -392,59 +243,20 @@ function Page() {}
     </div>);export default /**;
  * Page - Function description;
  */
-function Page() {}
-  return ("
-    <div className="min - h-screen bg - slate - 950 text - white">;
+function Page() {
+  return (
+    <div className="min - h-screen bg - slate-950 text-white">;
       <Head>;
         <title > Playbook — Autonomous Delivery</title>;"
         <meta name="description" content="A practical step - by - step playbook for reliable autonomous delivery." />;"
         <meta property="og:title" content="Playbook — Autonomous Delivery" />;"
         <meta property="og:description" content="A practical step - by - step playbook for reliable autonomous delivery." />;"
         <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;"
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;"
-        <h1 className="text - 3xl font - extrabold">Playbook — Autonomous Delivery</h1>;"
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class="text - white / 75"></p>" }} />;"
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Playbook Factory.</p>;
-          Playbook — Autonomous Delivery;
-        </h1>;
-        <div;
-          className=mt - 4';
-
-          dangerouslySetInnerHTML={{
-            __html:;
-              '<p > Signal source: <a class=text - cyan - 300 underline href="https://ziontechgroup.com" target=_blank rel="noopener">https://ziontechgroup.com</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class=text - white / 75></p>}}
-        />;
-        <p className=mt - 6 text - white / 60 text - sm'>;
-
-=======
-          name='description';'
-          content='A practical step - by - step playbook for reliable autonomous delivery.';' />;
-        <meta property='"og":title' content='Playbook — Autonomous Delivery' />;'
-        <meta;
-          property='"og":description';'
-          content='A practical step - by - step playbook for reliable autonomous delivery.';' />;
-        <meta name='"twitter":card' content='summary_large_image' />;'
       </Head>;
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;'
-        <h1 className='text - 3xl font - extrabold'>;'
-          Playbook — Autonomous Delivery;
-        </h1>;
-        <div;
-          className='mt - 4';'
-          dangerouslySetInnerHTML={{"__html":;
-              '<p > Signal "source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class="text - white / 75"></p>';'
-          }
-          dangerouslySetInnerHTML={{
-            }
-            "__html":;
-              '<p > Signal "source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class="text - white / 75"></p>''
-          }}
-        />;
-        <p className='mt - 6 text - white / 60 text - sm'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          Auto - generated by Cloud Playbook Factory.;
-        </p>;
+      <main className="container mx - auto px - 6 py-12 prose prose-invert">;
+        <h1 className="text-3xl font-extrabold">Playbook — Autonomous Delivery</h1>;
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Purpose</h2><p > Operational steps to execute reliably with measurable outcomes.</p><h2 > Checklist</h2><ol><li > Define objectives, KPIs, and guardrails.</li><li > Inventory data, models, tools, and constraints.</li><li > Design evaluation and feedback loops upfront.</li><li > Implement smallest viable slice with telemetry.</li><li > Iterate, measure, and harden for production.</li></ol><h2 > Notes</h2><p class="text - white / 75"></p>" }} />;
+        <p className="mt - 6 text-white / 60 text-sm">Auto - generated by Cloud Playbook Factory.</p>;
       </main>;
     </div>)export default /**;
  * Page - Function description;
@@ -571,6 +383,28 @@ return (;
 }
 
 
+
+
+      <Head>
+        <title>Playbook — Autonomous Delivery</title>
+        <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Playbook — Autonomous Delivery&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>
+        <h1 className='text-3xl font-extrabold'>
+          Playbook — Autonomous Delivery
+        </h1>
+        <div
+          className='mt-4'
+          dangerouslySetInnerHTML={{
+            __html:
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>'
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm'>
           Auto-generated by Cloud Playbook Factory.
         </p>
       </main>
@@ -591,15 +425,10 @@ export default function Page() {return (export default function Page() {return (
       </main>
     </div>
 
+export default function Page() {
+  return (
 
 
-
-=======
-    </div>;
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Playbook — Autonomous Delivery</title>
@@ -617,33 +446,6 @@ export default function Page() {return (export default function Page() {return (
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\"></p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>
       </main>
-    </div>
-<<<<<<< HEAD
-
-      </main>
-
-}
-;
-
-"
-
-
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-  }
-}
-
-
-
-
-=======
-  )
-
-    </div>
-  );
-}
-pr-12243
 
     </div>
   );
@@ -651,11 +453,8 @@ pr-12243
     </div>;
   );
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+}
+;
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

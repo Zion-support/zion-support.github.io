@@ -1,23 +1,35 @@
 
-<<<<<<< HEAD
-=======
-import React from 'react';
-return (<> <Head> <title>Automation Insights | Zion Tech Group - AI Automation Expertise</title> </Head> <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white" > <main className="container mx-auto px-6 py-12" > <section className="text-center mb-16" > <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent" > Automation Insights </h1> </div>) ) 
-}</div> </div> > Read More <span className="ml-1" >→</span> </a> </div>) ) 
-}</div> </div> </div> </div>) ) 
-}</div> </div> Let our experts help you build the automation systems of the future </p> <div className="flex flex-wrap justify-center gap-4" > <Link > Get Started </a> <Link href="/case-studies" className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200" > View Case Studies </a> </div> </div> </section> </main> </div> </>) 
 
-}
+import React from 'react';
+
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
-  const automationTrends = $2;
-      title: 'AI Automation Trends 2025',
-      description: 'Discover the latest trends in AI automation that are reshaping industries worldwide.',
-      category: 'Trends',
+
+  const automationTrends = [
+    {
+      id: 'ai-automation-2025'
+      title: 'AI Automation Trends 2025'
+      description:
+
+
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
-      featured: true},
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default function AutomationInsightsPage() {;
+  const automationTrends = [;
+    {;
+      id: 'ai-automation-2025',;
+      title: 'AI Automation Trends 2025',,
+  description:;
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',;
+      readTime: '8 min read',;
+      featured: true;
+    {
+      id: 'ai - automation - 2025',
+      title: 'AI Automation Trends 2025',
+    };
+
 
     {
 export default function AutomationInsightsPage() {const automationTrends = [;
@@ -43,65 +55,60 @@ export default function AutomationInsightsPage() {const automationTrends = [;
       featured: false
     },      featured: false
     }
-      id: 'autonomous-systems',
-      title: 'Building Autonomous Systems',
-      description: 'Learn how to design and implement truly autonomous systems that operate independently.',
-      category: 'Implementation',
-      readTime: '12 min read',
-      featured: false},
-    {
-      id: 'automation-roi',
-      title: 'Calculating Automation ROI',
-      description: 'A comprehensive guide to measuring and maximizing return on investment for automation projects.',
-      category: 'Business',
-      readTime: '10 min read',
-      featured: false}
-  ],
+  ];
 
-      }
-
-      'id': 'automation-framework','
-      'title': 'Zion Automation Framework','
-'description':
-        'Our proprietary framework for building scalable automation solutions.','
-      'type': 'Framework','
-      'complexity': 'Advanced','
-    },
+  const automationTools = [;
+    {;
+      id: 'automation-framework',;
+      title: 'Zion Automation Framework',,
+  description:;
+        'Our proprietary framework for building scalable automation solutions.',;
+      type: 'Framework',;
+      complexity: 'Advanced',      type: 'Framework',;
+      complexity: 'Advanced';
     {
-      }
-      'id': 'performance-monitor','
-      'title': 'Performance Monitoring Suite','
-      'description':
-        'Comprehensive tools for monitoring and optimizing automation performance.','
-      'type': 'Tool','
-      'complexity': 'Intermediate','
-    },
-    {
-      }
-      'id': 'deployment-automation','
-      'title': 'Deployment Automation','
-      'description': 'Streamlined deployment processes for automation systems.','
-      'type': 'Process','
-'complexity': 'Beginner','
+      id: 'automation - framework',
+      title: 'Zion Automation Framework',
+    };
+    {;
+      id: 'performance-monitor',;
+      title: 'Performance Monitoring Suite',,
+  description: 'Comprehensive tools for monitoring and optimizing automation performance.',;
+      type: 'Tool',;
+      complexity: 'Intermediate',;
+    },;
+    {;
+      id: 'performance-monitor',;
+      title: 'Performance Monitoring Suite',,
+  description:;
+        'Comprehensive tools for monitoring and optimizing automation performance.',;
+      type: 'Tool',;
+      complexity: 'Intermediate',;
+    },    {      complexity: 'Intermediate'
+};
+    {;
+      id: 'deployment-automation',;
+      title: 'Deployment Automation',,
+  description: 'Streamlined deployment processes for automation systems.',;
+      type: 'Process',;
+      complexity: 'Beginner',;
+    },  ];      complexity: 'Beginner';
     }
   ];
 
-const successMetrics = [;
-  {;
-      }
-      'metric': '227',;'
-      'label': 'Active Automations',,'
-  'description': 'Successfully deployed and running',;'
+  const successMetrics = [;
+    {;
+      metric: '227',;
+      label: 'Active Automations',,
+  description: 'Successfully deployed and running',;
     },;
     {;
-      }
-      'metric': '99 && 99.9%',;'
-      'label': 'Uptime',,'
-  'description': 'Reliable automation performance',    {;'
-      }
-      'metric': '99 && 99.9%',;'
-      'label': 'Uptime',,'
-  'description': 'Reliable automation performance';'
+      metric: '99 && 99.9%',;
+      label: 'Uptime',,
+  description: 'Reliable automation performance',    {;
+      metric: '99 && 99.9%',;
+      label: 'Uptime',,
+  description: 'Reliable automation performance';
     {
       id: 'deployment - automation',
       title: 'Deployment Automation',
@@ -116,11 +123,39 @@ const successMetrics = [;
     }
 
     {
-      id: 'performance-monitor'
-      title: 'Performance Monitoring Suite'
-      description: 'Comprehensive tools for monitoring and optimizing automation performance.'
-      type: 'Tool'
-      complexity: 'Intermediate'
+      metric: '227',
+      label: 'Active Automations',
+    };
+    {;
+      metric: '40%',;
+      label: 'Efficiency Gain',;
+      label: 'Average improvement across projects'
+};
+    {;
+      metric: '2,960+';
+      label: 'Pages Generated',,
+  description: 'Content created autonomously',;
+    },;
+    {;
+      metric: '40%',;
+      label: 'Efficiency Gain',;
+      label: 'Average improvement across projects',;
+    },;
+    {;
+      metric: '2,960+',;
+      label: 'Pages Generated',,
+  description: 'Content created autonomously',;
+    },  ],
+  description: 'Content created autonomously',
+  description: 'Successfully deployed and running',
+    },
+    {
+      metric: '99.9%',
+      label: 'Uptime',
+      description: 'Reliable automation performance',    {
+      metric: '99.9%',
+      label: 'Uptime',
+      description: 'Reliable automation performance';
     }
     {
       id: 'performance-monitor'
@@ -132,22 +167,31 @@ const successMetrics = [;
     },    {      complexity: 'Intermediate'
     }
     {
-      id: 'deployment-automation'
-      title: 'Deployment Automation'
-      description: 'Streamlined deployment processes for automation systems.'
-      type: 'Process'
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      complexity: 'Beginner'
-    }
+      metric: '2,960+'
+      label: 'Pages Generated'
+      description: 'Content created autonomously'
+    },  ];      description: 'Content created autonomously'
 
-  ],
-
-      }
-
-      'metric': '227','
-      'label': 'Active Automations','
-'description': 'Successfully deployed and running','
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+      metric: '2, 960+';
+      label: 'Pages Generated',
+      description: 'Content created autonomously',
     },
     {
       }
@@ -156,16 +200,10 @@ const successMetrics = [;
       'description': 'Reliable automation performance','
     },
     {
-      }
-      'metric': '40%','
-      'label': 'Efficiency Gain','
-      'label': 'Average improvement across projects','
-    },
-    {
-      }
-      'metric': '2,960+','
-      'label': 'Pages Generated','
-      'description': 'Content created autonomously','
+      metric: '2, 960+',
+      label: 'Pages Generated',
+      description: 'Content created autonomously',
+    },  ];      description: 'Content created autonomously';
     }
   ];
 <<<<<<< HEAD
@@ -253,9 +291,29 @@ future of intelligent technology
             <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
               Automation Insights;
             </h1>;
+            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
 
-            <p className='text-xl text-white/80 max-w-3xl mx-auto>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        <meta;
+          name='description';
+          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems.";
+        />;
+        <meta;
+          property='og:title';
+          content='Automation Insights | Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Expert insights on AI automation, autonomous systems, and industry trends.';
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
+        <main className='container mx - auto px - 6 py - 12'>;
+          <section className='text - center mb - 16'>;
+            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
+              Automation Insights;
+            </h1>;
+            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
+
               Deep insights into AI automation, autonomous systems, and the;
               future of intelligent technology;
             </p>;
@@ -431,48 +489,9 @@ future of intelligent technology;
                     </h3>;
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;'
 
-                    <Link,
-href={`/blog/${trend.id}`}`                      className='inline-flex items-center text-cyan-400 'hover': text-cyan-300 transition-colors''
-                    >
-                      Read More <span className='ml-1'>→</span>'
-<div className='mb-16'    />;
-              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'    />;
-                Latest Automation Trends;
-              </h2>;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'    />;
-                {automationTrends.map((trend, index) => ({/* Automation Trends */}
-            <div className='mb-16'    />;
-              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'    />;
-                Latest Automation Trends;
-              </h2>;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'    />;
-                {automationTrends && automationTrends.map((trend, index) => (<div;}
-                    key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'    />;
-                    <div className='flex items-center justify-between mb-4'    />;
-                      <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full'    />;
-                        {trend && trend.category}
-                      </span>;
-                      <span className='text-white/60 text-sm'    />;
-                        {trend && trend.readTime}
-                      </span>;
-                    </div>;
-                    <h3 className='text-xl font-bold mb-3 text-white'    />;
-                      {trend && trend.title}
-                    </h3>;
-                    <p className='text-white/70 mb-4'    />{trend && trend.description}</p>;
+            {/* Automation Trends */}
 
-                    <Link;
-href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors'
-                        />
-                      Read More <span className='ml-1'    />→</span>
-                    </Link>
-                      Read More <span className='ml-1'    />→</span>                    </Link>
 
-                    </Link>
-
-                  </div>
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -480,11 +499,15 @@ href={`/blog/${trend.id}`}
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
-
                 {automationTrends.map((trend, index) => (
-
                 {automationTrends.map((trend, index) => (
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            {/* Automation Trends */}
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
+                Latest Automation Trends;
+              </h2>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+                {automationTrends && automationTrends.map((trend, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
@@ -502,26 +525,12 @@ href={`/blog/${trend.id}`}
                     </h3>
                     <p className='text-white/70 mb-4'>{trend.description}</p>
                     <Link
-<<<<<<< HEAD
-
-
-=======
-                      href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Latest Automation Trends</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {automationTrends.map((trend, index) => (
 
-<<<<<<< HEAD
-
-
-=======
-                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
@@ -535,11 +544,9 @@ href={`/blog/${trend.id}`}
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
-<<<<<<< HEAD
-
-=======
                       Read More <span className='ml-1'>→</span>                    </Link>
 >>>>>>> origin/cursor/delete-old-data-records-6bba
+
 
 
                   </div>
@@ -564,10 +571,8 @@ href={`/blog/${trend.id}`}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'    />;
                 {automationTools.map((tool, index) => (<div;}
                     key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'    />
-
-                    <div className='text-4xl mb-4'    />🔧</div>;
-                    <h3 className='text-xl font-bold mb-3 text-white'    />;
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'><div className='text-4xl mb-4'>🔧</div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
                       {tool.title}
                     </h3>;
                     <p className='text-white/70 mb-4'    />{tool.description}</p>;
@@ -606,121 +611,94 @@ href={`/blog/${trend.id}`}
                     <div className="flex justify-center gap-2">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
-
+                  </div>
                 ))}
-            {/* Call to Action */}
-            {/* Call to Action */}
-<div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>;'
-              <h2 className='text-3xl font-bold mb-4 text-white'>;'
-                Ready to Automate Your Business?;
-              </h2>;
-              <p className='text-xl text-white/80 mb-6'>;'
-                Let our experts help you build the automation systems of the;
-                future;
-              </p>;
-              <div className='flex flex-wrap justify-center gap-4'>;'
-            <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>;'
-              <h2 className='text-3xl font-bold mb-4 text-white'>;'
-                Ready to Automate Your Business?;
-              </h2>;
-              <p className='text-xl text-white/80 mb-6'>;'
-                Let our experts help you build the automation systems of the;
-                future;
-              </p>;
-              <div className='flex flex-wrap justify-center gap-4'>;'
-                <Link;
-                  href='/contact';'
-                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg 'hover':from-cyan-500 'hover':to-fuchsia-500 transition-all duration-200 transform 'hover':scale-105'>;'
-                  Get Started;
-                </Link>;
+              </div>
+            </div>
 
-                <Link,
-href='/case-studies''
 
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 'hover':bg-white/20 transition-all duration-200''
-                >
-                  View Case Studies
+
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Read More <span className='ml-1'    />→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (<div key={index} className=\"bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300\"    />;
-                    <div className=\"flex items-center justify-between mb-4\"    />;
-                      <span className=\"px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full\"    />{trend && trend.category}</span>;
-                      <span className=\"text-white/60 text-sm\"    />{trend && trend.readTime}</span>;
+                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (;
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
+                    <div className="flex items-center justify-between mb-4">;
+                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend && trend.category}</span>;
+                      <span className="text-white/60 text-sm">{trend && trend.readTime}</span>;
                     </div>;
-                    <h3 className=\"text-xl font-bold mb-3 text-white\"    />{trend && trend.title}</h3>;
-                    <p className=\"text-white/70 mb-4\"    />{trend && trend.description}</p>;
-                    <Link;
+                    <h3 className="text-xl font-bold mb-3 text-white">{trend && trend.title}</h3>;
+                    <p className="text-white/70 mb-4">{trend && trend.description}</p>;
+                    <Link
                       href={`/blog/${trend && trend.id}`}
-                      className=\"inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors\"    />;
-                      Read More <span className=\"ml-1\"    />→</span>;
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;
+                      Read More <span className="ml-1">→</span>;
                     </Link>;
                   </div>;
-
                 ))}
               </div>;
-            </div>;{/* Automation Tools & Frameworks */}
-            <div className='mb-16'    />;
-              <h2 className='text-3xl font-bold mb-8 text-center text-green-400'    />;
+            </div>;
+
+            {/* Automation Tools & Frameworks */}
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>;
                 Our Automation Tools;
               </h2>;
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'    />;
-                {automationTools && automationTools.map((tool, index) => (<div;}
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
+                {automationTools && automationTools.map((tool, index) => (;
+                  <div
                     key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'    />;
-                    <div className='text-4xl mb-4'    />🔧</div>;
-                    <h3 className='text-xl font-bold mb-3 text-white'    />;
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
+                    <div className='text-4xl mb-4'>🔧</div>;
+                    <h3 className='text-xl font-bold mb-3 text-white'>;
                       {tool && tool.title}
                     </h3>;
-                    <p className='text-white/70 mb-4'    />{tool && tool.description}</p>;
-                    <div className='flex justify-center gap-2'    />;
-                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'    />;
+                    <p className='text-white/70 mb-4'>{tool && tool.description}</p>;
+                    <div className='flex justify-center gap-2'>;
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>;
                         {tool && tool.type}
                       </span>;
-                      <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full'    />;
+                      <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full'>;
                         {tool && tool.complexity}
-                      </span>                    </div>                  <div key={index} className=\"bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center\"    />;
-                    <div className=\"text-4xl mb-4\"    />🔧</div>;
-                    <h3 className=\"text-xl font-bold mb-3 text-white\"    />{tool && tool.title}</h3>;
-                    <p className=\"text-white/70 mb-4\"    />{tool && tool.description}</p>;
-                    <div className=\"flex justify-center gap-2\"    />;
-                      <span className=\"px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full\"    />{tool && tool.type}</span>;
-                      <span className=\"px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full\"    />{tool && tool.complexity}</span>;
+                      </span>                    </div>                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">;
+                    <div className="text-4xl mb-4">🔧</div>;
+                    <h3 className="text-xl font-bold mb-3 text-white">{tool && tool.title}</h3>;
+                    <p className="text-white/70 mb-4">{tool && tool.description}</p>;
+                    <div className="flex justify-center gap-2">;
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool && tool.type}</span>;
+                      <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool && tool.complexity}</span>;
                   </div>;
                 ))}
             {/* Call to Action */}
             {/* Call to Action */}
+            <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
+              <h2 className='text-3xl font-bold mb-4 text-white'>
+                Ready to Automate Your Business?
+              </h2>
+              <p className='text-xl text-white/80 mb-6'>
+                Let our experts help you build the automation systems of the
+                future
 
-<div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'    />;
-              <h2 className='text-3xl font-bold mb-4 text-white'    />;
+              </p>
+              <div className='flex flex-wrap justify-center gap-4'>
+              </p>
+              <div className='flex flex-wrap justify-center gap-4'>
+            <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>;
+              <h2 className='text-3xl font-bold mb-4 text-white'>;
                 Ready to Automate Your Business?;
               </h2>;
-              <p className='text-xl text-white/80 mb-6'    />;
+              <p className='text-xl text-white/80 mb-6'>;'
                 Let our experts help you build the automation systems of the;
                 future;
               </p>;
-              <div className='flex flex-wrap justify-center gap-4'    />;
-            <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'    />;
-              <h2 className='text-3xl font-bold mb-4 text-white'    />;
-                Ready to Automate Your Business?;
-              </h2>;
-              <p className='text-xl text-white/80 mb-6'    />;
-                Let our experts help you build the automation systems of the;
-                future;
-              </p>;
-              <div className='flex flex-wrap justify-center gap-4'    />;
-                <Link;
-                  href='/contact';
-                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'    />;
+              <div className='flex flex-wrap justify-center gap-4'>;
+                <Link
+                  href='/contact'
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
                   Get Started;
                 </Link>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                <Link
+                  href='/case-studies'
 
-
-                <Link;
-href='/case-studies'
-
-
-<<<<<<< HEAD
 
                 <Link
                   href="/contact"
@@ -747,15 +725,8 @@ href='/case-studies'
           </section>
         </main>
       </div>
-<<<<<<< HEAD
-
-
-
-
-=======
     </>
 
-                  href=/case-studies";
                   View Case Studies;
                 </Link>;
               </div>;
@@ -763,5 +734,21 @@ href='/case-studies'
           </section>;
         </main>;
       </div>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
+
+}
+  );
+}
+    </>;
+  );
+}
+  );
+}
+    </>);
+}
+);
+  );
+}
+}
+  );
+}

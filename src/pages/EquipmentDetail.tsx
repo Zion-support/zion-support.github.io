@@ -87,20 +87,72 @@ export default function EquipmentDetail() {
 
   return (
     <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
-            <div className="lg:col-span-2">
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
-                {/* Main Image */}
-                <div className="aspect-video w-full relative">
-                  <img 
-                    src={equipment.images[selectedImageIndex]} 
-                    alt={equipment.name} 
-                    className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
-                  />
+      <NextSeo
+        title={`${equipment.name} - Zion Marketplace`}
+        description = {equipment.description,}
+        openGraph={{
+          title: `${equipment.name} - Zion Marketplace`
+          description: equipment.description
+          images:
+            equipment.images.length > 0 && equipment.images[0]
+              ? [{ url: equipment.images[0] }]
+              : undefined
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+        }}
+      />
+      <div className='min-h-screen bg-zion-blue py-8 px-4'>
+        <div className='container mx-auto'>
+          {/* Breadcrumb */}
+          <motion.nav
+            className='flex mb-8'
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}><button
+              onClick={() => router.push('/equipment')}
+              className='text-zion-cyan hover:text-white transition-colors'            >
+              Equipment
+            </button>
+            <span className='mx-2 text-zion-slate-light'>/</span>
+            <span className='text-zion-slate-light'>{equipment.name}</span>
+          </motion.nav>
+          <div className='grid lg:grid-cols-2 gap-12'>
+            {/* Images */}
+            <motion.div
+              className='space-y-4'
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <AspectRatio
+                ratio={1}
+                className='bg-zion-blue-light rounded-lg overflow-hidden'
+              >
+                <ImageWithRetry
+                  src={
+                    equipment.images[selectedImageIndex] |
+                    equipment.images[0] |
+                    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+                  }
+                  alt={equipment.name}
+                  className='object-cover'                />
+              </AspectRatio>
+              {equipment.images.length > 1 && (
+                <div className='grid grid-cols-4 gap-2'>
+                  {equipment.images.map((image, index) => (                    <button
+                      key = {index,}
+                      onClick = {(,) => setSelectedImageIndex(index),}
+                      className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
+                        selectedImageIndex === index
+                          ? 'border-zion-cyan'
+                          : 'border-transparent hover:border-zion-slate-light'
+                      }`}
+                    >
+                      <ImageWithRetry
+                        src = {image,}
+                        alt={`${equipment.name} view ${index + 1}`}
+                        className='object-cover'
+                      />
+                    </button>
+                  ))}
                 </div>
                 
                 {/* Thumbnail Gallery */}

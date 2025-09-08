@@ -1,43 +1,12 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
-
-<<<<<<< HEAD
-=======
-ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-exports && exports.config = { schedule: '15 */12 * * *' };
-
-=======
     stdout: res && res.stdout || '',
-
-  const res = spawnSync('node', [abs, ...args], {'
-    stdio: 'pipe''
-    encoding: 'utf8'
-  });
-  return {}
-    status: res && res.status || 0,'
-    stdout: res && res.stdout || '','
-
     stderr: res && res.stderr || '',
-  };'
+  };
 exports && exports.config = { schedule: '15 */12 * * *' };
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-ursor/expand-services-advertise-and-build-project-4b36
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
 
 exports && exports.handler = async () => {
 
@@ -47,42 +16,22 @@ exports && exports.handler = async () => {
   const step = (name, fn) => {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
-
-<<<<<<< HEAD
-
-
-=======
-ursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    if (stdout) logs && logs.push(stdout);
-
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
-<<<<<<< HEAD
-
-    return status;
-  };
+    return status
+};
   step('security:audit', () => runNode('automation/security-audit && audit.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return {
     statusCode: 200,
     headers: { 'content-type': 'text/plain' },
     body: logs && logs.join('\n'),
-  };
+  }
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
-
-=======
-    return status
-};
-  step('security:audit', () => runNode('automation/security-audit && audit.cjs'));
-
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-  return {}
-    statusCode: 200,'
-    headers: { 'content-type': 'text/plain' },'
-    body: logs && logs.join('\n'),
+  const abs = path.resolve(__dirname, '....', relPath),  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
+}
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -154,64 +103,6 @@ exports && exports.handler = async () => {}
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
-
-=======
-'
-  step('security:audit', () => runNode('automation/security-audit && audit.cjs')),'
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-'
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
-},
-const path = require ('path');'
-const { spawn_sync } = require ('child_process');'
-;
-
-const abs = path && path.resolve(__dirname, '..', '..', relPath)function runNode() ;'
-  const abs  = path && path.resolve(__dirname, '..', '..', relPath)ursor/expand-services-advertise-and-build-project-4b36;'
-
-const res = spawnSync('node', [abs, ...args], {'stdio': 'pipe';'
-    }
-    'encoding': 'utf8';'
-  })return {'status': res && res.status || 0,'stdout': res && res.stdout || '','stderr': res && res.stderr || '';'
-  }exports && exports.config = { 'schedule': '15 */12 * * *','
-}exports && exports.handler = async () => {ursor/expand-services-advertise-and-build-project-4b36;
-    }
-    'status': res && res.status || 0,'stdout': res && res.stdout || '','stderr': res && res.stderr || '';'
-  }exports && exports.config = { 'schedule': '15 */12 * * *','
-}ursor/expand-services-advertise-and-build-project-4b36;
-exports && exports.handler = async () => {const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8','
-};
-  return { 'status': res.status || 0, 'stdout': res.stdout || '', 'stderr': res.stderr || '' }'
-}exports.config = { 'schedule': '15 */12 * * *','
-}exports.handler = async () => ;
-  const logs = [];
-
-const step = (name, fn) => {logs && logs.push(`\n=== ${name} ===`;`  const { status, stdout, stderr }  = fn()ursor/expand-services-advertise-and-build-project-4b36;
-    if (stdout) logs && logs.push(stdout)if (stderr) logs && logs.push(stderr)logs && logs.push(`exit = ${status}`;`  return status;
-  }step(''security':audit', () => runNode('automation/security-audit && audit.cjs'))step(''git':sync', () => runNode('automation/advanced-git-sync && sync.cjs'))return {'statusCode': 200,'headers': { 'content-type': 'text/plain','
-},'body': logs && logs.join('\n'),'
-}function runNode() {const abs = path && path.resolve(__dirname, '....', relPath),'body': logs && logs.join('\n'),'
-}function runNode() {const abs = path && path.resolve(__dirname, '....', relPath);'
-  }
-  const abs = path.resolve(__dirname, '....', relPath),ursor/expand-services-advertise-and-build-project-4b36;'
-
-const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8',;'
-});
-  return { 'status': res && res.status || 0, 'stdout': res && res.stdout || '', 'stderr': res && res.stderr || '' }'
-}exports && exports.config = { 'schedule': '15 */12 * * *','
-},exports && exports.handler = async () => {const logs = [],const step = (name, fn) => {logs && logs.push(`\n=== ${name} ===`);`  const { status, stdout, stderr } = fn(),if (stdout) logs && logs.push(stdout),if (stderr) logs && logs.push(stderr),logs && logs.push(`exit = ${status}`);`  return status;
-  },step(''security':audit', () => runNode('automation/security-audit && audit.cjs')),step(''git':sync', () => runNode('automation/advanced-git-sync && sync.cjs')),return { 'statusCode': 200, 'headers': { 'content-type': 'text/plain','
-}, 'body': logs && logs.join('\n') },'
-},ursor/expand-services-advertise-and-build-project-4b36;
-
-const path = require ('path';'
-  const { spawn_sync }  = require ('child_process')/**;'
-
-ursor/expand-services-advertise-and-build-project-4b36
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const path = require ('path');
 
 const { spawn_sync } = require ('child_process');

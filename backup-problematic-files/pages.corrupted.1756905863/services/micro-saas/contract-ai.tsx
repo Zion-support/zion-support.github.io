@@ -67,4 +67,5 @@ const Contract-ai: React.FC<Contract-aiProps> = ({ className }) => {
 
 
   );
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}

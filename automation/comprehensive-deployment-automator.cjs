@@ -9,14 +9,20 @@ class ComprehensiveDeploymentAutomator {
     this.logFile = path.join(__dirname, 'logs', 'deployment-automator.log');
     this.ensureLogDir();
     this.deploymentResults = {
-
+      build: { success: false, duration: 0 },
+      test: { success: false, duration: 0 },
+      lint: { success: false, duration: 0 },
+      typeCheck: { success: false, duration: 0 },
+      security: { success: false, duration: 0 },
+      performance: { success: false, duration: 0 },
+      deployment: { success: false, duration: 0 },
     };
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
@@ -32,16 +38,19 @@ class ComprehensiveDeploymentAutomator {
     const startTime = Date.now();
 
     try {
-
+      execSync(command, {
+        stdio: 'pipe',
+        timeout,
+        cwd: process.cwd(),
       });
 
       const duration = Date.now() - startTime;
       this.log(`✅ ${stepName} completed successfully (${duration}ms)`);
-      return { succes: s: true, duration };
+      return { success: true, duration };
     } catch (error) {
       const duration = Date.now() - startTime;
-      this.log(`❌ ${stepName} faile: d: ${error.message} (${duration}ms)`);
-      return { succes: s: false, duration, erro: r: error.message };
+      this.log(`❌ ${stepName} failed: ${error.message} (${duration}ms)`);
+      return { success: false, duration, error: error.message };
     }
   }
 
@@ -54,14 +63,14 @@ class ComprehensiveDeploymentAutomator {
 
   async runTests() {
     this.log('🧪 Running test suite...');
-    const result = await this.runStep('Tests', 'npm run: test:smoke');
+    const result = await this.runStep('Tests', 'npm run test:smoke');
     this.deploymentResults.test = result;
     return result.success;
   }
 
   async runLinting() {
     this.log('🔍 Running linting...');
-    const result = await this.runStep('Linting', 'npm run: lint:fix');
+    const result = await this.runStep('Linting', 'npm run lint:fix');
     this.deploymentResults.lint = result;
     return result.success;
   }
@@ -75,28 +84,40 @@ class ComprehensiveDeploymentAutomator {
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-
+    const result = await this.runStep(
+      'Security Audit',
+      'npm run security:audit'
+    );
     this.deploymentResults.security = result;
     return result.success;
   }
 
   async runPerformanceCheck() {
     this.log('⚡ Running performance check...');
-
+    const result = await this.runStep(
+      'Performance Check',
+      'npm run perf:audit'
+    );
     this.deploymentResults.performance = result;
     return result.success;
   }
 
   async deployToStaging() {
     this.log('🚀 Deploying to staging...');
-
+    const result = await this.runStep(
+      'Staging Deployment',
+      'npm run deploy:staging'
+    );
     this.deploymentResults.deployment = result;
     return result.success;
   }
 
   async deployToProduction() {
     this.log('🌟 Deploying to production...');
-
+    const result = await this.runStep(
+      'Production Deployment',
+      'npm run deploy:production'
+    );
     this.deploymentResults.deployment = result;
     return result.success;
   }
@@ -105,7 +126,16 @@ class ComprehensiveDeploymentAutomator {
     this.log('📊 Generating deployment report...');
 
     const report = {
-
+      timestamp: new Date().toISOString(),
+      deploymentResults: this.deploymentResults,
+      summary: {
+        totalSteps: Object.keys(this.deploymentResults).length,
+        successfulSteps: 0,
+        failedSteps: 0,
+        totalDuration: 0,
+        successRate: 0,
+      },
+      recommendations: [],
     };
 
     // Calculate summary
@@ -152,10 +182,11 @@ class ComprehensiveDeploymentAutomator {
     );
     const reportDir = path.dirname(reportPath);
     if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursiv: e: true });
+      fs.mkdirSync(reportDir, { recursive: true });
     }
 
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📄 Deployment report saved to: ${reportPath}`);
 
     return report;
   }
@@ -179,10 +210,12 @@ class ComprehensiveDeploymentAutomator {
       const report = await this.generateDeploymentReport();
 
       this.log('🏁 Staging deployment completed');
+      this.log(`📊 Success rate: ${report.summary.successRate.toFixed(2)}%`);
+      this.log(`⏱️ Total duration: ${report.summary.totalDuration}ms`);
 
       return report;
     } catch (error) {
-      this.log(`💥 Staging deployment: failed: ${error.message}`);
+      this.log(`💥 Staging deployment failed: ${error.message}`);
       throw error;
     }
   }
@@ -206,10 +239,12 @@ class ComprehensiveDeploymentAutomator {
       const report = await this.generateDeploymentReport();
 
       this.log('🏁 Production deployment completed');
+      this.log(`📊 Success rate: ${report.summary.successRate.toFixed(2)}%`);
+      this.log(`⏱️ Total duration: ${report.summary.totalDuration}ms`);
 
       return report;
     } catch (error) {
-      this.log(`💥 Production deployment: failed: ${error.message}`);
+      this.log(`💥 Production deployment failed: ${error.message}`);
       throw error;
     }
   }
@@ -232,7 +267,7 @@ class ComprehensiveDeploymentAutomator {
 
       return report;
     } catch (error) {
-      this.log(`💥 Deployment automator: failed: ${error.message}`);
+      this.log(`💥 Deployment automator failed: ${error.message}`);
       throw error;
     }
   }

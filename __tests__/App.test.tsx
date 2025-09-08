@@ -1,30 +1,18 @@
 
-<<<<<<< HEAD
+>>>>>>> origin/main
+
+import React from 'react';
 
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import App from '../App';
-
+import App from '../src/App';
 describe('App', () => {
-  test('renders without crashing', () => {
+  it('renders without crashing', () => {
     render(<App />);
-
     expect(screen.getByRole('main')).toBeInTheDocument();
-
   });
-});
-});
 
-    render(<App />);
-    expect(
-      screen.getByRole("heading", { level: 1, name: "Zion Tech Group" }),
-    ).toBeInTheDocument();
-  });
-});
 
-origin/main
 });
-
 import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
@@ -33,9 +21,15 @@ describe('App'
   it('has proper heading structure'
     const heading = screen.getByRole('heading', { level: '1'
     const heading = screen.getByRole('heading'
-
-  it('has proper heading structure', () => {
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "../src/App";
+describe("App", () => {
+  test("renders without crashing", () => {
     render(<App />);
+<<<<<<< HEAD
+=======
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });

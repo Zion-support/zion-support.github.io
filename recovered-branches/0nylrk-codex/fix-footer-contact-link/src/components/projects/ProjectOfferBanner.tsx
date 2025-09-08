@@ -82,7 +82,8 @@ export function ProjectOfferBanner() {;
       const updated = new Set(prev),;
       updated.add(projectId),;
       return updated;
-
+    })
+};
   const handleViewOffer = (projectId: string) => {;
     navigate(`/project/${projectId}`)
 };

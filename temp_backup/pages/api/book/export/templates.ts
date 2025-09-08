@@ -1,22 +1,51 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-const templates = {
-  lulu: {
+const templates = {,
+    lulu: {,
     sizes: [
-      { name: 'US Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 },
-      { name: 'A4', widthIn: 8.27, heightIn: 11.69, bleedIn: 0.125, marginIn: 0.75 }
-    ]
-  },
-  blurb: {
+      {,
+    name: 'US Letter', w,
+    idthIn: 8.5, h,
+    eightIn: 11, b,
+    leedIn: 0.125, m,
+    arginIn: 0.75 },
+      {,
+    name: 'A4', w,
+    idthIn: 8.27, h,
+    eightIn: 11.69, b,
+    leedIn: 0.125, m,
+    arginIn: 0.75 }]},
+  b,
+    lurb: {,
     sizes: [
-      { name: 'Standard Portrait', widthIn: 8, heightIn: 10, bleedIn: 0.125, marginIn: 0.75 },
-      { name: 'Large Square', widthIn: 12, heightIn: 12, bleedIn: 0.125, marginIn: 0.75 }
-    ]
-  },
-  amazon: {
+      {,
+    name: 'Standard Portrait', w,
+    idthIn: 8, h,
+    eightIn: 10, b,
+    leedIn: 0.125, m,
+    arginIn: 0.75 },
+      {,
+    name: 'Large Square', w,
+    idthIn: 12, h,
+    eightIn: 12, b,
+    leedIn: 0.125, m,
+    arginIn: 0.75 }]},
+  a,
+    mazon: {,
     sizes: [
-      { name: 'US Trade', widthIn: 6, heightIn: 9, bleedIn: 0.125, marginIn: 0.75 },
-      { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]},
-
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+      {,
+    name: 'US Trade', w,
+    idthIn: 6, h,
+    eightIn: 9, b,
+    leedIn: 0.125, m,
+    arginIn: 0.75 },
+      {,
+    name: 'Letter', w,
+    idthIn: 8.5, h,
+    eightIn: 11, b,
+    leedIn: 0.125, m,
+    arginIn: 0.75 }]}},
+export default function handler(,
+    _req: NextApiRequest, r,
+    es: NextApiResponse) {
   res.status(200).json(templates)
 }

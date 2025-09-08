@@ -1,134 +1,10 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {useAuthStatus} from "./talent/useAuthStatus";
-import {useTalentData} from "./talent/useTalentData";
-import {useFilterTalents} from "./talent/useFilterTalents";
-import {useUIState} from "./talent/useUIState";
-export function useTalentDirectory() {
-  // Fetch auth status and saved talents
-  const { ;
-    isAuthenticated;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export function useTalentDirectory() {
-
-    userDetails
-    savedTalents
-    handleToggleSave
-  } = useAuthStatus();
-  // Fetch talent data
-  const {
-    talents
-    isLoading
-import { useFilterTalents } from "./talent/useFilterTalents",
-import { useUIState } from "./talent/useUIState",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export function useTalentDirectory() {
-  // Fetch auth status and saved talents
-  const { 
-    isAuthenticated,
-    userDetails, 
-    savedTalents, 
-    handleToggleSave 
-  } = useAuthStatus(),
-
-  // Fetch talent data
-    talents, 
-    isLoading 
-<<<<<<< HEAD
-
-
-  } = useTalentData(),
-
-
-=======
-  } = useTalentData($2);
-  // Apply filters and sorting
-import { useAuthStatus } from './talent / useAuthStatus';
-import { useTalentData } from './talent / useTalentData';
-import { useFilterTalents } from './talent / useFilterTalents';
-
-import { useUIState } from './talent / useUIState';
-export /**;
- * useTalentDirectory - Function description;
- */
-function useTalentDirectory() {}
-  // Fetch auth status and saved talents;
-
-  const {}
-    is_authenticated;
-    user_details,
-    saved_talents,
-    handleToggleSave;
-  } = useAuthStatus ();
-;
-  // Fetch talent data;
-  const {}
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-
-    expanded_sections;
-
-  // Manage UI state
-  const {
-
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-
-  return {
-    // Talents and loading state
-    talents;
-    filteredTalents;
-    isLoading;
-    // Search and filter state
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
-    // UI state
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selectedTalent;
-    setSelectedTalent;
-    expandedSections;
-    // Auth and user state
-    isAuthenticated;
-    userDetails;
-    savedTalents;
-
-  } = useUIState(),
+  // Fetch auth status and saved talents  } = useUIState(),
 
   return {}
     // Talents and loading state;
@@ -227,12 +103,7 @@ function useTalentDirectory() {}
     isAuthenticated,
     userDetails,
     savedTalents,
-<<<<<<< HEAD
-
     
-
-=======
-
 
     // Actions
 
@@ -244,10 +115,9 @@ function useTalentDirectory() {}
     toggleSection;
     handleToggleSave
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useAuthStatus } from "./talent/useAuthStatus",;
-
+    expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
+import { useTalentData } from "./talent/useTalentData",;
+import { useFilterTalents } from "./talent/useFilterTalents",;
 import { useUIState } from "./talent/useUIState",;
 
   } = useAuthStatus(),;
@@ -348,12 +218,9 @@ pr-12325
     clearFilters;
     toggleSection;
     handleToggleSave;
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  }
+}
+;
 
   }
 }
@@ -373,20 +240,6 @@ pr-12325
     toggle_section;
     handleToggleSave;
   }
-
-
-=======
-  }
+}  }
 }
 ;
-
-  }
-}
-;
-
-}
-
-  }
-}
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba

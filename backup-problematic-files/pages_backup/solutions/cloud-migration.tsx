@@ -36,6 +36,7 @@ import { Cloud
   Smartphone,
   Brain;
 } from 'lucide-react';
+import Layout from "../../components/Layout";";
 
 const phases = [;
   {}
@@ -224,19 +225,10 @@ const benefits = [;
   }
 ;];
 
-=======
-
-
-    icon: Globe,;
-      'Cross-cloud integration,',;
-      'Disaster recovery',',;
-      'Load balancing',',;
-
-const benefits = [;
-  {}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+export default function CloudMigrationPage() {
+  return (;
+    <Layout );
+      title="Cloud Migration Solutions - Zion Tech Group"";
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services.""
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -308,48 +300,6 @@ const benefits = [;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>"
                   
-
-=======
-
-
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}"
-              className="text-center max-w-4xl mx-auto"">;"
-</motion>"
-              <div className="flex items-center justify-center mb-6">";"
-                <Cloud className="w-12 h-12 text-blue-400 mr-4" />";"
-"
-                <h1 className="text-5xl md: text-6xl font-bold">", Cloud,;"
-</h1>"
-                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";"
-</span>
-                  </span>;
-                </h1>;
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">";"
-</p>
-              </p>;"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;"
-                ;"
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Migration Success Stories,;"
-
-                ;
-              </div>;
-            </motion && motion.div>;
-        </section>;"
-        <section className="py-20 bg-white">";"
-          <div className="container mx-auto px-4">";"
-              className="text-center mb-16"">;"
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our Cloud Migration Process,;"
-</h2>
-              </h2>;"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";"
-                <motion&& motion.div}),
-                  key={phase && phase.title}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   <ul className="space-y-2 text-left">";
                     {phase && phase.steps.map((step, stepIndex) => (,;
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">";
@@ -382,16 +332,6 @@ const benefits = [;
               </p>;
             </motion.div>;
 
-=======
-
-
-                      </li>,;
-                  </ul>,;
-              ))}
-            </div>,;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {services && services.map((service, index) => (,;
                 <motion&& motion.div}),
@@ -406,7 +346,9 @@ const benefits = [;
                     </div>,;
                     <h3 className="text-2xl font-bold text-gray-900">{service && service.title}</h3>";
                   </div>;
-
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
+                  
                   <div>;
 <<<<<<< HEAD
 
@@ -467,19 +409,6 @@ const benefits = [;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
-=======
-
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;"
-                      {service && service.features.map((feature, featureIndex) => (,;"
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";"
-
-                </motion && motion.div>;)
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Cloud Migration?,;"
-                  key={benefit && benefit.title}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -524,21 +453,4 @@ const benefits = [;
       </div>
     </Layout>
 
-<<<<<<< HEAD
-=======
-
-        </section>;
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">"
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-            </motion.div>
-
-        </section>
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Cloud-migration;

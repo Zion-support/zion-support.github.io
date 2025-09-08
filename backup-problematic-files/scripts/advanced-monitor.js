@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -27,8 +25,9 @@ class AdvancedMonitor {
       const memoryUsage = execSync("free -h", { "encoding": "utf8" })
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`
-
-
+      fs && fs.appendFileSync(this && this.logPath, logEntry)} catch (error) {
+      console && console.error("Memory check "error": ", error)}
+  }
 // Start monitoring
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()

@@ -94,9 +94,10 @@ export function ServiceDescriptionForm() {
   }
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-const { toast } = useToast(),;
-const [isLoading, setIsLoading] = useState(false),;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  const { toast } = useToast(),
+  const [isLoading, setIsLoading] = useState(false),
+  
+
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -549,7 +550,9 @@ throw new Error(response.error);
 <<<<<<< HEAD
             <FormField;
 
-control={form && form.control}
+            <FormField
+              control={form && form.control}
+
               control={form.control}
 
                       {...field}

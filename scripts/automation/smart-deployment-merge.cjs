@@ -8,11 +8,11 @@ console.log('🚀 Starting Smart Deployment & Merge Automation...');
 class SmartDeploymentMerge {;
   constructor() {;
     this.projectRoot = process.cwd();
-    this.config = {;
-      "autoDeploy": process.env.AUTO_DEPLOY === 'true',
-      "smartMerge": process.env.SMART_MERGE === 'true',
-      "rollbackEnabled": process.env.ROLLBACK_ENABLED === 'true',
-      "qualityGates": process.env.QUALITY_GATES === 'strict';
+    this.config = {
+      autoDeploy: process.env.AUTO_DEPLOY === 'true',
+      smartMerge: process.env.SMART_MERGE === 'true',
+      rollbackEnabled: process.env.ROLLBACK_ENABLED === 'true',
+      qualityGates: process.env.QUALITY_GATES === 'strict',
     };
     this.deploymentData = this.loadDeploymentData();
   }
@@ -30,12 +30,12 @@ class SmartDeploymentMerge {;
     } catch (error) {;
       console.log('📚 Creating new deployment data file...');
     }
-    return {;
-      "deployments": [],
-      "merges": [],
-      "rollbacks": [],
-      "qualityChecks": [],
-      "lastDeployment": null;
+    return {
+      deployments: [],
+      merges: [],
+      rollbacks: [],
+      qualityChecks: [],
+      lastDeployment: null,
     };
   }
 
@@ -98,126 +98,147 @@ class SmartDeploymentMerge {;
       // Update deployment data;
       this.updateDeploymentData(productionResult);
       this.saveDeploymentData();
-;
-    } catch (error) {;
-      console.error('❌ Deployment workflow "failed": ', error.message);
+    } catch (error) {
+      console.error('❌ Deployment workflow failed:', error.message);
       await this.handleDeploymentError(error);
     }
   }
 ;
   async shouldDeploy() {;
     console.log('🔍 Checking if deployment is needed...');
-;
-    try {;
-      // Check for new commits;
-      const lastCommit = execSync('git log -1 --format=%H', { "encoding": 'utf8' }).trim();
+
+    try {
+      // Check for new commits
+      const lastCommit = execSync('git log -1 --format=%H', {
+        encoding: 'utf8',
+      }).trim();
       const lastDeployment = this.deploymentData.lastDeployment;
 ;
       if (!lastDeployment || lastDeployment.commit !== lastCommit) {;
         console.log('📝 New commits detected, deployment needed');
         return true;
       }
-;
-      // Check for critical fixes;
-      const recentCommits = execSync('git log --since="1 hour ago" --oneline', { "encoding": 'utf8' });
-      if (recentCommits.includes('"fix": ') || recentCommits.includes('"hotfix": ')) {;
+
+      // Check for critical fixes
+      const recentCommits = execSync('git log --since="1 hour ago" --oneline', {
+        encoding: 'utf8',
+      });
+      if (recentCommits.includes('fix:') || recentCommits.includes('hotfix:')) {
         console.log('🚨 Critical fixes detected, deployment needed');
         return true;
       }
 ;
       console.log('✅ No deployment needed');
       return false;
-;
-    } catch (error) {;
-      console.log('⚠️  Could not check deployment "status": ', error.message);
+    } catch (error) {
+      console.log('⚠️  Could not check deployment status:', error.message);
       return false;
     }
   }
 ;
   async runQualityGates() {;
     console.log('🛡️ Running quality gates...');
-;
-    const qualityCheck = {;
-      "passed": true,
-      "checks": [],
-      "score": 0;
+
+    const qualityCheck = {
+      passed: true,
+      checks: [],
+      score: 0,
     };
 ;
     try {;
       // Check build status;
       console.log('🔨 Checking build status...');
-      try {;
-        execSync('npm run build', { "stdio": 'pipe' });
-        qualityCheck.checks.push({ "name": 'Build', "status": 'passed' });
+      try {
+        execSync('npm run build', { stdio: 'pipe' });
+        qualityCheck.checks.push({ name: 'Build', status: 'passed' });
         qualityCheck.score += 20;
-      } catch (error) {;
-        qualityCheck.checks.push({ "name": 'Build', "status": 'failed', "error": error.message });
+      } catch (error) {
+        qualityCheck.checks.push({
+          name: 'Build',
+          status: 'failed',
+          error: error.message,
+        });
         qualityCheck.passed = false;
       }
 ;
       // Check linting;
       console.log('🔍 Running linting checks...');
-      try {;
-        execSync('npm run lint', { "stdio": 'pipe' });
-        qualityCheck.checks.push({ "name": 'Linting', "status": 'passed' });
+      try {
+        execSync('npm run lint', { stdio: 'pipe' });
+        qualityCheck.checks.push({ name: 'Linting', status: 'passed' });
         qualityCheck.score += 20;
-      } catch (error) {;
-        qualityCheck.checks.push({ "name": 'Linting', "status": 'failed', "error": error.message });
-        if (this.config.qualityGates === 'strict') {;
+      } catch (error) {
+        qualityCheck.checks.push({
+          name: 'Linting',
+          status: 'failed',
+          error: error.message,
+        });
+        if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
         }
       }
 ;
       // Check type checking;
       console.log('📝 Running type checks...');
-      try {;
-        execSync('npm run type-check', { "stdio": 'pipe' });
-        qualityCheck.checks.push({ "name": 'Type Checking', "status": 'passed' });
+      try {
+        execSync('npm run type-check', { stdio: 'pipe' });
+        qualityCheck.checks.push({ name: 'Type Checking', status: 'passed' });
         qualityCheck.score += 20;
-      } catch (error) {;
-        qualityCheck.checks.push({ "name": 'Type Checking', "status": 'failed', "error": error.message });
-        if (this.config.qualityGates === 'strict') {;
+      } catch (error) {
+        qualityCheck.checks.push({
+          name: 'Type Checking',
+          status: 'failed',
+          error: error.message,
+        });
+        if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
         }
       }
 ;
       // Check tests;
       console.log('🧪 Running tests...');
-      try {;
-        execSync('npm test', { "stdio": 'pipe' });
-        qualityCheck.checks.push({ "name": 'Tests', "status": 'passed' });
+      try {
+        execSync('npm test', { stdio: 'pipe' });
+        qualityCheck.checks.push({ name: 'Tests', status: 'passed' });
         qualityCheck.score += 20;
-      } catch (error) {;
-        qualityCheck.checks.push({ "name": 'Tests', "status": 'failed', "error": error.message });
-        if (this.config.qualityGates === 'strict') {;
+      } catch (error) {
+        qualityCheck.checks.push({
+          name: 'Tests',
+          status: 'failed',
+          error: error.message,
+        });
+        if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
         }
       }
 ;
       // Check security audit;
       console.log('🔒 Running security audit...');
-      try {;
-        execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
-        qualityCheck.checks.push({ "name": 'Security Audit', "status": 'passed' });
+      try {
+        execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
+        qualityCheck.checks.push({ name: 'Security Audit', status: 'passed' });
         qualityCheck.score += 20;
-      } catch (error) {;
-        qualityCheck.checks.push({ "name": 'Security Audit', "status": 'failed', "error": error.message });
-        if (this.config.qualityGates === 'strict') {;
+      } catch (error) {
+        qualityCheck.checks.push({
+          name: 'Security Audit',
+          status: 'failed',
+          error: error.message,
+        });
+        if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
         }
       }
-;
-      console.log(`📊 Quality "Score": ${qualityCheck.score}/100`);
-;
-    } catch (error) {;
-      console.log('⚠️  Quality gates check "failed": ', error.message);
+
+      console.log(`📊 Quality Score: ${qualityCheck.score}/100`);
+    } catch (error) {
+      console.log('⚠️  Quality gates check failed:', error.message);
       qualityCheck.passed = false;
     }
-;
-    // Save quality check results;
-    this.deploymentData.qualityChecks.push({;
-      "timestamp": new Date().toISOString(),
-      ...qualityCheck;
+
+    // Save quality check results
+    this.deploymentData.qualityChecks.push({
+      timestamp: new Date().toISOString(),
+      ...qualityCheck,
     });
 ;
     return qualityCheck;
@@ -225,54 +246,57 @@ class SmartDeploymentMerge {;
 ;
   async performSmartMerge() {;
     console.log('🔀 Performing smart merge...');
-;
-    try {;
-      // Get current branch;
-      const currentBranch = execSync('git branch --show-current', { "encoding": 'utf8' }).trim();
-;
-      // Get main/master branch;
+
+    try {
+      // Get current branch
+      const currentBranch = execSync('git branch --show-current', {
+        encoding: 'utf8',
+      }).trim();
+
+      // Get main/master branch
       const mainBranch = await this.getMainBranch();
 ;
       if (currentBranch !== mainBranch) {;
         console.log(`🔄 Merging ${currentBranch} into ${mainBranch}...`);
-;
-        // Switch to main branch;
-        execSync(`git checkout ${mainBranch}`, { "stdio": 'inherit' });
-;
-        // Pull latest changes;
-        execSync('git pull origin ' + mainBranch, { "stdio": 'inherit' });
-;
-        // Merge feature branch;
-        try {;
-          execSync(`git merge ${currentBranch} --no-ff -m "Merge ${currentBranch} [auto-deploy]"`, { "stdio": 'inherit' });
+
+        // Switch to main branch
+        execSync(`git checkout ${mainBranch}`, { stdio: 'inherit' });
+
+        // Pull latest changes
+        execSync('git pull origin ' + mainBranch, { stdio: 'inherit' });
+
+        // Merge feature branch
+        try {
+          execSync(
+            `git merge ${currentBranch} --no-ff -m "Merge ${currentBranch} [auto-deploy]"`,
+            { stdio: 'inherit' }
+          );
           console.log(`✅ Successfully merged ${currentBranch}`);
-;
-          // Update deployment data;
-          this.deploymentData.merges.push({;
-            "from": currentBranch,
-            "to": mainBranch,
-            "timestamp": new Date().toISOString(),
-            "success": true;
+
+          // Update deployment data
+          this.deploymentData.merges.push({
+            from: currentBranch,
+            to: mainBranch,
+            timestamp: new Date().toISOString(),
+            success: true,
           });
-;
-        } catch (error) {;
-          console.log(`⚠️  Merge "failed": ${error.message}`);
-;
-          // Handle merge conflicts;
+        } catch (error) {
+          console.log(`⚠️  Merge failed: ${error.message}`);
+
+          // Handle merge conflicts
           await this.handleMergeConflicts(currentBranch, mainBranch);
         }
       }
-;
-    } catch (error) {;
-      console.log('⚠️  Smart merge "failed": ', error.message);
+    } catch (error) {
+      console.log('⚠️  Smart merge failed:', error.message);
     }
   }
-;
-  async getMainBranch() {;
-    try {;
-      // Check if main branch exists;
-      const branches = execSync('git branch -r', { "encoding": 'utf8' });
-      if (branches.includes('origin/main')) {;
+
+  async getMainBranch() {
+    try {
+      // Check if main branch exists
+      const branches = execSync('git branch -r', { encoding: 'utf8' });
+      if (branches.includes('origin/main')) {
         return 'main';
       } else if (branches.includes('origin/master')) {;
         return 'master';
@@ -285,12 +309,16 @@ class SmartDeploymentMerge {;
 ;
   async handleMergeConflicts(featureBranch, mainBranch) {;
     console.log('🤖 Handling merge conflicts...');
-;
-    try {;
-      // Get conflicted files;
-      const status = execSync('git status --porcelain', { "encoding": 'utf8' });
-      const conflictedFiles = status.split('\n');
-        .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
+
+    try {
+      // Get conflicted files
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const conflictedFiles = status
+        .split('\n')
+        .filter(
+          line =>
+            line.includes('UU') || line.includes('AA') || line.includes('DD')
+        )
         .map(line => line.split(' ').pop());
 ;
       if (conflictedFiles.length === 0) {;
@@ -303,16 +331,17 @@ class SmartDeploymentMerge {;
       for (const file of conflictedFiles) {;
         await this.resolveConflict(file);
       }
-;
-      // Complete the merge;
-      execSync('git commit -m "Resolve merge conflicts [auto-deploy]"', { "stdio": 'inherit' });
+
+      // Complete the merge
+      execSync('git commit -m "Resolve merge conflicts [auto-deploy]"', {
+        stdio: 'inherit',
+      });
       console.log('✅ Merge conflicts resolved');
-;
-    } catch (error) {;
-      console.log('❌ Failed to resolve merge "conflicts": ', error.message);
-;
-      // Abort the merge;
-      execSync('git merge --abort', { "stdio": 'inherit' });
+    } catch (error) {
+      console.log('❌ Failed to resolve merge conflicts:', error.message);
+
+      // Abort the merge
+      execSync('git merge --abort', { stdio: 'inherit' });
       throw error;
     }
   }
@@ -334,7 +363,6 @@ class SmartDeploymentMerge {;
         if (line.startsWith('<<<<<<<')) {;
           inConflict = true;
           conflictType = 'ours';
-
           conflictType = 'theirs';
         } else if (line.startsWith('>>>>>>>')) {;
           inConflict = false;
@@ -350,35 +378,36 @@ class SmartDeploymentMerge {;
 ;
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
-;
-      // Add resolved file;
-      execSync(`git add ${filePath}`, { "stdio": 'inherit' });
-;
-    } catch (error) {;
-      console.log(`❌ Failed to resolve conflict in ${filePath}:`, error.message);
+
+      // Add resolved file
+      execSync(`git add ${filePath}`, { stdio: 'inherit' });
+    } catch (error) {
+      console.log(
+        `❌ Failed to resolve conflict in ${filePath}:`,
+        error.message
+      );
     }
   }
 ;
   async deployToStaging() {;
     console.log('🚀 Deploying to staging...');
-;
-    const deployment = {;
-      "environment": 'staging',
-      "timestamp": new Date().toISOString(),
-      "success": false;
+
+    const deployment = {
+      environment: 'staging',
+      timestamp: new Date().toISOString(),
+      success: false,
     };
-;
-    try {;
-      // Build the application;
-      execSync('npm run build', { "stdio": 'inherit' });
-;
-      // Deploy to staging (this would be your staging deployment command);
-      // For now, we'll simulate a successful deployment;
+
+    try {
+      // Build the application
+      execSync('npm run build', { stdio: 'inherit' });
+
+      // Deploy to staging (this would be your staging deployment command)
+      // For now, we'll simulate a successful deployment
       console.log('✅ Staging deployment completed');
       deployment.success = true;
-;
-    } catch (error) {;
-      console.log('❌ Staging deployment "failed": ', error.message);
+    } catch (error) {
+      console.log('❌ Staging deployment failed:', error.message);
       deployment.error = error.message;
     }
 ;
@@ -387,11 +416,11 @@ class SmartDeploymentMerge {;
 ;
   async runIntegrationTests() {;
     console.log('🧪 Running integration tests...');
-;
-    const testResult = {;
-      "success": false,
-      "tests": [],
-      "timestamp": new Date().toISOString();
+
+    const testResult = {
+      success: false,
+      tests: [],
+      timestamp: new Date().toISOString(),
     };
 ;
     try {;
@@ -399,14 +428,13 @@ class SmartDeploymentMerge {;
       // For now, we'll simulate running tests;
       console.log('✅ Integration tests passed');
       testResult.success = true;
-      testResult.tests = [;
-        { "name": 'API Tests', "status": 'passed' },
-        { "name": 'UI Tests', "status": 'passed' },
-        { "name": 'Database Tests', "status": 'passed' }
+      testResult.tests = [
+        { name: 'API Tests', status: 'passed' },
+        { name: 'UI Tests', status: 'passed' },
+        { name: 'Database Tests', status: 'passed' },
       ];
-;
-    } catch (error) {;
-      console.log('❌ Integration tests "failed": ', error.message);
+    } catch (error) {
+      console.log('❌ Integration tests failed:', error.message);
       testResult.error = error.message;
     }
 ;
@@ -415,11 +443,11 @@ class SmartDeploymentMerge {;
 ;
   async deployToProduction() {;
     console.log('🚀 Deploying to production...');
-;
-    const deployment = {;
-      "environment": 'production',
-      "timestamp": new Date().toISOString(),
-      "success": false;
+
+    const deployment = {
+      environment: 'production',
+      timestamp: new Date().toISOString(),
+      success: false,
     };
 ;
     try {;
@@ -427,16 +455,15 @@ class SmartDeploymentMerge {;
       // For now, we'll simulate a successful deployment;
       console.log('✅ Production deployment completed');
       deployment.success = true;
-;
-      // Update last deployment;
-      this.deploymentData.lastDeployment = {;
-        "commit": execSync('git log -1 --format=%H', { "encoding": 'utf8' }).trim(),
-        "timestamp": new Date().toISOString(),
-        "environment": 'production';
+
+      // Update last deployment
+      this.deploymentData.lastDeployment = {
+        commit: execSync('git log -1 --format=%H', { encoding: 'utf8' }).trim(),
+        timestamp: new Date().toISOString(),
+        environment: 'production',
       };
-;
-    } catch (error) {;
-      console.log('❌ Production deployment "failed": ', error.message);
+    } catch (error) {
+      console.log('❌ Production deployment failed:', error.message);
       deployment.error = error.message;
     }
 ;
@@ -454,35 +481,34 @@ class SmartDeploymentMerge {;
     try {;
       // Get the previous deployment;
       const previousCommit = this.deploymentData.lastDeployment?.commit;
-;
-      if (previousCommit) {;
-        // Rollback to previous commit;
-        execSync(`git reset --hard ${previousCommit}`, { "stdio": 'inherit' });
-;
-        // Redeploy;
-        execSync('npm run build', { "stdio": 'inherit' });
-;
+
+      if (previousCommit) {
+        // Rollback to previous commit
+        execSync(`git reset --hard ${previousCommit}`, { stdio: 'inherit' });
+
+        // Redeploy
+        execSync('npm run build', { stdio: 'inherit' });
+
         console.log('✅ Rollback completed');
-;
-        // Update rollback data;
-        this.deploymentData.rollbacks.push({;
-          "timestamp": new Date().toISOString(),
-          "from": 'current',
-          "to": previousCommit,
-          "success": true;
+
+        // Update rollback data
+        this.deploymentData.rollbacks.push({
+          timestamp: new Date().toISOString(),
+          from: 'current',
+          to: previousCommit,
+          success: true,
         });
 ;
       } else {;
         console.log('⚠️  No previous deployment found for rollback');
       }
-;
-    } catch (error) {;
-      console.log('❌ Rollback "failed": ', error.message);
-;
-      this.deploymentData.rollbacks.push({;
-        "timestamp": new Date().toISOString(),
-        "success": false,
-        "error": error.message;
+    } catch (error) {
+      console.log('❌ Rollback failed:', error.message);
+
+      this.deploymentData.rollbacks.push({
+        timestamp: new Date().toISOString(),
+        success: false,
+        error: error.message,
       });
     }
   }
@@ -501,29 +527,28 @@ class SmartDeploymentMerge {;
       console.log('📊 Updating monitoring...');
 ;
       console.log('✅ Post-deployment tasks completed');
-;
-    } catch (error) {;
-      console.log('⚠️  Post-deployment tasks "failed": ', error.message);
+    } catch (error) {
+      console.log('⚠️  Post-deployment tasks failed:', error.message);
     }
   }
-;
-  updateDeploymentData(result) {;
-    this.deploymentData.deployments.push({;
-      "timestamp": new Date().toISOString(),
-      "environment": 'production',
-      "success": result.success,
-      "commit": execSync('git log -1 --format=%H', { "encoding": 'utf8' }).trim();
+
+  updateDeploymentData(result) {
+    this.deploymentData.deployments.push({
+      timestamp: new Date().toISOString(),
+      environment: 'production',
+      success: result.success,
+      commit: execSync('git log -1 --format=%H', { encoding: 'utf8' }).trim(),
     });
   }
-;
-  async handleDeploymentError(error) {;
-    console.error('🚨 Deployment "error": ', error.message);
-;
-    // Log error;
-    const errorLog = {;
-      "timestamp": new Date().toISOString(),
-      "error": error.message,
-      "stack": error.stack;
+
+  async handleDeploymentError(error) {
+    console.error('🚨 Deployment error:', error.message);
+
+    // Log error
+    const errorLog = {
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
     };
 
     const errorFile = path.join(

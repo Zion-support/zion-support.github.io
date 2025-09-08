@@ -301,12 +301,18 @@ export default function ForumPostPage() {
             
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-4">
-                <Button variant="outline" size="sm" onClick={handleUpvote} className="flex items-center gap-2">
-                  <ThumbsUp className="h-4 w-4"/>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleUpvote}
+                  className="flex items-center gap-2"><ThumbsUp className="h-4 w-4" />
                   <span>{post.upvotes}</span>
                 </Button>
-                <Button variant="outline" size="sm" onClick={handleDownvote} className="flex items-center gap-2">
-                  <ThumbsDown className="h-4 w-4"/>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleDownvote}
+                  className="flex items-center gap-2"><ThumbsDown className="h-4 w-4" />
                   <span>{post.downvotes}</span>
                 </Button>
               </div>
@@ -319,19 +325,26 @@ export default function ForumPostPage() {
                     </Link>
                   </Button>)}
                 
-                {isAdminOrMod && (<React.Fragment>
-                    <Button variant="ghost" size="sm" onClick={handlePinPost}>
-                      <Pin className="h-4 w-4 mr-1"/>
+                {isAdminOrMod && (
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handlePinPost}><Pin className="h-4 w-4 mr-1" />
                       {post.isPinned ? "Unpin" : "Pin"}
                     </Button>
-                    <Button variant="ghost" size="sm" onClick={handleLockPost}>
-                      <Lock className="h-4 w-4 mr-1"/>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleLockPost}><Lock className="h-4 w-4 mr-1" />
                       {post.isLocked ? "Unlock" : "Lock"}
                     </Button>
                   </React.Fragment>)}
                 
-                <Button variant="ghost" size="sm" onClick={handleReportPost}>
-                  <Flag className="h-4 w-4 mr-1"/>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleReportPost}><Flag className="h-4 w-4 mr-1" />
                   Report
                 </Button>
               </div>

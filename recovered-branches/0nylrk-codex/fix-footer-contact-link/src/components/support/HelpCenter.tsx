@@ -1,18 +1,3 @@
-
-<<<<<<< HEAD
-
-  
-  const handleArticleSelect = $2;
-  const handleBackToCategories = () => {
-
-=======
-import { Search } from "lucide-react";
-export default function HelpCenter() {};
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);"
-  const [searchQuery, setSearchQuery] = useState("");
-
-
 import React, { useState } from "react";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
@@ -27,20 +12,22 @@ export default function HelpCenter() {;
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");"
-import React, { useState } from "react","
-import { Input } from "@/components/ui/input","
-import { Button } from "@/components/ui/button","
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
-import { HelpCategoryList } from "./HelpCategoryList","
-import { HelpArticleList } from "./HelpArticleList","
-import { HelpArticleView } from "./HelpArticleView","
-import { HELP_CATEGORIES } from "./help-content","
-import { AppLayout } from "@/layout/AppLayout","
-import { Search } from "lucide-react",export default function HelpCenter() {"
-  }
-  const handleCategorySelect = ("categoryId": string) => {
-    }
+  const [searchQuery, setSearchQuery] = useState("");
+import React, { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { HelpCategoryList } from "./HelpCategoryList",
+import { HelpArticleList } from "./HelpArticleList",
+import { HelpArticleView } from "./HelpArticleView",
+import { HELP_CATEGORIES } from "./help-content",
+import { AppLayout } from "@/layout/AppLayout",
+import { Search } from "lucide-react",export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
     setSelectedArticle(null)
   },
@@ -49,9 +36,7 @@ import { Search } from "lucide-react",export default function HelpCenter() {"
     setSelectedArticle(articleId)
   },
   
-  const handleArticleSelect = $2;
   const handleBackToCategories = () => {
->>>>>>> origin/cursor/delete-old-data-records-6bba
     setSelectedCategory(null),
     setSelectedArticle(null)
   },
@@ -59,34 +44,7 @@ import { Search } from "lucide-react",export default function HelpCenter() {"
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
-
-import React, { useState } from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {HelpCategoryList} from "./HelpCategoryList";
-import {HelpArticleList} from "./HelpArticleList";
-import {HelpArticleView} from "./HelpArticleView";
-import {HELP_CATEGORIES} from "./help-content";
-import {AppLayout} from "@/layout/AppLayout";
-import {Search} from "lucide-react";
-export default function HelpCenter() {;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-
-
-<<<<<<< HEAD
-
-  return (
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
@@ -99,11 +57,6 @@ export default function HelpCenter() {;
             team.
           </p>
 
-<<<<<<< HEAD
-
-=======
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <div className="relative mb-8">
             <Input"
               placeholder="Search for help articles..."
@@ -114,31 +67,12 @@ export default function HelpCenter() {;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
 
-<<<<<<< HEAD
-
-                  categories={HELP_CATEGORIES}
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-
-
-=======
-"
-          <Tabs defaultValue="articles" className="mb-8">"
-            <TabsList className="w-full grid grid-cols-3 mb-6">"
-              <TabsTrigger value="articles">Articles</TabsTrigger>"
-              <TabsTrigger value="faq">FAQ</TabsTrigger>"
+          <Tabs defaultValue="articles" className="mb-8">
+            <TabsList className="w-full grid grid-cols-3 mb-6">
+              <TabsTrigger value="articles">Articles</TabsTrigger>
+              <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-import { Input } from "@/components/ui/input";"
-import { Button } from "@/components/ui/button",;"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
-import { HelpCategoryList } from "./HelpCategoryList",;"
-import { HelpArticleList } from "./HelpArticleList",;"
-import { HelpArticleView } from "./HelpArticleView",;"
-import { HELP_CATEGORIES } from "./help-content",;"
-import { AppLayout } from "@/layout/AppLayout",;"
-import { Search } from "lucide-react",;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -149,12 +83,6 @@ import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { Search } from "lucide-react",;
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
@@ -164,20 +92,16 @@ export default function HelpCenter() {;
     setSelectedArticle(null);
   },;
   const handleArticleSelect = (articleId: string) => {;
-<<<<<<< HEAD
-
     setSelectedArticle(articleId);
   },;
   const handleBackToCategories = () => {;
     setSelectedCategory(null),;
-
+    setSelectedArticle(null)
+};
   const handleBackToArticles = () => {;
     setSelectedArticle(null)
 };
   return (;
-
-=======
-
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto">;
@@ -187,74 +111,25 @@ export default function HelpCenter() {;
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
           </p>;
-
           ;
           <div className="relative mb-8">;
             <Input;
               placeholder="Search for help articles...";
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-
-              onChange={(e) => setSearchQuery(e.target.value)}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
               className="pl-10";
             />;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
           </div>;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+          ;
           <Tabs defaultValue="articles" className="mb-8">;
             <TabsList className="w-full grid grid-cols-3 mb-6">;
               <TabsTrigger value="articles">Articles</TabsTrigger>;
               <TabsTrigger value="faq">FAQ</TabsTrigger>;
               <TabsTrigger value="contact">Contact Us</TabsTrigger>;
             </TabsList>;
-<<<<<<< HEAD
-
-
-=======
-
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
-                <HelpCategoryList;
-                  categories={HELP_CATEGORIES} ;
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
-                    ← Back to Articles;
-
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
-                </>;
-              )}
-
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES} 
-
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-
-                  onCategorySelect={handleCategorySelect}
-
-
-              
-
-
-              
->>>>>>> origin/cursor/delete-old-data-records-6bba
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -264,81 +139,13 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
-<<<<<<< HEAD
-
-
-
-=======
                   <HelpArticleList
-                    categoryId={selectedCategory}
-                    onArticleSelect={handleArticleSelect}
-                    searchQuery={searchQuery}
-                  />
-                </>
-              )}
-              {selectedArticle && (
-                <>
-                  <Button
-                    variant="ghost"
-                    onClick={handleBackToArticles}
-              {selectedCategory && !selectedArticle && (;
-                <>;
-                  <Button
-                    variant="ghost"
-                    onClick={handleBackToCategories}
-                    className="mb-4">;
-                    ← All Categories;
-                  </Button>;
-
-                  <HelpArticleList 
-
-                  <HelpArticleList
-            ;
-            <TabsContent value="articles">;
-              {!selectedCategory && !selectedArticle && (;
-                <HelpCategoryList ;
-                  categories={HELP_CATEGORIES} ;
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />;
-              )}
-              ;
-              {selectedCategory && !selectedArticle && (;
-                <>;
-                  <Button;
-                    variant="ghost";
-                    onClick={handleBackToCategories}
-                    className="mb-4";
-                  >;
-                    ← All Categories;
-                  </Button>;
-                  <HelpArticleList ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
                 </>;
-<<<<<<< HEAD
-
-=======
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
->>>>>>> origin/cursor/delete-old-data-records-6bba
               )}
-
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
-<<<<<<< HEAD
-
-              
-
 
               {selectedArticle && (
                 <>
@@ -347,57 +154,87 @@ export default function HelpCenter() {;
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-medium text-zion-cyan mb-2">
+                      How does the AI matching work?
+                    </h3>
+                    <p className="text-zion-slate-light">
+                      Our AI matching algorithm analyzes your requirements and
+                      preferences to match you with the most compatible talent                      experience, availability, and past performance to ensure
+                      optimal results.
+                    </p>
+                  </div>
 
+                  <div>
+                    <h3 className="font-medium text-zion-cyan mb-2">
+                      How do I hire someone on Zion?
+                    </h3>
+                    <p className="text-zion-slate-light">
+                      To hire talent on Zion, post a job or project, review
+                      matches or applications, interview candidates through our
+                      platform, and extend an offer. Our secure payment system
+                      protects both parties throughout the engagement.
+                    </p>
+                  </div>
 
+                  <div>
+                    <h3 className="font-medium text-zion-cyan mb-2">
+                      What are the payment terms?
+                    </h3>
+                    <p className="text-zion-slate-light">
+                      Zion offers flexible payment options including
+                      milestone-based payments, hourly rates, or fixed project
+                      fees. Funds are held in escrow until deliverables are
+                      approved, ensuring security for both clients and talent.
+                    </p>
+                  </div>
 
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    ← Back to Articles;
-
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
-                </>;
-              )}
-
-
-<<<<<<< HEAD
-
-
-                    className="mb-4"
-                  >
-                    ← Back to Articles
-                  </Button>
-                  <HelpArticleView articleId={selectedArticle} />
-                </>
-              )}
-            </TabsContent>
-
-<TabsContent value="faq">
-
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">
-                <h2 className="text-xl font-semibold mb-4">
-                  Frequently Asked Questions
-                </h2>
-
-                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                  <div>
+                    <h3 className="font-medium text-zion-cyan mb-2">
+                      How do I contact support?
+                    </h3>
+                    <p className="text-zion-slate-light">
+                      You can reach our support team through the chat widget at
+                      the bottom right of any page, by emailing
+                      support@ziontechgroup.com, or by scheduling a call with
+                      our team through the Contact tab.
                     </p>
                   </div>
                 </div>
               </div>
             </TabsContent>
 
-<<<<<<< HEAD
+            <TabsContent value="contact">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+                <div className="bg-zion-blue-light/20 rounded-lg p-6">
+                  <h2 className="text-xl font-semibold mb-4">
+                    Contact Support
+                  </h2>
+                  <p className="text-zion-slate-light mb-4">
+                    Our support team is available 24/7 to assist you with any
+                    questions or issues.
+                  </p>
 
+                  <div className="space-y-4">
+                    <div className="flex items-center">
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 text-zion-purple"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                      </div>
                       <a
                         href="mailto:support@ziontechgroup.com"
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
-
+                      </Link>                    </div>
 
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -416,12 +253,10 @@ export default function HelpCenter() {;
                     </div>
                   </div>
 
-
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
-
 
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
@@ -431,7 +266,6 @@ export default function HelpCenter() {;
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
-
 
                   <form className="space-y-4">
                     <div>
@@ -447,7 +281,6 @@ export default function HelpCenter() {;
                       />
                     </div>
 
-
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -459,13 +292,16 @@ export default function HelpCenter() {;
         </div>
       </div>
     </AppLayout>
-
-
+  );
+}
     </AppLayout>);
 }    </AppLayout>);
 }
-
-const [selectedArticle, setSelectedArticle] = useState<string | null> (null);"
+    </AppLayout>;
+  );}
+ export default function HelpCenter () {
+  const [selectedCategory, setSelectedCategory] = useState<string | null> (null);
+const [selectedArticle, setSelectedArticle] = useState<string | null> (null);
 const [searchQuery, setSearchQuery] = useState ("");
 const handleCategorySelect = (categoryId: string) => {}
 
@@ -541,4 +377,4 @@ const handleBackToArticles = () => {}
 }
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

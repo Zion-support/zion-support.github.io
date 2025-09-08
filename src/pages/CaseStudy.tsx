@@ -11,15 +11,55 @@ export default function CaseStudy() {
     if (!study) {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
-      </div>)}
-    return (<React.Fragment>
-      <SEO title={study.title} description={study.excerpt}/>
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto max-w-3xl">
-          <Button variant="outline" className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild>
-            <Link to="/case-studies">
-              <ArrowLeft className="mr-2 h-4 w-4"/> Back to Case Studies
-            </Link>
+      </div>
+    )
+  }
+  return (
+    <>
+      <SEO title={study.title} description={study.excerpt} />
+      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
+        <div className='container mx-auto max-w-3xl'>
+          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
+          <Breadcrumb className='mb-4 text-sm text-muted-foreground'>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href='/'>Home</Link>                </BreadcrumbLink>          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
+          <Breadcrumb className="mb-4 text-sm text-muted-foreground">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/">Home</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href='/case-studies'>Case Studies</Link>                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title}</span>                  <Link href="/case-studies">Case Studies</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
+                  <span>{study.title}</span>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          <Button
+            variant='outline'
+            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+            asChild
+          >
+            <Link href='/case-studies'>
+              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies            </Link>            variant="outline"
+            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            asChild><Link href="/case-studies">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
           </Button>
           <img loading="lazy" src={study.companyLogo} alt={`${study.company} logo`} className="h-12 mb-4"/>
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>

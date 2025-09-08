@@ -1,6 +1,17 @@
-<<<<<<< HEAD
 
 
+// Jest.setup utility
+export const Jest.setup = () => {
+  // Implementation here
+  return null;
+};
+
+
+
+// Mock global objects that might not be available in test environment
+
+
+    matches: false,
     media: query,
     onchange: null,
     addListener: jest && jest.fn(), // deprecated;
@@ -29,14 +40,16 @@ Object.define_property (window, 'match_media', {
   })),
 });
 
-
-
 global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
 
   observe: jest && jest.fn(),
   unobserve: jest && jest.fn(),
   disconnect: jest && jest.fn(),
 
+}));
+
+const originalConsoleError = console && console.error;
+const originalConsoleWarn = console && console.warn;
 
 
 beforeAll(() => {
@@ -48,7 +61,9 @@ beforeAll(() => {
       return;
     }
 
-
+    originalConsoleError && originalConsoleError.call(console, ...args);
+  };
+  console && console.warn = (...args: any[]) => {
 
     if (
       typeof args[0] === 'string' &&
@@ -58,15 +73,12 @@ beforeAll(() => {
     }
 
 
-
 });
 afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
 
-
 });
-
 ;
 
 // Mock IntersectionObserver;
@@ -142,4 +154,3 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
->>>>>>> origin/cursor/delete-old-data-records-6bba

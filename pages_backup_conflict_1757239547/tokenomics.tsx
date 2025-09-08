@@ -420,9 +420,7 @@ const { url } = await res.json();
                   <button
                     key={s}
                     onClick={() => setActiveSection(s)}
-                    className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}
-                  >
-                    {s}
+                    className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}
                   </button>
                 ))}
               </div>

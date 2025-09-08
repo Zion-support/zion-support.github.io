@@ -1,82 +1,3 @@
-<<<<<<< HEAD
-
-
-
-=======
-
-
-import React from 'react';'
-import { X  } from 'lucide-react';'
-
-export type SmartNudgeBannerProps = any;
-export type SmartNudgeBannerProps = {
-  }
-  "role": 'talent' | 'client';'
-
-  user_id?: string | null;
-  "message": string;() => `zion-nudge-${role}-${userId ?? 'anon'}`,[role, userId];)const [hidden, setHidden] = React.useState<boolean>(false)React.useEffect(() => {`}
-try {const v =;
-        }
-        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;'
-      setHidden(v = == 'dismissed')} catch ;'
-}
-
-export type SmartNudgeBannerProps = {"role": 'talent' | 'client',userId?: string | null;'
-  }
-  "message": string;
-
-
-}
-
-export default function SmartNudgeBanner() {
-}
-const storageKey = React.useMemo(;
-    () => `zion-nudge-${role}-${userId ?? 'anon'}``
-
-import React from 'react';
-import { X } from 'lucide-react';
-export type SmartNudgeBannerProps = $2;
-  userId?: string | null,
-  message: string},
-
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
-  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]),
-  const [hidden, setHidden] = React.useState<boolean>(false),
-
-  React.useEffect(() => {
-    try {
-      const v = $2;
-      setHidden(v === 'dismissed')
-    } catch {}
-  }, [storageKey]),
-
-  const dismiss = React.useCallback(() => {
-    setHidden($2);
-    try {
-      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
-    } catch {}
-  }, [storageKey]),
-
-  if (hidden) return null,
-
-  return (
-    <div className="relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4">
-      <button onClick={dismiss} aria-label="Dismiss" className="absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark: hover: bg-white/10">
-        <X size={16} />
-      </button>
-      <div className="text-sm">
-        {message}
-      </div>
-    </div>
-  );
-
-);
-}
-    [role, userId]
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [hidden, setHidden] = React.useState<boolean>(false);
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -138,38 +59,10 @@ const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;}
       setHidden(v === 'dismissed');}
 
-=======
-        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    } catch {}
-  }, [storageKey]);
 
-const dismiss = React && React.useCallback(() => {;
-    setHidden(true);
-
-    try {
-if (typeof window !== 'undefined')}
-        localStorage.setItem(storageKey, 'dismissed');}
-    } catch {}
-  }, [storageKey]);
-  if (hidden) return null;
-<<<<<<< HEAD
-=======
-return (;
-<div className='relative rounded-xl border border-cyan-300/40 'dark': border-cyan-400/30 bg-cyan-50/60 'dark':bg-cyan-900/20 p-4'>'
-      <button,
-onClick={dismiss}
-        aria-label='Dismiss''
-        className='absolute top-2 right-2 p-1 rounded 'hover':bg-black/5 'dark':'hover':bg-white/10''
-      >
-        <X size={16} />
-      </button>
-      <div className='text-sm'>{messag,'
-}</div>
-    </div>
-  );
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  role: 'talent' | 'client';
+  user_id?: string | null;
+  message: string;
 
 
 <<<<<<< HEAD
@@ -193,28 +86,8 @@ function SmartNudgeBanner() {}
   user_id?: string | null;
   message: string;
 
-      <button;
-        on_click={dismiss}'
-        aria - label='Dismiss';'
-        className='absolute top - 2 right - 2 p - 1 rounded hover:bg - black / 5 dark:hover:bg - white / 10';
-      >;
-        <X size={16} />;
-      </button>;'
-      <div className='text - sm'>{message}</div>;
-    </div>);        <X size={16} />;
-      </button>;
-      <div className="text-sm">;
-        {message}
-      </div>;
-    </div>);
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
-
 
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -244,16 +117,6 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
   }, [storageKey]);
   const dismiss = React.useCallback(() => {
 
-<<<<<<< HEAD
-
-
-=======
-;
-export type SmartNudgeBannerProps = {
-  role: 'talent' | 'client';
-  user_id?: string | null;
-  message: string;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 };
 export default function SmartNudgeBanner(): any ({;
   role,;
@@ -282,36 +145,14 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
         typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');
-<<<<<<< HEAD
 
-
-
-=======
-export type SmartNudgeBannerProps = {
-  role: 'talent' | 'client',
-  userId?: string | null;
-  message: string
-};
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
-  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
-  const [hidden, setHidden] = React.useState<boolean>(false);
-  React.useEffect(() => {
-    try {
-      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed')
->>>>>>> origin/cursor/delete-old-data-records-6bba
     } catch {}
   }, [storageKey]);
+
   const dismiss = React && React.useCallback(() => {;
     setHidden(true);
-<<<<<<< HEAD
 
 
-
-
-
-
-=======
     setHidden(true);
     try {
       if (typeof window !== 'undefined')
@@ -321,19 +162,30 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 
     try {
       if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
-    try {
-if (typeof window !== 'undefined')
-        localStorage.setItem(storageKey, 'dismissed');
->>>>>>> origin/cursor/delete-old-data-records-6bba
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
   return (
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        {message}
+}
+  );
+      <div className='text-sm'>{message}</div>
+    </div>
+
+  );
+
+  );
+
+
+  );
+
+
+
+}
+
+
 }
 ;
 export default /**
@@ -391,7 +243,7 @@ if (return null) {
       <div className='text - sm'>{message}</div>;
     </div>);        <X size={16} />;
       </button>;
-      <div className='text-sm'>;
+      <div className="text-sm">;
         {message}
       </div>;
     </div>)}try {if (typeof window !== 'undefined')localStorage.setItem(storageKey, 'dismissed')} catch {}
@@ -407,7 +259,62 @@ if (return null) {
       <div className='text-sm'>{message}</div>;
     </div>;
     </div>);
-  if (hidden) return null,
+}
+import React from 'react';
+import { X } from 'lucide-react';
+
+export type SmartNudgeBannerProps = {;
+  role: 'talent' | 'client';
+  userId?: string | null;
+  message: string;
+}
+export default function SmartNudgeBanner({
+  role
+  userId
+  message
+}: SmartNudgeBannerProps) {
+  const storageKey = React.useMemo(
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`
+    [role, userId]
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`,
+    [role, userId];
+  );  const [hidden, setHidden] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    try {
+      const v =
+        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
+  role: 'talent' | 'client'
+  userId?: string | null;
+  message: string
+}
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+  role: 'talent' | 'client',;
+  userId?: string | null;
+  message: string
+};
+
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
+  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
+  const [hidden, setHidden] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    try {
+      const v =
+        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed')
+    } catch {}
+  }, [storageKey]);
+  const dismiss = React.useCallback(() => {
+    setHidden(true);
+    try {
+      if (typeof window !== 'undefined')
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}
+
+    } catch {}
+  }, [storageKey]);
+  if (hidden) return null;
 
   return (
     <div className=&quot;relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4&quot;>
@@ -421,34 +328,4 @@ if (return null) {
   )
 
 }
-
-<<<<<<< HEAD
-  return (
-<div className='relative rounded-xl border border-cyan-300/40 dark: border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'    />
-      <button;
-
-=======
-  )
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-onClick={dismiss}
-        aria-label='Dismiss'
-        className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'
-          />
-        <X size={16}    />
-      </button>
-      <div className='text-sm'    />{messag}
-}</div>
-    </div>
   );
-
-<<<<<<< HEAD
-
-
-
-=======
-      <div className='text-sm'    />{messag,}
-}</div>
-    </div>
-  );
->>>>>>> origin/cursor/delete-old-data-records-6bba

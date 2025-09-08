@@ -1,49 +1,25 @@
-
-
-<<<<<<< HEAD
-=======
-declare module '@vitejs/plugin-react-swc' {
-
-  export default function reactSWC(): Plugin
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest / config' {
+  export { define_config } from 'vite';
 }
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  export function resolve(...paths: string[]): string;
+declare module '@vitejs/plugin-react-swc' {
+  import { Plugin } from 'vite';
+  export default function reactSWC(): Plugin
+}
+declare module 'path' {  export function resolve(...paths: string[]): string;
 
   export function join(...paths: string[]): string;
   export function dirname(path: string): string;
 }
 
-<<<<<<< HEAD
-
-declare module '@vitejs/plugin-react - swc' {
-
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 declare module 'lovable-tagger' {;
 
 import {Plugin} from 'vite';
   export function componentTagger(): Plugin
 }
 
-declare module 'lovable-tagger' {
-  import { Plugin } from 'vite';
-  export function componentTagger(): Plugin
-}
-
-;
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-;
-
+;;
 declare module '@vitejs/plugin-react-swc' {;
 
   import { Plugin } from 'vite',;
@@ -109,10 +85,4 @@ declare module 'lovable-tagger' {;'
   export function componentTagger(): Plugin;
 }
 ;
-}
-declare module 'lovable-tagger' {
-  import { Plugin } from 'vite',
-  export function componentTagger(): Plugin
-}
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}}

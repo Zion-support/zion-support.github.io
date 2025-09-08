@@ -155,11 +155,9 @@ export default function EnhancedServicesShowcase2025() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex items-center justify-center mb-6">
-                <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              transition={{ duration: 0.8 }}><div className='flex items-center justify-center mb-6'>
+                <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />
+                <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
                   2025 Innovation Showcase
                 </h1>
                 <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
@@ -356,11 +354,14 @@ export default function EnhancedServicesShowcase2025() {
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }} className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your search criteria or filters</p>
-              </motion.div>
+                animate={{ opacity: 1 }}
+                className='text-center py-16'><div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-semibold text-white mb-2'>
+                  No services found
+                </h3>
+                <p className='text-gray-400'>
+                  Try adjusting your search criteria or filters
+                </p>              </motion.div>
             )}
           </div>
         </section>
@@ -403,16 +404,11 @@ export default function EnhancedServicesShowcase2025() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline">
-                  <span className="relative">Start Your Transformation</span>
-                  <Rocket className="ml-2 w-6 h-6" />
-                </a>
-                <a 
-                  href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline">
-                  <span className="relative">View Pricing</span>
-                  <DollarSign className="ml-2 w-6 h-6" />
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+                <a
+                  href='/contact'
+                  className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'><span className='relative'>Start Your Transformation</span>
+                  <Rocket className='ml-2 w-6 h-6' />
                 </a>
               </div>
             </motion.div>

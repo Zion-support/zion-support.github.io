@@ -1,6 +1,6 @@
-
-import React from \'react\'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection() { import { Link } from \'react-router-dom\'; return null} ,{}export {}const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection() { import { Link } from "react-router-dom"; return null} ,{}export {}''";"
-import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection() { import { Link } from 'react-router-dom'; return null} ,{}export {}const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection() { import { Link } from "react-router-dom"; return null} ,{}export {}''";"
-import React from \'react\'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection() { import { Link } from \'react-router-dom\';'
-const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection() { import { Link } from "react-router-dom"; return null} ,{}export {}'';'
-ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
+import React from \'react\'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from \'react-router-dom\'
+const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from "react-router-dom"; return null} ,; {}; export {};''
+=======
+import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
+>>>>>>> origin/main

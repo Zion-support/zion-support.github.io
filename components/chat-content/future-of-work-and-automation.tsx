@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 
   return (
     <div className='container mx-auto px-4 py-10'>;'
@@ -9,19 +7,15 @@
         Article coming soon.;
       </p>;
     </div>;
-
-}
-
-}
-
-import React from 'react';
-
-
-}
+  );export default function FutureOfWorkAndAutomationPage() {;
+  return (
+    <div className="container mx-auto px-4 py-10">;
+      <h1 className="text-2xl font-semibold">Future of Work and Automation</h1>;
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>;
+    </div>;
+  );
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
 export default function FutureOfWorkAndAutomationPage() {
   return (
@@ -42,16 +36,38 @@ function FutureOfWorkAndAutomationPage() {return (<div className='container mx -
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Future of Work and Automation</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    </div>
+
+export default /**
+ * FutureOfWorkAndAutomationPage - Function description
+ */
+function FutureOfWorkAndAutomationPage() {
+  return (
+    <div className='container mx - auto px - 4 py - 10'>;
+      <h1 className='text - 2xl font - semibold'>Future of Work and Automation</h1>;
+      <p className='mt - 2 text - gray - 600 dark:text - gray - 300'>;
+        Article coming soon.;
+      </p>;
+    </div>);export default /**
+ * FutureOfWorkAndAutomationPage - Function description
+ */
+function FutureOfWorkAndAutomationPage() {
+  return (
+    <div className="container mx - auto px-4 py-10">;
+      <h1 className="text-2xl font-semibold">Future of Work and Automation</h1>;
+      <p className="mt - 2 text - gray - 600 dark: text-gray-300">Article coming soon.</p>;
+    </div>);
+}
+
+
+
+
+
+
   )
 }
 
 <<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function FutureOfWorkAndAutomationPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -93,6 +109,10 @@ export default function FutureOfWorkAndAutomationPage() {
       <h1 className="text-2xl font-semibold">Future of Work and Automation</h1>
 
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
+
+    </div>
+  );
+
     </div>
   );
 
@@ -104,30 +124,4 @@ export default function FutureOfWorkAndAutomationPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    </div>
-  );
-
-<<<<<<< HEAD
-=======
-
-
-    </div>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-
-
-<<<<<<< HEAD
-=======
-
-    </div>
-  );
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}

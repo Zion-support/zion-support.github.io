@@ -1,100 +1,193 @@
-import { PerformanceMetrics } from '../types';
-export const measurePerformance = $2;
-    const paintEntries = performance.getEntriesByType($2);
-    const fcp = paintEntries.find($2);
-    const lcp = $2;
-    const cls = performance
-      .getEntriesByType('layout-shift')
-      .reduce((acc, entry) => {
-        return acc + (entry as any).value
-      }, 0),
+// Performance optimization utilities
 
-    const fid = $2;
-    return {
-      loadTim: navigation.loadEventEnd - navigation.loadEventStart,
-      firstContentfulPain: fcp ? fcp.startTim: 0,
-      largestContentfulPain: lcp ? lcp.startTim: 0,
-      cumulativeLayoutShif: cls,
-      firstInputDela: fid ? fid.processingStart - fid.startTim: 0}
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+// Image lazy loading utility
+export const lazyLoadImage = (img: HTMLImageElement, src: string): void => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const image = entry.target as HTMLImageElement;
+          image.src = src;
+          image.classList.remove('lazy');
+          observer.unobserve(image);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  
+  observer.observe(img);
+};
+
+// Preload critical resources
+export const preloadResource = (href: string, as: string): void => {
+  if (typeof window === 'undefined') return;
+  
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+  document.head.appendChild(link);
+};
+
+// Prefetch resources for better navigation
+export const prefetchResource = (href: string): void => {
+  if (typeof window === 'undefined') return;
+  
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.href = href;
+  document.head.appendChild(link);
+};
+
+// Bundle size analyzer
+export const analyzeBundleSize = (): void => {
+  if (process.env.NODE_ENV !== 'development') return;
+  
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      console.log('Bundle Analysis:', {
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalTime: navigation.loadEventEnd - navigation.fetchStart
+      });
+    }
+  }
+};
+
+// Memory usage monitor
+export const getMemoryUsage = (): any => {
+  if (typeof window === 'undefined' || !('memory' in performance)) {
+    return null;
+  }
+  
+  const memory = (performance as any).memory;
+  return {
+    used: Math.round(memory.usedJSHeapSize / 1048576), // MB
+    total: Math.round(memory.totalJSHeapSize / 1048576), // MB
+    limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
+  };
+};
+
+// Critical CSS inliner
+export const inlineCriticalCSS = (css: string): void => {
+  if (typeof document === 'undefined') return;
+  
+  const style = document.createElement('style');
+  style.textContent = css;
+  document.head.insertBefore(style, document.head.firstChild);
+};
+
+// Service Worker registration for caching
+export const registerServiceWorker = async (): Promise<void> => {
+  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
+  
+  try {
+    const registration = await navigator.serviceWorker.register('/sw.js');
+    console.log('Service Worker registered:', registration);
   } catch (error) {
-    console.warn($2);
-    return null
+    console.error('Service Worker registration failed:', error);
   }
-},
+};
 
-export const getPerformanceScore = $2;
-  score: {
-    loadTim: 'good' | 'needs-improvement' | 'poor',
-    firstContentfulPain: 'good' | 'needs-improvement' | 'poor',
-    largestContentfulPain: 'good' | 'needs-improvement' | 'poor',
-    cumulativeLayoutShif: 'good' | 'needs-improvement' | 'poor',
-    firstInputDela: 'good' | 'needs-improvement' | 'poor'
+// Resource hints for better performance
+export const addResourceHints = (): void => {
+  if (typeof document === 'undefined') return;
+  
+  // DNS prefetch for external domains
+  const dnsPrefetchDomains = [
+    'fonts.googleapis.com',
+    'fonts.gstatic.com',
+    'images.unsplash.com'
+  ];
+  
+  dnsPrefetchDomains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'dns-prefetch';
+    link.href = `//${domain}`;
+    document.head.appendChild(link);
+  });
+};
+
+// Performance observer for Core Web Vitals
+export const observeWebVitals = (callback: (metric: any) => void): void => {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+  
+  const observer = new PerformanceObserver((list) => {
+    list.getEntries().forEach(callback);
+  });
+  
+  observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+};
+
+// Image optimization helper
+export const getOptimizedImageUrl = (
+  src: string,
+  width: number,
+  height?: number,
+  quality: number = 75
+): string => {
+  // This would typically use a service like Cloudinary, ImageKit, or Next.js Image Optimization
+  const params = new URLSearchParams({
+    w: width.toString(),
+    q: quality.toString(),
+    ...(height && { h: height.toString() })
+  });
+  
+  return `${src}?${params.toString()}`;
+};
+
+// Bundle splitting helper
+export const loadComponent = async <T>(
+  importFn: () => Promise<{ default: T }>
+): Promise<T> => {
+  try {
+    const module = await importFn();
+    return module.default;
+  } catch (error) {
+    console.error('Failed to load component:', error);
+    throw error;
   }
-} => {
-  const thresholds = {
-    loadTim: { goo: 2000, needsImprovemen: 4000},
-    firstContentfulPain: { goo: 1000, needsImprovemen: 2000},
-    largestContentfulPain: { goo: 1500, needsImprovemen: 3000},
-    cumulativeLayoutShif: { goo: 0.05, needsImprovemen: 0.1 },
-    firstInputDela: { goo: 50, needsImprovemen: 100}
-  },
+};
 
-  const getScore = $2;
-    threshol: { goo: number, needsImprovemen: number},
-    reverse = $2;
-    if (compareValue <= 1) return 'good',
-    if (
-      compareValue <=
-      (reverse
-        ? threshold.needsImprovement / threshold.goo: threshold.needsImprovement / threshold.good)
-    )
-      return 'needs-improvement',
-    return 'poor'
-  },
-
-  const scores = {
-    loadTim: getScore($2);
-    firstContentfulPain: getScore($2);
-    largestContentfulPain: getScore($2);
-    cumulativeLayoutShif: getScore($2);
-    firstInputDela: getScore(
-      metrics.firstInputDelay,
-      thresholds.firstInputDelay
-    )
-  },
-
-  const poorCount = $2;
-  const needsImprovementCount = $2;
-  let: overall: 'good' | 'needs-improvement' | 'poor',
-  if (poorCount > 0) {
-    overall = 'poor'
-  } else if (needsImprovementCount > 0) {
-    overall = 'needs-improvement'
-  } else {
-    overall = 'good'
-  }
-
-  return { overall, scores }
-},
-
-export const logPerformanceMetrics = $2;
-  label = 'Performance Metrics'
-) => {
-  console.group($2);
-  console.log('Load: Time: ', `${metrics.loadTime.toFixed(2)}ms`),
-  console.log(
-    'First Contentful: Paint: ',
-    `${metrics.firstContentfulPaint.toFixed(2)}ms`
-  ),
-  console.log(
-    'Largest Contentful: Paint: ',
-    `${metrics.largestContentfulPaint.toFixed(2)}ms`
-  ),
-  console.log(
-    'Cumulative Layout: Shift: ',
-    metrics.cumulativeLayoutShift.toFixed(4)
-  ),
-  console.log('First Input: Delay: ', `${metrics.firstInputDelay.toFixed(2)}ms`),
-  console.groupEnd()
-},
-
+export default {
+  debounce,
+  throttle,
+  lazyLoadImage,
+  preloadResource,
+  prefetchResource,
+  analyzeBundleSize,
+  getMemoryUsage,
+  inlineCriticalCSS,
+  registerServiceWorker,
+  addResourceHints,
+  observeWebVitals,
+  getOptimizedImageUrl,
+  loadComponent
+};

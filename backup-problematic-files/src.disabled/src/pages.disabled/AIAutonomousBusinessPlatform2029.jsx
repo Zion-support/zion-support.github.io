@@ -10,8 +10,4 @@ const AIAutonomousBusinessPlatform2029 = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default AIAutonomousBusinessPlatform2029;

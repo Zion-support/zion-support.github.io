@@ -61,8 +61,3 @@ export default function Digitaltwin({ }: DigitaltwinProps) {
 =======
   );
 
-}
-
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

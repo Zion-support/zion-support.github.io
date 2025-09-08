@@ -26,11 +26,30 @@ import { SkipForward, Volume2, VolumeX, Accessibility, Sun, Moon   } from 'lucid
   "voiceNavigation": boolean;
   "toggleVoiceNavigation": () => void;
 }
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null)export const useAccessibility = ("props": any) => {const context = useContext(AccessibilityContext)';'
-  }
-  if (!context) {';';export const useAccessibility = ("props": any) => {const context = useContext(AccessibilityContext)if (!context) {export const useAccessibility = ("props": any) => {const context = useContext(AccessibilityContext)if (!context) {throw new Error('useAccessibility must be used within an AccessibilityProvider')"}"
-  return context;
-}interface AccessibilityProviderProps  {"children": "ReactNod e;"}export const "AccessibilityProvider": "React.FC<AccessibilityProviderProps> = ({ children "}) => {interface AccessibilityProviderProps  {"children": ReactNod e;"
+const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
+export const useAccessibility = (props: any) => {
+  const context = useContext(AccessibilityContext);';
+  if (!context) {';';
+;
+export const useAccessibility = (props: any) => {;
+  const context = useContext(AccessibilityContext);
+  if (!context) {;
+export const useAccessibility = (props: any) => {
+  const context = useContext(AccessibilityContext);
+  if (!context) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+  "}
+  return context
+};
+;
+interface AccessibilityProviderProps {;
+  "children": "ReactNod e;
+;
+"}
+;
+export const "AccessibilityProvider": "React.FC<AccessibilityProviderProps> = ({ children "}) => {;
+interface AccessibilityProviderProps {
+  children: ReactNod e;
 }
 export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({ children }) => {const [highContrast, setHighContrast] = useState<any>(false)const [reducedMotion, setReducedMotion] = useState<any>(false)const [fontSize, setFontSize] = useState<any>(16)const [showSkipLinks, setShowSkipLinks] = useState<any>(false)const [voiceNavigation, setVoiceNavigation] = useState<any>(false)// Load accessibility preferences from localStorage';'
   }
@@ -72,9 +91,46 @@ export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({ 
     root.style.fontSize = `${fontSize}px`;`  }, [highContrast, reducedMotion, fontSize])// Keyboard navigation support;
   useEffect(() => {const handleKeyDown = ("props": "any) => {// Show skip links on Tab press;"
       }
-      if (event.key === 'Tab') {// Keyboard navigation support;'
-  }
-  useEffect(() => {const handleKeyDown = ("props": any) => {// Show skip links on Tab press;
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+  const toggleHighContrast = (props: any) => {
+    const newValue = !highContrast;';
+    setHighContrast(newValue);';';
+    localStorage.setItem('zion-high-contrast', newValue.toString())
+};
+  const toggleReducedMotion = (props: any) => {
+    const newValue = !reducedMotion;';
+    setReducedMotion(newValue);';';
+    localStorage.setItem('zion-reduced-motion', newValue.toString())
+};
+  const increaseFontSize = (props: any) => {
+    const newSize = Math.min(fontSize + 2, 24);';
+    setFontSize(newSize);';';
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
+  const decreaseFontSize = (props: any) => {
+    const newSize = Math.max(fontSize - 2, 12);';
+    setFontSize(newSize);';';
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
+  const resetFontSize = (props: any) => {';
+    setFontSize(16);';';
+    localStorage.setItem('zion-font-size', '16')
+};
+  const toggleVoiceNavigation = (props: any) => {
+    const newValue = !voiceNavigation;';
+    setVoiceNavigation(newValue);';';
+;
+  // Keyboard navigation support;
+  useEffect(() => {;
+    const handleKeyDown = (props: any) => {;
+      // Show skip links on Tab press;
+      if (event.key === 'Tab') {;
+        setShowSkipLinks(true);
+        setTimeout(() => setShowSkipLinks(false), 5000);
       }
       if (event.key === 'Tab') {setShowSkipLinks(true)setTimeout(() => setShowSkipLinks(false)", 5000)}"
       // High contrast toggle (Alt + H)if (event.altKey && event.key === 'h') {event.preventDefault()toggleHighContrast()}'
@@ -103,15 +159,86 @@ export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({ 
     setVoiceNavigation(newValue)';';// Keyboard navigation support;'
   useEffect(() => {const handleKeyDown = ("props": any) => {// Show skip links on Tab press;
       }
-      if (event.key === 'Tab') {setShowSkipLinks(true)setTimeout(() => setShowSkipLinks(false), 5000)}// High contrast toggle (Alt + H)if (event.altKey && event.key === 'h') {event.preventDefault()toggleHighContrast()}// Font size controls (Alt + Plus/Minus)if (event.altKey && event.key === '+') {event.preventDefault()increaseFontSize()}'
-      if (event.altKey && event.key === '-') {event.preventDefault()decreaseFontSize()}'
-    }document.addEventListener('keydown', handleKeyDown)return () => document.removeEventListener('keydown', handleKeyDown)}, [])const toggleHighContrast = ("props": "any) => {const toggleHighContrast = ("props": any) => {const newValue = !highContrast;"
-    }
-    setHighContrast(newValue)localStorage.setItem('zion-high-contrast'", newValue.toString())}const toggleReducedMotion = ("props": "any) => {const toggleReducedMotion = ("props": any) => {const newValue = !reducedMotion;"
-    }
-    setReducedMotion(newValue)localStorage.setItem('zion-reduced-motion'", newValue.toString())}const increaseFontSize = ("props": "any) => {const newSize = Math.min(fontSize + 2", 24)setFontSize(newSize)localStorage.setItem('zion-font-size', newSize.toString())}const decreaseFontSize = ("props": "any) => {const newSize = Math.max(fontSize - 2", 12)setFontSize(newSize)localStorage.setItem('zion-font-size', newSize.toString())}const resetFontSize = ("props": "any) => {const increaseFontSize = ("props": any) => {const newSize = Math.min(fontSize + 2, 24)setFontSize(newSize)localStorage.setItem('zion-font-size', newSize.toString())}const decreaseFontSize = ("props": any) => {const newSize = Math.max(fontSize - 2, 12)setFontSize(newSize)localStorage.setItem('zion-font-size', newSize.toString())}const resetFontSize = ("props": any) => {setFontSize(16)localStorage.setItem('zion-font-size'", '16')}const toggleVoiceNavigation = ("props": "any) => {const toggleVoiceNavigation = ("props": any) => {const newValue = !voiceNavigation;"
-    }
-    setVoiceNavigation(newValue)localStorage.setItem('zion-voice-navigation', newValue.toString())localStorage.setItem('zion-voice-navigation'", newValue.toString())}const value = {highContrast,toggleHighContrast,reducedMotion,toggleReducedMotion,fontSize,increaseFontSize,decreaseFontSize,resetFontSize,showSkipLinks,setShowSkipLinks,voiceNavigation,toggleVoiceNavigation}return (<AccessibilityContext.Provider value={value}>;"
+;
+      // Font size controls (Alt + Plus/Minus);
+      if (event.altKey && event.key === '+') {;
+        event.preventDefault();
+        increaseFontSize();
+      }
+      if (event.altKey && event.key === '-') {;
+        event.preventDefault();
+        decreaseFontSize();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+;
+  const toggleHighContrast = ("props": "any) => {;
+  const toggleHighContrast = (props: any) => {
+    const newValue = !highContrast;
+    setHighContrast(newValue);
+    localStorage.setItem('zion-high-contrast'", newValue.toString())
+};
+;
+  const toggleReducedMotion = ("props": "any) => {;
+  const toggleReducedMotion = (props: any) => {
+    const newValue = !reducedMotion;
+    setReducedMotion(newValue);
+    localStorage.setItem('zion-reduced-motion'", newValue.toString())
+};
+;
+  const increaseFontSize = ("props": "any) => {;
+    const newSize = Math.min(fontSize + 2", 24);
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
+;
+  const decreaseFontSize = ("props": "any) => {;
+    const newSize = Math.max(fontSize - 2", 12);
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
+;
+  const resetFontSize = ("props": "any) => {;
+  const increaseFontSize = (props: any) => {
+    const newSize = Math.min(fontSize + 2, 24);
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
+  const decreaseFontSize = (props: any) => {
+    const newSize = Math.max(fontSize - 2, 12);
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
+  const resetFontSize = (props: any) => {
+    setFontSize(16);
+    localStorage.setItem('zion-font-size'", '16')
+};
+;
+  const toggleVoiceNavigation = ("props": "any) => {;
+  const toggleVoiceNavigation = (props: any) => {
+    const newValue = !voiceNavigation;
+    setVoiceNavigation(newValue);
+    localStorage.setItem('zion-voice-navigation', newValue.toString());
+    localStorage.setItem('zion-voice-navigation'", newValue.toString())
+};
+  const value = {
+    highContrast,
+    toggleHighContrast,
+    reducedMotion,
+    toggleReducedMotion,
+    fontSize,
+    increaseFontSize,
+    decreaseFontSize,
+    resetFontSize,
+    showSkipLinks,
+    setShowSkipLinks,
+    voiceNavigation,
+    toggleVoiceNavigation,
+  };
+  return (
+    <AccessibilityContext.Provider value={value}>
       {/* Skip Links */}
       <AnimatePresence>;
         {showSkipLinks && (<motion.div;
@@ -318,35 +445,69 @@ export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({ 
         </motion.div>;
       </div>;
       {children}
-    </AccessibilityContext.Provider>;
-  )}// Focus trap component for modals;
-export const "FocusTrap": "React.FC<{ "children": ReactNod e; isActive?: boolean "}> = ({children,isActive = true;"
-}) => {useEffect(() => {if (!isActive) return;
-';'
-    }
-    const handleKeyDown = ("props": any) => {';';'
-      }
-      if (event.key !== 'Tab') return;'
-';'
-      const focusableElements = document.querySelectorAll(';';'
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';const handleKeyDown = ("props": "any) => {if (event.key !== 'Tab') return;const focusableElements = document.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';'
-        'button", [href], input, select, textarea, [tabindex]: "not([tabindex="-1"])';'
+    </AccessibilityContext.Provider>
+  )
+};
+;
 // Focus trap component for modals;
-}
-export const "FocusTrap": React.FC<{ "children": ReactNod e; isActive?: boolean }> = ({children,isActive = true;
-}) => {useEffect(() => {if (!isActive) return;
-    }
-    const handleKeyDown = ("props": any) => {if (event.key !== 'Tab') return;'
-      }
-      const focusableElements = document.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';'
-      )const firstElement = focusableElements[0] as HTMLElement;
+export const "FocusTrap": "React.FC<{ "children": ReactNod e; isActive?: boolean "}> = ({;
+  children,;
+  isActive = true;
+}) => {;
+  useEffect(() => {;
+    if (!isActive) return;
+';
+    const handleKeyDown = (props: any) => {';';
+      if (event.key !== 'Tab') return;
+';
+      const focusableElements = document.querySelectorAll(';';
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+;
+    const handleKeyDown = ("props": "any) => {;
+      if (event.key !== 'Tab') return;
+;
+      const focusableElements = document.querySelectorAll(;
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        'button", [href], input, select, textarea, [tabindex]: "not([tabindex="-1"])';
+// Focus trap component for modals
+export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> = ({
+  children,
+  isActive = true
+}) => {
+  useEffect(() => {
+    if (!isActive) return;
+    const handleKeyDown = (props: any) => {
+      if (event.key !== 'Tab') return;
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstElement = focusableElements[0] as HTMLElement;
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-      if (event.shiftKey && document.activeElement === firstElement) {event.preventDefault()lastElement.focus()"} else if (!event.shiftKey && document.activeElement === lastElement) {} else if (!event.shiftKey && document.activeElement === lastElement) {event.preventDefault()firstElement.focus()}"
-    }';'
-';';'
-    document.addEventListener('keydown', handleKeyDown)';';'
-}document.addEventListener('keydown', handleKeyDown)return () => document.removeEventListener('keydown', handleKeyDown)}, [isActive])return <>{children}</>;'
-}</motion>;
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      "} else if (!event.shiftKey && document.activeElement === lastElement) {;
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';'
+};
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isActive]);
+  return <>{children}</>
+};
+</motion>
+</motion>
+</AccessibilityContext>
+</any>
+</any>
+</AccessibilityProviderProps>';
+</AccessibilityContextType>;';;';
+;
 </motion>;
 </AccessibilityContext>;
 </any>;

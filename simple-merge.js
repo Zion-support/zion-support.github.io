@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 const { exec_sync } = require ('child_process'),
 
@@ -35,7 +37,7 @@ console.log ('🚀 Starting simple merge process...'),
 
 console.log('🚀 Starting simple merge process...'),;
 try {;
-
+>>>>>>> origin/main
   // Check git status;
   console.log('📊 Checking git status...'),;
   const status = execSync('git status --porcelain', { encoding: 'utf8' }),;
@@ -58,20 +60,36 @@ try {;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
-
-
+<<<<<<< HEAD
+=======
       // Resolve conflicts by accepting our version;
+
+>>>>>>> origin/main
 
       for (const file of files) {;
         if (file.trim()) {;
-
-
-
-
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);      for (const file of files) {;
+        if (file.trim()) {;
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
+=======
+      for (const file of files) {;
+        if (file.trim()) {;
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);
+>>>>>>> origin/main
           console.log(`Resolving conflicts in: ${file}`),;
           try {;"`
             execSync(`git checkout --ours "${file}"`);
-
+          } catch (e) {;
+<<<<<<< HEAD
+            execSync(`git checkout --theirs "${file}"`);      exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+=======
             execSync(`git checkout --theirs "${file}"`);
 
             execSync(`git checkout --theirs "${file}"`);
@@ -118,9 +136,14 @@ try {
           execSync(`git add "${file}"`)
         }
       }
-      
-      // Commit the merge
-      execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+
+
+;
+
+
+      // Commit the merge;
+      exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+>>>>>>> origin/main
     }
   }
   
@@ -142,8 +165,12 @@ try {
       execSync($2);
       console.log(`✅ Successfully merged ${branchName}`)
     } catch (error) {
-      console.log($2);
-      // Continue with other branches
+      console.log (`⚠️  Error merging ${branch}: ${error.message}`),
+
+<<<<<<< HEAD
+      ;
+      // Commit the merge;
+      execSync('git commit -m "feat:resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
     }
   }
 <<<<<<< HEAD
@@ -175,10 +202,15 @@ try {
       console.log(`✅ Successfully merged ${branchName}`);
     } catch (error) {;
       console.log(`⚠️  Error merging ${branch} ${error.message}`);
-
+=======
+>>>>>>> origin/main
       // Continue with other branches;
   // Push all changes;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       for (const file of files) {;
         if (file.trim()) {;
 
@@ -191,8 +223,12 @@ try {
       execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
     }
   }
-
-
+<<<<<<< HEAD
+=======      // Continue with other branches;
+    }
+  }
+  // Push all changes;
+=======
       // Continue with other branches;
     }
   }
@@ -220,6 +256,7 @@ try {
 
 
 
+>>>>>>> origin/main
   console.log(`Found ${branchList.length} branches to merge: `),;
 
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
@@ -250,7 +287,24 @@ try {
 } catch (error) {;'
 
   console.error('❌ Error during merge process:', error.message),;
-
+<<<<<<< HEAD
+}
+=======  process.exit(1);
+}
+  console.log('📤 Pushing all changes to main...');
+  execSync('git push origin main');
+  ;
+  console.log('🎉 All merge operations completed successfully!');
+  console.log('✅ All PRs have been merged into main branch');
+  console.log('✅ All merge conflicts have been resolved');
+  console.log('✅ Repository is now clean and up to date');
+  ;
+} catch (error) {;
+  console.error('❌ Error during merge process:', error.message);
+  process.exit(1);}
+  process.exit(1);
+}
+=======
 
   process.exit(1);
 
@@ -270,4 +324,6 @@ try {
   console.error($2);
   process.exit(1)
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  process.exit(1);
+}
+>>>>>>> origin/main

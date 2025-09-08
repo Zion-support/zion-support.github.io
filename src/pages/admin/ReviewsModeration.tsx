@@ -56,7 +56,15 @@ function ReviewsModerationContent() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
+            <Tabs
+              defaultValue='pending'
+              value={activeTab}
+              onValueChange={setActiveTab}><TabsList className='mb-6'>
+                <TabsTrigger value='pending'>Pending Reviews</TabsTrigger>
+                <TabsTrigger value='reported'>Reported Reviews</TabsTrigger>
+              </TabsList>
+              <TabsContent value='pending' className='mt-0'>
+                <ReviewsModerationTable                  reviews={reviews}            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>

@@ -1,18 +1,48 @@
-import React from 'react';'
-import { motion   } from 'framer-motion';'
-import { Link   } from 'react-router-dom';'
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star    } from 'lucide-react';const "CTASection": "React.FC = (): JSX.(Element) => {const features = [;"
-    {"icon": Rocke t","title": "Fast Implementation","description": "Get started in weeks, not months";"
-    },{"icon": "MessageCircl e","title": "24/7 Support","description": "Expert assistance whenever you need it";"
-    },{"icon": "Calenda r","title": "Flexible Plans","description": "Scale up or down as your business grows";"
-}
-const "CTASection": React.FC = (): JSX.(Element) => {const features = [;
-    {"icon": Rocke t,"title": "Fast Implementation","description": "Get started in weeks, not months";"
-    },{"icon": MessageCircl e,"title": "24/7 Support","description": "Expert assistance whenever you need it";"
-    },{"icon": Calenda r,"title": "Flexible Plans","description": "Scale up or down as your business grows";"
-    }, {"icon": "Sta r","title": "Proven Results","description": "Trusted by industry leaders worldwide";"
-}];
-  return (<section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">;"
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
+;
+const "CTASection": "React.FC = (): JSX.Element => {;
+  const features = [;
+    {;
+      "icon": Rocke t",;
+      "title": "Fast Implementation",;
+      "description": "Get started in weeks, not months";
+    },;
+    {;
+      "icon": "MessageCircl e",;
+      "title": "24/7 Support",;
+      "description": "Expert assistance whenever you need it";
+    },;
+    {;
+      "icon": "Calenda r",;
+      "title": "Flexible Plans",;
+      "description": "Scale up or down as your business grows";
+const CTASection: React.FC = (): JSX.Element => {
+  const features = [
+    {
+      icon: Rocke t,
+      title: "Fast Implementation",
+      description: "Get started in weeks, not months"
+    },
+    {
+      icon: MessageCircl e,
+      title: "24/7 Support",
+      description: "Expert assistance whenever you need it"
+    },
+    {
+      icon: Calenda r,
+      title: "Flexible Plans",
+      description: "Scale up or down as your business grows";
+    }, {;
+      "icon": "Sta r",;
+      "title": "Proven Results",;
+      "description": "Trusted by industry leaders worldwide"
+};
+  ];
+  return (
+    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
       {/* Background Elements */}
       <div className="absolute inset-0">;"
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5" />;"
@@ -269,9 +299,12 @@ const "CTASection": React.FC = (): JSX.(Element) => {const features = [;
         </motion.div>;
       </div>;
     </section>;
-  )}export default CTASection;}</motion>;
-</motion>';'
-</motion>;';';'
+  )
+};
+export default CTASection;}};
+</motion>
+</motion>';
+</motion>;';;';
 </motion>;
 </motion>;
 </motion>;

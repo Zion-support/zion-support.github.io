@@ -237,15 +237,15 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;"
                     ))}
                   </div>;
-                  <Quote className="w-8 h-8 text-cyan-400 mb-4" />;"
-                  <blockquote className="text-lg "md": "tex t-xl text-white mb-6 leading -relaxed">;"
-                    "{current.content"}";"
+                  <Quote className="w-8 h-8 text-cyan-400 mb-4"  />;
+                  <blockquote className="text-lg "md": "tex t-xl text-white mb-6 leading -relaxed">;
+                    "{current.content"}";
                   </blockquote>;
-                  <div  className="space-y-3">;"
-                    <h4 className="text-xl font-semibold text-white">{current.name}</h4>;"
-                    <p className="text-cyan -400">{current.position}</p>;"
-                    <p className="text-gray -300">{current.company}</p>;"
-                    <p className="text-sm text-gray -400">{current.industry} Industry</p>                  </div>;"
+                  <div  className="space-y-3">;
+                    <h4 className="text-xl font-semibold text-white">{current.name}</h4>;
+                    <p className="text-cyan -400">{current.position}</p>;
+                    <p className="text-gray -300">{current.company}</p>;
+                    <p className="text-sm text-gray -400">{current.industry} Industry</p>                  </div>;
                 </div>;
                 {/* Results and Verification */}";"
                 <div className=""lg": "w-80 space-y-6">;"
@@ -268,6 +268,38 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
                     {[...Array(current.rating)].map((_, i) => (";"
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;"
                     ))}
+                  </div>
+                  <Quote className="w-8 h-8 text-cyan-400 mb-4"  />
+                  <blockquote className="text-lg md: tex t-xl text-white mb-6 leading -relaxed">
+                    "{current.content}"
+                  </blockquote>
+                  <div  className="space-y-3">
+                    <h4 className="text-xl font-semibold text-white">{current.name}</h4>
+                    <p className="text-cyan -400">{current.position}</p>
+                    <p className="text-gray -300">{current.company}</p>
+                    <p className="text-sm text-gray -400">{current.industry} Industry</p>                  </div>
+                </div>
+                {/* Results and Verification */}"
+                <div className="lg:w-80 space-y-6">
+                  {/* Verification Badge */}
+                  {current.verified && ("
+                    <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
+                      <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
+                    </div>
+                  )}
+                  {/* Results */}"
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4">"
+                    <h5 className="text-white font-semibold mb-3">Key Results</h5>"
+                    <ul className="space-y-2">
+                      {current.results.map((result, index) => ("
+                        <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"   />                          {result}
+                        </li>) ) }
+                    </ul>;
+                  </div>;
+                  {/* Industry Badge */}";
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">";
+                    <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>;
                   </div>;
                   <Quote className="w-8 h-8 text-cyan-400 mb-4" />;"
                   <blockquote className="text-lg "md": tex t-xl text-white mb-6 leading -relaxed">;"

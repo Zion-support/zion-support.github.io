@@ -67,4 +67,5 @@ const Ai-seo-auditor: React.FC<Ai-seo-auditorProps> = ({ className }) => {
 
 
   );
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}

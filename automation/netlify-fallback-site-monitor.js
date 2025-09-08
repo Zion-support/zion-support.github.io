@@ -1,20 +1,9 @@
-<<<<<<< HEAD
 
 
 
-=======
-#!/usr/bin/env node //Netlify Function Fallback: site-monitor //This is a local fallback when the main function is unavailable try {
-  // Basic fallback logic const result = {
-  statusCode: 200;
-body: JSON.stringify ({
-  message: 'site-monitor executed locally as fallback';
-timestamp: new Date () .toISOString ();
-fallback: true
-})
-}
-return result;
-}catch (error) {
-  console.error ('Fallback execution error:', error);
+  console && console.error ('Fallback execution error:', error);
+
+
   statusCode: 500;
 body: JSON.stringify ({
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -22,8 +11,6 @@ body: JSON.stringify ({
 
 
 #!/usr/bin/env node
-<<<<<<< HEAD
-
 #!/usr/bin/env node
 
 =======
@@ -40,22 +27,10 @@ exports.handler = async (_event, _context) => {
 =======
     // // // console.log('site-monitor fallback executed locally'),
     
+#!/usr / bin / env node //Netlify Function Fallback: site - monitor //This is a local fallback when the main function is unavailable try {
+  console.error ('Fallback execution error:', error);
 
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-
-
-};
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+    
     try {
         // Basic fallback logic
         const result = {
@@ -68,10 +43,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 message: 'site-monitor executed locally as fallback'
                 timestamp: new Date().toISOString()
+<<<<<<< HEAD
+#!/usr/bin/env node
+#!/usr/bin/env node
+=======
 
 message: error && error.message 
 }) 
-
 
 
 #!/usr/bin/env node
@@ -81,120 +59,72 @@ message: error && error.message
 // This is a local fallback when the main function is unavailable
 
 exports.handler = async (_event, _context) => {
-<<<<<<< HEAD
-
-    console.log('site-monitor fallback executed locally'),
-
-
-    
-
-=======
     console.log('site-monitor fallback executed locally'),
 
     
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;
+  status_code: 500;
+body: JSON.stringify ({
+  error: 'Fallback execution failed';
+message: error.message;
+});
+}exports.handler = async (_event, _context) => {
+    console.log ('site - monitor fallback executed locally'),
+    try {
+        // Basic fallback logic;
+        const result = {
+
+    // // // console.log('site-monitor fallback executed locally'),
+    console.log('site-monitor fallback executed locally'),
+
+    
+>>>>>>> origin/main
     try {
         // Basic fallback logic;
 <<<<<<< HEAD
 
         const result = {
-
-=======
-        const result = {
-
         console && console.error('Fallback execution error:', error),
         return {
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
             statusCode: 500,
             body: JSON && JSON.stringify({
                 error: 'Fallback execution failed',
                 message: error && error.message
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                message: 'site-monitor executed locally as fallback';
-                timestamp: new Date().toISOString();
-                fallback: true
-            })
-        }
-<<<<<<< HEAD
-
-=======
-        return result
-    } catch (error) {
-        console.error('Fallback execution error:', error);
-        return {
-            statusCode: 500;
-            body: JSON.stringify({
-                error: 'Fallback execution failed';
-                message: error.message
-origin/cursor/automate-test-improve-and-merge-code-2533
-    console.log($2);
-    try {
-        // Basic fallback logic
-        const result = $2;
-            body: JSON.stringify({
-                message: 'site-monitor executed locally as fallback',
-                timestamp: new Date().toISOString($2);
-                fallback: true})
-        },
-        
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        return result
-    } catch (error) {
-        console.error($2);
-        return {
-            statusCode: 500
-            body: JSON.stringify({
-                error: 'Fallback execution failed'
-                message: error.message
-origin/cursor/automate-test-improve-and-merge-code-2533
             })
 
             status_code: 200,
             body: JSON.stringify ({
                 message: 'site - monitor executed locally as fallback',
                 timestamp: new Date ().toISOString (),
-                fallback: true
-            })
+                fallback: true;
+            });
         },
-        return result
+        return result;
     } catch (error) {
         console.error ('Fallback execution error:', error),
         return {
             status_code: 500,
             body: JSON.stringify ({
                 error: 'Fallback execution failed',
-<<<<<<< HEAD
-
                 message: error.message;
             });
 
-
         }
     }
 
-=======
-                message: error.message
-            })
-        }
-    }
+
+
 },
 
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
+;
 
 
+        console && console.error('Fallback execution error:', error),
+        return {
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
+<<<<<<< HEAD
+=======
 
 #!/usr/bin/env node;
 // Netlify Function Fallback: site-monitor;
@@ -229,30 +159,5 @@ exports.handler = async (_event, _context) => {// // // console.log('site-monito
     }
 },;
 
-<<<<<<< HEAD
 
 
-
-
-
-=======
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-},ursor/fix-website-loading-errors-and-merge-6662;
-}
-
-
-
-};
-
-
-
-},ursor/fix-website-loading-errors-and-merge-6662;
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

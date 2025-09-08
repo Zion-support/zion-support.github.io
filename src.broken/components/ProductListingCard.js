@@ -2,14 +2,32 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";"
 import { DollarSign } from "lucide-react";
 
-  const handleImageError = () => {}
-    if (!imageError) {'
+export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
+  const isGrid = view === 'grid';
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0
+    ? listing.images[0]
+    : '/placeholder.svg');
+  const [imageError, setImageError] = useState(false);
+
+  const formatPrice = () => {
+    if (listing.price === null) return "Custom pricing";
+    return `${listing.currency || '$'}${listing.price.toLocaleString()}`
+};
+
+  const handleImageError = () => {
+    if (!imageError) {
       setImageSrc('/placeholder.svg');
       setImageError(true);
     }
   };
 
-  const handleRequestQuote = (e) => {}
+  const handleViewListing = () => {
+    navigate(`${detailBasePath}/${listing.id}`)
+};
+
+  const handleRequestQuote = (e) => {
     e.preventDefault();
     e.stopPropagation();
     if (onRequestQuote) {}

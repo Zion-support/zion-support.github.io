@@ -163,21 +163,4 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }/> </div>) ) ) : (<div className="text-center py-8 text-zion-slate-light" > No items found. Please try a different search. </div>) ;
 }</div> </div>) ;
 }</div>) ;
-
-=======
-return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3> <div className="grid grid-cols-1 md: grid-cols-3 gap-4"> <Card > <h4 className="font-medium text-white">Services</h4> <p className="text-sm text-zion-slate-light">AI solutions;, consulting, development</p>  <Card > <h4 className="font-medium text-white">Talent</h4> <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>  <Card > <h4 className="font-medium text-white">Equipment</h4> <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>  </div> </div> {";""
-  formData.serviceType && (<div className="space-y-4"> <h3 className="text-xl font-semibold text-white">Select a specific {;"
-}</h3> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" /> <Input placeholder= {;"
-}className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple" /> </div> {";""
-  error && (<div className="text-center text-red-400 text-sm"> {;"
-</div>)"
-}</div>) ";""
-}<div className="grid grid-cols-1 gap-4 mt-4" aria-busy= {;"
-  loading ;"
-}> {";"
-  loading ? (<> <Skeleton className="h-[120px] w-full" /> <Skeleton className="h-[120px] w-full" /> <Skeleton className="h-[120px] w-full" /> </>) : filteredListings.length > 0 ? (filteredListings.map ( (item) => (<div key= {;"
-)"
-}/> </div>) ) ) : (<div className="text-center py-8 text-zion-slate-light" > No items found. Please try a different search. </div>) ;"
-
-}</div> </div>) ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}"

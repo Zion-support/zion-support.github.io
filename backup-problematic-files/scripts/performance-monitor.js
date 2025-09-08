@@ -61,18 +61,13 @@ try {
   console.log('✅ Bundle analysis completed');
   performanceChecks.bundleAnalysis = true;
 } catch (error) {
-  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+  console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 }
-  performanceChecks.bundleAnalysis = true} catch (error) {
-  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
-=======
-  console && console.log('📋 Analyzing bundle...');
-  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
-  console.log('✅ Bundle analysis completed');
   performanceChecks.bundleAnalysis = true;
   console && console.log('✅ Bundle analysis completed');
   performanceChecks && performanceChecks.bundleAnalysis = true;
 } catch (error) {
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
   console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 }
   performanceChecks.bundleAnalysis = true} catch (error) {

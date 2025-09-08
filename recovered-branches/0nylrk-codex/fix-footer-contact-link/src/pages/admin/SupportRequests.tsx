@@ -549,8 +549,8 @@ export default function SupportRequests() {;
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
+    setCategoryFilter(null)
+};
   return (
     <AppLayout>;
       <SEO
@@ -818,11 +818,8 @@ title=\"Support Requests | Admin Dashboard\"
 
 <<<<<<< HEAD
 
-
-=======
-              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
 
@@ -835,11 +832,8 @@ title=\"Support Requests | Admin Dashboard\"
                 </SelectContent>
               </Select>
 
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
 
@@ -852,11 +846,8 @@ title=\"Support Requests | Admin Dashboard\"
                 </SelectContent>
               </Select>
 
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
 

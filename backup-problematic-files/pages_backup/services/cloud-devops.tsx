@@ -13,11 +13,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
-<<<<<<< HEAD
-=======
+const features = [
+  {
+    icon: Cloud,
+    title: 'Cloud Migration',
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
 
@@ -153,7 +153,6 @@ export default function CloudDevOpsPage() {
         </section>;
       </div>;
     </Layout>;
-
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
@@ -216,33 +215,6 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
-
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-
   return (
 <<<<<<< HEAD
 
@@ -266,18 +238,15 @@ export default function CloudDevOpsPage() {
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud & DevOps</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Transform your infrastructure with our comprehensive cloud and DevOps services 
-                designed for scalability, reliability, and efficiency.
+        <section className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Cloud & DevOps Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Transform your infrastructure with modern cloud technologies and automated DevOps processes
+                for improved performance, security, and scalability.
               </p>
             </motion.div>
           </div>
@@ -317,8 +286,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -464,10 +431,10 @@ export default function CloudDevOpsPage() {
       </div>
     </Layout>
     </Layout>
-
     </>
-<<<<<<< HEAD
     </>
+    </Layout>
+  );
+};
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Cloud-devops;

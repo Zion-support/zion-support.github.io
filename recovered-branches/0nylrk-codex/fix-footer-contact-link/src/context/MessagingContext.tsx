@@ -1,73 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
-import { useAuth } from '@/hooks/useAuth';'
-import { MessagingContextType } from '@/types/messaging',;'
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;'
-// Default context used when React type definitions are missing;
-const "defaultContext": MessagingContextType = {;
-  }
-  "messages": [],;
-  "conversations": [],;
-  "unreadCount": 0,;
-  "activeConversation": null,;
-  "activeMessages": [],;
-  "isLoading": false,;
-  "sendMessage": async () => {},;
-  "createConversation": async () => {},;
-  "markAsRead": async () => {},;
-  "setActiveConversation": () => {},;
-  "fetchConversations": async () => {},;
-  "loadMessages": async () => {}
-}
-// Provider component,
-export function MessagingProvider() {;
-  }
-  const { user } = useAuth();
-
-  const {;
-    }
-    messages;
-    active_messages;
-    setActiveMessages;
-    conversations;
-    set_conversations;
-    unread_count;
-    setUnreadCount;
-    active_conversation;
-    setActiveConversation;
-    is_loading;
-    send_message;
-    create_conversation;
-    markAsRead;
-
-
-  const context = useContext(MessagingContext) as MessagingContextType;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-const defaultContext: MessagingContextType = {
-
-  messages: [],
-  conversations: [],
-  unreadCount: 0,
-  activeConversation: null,
-  activeMessages: [],
-  isLoading: false,
-  sendMessage: async () => {},
-  createConversation: async () => {},
-  markAsRead: async () => {},
-  setActiveConversation: () => {},
-  fetchConversations: async () => {},
-  loadMessages: async () => {}
-};
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -89,101 +21,26 @@ const defaultContext: MessagingContextType = {;
   loadMessages: async () => {}
 },
 
-
-<<<<<<< HEAD
-
-
-
-
-const defaultContext: MessagingContextType = {
-
-=======
-const defaultContext: MessagingContextType = {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  messages: []
-  conversations: []
-  unreadCount: 0;
-  activeConversation: null;
-  activeMessages: []
-  isLoading: false;
-
-
-<<<<<<< HEAD
-=======
-  defaultContext as MessagingContextType;
-// Hook for using the messaging context;
-export function useMessaging(): MessagingContextType {};
-  // Cast to avoid type errors when React type definitions are missing;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-// Hook for using the messaging context
-export function useMessaging(): MessagingContextType {
-
-  if (context === undefined) {
-
-    throw new Error('useMessaging must be used within a MessagingProvider')
-
-
-  }
-  return context;
 }
 
-<<<<<<< HEAD
+// Provider component
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+  const { user } = useAuth();
 
-
-import React, { create_context, useContext, useEffect, ReactNode } from 'react';
-import {use_auth} from '@/hooks / use_auth';
-import {MessagingContextType} from '@/types / messaging';
-import {useMessagingOperations, useMessagingRealtime} from '@/hooks / messaging';
-// Default context used when React type definitions are missing;
-const default_context: MessagingContextType = {
-  messages: [],
-  conversations: [],
-  unread_count: 0,
-  active_conversation: null,
-  active_messages: [],
-  is_loading: false,
-  send_message: async () => {},
-  create_conversation: async () => {},
-  markAsRead: async () => {},
-  setActiveConversation: () => {},
-  fetch_conversations: async () => {},
-  load_messages: async () => {}
-}
-;
-// "create_context" may be untyped if React type definitions are missing.;
-// To avoid TS2347 when the definitions are unavailable, we cast the default;
-// value instead of passing a generic type parameter directly.;
-const MessagingContext = create_context (
-  default_context as MessagingContextType);
-;
-// Hook for using the messaging context;
-export function use_messaging (): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext (MessagingContext) as MessagingContextType;
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ('use_messaging must be used within a MessagingProvider');
-  }
-  return context;
-}
-// Provider component;
-export /**
- * MessagingProvider - Function description
- */
-function MessagingProvider() {
-  const { user } = use_auth ();
-;
-
-
-  const {
-
-
-
-=======
+  const {;
+    messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
 
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
@@ -360,111 +217,6 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
       fetchConversations();
     } else {;
 
-=======
-  } = useMessagingOperations($2);
-  // Setup real-time subscription
-  useMessagingRealtime($2);
-  // Calculate unread count from conversations
-  useEffect(() => {
-    if (conversations.length > 0) {
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),
-      setUnreadCount(count)
-    }
-  }, [conversations, setUnreadCount]),
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  // Fetch conversations when user changes
-  useEffect(() => {
-    if (user) {
-      fetchConversations()
-    } else {
-      setConversations($2);
-      setUnreadCount(0)
-    }
-  }, [user, fetchConversations, setConversations, setUnreadCount]),
-
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = $2;
-    activeMessages,
-    conversations,
-    unreadCount,
-    activeConversation,
-    isLoading,
-    sendMessage,
-    createConversation,
-    markAsRead,
-    setActiveConversation,
-    fetchConversations,
-    loadMessages
-  },
-
-  return (
-    <MessagingContext.Provider value={contextValue}>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      {children}
-    </MessagingContext.Provider>
-  )
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-// Provider component;
-export function MessagingProvider() {;
-  }
-  const { user } = useAuth(),;
-  const {;
-    }
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;
-    loadMessages;
-  } = useMessagingOperations(user),;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    }
-    if (conversations.length > 0) {;
-      }
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
-    }
-  }, [conversations, setUnreadCount]),;
-  // Fetch conversations when user changes;
-  useEffect(() => {;
-    }
-    if (user) {;
-      }
-      fetchConversations();
-    } else {;
-      }
-      setConversations([]),;
-<<<<<<< HEAD
-
-      setConversations([]);
-
-      setUnreadCount(0);
-    }
-  }, [user, fetchConversations, setConversations, setUnreadCount]);
-
-
-=======
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -512,53 +264,24 @@ if ( {) {
     create_conversation;
     markAsRead;
     setActiveConversation;
-return (;
+
+  return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}      {children}
 
     </MessagingContext && MessagingContext.Provider>;
   );
 }
+
+=======  return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}
     fetch_conversations,
     load_messages;
   }
 ;
-return (;
+  return (
     <MessagingContext.Provider value={context_value}>;
       {children}
     </MessagingContext.Provider>);
 }
-;
-;
-// Provider component;
-export function MessagingProvider({ children } { children:ReactNode }) {;
-  const { user } = useAuth(),;
-  ;
-  const {;
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;}
-    loadMessages;}
-  } = useMessagingOperations(user),;
-;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-;
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations.length > 0) {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-

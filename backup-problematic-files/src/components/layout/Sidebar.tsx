@@ -9,9 +9,4 @@ export default function Sidebar() {
       <p>Sidebar</p>
     </aside>
   );
-
-=======
-    <aside className="sidebar">"
-</aside>
-      <p>Sidebar</p>
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}

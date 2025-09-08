@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""=======' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+=======
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 
 <<<<<<< HEAD
 
@@ -27,6 +31,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
+>>>>>>> origin/main
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""

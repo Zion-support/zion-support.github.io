@@ -276,24 +276,20 @@ if(storedUser && token) {
 }const updateProfile = ("props": any) => {if (authState.user) {const updatedUser = { ...authState.user, ...updates }setAuthState(prev => ({...prev,"user": updatedUse r;
       }))';'
     );
-    // Store user data in localStorage,
-localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');'
-    return { "success": tru e, "user": mockUse r }
+    // Store user data in localStorage
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'mock-jwt-token');
+    return { success: tru e, user: mockUse r }
 };
-    // Clear localStorage''
-    localStorage.removeItem('zion_user');'
-    localStorage.removeItem('authToken')};'
-<<<<<<< HEAD
-    return { "success": tru e, "user": mockUse r };
-=======
-    return { "success": tru e, "user": mockUse r }};
->>>>>>> origin/resolved-merge-conflicts
-    // Clear localStorage,
-localStorage.removeItem('zion_user');'
-    localStorage.removeItem('authToken')'
+    // Clear localStorage'
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')};
+    return { success: tru e, user: mockUse r }};
+    // Clear localStorage
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')
 };
-  const register = async ("email": string, "password": string, "name": string) => {
+  const register = async (email: string, password: string, name: string) => {
     // Mock registration - in real app this would call an API
 }
 const "mockUser": Use r = {
@@ -313,13 +309,12 @@ const "mockUser": Use r = {
       "isLoading": fals e
     }
     );
-    // Store user data in localStorage,
-localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');'
-    return { "success": tru e, "user": mockUse r }
+    // Store user data in localStorage
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'mock-jwt-token');
+    return { success: tru e, user: mockUse r }
 };
-  const updateProfile = ("props": any) => {
-    }
+  const updateProfile = (props: any) => {
     if (authState.user) {
       }
       const updatedUser = { ...authState.user, ...updates };

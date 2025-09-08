@@ -10,8 +10,4 @@ const AnalyticsDashboard.js = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default AnalyticsDashboard.js;

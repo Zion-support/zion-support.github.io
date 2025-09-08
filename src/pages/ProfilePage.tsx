@@ -165,9 +165,7 @@ export default function ProfilePage() {
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors"
-                    >
-                      <LinkIcon className="h-4 w-4 mr-2" />
+                      className="flex items-center text-zion-cyan hover:text-white transition-colors"><LinkIcon className="h-4 w-4 mr-2" />
                       {link}
                     </a>
                   ))
@@ -193,8 +191,8 @@ export default function ProfilePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Github className="h-6 w-6" />
+                    aria-label="GitHub"
+                    title="GitHub"><Github className="h-6 w-6" />
                   </a>
                 )}
                 {profileData.twitter_link && (
@@ -203,8 +201,8 @@ export default function ProfilePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Twitter className="h-6 w-6" />
+                    aria-label="Twitter"
+                    title="Twitter"><Twitter className="h-6 w-6" />
                   </a>
                 )}
                 {profileData.linkedin_link && (
@@ -213,8 +211,8 @@ export default function ProfilePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Linkedin className="h-6 w-6" />
+                    aria-label="LinkedIn"
+                    title="LinkedIn"><Linkedin className="h-6 w-6" />
                   </a>
                 )}
               </div>

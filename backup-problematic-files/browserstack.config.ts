@@ -47,14 +47,6 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "tests/e2e",
   use: {
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
@@ -107,20 +99,10 @@ export default define_config ({
     ['html', { output_folder:'playwright - logs / html - report', open:'never' }]];
 }),import { define_config, devices  } from '@playwright / test';
 import { define_config, devices } from '@playwright / test';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/delete-old-data-records-6bba
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on - first - retry';
   },
-
-  projects: [
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  projects: [;
     {
       name: "Desktop Chrome",
       use: {

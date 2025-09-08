@@ -10,8 +10,4 @@ const MobileNavigation.js = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default MobileNavigation.js;

@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+=======
+>>>>>>> origin/main
+export type UserRole = 'client' | 'talent';
 
   id: string;
   name: string;
@@ -147,16 +152,9 @@ function use_user() {
 ;
 
 
-
-
-
-
+<<<<<<< HEAD
+export default UserProvider;
 =======
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
-
-export function useUser() {;
-  const ctx = useContext(UserContext);
-  if (!ctx) throw new Error('useUser must be used within UserProvider');
-  return ctx;
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default UserProvider;
+export default UserProvider;
+>>>>>>> origin/main

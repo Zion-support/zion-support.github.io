@@ -52,8 +52,13 @@ export default function AIBusinessIntelligenceSuite() {
   ];
 
   return (
-    <Layout>
-      <div className="min-h-screen">
+    <UltraAdvancedFuturisticBackground
+      intensity="high"
+      colorScheme="quantum-fusion"
+      particleCount={500}
+      animationSpeed={2.0}
+      enableHolographic={true}
+      enableQuantumEffects={true}><div className="min-h-screen">
         <Head>
           <title>AI Business Intelligence Suite - Zion Tech Group | Transform Data into Insights</title>
           <meta name="description" content="Transform data into actionable insights with our AI-powered business intelligence platform. Real-time analytics, predictive modeling, and automated reporting. Contact: +1 302 464 0950" />
@@ -135,9 +140,10 @@ export default function AIBusinessIntelligenceSuite() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
-                  <a 
-                    href="/contact" className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25">
-                    <span className="flex items-center">
+                  <Button
+                    href="/contact"
+                    variant="secondary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"><span className="flex items-center">
                       <Phone className="mr-3 w-5 h-5" />
                       Talk to Expert
                     </span>
@@ -403,9 +409,10 @@ export default function AIBusinessIntelligenceSuite() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <a 
-                    href="/contact" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25">
-                    <span className="flex items-center">
+                  <Button
+                    href="/contact"
+                    variant="primary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25"><span className="flex items-center">
                       <Rocket className="mr-3 w-5 h-5" />
                       Start Free Trial
                       <ArrowRight className="ml-3 w-5 h-5" />
@@ -418,9 +425,10 @@ export default function AIBusinessIntelligenceSuite() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
-                  <a 
-                    href="/contact" className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25">
-                    <span className="flex items-center">
+                  <Button
+                    href="/contact"
+                    variant="secondary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"><span className="flex items-center">
                       <Phone className="mr-3 w-5 h-5" />
                       Talk to Expert
                     </span>

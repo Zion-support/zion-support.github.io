@@ -17,8 +17,4 @@ export default function ModernNavigation() {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}
-}
+}}

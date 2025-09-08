@@ -28,10 +28,6 @@ interface OptimizedImageProps {
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const imgRef = useRef<HTMLDivElement>(null);
 
-
-
-
-
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -97,6 +93,9 @@ export function OptimizedImage({}
   const [isInView, setIsInView] = useState(!lazy || priority)
   const imgRef = useRef<HTMLDivElement>(null)
 
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+
     if (!lazy || priority || isInView) return;
 
     const observer = new IntersectionObserver(
@@ -106,18 +105,6 @@ export function OptimizedImage({}
           observer.disconnect()
 
 }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-;
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return () => observer.disconnect ();
 }, [lazy, priority, isInView]);
 //Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
@@ -129,18 +116,7 @@ export function OptimizedImage({}
 <defs> <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop - color:#f3f4f6, stop - opacity:1" /> <stop offset="100%" style="stop - color:#e5e7eb, stop - opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .to_string ('base64');
 }`;
 }
-  const img_ref = useRef < HTMLDivElement>(null);
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  // Intersection Observer for lazy loading;
+  const img_ref = useRef < HTMLDivElement>(null);  // Intersection Observer for lazy loading;
 
   }, [lazy, priority, isInView]);
   // Generate WebP - compatible src;
@@ -176,6 +152,9 @@ if (||) {}
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
+
+        }
+      }
 
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
@@ -234,6 +213,8 @@ if (||) {}
     }
 
     // For internal images, Next && Next.js will handle optimization;
+    return originalSrc
+};
 
   const handleLoad = () => {;
     setIsLoading(false);
@@ -248,6 +229,21 @@ if (||) {}
 
   // Generate blur placeholder;
   const generateBlurDataURL = () => {;
+    if (blurDataURL) return blurDataURL;
+
+    // Generate a simple gray blur placeholder;
+    return `data:image/svg+xml;base64,${Buffer && Buffer.from(;
+      `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www && www.w3.org/2000/svg">;
+        <defs>;
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
+            <stopoffset="0%" style="stop-color:#f3f4f6stop-opacity:1" />;
+            <stopoffset="100%" style="stop-color:#e5e7ebstop-opacity:1" />;
+          </linearGradient>;
+        </defs>;
+        <rect width="100%" height="100%" fill="url(#grad)" />;
+      </svg>`;
+    ).toString('base64')}`
+};
 
     >;
       {isInView && !hasError && (;
@@ -281,34 +277,12 @@ if (||) {}
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
-
       )}
 ;
       {/* Error fallback */}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {hasError && (;
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
-          {fallbackSrc ? (;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            <img
-
+          {fallbackSrc ? (;            <img
               src={fallbackSrc}
               alt={alt}
 
@@ -336,6 +310,42 @@ if (||) {}
 ;
       {/* Lazy loading placeholder */}
 
+    </div>;
+
+  );
+}
+
+  )
+
+// Higher-order component for easy migration from regular img tags
+export function withImageOptimization<P extends { src: string; alt: string }>(
+  Component: React.ComponentType<P>
+) {
+  return function OptimizedComponent(props: P) {
+
+// Higher-order component for easy migration from regular img tags;
+export function withImageOptimization<Pextends { src: string alt: string }>(;
+  Component: React && React.ComponentType<P>;
+) {;
+  return function OptimizedComponent(): any (props: P) {;
+
+    const { src, alt, ...otherProps } = props;
+
+    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
+};
+}
+
+// Utility to preload critical images;
+export function preloadImage(): any (src: string): Promise<void> {;
+  return new Promise((resolve, reject) => {;
+    const img = new window && window.Image();
+    img && img.onload = () => resolve();
+    img && img.onerror = reject;
+    img && img.src = src;
+  });
+}
+
+    const { src, alt, ...otherProps } = props
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
   }
 }

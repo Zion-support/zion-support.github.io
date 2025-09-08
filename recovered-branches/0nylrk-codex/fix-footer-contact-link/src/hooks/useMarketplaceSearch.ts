@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {useState, useMemo} from "react";
-import {ProductListing} from "@/types/listings";
-import {SearchSuggestion, FilterOptions} from "@/types/search";
-import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
-export function useMarketplaceSearch() {
-  // Search state;
-  const [searchQuery, setSearchQuery] = useState("");
-
-
-<<<<<<< HEAD
-=======
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -34,42 +20,10 @@ export function useMarketplaceSearch() {}
     [];
   );
 
-export function useMarketplaceSearch() {
-  // Search state
-  const [searchQuery, setSearchQuery] = useState(""),
-  
-  // Filter states
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),
-  
-  // Generate search suggestions and filter options
-  const searchSuggestions: SearchSuggestion[] = useMemo(
-    () => generateSearchSuggestions(),
-    []),
   const filterOptions: FilterOptions = useMemo(
-    () => generateFilterOptions(),
-    []),
-
-  // Filter listings based on current search query and filters
-  const filteredListings = useMemo(() => {
-    return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
-      // Search query filter
-
-      // Product type filter
-
-      const matchesProductType = selectedProductTypes.length === 0 |
-        selectedProductTypes.includes(listing.category);
-      // Location filter;
-      const matchesLocation = selectedLocations.length === 0 |
-        (listing.location && selectedLocations.includes(listing.location));
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    () => generateFilterOptions();
+    [];
+  );      const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -85,14 +39,8 @@ export function useMarketplaceSearch() {
       // Availability filter
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
-<<<<<<< HEAD
-
       
 
-=======
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       // Rating filter
 
       const matchesRating = selectedRating === null |
@@ -100,13 +48,7 @@ export function useMarketplaceSearch() {
       return matchesSearch &&
         matchesProductType &&
         matchesLocation &&
-<<<<<<< HEAD
-
-        matchesAvailability &&
-
-=======
-
-
+        matchesAvailability &&        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
       // Product type filter;
@@ -130,30 +72,15 @@ export function useMarketplaceSearch() {
 =======
         matchesRating;
     })
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
+  
 
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
-        setSelectedProductTypes((prev: string[]) =>
-<<<<<<< HEAD
-
-
-=======
-          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
-        );
-        break;
-      case 'locations':
-        setSelectedLocations((prev: string[]) =>
-          prev && prev.includes(value) ? prev && prev.filter(l => l !== value) : [...prev, value]
-        );
-        break;
-      case 'availability':
-        setSelectedAvailability((prev: string[]) =>
-
-        );
-import { useState, useMemo } from './react';
+        setSelectedProductTypes((prev: string[]) =>import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
 
@@ -225,21 +152,10 @@ function useMarketplaceSearch() {}
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
-
-
-  }
-;
-  // Clear all filters;
-
-    setSearchQuery ("");
-    setSelectedProductTypes ([]);
-    setSelectedLocations ([]);
-    setSelectedAvailability ([]);
-    setSelectedRating (null);
-  }
-;
-
-
+        break;
+      default: break;
+    }
+  }  return {
     search_query;
     setSearchQuery;
     search_suggestions;
@@ -252,22 +168,7 @@ function useMarketplaceSearch() {}
     handleFilterChange;
     clearAllFilters;
 
-          prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
-        ),
-        break,
-      default: break;
-    }
-
-          prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]
-        ),
-        break,
-      case 'locations':
-        setSelectedLocations((prev: string[]) =>
-          prev.includes(value) ? prev.filter(l => l !== value) : [...prev, value]
-        ),
-        break,
-      case 'availability':
-        setSelectedAvailability((prev: string[]) =>
+    filter_options;
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
@@ -286,18 +187,9 @@ function useMarketplaceSearch() {}
         break,
       default: break;
     }
-<<<<<<< HEAD
 
-
-
-=======
   },
   
-
-  }
-  },
-  
->>>>>>> origin/cursor/delete-old-data-records-6bba
   // Clear all filters
   const clearAllFilters = () => {
 
@@ -305,42 +197,10 @@ function useMarketplaceSearch() {}
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
-<<<<<<< HEAD
-
     setSelectedRating(null)
-
-
-
   },
   
   return {
-
-
-=======
-    setSelectedRating(null)
-
-  },
-  
-  return {}
-  },
-  
-  return {
-    searchQuery;
-    setSearchQuery;
-    searchSuggestions;
-    selectedProductTypes;
-    selectedLocations;
-    selectedAvailability;
-    selectedRating;
-    setSelectedRating;
-    filteredListings;
-    handleFilterChange;
-    clearAllFilters;
-
-    filterOptions
-  }
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
     searchQuery,
     setSearchQuery,
     searchSuggestions,
@@ -352,22 +212,13 @@ function useMarketplaceSearch() {}
     filteredListings,
     handleFilterChange,
     clearAllFilters,
-<<<<<<< HEAD
-    filterOptions
-
-
-  }
-}
-;
-=======
-
     filterOptions
 
   }
-}import { useState, useMemo } from "react";"
-import { ProductListing } from "@/types/listings";"
-import { SearchSuggestion, FilterOptions } from "@/types/search",;"
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;"
+}import { useState, useMemo } from "react",;
+import { ProductListing } from "@/types/listings",;
+import { SearchSuggestion, FilterOptions } from "@/types/search",;
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
 export function useMarketplaceSearch() {;
   // Search state;
   }
@@ -464,4 +315,4 @@ export function useMarketplaceSearch() {;
   }
 }
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

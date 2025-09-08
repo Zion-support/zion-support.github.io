@@ -1,53 +1,7 @@
 
-<<<<<<< HEAD
-=======
-    </div>;
-  );
+
 export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
-
-export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
-  return (
-    <div className="flex justify-between items-center mb-8">
-      <div>
-        <h1 className="text-3xl font-bold">Smart Contract Builder</h1>
-        <p className="text-muted-foreground mt-2">
-          Create legally binding agreements with optional blockchain deployment
-        </p>
-      </div>
-
-export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
-  return (
-    <div className=flex justify-between items-center mb-8">
-      <div>
-        <h1 className="text-3xl font-bold>Smart Contract Builder</h1>
-        <p className=text-muted-foreground mt-2">
-          Create legally binding agreements with optional blockchain deployment
-        </p>
-      </div>
-      <Button size="lg onClick={onCreateClick}>
-        Create New Contract
-      </Button>
-<<<<<<< HEAD
-
-import { Button } from "@/components/ui/button",
-interface ContractHeaderProps {
-  onCreateClick: () => void
-}
-
-      <Button size="lg" onClick={onCreateClick}>
-
-=======
-      <Button size=lg" onClick={onCreateClick}>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        Create New Contract
-      </Button>
-    </div>
-
-  );
-
+  return (  );
 }
 
   )
@@ -68,49 +22,12 @@ interface ContractHeaderProps {;
   onCreateClick: () => void;
 }
 ;
-
-
-<<<<<<< HEAD
-
-
-
+export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
+  return (;      <Button size="lg" onClick={onCreateClick}>;
+        Create New Contract;
+      </Button>;
     </div>;
-import { Button  } from '@/components / ui / button';
-interface ContractHeaderProps {
-  onCreateClick: () => void;
-}
-export /**
- * ContractHeader - Function description
- */
-function ContractHeader() {
-
-  return (
-
-import { Button } from "@/components/ui/button",;
-;
-interface ContractHeaderProps {;
-  onCreateClick:() => void;
-}
-;
-export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
-  return (;
-
-    <div className="flex justify-between items-center mb-8">;
-
-      <div>;
-        <h1 className="text-3xl font-bold>Smart Contract Builder</h1>;
-        <p className=text-muted-foreground mt-2">;
-          Create legally binding agreements with optional blockchain deployment;
-        </p>;
-      </div>;
-
-
-      <Button size="lg" onClick={onCreateClick}>;
-
-
-=======
-export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  );
 import { Button  } from '@/components / ui / button';
 interface ContractHeaderProps {}
   onCreateClick: () => void;
@@ -142,14 +59,10 @@ function ContractHeader() {
       </Button>;
     </div>);
 
+}=======}
+
 }
-<<<<<<< HEAD
-
-
-
-
-=======
-  )}
+  ),;}
  interface ContractHeaderProps {
   onCreateClick: () => void 
 }export function ContractHeader ({
@@ -166,12 +79,5 @@ function ContractHeader() {
     </div>;
   );
 }
-
-<<<<<<< HEAD
-
-
-
-
-=======
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

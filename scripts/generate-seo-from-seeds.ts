@@ -10,20 +10,36 @@ async function post(url: string, body: any) {
   return await res.json()
 }
 
-'
-import fs from 'fs';'
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> origin/main
+ 
+
+import fs from 'fs';
 import path from 'path';
 
-
+<<<<<<< HEAD
+=======
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 async function post(url: string, body: any) {}
   try {'
   const res = await fetch(url, { method: 'POST', headers: { "Content-Type": "application/json" }, body: JSON && JSON.stringify(body) })
   return await res && res.json()
 
-
-
+}
+>>>>>>> origin/main
+/* eslint-disable no-console */;
+import fs from 'fs',;
+import path from 'path',;
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
+async function post(url: string, body: any) {;
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
+<<<<<<< HEAD
+  return await res.json();
+=======
+  return await res.json();
 }
 
 }
@@ -306,6 +322,6 @@ const outDir = path.join (process.cwd (), 'datapage-metadataseo')fs.mkdirSync (o
     }
   }
 }
-
-main().catch((e) => { console.error(e), process.exit(1) }),
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;
+main().catch((e) => { console.error(e), process.exit(1) });
+>>>>>>> origin/main

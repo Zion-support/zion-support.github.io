@@ -1,58 +1,69 @@
-import React, { createContext, useContext, useState } from 'react';
-const DialogContext = createContext(undefined);
-export function Dialog({ children, open, onOpenChange }) {
-    const [internalOpen, setInternalOpen] = useState(false);
-    const isControlled = open !== undefined;
-    const isOpen = isControlled ? open : internalOpen;
-    const setIsOpen = (newOpen) => {
-        if (!isControlled) {
-            setInternalOpen(newOpen);
-        }
-        if (onOpenChange) {
-            onOpenChange(newOpen);
-        }
-    };
-    return (<DialogContext.Provider value={{ isOpen, setIsOpen }}>
-      <div className="relative">
-        {children}
-      </div>
-    </DialogContext.Provider>);
-}
-export function DialogTrigger({ children, asChild = false }) {
-    const context = useContext(DialogContext);
-    if (!context)
-        throw new Error('DialogTrigger must be used within Dialog');
-    if (asChild) {
-        return (<div onClick={() => context.setIsOpen(true)}>
-        {children}
-      </div>);
-    }
-    return (<div onClick={() => context.setIsOpen(true)}>
+import * as React from "react"
+import * as DialogPrimitive from "@radix-ui/react-dialog"
+import { X } from 'lucide-react'
+
+import { cn } from "@/lib/utils"
+
+const Dialog = DialogPrimitive.Root
+
+const DialogTrigger = DialogPrimitive.Trigger
+
+const DialogPortal = DialogPrimitive.Portal
+
+const DialogClose = DialogPrimitive.Close
+
+const DialogOverlay = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Overlay>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Overlay
+  />
+))
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
+const DialogContent = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
+>(({ className, children, ...props }, ref) => (
+  <DialogPortal>
+    <DialogOverlay />
+    <DialogPrimitive.Content  />;
+));
+DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
+
+  />
+))
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
+const DialogContent = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
+>(({ className, children, ...props }, ref) => (
+  <DialogPortal>
+    <DialogOverlay />
+    <DialogPrimitive.Content
+
+      ref={ref}
+      className={cn(
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
+      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      className
+    )}
+    {...props}
+  />;
+));
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
+const DialogContent = React.forwardRef<;
+  React.ElementRef<typeof DialogPrimitive.Content>,;
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>;
+>(({ className, children, ...props }, ref) => (;
+  <DialogPortal>;
+    <DialogOverlay />;
+    <DialogPrimitive.Content;
+      ref={ref}
+      className={cn(
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg",
+        className
+      )}
+      {...props}
+    >
       {children}
-    </div>);
-}
-export function DialogContent({ children, className = '' }) {
-    const context = useContext(DialogContext);
-    if (!context)
-        throw new Error('DialogContent must be used within Dialog');
-    if (!context.isOpen)
-        return null;
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)}/>
-      <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
-        {children}
-      </div>
-    </div>);
-}
-export function DialogHeader({ children, className = '' }) {
-    return <div className={`mb-4 ${className}`}>{children}</div>;
-}
-export function DialogTitle({ children, className = '' }) {
-    return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
-}
-export function DialogDescription({ children, className = '' }) {
-    return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
-}
-export function DialogFooter({ children, className = '' }) {
-    return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
-}
+

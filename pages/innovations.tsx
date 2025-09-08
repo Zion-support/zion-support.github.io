@@ -96,9 +96,7 @@ export default function InnovationsPage() {
               >
                 <a
                   href="#innovations"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
-                >
-                  <Eye className="w-5 h-5 mr-2" />
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"><Eye className="w-5 h-5 mr-2" />
                   Explore Innovations
                 </a>
                 
@@ -293,9 +291,7 @@ export default function InnovationsPage() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
                     href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"><Mail className="w-5 h-5 mr-2" />
                     Start Innovation Partnership
                   </a>
                   

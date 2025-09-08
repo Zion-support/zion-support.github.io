@@ -1,39 +1,23 @@
-<<<<<<< HEAD
-
-import { SortDesc, ChevronDown  } from './lucide-react';
-
-
-=======
-import { SortDesc, ChevronDown  } from './lucide-react';
-
-
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { SORT_OPTIONS } from "@/data/sortOptions";
+import { SortDesc, ChevronDown } from "lucide-react";
 import {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { SORT_OPTIONS  } from '@/data / sort_options';
-import { SortDesc, ChevronDown  } from './lucide-react';
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {
-
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-<<<<<<< HEAD
-
-export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
-
-=======
-} from '@/components / ui / dropdown - menu';
-;
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { SortDesc, ChevronDown  } from './lucide-react';import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 interface SortDropdownProps {
   // TODO: Implement
   sortOption: string;,
@@ -53,11 +37,6 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           variant="outline"
           className="w-full justify-between border-zion-blue-light text-white"
         >
@@ -70,48 +49,20 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 
 =======
             {SORT_OPTIONS.find((opt) => opt.value === sortOption)?.label ||
->>>>>>> origin/cursor/delete-old-data-records-6bba
               "Sort by"}
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      <DropdownMenuContent
-        align="start"
-
-        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
-      >
-        {SORT_OPTIONS.map((option) => (;
-          <DropdownMenuItem;
-            key={option.value}
-<<<<<<< HEAD
-
-
-
-
-=======
-
-            onClick={() => setSortOption(option.value)});
-}
-;
-
-            key={option.value}
-
-              sortOption === option.value
-                ? "bg-zion-purple/20 text-zion-purple"
-                : ""
-
-            }`}
-
-
-  )
-}
-}
-;
+      </DropdownMenuTrigger>            }`}
+          >
+            {option.label}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { SORT_OPTIONS } from "@/data/sortOptions",;
 import { SortDesc, ChevronDown } from "lucide-react",;
 import {;
   DropdownMenu,;
@@ -125,8 +76,6 @@ interface SortDropdownProps {;
 
   );
 
-
 }
 ;
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

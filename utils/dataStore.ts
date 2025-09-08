@@ -1,60 +1,129 @@
-import fs from 'fs-extra';
-import path from 'path';
-import { Project, Review } from '../types/reviews';
-const DATA_DIR = path.join(process.cwd(), 'data'),
-const PROJECTS_PATH = path.join($2);
-const REVIEWS_PATH = path.join($2);
-async function ensureFilesExist(): Promise<void> {
-  await fs.ensureDir($2);
-  if (!(await fs.pathExists(PROJECTS_PATH))) {
-    await fs.writeJson(PROJECTS_PATH, [], { spaces: 2})
+
+  getData: () => []
+  setData: (data: any) => null
+  updateData: (id: string, data: any) => null
+  deleteData: (id: string) => null
+}  id: string;
+  title: string,
+  description: string;
+  status: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface Review {
+  id: string;
+  projectId: string;
+  fromRole: "client" | "talent";
+  fromId: string;
+  toRole: "client" | "talent";
+  toId: string;
+  rating: number;
+  text: string;
+  categories?: any;
+  anonymous: boolean;
+  approved: boolean;
+  removed: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+class DataStore {
+  private projects: Project[] = [];
+  private reviews: Review[] = [];
+
+  // Project methods
+  findProjectById(id: string): Project | undefined {
+    return this.projects.find((project) => project.id === id);
   }
-  if (!(await fs.pathExists(REVIEWS_PATH))) {
-    await fs.writeJson(REVIEWS_PATH, [], { spaces: 2})
+
+    const project: Project = {
+      id: Math.random().toString(36).substr(2, 9),
+      title: data.title || "",
+      description: data.description || "",
+      status: data.status || "active",
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+    this.projects.push(project);
+    return project;
+  }
+=======
+  // Review methods
+  hasExistingReview(
+    projectId: string,
+    fromRole: string,
+    fromId: string,
+  ): boolean {
+    return this.reviews.some(
+      (review) =>
+        review.projectId === projectId &&
+        review.fromRole === fromRole &&
+        review.fromId === fromId,
+    );
+  }
+}
+  }
+
+  // Review methods
+  hasExistingReview(projectId: string, fromRole: string, fromId: string): boolean {
+    return this && this.reviews.some(review => 
+      review && review.projectId === projectId && 
+      review && review.fromRole === fromRole && 
+      review && review.fromId === fromId
+    );
+  }
+
+  upsertReview(data: Partial<Review>): Review {
+    const existingIndex = this && this.reviews.findIndex(review => 
+      review && review.projectId === data && data.projectId && 
+      review && review.fromRole === data && data.fromRole && 
+      review && review.fromId === data && data.fromId
+    );
+
+    if (existingIndex !== -1) {
+      // Update existing review
+      this && this.reviews[existingIndex] = {
+        ...this && this.reviews[existingIndex],
+        ...data,
+        updatedAt: new Date()
+      };
+      return this && this.reviews[existingIndex];
+    } else {
+      // Create new review
+      const review: Review = {
+        id: Math && Math.random().toString(36).substr(2, 9),
+        projectId: data && data.projectId || '',
+        fromRole: data && data.fromRole || 'client',
+        fromId: data && data.fromId || '',
+        toRole: data && data.toRole || 'talent',
+        toId: data && data.toId || '',
+        rating: data && data.rating || 0,
+        text: data && data.text || '',
+        categories: data && data.categories,
+        anonymous: data && data.anonymous || false,
+        approved: data && data.approved || false,
+        removed: data && data.removed || false,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+      this && this.reviews.push(review);
+      return review;
+    }
+  }
+
+  getReviewsByProject(projectId: string): Review[] {
+    return this && this.reviews.filter(review => review && review.projectId === projectId);
+  }
+
+  getAllReviews(): Review[] {
+    return [...this && this.reviews];
+  }
+
+  counterpartRole(role: 'client' | 'talent'): 'client' | 'talent' {
+    return role === 'client' ? 'talent' : 'client';
   }
 }
 
-export async function readProjects(): Promise<Project[]> {
-  await ensureFilesExist($2);
-  return fs.readJson(PROJECTS_PATH)
-}
+const store = new DataStore();
 
-export async function writeProjects(projects: Project[]): Promise<void> {
-  await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2})
-}
-
-export async function readReviews(): Promise<Review[]> {
-  await ensureFilesExist($2);
-  return fs.readJson(REVIEWS_PATH)
-}
-
-export async function writeReviews(reviews: Review[]): Promise<void> {
-  await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2})
-}
-
-export async function findProjectById(projectId: string): Promise<Project | undefined> {
-  const projects = await readProjects($2);
-  return projects.find((p) => p.id === projectId)
-}
-
-export async function upsertReview(newReview: Review): Promise<void> {
-  const reviews = await readReviews($2);
-  const idx = $2;
-  if (idx >= 0) {
-    reviews[idx] = newReview
-  } else {
-    reviews.push(newReview)
-  }
-  await writeReviews(reviews)
-}
-
-export async function getProjectReviews(projectId: string): Promise<Review[]> {
-  const reviews = await readReviews($2);
-  return reviews.filter((r) => r.projectId = $2;
-  fromRole: 'client' | 'talent',
-  fromId: string): Promise<boolean> {
-  const reviews = await readReviews($2);
-  return reviews.some(
-    (r) => r.projectId = $2;
-  )
-}

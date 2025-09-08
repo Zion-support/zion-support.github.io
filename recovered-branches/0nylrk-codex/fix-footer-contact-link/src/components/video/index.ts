@@ -1,8 +1,9 @@
 
-<<<<<<< HEAD
+export * from './VideoCallRoom';
+;
 
-
-
-=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba

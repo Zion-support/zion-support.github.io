@@ -240,7 +240,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </motion.div>
     </>
-  );
+  )
 };
 
 export default Sidebar;

@@ -25,8 +25,6 @@ export function SocialLogin() {
       </div>"
       <div className="mt-6 grid grid-cols-4 gap-3">
 
-<<<<<<< HEAD
-=======
         <Button
           type="button"
           variant="outline"
@@ -74,66 +72,19 @@ export function SocialLogin() {
           variant="outline""
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  )
-
+          disabled={isLoading}  )
+import { Facebook, Twitter } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
-<<<<<<< HEAD
 
 
-
-=======
-export function SocialLogin() {;
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
-  return (;
-    <div className="mt-6">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  return (    <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
-
-<<<<<<< HEAD
-        <div className="relative flex justify-center text-sm">;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { Facebook, Twitter  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
-import { use_auth  } from '@/hooks / use_auth';
-
-import { Web3Login  } from './Web3Login';
-export /**;
- * SocialLogin - Function description;
- */
-function SocialLogin() {}
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading } =;
-    use_auth ();
-;
-  return ("
-    <div className="mt - 6">;"
-      <div className="relative">;"
-        <div className="absolute inset - 0 flex items - center">;"
-          <div className="w - full border - t border - zion - blue - light" />;
-        </div>;"
-        <div className="relative flex justify - center text - sm">;"
-          <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
-
-
-            Or continue with;
-          </span>;
-        </div>;
-        >;"
-          <span className="sr-only">Sign in with Twitter</span>;"
-
-          <Twitter className="h-5 w-5" />;
-        </Button>;
-        <Web3Login />;
-      </div>;
-    </div>;
-
+        <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
           disabled={is_loading}
         >;
           <span className="sr-only">Sign in with Google</span>;
@@ -178,16 +129,8 @@ function SocialLogin() {}
           on_click={() => loginWithTwitter ()}
           disabled={is_loading}
         >;
-
-
-<<<<<<< HEAD
-  );
-}
-;
-
-
-
-=======
+          <span className="sr-only">Sign in with Twitter</span>;
+          <Twitter className="h - 5 w-5" />;
         </Button>;
         <Web3Login />;
       </div>;
@@ -196,16 +139,4 @@ function SocialLogin() {}
   );
 }
 ;
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
-        </div>;
-      </div>;
-      <div className="mt-6 grid grid-cols-4 gap-3">;
-        <Button;
-          type="button";
-          variant="outline";
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-  );
-}
-;
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

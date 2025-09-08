@@ -28,9 +28,3 @@ export default function Helpdesk(): any ({ }: HelpdeskProps) {;
     </div>;
   );
 
-
-=======
-}
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

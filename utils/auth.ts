@@ -3,30 +3,24 @@ import type { NextApiRequest } from 'next';
 export interface User {
   id: string;
   email: string;
-  role: string;
-  isAdmin: boolean;
+  role?: string;
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User | null {
-  // Basic implementation - in production, this would parse from JWT or session
+  // Simple implementation - in production, this would parse JWT or session
   const authHeader = req.headers.authorization;
   if (!authHeader) return null;
   
-  try {
-    // Mock user for development
-    return {
-      id: '1',
-      email: 'admin@example.com',
-      role: 'admin',
-      isAdmin: true
-    };
-  } catch {
-    return null;
-  }
+  // Mock user for now
+  return {
+    id: '1',
+    email: 'admin@example.com',
+    role: 'admin'
+  };
 }
 
 export function ensureAdmin(user: User | null): void {
-  if (!user || !user.isAdmin) {
+  if (!user || user.role !== 'admin') {
     const error = new Error('Forbidden');
     (error as any).statusCode = 403;
     throw error;
@@ -34,8 +28,8 @@ export function ensureAdmin(user: User | null): void {
 }
 
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-  const user = parseUserFromRequest(req);
   try {
+    const user = parseUserFromRequest(req);
     ensureAdmin(user);
     return { allowed: true };
   } catch {

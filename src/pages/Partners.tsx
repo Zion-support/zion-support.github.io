@@ -178,127 +178,141 @@ export default function Partners(...args: any[]): any {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Why Partner With Us?
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover the advantages of joining our technology ecosystem
-            </p>
-          </motion.div>
-          
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {partnerBenefits.map((benefit, index)   => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + index * 0.1 }}
-                className="text-center p-6"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-4">
-                  <benefit.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
-            </p>
-          </div>
-          
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {existingPartners.map((partner, index)   => (
-              <motion.div
-                key={partner.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-4xl">{partner.logo}</div>
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
-                      {partner.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
-                  <p className="text-slate-300 text-sm mb-4">{partner.description}</p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-400 text-sm">Partner since {partner.year}</span>
-                    <Star className="w-4 h-4 text-amber-400" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Partnership Process */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            <Link href='/signup?type=partner&source=partner-program'>
+              {t('partner.apply')}
+            </Link>
+          </Button>
+          <Button
+            size='lg'
+            variant='outline'
+            className='text-zion-cyan border-zion-cyan'            disabled={!authServiceAvailable}          <Button
+            size="lg"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            asChild><Link href="/signup?type=partner&source=partner-program">{t('partner.apply')}</Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-zion-cyan border-zion-cyan"
+            disabled={!authServiceAvailable}
+            onClick={() => router.push('/login')}
+            disabled = {!authServiceAvailable,}
+            onClick = {() => router.push('/login'),}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Partnership Process
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Simple steps to become a Zion Tech Group partner
-            </p>
-          </motion.div>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-              {partnershipProcess.map((step, index)   => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center group"
-                >
-                  <div className="relative">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-2xl font-bold text-white">{step.step}</span>
-                    </div>
-                    
-                    {index < partnershipProcess.length - 1 && (
-                      <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 transform -translate-y-1/2 z-0"></div>
-                    )}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
-                  <p className="text-slate-300 mb-4 leading-relaxed">{step.description}</p>
-                  <div className="text-cyan-400 text-sm font-medium">{step.duration}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+            {t('partner.login')}
+          </Button>
+          {!authServiceAvailable && (
+            <p className='text-red-500 text-sm mt-2'>
+              {t('partner.login_unavailable')}
+            </p>          )}            <p className="text-red-500 text-sm mt-2">{t('partner.login_unavailable')}</p>
+          )}
         </div>
-      </section>
+      </div>
+    );
+  }
+  // Authenticated user view - Partner Dashboard
+  logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  return (
+    <div className='container max-w-7xl py-10'>
+      <h1>DEBUG: Partners Page - Authenticated View</h1>
+      <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
+        <div>
+          <h1 className='text-3xl font-bold tracking-tight text-white'>
+            {t('partner.dashboard_title')}
+          </h1>
+          <p className='text-zion-slate-light'>{t('partner.dashboard_desc')}</p>
+        </div>
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            className='flex items-center gap-2'
+            onClick={() => window.print()}
+          >
+            <FileDown className='h-4 w-4' />            {t('partner.export_csv')}      <h1>DEBUG: Partners Page - Authenticated View</h1>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
+          <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
+        </div>
+        <div className="flex gap-2">
+          <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
+            <FileDown className="h-4 w-4" />
+            {t('partner.export_csv')}
+          </Button>
+        </div>
+      </div>
+      <Tabs
+        value={activeTab}
+        onValueChange={setActiveTab}
+        className='space-y-4'><TabsList className='grid grid-cols-2 md:grid-cols-5 mb-4'>
+          <TabsTrigger value='overview'>
+            {t('partner.tabs.overview')}
+          </TabsTrigger>
+          <TabsTrigger value='referrals'>
+            {t('partner.tabs.referrals')}
+          </TabsTrigger>
+          <TabsTrigger value='earnings'>
+            {t('partner.tabs.earnings')}
+          </TabsTrigger>
+          <TabsTrigger value='leaderboard'>
+            {t('partner.tabs.leaderboard')}
+          </TabsTrigger>
+          <TabsTrigger value='resources'>
+            {t('partner.tabs.resources')}
+          </TabsTrigger>
+        </TabsList>        </TabsList>
+        <TabsContent value="overview" className="space-y-4">
+          <PartnerDashboard />
+        </TabsContent>
+        <TabsContent value="referrals" className="space-y-4">
+          <PartnerReferralLinks />
+        </TabsContent>
+        <TabsContent value='overview' className='space-y-4'>
+          <PartnerDashboard />
+        </TabsContent>
+        <TabsContent value='referrals' className='space-y-4'>
+          <PartnerReferralLinks />
+        </TabsContent>
+        <TabsContent value='earnings' className='space-y-4'>          <Card>
+        <TabsContent value="earnings" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>{t('partner.earnings_title')}</CardTitle>
+              <CardDescription>{t('partner.earnings_desc')}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              {/* This will be implemented later */}
+              <p className='text-zion-slate-light'>
+                {t('partner.earnings_placeholder')}
+              </p>
+            </CardContent>
+          </Card>
+        </TabsContent>            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="leaderboard" className="space-y-4">
+          <PartnerLeaderboard />
+        </TabsContent>
+        <TabsContent value='leaderboard' className='space-y-4'>
+          <PartnerLeaderboard />
+        </TabsContent>
+        <TabsContent value='resources' className='space-y-4'>          <PartnerResources />
+        <TabsContent value="resources" className="space-y-4">
+          <PartnerResources />
+        </TabsContent>
+      </Tabs>
     </div>
   );
+  async function checkHealth () {try {}checkHealth () ;
+}, []);
+//If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
+}</Button>) ;
+}</div> </div>) ";
+}//Authenticated user view - Partner Dashboard return (<div className="container max-w-7xl py-10"><h1>DEBUG: Partners Page - Authenticated View</h1> <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8"><div> </Button> </div> </div> </TabsList> <TabsContent value="overview" className="space-y-4"><PartnerDashboard /> </TabsContent> <TabsContent value="referrals" className="space-y-4"><PartnerReferralLinks /> </TabsContent> <TabsContent value="earnings" className="space-y-4"><Card> <CardHeader> <CardTitle> {';
+  t ('partner.earnings title') ;
+}</CardTitle> <CardDescription> {';
+  t ('partner.earnings desc') ";
+}</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space-y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
+}'"}
 }

@@ -122,8 +122,6 @@ async function checkAutomationStatus() {
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';);
-
-<<<<<<< HEAD
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       } catch(error) { 
       statusReport.pm2Processes = [] }
@@ -131,9 +129,19 @@ async function checkAutomationStatus() {
       statusReport.pm2Processes = [] }
       } catch(error) { 
       statusReport.pm2Processes = [] }
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
+      const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
+      const pm2Data = JSON.parse(pm2List;);
+      statusReport.pm2Processes = pm2Data;
+      const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';);
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
+      } catch(error) { 
+      statusReport.pm2Processes = [] }
 
       } catch(error) { 
       statusReport.pm2Processes = [] }

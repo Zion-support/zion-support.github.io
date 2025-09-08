@@ -22,14 +22,3 @@ export default function Revenueops({ }: RevenueopsProps) {
 <<<<<<< HEAD
 
   );
-
-
-
-
-
-
-
-
-=======
-  );
-}

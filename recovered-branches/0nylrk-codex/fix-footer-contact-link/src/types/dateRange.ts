@@ -1,15 +1,7 @@
-
-<<<<<<< HEAD
-
-=======
-from?: Date;
-  to?: Date
-}
-
+export interface DateRange {
+  from?: Date;
   to?: Date;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 export interface DateRange {;
   from?: Date;
   to?: Date;
@@ -17,22 +9,16 @@ export interface DateRange {;
   to?: Date;
 }
 ;
-
-<<<<<<< HEAD
-=======
-
 export interface DateRange {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-
-
-
-=======
   from?: Date;
 }export interface DateRange {
   from?: Date;
-
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export interface DateRange {;
+  from?: Date;
+  to?: Date
+}
+  to?: Date;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

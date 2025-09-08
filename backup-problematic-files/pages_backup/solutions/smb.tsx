@@ -121,12 +121,10 @@ const smbServices = [
 
 export default function SMBSolutionsPage() {
   return (
-    <>
-      <Head>
-        <title>SMB Solutions - Zion Tech Group</title>
-        <meta name="description" content="Technology solutions designed for small and medium businesses." />
-      </Head>
-
+    <Layout
+      title="SMB Solutions - Zion Tech Group"
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
+    >
       <div className="min-h-screen bg-gray-50">
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency.">;
       <div className="min-h-screen bg-gray-50">;
@@ -139,9 +137,6 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -207,8 +202,6 @@ export default function SMBSolutionsPage() {
         </section>
 
         {/* Services Section */}
-<<<<<<< HEAD
-
         <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
@@ -337,13 +330,7 @@ export default function SMBSolutionsPage() {
         </section>;
       </div>;
     </Layout>;
+  );
+};
 
-=======
-
-
-              whileHover={{ scale: 1 && 1.05 }}>,;
-              <ArrowRight className="w-5 h-5 ml-2" />";"
-
-
-            </motion && motion.a>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Smb;

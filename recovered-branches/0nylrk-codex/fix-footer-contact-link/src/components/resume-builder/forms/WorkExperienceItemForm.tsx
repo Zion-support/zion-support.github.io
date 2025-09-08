@@ -1,6 +1,4 @@
 
-
-
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";"
 import {useForm} from "react-hook-form";"
@@ -18,18 +16,7 @@ import {format} from "date-fns";"
 import {CalendarIcon, Loader2} from "lucide-react";"
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";"
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-'
-import { useState } from 'react',
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import { useState } from 'react',import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -43,336 +30,41 @@ import { Textarea } from "@/components/ui/textarea",
 import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-// Define form schema
-
-const formSchema = z.object({
-  company_name: z.string().min(1, "Company name is required"),
-  role_title: z.string().min(1, "Role title is required"),
-  start_date: z.date({
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    required_error: "Start date is required"}),
-  end_date: z.date().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
-type FormValues = z.infer<typeof formSchema>,
-
-<<<<<<< HEAD
-
-interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience,
-  onSubmit: (data: WorkExperience) => Promise<void>,
-
-=======
-
-export function WorkExperienceItemForm({;
-
+import { CalendarIcon, Loader2 } from "lucide-react",export function WorkExperienceItemForm({;
   initialData;
   onSubmit;
 export function WorkExperienceItemForm({}
   initialData,
   onSubmit,
-
   onCancel}: WorkExperienceItemFormProps) {
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
-  onCancel}: WorkExperienceItemFormProps) {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  // Set up form
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      company_name: initialData?.company_name || "",
-
-      role_title: initialData?.role_title || "",
-      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
-      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
-      is_current: initialData?.is_current || false,"
-      description: initialData?.description || "","
-      location: initialData?.location || ""}}),
-  
-  const { isSubmitting } = form.formState,"
-  const watchIsCurrent = form.watch("is_current"),"
-  const watchRoleTitle = form.watch("role_title"),"
-  const watchCompanyName = form.watch("company_name"),
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const handleFormSubmit = async (values: FormValues) => {
-    // Create a properly typed WorkExperience object with all required fields
-    const workExperience: WorkExperience = {
-      id: initialData?.id
-      company_name: values.company_name,  // Required
-      role_title: values.role_title,      // Required
-      start_date: values.start_date,      // Required
-      end_date: values.end_date,          // Optional
-      is_current: values.is_current,      // Required
-      description: values.description,    // Optional
-      location: values.location,          // Optional
-
-<<<<<<< HEAD
-
-
-
-=======
-
-  const handleFormSubmit = async (values: FormValues) => {}
-    // Create a properly typed WorkExperience object with all required fields;
-    const workExperience: WorkExperience = {}
-      id: initialData?.id;
-      company_name: values.company_name,  // Required;
-      role_title: values.role_title,      // Required;
-      start_date: values.start_date,      // Required;
-      end_date: values.end_date,          // Optional;
-      is_current: values.is_current,      // Required;
-      description: values.description,    // Optional;
-      location: values.location,          // Optional;
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    },
-    
-    await onSubmit(workExperience)
-  },
-
-
-
-<<<<<<< HEAD
-=======
-  const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true })
-    setIsEnhancementDialogOpen(false)
-
-  },
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return (
-    <>
-      <Form {...form}>"
-        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField;
-              control={form.control}"
-
-              name="company_name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Company Name</FormLabel>
-
-                    <Input placeholder="e.g. Acme Corporation" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-
-<<<<<<< HEAD
-
-=======
-import { useState } from 'react',;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { useForm } from "react-hook-form",;
-import { z } from "zod",;
-import { WorkExperience } from "@/types/resume",;
-import { Button } from "@/components/ui/button",;
-import { Calendar } from "@/components/ui/calendar",;
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { Textarea } from "@/components/ui/textarea",;
-import { cn } from "@/lib/utils",;
-import { Switch } from "@/components/ui/switch",;
-import { format } from "date-fns",;
-import { CalendarIcon, Loader2 } from "lucide-react",;
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
-
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
-// Define form schema;
-const formSchema = z.object({;"
-  company_name: z.string().min(1, "Company name is required"),;"
-  role_title: z.string().min(1, "Role title is required"),;
-  start_date: z.date({;"
-
-    required_error: "Start date is required"}),;
-  end_date: z.date().optional(),;
-  is_current: z.boolean().default(false),;
-  description: z.string().optional(),;
-  location: z.string().optional()}),;
-type FormValues = z.infer<typeof formSchema>,;
-interface WorkExperienceItemFormProps {;
-  initialData?: WorkExperience,;
-  onSubmit: (data: WorkExperience) => Promise<void>,;
-  onCancel: () => void;
-}
-;
-
-export function WorkExperienceItemForm({;
-  initialData,;
-  onSubmit,;
-  onCancel}: WorkExperienceItemFormProps) {;
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
-
-  // Set up form;
-  const form = useForm<FormValues>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      company_name: initialData?.company_name || "",;
-      role_title: initialData?.role_title || "",;
-
-      start_date: initialData?.start_date ? new Date(initialData && initialData.start_date) : new Date(),;
-      end_date: initialData?.end_date ? new Date(initialData && initialData.end_date) : undefined,;
-      is_current: initialData?.is_current || false,;
-      description: initialData?.description || "",;
-      location: initialData?.location || ""}}),;
-
-  const { isSubmitting } = form && form.formState;
-  const watchIsCurrent = form && form.watch("is_current");
-  const watchRoleTitle = form && form.watch("role_title");
-  const watchCompanyName = form && form.watch("company_name");
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const handleFormSubmit = async (values: FormValues) => {;
-    // Create a properly typed WorkExperience object with all required fields;
-    const workExperience: WorkExperience = {;
-      id: initialData?.id,;
-
-<<<<<<< HEAD
-
-=======
-      company_name: values && values.company_name,  // Required;
-      role_title: values && values.role_title,      // Required;
-      start_date: values && values.start_date,      // Required;
-      end_date: values && values.end_date,          // Optional;
-      is_current: values && values.is_current,      // Required;
-      description: values && values.description,    // Optional;
-      location: values && values.location,          // Optional;
-    };
-
-    await onSubmit(workExperience);
-  };
-
-  const handleAIEnhancement = (content: string) => {;
-    form && form.setValue("description", content, { shouldDirty: true }),;
-    setIsEnhancementDialogOpen(false);
-  };
-
+  onCancel}: WorkExperienceItemFormProps) {  return (
     <>;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <FormField
               control={form && form.control}
-
+              name="company_name"  onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
-
-  // Set up form;
-  const form = useForm<FormValues>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      company_name: initialData?.company_name || "",;
-      role_title: initialData?.role_title || "",;
-
-
-      start_date: initialData?.start_date ? new Date(initialData && initialData.start_date) : new Date(),;
-      end_date: initialData?.end_date ? new Date(initialData && initialData.end_date) : undefined,;
-      is_current: initialData?.is_current || false,;
-      description: initialData?.description || "",;
-      location: initialData?.location || ""}}),;
-
-  const { isSubmitting } = form && form.formState;
-  const watchIsCurrent = form && form.watch("is_current");
-  const watchRoleTitle = form && form.watch("role_title");
-  const watchCompanyName = form && form.watch("company_name");
-
-  const handleFormSubmit = async (values: FormValues) => {;
-    // Create a properly typed WorkExperience object with all required fields;
-    const workExperience: WorkExperience = {;
-      id: initialData?.id,;
-
-
-      company_name: values && values.company_name,  // Required;
-      role_title: values && values.role_title,      // Required;
-      start_date: values && values.start_date,      // Required;
-      end_date: values && values.end_date,          // Optional;
-      is_current: values && values.is_current,      // Required;
-      description: values && values.description,    // Optional;
-      location: values && values.location,          // Optional;
-    };
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    await onSubmit(workExperience);
-  },;
-  const handleAIEnhancement = (content: string) => {;
-    form.setValue("description", content, { shouldDirty: true }),;
-    setIsEnhancementDialogOpen(false);
-<<<<<<< HEAD
-
-  },;
-  return (;
-
-    <>;
-      <Form {...form}>;
-        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-            <FormField;
-              control={form.control}
-              name="company_name";
-
-=======
-
-  };
-
+  return (
     <>;
       <Form {...form}>;"
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
-
-                    <Input placeholder="e.g. Acme Corporation" {...field} />;
-                  </FormControl>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                    <Input placeholder="e && e.g. Acme Corporation" {...field} />;                  </FormControl>;
                   <FormMessage />;
-                </FormItem>;              )}
+                </FormItem>;
+              )}
+
             />;
 
-<<<<<<< HEAD
-            ;
-            <FormField;
-              control={form.control}
-              name="role_title";
-
-=======
             <FormField
               control={form && form.control}
               name="role_title"
@@ -395,24 +87,22 @@ export function WorkExperienceItemForm({;
                 </FormItem>;
               )}
 
-<<<<<<< HEAD
-            />;
             />;
           </div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
             <FormField
               control={form && form.control}
-              name="location"
-          </div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField;
-              control={form.control}
-              name="location";
-              render={({ field }) => (;
+              name="location"              render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Location</FormLabel>;
                   <FormControl>;
+                    <Input placeholder="e && e.g. New York, NY (Remote)" {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
 import {useState} from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from './react - hook - form';
@@ -480,8 +170,8 @@ function WorkExperienceItemForm() {}
       role_title: values.role_title,      // Required;
       start_date: values.start_date,      // Required;
       end_date: values.end_date,          // Optional;
-      is_current: values.is_current,      // Required;
-      description: values.description,    // Optional;
+      is_current: values.is_current,      // Required,
+  description: values.description,    // Optional;
       location: values.location,          // Optional;
     }
 ;
@@ -495,7 +185,9 @@ function WorkExperienceItemForm() {}
 ;
   return (
     <>;
-
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (handleFormSubmit)} className="space-y-6">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
             <FormField;
               control={form.control}"
               name="company_name";
@@ -519,7 +211,8 @@ function WorkExperienceItemForm() {}
                   <FormMessage />;
                 </FormItem>)}
             />;
-
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
             <FormField;
               control={form.control}"
               name="location";
@@ -548,89 +241,19 @@ function WorkExperienceItemForm() {}
               control={form.control}
               name="is_current";
               render={({ field }) => (
-                <FormItem className="flex flex - col">;
+                <FormItem className="flex flex-col">;
                   <FormLabel > Current Position</FormLabel>;
-                  <div className="flex items - center gap - 2 h - 10">;
+                  <div className="flex items - center gap - 2 h-10">;
                     <Switch;
                       checked={field.value}
-<<<<<<< HEAD
-
 
             />;
-
-
-=======
-            />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <FormField
-              control={form && form.control}
-              name="is_current"
-              render={({ field }) => (;
-                <FormItem className="flex flex-col">;
-                  <FormLabel>Current Position</FormLabel>;
-                  <div className="flex items-center gap-2 h-10">;
-                    <Switch
-                      checked={field && field.value}
-                      onCheckedChange={field && field.onChange}
-                      id="current-position"
-                    />;
-                    <label htmlFor="current-position" className="text-sm text-muted-foreground">;
-
-
-                      onCheckedChange={field.on_change}
-                      id="current - position";
-                    />;
-                    <label html_for="current - position" className="text - sm text - muted - foreground">;
-
-<<<<<<< HEAD
-=======
-
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;              )}
-            />;
-            ;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      I currently work here;
-                    </label>;
-                  </div>;
-                  <FormMessage />;
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
               <FormField
                 control={form && form.control}
-                name="end_date"
-<<<<<<< HEAD
-
-=======
-
-              <FormField
+                name="end_date"              <FormField
                 control={form && form.control}
 
                 name="end_date"
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 render={({ field }) => (;
 
                   <FormItem className="flex flex-col">;
@@ -638,220 +261,42 @@ function WorkExperienceItemForm() {}
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-                          <Button"
+                          <Button
                             variant={"outline"}
                             className={cn(
-
-                            )}"
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
-                          </Button>;
-                        </FormControl>;
-                      </PopoverTrigger>;"
-                      <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
-
-
-=======
-
-
-                        <Calendar"
-                          mode="single"
-
-                          initialFocus"
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                          captionLayout="dropdown-buttons"
-                          fromYear={1990}
-                          toYear={new Date().getFullYear()}
-                          disabled={(date) => date > new Date()}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                        />;
-
+                              "w-full pl-3 text-left font-normal"
+                              !field && field.value && "text-muted-foreground"
+                            )}>;
+                            {field && field.value ? (;
+                              format(field && field.value, "MMM yyyy");
+                            ) : (;                              <span>Select date</span>;                        />;
                       </PopoverContent>;
                     </Popover>;
-<<<<<<< HEAD
-
-                    <FormMessage />;
-
-=======
-
-
+                    <FormMessage />;          <FormField
+            control={form && form.control}
+            name="description"          <FormField
             control={form && form.control}
             name="description"
-          <FormField
-            control={form && form.control}
-            name="description"
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
             render={({ field }) => (;
               <FormItem>;"
                 <div className="flex justify-between items-center">;
                   <FormLabel>Description</FormLabel>;"
                   <div className="flex gap-2">;
-<<<<<<< HEAD
+                    <AIEnhancementButton
+                      options={{
 
-
-=======
-
-
-                    <AIEnhancementButton;
-                      options={{}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}"
-                      onEnhanced={(content) => form && form.setValue("description", content, { shouldDirty: true })}"
-                      buttonText="Enhance with AI";
-                    />;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  </FormItem>)}
-              />)}
-          </div>;
-          <FormField;
-
-                    <AIEnhancementButton;
-                      options={{;
-                        enhancementType:"work-description",;
-                        content:field.value || "",;
-                        context:`${watchRoleTitle} at ${watchCompanyName}`;
-                      }}
-                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty:true })}
-                      buttonText="Enhance with AI";
-                    />;
-                    <Button;
-                      type="button";
-                      variant="outline";
-                      size="sm";
-<<<<<<< HEAD
-
-                      on_click={() => setIsEnhancementDialogOpen (true)}
-                      className="text - xs";
-                    <AIEnhancementButton;
-                      options={{;
-                        enhancementType:"work-description",;
-                        content:field.value || "",;
-                        context:`${watchRoleTitle} at ${watchCompanyName}`;
-                      }}
-                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty:true })}
-                      buttonText="Enhance with AI";
-                    />;
-                    <Button;
-                      type="button";
-                      variant="outline";
-                      size="sm";
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className="text-xs";
-
-=======
-
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className="text-xs";
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    >;
-
+                        enhancementType: "work-description",
+                        content: field && field.value || "",                    >;
                       AI Writer;
                     </Button>;
                   </div>;
                 </div>;
                 <FormControl>;
 
-<<<<<<< HEAD
                   <Textarea;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
                     className="min-h-[150px]";
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-          />;
-          ;
-          <div className="flex justify-end gap-2">;
-            <Button type="button" variant="outline" onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                  Saving...;
-                </>;
-              ) :(;
-                <>Save</>;
-              )}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-<<<<<<< HEAD
-
-      <AIEnhancementDialog;
-=======
-
-
-        initialContent={form && form.getValues("description") || ""}
-      />;
-    </>;
-  );
 }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        title="Enhance Work Experience Description";
-        is_open={isEnhancementDialogOpen}
-        on_close={() => setIsEnhancementDialogOpen (false)}
-        on_apply={handleAIEnhancement}
-
-        initial_content={form.get_values ("description") || ""}
-      />;
-    </>);
-}
-
-}
-;
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
 ;
       <AIEnhancementDialog;"
         title="Enhance Work Experience Description";
@@ -869,7 +314,30 @@ function WorkExperienceItemForm() {}
       />;
     </>;
   ),;}
-
+ is current: z.boolean () .default (false),
+  description: z.string () .optional ();
+location: z.string () .optional () 
+});
+type FormValues = z.infer<typeof formSchema>;
+//Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
+  await onSubmit (workExperience) 
+};
+setIsEnhancementDialogOpen (false)
+};
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> {
+  !watchIsCurrent && (<FormField control= {
+  form.control 
+}<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/>) 
+}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
+  ...field 
+}/> </FormControl> <FormMessage /> </FormItem>) 
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) 
 }
@@ -877,4 +345,4 @@ function WorkExperienceItemForm() {}
 }
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

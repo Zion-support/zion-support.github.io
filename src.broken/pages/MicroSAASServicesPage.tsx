@@ -665,7 +665,28 @@ import {;
   Smartphone,;
   Database;'
 } from 'lucide-react',;
-
+export default function MicroSAASServicesPage() {;
+  const microSAASServices = [;
+    {;
+      name: "Project Management Hub",,
+  description: "Lightweight, intuitive project management tool designed for small teams and startups. Streamline workflows, track progress, and collaborate effectively.",;
+      icon: <Users className="w-12 h-12 text-blue-500" />,;
+      features: [;
+        "Task management and assignment",;
+        "Team collaboration tools",;
+        "Time tracking and reporting",;
+        "Project templates and workflows",;
+        "File sharing and storage",;
+        "Mobile app access",;
+        "Integration with popular tools",;
+        "Custom branding options";
+      ],;
+      pricing: {;
+        starter: "$29/month",;
+        professional: "$59/month",;
+        enterprise: "$99/month";
+      },;
+      marketPrice: "$50-100/month",;
       useCases: ["Small teams", "Startups", "Freelancers", "Agencies", "Remote teams"],;
       benefits: [;"
         "50% cost savings vs competitors",;"
@@ -678,7 +699,9 @@ import {;
       freeTrial: "14 days",;"
       setupTime: "Under 1 hour";
     },;
-
+    {;
+      name: "Invoice & Billing System",,
+  description: "Automated invoicing and payment processing platform with recurring billing, financial analytics, and tax calculations.",;
       icon: <CreditCard className="w-12 h-12 text-green-500" />,;
       features: [;"
         "Automated invoice generation",;"
@@ -708,7 +731,9 @@ import {;
       freeTrial: "30 days",;"
       setupTime: "Under 2 hours";
     },;
-
+    {;
+      name: "Social Media Scheduler",,
+  description: "AI-powered social media management platform with content optimization, multi-platform posting, and performance analytics.",;
       icon: <MessageSquare className="w-12 h-12 text-purple-500" />,;
       features: [;"
         "Multi-platform posting (Instagram, Twitter, LinkedIn, Facebook)",;"
@@ -738,7 +763,9 @@ import {;
       freeTrial: "7 days",;"
       setupTime: "Under 30 minutes";
     },;
-
+    {;
+      name: "Customer Relationship Manager",,
+  description: "Simple yet powerful CRM designed for growing businesses. Manage leads, track sales, and nurture customer relationships.",;
       icon: <BarChart3 className="w-12 h-12 text-orange-500" />,;
       features: [;"
         "Lead management and scoring",;"
@@ -768,7 +795,9 @@ import {;
       freeTrial: "21 days",;"
       setupTime: "Under 2 hours";
     },;
-
+    {;
+      name: "Email Marketing Platform",,
+  description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign window.window.window.performance.",;
       icon: <Mail className="w-12 h-12 text-indigo-500" />,;
       features: [;"
         "Drag-and-drop email builder",;"
@@ -798,7 +827,9 @@ import {;
       freeTrial: "14 days",;"
       setupTime: "Under 1 hour";
     },;
-
+    {;
+      name: "Analytics Dashboard",,
+  description: "Comprehensive business analytics platform with real-time insights, custom reports, and data visualization tools.",;
       icon: <TrendingUp className="w-12 h-12 text-pink-500" />,;
       features: [;"
         "Real-time data visualization",;"
@@ -830,7 +861,28 @@ import {;
     }
   ],;
   const additionalMicroSAAS = [;
-
+    {;
+      name: "Time Tracking Tool",,
+  description: "Simple time tracking for teams and freelancers with project billing and productivity insights.",;
+      pricing: "$19/month",;
+      icon: <Calendar className="w-8 h-8 text-blue-400" />;
+    },;
+    {;
+      name: "Knowledge Base Platform",,
+  description: "Create and manage documentation, FAQs, and help articles for your customers and team.",;
+      pricing: "$39/month",;
+      icon: <FileText className="w-8 h-8 text-green-400" />;
+    },;
+    {;
+      name: "Survey & Feedback Tool",,
+  description: "Collect customer feedback, conduct surveys, and gather insights to improve your products and services.",;
+      pricing: "$29/month",;
+      icon: <MessageSquare className="w-8 h-8 text-purple-400" />;
+    },;
+    {;
+      name: "Appointment Scheduler",,
+  description: "Automated appointment booking system with calendar integration and reminder notifications.",;
+      pricing: "$25/month",;
       icon: <Calendar className="w-8 h-8 text-orange-400" />;
     }
   ],;
@@ -841,7 +893,24 @@ import {;
     { label: "Customer Satisfaction", value: "96%" }
   ],;
   const whyChooseUs = [;
-
+    {;
+      title: "Affordable Pricing",,
+  description: "Up to 60% savings compared to enterprise solutions without compromising on features.",;
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />;
+    },;
+    {;
+      title: "Quick Setup",,
+  description: "Get up and running in under 2 hours with our intuitive setup wizards and templates.",;
+      icon: <Zap className="w-8 h-8 text-blue-400" />;
+    },;
+    {;
+      title: "Scalable Solutions",,
+  description: "Start small and scale up as your business grows. No long-term contracts or hidden fees.",;
+      icon: <Globe className="w-8 h-8 text-purple-400" />;
+    },;
+    {;
+      title: "24/7 Support",,
+  description: "Round-the-clock customer support to help you succeed with our platforms.";
       icon: <Users className="w-8 h-8 text-orange-400" />;
     }
   ];

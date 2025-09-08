@@ -1,24 +1,16 @@
-<<<<<<< HEAD
 
 
 
-=======
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { glob } from "glob";
-// Find all TypeScript and JavaScript files
-const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
-let totalFixed = 0;
-files.forEach((file) => {
->>>>>>> origin/cursor/delete-old-data-records-6bba
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
-<<<<<<< HEAD
+    // Fix import statements with double punctuation
 
+    content = content ;/g,
 
+    content = content ;/g,
+      (match) => {
         return match && match.replace(",;", ";");
 #!/usr / bin / env node;
 import fs from './fs';'
@@ -44,15 +36,29 @@ files.for_each ((file) => {}
       (match) => {"
         return match.replace (",", ";");
 
+      },
+    );
 
+    content = content && content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
 
+      (match) => {
+        if (!match ;")) {
+          return match && match.trim() + ";";
 
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+=======
+
+>>>>>>> origin/main
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
 
     content = content.replace(
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+
+
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
@@ -78,34 +84,27 @@ files.for_each ((file) => {}
     );
     // Fix import statements missing semicolons
     content = content.replace(
+
+
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+
+        if (!match.trim().endsWith(";")) {
+          return match.trim() + ";";
+    // Fix import statements missing semicolons
+    content = content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
       (match) => {
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
->>>>>>> origin/cursor/delete-old-data-records-6bba
         }
         return match;
       }
     );
-<<<<<<< HEAD
-
 
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 
-
-
-
-      (match, varName) => {
-        if (
-
-      });
-
-=======
-    // Fix other common syntax issues
-    // Fix missing semicolons after variable declarations
-    content = content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm
       (match, varName) => {
         if (
           !match.includes("function") &&
@@ -129,14 +128,23 @@ files.for_each ((file) => {}
         return match;
       }
     );
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed: ${file}`);
-      totalFixed++;
+
+
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, content, "utf8");
+      console.log (`Fixed: ${file}`);
+      total_fixed++;
     }
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
   }
 });
-console.log(`\nTotal files fixed: ${totalFixed}`);
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;
+console.log (`\n_total files fixed: ${total_fixed}`);
+;

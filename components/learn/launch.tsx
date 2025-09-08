@@ -1,13 +1,21 @@
-<<<<<<< HEAD
+import { GetServerSideProps } from 'next';
 
 
-=======
+  };      permanent: false}}
+
+}
+
+
 export default function LaunchRedirect() {;
   return null;
 }
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
+
+
+
+      destination: '/academy/founder-course',
       permanent: false}}
 };
 
@@ -17,6 +25,12 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default function LaunchRedirect() {
   return null;
 
+
+  };      permanent: false}}
+
+export default function LaunchRedirect() {;
+  return null;
+}
       destination: '/academy / founder - course',
 >>>>>>> origin/cursor/delete-old-data-records-6bba
       permanent: false,
@@ -28,11 +42,22 @@ export default /**;
  * LaunchRedirect - Function description;
  */
 
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-=======
-  return null
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;
+
+      destination: '/academy/founder-course',
+      permanent: false,
+    },;
+  };      permanent: false}}
+};
+
+export default function LaunchRedirect() {;
+  return null;
+}
+}
+;
+}
+;
+
+}
+;

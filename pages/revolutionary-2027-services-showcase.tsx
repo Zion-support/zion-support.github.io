@@ -173,9 +173,10 @@ export default function Revolutionary2027ServicesShowcase() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
-                <Rocket className="w-5 h-5 mr-2" />
+            <div className='flex flex-wrap items-center justify-center gap-4'>
+              <a
+                href='/contact'
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'><Rocket className='w-5 h-5 mr-2' />
                 Get Started Today
               </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
@@ -306,16 +307,22 @@ export default function Revolutionary2027ServicesShowcase() {
                         </p>
 
                         {/* Features */}
-                        <div className="mb-4">
-                          <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
-                          <ul className="space-y-1">
-                            {service.features.slice(0, 3).map((feature, idx) => (
-                              <li key={idx} className="flex items-center gap-2 text-xs text-gray-400">
-                                <CheckCircle className="w-3 h-3 text-emerald-400 flex-shrink-0" />
-                                <span className="line-clamp-1">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
+                        <div className='mb-4'>
+                          <h4 className='text-sm font-semibold text-gray-200 mb-2'>
+                            Key Features:
+                          </h4>
+                          <ul className='space-y-1'>
+                            {service.features
+                              .slice(0, 3)
+                              .map((feature, idx) => (
+                                <li
+                                  key={idx}
+                                  className='flex items-center gap-2 text-xs text-gray-400'><CheckCircle className='w-3 h-3 text-emerald-400 flex-shrink-0' />
+                                  <span className='line-clamp-1'>
+                                    {feature}
+                                  </span>
+                                </li>
+                              ))}                          </ul>
                         </div>
 
                         {/* Stats */}
@@ -342,10 +349,10 @@ export default function Revolutionary2027ServicesShowcase() {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="flex gap-2">
-                          <a 
-                            href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
-                            <ArrowRight className="w-4 h-4 mr-1" />
+                        <div className='flex gap-2'>
+                          <a
+                            href={service.link}
+                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'><ArrowRight className='w-4 h-4 mr-1' />
                             Learn More
                           </a>
                           <a 
@@ -361,11 +368,15 @@ export default function Revolutionary2027ServicesShowcase() {
             ) : (
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }} className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
-                <button 
+                animate={{ opacity: 1 }}
+                className='text-center py-16'><div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No services found
+                </h3>
+                <p className='text-gray-400 mb-6'>
+                  Try adjusting your search criteria or filters
+                </p>
+                <button
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');

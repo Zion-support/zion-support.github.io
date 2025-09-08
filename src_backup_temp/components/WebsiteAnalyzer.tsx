@@ -12,62 +12,105 @@ import { CheckCircle", import { LinkChecker, LinkInfo, PageInfo   } from '../uti
 }
 export default function Page() {catch(error) {`;`          // console.error(`Error analyzing ${page}:`, error)}`        // Add delay to prevent overwhelming the server;
         await new Promise(resolve => setTimeout (resolve, 100) ) }
-      setAnalysisResult({summary,"pages": result s,brokenLinks,missingPages;
-      }) } catch(error) {// console.error('Analysis "failed":', error)} finally {setIsAnalyzing(false)';'
-      }
-      setProgress(100)';';'
-      setCurrentPage('')}'
-  }';'
-    a.href = url;';';'
-    a.download = 'zion-website-analysis.json';    document.body.appendChild(a)a.click()document.body.removeChild(a)URL.revokeObjectURL(url)}';'
-';';'
-      case 'broken':"';'
-        return <XCircle className="w-4 h-4 text-red-500" />;';';'
-      case 'missing':"';'
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;';';'
-      case 'external':";setAnalysisResult({summary,"pages": result s,brokenLinks,missingPages;"
-      }) } catch(error) {// console.error('Analysis "failed":', error)} finally {setIsAnalyzing(false)setProgress(100)setCurrentPage('')}'
-  }a.href = url;
-    a.download = 'zion-website-analysis.json';    document.body.appendChild(a)a.click()document.body.removeChild(a)URL.revokeObjectURL(url)}case 'broken':";"
-        return <XCircle className="w-4 h-4 text-red-500" />;"
-      case 'missing':";"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;"
-      case 'external':";"
-      case 'external':";"
-        return <ExternalLink className="w-4 h-4 text-blue-500" />;"
-      "default":";"
-      "default":";"
-        return <AlertTriangle className="w-4 h-4 text-gray-500" />}"
-  }';'
-';';'
-      case 'broken':'';';'
-        return 'text-red-600 bg-red-100';';';'
-      case 'missing':'';';'
-        return 'text-yellow-600 bg-yellow-100';';';'
-      case 'external':'';';'
-        return 'text-blue-600 bg-blue-100';';';'
-      "default":'';';'
-}case 'broken':';'
-        return 'text-red-600 bg-red-100';'
-      case 'missing':';'
-        return 'text-yellow-600 bg-yellow-100';'
-      case 'external':';'
-        return 'text-blue-600 bg-blue-100';'
-      "default":';'
-      "default":';'
-      "default":';'
-        return 'text-gray-600 bg-gray-100'}  }return (";"
-    <div className="max-w-7xl mx-auto p-6 space-y-6">";"
-      <div className="bg-white rounded-lg shadow-lg p-6">";"
-        <div className="flex items-center justify-between mb-6">;"
-          <div>";"
-            <h1 className="text-3xl font-bold text-gray-900">Website Analysis Tool</h1>";"
-            <p className="text-gray-600 mt-2">;"
-              Comprehensive analysis of Zion Tech Group website links and content;
-            </p>;
-          </div>";"
-          <div className="flex space-x-3">;"
-            <button;
+;
+      setAnalysisResult({;
+        summary,;
+        "pages": "result s",;
+        brokenLinks,;
+        missingPages;
+      }) } catch(error) {;
+      // console.error('Analysis "failed":', error)} finally {;
+export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
+export default WebsiteAnalyzer;
+import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
+export default function Page(props: any) {
+ catch(error) {
+`
+          // console.error(`Error analyzing ${page}:`, error)}
+        // Add delay to prevent overwhelming the server
+        await new Promise(resolve => setTimeout (resolve, 100) ) }
+      setAnalysisResult({
+        summary,
+        pages: result s,
+        brokenLinks,
+        missingPages
+      }) } catch(error) {
+      // console.error('Analysis failed:', error)} finally {
+      setIsAnalyzing(false);';
+      setProgress(100);';';
+      setCurrentPage('')}
+  };
+';
+    a.href = url;';';
+    a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url)};';
+';';
+      case 'broken':"';
+        return <XCircle className="w-4 h-4 text-red-500"   />;';';
+      case 'missing':"';
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;';';
+      case 'external':"
+;
+      setAnalysisResult({;
+        summary,;
+        pages: result s,;
+        brokenLinks,;
+        missingPages;
+      }) } catch(error) {;
+      // console.error('Analysis failed:', error)} finally {;
+      setIsAnalyzing(false);
+      setProgress(100);
+      setCurrentPage('')}
+  };
+    a.href = url;
+    a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url)};
+      case 'broken':"
+        return <XCircle className="w-4 h-4 text-red-500"   />;
+      case 'missing':"
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
+      case 'external':";
+      case 'external':"
+        return <ExternalLink className="w-4 h-4 text-blue-500"   />;
+      "default":";
+      default:"
+        return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
+  };';
+';';
+      case 'broken':'';';
+        return 'text-red-600 bg-red-100';';';
+      case 'missing':'';';
+        return 'text-yellow-600 bg-yellow-100';';';
+      case 'external':'';';
+        return 'text-blue-600 bg-blue-100';';';
+      default:'';'
+};
+      case 'broken':'
+        return 'text-red-600 bg-red-100';
+      case 'missing':'
+        return 'text-yellow-600 bg-yellow-100';
+      case 'external':'
+        return 'text-blue-600 bg-blue-100';
+      default:';
+      "default":';
+      default:'
+        return 'text-gray-600 bg-gray-100'}  };
+  return ("
+    <div className="max-w-7xl mx-auto p-6 space-y-6">"
+      <div className="bg-white rounded-lg shadow-lg p-6">"
+        <div className="flex items-center justify-between mb-6">
+          <div>"
+            <h1 className="text-3xl font-bold text-gray-900">Website Analysis Tool</h1>"
+            <p className="text-gray-600 mt-2">
+              Comprehensive analysis of Zion Tech Group website links and content
+            </p>
+          </div>"
+          <div className="flex space-x-3">
+            <button
               onClick={analyzeWebsite}
               disabled={isAnalyzing}";"
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 "disabled": opacit y-50 "disabled": curso r-not-allowed";"
@@ -132,6 +175,63 @@ export default function Page() {catch(error) {`;`          // console.error(`Err
               >";"
                 <Download className="w-4 h-4 mr-2" />                Export Report;"
               </button>) }
+          </div>
+        </div>
+        {isAnalyzing && ("
+          <div className="mb-6">"
+            <div className="flex items-center justify-between mb-2">"
+              <span className="text-sm font-medium text-gray-700">Progress</span>"
+              <span className="text-sm text-gray-500">{Math.round(progress)}%</span>
+            </div>"
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div "
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"`
+                style="{{{ width: `${progress}}"%` }}
+               />
+            </div>
+            {currentPage && ("
+              <p className="text-sm text-gray-600 mt-2">"
+                Analyzing: <span className="font-mono">{currentPage}</span>
+              </p>
+            )}
+              </div>
+  );
+}
+          </div>
+        )}
+;
+        {analysisResult && (";
+          <div className="space-y-6">;
+            {/* Summary Cards */}";
+            <div className="grid grid-cols-1 "md": "gri d-cols-4 gap-4">";
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">";
+                <div className="flex items-center">";
+                  <LinkIcon className="w-8 h-8 text-blue-600 mr-3"   />;
+                  <div>";
+                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks"}</p>"                    <p className="text-sm text-blue-700">Total Links</p>;
+                  </div>;
+                </div>;
+              </div>;
+              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">;
+                <div  className="flex items -center">;
+                  <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />;
+                  <div>;
+        {analysisResult && ("
+          <div className="space-y-6">
+            {/* Summary Cards */}"
+            <div className="grid grid-cols-1 md: gri d-cols-4 gap-4">"
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">"
+                <div className="flex items-center">"
+                  <LinkIcon className="w-8 h-8 text-blue-600 mr-3"   />
+                  <div>"
+                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks}</p>"                    <p className="text-sm text-blue-700">Total Links</p>
+                  </div>
+                </div>
+              </div>
+              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">
+                <div  className="flex items -center">
+                  <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />
+                  <div>
           </div>;
         </div>;
         {isAnalyzing && (";"
@@ -164,66 +264,34 @@ export default function Page() {catch(error) {`;`          // console.error(`Err
                   </div>;
                 </div>;
               </div>;
-              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">;"
-                <div  className="flex items -center">;"
-                  <CheckCircle className="w-8 h-8 text-green-600 mr-3" />;"
+              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">;
+                <div  className="flex items -center">;
+                  <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />;
                   <div>;
-        {analysisResult && (";"
-          <div className="space-y-6">;"
-            {/* Summary Cards */}";"
-            <div className="grid grid-cols-1 "md": gri d-cols-4 gap-4">";"
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">";"
-                <div className="flex items-center">";"
-                  <LinkIcon className="w-8 h-8 text-blue-600 mr-3" />;"
-                  <div>";"
-                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks}</p>"                    <p className="text-sm text-blue-700">Total Links</p>;"
-                  </div>;
-                </div>;
-              </div>;
-              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">;"
-                <div  className="flex items -center">;"
-                  <CheckCircle className="w-8 h-8 text-green-600 mr-3" />;"
-                  <div></div>;
-        )}{analysisResult && (";"
-          <div className="space-y-6">;"
-            {/* Summary Cards */}";"
-            <div className="grid grid-cols-1 "md": gri d-cols-4 gap-4">";"
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">";"
-                <div className="flex items-center">";"
-                  <LinkIcon className="w-8 h-8 text-blue-600 mr-3" />;"
-                  <div>";"
-                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks}</p>"                    <p className="text-sm text-blue-700">Total Links</p>;"
-                  </div>;
-                </div>;
-              </div>;
-              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">;"
-                <div  className="flex items -center">;"
-                  <CheckCircle className="w-8 h-8 text-green-600 mr-3" />;"
-                  <div>;
-                    <p className="text-2xl font-bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}"
-                    </p>";"
-                    <p className="text-sm text-green-700">Working Links</p>;"
-                  </div>;
-                </div>;
-              </div>;
-              <div  className="bg-red - 50 p-4 rounded-lg border border-red -200">;"
-                <div  className="flex items -center">;"
-                  <XCircle className="w-8 h-8 text-red-600 mr-3" />;"
-                  <div>;
-                    <p className="text-2xl font-bold text-red -900">{analysisResult.summary.brokenLinks}</p>;"
-                    <p className="text-sm text-red -700">Broken Links</p>;"
-                  </div>;
-                </div>;
-              </div>;
-              <div  className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">;"
-                <div  className="flex items -center">;"
-                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3" />;"
-                  <div>;
-                    <p className="text-2xl font-bold text-yellow-900">{analysisResult.summary.missingPages}</p>;"
-                    <p className="text-sm text-yellow-700">Missing Pages</p>                  </div>;"
-                </div>;
-              </div>;
-            </div>;
+                    <p className="text-2xl font-bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
+                    </p>"
+                    <p className="text-sm text-green-700">Working Links</p>
+                  </div>
+                </div>
+              </div>
+              <div  className="bg-red - 50 p-4 rounded-lg border border-red -200">
+                <div  className="flex items -center">
+                  <XCircle className="w-8 h-8 text-red-600 mr-3"  />
+                  <div>
+                    <p className="text-2xl font-bold text-red -900">{analysisResult.summary.brokenLinks}</p>
+                    <p className="text-sm text-red -700">Broken Links</p>
+                  </div>
+                </div>
+              </div>
+              <div  className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <div  className="flex items -center">
+                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
+                  <div>
+                    <p className="text-2xl font-bold text-yellow-900">{analysisResult.summary.missingPages}</p>
+                    <p className="text-sm text-yellow-700">Missing Pages</p>                  </div>
+                </div>
+              </div>
+            </div>
             {/* Broken Links */}
             {analysisResult.brokenLinks.length > 0 && (";"
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">";"

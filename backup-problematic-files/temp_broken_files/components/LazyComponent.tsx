@@ -9,8 +9,12 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   fallback?: React.ReactNode;
   [key: string]: any;
 }
-const LazyComponent: React.FC<LazyComponentProps> = ({component;
-  fallback = <div>Loading...</div>;
+
+;
+const LazyComponent: React.FC<LazyComponentProps> = ({;
+  component,;
+  fallback = <div>Loading...</div>,;
+
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;
@@ -20,4 +24,22 @@ const LazyComponent: React.FC<LazyComponentProps> = ({component;
   );
 }
 export default LazyComponent;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  component, 
+  fallback = <div>Loading...</div>, 
+  ...props 
+}) => {
+  const LazyLoadedComponent = lazy(component),  
+  return (
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {_...props} />
+    </Suspense>
+  )
+},
+
+export default LazyComponent,
+
+
+:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
+:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx

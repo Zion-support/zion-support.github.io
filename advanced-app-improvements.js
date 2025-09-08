@@ -290,7 +290,10 @@ export class MemoryCache {
   size() {
     return this.cache.size;
   }
-}`
+}
+
+export const memoryCache = new MemoryCache();
+  `;
   };
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {

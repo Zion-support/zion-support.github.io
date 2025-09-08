@@ -10,16 +10,54 @@ import { TrendingUp, Award, Users, Clock    } from 'lucide-react';interface Stat
   }
   "label": string,"description": string;
   "avatar": string;
-"icon": React.ComponentType<{ className?: string}>;
-  "color": string}interface StatsSectionProps extends React.PropsWithChildren<{}> {"stats": Sta t[]}const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = useRef(null)const isInView = useInView(ref, { "once": tru e })const [counts, setCounts] = useState<any>({})useEffect(() => {';'
-    }
-    if (isInView) {';';'
-      }
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''))';';useEffect(() => {if (isInView) {const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''))interface StatsSectionProps extends React.PropsWithChildren<{}> {"stats": Sta t[]}'
-const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = useRef(null)const isInView = useInView(ref, { "once": tru e }
-    )const [counts, setCounts] = useState<any>({}
-    )useEffect(() => {if (isInView) {const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''))const suffix = stat.number.replace(/[0-9]/g, '')let current = 0;'
-          }
+"icon": React.ComponentType<{ className?: string"}>;
+  "color": "string"}
+;
+interface StatsSectionProps extends React.PropsWithChildren<{}> {;
+  "stats": "Sta t[]"}
+;
+const "StatsSection": "React.FC<StatsSectionProps> = ({ stats "}) => {;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { "once": "tru e "});
+  const [counts, setCounts] = useState<any>({});
+;
+  useEffect(() => {;
+    if (isInView) {;
+interface Stat {
+  number: string;
+  label: string,
+  description: string;
+  avatar: string;
+icon: React.ComponentType<{ className?: string}>;
+  color: string}
+;
+interface StatsSectionProps extends React.PropsWithChildren<{}> {;
+  stats: Sta t[]}
+;
+const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: tru e });
+  const [counts, setCounts] = useState<any>({});
+  useEffect(() => {';
+    if (isInView) {';';
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));';';
+;
+  useEffect(() => {;
+    if (isInView) {;
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
+interface StatsSectionProps extends React.PropsWithChildren<{}> {
+  stats: Sta t[]}
+const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: tru e }
+    );
+  const [counts, setCounts] = useState<any>({}
+    );
+  useEffect(() => {
+    if (isInView) {
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
+          const suffix = stat.number.replace(/[0-9]/g, '');
+          let current = 0;
           const increment = targetNumber / 50;
           const countTimer = setInterval(() => {current += increment;
             }
@@ -163,9 +201,12 @@ const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = 
           ))"}</div>;"
       </div>;
     </section>;
-  )}export default StatsSection;}}}</motion>;
-</any>';'
-</StatsSectionProps>;';';'
+  )
+};
+export default StatsSection;}}}}};
+</motion>
+</any>';
+</StatsSectionProps>;';;';
 </motion>;
 </motion>;
 </motion>;

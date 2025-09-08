@@ -118,20 +118,19 @@ export const 'Button': React.FC<ButtonProps> = ({';';';'
       className={classes}
       onClick={onClick}
       disabled={disabled}
-    >';'
-      {children}';';'
-    </button>';';';'
-  )';';';';'
-}';';';';';'
-export default Button;'';';';';';'
-</ButtonProps>;';';'
-    >;
+    >';
+      {children}';';
+    </button>';';';
+  );';';';'
+};';';';';';
+export default Button;"';';';';';
+</ButtonProps>;';;';
     >;
       {children}
-    </button>';'
-  )';';'
-}';';';'
-export default Button;';'
+    </button>';
+  );';'
+};';';';
+export default Button;";
 </ButtonProps>;
 export default Button;'';';';';'
 </ButtonProps>;

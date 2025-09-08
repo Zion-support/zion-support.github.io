@@ -67,10 +67,12 @@ export default function DisputeDetailPage() {
       {!dispute ? (
         <div>Loading...</div>
       ) : (
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-between mb-4">
-            <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>
-            <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
+        <div className='max-w-4xl mx-auto'>
+          <div className='flex items-center justify-between mb-4'>
+            <h1 className='text-2xl font-semibold'>Case {dispute.id}</h1>
+            <span
+              className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}
+            </span>
           </div>
           <div className='mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
             <div className='p-3 border rounded'>

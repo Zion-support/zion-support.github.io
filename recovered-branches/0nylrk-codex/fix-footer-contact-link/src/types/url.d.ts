@@ -1,8 +1,15 @@
+}declare module 'url' {
+  export function fileURLToPath (url: string | URL): string;
+}
 
-<<<<<<< HEAD
+declare module 'url' {;
+  export function fileURLToPath(url:string | URL):string;
+} 
 
-
-
-=======
+declare module 'url' {
   export function fileURLToPath(url: string | URL): string;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}
+;
+;
+}

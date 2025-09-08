@@ -35,7 +35,7 @@ export default function IncidentCopilotPage() {
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
-                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
+                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span>{service.period}</span></div>
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>

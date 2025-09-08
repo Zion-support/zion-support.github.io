@@ -593,7 +593,28 @@ import {;
   Users,;
   BarChart3;'
 } from 'lucide-react',;
-
+export default function ITServicesPage() {;
+  const itServices = [;
+    {;
+      name: "Cloud Migration & Optimization",,
+  description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.",;
+      icon: <Cloud className="w-12 h-12 text-blue-500" />,;
+      features: [;
+        "Multi-cloud strategy development",;
+        "Cost optimization and monitoring",;
+        "Security compliance implementation",;
+        "Performance tuning and optimization",;
+        "24/7 monitoring and alerting",;
+        "Disaster recovery planning",;
+        "Data migration and validation",;
+        "Team training and documentation";
+      ],;
+      pricing: {;
+        small: "From $2,500",;
+        medium: "From $5,000",;
+        enterprise: "From $15,000";
+      },;
+      marketPrice: "$5,000-15,000",;
       useCases: ["Enterprises", "Mid-size companies", "Startups", "Healthcare", "Financial services"],;
       benefits: [;"
         "Reduced infrastructure costs",;"
@@ -604,7 +625,9 @@ import {;
       ],;"
       website: "https://ziontechgroup.com/cloud-migration";
     },;
-
+    {;
+      name: "DevOps Automation Platform",,
+  description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",;
       icon: <Code className="w-12 h-12 text-green-500" />,;
       features: [;"
         "CI/CD pipeline automation",;"
@@ -632,7 +655,9 @@ import {;
       ],;"
       website: "https://ziontechgroup.com/devops-automation";
     },;
-
+    {;
+      name: "Cybersecurity Assessment & Implementation",,
+  description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",;
       icon: <Shield className="w-12 h-12 text-red-500" />,;
       features: [;"
         "Security audits and assessments",;"
@@ -660,7 +685,9 @@ import {;
       ],;"
       website: "https://ziontechgroup.com/cybersecurity";
     },;
-
+    {;
+      name: "Network Infrastructure Design",,
+  description: "Scalable network architecture design with high availability, security, and performance optimization.",;
       icon: <Network className="w-12 h-12 text-purple-500" />,;
       features: [;"
         "Network architecture design",;"
@@ -688,7 +715,9 @@ import {;
       ],;"
       website: "https://ziontechgroup.com/network-infrastructure";
     },;
-
+    {;
+      name: "Database Design & Optimization",,
+  description: "Database architecture design, performance tuning, and migration services for optimal data management.",;
       icon: <Database className="w-12 h-12 text-orange-500" />,;
       features: [;"
         "Database architecture design",;"
@@ -716,7 +745,9 @@ import {;
       ],;"
       website: "https://ziontechgroup.com/database-services";
     },;
-
+    {;
+      name: "IT Infrastructure Management",,
+  description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",;
       icon: <Server className="w-12 h-12 text-indigo-500" />,;
       features: [;"
         "24/7 infrastructure monitoring",;"
@@ -746,7 +777,28 @@ import {;
     }
   ],;
   const additionalServices = [;
-
+    {;
+      name: "API Development & Integration",,
+  description: "Custom API development and third-party system integration services.",;
+      pricing: "From $2,500",;
+      icon: <Code className="w-8 h-8 text-blue-400" />;
+    },;
+    {;
+      name: "Data Backup & Recovery",,
+  description: "Comprehensive backup solutions and disaster recovery planning.",;
+      pricing: "From $299/month",;
+      icon: <Database className="w-8 h-8 text-green-400" />;
+    },;
+    {;
+      name: "Performance Monitoring",,
+  description: "Real-time performance monitoring and optimization services.",;
+      pricing: "From $199/month",;
+      icon: <Monitor className="w-8 h-8 text-purple-400" />;
+    },;
+    {;
+      name: "IT Consulting",,
+  description: "Strategic IT consulting and technology roadmap planning.",;
+      pricing: "From $150/hour",;
       icon: <Users className="w-8 h-8 text-orange-400" />;
     }
   ],;

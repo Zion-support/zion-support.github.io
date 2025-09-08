@@ -828,13 +828,19 @@ export default function DataAnalyticsPage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
-
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
@@ -859,7 +865,6 @@ export default function DataAnalyticsPage() {
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
-
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -910,20 +915,12 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
-
+    </Layout>
+    </Layout>
     </>
-<<<<<<< HEAD
+    </>
+    </Layout>
+  );
+};
 
 export default Data-analytics;
-
-
-=======
-  );
-}
-
-    </Layout>
-    </Layout>
-    </>
-
-    </>
->>>>>>> origin/cursor/delete-old-data-records-6bba

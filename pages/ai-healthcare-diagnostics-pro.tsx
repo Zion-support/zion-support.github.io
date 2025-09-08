@@ -267,11 +267,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
-                <div className="text-gray-300">Diagnostic Accuracy</div>
-              </motion.div>
+                className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'><div className='text-3xl font-bold text-green-400 mb-2'>
+                  99.2%
+                </div>
+                <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -285,11 +284,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                <div className="text-gray-300">Continuous Monitoring</div>
-              </motion.div>
+                className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm'><div className='text-3xl font-bold text-purple-400 mb-2'>
+                  24/7
+                </div>
+                <div className='text-gray-300'>Continuous Monitoring</div>              </motion.div>
             </div>
 
             {/* CTA Buttons */}
@@ -569,10 +567,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
+            viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Ready to{' '}
+              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
+                Transform
+              </span>{' '}
+              Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.

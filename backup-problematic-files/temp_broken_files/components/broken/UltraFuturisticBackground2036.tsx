@@ -4,11 +4,11 @@ import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 }
-:components/broken/UltraFuturisticBackground2036.tsx
-export default function UltraFuturisticBackground2036({variant = 'default';
+
 ;
 export default function UltraFuturisticBackground2036({;
   variant = 'default',;
+
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -218,175 +218,11 @@ export default function UltraFuturisticBackground2036({;
     }
 }, [variant, intensity])
 
-  intensity = 'medium';
-}: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const animationRef = useRef<number | undefined>(undefined);
-</number>
-    const particles: Array<{x: number;,
-  y: number;
-      vx: number;,
-  vy: number;
-      size: number;,
-  color: string;
-      type: 'quantum' | 'neon' | 'energy' | 'data';
-    }> = [];
-    const colors = {quantum: ['#00ffff#0080ff#8000ff#ff0080'];',
-  neon: ['#00ff00#ff00ff#ffff00#00ffff'];
-      energy: ['#ff6600#ff0066#6600ff#00ff66'];',
-  data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
-    const intensityMultiplier = {low: 0.5;,
-  medium: 1;
-      high: 1.5;
-    const variantConfig = {default: { particleCount: 50, speed: 1, size: 2 }
-      quantum: { particleCount: 80, speed: 1.5, size: 3 }
-      space: { particleCount: 100, speed: 0.8, size: 2.5 }
-      ai: { particleCount: 120, speed: 2, size: 1.5 }
-      cyber: { particleCount: 90, speed: 1.8, size: 2.2 }
-    const config = variantConfig[variant];
-    const multiplier = intensityMultiplier[intensity];
-    // Initialize particles;
-    for (let i = 0, i < config.particleCount * multiplier, i++) {particles.push({;)
-        x: Math.random() * canvas.width;,
-  y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * config.speed * multiplier;,
-  vy: (Math.random() - 0.5) * config.speed * multiplier;
-        size: Math.random() * config.size * multiplier;,
-  opacity: Math.random() * 0.8 + 0.2;
-        color: colors[variant][Math.floor(Math.random() * colors[variant].length)];,
-  type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant;
-      });
-    const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Create gradient background;
-      const gradient = ctx.createRadialGradient(;
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.height / 2;)
-        Math.max(canvas.width, canvas.height) / 2;
-      );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
-      gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)');
-      gradient.addColorStop(0.7, 'rgba(40, 20, 60, 0.4)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles;
-      particles.forEach((particle, index) => {;
-        // Update position;
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        // Wrap around edges;
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-        // Draw particle with glow effect;
-        ctx.save();
-        // Create glow effect;
-        const glowGradient = ctx.createRadialGradient(;
-          particle.x, particle.y, 0;
-          particle.x, particle.y, particle.size * 3;)
-        glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`);`;
-        glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2, '0')}`);
-        glowGradient.addColorStop(1, 'transparent');
-        ctx.fillStyle = glowGradient;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
-        ctx.fill();
-        // Draw core particle;
-        ctx.fillStyle = particle.color;
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.restore();
-        // Draw connections between nearby particles;
-        particles.slice(index + 1).forEach(otherParticle => {const distance = Math.sqrt(;)
-            Math.pow(particle.x - otherParticle.x, 2) +;
-            Math.pow(particle.y - otherParticle.y, 2);
-          if (distance < 100 * multiplier) {;
-            const opacity = (100 - distance) / 100 * 0.3 * multiplier;`;
-            ctx.strokeStyle = `rgba(0, 255, 255, ${opacity})`;
-            ctx.lineWidth = 0.5;
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.stroke();
-      // Add floating geometric shapes;
-      if (variant === 'quantum' |variant === 'ai') {drawQuantumShapes(ctx, canvas, multiplier);
-      // Add data streams for AI variant;
-      if (variant === 'ai') {drawDataStreams(ctx, canvas, multiplier);
-      // Add space elements for space variant;
-      if (variant === 'space') {drawSpaceElements(ctx, canvas, multiplier);
-      animationRef.current = requestAnimationFrame(animate);
-    const drawQuantumShapes = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {const time = Date.now() * 0.001;
-      for (let i = 0, i < 3, i++) {;
-        const x = canvas.width * (0.2 + i * 0.3);
-        const y = canvas.height * (0.3 + Math.sin(time + i) * 0.1);
-        const size = 30 * multiplier;
-        ctx.translate(x, y);
-        ctx.rotate(time + i);
-        // Draw quantum circuit pattern;`;
-        ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * multiplier})`;
-        ctx.lineWidth = 2;
-        ctx.setLineDash([5, 5]);
-        ctx.moveTo(-size, -size);
-        ctx.lineTo(size, -size);
-        ctx.lineTo(size, size);
-        ctx.lineTo(-size, size);
-        ctx.closePath();
-        // Draw inner quantum dots;`;
-        ctx.fillStyle = `rgba(0, 255, 255, ${0.6 * multiplier})`;
-        ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2);
-    const drawDataStreams = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {const time = Date.now() * 0.001;
-      for (let i = 0, i < 5, i++) {;
-        const x = canvas.width * (0.1 + i * 0.2);
-        const startY = canvas.height * 0.1;
-        const endY = canvas.height * 0.9;
-        ctx.save();`;
-        ctx.strokeStyle = `rgba(0, 255, 0, ${0.4 * multiplier})`;
-        ctx.setLineDash([10, 5]);
-        // Animated data stream;
-        const streamY = startY + (endY - startY) * ((time * 0.5 + i * 0.2) % 1);
-        ctx.moveTo(x, startY);
-        ctx.lineTo(x, streamY);
-        // Data packets;`;
-        ctx.fillStyle = `rgba(0, 255, 0, ${0.8 * multiplier})`;
-        ctx.fillRect(x - 3, streamY - 3, 6, 6);
-    const drawSpaceElements = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {const time = Date.now() * 0.001;
-      // Draw stars;
-      for (let i = 0, i < 50 * multiplier, i++) {;
-        const x = (i * 12345) % canvas.width;
-        const y = (i * 67890) % canvas.height;
-        const brightness = (Math.sin(time + i) + 1) * 0.5;
-        ctx.fillStyle = `rgba(255, 255, 255, ${brightness * multiplier})`;
-        ctx.arc(x, y, 1, 0, Math.PI * 2);
-      // Draw nebula;
-      const nebulaGradient = ctx.createRadialGradient(;
-        canvas.width * 0.7, canvas.height * 0.3, 0;
-        canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier;)
-      nebulaGradient.addColorStop(0, 'rgba(255, 0, 255, 0.1)');
-      nebulaGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)');
-      nebulaGradient.addColorStop(1, 'transparent');
-      ctx.fillStyle = nebulaGradient;
-      ctx.arc(canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier, 0, Math.PI * 2);
-    animate();
-    return () => {if (animationRef.current) {;
-        cancelAnimationFrame(animationRef.current);
-
-
-
-  return (
-    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
-</div>
-
-=======
-interface UltraFuturisticBackground2036Props {
-  variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',
-  intensity?: 'low' | 'medium' | 'high'
-}
-:components/broken/UltraFuturisticBackground2036.tsx
-export default function UltraFuturisticBackground2036({variant = 'default';
 ;
 export default function UltraFuturisticBackground2036({;
   variant = 'default',;
+
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -591,10 +427,8 @@ export default function UltraFuturisticBackground2036({;
     animate();
     return () => {if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
-    }
-}, [variant, intensity])
+
+
 
 export default function UltraFuturisticBackground2036({ 
   variant = $2;
@@ -823,12 +657,24 @@ export default function UltraFuturisticBackground2036({
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
+
+
+      }
+      window.removeEventListener('resize', resizeCanvas)
+    }
+
+
+      }
+      window.removeEventListener('resize', resizeCanvas)
+    }
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
       }
       window.removeEventListener('resize', resizeCanvas)
     }
   }, [variant, intensity]),
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }, [variant, intensity]),
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -861,32 +707,21 @@ key={i}
         {variant === 'cyber' && (
           <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size: 50px_50px]" />
         )}
+
+        ;
+
+;
+        ;
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset-0&quot;>
             {[...Array(8)].map((_, i) => (
-              <motion.div
-                key = $2;
-                  transform: 'translateX(-50%)'
-                }}
-                animate={{
-                  opacity: [0.3, 0.8, 0.3]}}
-                transition = $2;
-                  repeat: Infinity,
-                  delay: i * 0.5}}
-              />;
-            ))}
-          </div>;
-        )}
-                animate={_{
-                  opacity: [0.3, 0.8, 0.3]}}
-                transition={_{
-                  duration: 3, repeat: Infinity, delay: i * 0.5}}
-              />
-            ))}
-          </div>;
-        )}
-        ;
+              <motion.div,
+key={i}
+                className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
+
+
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -894,15 +729,16 @@ key={i}
               <motion.div,
 key={i}
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
-                style={{
-                  top: `${(i + 1) * 16.67}%`}}
-                animate={{
+
+                style={{                  top: `${(i + 1) * 16.67}%`}}
+                animate={_{
                   opacity: [0.2, 0.6, 0.2]}}
-                transition = $2;
-                  repeat: Infinity,
-                  delay: i * 0.8}}
-              />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                transition={_{
+                  duration: 4, repeat: Infinity, delay: i * 0.8}}
+              />
+
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
             ))}
           </div>;
         )}

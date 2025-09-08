@@ -1,7 +1,8 @@
 <<<<<<< HEAD
-
-
+import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrderQuery(orderId) { return useQuery({ queryKey["order",orderId],"queryFn": async () => { if (!orderId) return null const res = await fetch("/api/orders/${orderI,d}") if (!res.ok) { throw new Error("Failed to fetch order")} return (await res.json())},enabled !!orderI,d})}";';"; "; ); export default Component;
 =======
+
+>>>>>>> origin/main
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +30,9 @@ const React from "react"; import { useQuery } from "@tanstack/react-query" expor
 
 import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrderQuery(orderId) { return useQuery({ queryKey["order",orderId],"queryFn": async () => { if (!orderId) return null const res = await fetch("/api/orders/${orderI,d}") if (!res && res.ok) { throw new Error("Failed to fetch order")} return (await res ;';"; "; ); export default Component;
 
+<<<<<<< HEAD
+=======
 import React from \"react\"; import { useQuery } from \"@tanstack/react-query\" export function useGetOrderQuery(orderId) { return useQuery({ queryKey[\"order\",orderId],\"queryFn\": async () => { if (!orderId) return null const res = await fetch(\"/api/orders/${orderI,d}\") if (!res.ok) { throw new Error(\"Failed to fetch order\")} return (await res.json())},enabled !!orderI,d})}\";\';\"; \"; ); export default Component;
 const React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrderQuery(orderId) { return useQuery({ queryKey["order",orderId],queryFn: async () => { if (!orderId) return null const res = await fetch("/api/orders/${orderI,d}") if (!res.ok) { throw new Error("Failed to fetch order")} return (await res.json())},enabled !orderI,d})}";";"; "; ); export default Component;"""
 import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrderQuery(orderId) { return useQuery({ queryKey["order",orderId],"queryFn": async () => { if (!orderId) return null const res = await fetch("/api/orders/${orderI,d}") if (!res.ok) { throw new Error("Failed to fetch order")} return (await res.json())},enabled !!orderI,d})}";';"; "; ); export default Component;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

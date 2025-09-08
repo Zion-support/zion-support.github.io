@@ -7,34 +7,4 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-=======
-
-const filesToFix = [
-  'pages/about.tsx',
-  'pages/ITServices.tsx', 
-  'pages/ai-services.tsx',
-  'pages/api-docs.tsx',
-  'pages/api.tsx',
-  'pages/careers.tsx',
-  'pages/guides.tsx',
-  'pages/services.tsx',
-  'pages/contact.tsx',
-  'pages/micro-saas.tsx',
-  'pages/it-services.tsx',
-  'pages/index.tsx',
-  'pages/404.tsx',
-  'pages/cookies.tsx',
-  'pages/case-studies.tsx',
-  'pages/industries/index.tsx'
-];
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-const fs = require('fs');
-const path = require('path');
-
-const { execSync } = require('child_process');
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Resolve-conflicts;

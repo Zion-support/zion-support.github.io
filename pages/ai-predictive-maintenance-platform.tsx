@@ -1,26 +1,23 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import Head from 'next/head';
+import Layout from '../components/Layout';
 
 export default function AIPredictiveMaintenancePlatform() {
-	return (
-		<ServiceLanding
-			title="AI Predictive Maintenance Platform"
-			slug="ai-predictive-maintenance-platform"
-			description="Reduce unplanned downtime by forecasting equipment failures from sensor data, logs, and maintenance history. Optimize parts inventory and service schedules with AI."
-			subtitle="Increase uptime 10–30% and cut maintenance costs with accurate predictions."
-			pricePerMonthUSD={1799}
-			implementationWeeks="Implementation: 3–6 weeks"
-			roiNote="Average ROI 3–7x within 120 days"
-			features={[
-				"Multivariate time-series modeling for failure prediction",
-				"Anomaly detection and early warning alerts",
-				"Optimal maintenance scheduling and crew planning",
-				"Parts demand forecasting and vendor SLAs",
-				"Edge/IoT ingestion and cloud pipelines",
-				"Integrations: OPC-UA, MQTT, Kafka, Snowflake"
-			]}
-			industries={["Manufacturing", "Energy", "Utilities", "Transportation"]}
-			canonical="https://ziontechgroup.com/ai-predictive-maintenance-platform"
-		/>
-	);
+  return (
+    <Layout>
+      <Head>
+        <title>AI Predictive Maintenance Platform - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered predictive maintenance platform for industrial equipment." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-20">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">AI Predictive Maintenance Platform</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI-powered predictive maintenance platform for industrial equipment.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

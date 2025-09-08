@@ -168,10 +168,8 @@ const NeuralFinanceAI: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
-                <Brain className="w-4 h-4" />
+              transition={{ duration: 0.8 }}><div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6'>
+                <Brain className='w-4 h-4' />
                 <span>AI-Powered Financial Intelligence</span>
               </div>
               
@@ -465,12 +463,11 @@ const NeuralFinanceAI: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="text-4xl mb-3">{integration.logo}</div>
-                <h3 className="text-sm font-semibold text-white mb-1">{integration.name}</h3>
-                <p className="text-xs text-gray-400">{integration.category}</p>
-              </motion.div>
+                className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105'><div className='text-4xl mb-3'>{integration.logo}</div>
+                <h3 className='text-sm font-semibold text-white mb-1'>
+                  {integration.name}
+                </h3>
+                <p className='text-xs text-gray-400'>{integration.category}</p>              </motion.div>
             ))}
           </div>
         </div>

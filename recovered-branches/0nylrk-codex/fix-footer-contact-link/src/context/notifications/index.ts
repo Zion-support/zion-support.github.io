@@ -1,23 +1,18 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 // Index utility
 export const Index = () => {
   // Implementation here
   return null
 };
 
+export * from './useNotificationOperations';
 
-<<<<<<< HEAD
-
-
-
-
-=======
 export * from './types',;
 export * from './NotificationContext',;
 export * from './types',;
 export * from './NotificationContext',;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export * from './useNotificationOperations';
+
+export * from './useNotificationOperations';
+;
+export * from './types';
+export * from './NotificationContext';

@@ -28,9 +28,3 @@ export default function Marketplace(): any ({ }: MarketplaceProps) {;
     </div>;
   );
 
-
-=======
-}
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

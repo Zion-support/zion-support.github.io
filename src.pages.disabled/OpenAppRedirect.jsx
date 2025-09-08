@@ -6,16 +6,13 @@
 
 =======
 import React from \'react\' export default OpenAppRedirect\';
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react' export default OpenAppRedirect';
+ursor/add-new-services-and-deploy-updates-0462
+:src.pages.disabled/OpenAppRedirect.jsx
+import _React from 'react' export default OpenAppRedirect';
+:temp_exclude/src.pages.disabled/OpenAppRedirect.jsx
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
-import _React from 'react' export default OpenAppRedirect';
-import _React from 'react' export default OpenAppRedirect';
-<<<<<<< HEAD
-
-
-
-=======
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 >>>>>>> origin/cursor/delete-old-data-records-6bba

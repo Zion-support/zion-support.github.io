@@ -1,14 +1,8 @@
+import React from 'react';
 module.exports = default function BlockchainSolutions() { return null}
 import React from 'react';
-<<<<<<< HEAD
-import React from 'react';
-import * as React from 'react';
-
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 interface BlockchainsolutionsProps {
   // Add props here as needed
-}
 
 module.exports = default function BlockchainSolutions() { return null}
 module.exports = default function BlockchainSolutions() { return null}
@@ -31,12 +25,17 @@ interface BlockchainsolutionsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+interface BlockchainsolutionsProps {
+  // Add props here as needed
 
+module.exports = default function BlockchainSolutions() { return null}
+import React from 'react';
+import React from 'react';
+import * as React from 'react';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface BlockchainsolutionsProps {
+  // Add props here as needed
+}
 export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
   return (
     <div>
@@ -44,8 +43,7 @@ export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
+
 }
 }
 }
@@ -53,9 +51,4 @@ export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-}
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

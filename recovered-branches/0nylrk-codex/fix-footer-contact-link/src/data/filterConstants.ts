@@ -1,6 +1,90 @@
 
-<<<<<<< HEAD
+export const COMMON_SKILLS = [
+  'Machine Learning',
+  'Python',
+  'JavaScript',
+  'React',
+  'Data Science',
+  'AWS',
+  'Docker',
+  'Kubernetes',
+  'DevOps',
+  'Cloud Architecture',;
+  'TensorFlow',];
 
+export const COMMON_SKILLS = [
+  'Machine Learning'
+  'Python'
+  'JavaScript'
+  'React'
+  'Data Science'
+  'AWS'
+  'Docker'
+  'Kubernetes'
+  'DevOps'
+  'Cloud Architecture'
+  'TensorFlow',];
+// Regionsexport const REGIONS = [  "Machine Learning";
+  "Python";
+  "JavaScript";
+  "React";
+  "Data Science";
+  "AWS";
+  "Docker";
+  "Kubernetes";
+  "DevOps";
+  "Cloud Architecture";  "Europe";
+  "Asia Pacific";
+  "South America";
+  "Middle East";
+
+// Common skills for filtering
+export const COMMON_SKILLS = [
+  "Machine Learning",
+  "Python",
+  "JavaScript",
+  "React",
+  "Data Science",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "DevOps",
+  "Cloud Architecture",
+  "TensorFlow"
+],
+
+// Regions
+export const REGIONS = [
+  "North America",
+  "Europe",
+  "Asia Pacific",
+  "South America",
+  "Middle East",
+  "Africa"
+],
+// Common skills for filtering;
+export const COMMON_SKILLS = [;
+  "Machine Learning",;
+  "Python",;
+  "JavaScript",;
+  "React",;
+  "Data Science",;
+  "AWS",;
+  "Docker",;
+  "Kubernetes",;
+  "DevOps",;
+  "Cloud Architecture",;
+  "TensorFlow";
+],;
+// Regions;
+export const REGIONS = [;
+  "North America",;
+  "Europe",;
+  "Asia Pacific",;
+  "South America",;
+  "Middle East",;
+  "Africa";
+];
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -28,43 +112,11 @@ export const REGIONS = [  "Machine Learning";
   "DevOps";
   "Cloud Architecture";
 
-
-
-
-=======
-export const COMMON_SKILLS = [
-  'Machine Learning',
-  'Python',
-  'JavaScript',
-  'React',
-  'Data Science',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'DevOps',
-  'Cloud Architecture',;
-  'TensorFlow',];
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
   "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
 
-<<<<<<< HEAD
-
-
-  "Europe";
-  "Asia Pacific";
-  "South America";
-  "Middle East";
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   'Cloud Architecture',;
   'TensorFlow',];
 
@@ -84,9 +136,3 @@ export const COMMON_SKILLS = [
 
   "TensorFlow"
 
-
-
-
-=======
-  "TensorFlow"
->>>>>>> origin/cursor/delete-old-data-records-6bba

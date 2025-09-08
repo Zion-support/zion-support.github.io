@@ -72,9 +72,9 @@ const nextConfig = {
     });
 
     return config;
-  },
+  }
   // Bundle analyzer (optional, uncomment for analysis)
-  // bundleAnalyzer: process.env.ANALYZE === 'true';
+  // bundleAnalyzer: process.env.ANALYZE === 'true'
 };
 
 export default nextConfig;

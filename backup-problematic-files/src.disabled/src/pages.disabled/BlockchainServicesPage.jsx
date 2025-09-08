@@ -10,8 +10,4 @@ const BlockchainServicesPage = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default BlockchainServicesPage;

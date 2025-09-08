@@ -2,9 +2,11 @@
 
 <<<<<<< HEAD
 
-=======
-      return dateObj && dateObj.toLocaleDateString(),'
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  const dateObj = new Date(date);
+  switch (format) {
+    case 'short':
+
+      return dateObj && dateObj.toLocaleDateString(),
     case 'medium':
       return dateObj && dateObj.toLocaleDateString(undefined, { '
         year: 'numeric', '
@@ -30,22 +32,6 @@
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
-
-      const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
-      const yesterday = new Date(today);
-
-      yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
-      
-
-
-      if (dateObj >= today) {
-
-
-        return 'Today'
-      } else if (dateObj >= yesterday) {'
-        return 'Yesterday'
-
-      } else {
 
 },
 };
@@ -213,10 +199,6 @@ if ( {) {}
   }'`
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
-
-;
-
-export const timeAgo = (date: Date | string | number): string => {
 
 };
 

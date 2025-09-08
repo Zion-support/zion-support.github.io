@@ -33,9 +33,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-
   return <NextSeo {...props} />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function Seo(props: SeoProps) {;
   return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {;
 
@@ -44,15 +42,10 @@ export default function Seo(props: SeoProps) {;
 }
 
 
-<<<<<<< HEAD
-
 import { NextSeo } from 'next - seo';
 import { NextSeoProps } from 'next - seo';
 ;
 export type SeoProps = NextSeoProps;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 export default /**
  * Seo - Function description
@@ -66,13 +59,6 @@ function Seo() {
 
 }
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
 
 import { NextSeo } from 'next-seo';
 import { NextSeoProps } from 'next-seo';
@@ -87,6 +73,4 @@ export default function Seo(props: SeoProps) {;
 }
 
 }
-
   return <NextSeo {...props} />;
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -278,9 +278,7 @@ export default function Pricing2033Page() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative ${
                     tier.popular ? 'scale-105' : ''
-                  }`}
-                >
-                  {tier.popular && (
+                  }`}>{tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full">
                         Most Popular

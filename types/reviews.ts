@@ -18,8 +18,26 @@ export interface Review {
 
 =======
 export type ProjectStatus = 'InProgress' | 'Completed';
-
+<<<<<<< HEAD
+export type Project = {  id: string;
+=======
+export type Project = {
   id: string;
+>>>>>>> origin/main
+  userId: string;
+  serviceId: string;
+  rating: number;
+  comment: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+export type ReviewRole = 'client' | 'talent';
+export type ReviewCategoryScores = {
+  communication?: number; // 1-5 optional
+  qualityOfWork?: number; // 1-5 optional
+  timeliness?: number; // 1-5 optional
+  wouldWorkWithAgain?: boolean; // optional
+}
   clientId: string, // slug for client/user;
   talentSlug: string, // slug from TALENT_PROFILES;
   title: string;
@@ -211,6 +229,9 @@ export type ProjectStatus = 'InProgress' | 'Completed',export type Project = {"i
 },export type ReviewsSummary = {"average_rating": number,"total_reviews": number,"totalCompletedProjects": number,"most_recent": PublicReview[];}
 <<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
+<<<<<<< HEAD
+};
+=======
+};
+>>>>>>> origin/main
