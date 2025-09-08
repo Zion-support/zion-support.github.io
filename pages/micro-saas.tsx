@@ -1,49 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Heart, 
-  Building, 
-  Cloud,
-  Zap,
-  Shield,
-  Bot,
-  Database,
-  Sprout,
-  FileText,
-  MessageSquare,
-  Layers,
-  Clock,
-  TrendingUp,
-  Brain,
-  Calendar,
-  Headphones,
-  RefreshCw,
-  Video,
-  Stethoscope,
-  Cpu,
-  Image,
-  Mail,
-  Search,
-  BarChart3,
-  Users,
-  Globe,
-  Lock,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Lightbulb,
-  Target,
-  Award,
-  DollarSign,
-  Trash2,
-  Camera,
-  HardDrive,
-  Droplets
-} from 'lucide-react';
-import Layout from '../components/Layout';
+import { Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {

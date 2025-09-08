@@ -80,6 +80,15 @@ export default [
         Node: 'readonly',
         PerformanceObserver: 'readonly',
       },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        localStorage: 'readonly',
+        process: 'readonly',
+        PerformanceObserver: 'readonly',
+        React: 'readonly',
+      },
     },
     plugins: {
       react,

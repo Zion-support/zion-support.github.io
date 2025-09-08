@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
+import React from 'react';
+import Link from 'next/link';
 
 import { additionalEnhancedServices } from '../data/additional-real-services'
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
@@ -64,9 +63,64 @@ const itServices: Service[] = [
   }
 ];
 
-export default function Services() {
-	const title = 'Services — Zion Tech Group'
-	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
+export default function Services(): React.ReactElement {
+  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
+    <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
+      <div style={{ 
+        display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
+        paddingBottom: 12, borderBottom: `2px solid ${color}20`
+      }}>
+        <div style={{ 
+          width: 4, height: 32, background: color, borderRadius: 2 
+        }}></div>
+        <h2 style={{ 
+          fontSize: 28, fontWeight: 800, margin: 0,
+          background: `linear-gradient(135deg, ${color}, ${color}80)`,
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>{title}</h2>
+        <div style={{ 
+          background: `${color}20`, color: color, padding: '4px 12px', 
+          borderRadius: 20, fontSize: 14, fontWeight: 600 
+        }}>
+          {items.length} Services
+        </div>
+      </div>
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+        gap: 20 
+      }}>
+        {items.map((s) => (
+          <a key={s.name} href={s.link} style={{
+            border: '1px solid rgba(0,0,0,0.08)', borderRadius: 16, padding: 24,
+            background: 'white', textDecoration: 'none', color: '#0b1220',
+            transition: 'all 0.3s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+            ':hover': {
+              transform: 'translateY(-4px)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+              borderColor: `${color}40`
+            }
+          }}>
+            <div style={{ 
+              fontWeight: 700, marginBottom: 8, fontSize: 16,
+              lineHeight: 1.4, color: '#1e293b'
+            }}>{s.name}</div>
+            <div style={{ 
+              opacity: 0.8, fontSize: 14, marginBottom: 12, 
+              lineHeight: 1.5, color: '#64748b'
+            }}>{s.summary}</div>
+            <div style={{ 
+              fontSize: 13, color: color, fontWeight: 600,
+              background: `${color}10`, padding: '6px 12px',
+              borderRadius: 8, display: 'inline-block'
+            }}>{s.pricing}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
 
 	// Combine all services
 	const allServices = [...additionalEnhancedServices, ...enhancedServices2025, ...zionInnovativeServices2025]

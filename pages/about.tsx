@@ -27,6 +27,54 @@ export default function AboutPage() {
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Our Story
             </h1>
+            <p className="text-xl text-slate-300 mb-8">
+              Pioneering the Future of Technology Solutions
+            </p>
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+              We are a leading technology company dedicated to delivering innovative micro SaaS products, 
+              advanced AI services, and comprehensive IT solutions that help businesses scale efficiently and securely.
+            </p>
+          </div>
+        </section>
+
+        {/* Mission & Vision */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h2 className="text-3xl font-bold mb-6 text-blue-400">Our Mission</h2>
+                <p className="text-lg text-slate-300 mb-4">
+                  To empower businesses with cutting-edge technology solutions that drive growth, 
+                  efficiency, and innovation. We believe in making advanced technology accessible 
+                  and practical for organizations of all sizes.
+                </p>
+                <p className="text-slate-400">
+                  Our mission is to bridge the gap between complex technology and practical business needs, 
+                  delivering solutions that are both powerful and easy to use.
+                </p>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h2 className="text-3xl font-bold mb-6 text-purple-400">Our Vision</h2>
+                <p className="text-lg text-slate-300 mb-4">
+                  To be the world&apos;s leading provider of micro SaaS products and AI-powered solutions, 
+                  transforming how businesses operate and compete in the digital age.
+                </p>
+                <p className="text-slate-400">
+                  We envision a future where every business has access to enterprise-grade technology 
+                  solutions that are affordable, scalable, and tailored to their specific needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Company Stats */}
+        <section className="py-16 px-4 bg-slate-900/40">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Our Impact
+            </h2>
             
             <p className="text-xl lg:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
               For over 15 years, we've been at the forefront of technology innovation, 

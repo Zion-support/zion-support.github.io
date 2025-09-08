@@ -1,9 +1,16 @@
-import React, { useEffect, useState } from
-  'react';''
-  'interface PerformanceMetrics {fcp?: number;'lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
+import React, { useEffect } from 'react';
+
+interface PerformanceEntry {
+  entryType: string;
+  startTime: number;
+  processingStart?: number;
+  value?: number;
+  hadRecentInput?: boolean;
+}
+
+interface PerformanceObserver {
+  observe(options: { entryTypes: string[] }): void;
+  disconnect(): void;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -11,51 +18,64 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-if (typeof window ===, undefined
-  ') return;''    // Only show in development or for admin users'
-    const isDev = process.env.NODE_ENV ===
-  'development';'    const isAdmin = localStorage.getItem('
-  'admin_mode') ===
-  'true';''
-  '    if (!isDev && !isAdmin) return;'const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new (window as { PerformanceObserver: new (callback: (list: { getEntries(): PerformanceEntry[] }) => void) => PerformanceObserver }).PerformanceObserver((list: { getEntries(): PerformanceEntry[] }) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            // eslint-disable-next-line no-console
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      });
       
-      entries.forEach((entry) => {
-        switch (entry.entryType) {
-case 'paint'
-  ': if (entry.name === 'first-contentful-paint
-  ') {              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
-            break;
-          case
-  'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case
-  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));, break;'          case'
-  'layout-shift': if (!(entry as any).hadRecentInput) {
-  '              setMetrics(prev => ({                ...prev, cls: (prev.cls || 0) + (entry as any).value '
-              }));
-            }
-            break;
-          case
-  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));, break;'        }});'
-    });
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch {
+        // Fallback for browsers that don't support LCP
+      }
 
-    // Observe different types of performance entries
-    try {
-observer.observe({ entryTypes: [
-  'paint, '
-,
-  largest-contentful-paint', '
-  'first-input',
-  'layout-shift', 'navigation'] });'    } catch (e) {'
-  '      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: ['
-  'paint, '
-  'largest-contentful-paint'] });'    }'
-  ''// Show metrics after 3 seconds
-    const timer = setTimeout(() => {;setIsVisible(true);
-    }, 3000);
+      // Monitor First Input Delay (FID)
+      const fidObserver = new (window as { PerformanceObserver: new (callback: (list: { getEntries(): PerformanceEntry[] }) => void) => PerformanceObserver }).PerformanceObserver((list: { getEntries(): PerformanceEntry[] }) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            // eslint-disable-next-line no-console
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
 
-    return () => {
-      observer.disconnect();
-      clearTimeout(timer);
-    };
+      try {
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch {
+        // Fallback for browsers that don't support FID
+      }
+
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new (window as { PerformanceObserver: new (callback: (list: { getEntries(): PerformanceEntry[] }) => void) => PerformanceObserver }).PerformanceObserver((list: { getEntries(): PerformanceEntry[] }) => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value || 0;
+          }
+        }
+        // eslint-disable-next-line no-console
+        console.log('CLS:', clsValue);
+      });
+
+      try {
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch {
+        // Fallback for browsers that don't support CLS
+      }
+
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
   }, []);
 
   if (!isVisible) return null;

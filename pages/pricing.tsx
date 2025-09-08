@@ -1,45 +1,6 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Check, Star, TrendingUp, Shield, Zap, Brain, Cloud, Lock, Users, Globe, Award, Phone, Mail, MapPin } from 'lucide-react';
-import { zionInnovativeServices2025 } from '../data/zion-2025-innovative-services';
+import React from 'react';
 
-export default function Pricing() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('price');
-
-  const categories = ['all', ...new Set(zionInnovativeServices2025.map(service => service.category))];
-
-  const filteredServices = zionInnovativeServices2025
-    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return parseInt(a.price.replace('$', '').replace(',', '')) - parseInt(b.price.replace('$', '').replace(',', ''));
-        case 'popularity':
-          return (b.isPopular ? 1 : 0) - (a.isPopular ? 1 : 0);
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
-        default:
-          return 0;
-      }
-    });
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI': return <Brain className="w-5 h-5" />;
-      case 'Quantum': return <Zap className="w-5 h-5" />;
-      case 'Security': return <Shield className="w-5 h-5" />;
-      case 'GreenTech': return <Globe className="w-5 h-5" />;
-      case 'Automation': return <TrendingUp className="w-5 h-5" />;
-      case 'Fintech': return <Award className="w-5 h-5" />;
-      case 'Healthcare': return <Users className="w-5 h-5" />;
-      case 'IoT': return <Cloud className="w-5 h-5" />;
-      case 'Blockchain': return <Lock className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
-    }
-  };
+import Head from 'next/head';
 
   return (
     <>

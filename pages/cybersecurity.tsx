@@ -53,22 +53,27 @@ export default function CybersecurityPage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {solutions.map((s) => (
-                <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
-                  <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
-                  <p className="text-gray-300 text-sm">Learn more</p>
-                </a>
-              ))}
-              <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
-                <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
-                <p className="text-gray-300 text-sm">Learn more</p>
-              </a>
-              <a href="/mobile-device-management" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
-                <div className="text-gray-200 font-semibold mb-2">Mobile Device Management (MDM)</div>
-                <p className="text-gray-300 text-sm">Learn more</p>
+        {/* CTA Section */}
+        <section className="bg-gray-50 py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Secure Your Business Today
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Don&apos;t wait for a security breach. Let our experts help you build a robust security posture.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              >
+                Schedule Security Audit
+              </Link>
+              <a 
+                href={`tel:${contact.phone}`}
+                className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
+              >
+                Call {contact.phone}
               </a>
             </div>
           </section>

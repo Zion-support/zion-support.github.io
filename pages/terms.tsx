@@ -13,13 +13,21 @@ const TermsPage: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Terms of Service</h1>
             <p className="text-gray-700 mb-6">Last updated: 2025-01-15</p>
 
-            <div className="prose max-w-none">
-              <h2>1. Acceptance of Terms</h2>
-              <p>By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.</p>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">1. Acceptance of Terms</h2>
+              <p className="text-slate-300 mb-4">
+                By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound by the terms 
+                and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+              </p>
+            </section>
 
-              <h2>2. Use License</h2>
-              <p>Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
-              <ul>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
+              <p className="text-slate-300 mb-4">
+                Permission is granted to temporarily download one copy of Zion Tech Group&apos;s services for personal, 
+                non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
                 <li>modify or copy the materials</li>
                 <li>use the materials for any commercial purpose or for any public display (commercial or non-commercial)</li>
                 <li>attempt to decompile or reverse engineer any software contained on Zion Tech Group's website</li>
