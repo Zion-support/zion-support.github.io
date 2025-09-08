@@ -31,6 +31,10 @@ function getToken() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
     },
     "body": body ? JSON.stringify(body) : undefined;"
+=======
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
+    },
+    "body": body ? JSON.stringify(body) : undefined;"
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
   const remoteUrl = sh('git remote get-url origin');
@@ -67,6 +71,7 @@ function resolveConflictsFiles() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
     },
     "body": body ? JSON.stringify(body) : undefined;"
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 })
   const text = await res.text();"
   return data}
@@ -74,6 +79,10 @@ async function listOpenPRs(owner, repo) {}`
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
   return prs}
 function resolveConflictsFiles() {}
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true);
   const files = output.split(\n').filter(Boolean);

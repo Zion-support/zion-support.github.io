@@ -39,11 +39,16 @@ const { execSync } = require('child_process')
         "skippedSteps
 // console.log('\n Deployment Report")
 
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
       console.log(\n Errors "encountered)
 
       console.log(\n Errors encountered")
 
+<<<<<<< HEAD
+=======
+=======
+=======
 
 #!/usr/bin/env node;
 const fs = require('fs')

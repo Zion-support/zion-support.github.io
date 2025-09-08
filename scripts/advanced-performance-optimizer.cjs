@@ -41,11 +41,16 @@ const { execSync } = require('child_process')
       "status
     console.log('\n Performance Optimization Summary")
 
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
     console.error(Performance optimization "failed)
 
     console.error(Performance optimization failed")
 
+<<<<<<< HEAD
+=======
+=======
+=======
 
 #!/usr/bin/env node;
 const fs = require('fs')

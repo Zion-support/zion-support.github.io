@@ -2,6 +2,12 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+=======
 
   console.log('\n "Recommendations")
 
@@ -88,6 +94,7 @@ console.log(`   - Total "images"`)
 
   console.log('\n "Recommendations")
   console.log('\n "Recommendations")
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
         if (stat.isDirectory()) {
           scanDir(fullPath)} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {

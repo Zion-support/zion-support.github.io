@@ -10,6 +10,18 @@ class ESLintErrorAutoFixer {}
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.fixInterval = parseInt(process.env.ESLINT_FIX_INTERVAL) || 300000; // 5 minutes;
+    console.log(`[${timestamp}] [${level}] ${message})};
+>>>>>>> origin/chore/fix-lint-and-merge
+  async runESLintCheck() {}
+    try {}
+
+      return { "success: false, errors, count": errors.length }}"
+  }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  async runESLintFix() {}
+    try {}"
+
+=======
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
 =======
 
@@ -60,6 +72,7 @@ class ESLintErrorAutoFixer {}
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
           currentError = {}
 
     return errors};
@@ -68,6 +81,10 @@ class ESLintErrorAutoFixer {}
 =======
     for (const error of errors) {}
         if (await this.fixSingleESLintError(error)) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // Apply common ESLint fixes;
+>>>>>>> merged-prs-20250907-203621
+=======
           fixesApplied++};
 
     return fixesApplied};
@@ -78,6 +95,7 @@ class ESLintErrorAutoFixer {}
     const lines = content.split('\n');
 =======
     // Apply common ESLint fixes;
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     const fixes = [this.fixUnusedVariables.bind(this)]
       this.fixMissingSemicolons.bind(this),
       this.fixUnusedImports.bind(this),
@@ -154,6 +172,10 @@ class ESLintErrorAutoFixer {}
     };
     return { "modified": false, "content": lines.join('\n') }};
   fixPreferConst(lines, error) {}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      const report = {}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
     if (error.message.includes('Use const instead of let')) {}
       const lineIndex = error.line - 1;
       const line = lines[lineIndex];
@@ -222,6 +244,7 @@ class ESLintErrorAutoFixer {}
       // Run check again to see if fixes worked;
       const postCheckResult = await this.runESLintCheck();
       const report = {}
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
         "timestamp": new Date().toISOString(),
         "initialErrors": checkResult.errors.length,
         "autoFixApplied": autoFixResult.success,

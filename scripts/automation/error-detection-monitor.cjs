@@ -4,11 +4,21 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> merged-prs-20250907-203621
+
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
 =======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 class ErrorDetectionMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -26,8 +36,7 @@ class ErrorDetectionMonitor {}
     this.lastCheck = null};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-
-=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     console.log(`[${timestamp}] [${level}] ${message}`)};
 =======
     console.log(`[${timestamp}] [${level}] ${message})};
@@ -37,81 +46,6 @@ class ErrorDetectionMonitor {}
       return { "success": false, errors, "count": errors.length }};"
   };
   async runLintCheck() {}
-    try {}
-      this.log('Running ESLint check...');
-      execSync('npm run lint', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseLintErrors(output);
-      this.log(`ESLint check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
-  };
-  async runBuildCheck() {}
-    try {}
-      this.log('Running build check...');
-      execSync('npm run build', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseBuildErrors(output);
-      this.log(`Build check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
-  };
-  async runDependencyCheck() {}
-    try {}
-      this.log('Running dependency check...');
-      execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseDependencyErrors(output);
-      this.log(`Dependency check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
-  };
-  parseTypeScriptErrors(output) {}
-    const errorLines = output.split('\n').filter(line => )
-      line.includes('error TS') || line.includes('"error": ');
-    );
-    return errorLines.map(line => ({})
-      type: 'typescript',
-      "message": line.trim(),
-      "severity": 'error'
-    }))};
-  parseLintErrors(output) {}
-    const errorLines = output.split('\n').filter(line => )
-      line.includes('error') || line.includes('"Error": ');
-    );
-    return errorLines.map(line => ({})
-      type: 'eslint',
-      "message": line.trim(),
-      "severity": 'error'
-    }))};
-  parseBuildErrors(output) {}
-    const errorLines = output.split('\n').filter(line => )
-      line.includes('error') || line.includes('"Error": ') || line.includes('Failed');
-    );
-    return errorLines.map(line => ({})
-      type: 'build',
-      "message": line.trim(),
-      "severity": 'error'
-    }))};
-  parseDependencyErrors(output) {}
-    const errorLines = output.split('\n').filter(line => )
-      line.includes('vulnerability') || line.includes('VULNERABILITY');
-    );
-    return errorLines.map(line => ({})
-      "type": 'dependency',
-      "message": line.trim(),
-      "severity": 'warning'
-    }))};
-  async checkForErrors() {}
-    this.log('Starting comprehensive error detection...');
-    const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },]
-      { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
-      { "name": 'Build', "check": this.runBuildCheck.bind(this) },
-      { "name": 'Dependencies', "check": this.runDependencyCheck.bind(this) };
-=======
     try {}"
 
     ];
