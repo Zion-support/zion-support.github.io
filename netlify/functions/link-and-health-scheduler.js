@@ -1,32 +1,22 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Link and health scheduler function triggered');
+    console.log('🤖 link-and-health-scheduler function triggered');
     
-    // Basic link and health scheduling logic
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Link and health scheduler executed successfully',
+        message: 'link-and-health-scheduler function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'link-and-health-scheduler',
-        tasks: ['link-checking', 'health-monitoring', 'scheduling']
+        function: 'link-and-health-scheduler'
       })
     };
     
-    console.log('Link and health scheduler completed successfully');
     return result;
   } catch (error) {
-    console.error('Error in link and health scheduler:', error);
+    console.error('❌ link-and-health-scheduler function error:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,

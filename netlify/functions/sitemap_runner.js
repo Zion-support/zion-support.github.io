@@ -1,32 +1,22 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Sitemap runner function triggered');
+    console.log('🤖 sitemap_runner function triggered');
     
-    // Basic sitemap generation logic
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Sitemap runner executed successfully',
+        message: 'sitemap_runner function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'sitemap_runner',
-        operations: ['generate', 'update', 'validate']
+        function: 'sitemap_runner'
       })
     };
     
-    console.log('Sitemap runner completed successfully');
     return result;
   } catch (error) {
-    console.error('Error in sitemap runner:', error);
+    console.error('❌ sitemap_runner function error:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,

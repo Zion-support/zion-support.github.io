@@ -1,32 +1,22 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Cloud orchestrator function triggered');
+    console.log('🤖 cloud_orchestrator function triggered');
     
-    // Basic cloud orchestration logic
+    // Basic function logic - can be expanded later
     const result = {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Cloud orchestrator executed successfully',
+        message: 'cloud_orchestrator function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'cloud_orchestrator',
-        tasks: ['deployment', 'monitoring', 'optimization']
+        function: 'cloud_orchestrator'
       })
     };
     
-    console.log('Cloud orchestrator completed successfully');
     return result;
   } catch (error) {
-    console.error('Error in cloud orchestrator:', error);
+    console.error('❌ cloud_orchestrator function error:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
