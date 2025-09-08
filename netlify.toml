@@ -1,12 +1,14 @@
 [build]
   # Install Python dependencies first, then Node.js dependencies and build
-  command = "pip install -r requirements.txt && npm ci && npm run build"
+  command = "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt && npm ci && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
+  PYTHON_VERSION = "3.12"
+  PIP_CACHE_DIR = "/opt/buildhome/.cache/pip"
+  MISE_SETTINGS_PYTHON_COMPILE = "false"
 
 [[plugins]]
   package = "netlify-plugin-compress"
