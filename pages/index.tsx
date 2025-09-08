@@ -800,7 +800,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
                 </a>
               </div>
@@ -814,7 +814,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   View Testing Guide →
                 </a>
               </div>
@@ -828,7 +828,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </a>
               </div>
@@ -848,7 +848,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/ultimate-redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -862,7 +862,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Error prevention</li>
                   <li>• Continuous improvement</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -876,7 +876,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Automation README</a> - System details</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Growth Automation</a> - Scaling systems</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/pm2-redundancy" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -964,8 +964,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="/docs/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security Guide →
+                <Link href="/docs/architecture" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Architecture Guide →
                 </Link>
               </div>
 
@@ -978,8 +978,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="/docs/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Testing Guide →
+                <Link href="/docs/deployment" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Deployment Guide →
                 </Link>
               </div>
 
@@ -992,8 +992,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/docs/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
+                <Link href="/docs/api" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View API Documentation →
                 </Link>
               </div>
             </div>
@@ -1026,7 +1026,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Autonomous Agents (227+)</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/docs/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/github-actions-improvements" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </Link>
               </div>
@@ -1364,20 +1364,20 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <div>
                 <h3 className="text-lg font-semibold text-green-400 mb-4">Documentation</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/docs/README.md" className="hover:text-green-300 transition-colors">Project Overview</Link></li>
-                  <li><Link href="/docs/ARCHITECTURE.md" className="hover:text-green-300 transition-colors">Architecture</Link></li>
-                  <li><Link href="/docs/API.md" className="hover:text-green-300 transition-colors">API Docs</Link></li>
-                  <li><Link href="/docs/CONTRIBUTING.md" className="hover:text-green-300 transition-colors">Contributing</Link></li>
+                  <li><Link href="/docs/readme" className="hover:text-green-300 transition-colors">Project Overview</Link></li>
+                  <li><Link href="/docs/architecture" className="hover:text-green-300 transition-colors">Architecture</Link></li>
+                  <li><Link href="/docs/api" className="hover:text-green-300 transition-colors">API Docs</Link></li>
+                  <li><Link href="/docs/contributing" className="hover:text-green-300 transition-colors">Contributing</Link></li>
                 </ul>
               </div>
               
               <div>
                 <h3 className="text-lg font-semibold text-yellow-400 mb-4">Automation</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/docs/COMPREHENSIVE_REDUNDANCY_README.md" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
-                  <li><Link href="/docs/README_ULTIMATE_REDUNDANCY.md" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
-                  <li><Link href="/docs/README_PM2_REDUNDANCY_COMPLETE.md" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
-                  <li><Link href="/docs/AUTOMATION_COMPLETION_REPORT.md" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
+                  <li><Link href="/docs/comprehensive-redundancy" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
+                  <li><Link href="/docs/ultimate-redundancy" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
+                  <li><Link href="/docs/pm2-redundancy" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
+                  <li><Link href="/docs/automation-completion-report" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
                 </ul>
               </div>
             </div>

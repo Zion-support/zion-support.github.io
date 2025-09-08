@@ -1,103 +1,86 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 
-type DocProps = {
+type DocSlug = keyof typeof DOCS_MAP;
+
+const DOCS_MAP = {
+  readme: 'README.md',
+  architecture: 'ARCHITECTURE.md',
+  api: 'API.md',
+  deployment: 'DEPLOYMENT.md',
+  contributing: 'CONTRIBUTING.md',
+  testing: 'TESTING.md',
+  performance: 'PERFORMANCE.md',
+  security: 'SECURITY.md',
+  'github-actions-improvements': 'GITHUB_ACTIONS_IMPROVEMENTS.md',
+  'comprehensive-redundancy': 'README_COMPREHENSIVE_REDUNDANCY.md',
+  'ultimate-redundancy': 'README_ULTIMATE_REDUNDANCY.md',
+  'pm2-redundancy': 'README_PM2_REDUNDANCY_COMPLETE.md',
+  'automation-completion-report': 'AUTOMATION_COMPLETION_REPORT.md',
+  'lighthouse-live-report': 'lighthouse-live-report.md',
+  'lighthouse-budgets-report': 'lighthouse-budgets-report.md',
+  'performance-weekly-report': 'performance-weekly-report.md'
+} as const;
+
+interface DocsPageProps {
   title: string;
   html: string;
-};
-
-const slugToFile: Record<string, string> = {
-  'ultimate-redundancy': 'README_ULTIMATE_REDUNDANCY.md',
-  'comprehensive-redundancy': 'README_COMPREHENSIVE_REDUNDANCY.md',
-  'pm2-redundancy-complete': 'README_PM2_REDUNDANCY_COMPLETE.md',
-  'performance': 'PERFORMANCE.md',
-  'security': '',
-  'testing': ''
-};
-
-export async function getStaticPaths() {
-  const paths = Object.keys(slugToFile).map((slug) => ({ params: { slug } }));
-  return { paths, fallback: false };
 }
 
-function markdownToHtml(markdown: string): string {
-  // Minimal markdown handling to keep dependencies light
-  let html = markdown
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-  // headings
-  html = html.replace(/^# (.*)$/gm, '<h1>$1</h1>');
-  html = html.replace(/^## (.*)$/gm, '<h2>$1</h2>');
-  html = html.replace(/^### (.*)$/gm, '<h3>$1</h3>');
-  // bold & italics
-  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
-  // code blocks
-  html = html.replace(/```[\s\S]*?```/g, (block) => {
-    const code = block.replace(/```/g, '');
-    return `<pre><code>${code.trim()}</code></pre>`;
-  });
-  // inline code
-  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
-  // links
-  html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-cyan-400">$1</a>');
-  // paragraphs
-  html = html.replace(/^(?!<h\d|<pre|<ul|<li|<p|<blockquote)(.+)$/gm, '<p>$1</p>');
-  return html;
-}
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  const fileName = slugToFile[slug] || '';
-
-  let title = 'Documentation';
-  let html = '';
-
-  if (fileName) {
-    const filePath = path.join(process.cwd(), fileName);
-    if (fs.existsSync(filePath)) {
-      const md = fs.readFileSync(filePath, 'utf8');
-      title = md.split('\n')[0]?.replace(/^#\s*/, '') || title;
-      html = markdownToHtml(md);
-    }
-  }
-
-  if (!html) {
-    if (slug === 'security') {
-      title = 'Security & Compliance';
-      html = markdownToHtml(`# Security & Compliance\n\n- Automated security scanning\n- Vulnerability assessments\n- Compliance monitoring\n- Threat detection & response\n- Zero-trust architecture`);
-    } else if (slug === 'testing') {
-      title = 'Testing & Quality Assurance';
-      html = markdownToHtml(`# Testing & Quality\n\n- Automated testing suites\n- Performance & security testing\n- Continuous validation\n- Quality gates in CI/CD`);
-    } else {
-      title = 'Documentation';
-      html = markdownToHtml(`# Documentation\n\nContent coming soon.`);
-    }
-  }
-
-  return { props: { title, html } };
-}
-
-export default function DocPage({ title, html }: DocProps) {
+export default function DocsPage({ title, html }: DocsPageProps) {
   return (
     <>
       <Head>
-        <title>{title} — Zion Tech Group</title>
-        <meta name="description" content={`${title} documentation`} />
+        <title>{title} | Zion Tech Group Docs</title>
+        <meta name="description" content={`${title} — Project documentation`} />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="mb-8">
-            <Link href="/" className="text-cyan-400">← Back to Home</Link>
-          </div>
-          <article className="prose prose-invert max-w-3xl" dangerouslySetInnerHTML={{ __html: html }} />
+          <nav className="mb-8">
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
+          <article className="prose prose-invert max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </article>
         </main>
       </div>
     </>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = Object.keys(DOCS_MAP).map((slug) => ({ params: { slug } }));
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps<DocsPageProps> = async (context) => {
+  const slugParam = context.params?.slug;
+  const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam;
+  if (!slug || !(slug in DOCS_MAP)) {
+    return { notFound: true };
+  }
+
+  const filename = DOCS_MAP[slug as DocSlug];
+  const filePath = path.join(process.cwd(), filename);
+  const markdown = fs.readFileSync(filePath, 'utf8');
+
+  const { marked } = await import('marked');
+  const parsed = marked.parse(markdown);
+  const html = typeof parsed === 'string' ? parsed : await parsed;
+
+  const prettyTitle = filename.replace(/\.md$/i, '').replace(/[_-]+/g, ' ');
+
+  return {
+    props: {
+      title: prettyTitle,
+      html
+    }
+  };
+};
 
