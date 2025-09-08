@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-import React, { memo, Suspense, lazy, ComponentType, ReactNode } from 'react';
-import { useLazyComponent } from '../hooks/useLazyLoad';
-=======
-import React, { memo, Suspense, ReactNode } from 'react';>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+import React, { memo, Suspense, ReactNode } from 'react';
 
 interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
   enableLazyLoading?: boolean;
-<<<<<<< HEAD
-  lazyImport?: () => Promise<{ default: ComponentType<any> }>;
-=======
-  lazyImport?: () => Promise<{ default: React.ComponentType<any> }>;>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+  lazyImport?: () => Promise<{ default: React.ComponentType<any> }>;
   memoize?: boolean;
   className?: string;
 }
@@ -39,16 +32,11 @@ const useLazyComponent = (importFn: () => Promise<{ default: ComponentType<unkno
 };
 
 /**
-<<<<<<< HEAD
- * Performance wrapper component that provides lazy loading and memoization
-=======
- * Performance wrapper component that provides basic performance optimizations>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+ * Performance wrapper component that provides basic performance optimizations
  */
 const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   children,
   fallback = <div>Loading...</div>,
-};
-=======
   className,
 }) => {
   return (
@@ -60,4 +48,4 @@ const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   );
 };
 
-export default memo(PerformanceWrapper);>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+export default memo(PerformanceWrapper);

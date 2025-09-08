@@ -1,4 +1,4 @@
-=======import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceData {
   loadTime: number;
@@ -83,9 +83,6 @@ export const usePerformance = () => {
     optimizeForSlowConnection
   };
 };
-=======
-import { useEffect, useRef, useCallback } from 'react';
-import { PerformanceMonitor, debounce, throttle } from '../utils/performance';
 
 /**
  * Hook for performance monitoring and optimization
@@ -156,4 +153,4 @@ export function usePerformance() {
     createThrottled,
     getMetrics: monitor.getMetrics.bind(monitor),
   };
-}>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+}

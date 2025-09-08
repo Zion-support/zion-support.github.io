@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
   description?: string;
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   keywords?: string[];
   author?: string;
   canonical?: string;
@@ -348,18 +345,12 @@ export function BlogPostSEO({
         dateModified: publishedDate,
         mainEntityOfPage: {
           '@type': 'WebPage',
-<<<<<<< HEAD
           '@id': typeof window !== 'undefined' ? window.location.href : ''
         }
       }}
     />
   );
 }
-=======
-          '@id': fullUrl,
-        },
-      };
-    }
 
     if (type === 'service') {
       return {

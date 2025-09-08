@@ -1,10 +1,9 @@
-=======import React, { memo } from 'react';
+import React, { memo } from 'react';
 
 // Info card component for better performance
 const InfoCard = memo<{ title: string; children: React.ReactNode }>(({ title, children }) => (
   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
     <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
->>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     {children}
   </div>
 ));

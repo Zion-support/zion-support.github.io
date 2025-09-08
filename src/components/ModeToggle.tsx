@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
-=======
-import React from "react">>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+import React from "react"
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { useTheme } from "@/components/ThemeProvider"
@@ -13,7 +10,6 @@ export function ModeToggle() {
     <Button
       variant="ghost"
       size="icon"
-=======
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       aria-label="Toggle theme"
     >
@@ -22,4 +18,4 @@ export function ModeToggle() {
       <span className="sr-only">Toggle theme</span>
     </Button>
   )
-}>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+}

@@ -1,28 +1,53 @@
 // Mock Supabase client for build
 export const supabase = {
-=======>>>>>>> origin/main          data: [],
+  from: (table: string) => ({
+    select: () => ({
+      eq: () => ({
+        single: () => Promise.resolve({
+          data: null,
+          error: null
+        }),
+        data: Promise.resolve({
+          data: [],
           error: null
         })
       })
     }),
-=======    update: () => ({
-      eq: () => ({
-        eq: () => ({=======
+    insert: () => ({
+      select: () => Promise.resolve({
+        data: null,
+        error: null
+      })
+    }),
     update: () => ({
       eq: () => ({
-        eq: () => ({>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+        select: () => Promise.resolve({
+          data: null,
           error: null
         })
       })
     }),
     delete: () => ({
-=======      eq: () => ({
-        eq: () => ({=======
-      eq: () => ({
-        eq: () => ({>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
-          error: null
-        })
+      eq: () => Promise.resolve({
+        data: null,
+        error: null
       })
     })
-  })
+  }),
+  auth: {
+    signIn: () => Promise.resolve({
+      data: { user: null },
+      error: null
+    }),
+    signUp: () => Promise.resolve({
+      data: { user: null },
+      error: null
+    }),
+    signOut: () => Promise.resolve({
+      error: null
+    }),
+    onAuthStateChange: () => ({
+      data: { subscription: { unsubscribe: () => {} } }
+    })
+  }
 };

@@ -1,4 +1,3 @@
-=======
 import React, { createContext, useContext, useState } from 'react';
 
 interface WhitelabelContextType {
@@ -26,5 +25,5 @@ export const useWhitelabel = () => {
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
-  return context;>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+  return context;
 };
