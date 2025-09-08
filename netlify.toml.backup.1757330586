@@ -6,7 +6,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.11.10"
+=======
   PYTHON_VERSION = "3.12"
+>>>>>>> origin/cursor/install-python-dependencies-with-mise-c956
 
 [[plugins]]
   package = "netlify-plugin-compress"
