@@ -1,8 +1,10 @@
-import { SEO } from '../../components/SEO';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  PenTool, 
+  Rocket, 
+  Satellite, 
+  Globe, 
   Brain, 
   Zap, 
   ArrowRight,
@@ -15,103 +17,97 @@ import {
   Cpu,
   Database,
   Network,
-  Target,
-  TrendingUp,
-  FileText,
-  Image,
-  Video,
-  ShoppingCart,
-  Globe
+  Target
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIContentCreation() {
+export default function AISpaceTechnologyPlatform() {
   const features = [
     {
-      title: "AI Text Generation",
-      description: "Intelligent content creation for blogs, articles, and marketing copy",
-      icon: FileText,
+      title: "Satellite Data Analysis",
+      description: "AI-powered processing of satellite imagery and space data for insights",
+      icon: Satellite,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Image Generation",
-      description: "AI-powered image creation and editing for visual content",
-      icon: Image,
+      title: "Space Mission Planning",
+      description: "Intelligent mission design and trajectory optimization using AI algorithms",
+      icon: Rocket,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Video Production",
-      description: "Automated video creation and editing with AI technology",
-      icon: Video,
+      title: "Astronomical Research",
+      description: "AI-driven analysis of celestial data and space phenomena",
+      icon: Globe,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Content Optimization",
-      description: "SEO optimization and content performance enhancement",
-      icon: TrendingUp,
+      title: "Space Weather Monitoring",
+      description: "Real-time monitoring and prediction of space weather events",
+      icon: Zap,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Multilingual Content",
-      description: "AI-powered translation and localization services",
-      icon: Globe,
+      title: "Autonomous Space Systems",
+      description: "AI-powered autonomous navigation and decision-making for space vehicles",
+      icon: Brain,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Content Strategy",
-      description: "Data-driven content planning and audience targeting",
-      icon: Brain,
+      title: "Space Debris Tracking",
+      description: "Intelligent monitoring and collision avoidance for space debris",
+      icon: Target,
       color: "from-yellow-500 to-orange-500"
     }
   ];
 
   const benefits = [
-    "Faster content creation and reduced production time",
-    "Improved content quality and consistency",
-    "Cost-effective content production solutions",
-    "Scalable content creation for multiple channels",
-    "Data-driven content optimization and performance",
-    "Enhanced audience engagement and conversion rates"
+    "Advanced space data analysis and insights",
+    "Improved mission success rates and efficiency",
+    "Real-time space weather monitoring and alerts",
+    "Enhanced satellite operations and maintenance",
+    "Autonomous space system capabilities",
+    "Cost-effective space exploration solutions"
   ];
 
   const useCases = [
     {
-      title: "Marketing Content",
-      description: "AI-powered marketing copy and campaign materials",
-      icon: PenTool
+      title: "Satellite Operations",
+      description: "AI-powered satellite management and data processing",
+      icon: Satellite
     },
     {
-      title: "Blog & Articles",
-      description: "Automated blog post and article generation",
-      icon: FileText
+      title: "Space Exploration",
+      description: "Mission planning and autonomous navigation systems",
+      icon: Rocket
     },
     {
-      title: "Social Media",
-      description: "Dynamic social media content creation",
-      icon: Monitor
+      title: "Earth Observation",
+      description: "Environmental monitoring and climate change analysis",
+      icon: Globe
     },
     {
-      title: "E-commerce",
-      description: "Product descriptions and marketing materials",
-      icon: ShoppingCart
+      title: "Space Research",
+      description: "Astronomical data analysis and scientific discovery",
+      icon: Star
     }
   ];
 
   const technologies = [
-    "Natural Language Processing (NLP)",
-    "Computer Vision & Image Generation",
     "Machine Learning & Deep Learning",
-    "Content Management Systems",
-    "SEO & Analytics Tools",
-    "Multilingual AI Models"
+    "Computer Vision & Image Processing",
+    "Autonomous Navigation Systems",
+    "Real-time Data Processing",
+    "Cloud Computing & Edge Processing",
+    "Satellite Communication Protocols"
   ];
 
   return (
     <>
       <SEO 
-        title="AI Content Creation Platform Development | Zion Tech Group"
-        description="Build intelligent content creation platforms with AI-powered text, image, and video generation. Automated content production and optimization."
-        keywords="ai content creation, text generation, image generation, video production, content optimization, automated content"
+        title="AI Space Technology Platform Development | Zion Tech Group"
+        description="Revolutionize space technology with AI-powered platforms. Satellite operations, space mission planning, and autonomous space systems."
+        keywords="ai space technology, satellite operations, space mission planning, autonomous space systems, space data analysis"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -124,32 +120,33 @@ export default function AIContentCreation() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-sm font-medium mb-6">
-                <PenTool className="w-4 h-4 mr-2" />
-                AI-Powered Content Creation
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-400 to-purple-500 text-white text-sm font-medium mb-6">
+                <Rocket className="w-4 h-4 mr-2" />
+                AI-Powered Space Technology
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Create Content with
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> AI</span>
+                Explore the
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Universe</span>
+                with AI
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize content creation with AI-powered platforms. From intelligent text generation to 
-                automated video production, create engaging content at scale.
+                Revolutionize space technology with AI-powered platforms. From satellite operations to space mission planning, 
+                create the future of space exploration and research.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-400 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-500 hover:to-indigo-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Demo
                 </Link>
@@ -168,10 +165,10 @@ export default function AIContentCreation() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Content Creation Features
+                Advanced Space Technology Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Cutting-edge AI capabilities designed for modern content production
+                Cutting-edge AI capabilities designed for space exploration and satellite operations
               </p>
             </motion.div>
 
@@ -182,7 +179,7 @@ export default function AIContentCreation() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-indigo-400 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -205,10 +202,10 @@ export default function AIContentCreation() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose AI-Powered Content Creation?
+                Why Choose AI-Powered Space Technology?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover the advantages of intelligent content production platforms
+                Discover the advantages of intelligent space technology platforms
               </p>
             </motion.div>
 
@@ -222,7 +219,7 @@ export default function AIContentCreation() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -236,7 +233,7 @@ export default function AIContentCreation() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -255,10 +252,10 @@ export default function AIContentCreation() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Content Creation Applications
+                Space Technology Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Versatile AI-powered solutions for diverse content production needs
+                Versatile AI-powered solutions for space exploration and satellite operations
               </p>
             </motion.div>
 
@@ -269,9 +266,9 @@ export default function AIContentCreation() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-blue-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-indigo-400 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
@@ -295,7 +292,7 @@ export default function AIContentCreation() {
                 Cutting-Edge Technologies
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with the latest AI and content creation technology innovations
+                Built with the latest AI and space technology innovations
               </p>
             </motion.div>
 
@@ -306,9 +303,9 @@ export default function AIContentCreation() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-blue-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-indigo-400 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{tech}</h3>
@@ -327,22 +324,22 @@ export default function AIContentCreation() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Revolutionize Content Creation?
+                Ready to Explore Space with AI?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's build intelligent content creation platforms that transform how content is produced
+                Let's build the future of space technology together with AI-powered platforms
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-400 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-500 hover:to-indigo-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Consultation
                 </Link>

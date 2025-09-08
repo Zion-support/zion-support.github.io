@@ -1,6 +1,10 @@
 import React from 'react';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
+import { 
+  MessageCircle, Phone, Mail, MapPin, Clock, Globe,
+  Users, Building, Shield, Zap, CheckCircle, Send
+} from 'lucide-react';
 
 const Contact: React.FC = () => {
   const contactMethods = [
@@ -27,61 +31,42 @@ const Contact: React.FC = () => {
     }
   ];
 
-  const businessHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
-    { day: 'Saturday', hours: '10:00 AM - 2:00 PM EST' },
-    { day: 'Sunday', hours: 'Closed' }
+  const services = [
+    'AI Business Intelligence',
+    'Cloud Infrastructure',
+    'Cybersecurity Solutions',
+    'Digital Transformation',
+    'Enterprise Solutions',
+    'Custom Development'
   ];
 
-  const supportCategories = [
-    'Technical Support',
-    'Sales Inquiries',
-    'Partnership Opportunities',
-    'General Questions',
-    'Feature Requests',
-    'Bug Reports'
-  ];
-
-  const contactInfo = [
+  const departments = [
     {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Phone',
-      value: '+1 302 464 0950',
-      href: 'tel:+13024640950'
+      name: 'Sales & Business Development',
+      email: 'sales@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com'
+      name: 'Technical Support',
+      email: 'support@ziontechgroup.com',
+      phone: '+1 302 464 0951'
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
-      title: 'Address',
-      value: '364 E Main St STE 1008 Middletown DE 19709',
-      href: '#'
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Business Hours',
-      value: 'Mon-Fri: 9AM-6PM EST',
-      href: '#'
+      name: 'Partnerships',
+      email: 'partnerships@ziontechgroup.com',
+      phone: '+1 302 464 0952'
     }
   ];
 
-  const services = [
-    'AI Solutions',
-    'Cloud Services',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Infrastructure',
-    'Consulting',
-    'Quantum Technology',
-    'Other'
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
+    <>
+      <SEO 
+        title="Contact Us - Zion Tech Group"
+        description="Get in touch with Zion Tech Group. Contact our team for consultations, support, or to discuss your technology needs."
+        keywords="contact Zion Tech Group, support, consultation, technology services, get in touch"
+        ogType="website"
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

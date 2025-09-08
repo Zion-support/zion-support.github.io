@@ -1,117 +1,113 @@
-import { SEO } from '../../components/SEO';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  PenTool, 
+  BookOpen, 
   Brain, 
-  Zap, 
+  Users, 
+  GraduationCap, 
+  Target, 
+  BarChart3, 
   ArrowRight,
   CheckCircle,
   Star,
+  Zap,
   Monitor,
-  Shield,
+  Smartphone,
+  Globe,
   Lock,
-  Building,
-  Cpu,
-  Database,
-  Network,
-  Target,
-  TrendingUp,
-  FileText,
-  Image,
-  Video,
-  ShoppingCart,
-  Globe
+  Shield,
+  TrendingUp
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIContentCreation() {
+export default function AIEducationPlatform() {
   const features = [
     {
-      title: "AI Text Generation",
-      description: "Intelligent content creation for blogs, articles, and marketing copy",
-      icon: FileText,
+      title: "Personalized Learning Paths",
+      description: "AI-driven curriculum adaptation based on individual learning styles and progress",
+      icon: Brain,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Image Generation",
-      description: "AI-powered image creation and editing for visual content",
-      icon: Image,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Video Production",
-      description: "Automated video creation and editing with AI technology",
-      icon: Video,
+      title: "Intelligent Assessment",
+      description: "Automated grading and feedback systems with detailed performance analytics",
+      icon: Target,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Content Optimization",
-      description: "SEO optimization and content performance enhancement",
-      icon: TrendingUp,
+      title: "Adaptive Content",
+      description: "Dynamic content generation and modification based on learner needs",
+      icon: BookOpen,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Real-time Analytics",
+      description: "Comprehensive learning analytics and progress tracking",
+      icon: BarChart3,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Multilingual Content",
-      description: "AI-powered translation and localization services",
-      icon: Globe,
+      title: "Multi-platform Support",
+      description: "Seamless learning experience across desktop, tablet, and mobile devices",
+      icon: Smartphone,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Content Strategy",
-      description: "Data-driven content planning and audience targeting",
-      icon: Brain,
-      color: "from-yellow-500 to-orange-500"
+      title: "Collaborative Learning",
+      description: "AI-powered group formation and peer learning facilitation",
+      icon: Users,
+      color: "from-red-500 to-pink-500"
     }
   ];
 
   const benefits = [
-    "Faster content creation and reduced production time",
-    "Improved content quality and consistency",
-    "Cost-effective content production solutions",
-    "Scalable content creation for multiple channels",
-    "Data-driven content optimization and performance",
-    "Enhanced audience engagement and conversion rates"
+    "Personalized learning experiences for every student",
+    "Improved engagement and retention rates",
+    "Real-time progress monitoring and feedback",
+    "Reduced administrative workload for educators",
+    "Scalable solutions for institutions of all sizes",
+    "Data-driven insights for continuous improvement"
   ];
 
   const useCases = [
     {
-      title: "Marketing Content",
-      description: "AI-powered marketing copy and campaign materials",
-      icon: PenTool
+      title: "K-12 Education",
+      description: "Adaptive learning platforms for primary and secondary education",
+      icon: GraduationCap
     },
     {
-      title: "Blog & Articles",
-      description: "Automated blog post and article generation",
-      icon: FileText
+      title: "Higher Education",
+      description: "University-level AI-powered learning management systems",
+      icon: BookOpen
     },
     {
-      title: "Social Media",
-      description: "Dynamic social media content creation",
-      icon: Monitor
+      title: "Corporate Training",
+      description: "Employee skill development and certification platforms",
+      icon: Users
     },
     {
-      title: "E-commerce",
-      description: "Product descriptions and marketing materials",
-      icon: ShoppingCart
+      title: "Language Learning",
+      description: "AI-driven language acquisition and practice systems",
+      icon: Globe
     }
   ];
 
   const technologies = [
-    "Natural Language Processing (NLP)",
-    "Computer Vision & Image Generation",
     "Machine Learning & Deep Learning",
-    "Content Management Systems",
-    "SEO & Analytics Tools",
-    "Multilingual AI Models"
+    "Natural Language Processing",
+    "Computer Vision",
+    "Predictive Analytics",
+    "Cloud Computing",
+    "Mobile App Development"
   ];
 
   return (
     <>
       <SEO 
-        title="AI Content Creation Platform Development | Zion Tech Group"
-        description="Build intelligent content creation platforms with AI-powered text, image, and video generation. Automated content production and optimization."
-        keywords="ai content creation, text generation, image generation, video production, content optimization, automated content"
+        title="AI Education Platform Development | Zion Tech Group"
+        description="Transform education with AI-powered learning platforms. Personalized learning, intelligent assessment, and adaptive content for modern education."
+        keywords="ai education, learning platform, personalized learning, adaptive learning, edtech, machine learning education"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -125,18 +121,19 @@ export default function AIContentCreation() {
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-sm font-medium mb-6">
-                <PenTool className="w-4 h-4 mr-2" />
-                AI-Powered Content Creation
+                <BookOpen className="w-4 h-4 mr-2" />
+                AI-Powered Education Solutions
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Create Content with
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> AI</span>
+                Revolutionize
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Education</span>
+                with AI
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize content creation with AI-powered platforms. From intelligent text generation to 
-                automated video production, create engaging content at scale.
+                Build next-generation learning platforms that adapt to every student's needs. 
+                From personalized learning paths to intelligent assessment, create the future of education.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -168,10 +165,10 @@ export default function AIContentCreation() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Content Creation Features
+                Comprehensive AI Education Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Cutting-edge AI capabilities designed for modern content production
+                Advanced AI capabilities designed to transform the learning experience
               </p>
             </motion.div>
 
@@ -205,10 +202,10 @@ export default function AIContentCreation() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose AI-Powered Content Creation?
+                Why Choose AI-Powered Education?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover the advantages of intelligent content production platforms
+                Discover the transformative benefits of intelligent learning systems
               </p>
             </motion.div>
 
@@ -255,10 +252,10 @@ export default function AIContentCreation() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Content Creation Applications
+                Education Solutions for Every Sector
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Versatile AI-powered solutions for diverse content production needs
+                Tailored AI education platforms for diverse learning environments
               </p>
             </motion.div>
 
@@ -295,7 +292,7 @@ export default function AIContentCreation() {
                 Cutting-Edge Technologies
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with the latest AI and content creation technology innovations
+                Built with the latest AI and education technology innovations
               </p>
             </motion.div>
 
@@ -327,10 +324,10 @@ export default function AIContentCreation() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Revolutionize Content Creation?
+                Ready to Transform Education?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's build intelligent content creation platforms that transform how content is produced
+                Let's build the future of learning together with AI-powered education platforms
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
