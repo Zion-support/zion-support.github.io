@@ -112,16 +112,26 @@ async function main() {
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
     
-    // Push changes after each batch
-    execGitCommand('git push origin main', 'Pushing merged changes to origin');
+    // Rebase with remote and push after each batch to avoid divergence
+    execGitCommand('git pull --rebase origin main', 'Rebasing main with remote before push');
+    let pushed = execGitCommand('git push origin main', 'Pushing merged changes to origin');
+    if (!pushed) {
+      // Fallback in case remote moved between rebase and push
+      execGitCommand('git pull --rebase origin main', 'Retry rebase before fallback push');
+      execGitCommand('git push --force-with-lease origin main', 'Force-with-lease push to origin');
+    }
   }
   
   console.log(`\n🎉 Merge process completed!`);
   console.log(`✅ Successfully merged: ${successCount} PRs`);
   console.log(`❌ Failed to merge: ${failCount} PRs`);
   
-  // Final push
-  execGitCommand('git push origin main', 'Final push to origin');
+  // Final sync and push
+  execGitCommand('git pull --rebase origin main', 'Final rebase with remote');
+  let finalPush = execGitCommand('git push origin main', 'Final push to origin');
+  if (!finalPush) {
+    execGitCommand('git push --force-with-lease origin main', 'Final force-with-lease push to origin');
+  }
 }
 
 // Run the script
