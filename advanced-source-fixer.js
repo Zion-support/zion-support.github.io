@@ -39,14 +39,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-
-const __filename = fileURLToPath(import && import.meta.url);
-const __dirname = path && path.dirname(__filename);
-
+const fs = require("fs");
+const path = require("path");
 
 class AdvancedSourceFixer {
   constructor() {
@@ -526,6 +520,23 @@ class AdvancedSourceFixer {}
     // Fix unterminated strings
     fixed = fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed.replace(/'[^']*$/gm, "'");
+
+    // Fix duplicate keywords
+    fixed = fixed.replace(/import\s+from\s+from/g, "import React from");
+    fixed = fixed.replace(/export\s+from\s+from/g, "export default");
+    fixed = fixed.replace(/function\s+function/g, "function");
+    fixed = fixed.replace(/const\s+const/g, "const");
+    fixed = fixed.replace(/let\s+let/g, "let");
+
+    // Add missing semicolons
+    fixed = fixed.replace(/([^}])\n/g, "$1;\n");
+
+    // Fix JSX tags
+    fixed = fixed.replace(/<([^>]*)\s*>/g, "<$1>");
+    fixed = fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
+
+    return fixed;
+  }
 
     // Fix duplicate keywords
     fixed = fixed.replace(/import\s+from\s+from/g, "import React from");
