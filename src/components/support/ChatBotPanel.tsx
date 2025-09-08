@@ -114,17 +114,14 @@ export function ChatBotPanel() {
 
   const sendToAIAssistant = async (message: string) => {
     try {
-      const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      const response = await api.post(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
+        {
           messages: [{ role: "user", content: message }]
-        }),
-      });
-      
-      if (!response.ok) {
+        }
+      );
+
+      if (response.status < 200 || response.status >= 300) {
         return {
           success: false,
           message: "I'm having trouble connecting to my knowledge base right now."

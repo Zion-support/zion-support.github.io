@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { captureException } from '@/lib/sentry';
+import api from '@/lib/api';
 
 interface SupabaseClient {
   auth: {

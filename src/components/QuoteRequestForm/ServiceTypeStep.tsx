@@ -4,11 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { SAMPLE_SERVICES } from "@/data/sampleServices";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useQuery } from "@tanstack/react-query";
-import { fetchServices } from "@/api/services";
+import api from '@/lib/api';
 
   formData: QuoteFormData;
 
@@ -28,11 +24,32 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     retry: 2,
   });
 
-  const fallbackListings = SAMPLE_SERVICES.filter(
-    (item) =>
-      item.category === formData.serviceType &&
-      item.title.toLowerCase().includes(debouncedQuery.toLowerCase())
-  );
+  // Fetch services when the service type changes
+  useEffect(() => {
+    if (!formData.serviceType) {
+      setListings([]);
+      return;
+    }
+
+    const fetchServices = async () => {
+      setLoading(true);
+      try {
+        const response = await api.get(
+          `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
+        );
+        if (response.status < 200 || response.status >= 300) throw new Error('Failed to fetch');
+        const data = response.data;
+        setListings(data as ListingItem[]);
+      } catch (err) {
+        // Fallback to sample data on error
+        setListings(SAMPLE_LISTINGS.filter(item => item.category.toLowerCase() === formData.serviceType.toLowerCase()));
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServices();
+  }, [formData.serviceType]);
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
