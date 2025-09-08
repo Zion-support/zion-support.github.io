@@ -1,1079 +1,671 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield,
-  Lock,
-  Eye,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  Search,
-  Filter,
-  ChevronRight,
-  ChevronDown,
-  ExternalLink,
-  Download,
-  FileText,
-  BookOpen,
-  Users,
-  Globe,
-  MapPin,
-  Calendar,
-  User,
-  Building,
-  Zap,
-  Cloud,
-  ArrowRight,
-  Settings,
-  HelpCircle,
-  MessageSquare,
-  FileCode,
-  Terminal,
-  Database,
-  Rocket,
-  Target,
-  TrendingUp,
-  Award,
-  Clock3,
-  MessageCircle,
-  Phone,
-  Mail,
-  Star,
-  Monitor,
-  Key,
-  Fingerprint,
-  Server,
-  Network,
-  AlertTriangle,
-  XCircle,
-  FileCheck,
-  FileX,
-  FileAlert,
-  FileSearch,
-  FileShield,
-  FileLock,
-  CreditCard,
-  EyeOff,
-  Trash2,
-  Edit3,
-  Copy,
-  Share2,
-  Pause,
-  Brain
+import {
+  Shield, Lock, Eye, Database, Users, Globe,
+  CheckCircle, AlertCircle, Info, Calendar,
+  ArrowRight, ChevronDown, ChevronRight, Mail, Phone
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from '@/components/SEO';
 
 export default function Privacy() {
-  const [searchQuery, setSearchQuery] = React.useState('');
-  const [selectedCategory, setSelectedCategory] = React.useState('all');
-  const [expandedSections, setExpandedSections] = React.useState<string[]>(['overview']);
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['overview']));
 
-  const privacyCategories = [
-    { id: 'all', name: 'All Privacy', count: 28, color: 'from-blue-500 to-cyan-600' },
-    { id: 'overview', name: 'Privacy Overview', count: 6, color: 'from-green-500 to-emerald-600' },
-    { id: 'data-collection', name: 'Data Collection', count: 8, color: 'from-purple-500 to-pink-600' },
-    { id: 'data-usage', name: 'Data Usage', count: 6, color: 'from-orange-500 to-red-600' },
-    { id: 'user-rights', name: 'User Rights', count: 8, color: 'from-indigo-500 to-purple-600' }
-  ];
-
-  const privacyOverview = [
-    {
-      id: 'data-protection',
-      title: 'Data Protection Principles',
-      description: 'Core principles that guide how we protect and handle your personal information',
-      icon: Shield,
-      color: 'from-blue-500 to-cyan-600',
-      featured: true,
-      details: [
-        'Lawfulness, fairness, and transparency',
-        'Purpose limitation and data minimization',
-        'Accuracy and storage limitation',
-        'Integrity and confidentiality',
-        'Accountability and compliance'
-      ]
-    },
-    {
-      id: 'privacy-by-design',
-      title: 'Privacy by Design',
-      description: 'Privacy considerations integrated into every aspect of our services',
-      icon: Settings,
-      color: 'from-green-500 to-emerald-600',
-      featured: true,
-      details: [
-        'Proactive privacy protection',
-        'Privacy as default setting',
-        'Privacy embedded in design',
-        'Full functionality and security',
-        'End-to-end lifecycle protection'
-      ]
-    },
-    {
-      id: 'transparency',
-      title: 'Transparency & Control',
-      description: 'Clear information about data practices and user control options',
-      icon: Eye,
-      color: 'from-purple-500 to-pink-600',
-      featured: false,
-      details: [
-        'Clear privacy notices',
-        'Easy-to-understand language',
-        'Granular consent options',
-        'Real-time privacy controls',
-        'Regular privacy updates'
-      ]
-    },
-    {
-      id: 'security-measures',
-      title: 'Security Measures',
-      description: 'Robust security measures to protect your personal information',
-      icon: Lock,
-      color: 'from-orange-500 to-red-600',
-      featured: false,
-      details: [
-        'Encryption at rest and in transit',
-        'Access controls and authentication',
-        'Regular security audits',
-        'Incident response procedures',
-        'Employee training and awareness'
-      ]
-    },
-    {
-      id: 'compliance-standards',
-      title: 'Compliance Standards',
-      description: 'Adherence to international privacy and data protection standards',
-      icon: FileCheck,
-      color: 'from-indigo-500 to-purple-600',
-      featured: false,
-      details: [
-        'GDPR compliance',
-        'CCPA compliance',
-        'SOC 2 Type II certification',
-        'ISO 27001 certification',
-        'Regular compliance audits'
-      ]
-    },
-    {
-      id: 'data-governance',
-      title: 'Data Governance',
-      description: 'Comprehensive policies and procedures for data management',
-      icon: Database,
-      color: 'from-teal-500 to-cyan-600',
-      featured: false,
-      details: [
-        'Data classification policies',
-        'Retention and deletion policies',
-        'Data processing agreements',
-        'Vendor management',
-        'Regular policy reviews'
-      ]
+  const toggleSection = (sectionId: string) => {
+    const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(sectionId)) {
+      newExpanded.delete(sectionId);
+    } else {
+      newExpanded.add(sectionId);
     }
-  ];
+    setExpandedSections(newExpanded);
+  };
 
-  const dataCollection = [
+  const privacySections = [
     {
-      id: 'personal-information',
-      title: 'Personal Information',
-      description: 'Types of personal information we may collect from you',
-      category: 'collection',
-      icon: User,
-      color: 'from-blue-500 to-cyan-600',
-      examples: [
-        'Name, email address, and contact information',
-        'Company and job title information',
-        'Account credentials and preferences',
-        'Communication and support history',
-        'Device and browser information'
-      ],
-      purpose: 'Account management and service delivery',
-      retention: 'As long as account is active plus 7 years'
+      id: 'overview',
+      title: 'Privacy Policy Overview',
+      description: 'How we protect your privacy and handle your data',
+      icon: Shield,
+      content: (
+        <div className="space-y-6">
+          <p className="text-gray-300 leading-relaxed">
+            At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, visit our website, or interact with us.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            This policy applies to all users of our services, including customers, website visitors, and anyone who provides us with personal information. By using our services, you consent to the collection and use of information in accordance with this policy.
+          </p>
+          <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+            <div className="flex items-start space-x-3">
+              <Info className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+              <div>
+                <h4 className="text-blue-400 font-semibold mb-2">Last Updated</h4>
+                <p className="text-gray-300 text-sm">This Privacy Policy was last updated on December 1, 2024. We may update this policy from time to time, and we will notify you of any changes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
     },
     {
-      id: 'usage-data',
-      title: 'Usage Data',
-      description: 'Information about how you use our services',
-      category: 'collection',
-      icon: Monitor,
-      color: 'from-green-500 to-emerald-600',
-      examples: [
-        'Service usage patterns and preferences',
-        'Feature utilization and interactions',
-        'Performance and error data',
-        'Search queries and navigation',
-        'Time spent on different features'
-      ],
-      purpose: 'Service improvement and optimization',
-      retention: '2 years for analytics, 7 years for legal'
+      id: 'data-collection',
+      title: 'Information We Collect',
+      description: 'Types of data we collect and how we collect it',
+      icon: Database,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Personal Information</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Name, email address, phone number, and company information</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Account credentials and profile information</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Billing and payment information</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Communication preferences and marketing preferences</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Usage Information</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Service usage patterns and analytics data</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Device information and IP addresses</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Cookies and similar tracking technologies</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Log files and system information</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Data Collection Methods</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Direct input through forms and account creation</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Automated collection through our services and website</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Third-party integrations and partnerships</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Customer support interactions and feedback</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )
     },
     {
-      id: 'technical-data',
-      title: 'Technical Data',
-      description: 'Technical information about your devices and connections',
-      category: 'collection',
-      icon: Server,
-      color: 'from-purple-500 to-pink-600',
-      examples: [
-        'IP address and location data',
-        'Device type and operating system',
-        'Browser type and version',
-        'Network connection information',
-        'Performance metrics and logs'
-      ],
-      purpose: 'Security, troubleshooting, and optimization',
-      retention: '90 days for operational, 2 years for security'
+      id: 'data-usage',
+      title: 'How We Use Your Information',
+      description: 'Purposes for which we use your data',
+      icon: Eye,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Service Provision</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Providing and maintaining our AI services and platform</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Processing transactions and managing billing</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Customer support and technical assistance</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Account management and user authentication</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Service Improvement</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Analyzing usage patterns to improve our services</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Developing new features and functionality</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Conducting research and analytics</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Quality assurance and testing</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Communication</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Sending service updates and notifications</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Marketing communications (with your consent)</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Responding to inquiries and support requests</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Legal and regulatory compliance</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'data-sharing',
+      title: 'Information Sharing and Disclosure',
+      description: 'When and how we share your information',
+      icon: Users,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">We Do Not Sell Your Data</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Zion Tech Group does not sell, rent, or trade your personal information to third parties for their marketing purposes. Your data is valuable and we are committed to protecting it.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Limited Sharing Scenarios</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Service Providers:</strong> Trusted third-party vendors who help us operate our services</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Business Transfers:</strong> In connection with mergers, acquisitions, or asset sales</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>With Your Consent:</strong> When you explicitly authorize us to share information</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Data Protection Standards</h4>
+            <p className="text-gray-300 leading-relaxed">
+              All third-party service providers are carefully selected and must meet our strict data protection standards. We ensure they implement appropriate security measures and use your data only for specified purposes.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'data-security',
+      title: 'Data Security and Protection',
+      description: 'How we protect your information',
+      icon: Lock,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Security Measures</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>End-to-end encryption for data in transit and at rest</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Multi-factor authentication and access controls</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Regular security audits and vulnerability assessments</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>24/7 monitoring and threat detection</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Employee training on data protection and security</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Data Retention</h4>
+            <p className="text-gray-300 leading-relaxed">
+              We retain your personal information only for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements. When data is no longer needed, we securely delete or anonymize it.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Incident Response</h4>
+            <p className="text-gray-300 leading-relaxed">
+              In the unlikely event of a data breach, we have comprehensive incident response procedures in place. We will notify affected users and relevant authorities as required by law, and take immediate steps to contain and remediate any security issues.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'your-rights',
+      title: 'Your Privacy Rights',
+      description: 'Your rights regarding your personal information',
+      icon: CheckCircle,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Access and Control</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Access:</strong> Request a copy of your personal information</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Correction:</strong> Update or correct inaccurate information</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Deletion:</strong> Request deletion of your personal data</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Portability:</strong> Receive your data in a portable format</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Marketing Preferences</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Opt-out of marketing communications at any time</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Manage your communication preferences</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Control cookie and tracking preferences</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">How to Exercise Your Rights</h4>
+            <p className="text-gray-300 leading-relaxed">
+              To exercise any of your privacy rights, contact us at privacy@ziontechgroup.com or use the privacy controls in your account settings. We will respond to your request within 30 days and may need to verify your identity before processing certain requests.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'international-transfers',
+      title: 'International Data Transfers',
+      description: 'How we handle data across borders',
+      icon: Globe,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Global Operations</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Zion Tech Group operates globally and may transfer your personal information to countries other than your country of residence. We ensure that all international data transfers comply with applicable data protection laws and regulations.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Transfer Safeguards</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Standard Contractual Clauses (SCCs) for EU data transfers</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Adequacy decisions for countries with equivalent protection</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Binding corporate rules for intra-group transfers</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Additional technical and organizational safeguards</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Data Localization</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Where required by local law, we may store your data in specific geographic regions. We will inform you of any such requirements and ensure compliance with applicable regulations.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
       id: 'cookies-tracking',
-      title: 'Cookies & Tracking',
-      description: 'Use of cookies and similar technologies',
-      category: 'collection',
-      icon: FileText,
-      color: 'from-orange-500 to-red-600',
-      examples: [
-        'Essential cookies for functionality',
-        'Analytics cookies for insights',
-        'Preference cookies for customization',
-        'Marketing cookies for relevant content',
-        'Third-party tracking technologies'
-      ],
-      purpose: 'Service functionality and user experience',
-      retention: 'Varies by cookie type (session to 2 years)'
-    },
-    {
-      id: 'third-party-data',
-      title: 'Third-Party Data',
-      description: 'Information we receive from third-party sources',
-      category: 'collection',
-      icon: Globe,
-      color: 'from-indigo-500 to-purple-600',
-      examples: [
-        'Social media profile information',
-        'Public records and databases',
-        'Business intelligence services',
-        'Partner and vendor information',
-        'Publicly available information'
-      ],
-      purpose: 'Enhanced service delivery and insights',
-      retention: 'As long as relevant plus 2 years'
-    },
-    {
-      id: 'sensitive-data',
-      title: 'Sensitive Data',
-      description: 'Special categories of personal information',
-      category: 'collection',
-      icon: Shield,
-      color: 'from-red-500 to-pink-600',
-      examples: [
-        'Health and medical information',
-        'Financial and payment data',
-        'Biometric identification data',
-        'Political and religious beliefs',
-        'Criminal record information'
-      ],
-      purpose: 'Limited to specific service requirements',
-      retention: 'Minimum necessary, maximum 7 years'
-    },
-    {
-      id: 'children-data',
-      title: 'Children\'s Data',
-      description: 'Special protection for children under 13 years old',
-      category: 'collection',
-      icon: Users,
-      color: 'from-yellow-500 to-orange-600',
-      examples: [
-        'Age verification procedures',
-        'Parental consent requirements',
-        'Limited data collection',
-        'Educational content only',
-        'No marketing or tracking'
-      ],
-      purpose: 'Educational services only',
-      retention: 'Until child reaches 13 or account closure'
-    },
-    {
-      id: 'anonymized-data',
-      title: 'Anonymized Data',
-      description: 'Data that has been processed to remove personal identifiers',
-      category: 'collection',
-      icon: EyeOff,
-      color: 'from-slate-500 to-gray-600',
-      examples: [
-        'Aggregated usage statistics',
-        'Trend analysis and insights',
-        'Research and development data',
-        'Performance benchmarking',
-        'Industry trend analysis'
-      ],
-      purpose: 'Research, analytics, and insights',
-      retention: 'Indefinitely (no personal identifiers)'
-    }
-  ];
-
-  const dataUsage = [
-    {
-      id: 'service-delivery',
-      title: 'Service Delivery',
-      description: 'Using your data to provide and improve our services',
-      category: 'usage',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-600',
-      examples: [
-        'Account creation and management',
-        'Service customization and preferences',
-        'Technical support and troubleshooting',
-        'Service updates and improvements',
-        'Performance optimization'
-      ],
-      legalBasis: 'Contract performance and legitimate interest',
-      userControl: 'Required for service functionality'
-    },
-    {
-      id: 'communication',
-      title: 'Communication',
-      description: 'Keeping you informed about our services and updates',
-      category: 'usage',
-      icon: MessageCircle,
-      color: 'from-green-500 to-emerald-600',
-      examples: [
-        'Service announcements and updates',
-        'Security and privacy notifications',
-        'Account and billing information',
-        'Support and customer service',
-        'Legal and compliance notices'
-      ],
-      legalBasis: 'Contract performance and legal obligation',
-      userControl: 'Required for service delivery'
-    },
-    {
-      id: 'marketing',
-      title: 'Marketing & Advertising',
-      description: 'Promoting relevant products and services',
-      category: 'usage',
-      icon: Target,
-      color: 'from-purple-500 to-pink-600',
-      examples: [
-        'Product and service recommendations',
-        'Personalized marketing content',
-        'Newsletter and promotional emails',
-        'Social media advertising',
-        'Partner and affiliate marketing'
-      ],
-      legalBasis: 'Consent and legitimate interest',
-      userControl: 'Fully opt-in with easy opt-out'
-    },
-    {
-      id: 'analytics',
-      title: 'Analytics & Research',
-      description: 'Understanding usage patterns and improving services',
-      category: 'usage',
-      icon: TrendingUp,
-      color: 'from-orange-500 to-red-600',
-      examples: [
-        'Usage pattern analysis',
-        'Feature performance evaluation',
-        'User experience research',
-        'Service optimization insights',
-        'Industry trend analysis'
-      ],
-      legalBasis: 'Legitimate interest and consent',
-      userControl: 'Opt-out available for non-essential'
-    },
-    {
-      id: 'security',
-      title: 'Security & Fraud Prevention',
-      description: 'Protecting our services and users from threats',
-      category: 'usage',
-      icon: Lock,
-      color: 'from-indigo-500 to-purple-600',
-      examples: [
-        'Threat detection and prevention',
-        'Fraud monitoring and detection',
-        'Account security verification',
-        'Incident investigation and response',
-        'Compliance and audit requirements'
-      ],
-      legalBasis: 'Legal obligation and legitimate interest',
-      userControl: 'Required for security purposes'
-    },
-    {
-      id: 'compliance',
-      title: 'Legal & Compliance',
-      description: 'Meeting legal obligations and regulatory requirements',
-      category: 'usage',
-      icon: FileCheck,
-      color: 'from-teal-500 to-cyan-600',
-      examples: [
-        'Regulatory reporting requirements',
-        'Tax and accounting obligations',
-        'Legal dispute resolution',
-        'Government requests and subpoenas',
-        'Audit and compliance verification'
-      ],
-      legalBasis: 'Legal obligation and legitimate interest',
-      userControl: 'Required by law'
-    }
-  ];
-
-  const userRights = [
-    {
-      id: 'access',
-      title: 'Right of Access',
-      description: 'Request a copy of your personal information',
-      category: 'rights',
+      title: 'Cookies and Tracking Technologies',
+      description: 'How we use cookies and similar technologies',
       icon: Eye,
-      color: 'from-blue-500 to-cyan-600',
-      process: [
-        'Submit request through privacy portal',
-        'Verify your identity',
-        'Receive data within 30 days',
-        'Format of your choice',
-        'No charge for reasonable requests'
-      ],
-      timeframe: '30 days from request receipt',
-      exceptions: 'Excessive or repetitive requests may incur fees'
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Types of Cookies</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Essential Cookies:</strong> Required for basic website functionality</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Performance Cookies:</strong> Help us understand how visitors use our site</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Functional Cookies:</strong> Remember your preferences and settings</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span><strong>Marketing Cookies:</strong> Used for targeted advertising (with consent)</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Cookie Management</h4>
+            <p className="text-gray-300 leading-relaxed">
+              You can control cookies through your browser settings and our cookie consent manager. You can delete existing cookies and set your browser to refuse cookies, though this may affect website functionality.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Third-Party Tracking</h4>
+            <p className="text-gray-300 leading-relaxed">
+              We may use third-party analytics and advertising services that use cookies and similar technologies. These services have their own privacy policies, and we encourage you to review them.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
-      id: 'rectification',
-      title: 'Right of Rectification',
-      description: 'Correct inaccurate or incomplete personal information',
-      category: 'rights',
-      icon: Edit3,
-      color: 'from-green-500 to-emerald-600',
-      process: [
-        'Identify the specific data to correct',
-        'Provide correct information',
-        'Verification of identity',
-        'Update within 30 days',
-        'Notify third parties if applicable'
-      ],
-      timeframe: '30 days from request receipt',
-      exceptions: 'May require additional verification'
+      id: 'children-privacy',
+      title: 'Children\'s Privacy',
+      description: 'How we protect children\'s information',
+      icon: Users,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Age Restrictions</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Educational Use</h4>
+            <p className="text-gray-300 leading-relaxed">
+              For educational institutions using our services, we may collect information about students as authorized by the institution and in compliance with applicable laws such as FERPA (Family Educational Rights and Privacy Act).
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Parental Consent</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Where required by law, we will obtain parental consent before collecting personal information from children. We will also provide parents with information about our data practices and their rights regarding their child's information.
+            </p>
+          </div>
+        </div>
+      )
     },
     {
-      id: 'erasure',
-      title: 'Right of Erasure',
-      description: 'Request deletion of your personal information',
-      category: 'rights',
-      icon: Trash2,
-      color: 'from-red-500 to-pink-600',
-      process: [
-        'Submit deletion request',
-        'Verify your identity',
-        'Review for legal exceptions',
-        'Delete within 30 days',
-        'Confirm deletion completion'
-      ],
-      timeframe: '30 days from request receipt',
-      exceptions: 'Legal obligations, security, fraud prevention'
-    },
-    {
-      id: 'portability',
-      title: 'Right of Portability',
-      description: 'Receive your data in a portable format',
-      category: 'rights',
-      icon: Download,
-      color: 'from-purple-500 to-pink-600',
-      process: [
-        'Request data portability',
-        'Specify format preference',
-        'Verify your identity',
-        'Prepare data package',
-        'Deliver within 30 days'
-      ],
-      timeframe: '30 days from request receipt',
-      exceptions: 'May exclude third-party data'
-    },
-    {
-      id: 'restriction',
-      title: 'Right of Restriction',
-      description: 'Limit how we process your personal information',
-      category: 'rights',
-      icon: Pause,
-      color: 'from-orange-500 to-red-600',
-      process: [
-        'Submit restriction request',
-        'Specify processing limits',
-        'Verify your identity',
-        'Implement restrictions',
-        'Notify you of changes'
-      ],
-      timeframe: '30 days from request receipt',
-      exceptions: 'May affect service functionality'
-    },
-    {
-      id: 'objection',
-      title: 'Right of Objection',
-      description: 'Object to specific processing activities',
-      category: 'rights',
-      icon: AlertTriangle,
-      color: 'from-yellow-500 to-orange-600',
-      process: [
-        'Submit objection request',
-        'Specify objection grounds',
-        'Review and evaluate',
-        'Respond within 30 days',
-        'Implement if valid'
-      ],
-      timeframe: '30 days from request receipt',
-      exceptions: 'Legitimate interests may override'
-    },
-    {
-      id: 'automated-decision',
-      title: 'Automated Decision Rights',
-      description: 'Rights related to automated decision-making',
-      category: 'rights',
-      icon: Brain,
-      color: 'from-indigo-500 to-purple-600',
-      process: [
-        'Request human review',
-        'Express your point of view',
-        'Challenge the decision',
-        'Request explanation',
-        'Appeal the outcome'
-      ],
-      timeframe: '30 days from request receipt',
-      exceptions: 'Contract performance, legal requirements'
-    },
-    {
-      id: 'complaint',
-      title: 'Right to Complain',
-      description: 'File complaints with supervisory authorities',
-      category: 'rights',
-      icon: MessageSquare,
-      color: 'from-teal-500 to-cyan-600',
-      process: [
-        'Contact our privacy team first',
-        'Escalate to supervisory authority',
-        'Provide relevant details',
-        'Cooperate with investigation',
-        'Implement required changes'
-      ],
-      timeframe: 'Varies by jurisdiction',
-      exceptions: 'None - fundamental right'
+      id: 'changes-updates',
+      title: 'Changes to This Policy',
+      description: 'How we update our privacy policy',
+      icon: Calendar,
+      content: (
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-white font-semibold mb-3">Policy Updates</h4>
+            <p className="text-gray-300 leading-relaxed">
+              We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will update the "Last Updated" date at the top of this policy.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-semibold mb-3">Notification of Changes</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Email notifications for significant changes</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Website banners and in-app notifications</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>Account dashboard updates</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                <span>30-day advance notice for material changes</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">Continued Use</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Your continued use of our services after any changes to this Privacy Policy constitutes acceptance of the updated policy. If you do not agree with the changes, you may need to discontinue using our services.
+            </p>
+          </div>
+        </div>
+      )
     }
   ];
-
-  const toggleSection = (sectionId: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionId) 
-        ? prev.filter(id => id !== sectionId)
-        : [...prev, sectionId]
-    );
-  };
-
-  const getCategoryColor = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'collection':
-        return 'text-blue-400 bg-blue-400/10';
-      case 'usage':
-        return 'text-green-400 bg-green-400/10';
-      case 'rights':
-        return 'text-purple-400 bg-purple-400/10';
-      default:
-        return 'text-slate-400 bg-slate-400/10';
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Privacy Policy - Zion Tech Group"
-        description="Learn about how Zion Tech Group protects your privacy, handles your data, and respects your rights. Comprehensive privacy policy and data protection information."
+        description="Learn about how Zion Tech Group protects your privacy, collects and uses your data, and ensures compliance with data protection regulations."
+        keywords="privacy policy, data protection, GDPR, data privacy, Zion Tech Group, personal information"
+        canonicalUrl="https://ziontechgroup.com/privacy"
       />
-      
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20"></div>
-        <div className="relative container mx-auto px-4 py-20">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+            transition={{ duration: 0.6 }}
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Privacy
-              <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                Policy
-              </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Policy</span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Your privacy is fundamental to us. Learn how we protect your data, respect your rights, and maintain transparency in all our practices.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              We are committed to protecting your privacy and ensuring the security of your personal information. This policy explains how we collect, use, and safeguard your data.
             </p>
             
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-slate-400" />
-                <input
-                  type="text"
-                  placeholder="Search privacy policy, data handling, or user rights..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                />
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-lg">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span className="text-green-400 font-medium">GDPR Compliant</span>
               </div>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">Privacy First</div>
-                <div className="text-slate-400 text-sm">Design</div>
+              <div className="flex items-center space-x-2 px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-lg">
+                <Shield className="w-5 h-5 text-blue-400" />
+                <span className="text-blue-400 font-medium">ISO 27001 Certified</span>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">100%</div>
-                <div className="text-slate-400 text-sm">Transparent</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">8+</div>
-                <div className="text-slate-400 text-sm">User Rights</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-slate-400 text-sm">Privacy Support</div>
+              <div className="flex items-center space-x-2 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-lg">
+                <Lock className="w-5 h-5 text-purple-400" />
+                <span className="text-purple-400 font-medium">SOC 2 Type II</span>
               </div>
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
-      <div className="container mx-auto px-4 pb-20">
-        {/* Privacy Overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Privacy Overview</h2>
-            <p className="text-slate-400 max-w-3xl mx-auto">
-              Our commitment to protecting your privacy through comprehensive policies and practices
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {privacyOverview.map((item, index) => (
-              <div
-                key={item.id}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
-                  item.featured 
-                    ? 'border-blue-500/50 shadow-lg shadow-blue-500/20' 
-                    : 'border-slate-700 hover:border-slate-600'
-                }`}
+      {/* Privacy Policy Sections */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="space-y-8">
+            {privacySections.map((section, index) => (
+              <motion.div
+                key={section.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10"
               >
-                {item.featured && (
-                  <div className="flex items-center gap-2 mb-4">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-yellow-400 text-sm font-medium">Core Principle</span>
+                {/* Section Header */}
+                <button
+                  onClick={() => toggleSection(section.id)}
+                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                      <section.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                      <p className="text-gray-300">{section.description}</p>
+                    </div>
                   </div>
+                  {expandedSections.has(section.id) ? (
+                    <ChevronDown className="w-6 h-6 text-gray-400" />
+                  ) : (
+                    <ChevronRight className="w-6 h-6 text-gray-400" />
+                  )}
+                </button>
+                
+                {/* Section Content */}
+                {expandedSections.has(section.id) && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="px-8 pb-6 border-t border-white/10"
+                  >
+                    <div className="pt-6">
+                      {section.content}
+                    </div>
+                  </motion.div>
                 )}
-                
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                    <p className="text-slate-400 text-sm">{item.description}</p>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Elements:</h4>
-                  <ul className="space-y-1">
-                    {item.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs text-slate-400">
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <button className="w-full py-2 px-4 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm font-medium">
-                  Learn More
-                </button>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* Data Collection */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Data Collection</h2>
-            <p className="text-slate-400 max-w-3xl mx-auto">
-              Understanding what data we collect and why it's necessary for our services
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {dataCollection.map((item, index) => (
-              <div
-                key={item.id}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-slate-400 text-sm mb-3">{item.description}</p>
-                    
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
-                        {item.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Examples:</h4>
-                  <ul className="space-y-1">
-                    {item.examples.map((example, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs text-slate-400">
-                        <CheckCircle className="w-3 h-3 text-blue-400" />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-slate-400">
-                  <div>
-                    <span className="block text-xs text-slate-500">Purpose</span>
-                    {item.purpose}
-                  </div>
-                  <div>
-                    <span className="block text-xs text-slate-500">Retention</span>
-                    {item.retention}
-                  </div>
-                </div>
-                
-                <button className="w-full py-2 px-4 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm font-medium">
-                  View Details
-                </button>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Data Usage */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Data Usage</h2>
-            <p className="text-slate-400 max-w-3xl mx-auto">
-              How we use your data to provide, improve, and secure our services
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {dataUsage.map((item, index) => (
-              <div
-                key={item.id}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-slate-400 text-sm mb-3">{item.description}</p>
-                    
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
-                        {item.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Examples:</h4>
-                  <ul className="space-y-1">
-                    {item.examples.map((example, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs text-slate-400">
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-slate-400">
-                  <div>
-                    <span className="block text-xs text-slate-500">Legal Basis</span>
-                    {item.legalBasis}
-                  </div>
-                  <div>
-                    <span className="block text-xs text-slate-500">User Control</span>
-                    {item.userControl}
-                  </div>
-                </div>
-                
-                <button className="w-full py-2 px-4 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm font-medium">
-                  View Details
-                </button>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* User Rights */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Your Privacy Rights</h2>
-            <p className="text-slate-400 max-w-3xl mx-auto">
-              Comprehensive rights to control and manage your personal information
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {userRights.map((right, index) => (
-              <div
-                key={right.id}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${right.color} rounded-xl flex items-center justify-center`}>
-                    <right.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{right.title}</h3>
-                    <p className="text-slate-400 text-sm">{right.description}</p>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Process:</h4>
-                  <ul className="space-y-1">
-                    {right.process.map((step, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs text-slate-400">
-                        <CheckCircle className="w-3 h-3 text-purple-400" />
-                        {step}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-slate-400">
-                  <div>
-                    <span className="block text-xs text-slate-500">Timeframe</span>
-                    {right.timeframe}
-                  </div>
-                  <div>
-                    <span className="block text-xs text-slate-500">Exceptions</span>
-                    {right.exceptions}
-                  </div>
-                </div>
-                
-                <button className="w-full py-2 px-4 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm font-medium">
-                  Exercise Right
-                </button>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-12 border border-blue-500/30 text-center"
-        >
-          <h2 className="text-4xl font-bold text-white mb-6">Questions About Your Privacy?</h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Our privacy team is here to help you understand your rights and how we protect your data
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
-              Contact Privacy Team
-            </button>
-            <button className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300">
-              Exercise Your Rights
-            </button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <MessageCircle className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Privacy Support</h3>
-              <p className="text-slate-400 text-sm">24/7 privacy assistance</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <FileText className="w-6 h-6 text-cyan-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Detailed Policy</h3>
-              <p className="text-slate-400 text-sm">Complete privacy documentation</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <Shield className="w-6 h-6 text-green-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Data Protection</h3>
-              <p className="text-slate-400 text-sm">Enterprise-grade security</p>
-            </div>
-          </section>
-
-          {/* How We Use Information */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">How We Use Your Information</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-800/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-white">Service Delivery</h3>
-                <ul className="text-gray-300 space-y-2 text-sm">
-                  <li>• Provide and maintain our services</li>
-                  <li>• Process transactions and payments</li>
-                  <li>• Deliver customer support</li>
-                  <li>• Send service updates and notifications</li>
-                </ul>
-              </div>
-              <div className="bg-gray-800/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-white">Business Operations</h3>
-                <ul className="text-gray-300 space-y-2 text-sm">
-                  <li>• Improve our services and user experience</li>
-                  <li>• Conduct research and analytics</li>
-                  <li>• Develop new features and solutions</li>
-                  <li>• Ensure security and prevent fraud</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Information Sharing */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Information Sharing and Disclosure</h2>
-            <p className="text-gray-300 mb-4">
-              We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
-            </p>
-            <ul className="text-gray-300 space-y-2 ml-6">
-              <li>• With your explicit consent</li>
-              <li>• To comply with legal obligations</li>
-              <li>• To protect our rights and safety</li>
-              <li>• With trusted service providers (under strict confidentiality agreements)</li>
-            </ul>
-          </section>
-
-          {/* Data Security */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Data Security</h2>
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-6 border border-cyan-500/20">
-              <div className="flex items-center mb-4">
-                <Lock className="w-6 h-6 text-cyan-500 mr-3" />
-                <h3 className="text-lg font-semibold text-white">Advanced Security Measures</h3>
-              </div>
-              <ul className="text-gray-300 space-y-2">
-                <li>• End-to-end encryption for sensitive data</li>
-                <li>• Multi-factor authentication systems</li>
-                <li>• Regular security audits and penetration testing</li>
-                <li>• SOC2 Type II compliance</li>
-                <li>• ISO 27001 information security standards</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Your Rights */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Your Privacy Rights</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-800/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-white">Access and Control</h3>
-                <ul className="text-gray-300 space-y-2 text-sm">
-                  <li>• Access your personal information</li>
-                  <li>• Update or correct your data</li>
-                  <li>• Request deletion of your information</li>
-                  <li>• Opt-out of marketing communications</li>
-                </ul>
-              </div>
-              <div className="bg-gray-800/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-3 text-white">Data Portability</h3>
-                <ul className="text-gray-300 space-y-2 text-sm">
-                  <li>• Export your data in standard formats</li>
-                  <li>• Transfer data to other services</li>
-                  <li>• Request data processing restrictions</li>
-                  <li>• Lodge complaints with authorities</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Cookies and Tracking */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Cookies and Tracking Technologies</h2>
-            <p className="text-gray-300 mb-4">
-              We use cookies and similar technologies to enhance your browsing experience, analyze website traffic, and personalize content. You can control cookie settings through your browser preferences.
-            </p>
-            <div className="bg-gray-800/50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3 text-white">Types of Cookies We Use</h3>
-              <div className="grid md:grid-cols-3 gap-4 text-sm">
-                <div>
-                  <h4 className="font-semibold text-cyan-400 mb-2">Essential Cookies</h4>
-                  <p className="text-gray-300">Required for basic website functionality</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-cyan-400 mb-2">Analytics Cookies</h4>
-                  <p className="text-gray-300">Help us understand how visitors use our site</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-cyan-400 mb-2">Preference Cookies</h4>
-                  <p className="text-gray-300">Remember your settings and preferences</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-600">
+      {/* Contact Information */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Your Privacy Matters
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            We're committed to protecting your data and ensuring transparency in everything we do.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Privacy Team
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Learn More
-            </button>
-          </div>
-        </motion.div>
-      </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Questions About Privacy?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              If you have any questions about this Privacy Policy or our data practices, please don't hesitate to contact our privacy team.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-gray-300 text-sm mb-3">Send us a detailed message</p>
+                <a
+                  href="mailto:privacy@ziontechgroup.com"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                >
+                  privacy@ziontechgroup.com
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <Phone className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-gray-300 text-sm mb-3">Speak with our privacy team</p>
+                <a
+                  href="tel:+15551234567"
+                  className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-medium"
+                >
+                  +1 (555) 123-4567
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl">
+              <div className="flex items-start space-x-3">
+                <Info className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
+                <div className="text-left">
+                  <h4 className="text-blue-400 font-semibold mb-2">Data Protection Officer</h4>
+                  <p className="text-gray-300 text-sm">
+                    For complex privacy matters or to exercise your data rights, you can also contact our Data Protection Officer directly at <strong>dpo@ziontechgroup.com</strong>. We are committed to responding to all privacy inquiries within 30 days.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
