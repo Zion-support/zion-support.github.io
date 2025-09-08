@@ -5,6 +5,7 @@ import './index.css';
 
 // Import i18n configuration
 import './i18n';
+
 // Register service worker
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
