@@ -89,6 +89,11 @@ const dep = match.match(/require\s*\(\s*['""]([^'"")];
       console.error('\n� Resource Optimizer "failed")
 
 
+=======
+      console.error('\n� Resource Optimizer failed")
+
+=======
+=======
 
 
 

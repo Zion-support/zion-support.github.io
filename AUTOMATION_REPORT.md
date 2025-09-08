@@ -8,7 +8,10 @@
 - ❌ Errors: 4
 **Timestamp:** 2025-09-07T02:51:20.034Z
 **Duration:** 9764ms
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 ## Summary
 - ✅ Successful: 1
@@ -23,6 +26,10 @@
 ## Successful Operations
 - Operation
 
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
 
 
 ### 2. **Build System Restoration** ✅
@@ -347,6 +354,7 @@ Caused by:
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 ## Recommendations
 - Address all errors before deployment
 

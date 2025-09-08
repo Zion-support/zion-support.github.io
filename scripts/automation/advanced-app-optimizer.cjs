@@ -285,11 +285,6 @@ export class PerformanceMonitor {}
 
 =======
       
-      const measure = performance.getEntriesByName(name)[0];
-      this.metrics.set(name, measure.duration);
-
-      
-=======
       
 =======
 =======
@@ -402,35 +397,6 @@ export function initWebVitals() {}
         return files) {}
         return files}};
     generateOptimizationReport() {}
-        this.log('Generating advanced app optimization report...');
-        const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "optimizations": {}
-                nextConfig: this.optimizeNextConfig(),
-                "tailwindConfig": this.optimizeTailwindConfig(),
-                "performanceMonitoring": this.createPerformanceMonitoring(),
-                "images": this.optimizeImages();
-            },
-            "recommendations": this.generateOptimizationRecommendations();
-       };
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log("Advanced app optimization report saved to ${this.reportFile}");
-        return report};
-    generateOptimizationRecommendations() {}
-        return [;]
-            'Implement code splitting for better loading performance',
-            'Use dynamic imports for heavy components',
-            'Optimize images with Next.js Image component',
-            'Implement service worker for caching',
-            'Use React.memo for expensive components',
-            'Implement virtual scrolling for large lists',
-            'Use CSS-in-JS with zero runtime cost',
-            'Implement progressive web app features',
-            'Use CDN for static assets',
-            'Implement proper error boundaries'
-        ]};
-    async run() {}
         this.log('Advanced App Optimizer started');
         try {}
             const report = this.generateOptimizationReport(;);
@@ -448,9 +414,12 @@ export function initWebVitals() {}
             "recommendations": this.generateOptimizationRecommendations();"
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
+<<<<<<< HEAD
+=======
         this.log("Advanced app optimization report saved to ${this.reportFile}");"
         return report};
     generateOptimizationRecommendations() {}
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
         return [;]"
 
             throw error};
