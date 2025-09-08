@@ -12,6 +12,10 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
+<<<<<<< HEAD
+  onSubmit: (formData: any) => void;
+  isSubmitting?: boolean
+=======
   onSubmit: (formData: any) => void
   isSubmitting?: boolean }
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
@@ -122,6 +126,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   // Ensure all translations are available
   const ensureAllTranslations = async () => {
     const promises = []
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting;
