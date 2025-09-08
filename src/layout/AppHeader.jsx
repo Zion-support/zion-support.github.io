@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation.jsx';
+import { Menu, X, Search, User, Bell, ChevronDown, Globe, Briefcase, BookOpen, Shield } from 'lucide-react';
+
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const location = useLocation();
 
   // Handle scroll effect
   useEffect(() => {
@@ -28,112 +27,72 @@ export function AppHeader() {
     // In a real app, this would toggle the theme
   };
 
-  const navigationItems = [
-    { name: 'Home', path: '/', icon: null },
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
     { 
       name: 'Services', 
-      path: '/services', 
-      label: 'Services',
-      hasDropdown: true,
-      dropdownItems: [
-        { path: '/services/ai-business-solutions', label: 'AI & Business Solutions' },
-        { path: '/services/cybersecurity-suite', label: 'Cybersecurity Suite' },
-        { path: '/services/cloud-infrastructure', label: 'Cloud Infrastructure' },
-        { path: '/services/digital-marketing', label: 'Digital Marketing' },
-        { path: '/services/financial-solutions', label: 'Financial Solutions' },
-        { path: '/services/manufacturing-solutions', label: 'Manufacturing Solutions' },
-        { path: '/services/iot-services', label: 'IoT Services' },
-        { path: '/services/blockchain-services', label: 'Blockchain Services' },
-        { path: '/services/quantum-technology', label: 'Quantum Technology' },
-        { path: '/services/5g-enterprise-solutions', label: '5G Enterprise Solutions' },
-        { path: '/services/green-it', label: 'Green IT' },
-        { path: '/services/enterprise-it', label: 'Enterprise IT' },
-        { path: '/services/micro-saas', label: 'Micro SaaS Services' },
-        { path: '/services/onsite-it', label: 'Onsite IT Services' },
-        { path: '/services/dispute-management', label: 'Dispute Management' }
+      href: '/services', 
+      current: false,
+      dropdown: [
+        { name: 'Overview', href: '/services/overview', icon: BookOpen },
+        { name: 'Pricing Guide', href: '/services/pricing', icon: Briefcase },
+        { name: 'Showcase', href: '/services/showcase', icon: Globe },
+        { name: 'AI Services', href: '/services/ai-services', icon: Globe },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Globe },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Globe },
+        { name: 'Green IT', href: '/green-it', icon: Globe },
+        { name: '5G Solutions', href: '/services/five-g-solutions', icon: Globe },
+        { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Globe }
       ]
     },
     { 
-      path: '/products', 
-      label: 'Products',
-      hasDropdown: true,
-      dropdownItems: [
-        { path: '/products', label: 'All Products' },
-        { path: '/products/new', label: 'New Products' },
-        { path: '/equipment', label: 'Equipment' },
-        { path: '/portfolio-builder', label: 'Portfolio Builder' },
-        { path: '/zion-hire-ai', label: 'Zion Hire AI' },
-        { path: '/ai-research-assistant', label: 'AI Research Assistant' },
-        { path: '/ai-content-generator', label: 'AI Content Generator' },
-        { path: '/ai-code-review', label: 'AI Code Review' },
-        { path: '/cloud-cost-optimizer', label: 'Cloud Cost Optimizer' },
-        { path: '/service-description-generator', label: 'Service Description Generator' }
+      name: 'Marketplace', 
+      href: '/marketplace', 
+      current: false,
+      dropdown: [
+        { name: 'Products', href: '/marketplace', icon: Briefcase },
+        { name: 'Talent', href: '/talent', icon: User },
+        { name: 'Equipment', href: '/equipment', icon: Briefcase },
+        { name: 'Categories', href: '/categories', icon: BookOpen }
       ]
     },
     { 
-      path: '/business-solutions', 
-      label: 'Business',
-      hasDropdown: true,
-      dropdownItems: [
-        { path: '/business-solutions', label: 'Business Solutions' },
-        { path: '/enterprise', label: 'Enterprise Admin' },
-        { path: '/enterprise/billing', label: 'Enterprise Billing' },
-        { path: '/enterprise/demo', label: 'Enterprise Demo' },
-        { path: '/enterprise/plans', label: 'Enterprise Plans' },
-        { path: '/digital-transformation', label: 'Digital Transformation' },
-        { path: '/autonomous-business-platform', label: 'Autonomous Business Platform' }
+      name: 'Company', 
+      href: '/about', 
+      current: false,
+      dropdown: [
+        { name: 'About Us', href: '/about', icon: User },
+        { name: 'Leadership', href: '/leadership', icon: User },
+        { name: 'Partners', href: '/partners', icon: Briefcase },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Blog', href: '/blog', icon: BookOpen }
       ]
     },
     { 
-      path: '/pricing', 
-      label: 'Pricing',
-      hasDropdown: true,
-      dropdownItems: [
-        { path: '/pricing', label: 'Main Pricing' },
-        { path: '/pricing-guide', label: 'Pricing Guide' },
-        { path: '/services-pricing', label: 'Services Pricing' },
-        { path: '/services-comparison', label: 'Services Comparison' }
+      name: 'Resources', 
+      href: '/help', 
+      current: false,
+      dropdown: [
+        { name: 'Help Center', href: '/help', icon: BookOpen },
+        { name: 'Documentation', href: '/docs', icon: BookOpen },
+        { name: 'White Papers', href: '/white-papers', icon: BookOpen },
+        { name: 'Webinars', href: '/webinars', icon: Globe },
+        { name: 'Training', href: '/training', icon: BookOpen },
+        { name: 'Research', href: '/research', icon: BookOpen }
       ]
     },
-    { 
-      path: '/community', 
-      label: 'Community',
-      hasDropdown: true,
-      dropdownItems: [
-        { path: '/partners', label: 'Partners' },
-        { path: '/events', label: 'Events' },
-        { path: '/news', label: 'News' },
-        { path: '/blog', label: 'Blog' },
-        { path: '/forum/create', label: 'Create Post' },
-        { path: '/jobs/post', label: 'Post Job' },
-        { path: '/hiring-tracker', label: 'Hiring Tracker' },
-        { path: '/talent-onboarding', label: 'Talent Onboarding' }
-      ]
-    },
-    { path: '/faq', label: 'FAQ' },
-    { path: '/contact', label: 'Contact' }
+    { name: 'Contact', href: '/contact', current: false },
   ];
 
-  const isActiveRoute = (path) => {
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
+  const handleDropdownToggle = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
   };
 
   return (
-    <motion.header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10' 
-          : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+    <header className="bg-slate-900 shadow-lg border-b border-slate-700 relative z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <motion.div 
@@ -156,61 +115,46 @@ export function AppHeader() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+          <nav className="hidden lg:flex space-x-1">
+            {navigation.map((item, index) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div className="relative">
                     <button
-                      className="flex items-center space-x-1 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2"
-                      onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => setActiveDropdown(null)}
+                      onClick={() => handleDropdownToggle(index)}
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 ${
+                        item.current
+                          ? 'text-cyan-400 bg-slate-800'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-800'
+                      }`}
                     >
-                      <span>{item.name}</span>
+                      {item.name}
                       <ChevronDown className="w-4 h-4" />
                     </button>
                     
-                    {/* Dropdown Menu */}
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
-                          className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4"
-                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                          onMouseEnter={() => setActiveDropdown(item.name)}
-                          onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                          <div className="grid grid-cols-1 gap-2">
-                            {item.dropdown.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                to={dropdownItem.path}
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
-                              >
-                                <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
-                                  <dropdownItem.icon className="w-5 h-5 text-white" />
-                                </div>
-                                <div>
-                                  <div className="text-white font-medium group-hover/item:text-zion-cyan transition-colors duration-300">
-                                    {dropdownItem.name}
-                                  </div>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    {activeDropdown === index && (
+                      <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2 z-50">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="flex items-center gap-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <dropdownItem.icon className="w-4 h-4" />
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <Link
-                    to={item.path}
-                    className={`transition-colors duration-300 ${
-                      isActiveRoute(item.path)
-                        ? 'text-zion-cyan'
-                        : 'text-zion-slate-light hover:text-zion-cyan'
+                    to={item.href}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      item.current
+                        ? 'text-cyan-400 bg-slate-800'
+                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
                     }`}
                   >
                     {item.name}
@@ -221,13 +165,27 @@ export function AppHeader() {
           </nav>
 
           {/* Right side actions */}
-          <div className="flex items-center space-x-4">
-            {/* Dark mode toggle */}
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
-            >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search */}
+            <form onSubmit={handleSearch} className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-64 px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+            </form>
+
+            {/* User menu */}
+            <button className="p-2 text-gray-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+              <User className="w-5 h-5" />
             </button>
 
             {/* CTA Button */}
@@ -238,7 +196,8 @@ export function AppHeader() {
               Get Started
             </Link>
 
-            {/* Mobile menu button */}
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
@@ -247,66 +206,83 @@ export function AppHeader() {
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
-      <AnimatePresence>
+        {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <motion.div
-            className="lg:hidden bg-zinc-900/95 backdrop-blur-xl border-t border-zinc-700/50"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="container mx-auto px-4 py-4">
-              <nav className="space-y-4">
-                {navigationItems.map((item) => (
-                  <div key={item.name}>
-                    {item.dropdown ? (
-                      <div>
-                        <button
-                          className="flex items-center justify-between w-full text-left text-zinc-300 hover:text-white transition-colors duration-300 p-3 rounded-lg hover:bg-zinc-800/50"
-                          onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                        >
-                          <span className="font-medium">{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
-                        </button>
-                        {activeDropdown === item.name && (
-                          <div className="ml-4 mt-2 space-y-2">
-                            {item.dropdown.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                to={dropdownItem.path}
-                                className="block p-3 rounded-lg hover:bg-zinc-800/50 text-zinc-300 hover:text-white transition-colors duration-300"
-                              >
-                                {dropdownItem.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <Link
-                        to={item.path}
-                        className={`block p-3 rounded-lg transition-colors duration-300 ${
-                          isActiveRoute(item.path)
-                            ? 'text-zion-cyan bg-zion-cyan/10'
-                            : 'text-zinc-300 hover:text-white hover:bg-zinc-800/50'
-                        }`}
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() => handleDropdownToggle(navigation.indexOf(item))}
+                        className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 transition-colors flex items-center justify-between"
                       >
                         {item.name}
-                      </Link>
-                    )}
-                  </div>
-                ))}
-              </nav>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === navigation.indexOf(item) ? 'rotate-180' : ''}`} />
+                      </button>
+                      {activeDropdown === navigation.indexOf(item) && (
+                        <div className="ml-4 mt-2 space-y-1">
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.href}
+                              className="block px-3 py-2 rounded-md text-sm text-gray-400 hover:text-white hover:bg-slate-700 transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        item.current
+                          ? 'text-cyan-400 bg-slate-700'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
             </div>
-          </motion.div>
+            
+            {/* Mobile Search */}
+            <div className="px-2 pt-2 pb-3">
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                >
+                  <Search className="w-5 h-5" />
+                </button>
+              </form>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-    </motion.header>
+      </div>
+      
+      {/* Click outside to close dropdowns */}
+      {activeDropdown !== null && (
+        <div 
+          className="fixed inset-0 z-40" 
+          onClick={() => setActiveDropdown(null)}
+        />
+      )}
+    </header>
   );
 }
