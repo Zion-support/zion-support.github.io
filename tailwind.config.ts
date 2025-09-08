@@ -1,10 +1,10 @@
-import type { Config } from 'tailwindcss'
-export default (async () => {
-  const forms = await import('@tailwindcss/forms');
-  const typography = await import('@tailwindcss/typography');
-  const aspectRatio = await import('@tailwindcss/aspect-ratio');
-  
-  return {
+import { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+import animatePlugin from "tailwindcss-animate";
+
+const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
