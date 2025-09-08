@@ -1,7 +1,6 @@
 [build]
-  # Install Python dependencies first, then Node.js dependencies and build
-  # Explicitly use system Python to avoid mise shim issues
-  command = "/usr/bin/python3 -m pip install -r requirements.txt && npm ci && npm run build"
+  # Skip building and publish the prebuilt dist directory
+  command = "echo Using prebuilt dist; exit 0"
   publish = "dist"
   command_timeout = "30m"
 
