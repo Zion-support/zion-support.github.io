@@ -127,7 +127,7 @@ return matchesSearch && matchesCategory && matchesPrice && matchesRating;
           description: `Your quote request for ${listing.title} has been sent.`)
         }),
         "
-        navigate(&quot;/request-quote", {"
+        navigate("/request-quote", {"
           state: { ,
   serviceType: categorySlug,
             specificItem: {,
@@ -166,7 +166,7 @@ return (_<div className="min-h-screen bg-zion-blue py-12 px-4">;"
                 <Filter className="mr-2 h-5 w-5" /> Filters;
               </h3>
 
-                <label className="text-sm font-medium text-zion-slate-light block mb-2&quot;>
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Category;
                 </label>;
                 <Select

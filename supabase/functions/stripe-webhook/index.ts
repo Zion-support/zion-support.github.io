@@ -23,11 +23,20 @@ serve(async req => {
       const session = event.data.object as Stripe.Checkout.Session;
       const orderId = session.metadata?.orderId;
       if (orderId) {
+<<<<<<< HEAD
         const supabase = createClient(
           Deno.env.get('SUPABASE_URL') || '',
           Deno.env.get('SUPABASE_ANON_KEY') || ''
         );
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
+=======
+        // Use service role key for this operation
+        const supabaseAdmin = createClient(
+          Deno.env.get('SUPABASE_URL') || '',
+          Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
+        );
+        await supabaseAdmin.from("orders").update({ status: "paid" }).eq("id", orderId);
+>>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
       }
     }
 

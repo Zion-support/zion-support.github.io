@@ -77,7 +77,7 @@ const Services: NextPage = () => {
           </h1>
                       <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
               Discover our cutting-edge portfolio of innovative technology solutions designed to transform your business. 
-              From AI-powered analytics to quantum computing platforms, we&apos;re building the future today.
+              From AI-powered analytics to quantum computing platforms, we're building the future today.
             </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
             <span>🚀 8+ Revolutionary Services</span>
@@ -275,7 +275,7 @@ const Services: NextPage = () => {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
             <p className="text-gray-600 mb-6">
-              Try adjusting your filters or search terms to find what you&apos;re looking for.
+              Try adjusting your filters or search terms to find what you're looking for.
             </p>
             <button
               onClick={() => {
@@ -717,7 +717,7 @@ export default function ServicesPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our AI and quantum technology solutions can help 
+              Let's discuss how our AI and quantum technology solutions can help 
               you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

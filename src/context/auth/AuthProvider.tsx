@@ -1,30 +1,45 @@
 import React, { createContext, useContext, useState } from 'react';
 
+interface User {
+  id: string;
+  email: string;
+  name: string;
+}
+
 interface AuthContextType {
+  user: User | null;
   isAuthenticated: boolean;
-  user: any;
-  login: (user: any) => void;
+  login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+  loading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState(null);
-  
-  const login = (userData: any) => {
-    setUser(userData);
-    setIsAuthenticated(true);
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const login = async (email: string, password: string) => {
+    setLoading(true);
+    // Simulate login
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setUser({ id: '1', email, name: 'User' });
+    setLoading(false);
   };
-  
+
   const logout = () => {
     setUser(null);
-    setIsAuthenticated(false);
   };
-  
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
+    <AuthContext.Provider value={{ 
+      user, 
+      isAuthenticated: !!user, 
+      login, 
+      logout, 
+      loading 
+    }}>
       {children}
     </AuthContext.Provider>
   );

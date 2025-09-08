@@ -1,223 +1,263 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0A1024;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
 
-@layer base {
-  :root {
-    --font-sans: 'Orbitron', system-ui, sans-serif; /* Keep existing font */
+/* CSS Variables */
+:root {
+  --font-size: 16px;
+  --primary-color: #3b82f6;
+  --secondary-color: #64748b;
+  --accent-color: #f59e0b;
+  --background-color: #ffffff;
+  --text-color: #1f2937;
+  --border-color: #e5e7eb;
+}
 
-    /* Dark Theme Base (zion-slate) */
-    --background: 260 70% 10%; /* zion-slate */
-    --foreground: 0 0% 85%;    /* Light Gray Text */
+html {
+  scroll-behavior: smooth;
+  font-size: var(--font-size);
+}
 
-    --card: 260 70% 12%;       /* Slightly lighter zion-slate */
-    --card-foreground: 0 0% 85%; /* Light Gray Text */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
 
-    --popover: 260 70% 12%;    /* Slightly lighter zion-slate */
-    --popover-foreground: 0 0% 85%; /* Light Gray Text */
+/* Accessibility enhancements */
+.keyboard-navigation *:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
 
-    --primary: 217 82% 55%;    /* zion-blue */
-    --primary-foreground: 0 0% 100%; /* white */
+.high-contrast {
+  filter: contrast(150%) brightness(110%);
+}
 
-    --secondary: 273 82% 50%;  /* zion-purple */
-    --secondary-foreground: 0 0% 100%; /* white */
+.reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
 
-    --muted: 260 70% 20%;      /* Darker muted zion-slate */
-    --muted-foreground: 0 0% 60%; /* Muted gray text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-    --accent: 177 70% 50%;     /* zion-cyan */
-    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
 
-    --destructive: 0 70% 55%;   /* Adjusted Red for dark theme */
-    --destructive-foreground: 0 0% 100%; /* white */
+* {
+  box-sizing: border-box;
+}
 
-    --border: 260 70% 20%;     /* Muted zion-slate for borders */
-    --input: 260 70% 15%;      /* Slightly different from border for input bg */
-    --ring: 217 82% 55%;       /* zion-blue for focus rings */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0A1024 0%, #141A3C 100%);
+}
 
-    --radius: 0.5rem; /* Keep existing radius */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
 
-    /* Dark Theme Sidebar */
-    --sidebar-background: 260 70% 8%;  /* Even darker zion-slate */
-    --sidebar-foreground: 0 0% 85%;    /* Light Gray Text */
-    --sidebar-primary: 217 82% 55%;    /* zion-blue */
-    --sidebar-primary-foreground: 0 0% 100%; /* white */
-    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
-    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
-    --sidebar-border: 260 70% 15%;     /* Muted zion-slate for sidebar borders */
-    --sidebar-ring: 217 82% 55%;       /* zion-blue */
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
 
-  .dark { /* Ensure .dark mirrors :root for dark theme consistency */
-    --background: 260 70% 10%; /* zion-slate */
-    --foreground: 0 0% 85%;    /* Light Gray Text */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
 
-    --card: 260 70% 12%;       /* Slightly lighter zion-slate */
-    --card-foreground: 0 0% 85%; /* Light Gray Text */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
 
-    --popover: 260 70% 12%;    /* Slightly lighter zion-slate */
-    --popover-foreground: 0 0% 85%; /* Light Gray Text */
+button:hover {
+  border-color: #00FFFF;
+}
 
-    --primary: 217 82% 55%;    /* zion-blue */
-    --primary-foreground: 0 0% 100%; /* white */
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
 
-    --secondary: 273 82% 50%;  /* zion-purple */
-    --secondary-foreground: 0 0% 100%; /* white */
+/* Custom components */
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-    --muted: 260 70% 20%;      /* Darker muted zion-slate */
-    --muted-foreground: 0 0% 60%; /* Muted gray text */
+.btn-primary:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
 
-    --accent: 177 70% 50%;     /* zion-cyan */
-    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-    --destructive: 0 70% 55%;   /* Adjusted Red for dark theme */
-    --destructive-foreground: 0 0% 100%; /* white */
+.btn-secondary:hover {
+  background-color: #4b5563;
+  transform: translateY(-2px);
+}
 
-    --border: 260 70% 20%;     /* Muted zion-slate for borders */
-    --input: 260 70% 15%;      /* Slightly different from border for input bg */
-    --ring: 217 82% 55%;       /* zion-blue for focus rings */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
-    /* Dark Theme Sidebar */
-    --sidebar-background: 260 70% 8%;  /* Even darker zion-slate */
-    --sidebar-foreground: 0 0% 85%;    /* Light Gray Text */
-    --sidebar-primary: 217 82% 55%;    /* zion-blue */
-    --sidebar-primary-foreground: 0 0% 100%; /* white */
-    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
-    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
-    --sidebar-border: 260 70% 15%;     /* Muted zion-slate for sidebar borders */
-    --sidebar-ring: 217 82% 55%;       /* zion-blue */
-  }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
 
-  .light {
-    /* Light Theme Base */
-    --background: 0 0% 100%;    /* white */
-    --foreground: 260 70% 15%;  /* Dark Gray Text (derived from zion-slate) */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-    --card: 0 0% 98%;         /* Very light gray for cards */
-    --card-foreground: 260 70% 15%; /* Dark Gray Text */
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
 
-    --popover: 0 0% 98%;      /* Very light gray for popovers */
-    --popover-foreground: 260 70% 15%; /* Dark Gray Text */
-
-    --primary: 217 82% 55%;    /* zion-blue */
-    --primary-foreground: 0 0% 100%; /* white */
-
-    --secondary: 273 82% 50%;  /* zion-purple */
-    --secondary-foreground: 0 0% 100%; /* white */
-
-    --muted: 0 0% 90%;         /* Light muted gray */
-    --muted-foreground: 0 0% 40%; /* Darker muted gray text */
-
-    --accent: 177 70% 50%;     /* zion-cyan */
-    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
-
-    --destructive: 0 70% 50%;   /* Adjusted Red for light theme */
-    --destructive-foreground: 0 0% 100%; /* white */
-
-    --border: 0 0% 85%;       /* Light gray border */
-    --input: 0 0% 90%;        /* Slightly different from border for input bg */
-    --ring: 217 82% 55%;       /* zion-blue for focus rings */
-
-    --radius: 0.5rem; /* Keep existing radius */
-
-    /* Light Theme Sidebar */
-    --sidebar-background: 0 0% 96%;  /* Light gray for sidebar */
-    --sidebar-foreground: 260 70% 15%;  /* Dark Gray Text */
-    --sidebar-primary: 217 82% 55%;    /* zion-blue */
-    --sidebar-primary-foreground: 0 0% 100%; /* white */
-    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
-    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
-    --sidebar-border: 0 0% 80%;       /* Slightly darker gray for sidebar borders */
-    --sidebar-ring: 217 82% 55%;       /* zion-blue */
+@media (min-width: 640px) {
+  .cta-buttons {
+    flex-direction: row;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+.App {
+  text-align: center;
+}
 
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
 
-  a {
-    @apply text-primary hover:text-accent focus-visible:outline-accent transition-colors duration-150;
-  }
+.App-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply text-foreground font-semibold;
-  }
+.App-header p {
+  margin: 0 0 30px 0;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
 
-  p {
-    @apply text-foreground/90; /* Using 90% opacity for foreground */
-  }
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
 
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
 
-  /* Custom scrollbar for webkit browsers */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
+.feature-card h3 {
+  margin: 0 0 1rem 0;
+  color: #60a5fa;
+  font-size: 1.5rem;
+}
 
-  ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
-  }
+.feature-card p {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.6;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: hsl(var(--accent));
-    border-radius: 5px;
-  }
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--secondary));
-  }
-
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* LiveKit UI overrides */
-  [data-lk-theme='default'] {
-    --lk-color-accent: #06B6D4;
-    --lk-button-background: #06B6D4;
-    --lk-button-background-hover: #0891B2;
-    --lk-bg1: #0B1120;
-    --lk-bg2: #0F172A;
-  }
-
-  /* Skip link styles */
-  .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #ffffff;
-    color: #000000;
-    padding: 0.5rem 1rem;
-    z-index: 1000;
-    transition: top 0.3s;
-  }
-
-  .skip-link:focus {
-    top: 0;
-  }
-
-  /* Improved placeholder contrast */
-  input::placeholder,
-  textarea::placeholder {
-    color: #b3b3b3;
-    opacity: 1;
+@media (min-width: 640px) {
+  .cta-buttons {
+    flex-direction: row;
   }
 }

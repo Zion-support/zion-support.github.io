@@ -1,9 +1,9 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   constructor() {this.projectRoot = process.cwd(),this.reportsDir = path.join(this.projectRoot, 'security-reports'})
->>>>>>> merged-prs-20250907-203621
     this.log(' Running npm audit...')
       const result = execSync('npm audit --json', {"stdio"})
 // console.log(`NPM "Audit"`)

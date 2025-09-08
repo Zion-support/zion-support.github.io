@@ -1,17 +1,28 @@
 import React, { createContext, useContext, useState } from 'react';
 
+type ViewMode = 'grid' | 'list' | 'card';
+
 interface ViewModeContextType {
-  viewMode: 'grid' | 'list';
-  setViewMode: (mode: 'grid' | 'list') => void;
+  viewMode: ViewMode;
+  setViewMode: (mode: ViewMode) => void;
+  toggleViewMode: () => void;
 }
 
 const ViewModeContext = createContext<ViewModeContextType | undefined>(undefined);
 
 export const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  
+  const [viewMode, setViewMode] = useState<ViewMode>('grid');
+
+  const toggleViewMode = () => {
+    setViewMode(prev => prev === 'grid' ? 'list' : 'grid');
+  };
+
   return (
-    <ViewModeContext.Provider value={{ viewMode, setViewMode }}>
+    <ViewModeContext.Provider value={{ 
+      viewMode, 
+      setViewMode, 
+      toggleViewMode 
+    }}>
       {children}
     </ViewModeContext.Provider>
   );

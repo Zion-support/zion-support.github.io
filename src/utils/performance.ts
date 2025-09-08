@@ -1,181 +1,25 @@
-// Performance monitoring and optimization utilities
+/**
+ * Performance utilities for optimizing the application
+ */
 
-export interface PerformanceMetrics {
-  loadTime: number;
-  bundleSize: number;
-  memoryUsage: number;
-  renderTime: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  cumulativeLayoutShift?: number;
-}
-
-export class PerformanceTracker {
-  private static instance: PerformanceTracker;
-  private metrics: PerformanceMetrics | null = null;
-  private observers: ((metrics: PerformanceMetrics) => void)[] = [];
-
-  static getInstance(): PerformanceTracker {
-    if (!PerformanceTracker.instance) {
-      PerformanceTracker.instance = new PerformanceTracker();
-    }
-    return PerformanceTracker.instance;
-  }
-
-  private constructor() {
-    this.initializeTracking();
-  }
-
-  private initializeTracking() {
-    if (typeof window === 'undefined') return;
-
-    // Track page load performance
-    window.addEventListener('load', () => {
-      this.captureMetrics();
-    });
-
-    // Track navigation timing
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        this.metrics = {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          bundleSize: this.estimateBundleSize(),
-          memoryUsage: this.getMemoryUsage(),
-          renderTime: performance.now(),
-          firstContentfulPaint: this.getFirstContentfulPaint(),
-          largestContentfulPaint: this.getLargestContentfulPaint(),
-          cumulativeLayoutShift: this.getCumulativeLayoutShift(),
-        };
-      }
-    }
-  }
-
-  private estimateBundleSize(): number {
-    const scripts = document.querySelectorAll('script[src]');
-    let totalSize = 0;
-    
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && src.includes('assets/')) {
-        // Rough estimation based on common bundle sizes
-        totalSize += 200; // KB
-      }
-    });
-    
-    return totalSize;
-  }
-
-  private getMemoryUsage(): number {
-    if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize / 1024 / 1024; // MB
-    }
-    return 0;
-  }
-
-  private getFirstContentfulPaint(): number | undefined {
-    const paintEntries = performance.getEntriesByType('paint');
-    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    return fcp ? fcp.startTime : undefined;
-  }
-
-  private getLargestContentfulPaint(): number | undefined {
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    const lcp = lcpEntries[lcpEntries.length - 1];
-    return lcp ? lcp.startTime : undefined;
-  }
-
-  private getCumulativeLayoutShift(): number | undefined {
-    const clsEntries = performance.getEntriesByType('layout-shift');
-    return clsEntries.reduce((total, entry) => {
-      return total + (entry as any).value;
-    }, 0);
-  }
-
-  private captureMetrics() {
-    if (this.metrics) {
-      this.notifyObservers(this.metrics);
-    }
-  }
-
-  public getMetrics(): PerformanceMetrics | null {
-    return this.metrics;
-  }
-
-  public subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
-    this.observers.push(callback);
-    
-    // Return unsubscribe function
-    return () => {
-      const index = this.observers.indexOf(callback);
-      if (index > -1) {
-        this.observers.splice(index, 1);
-      }
-    };
-  }
-
-  private notifyObservers(metrics: PerformanceMetrics) {
-    this.observers.forEach(callback => callback(metrics));
-  }
-
-  public logMetrics() {
-    if (this.metrics) {
-      console.group('🚀 Performance Metrics');
-      console.log('Load Time:', `${this.metrics.loadTime.toFixed(2)}ms`);
-      console.log('Bundle Size:', `~${this.metrics.bundleSize}KB`);
-      console.log('Memory Usage:', `${this.metrics.memoryUsage.toFixed(2)}MB`);
-      console.log('Render Time:', `${this.metrics.renderTime.toFixed(2)}ms`);
-      
-      if (this.metrics.firstContentfulPaint) {
-        console.log('First Contentful Paint:', `${this.metrics.firstContentfulPaint.toFixed(2)}ms`);
-      }
-      if (this.metrics.largestContentfulPaint) {
-        console.log('Largest Contentful Paint:', `${this.metrics.largestContentfulPaint.toFixed(2)}ms`);
-      }
-      if (this.metrics.cumulativeLayoutShift) {
-        console.log('Cumulative Layout Shift:', this.metrics.cumulativeLayoutShift.toFixed(4));
-      }
-      
-      console.groupEnd();
-    }
-  }
-}
-
-// Export singleton instance
-export const performanceTracker = PerformanceTracker.getInstance();
-
-// Utility functions
-export const measurePerformance = (fn: () => void, label: string): number => {
-  const start = performance.now();
-  fn();
-  const end = performance.now();
-  const duration = end - start;
-  
-  if (import.meta.env.MODE === 'development') {
-    console.log(`⏱️ ${label}: ${duration.toFixed(2)}ms`);
-  }
-  
-  return duration;
-};
-
-export const debounce = <T extends (...args: any[]) => any>(
+// Debounce function for search and input handling
+export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
+): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
-  
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
-};
+}
 
-export const throttle = <T extends (...args: any[]) => any>(
+// Throttle function for scroll and resize events
+export function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {
+): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
@@ -183,4 +27,122 @@ export const throttle = <T extends (...args: any[]) => any>(
       setTimeout(() => (inThrottle = false), limit);
     }
   };
-};
+}
+
+// Performance monitoring class
+export class PerformanceMonitor {
+  private metrics: Record<string, any> = {};
+  private observers: PerformanceObserver[] = [];
+
+  constructor() {
+    this.initializeObservers();
+  }
+
+  private initializeObservers() {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      // Monitor LCP (Largest Contentful Paint)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.lcp = lastEntry.startTime;
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+
+      // Monitor FID (First Input Delay)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          this.metrics.fid = entry.processingStart - entry.startTime;
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+
+      // Monitor CLS (Cumulative Layout Shift)
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        this.metrics.cls = clsValue;
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
+    }
+  }
+
+  startMonitoring() {
+    // Start performance monitoring
+    console.log('Performance monitoring started');
+  }
+
+  stopMonitoring() {
+    // Stop performance monitoring
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    console.log('Performance monitoring stopped');
+  }
+
+  getMetrics() {
+    return { ...this.metrics };
+  }
+
+  reportMetrics(endpoint?: string) {
+    if (endpoint) {
+      // In a real app, this would send metrics to analytics endpoint
+      console.log('Reporting metrics to:', endpoint, this.metrics);
+    }
+  }
+}
+
+// Utility function to measure function execution time
+export function measureTime<T>(fn: () => T, label?: string): T {
+  const start = performance.now();
+  const result = fn();
+  const end = performance.now();
+  
+  if (label) {
+    console.log(`${label} took ${end - start} milliseconds`);
+  }
+  
+  return result;
+}
+
+// Utility function to create a performance mark
+export function mark(name: string) {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    performance.mark(name);
+  }
+}
+
+// Utility function to measure between two marks
+export function measure(name: string, startMark: string, endMark?: string) {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    try {
+      if (endMark) {
+        performance.measure(name, startMark, endMark);
+      } else {
+        performance.measure(name, startMark);
+      }
+    } catch (error) {
+      console.warn('Performance measure failed:', error);
+    }
+  }
+}
+
+// Utility function to get memory usage (if available)
+export function getMemoryUsage() {
+  if (typeof window !== 'undefined' && 'memory' in performance) {
+    const memory = (performance as any).memory;
+    return {
+      used: memory.usedJSHeapSize,
+      total: memory.totalJSHeapSize,
+      limit: memory.jsHeapSizeLimit
+    };
+  }
+  return null;
+}

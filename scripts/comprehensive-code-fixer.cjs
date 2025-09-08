@@ -3,17 +3,9 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
+=======
 console.log()
 
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
 console.log('')
   console.log('� Fixing common linting issues...')
 const filesToFix = ['components/ContactForm.tsx'];

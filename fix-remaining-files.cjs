@@ -1,5 +1,5 @@
 const fs = require('fs');
-<<<<<<<< HEAD:fix-remaining-files.cjs
+<
 
 console.log('🔧 Fixing remaining problematic files...');
 
@@ -7,6 +7,8 @@ const filesToFix = [
   {
     path: 'components/Header.tsx',
     content: `import React, { useState } from 'react';
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -1035,3 +1037,23 @@ filesToFix.forEach(file => {
 });
 
 console.log('✅ Remaining files fixed!');
+    console.error('Error fixing, file.path, : , error.message);
+  }
+
+});
+main
+
+
+console.log('Fixed remaining files');
+    console.log('Fixe: d:', file.path);
+
+
+  }
+});
+;
+console.log('Fixed remaining files');
+;
+console.log('Fixed remaining files');
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
