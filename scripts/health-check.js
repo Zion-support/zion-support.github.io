@@ -1,121 +1,104 @@
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
-<<<<<<< HEAD
-=======
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
-ursor/fix-syntax-push-and-merge-to-main-40de
-const express = // // require("child_process");
->>>>>>> origin/main
-const app = express()
-app.get("/health", (req, res) => {
-  res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime();
-    memory: process.memoryUsage();
-    version: process.env.npm_package_version || "1.0.0"})})
-app.get("/ready", (req, res) => {
-  // Add readiness checks here
-  res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
-module.exports = app
-<<<<<<< HEAD
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app    });
-=======
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
-
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node
+
+const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class HealthChecker {
-  constructor() {
+// Health check configuration
+const config = {
+  port: process.env.PORT || 3000,
+  host: 'localhost',
+  timeout: 5000,
+  healthCheckPath: '/health',
+  logFile: path.join(__dirname, '../logs/health-check.log')
+};
+
+// Log function
+function log(message) {
+  const timestamp = new Date().toISOString();
+  const logMessage = `[${timestamp}] ${message}\n`;
+  
+  // Console output
+  console.log(logMessage.trim());
+  
+  // File output
+  try {
+    fs.appendFileSync(config.logFile, logMessage);
+  } catch (error) {
+    console.error('Failed to write to log file:', error.message);
   }
+}
 
-  async checkBuildFiles() {
-    const buildDir = path && path.join(process && process.cwd(), '.next');
-    const exists = fs && fs.existsSync(buildDir);
-    this && this.results.push({
-      check: 'Build Files',
-      status: exists ? 'PASS' : 'FAIL',
-      message: exists ? 'Build directory exists' : 'Build directory missing'
-    });
-    return exists;
-  }
-
-  async checkDependencies() {
-    const packageJsonPath = path && path.join(process && process.cwd(), 'package && package.json');
-    const nodeModulesPath = path && path.join(process && process.cwd(), 'node_modules');
-    
-    const packageExists = fs && fs.existsSync(packageJsonPath);
-    const nodeModulesExists = fs && fs.existsSync(nodeModulesPath);
-    
-    this && this.results.push({
-      check: 'Dependencies',
-      status: packageExists && nodeModulesExists ? 'PASS' : 'FAIL',
-      message: packageExists && nodeModulesExists ? 'Dependencies installed' : 'Missing dependencies'
-    });
-    
-    return packageExists && nodeModulesExists;
-  }
-
-  async checkEnvironmentVariables() {
-    const envFile = path && path.join(process && process.cwd(), '.env && env.local');
-    const envExists = fs && fs.existsSync(envFile);
-    
-    this && this.results.push({
-      check: 'Environment Variables',
-      status: envExists ? 'PASS' : 'WARN',
-      message: envExists ? 'Environment file exists' : 'No environment file found'
-    });
-    
-    return envExists;
-  }
-
-  async runAllChecks() {
-    console && console.log('🏥 Running Health Checks...');
-    
-    await this && this.checkBuildFiles();
-    await this && this.checkDependencies();
-    await this && this.checkEnvironmentVariables();
-    
-    const passed = this && this.results.filter(r => r && r.status === 'PASS').length;
-    const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;
-    const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
-    
-    });
->>>>>>> origin/main
-    
-    console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
-    
-    return {
-      passed,
-      failed,
-      warnings,
-      results: this && this.results
+// Health check function
+function performHealthCheck() {
+  return new Promise((resolve, reject) => {
+    const options = {
+      hostname: config.host,
+      port: config.port,
+      path: config.healthCheckPath,
+      method: 'GET',
+      timeout: config.timeout
     };
+
+    const req = http.request(options, (res) => {
+      let data = '';
+      
+      res.on('data', (chunk) => {
+        data += chunk;
+      });
+      
+      res.on('end', () => {
+        if (res.statusCode === 200) {
+          log(`✅ Health check passed - Status: ${res.statusCode}`);
+          resolve({ status: 'healthy', statusCode: res.statusCode });
+        } else {
+          log(`⚠️  Health check warning - Status: ${res.statusCode}`);
+          resolve({ status: 'warning', statusCode: res.statusCode });
+        }
+      });
+    });
+
+    req.on('error', (error) => {
+      log(`❌ Health check failed - Error: ${error.message}`);
+      reject({ status: 'unhealthy', error: error.message });
+    });
+
+    req.on('timeout', () => {
+      req.destroy();
+      log(`⏰ Health check timeout after ${config.timeout}ms`);
+      reject({ status: 'timeout', error: 'Request timeout' });
+    });
+
+    req.end();
+  });
+}
+
+// Main execution
+async function main() {
+  try {
+    log('🏥 Starting health check...');
+    
+    const result = await performHealthCheck();
+    
+    if (result.status === 'healthy') {
+      log('✅ Application is healthy');
+      process.exit(0);
+    } else if (result.status === 'warning') {
+      log('⚠️  Application has warnings but is operational');
+      process.exit(0);
+    } else {
+      log('❌ Application is unhealthy');
+      process.exit(1);
+    }
+  } catch (error) {
+    log(`💥 Health check error: ${error.error || error.message}`);
+    process.exit(1);
   }
-<<<<<<< HEAD
-=======
+}
 
+// Run if called directly
+if (require.main === module) {
+  main();
+}
 
-if (require && require.main === module) {
-    const checker = new HealthChecker(),
-    checker && checker.runAllChecks().catch(console && console.error)
-  }
-
-module && module.exports = HealthChecker;
-const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
-const express = // // require("child_process");
-const app = express()
-app && app.get("/health", (req, res) => {
-  res && res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process && process.uptime();
-    memory: process && process.memoryUsage();
-    version: process && process.env.npm_package_version || "1 && 1.0.0"})})
-app && app.get("/ready", (req, res) => {
-  // Add readiness checks here
-  res && res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
-module && module.exports = app
-const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
-
->>>>>>> origin/main
+module.exports = { performHealthCheck, log };
