@@ -1,27 +1,47 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('front-index-orchestrator function triggered');
+    console.log('🚀 front-index-orchestrator function triggered');
     
-    // Basic front index orchestration logic
-    const result = {
+    // Execute the corresponding automation script
+    const scriptPath = path.join(process.cwd(), 'automation', 'front-index-orchestrator.cjs');
+    const result = execSync(`node "${scriptPath}"`, { 
+      encoding: 'utf8',
+      cwd: process.cwd(),
+      timeout: 30000 // 30 second timeout
+    });
+    
+    console.log('✅ front-index-orchestrator completed successfully');
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Front index orchestrator function executed successfully',
+        message: 'front-index-orchestrator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'front-index-orchestrator',
-        action: 'orchestrating front-end indexing processes'
-      })
+        result: result
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
     
-    return result;
   } catch (error) {
-    console.error('Error in front-index-orchestrator:', error);
+    console.error('❌ front-index-orchestrator failed:', error.message);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
-      })
+        message: 'front-index-orchestrator execution failed',
+        timestamp: new Date().toISOString(),
+        error: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     };
   }
 };
