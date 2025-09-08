@@ -1,13 +1,11 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-import React, { forwardRef } from 'react';'
-
-<<<<<<< HEAD
-
+import React, { forward_ref } from 'react';
+export type ResumeData = {
+export type ResumeData = {;
+import React, { forward_ref } from 'react';
+export type ResumeData = {
   name: string;
   contact?: {;
 
@@ -60,17 +58,11 @@ export type ResumeData = any;
 };
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string }
   summary?: string;
   skills?: string[];
   technologies?: string[];
   experience?: Array<{
-
-<<<<<<< HEAD
-title: string;
-
-
-=======
-
     title: string;    title: string
     bullets?: string[];  name: string,;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -84,11 +76,282 @@ title: string;
     title: string;    title: string,;
 
 
-
     company?: string;
     start?: string;
     end?: string;
-    location?: string
+    location?: string;
+};
+
+    {children}
+
+export type ResumePreviewProps = {;
+
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+}
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
+  children
+}) => (
+  <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
+  education?: Array<{
+    institution: string
+  education?: Array<{;
+    institution: string;
+    degree?: string;
+    start?: string;
+    end?: string;
+  }>;
+  certifications?: string[];
+  portfolio?: Array<{;
+    title: string;
+    description?: string;
+    link?: string;
+    technologies?: string[];
+  }>;
+};
+
+export type ResumePreviewProps = {;
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+};
+
+const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({;
+  children,;
+}) => (;
+  <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
+  education?: Array<{;
+    institution: string,;
+
+
+    degree?: string;
+    start?: string;
+    end?: string;
+  }>;
+  certifications?: string[];
+
+export type ResumeData = {
+  name: string,
+  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string };
+  summary?: string;
+  skills?: string[];
+  technologies?: string[];
+  experience?: Array<{
+    title: string,
+    company?: string;
+    start?: string;
+    end?: string;
+    location?: string;
+    bullets?: string[]
+  }>;
+}
+;
+export type ResumePreviewProps = {
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+}
+;
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
+  <h2 className='text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1'>    {children}  }>;
+
+  education?: Array<{
+    institution: string,
+    degree?: string;
+    start?: string;
+    end?: string;
+  }>;
+  certifications?: string[];
+  portfolio?: Array<{
+    title: string,
+    description?: string;
+    link?: string;
+
+
+  data: ResumeData,;
+
+
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number
+}
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
+  portfolio?: Array<{;
+    title: string,;
+    description?: string;
+    link?: string;
+    technologies?: string[];
+  }>;
+};
+
+export type ResumePreviewProps = {;
+  data: ResumeData,;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+};
+
+const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({ children }) => (;
+  <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">;
+
+
+};
+
+};
+
+    technologies?: string[];
+  }>;
+}
+;
+export type ResumePreviewProps = {
+  data: ResumeData,
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+}
+;
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+
+
+    const portfolioItems = (data.portfolio || []).slice(
+      0,
+      Math.max(0, maxPortfolioItems);
+
+    );
+
+      >
+        <div className='p-8'>
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems));
+
+export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {;
+    const portfolioItems = (data && data.portfolio || []).slice(;
+      0,;
+      Math && Math.max(0, maxPortfolioItems);
+    );
+
+
+      >;
+        <div className='p-8'>;
+          {/* Header */}
+          <header className='mb-6'>;
+            <h1 className='text-3xl font-bold text-gray-900 dark:text-white'>;
+              {data && data.name}
+            </h1>;
+            <div className='mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap'>              {data && data.contact?.email && <span>{data && data.contact.email}</span>}
+              {data && data.contact?.phone && <span>{data && data.contact.phone}</span>}
+              {data && data.contact?.location && <span>{data && data.contact.location}</span>}
+              {data && data.contact?.website && (;
+  <h2 className="text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1">;
+    {children}
+  </h2>);
+;
+export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
+    const portfolio_items = (data.portfolio || []).slice (
+      0,
+      Math.max (0, maxPortfolioItems));
+;
+      >;
+        <div className='p - 8'>;
+          {/* Header */}
+          <header className='mb - 6'>;
+            <h1 className='text - 3xl font - bold text - gray - 900 dark:text - white'>;
+              {data.name}
+            </h1>;
+            <div className='mt - 2 text - sm text - gray - 600 dark:text - gray - 300 space - x-3 flex flex - wrap'>              {data.contact?.email && <span>{data.contact.email}</span>}
+              {data.contact?.phone && <span>{data.contact.phone}</span>}
+              {data.contact?.location && <span>{data.contact.location}</span>}
+              {data.contact?.website && (
+    return (
+      <div;
+        ref={ref}
+
+
+                  {data.contact.website}
+                </a>)}
+              {data.contact?.linkedin && (
+
+            </div>;
+          </header>;
+
+          <header className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{data.name}</h1>
+            <div className="mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap">
+        className={`resume - a4 ${theme === 'dark' ? 'dark' : ''} bg - white dark:bg - black text - gray - 900 dark:text - gray - 100`}
+      >;
+        <div className="p - 8">;
+          {/* Header */}
+          <header className="mb - 6">;
+            <h1 className="text - 3xl font - bold text - gray - 900 dark:text - white">{data.name}</h1>;
+            <div className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300 space - x-3 flex flex - wrap">;
+  </h2>
+),
+
+export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems)),
+
+    return (
+      <div
+        ref={ref}
+        className={_`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
+      >
+        <div className=&quot;p-8&quot;>
+          {/* Header */}
+          <header className=&quot;mb-6&quot;>
+            <h1 className=&quot;text-3xl font-bold text-gray-900 dark:text-white&quot;>{data.name}</h1>
+            <div className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap&quot;>
+
+import React, { forwardRef } from 'react';
+export type ResumeData = {;
+
+export type ResumeData = {
+  name: string;
+  contact?: {
+    email?: string;
+    phone?: string;
+    location?: string;
+    website?: string;
+    linkedin?: string;
+    github?: string;
+  };  summary?: string;
+  skills?: string[];
+  technologies?: string[];
+  experience?: Array<{
+    title: string;    company?: string;
+    start?: string;
+    end?: string;
+    location?: string;
+    bullets?: string[];  name: string
+  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string }
+  summary?: string;
+  skills?: string[];
+  technologies?: string[];
+  experience?: Array<{
+    title: string;    title: string
+    company?: string;
+    start?: string;
+    end?: string;
+    location?: string;
+    bullets?: string[];
+  }>;
+  education?: Array<{
+    institution: string;
+    degree?: string;
+    start?: string;
+    end?: string;
+  }>;
+  certifications?: string[];
+  portfolio?: Array<{
+    title: string;
+    description?: string;
+    link?: string;
+    technologies?: string[];
+  }>;
+}
+export type ResumePreviewProps = {
 };
 
     {children}
@@ -213,40 +476,23 @@ import React, { forwardRef } from 'react';
             </div>;
           </header>;
 
+
+
+
           {/* Summary */}
 
           {data.summary && (
-            <section className='mb-5'>
-              <SectionTitle>Professional Summary</SectionTitle>
-              <p className='mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
-                {data.summary}
-              </p>            </section>            <section className="mb-5">
+            <section className="mb-5">
               <SectionTitle>Professional Summary</SectionTitle>
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
             </section>
-          )}
-          {/* Summary */}
 
-<section className='mb-5'>'
-              <SectionTitle>Professional Summary</SectionTitle>
-              <p className='mt-2 text-sm leading-relaxed text-gray-800 "dark": text-gray-200'>'
-
-                {data.summar
-}
-              </p>;
-            </section>;
           )}
           {/* Skills & Technologies */}
 <section className='mb-5'    />
               <SectionTitle    />Professional Summary</SectionTitle>
               <p className='mt-2 text-sm leading-relaxed text-gray-800 dark: text-gray-200'    />
 
-                {data.summar}
-
-              </p>
-            </section>
-          )}
->>>>>>> origin/cursor/delete-old-data-records-6bba
           {/* Summary */}
           {data && data.summary && (;
             <section className='mb-5'>;
@@ -259,7 +505,14 @@ import React, { forwardRef } from 'react';
             </section>;
           )}
           {/* Skills & Technologies */}
-<<<<<<< HEAD
+
+
+
+
+
+
+
+
 
           )}
 
@@ -267,8 +520,10 @@ import React, { forwardRef } from 'react';
           {(data.skills?.length || data.technologies?.length) && (
 <section className='mb-5'>'
               <SectionTitle>Skills & Technologies</SectionTitle>
-              <div className='mt-2 text-sm flex flex-wrap gap-2'>'
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>
+                {data.skills?.map((s, idx) => (
           {(data.skills?.length |data.technologies?.length) && (
+
 
 
           )}
@@ -288,17 +543,6 @@ import React, { forwardRef } from 'react';
                   <span
                     key={`tech-${idx}`}
 
-                    className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {t}              <SectionTitle>Skills & Technologies</SectionTitle>;
-              <div className="mt-2 text-sm flex flex-wrap gap-2">;
-                {data && data.skills?.map((s, idx) => (;
-                  <span key={`skill-${idx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700">;
-                    {s}
-                  </span>;
-          {(data.skills?.length || data.technologies?.length) && (
-            <section className="mb-5">
-              <SectionTitle>Skills & Technologies</SectionTitle>
-                    className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
-                  >                    {t}              <SectionTitle>Skills & Technologies</SectionTitle>
               <div className="mt-2 text-sm flex flex-wrap gap-2">
                 {data.skills?.map((s, idx) => (
                   <span key={`skill-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
@@ -306,6 +550,10 @@ import React, { forwardRef } from 'react';
                   </span>
                 ))}
                 {data.technologies?.map((t, idx) => (
+                  <span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+                    {t}
+                  </span>
+
                 ))}
                 {data && data.technologies?.map((t, idx) => (;
                   <span
@@ -317,6 +565,7 @@ import React, { forwardRef } from 'react';
               </div>;
             </section>;
           )}
+                ))}
                 <a;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   className='underline';
@@ -431,7 +680,7 @@ key={`skill-${idx}`}`
                   >                    {t}              <SectionTitle > Skills & Technologies</SectionTitle>;
               <div className="mt - 2 text - sm flex flex-wrap gap-2">;
                 {data.skills?.map ((s, idx) => (
-                  <span key={`skill-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border-gray-700">;
+                  <span key={`skill-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
                     className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
 
                   >                    {t}
@@ -445,13 +694,32 @@ key={`skill-${idx}`}`
                   >                  <span key={`tech-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border-gray-700">;
                     {t}
 
+
           {/* Experience */}
+          {/* Experience */}
+          {/* Experience */}
+          {data.experience?.length ? (
+            <section className='mb - 5'>;
+              <SectionTitle > Work Experience</SectionTitle>;
+              <div className='mt - 2 space - y-3'>;
+                {data.experience.map ((role, idx) => (
+                  <div key={`exp-${idx}`}>;
+                    <div className='flex items - baseline justify - between'>;
+                      <h3 className='font - medium text - gray - 900 dark:text - white'>;
+                        {role.title}
+                        {role.company ? ` • ${role.company}` : ''}
+                        {role.title}
+                        {role.company ? ` • ${role.company}` : ''}
+
           {data.experience?.length ? (
             <section className="mb-5">
               <SectionTitle>Work Experience</SectionTitle>
 
+
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
 
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
           {/* Experience */}
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
@@ -462,78 +730,7 @@ key={`skill-${idx}`}`
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
-                        {(role.start || role.end) && (
-                          <span>
-                            {role.start || ''}
-                            {role.end ? ` – ${role.end}` : ''}
-                          </span>
-                        )}
-                        {role.location ? ` • ${role.location}` : ''}
-                      </div>
-                    </div>
-                    {role.bullets?.length ? (
-                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
-                        {role.bullets.map((b, bIdx) => (
-                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            </section>
-          ) : null}
 
-          {/* Education */}
-          {data.education?.length ? (
-            <section className="mb-5">
-              <SectionTitle>Education</SectionTitle>
-              <div className="mt-2 space-y-2">
-                {data.education.map((ed, idx) => (
-                  <div key={`edu-${idx}`} className="text-sm">
-                    <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
-                    <div className="text-gray-700 dark:text-gray-300">
-                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
-                        .filter(Boolean)
-                    {t}
-
-
-          {/* Experience *
-}
-          {data.experience?.length ? (
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          {data.experience?.length ? (
-            <section className="mb-5">
-              <SectionTitle>Work Experience</SectionTitle>
-
-
-                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
-
-
-<<<<<<< HEAD
-
-
-              <div className="mt-2 space-y-3">
-=======
-              <div className='mt-2 space-y-3'>'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                {data.experience.map((role, idx) => (
-                  <div key={`exp-${idx}`}>
-                    <div className="flex items-baseline justify-between">
-                      <h3 className="font-medium text-gray-900 dark:text-white">
-                        {role.title}
-                        {role.company ? ` • ${role.company}` : ''}
-                      </h3>
-                      <div className="text-xs text-gray-600 dark:text-gray-300">
-
-<<<<<<< HEAD
-
-
-=======
-                        {role.company ? ` • ${role.company}` : ''}'                      </h3>
-                      <div className='text-xs text-gray-600 "dark":text-gray-300'>'
->>>>>>> origin/cursor/delete-old-data-records-6bba
                         {(role.start || role.end) && (
 
                           <span>
@@ -542,11 +739,6 @@ key={`skill-${idx}`}`
                           </span>
 
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           {data && data.experience?.length ? (;
             <section className='mb-5'>;
               <SectionTitle>Work Experience</SectionTitle>;
@@ -582,11 +774,31 @@ key={`skill-${idx}`}`
                         {role && role.bullets.map((b, bIdx) => (;
                           <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>;
 
+                        )}
+                      </h3>;
+                      <div className='text - xs text - gray - 600 dark:text - gray - 300'>                        {(role.start || role.end) && (              <SectionTitle > Work Experience</SectionTitle>;
+              <div className="mt - 2 space - y-3">;
+                {data.experience.map ((role, idx) => (
+                  <div key={`exp-${idx}`}>;
+                    <div className="flex items - baseline justify - between">;
+                      <h3 className="font - medium text - gray - 900 dark:text - white">;
+                        {role.title}
+                        {role.company ? ` • ${role.company}` : ''}
+                      </h3>;
+                      <div className="text - xs text - gray - 600 dark:text - gray - 300">;
+                        {(role.start || role.end) && (
+                          <span>;
+                            {role.start || ''}
+                            {role.end ? ` – ${role.end}` : ''}
+                          </span>)}
+
+
                         {role.location ? ` • ${role.location}` : ''}
                       </div>;
                     </div>;
                     {role.bullets?.length ? (
-                      <ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                        {role.bullets.map ((b, b_idx) => (                      <ul className="mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray-200 space-y-1">;
+
+                      <ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                        {role.bullets.map ((b, b_idx) => (                      <ul className="mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1">;
                         {role.bullets.map ((b, b_idx) => (
                           <li key={`exp-${idx}-b-${b_idx}`}>{b}</li>))}
                       </ul>) : null}
@@ -594,8 +806,21 @@ key={`skill-${idx}`}`
               </div>;
             </section>) : null}
 
+                        {(role.start || role.end) && (
+
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
+
+                        {(role.start || role.end) && (
 
 
+
+                          <span>
+                            {role.start || ''}
+                          <span>
+                            {role.start || ''}
+
+                          <span>
+                            {role.start || ''}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
 =======
@@ -652,11 +877,16 @@ key={`skill-${idx}`}`
           ) : null}
 
 
-<<<<<<< HEAD
-
-
 
           {/* Education */}
+
+
+
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+
+          {/* Education */}
+
+
 
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
 
@@ -689,7 +919,30 @@ key={`skill-${idx}`}`
               <SectionTitle>Education</SectionTitle>
               <div className='mt-2 space-y-2'>'
                 {data.education.map((ed, idx) => (
-                  <div key={`edu-${idx}`} className='text-sm'>'                    <div className='font-medium text-gray-900 "dark": text-white'>'
+                  <div key={`edu-${idx}`} className="text-sm">
+                    <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
+                    <div className="text-gray-700 dark:text-gray-300">
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+                        .filter(Boolean)
+                      <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+                        {role.bullets.map((b, bIdx) => (
+                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {/* Education */}
+          {data.education?.length ? (
+            <section className='mb-5'>
+              <div className='mt-2 space-y-2'>
+                {data.education.map((ed, idx) => (
+                  <div key={`edu-${idx}`} className='text-sm'>
+                    <div className='font-medium text-gray-900 dark:text-white'>
                       {ed.institution}
                     </div>
                     <div className='text-gray-700 "dark":text-gray-300'>'
@@ -703,36 +956,45 @@ ed.start && ed.end
                         .join(' • ')}'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+
+                        .filter(Boolean)
+
                         .join(' • ')}
                     </div>
                 ))}
               </div>
             </section>
-<<<<<<< HEAD
-
-
-                ))}
-              </div>;
-            </section>;
-
           ) : null}
 
-            <section className='mb-5'>
-              <SectionTitle>Portfolio</SectionTitle>
-              <div className='mt-2 space-y-2'>
-                {portfolioItems.map((p, idx) => (
-                  <div key={`proj-${idx}`} className='text-sm'>
-                    <div className='font-medium text-gray-900 dark:text-white'>
-                      {p.title}
-                      {p.link && (
 
 
-=======
-          ) : null}
+
 
           {/* Certifications */}
           {data.certifications?.length ? (
+            <section className="mb-5">
+              <SectionTitle>Certifications</SectionTitle>
+              <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+                {data.certifications.map((c, idx) => (
+                  <li key={`cert-${idx}`}>{c}</li>
+                ))}
+              </div>;
+            </section>;
+          ) : null}
 
+
+                        <a
+                          className='ml-2 underline text-blue-600 dark:text-blue-400'
+                          href={p && p.link}
+                          target='_blank'
+                          rel='noreferrer'>                          link              <SectionTitle>Portfolio</SectionTitle>;
+              <div className="mt-2 space-y-2">;
+                {portfolioItems && portfolioItems.map((p, idx) => (;
+                  <div key={`proj-${idx}`} className="text-sm">;
+                    <div className="font-medium text-gray-900 dark:text-white">;
+                      {p && p.title}
+                      {p && p.link && (;
+                        <a className="ml-2 underline text-blue-600 dark:text-blue-400" href={p && p.link} target="_blank" rel="noreferrer">;
                           link;
                         </a>;
                       )}
@@ -752,36 +1014,77 @@ ed.start && ed.end
                       <div className="mt-1 text-xs flex flex-wrap gap-2">;
                         {p && p.technologies.map((t, tIdx) => (;
                           <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark: border-gray-700">;
+
+              <div className="mt-2 space-y-2">
+                {portfolioItems.map((p, idx) => (
+                  <div key={`proj-${idx}`} className="text-sm">
+                    <div className="font-medium text-gray-900 dark:text-white">
+                    </div>;
+                    <div className='text - gray - 700 dark:text - gray - 300'>;
+                      {[;
+                        ed.degree,
+                        ed.start && ed.end;
+                          ? `${ed.start} – ${ed.end}`;
+                          : ed.start || ed.end,
+                      ]                        .filter (Boolean)                  <div key={`edu-${idx}`} className="text - sm">;
+                    <div className="font - medium text - gray - 900 dark:text - white">{ed.institution}</div>;
+                    <div className="text - gray - 700 dark:text - gray - 300">;
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end];
+                        .join (' • ')}
+                    </div>;
+                  </div>))}
+              </div>;
+            </section>) : null}
+          {/* Certifications */}
+          {data.certifications?.length ? (
+            <section className='mb - 5'>;
+              <SectionTitle > Certifications</SectionTitle>;
+              <ul className='mt - 2 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                {data.certifications.map ((c, idx) => (            <section className="mb - 5">;
+              <SectionTitle > Certifications</SectionTitle>;
+              <ul className="mt - 2 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1">;
+                {data.certifications.map ((c, idx) => (
+                  <li key={`cert-${idx}`}>{c}</li>))}
+              </ul>;
+            </section>) : null}
+          {/* Portfolio */}
+          {portfolio_items.length ? (
+            <section className='mb - 5'>;
+              <SectionTitle > Portfolio</SectionTitle>;
+              <div className='mt - 2 space - y-2'>;
+                {portfolio_items.map ((p, idx) => (
+                  <div key={`proj-${idx}`} className='text - sm'>;
+                    <div className='font - medium text - gray - 900 dark:text - white'>;
                       {p.title}
                       {p.link && (
-                        <a className="ml - 2 underline text - blue - 600 dark:text-blue-400" href={p.link} target="_blank" rel="noreferrer">;
+                        <a;
+                          className='ml - 2 underline text - blue - 600 dark:text - blue - 400';
+                          href={p.link}
+                          target='_blank';
+                          rel='noreferrer';
+                        >                          link              <SectionTitle > Portfolio</SectionTitle>;
+              <div className="mt - 2 space - y-2">;
+                {portfolio_items.map ((p, idx) => (
+                  <div key={`proj-${idx}`} className="text - sm">;
+                    <div className="font - medium text - gray - 900 dark:text - white">;
+
+                      {p.title}
+                      {p.link && (
+                        <a className="ml - 2 underline text - blue - 600 dark:text - blue - 400" href={p.link} target="_blank" rel="noreferrer">;
                           link;
                         </a>)}
                     </div>;
                     {p.description && (
-                            {t}
-                          </span>;
-                        ))}
-                      </div>;
-                    ) : null}
-                  </div>;
-                ))}
-              </div>;
-            </section>;
-          ) : null}
-        </div>;
-      </div>;
-    );
-  }
-);
+
+
+ResumePreview && ResumePreview.displayName = 'ResumePreview';
 export default ResumePreview;
+
+
+export default ResumePreview;
+
 
 ResumePreview.displayName = 'ResumePreview';
 export default ResumePreview;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    )}
-)export default ResumePreview;ResumePreview.displayName = 'ResumePreview';export default ResumePreview;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                       <p className='text - gray - 700 dark:text - gray - 300'>;
                         {p.description}
                       </p>)}
@@ -803,53 +1106,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>);
   }
-      </div>)}ResumePreview.displayName = 'ResumePreview';export default ResumePreview;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  <div key={`proj-${idx}`} className="text-sm">
-                    <div className="font-medium text-gray-900 dark:text-white">
-                      {p.title}
-                      {p.link && (
-                        <a className="ml-2 underline text-blue-600 dark:text-blue-400" href={p.link} target="_blank" rel="noreferrer">
-                          link
-                        </a>
-                      )}
-                    </div>
-                    {p.description && (
-                      <p className="text-gray-700 dark:text-gray-300">{p.description}</p>
-                    )}
-                    {p.technologies?.length ? (
-                      <div className="mt-1 text-xs flex flex-wrap gap-2">
-                        {p.technologies.map((t, tIdx) => (
-                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            </section>
-          ) : null}
-        </div>
-    )
-  }
 );
-<<<<<<< HEAD
-ResumePreview.displayName = 'ResumePreview';
+;
+ResumePreview.display_name = 'ResumePreview';
+;
 export default ResumePreview;
-
-
-
-
-=======
-
-ResumePreview.displayName = 'ResumePreview';
-export default ResumePreview;
-
 ;
                         <a className="ml-2 underline text-blue-600 dark:text-blue-400" href={p.link} target="_blank" rel="noreferrer">
                           link
@@ -903,4 +1164,3 @@ export default ResumePreview;
 }
 }
 export default ResumePreview;
->>>>>>> origin/cursor/delete-old-data-records-6bba

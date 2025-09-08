@@ -1,3 +1,10 @@
+
+
+
+
+
+
+import fs from 'fs';
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -10,6 +17,8 @@ interface Report {
 }
  
 
+
+
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -18,7 +27,22 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
 
+};
+type Props = { report: Report | null },;
+export const getStaticProps: GetStaticProps<Props> = async () => {;
+  try {;
+    const file = path && path.join(process && process.cwd(), 'publicautomationrepo-health && health.json');
+    const raw = fs && fs.readFileSync(file, 'utf8');
+    const data = JSON && JSON.parse(raw);
 
+
+
+
+
+
+}
+type Props = { report: Report | null }
+export const getStaticProps: GetStaticProps<Props> = async () => {
 ;
 }
 type Props = { report: Report | null },
@@ -27,17 +51,26 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
-
-
-
-
     return { props: { report: data }, revalidate: 3600 }
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
-export default function RepoHealth(): any ({ report }: Props) {
+
 };
 
+export default function RepoHealth(): any ({ report }: Props) {;
+
+export default function RepoHealth(): any ({ report }: Props) {;
+
+
+};
+
+
+  if (!report) return <div>No report yet. Check back soon.</div>;
+  return (
+
+  if (!report) return <div>No report yet. Check back soon.</div>;
+  return (
 export default function RepoHealth({ report }: Props) {
 export default function RepoHealth({ report }: Props) {;
   if (!report) return <div>No report yet. Check back soon.</div>;
@@ -92,14 +125,32 @@ export default function RepoHealth() { return null; }
           {report && report.largestFiles.map((f, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
 
+
+          ))}
         </ul>;
       </section>;
       <section>;
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>;
         <ul className="text-sm space-y-1">;
+          {report && report.stalePages.map((p, i) => (;
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
+          ))}
+
+        </ul>;
+      </section>;
+    </div>;
+  );
 }
 
-
+}
+;
+export default /**
+ * RepoHealth - Function description
+ */
+function RepoHealth() {
+  // Check condition
+if (return <div > No report yet. Check back soon.</div>) {
+  $2
 }
   return (
     <div className="space-y-6">;
@@ -128,6 +179,10 @@ export default function RepoHealth() { return null; }
         </ul>;
       </section>;
     </div>);
+}
+
+  );
+}
 
   }
 
@@ -255,14 +310,5 @@ export default function RepoHealth({ report }: Props) {;
     </div>
 );
 }
-
-
-<<<<<<< HEAD
-"
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  );
+}

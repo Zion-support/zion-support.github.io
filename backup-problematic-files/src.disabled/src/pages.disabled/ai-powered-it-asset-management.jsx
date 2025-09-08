@@ -10,8 +10,4 @@ const Ai-powered-it-asset-management = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Ai-powered-it-asset-management;

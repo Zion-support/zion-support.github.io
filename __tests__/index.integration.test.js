@@ -1,7 +1,3 @@
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
-<<<<<<< HEAD
-=======
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
 
 
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -14,6 +10,3 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
->>>>>>> origin/main

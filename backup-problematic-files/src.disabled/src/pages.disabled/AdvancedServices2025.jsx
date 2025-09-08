@@ -10,8 +10,4 @@ const AdvancedServices2025 = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default AdvancedServices2025;

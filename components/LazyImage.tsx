@@ -1,12 +1,13 @@
-<<<<<<< HEAD
 
-
-
-=======
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
+import React, { useState, useRef, useEffect } from './react';
+import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
+;
+
 interface LazyImageProps {
+interface LazyImageProps {
+
+interface LazyImageProps {;
   src: string;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   alt: string;
@@ -17,35 +18,68 @@ interface LazyImageProps {
   placeholder?: "blur" | "empty";
   blurDataURL?: string;
   sizes?: string;
-<<<<<<< HEAD
+  quality?: number;
+  fill?: boolean;
 
   const [hasError, setHasError] = useState(false;
   const imgRef = useRef<HTMLDivElement    />(null;}
   return (<div;}
 
+export default function LazyImage(): any ({;
+  src,;
+  alt,;
+  width,;
+  height,;
+  className = "",;
+  priority = false,;
+  placeholder = "empty",;
+  blurDataURL,;
+  sizes,;
+  quality = 75,;
+  fill = false,;
+  style,;
+  onLoad,;
+  onError,;
+}: LazyImageProps) {;
 
-=======
-  quality?: number;}
-  fill?: boolean;}
-  src,alt,width,height,className = "",priority = false,placeholder = "empty",blurDataURL,sizes,quality = 75,fill = false,style,onLoad,onError,}: LazyImageProps) {const [isLoaded, setIsLoaded] = useState(false)const [isInView, setIsInView] = useState(priority)const [hasError, setHasError] = useState(false)const imgRef = useRef<HTMLDivElement />(null)return (<div;}
-  src,alt,width,height,className = "",priority = false,placeholder = "empty",blurDataURL,sizes,quality = 75,fill = false,style,onLoad,onError,}: LazyImageProps) {const [isLoaded, setIsLoaded] =;
-  useState(false);
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  placeholder = "empty",
+  blurDataURL,
+  sizes,
+  quality = 75,
+  fill = false,
+  style,
+  onLoad,
+  onError,
+}: LazyImageProps) {;
+
+  const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+
+
+  useEffect(() => {;
     if (priority) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry && entry.isIntersecting) {;
+
           setIsInView(true);
           observer.disconnect();
         }
-      }
-      {
-        threshold: 0.1
-        rootMargin: "50px"
-      }
+
+      },;
+      {;
+        threshold: 0 && 0.1,;
+        rootMargin: "50px",;
+      },;
     );
     if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -59,8 +93,9 @@ interface LazyImageProps {
   const handleError = () => {
     setHasError(true);
     onError?.();
-  }
-  if (hasError) {
+  };
+  if (hasError) {;
+
     return (
       <div
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -78,9 +113,11 @@ interface LazyImageProps {
           <LoadingSpinner size="sm" color="gray" />;}
         </div>;}
       )}
-<<<<<<< HEAD
 
 
+      {isInView && (;
+
+        <Image
   style?: React.CSSProperties;
   on_load?: () =    /> void;
   on_error?: () => void;
@@ -144,20 +181,6 @@ if ( {) {$2;}
 
       {isInView && (
         <Image;
-
-=======
-        </div>
-    </div>
-  );
-}
-  return (<div ref={img_ref} className={`relative ${class_name}`} style={style} />;
-      {!isInView && !priority && (<div className="absolute inset - 0 flex items - center justify - center bg-gray-100" />;
-          <LoadingSpinner size="sm" color="gray" />
-    </div>}
-  );}
-
-      {isInView && (<Image;}
->>>>>>> origin/cursor/delete-old-data-records-6bba
           src={src}
           alt={alt}
           width={width}
@@ -172,9 +195,7 @@ if ( {) {$2;}
           on_error={handle_error}
           className={`transition - opacity duration - 300 ${is_loaded ? "opacity - 100" : "opacity - 0";}
           }`}
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}

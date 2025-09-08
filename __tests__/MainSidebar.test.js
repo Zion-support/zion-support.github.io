@@ -1,7 +1,3 @@
-import _React from 'react"  import '@testing-library/jest-dom import MainSidebar from '../components/MainSidebar" describe('MainSidebar',() => {' test('renders without crashing',() => {' render(<MainSidebar / / />) expect(screen.getByTestId("mainsidebar")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainSidebar / / />) }) test('handles user interactions',() => {' render(<MainSidebar / / />) }) test('applies correct styling',() => {' render(<MainSidebar / / />) }) })
-<<<<<<< HEAD
-=======
-import _React from 'react"  import '@testing-library/jest-dom import MainSidebar from '../components/MainSidebar" describe('MainSidebar',() => {' test('renders without crashing',() => {' render(<MainSidebar / / />) expect(screen.getByTestId("mainsidebar")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainSidebar / / />) }) test('handles user interactions',() => {' render(<MainSidebar / / />) }) test('applies correct styling',() => {' render(<MainSidebar / / />) }) })
 
 
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -14,6 +10,3 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
-import _React from 'react"  import '@testing-library/jest-dom import MainSidebar from '../components/MainSidebar" describe('MainSidebar',() => {' test('renders without crashing',() => {' render(<MainSidebar / / />) expect(screen.getByTestId("mainsidebar")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainSidebar / / />) }) test('handles user interactions',() => {' render(<MainSidebar / / />) }) test('applies correct styling',() => {' render(<MainSidebar / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import MainSidebar from '../components/MainSidebar" describe('MainSidebar',() => {' test('renders without crashing',() => {' render(<MainSidebar / / />) expect(screen.getByTestId("mainsidebar")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainSidebar / / />) }) test('handles user interactions',() => {' render(<MainSidebar / / />) }) test('applies correct styling',() => {' render(<MainSidebar / / />) }) })
->>>>>>> origin/main

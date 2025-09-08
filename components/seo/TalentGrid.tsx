@@ -1,32 +1,30 @@
 
+
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
 type Props = {;
   region?: string;
-  service?: string
+  service?: string;
+
+
 };
 
-
-
-function matchesRegion(profile: TalentProfile, region?: string) {
-  if (!region) return true,
-  const r = region.toLowerCase($2);
-  return profile.location.toLowerCase().includes(r)
-
-
-            ${p.hourlyRateUsd}/hr • {p.availability}
-          </div>;
-        </div>;
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   if (!region) return true;
 
-const r = region.toLowerCase();
-return profile.location.toLowerCase().includes(r);
 
+  );
 
+};
+
+function matchesRegion(): any (profile: TalentProfile, region?: string) {;
+  if (!region) return true;
+  if (items && items.length === 0) {;
+    return (
+      <div className="text-sm text-gray-400">;
+        No matching talent found. Try broadening filters.;
+      </div>;
     );
   }
   return (
@@ -68,26 +66,20 @@ return profile.location.toLowerCase().includes(r);
             ))}
           </div>;
           <div className="mt-3 text-sm">;
-      <div className='text-sm text-gray-400'    />
-        No matching talent found. Try broadening filters.
-      </div>
-    );
+            ${p && p.hourlyRateUsd}/hr • {p && p.availability}
+          </div>;
+        </div>;
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-      </div>}
-    );}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  const r = region.toLowerCase();
+  return profile.location.toLowerCase().includes(r)
+}
 
 
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
     [region, service]
-
-<<<<<<< HEAD
-=======
-  ),
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  );
 
   if (items.length === 0) {
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
@@ -112,31 +104,18 @@ export default function TalentGrid({ region, service }: Props) {
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
 
-<<<<<<< HEAD
+      ))}
+    </div>;
+  );
 
+}
 
+}
+
+      ))}
     </div>
   );
 }
-
-
-"
-
-
-=======
-      ))}
-    </div>;
-  );
-}
-      ))}
-    </div>;
-  );
-
-}
-
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -220,4 +199,11 @@ if ( {) {
                 {sk}
               </span>))}
           </div>;
-          <div className="mt-3 text-sm">;
+          <div className="mt - 3 text - sm">;
+            ${p.hourlyRateUsd}/hr • {p.availability}
+          </div>;
+        </div>))}
+    </div>);
+}
+
+}

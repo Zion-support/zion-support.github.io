@@ -14,29 +14,4 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
 };
 pr-12325
 
-<<<<<<< HEAD
-
-    <div className={className || }>
-</div>
-
-=======
-
-interface Login.testProps {
-  }
-  className?: string;
-}
-
-}
-return (;
-    <div className={className || ''}>'
-    <div className={className || }>
-</div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <h1>Login.test</h1>
-
-      <p>This component is under development.</p>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Login.test;

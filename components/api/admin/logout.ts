@@ -12,6 +12,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
+
+
   res.status(200).json({ ok: true })
 }  res.status(200).json({ ok: true })
 }
@@ -28,4 +30,17 @@ function handler() {
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+import { clearSessionCookie } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  clearSessionCookie(res);
+  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  clearSessionCookie(res);
+  res.status(200).json({ ok: true })
+}
+}
+
+}

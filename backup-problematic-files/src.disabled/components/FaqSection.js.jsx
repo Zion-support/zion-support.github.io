@@ -10,8 +10,4 @@ const FaqSection.js = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default FaqSection.js;

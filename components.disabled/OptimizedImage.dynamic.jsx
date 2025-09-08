@@ -2,9 +2,6 @@
 </p>'</p>'
 =======
 const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
-</p>'
-</p>'
-
 
 
 
@@ -13,6 +10,7 @@ const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": (
 
 </p>'
 
+</p>'
 </p>'
 >>>>>>> origin/main
 </p>'
@@ -25,11 +23,3 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
-</p>'</p>'
-=======
-</p>'
-</p>'
-</p>'
->>>>>>> origin/main

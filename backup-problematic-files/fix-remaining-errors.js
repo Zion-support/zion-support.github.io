@@ -8,7 +8,6 @@ if (modified) {,;
 <<<<<<< HEAD
   return false};
   };
-
   let createdCount = 0,;
   for (const [filePath, content] of Object.entries(minimalFiles)) {,;
     try {,;

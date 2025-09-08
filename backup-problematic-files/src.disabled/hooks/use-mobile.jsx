@@ -23,8 +23,4 @@ const Use-mobile = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Use-mobile;

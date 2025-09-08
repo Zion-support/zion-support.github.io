@@ -67,4 +67,5 @@ const Cloud-finops: React.FC<Cloud-finopsProps> = ({ className }) => {
 
 
   );
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}

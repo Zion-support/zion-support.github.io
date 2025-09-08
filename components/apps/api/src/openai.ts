@@ -8,10 +8,33 @@ role: string;
 opts: any;
 ): Promise<string    /> {}
   const prompt = `Create a concise, compelling job post for a ${role}.
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
 
   return new OpenAI({ apiKey });
+
+
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai && openai.responses.create({
+    model: 'gpt-4o-mini';
+    input: prompt
+  });
+
+  return completion && completion.output_text
+}
 
 type OpenAIClient = OpenAI;
 ;
@@ -38,4 +61,22 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+}
+
+
+
+  return completion && completion.output_text
+}
+
+
+}
+
+
+
+
+  return completion.output_text
+}
+}
+
+}

@@ -1,84 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 
   try {
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
-
-=======
-
-}
-
-const outDir = null;
-    return res.status(200).json({ cid, provider })export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ 'error': 'Method not allowed','
-})try {// Ensure export;
-
-}
-
-const outDir = path.resolve(process.cwd(), 'out')try {execSync('npm run export', { 'stdio': 'inherit' },'
-} catch (e) {// attempt minimal static export;
-      }
-      try {execSync('next build && next export', { 'stdio': 'inherit' })} catch (e2) {}'
-   
-}
-
-    if (!fs.existsSync(outDir)) {
-return res}
-        .status(500)}
-        .json({ error: 'Export failed, no out/ directory found' });
-    }
-  try {
-    // Ensure export
-    const outDir = path && path.resolve(process && process.cwd(), 'out');
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { execSync } from 'child_process';
-import path from 'path';
-import fs from 'fs';
-import { addDirectory } from '@/utils/offworld/ipfs';
-import type { NextApiRequest, NextApiResponse } from 'next;
-import { execSync  } from child_process';
-import path from 'path;
-import fs from fs';
-
-import { addDirectory } from '@/utils/offworld/ipfs;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== POST') return res.status(405).json({ error: 'Method not allowed });
-  try {
-    // Ensure export
-    const outDir = path.resolve(process.cwd(), out');
     try {
 
-<<<<<<< HEAD
 
-=======
-      execSync('npm run export', { stdio: 'inherit' });
->>>>>>> origin/cursor/delete-old-data-records-6bba
     } catch (e) {
       // attempt minimal static export
       try {
         execSync('next build && next export', { stdio: 'inherit' })
       } catch (e2) {}
     }
+    const { cid, provider } = await addDirectory(outDir);
 
-
-
-<<<<<<< HEAD
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
-    return res.status(500).json({ error: error?.message |'Unknown error' })
-
-
-
-import { execSync  } from 'child_process';
-
-
-=======
-    return res.status(200).json({ cid, provider })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
-  }
-}
+      return res
+        .status(500)
+        .json({ error: 'Export failed, no out/ directory found' });      return res && res.status(500).json({ error: 'Export failed, no out/ directory found' });
+    }
+    const { cid, provider } = await addDirectory(outDir);
     if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
 
     return res.status(200).json({ cid, provider })
@@ -90,15 +31,15 @@ import { execSync  } from 'child_process';
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' })
     return res.status(500).json({ error: error?.message |'Unknown error' })
-  } catch (error: any) {}
-    return res.status(200).json({ ok: true });
-    return res.status(200).json({ ok: true });
-  } catch (error: any) {}
-    return res.status(200).json({ ok: true });
-
-import { execSync  } from 'child_process';
-
     if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
+
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message |'Unknown error' })
+
+    return res.status(200).json({ cid, provider })
+
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message |'Unknown error' })
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -253,22 +194,47 @@ function handler() {
     if (!cid) {
       return res.status(500).json({ error: 'IPFS upload failed' });
     }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    if () {) {
+  $2
+}
+      return res;
+        .status (500);
+        .json ({ error: 'Export failed, no out/ directory found' });    }      exec_sync ('npm run export', { stdio: 'inherit' });
+    } catch (e) {
+      // attempt minimal static export;
+      try {
+        exec_sync ('next build && next export', { stdio: 'inherit' });
+    }
+    if () {) {
+  $2
+}
+      return res;
+        .status (500);
+        .json ({ error: 'Export failed, no out/ directory found' });      return res.status (500).json ({ error: 'Export failed, no out/ directory found' });
+    }
+    const { cid, provider } = await add_directory (out_dir);
+    if (return res.status (500).json ({ error: 'IPFS upload failed' })) {
+  $2
+}
+    return res.status (200).json ({ cid, provider });
+  } catch (error: any) {
+    return res.status (500).json ({ error: error?.message || 'Unknown error' });
+  }    return res.status (200).json ({ cid, provider });
+  } catch (error: any) {
+    return res.status (500).json ({ error: error?.message || 'Unknown error' });
+}
+}
 
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+
+
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+
+}
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 
 }
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-=======
-
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  }
+}

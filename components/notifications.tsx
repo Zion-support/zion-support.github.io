@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
@@ -19,7 +20,16 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';  {
+import React from 'react';
+
+
+  return <NotificationCenter />;
+}
+import dynamic from 'next / dynamic';
+;
+const NotificationCenter = dynamic (
+  () => import ('../components / notifications / NotificationCenter'),
+  {
     ssr: false
   }
 );
@@ -50,4 +60,3 @@ function NotificationsPage() {
   return <NotificationCenter />;
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

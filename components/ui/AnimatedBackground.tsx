@@ -1,11 +1,12 @@
-import { ReactNode } from "react";
 
 interface AnimatedBackgroundProps {
   children?: ReactNode;
   className?: string;
 }
 
-export default function AnimatedBackground({ children, className = '' }: AnimatedBackgroundProps) {
+  return (
+    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
+export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
       <div
@@ -14,6 +15,14 @@ export default function AnimatedBackground({ children, className = '' }: Animate
           background:
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
         }}
+
+      />
+      <style jsx global>{`
+        @keyframes bgflow {
+          0% {;
+          0% {
+
+
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -27,6 +36,15 @@ export default function AnimatedBackground({ children, className = '' }: Animate
     </div>;
   );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
+
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+
+      {/* Gradient Background */}
+
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800" />;
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -90,6 +108,10 @@ function AnimatedBackground() {
           repeat: Infinity
           ease: "easeInOut"
         }}
+
+      />;
+      <motion&& motion.div
+
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
         animate={{
           x: [0, -80, 0]
@@ -108,6 +130,10 @@ function AnimatedBackground() {
           repeat: Infinity
           ease: "easeInOut"
         }}
+
+      />;
+      <motion&& motion.div
+
         className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"
         animate={{
           x: [0, 60, 0]
@@ -126,8 +152,55 @@ function AnimatedBackground() {
           repeat: Infinity
           ease: "easeInOut"
         }}
+
+      />;
+
+
       {/* Grid Pattern */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
+
+            linear-gradient(rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
+            linear-gradient(90deg, rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
+          `
+          backgroundSize: '50px 50px',
+        }}
+      />;
+
+    </div>;
+  );
+
+};
+export default AnimatedBackground;
+
+      />;
+      {/* Grid Pattern */}
+      <div;
+        className="absolute inset - 0 opacity - 10";
+        style={{
+          background_image: `;
+            linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
+            linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);
+          `;
+          background_size: '50px 50px',
+        }}
+      />;
+    </div>);
+}
+;
+export default AnimatedBackground;
+;
+
+        }
+      `}</style>
+    </div>
+  )
+}
+
+}
+export default AnimatedBackground;
+};
+
+export default AnimatedBackground;

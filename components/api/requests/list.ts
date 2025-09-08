@@ -1,19 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
-
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-) {
-origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const raw = null;
 
@@ -45,8 +31,9 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
   } catch {
-res && res.status(200).json({ items: [] });
+    res && res.status(200).json({ items: [] });
   }
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -56,10 +43,9 @@ export default async /**
  */
 function handler() {
   try {
-    const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
-    const items = JSON.parse (raw);
-    res.status (200).json ({ items });
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
+    const items = JSON.parse(raw);
+    res.status(200).json({ items });
   } catch {
     }
     res.status (200).json ({ "items": []

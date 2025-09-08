@@ -1,7 +1,3 @@
-import _React from 'react"  import '@testing-library/jest-dom import MainLayout from '../components/MainLayout" describe('MainLayout',() => {' test('renders without crashing',() => {' render(<MainLayout / / />) expect(screen.getByTestId("mainlayout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainLayout / / />) }) test('handles user interactions',() => {' render(<MainLayout / / />) }) test('applies correct styling',() => {' render(<MainLayout / / />) }) })
-<<<<<<< HEAD
-=======
-import _React from 'react"  import '@testing-library/jest-dom import MainLayout from '../components/MainLayout" describe('MainLayout',() => {' test('renders without crashing',() => {' render(<MainLayout / / />) expect(screen.getByTestId("mainlayout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainLayout / / />) }) test('handles user interactions',() => {' render(<MainLayout / / />) }) test('applies correct styling',() => {' render(<MainLayout / / />) }) })
 
 
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -14,6 +10,3 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
-import _React from 'react"  import '@testing-library/jest-dom import MainLayout from '../components/MainLayout" describe('MainLayout',() => {' test('renders without crashing',() => {' render(<MainLayout / / />) expect(screen.getByTestId("mainlayout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainLayout / / />) }) test('handles user interactions',() => {' render(<MainLayout / / />) }) test('applies correct styling',() => {' render(<MainLayout / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import MainLayout from '../components/MainLayout" describe('MainLayout',() => {' test('renders without crashing',() => {' render(<MainLayout / / />) expect(screen.getByTestId("mainlayout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<MainLayout / / />) }) test('handles user interactions',() => {' render(<MainLayout / / />) }) test('applies correct styling',() => {' render(<MainLayout / / />) }) })
->>>>>>> origin/main

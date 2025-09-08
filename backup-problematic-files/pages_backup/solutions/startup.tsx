@@ -38,8 +38,4 @@ const Startup: React.FC<StartupProps> = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Startup;

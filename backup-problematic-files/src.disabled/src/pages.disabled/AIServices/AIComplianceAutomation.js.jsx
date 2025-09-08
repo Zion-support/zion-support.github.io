@@ -10,8 +10,4 @@ const AIComplianceAutomation.js = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default AIComplianceAutomation.js;

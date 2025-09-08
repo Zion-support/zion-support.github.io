@@ -11,6 +11,8 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React from 'react';
+import { useEffect, useMemo, useState } from 'react';
+export default function RequestToHirePage() {
 
 import { useEffect, useMemo, useState } from 'react';
 
@@ -26,6 +28,7 @@ export default function RequestToHirePage() {;
     [talent]
   );export default function RequestToHirePage() {;
 
+
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
@@ -34,6 +37,9 @@ export default function RequestToHirePage() {;
     email: '',
     budget: '',
     timeline: '',
+
+
+
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -54,8 +60,45 @@ export default function RequestToHirePage() {;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null| { id: string message: string }>(;
     null;
-  );  const [error, setError] = useState<string | null>(null),
-  description: ''}),;
+  );  const [error, setError] = useState<string | null>(null);    description: ''}),;
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null | { id: string, message: string }>(null),;
+  const [error, setError] = useState<string | null>(null);
+
+  const onSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setError(null),;
+
+    if (!form && form.name || !form && form.email || !form && form.description) {;
+      setError('Please fill in name, email, and description.');
+      return;    }      return;
+
+    setError(null);
+
+    if (!form.name || !form.email || !form.description) {
+      setError('Please fill in name, email, and description.');
+      return
+
+    }
+
+          ...form;
+          budget: normalizedBudget,
+          talentSlug: selected?.slug || null})}),
+
+    }
+          ...form;
+          budget: normalizedBudget,
+          talentSlug: selected?.slug || null})}),
+    name: ''
+    email: ''
+    budget: ''
+    timeline: ''
+    description: ''
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null | { id: string; message: string }>(
+    null
+  );  const [error, setError] = useState<string | null>(null);    description: ''})
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null)
   const [error, setError] = useState<string | null>(null);
@@ -86,12 +129,8 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false);    }          budget: normalizedBudget
           talentSlug: selected?.slug |null})})
-    }
-
-          ...form;
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null})}),
-
+      setError('Please fill in name, email, and description.');
+      return;    }      return;
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -133,7 +172,8 @@ export default function RequestToHirePage() {;
       setError(err && err.message || 'Something went wrong');
     } finally {;
       setSubmitting(false);
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
     }
   }
   if (result) {;
@@ -260,7 +300,17 @@ export default function RequestToHirePage() {;
           className='px-4 py-2 rounded bg-black text-white>          {submitting ? Submitting…' : 'Submit Request}      </div>;
     );
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  if (result) {
+    return (
+      <div className="max-w-xl mx-auto py-12">
+        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
+        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
+        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
+      </div>
+    )
+
+</div>
+    )
   }
   return (
     <div className=max-w-xl mx-auto">;
@@ -289,6 +339,16 @@ export default function RequestToHirePage() {;
 <<<<<<< HEAD
 
         {error && <div className="text-sm text-red-600">{error}</div>}
+
+
+          {submitting ? 'Submitting…' : 'Submit Request'}
+
+        </button>;
+      </form>;
+    </div>;
+  );
+}
+
   );
 }
     description: '',
@@ -421,8 +481,11 @@ if ( {) {$2;
       </form>;
     </div>;
     </div>);
+}
 
-<<<<<<< HEAD
+  );
+}
+
       </div>
     )
   }
@@ -563,16 +626,7 @@ if ( {) {$2;
   );
 }
 
-=======
-  )}
-  )
+);
 }
-        {error && <div className='text-sm text-red-600'    />{error}</div>}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  );
+}

@@ -1,8 +1,5 @@
 
 
-<<<<<<< HEAD
-=======
-
 
 
 import AIChatbotSystem from '
@@ -11,7 +8,8 @@ describe('AIChatbotSystem'
     expect(screen ;'  });
   it('displays correct content'
   it('handles user interactions'
->>>>>>> origin/main
+
+
 import AIChatbotSystem from './AIChatbotSystem;
 describe('AIChatbotSystem', () => {;
   it('renders without crashing', () => {;
@@ -38,6 +36,8 @@ import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() 
 });
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});,});
 // Add interaction tests based on component functionality})});
+
+
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', () => {; it('renders without crashing', () => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbotSystem />); }); ; it('handles user interactions'
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
@@ -46,8 +46,3 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', () => {; it('renders without crashing', () => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbotSystem />); }); ; it('handles user interactions'
-import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});,});
-// Add interaction tests based on component functionality})});
-import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
-import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
->>>>>>> origin/main

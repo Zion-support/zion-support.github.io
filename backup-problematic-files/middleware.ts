@@ -1,10 +1,29 @@
-<<<<<<< HEAD
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+
+export function middleware(request: NextRequest) {;
+
+  const response = NextResponse.next();
+
+
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+  // CSP header
+  response.headers.set(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  );
 
 
 }
+
   
-  
-ursor/fix-lint-push-and-merge-to-main-ae4e
+export function middleware(request: NextRequest) {
 
 =======
 import { NextResponse } from "next/server";
@@ -89,7 +108,9 @@ export function middleware(request: NextRequest) {
   
   return response;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  
+  
+ursor/fix-lint-push-and-merge-to-main-ae4e
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -103,11 +124,11 @@ export function middleware(request: NextRequest) {
   );
   
   return response;
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
+  return response;
+    return response;
+}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -132,6 +153,24 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
   return response;
+return response;
+}
+  matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)"],
+};
+export const config = {
+  matcher: ["/((?!api | _next / static | _next / image | favicon.ico).*)"],
+}
+;
+
+return response;
+}
+
+
+export const config = {
+
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
+};
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
@@ -165,4 +204,5 @@ origin/automation-improvements-final
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
+};

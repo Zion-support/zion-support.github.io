@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+
       supabase
 >>>>>>> origin/cursor/delete-old-data-records-6bba
         .from('profile_views')
@@ -79,24 +80,21 @@ topTags: Object && Object.entries(tagCounts)
         { label: 'ai', value: 1 }
       ]
 
+    });
+
+
+  }
+
+}
+
+
   }
 
 }
 
-}import { createServerClient } from '../../../utils / supabase / server';
-;
-export default async /**;
- * handler - Function description;
- */
-
 }
 
-  }
 }
-ursor/fix-website-loading-errors-and-merge-6662
-pr-12243
-'
-
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**;
@@ -158,5 +156,3 @@ pr-12243
 
 }
 }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

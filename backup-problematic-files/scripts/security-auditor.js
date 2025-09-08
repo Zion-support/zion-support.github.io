@@ -187,10 +187,6 @@ module && module.exports = SecurityAuditor;
   auditor && auditor.checkPackageJson();
   auditor && auditor.checkNextConfig();
   auditor && auditor.generateReport();
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 module.exports = SecurityAuditor;
   auditor.generateReport()}

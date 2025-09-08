@@ -10,8 +10,4 @@ const Quantum-neural-network-platform = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Quantum-neural-network-platform;

@@ -1,26 +1,16 @@
-<<<<<<< HEAD
-=======
-});''
 
-
->>>>>>> origin/main
 describe('smoke', () => {
   it('true is truthy', () => {
     expect(true).toBeTruthy();
   });
-<<<<<<< HEAD
-});''describe('smoke'
-  it('true is truthy'
-describe('smoke', () => { it("true is truthy"
-
-describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
-});''
-});''
-=======
 
 });''
 
 });
+
+describe('smoke'
+  it('true is truthy'
+describe('smoke', () => { it("true is truthy"
 
 describe('smoke'
   it('true is truthy'
@@ -38,12 +28,3 @@ describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"
 ursor/automate-test-improve-and-merge-code-2480
-
-describe('smoke'
-  it('true is truthy'
-describe('smoke', () => { it("true is truthy"
-
-describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
-});''
-});''
->>>>>>> origin/main

@@ -1,2 +1,12 @@
 import React from 'react';
-<<<<<<< HEADexport default PWARegistration.dynamic;
+
+;
+const PWARegistration.dynamic = () => {
+  return (
+    <div data - testid="pwaregistration.dynamic">;
+      <h1 > PWARegistration.dynamic</h1>;
+    </div>);
+}
+;
+
+export default PWARegistration.dynamic;

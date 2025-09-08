@@ -171,5 +171,8 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
+:temp_broken_files/utils/env-polyfill.ts
 }"}// Ensure process is available globally '"
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}// Ensure process is available globally '"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts

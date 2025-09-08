@@ -10,8 +10,4 @@ const PricingPage = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default PricingPage;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 translations: Record<string, string>;
 
@@ -16,29 +15,20 @@ import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 
 export type UseAutoTranslateResult = {
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export type UseAutoTranslateResult = {;
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
 export function useAutoTranslate(
-<<<<<<< HEAD
-
-
-
-  text: string,
-  targets: string[],
-  debounceMs = 600;
-): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
-
-
-
-=======
   text: string
   targets: string[]
   debounceMs = 600
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  text: string,
+  targets: string[],
+  debounceMs = 600;
+): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -71,14 +61,11 @@ export function useAutoTranslate(
   }, [key, debounceMs]);
 
   return { translations, loading, error }
-<<<<<<< HEAD
-
-
-
-
-=======
+:hooks/useAutoTranslate.ts
     }
   }, [key, debounceMs]);
   return { translations, loading, error }
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+main:hooks/useAutoTranslate.ts
+:backup-problematic-files/hooks/useAutoTranslate.ts

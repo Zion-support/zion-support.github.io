@@ -53,7 +53,6 @@ export function AutocompleteSuggestions({ ;
             </li>;
           ),;
         })}
-
       </ul>;
     </div>;
   ),;  if (!searchTerm || searchTerm.length === 0) {

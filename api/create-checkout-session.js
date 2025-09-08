@@ -1,44 +1,5 @@
-<<<<<<< HEAD
-=======
 
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-  res.status(200).json({ message: 'Checkout session created' });
-}
-export default function handler(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-import Stripe from 'stripe';
-import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16'
-});
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
-  }
-  try {
-    const { priceId, quantity = 1 } = req.body || {};
-    if (!priceId) {
-      res.statusCode = 400;
-      res.json({ error: 'Price ID is required' });
-      return;
-    }
-    const session = await stripe.checkout.sessions.create({
-      mode: 'subscription'
-      payment_method_types: ['card']
-      line_items: [
-        {
-          price: priceId
-          quantity: quantity
-        }
-      ]
-      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`
-      cancel_url: `${req.headers.origin}/cancel`
-    });
+
     res.statusCode = 200;
     res.json({
       success: true
@@ -63,9 +24,12 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
-=======      url: session.url
-=======
+
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
       url: session.url
 >>>>>>> origin/main
     })
@@ -76,9 +40,5 @@ export default function handler(req, res) {
   }
 };
 export default withErrorLogging(handler),
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/main
-
-export default withErrorLogging(handler);
+,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5

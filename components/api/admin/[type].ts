@@ -1,9 +1,17 @@
-<<<<<<< HEAD
-
-
-=======
-
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+  });
+  return {
+
+    search;
+
+    sort;
+    order: (order as any) || 'desc', page: page ? Number(page) : 0,
+    pageSize: pageSize ? Number(pageSize) : 20, filters,
+    format: (format as any) || undefined}
+}
+
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
@@ -38,6 +46,11 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     format: (format as any) || undefined,
   };
 
+  };    search;
+    sort;
+    order: (order as any) |'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
 
 
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
@@ -113,8 +126,16 @@ const filters: Record<string, any    /> = {};
     order: (order as any) || 'desc',
     page: page ? Number(page) : 0,
     pageSize: pageSize ? Number(pageSize) : 20,
-    filters}
-    format: (format as any) || undefined}
+    filters,
+    format: (format as any) || undefined,
+
+
+    filters
+    format: (format as any) |undefined}
+
+}
+function toCsv(rows: any[]): string {
+
   if (!rows && rows.length) return '';
   const headers = Object && Object.keys(rows[0]);
   const escape = (v: any) => {
@@ -125,21 +146,37 @@ const filters: Record<string, any    /> = {};
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
-  return lines.join('\n');
+  return lines && lines.join('\n');
+
 
 export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-if (!ADMIN_TYPES.includes(type))
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
 
     return res.status(400).json({ error: 'Invalid type'}
 });
 
+
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+
+) {;
+  const type = (req.query.type as AdminType) || '';
+
+
+  if (!ADMIN_TYPES.includes(type))
+    return res.status(400).json({ error: 'Invalid type' });  }
+  if (!ADMIN_TYPES.includes(type))
+    return res.status(400).json({ error: 'Invalid type' });  }
     return '"' + s.replace(/"/g, '""') + '"'
   };
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
+
+
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
@@ -147,8 +184,8 @@ if (!ADMIN_TYPES.includes(type))
 };
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const type = (req.query.type as AdminType) || '';
+
+}
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
 
   try {
@@ -157,71 +194,52 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const useSupabase = isSupabaseConfigured();
 
-
-
+  if (req && req.method === 'GET') {
+}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+  const type = (req && req.query.type as AdminType) || '';
+  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
+  const useSupabase = isSupabaseConfigured();
+  if (req && req.method === 'GET') {
+    const params = parseListParams(req);
+    if (useSupabase) {
+      const table = type;
+      let query = client && client.from(table).select('*', { count: 'exact' });
+      if (params && params.search) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || ''
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' }),
 
-  const useSupabase = isSupabaseConfigured()
+}
 
-  if (req.method === 'GET') {
-    const params = parseListParams(req)
-    if (useSupabase) {
-      const table = type
-      let query = client.from(table).select('*', { count: 'exact' }),
-      if (params.search) {
 
-        // heuristic: search name/title/email
-        query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          if (v !== undefined) query = query.eq(k, v)
-        }
-      }
-if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const type = (req.query.type as AdminType) || '';
+
+
+  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+
+  try {
+  const type = (req && req.query.type as AdminType) || '';
+  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
+
+
+  const useSupabase = isSupabaseConfigured();
+
+  if (req && req.method === 'GET') {
     const params = parseListParams(req);
     if (useSupabase) {
       const table = type;
-      let query = client.from(table).select('*', { count: 'exact' });
-
-      if (params.search) {
+      let query = client && client.from(table).select('*', { count: 'exact' });
+      if (params && params.search) {
         // heuristic: search name/title/email
-  }const lines = [headers.join(',')].concat(rows.map(r => headers.map(h => escape(r[h])).join(',')))return lines.join('\n')export default async function handler(req: NextApiRequest;
-  res: NextApiResponse;
-  if (!ADMIN_TYPES.includes(type))return res.status(400).json({ error: 'Invalid type' })}
-    return '"' + s.replace(/"/g, '""') + '"';
-  }const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()))return lines.join('\n')try {const type = (req && req.query.type as AdminType) || '';
-  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))return res && res.status(400).json({ error: 'Invalid type' })}const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()))return lines && lines.join('\n')}
-  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' })try {const type = (req && req.query.type as AdminType) || '';
-  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' })return res.status(400).json({ error: 'Invalid type' })const useSupabase  = isSupabaseConfigured()if (req && req.method === 'GET') {const params = parseListParams(req)if (useSupabase) {const table = type;
-      let query = client && client.from(table).select('*', { count: 'exact' })if (params && params.search) {// heuristic: search name/title/email;
         }
       }
-      }
-      return res && res.status(200).json({ items: data || [], total: count || 0 })query = query.or('name.ilike.%' +;
-            params.search +;
-            '%,title.ilike.%' +;
-            params.search +;
-            '%,email.ilike.%' +;
-            params.search +;
-            '%';
-        )}
-      if (params.filters) {for (const [k, v] of Object.entries(params.filters)) {if (v !== undefined) query = query.eq(k, v)}
-      }
-      if (params.sort)query = query.order(params.sort, { ascending: params.order === 'asc' })const from = params.page * params.pageSize;
-      const to = from + params.pageSize - 1;
-        }
-      }
-<<<<<<< HEAD
 
-=======
-      }
-      return res && res.status(200).json({ items: data || [], total: count || 0 });
+      if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
       const from = params && params.page * params && params.pageSize;
       const to = from + params && params.pageSize - 1;
       const { data, error, count } = await query && query.range(from, to);
@@ -235,6 +253,9 @@ if (params && params.sort) query = query && query.order(params && params.sort, {
         return res && res.status(200).send(toCsv(data || []));      }        res && res.setHeader('Content-Typetext/csv');
         res && res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res && res.status(200).send(toCsv(data || []))
+
+      }
+      return res && res.status(200).json({ items: data || [], total: count || 0 });
         res.setHeader('Content-Typetext/csv');
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(data || []))
@@ -359,46 +380,23 @@ res.setHeader('Content-Type', 'text/csv');'
       }
 <<<<<<< HEAD
       return res.status(200).json({ items: data |[], total: count |0 });
-
-=======
-return res.status(200).json({ "items": data |[], "total": count |0,;
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      }
+      return res && res.status(200).json({ items: data || [], total: count || 0 });
     } else {
       // fallback;
 const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
-
-      if (params.search) {
-        const s = params.search.toLowerCase();
-filtered = filtered.filter(r =>
-          JSON.stringify(r).toLowerCase().includes(s)}
-        );}
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          filtered = filtered.filter(
-            (r: any) => String((r as any)[k]) === String(v)}
-          );}
-<<<<<<< HEAD
-
-        }
-      }
-
-
-
-          const av = (a as any)[params.sort!];
-
-
-=======
-        }
-
-
-if ( {) {
-  $2
-}
-        filtered.sort ((array: any, boolean: any) => {
+      if (params.sort) {
         filtered.sort((a: any, b: any) => {
+          const av = (a as any)[params.sort!];
+          const bv = (b as any)[params.sort!];
+
+          return (
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
+
+        });
+      }
+
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (
@@ -411,12 +409,6 @@ return (
           );}
         });
       }
-<<<<<<< HEAD
-
-
-
-      return res.status(200).json({ items: pageItems, total });
-=======
       const total = filtered && filtered.length;
       const start = params && params.page * params && params.pageSize;
       const end = start + params && params.pageSize;
@@ -428,22 +420,28 @@ return (
 
 const start = params.page * params.pageSize;
 
-const end = start + params.pageSize;
-
-const pageItems = filtered.slice(start, end);
-      if (params.format === 'csv') {
-res.setHeader('Content-Type', 'text/csv');
-        res.setHeader(}
-          'Content-Disposition'}"
-          `attachment; filename=\"${type}.csv\"`
-        );
         return res.status(200).send(toCsv(pageItems));
 
-      return res.status(200).json({ "items": pageItems, total });
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+      }
+
+      }
+
+
+      return res.status(200).json({ items: pageItems, total });
     }
   }
 
+      id: string;
+      updates: Record<string, any>;
+    }
+    if (!id) return res.status(400).json({ error: 'Missing id' });
+
+  if (req && req.method === 'PATCH') {
+    const { id, updates } = req && req.body as {
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
 
 <<<<<<< HEAD
   if (req.method === 'PATCH') {
@@ -467,6 +465,40 @@ res.setHeader('Content-Type', 'text/csv');
 });
     } else {
 
+
+      const updated = {
+        ...list[idx]
+        ...updates
+        updated_at: new Date().toISOString()
+      }
+      list[idx] = updated as any;
+
+      return res.status(200).json({ item: updated })
+
+    }
+  }
+
+
+
+    }
+  }
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+  }
+
+  if (req.method === 'DELETE') {
+    const id = (req.query.id as string) |'';
+    if (!id) return res.status(400).json({ error: 'Missing id' });
+    if (useSupabase) {
+      const { error } = await client.from(type).delete().eq('id', id);
+      if (error) return res.status(500).json({ error: error.message });
+
+
+  if (req && req.method === 'DELETE') {
+    const id = (req && req.query.id as string) || '';
+    if (!id) return res && res.status(400).json({ error: 'Missing id' });
       return res.status(200).json({ item: updated });    }
 
     }
@@ -494,7 +526,7 @@ res.setHeader('Content-Type', 'text/csv');
   return res && res.status(405).json({ error: 'Method not allowed' });
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
-<<<<<<< HEAD
+
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
@@ -544,8 +576,51 @@ if ( {) {
       if (return res.status (404).json ({ error: 'Not found' })) {
   $2
 }
-
-=======
+      const updated = {
+        ...list[idx],
+        ...updates,
+        updated_at: new Date ().toISOString (),
+      }
+      list[idx] = updated as any;
+      return res.status (200).json ({ item: updated });    }      return res.status (200).json ({ item: updated });
+    }
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const id = (req.query.id as string) || '';
+    if (return res.status (400).json ({ error: 'Missing id' })) {
+  $2
+}
+    // Check condition
+if ( {) {
+  $2
+}
+      const { error } = await client.from (type).delete ().eq ('id', id);
+      if (return res.status (500).json ({ error: error.message })) {
+  $2
+}
+      return res.status (200).json ({ ok: true });
+      const list = MOCK_DATA[type] || [];
+      const idx = list.find_index ((r: any) => r.id === id);
+      if (return res.status (404).json ({ error: 'Not found' })) {
+  $2
+}
+      list.splice (idx, 1);
+      return res.status (200).json ({ ok: true });    }
+  }
+  return res.status (405).json ({ error: 'Method not allowed' });
+;
+}return res.status (200) .send (to_csv (data || []) );
+}return res.status (200) .send (to_csv (page_items) );      return res.status (200).json ({ ok: true });
+    }
+  }
+return res.status (405).json ({ error: 'Method not allowed' });
+;
+}return res.status (200) .send (to_csv (data || []) );
+}return res.status (200) .send (to_csv (page_items) );
+}
 }
       return res.status(200).json({ ok: true })
     } else {
@@ -557,14 +632,6 @@ if ( {) {
     }
   }
 
-      }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      const updated = {
-        ...list[idx],
-        ...updates}
-        updated_at: new Date().toISOString()}
-      };
-      list[idx] = updated as any;
 
       return res.status(200).json({ item: updated}
 });
@@ -620,19 +687,14 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
 
 
-<<<<<<< HEAD
-=======
-  return res.status(405).json({ error: 'Method not allowed' });
-  return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed' });
+}return res.status (200) .send (toCsv (data |[]) );
+}return res.status (200) .send (toCsv (pageItems) );
+}
 
-const idx = list.findIndex((r: any) => r.id === id);
-      if (idx = == -1);}
-  return res.status(404).json({ error: 'Not found'}
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      list.splice(idx, 1);
-      return res.status(200).json({ ok: true}
-});
+  return res.status(405).json({ error: 'Method not allowed' });
+  return res.status(405).json({ error: 'Method not allowed' });
+      return res.status(200).json({ items: pageItems, total })
     }
   }
 
@@ -653,4 +715,8 @@ return res.status(405).json({ error: 'Method not allowed'}
 <<<<<<< HEAD
 
 }
+
+
+
+
 

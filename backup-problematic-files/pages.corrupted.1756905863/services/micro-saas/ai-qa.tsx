@@ -67,4 +67,5 @@ const Ai-qa: React.FC<Ai-qaProps> = ({ className }) => {
 
 
   );
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}

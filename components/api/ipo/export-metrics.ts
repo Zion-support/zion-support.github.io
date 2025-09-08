@@ -1,4 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -13,6 +18,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const rows = [
     ['MetricValueTrend%'];
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -55,9 +63,23 @@ function handler() {if () return) {$2;
     ['CAC/LTV ratio1: 5 && 5.60.4']], const csv = rows && rows.map(r => r && r.map(v => String(v)).join()).join('\n'),  res && res.setHeader('Content-Typetext/csv');
   res && res.setHeader('Content-Dispositionattachment, filename='ipo-metrics && metrics.csv'');
   res && res.status(200).send(csv)
+
+import { requireSuperadminApi } from '../../../utils / api / auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
 }
+}
+
+}
+
+
+}
+
 
 }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

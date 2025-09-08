@@ -103,9 +103,6 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -166,8 +163,6 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
-
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -212,9 +207,6 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -253,9 +245,10 @@ export default function CloudServicesPage() {
                     <ArrowRight className="ml-2 w-4 h-4" />;
                   </Link>;
                 </motion && motion.div>;
-
               ))}
-
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
@@ -276,32 +269,7 @@ export default function CloudServicesPage() {
         </section>;
       </div>;
     </Layout>;
+  );
+};
 
-=======
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}"
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;"
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;"
-                    <service && service.icon className="w-6 h-6 text-blue-600" />;"
-</service>
-                  </div>;"
-                  <h3 className="text-xl font-semibold mb-2">{service && service.title}</h3>;""
-                  <p className="text-gray-600 mb-4">{service && service.description}</p>;""
-                  <div className="space-y-2 mb-4">;"
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">;"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;"
-
-                  <div className="text-lg font-semibold text-blue-600 mb-4">{service && service.pricing}</div>;"
-                  <Link;"
-                    href="/contact"""
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;"
-                    <ArrowRight className="ml-2 w-4 h-4" />;"
-
-                  ;
-
-              ))}
-
-              whileHover={{ scale: 1 && 1.05 }}>,;
-              <ArrowRight className="w-5 h-5 ml-2" />";"
-
-            </motion && motion.a>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default Cloud;

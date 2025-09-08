@@ -1,25 +1,24 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
-import Link from next/link';
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
-import Link from 'next/link';'
+import Link from 'next / link';
+export type Course = {
+export type Course = {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
+  category: string;
 
-<<<<<<< HEAD
+
+
+export default function CourseCard(): any ({ course }: { course: Course }) {;
+  return (
+
 
   certification_badge: string,
   description?: string;
@@ -106,30 +105,9 @@ function CourseCard() {}
         </Link>;
       </div>;
     </div>);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      </div>;
-
-        </Link>;
-      </div>;
-
-    </div>);
-
-  );
-
-<<<<<<< HEAD
-
-
-        </Link>
-      </div>
-    </div>
-  )
 }
 
-
-
-=======
-  )}
+  );
 
         </Link>
           <a className=&quot;text-blue-600 hover:underline text-sm&quot;>View course</a>
@@ -144,8 +122,6 @@ function CourseCard() {}
   );
 }
   );
-}
 
   );
 
->>>>>>> origin/cursor/delete-old-data-records-6bba

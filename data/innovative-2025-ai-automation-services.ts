@@ -29,6 +29,11 @@
     email: string;
     address: string;
 
+
+  }
+
+;
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;

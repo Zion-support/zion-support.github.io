@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 export default function EpisodePage() {
@@ -47,32 +45,38 @@ return (;
       </div>;
   )
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+
+
+
+
 export default function EpisodePage() {
   const router = useRouter($2);
   const { id } = router.query as { id?: string },
   const [episode, setEpisode] = useState<any>(null),
 
-  useEffect(() => {
-    if (!id) return,
-    (async () => {
-      const res = await fetch($2);
-      const data = await res.json($2);
-      setEpisode(data.episode)
-    })()
-  }, [id]),
+export default function EpisodePage() {
 
-  if (!episode) return <div>Loading…</div>,
+  const router = useRouter();
+  const { id } = router.query as { id?: string }
+  const [episode, setEpisode] = useState<any>(null);
+  useEffect(() => {
+export default function EpisodePage() {;
+  const router = useRouter();
+  const { id } = router && router.query as { id?: string };
+  const [episode, setEpisode] = useState<any>(null);
+
+  useEffect(() => {;
+    if (!id) return;
+    (async () => {;
+      const res = await fetch('/api/podcast/get?id=' + id);
+
+
+  }, [id]);
+  if (!episode) return <div>Loading…</div>;
 
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-bold">{episode.title}</h1>
-      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
-      {episode.audio?.mp3Url && (
-        <audio controls className="w-full">
-          <source src={episode.audio.mp3Url} type="audio/mpeg" />
-        </audio>
-      )}
+
+
       <div>
         <h2 className="text-xl font-semibold">Transcript</h2>
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
@@ -80,9 +84,15 @@ export default function EpisodePage() {
     </div>
 );
 }
-
-  )
+      <div>;
+        <h2 className="text-xl font-semibold">Transcript</h2>;
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
+      </div>;
+    </div>;
+  );
 }
+
+
 import { use_router } from 'next / router';
 export default /**
  * EpisodePage - Function description
@@ -195,9 +205,10 @@ export default function EpisodePage() {
       <div>'
         <h2 className='text-xl font-semibold'>Transcript</h2>'
         <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>
-<div className='space-y-4' />
-      <h1 className='text-2xl font-bold' />{episode.title}</h1>
-      <p className='text-sm text-gray-600' />
+          {episode.transcript}
+        </pre>
+      </div>
+    </div>
 
         Guest: {episode.invitee?.name} ·{' '}
         {new Date(episode.createdAt).toLocaleString(,}
@@ -212,10 +223,7 @@ export default function EpisodePage() {
         Guest: {episode.invitee?.name} ·{' }
         {new Date(episode.createdAt).toLocaleString()}
 
-<<<<<<< HEAD
-=======
-import React, { useEffect, useState } from 'react';
-import { useRouter  } from 'next/router';
+  );
 
 const router = null;
 
@@ -313,8 +321,3 @@ export default function EpisodePage() {
 );
 }
   );
-
-  );
-
-  );
->>>>>>> origin/cursor/delete-old-data-records-6bba

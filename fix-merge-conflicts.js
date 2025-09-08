@@ -1,3 +1,5 @@
+
+
 }; traverse(dir); return files};
 // Find and fix files with merge conflicts;
 const conflictedFiles = findFilesWithConflicts('.');
@@ -7,6 +9,7 @@ console.log('Merge conflict resolution complete!');
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?}}}}}}}}
 };
   traverse(dir);
+
   return files};
 // Find and fix files with merge conflicts;
 const conflictedFiles = findFilesWithConflicts('.');
@@ -18,6 +21,8 @@ console.log('Merge conflict resolution complete!');
 };
         }
 };
+};
+
 }
 };
 =======
@@ -61,18 +66,14 @@ function findFilesWithConflicts(dir) {
           continue;
         }
       }
-    } catch (error) {
-      // Skip directories that can't be read
-      return;
-    }
->>>>>>> origin/main
-  }
 
-  scanDirectory(dir);
-  return files;
 }
 
-<<<<<<< HEAD
+  }
+  
+  return fixedCount;
+}
+
   traverse(dir);
   return files}
 // Find and fix files with merge conflicts
@@ -140,4 +141,25 @@ console.log('\nMerge conflict fixing complete!');
 console.log('\nMerge conflict fixing complete!');
 ;
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
-);
+// Run TypeScript check to see remaining errors
+console.log('\nRunning TypeScript check...');
+try {
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
+  console.log('TypeScript check passed!');
+} catch (error) {
+  console.log('TypeScript check found some issues, but continuing...');
+}
+};
+};
+
+console.log('\nMerge conflict fixing complete!');
+console.log('\nMerge conflict fixing complete!');
+console.log('\nMerge conflict fixing complete!');
+console.log('\nMerge conflict fixing complete!');
+}),;
+console.log('\nMerge conflict fixing complete!'),;
+console.log('\nMerge conflict fixing complete!'),;
+,;
+console.log(`Fixed merge conflicts in ${fixedCount} files`),;
+,),;
+

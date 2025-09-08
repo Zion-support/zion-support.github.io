@@ -1,23 +1,92 @@
-<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useEffect, useRef } from 'react';
 
 
-
-=======
 import type {;
   RemoteParticipant,;
   LocalParticipant,;
   TrackPublication,;
   Track,;
+} from 'livekit-client';
 
-import React, { useEffect, useRef } from 'react';
+  RemoteParticipant
+  LocalParticipant
+  TrackPublication
+  Track;
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
+
+import type {;
+  RemoteParticipant,;
+  LocalParticipant,;
+  TrackPublication,;
+  Track,;
+} from 'livekit-client';
+
+type Props = {;
+  participant: RemoteParticipant | LocalParticipant;
+  isLocal?: boolean;
+  displayName?: string;
+};
+
+export default function ParticipantTile(): any ({;
+  participant,;
+  isLocal,;
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {;
+  participant: RemoteParticipant | LocalParticipant,;
+
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
   isLocal?: boolean;
   displayName?: string;participant;
   isLocal;
   displayName;
 
+type Props = {
+  participant: RemoteParticipant | LocalParticipant,
+
   isLocal?: boolean;
   displayName?: string;
+};
+
+
+
+      }
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+        track && track.attach(audioRef && audioRef.current);      }
+    };
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
+      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
+        track && track.detach(videoRef && videoRef.current);
+
+
+}
+export default function ParticipantTile({
   participant
   isLocal
   displayName
@@ -201,6 +270,19 @@ type Props = {;
       if (track && track.kind === 'video' && videoRef && videoRef.current) {;
         track && track.attach(videoRef && videoRef.current);
       }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.attach(audioRef.current);      }
+    }
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+        track.detach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.detach(audioRef.current);      }        track.attach(videoRef.current)
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.attach(audioRef.current)
+      }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
 
         track && track.attach(audioRef && audioRef.current);      }
@@ -208,7 +290,6 @@ type Props = {;
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
       if (track && track.kind === 'video' && videoRef && videoRef.current) {;
         track && track.detach(videoRef && videoRef.current);
-
       }
 =======
 
@@ -220,12 +301,6 @@ type Props = {;
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);
       }
-<<<<<<< HEAD
-
-
-
-}
-
 
 
       }
@@ -234,22 +309,38 @@ type Props = {;
       }
 
 
-
       }
     };
 
     participant.tracks.forEach(pub => {
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track)
-
-
-
+      }
+    };
+    participant.tracks.forEach(pub => {
+      const track = pub.track;
+      if (track) handleTrackSubscribed(pub, track)
+    }
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+        track.detach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.detach(audioRef.current);        track.detach(videoRef.current)
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.detach(audioRef.current)
+    }
+    participant.tracks.forEach(pub => {
+      const track = pub.track;
+      if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track)
+      }
+    };
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {'
       participant.off('trackSubscribed', handleTrackSubscribed);
-=======
 
     });
     participant.on('trackSubscribed', handleTrackSubscribed);'
@@ -263,21 +354,8 @@ participant.off('trackUnsubscribed', handleTrackUnsubscribed)'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
   }, [participant]);
-return (;
-    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>'
-      <video,
-ref={videoRef}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        autoPlay;
-        playsInline;
-        muted={Boolean(isLocal)}
-
-
-<<<<<<< HEAD
-
+  return (
+    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
       <video
         ref={videoRef}
         autoPlay
@@ -285,8 +363,31 @@ ref={videoRef}
         muted={Boolean(isLocal)}
         className='w-full h-48 object-cover bg-black'
 
+      />;
+      <audio ref={audioRef} autoPlay className='hidden' />;
+      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>;
+        {displayName ||;
+          (participant as any).name ||;
 
 
+      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
+    }
+  }, [participant]);
+
+
+  return (
+
+
+  return (
+
+          (isLocal ? 'You' : 'Participant')}
+      </div>;
+    </div>;
+  );  }, [participant]);
+      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
+    }
+  }, [participant]);
+  return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">;
       <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />;
       <audio ref={audioRef} autoPlay className="hidden" />;
@@ -298,27 +399,7 @@ ref={videoRef}
 
 }
 
-
-
-=======
-        className='w-full h-48 object-cover bg-black'' />
-      <audio ref={audioRef} autoPlay className='hidden' />'
-      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>'
-        {displayName |
-          (participant as any).name |
-          (isLocal ? 'You' : 'Participant')}'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      </div>
-  );
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-  RemoteParticipant,
-  LocalParticipant,
-  TrackPublication,
-=======
-return (;
+  return (
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,
@@ -531,49 +612,32 @@ if ( {) {$2;}
       <audio ref={audio_ref} auto_play className="hidden" />;
       <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg-black / 60 text-white">;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
-        {display_name || (participant as any).name || (is_local ? 'You : Participant')}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      </div>;
+    </div>);
+}
       </div>
     </div>
 
   );
 
-
-<<<<<<< HEAD
-
-=======
-        {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  participant: RemoteParticipant | LocalParticipant
-  is_local?: boolean;}
-  display_name?: string;}
-
-        track.attach (audio_ref.current)}
-
-        track.attach (audio_ref.current)}
-
-      <video
-        ref={video_ref}
-        auto_play
-        plays_inline
-        muted={Boolean (is_local)}
-        className=w - full h - 48 object - cover bg - black'
-        {display_name || (participant as any).name || (is_local ? 'You : Participant')}
+      />
+      <audio ref={audioRef} autoPlay className='hidden' />
+      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>
+        {displayName |
+          (participant as any).name |
+          (isLocal ? 'You' : 'Participant')}
       </div>
-    </div>)
+    </div>
+  );  }, [participant]);
+
+  return (
+    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
+      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
+      <audio ref={audioRef} autoPlay className="hidden" />
+      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
+        {displayName |(participant as any).name |(isLocal ? 'You' : 'Participant')}
       </div>
     </div>
 );
 }
-
-
-<<<<<<< HEAD
-
-
-
-=======
   );
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba

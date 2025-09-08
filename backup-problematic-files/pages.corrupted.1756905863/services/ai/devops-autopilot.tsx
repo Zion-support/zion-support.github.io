@@ -67,4 +67,5 @@ const Devops-autopilot: React.FC<Devops-autopilotProps> = ({ className }) => {
 
 
   );
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}

@@ -1,2 +1,12 @@
 import React from 'react';
-<<<<<<< HEADexport default MainSidebar.dynamic;
+
+;
+const MainSidebar.dynamic = () => {
+  return (
+    <div data - testid="mainsidebar.dynamic">;
+      <h1 > MainSidebar.dynamic</h1>;
+    </div>);
+}
+;
+
+export default MainSidebar.dynamic;

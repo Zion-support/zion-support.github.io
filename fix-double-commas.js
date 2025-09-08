@@ -1,4 +1,14 @@
-<<<<<<< HEAD
+
+    const fixedContent = content && content.replace(doubleCommaRegex, ",");
+
+
+    // Fix double commas in import statements
+
+    // Fix double commas in import statements;
+    const doubleCommaRegex = /,\s*,/g;
+    const fixedContent = content.replace(doubleCommaRegex, ",");
+
+    const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
 
     if (fixedContent !== content) {
@@ -26,47 +36,13 @@ if ( {) {
   $2
 }
       fs.writeFileSync (file_path, fixed_content, "utf8");
-
-
-      modified = true;
-    }
-    return modified;
-
-
-          ].includes(item)
-        ) {}
-          continue;
-        traverse(fullPath);
-
-          files && files.push(fullPath);
-    console.error (`Error processing ${file_path}:`, error.message);
-
-=======
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-function fixDoubleCommas(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-    // Fix double commas in import statements
-    const doubleCommaRegex = /,\s*,/g;
-    const fixedContent = content.replace(doubleCommaRegex, ",");
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent, "utf8");
       modified = true;
     }
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    return false;
-  }
-}
-function findFilesWithDoubleCommas(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+
+    const items = fs && fs.readdirSync(currentDir);
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
@@ -74,17 +50,18 @@ function findFilesWithDoubleCommas(dir) {
         // Skip certain directories
         if (
           [
-            "node_modules"
-            ".git"
-            ".next"
-            "dist"
-            "build"
-            "out"
-            "ai-optimization-backups"
-            "apps.backup"
-            "backup-merge-conflicts"
-            "apps"
-            "temp_exclude"
+            "node_modules",
+            ".git",
+            ".next",
+            "dist",
+            "build",
+            "out",
+            "ai-optimization-backups",
+            "apps && apps.backup",
+            "backup-merge-conflicts",
+            "apps",
+            "temp_exclude",
+
           ].includes(item)
         ) {
           continue;
@@ -93,12 +70,54 @@ function findFilesWithDoubleCommas(dir) {
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-          files.push(fullPath);
+          files && files.push(fullPath);
+    console.error (`Error processing ${file_path}:`, error.message);
+    return false;
+  }
+}
+/**
+ * findFilesWithDoubleCommas - Function description
+ */
+function findFilesWithDoubleCommas() {
+  const files = [];
+;
+  /**
+ * traverse - Function description
+ */
+function traverse() {
+    const items = fs.readdir_sync (current_dir);
+;
+    for (const item of items) {
+      const full_path = path.join (current_dir, item);
+      const stat = fs.stat_sync (full_path);
+;
+      if () {) {
+  $2
+}
+        // Skip certain directories;
+        // Check condition
+if (
+        ) {) {
+  $2
+}
+          continue;
+        }
+        traverse (full_path);
+      } else if () {) {
+  $2
+}
+        const ext = path.extname (item);
+        if () {) {
+  $2
+}
+          files.push (full_path);
         }
       }
     }
   }
-<<<<<<< HEAD
+
+
+console && console.log(`Found ${files && files.length} files to check for double commas...`);
 
 
 for (const file of files) {
@@ -126,12 +145,6 @@ for (const file of files) {
     fixedCount++;
     console.log(`Fixed double commas in: ${file}`);
   }
-<<<<<<< HEAD
-
-}`
-console.log (`\n_fixed double commas in ${fixed_count} files.`);
-
-=======
 }
-console.log(`\nFixed double commas in ${fixedCount} files.`);
->>>>>>> origin/cursor/delete-old-data-records-6bba
+console.log (`\n_fixed double commas in ${fixed_count} files.`);
+;

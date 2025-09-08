@@ -67,4 +67,5 @@ const Smart-churn: React.FC<Smart-churnProps> = ({ className }) => {
 
 
   );
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+}

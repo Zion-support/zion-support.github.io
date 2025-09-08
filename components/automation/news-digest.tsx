@@ -1,18 +1,17 @@
 
 
-<<<<<<< HEAD
 
-type NewsItem = any;
-
-=======
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 
 
-
-</div> </div>) )
- </div> </div>) ) 
+ </div> </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datanews-digest && digest.json');
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
@@ -38,6 +37,15 @@ function getServerSideProps() {
   const file = path.join (process.cwd (), 'datanews - digest.json');
   let items: NewsItem[] = [];  let generated_at = '';
   try {
+    const raw = fs.readFileSync (file, 'utf - 8');
+    const json = JSON.parse (raw);
+    items = json.items || [];
+    generated_at = json.generated_at || '';
+  } catch {}
+  return { props: { items, generated_at } }
+}
+
+
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
     items = json.items |[];
@@ -75,7 +83,12 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
   try {items = json.items || [];type NewsItem = any;generatedAt = json.generatedAt || '';
   } catch {}
   return { props: { items, generatedAt } }
-}export default function NewsDigestPage() {return (<div className="space-y-6">;
+}
+
+
+export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
+  return (
+    <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>;
       <div className="grid grid-cols-1 gap-4">;
@@ -168,6 +181,8 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
           </div>
         ))}
       </div>
+
+
     </div>;
 
 );
@@ -176,10 +191,9 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 
 );
 }
-
-
-
+  );
 }
+
 
 export default /**
  * NewsDigestPage - Function description
@@ -203,6 +217,7 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
+}
     items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
@@ -234,5 +249,3 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 }
   );
 }
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -139,9 +139,8 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-      },
+        afterAll: 'readonly'
+      }
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -160,9 +159,7 @@ export default [
       'prefer-const': 'error',
       'no-var': 'error',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn'
+      'react/react-in-jsx-scope': 'off'
     },
     settings: {
       react: {
@@ -175,6 +172,8 @@ export default [
     languageOptions: {
       sourceType: 'commonjs',
       globals: {
+        ...globals.node,
+        console: 'readonly',
         process: 'readonly',
         console: 'readonly',
         require: 'readonly',
@@ -183,49 +182,11 @@ export default [
         __dirname: 'readonly',
         __filename: 'readonly'
       }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error'
     }
-  },
-  {
-    ignores: [
-      // Node/build outputs
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'out/**',
-      'coverage/**',
-
-      // Large/legacy sources and disabled dirs
-      'src/**src.corrupted/**src.disabled/**src.broken/**src.pages.disabled/**solutions.disabled/**components.disabled/**components.corrupted/**',
-      'hooks/**hooks.disabled/**lib.disabled/**lib/**lib.corrupted/**zion-os.disabled/**zion_academy/**contracts.disabled/**',
-      'corrupted-files-backup/**corrupted_files_backup_2/**cypress.disabled/**cypress_backup/**data/**e2e/**pages.disabled/**pages.disabled_backup/**',
-      'pages_backup/**supabase/**types/**types.disabled/**utils/**',
-
-      // Tests and mocks
-      '__tests__/**tests/**tests.disabled/***.test.*',
-
-      // Temp and backups
-      'backup/**backup-pages/**pages-backup/**lib_backup/**data_backup/**styles_backup/**api-backup/**automation_backup/**',
-      'ai-optimization-backups/**ai-analysis-reports/**optimization-reports/**public/reports/**temp_backup/**temp_broken_components/**temp_working/**temp_*/**',
-      'backup-merge-conflicts/**deployments/**deployment/**server/**services/**',
-
-      // Scripts/configs and CJS files not intended for lint
-      'scripts/**automation/**netlify/***.config.js*.config.cjs*.config.mjs**/*.cjs',
-
-      // Public assets/scripts
-      'public/**',
-
-      // Root-level noisy files
-      'api/***.js.*.js*.ts*.tsx*.jsxjest.config.*fix-*.js',
-      'fix-*.jsx',
-
-      // Misc root configs that were being linted
-      '.eslintrc.js.eslintrc.cjs.eslintrc.disabled.js.prettierrc.js',
-
-      // Page backups
-      'pages.__backup/**',
-      'pages-disabled/**',
-      'pages.disabled_auto/**',
-    ],
-  },
+  }
 ];

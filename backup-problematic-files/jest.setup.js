@@ -20,11 +20,29 @@ jest.mock("next/router", () => ({
       events: {,
   on: jest.fn(),
         off: jest.fn(),
+      isFallback: false
+    };
+  },
+}));
+
+// Mock Next.js Image component
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props) => {
+    const { src, alt, ...otherProps } = props;
+    return {
+      type: 'img',
+      props: { src, alt, ...otherProps }
+        emit: jest.fn()
+      },
+
 
     };
   },
 }));
 
+// Mock Next.js Image component
+jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />
 };
@@ -32,6 +50,27 @@ jest.mock("next/router", () => ({
 
 
 
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+});
+main:jest.setup.js
+
+// Mock Next.js Link component
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({ children, href, ...props }) => {
+
+
+  },
+
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -64,12 +103,15 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-<<<<<<< HEAD
 
 };
 
-
-
-=======
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+// Global test setup
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+};
+};
+:backup-problematic-files/jest.setup.js

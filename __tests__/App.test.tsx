@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
 
@@ -12,42 +10,9 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-  it('has proper heading structure', () => {
-    render(<App />);
-<<<<<<< HEAD
+
+
 });
-=======
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
-  });
-});
-
-
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import App from '../App';
-
-describe('App', () => {
-  test('renders without crashing', () => {
-    render(<App />);
-
-    expect(screen.getByRole('main')).toBeInTheDocument();
-
-  });
-});
-});
-
-    render(<App />);
-    expect(
-      screen.getByRole("heading", { level: 1, name: "Zion Tech Group" }),
-    ).toBeInTheDocument();
-  });
-});
-
-origin/main
-});
->>>>>>> origin/main
 import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
@@ -56,8 +21,12 @@ describe('App'
   it('has proper heading structure'
     const heading = screen.getByRole('heading', { level: '1'
     const heading = screen.getByRole('heading'
-
-  it('has proper heading structure', () => {
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "../src/App";
+describe("App", () => {
+  test("renders without crashing", () => {
     render(<App />);
 <<<<<<< HEAD
 =======
@@ -65,4 +34,3 @@ describe('App'
     expect(heading).toBeInTheDocument();
   });
 });
->>>>>>> origin/main

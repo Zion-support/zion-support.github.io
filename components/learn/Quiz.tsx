@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
           <div className='font-medium'>;
@@ -17,14 +16,18 @@ export default function Quiz() {
 
 
 
-=======
-import React, { useState } from 'react';
-type Question = any;
-  question: string;
-  options: string[];
-  answerIndex: number;
-    onComplete(score)
-  }
+export default function Quiz({ questions, onComplete }: Props) {
+
+export default function Quiz({ questions, onComplete }: Props) {;
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const score = questions.reduce(
+    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
+    0
+  );
+  function submit() {
+
+
 
   return (
     <div className="space-y-4">
@@ -36,82 +39,45 @@ export default function Quiz({ questions, onComplete }: Props) {;
     0;
   );
   function submit() {;
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+    setSubmitted(true);
+    onComplete(score);
   }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-type Props = {questions: Question[];
-  onComplete: (score: number) => void;
+  return (
+    <div className='space-y-4'>;
+      {questions && questions.map((q, idx) => (;
+        <div key={q && q.id} className='border rounded p-3'>;
+          <div className='font-medium'>;
+            {idx + 1}. {q && q.question}
+          </div>;
+          <div className='mt-2 grid gap-2'>;
+            {q && q.options.map((opt, i) => (;
+              <label key={i} className='flex items-center gap-2'>;
+                <input
 
-
-
-import React, { useState } from 'react';
-
-type Question = any;
-  question: string;
-  options: string[];
-  answerIndex: number;
-}
-
-type Props = {questions: Question[];}
-  onComplete: (score: number) => void}
-};
-
-
-export default function Quiz({ questions, onComplete }: Props) {}
-}
-export default function Quiz({ questions, onComplete }: Props) {;}
-}
-
+                  type='radio'                  name={q.id}
   function submit() {
 
 export default function Quiz() {
 
-    setSubmitted($2);
-origin/cursor/automate-test-improve-and-merge-code-2533
+
+
 export default function Quiz({ questions, onComplete }: Props) {
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
-}
+  function submit() {
 
-const [answers, setAnswers] = useState<Record<string, number    />>({});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-const [submitted, setSubmitted] = useState(false);
-
-const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),
-<<<<<<< HEAD
-
-    0;
-
-=======
-    0
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  );
+    setSubmitted(true)
   function submit() {
     setSubmitted(true);}
     onComplete(score);}
   }
+  function submit() {
+  function submit() {
 
 <<<<<<< HEAD
     setSubmitted(true)
-
-
 
     onComplete(score)
   }
@@ -130,7 +96,6 @@ const score = questions.reduce(
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
-
 
 
             <div className='mt - 2 text - sm'>;
@@ -153,7 +118,12 @@ const score = questions.reduce(
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue-600 text-white rounded">Submit Quiz</button>;
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>);
-<<<<<<< HEAD
+}
+
+  );
+}
+
+
 
                 />
                 <span>{opt}</span>
@@ -267,65 +237,17 @@ type = 'radio'
         <div className=text-sm'>
           Score: {score} / {questions.length}
         </div>
-
-
-
-
-=======
-              </label>;
-            ))}
-
-<div className='mt-2 text-sm'>
-    <div className="space-y-4">
-    setSubmitted(true);
-    onComplete(score);
-  }
-  return (
-    <div className='space-y-4'>
-
-    </div>)<button on_click={submi}"
-} className=\"px - 4 py - 2 bg - blue - 600 text - white rounded\"    />Submit Quiz</button>;"
-      {submitted && <div className=\"text - sm\"    />Score: {score} / {questions.length}</div>}
-    </div>)<span    />{op}
-}</span>;
-              </label>;
-            ))}
-
-          </div>
-          {submitted && (
-
-<div className='mt-2 text-sm'    />
-              {answers[q.id] === q.answerIndex ? (
-                <span className='text-green-600'    />Correct</span>
-              ) : (
-                <span className='text-red-600'    />Incorrect</span>}
-}
-              )}
-            </div>;
-          )}
-
-        </div>
-      ))}
-
-<button;
-onClick={submit}
-        className='px-4 py-2 bg-blue-600 text-white rounded'    />
-
-        Submit Quiz;
-      </button>;
-      {submitted && (<div className='text-sm'    />;}
-          Score: {score} / {questions.lengt}
-}
-        </div>;
       )}
-        </div>;
-      )}
-    </div>;
-  )
-
-  )
-
+    </div>
+  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
+      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
+    </div>
+);
 }
   );
 }
+
+}
+}
+
 

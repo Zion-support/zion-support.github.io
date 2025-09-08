@@ -1,3 +1,8 @@
+
+
+// Define HTML element types;
+interface HTMLElement {;
+
   className: string;
   id: string;
   innerHTML: string;
@@ -19,7 +24,12 @@ interface HTMLElement {
 }
 
 interface HTMLDivElement extends HTMLElement {
-  tagName: "DIV";
+  tag_name: 'DIV';
+}
+
+
+interface HTMLDivElement extends HTMLElement {;
+  tagName: 'DIV';
 }
 
 const badgeVariants = cva(;
@@ -77,4 +87,6 @@ export interface BadgeProps;
  */
 function Badge() {
   return (
-<<<<<<< HEAD
+    <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
+}
+export { Badge, badge_variants }

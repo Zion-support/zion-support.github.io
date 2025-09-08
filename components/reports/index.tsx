@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-export default function ReportsIndex() {export default function ReportsIndex() {return (<div className='min-h-screen bg-slate-950 text-white' />;
+
 export default function ReportsIndex() {;
 export default function ReportsIndex() {
   return (
@@ -16,8 +14,10 @@ export default function ReportsIndex() {
             agents.          </p>export default function ReportsIndex() { return null; }
         {/* Header */}
 
+
         {/* Back to Home */}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
+
 
         {/* Back to Home */}
         <div className='mt-12 text-center'>;
@@ -69,13 +69,47 @@ function ReportsIndex() {
           <Link;
             href='/';
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
-          >            ← Back to home        <div className="mt-12 text-center">;
-          <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition-colors duration-200">;
+          >            ← Back to home        <div className="mt - 12 text - center">;
+          <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
+            ← Back to home;
+          </Link>;
+        </div>;
+      </main>;
+
+  );
+}
+        <div className="mt-12 text-center">
+
+
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+        {/* Content Categorizer Component */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <ContentCategorizer />;
+        {/* Back to Home */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mt-12 text-center">
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+            ← Back to home
+          </Link>
+        </div>
+      </main>
+
+    </div>);
+}
+
+
 
     </div>
     </div>
   );
-}    </div>;
+}
+    </div>;
   );
 }
 
@@ -114,3 +148,11 @@ pr-12243
   )
 }
 ;
+
+    </div>);
+}
+
+
+
+    </div>);
+}

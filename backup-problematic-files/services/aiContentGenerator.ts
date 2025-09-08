@@ -164,7 +164,6 @@ body: JSON.stringify (request)
   request.topic 
 }implementation ## Conclusion 
 }
-
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;

@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 
 
  
+
+
 
 import fs from 'fs';
 import path from 'path';
@@ -31,7 +32,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw)
+    const data = JSON.parse(raw);
 };
 type Props = { report: Report | null },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -39,13 +40,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
     const file = path && path.join(process && process.cwd(), 'publicautomationsite-validator && validator.json');'
     const raw = fs && fs.readFileSync(file, 'utf8');
     const data = JSON && JSON.parse(raw);
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 }
 type Props = { report: Report | null },
@@ -54,19 +50,20 @@ export const getStaticProps: GetStaticProps < Props> = async () => {}
     const file = path.join (process.cwd (), 'publicautomationsite - validator.json');'
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
     return { props: { report: data }, revalidate: 21600 }
   } catch {;
     return { props: { report: null }, revalidate: 21600 }
   }
-export default function SiteValidator(): any ({ report }: Props) {
+
 };
+
+export default function SiteValidator(): any ({ report }: Props) {;
+
+export default function SiteValidator(): any ({ report }: Props) {;
+
+
+};
+
 
 export default function SiteValidator({ report }: Props) {
 export default function SiteValidator({ report }: Props) {;
@@ -105,14 +102,10 @@ type Broken = any;
           </ul>;
         </section>;
       )}
+
+    </div>;
+  );
 }
-
-<<<<<<< HEAD
-
-
-=======
-export default function SiteValidator({ report }: Props) {
-  if (!report) return <div>No validation report yet.</div>,
 
 }
 ;
@@ -154,6 +147,11 @@ if (return <div > No validation report yet.</div>) {
         </section>)}
 
     </div>);
+}
+    </div>
+
+  );
+}
 
   }
 },
@@ -218,32 +216,8 @@ export default function SiteValidator({ report }: Props) {
           </ul>
         </section>
       )}
-
     </div>
 );
 }
   );
 }
-
-    </div>
-);
-}
-
-
-
-
-
-
-=======
-
-          </ul>
-        </section>)}
-
-    </div>)
-    </div>
-);
-}
-
-
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -10,8 +10,4 @@ const UltimateServicesShowcase2026 = ({ className }) => {
   );
 };
 
-
-=======
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default UltimateServicesShowcase2026;

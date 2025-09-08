@@ -12,10 +12,19 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
 
 
-=======
+
+
+
+const tabs: Array<{
+  key: Props['samples'][number]['language'];
+  label: string;
+}> = [
+  { key: 'curl', label: 'cURL' }
+  { key: 'javascript', label: 'JavaScript' }
+  { key: 'python', label: 'Python' }
+];
 
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string}[]
@@ -39,32 +48,7 @@ export default function CodeSamples({ samples }: Props) {;
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
 
-<<<<<<< HEAD
-=======
-interface Props {}
-samples: { language: 'curl' | 'javascript' | 'python'; code: string}
-}[];
-
-'
-const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = []
-'
-const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = []
-'
-  { key: 'curl', label: 'cURL' }'
-  { key: 'javascript', label: 'JavaScript' }'
-  { key: 'python', label: 'Python' }]
-export default function CodeSamples({ samples }: Props) {};
-interface Props {;'
-  samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
-
-const tabs: Array<{;'
-  key: Props['samples'][number]['language'];
-  label: string;
-}> = [;'
-  { key: 'curl', label: 'cURL' },;'
-  { key: 'javascript', label: 'JavaScript' },;'
-  { key: 'python', label: 'Python' },;
-}
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
@@ -75,9 +59,6 @@ const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> 
   { key: 'python', label: 'Python' }
 ];
 export default function CodeSamples({ samples }: Props) {
-  const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
-  const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
-
 
 interface Props {;
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
@@ -118,17 +99,8 @@ export default function CodeSamples(): any ({ samples }: Props) {;
     </div>
 );
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-      </div>;
-<pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>;
-        <code>{sampleMap[active] || ''}</code>;
-      </pre>;
-    </div>;
-  )}      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>;
-        <code>{sampleMap[active] |''}</code>;
-      </pre>;
-    </div>;
-)}<button;
+
+          <button
             key={t && t.key}
             className={`px-3 py-1 rounded border ${active === t && t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
             onClick={() => setActive(t && t.key)}
@@ -195,15 +167,18 @@ const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s 
             {t.label}
           </button>;
         ))}
-<<<<<<< HEAD
 
-=======
-      </div>;
-      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>;
-        <code>{sampleMap[active] || ''}</code>;
-      </pre>;
-    </div>;
-  )}const tabs: Array<{key: Props['samples'][number]['language'];
+
+      </div>
+      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
+        <code>{sampleMap[active] || ''}</code>
+      </pre>
+    </div>
+  );
+}
+;
+const tabs: Array<{
+  key: Props['samples'][number]['language'];
   label: string;
 }> = [;
   { key: 'curl', label: 'cURL' },{ key: 'javascript', label: 'JavaScript' },{ key: 'python', label: 'Python' },];export default /**;
@@ -242,10 +217,10 @@ function CodeSamples() {
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
-
-    </div>)}
-  )
 }
+import React, { useState } from 'react';
+interface Props {
+  samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
 
 "
 "
@@ -259,12 +234,5 @@ function CodeSamples() {
   );
 
 }
-
-"
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+  );

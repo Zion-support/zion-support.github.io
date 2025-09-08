@@ -1,39 +1,20 @@
-<<<<<<< HEAD
-describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})});
-describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired"); cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})});'"'"
-describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}});''
-=======
->>>>>>> origin/main
+
+});''
+
+
+
+
+
+
 });''
 });''
 });''
 });''
+
+
+
 });''
-});''
-});''
-});''
-<<<<<<< HEAD
-});''});''
-});''});''
-});''
-});''
-});''
-});''
-});''
-});''
-});''
-});''
-});''
-});''
-});''
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-});''
-});''
-});''
-});''
-});''
-});''
+
 });''
 describe ('community category listing', () => {
   it ('displays posts in Getting Hired category', () => {
@@ -46,8 +27,29 @@ describe ("community category listing", () => { it ("displays posts in Getting H
 describe ('community category listing', () => { it ('displays posts in Getting Hired category', () => { cy.visit ('/community / getting - hired'); cy.get ('[data - testid="post - card"]') .its ('length') .should ('be.greater_than', 0)})}
 });'';
 });'';
-});''
-});''
 
 });''
->>>>>>> origin/main
+});''
+ursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/integrate-build-improve-and-re-verify-8f7d
+});''
+});''
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+});''
+});''
+});''
+});''
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+});''
+origin/main
+origin/automation-improvements-final
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''

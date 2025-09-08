@@ -3,16 +3,6 @@
 const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedNavigation\' ,
 const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedNavigation" ,"""
 const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
-<<<<<<< HEAD
-</p>'</p>'
-</p>'
-=======
-</p>'
-</p>'
-</p>'
-
 
 </p>'
-</p>'
-</p>'
->>>>>>> origin/main
+

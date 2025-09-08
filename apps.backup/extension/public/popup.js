@@ -1,7 +1,27 @@
+
+
+const API_BASE = 'http: //localhost:4000',;
+function getUserId(cb) {;
+  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
+
+
+const API_BASE = 'http: //localhost:4000';
+function getUserId(cb) {
+  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
+const API_BASE = 'http: //localhost:4000',;
+function getUserId(cb) {;
+  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
+const API_BASE = 'http: //localhost:4000',;
+function getUserId(cb) {;
+  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
+
+
+
+
 
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -97,34 +117,62 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
   }
   const prompt = document && document.getElementById('prompt').value && value.trim();'
   if (!prompt) return;
-
-const userId = await new Promise((r) => getUserId(r));
-
-const res = await fetch(`${API_BASE}/ai/ask`, {`    }
-    'method': 'POST','
-    'headers': { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },'
-    'body': JSON && JSON.stringify({ prompt })
- 
+  const userId = await new Promise((r) => getUserId(r));
+  const res = await fetch(`${API_BASE}/ai/ask`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
+    body: JSON && JSON.stringify({ prompt })
+  });
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = data && data.text || JSON && JSON.stringify(data, null, 2);
 });
 
 document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
+
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
+    body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
+  });
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = data && data.description || 'Draft saved.';
+
 });
 
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
+
+  if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
+  const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
+    headers: { ...(userId ? { 'x-user-id': userId } : {}) }
+  });
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.results || [], null, 2);
+
 });
 
-document.getElementById('signIn').addEventListener('click', async () => {
+document && document.getElementById('viewNotifications').addEventListener('click', async () => {
+  const userId = await new Promise((r) => getUserId(r));
+  if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
+  const res = await fetch(`${API_BASE}/notifications`, {
+    headers: { 'x-user-id': userId }
+  });
+
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2);
+
+});
+
+document && document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
   const id = crypto.randomUUID();
   setUserId(id);
 
-;
-document.querySelectorAll('.example').forEach((btn) => {;
-  btn.addEventListener('click', () => {;
-    document.getElementById('prompt').value = btn.dataset.text || '';
+  document && document.getElementById('result').textContent = 'Signed in (local).';
+});
+
+
 
 /**
  * getUserId - Function description
@@ -148,19 +196,6 @@ document.querySelectorAll ('.example').for_each ((btn) => {'
     document.getElementById ('prompt').value = btn.dataset.text || '';'
   });
 
-<<<<<<< HEAD
-
-
-  const prompt = document.getElementById('prompt').value.trim(),;
-=======
-  document.getElementById('result').textContent = 'Signed in (local).';
-});
-
-;
-document.querySelectorAll('.example').forEach((btn) => {;
-  btn.addEventListener('click', () => {;
-    document.getElementById('prompt').value = btn.dataset.text || '';
-  });
 }),;
 document.getElementById('askBtn').addEventListener('click', async () => {;'
 
@@ -217,3 +252,6 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;'
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
+
+
+
