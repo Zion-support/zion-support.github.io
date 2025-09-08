@@ -1,7 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
-import { createShippoShipment } from "../_shared/shippo.ts";
 
   apiVersion: '2023-10-16})
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET;
@@ -19,34 +18,11 @@ if (event.type === 'checkout.session.completed') {const session = event.data.obj
       const orderId = session.metadata?.orderId;
       if (orderId) {
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
-
-        const { data: order } = await supabase
-          .from("orders")
-          .select("shipping_address, items")
-          .eq("id", orderId)
-          .single();
-
-        if (order?.shipping_address) {
-          try {
-            const shipment = await createShippoShipment({
-              address_to: order.shipping_address,
-              parcels: order.items || []
-            });
-
-            await supabase
-              .from("orders")
-              .update({
-                tracking_number: shipment.tracking_number,
-                tracking_status: shipment.tracking_status?.status,
-                tracking_events: shipment.tracking_history
-              })
-              .eq("id", orderId);
-          } catch (err) {
-            console.error("Error creating shipment", err);
-          }
-        }
       }
     }
-    return new Response(JSON.stringify({ received: true }) { status: 200 })}
-  return new Response('Not found' { status: 404 })})
 
+    return new Response(JSON.stringify({ received: true }), { status: 200 });
+  }
+
+  return new Response("Not found", { status: 404 });
+});
