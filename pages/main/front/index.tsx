@@ -212,7 +212,6 @@ export default function FrontLanding() {
           </div>
         </motion.section>
 
-
         {/* Floating Quick-Nav Dock */}
         <aside className="fixed left-4 top-1/2 z-30 hidden -translate-y-1/2 lg:block">
           <nav aria-label="Quick section navigation" className="space-y-2">
@@ -1503,7 +1502,7 @@ export default function FrontLanding() {
             </Link>
           </div>
         </section>
-{/* AUTO-GENERATED: FRONT_ADS_END */}
+        {/* AUTO-GENERATED: FRONT_ADS_END */}
 
         <section id="new-intelligent-automations-front" className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">New Intelligent Automations</h2>
