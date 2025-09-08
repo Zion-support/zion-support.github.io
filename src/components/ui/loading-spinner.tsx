@@ -1,132 +1,43 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'cyan' | 'white' | 'blue';
-  text?: string;
-  showText?: boolean;
-  className?: string;
+import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
+export function LoadingSpinner({ size = 'md', variant = 'default', className = '', text }) {
+    const sizeClasses = {
+        sm: 'w-4 h-4',
+        md: 'w-6 h-6',
+        lg: 'w-8 h-8',
+        xl: 'w-12 h-12'
+    };
+    const variantClasses = {
+        default: 'text-zion-cyan',
+        primary: 'text-zion-blue',
+        secondary: 'text-zion-purple',
+        white: 'text-white'
+    };
+    return (<div className={cn("flex flex-col items-center gap-3", className)}>
+      <motion.div className={cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size], variantClasses[variant])} role="status" aria-label="Loading">
+        <span className="sr-only">Loading...</span>
+      </motion.div>
+      
+      {text && (<motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-zion-slate-light font-medium text-sm">
+          {text}
+        </motion.p>)}
+    </div>);
 }
-
-const sizeClasses = {
-  sm: 'w-4 h-4',
-  md: 'w-6 h-6',
-  lg: 'w-8 h-8',
-  xl: 'w-12 h-12'
-};
-
-const colorClasses = {
-  cyan: 'border-cyan-400',
-  white: 'border-white',
-  blue: 'border-blue-400'
-};
-
-export default function LoadingSpinner({
-  size = 'md',
-  color = 'cyan',
-  text,
-  showText = false,
-  className = ''
-}: LoadingSpinnerProps) {
-  return (<div className={`flex flex-col items-center justify-center ${className}`} role="status" >
-      <div className="relative">
-        {/* Outer ring */}
-        <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
-
-        {/* Animated spinner */}
-        <motion.div
-          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-
-        {/* Center dot for larger sizes */}
-        {size === 'xl' && (
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
-          </div>
-        )}
+// Page loading component
+export function PageLoader() {
+    return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
+      <div className="text-center text-white">
+        <LoadingSpinner size="xl" variant="white" className="mx-auto mb-4"/>
+        <h1 className="text-2xl font-bold">Loading Zion Tech Group...</h1>
+        <p className="mt-2 text-blue-200">Please wait while we prepare your experience.</p>
       </div>
-
-      {/* Loading text */}
-      {showText && text && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-4 text-center"
-        >
-          <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
-            {text}
-          </div>
-        </motion.div>
-      )}
-    </div>
-  );
-};
-
-// Optimized spinner for inline use
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
-  size = 'sm',
-  className = ''
-}) => (
-  <div className={`inline-flex items-center ${className}`} role="status" >
-    <motion.div
-      className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
-      animate={{ rotate: 360 }}
-      transition={{
-        duration: 1,
-        repeat: Infinity,
-        ease: "linear"
-      }}
-    />
-    <span className="sr-only">Loading</span>
-  </div>
-);
-
-// Full-screen loading overlay
-export const FullScreenLoader: React.FC<{
-  text?: string;
-  showLogo?: boolean;
-  className?: string}> = ({
-  text = 'Loading amazing experiences...',
-  showLogo = true,
-  className = ''
-}) => (
-  <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>
-    <div className="relative text-center">
-      {showLogo && (
-        <div className="mb-6">
-          <div className="w-24 h-24 border-4 border-cyan-400/20 rounded-full mx-auto mb-4"></div>
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
-            ZION
-          </div>
-        </div>
-      )}
-      <LoadingSpinner size="lg" color="cyan" text={text} />
-    </div>
-  </div>
-);
-
-// Skeleton loading component;
-export const SkeletonLoader: React.FC<{
-  className?: string;
-  lines?: number}> = ({
-  className = '',
-  lines = 3}) => (
-  <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: lines }).map((_: unknown, index: unknown) => (
-      <div
-        key={index}
-        className={`h-4 bg-gray-300 rounded mb-2 ${index === lines - 1 ? 'w-3/4' : 'w-full'}`}
-      />
-    ))}
-  </div>
-);
-
+    </div>);
+}
+// Inline loading component
+export function InlineLoader({ size = 'sm', variant = 'default' }) {
+    return (<div className="inline-flex items-center">
+      <LoadingSpinner size={size} variant={variant} className="mr-2"/>
+      <span className="text-sm text-gray-600">Loading...</span>
+    </div>);
+}

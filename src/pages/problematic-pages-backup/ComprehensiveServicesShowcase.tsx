@@ -4,6 +4,7 @@ import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-ser
 import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
 import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
 import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+
 interface Service {
   id: string;
   name: string;
@@ -40,9 +41,11 @@ interface Service {
   rating: number;
   reviews: number;
 }
+
 const ComprehensiveServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+
   const allServices = [
     ...comprehensiveMicroSaasServices2025, 
     ...innovativeITAIServices2025,
@@ -50,6 +53,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     ...emergingTechInnovationServices2025,
     ...enterpriseITInnovationServices2025
   ];
+  
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
     { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length },
@@ -93,11 +97,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },
     { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
   ];
+
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
         const category = categories.find(c => c.id === selectedCategory);
         if (!category) return true;
+        
         // Handle special category mappings
         const categoryMappings: { [key: string]: string[] } = {
           'ai-legal-compliance': ['Legal', 'Compliance'],
@@ -124,19 +130,23 @@ const ComprehensiveServicesShowcase: React.FC = () => {
           'enterprise-workflow-automation': ['Enterprise', 'Workflow', 'Automation'],
           'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin', 'IoT']
         };
+        
         const targetKeywords = categoryMappings[selectedCategory] || [category.name];
         return targetKeywords.some(keyword => 
           service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', ''))
         );
       });
+
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
+
   const filteredServices = selectedCategory === 'all' 
     ? COMPREHENSIVE_SERVICES 
     : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
@@ -179,6 +189,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
           </div>
         </motion.div>
       </section>
+
       {/* Category Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -197,6 +208,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               </TabsTrigger>
             ))}
           </TabsList>
+
 import { 
   Brain, 
   Shield, 
@@ -217,8 +229,10 @@ import {
   Star,
   Award
 } from 'lucide-react';
+
 export const ComprehensiveServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+
   const serviceCategories = [
     { id: 'all', name: 'All Services', icon: Star },
     { id: 'ai', name: 'AI & ML', icon: Brain },
@@ -231,6 +245,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
     { id: 'space', name: 'Space Tech', icon: Rocket },
     { id: 'saas', name: 'MicroSAAS', icon: Package }
   ];
+
   const services = [
     {
       id: 'ai-solutions',
@@ -332,6 +347,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
       href: '/services/microsaas'
     }
   ];
+
   const solutions = [
     {
       id: 'ai-autonomous-business',
@@ -398,12 +414,15 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
       href: '/solutions/ai-business-intelligence'
     }
   ];
+
   const filteredServices = activeCategory === 'all' 
     ? services 
     : services.filter(service => service.category === activeCategory);
+
   const filteredSolutions = activeCategory === 'all' 
     ? solutions 
     : solutions.filter(solution => solution.category === activeCategory);
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -421,6 +440,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
             designed to transform your business and drive innovation.
           </p>
         </div>
+
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {serviceCategories.map((category) => (
@@ -438,6 +458,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
             </button>
           ))}
         </div>
+
         {/* Services Section */}
         <div className="mb-20">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">
@@ -452,12 +473,15 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
+                
                 <h4 className="text-xl font-semibold text-white mb-3 text-center">
                   {service.title}
                 </h4>
+                
                 <p className="text-gray-300 mb-4 text-center text-sm">
                   {service.description}
                 </p>
+                
                 <div className="mb-4">
                   <h5 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h5>
                   <ul className="space-y-1">
@@ -493,6 +517,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                     </span>
                   </div>
                 )}
+                
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl`}>
                     {service.icon}
@@ -505,6 +530,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                   </div>
                   <p className="text-xs text-gray-400 mb-4">{service.category}</p>
                 </div>
+
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -518,10 +544,12 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                     </div>
                   )}
                 </div>
+
                 <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
                   <span>⭐ {service.rating} ({service.reviews})</span>
                   <span>👥 {service.customers} customers</span>
                 </div>
+
                 <div className="text-center">
                   <span className="text-xs text-gray-400">
                     {service.trialDays} days free trial • Setup: {service.setupTime}
@@ -532,6 +560,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Service Details Modal */}
       {selectedService && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -561,10 +590,12 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                   </svg>
                 </button>
               </div>
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{selectedService.description}</p>
+                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -576,6 +607,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Technology Stack</h4>
                     <div className="flex flex-wrap gap-2">
@@ -587,6 +619,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
                 <div>
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Pricing & Details</h4>
@@ -613,14 +646,17 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
+
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Market Position</h4>
                     <p className="text-gray-300 text-sm leading-relaxed">{selectedService.marketPosition}</p>
                   </div>
+
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">ROI & Benefits</h4>
                     <p className="text-gray-300 text-sm leading-relaxed">{selectedService.roi}</p>
                   </div>
+
                   <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Get Started</h4>
                     <div className="space-y-3 text-sm">
@@ -650,6 +686,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
           </motion.div>
         </div>
       )}
+
       {/* Contact CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -686,10 +723,12 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
     </div>
   );
 }
+
 interface ServiceCardProps {
   service: any;
   getCategoryIcon: (category: string) => React.ReactNode;
 }
+
 function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
   return (
     <Card className="group hover:scale-105 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-cyan-500/50">
@@ -716,6 +755,7 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
           </div>
         </div>
       </div>
+      
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -738,6 +778,7 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
           {service.description}
         </CardDescription>
       </CardHeader>
+      
       <CardContent className="pt-0">
         <div className="flex flex-wrap gap-2 mb-4">
           {service.tags.slice(0, 3).map((tag: string, index: number) => (
@@ -746,6 +787,7 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
             </Badge>
           ))}
         </div>
+        
         <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
           <div className="flex items-center gap-1">
             <Clock className="w-3 h-3" />
@@ -756,6 +798,7 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
             {service.location}
           </div>
         </div>
+        
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -770,6 +813,7 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
               <div className="text-slate-400 text-xs">{service.author.email}</div>
             </div>
           </div>
+          
           <Button size="sm" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
             <ArrowRight className="w-3 h-3 mr-1" />
             Learn More
@@ -780,6 +824,7 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
   );
 }
                 </div>
+                
                 <div className="mb-4">
                   <h5 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h5>
                   <ul className="space-y-1">
@@ -791,6 +836,7 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
                     ))}
                   </ul>
                 </div>
+                
                 <a
                   href={service.href}
                   className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group-hover:shadow-lg"
@@ -835,15 +881,18 @@ import {
   Server
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService } from '../data/innovativeMicroSaasServices';
+
 interface ServiceCardProps {
   service: InnovativeMicroSaasService;
   index: number;
   viewMode: 'grid' | 'list';
   onServiceClick: (service: InnovativeMicroSaasService) => void;
 }
+
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onServiceClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+
   const getCategoryIcon = useCallback((category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-5 h-5" />,
@@ -861,6 +910,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
     };
     return iconMap[category] || <Star className="w-5 h-5" />;
   }, []);
+
   const getCategoryColor = useCallback((category: string) => {
     const colorMap: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -878,10 +928,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
     };
     return colorMap[category] || 'from-blue-500 to-purple-500';
   }, []);
+
   const handleLike = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     setIsLiked(!isLiked);
   }, [isLiked]);
+
   const handleShare = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     if (navigator.share) {
@@ -894,6 +946,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
       navigator.clipboard.writeText(service.websiteUrl);
     }
   }, [service]);
+
   if (viewMode === 'grid') {
     return (
       <motion.div
@@ -910,6 +963,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
         <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 transform rotate-12 scale-150"></div>
         </div>
+
         {/* Service Header */}
         <div className="relative z-10 flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -940,10 +994,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
             </button>
           </div>
         </div>
+
         {/* Description */}
         <p className="relative z-10 text-gray-300 text-sm mb-4 line-clamp-3">
           {service.description}
         </p>
+
         {/* Stats Grid */}
         <div className="relative z-10 grid grid-cols-2 gap-3 mb-4 text-sm">
           <div className="flex items-center gap-2 text-gray-400">
@@ -963,6 +1019,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
             <span>{service.estimatedDelivery}</span>
           </div>
         </div>
+
         {/* Features Preview */}
         <div className="relative z-10 mb-4">
           <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
@@ -975,6 +1032,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
             ))}
           </div>
         </div>
+
         {/* Action Buttons */}
         <div className="relative z-10 flex gap-2">
           <button 
@@ -992,6 +1050,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
             <Share2 className="w-4 h-4 text-gray-400" />
           </button>
         </div>
+
         {/* Hover Overlay */}
         <AnimatePresence>
           {isHovered && (
@@ -1006,6 +1065,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
       </motion.div>
     );
   }
+
   // List View
   return (
     <motion.div
@@ -1039,7 +1099,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
               <div className="text-sm text-gray-400">{service.pricingModel}</div>
             </div>
           </div>
+
           <p className="text-gray-300 mb-4">{service.description}</p>
+
           {/* Stats Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
             <div className="text-center">
@@ -1059,6 +1121,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
               <div className="text-xs text-gray-400">Delivery</div>
             </div>
           </div>
+
           {/* Features */}
           <div className="mb-4">
             <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
@@ -1072,6 +1135,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
             </div>
           </div>
         </div>
+
         {/* CTA Section */}
         <div className="lg:w-48 flex flex-col justify-between">
           <div className="space-y-3 mb-4">
@@ -1088,6 +1152,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
               <div className="text-lg font-bold text-blue-400">{service.timeToValue}</div>
             </div>
           </div>
+          
           <div className="flex gap-2">
             <button 
               className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
@@ -1109,6 +1174,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
     </motion.div>
   );
 };
+
 const ComprehensiveServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -1116,9 +1182,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedService, setSelectedService] = useState<InnovativeMicroSaasService | null>(null);
   const [showFilters, setShowFilters] = useState(false);
+
   // Memoized filtered services for better performance
   const filteredServices = useMemo(() => {
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES;
+
     // Filter by search term
     if (searchTerm) {
       const searchLower = searchTerm.toLowerCase();
@@ -1129,10 +1197,12 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         service.category.toLowerCase().includes(searchLower)
       );
     }
+
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
+
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -1148,18 +1218,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {
           return 0;
       }
     });
+
     return filtered;
   }, [searchTerm, selectedCategory, sortBy]);
+
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {
     setSelectedService(service);
     // You can add navigation logic here
     console.log('Service clicked:', service);
   }, []);
+
   const clearFilters = useCallback(() => {
     setSearchTerm('');
     setSelectedCategory('all');
     setSortBy('rating');
   }, []);
+
   // Keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -1167,9 +1241,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         setSelectedService(null);
       }
     };
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -1202,6 +1278,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             </span>
           </div>
         </motion.div>
+
         {/* Search and Filter Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1222,6 +1299,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 aria-label="Search services"
               />
             </div>
+
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -1234,6 +1312,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 <option key={category} value={category}>{category}</option>
               ))}
             </select>
+
             {/* Sort By */}
             <select
               value={sortBy}
@@ -1246,6 +1325,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <option value="aiScore">Sort by AI Score</option>
               <option value="name">Sort by Name</option>
             </select>
+
             {/* View Mode */}
             <div className="flex gap-2">
               <button
@@ -1274,6 +1354,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               </button>
             </div>
           </div>
+
           {/* Clear Filters */}
           {(searchTerm || selectedCategory !== 'all') && (
             <div className="mt-4 flex items-center justify-between">
@@ -1289,6 +1370,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             </div>
           )}
         </motion.div>
+
         {/* Services Grid/List */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1339,6 +1421,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             </motion.div>
           )}
         </motion.div>
+
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1368,4 +1451,5 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     </div>
   );
 };
+
 export default ComprehensiveServicesShowcase;

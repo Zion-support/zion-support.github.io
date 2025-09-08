@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -6,6 +7,7 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
+
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -67,6 +69,7 @@ const featuredPosts: ForumPost[] = [
     authorRole: "Verified Talent"
   }
 ];
+
 // Mock data for recent posts
 const recentPosts: ForumPost[] = [
   {
@@ -157,13 +160,16 @@ const recentPosts: ForumPost[] = [
     authorRole: "Freelancer"
   }
 ];
+
 export default function CommunityPage() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
+  
   return (
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, MessageCircle, Calendar, BookOpen, Award, Globe, Lightbulb, Rocket, Heart, Star, Zap, Target } from 'lucide-react';
+
 export default function CommunityPage() {
   const communityFeatures = [
     {
@@ -203,6 +209,7 @@ export default function CommunityPage() {
       color: 'from-red-500 to-pink-500'
     }
   ];
+
   const upcomingEvents = [
     {
       title: 'AI Ethics & Responsible Development',
@@ -229,14 +236,15 @@ export default function CommunityPage() {
       icon: Target
     }
   ];
+
   const communityStats = [
     { label: 'Active Members', value: '2,847', icon: Users },
     { label: 'Discussions', value: '1,234', icon: MessageCircle },
     { label: 'Resources Shared', value: '567', icon: BookOpen },
     { label: 'Events Hosted', value: '89', icon: Calendar }
   ];
+
   return (
-=======
     <>
       <SEO
         title="Community Forum | Zion AI Marketplace"
@@ -244,6 +252,7 @@ export default function CommunityPage() {
         keywords="community, forum, discussion, AI marketplace, questions, answers"
         canonical="https://ziontechgroup.com/community"
       />
+      
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
@@ -252,17 +261,21 @@ export default function CommunityPage() {
               Join the conversation, ask questions, and share your knowledge
             </p>
           </div>
+          
           <CreatePostButton />
         </div>
+        
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="recent">Recent</TabsTrigger>
           </TabsList>
+          
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
+          
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts.map((post) => (
@@ -270,6 +283,7 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
+          
           <TabsContent value="recent">
             <div className="space-y-4">
               {recentPosts.map((post) => (
@@ -282,6 +296,7 @@ export default function CommunityPage() {
     </>
           </div>
         </div>
+
         {/* Community Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {communityStats.map((stat, index) => {
@@ -297,6 +312,7 @@ export default function CommunityPage() {
             );
           })}
         </div>
+
         {/* Community Features */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -317,6 +333,7 @@ export default function CommunityPage() {
             })}
           </div>
         </div>
+
         {/* Upcoming Events */}
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
@@ -359,6 +376,7 @@ export default function CommunityPage() {
             })}
           </div>
         </div>
+
         {/* Community Guidelines */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -409,6 +427,7 @@ export default function CommunityPage() {
             </div>
           </div>
         </div>
+
         {/* Get Involved */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -433,6 +452,5 @@ export default function CommunityPage() {
         </div>
       </div>
     </div>
-=======
   );
 }

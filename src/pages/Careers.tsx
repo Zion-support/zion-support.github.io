@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-
-
-
-  // Benefits list
-=======
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, DollarSign, Users, Zap, Heart, Globe, Shield } from 'lucide-react';
+
 export default function Careers() {
   const openPositions = [
     {
@@ -79,98 +74,16 @@ export default function Careers() {
       posted: "4 days ago"
     }
   ];
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
   const benefits = [
     {
       icon: <Zap className="w-8 h-8 text-zion-cyan" />,
       title: "Flexible Work",
-<<<<<<< HEAD
-      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
-      icon: (
-        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-      )
-
-    }
-    {
-      title: 'Health & Wellness'
-      description:
-        'Comprehensive health insurance and wellness programs to keep you at your best.'
-    },
-
-=======
       description: "Remote-first culture with flexible hours and unlimited PTO"
     },
->>>>>>> origin/cursor/delete-old-data-records-6bba
     {
       icon: <Heart className="w-8 h-8 text-zion-purple" />,
       title: "Health & Wellness",
-<<<<<<< HEAD
-      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
-      icon: (
-        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-      )
-
-    }
-    {
-      title: 'Continuous Learning'
-      description:
-        'Education stipends and dedicated learning time to help you grow professionally.'
-    },
-
-    {
-      title: "Continuous Learning",
-      description: "Education stipends and dedicated learning time to help you grow professionally.",
-      icon: (
-        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      )
-
-    }
-    {
-      title: 'Competitive Compensation'
-      description:
-        'Salary packages that recognize your value, plus equity options to share in our success.'
-    },
-    {
-      title: "Competitive Compensation",
-      description: "Salary packages that recognize your value, plus equity options to share in our success.",
-
-      icon: (
-        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      )
-
-    }
-    {
-      title: 'Impactful Projects'
-      description:
-        'Contribute to innovations that make advanced technology accessible worldwide.'
-    },
-
-    {
-      title: "Impactful Projects",
-      description: "Contribute to innovations that make advanced technology accessible worldwide.",
-      icon: (
-        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-
-      ),
-    },
-  ]
-      )
-    }
-  ]
-  ],
-
-
-=======
       description: "Comprehensive health insurance and wellness programs"
     },
     {
@@ -187,7 +100,128 @@ export default function Careers() {
       icon: <Shield className="w-8 h-8 text-zion-cyan" />,
       title: "Security",
       description: "Competitive salary, equity, and retirement benefits"
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export default function Careers() {
+  // Sample job listings
+  const jobs = {
+    engineering: [
+      {
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
+      },
+      {
+        title: "AI Research Engineer",
+        location: "San Francisco, CA",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
+      },
+      {
+        title: "Full Stack Developer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
+      }
+    ],
+    product: [
+      {
+        title: "Product Manager",
+        location: "New York, NY",
+        type: "Full-time",
+        department: "Product",
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
+      },
+      {
+        title: "UX/UI Designer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Product",
+        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
+      }
+    ],
+    marketing: [
+      {
+        title: "Growth Marketing Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
+      },
+      {
+        title: "Content Strategist",
+        location: "London, UK",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
+      }
+    ],
+    operations: [
+      {
+        title: "Community Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
+      },
+      {
+        title: "Talent Acquisition Specialist",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
+      }
+    ]
+  };
+
+  // Benefits list
+  const benefits = [
+    {
+      title: "Flexible Work",
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      )
+    },
+    {
+      title: "Health & Wellness",
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Continuous Learning",
+      description: "Education stipends and dedicated learning time to help you grow professionally.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
+    },
+    {
+      title: "Competitive Compensation",
+      description: "Salary packages that recognize your value, plus equity options to share in our success.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    }
+  ];
+
   return (
     <>
       <SEO 
@@ -196,6 +230,7 @@ export default function Careers() {
         keywords="careers, jobs, Zion Tech Group, AI jobs, tech jobs, remote jobs"
         canonical="https://ziontechgroup.com/careers"
       />
+      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -220,6 +255,7 @@ export default function Careers() {
               </Badge>
             </div>
           </div>
+
           {/* Company Culture */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
@@ -239,6 +275,7 @@ export default function Careers() {
               ))}
             </div>
           </section>
+
           {/* Open Positions */}
           <section>
             <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
@@ -265,6 +302,7 @@ export default function Careers() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-zion-slate-light mb-4">{position.description}</p>
+                    
                     <div className="mb-4">
                       <h4 className="font-semibold text-white mb-2">Requirements:</h4>
                       <ul className="list-disc list-inside text-zion-slate-light space-y-1 ml-4">
@@ -273,6 +311,7 @@ export default function Careers() {
                         ))}
                       </ul>
                     </div>
+                    
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <span className="flex items-center gap-1">
@@ -289,6 +328,7 @@ export default function Careers() {
               ))}
             </div>
           </section>
+
           {/* Call to Action */}
           <section className="mt-20 text-center">
             <Card className="bg-zion-blue-dark border-zion-cyan/30 text-white max-w-2xl mx-auto">
@@ -305,6 +345,7 @@ export default function Careers() {
               </CardContent>
             </Card>
           </section>
+
           {/* Contact Information */}
           <section className="mt-20 text-center">
             <h2 className="text-2xl font-bold text-white mb-8">Get in Touch</h2>
@@ -334,48 +375,7 @@ export default function Careers() {
               Help us build the future of AI and technology
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
-              <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
-              <p className="text-zion-slate-light text-lg whitespace-pre-line">
-ursor/fix-website-loading-errors-and-merge-6662
-
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-
-
-            <div>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                Why Work at Zion?
-              </h2>
-              <p className='text-zion-slate-light text-lg whitespace-pre-line'>
-        canonical='https://app && app.ziontechgroup.com/careers'
-      />;
-      <main className='min-h-screen bg-zion-blue pt-24 pb-20'>;
-        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-16'>;
-            <GradientHeading>Join Our Team</GradientHeading>;
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-              Help us build the future of AI and technology;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>;
-            <div>;
-              <h2 className='text-3xl font-bold text-white mb-6'>;
-                Why Work at Zion?;
-              </h2>;
-              <p className='text-zion-slate-light text-lg whitespace-pre-line'>;
-                {whyWork}
-              </p>;
-            </div>;
-            <div className='rounded-lg overflow-hidden relative w-full h-full'>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
-
-          
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
@@ -401,29 +401,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               />
             </div>
           </div>
-<<<<<<< HEAD
-
-          <div className='mb-24'>
-            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-              Our Benefits
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;
-                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit && benefit.icon}
-                  </div>;
-                  <h3 className='text-xl font-bold text-white mb-3'>;
-                    {benefit && benefit.title}
-                  </h3>;
-                  <p className='text-zion-slate-light'>{benefit && benefit.description}</p>;
-                </div>;
-
-
           
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -431,30 +409,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
               ))}
-<<<<<<< HEAD
-
-
-                          <Button
-                            asChild
-                            className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                          >
-                            <Link href={`/careers/${job.id}`}>View Details</Link>
-=======
             </div>
           </div>
+          
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
+            
             <Tabs defaultValue="engineering" className="w-full">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">
                 <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>
@@ -462,6 +427,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
               </TabsList>
+              
               {Object.entries(jobs).map(([department, jobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">
                   {jobList.map((job, index) => (
@@ -479,57 +445,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                           </div>
                           <Button className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                             Apply Now
->>>>>>> origin/cursor/delete-old-data-records-6bba
                           </Button>
                         </div>
                       </CardContent>
                     </Card>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   ))}
                 </TabsContent>
               ))}
             </Tabs>
           </div>
-<<<<<<< HEAD
-
-          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
-            <h2 className='text-3xl font-bold text-white mb-6'>
-              Don't see the right position?
-            </h2>
-            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-              We're always looking for talented individuals who are passionate
-              about AI and technology. Send us your resume and let's start a
-              conversation. You can also apply directly by emailing us at
-
-
           
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about AI and technology.
-              Send us your resume and let's start a conversation. You can also
-              apply directly by emailing us at
-
-
-              <a
-                href={`mailto:${applyEmail}`}
-                className="text-zion-cyan hover:text-zion-purple transition-colors"
-              >
-                {applyEmail}
-
-              </Link>
-
-              .
-            </p>
-            <Button
-              asChild
-
-
-=======
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -545,4 +470,3 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>
   );
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

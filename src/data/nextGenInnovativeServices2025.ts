@@ -28,6 +28,7 @@ export interface NextGenInnovativeService2025 {
   launchDate: string;
   betaAccess: boolean;
 }
+
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] = [
   // Quantum AI Orchestration Platform
   {
@@ -87,6 +88,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     launchDate: "Q1 2025",
     betaAccess: true
   },
+
   // Autonomous AI Business Operations Suite
   {
     id: "autonomous-ai-business-operations-suite",
@@ -145,6 +147,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     launchDate: "Q2 2025",
     betaAccess: true
   },
+
   // Neural Interface Development Platform
   {
     id: "neural-interface-development-platform",
@@ -203,6 +206,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     launchDate: "Q3 2025",
     betaAccess: false
   },
+
   // Holographic Collaboration Workspace
   {
     id: "holographic-collaboration-workspace",
@@ -261,6 +265,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     launchDate: "Q2 2025",
     betaAccess: true
   },
+
   // AI-Powered Cybersecurity Mesh
   {
     id: "ai-powered-cybersecurity-mesh",
@@ -319,6 +324,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     launchDate: "Q1 2025",
     betaAccess: true
   },
+
   // Sustainable Tech Innovation Hub
   {
     id: "sustainable-tech-innovation-hub",
@@ -382,6 +388,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface NextGenService {
   id: number;
   name: string;
@@ -404,6 +411,7 @@ export interface NextGenService {
   supportLevel: string;
   innovationScore: number;
 }
+
 // Next-Generation Innovative Services for 2025
 export const nextGenInnovativeServices2025: NextGenService[] = [
   {
@@ -921,7 +929,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     estimatedDelivery: "18-24 weeks",
     supportLevel: "enterprise",
     innovationScore: 9.2
-=======
   }
 ];
+
 export default nextGenInnovativeServices2025;

@@ -1,26 +1,77 @@
-import React from 'react';
-const FuturisticAnimatedBackground2029: React.FC = () => {
+import React, { useEffect, useRef } from 'react';
+
+interface FuturisticAnimatedBackground2029Props {
+  className?: string;
+}
+
+export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Set canvas size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Simple particle animation
+    let particles: Array<{x: number, y: number, vx: number, vy: number, size: number, life: number}> = [];
+    
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        life: Math.random() * 100 + 50
+      });
+    }
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      particles.forEach(particle => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        particle.life--;
+        
+        if (particle.life <= 0) {
+          particle.life = Math.random() * 100 + 50;
+          particle.x = Math.random() * canvas.width;
+          particle.y = Math.random() * canvas.height;
+        }
+        
+        ctx.fillStyle = `rgba(100, 150, 255, ${particle.life / 100})`;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    };
+  }, []);
+
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black opacity-50" />
-  );
-};
-export default FuturisticAnimatedBackground2029;
-=======
-    <div className={`fixed inset-0 pointer-events-none ${className}`}>
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
-        }}
-      />
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
-      {/* Animated orbs */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-    </div>
+    <canvas
+      ref={canvasRef}
+      className={`fixed inset-0 pointer-events-none ${className}`}
+      style={{ zIndex: -1 }}
+    />
   );
 }

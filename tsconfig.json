@@ -1,115 +1,66 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2020"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "esModuleInterop": true,
     "moduleResolution": "node",
+    "jsx": "preserve",
+    "strict": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
+    },
+    "typeRoots": ["./src/types"],
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noEmit": true,
     "jsx": "preserve",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-<<<<<<< HEAD
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/utils/*": ["./lib/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/assets/*": ["./assets/*"],
-      "@/public/*": ["./public/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-=======
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/assets/*": [
-        "./src/assets/*"
-      ],
-      "@/app/*": [
-        "./app/*"
-      ],
-      "@/public/*": [
-        "./public/*"
-      ]
-    },
-    "strictNullChecks": true
+    ]
   },
   "include": [
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "apps/**",
-    "apps.backup/**",
-    "api-backup/**",
-    "backup/**",
-    "backup-merge-conflicts/**",
-    "backup-problematic-files/**",
-    "broken_files_backup/**",
-    "corrupted_backup/**",
-    "_conflicted_disabled/**",
-    "components-disabled/**",
-    "components.disabled/**",
-    "components.disabled_full/**",
-    "api-disabled/**",
-    "api.disabled/**",
-    "api.disabled.temp/**",
-    "src_backup/**",
-    "utils/**",
-    "vite.config-backup.ts",
-    "browserstack.config.ts",
-    "cypress.config.ts",
-    "jest.config.*",
-    "*.config.ts",
-    "types/**",
-    "netlify/**",
-    "components/**",
-    "src/**"
+    "src",
+    "pages",
+    "components",
+    "types"
   ]
 }

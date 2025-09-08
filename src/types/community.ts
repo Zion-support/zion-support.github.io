@@ -14,6 +14,7 @@ export interface ForumPost {
   isPinned: boolean;
   isLocked: boolean;
 }
+
 export interface ForumReply {
   id: string;
   content: string;
@@ -25,6 +26,7 @@ export interface ForumReply {
   likes: number;
   parentId?: string;
 }
+
 export interface ForumCategoryInfo {
   id: string;
   name: string;
@@ -37,6 +39,7 @@ export interface ForumCategoryInfo {
     date: string;
   };
 }
+
 export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
   {
     id: 'general',
@@ -87,4 +90,3 @@ export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
     },
   },
 ];
-=======

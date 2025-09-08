@@ -1,27 +1,8 @@
 {
-<<<<<<< HEAD
-
-
-
-=======
-  "generatedAt": "2025-08-26T13:57:08.259Z",
-  "generatedAt": "2025-08-26T12:40:09.094Z",
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  "generatedAt": "2025-08-26T17:37:08.685Z",
   "functions": [],
   "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
-}
-
-  "generatedAt": "2025-08-26T22:07:00.945Z",
-  "functions": []
-}
-
-<<<<<<< HEAD
-  "functions": [],
-  "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
-}
-  "generatedAt": "2025-08-26T22:07:00.945Z",
-  "functions": []
-}
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+  "generatedAt": "2025-08-26T13:43:43.123Z",
+  "functions": []
+}

@@ -1,18 +1,57 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
+import Header from './components/Header';
 import { Footer } from './components/Footer';
-import { ChatAssistant } from './components/ChatAssistant';
-import { SidebarProvider } from './context/SidebarContext';
+import Sidebar from './components/Sidebar';
+import { AccessibilityControls } from './components/AccessibilityControls';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+import { AIChatbot } from './components/AIChatbot';
+import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
+import { AICodeGenerator } from './components/AICodeGenerator';
+import { EnterpriseDashboard } from './components/EnterpriseDashboard';
+import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
+import { MachineLearningDashboard } from './components/MachineLearningDashboard';
 
-// Lazy load essential pages
+import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ScrollToTop } from './components/ScrollToTop';
+import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
+import { BrokenLinkFixer } from './components/BrokenLinkFixer';
+import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
+
+// Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+const Contact = React.lazy(() => import('./pages/EnhancedContact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
-const Team = React.lazy(() => import('./pages/Team'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Signup = React.lazy(() => import('./pages/Signup'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const Resources = React.lazy(() => import('./pages/Resources'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const MicroSAAS = React.lazy(() => import('./pages/services/MicroSAAS'));
+const ServicesPricingPage = React.lazy(() => import('./pages/services/ServicesPricingPage'));
+const MicroSaasServices = React.lazy(() => import('./pages/services/MicroSaasServices'));
 
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
@@ -25,46 +64,40 @@ const LoadingFallback = () => (
   </div>
 );
 
-const Partners = React.lazy(() => import('./pages/Partners'));
-
-// New innovative services showcase 2027
-const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027'));
-
-// New comprehensive pricing 2027
-const ComprehensivePricing2027 = lazy(() => import('./pages/ComprehensivePricing2027'));
+const App: React.FC = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  useScrollToTop();
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
     <Router>
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         <AppHeader />
+        
         <main className="flex-1">
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
-              {/* Main Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/signup" element={<Signup />} />
-              
-              {/* Catch-all route for 404 */}
-              <Route path="*" element={
-                <div className="min-h-screen flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold text-zion-cyan mb-4">404</h1>
-                    <p className="text-xl text-muted-foreground mb-8">Page not found</p>
-                    <a href="/" className="text-zion-cyan hover:underline">Go back home</a>
-                  </div>
-                </div>
-              } />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/micro-saas" element={<MicroSAAS />} />
+              <Route path="/services/pricing" element={<ServicesPricingPage />} />
+              <Route path="/services/micro-saas-services" element={<MicroSaasServices />} />
             </Routes>
           </Suspense>
         </main>
+        
         <Footer />
         <ChatAssistant />
       </div>

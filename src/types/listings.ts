@@ -38,12 +38,12 @@ export interface Listing {
     cost: number;
   };
 }
+
 export interface ListingFilter {
   category?: string;
   priceRange?: {
     min: number;
     max: number;
-=======
   };
   location?: string;
   condition?: string;
@@ -52,6 +52,7 @@ export interface ListingFilter {
   sortBy?: 'price' | 'date' | 'rating' | 'views';
   sortOrder?: 'asc' | 'desc';
 }
+
 export interface ListingSearchResult {
   listings: Listing[];
   total: number;
@@ -59,6 +60,7 @@ export interface ListingSearchResult {
   limit: number;
   hasMore: boolean;
 }
+
 export interface ListingFormData {
   title: string;
   description: string;
@@ -81,6 +83,7 @@ export interface ListingFormData {
     cost: number;
   };
 }
+
 export interface ListingStats {
   totalListings: number;
   activeListings: number;
@@ -88,7 +91,6 @@ export interface ListingStats {
   totalFavorites: number;
   averagePrice: number;
   categoryDistribution: Record<string, number>;
-=======
   availability?: string;
   aiScore?: number;
   pricingTier?: string;

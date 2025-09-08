@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { supabaseStorageAdapter } from './safeStorageAdapter';
 // Mock Supabase client for development
 // In production, this would be the actual Supabase client
-=======
+
 interface SupabaseClient {
   auth: {
     signUp: (credentials: any) => Promise<any>;
@@ -16,6 +16,7 @@ interface SupabaseClient {
     from: (bucket: string) => any;
   };
 }
+
 // Mock implementation
 const createMockSupabaseClient = (): SupabaseClient => ({
   auth: {
@@ -67,4 +68,5 @@ const createMockSupabaseClient = (): SupabaseClient => ({
     }),
   },
 });
+
 export const supabase = createMockSupabaseClient();

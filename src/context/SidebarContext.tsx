@@ -1,22 +1,22 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface SidebarContextType {
-  sidebarOpen: boolean;
-  setSidebarOpen: (open: boolean) => void;
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: (open: boolean) => void;
   toggleSidebar: () => void;
 }
 
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export function SidebarProvider({ children }: { children: ReactNode }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
-    <SidebarContext.Provider value={{ sidebarOpen, setSidebarOpen, toggleSidebar }}>
+    <SidebarContext.Provider value={{ isSidebarOpen, setIsSidebarOpen, toggleSidebar }}>
       {children}
     </SidebarContext.Provider>
   );

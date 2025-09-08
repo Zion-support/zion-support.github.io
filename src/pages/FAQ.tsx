@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { HelpCircle, Users, ShoppingCart, Shield, Zap, Globe } from "lucide-react";
+
 export default function FAQ() {
   const faqCategories = [
     {
@@ -26,6 +27,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+
 export default function FAQ() {
   const faqData = [
     {
@@ -278,6 +280,7 @@ export default function FAQ() {
       ]
     }
   ];
+
   const contactMethods = [
     {
       title: "Email Support",
@@ -292,6 +295,7 @@ export default function FAQ() {
       icon: Users
     }
   ];
+
   return (
     <>
       <SEO 
@@ -303,11 +307,13 @@ export default function FAQ() {
       <Header />
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+
 interface FAQItem {
   question: string;
   answer: string;
   category: string;
 }
+
 const faqData: FAQItem[] = [
   {
     question: "What is Zion Tech Group?",
@@ -370,13 +376,16 @@ const faqData: FAQItem[] = [
     category: "General"
   }
 ];
+
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
   const filteredFAQ = selectedCategory === 'All' 
     ? faqData 
     : faqData.filter(item => item.category === selectedCategory);
+
   const toggleItem = (index: number) => {
     const newOpenItems = new Set(openItems);
     if (newOpenItems.has(index)) {
@@ -386,6 +395,7 @@ export default function FAQ() {
     }
     setOpenItems(newOpenItems);
   };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -394,6 +404,7 @@ export default function FAQ() {
         keywords="FAQ, frequently asked questions, Zion Tech Group, AI marketplace, support"
         canonical="https://ziontechgroup.com/faq"
       />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -405,6 +416,7 @@ export default function FAQ() {
           </p>
         </div>
       </section>
+
       {/* FAQ Content */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -424,6 +436,7 @@ export default function FAQ() {
               </button>
             ))}
           </div>
+
           {/* FAQ Items */}
           <div className="max-w-4xl mx-auto space-y-4">
             {filteredFAQ.map((item, index) => (
@@ -442,6 +455,7 @@ export default function FAQ() {
                     <ChevronDown className="w-5 h-5 text-zion-cyan" />
                   )}
                 </button>
+                
                 {openItems.has(index) && (
                   <div className="px-6 pb-4">
                     <p className="text-zion-slate-light leading-relaxed">{item.answer}</p>
@@ -450,6 +464,7 @@ export default function FAQ() {
               </div>
             ))}
           </div>
+
           {/* Contact CTA */}
           <div className="text-center mt-16">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -464,7 +479,9 @@ export default function FAQ() {
         keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
         canonical="https://ziontechgroup.com/faq"
       />
+      
       <AppHeader />
+      
       <main className="pt-16 pb-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
@@ -475,6 +492,7 @@ export default function FAQ() {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Find answers to common questions about Zion Tech Group's AI and tech marketplace platform
             </p>
+            
             {/* Search Bar */}
             <div className="mt-8 max-w-md mx-auto">
               <div className="relative">
@@ -488,6 +506,7 @@ export default function FAQ() {
             </div>
           </div>
         </section>
+
         {/* FAQ Content */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -525,6 +544,7 @@ export default function FAQ() {
             </div>
           </div>
         </section>
+
         {/* Contact Support Section */}
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 text-center">
@@ -569,6 +589,7 @@ export default function FAQ() {
               Find answers to the most common questions about Zion Tech Group and our marketplace platform
             </p>
           </div>
+          
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               {faqData.map((item, index) => (
@@ -585,6 +606,7 @@ export default function FAQ() {
               ))}
             </Accordion>
           </div>
+          
           <div className="mt-16 text-center">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
@@ -607,6 +629,7 @@ export default function FAQ() {
               Find answers to common questions about Zion's platform, services, and how to get started
             </p>
           </div>
+
           {/* FAQ Categories */}
           <div className="space-y-12 mb-16">
             {faqCategories.map((category, categoryIndex) => (
@@ -634,12 +657,14 @@ export default function FAQ() {
               </Card>
             ))}
           </div>
+
           {/* Contact Section */}
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Still Need Help?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our support team is here to help you get the most out of Zion.
             </p>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
               {contactMethods.map((method, index) => (
                 <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
@@ -663,6 +688,7 @@ export default function FAQ() {
                 </Card>
               ))}
             </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 <Link to="/contact">Contact Support</Link>
@@ -672,6 +698,7 @@ export default function FAQ() {
               </Button>
             </div>
           </div>
+
           {/* Quick Links */}
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Navigation</h3>
@@ -713,6 +740,7 @@ export default function FAQ() {
           </div>
         </section>
       </main>
+      
       <Footer />
     </div>
   );
@@ -724,6 +752,7 @@ export default function FAQ() {
         keywords="FAQ, Zion Tech Group, AI marketplace, tech services, support"
         canonical="https://ziontechgroup.com/faq"
       />
+
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">
@@ -733,6 +762,7 @@ export default function FAQ() {
             Get answers to common questions about Zion Tech Group's AI and tech marketplace platform
           </p>
         </div>
+
         <div className="max-w-4xl mx-auto">
           <Card className="bg-zion-blue-dark border-zion-purple/20">
             <CardHeader>
@@ -756,6 +786,7 @@ export default function FAQ() {
               </Accordion>
             </CardContent>
           </Card>
+
           <div className="mt-12 text-center">
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardContent className="pt-6">

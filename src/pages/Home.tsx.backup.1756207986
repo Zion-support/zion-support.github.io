@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -11,6 +12,7 @@ import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background relative">
@@ -20,11 +22,28 @@ export default function Home() {
         keywords="AI, technology, marketplace, services, talent"
         canonical="https://ziontechgroup.com/"
       />
+
       {/* Animated Background */}
       <AnimatedBackground variant="particles" />
       <FloatingParticles count={30} />
+
       <ITServiceRequestHero />
+
       <HeroSection />
+      
+<<<<<<< HEAD
+      <QuickAccess />
+      
+      <FeatureCTAs />
+      
+      <FeatureHighlights />
+      
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <NewsletterSection />
+=======
       {/* Service Categories Overview */}
       <motion.section 
         className="py-20 bg-white/5 backdrop-blur-sm"
@@ -42,6 +61,7 @@ export default function Home() {
               Explore our comprehensive range of technology solutions designed to transform your business
             </p>
           </motion.div>
+          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -80,8 +100,10 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+
       {/* Interactive Service Showcase */}
       <InteractiveServiceShowcase />
+
       {/* Featured Services */}
       <motion.section 
         className="py-20"
@@ -99,6 +121,7 @@ export default function Home() {
               Discover our most innovative and in-demand technology solutions
             </p>
           </motion.div>
+          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -119,6 +142,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+
       {/* Testimonials Section */}
       <motion.section 
         className="py-20 bg-white/5 backdrop-blur-sm"
@@ -136,6 +160,7 @@ export default function Home() {
               Real feedback from businesses that have transformed with our technology solutions
             </p>
           </motion.div>
+          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -168,6 +193,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+
       {/* Stats Section */}
       <motion.section 
         className="py-20"
@@ -185,6 +211,7 @@ export default function Home() {
               Our track record speaks for itself - we deliver results that exceed expectations
             </p>
           </motion.div>
+          
           <motion.div 
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={containerVariants}
@@ -210,6 +237,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+
       {/* CTA Section */}
       <motion.section 
         className="py-20"
@@ -280,6 +308,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0230
     </div>
   );
 }

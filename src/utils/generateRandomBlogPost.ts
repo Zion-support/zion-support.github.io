@@ -1,4 +1,5 @@
 import { BlogPost } from '@/types/blog';
+
 export function generateRandomBlogPost(): BlogPost {
   const titles = [
     'The Future of AI in Technology',
@@ -7,15 +8,18 @@ export function generateRandomBlogPost(): BlogPost {
     'Cloud Computing Trends',
     'Cybersecurity in 2024'
   ];
+
   const authors = [
     { name: 'Sarah Johnson', avatar: '/avatars/sarah.jpg', avatarUrl: '/avatars/sarah.jpg', bio: 'AI Research Lead' },
     { name: 'Michael Chen', avatar: '/avatars/michael.jpg', avatarUrl: '/avatars/michael.jpg', bio: 'Senior Software Engineer' },
     { name: 'Emily Rodriguez', avatar: '/avatars/emily.jpg', avatarUrl: '/avatars/emily.jpg', bio: 'Data Scientist' },
     { name: 'David Kim', avatar: '/avatars/david.jpg', avatarUrl: '/avatars/david.jpg', bio: 'DevOps Engineer' }
   ];
+
   const randomTitle = titles[Math.floor(Math.random() * titles.length)];
   const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
   const randomId = Math.random().toString(36).substr(2, 9);
+
   return {
     id: randomId,
     title: randomTitle,
@@ -32,6 +36,7 @@ export function generateRandomBlogPost(): BlogPost {
   };
 }
 import { BlogPost } from '../types/blog';
+
 const topics = [
   'Artificial Intelligence',
   'Machine Learning',
@@ -44,6 +49,7 @@ const topics = [
   'DevOps',
   'Software Development'
 ];
+
 const adjectives = [
   'Revolutionary',
   'Innovative',
@@ -56,6 +62,7 @@ const adjectives = [
   'Intelligent',
   'Automated'
 ];
+
 const nouns = [
   'Solutions',
   'Technologies',
@@ -68,6 +75,7 @@ const nouns = [
   'Tools',
   'Services'
 ];
+
 const contentSnippets = [
   'In today\'s rapidly evolving technological landscape, businesses are constantly seeking innovative solutions to stay ahead of the competition.',
   'The integration of artificial intelligence and machine learning has transformed how organizations approach complex problem-solving.',
@@ -80,12 +88,15 @@ const contentSnippets = [
   'DevOps practices streamline development and operations, enabling faster delivery of high-quality software.',
   'Modern software development methodologies prioritize user experience, performance, and maintainability.'
 ];
+
 export function generateRandomBlogPost(): BlogPost {
   const topic = topics[Math.floor(Math.random() * topics.length)];
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
   const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)];
+  
   const title = `${adjective} ${noun} for ${topic}`;
+  
   return {
     id: Math.random().toString(36).substr(2, 9),
     title,
@@ -101,6 +112,7 @@ export function generateRandomBlogPost(): BlogPost {
     readTime: Math.floor(Math.random() * 10) + 5,
   };
 }
+
 export function generateMultipleBlogPosts(count: number): BlogPost[] {
   const posts: BlogPost[] = [];
   for (let i = 0; i < count; i++) {
@@ -108,4 +120,3 @@ export function generateMultipleBlogPosts(count: number): BlogPost[] {
   }
   return posts;
 }
-=======

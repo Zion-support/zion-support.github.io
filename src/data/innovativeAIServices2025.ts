@@ -1,565 +1,677 @@
-// Innovative AI Services 2025 - Zion Tech Group
-// Cutting-edge AI solutions with real business value and competitive pricing
-
-export interface AIService {
+export interface InnovativeAIService {
   id: string;
-  name: string;
-  category: string;
+  title: string;
   description: string;
-  shortDescription: string;
-  pricing: {
-    starter: {
-      price: number;
-      period: string;
-      features: string[];
-      apiCalls: string;
-      support: string;
-    };
-    professional: {
-      price: number;
-      period: string;
-      features: string[];
-      apiCalls: string;
-      support: string;
-    };
-    enterprise: {
-      price: number;
-      period: string;
-      features: string[];
-      apiCalls: string;
-      support: string;
-    };
-  };
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
-  targetAudience: string[];
   useCases: string[];
-  integrations: string[];
-  apiAccess: boolean;
-  customDevelopment: boolean;
-  trainingIncluded: boolean;
-  freeTrial: boolean;
-  moneyBackGuarantee: boolean;
-  sla: string;
-  responseTime: string;
-  availability: string;
-  compliance: string[];
-  security: string[];
-  deployment: string[];
-  support: string[];
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
+  targetAudience: string[];
   tags: string[];
-  image: string;
-  demoUrl: string;
-  documentationUrl: string;
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  roi: string;
+  innovationLevel: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string;
   };
-  createdAt: string;
-  featured: boolean;
-  trending: boolean;
-  rating: number;
-  reviewCount: number;
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
 }
 
-export const innovativeAIServices: AIService[] = [
+export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
+  // Advanced AI Solutions
   {
-    id: "ai-autonomous-research-assistant",
-    name: "AI Autonomous Research Assistant",
-    category: "Research & Development",
-    description: "Revolutionary AI platform that conducts independent research, analyzes vast amounts of data, identifies patterns, and generates comprehensive research reports. Features include autonomous literature review, trend analysis, and knowledge discovery across multiple domains.",
-    shortDescription: "AI-powered autonomous research and knowledge discovery platform",
-    pricing: {
-      starter: {
-        price: 99,
-        period: "month",
-        features: ["Basic research automation", "Literature review", "Basic reporting", "Email support", "Up to 100 research queries/month"],
-        apiCalls: "1,000/month",
-        support: "Email support"
-      },
-      professional: {
-        price: 249,
-        period: "month",
-        features: ["All starter features", "Advanced AI models", "Custom research domains", "Priority support", "Up to 500 research queries/month"],
-        apiCalls: "5,000/month",
-        support: "Priority support"
-      },
-      enterprise: {
-        price: 599,
-        period: "month",
-        features: ["All professional features", "Custom AI training", "Advanced integrations", "Dedicated support", "Unlimited research queries", "White-label options"],
-        apiCalls: "Unlimited",
-        support: "Dedicated support"
-      }
-    },
+    id: "autonomous-business-intelligence-platform",
+    title: "Autonomous Business Intelligence Platform",
+    description: "Next-generation AI-powered business intelligence platform that autonomously analyzes data, generates insights, and makes strategic recommendations without human intervention.",
+    category: "AI & Analytics",
+    subcategory: "Business Intelligence",
+    price: 7999,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      "Autonomous literature review",
-      "Multi-domain knowledge discovery",
-      "Pattern recognition and analysis",
-      "Automated research synthesis",
-      "Citation and reference management",
-      "Research gap identification",
-      "Trend analysis and forecasting",
-      "Custom research domains",
-      "API for integrations",
-      "Advanced analytics dashboard"
-    ],
-    benefits: [
-      "Accelerate research by 10x",
-      "Reduce research time by 80%",
-      "Discover hidden insights and patterns",
-      "Stay ahead of industry trends",
-      "Improve research quality and accuracy",
-      "Enable data-driven decision making"
-    ],
-    targetAudience: [
-      "Research institutions",
-      "Universities and colleges",
-      "Pharmaceutical companies",
-      "Technology companies",
-      "Consulting firms",
-      "Government agencies"
-    ],
-    useCases: [
-      "Academic research",
-      "Market research",
-      "Competitive intelligence",
-      "Patent research",
-      "Scientific discovery",
-      "Trend analysis"
-    ],
-    integrations: [
-      "PubMed",
-      "arXiv",
-      "IEEE",
-      "ACM",
-      "Google Scholar",
-      "ResearchGate",
-      "JSTOR",
-      "Custom databases"
-    ],
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,
-    sla: "99.9% uptime guarantee",
-    responseTime: "< 1 hour for support",
-    availability: "24/7 cloud-based access",
-    compliance: ["GDPR", "CCPA", "SOC 2", "HIPAA", "FERPA"],
-    security: [
-      "End-to-end encryption",
-      "Advanced access controls",
-      "Regular security audits",
-      "Data backup and recovery",
-      "Compliance monitoring"
-    ],
-    deployment: ["Cloud-based SaaS", "On-premise options", "Hybrid deployment"],
-    support: [
-      "24/7 email support",
-      "Live chat during business hours",
-      "Video tutorials",
-      "Knowledge base",
-      "Implementation assistance"
-    ],
-    marketPrice: "$99-599/month",
-    competitors: ["Semantic Scholar", "ResearchGate", "Google Scholar", "IBM Watson"],
-    roi: "400% ROI within 6 months",
-    setupTime: "1-2 days",
-    innovationLevel: "Revolutionary AI technology",
-    marketSize: "$45.2 billion AI research market",
-    growthRate: "28% annual growth",
-    tags: ["AI research", "knowledge discovery", "automation", "analytics", "innovation"],
-    image: "/images/services/ai-autonomous-research-assistant.jpg",
-    demoUrl: "https://ziontechgroup.com/demo/ai-autonomous-research-assistant",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-autonomous-research-assistant",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    createdAt: "2025-01-15",
-    featured: true,
-    trending: true,
-    rating: 4.9,
-    reviewCount: 234
-  },
-  {
-    id: "ai-business-intelligence-platform",
-    name: "AI Business Intelligence Platform",
-    category: "Business Intelligence",
-    description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights. Features include predictive analytics, automated reporting, KPI tracking, and intelligent dashboards that adapt to business needs.",
-    shortDescription: "AI-powered business intelligence and predictive analytics platform",
-    pricing: {
-      starter: {
-        price: 79,
-        period: "month",
-        features: ["Basic BI dashboards", "Data visualization", "Basic reporting", "Email support", "Up to 5 data sources"],
-        apiCalls: "2,000/month",
-        support: "Email support"
-      },
-      professional: {
-        price: 199,
-        period: "month",
-        features: ["All starter features", "Advanced AI analytics", "Predictive modeling", "Priority support", "Up to 20 data sources"],
-        apiCalls: "10,000/month",
-        support: "Priority support"
-      },
-      enterprise: {
-        price: 499,
-        period: "month",
-        features: ["All professional features", "Custom AI models", "Advanced integrations", "Dedicated support", "Unlimited data sources", "White-label options"],
-        apiCalls: "Unlimited",
-        support: "Dedicated support"
-      }
-    },
-    features: [
-      "AI-powered data analysis",
-      "Predictive analytics and modeling",
-      "Automated insights generation",
-      "Custom KPI dashboards",
-      "Real-time data monitoring",
-      "Advanced data visualization",
-      "Natural language queries",
+      "Autonomous data analysis",
+      "Self-learning algorithms",
+      "Predictive modeling",
+      "Natural language generation",
       "Automated reporting",
-      "Data storytelling",
-      "API for integrations"
+      "Real-time insights",
+      "Multi-source integration",
+      "Advanced visualization",
+      "Mobile optimization",
+      "API access"
     ],
     benefits: [
-      "Transform data into actionable insights",
-      "Improve decision making by 60%",
-      "Identify growth opportunities",
-      "Reduce time spent on reporting by 70%",
-      "Predict future trends and outcomes",
-      "Enable data-driven culture"
-    ],
-    targetAudience: [
-      "Small to medium businesses",
-      "Enterprise companies",
-      "Data analysts",
-      "Business consultants",
-      "Marketing teams",
-      "Sales teams"
+      "100% automated insights",
+      "Reduce analysis time by 95%",
+      "Improve decision accuracy by 80%",
+      "24/7 business monitoring",
+      "Scalable intelligence"
     ],
     useCases: [
-      "Performance analytics",
-      "Market analysis",
-      "Customer insights",
-      "Financial forecasting",
+      "Financial analysis",
+      "Market research",
       "Operational optimization",
+      "Risk assessment",
       "Strategic planning"
     ],
-    integrations: [
-      "Salesforce",
-      "HubSpot",
-      "QuickBooks",
-      "Google Analytics",
-      "Shopify",
-      "Excel",
-      "SQL databases",
-      "Cloud storage"
+    targetAudience: [
+      "Business Analysts",
+      "Data Scientists",
+      "Executives",
+      "Strategy Teams",
+      "Operations Managers"
     ],
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,
-    sla: "99.5% uptime guarantee",
-    responseTime: "< 4 hours for support",
-    availability: "24/7 cloud-based access",
-    compliance: ["GDPR", "CCPA", "SOC 2", "SOX", "ISO 27001"],
-    security: [
-      "Bank-level encryption",
-      "Multi-factor authentication",
-      "Regular security audits",
-      "Data backup and recovery",
-      "Compliance monitoring"
-    ],
-    deployment: ["Cloud-based SaaS", "On-premise options", "Hybrid deployment"],
-    support: [
-      "Email and phone support",
-      "Video tutorials",
-      "Knowledge base",
-      "Implementation assistance",
-      "Regular check-ins"
-    ],
-    marketPrice: "$79-499/month",
-    competitors: ["Tableau", "Power BI", "Qlik", "Domo", "Looker"],
-    roi: "300% ROI within 5 months",
-    setupTime: "3-5 days",
-    innovationLevel: "Advanced AI analytics",
-    marketSize: "$29.8 billion business intelligence market",
-    growthRate: "20% annual growth",
-    tags: ["business intelligence", "AI analytics", "predictive modeling", "data visualization", "insights"],
-    image: "/images/services/ai-business-intelligence-platform.jpg",
-    demoUrl: "https://ziontechgroup.com/demo/ai-business-intelligence-platform",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-business-intelligence-platform",
+    tags: ["AI", "Business Intelligence", "Automation", "Predictive Analytics", "Machine Learning"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$7,999 - $24,999/month",
+    roi: "300-500%",
+    innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    createdAt: "2025-01-20",
-    featured: true,
-    trending: true,
-    rating: 4.8,
-    reviewCount: 167
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "GPT-4", "React", "FastAPI"],
+      integrations: ["Salesforce", "SAP", "Oracle", "Microsoft 365", "Google Workspace"],
+      apiEndpoints: 500,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Tableau", "Power BI", "Looker", "Qlik", "ThoughtSpot"],
+    marketSize: "$29.9 billion by 2025"
   },
+
   {
-    id: "ai-financial-trading-platform",
-    name: "AI Financial Trading Platform",
-    category: "Financial Technology",
-    description: "Intelligent financial trading platform that uses AI to analyze market data, identify trading opportunities, and execute trades automatically. Features include risk management, portfolio optimization, and real-time market analysis.",
-    shortDescription: "AI-powered automated trading and portfolio management platform",
-    pricing: {
-      starter: {
-        price: 149,
-        period: "month",
-        features: ["Basic AI trading signals", "Portfolio tracking", "Risk management", "Email support", "Up to $50K portfolio"],
-        apiCalls: "5,000/month",
-        support: "Email support"
-      },
-      professional: {
-        price: 399,
-        period: "month",
-        features: ["All starter features", "Advanced AI models", "Automated trading", "Priority support", "Up to $500K portfolio"],
-        apiCalls: "25,000/month",
-        support: "Priority support"
-      },
-      enterprise: {
-        price: 999,
-        period: "month",
-        features: ["All professional features", "Custom AI strategies", "Advanced integrations", "Dedicated support", "Unlimited portfolio", "White-label options"],
-        apiCalls: "Unlimited",
-        support: "Dedicated support"
-      }
-    },
+    id: "consciousness-simulation-platform",
+    title: "Consciousness Simulation Platform",
+    description: "Breakthrough AI platform that simulates and studies consciousness, enabling research in cognitive science, psychology, and artificial general intelligence development.",
+    category: "AI Research",
+    subcategory: "Consciousness Studies",
+    price: 15999,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      "AI-powered market analysis",
-      "Automated trading execution",
-      "Risk management system",
-      "Portfolio optimization",
-      "Real-time market data",
-      "Technical analysis tools",
-      "Backtesting capabilities",
+      "Neural network simulation",
+      "Consciousness modeling",
+      "Cognitive architecture",
+      "Research tools",
+      "Data visualization",
+      "Collaborative workspace",
+      "Experiment tracking",
+      "Publication tools",
+      "API access",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Advance AGI research",
+      "Understand consciousness",
+      "Improve AI systems",
+      "Research collaboration",
+      "Scientific breakthroughs"
+    ],
+    useCases: [
+      "Cognitive science research",
+      "Psychology studies",
+      "AGI development",
+      "Neuroscience research",
+      "Philosophy research"
+    ],
+    targetAudience: [
+      "Research Institutions",
+      "Universities",
+      "AI Research Labs",
+      "Neuroscientists",
+      "Psychologists"
+    ],
+    tags: ["AI Research", "Consciousness", "Cognitive Science", "AGI", "Neuroscience"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$15,999 - $49,999/month",
+    roi: "100-200%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "PyTorch", "React", "FastAPI"],
+      integrations: ["Research platforms", "Academic databases", "Publication systems", "Collaboration tools"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Research ethics", "Data protection"]
+    },
+    competitors: ["OpenAI", "DeepMind", "Anthropic", "Anthropic", "Research institutions"],
+    marketSize: "$1.2 billion by 2025"
+  },
+
+  {
+    id: "quantum-neural-network-platform",
+    title: "Quantum Neural Network Platform",
+    description: "Revolutionary platform that combines quantum computing with neural networks to create hybrid AI systems with unprecedented computational power and learning capabilities.",
+    category: "Quantum AI",
+    subcategory: "Neural Networks",
+    price: 19999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum neural processing",
+      "Hybrid classical-quantum",
+      "Advanced training algorithms",
+      "Quantum advantage",
+      "Research collaboration",
+      "Performance optimization",
+      "Multi-qubit support",
+      "Quantum error correction",
+      "API access",
+      "Analytics platform"
+    ],
+    benefits: [
+      "1000x faster processing",
+      "Solve complex problems",
+      "Quantum advantage",
+      "Research leadership",
+      "Future-proof technology"
+    ],
+    useCases: [
+      "Drug discovery",
+      "Financial modeling",
+      "Climate modeling",
+      "Cryptography",
+      "Optimization problems"
+    ],
+    targetAudience: [
+      "Research Institutions",
+      "Pharmaceutical Companies",
+      "Financial Services",
+      "Technology Companies",
+      "Government Agencies"
+    ],
+    tags: ["Quantum Computing", "AI", "Neural Networks", "Machine Learning", "Research"],
+    estimatedDelivery: "16-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$19,999 - $99,999/month",
+    roi: "150-300%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Qiskit", "Cirq", "PennyLane", "Python", "C++"],
+      integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "AWS Braket"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Quantum-resistant encryption"]
+    },
+    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "D-Wave", "Rigetti"],
+    marketSize: "$1.9 billion by 2025"
+  },
+
+  {
+    id: "ai-autonomous-vehicle-platform",
+    title: "AI Autonomous Vehicle Platform",
+    description: "Complete autonomous vehicle management system with AI-driven navigation, safety monitoring, fleet optimization, and regulatory compliance for commercial and personal vehicles.",
+    category: "Autonomous Systems",
+    subcategory: "Vehicle Automation",
+    price: 12999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Autonomous navigation",
+      "Safety monitoring",
+      "Fleet management",
+      "Predictive maintenance",
+      "Regulatory compliance",
+      "Real-time tracking",
+      "Route optimization",
+      "Driver assistance",
+      "Mobile app",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Reduce accidents by 90%",
+      "Lower fuel costs by 30%",
+      "Improve efficiency by 40%",
+      "24/7 operation",
+      "Enhanced safety"
+    ],
+    useCases: [
+      "Commercial fleets",
+      "Ride-sharing services",
+      "Logistics companies",
+      "Public transportation",
+      "Personal vehicles"
+    ],
+    targetAudience: [
+      "Fleet Managers",
+      "Transportation Companies",
+      "Automotive Manufacturers",
+      "Logistics Providers",
+      "Government Agencies"
+    ],
+    tags: ["Autonomous Vehicles", "AI", "Fleet Management", "Safety", "Transportation"],
+    estimatedDelivery: "12-18 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$12,999 - $39,999/month",
+    roi: "200-400%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "Computer Vision", "React", "FastAPI"],
+      integrations: ["Vehicle systems", "GPS", "Traffic data", "Weather services", "Mapping platforms"],
+      apiEndpoints: 600,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "Vehicle safety", "Data protection"]
+    },
+    competitors: ["Waymo", "Tesla", "Cruise", "Argo AI", "Mobileye"],
+    marketSize: "$93.3 billion by 2025"
+  },
+
+  {
+    id: "enterprise-rag-search-platform",
+    title: "Enterprise RAG Search Platform",
+    description: "Private, secure Retrieval-Augmented Generation platform that provides intelligent search and AI-powered insights over enterprise documents, wikis, tickets, and data.",
+    category: "AI & Search",
+    subcategory: "Enterprise Search",
+    price: 8999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Hybrid vector + keyword search",
+      "PII redaction and access control",
+      "Grounding citations",
+      "Plugin integrations",
+      "On-prem or VPC deployment",
+      "Real-time indexing",
+      "Advanced analytics",
+      "Custom models",
+      "API access",
+      "Mobile optimization"
+    ],
+    benefits: [
+      "Improve search accuracy by 80%",
+      "Reduce information retrieval time by 70%",
+      "Enhance data security",
+      "Better decision making",
+      "Scalable search"
+    ],
+    useCases: [
+      "Enterprise search",
+      "Knowledge management",
+      "Customer support",
+      "Research and development",
+      "Compliance monitoring"
+    ],
+    targetAudience: [
+      "Knowledge Managers",
+      "IT Directors",
+      "Research Teams",
+      "Support Teams",
+      "Compliance Officers"
+    ],
+    tags: ["AI", "Enterprise Search", "RAG", "Knowledge Management", "Security"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$8,999 - $24,999/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "Transformers", "Vector databases", "React", "FastAPI"],
+      integrations: ["Confluence", "Google Drive", "SharePoint", "Jira", "Salesforce"],
+      apiEndpoints: 400,
+      uptime: "99.95%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Elasticsearch", "Algolia", "Pinecone", "Weaviate", "Qdrant"],
+    marketSize: "$8.5 billion by 2025"
+  },
+
+  {
+    id: "agentic-copilot-suite",
+    title: "Agentic Copilot Suite (Sales, Support, DevOps)",
+    description: "Task-driven AI agents that execute workflows across CRM, ticketing, CI/CD, and cloud platforms with human-in-the-loop approvals and comprehensive audit trails.",
+    category: "AI Automation",
+    subcategory: "Workflow Automation",
+    price: 12999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Guardrailed tool use",
+      "Human-in-the-loop approvals",
+      "Observability and audit trails",
+      "Multi-platform connectors",
+      "SSO integration",
+      "Custom workflows",
       "Performance analytics",
-      "Custom trading strategies",
-      "API for integrations"
+      "Mobile management",
+      "API access",
+      "Analytics dashboard"
     ],
     benefits: [
-      "Improve trading performance by 25%",
-      "Reduce emotional trading decisions",
-      "24/7 market monitoring",
-      "Better risk management",
-      "Data-driven trading strategies",
-      "Portfolio diversification"
-    ],
-    targetAudience: [
-      "Individual traders",
-      "Investment firms",
-      "Hedge funds",
-      "Financial advisors",
-      "Retail investors",
-      "Institutional investors"
+      "Automate 80% of repetitive tasks",
+      "Improve workflow efficiency by 60%",
+      "Reduce human error by 90%",
+      "Enhanced compliance",
+      "Scalable automation"
     ],
     useCases: [
-      "Stock trading",
-      "Forex trading",
-      "Cryptocurrency trading",
-      "Portfolio management",
-      "Risk assessment",
-      "Market analysis"
+      "Sales automation",
+      "Customer support",
+      "DevOps workflows",
+      "HR processes",
+      "Finance operations"
     ],
-    integrations: [
-      "Interactive Brokers",
-      "TD Ameritrade",
-      "E*TRADE",
-      "Robinhood",
-      "Coinbase",
-      "Binance",
-      "Bloomberg",
-      "Reuters"
+    targetAudience: [
+      "Sales Teams",
+      "Support Teams",
+      "DevOps Engineers",
+      "HR Professionals",
+      "Finance Teams"
     ],
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,
-    sla: "99.9% uptime guarantee",
-    responseTime: "< 2 hours for support",
-    availability: "24/7 cloud-based access",
-    compliance: ["GDPR", "CCPA", "SOC 2", "FINRA", "SEC"],
-    security: [
-      "Bank-level encryption",
-      "Multi-factor authentication",
-      "Regular security audits",
-      "Data backup and recovery",
-      "Compliance monitoring"
-    ],
-    deployment: ["Cloud-based SaaS", "On-premise options"],
-    support: [
-      "24/7 email support",
-      "Live chat during market hours",
-      "Video tutorials",
-      "Knowledge base",
-      "Implementation assistance"
-    ],
-    marketPrice: "$149-999/month",
-    competitors: ["Alpaca", "QuantConnect", "MetaTrader", "TradingView"],
-    roi: "200% ROI within 4 months",
-    setupTime: "1-3 days",
-    innovationLevel: "Advanced AI trading",
-    marketSize: "$12.8 billion algorithmic trading market",
-    growthRate: "22% annual growth",
-    tags: ["AI trading", "financial technology", "automation", "portfolio management", "risk management"],
-    image: "/images/services/ai-financial-trading-platform.jpg",
-    demoUrl: "https://ziontechgroup.com/demo/ai-financial-trading-platform",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-financial-trading-platform",
+    tags: ["AI", "Automation", "Workflows", "Copilots", "Process Optimization"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$12,999 - $39,999/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    createdAt: "2025-01-25",
-    featured: true,
-    trending: true,
-    rating: 4.7,
-    reviewCount: 189
+    technicalSpecs: {
+      technology: ["Python", "LangChain", "React", "FastAPI", "PostgreSQL"],
+      integrations: ["Salesforce", "Zendesk", "GitHub", "AWS", "Azure", "Google Cloud"],
+      apiEndpoints: 800,
+      uptime: "99.95%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Zapier"],
+    marketSize: "$19.6 billion by 2025"
   },
+
   {
-    id: "ai-cybersecurity-suite",
-    name: "AI Cybersecurity Suite",
-    category: "Cybersecurity",
-    description: "Comprehensive AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and proactive security monitoring. Features include behavioral analysis, threat intelligence, and automated security orchestration.",
-    shortDescription: "AI-powered cybersecurity threat detection and response platform",
-    pricing: {
-      starter: {
-        price: 89,
-        period: "month",
-        features: ["Basic threat detection", "Security monitoring", "Basic reporting", "Email support", "Up to 100 endpoints"],
-        apiCalls: "3,000/month",
-        support: "Email support"
-      },
-      professional: {
-        price: 249,
-        period: "month",
-        features: ["All starter features", "Advanced AI models", "Automated response", "Priority support", "Up to 1,000 endpoints"],
-        apiCalls: "15,000/month",
-        support: "Priority support"
-      },
-      enterprise: {
-        price: 599,
-        period: "month",
-        features: ["All professional features", "Custom AI training", "Advanced integrations", "Dedicated support", "Unlimited endpoints", "White-label options"],
-        apiCalls: "Unlimited",
-        support: "Dedicated support"
-      }
-    },
+    id: "ai-powered-emotional-intelligence",
+    title: "AI-Powered Emotional Intelligence Platform",
+    description: "Advanced emotional intelligence platform that analyzes human emotions, sentiment, and behavior to improve customer interactions, employee engagement, and decision-making processes.",
+    category: "AI & Psychology",
+    subcategory: "Emotional Intelligence",
+    price: 5999,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      "AI-powered threat detection",
-      "Behavioral analysis",
-      "Automated incident response",
-      "Real-time security monitoring",
-      "Threat intelligence feeds",
-      "Vulnerability assessment",
-      "Security orchestration",
-      "Compliance reporting",
-      "Custom security policies",
-      "API for integrations"
+      "Emotion recognition",
+      "Sentiment analysis",
+      "Behavioral insights",
+      "Real-time monitoring",
+      "Predictive analytics",
+      "Multi-modal analysis",
+      "Custom models",
+      "API integration",
+      "Mobile app",
+      "Analytics dashboard"
     ],
     benefits: [
-      "Detect threats 10x faster",
-      "Reduce false positives by 80%",
-      "Automate 70% of security tasks",
-      "Improve incident response time",
-      "Better compliance and audit readiness",
-      "Proactive security posture"
-    ],
-    targetAudience: [
-      "Small to medium businesses",
-      "Enterprise companies",
-      "Government agencies",
-      "Healthcare organizations",
-      "Financial institutions",
-      "Educational institutions"
+      "Improve customer satisfaction by 40%",
+      "Enhance employee engagement by 35%",
+      "Better decision making",
+      "Personalized experiences",
+      "Emotional intelligence training"
     ],
     useCases: [
-      "Threat detection",
-      "Incident response",
-      "Vulnerability management",
-      "Compliance monitoring",
-      "Security monitoring",
-      "Risk assessment"
+      "Customer service",
+      "Employee engagement",
+      "Marketing campaigns",
+      "Product development",
+      "Healthcare monitoring"
     ],
-    integrations: [
-      "SIEM systems",
-      "EDR solutions",
-      "Firewall management",
-      "Identity management",
-      "Cloud security",
-      "Network monitoring",
-      "Email security",
-      "Web application security"
+    targetAudience: [
+      "HR Professionals",
+      "Marketing Teams",
+      "Customer Success",
+      "Product Managers",
+      "Healthcare Providers"
     ],
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,
-    sla: "99.9% uptime guarantee",
-    responseTime: "< 1 hour for critical issues",
-    availability: "24/7 cloud-based access",
-    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "NIST", "HIPAA"],
-    security: [
-      "End-to-end encryption",
-      "Zero-trust architecture",
-      "Regular security audits",
-      "Data backup and recovery",
-      "Compliance monitoring"
-    ],
-    deployment: ["Cloud-based SaaS", "On-premise options", "Hybrid deployment"],
-    support: [
-      "24/7 security support",
-      "Live chat during business hours",
-      "Video tutorials",
-      "Knowledge base",
-      "Implementation assistance"
-    ],
-    marketPrice: "$89-599/month",
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
-    roi: "350% ROI within 6 months",
-    setupTime: "1-2 weeks",
-    innovationLevel: "Advanced AI security",
-    marketSize: "$182.3 billion cybersecurity market",
-    growthRate: "25% annual growth",
-    tags: ["cybersecurity", "AI security", "threat detection", "incident response", "security automation"],
-    image: "/images/services/ai-cybersecurity-suite.jpg",
-    demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity-suite",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-cybersecurity-suite",
+    tags: ["AI", "Emotional Intelligence", "Psychology", "Sentiment Analysis", "Behavioral Science"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$5,999 - $16,999/month",
+    roi: "250-400%",
+    innovationLevel: "Cutting-edge",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    createdAt: "2025-01-30",
-    featured: true,
-    trending: true,
-    rating: 4.9,
-    reviewCount: 156
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "Computer Vision", "NLP", "React"],
+      integrations: ["CRM systems", "HR platforms", "Communication tools", "Analytics platforms"],
+      apiEndpoints: 500,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Affectiva", "Emotient", "Realeyes", "Noldus", "iMotions"],
+    marketSize: "$3.8 billion by 2025"
+  },
+
+  {
+    id: "ai-powered-creativity-platform",
+    title: "AI-Powered Creativity Platform",
+    description: "Revolutionary AI platform that enhances human creativity through collaborative AI tools, idea generation, design assistance, and creative workflow optimization.",
+    category: "AI & Creativity",
+    subcategory: "Creative Assistance",
+    price: 7999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI idea generation",
+      "Design assistance",
+      "Creative collaboration",
+      "Workflow optimization",
+      "Content creation",
+      "Style transfer",
+      "Custom models",
+      "API access",
+      "Mobile app",
+      "Analytics platform"
+    ],
+    benefits: [
+      "Increase creativity by 60%",
+      "Accelerate design process by 50%",
+      "Improve collaboration",
+      "Reduce creative blocks",
+      "Enhanced innovation"
+    ],
+    useCases: [
+      "Graphic design",
+      "Content creation",
+      "Product design",
+      "Marketing campaigns",
+      "Research and development"
+    ],
+    targetAudience: [
+      "Designers",
+      "Content Creators",
+      "Marketing Teams",
+      "Product Managers",
+      "Research Teams"
+    ],
+    tags: ["AI", "Creativity", "Design", "Innovation", "Collaboration"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "premium",
+    marketPrice: "$7,999 - $24,999/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "GANs", "React", "FastAPI"],
+      integrations: ["Design tools", "Content platforms", "Collaboration tools", "Analytics platforms"],
+      apiEndpoints: 600,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Canva", "Figma", "Adobe Creative Cloud", "Midjourney", "DALL-E"],
+    marketSize: "$15.2 billion by 2025"
+  },
+
+  {
+    id: "ai-powered-education-platform",
+    title: "AI-Powered Education Platform",
+    description: "Intelligent education platform that personalizes learning experiences, provides adaptive tutoring, and uses AI to optimize educational outcomes for students of all ages.",
+    category: "AI & Education",
+    subcategory: "Personalized Learning",
+    price: 4999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Personalized learning paths",
+      "Adaptive tutoring",
+      "Progress tracking",
+      "Content recommendation",
+      "Assessment automation",
+      "Collaborative learning",
+      "Mobile optimization",
+      "Analytics dashboard",
+      "API access",
+      "Multi-language support"
+    ],
+    benefits: [
+      "Improve learning outcomes by 40%",
+      "Reduce learning time by 30%",
+      "Personalized education",
+      "Better engagement",
+      "Scalable learning"
+    ],
+    useCases: [
+      "K-12 education",
+      "Higher education",
+      "Corporate training",
+      "Skill development",
+      "Language learning"
+    ],
+    targetAudience: [
+      "Educational Institutions",
+      "Corporate Training",
+      "EdTech Companies",
+      "Teachers",
+      "Students"
+    ],
+    tags: ["AI", "Education", "Personalized Learning", "Adaptive Tutoring", "EdTech"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$4,999 - $14,999/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "NLP", "React", "FastAPI"],
+      integrations: ["LMS platforms", "Content management", "Assessment tools", "Analytics platforms"],
+      apiEndpoints: 400,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "FERPA", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Coursera", "Udemy", "Khan Academy", "Duolingo", "Cognii"],
+    marketSize: "$25.7 billion by 2025"
+  },
+
+  {
+    id: "ai-powered-sustainability-platform",
+    title: "AI-Powered Sustainability Platform",
+    description: "Intelligent sustainability platform that uses AI to monitor environmental impact, optimize resource usage, and provide actionable insights for sustainable business practices.",
+    category: "AI & Sustainability",
+    subcategory: "Environmental Monitoring",
+    price: 6999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Environmental monitoring",
+      "Resource optimization",
+      "Carbon footprint tracking",
+      "Sustainability reporting",
+      "Predictive analytics",
+      "Compliance monitoring",
+      "Mobile app",
+      "API integration",
+      "Analytics dashboard",
+      "Custom models"
+    ],
+    benefits: [
+      "Reduce carbon footprint by 40%",
+      "Lower resource costs by 30%",
+      "Improve compliance",
+      "Enhanced sustainability",
+      "Better reporting"
+    ],
+    useCases: [
+      "Manufacturing",
+      "Energy management",
+      "Waste management",
+      "Supply chain",
+      "Building management"
+    ],
+    targetAudience: [
+      "Sustainability Officers",
+      "Facility Managers",
+      "Operations Managers",
+      "Environmental Officers",
+      "Compliance Teams"
+    ],
+    tags: ["AI", "Sustainability", "Environmental Monitoring", "Resource Optimization", "Compliance"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "premium",
+    marketPrice: "$6,999 - $19,999/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "IoT", "React", "FastAPI"],
+      integrations: ["IoT sensors", "Energy monitoring", "Sustainability platforms", "Reporting tools"],
+      apiEndpoints: 500,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "Environmental compliance"]
+    },
+    competitors: ["Watershed", "Normative", "Carbon Analytics", "Sweep", "Normative"],
+    marketSize: "$15.6 billion by 2025"
   }
 ];
-
-export default innovativeAIServices;

@@ -1,6 +1,6 @@
 {
-  "name": "ziontechgroup-site",
-  "version": "1.0.0",
+  "name": "zion-tech-group",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",

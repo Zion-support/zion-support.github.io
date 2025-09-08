@@ -1,25 +1,8 @@
-
-<:pages/white-papers.tsx.backup
-
-
-import React from 'react';
-
 import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-
+import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-<
-import React from 'react';
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-=
-import React, { useState } from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
->import Link from 'next/link';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
-
 import {
   FileText,
   Download,
@@ -32,143 +15,8 @@ import {
   BookOpen,
   Star,
   Clock,
-
-  Tag
-} from 'lucide-react';
-
-<:pages/white-papers.tsx.backup
-  Tag
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
-
-const whitePaperCategories = [
-  { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
-  { name: 'Cybersecurity', count: 6, color: 'bg-red-100 text-red-800' },
-  { name: 'Cloud Computing', count: 5, color: 'bg-green-100 text-green-800' },
-  { name: 'Data Analytics', count: 7, color: 'bg-purple-100 text-purple-800' },
-  { name: 'Digital Transformation', count: 4, color: 'bg-yellow-100 text-yellow-800' },
-  { name: 'Industry Insights', count: 9, color: 'bg-indigo-100 text-indigo-800' }
-];
-
-const featuredPapers = [
-  {
-    id: 1,
-    title: 'The Future of AI in Enterprise: A Comprehensive Guide to Implementation',
-    excerpt: 'Explore how artificial intelligence is transforming enterprise operations and learn best practices for successful AI implementation.',
-    category: 'AI & Machine Learning',
-    author: 'Dr. Sarah Chen',
-    date: '2025-01-15',
-    readTime: '25 min read',
-    pages: 45,
-    downloads: 1250,
-    featured: true,
-    tags: ['AI', 'Enterprise', 'Implementation', 'Future Tech'],
-    downloadUrl: '/whitepapers/ai-enterprise-guide.pdf'
-  },
-  {
-    id: 2,
-    title: 'Cybersecurity in the Age of Quantum Computing: Preparing for the Future',
-    excerpt: 'Understand the implications of quantum computing on cybersecurity and learn how to prepare your organization for the quantum era.',
-    category: 'Cybersecurity',
-    author: 'Michael Rodriguez',
-    date: '2025-01-10',
-    readTime: '30 min read',
-    pages: 52,
-    downloads: 980,
-    featured: true,
-    tags: ['Cybersecurity', 'Quantum Computing', 'Future Security'],
-    downloadUrl: '/whitepapers/quantum-cybersecurity.pdf'
-  },
-  {
-    id: 3,
-    title: 'Cloud Migration Strategies: A Step-by-Step Guide for Enterprise',
-    excerpt: 'Comprehensive guide to planning and executing successful cloud migration projects with real-world case studies.',
-    category: 'Cloud Computing',
-    author: 'Lisa Wang',
-    date: '2025-01-05',
-    readTime: '35 min read',
-    pages: 60,
-    downloads: 2100,
-    featured: true,
-    tags: ['Cloud Migration', 'Enterprise', 'Strategy'],
-    downloadUrl: '/whitepapers/cloud-migration-guide.pdf'
-  }
-];
-
-const recentPapers = [
-  {
-    id: 4,
-    title: 'Data Analytics for Healthcare: Improving Patient Outcomes',
-    excerpt: 'How healthcare organizations can leverage data analytics to improve patient care and operational efficiency.',
-    category: 'Data Analytics',
-    author: 'Dr. James Wilson',
-    date: '2025-01-03',
-    readTime: '20 min read',
-    pages: 32,
-    downloads: 750,
-    tags: ['Healthcare', 'Data Analytics', 'Patient Care']
-  },
-  {
-    id: 5,
-    title: 'Digital Transformation in Manufacturing: Industry 4.0 Implementation',
-    excerpt: 'A comprehensive look at how manufacturers can embrace Industry 4.0 technologies for competitive advantage.',
-    category: 'Digital Transformation',
-    author: 'Maria Garcia',
-    date: '2024-12-28',
-    readTime: '28 min read',
-    pages: 48,
-    downloads: 890,
-    tags: ['Manufacturing', 'Industry 4.0', 'Digital Transformation']
-  },
-  {
-    id: 6,
-    title: 'The State of FinTech: Trends and Opportunities in 2025',
-    excerpt: 'Analysis of current FinTech trends and emerging opportunities in the financial technology sector.',
-    category: 'Industry Insights',
-    author: 'David Kim',
-    date: '2024-12-20',
-    readTime: '22 min read',
-    pages: 38,
-    downloads: 1100,
-    tags: ['FinTech', 'Trends', 'Financial Technology']
-  },
-  {
-    id: 7,
-    title: 'IoT Security Best Practices: Protecting Connected Devices',
-    excerpt: 'Essential security measures for protecting Internet of Things devices and networks.',
-    category: 'Cybersecurity',
-    author: 'Emily Johnson',
-    date: '2024-12-15',
-    readTime: '18 min read',
-    pages: 28,
-    downloads: 650,
-    tags: ['IoT', 'Security', 'Connected Devices']
-  }
-];
-
-const stats = [
-  { number: '25+', label: 'White Papers' },
-  { number: '10K+', label: 'Downloads' },
-  { number: '15+', label: 'Industry Experts' },
-  { number: '95%', label: 'Reader Satisfaction' }
-
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Download, 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Tag, 
-
-=
   Tag,
->=
-  Tag,
->  ExternalLink 
+  ExternalLink
 } from 'lucide-react';
 <:pages/white-papers.tsx.backup
 
@@ -369,15 +217,7 @@ export default function WhitePapersPage() {
   const featuredPapers = whitePapers.filter(paper => paper.isFeatured);
 
   return (
-title="White Papers - Zion Tech Group"
-
     <Layout
-
-    <MainLayout
-
-      title="White Papers - Zion Tech Group"
-
-
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
@@ -403,85 +243,6 @@ title="White Papers - Zion Tech Group"
                   Papers
                 </span>
               </h1>
-
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
-
-
-  return (
-
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
-
-  return (
-
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
-
-  return (
-
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
-
-    <>
-      <Head>
-        <title>White Papers - Zion Tech Group</title>
-        <meta name="description" content="Download our comprehensive white papers on technology trends and best practices." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Download our comprehensive white papers on technology trends and best practices.
-
-
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Access our comprehensive collection of technical white papers and research documents. 
-                Free downloads covering AI, cloud solutions, cybersecurity, and more.
-
-              </p>
-              
-              <div className="mb-4">
-                <div className="flex items-center text-sm text-gray-600 mb-2">
-                  <User className="h-4 w-4 mr-2" />
-                  <span className="font-semibold">Author:</span>
-                  <span className="ml-2">{paper.author}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600 mb-2">
-                  <Clock className="h-4 w-4 mr-2" />
-                  <span className="font-semibold">Read Time:</span>
-                  <span className="ml-2">{paper.readTime}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600 mb-4">
-                  <Eye className="h-4 w-4 mr-2" />
-                  <span className="font-semibold">Downloads:</span>
-                  <span className="ml-2">{paper.downloadCount}</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
-                <Download className="h-4 w-4 mr-2" />
-                Download PDF
-              </button>
-            </motion.div>
-
-          </div>
-        </section>
-
-<:pages/white-papers.tsx.backup
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
@@ -869,73 +630,6 @@ title="White Papers - Zion Tech Group"
           </div>
         </section>
       </div>
-
-</Layout>
-
     </Layout>
-
-</Layout>
-
-    </Layout>
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Need Custom Research?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Contact us for custom research and analysis tailored to your specific needs.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Contact Us
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/research"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View All Research
-                </Link>
-              </div>
-
-
-</Layout>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-
-<:pages/white-papers.tsx.backup
-
-
-
-<
-
-
-
-
-
-    </>
-
-    </MainLayout>
-
-    </>
-
-<:pages/white-papers.tsx.backup
-    </>
-<:pages/white-papers.tsx.backup
-
-    </MainLayout>
-    </MainLayout>
-
   );
 }

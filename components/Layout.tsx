@@ -1,384 +1,197 @@
-import React, { ReactNode } from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-import PerformanceMonitor from './PerformanceMonitor';
-import Analytics from './Analytics';
-
-<<<<<<< HEAD
-interface LayoutProps {
-  children: ReactNode;
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-interface LayoutProps {
-  children: React.ReactNode;
-interface LayoutProps {;
-  children: React && React.ReactNode;
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-
-
-
-
-
-origin/automation-improvements-final
-
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
+import EnhancedNavigation2025 from "./layout/EnhancedNavigation2025";
+import EnhancedFooter from "./layout/EnhancedFooter";
 
 interface LayoutProps {
   children: React.ReactNode;
-interface LayoutProps {;
-  children: React && React.ReactNode;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
 }
 
-<<<<<<< HEAD
-const Layout: React.FC<LayoutProps> = ({ 
-  children, 
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
-=======
-const Layout: React.FC < LayoutProps> = ({
-  children,
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  canonical = "https://ziontechgroup.com",
-  ogTitle,
-  ogDescription,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  noIndex = false,
-}) => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
-    description: description,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "364 E Main St STE 1008",
-      addressLocality: "Middletown",
-      addressRegion: "DE",
-      postalCode: "19709",
-      addressCountry: "US",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+1-302-464-0950",
-      contactType: "customer service",
-      email: "kleber@ziontechgroup.com",
-    },
-<<<<<<< HEAD
-  };
-
-=======
-  }
-;
+export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min - h-screen bg - white">;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
-        <meta name="keywords" content={keywords} />;
-        {canonical && <link rel="canonical" href={canonical} />}
-        <meta
-          property="og:description"
-          content={ogDescription || description}
-        />;
-        <meta property="og:image" content={ogImage} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation2025 />
+      <main className="flex-grow">
+        {children}
+      </main>
 
-interface LayoutProps {
-  }
-  "children": ReactNode;
+      {/* Footer */}
+      <footer className="bg-slate-800 border-t border-slate-700">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid lg:grid-cols-5 gap-8 mb-12">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center space-x-2 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">Z</span>
+                </div>
+                <span className="text-white font-bold text-xl">Zion Tech Group</span>
+              </div>
+              
+              <p className="text-slate-300 mb-6 max-w-md">
+                Leading technology solutions provider specializing in digital transformation, 
+                AI, cloud architecture, and cybersecurity. We help businesses innovate and thrive.
+              </p>
+              
+              <div className="flex space-x-4">
+                {[
+                  { icon: Facebook, href: '#', label: 'Facebook' },
+                  { icon: Twitter, href: '#', label: 'Twitter' },
+                  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+                  { icon: Instagram, href: '#', label: 'Instagram' }
+                ].map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    className="w-10 h-10 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center text-slate-300 hover:text-white transition-all duration-300"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
 
-}
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-white font-semibold mb-6">Quick Links</h3>
+              <ul className="space-y-3">
+                {navigation.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-}) => {
+            {/* Services */}
+            <div>
+              <h3 className="text-white font-semibold mb-6">Services</h3>
+              <ul className="space-y-3">
+                {serviceCategories.slice(0, 6).map((service) => (
+                  <li key={service.name}>
+                    <Link
+                      href={service.href}
+                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                    >
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
+            {/* Products */}
+            <div>
+              <h3 className="text-white font-semibold mb-6">Products</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/products#micro-saas"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    Micro SAAS Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products#ai-services"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    AI-Powered Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products#cloud-solutions"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    Cloud Infrastructure
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products#security-solutions"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    Cybersecurity
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-}
+          {/* Contact Info */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12 p-8 bg-slate-700/50 rounded-2xl">
+            {[
+              {
+                icon: Phone,
+                title: 'Phone',
+                details: ['+1 302 464 0950'],
+                color: 'from-blue-500 to-cyan-600'
+              },
+              {
+                icon: Mail,
+                title: 'Email',
+                details: ['kleber@ziontechgroup.com'],
+                color: 'from-purple-500 to-pink-600'
+              },
+              {
+                icon: MapPin,
+                title: 'Office',
+                details: ['364 E Main St STE 1008', 'Middletown DE 19709'],
+                color: 'from-green-500 to-emerald-600'
+              }
+            ].map((contact, index) => (
+              <div key={index} className="text-center">
+                <div className={`w-16 h-16 bg-gradient-to-r ${contact.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                  <contact.icon className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-white font-semibold mb-3">{contact.title}</h4>
+                {contact.details.map((detail, detailIndex) => (
+                  <p key={detailIndex} className="text-slate-300 text-sm">
+                    {detail}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
 
+          {/* Bottom Footer */}
+          <div className="border-t border-slate-700 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="text-slate-400 text-sm mb-4 md:mb-0">
+                © 2024 Zion Tech Group. All rights reserved.
+              </div>
+              
+              <div className="flex items-center space-x-6 text-sm text-slate-400">
+                <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-200">
+                  Terms of Service
+                </Link>
+                <Link href="/cookies" className="hover:text-cyan-400 transition-colors duration-200">
+                  Cookie Policy
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-return (<main className="min-h-screen">;"
-      {children}
-    </main>;
-    <main className="min-h-screen">;"
-      {children}
-    </main>;
-    <div className="min-h-screen flex flex-col">;"
-      <Navigation />;
-      <main className="flex-1">{children}</main>;"
-      <Footer />;
-    </div>;
-  )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
-  )}
-
-export default Layout;ursor/automate-test-improve-and-merge-code-646c;
-}
-export default function Layout() {
- ;
-  }
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-return (;
-    <>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return (
-    <div className="min-h-screen bg-white">
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noIndex && <meta name="robots" content="noindex, nofollow" />}
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={ogTitle || title} />
-        <meta property="og:description" content={ogDescription || description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={ogTitle || title} />
-        <meta name="twitter:description" content={ogDescription || description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* JSON-LD */}
-        <script
-          type="application/ld+json"
-<<<<<<< HEAD
-=======
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>;
-  );
-}
-
-        <meta
-          property="og:description"
-          content={ogDescription || description}
-        />;
-        <meta property="og:image" content={ogImage} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={ogTitle || title} />;
-        <meta
-          name="twitter:description"
-          content={ogDescription || description}
-        />;
-        <meta name="twitter:image" content={ogImage} />;
-        {/* JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
-        />;
-      </Head>;
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>;
-  );
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
-      <PerformanceMonitor />
-      <Analytics />
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="w-6 h-6 mx-auto" />
+      </button>
     </div>
-<<<<<<< HEAD
   );
-};
-
-export default Layout;
-=======
-import React, { ReactNode } from "react";
-
-interface LayoutProps {
-  children: ReactNode,
 }
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
-
-import React, { ReactNode } from "react";
-interface LayoutProps {
-  children: ReactNode;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-        {no_index && <meta name="robots" content="noindex, nofollow" />}
-        {/* Open Graph */}
-        <meta property="og:title" content={og_title || title} />;
-        <meta;
-          property="og:description";
-          content={og_description || description}
-        />;
-        <meta property="og:image" content={og_image} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={og_title || title} />;
-        <meta;
-          name="twitter:description";
-          content={og_description || description}
-        />;
-        <meta name="twitter:image" content={og_image} />;
-        {/* JSON - LD */}
-        <script;
-          type="application / ld + json";
-          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
-        />;
-      </Head>;
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>);
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <main className="min-h-screen">
-      {children  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </main>
-
-
-
-  );
-};
-export default Layout;
-;
-
-  );
-};
-export default Layout;
-
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-import Sidebar from './Sidebar';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  ChevronDown,
-  Star,
-  CheckCircle
-} from 'lucide-react';
-
-interface LayoutProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogUrl?: string;
-  children: React.ReactNode;
-}
-
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogTitle,
-  ogDescription,
-  ogUrl
-}: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

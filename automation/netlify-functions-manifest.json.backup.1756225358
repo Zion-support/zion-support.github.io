@@ -1,0 +1,14 @@
+{
+<<<<<<< HEAD
+  "generatedAt": "2025-08-26T12:15:59.291Z",
+=======
+  "generatedAt": "2025-08-26T13:16:08.161Z",
+=======
+  "generatedAt": "2025-08-26T12:29:05.562Z",
+  "functions": [],
+  "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
+=======
+  "generatedAt": "2025-08-26T13:43:43.123Z",
+  "functions": []
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8de9
+}

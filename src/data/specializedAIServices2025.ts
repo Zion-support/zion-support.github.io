@@ -30,6 +30,7 @@ export interface SpecializedAIService2025 {
   aiModel: string;
   trainingData: string;
 }
+
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   // Multimodal AI Platform
   {
@@ -91,6 +92,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     aiModel: "GPT-5 + Multimodal Models",
     trainingData: "Proprietary + Public Datasets"
   },
+
   // AI-Powered Predictive Healthcare Analytics
   // AI-Powered Drug Discovery Platform
   {
@@ -152,6 +154,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     aiModel: "Custom Drug Discovery Models",
     trainingData: "Proprietary Pharmaceutical Data"
   },
+
   // Autonomous Financial Trading AI
   // AI-Powered Financial Trading Platform
   {
@@ -213,6 +216,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     aiModel: "Custom Financial AI Models",
     trainingData: "Market Data + Historical Trading Data"
   },
+
   // AI-Powered Supply Chain Optimization
   // AI-Powered Climate Prediction Engine
   {
@@ -274,6 +278,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     aiModel: "Custom Climate Prediction Models",
     trainingData: "Satellite + Historical Climate Data"
   },
+
   // AI-Powered Legal Research Assistant
   {
     id: "ai-legal-research-assistant",
@@ -334,6 +339,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     aiModel: "Custom Legal AI Models",
     trainingData: "Legal Documents + Case Law"
   },
+
   // AI-Powered Educational Personalization
   // AI-Powered Creative Design Platform
   {

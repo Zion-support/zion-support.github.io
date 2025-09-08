@@ -1,192 +1,56 @@
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import EnhancedNavigation2025 from './EnhancedNavigation2025';
+import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraAdvancedFuturisticBackground from '../backgrounds/UltraAdvancedFuturisticBackground';
+import TopContactBar from './TopContactBar';
+import NeoFuturisticFooter from './NeoFuturisticFooter';
 
-
-<<<<<<< HEAD
-
-
-  children: ReactNode;
-
-
-=======
-import React, { ReactNode } from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-
-import Header from '../Header';
-import Footer from '../Footer';
-
-
-
-
-import React from 'react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/main
-origin/automation-improvements-final
-import React from 'react';
 interface LayoutProps {
   children: React.ReactNode;
-interface LayoutProps {;
-  children: React && React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  title?: string;
-  description?: string;
-  keywords?: string;
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  og_title?: string;
-  og_description?: string;
-  og_image?: string;
-  no_index?: boolean;
-<<<<<<< HEAD
-
-
-}: LayoutProps) {
-  const json_ld = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
-    description: description,
-    address: {
-      "@type": "PostalAddress",
-      street_address: "364 E Main St STE 1008",
-      address_locality: "Middletown",
-      address_region: "DE",
-      postal_code: "19709",
-      address_country: "US"
-    },
-    contact_point: {
-      "@type": "ContactPoint",
-      telephone: "+1-302-464-0950",
-      contact_type: "customer service",
-      email: "kleber@ziontechgroup.com"
-    }
-  };
-
-  return (
-
-
-
-export default function Layout({
-  children
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
-  canonical
-  ogTitle
-  ogDescription
-  ogImage
-  noIndex = false
-}: LayoutProps) {
-
-
-
-
-  return (
-    <div className="min-h-screen bg-white">;
-export default /**
- * Layout - Function description
- */
-function Layout() {
-  return (
-    <div className="min - h-screen bg - white">;
-      <Header />;
-      <main>;
-        {children}
-
-
-
-    </div>
-  );
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  backgroundIntensity?: 'low' | 'medium' | 'high' | 'extreme';
+  backgroundTheme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-fusion';
+  backgroundParticleCount?: number;
+  backgroundAnimationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
 }
 
-
-
-
-
-=======
-}
-
-const Layout: React.FC<LayoutProps> = ({ 
+export default function Layout({ 
   children, 
-  title = 'Zion Tech Group', 
-  description = 'Building practical AI and modern web solutions.' 
-}) => {
-  return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
-};
+  backgroundIntensity = 'medium',
+  backgroundTheme = 'quantum',
+  backgroundParticleCount = 200,
+  backgroundAnimationSpeed = 1.0,
+  enableHolographic = true,
+  enableQuantumEffects = true
+}: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-export default Layout;
-    <div className="min-h-screen bg-gray-50">
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+	return (
+		<div className="min-h-screen bg-black text-white">
+			<a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-black/80 focus:text-white focus:border focus:border-cyan-500 focus:rounded px-3 py-2 z-[100]">Skip to content</a>
+			<UltraFuturisticBackground2035 
+				intensity="high" 
+				colorScheme="quantum-fusion"
+				particleCount={400}
+				animationSpeed={1.8}
+				enableHolographic={true}
+				enableQuantumEffects={true}
+				enableNeonEffects={true}
+				enableSpaceTime={true}
+			>
+				{/* TopContactBar temporarily disabled due to missing module */}
+				<UltraFuturisticNavigation2034 onMenuClick={() => setSidebarOpen(true)} />
+				<div className="flex">
+					{/* EnhancedSidebar2025 temporarily disabled due to build issues */}
+					<main id="main" className="flex-1 pt-24 lg:pt-28">
+						{children}
+					</main>
+				</div>
+				<UltraFuturisticFooter2029 />
+			</UltraFuturisticBackground2035>
+		</div>
+	);
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      {children  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    <div className="min-h-screen bg-gray-50">
-      {children}
-    </div>
-  );
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
