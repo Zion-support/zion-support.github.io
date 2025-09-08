@@ -1,458 +1,216 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Microscope,
-  Activity,
-  BarChart3,
-  Clock,
-  Globe,
-  Lock,
-  Star,
-  Award,
-  TrendingUp,
-  Eye,
-  Database,
-  Network,
-  Cpu,
-  Smartphone,
-  Tablet,
-  Monitor,
-  Server,
-  Cloud,
-  Key,
-  FileText,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { Heart, Shield, Brain, Activity, Users, BarChart3, Clock, CheckCircle } from 'lucide-react';
 
 export default function AIHealthcarePlatform() {
   const features = [
     {
-      title: 'AI-Powered Diagnostics',
-      description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis',
-      color: 'from-blue-500 to-cyan-500'
+      icon: Brain,
+      title: "AI-Powered Diagnostics",
+      description: "Advanced machine learning algorithms for accurate and early disease detection"
     },
     {
-      title: 'Predictive Analytics',
-      description: 'Forecast health outcomes and identify risk factors before they become critical',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500'
+      icon: Activity,
+      title: "Real-time Monitoring",
+      description: "Continuous patient monitoring with instant alerts and anomaly detection"
     },
     {
-      title: 'Personalized Treatment Plans',
-      description: 'AI-generated treatment recommendations based on individual patient data',
-      icon: Heart,
-      title: 'Patient Monitoring',
-      description: 'Real-time health monitoring with predictive analytics and early warning systems',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: 'Real-time Monitoring',
-      description: 'Continuous health monitoring with instant alerts for critical changes',
-      icon: Monitor,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      title: 'Secure Data Management',
-      description: 'HIPAA-compliant data handling with enterprise-grade security',
       icon: Shield,
-      title: 'Data Security',
-      description: 'HIPAA-compliant security with end-to-end encryption and privacy protection',
-      color: 'from-green-500 to-emerald-500'
+      title: "HIPAA Compliance",
+      description: "Enterprise-grade security ensuring complete patient data protection"
     },
     {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Lightning-fast AI processing for immediate results and insights',
-      color: 'from-yellow-500 to-orange-500'
+      icon: BarChart3,
+      title: "Predictive Analytics",
+      description: "Forecast health trends and optimize treatment outcomes"
+    },
+    {
+      icon: Users,
+      title: "Care Coordination",
+      description: "Seamless collaboration between healthcare providers and teams"
+    },
+    {
+      icon: Clock,
+      title: "24/7 Operations",
+      description: "Round-the-clock AI assistance and automated healthcare workflows"
     }
   ];
 
   const benefits = [
-    'Improved diagnostic accuracy by 95%',
-    'Reduced diagnosis time by 80%',
-    'Enhanced patient outcomes and satisfaction',
-    'Cost-effective healthcare delivery',
-    '24/7 automated monitoring capabilities',
-    'Scalable for healthcare networks of any size'
-  ];
-
-  const useCases = [
-    {
-      title: 'Radiology & Imaging',
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for early detection',
-      icon: Eye
-    },
-    {
-      title: 'Laboratory Testing',
-      description: 'Automated analysis of blood tests and pathology samples',
-      icon: Microscope
-    },
-    {
-      title: 'Patient Monitoring',
-      description: 'Continuous monitoring of vital signs and health metrics',
-      icon: Activity
-    },
-    {
-      title: 'Predictive Analytics',
-      description: 'Forecasting disease progression and treatment outcomes',
-      icon: TrendingUp
-    }
-  ];
-
-  const technologies = [
-    'Machine Learning & Deep Learning',
-    'Computer Vision & Image Processing',
-    'Natural Language Processing',
-    'Predictive Analytics',
-    'IoT & Wearable Integration',
-    'Cloud Computing & Edge Processing',
-    'Blockchain for Data Integrity',
-    'Real-time Data Streaming'
+    "Reduce diagnostic errors by up to 90%",
+    "Improve patient outcomes through predictive care",
+    "Streamline administrative workflows",
+    "Enhance care coordination across teams",
+    "Lower operational costs by 30-40%",
+    "Ensure complete regulatory compliance"
   ];
 
   return (
-    <>
-      <SEO 
-        title="AI Healthcare Platform - Zion Tech Group"
-        description="Revolutionary AI-powered healthcare platform with advanced diagnostics, patient monitoring, and predictive analytics. Transform healthcare delivery with cutting-edge technology."
-        keywords="AI healthcare, medical AI, healthcare platform, medical diagnostics, patient monitoring, healthcare analytics, medical technology"
-        canonical="https://ziontechgroup.com/services/ai-healthcare-platform"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-red-900/20"></div>
-          <div className="container-responsive relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Heart className="w-4 h-4" />
-                Healthcare Innovation
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full">
+                <Heart className="w-12 h-12 text-white" />
               </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                AI Healthcare Platform
-              </h1>
-              
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionizing healthcare delivery with cutting-edge AI technology. 
-                Our platform provides advanced diagnostics, patient monitoring, and 
-                predictive analytics to improve outcomes and reduce costs.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
-                >
-                  View Pricing
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Features Grid */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Platform Features
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Comprehensive AI-powered healthcare solutions designed to transform 
-                patient care and medical outcomes.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 group"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
             </div>
-          </div>
-        </section>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Healthcare
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                Platform
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Revolutionary AI-powered healthcare platform that transforms patient care through 
+              intelligent diagnostics, predictive analytics, and automated workflows.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="container-responsive">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Features Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Advanced Healthcare AI Features
+            </h2>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+              Comprehensive AI solutions designed specifically for modern healthcare environments
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
               >
-                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
-                  Transform Healthcare Delivery
-                </h2>
-                
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <motion.div
-                      key={benefit}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-center gap-3"
-                    >
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-gray-300">{benefit}</span>
-                    </motion.div>
-                  ))}
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mr-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-400 mb-2">95%</div>
-                      <div className="text-sm text-gray-400">Diagnostic Accuracy</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
-                      <div className="text-sm text-gray-400">Faster Diagnosis</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                      <div className="text-sm text-gray-400">Monitoring</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-red-400 mb-2">60%</div>
-                      <div className="text-sm text-gray-400">Cost Reduction</div>
-                    </div>
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Measurable Healthcare Outcomes
+              </h2>
+              <p className="text-gray-300 text-lg mb-8">
+                Our AI Healthcare Platform delivers proven results across all healthcare metrics
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="flex items-center"
+                  >
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0" />
+                    <span className="text-white">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8"
+            >
+              <h3 className="text-2xl font-bold text-white mb-6">Implementation Stats</h3>
+              <div className="space-y-6">
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Diagnostic Accuracy</span>
+                    <span className="text-cyan-400 font-semibold">96%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style={{ width: '96%' }}></div>
                   </div>
                 </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Healthcare Applications
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform addresses critical healthcare challenges across 
-                multiple specialties and use cases.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <motion.div
-                  key={useCase.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                    <useCase.icon className="w-8 h-8 text-white" />
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Cost Reduction</span>
+                    <span className="text-cyan-400 font-semibold">40%</span>
                   </div>
-                  
-                  <h3 className="text-2xl font-semibold text-white mb-4">
-                    {useCase.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Technologies */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Advanced Technologies
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Built with cutting-edge AI and healthcare technologies for 
-                reliable, scalable, and secure healthcare solutions.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {technologies.map((tech, index) => (
-                <motion.div
-                  key={tech}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl p-4 text-center hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <span className="text-gray-300 text-sm font-medium">{tech}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Transform Healthcare?
-              </h2>
-              
-              <p className="text-xl text-gray-400 mb-8">
-                Join leading healthcare providers who are already using our AI platform 
-                to improve patient outcomes and operational efficiency.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
-                >
-                  Contact Sales
-                </motion.button>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style={{ width: '40%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Patient Satisfaction</span>
+                    <span className="text-cyan-400 font-semibold">98%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style={{ width: '98%' }}></div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact Info */}
-        <section className="py-16 bg-slate-800/50">
-          <div className="container-responsive">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  +1 302 464 0950
-                </a>
-                <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
-              </div>
-              
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-                <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
-              </div>
-              
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-slate-300">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </p>
-                <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-              </div>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Healthcare?
+            </h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Join leading healthcare organizations using our AI platform to improve patient outcomes
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Request Demo
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                View Case Studies
+              </button>
             </div>
-          </div>
-        </section>
-      </div>
-    </>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
