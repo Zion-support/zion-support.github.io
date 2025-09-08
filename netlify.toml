@@ -243,12 +243,8 @@
 
 [[scheduled.functions]]
   name = "internal-link-graph-runner"
-  schedule = "13 */4 * * *"
+  schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "component-usage-index-runner"
-  schedule = "29 */6 * * *"
-
-[[scheduled.functions]]
-  name = "content-freshness-runner"
-  schedule = "41 */3 * * *"
+  name = "unused-images-runner"
+  schedule = "*/20 * * * *" # every 20 minutes

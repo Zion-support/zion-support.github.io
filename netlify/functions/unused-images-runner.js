@@ -18,7 +18,7 @@ exports.handler = async () => {
     return status;
   };
 
-  logStep('reports:internal-links', () => runNode('scripts/internal-link-graph.js'));
+  logStep('reports:unused-images', () => runNode('scripts/unused-images-report.js'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
