@@ -150,6 +150,86 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const currentYear = new Date().getFullYear();
+
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI Solutions', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud & DevOps', href: '/cloud-solutions' },
+        { name: 'Cybersecurity', href: '/services' },
+        { name: 'Micro SAAS', href: '/micro-saas' },
+        { name: 'Digital Transformation', href: '/digital-transformation' }
+      ]
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/healthcare-solutions' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Government', href: '/government-solutions' },
+        { name: 'Retail Solutions', href: '/retail-solutions' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Support Center', href: '/help' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Research', href: '/research-development' }
+      ]
+    }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'GitHub', href: '#', icon: Github }
+  ];
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      text: '+1 302 464 0950',
+      href: 'tel:+13024640950'
+    },
+    {
+      icon: Mail,
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      icon: MapPin,
+      text: 'Middletown, DE',
+      href: '#'
+    },
+    {
+      icon: Clock,
+      text: 'Mon-Fri: 9AM-6PM EST',
+      href: '#'
+    }
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}

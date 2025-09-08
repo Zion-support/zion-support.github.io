@@ -50,18 +50,9 @@ import {
   Globe,
   Zap,
   Cloud,
-  Lock,
-  Workflow,
-  Eye,
-  Key,
-  Sparkles,
-  Heart,
-  Target as TargetIcon,
-  ArrowUpRight,
-  CheckCircle2,
-  Star as StarIcon,
-  ShoppingBag,
-  Building
+  Cpu,
+  Zap,
+  Users
 } from 'lucide-react';
 
 export function Header() {
@@ -87,17 +78,26 @@ export function Header() {
       href: '/services',
       icon: Zap,
       dropdown: [
-        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
-        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
-        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
-        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
-        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
-        { name: 'Pricing', href: '/pricing', icon: DollarSign }
+        { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI platforms' },
+        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Digital transformation' },
+        { name: 'Cloud & DevOps', href: '/cloud-solutions', icon: Cloud, description: 'Scalable infrastructure' },
+        { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'Advanced security' },
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Zap, description: 'Custom software solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Cpu, description: 'Business modernization' },
+        { name: 'Industry Solutions', href: '/industry-solutions', icon: Users, description: 'Sector-specific solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech', icon: Zap, description: 'Next-generation technology' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/enterprise', icon: Users, description: 'Large-scale business solutions' },
+        { name: 'Healthcare Tech', href: '/healthcare-solutions', icon: Shield, description: 'Medical technology solutions' },
+        { name: 'Financial Solutions', href: '/financial-solutions', icon: Shield, description: 'Fintech innovations' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions', icon: Cpu, description: 'Industry 4.0 solutions' },
+        { name: 'Government', href: '/government-solutions', icon: Shield, description: 'Public sector technology' },
+        { name: 'Retail Solutions', href: '/retail-solutions', icon: Users, description: 'E-commerce & retail tech' }
       ]
     },
     {

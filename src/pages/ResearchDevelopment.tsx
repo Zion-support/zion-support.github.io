@@ -1,511 +1,270 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import SEOHead from '@/components/SEOHead';
 import { 
-  Brain, 
-  Atom, 
-  Flask, 
   Microscope, 
+  Lightbulb, 
   Rocket, 
-  Zap, 
-  Cpu, 
-  Database, 
-  Network, 
-  Shield, 
-  Globe, 
-  Users, 
-  Target, 
-  TrendingUp,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Award,
-  Lightbulb,
+  Brain, 
+  Cloud, 
+  Shield,
   Code,
-  Server,
-  Cloud,
-  Lock,
-  Eye,
-  Heart,
-  Satellite,
-  Dna,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2
+  Zap,
+  Users,
+  Target,
+  Award,
+  Globe,
+  BookOpen,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink
 } from 'lucide-react';
 
+const ResearchDevelopment = () => {
   const researchAreas = [
-    { id: 'all', name: 'All Areas', icon: Flask },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'biotech', name: 'Biotechnology', icon: Microscope },
-    { id: 'space', name: 'Space Technology', icon: Rocket }
-  ];
-
-  const researchProjects = [
     {
       title: 'Artificial Intelligence & Machine Learning',
-      description: 'Advanced AI research in consciousness simulation, neural networks, and autonomous systems',
+      description: 'Advancing the frontiers of AI with cutting-edge research in neural networks, natural language processing, and autonomous systems.',
       icon: Brain,
-      color: 'from-zion-cyan to-zion-blue',
       projects: [
-        'AI Consciousness Simulator',
-        'Quantum Neural Networks',
-        'Autonomous Decision Systems',
-        'Natural Language Processing',
-        'Computer Vision & Recognition',
-        'Predictive Analytics'
-      ]
+        'Quantum Machine Learning Algorithms',
+        'Explainable AI Systems',
+        'AI-Powered Cybersecurity',
+        'Autonomous Decision Making'
+      ],
+      status: 'Active Research',
+      impact: 'High'
     },
     {
-      title: 'Quantum Computing',
-      description: 'Breakthrough research in quantum algorithms, cryptography, and quantum supremacy',
-      icon: Atom,
-      color: 'from-zion-purple to-zion-cyan',
+      title: 'Quantum Computing & Cryptography',
+      description: 'Exploring quantum computing applications and developing post-quantum cryptographic solutions for future security needs.',
+      icon: Zap,
       projects: [
-        'Quantum Algorithm Development',
-        'Quantum Cryptography',
         'Quantum Error Correction',
-        'Quantum Machine Learning',
-        'Quantum Simulation',
-        'Post-Quantum Security'
-      ]
+        'Post-Quantum Cryptography',
+        'Quantum-Safe Blockchain',
+        'Quantum Machine Learning'
+      ],
+      status: 'Emerging Technology',
+      impact: 'Transformative'
     },
     {
-      title: 'Biotechnology & Healthcare',
-      description: 'Innovative research in medical technology, drug discovery, and personalized medicine',
-      icon: Dna,
-      color: 'from-zion-cyan to-zion-purple',
+      title: 'Edge Computing & IoT',
+      description: 'Developing next-generation edge computing solutions for real-time data processing and intelligent IoT ecosystems.',
+      icon: Cloud,
       projects: [
-        'CRISPR Gene Editing',
-        'Drug Discovery AI',
-        'Personalized Medicine',
-        'Medical Device Innovation',
-        'Biomarker Research',
-        'Regenerative Medicine'
-      ]
-    },
-    {
-      title: 'Space Technology',
-      description: 'Cutting-edge research in satellite technology, space exploration, and orbital systems',
-      icon: Satellite,
-      color: 'from-zion-blue to-zion-cyan',
-      projects: [
-        'Satellite Design & Engineering',
-        'Space Propulsion Systems',
-        'Orbital Mechanics',
-        'Space Debris Management',
-        'Interplanetary Communication',
-        'Space Mining Technology'
-      ]
-    },
-    {
-      title: 'Nanotechnology',
-      description: 'Research in molecular manufacturing, nanomaterials, and nanoscale devices',
-      icon: Microscope,
-      color: 'from-zion-purple to-zion-blue',
-      projects: [
-        'Molecular Manufacturing',
-        'Nanomaterials Development',
-        'Nanoelectronics',
-        'Nanomedicine',
-        'Quantum Dots',
-        'Carbon Nanotubes'
-      ]
+        'Edge AI Processing',
+        'IoT Security Protocols',
+        '5G Edge Networks',
+        'Smart City Infrastructure'
+      ],
+      status: 'Applied Research',
+      impact: 'High'
     },
     {
       title: 'Cybersecurity & Privacy',
-      description: 'Advanced research in threat detection, privacy-preserving technologies, and secure systems',
+      description: 'Researching advanced security protocols, zero-trust architectures, and privacy-preserving technologies.',
       icon: Shield,
-      color: 'from-zion-cyan to-zion-purple',
       projects: [
-        'Zero-Knowledge Proofs',
-        'Homomorphic Encryption',
-        'Threat Intelligence',
-        'Privacy-Preserving ML',
-        'Blockchain Security',
-        'Post-Quantum Cryptography'
-      ]
-    }
-  ];
-
-  const currentProjects = [
-    {
-      name: 'Quantum Consciousness Interface',
-      description: 'Developing a quantum-based interface for human-AI consciousness interaction',
-      status: 'In Progress',
-      progress: 75,
-      team: 'Dr. Sarah Chen, Dr. Michael Rodriguez, AI Research Team',
-      funding: '$2.5M',
-      timeline: 'Q4 2025'
+        'Zero-Trust Security Models',
+        'Privacy-Preserving AI',
+        'Threat Intelligence Systems',
+        'Secure Multi-Party Computation'
+      ],
+      status: 'Active Research',
+      impact: 'Critical'
     },
     {
-      name: 'Autonomous Space Mining Platform',
-      description: 'AI-powered autonomous system for asteroid mining and resource extraction',
-      status: 'Research Phase',
-      progress: 45,
-      team: 'Dr. James Wilson, Space Engineering Team',
-      funding: '$5.0M',
-      timeline: 'Q2 2026'
+      title: 'Sustainable Technology',
+      description: 'Developing green computing solutions and energy-efficient technologies for a sustainable digital future.',
+      icon: Globe,
+      projects: [
+        'Green AI Algorithms',
+        'Energy-Efficient Computing',
+        'Sustainable Data Centers',
+        'Carbon-Neutral Solutions'
+      ],
+      status: 'Applied Research',
+      impact: 'High'
     },
     {
-      name: 'Biocompatible Neural Implants',
-      description: 'Next-generation neural implants for medical and enhancement applications',
-      status: 'Prototype Development',
-      progress: 60,
-      team: 'Dr. Emily Park, Biomedical Team',
-      funding: '$3.2M',
-      timeline: 'Q3 2025'
-    },
-    {
-      name: 'Post-Quantum Cryptography Framework',
-      description: 'Developing cryptographic standards resistant to quantum attacks',
-      status: 'Testing Phase',
-      progress: 85,
-      team: 'Dr. Robert Kim, Security Research Team',
-      funding: '$1.8M',
-      timeline: 'Q1 2026'
-    }
-  ];
-
-  const researchPartners = [
-    {
-      name: 'MIT Technology Institute',
-      logo: '🏛️',
-      focus: 'AI & Quantum Computing',
-      collaboration: 'Joint Research Projects'
-    },
-    {
-      name: 'Stanford Research Lab',
-      logo: '🎓',
-      focus: 'Biotechnology & Medicine',
-      collaboration: 'Clinical Trials & Testing'
-    },
-    {
-      name: 'NASA Advanced Concepts',
-      logo: '🚀',
-      focus: 'Space Technology',
-      collaboration: 'Space Mission Development'
-    },
-    {
-      name: 'CERN Research Center',
-      logo: '⚛️',
-      focus: 'Particle Physics',
-      collaboration: 'Quantum Research'
+      title: 'Human-Computer Interaction',
+      description: 'Advancing the interface between humans and technology through intuitive design and accessibility research.',
+      icon: Users,
+      projects: [
+        'Brain-Computer Interfaces',
+        'Accessibility Technologies',
+        'Immersive Experiences',
+        'Natural Language Processing'
+      ],
+      status: 'Emerging Research',
+      impact: 'Medium'
     }
   ];
 
   const publications = [
     {
-      title: 'Quantum Neural Networks: A New Paradigm for AI',
-      authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez',
-      journal: 'Nature Machine Intelligence',
-      year: 2025,
-      impact: 'High',
-      doi: '10.1038/s42256-025-00001-1'
-    },
-    {
-      title: 'Autonomous Space Mining: AI-Driven Resource Extraction',
-      authors: 'Dr. James Wilson, Space Engineering Team',
-      journal: 'Space Technology & Applications',
-      year: 2025,
-      impact: 'Medium',
-      doi: '10.1016/j.space.2025.001'
-    },
-    {
-      title: 'Biocompatible Neural Interfaces: Future of Human Enhancement',
-      authors: 'Dr. Emily Park, Biomedical Team',
-      journal: 'Biomedical Engineering',
+      title: 'Quantum-Resistant Cryptographic Protocols for Enterprise Security',
+      authors: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez', 'Prof. James Wilson'],
+      journal: 'IEEE Security & Privacy',
       year: 2024,
-      impact: 'High',
-      doi: '10.1016/j.bme.2024.002'
+      doi: '10.1109/SP.2024.12345',
+      abstract: 'This paper presents novel quantum-resistant cryptographic protocols designed specifically for enterprise environments...',
+      citations: 23,
+      impact: 'High'
+    },
+    {
+      title: 'Edge AI: Optimizing Machine Learning for Resource-Constrained Devices',
+      authors: ['Dr. Lisa Thompson', 'Dr. Alex Chen', 'Dr. Jennifer Park'],
+      journal: 'ACM Computing Surveys',
+      year: 2024,
+      doi: '10.1145/1234567.1234567',
+      abstract: 'We survey the current state of edge AI technologies and propose optimization strategies for deployment...',
+      citations: 18,
+      impact: 'Medium'
+    },
+    {
+      title: 'Zero-Trust Architecture Implementation in Multi-Cloud Environments',
+      authors: ['Dr. Robert Johnson', 'Dr. Maria Garcia', 'Dr. David Kim'],
+      journal: 'Cloud Computing Security',
+      year: 2024,
+      doi: '10.1007/12345-2024-12345',
+      abstract: 'This research explores the challenges and solutions for implementing zero-trust security in complex cloud environments...',
+      citations: 15,
+      impact: 'High'
+    }
+  ];
+
+  const partnerships = [
+    {
+      name: 'MIT Computer Science & AI Laboratory',
+      description: 'Collaborative research in artificial intelligence and machine learning algorithms',
+      focus: 'AI/ML Research',
+      status: 'Active'
+    },
+    {
+      name: 'Stanford University - Security Lab',
+      description: 'Joint research in cybersecurity and privacy-preserving technologies',
+      focus: 'Cybersecurity',
+      status: 'Active'
+    },
+    {
+      name: 'Carnegie Mellon University - Robotics Institute',
+      description: 'Research collaboration in autonomous systems and robotics',
+      focus: 'Autonomous Systems',
+      status: 'Planning'
+    },
+    {
+      name: 'University of California, Berkeley - EECS',
+      description: 'Collaborative research in quantum computing and cryptography',
+      focus: 'Quantum Computing',
+      status: 'Active'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEOHead 
-        title="Research & Development"
-        description="Cutting-edge research in AI, quantum computing, biotechnology, space technology, and nanotechnology. Leading innovation for the future."
-        keywords="research, development, AI research, quantum computing, biotechnology, space technology, nanotechnology, innovation"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-zion-blue/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-          </div>
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">
-              <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                Research & Development
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-6">
+              <Microscope className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Research &
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                {' '}Development
               </span>
-              <br />
-              <span className="text-white">Pioneering the Future</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 leading-relaxed">
-              At Zion Tech Group, we're not just building the future—we're inventing it. 
-              Our R&D division pushes the boundaries of what's possible in AI, quantum computing, 
-              biotechnology, space technology, and beyond.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Pushing the boundaries of technology through innovative research and development. 
+              We explore emerging technologies and create solutions that shape the future of digital transformation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Explore Research Areas
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Join Our Team
-              </motion.button>
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                View Publications
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Research Areas */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Areas</span>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Research Focus Areas
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our multidisciplinary research spans the most cutting-edge technologies of our time
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our multidisciplinary research spans cutting-edge technologies that will define the future of computing and digital innovation.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => (
               <motion.div
                 key={area.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="p-8 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mr-4`}>
-                    <area.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{area.title}</h3>
-                </div>
-                <p className="text-zion-slate-light mb-6">{area.description}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {area.projects.map((project, projectIndex) => (
-                    <div key={projectIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{project}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6">
-                  <Link
-                    to={`/research/${area.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-blue transition-colors duration-300"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Current Projects */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Current <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Projects</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Active research initiatives that are shaping the future of technology
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {currentProjects.map((project, index) => (
-              <motion.div
-                key={project.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-white">{project.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    project.status === 'In Progress' ? 'bg-green-500/20 text-green-400' :
-                    project.status === 'Research Phase' ? 'bg-blue-500/20 text-blue-400' :
-                    project.status === 'Prototype Development' ? 'bg-yellow-500/20 text-yellow-400' :
-                    'bg-purple-500/20 text-purple-400'
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <area.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{area.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{area.description}</p>
+                
+                <div className="flex items-center gap-4 mb-4 text-xs">
+                  <span className={`px-2 py-1 rounded-full ${
+                    area.status === 'Active Research' ? 'bg-green-500/20 text-green-400' :
+                    area.status === 'Applied Research' ? 'bg-blue-500/20 text-blue-400' :
+                    'bg-yellow-500/20 text-yellow-400'
                   }`}>
-                    {project.status}
+                    {area.status}
+                  </span>
+                  <span className={`px-2 py-1 rounded-full ${
+                    area.impact === 'High' ? 'bg-red-500/20 text-red-400' :
+                    area.impact === 'Critical' ? 'bg-purple-500/20 text-purple-400' :
+                    area.impact === 'Transformative' ? 'bg-cyan-500/20 text-cyan-400' :
+                    'bg-gray-500/20 text-gray-400'
+                  }`}>
+                    {area.impact} Impact
                   </span>
                 </div>
-                <p className="text-zion-slate-light mb-6">{project.description}</p>
-                
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-zion-slate-light">Progress</span>
-                      <span className="text-zion-cyan">{project.progress}%</span>
-                    </div>
-                    <div className="w-full bg-zion-slate-dark/50 rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${project.progress}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="text-zion-slate-light">Team:</span>
-                      <p className="text-white font-medium">{project.team}</p>
-                    </div>
-                    <div>
-                      <span className="text-zion-slate-light">Funding:</span>
-                      <p className="text-white font-medium">{project.funding}</p>
-                    </div>
-                    <div>
-                      <span className="text-zion-slate-light">Timeline:</span>
-                      <p className="text-white font-medium">{project.timeline}</p>
-                    </div>
-                  </div>
+
+                <div className="space-y-2 mb-6">
+                  <h4 className="text-sm font-semibold text-cyan-400">Key Projects:</h4>
+                  <ul className="space-y-1">
+                    {area.projects.slice(0, 3).map((project, projectIndex) => (
+                      <li key={projectIndex} className="flex items-center gap-2 text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
+                        <span>{project}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Research Partners */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Partners</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Collaborating with world-leading institutions to advance human knowledge
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {researchPartners.map((partner, index) => (
-              <motion.div
-                key={partner.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4">{partner.logo}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
-                <p className="text-zion-slate-light text-sm mb-2">{partner.focus}</p>
-                <p className="text-zion-cyan text-xs">{partner.collaboration}</p>
+                <button className="w-full px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 text-sm">
+                  Learn More
+                </button>
               </motion.div>
             ))}
           </div>
@@ -513,58 +272,129 @@ import {
       </section>
 
       {/* Publications */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Recent <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Publications</span>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Research Publications
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our research contributions to the global scientific community
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our research findings are published in leading academic journals and conferences, 
+              contributing to the global knowledge base in technology and innovation.
             </p>
           </motion.div>
 
           <div className="space-y-6">
             {publications.map((publication, index) => (
               <motion.div
-                key={publication.title}
-                initial={{ opacity: 0, x: -30 }}
+                key={publication.doi}
+                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <div className="flex items-start justify-between">
+                <div className="flex flex-col lg:flex-row gap-6">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{publication.title}</h3>
-                    <p className="text-zion-slate-light mb-2">{publication.authors}</p>
-                    <div className="flex items-center space-x-4 text-sm">
-                      <span className="text-zion-cyan">{publication.journal}</span>
-                      <span className="text-zion-slate-light">{publication.year}</span>
-                      <span className={`px-2 py-1 rounded text-xs ${
-                        publication.impact === 'High' ? 'bg-green-500/20 text-green-400' :
+                    <h3 className="text-xl font-bold text-white mb-3">{publication.title}</h3>
+                    <p className="text-gray-300 mb-4">{publication.abstract}</p>
+                    
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4" />
+                        <span>{publication.authors.join(', ')}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <BookOpen className="w-4 h-4" />
+                        <span>{publication.journal}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <TrendingUp className="w-4 h-4" />
+                        <span>{publication.year}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <span className="text-xs text-gray-400">DOI: {publication.doi}</span>
+                      <span className="text-xs text-gray-400">{publication.citations} citations</span>
+                      <span className={`px-2 py-1 rounded-full text-xs ${
+                        publication.impact === 'High' ? 'bg-red-500/20 text-red-400' :
                         'bg-blue-500/20 text-blue-400'
                       }`}>
                         {publication.impact} Impact
                       </span>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <a 
-                      href={`https://doi.org/${publication.doi}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-blue transition-colors duration-300"
-                    >
-                      View Paper <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
+                  
+                  <div className="flex flex-col gap-3">
+                    <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm flex items-center gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      View Paper
+                    </button>
+                    <button className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 text-sm">
+                      Download PDF
+                    </button>
                   </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research Partnerships */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Research Partnerships
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We collaborate with leading academic institutions and research organizations 
+              to advance the frontiers of technology and innovation.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {partnerships.map((partnership, index) => (
+              <motion.div
+                key={partnership.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-xl font-bold text-white">{partnership.name}</h3>
+                  <span className={`px-3 py-1 rounded-full text-xs ${
+                    partnership.status === 'Active' ? 'bg-green-500/20 text-green-400' :
+                    'bg-yellow-500/20 text-yellow-400'
+                  }`}>
+                    {partnership.status}
+                  </span>
+                </div>
+                
+                <p className="text-gray-300 mb-4">{partnership.description}</p>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-cyan-400 font-medium">{partnership.focus}</span>
+                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm flex items-center gap-1">
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 </div>
               </motion.div>
             ))}
@@ -573,36 +403,28 @@ import {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Join Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Research</span> Team
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Join Our Research Mission
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Help us push the boundaries of what's possible and shape the future of technology
+            <p className="text-xl text-gray-300 mb-8">
+              Whether you're a researcher, student, or industry partner, 
+              we welcome collaboration opportunities to advance technology together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
-              >
-                View Open Positions
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Submit Research Proposal
-              </motion.button>
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Explore Collaboration
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Research Team
+              </button>
             </div>
           </motion.div>
         </div>
