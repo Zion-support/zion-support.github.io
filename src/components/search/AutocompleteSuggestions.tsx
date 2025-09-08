@@ -1,37 +1,78 @@
-import React from 'react';
-import { SearchSuggestion } from '@/types/search';
+import React from "react";
+
+interface SearchSuggestion {
+  text: string;
+  type: string;
+}
+
+interface SearchHighlight {
+  before: string;
+  match: string;
+  after: string;
+}
 
 interface AutocompleteSuggestionsProps {
   suggestions: SearchSuggestion[];
-  onSelect: (suggestion: SearchSuggestion) => void;
-  isVisible: boolean;
+  searchTerm: string;
+  onSelectSuggestion: (suggestion: string) => void;
+  visible: boolean;
 }
 
-export const AutocompleteSuggestions: React.FC<AutocompleteSuggestionsProps> = ({
+// Helper function to highlight matching text
+function highlightMatch(text: string, searchTerm: string): SearchHighlight {
+  if (!searchTerm) {
+    return { before: text, match: "", after: "" };
+  }
+  
+  const index = text.toLowerCase().indexOf(searchTerm.toLowerCase());
+  if (index === -1) {
+    return { before: text, match: "", after: "" };
+  }
+  
+  return {
+    before: text.substring(0, index),
+    match: text.substring(index, index + searchTerm.length),
+    after: text.substring(index + searchTerm.length)
+  };
+}
+
+export function AutocompleteSuggestions({
   suggestions,
-  onSelect,
-  isVisible,
-}) => {
-  if (!isVisible || suggestions.length === 0) {
+  searchTerm,
+  onSelectSuggestion,
+  visible
+}: AutocompleteSuggestionsProps) {
+  if (!visible || !suggestions || suggestions.length === 0) {
     return null;
   }
 
   return (
-    <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-md shadow-lg z-50 max-h-60 overflow-y-auto">
-      {suggestions.map((suggestion, index) => (
-        <button
-          key={index}
-          className="w-full px-4 py-2 text-left hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
-          onClick={() => onSelect(suggestion)}
-        >
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-900">{suggestion.title}</span>
-            {suggestion.category && (
-              <span className="text-sm text-gray-500">in {suggestion.category}</span>
-            )}
-          </div>
-        </button>
-      ))}
+    <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden">
+      <ul className="py-2 max-h-60 overflow-y-auto">
+        {suggestions.map((suggestion, index) => {
+          const highlight = highlightMatch(suggestion.text, searchTerm);
+          return (
+            <li
+              key={`${suggestion.type}-${index}`}
+              className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+              onClick={() => onSelectSuggestion(suggestion.text)}
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <span>{highlight.before}</span>
+                  <span className="font-bold text-blue-600 dark:text-blue-400">
+                    {highlight.match}
+                  </span>
+                  <span>{highlight.after}</span>
+                </div>
+                <span className="text-xs text-gray-500 dark:text-gray-400 capitalize">
+                  {suggestion.type}
+                </span>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
-};
+}
