@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Front enhancer function triggered');
+    console.log('Front maximizer function triggered');
     
-    // Basic front enhancement logic
+    // Basic front maximization logic
     const result = {
       statusCode: 200,
       headers: {
@@ -10,17 +10,17 @@ exports.handler = async function(event, context) {
         'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
-        message: 'Front enhancer executed successfully',
+        message: 'Front maximizer executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'front-enhancer',
-        enhancements: ['content', 'links', 'metadata']
+        function: 'front-maximizer',
+        maximizations: ['performance', 'features', 'user-experience']
       })
     };
     
-    console.log('Front enhancer completed successfully');
+    console.log('Front maximizer completed successfully');
     return result;
   } catch (error) {
-    console.error('Error in front enhancer:', error);
+    console.error('Error in front maximizer:', error);
     return {
       statusCode: 500,
       headers: {
@@ -30,7 +30,7 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'front-enhancer'
+        function: 'front-maximizer'
       })
     };
   }

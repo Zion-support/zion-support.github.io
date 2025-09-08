@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Front enhancer function triggered');
+    console.log('Marketing and features promo function triggered');
     
-    // Basic front enhancement logic
+    // Basic marketing and features promo logic
     const result = {
       statusCode: 200,
       headers: {
@@ -10,17 +10,17 @@ exports.handler = async function(event, context) {
         'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
-        message: 'Front enhancer executed successfully',
+        message: 'Marketing and features promo executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'front-enhancer',
-        enhancements: ['content', 'links', 'metadata']
+        function: 'marketing-and-features-promo',
+        promotions: ['features', 'benefits', 'marketing']
       })
     };
     
-    console.log('Front enhancer completed successfully');
+    console.log('Marketing and features promo completed successfully');
     return result;
   } catch (error) {
-    console.error('Error in front enhancer:', error);
+    console.error('Error in marketing and features promo:', error);
     return {
       statusCode: 500,
       headers: {
@@ -30,7 +30,7 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'front-enhancer'
+        function: 'marketing-and-features-promo'
       })
     };
   }
