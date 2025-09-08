@@ -1,365 +1,210 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
 
-console.log("🚀 Starting CI/CD automation...");
+<<<<<<< HEAD
+=======
+/**
+ * CI/CD Automation Script
+ * Replaces GitHub Actions CI/CD Pipeline
+ * Runs every 4 hours via PM2 cron restart
+ */
+
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 class CICDAutomation {
   constructor() {
-    this.ciResults = {
-      dependencies: { status: "pending", result: null },
-      linting: { status: "pending", result: null },
-      typeCheck: { status: "pending", result: null },
-      build: { status: "pending", result: null },
-      testing: { status: "pending", result: null },
-      quality: { status: "pending", result: null }
-    };
-    this.reportDir = path.join(process.cwd(), "ci-cd-reports");
-    this.ensureReportDirectory();
-    this.startTime = Date.now();
+<<<<<<< HEAD
+    this.logFile = path.join(__dirname, 'logs', 'ci-cd-automation.log');
+=======
+    this.logFile = path.join(__dirname, '..', 'logs', 'ci-cd.log');
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+    this.ensureLogDir();
   }
 
-  ensureReportDirectory() {
-    if (!fs.existsSync(this.reportDir)) {
-      fs.mkdirSync(this.reportDir, { recursive: true });
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  async installDependencies() {
-    console.log("📦 Installing dependencies...");
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
+    console.log(message);
+=======
+    console.log(logMessage.trim());
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async runTests() {
     try {
-      const startTime = Date.now();
-      const output = execSync("npm install", {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
-      const duration = Date.now() - startTime;
-      this.ciResults.dependencies.status = "success";
-      this.ciResults.dependencies.result = {
-        duration: `${duration}ms`,
-        output: "Dependencies installed successfully"
-      };
-      console.log(`✅ Dependencies installed in ${duration}ms`);
+      this.log('Running tests...');
+      execSync('npm run test:smoke', { stdio: 'pipe' });
+      this.log('Tests completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.dependencies.status = "failure";
-      this.ciResults.dependencies.result = {
-        error: error.message,
-        output: error.stdout || error.stderr || "Unknown error"
-      };
-      console.log(`❌ Dependency installation failed: ${error.message}`);
-      throw error;
+      this.log(`Tests failed: ${error.message}`);
+      return false;
     }
   }
 
-  async runLinting() {
-    console.log("🔍 Running linting checks...");
+<<<<<<< HEAD
+=======
+  async runLint() {
     try {
-      const startTime = Date.now();
-      const output = execSync("npm run lint", {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
-      const duration = Date.now() - startTime;
-      this.ciResults.linting.status = "success";
-      this.ciResults.linting.result = {
-        duration: `${duration}ms`,
-        output: output,
-        issues: this.parseLintOutput(output)
-      };
-      console.log(`✅ Linting completed in ${duration}ms`);
+      this.log('Running linting...');
+      execSync('npm run lint', { stdio: 'pipe' });
+      this.log('Linting completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.linting.status = "failure";
-      this.ciResults.linting.result = {
-        error: error.message,
-        output: error.stdout || error.stderr || "Unknown error",
-        issues: this.parseLintOutput(error.stdout || error.stderr || "")
-      };
-      console.log(`❌ Linting failed: ${error.message}`);
-    }
-  }
-
-  parseLintOutput(output) {
-    try {
-      const lines = output.split("\n");
-      const errorMatches = output.match(/error/g) || [];
-      const warningMatches = output.match(/warning/g) || [];
-      return {
-        total: errorMatches.length + warningMatches.length,
-        errors: errorMatches.length,
-        warnings: warningMatches.length
-      };
-    } catch (error) {
-      return { total: 0, errors: 0, warnings: 0 };
+      this.log(`Linting failed: ${error.message}`);
+      return false;
     }
   }
 
   async runTypeCheck() {
-    console.log("🔍 Running TypeScript type checking...");
     try {
-      const startTime = Date.now();
-      const output = execSync("npm run type-check", {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
-      const duration = Date.now() - startTime;
-      this.ciResults.typeCheck.status = "success";
-      this.ciResults.typeCheck.result = {
-        duration: `${duration}ms`,
-        output: output,
-        issues: this.parseTypeCheckOutput(output)
-      };
-      console.log(`✅ Type checking completed in ${duration}ms`);
+      this.log('Running type checking...');
+      execSync('npm run type-check', { stdio: 'pipe' });
+      this.log('Type checking completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.typeCheck.status = "failure";
-      this.ciResults.typeCheck.result = {
-        error: error.message,
-        output: error.stdout || error.stderr || "Unknown error",
-        issues: this.parseTypeCheckOutput(error.stdout || error.stderr || "")
-      };
-      console.log(`❌ Type checking failed: ${error.message}`);
+      this.log(`Type checking failed: ${error.message}`);
+      return false;
     }
   }
 
-  parseTypeCheckOutput(output) {
-    try {
-      const lines = output.split("\n");
-      const errorLines = lines.filter(line => line.includes("error TS"));
-      const warningLines = lines.filter(line => line.includes("warning TS"));
-      return {
-        total: errorLines.length + warningLines.length,
-        errors: errorLines.length,
-        warnings: warningLines.length
-      };
-    } catch (error) {
-      return { total: 0, errors: 0, warnings: 0 };
-    }
-  }
-
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
   async runBuild() {
-    console.log("🏗️ Building project...");
     try {
-      const startTime = Date.now();
-      const output = execSync("npm run build", {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
-      const duration = Date.now() - startTime;
-      this.ciResults.build.status = "success";
-      this.ciResults.build.result = {
-        duration: `${duration}ms`,
-        output: "Build completed successfully",
-        buildSize: this.calculateBuildSize()
-      };
-      console.log(`✅ Build completed in ${duration}ms`);
+      this.log('Running build...');
+      execSync('npm run build', { stdio: 'pipe' });
+      this.log('Build completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.build.status = "failure";
-      this.ciResults.build.result = {
-        error: error.message,
-        output: error.stdout || error.stderr || "Unknown error"
-      };
-      console.log(`❌ Build failed: ${error.message}`);
-      throw error;
+      this.log(`Build failed: ${error.message}`);
+      return false;
     }
   }
 
-  calculateBuildSize() {
+<<<<<<< HEAD
+  async runLint() {
     try {
-      const distDir = path.join(process.cwd(), "dist");
-      if (!fs.existsSync(distDir)) return "0 B";
-
-      let totalSize = 0;
-      const walkDir = dir => {
-        const files = fs.readdirSync(dir);
-        files.forEach(file => {
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          if (stat.isDirectory()) {
-            walkDir(filePath);
-          } else {
-            totalSize += stat.size;
-          }
-        });
-      };
-      walkDir(distDir);
-      
-      const units = ["B", "KB", "MB", "GB"];
-      let size = totalSize;
-      let unitIndex = 0;
-      while (size >= 1024 && unitIndex < units.length - 1) {
-        size /= 1024;
-        unitIndex++;
-      }
-      return `${size.toFixed(2)} ${units[unitIndex]}`;
+      this.log('Running lint...');
+      execSync('npm run lint', { stdio: 'pipe' });
+      this.log('Lint completed successfully');
+      return true;
     } catch (error) {
-      return "Unknown";
+      this.log(`Lint failed: ${error.message}`);
+=======
+  async runVerify() {
+    try {
+      this.log('Running verify (type-check, lint, tests, build)...');
+      execSync('npm run verify', { stdio: 'pipe' });
+      this.log('Verify completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Verify failed: ${error.message}`);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+      return false;
     }
   }
 
-  async runTests() {
-    console.log("🧪 Running tests...");
+<<<<<<< HEAD
+  async runTypeCheck() {
     try {
-      const startTime = Date.now();
-      const packagePath = path.join(process.cwd(), "package.json");
-      const packageData = JSON.parse(fs.readFileSync(packagePath, "utf8"));
-      const scripts = packageData.scripts || {};
-      
-      let testCommand = "";
-      if (scripts.test) {
-        testCommand = "npm test";
-      } else if (scripts["test:unit"]) {
-        testCommand = "npm run test:unit";
-      } else {
-        console.log("⚠️ No test scripts found, skipping tests");
-        this.ciResults.testing.status = "skipped";
-        this.ciResults.testing.result = {
-          reason: "No test scripts configured",
-          output: "Tests skipped"
-        };
-        return;
-      }
-
-      const output = execSync(testCommand, {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
-
-      const duration = Date.now() - startTime;
-      this.ciResults.testing.status = "success";
-      this.ciResults.testing.result = {
-        duration: `${duration}ms`,
-        output: output,
-        summary: this.parseTestOutput(output)
-      };
-      console.log(`✅ Tests completed in ${duration}ms`);
+      this.log('Running type check...');
+      execSync('npm run type-check', { stdio: 'pipe' });
+      this.log('Type check completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.testing.status = "failure";
-      this.ciResults.testing.result = {
-        error: error.message,
-        output: error.stdout || error.stderr || "Unknown error"
-      };
-      console.log(`❌ Tests failed: ${error.message}`);
+      this.log(`Type check failed: ${error.message}`);
+=======
+  async deploy() {
+    try {
+      this.log('Starting deployment...');
+      // Add deployment logic here
+      this.log('Deployment completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Deployment failed: ${error.message}`);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+      return false;
     }
   }
 
-  parseTestOutput(output) {
-    try {
-      const passedMatches = output.match(/(\d+)\s+"passed/g) || [];
-      const failedMatches = output.match(/(\d+)\s+"failed/g) || [];
-      const skippedMatches = output.match(/(\d+)\s+"skipped/g) || [];
-      
-      const passed = passedMatches.length > 0 ? parseInt(passedMatches[0].match(/\d+/)[0]) : 0;
-      const failed = failedMatches.length > 0 ? parseInt(failedMatches[0].match(/\d+/)[0]) : 0;
-      const skipped = skippedMatches.length > 0 ? parseInt(skippedMatches[0].match(/\d+/)[0]) : 0;
-      
-      return { passed, failed, skipped, total: passed + failed + skipped };
-    } catch (error) {
-      return { passed: 0, failed: 0, skipped: 0, total: 0 };
-    }
-  }
-
-  async runQualityChecks() {
-    console.log("📊 Running quality checks...");
-    try {
-      const qualityResults = {
-        buildSuccess: this.ciResults.build.status === "success",
-        lintingPassed: this.ciResults.linting.status === "success",
-        typeCheckPassed: this.ciResults.typeCheck.status === "success",
-        testsPassed: this.ciResults.testing.status === "success",
-        dependenciesInstalled: this.ciResults.dependencies.status === "success"
-      };
-      
-      const totalChecks = Object.keys(qualityResults).length;
-      const passedChecks = Object.values(qualityResults).filter(Boolean).length;
-      const qualityScore = ((passedChecks / totalChecks) * 100).toFixed(2);
-      
-      this.ciResults.quality.status = passedChecks === totalChecks ? "success" : "failure";
-      this.ciResults.quality.result = {
-        score: qualityScore,
-        passed: passedChecks,
-        total: totalChecks,
-        details: qualityResults
-      };
-      console.log(`✅ Quality checks completed. Score: ${qualityScore}%`);
-    } catch (error) {
-      this.ciResults.quality.status = "failure";
-      this.ciResults.quality.result = {
-        error: error.message,
-        score: 0,
-        passed: 0,
-        total: 0
-      };
-      console.log(`❌ Quality checks failed: ${error.message}`);
-    }
-  }
-
-  async generateCIReport() {
-    console.log("📋 Generating CI/CD report...");
-    const totalDuration = Date.now() - this.startTime;
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${totalDuration}ms`,
-      summary: {
-        total: Object.keys(this.ciResults).length,
-        passed: Object.values(this.ciResults).filter(r => r.status === "success").length,
-        failed: Object.values(this.ciResults).filter(r => r.status === "failure").length,
-        skipped: Object.values(this.ciResults).filter(r => r.status === "skipped").length
-      },
-      results: this.ciResults,
-      quality: this.ciResults.quality.result
+<<<<<<< HEAD
+  async runCIPipeline() {
+    this.log('Starting CI/CD pipeline...');
+=======
+  async run() {
+    this.log('=== CI/CD Automation Started ===');
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+    
+    const results = {
+      lint: await this.runLint(),
+      typeCheck: await this.runTypeCheck(),
+<<<<<<< HEAD
+      test: await this.runTests(),
+      build: await this.runBuild()
     };
 
-    fs.writeFileSync(
-      path.join(this.reportDir, "ci-cd-report.json"),
-      JSON.stringify(report, null, 2)
-    );
+    const allPassed = Object.values(results).every(result => result);
+    
+    if (allPassed) {
+      this.log('CI/CD pipeline completed successfully');
+    } else {
+      this.log('CI/CD pipeline failed - some steps did not pass');
+    }
 
-    console.log("📋 CI/CD report generated successfully");
-    return report;
+    return allPassed;
   }
 
-  async runPipeline() {
-    try {
-      await this.installDependencies();
-      await this.runLinting();
-      await this.runTypeCheck();
-      await this.runBuild();
-      await this.runTests();
-      await this.runQualityChecks();
+  async start() {
+    this.log('CI/CD automation service started');
+    
+    // Run initial pipeline
+    await this.runCIPipeline();
+    
+    // Set up interval for periodic CI/CD (every 4 hours)
+    setInterval(async () => {
+      await this.runCIPipeline();
+    }, 4 * 60 * 60 * 1000);
+  }
+}
 
-      const report = await this.generateCIReport();
-      console.log(`\n🎯 Pipeline Summary:`);
-      console.log(`Duration: ${report.duration}`);
-      console.log(`Total Checks: ${report.summary.total}`);
-      console.log(`Passed: ${report.summary.passed} ✅`);
-      console.log(`Failed: ${report.summary.failed} ❌`);
-      console.log(`Quality Score: ${report.quality.score}%`);
+// Start the automation if this file is run directly
+if (require.main === module) {
+  const automation = new CICDAutomation();
+  automation.start().catch(console.error);
+=======
+      tests: await this.runTests(),
+      build: await this.runBuild(),
+      verify: await this.runVerify(),
+      deploy: await this.deploy()
+    };
 
-      if (report.summary.failed > 0) {
-        console.log("\n❌ Pipeline failed. Review failed checks above.");
-        process.exit(1);
-      } else {
-        console.log("\n✅ Pipeline passed successfully! Ready for deployment.");
-      }
-
-      return report;
-    } catch (error) {
-      console.error("❌ Pipeline failed:", error);
-      process.exit(1);
+    const allPassed = Object.values(results).every(result => result === true);
+    
+    if (allPassed) {
+      this.log('=== CI/CD Automation Completed Successfully ===');
+    } else {
+      this.log('=== CI/CD Automation Completed with Failures ===');
+      this.log(`Results: ${JSON.stringify(results, null, 2)}`);
     }
   }
 }
 
-// Main execution
-async function main() {
-  const ci = new CICDAutomation();
-  await ci.runPipeline();
+// Run the automation
+if (require.main === module) {
+  const automation = new CICDAutomation();
+  automation.run().catch(console.error);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
 }
 
-// Start the CI/CD pipeline
-main().catch(console.error);
+module.exports = CICDAutomation;

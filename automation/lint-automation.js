@@ -1,17 +1,25 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
 
-console.log("🔍 Starting lint automation...");
+<<<<<<< HEAD
+=======
+/**
+ * Lint Automation Script
+ * Replaces GitHub Actions linting workflows
+ * Runs every 6 hours via PM2 cron restart
+ */
+
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 class LintAutomation {
   constructor() {
-    this.logFile = path.join(__dirname, "logs", "lint-automation.log");
-    this.ensureLogDirectory();
+    this.logFile = path.join(__dirname, 'logs', 'lint-automation.log');
+    this.ensureLogDir();
   }
 
-  ensureLogDirectory() {
+  ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
@@ -21,188 +29,112 @@ class LintAutomation {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
     console.log(message);
+=======
+    console.log(logMessage.trim());
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
     fs.appendFileSync(this.logFile, logMessage);
   }
 
-  async runLinting() {
+  async runLint() {
     try {
-      this.log("🔍 Running ESLint...");
-      const startTime = Date.now();
+      this.log('Starting lint automation...');
       
-      const output = execSync("npm run lint", {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
+      // Run ESLint
+      this.log('Running ESLint...');
+      execSync('npm run lint', { stdio: 'pipe' });
+      this.log('ESLint completed successfully');
       
-      const duration = Date.now() - startTime;
-      this.log(`✅ Linting completed in ${duration}ms`);
+      // Run type checking
+      this.log('Running TypeScript type check...');
+      execSync('npm run type-check', { stdio: 'pipe' });
+<<<<<<< HEAD
+      this.log('Type check completed successfully');
       
-      return {
-        status: "success",
-        duration: duration,
-        output: output
-      };
+      this.log('Lint automation completed successfully');
+      
     } catch (error) {
-      this.log(`❌ Linting failed: ${error.message}`);
+      this.log(`Lint automation failed: ${error.message}`);
       
       // Try to fix linting issues
       try {
-        this.log("🔧 Attempting to fix linting issues...");
-        execSync("npm run lint:fix", {
-          encoding: "utf8",
-          cwd: process.cwd(),
-          stdio: "pipe"
-        });
-        this.log("✅ Linting issues fixed");
-        
-        return {
-          status: "fixed",
-          duration: 0,
-          output: "Issues were automatically fixed"
-        };
+        this.log('Attempting to fix linting issues...');
+        execSync('npm run lint:fix', { stdio: 'pipe' });
+        this.log('Lint fixes applied successfully');
       } catch (fixError) {
-        this.log(`❌ Could not fix linting issues: ${fixError.message}`);
-        
-        return {
-          status: "failure",
-          duration: 0,
-          error: error.message,
-          output: error.stdout || error.stderr || "Unknown error"
-        };
+        this.log(`Failed to fix linting issues: ${fixError.message}`);
       }
     }
   }
 
-  async runTypeCheck() {
-    try {
-      this.log("🔍 Running TypeScript type check...");
-      const startTime = Date.now();
+  async start() {
+    this.log('Lint automation service started');
+    
+    // Run initial lint
+    await this.runLint();
+    
+    // Set up interval for periodic linting (every 6 hours)
+    setInterval(async () => {
+      await this.runLint();
+    }, 6 * 60 * 60 * 1000);
+  }
+}
+
+// Start the automation if this file is run directly
+if (require.main === module) {
+  const automation = new LintAutomation();
+  automation.start().catch(console.error);
+=======
+      this.log('TypeScript type check completed successfully');
       
-      const output = execSync("npm run type-check", {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
-      
-      const duration = Date.now() - startTime;
-      this.log(`✅ Type checking completed in ${duration}ms`);
-      
-      return {
-        status: "success",
-        duration: duration,
-        output: output
-      };
+      this.log('Lint automation completed successfully');
+      return true;
     } catch (error) {
-      this.log(`❌ Type checking failed: ${error.message}`);
-      
-      return {
-        status: "failure",
-        duration: 0,
-        error: error.message,
-        output: error.stdout || error.stderr || "Unknown error"
-      };
+      this.log(`Lint automation failed: ${error.message}`);
+      return false;
     }
   }
 
-  async runQualityChecks() {
+  async runLintFix() {
     try {
-      this.log("📊 Running quality checks...");
-      const startTime = Date.now();
+      this.log('Starting lint fix automation...');
       
-      const output = execSync("npm run check", {
-        encoding: "utf8",
-        cwd: process.cwd(),
-        stdio: "pipe"
-      });
+      // Run ESLint with fix
+      this.log('Running ESLint with auto-fix...');
+      execSync('npm run lint:fix', { stdio: 'pipe' });
+      this.log('ESLint auto-fix completed');
       
-      const duration = Date.now() - startTime;
-      this.log(`✅ Quality checks completed in ${duration}ms`);
-      
-      return {
-        status: "success",
-        duration: duration,
-        output: output
-      };
+      this.log('Lint fix automation completed successfully');
+      return true;
     } catch (error) {
-      this.log(`❌ Quality checks failed: ${error.message}`);
-      
-      return {
-        status: "failure",
-        duration: 0,
-        error: error.message,
-        output: error.stdout || error.stderr || "Unknown error"
-      };
+      this.log(`Lint fix automation failed: ${error.message}`);
+      return false;
     }
-  }
-
-  async generateReport(results) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        total: Object.keys(results).length,
-        passed: Object.values(results).filter(r => r.status === "success").length,
-        failed: Object.values(results).filter(r => r.status === "failure").length,
-        fixed: Object.values(results).filter(r => r.status === "fixed").length
-      },
-      results: results
-    };
-
-    const reportPath = path.join(process.cwd(), "lint-reports", "lint-automation-report.json");
-    const reportDir = path.dirname(reportPath);
-    
-    if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursive: true });
-    }
-    
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to ${reportPath}`);
-    
-    return report;
   }
 
   async run() {
-    try {
-      this.log("🚀 Starting lint automation pipeline...");
-      
-      const results = {
-        linting: await this.runLinting(),
-        typeCheck: await this.runTypeCheck(),
-        quality: await this.runQualityChecks()
-      };
-      
-      const report = await this.generateReport(results);
-      
-      this.log(`\n🎯 Lint Automation Summary:`);
-      this.log(`Total Checks: ${report.summary.total}`);
-      this.log(`Passed: ${report.summary.passed} ✅`);
-      this.log(`Failed: ${report.summary.failed} ❌`);
-      this.log(`Fixed: ${report.summary.fixed} 🔧`);
-      
-      if (report.summary.failed > 0) {
-        this.log("\n❌ Some checks failed. Review the report for details.");
-        process.exit(1);
-      } else {
-        this.log("\n✅ All lint checks passed successfully!");
-      }
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Lint automation failed: ${error.message}`);
-      process.exit(1);
+    this.log('=== Lint Automation Started ===');
+    
+    // Try to fix linting issues first
+    const fixSuccess = await this.runLintFix();
+    
+    // Then run linting to check for remaining issues
+    const lintSuccess = await this.runLint();
+    
+    if (fixSuccess && lintSuccess) {
+      this.log('=== Lint Automation Completed Successfully ===');
+    } else {
+      this.log('=== Lint Automation Completed with Issues ===');
     }
   }
 }
 
-// Main execution
-async function main() {
-  const lintAutomation = new LintAutomation();
-  await lintAutomation.run();
+// Run the automation
+if (require.main === module) {
+  const automation = new LintAutomation();
+  automation.run().catch(console.error);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-f06c
 }
 
-// Start the lint automation
-main().catch(error => {
-  console.error("❌ Failed to start lint automation:", error);
-  process.exit(1);
-});
+module.exports = LintAutomation;
