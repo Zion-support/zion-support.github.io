@@ -24888,3 +24888,27 @@ fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-3e3e
 [2025-09-08T21:34:03.989Z] 🔧 Resolving conflicts in: package-lock.json
 [2025-09-08T21:34:03.996Z] ✅ Resolved conflicts in: package-lock.json
 [2025-09-08T21:34:03.996Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:34:04.107Z] ✅ Success: Add resolved files
+[2025-09-08T21:34:04.107Z] 🚀 Commit merge for cursor/fix-netlify-build-and-merge-to-main-4ed2: git commit -m "Resolve conflicts and merge cursor/fix-netlify-build-and-merge-to-main-4ed2"
+[2025-09-08T21:34:04.155Z] ✅ Success: Commit merge for cursor/fix-netlify-build-and-merge-to-main-4ed2
+[2025-09-08T21:34:04.155Z] ✅ Successfully resolved conflicts and merged: cursor/fix-netlify-build-and-merge-to-main-4ed2
+[2025-09-08T21:34:04.155Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-5173
+[2025-09-08T21:34:04.155Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-5173: git fetch origin cursor/fix-netlify-build-and-merge-to-main-5173
+[2025-09-08T21:34:04.501Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-5173
+[2025-09-08T21:34:04.501Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-5173: git merge origin/cursor/fix-netlify-build-and-merge-to-main-5173 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-5173 into main"
+[2025-09-08T21:34:04.931Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-5173
+[2025-09-08T21:34:04.931Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-5173
+[2025-09-08T21:34:05.932Z] 📦 Processing batch 306/509
+[2025-09-08T21:34:05.932Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-519e
+[2025-09-08T21:34:05.932Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-519e: git fetch origin cursor/fix-netlify-build-and-merge-to-main-519e
+[2025-09-08T21:34:06.039Z] ❌ Error in Fetch origin/cursor/fix-netlify-build-and-merge-to-main-519e: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-519e
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-519e
+
+[2025-09-08T21:34:06.039Z] ❌ Failed to merge cursor/fix-netlify-build-and-merge-to-main-519e: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-519e
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-519e
+
+[2025-09-08T21:34:06.039Z] 🔧 Attempting to resolve conflicts for: cursor/fix-netlify-build-and-merge-to-main-519e
+[2025-09-08T21:34:06.039Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:34:06.090Z] ✅ Success: Get git status
+[2025-09-08T21:34:06.090Z] 📄 Found 0 conflicted files
+[2025-09-08T21:34:06.090Z] 🚀 Add resolved files: git add .
