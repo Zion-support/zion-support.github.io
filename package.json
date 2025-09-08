@@ -42,7 +42,11 @@
     "prebuild": "echo 'Skipping prebuild checks'",
     "postbuild": "echo 'Build completed successfully' && npm run optimize",
     "optimize": "node scripts/optimize-build.js",
-    "build:optimize": "npm run build && npm run optimize"
+    "build:optimize": "npm run build && npm run optimize",
+    "performance": "node scripts/performance-monitor.js",
+    "security": "node scripts/security-audit.js",
+    "audit:all": "npm run security && npm run performance && npm run optimize",
+    "build:full": "npm run build && npm run audit:all"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
