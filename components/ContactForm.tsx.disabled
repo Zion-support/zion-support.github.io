@@ -71,7 +71,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
   const handleBlur = useCallback((name: keyof ContactFormData) => {
     const error = validateField(name, formData[name]);
     setErrors({ ...errors, [name]: error });
-  }, [validateField, formData, errors]);
+  }, [validateField, formData]);
 
   const validateForm = useCallback((): boolean => {
     const newErrors: Partial<ContactFormData> = {};
@@ -86,6 +86,36 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
       }
     });
 
+    setErrors(newErrors);
+    return isValid;
+  }, [formData, validateField]);
+
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const handleBlur = (name: string) => {
+    const error = validateField(name, formData[name]);
+    if (error) {
+      setErrors(prev => ({ ...prev, [name]: error }));
+    }
+  };
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+    
+    Object.keys(formData).forEach(key => {
+      const error = validateField(key, formData[key as keyof FormData]);
+      if (error) {
+        newErrors[key] = error;
+      }
+    });
+    
     setErrors(newErrors);
     return isValid;
   }, [formData, validateField]);

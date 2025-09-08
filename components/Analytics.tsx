@@ -427,7 +427,7 @@ interface ComponentProps {
                       <MetricCard
                         title="Conversion Rate"
                         value={`${data.conversionRate}%`}
-                        icon={<BarChart3 className="w-6 h-6" />}
+                        icon={<Zap className="w-6 h-6" />}
                         trend="up"
                         trendValue="+1.8%"
                         color="purple"
@@ -439,7 +439,7 @@ interface ComponentProps {
                       {/* Top Pages */}
                       <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
                         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                          <BarChart3 className="w-5 h-5 text-blue-400" />
+                          <Zap className="w-5 h-5 text-blue-400" />
                           Top Pages
                         </h3>
                         <div className="space-y-3">
@@ -461,7 +461,7 @@ interface ComponentProps {
                       {/* User Behavior */}
                       <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
                         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                          <Eye className="w-5 h-5 text-green-400" />
+                          <Zap className="w-5 h-5 text-green-400" />
                           User Behavior
                         </h3>
                         <div className="space-y-3">
@@ -535,7 +535,7 @@ interface ComponentProps {
 
                     {/* Last Updated */}
                     <div className="text-center mt-8 text-gray-500 text-sm">
-                      Last updated: {lastRefreshRef.current?.toLocaleTimeString() || 'Unknown'}
+                      Last updated: {lastRefreshRef.current?.toLocaleTimeString() || 'Never'}
                     </div>
                   </div>
                 ) : null}

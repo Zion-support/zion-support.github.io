@@ -15,7 +15,7 @@ interface AIChatbotProps {
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([
+  const [messages, setMessages] = useState<ChatMessage[]>(() => [
     {
       id: '1',
       type: 'bot',
@@ -65,7 +65,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?";
     }
     
-    return finalResponse;
+    return finalResponse || "I'm here to help! How can I assist you today?";
   };
 
   const handleSendMessage = async () => {

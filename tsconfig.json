@@ -21,17 +21,47 @@
         "./src/*"
       ]
     },
-    "forceConsistentCasingInFileNames": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "allowJs": true,
+    "incremental": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "types": [
+      "node"
+    ],
+    "jsx": "preserve",
+    "noEmit": true,
+    "isolatedModules": true
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "types/**/*.ts",
+    "types/**/*.tsx",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "context/**/*.ts",
+    "context/**/*.tsx",
+    "services/**/*.ts",
+    "services/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
