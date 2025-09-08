@@ -1,5 +1,19 @@
-import { Link } from 'react-router-dom';
-import { Cog } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { 
+  Rocket, 
+  Satellite, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Brain,
+  CheckCircle,
+  Users,
+  Database,
+  Network,
+  Cpu,
+  Orbit
+} from 'lucide-react';
 
 const SpaceTech = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">

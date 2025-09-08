@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
 
 const HealthcareSolutions = () => {

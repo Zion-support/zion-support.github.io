@@ -80,8 +80,7 @@ const SEOOptimizer = () => {
             });
         }
         catch (error) {
-            // console.error('Error analyzing SEO:', error);
-        }
+            // // console.error('Error analyzing SEO:', error)}
         finally {
             setIsAnalyzing(false);
         }

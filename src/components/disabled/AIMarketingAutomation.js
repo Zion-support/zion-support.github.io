@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, Analytics } from 'lucide-react';

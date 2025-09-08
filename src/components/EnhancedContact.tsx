@@ -12,12 +12,9 @@ export const EnhancedContact = () => {
         phone: '',
         service: '',
         message: ''
-      });
-    } catch (error) {
-      // console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      })} catch (error) {
+      // // console.error('Error submitting form:', error)} finally {
+      setIsSubmitting(false)}
   };
 
   const contactInfo = [

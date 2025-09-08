@@ -114,10 +114,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       try {
         audioRef.current.play().catch(() => {
           // Ignore autoplay restrictions
-        });
-      } catch (error) {
-        // console.warn('Could not play notification sound:', error);
-      }
+        })} catch (error) {
+        // // console.warn('Could not play notification sound:', error)}
     }
   }, [settings.sound]);
 
@@ -125,10 +123,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const triggerVibration = useCallback(() => {
     if (settings.vibration && 'vibrate' in navigator) {
       try {
-        navigator.vibrate(200);
-      } catch (error) {
-        // console.warn('Could not trigger vibration:', error);
-      }
+        navigator.vibrate(200)} catch (error) {
+        // // console.warn('Could not trigger vibration:', error)}
     }
   }, [settings.vibration]);
 

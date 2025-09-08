@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { 
+import { motion  } from 'framer-motion';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   FileText, 
   Shield, 
   Users, 

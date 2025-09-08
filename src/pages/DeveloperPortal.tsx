@@ -59,10 +59,17 @@ const DeveloperPortal: React.FC = () => {
 
   const community = [
     {
-      name: 'Developer Forum',
-      description: 'Get help from our community',
-      members: '2.5K+',
-      icon: '💬'
+      language: 'JavaScript',
+      code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+
+const data = await response.json();
+// // // // // // console.log(data);`,
+      icon: Code
     },
     {
       name: 'GitHub Discussions',

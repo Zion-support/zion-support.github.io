@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from '@/components/SEO';
 import { DisputeDetail } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';

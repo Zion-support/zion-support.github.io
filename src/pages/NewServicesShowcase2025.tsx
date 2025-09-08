@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3,
+import { 
+  Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3, 
   DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,
   Calendar, Shield, Filter, Headphones, Calculator, PieChart,
   ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star

@@ -27,27 +27,19 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 3000);
-  };
+    // Here you would typically send the form data to your backend
+    // // console.log('Form submitted:', formData);
+    alert('Thank you for your message! We will get back to you within 24 hours.');
+    setFormData({
+      name: '',
+      email: '',
+      comp: '',
+      phone: '',
+      service: '',
+      message: '',
+      budget: '',
+      timeline: ''
+    })};
 
   const services = [
     { id: 'ai-analytics', name: 'AI & Analytics Solutions', icon: <Brain className="w-5 h-5" /> },

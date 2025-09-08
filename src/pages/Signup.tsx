@@ -47,9 +47,8 @@ export default function Signup() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
-    // console.log('Signup attempt:', formData);
-    setIsLoading(false);
-  };
+    // // console.log('Signup attempt:', formData);
+    setIsLoading(false)};
   const features = [
     {
       icon: <Shield className="h-6 w-6 text-zion-cyan" />,

@@ -1,3 +1,4 @@
+
 export function Separator({ className = '', orientation = 'horizontal', decorative = true, ...props }) {
   const baseClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px';
   

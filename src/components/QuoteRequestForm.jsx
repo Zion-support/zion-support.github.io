@@ -112,7 +112,7 @@ export const QuoteRequestForm = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // In a real app, you would send the data to your backend
-      // console.log('Quote request submitted:', formData);
+      // // console.log('Quote request submitted:', formData);
       
       setIsSubmitted(true);
       setFormData({
@@ -129,13 +129,10 @@ export const QuoteRequestForm = () => {
         contactMethod: 'email',
         agreeToTerms: false,
         agreeToMarketing: false
-      });
-    } catch (error) {
-      // console.error('Error submitting quote request:', error);
-      setErrors({ submit: 'Failed to submit request. Please try again.' });
-    } finally {
-      setIsSubmitting(false);
-    }
+      })} catch (error) {
+      // // console.error('Error submitting quote request:', error);
+      setErrors({ submit: 'Failed to submit request. Please try again.' })} finally {
+      setIsSubmitting(false)}
   };
 
   if (isSubmitted) {

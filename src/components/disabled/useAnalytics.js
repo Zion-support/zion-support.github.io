@@ -129,8 +129,7 @@ export const useAnalytics = (config = {}) => {
             trackEvent('performance', 'metrics_captured', 'performance_tracking', undefined, { metrics });
         }
         catch (error) {
-            console.error('Failed to track performance metrics:', error);
-        }
+            // // console.error('Failed to track performance metrics:', error)}
     }, [enablePerformanceTracking]);
     // Setup user behavior tracking
     const setupUserBehaviorTracking = useCallback(() => {
@@ -234,7 +233,7 @@ export const useAnalytics = (config = {}) => {
     const sendEventsToServer = useCallback(async (eventsToSend) => {
         try {
             // In a real implementation, this would send to your analytics server
-            console.log('Sending analytics events:', eventsToSend);
+            // // console.log('Sending analytics events:', eventsToSend);
             // Simulate API call
             await fetch('/api/analytics/events', {
                 method: 'POST',
@@ -243,8 +242,7 @@ export const useAnalytics = (config = {}) => {
             });
         }
         catch (error) {
-            console.error('Failed to send analytics events:', error);
-        }
+            // // console.error('Failed to send analytics events:', error)}
     }, []);
     // Flush events manually
     const flushEvents = useCallback(() => {

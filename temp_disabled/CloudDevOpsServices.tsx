@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
 const CloudDevOpsServices = () => {

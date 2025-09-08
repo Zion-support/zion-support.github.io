@@ -1,4 +1,3 @@
-import React from 'react';
 import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';
 import EnhancedSEO from '@/components/EnhancedSEO';
 export default function EnhancedInnovativeServicesPage() {

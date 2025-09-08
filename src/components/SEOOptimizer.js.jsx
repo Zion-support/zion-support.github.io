@@ -82,14 +82,11 @@ const SEOOptimizer = () => {}
                 pagesWithIssues,
                 topIssues,
                 pageAnalyses,
-                summary;
-            }) }
-        catch (error) {}
-'
-''
-'''
-            // console.error('Error analyzing SEO:', error)}
-        finally {}
+                summary
+            })}
+        catch (error) {
+            // // console.error('Error analyzing SEO:', error)}
+        finally {
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {}

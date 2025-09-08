@@ -310,14 +310,123 @@ export function MobileExperienceEnhancer() {
     }
   }, [touchGestures]);
 
-  // Apply mobile optimizations
-  const applyMobileOptimization = useCallback((optimizationId: string, enabled: boolean) => {
-    setMobileOptimizations(prev => {
-      const newSet = new Set(prev);
-      if (enabled) {
-        newSet.add(optimizationId);
-      } else {
-        newSet.delete(optimizationId);
+    // Create mobile navigation if it doesn't exist
+    if (!document.querySelector('.mobile-nav')) {
+      const mobileNav = createMobileNavigation();
+      document.body.appendChild(mobileNav)}
+
+    return () => {
+      if (style.parentNode) {
+        style.parentNode.removeChild(style)}
+      const mobileNav = document.querySelector('.mobile-nav');
+      if (mobileNav && mobileNav.parentNode) {
+        mobileNav.parentNode.removeChild(mobileNav)}
+    }}, [enabled, settings.mobileNavigation, isMobile, location.pathname]);
+
+  // Create mobile navigation
+  const createMobileNavigation = useCallback(() => {
+    const nav = document.createElement('nav');
+    nav.className = 'mobile-nav';
+    nav.setAttribute('role', 'navigation');
+    nav.setAttribute('aria-label', 'Mobile navigation');
+
+    const navItems = [
+      { href: '/', label: 'Home', icon: '🏠' },
+      { href: '/services', label: 'Services', icon: '⚙️' },
+      { href: '/about', label: 'About', icon: 'ℹ️' },
+      { href: '/contact', label: 'Contact', icon: '📞' },
+    ];
+
+    navItems.forEach(item  => {
+      const link = document.createElement('a');
+      link.href = item.href;
+      link.className = `nav-item ${location.pathname === item.href ? 'active' : ''}`;
+      link.innerHTML = `
+        <span class="nav-icon">${item.icon}</span>
+        <span>${item.label}</span>
+      `;
+      nav.appendChild(link)});
+
+    return nav}, [location.pathname]);
+
+  // Responsive images
+  useEffect(() => {
+    if (!enabled || !settings.responsiveImages || !isMobile) return;
+
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add responsive image attributes
+        if (!img.sizes) {
+          img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
+        
+        // Add loading attribute for better performance
+        if (!img.loading) {
+          img.loading = 'lazy'}
+        
+        // Add decoding attribute
+        if (!img.decoding) {
+          img.decoding = 'async'}
+      })};
+
+    optimizeImages();
+
+    // Re-optimize on route change
+    const observer = new MutationObserver(optimizeImages);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return ()  => observer.disconnect()}, [enabled, settings.responsiveImages, isMobile]);
+
+  // Mobile performance optimization
+  useEffect(() => {
+    if (!enabled || !settings.mobilePerformance || !isMobile) return;
+
+    // Reduce animations on mobile
+    const style = document.createElement('style');
+    style.textContent = `
+      .mobile-performance * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.3s !important}
+      
+      .mobile-performance .animate-slow {
+        animation-duration: 0.5s !important}
+      
+      .mobile-performance .animate-fast {
+        animation-duration: 0.1s !important}
+    `;
+    document.head.appendChild(style);
+
+    document.body.classList.add('mobile-performance');
+
+    // Optimize scroll performance
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Handle scroll optimizations here
+          ticking = false});
+        ticking = true}
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return ()  => {
+      document.body.classList.remove('mobile-performance');
+      if (style.parentNode) {
+        style.parentNode.removeChild(style)}
+      window.removeEventListener('scroll', handleScroll)}}, [enabled, settings.mobilePerformance, isMobile]);
+
+  // Offline support
+  useEffect(() => {
+    if (!enabled || !settings.offlineSupport) return;
+
+    const registerServiceWorker = async () => {
+      if ('serviceWorker' in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
+          serviceWorkerRef.current = registration;
+          // // console.log('Service Worker registered successfully')} catch (error) {
+          // // console.warn('Service Worker registration failed:', error)}
       }
       
       // Apply mobile navigation

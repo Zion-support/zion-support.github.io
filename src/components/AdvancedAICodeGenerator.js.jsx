@@ -253,20 +253,13 @@ export function useApi<T>(url: string, options: UseApiOptions = {}): UseApiResul
   }
 ];
 
-export const AdvancedAICodeGenerator = () => {
-  const [selectedSnippet, setSelectedSnippet] = useState(null);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterLanguage, setFilterLanguage] = useState('all');
-  const [sortBy, setSortBy] = useState('rating');
-  const [copied, setCopied] = useState(false);
-
-  const filteredSnippets = mockCodeSnippets.filter(snippet => {
-    const matchesSearch = snippet.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         snippet.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         snippet.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesLanguage = filterLanguage === 'all' || snippet.language === filterLanguage;
-    return matchesSearch && matchesLanguage;
+export function useLocalStorage<T>(key: string, initialValue: T) {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue} catch (error) {
+      // // console.error(\`Error reading localStorage key "\${key}":\`, error);
+      return initialValue}
   });
 
   const sortedSnippets = [...filteredSnippets].sort((a, b) => {
@@ -294,26 +287,98 @@ export const AdvancedAICodeGenerator = () => {
 
   const copyToClipboard = async (code) => {
     try {
-      await navigator.clipboard.writeText(code);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (error) {
-      console.error('Failed to copy code:', error);
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
+      // // console.error(\`Error setting localStorage key "\${key}":\`, error)}
+  };
+
+  return [storedValue, setValue] as const}`,
+        language: 'typescript',
+        confidence: 0.94,
+        alternatives[
+            'Alternative 1: With error boundaries',
+            'Alternative 2: With event listeners',
+            'Alternative 3: With custom serializer'
+        ],
+        timestamp: '2024-01-15T11:45:00Z'
     }
-  };
-
-  const downloadCode = (snippet) => {
-    const blob = new Blob([snippet.code], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${snippet.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${snippet.language}`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+];
+export function AdvancedAICodeGenerator() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [activeTab, setActiveTab] = useState('generator');
+    const [selectedLanguage, setSelectedLanguage] = useState('all');
+    const [selectedComplexity, setSelectedComplexity] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [aiPrompt, setAiPrompt] = useState('');
+    const [generatedCode, setGeneratedCode] = useState('');
+    const [isGenerating, setIsGenerating] = useState(false);
+    const [codeSnippets, setCodeSnippets] = useState(mockCodeSnippets);
+    const [codeAnalysis, setCodeAnalysis] = useState(mockCodeAnalysis);
+    const [aiGenerations, setAiGenerations] = useState(mockAIGenerations);
+    const [showSuggestions, setShowSuggestions] = useState(true);
+    const containerRef = useRef(null);
+    const getComplexityColor = (complexity) => {
+        switch (complexity) {
+            case 'low': return 'text-green-500';
+            case 'medium': return 'text-yellow-500';
+            case 'high': return 'text-red-500';
+            default: return 'text-gray-500'}
+    };
+    const getQualityColor = (score) => {
+        if (score >= 90)
+            return 'text-green-500';
+        if (score >= 80)
+            return 'text-yellow-500';
+        return 'text-red-500'};
+    const generateCode = async () => {
+        if (!aiPrompt.trim())
+            return;
+        setIsGenerating(true);
+        // Simulate AI code generation
+        setTimeout(() => {
+            const newGeneration = {
+                id: Date.now().toString(),
+                prompt: aiPrompt,
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+                language: 'javascript',
+                confidence: 0.87,
+                alternatives[
+                    'Alternative 1: Functional approach',
+                    'Alternative 2: Class-based approach',
+                    'Alternative 3: Async/await pattern'
+                ],
+                timestamp: new Date().toISOString()
+            };
+            setAiGenerations(prev => [newGeneration, ...prev]);
+            setGeneratedCode(newGeneration.generatedCode);
+            setIsGenerating(false)}, 2000)};
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text)};
+    if (!isOpen) {
+        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
+        <Code className="w-6 h-6"/>
+      </button>)}
+    if (isMinimized) {
+        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
+        <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
+          <div className="flex items-center space-x-2">
+            <Code className="w-5 h-5 text-blue-600"/>
+            <span className="text-sm font-medium">AI Code Generator</span>
+          </div>
+          <div className="flex items-center space-x-1">
+            <button onClick={() => setIsMinimized(false)} className="p-1 hover:bg-zion-slate-light rounded">
+              <Maximize2 className="w-4 h-4"/>
+            </button>
+            <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-zion-slate-light rounded">
+              <X className="w-4 h-4"/>
+            </button>
+          </div>
+        </div>
+      </div>)}
+    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">
         <div className="flex items-center justify-between">

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Enhanced Error Prevention Automation Management Script
-# This script manages PM2-based error prevention automations
+# Error Prevention Automation Management Script
+# This script provides comprehensive management of PM2-based error prevention automation
 
 set -e
 
@@ -10,15 +10,15 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Configuration
-ECOSYSTEM_FILE="ecosystem-enhanced-error-prevention.config.cjs"
-LOG_DIR="./logs"
+ECOSYSTEM_FILE="ecosystem-error-prevention-enhanced.cjs"
+LOGS_DIR="./logs"
 REPORTS_DIR="./reports"
-
-# Ensure directories exist
-mkdir -p "$LOG_DIR" "$REPORTS_DIR"
+BACKUP_DIR="./backups"
 
 # Function to print colored output
 print_status() {
@@ -35,171 +35,300 @@ print_error() {
 
 print_header() {
     echo -e "${BLUE}================================${NC}"
-    echo -e "${BLUE}$1${NC}"
+    echo -e "${BLUE} $1${NC}"
     echo -e "${BLUE}================================${NC}"
 }
 
 # Function to check if PM2 is installed
 check_pm2() {
     if ! command -v pm2 &> /dev/null; then
-        print_error "PM2 is not installed. Installing PM2..."
-        npm install -g pm2
+        print_error "PM2 is not installed. Please install it first:"
+        echo "npm install -g pm2"
+        exit 1
     fi
 }
 
-# Function to start all automations
-start_automations() {
-    print_header "Starting Error Prevention Automations"
+# Function to create necessary directories
+create_directories() {
+    print_status "Creating necessary directories..."
+    
+    mkdir -p "$LOGS_DIR"
+    mkdir -p "$REPORTS_DIR"
+    mkdir -p "$BACKUP_DIR"
+    
+    print_status "Directories created successfully"
+}
+
+# Function to install required dependencies
+install_dependencies() {
+    print_status "Installing required dependencies..."
+    
+    # Install chokidar for file watching
+    if ! npm list chokidar &> /dev/null; then
+        npm install --save-dev chokidar
+        print_status "Installed chokidar"
+    fi
+    
+    # Install glob for file pattern matching
+    if ! npm list glob &> /dev/null; then
+        npm install --save-dev glob
+        print_status "Installed glob"
+    fi
+    
+    print_status "Dependencies installed successfully"
+}
+
+# Function to start all automation services
+start_automation() {
+    print_header "Starting Error Prevention Automation"
+    
+    check_pm2
+    create_directories
+    install_dependencies
+    
+    print_status "Starting PM2 ecosystem..."
+    
+    if pm2 list | grep -q "error-prevention"; then
+        print_warning "Automation services are already running. Restarting..."
+        pm2 restart ecosystem-error-prevention-enhanced.cjs
+    else
+        pm2 start ecosystem-error-prevention-enhanced.cjs
+    fi
+    
+    print_status "Waiting for services to start..."
+    sleep 5
+    
+    pm2 status
+    print_status "Automation services started successfully"
+}
+
+# Function to stop all automation services
+stop_automation() {
+    print_header "Stopping Error Prevention Automation"
     
     check_pm2
     
-    print_status "Starting PM2 ecosystem..."
-    pm2 start "$ECOSYSTEM_FILE"
+    print_status "Stopping PM2 ecosystem..."
     
-    print_status "Saving PM2 configuration..."
-    pm2 save
-    
-    print_status "Setting up PM2 startup script..."
-    pm2 startup
-    
-    print_status "All automations started successfully!"
-    
-    # Show status
-    pm2 status
+    if pm2 list | grep -q "error-prevention"; then
+        pm2 stop ecosystem-error-prevention-enhanced.cjs
+        print_status "Automation services stopped successfully"
+    else
+        print_warning "No automation services are currently running"
+    fi
 }
 
-# Function to stop all automations
-stop_automations() {
-    print_header "Stopping Error Prevention Automations"
+# Function to restart all automation services
+restart_automation() {
+    print_header "Restarting Error Prevention Automation"
     
-    print_status "Stopping all PM2 processes..."
-    pm2 stop "$ECOSYSTEM_FILE"
-    
-    print_status "All automations stopped!"
-    
-    # Show status
-    pm2 status
-}
-
-# Function to restart all automations
-restart_automations() {
-    print_header "Restarting Error Prevention Automations"
+    check_pm2
     
     print_status "Restarting PM2 ecosystem..."
-    pm2 restart "$ECOSYSTEM_FILE"
     
-    print_status "All automations restarted successfully!"
-    
-    # Show status
-    pm2 status
+    if pm2 list | grep -q "error-prevention"; then
+        pm2 restart ecosystem-error-prevention-enhanced.cjs
+        print_status "Automation services restarted successfully"
+    else
+        print_warning "No automation services are currently running. Starting them..."
+        start_automation
+    fi
 }
 
-# Function to show status
+# Function to show status of automation services
 show_status() {
     print_header "Error Prevention Automation Status"
     
+    check_pm2
+    
+    echo ""
     print_status "PM2 Status:"
     pm2 status
     
     echo ""
     print_status "PM2 Logs (last 20 lines):"
     pm2 logs --lines 20
+    
+    echo ""
+    print_status "Recent Error Fix Reports:"
+    if [ -f "$LOGS_DIR/error-fix-report.json" ]; then
+        echo "Error Fix Report: $LOGS_DIR/error-fix-report.json"
+    fi
+    
+    if [ -f "$LOGS_DIR/real-time-monitor-health.json" ]; then
+        echo "Real-time Monitor Health: $LOGS_DIR/real-time-monitor-health.json"
+    fi
 }
 
 # Function to show logs
 show_logs() {
     print_header "Error Prevention Automation Logs"
     
-    local service=${1:-"all"}
+    check_pm2
     
-    if [ "$service" = "all" ]; then
+    local service_name="${1:-all}"
+    
+    if [ "$service_name" = "all" ]; then
         print_status "Showing logs for all services..."
         pm2 logs --lines 50
     else
-        print_status "Showing logs for $service..."
-        pm2 logs "$service" --lines 50
+        print_status "Showing logs for service: $service_name"
+        pm2 logs "$service_name" --lines 50
     fi
 }
 
-# Function to monitor automations
-monitor_automations() {
-    print_header "Monitoring Error Prevention Automations"
+# Function to monitor automation services
+monitor_automation() {
+    print_header "Monitoring Error Prevention Automation"
     
-    print_status "Opening PM2 monitoring dashboard..."
+    check_pm2
+    
+    print_status "Starting PM2 monitoring dashboard..."
     pm2 monit
 }
 
-# Function to check health
-check_health() {
-    print_header "Checking Error Prevention Automation Health"
+# Function to generate health report
+generate_health_report() {
+    print_header "Generating Health Report"
     
-    print_status "Running health check..."
-    node ./scripts/automation/health-check.cjs check
+    check_pm2
     
-    if [ $? -eq 0 ]; then
-        print_status "Health check completed successfully!"
-    else
-        print_warning "Health check completed with warnings or errors. Check reports for details."
-    fi
+    local timestamp=$(date +"%Y%m%d_%H%M%S")
+    local report_file="$REPORTS_DIR/health_report_$timestamp.json"
+    
+    print_status "Generating comprehensive health report..."
+    
+    # Create health report
+    cat > "$report_file" << EOF
+{
+  "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+  "pm2_status": $(pm2 jlist),
+  "system_info": {
+    "node_version": "$(node --version)",
+    "npm_version": "$(npm --version)",
+    "pm2_version": "$(pm2 --version)",
+    "disk_usage": "$(df -h . | tail -1)",
+    "memory_usage": "$(free -h | grep Mem | awk '{print $3"/"$2}')"
+  },
+  "automation_services": [
+    "error-prevention-orchestrator-enhanced",
+    "real-time-error-monitor",
+    "intelligent-code-quality-fixer",
+    "automated-testing-validation",
+    "performance-security-scanner",
+    "code-style-formatting-enforcer",
+    "dependency-security-manager",
+    "health-check-monitoring-dashboard"
+  ]
+}
+EOF
+    
+    print_status "Health report generated: $report_file"
 }
 
-# Function to generate reports
-generate_reports() {
-    print_header "Generating Error Prevention Reports"
+# Function to backup current state
+backup_state() {
+    print_header "Backing Up Current State"
     
-    print_status "Running comprehensive error fixer..."
-    node ./scripts/automation/comprehensive-error-fixer.cjs run
+    local timestamp=$(date +"%Y%m%d_%H%M%S")
+    local backup_path="$BACKUP_DIR/backup_$timestamp"
     
-    print_status "Running health check..."
-    node ./scripts/automation/health-check.cjs check
+    print_status "Creating backup at: $backup_path"
     
-    print_status "Reports generated in $REPORTS_DIR"
+    mkdir -p "$backup_path"
     
-    # List generated reports
+    # Backup PM2 configuration
+    if [ -f "$ECOSYSTEM_FILE" ]; then
+        cp "$ECOSYSTEM_FILE" "$backup_path/"
+    fi
+    
+    # Backup logs
+    if [ -d "$LOGS_DIR" ]; then
+        cp -r "$LOGS_DIR" "$backup_path/"
+    fi
+    
+    # Backup reports
     if [ -d "$REPORTS_DIR" ]; then
-        echo ""
-        print_status "Generated Reports:"
-        ls -la "$REPORTS_DIR"
+        cp -r "$REPORTS_DIR" "$backup_path/"
     fi
+    
+    # Backup package files
+    if [ -f "package.json" ]; then
+        cp package.json "$backup_path/"
+    fi
+    
+    if [ -f "package-lock.json" ]; then
+        cp package-lock.json "$backup_path/"
+    fi
+    
+    print_status "Backup completed successfully"
 }
 
-# Function to clean up
+# Function to restore from backup
+restore_from_backup() {
+    print_header "Restoring From Backup"
+    
+    local backup_path="$1"
+    
+    if [ -z "$backup_path" ]; then
+        print_error "Please specify a backup path"
+        echo "Usage: $0 restore <backup_path>"
+        exit 1
+    fi
+    
+    if [ ! -d "$backup_path" ]; then
+        print_error "Backup directory not found: $backup_path"
+        exit 1
+    fi
+    
+    print_status "Restoring from backup: $backup_path"
+    
+    # Stop current services
+    stop_automation
+    
+    # Restore files
+    if [ -f "$backup_path/$ECOSYSTEM_FILE" ]; then
+        cp "$backup_path/$ECOSYSTEM_FILE" ./
+    fi
+    
+    if [ -d "$backup_path/logs" ]; then
+        cp -r "$backup_path/logs" ./
+    fi
+    
+    if [ -d "$backup_path/reports" ]; then
+        cp -r "$backup_path/reports" ./
+    fi
+    
+    if [ -f "$backup_path/package.json" ]; then
+        cp "$backup_path/package.json" ./
+    fi
+    
+    if [ -f "$backup_path/package-lock.json" ]; then
+        cp "$backup_path/package-lock.json" ./
+    fi
+    
+    print_status "Restore completed successfully"
+    
+    # Start services
+    start_automation
+}
+
+# Function to clean up old logs and reports
 cleanup() {
-    print_header "Cleaning Up Error Prevention Automations"
+    print_header "Cleaning Up Old Files"
     
-    print_warning "This will stop and remove all PM2 processes. Are you sure? (y/N)"
-    read -r response
+    print_status "Cleaning up old logs and reports..."
     
-    if [[ "$response" =~ ^[Yy]$ ]]; then
-        print_status "Stopping all PM2 processes..."
-        pm2 stop all
-        
-        print_status "Removing all PM2 processes..."
-        pm2 delete all
-        
-        print_status "Clearing PM2 logs..."
-        pm2 flush
-        
-        print_status "Cleanup completed!"
-    else
-        print_status "Cleanup cancelled."
-    fi
-}
-
-# Function to update automations
-update_automations() {
-    print_header "Updating Error Prevention Automations"
+    # Remove logs older than 30 days
+    find "$LOGS_DIR" -name "*.log" -mtime +30 -delete 2>/dev/null || true
     
-    print_status "Pulling latest changes..."
-    git pull origin main
+    # Remove reports older than 30 days
+    find "$REPORTS_DIR" -name "*.json" -mtime +30 -delete 2>/dev/null || true
     
-    print_status "Installing dependencies..."
-    npm install
+    # Remove backups older than 7 days
+    find "$BACKUP_DIR" -name "backup_*" -mtime +7 -delete 2>/dev/null || true
     
-    print_status "Restarting automations..."
-    restart_automations
-    
-    print_status "Update completed!"
+    print_status "Cleanup completed successfully"
 }
 
 # Function to show help
@@ -209,128 +338,69 @@ show_help() {
     echo "Usage: $0 [COMMAND] [OPTIONS]"
     echo ""
     echo "Commands:"
-    echo "  start           Start all error prevention automations"
-    echo "  stop            Stop all error prevention automations"
-    echo "  restart         Restart all error prevention automations"
-    echo "  status          Show status of all automations"
-    echo "  logs [SERVICE]  Show logs (all services or specific service)"
-    echo "  monitor         Open PM2 monitoring dashboard"
-    echo "  health          Run health check"
-    echo "  reports         Generate comprehensive reports"
-    echo "  cleanup         Stop and remove all PM2 processes"
-    echo "  update          Update automations from git and restart"
-    echo "  help            Show this help message"
+    echo "  start           - Start all automation services"
+    echo "  stop            - Stop all automation services"
+    echo "  restart         - Restart all automation services"
+    echo "  status          - Show status of automation services"
+    echo "  logs [SERVICE]  - Show logs (all services or specific service)"
+    echo "  monitor         - Open PM2 monitoring dashboard"
+    echo "  health          - Generate health report"
+    echo "  backup          - Create backup of current state"
+    echo "  restore <PATH>  - Restore from backup"
+    echo "  cleanup         - Clean up old logs and reports"
+    echo "  help            - Show this help message"
     echo ""
     echo "Examples:"
-    echo "  $0 start                    # Start all automations"
-    echo "  $0 logs syntax-error-fixer # Show logs for specific service"
-    echo "  $0 health                   # Run health check"
+    echo "  $0 start                    # Start all services"
+    echo "  $0 logs                     # Show all logs"
+    echo "  $0 logs real-time-error-monitor  # Show specific service logs"
+    echo "  $0 backup                   # Create backup"
+    echo "  $0 restore ./backups/backup_20231201_120000  # Restore from backup"
     echo ""
-    echo "Services:"
-    echo "  enhanced-error-prevention-orchestrator"
-    echo "  syntax-error-fixer"
-    echo "  typescript-error-fixer"
-    echo "  linting-error-fixer"
-    echo "  build-error-fixer"
-    echo "  dependency-error-fixer"
-    echo "  error-prevention-monitor"
-    echo "  scheduled-comprehensive-fixer"
-    echo "  error-prevention-health-check"
-}
-
-# Function to run quick fix
-quick_fix() {
-    print_header "Running Quick Error Fix"
-    
-    print_status "Running syntax error fixer..."
-    node ./scripts/automation/syntax-error-fixer.cjs run
-    
-    print_status "Running TypeScript error fixer..."
-    node ./scripts/automation/comprehensive-error-fixer.cjs typescript
-    
-    print_status "Running linting fixer..."
-    node ./scripts/automation/comprehensive-error-fixer.cjs linting
-    
-    print_status "Quick fix completed!"
-}
-
-# Function to run comprehensive fix
-comprehensive_fix() {
-    print_header "Running Comprehensive Error Fix"
-    
-    print_status "Running all error fixers..."
-    node ./scripts/automation/comprehensive-error-fixer.cjs run
-    
-    print_status "Comprehensive fix completed!"
-}
-
-# Function to show performance metrics
-show_performance() {
-    print_header "Error Prevention Automation Performance"
-    
-    print_status "PM2 Performance Metrics:"
-    pm2 show enhanced-error-prevention-orchestrator
-    
-    echo ""
-    print_status "System Resources:"
-    pm2 monit --no-daemon --lines 1
+    echo "Environment Variables:"
+    echo "  PM2_HOME       - PM2 home directory"
+    echo "  NODE_ENV       - Node environment (production/development)"
 }
 
 # Main script logic
-main() {
-    local command=${1:-"help"}
-    
-    case $command in
-        start)
-            start_automations
-            ;;
-        stop)
-            stop_automations
-            ;;
-        restart)
-            restart_automations
-            ;;
-        status)
-            show_status
-            ;;
-        logs)
-            show_logs "$2"
-            ;;
-        monitor)
-            monitor_automations
-            ;;
-        health)
-            check_health
-            ;;
-        reports)
-            generate_reports
-            ;;
-        cleanup)
-            cleanup
-            ;;
-        update)
-            update_automations
-            ;;
-        quick-fix)
-            quick_fix
-            ;;
-        comprehensive-fix)
-            comprehensive_fix
-            ;;
-        performance)
-            show_performance
-            ;;
-        help|--help|-h)
-            show_help
-            ;;
-        *)
-            print_error "Unknown command: $command"
-            echo ""
-            show_help
-            exit 1
-            ;;
-    esac
-}
-
-# Run main function with all arguments
-main "$@"
+case "${1:-help}" in
+    start)
+        start_automation
+        ;;
+    stop)
+        stop_automation
+        ;;
+    restart)
+        restart_automation
+        ;;
+    status)
+        show_status
+        ;;
+    logs)
+        show_logs "$2"
+        ;;
+    monitor)
+        monitor_automation
+        ;;
+    health)
+        generate_health_report
+        ;;
+    backup)
+        backup_state
+        ;;
+    restore)
+        restore_from_backup "$2"
+        ;;
+    cleanup)
+        cleanup
+        ;;
+    help|--help|-h)
+        show_help
+        ;;
+    *)
+        print_error "Unknown command: $1"
+        echo ""
+        show_help
+        exit 1
+        ;;
+esac

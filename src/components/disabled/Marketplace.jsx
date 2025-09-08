@@ -69,7 +69,7 @@ export default function Marketplace() {
         return true;
     });
     const handleFilterChange = (filterType, value) => {
-        console.log(`Filter changed: ${filterType} = ${value}`);
+        // // console.log(`Filter changed: ${filterType} = ${value}`);
         switch (filterType) {
             case 'productTypes':
                 setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
@@ -94,19 +94,17 @@ export default function Marketplace() {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
                     // Quote request functionality would go here
-                    // // // console.log(`Quote requested for ${listing.title}`);
-                    // Navigate to the quote request page with the listing information
-                    navigate("/request-quote", {
-                        state: {
-                            serviceType: listing.category,
-                            specificItem: {
-                                id: listing.id,
-                                title: listing.title,
-                                category: listing.category,
-                                image: listing.images?.[0]
-                            }
-                        }
-                    });
+        // // console.log(`Quote requested for ${listing.title}`);
+            // Navigate to the quote request page with the listing information
+            navigate("/request-quote", {
+                state: {
+                    serviceType: listing.category,
+                    specificItem: {
+                        id: listing.id,
+                        title: listing.title,
+                        category: listing.category,
+                        image: listing.images?.[0]
+                    }
                 }
     };
     return (<main className="flex-grow container mx-auto px-4 py-8">

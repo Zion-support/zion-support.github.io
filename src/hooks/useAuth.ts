@@ -37,9 +37,8 @@ export function useAuth() {
             user,
             isAuthenticated: true,
             isLoading: false,
-          });
-        } catch (error) {
-          // console.error('Error parsing stored user:', error);
+          })} catch (error) {
+          // // console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,
             isAuthenticated: false,

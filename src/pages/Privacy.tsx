@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import { motion  } from 'framer-motion';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 

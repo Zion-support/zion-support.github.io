@@ -88,29 +88,10 @@ export default function Login() {
       newErrors.email = 'Email is invalid';
     }
     
-    if (!password) {
-      newErrors.password = 'Password is required';
-    } else if (password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      setIsLoading(false);
-      return;
-    }
-
-    // Simulate login process
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      // Redirect to dashboard or handle successful login
-      window.location.href = '/dashboard';
-    } catch (error) {
-      // console.error('Login failed:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    // Here you would typically make an API call to authenticate
+    // // console.log('Login attempt:', formData);
+    
+    setIsLoading(false)};
 
   const features = [
     { icon: Brain, title: 'AI-Powered Solutions', description: 'Advanced artificial intelligence services' },

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } from 'lucide-react';
 const FiveGNetworkOptimization = () => {
