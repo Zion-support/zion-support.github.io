@@ -18,6 +18,12 @@
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 
+# Explicitly disable the Next.js plugin (installed via UI) for prebuilt static deploys
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  disabled = true
+
+
 
 [[redirects]]
   from = "/*"
