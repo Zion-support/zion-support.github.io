@@ -1,3 +1,9 @@
+#!/usr/bin/env node
+/**;
+ * Comprehensive Testing Suite;
+ * Runs all tests and generates comprehensive test reports;
+ */;
+=======
 
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
     console.log(logEntry),};
@@ -28,6 +34,7 @@ class ComprehensiveTestingSuite {}
   log(message, type = "info) {}
 
     const timestamp = new Date().toISOString();
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     this.testResults = {;}"
       "unit": { passed: 0, "failed": 0, "total": 0 },
       "integration": { passed: 0, "failed": 0, "total": 0 },
@@ -39,22 +46,7 @@ class ComprehensiveTestingSuite {}
   log(message, type = "info") {;}"
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
-    console.log(logEntry),};
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message};`
-    console.log(logEntry)};
-;
-  async runUnitTests() {;}
-    try {;}"
-      this.log("Running unit tests...");"
-      // Check if Jest is configured;"
-      if (fs.existsSync("jest.config.js") || fs.existsSync("jest.config.json")) {;}
-        execSync("npm test", { "cwd": this.projectRoot, "stdio": "pipe" }")
-  log(message, type = "info") {;}
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
-    console.log(logEntry),}
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message};`
-    console.log(logEntry)}
+=======
 
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
     console.log(logEntry)}
@@ -71,57 +63,6 @@ class ComprehensiveTestingSuite {}
     try {;}"
       this.log("Running unit tests...");"
       // Check if Jest is configured;"
-      if (fs.existsSync("jest.config.js") || fs.existsSync("jest.config.json")) {;}
-        execSync("npm test", { "cwd": this.projectRoot, "stdio": "pipe" }")
-})
-        this.testResults.unit.passed = 1
-        this.testResults.unit.total = 1;"
-        this.log("Unit tests completed successfully", "success")} else {;}
-        this.log("No Jest configuration found, skipping unit tests", "warn");"
-
-  async runIntegrationTests() {;}
-      this.log("Running integration tests...");"
-      // Check for integration test files;"
-      const testDirs = ["tests", "test", "__tests__"];"
-      let integrationTestsFound = false
-  for($2) {;}
-        if (fs.existsSync(dir)) {;}
-          const files = fs.readdirSync(dir)
-          const integrationTestFiles = files.filter(file => ;)"
-            file.includes("integration") || file.includes("test"));"
-  if($2) {;}
-            integrationTestsFound = true
-  if($2) {;}"
-        execSync("npm run "test": integration", { "cwd": this.projectRoot, "stdio": "pipe" }")
-        this.testResults.integration.passed = 1
-      if (fs.existsSync("jest.config.js) || fs.existsSync(jest.config.json")) {}
-        execSync("npm test, { cwd": this.projectRoot, "stdio: pipe" }")
-});
-        this.testResults.unit.passed = 1;
-        this.testResults.unit.total = 1;"
-        this.log("Unit tests completed successfully", "success")} else {;}
-        this.log("No Jest configuration found, skipping unit tests", "warn");"
-
-  async runIntegrationTests() {;}
-      this.log("Running integration tests...");"
-      // Check for integration test files;"
-      const testDirs = ["tests", "test", "__tests__"];"
-      let integrationTestsFound = false;
-      for (const dir of testDirs) {;}
-        if (fs.existsSync(dir)) {;}
-          const files = fs.readdirSync(dir);
-          const integrationTestFiles = files.filter(file => ;)"
-            file.includes("integration") || file.includes("test"));"
-          if (integrationTestFiles.length > 0) {;}
-            integrationTestsFound = true;
-
-      if (integrationTestsFound) {;}"
-        execSync("npm run "test": integration", { "cwd": this.projectRoot, "stdio": "pipe" }")
-        this.testResults.integration.passed = 1;
-        this.testResults.integration.total = 1;"
-        this.log("Integration tests completed successfully", "success")} else {;}
-        this.log("No integration tests found, skipping", "warn");"
-
   async runE2ETests() {;}
       this.log("Running end-to-end tests...");"
       // Check for E2E test configuration;"
@@ -217,12 +158,15 @@ class ComprehensiveTestingSuite {}
         "Add performance tests",
         "Implement accessibility tests",
         "Add security tests",
+<<<<<<< HEAD
+=======
         "Set up continuous testing in CI/CD"]};
     const reportPath = path.join(this.projectRoot, "comprehensive-testing-suite-report.json");"
         "Set up continuous testing in CI/CD"]}
     const reportPath = path.join(this.projectRoot, "comprehensive-testing-suite-report.json");"
         Set up continuous testing in CI/CD]}
     const reportPath = path.join(this.projectRoot, "comprehensive-testing-suite-report.json");
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
   async run() {;}"
     this.log("Starting Comprehensive Testing Suite");"

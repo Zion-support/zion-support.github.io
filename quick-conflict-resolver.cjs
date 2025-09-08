@@ -36,5 +36,8 @@ async function main() {
 
     // Try to commit;
   // TODO: Implement
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 

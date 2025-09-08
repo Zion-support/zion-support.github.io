@@ -1,4 +1,6 @@
 module.exports = {}
+<<<<<<< HEAD
+=======
 
   "apps: [// Main Application;]
     {}
@@ -16,6 +18,7 @@ module.exports = {}
       args: 'start',
       cwd: '/workspace',
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       instances: 1,
       autorestart: true,
       watch: false,
@@ -29,12 +32,15 @@ module.exports = {}
         PORT: 3000,
         DEBUG: true'
       },
+<<<<<<< HEAD
+=======
 
       log_file: './logs/web.log,
       out_file: ./logs/web-out.log',
       error_file: './logs/web-error.log,
       log_date_format: YYYY-MM-DD HH:mm:ss Z',
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       log_file: './logs/web.log',
       out_file: './logs/web-out.log',
       error_file: './logs/web-error.log',
@@ -43,6 +49,13 @@ module.exports = {}
   "apps": [// Main Application;]"
     {}"
 
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+      merge_logs: true,
+      time: true;
+
+=======
+=======
 
 
       merge_logs: true,
@@ -68,6 +81,7 @@ module.exports = {}
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     // AI-Powered Code Analysis & Auto-Fixing
     {
       name: 'ai-code-analyzer',
@@ -81,6 +95,16 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    // AI-Powered Code Analysis & Auto-Fixing;
+    {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
 
 
@@ -113,6 +137,7 @@ module.exports = {}
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: 'production,
         AI_ANALYSIS_MODE: comprehensive',
         AUTO_FIX: 'true
@@ -137,6 +162,9 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
+<<<<<<< HEAD
+=======
+=======
 
     // AI-Powered Code Analysis & Auto-Fixing
     {
@@ -161,6 +189,7 @@ module.exports = {}
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -183,6 +212,9 @@ main
       out_file: './logs/ai-code-analyzer-out.log',
       error_file: './logs/ai-code-analyzer-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -214,6 +246,7 @@ main
       restart_delay: 15000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -231,6 +264,9 @@ main
 
 
     // Smart Performance Optimizer;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: 'smart-performance-optimizer,
@@ -248,6 +284,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: 'production,
         OPTIMIZATION_LEVEL: aggressive',
         PERFORMANCE_MONITORING: 'true
@@ -265,6 +302,9 @@ main
       "args": 'scripts/automation/smart-performance-optimizer.cjs',
       "cron_restart": '0 */4 * * *', // Every 4 hours;
       "max_memory_restart": '1G',
+<<<<<<< HEAD
+=======
+=======
 
       "restart_delay": 15000,
       "env": {}
@@ -292,6 +332,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -311,6 +352,9 @@ main
       out_file: './logs/smart-performance-optimizer-out.log',
       error_file: './logs/smart-performance-optimizer-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -342,6 +386,7 @@ main
       restart_delay: 20000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -359,6 +404,9 @@ main
 
 
     // Intelligent Dependency Manager;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": 'intelligent-dependency-manager,
@@ -376,6 +424,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: 'production,
         AUTO_UPDATE: true',
         SECURITY_FIRST: 'true,
@@ -393,6 +442,9 @@ main
       "name": 'intelligent-dependency-manager',
       "args": 'scripts/automation/intelligent-dependency-manager.cjs',
       "cron_restart": '0 0 * * 0', // Weekly on Sunday at midnight;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '512M',
       "restart_delay": 20000,
@@ -421,6 +473,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -441,6 +494,9 @@ main
       out_file: './logs/intelligent-dependency-manager-out.log',
       error_file: './logs/intelligent-dependency-manager-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -472,6 +528,7 @@ main
       restart_delay: 30000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -489,6 +546,9 @@ main
 
 
     // Smart Deployment Automation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: smart-deployment-automation',
@@ -506,6 +566,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         AUTO_DEPLOY: 'false, // Set to true for automatic deployment
         ROLLBACK_ENABLED: true',
@@ -523,6 +584,9 @@ main
       "name": 'smart-deployment-automation',
       "args": 'scripts/automation/smart-deployment-automation.cjs',
       "cron_restart": '0 */6 * * *', // Every 6 hours;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '1G',
       "restart_delay": 30000,
@@ -551,6 +615,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -571,6 +636,9 @@ main
       out_file: './logs/smart-deployment-automation-out.log',
       error_file: './logs/smart-deployment-automation-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -602,6 +670,7 @@ main
       restart_delay: 10000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -619,6 +688,9 @@ main
 
 
     // Intelligent Repository Manager;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": 'intelligent-repository-manager,
@@ -636,6 +708,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: 'production,
         AUTO_MERGE: false', // Set to true for automatic merging
         CONFLICT_RESOLUTION: 'intelligent,
@@ -653,6 +726,9 @@ main
       "name": 'intelligent-repository-manager',
       "args": 'scripts/automation/intelligent-repository-manager.cjs',
       "cron_restart": '*/30 * * * *', // Every 30 minutes;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '512M',
       "restart_delay": 10000,
@@ -681,6 +757,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -701,6 +778,9 @@ main
       out_file: './logs/intelligent-repository-manager-out.log',
       error_file: './logs/intelligent-repository-manager-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -732,6 +812,7 @@ main
       restart_delay: 5000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -749,6 +830,9 @@ main
 
 
     // Advanced Development Workflow;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: advanced-development-workflow',
@@ -766,6 +850,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         WORKFLOW_MODE: 'continuous,
         QUALITY_GATES: enabled'
@@ -782,6 +867,9 @@ main
       "name": 'advanced-development-workflow',
       "args": 'scripts/automation/advanced-development-workflow.cjs',
       "cron_restart": '*/15 * * * *', // Every 15 minutes;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '512M',
       "restart_delay": 5000,
@@ -810,6 +898,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -829,6 +918,9 @@ main
       out_file: './logs/advanced-development-workflow-out.log',
       error_file: './logs/advanced-development-workflow-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -860,6 +952,7 @@ main
       restart_delay: 15000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -877,6 +970,9 @@ main
 
 
     // Intelligent CI/CD Orchestrator;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": intelligent-cicd-orchestrator',
@@ -894,6 +990,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         PIPELINE_MODE: 'intelligent,
         AUTO_DEPLOYMENT: false'
@@ -910,6 +1007,9 @@ main
       "name": 'intelligent-cicd-orchestrator',
       "args": 'scripts/automation/intelligent-cicd-orchestrator.cjs',
       "cron_restart": '*/10 * * * *', // Every 10 minutes;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '1G',
       "restart_delay": 15000,
@@ -938,6 +1038,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -957,6 +1058,9 @@ main
       out_file: './logs/intelligent-cicd-orchestrator-out.log',
       error_file: './logs/intelligent-cicd-orchestrator-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -988,6 +1092,7 @@ main
       restart_delay: 10000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1005,6 +1110,9 @@ main
 
 
     // Enhanced CI/CD Automation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: enhanced-ci-cd-automation',
@@ -1022,6 +1130,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         QUALITY_GATES: 'strict,
         PARALLEL_JOBS: 4'
@@ -1038,6 +1147,9 @@ main
       "name": 'enhanced-ci-cd-automation',
       "args": 'scripts/automation/enhanced-ci-cd-automation.cjs',
       "cron_restart": '*/5 * * * *', // Every 5 minutes;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '1G',
       "restart_delay": 10000,
@@ -1066,6 +1178,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1085,6 +1198,9 @@ main
       out_file: './logs/enhanced-ci-cd-automation-out.log',
       error_file: './logs/enhanced-ci-cd-automation-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -1116,6 +1232,7 @@ main
       restart_delay: 20000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1133,6 +1250,9 @@ main
 
 
     // Enhanced Testing Automation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": enhanced-testing-automation',
@@ -1150,6 +1270,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         TEST_STRATEGY: 'comprehensive,
         PARALLEL_TESTS: true'
@@ -1166,6 +1287,9 @@ main
       "name": 'enhanced-testing-automation',
       "args": 'scripts/automation/enhanced-testing-automation.cjs',
       "cron_restart": '*/20 * * * *', // Every 20 minutes;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '1G',
       "restart_delay": 20000,
@@ -1194,6 +1318,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1213,6 +1338,9 @@ main
       out_file: './logs/enhanced-testing-automation-out.log',
       error_file: './logs/enhanced-testing-automation-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -1244,6 +1372,7 @@ main
       restart_delay: 25000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1261,6 +1390,9 @@ main
 
 
     // Enhanced Security Automation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: enhanced-security-automation',
@@ -1278,6 +1410,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         SECURITY_LEVEL: 'maximum,
         VULNERABILITY_SCANNING: true'
@@ -1294,6 +1427,9 @@ main
       "name": 'enhanced-security-automation',
       "args": 'scripts/automation/enhanced-security-automation.cjs',
       "cron_restart": '0 */3 * * *', // Every 3 hours;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '512M',
       "restart_delay": 25000,
@@ -1322,6 +1458,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1341,6 +1478,9 @@ main
       out_file: './logs/enhanced-security-automation-out.log',
       error_file: './logs/enhanced-security-automation-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -1372,6 +1512,7 @@ main
       restart_delay: 5000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1389,6 +1530,9 @@ main
 
 
     // Project Health Monitor;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": project-health-monitor',
@@ -1406,6 +1550,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         HEALTH_CHECKS: 'comprehensive,
         MONITORING_INTERVAL: 300000'
@@ -1421,6 +1566,9 @@ main
 
       "name": 'project-health-monitor',
       "args": 'scripts/automation/project-health-monitor.cjs',
+<<<<<<< HEAD
+=======
+=======
 
       "cwd": '/workspace',
       "instances": 1,
@@ -1454,6 +1602,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1473,6 +1622,9 @@ main
       out_file: './logs/project-health-monitor-out.log',
       error_file: './logs/project-health-monitor-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -1504,6 +1656,7 @@ main
       restart_delay: 2000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1521,6 +1674,9 @@ main
 
 
     // PM2 Sync Automation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: pm2-sync-automation',
@@ -1538,6 +1694,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         SYNC_MODE: 'continuous,
         PROCESS_MONITORING: true'
@@ -1554,6 +1711,9 @@ main
       "name": 'pm2-sync-automation',
       "args": 'scripts/automation/pm2-sync-automation.cjs',
       "cron_restart": '*/1 * * * *', // Every minute;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '1G',
       "restart_delay": 2000,
@@ -1582,6 +1742,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1601,6 +1762,9 @@ main
       out_file: './logs/pm2-sync-automation-out.log',
       error_file: './logs/pm2-sync-automation-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -1632,6 +1796,7 @@ main
       restart_delay: 30000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1649,6 +1814,9 @@ main
 
 
     // Link Checker Automation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": link-checker-automation',
@@ -1666,6 +1834,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         CHECK_DEPTH: 'deep,
         EXTERNAL_LINKS: true'
@@ -1682,6 +1851,9 @@ main
       "name": 'link-checker-automation',
       "args": 'scripts/automation/link-checker-automation.cjs',
       "cron_restart": '0 */8 * * *', // Every 8 hours;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '512M',
       "restart_delay": 30000,
@@ -1710,6 +1882,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1729,6 +1902,9 @@ main
       out_file: './logs/link-checker-automation-out.log',
       error_file: './logs/link-checker-automation-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -1760,6 +1936,7 @@ main
       restart_delay: 5000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1777,6 +1954,9 @@ main
 
 
     // TypeScript Syntax Fixer;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: typescript-syntax-fixer',
@@ -1794,6 +1974,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         AUTO_FIX: 'true,
         STRICT_MODE: true'
@@ -1810,6 +1991,9 @@ main
       "name": 'typescript-syntax-fixer',
       "args": 'scripts/automation/typescript-syntax-fixer.cjs',
       "max_memory_restart": '256M',
+<<<<<<< HEAD
+=======
+=======
 
       "restart_delay": 5000,
       "env": {}
@@ -1837,6 +2021,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1856,6 +2041,9 @@ main
       out_file: './logs/typescript-syntax-fixer-out.log',
       error_file: './logs/typescript-syntax-fixer-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -1887,6 +2075,7 @@ main
       restart_delay: 3000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -1904,6 +2093,9 @@ main
 
 
     // Console Error Fixer;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": console-error-fixer',
@@ -1921,6 +2113,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         ERROR_DETECTION: 'real-time,
         AUTO_FIX: true'
@@ -1936,6 +2129,9 @@ main
 
       "name": 'console-error-fixer',
       "args": 'scripts/automation/console-error-fixer.cjs',
+<<<<<<< HEAD
+=======
+=======
 
       "cwd": '/workspace',
       "instances": 1,
@@ -1969,6 +2165,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -1987,6 +2184,9 @@ main
       out_file: './logs/console-error-fixer-out.log',
       error_file: './logs/console-error-fixer-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2018,6 +2218,7 @@ main
       restart_delay: 10000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2035,6 +2236,9 @@ main
 
 
     // Quality Checks;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: quality-checks',
@@ -2052,6 +2256,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         QUALITY_STANDARDS: 'high,
         COVERAGE_THRESHOLD: 80'
@@ -2067,6 +2272,9 @@ main
 
       "name": 'quality-checks',
       "args": 'scripts/automation/quality-checks.cjs',
+<<<<<<< HEAD
+=======
+=======
 
       "cwd": '/workspace',
       "instances": 1,
@@ -2100,6 +2308,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -2119,6 +2328,9 @@ main
       out_file: './logs/quality-checks-out.log',
       error_file: './logs/quality-checks-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2150,6 +2362,7 @@ main
       restart_delay: 20000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2167,6 +2380,9 @@ main
 
 
     // Security Audit;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": security-audit',
@@ -2184,6 +2400,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         AUDIT_LEVEL: 'comprehensive,
         VULNERABILITY_ALERTS: true'
@@ -2199,6 +2416,9 @@ main
 
       "name": 'security-audit',
       "args": 'scripts/automation/security-audit.cjs',
+<<<<<<< HEAD
+=======
+=======
 
       "cwd": '/workspace',
       "instances": 1,
@@ -2232,6 +2452,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -2251,6 +2472,9 @@ main
       out_file: './logs/security-audit-out.log',
       error_file: './logs/security-audit-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2282,6 +2506,7 @@ main
       restart_delay: 60000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2299,6 +2524,9 @@ main
 
 
     // Continuous Improvement;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: continuous-improvement',
@@ -2316,6 +2544,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         IMPROVEMENT_MODE: 'automatic,
         LEARNING_ENABLED: true'
@@ -2332,6 +2561,9 @@ main
       "name": 'continuous-improvement',
       "args": 'scripts/automation/continuous-improvement.cjs',
       "cron_restart": '0 2 * * *', // Daily at 2 AM;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '256M',
       "restart_delay": 60000,
@@ -2360,6 +2592,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -2379,6 +2612,9 @@ main
       out_file: './logs/continuous-improvement-out.log',
       error_file: './logs/continuous-improvement-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2410,6 +2646,7 @@ main
       restart_delay: 120000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2427,6 +2664,9 @@ main
 
 
     // Daily Build Test;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": daily-build-test',
@@ -2444,6 +2684,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         BUILD_STRATEGY: 'comprehensive,
         NOTIFICATION_ENABLED: true'
@@ -2460,6 +2701,9 @@ main
       "name": 'daily-build-test',
       "args": 'scripts/automation/daily-build-test.cjs',
       "cron_restart": '0 1 * * *', // Daily at 1 AM;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '512M',
       "restart_delay": 120000,
@@ -2488,6 +2732,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -2507,6 +2752,9 @@ main
       out_file: './logs/daily-build-test-out.log',
       error_file: './logs/daily-build-test-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2538,6 +2786,7 @@ main
       restart_delay: 5000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2555,6 +2804,9 @@ main
 
 
     // Health Check;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: health-check',
@@ -2572,6 +2824,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         HEALTH_CHECK_INTERVAL: '120000,
         ALERT_THRESHOLD: medium'
@@ -2588,6 +2841,9 @@ main
       "name": 'health-check',
       "args": 'scripts/automation/health-check.cjs',
       "cron_restart": '*/2 * * * *', // Every 2 minutes;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '256M',
       "restart_delay": 5000,
@@ -2616,6 +2872,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -2635,6 +2892,9 @@ main
       out_file: './logs/health-check-out.log',
       error_file: './logs/health-check-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2666,6 +2926,7 @@ main
       restart_delay: 30000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2683,6 +2944,9 @@ main
 
 
     // Security Scanner;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       name": security-scanner',
@@ -2700,6 +2964,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         SCAN_DEPTH: 'comprehensive,
         REAL_TIME_SCANNING: true'
@@ -2715,6 +2980,9 @@ main
 
       "name": 'security-scanner',
       "args": 'scripts/automation/security-scanner.cjs',
+<<<<<<< HEAD
+=======
+=======
 
       "cwd": '/workspace',
       "instances": 1,
@@ -2748,6 +3016,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -2767,6 +3036,9 @@ main
       out_file: './logs/security-scanner-out.log',
       error_file: './logs/security-scanner-error.log',
 
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2798,6 +3070,7 @@ main
       restart_delay: 5000,
       env: {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2815,6 +3088,9 @@ main
 
 
     // Performance Monitor;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
     {}
       "name: performance-monitor',
@@ -2832,6 +3108,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         NODE_ENV: production',
         MONITORING_INTERVAL: '180000,
         PERFORMANCE_ALERTS: true'
@@ -2849,6 +3126,9 @@ main
       "name": 'performance-monitor',
       "args": 'scripts/automation/performance-monitor.cjs',
       "cron_restart": '*/3 * * * *', // Every 3 minutes;
+<<<<<<< HEAD
+=======
+=======
 
       "max_memory_restart": '512M',
       "restart_delay": 5000,
@@ -2877,6 +3157,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 main
 
@@ -2898,6 +3179,9 @@ main
     }
   ],
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
 
 
@@ -2909,6 +3193,7 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       user: node',
       host: 'your-production-server.com,
       ref: origin/main',
@@ -2934,6 +3219,9 @@ main
   // PM2 Deploy configuration
   deploy: {
     production: {
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -2951,12 +3239,21 @@ main
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   // PM2 Deploy configuration;
   "deploy": {}
     production: {}
 main
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+=======
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 
@@ -2981,6 +3278,12 @@ main
       ref: 'origin/develop',
       path: '/var/www/staging',
       'post-deploy': 'npm install && pm2 reload ecosystem.enhanced-intelligent-v2.cjs --env staging',
+<<<<<<< HEAD
+    };
+  };
+};
+=======
+=======
 
       'pre-setup': ''
 
@@ -2993,6 +3296,7 @@ main
 };
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     };
 
 

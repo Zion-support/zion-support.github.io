@@ -32,6 +32,8 @@ const componentName = file.replace('.tsx', '').replace(/-/g, '');
     if (p1.includes(") && p2.includes("') && !p1.includes('") && !p2.includes(")
 
     if (p1.includes() && p2.includes("") && !p1.includes(') && !p2.includes(")
+>>>>>>> merged-prs-20250907-203621
+=======
 
 
 const fs = require('fs')

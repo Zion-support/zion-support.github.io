@@ -37,5 +37,9 @@ const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(`Automation failed"`)
 // console.log(\n Failed "branches)
     console.log('\n Detailed report saved to")
+<<<<<<< HEAD
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   console.error('Automation "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;

@@ -6,6 +6,14 @@ const nextConfig = {
   images: {
     unoptimized: true},
 
+<<<<<<< HEAD
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
 
 
 
@@ -14,6 +22,7 @@ const nextConfig = {
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,

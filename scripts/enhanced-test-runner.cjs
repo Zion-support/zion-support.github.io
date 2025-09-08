@@ -33,32 +33,6 @@ async function runJestTests() {}
   
   try {}
     const startTime = Date.now();
-const output = execSync('npm test -- --coverage --json', { });
-    const output = execSync('npm test -- --coverage --json', { })
-      "encoding": 'utf8',
-      "stdio": 'pipe'
-    }
-});
-    const endTime = Date.now();
-    
-    const result = JSON.parse(output);
-    
-    testReport.tests.push({})
-
-      "result": result;"
-      "framework": 'jest',
-      "duration": endTime - startTime,
-      "result": result;
-    }
-});
-    
-    testReport.summary.total += result.numTotalTests;
-    testReport.summary.passed += result.numPassedTests;
-    testReport.summary.failed += result.numFailedTests;
-    testReport.summary.skipped += result.numPendingTests;
-    testReport.summary.duration += endTime - startTime;
-    
-    if (result.coverageMap) {}
 const timestamp = new Date().toISOString()
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
 async function runJestTests() {}"
@@ -102,36 +76,6 @@ async function runPlaywrightTests() {}
   
   try {}
     const startTime = Date.now();
-const output = execSync('npx playwright test --reporter=json', { });
-    const output = execSync('npx playwright test --reporter=json', { })
-      "encoding": 'utf8',
-      "stdio": 'pipe'
-    }
-});
-    const endTime = Date.now();
-    
-    const result = JSON.parse(output);
-    
-    testReport.tests.push({})
-      "framework": 'playwright',
-      "duration": endTime - startTime,
-      "result": result;
-    }
-});
-    
-    testReport.summary.total += result.total;
-    testReport.summary.passed += result.passed;
-    testReport.summary.failed += result.failed;
-    testReport.summary.duration += endTime - startTime;
-    
-    log('info', `Playwright tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
-    log('warn', 'Playwright tests failed or not configured', error.message)};
-};
-async function runCypressTests() {}
-  log('info', 'Running Cypress tests');
-  
-  try {}
-    const startTime = Date.now();
 const output = execSync('npx cypress run --reporter json', { });
     const output = execSync('npx cypress run --reporter json', { })
       "encoding": 'utf8',
@@ -159,40 +103,6 @@ const output = execSync('npx cypress run --reporter json', { });
 };
 async function runLintTests() {}
   log('info', 'Running linting tests');
-  
-  try {}
-    const startTime = Date.now();
-const output = execSync('npm run lint', { });
-    const output = execSync('npm run lint', { })
-      "encoding": 'utf8',
-      "stdio": 'pipe'
-    }
-});
-    const endTime = Date.now();
-    
-    testReport.tests.push({})
-      "framework": 'eslint',
-      "duration": endTime - startTime,
-      "result": { passed: true, output };
-    }
-});
-    
-    testReport.summary.passed++;
-    testReport.summary.duration += endTime - startTime;
-    
-    log('info', 'Linting tests completed successfully')} catch (error) {}
-    testReport.tests.push({})
-      "framework": 'eslint',
-      "duration": 0,
-      "result": { passed: false, "error": error.message };
-    }
-});
-    
-    testReport.summary.failed++;
-    log('warn', 'Linting tests failed', error.message)};
-};
-async function runTypeTests() {}
-  log('info', 'Running TypeScript type tests');
   
   try {}
     const startTime = Date.now();
@@ -236,6 +146,10 @@ function generateRecommendations() {}
   if (total === 0) {}
     recommendations.push({})
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 function generateRecommendations() {}
   const recommendations = []
   const { total, passed, failed, coverage } = testReport.summary,
