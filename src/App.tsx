@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import React, { Suspense, lazy, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import PerformanceDashboard from './components/PerformanceDashboard';
@@ -140,6 +140,11 @@ const InnovativeServicesMarketing = lazy(() => import('./pages/InnovativeService
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = lazy(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingAISolutions = lazy(() => import('./pages/solutions/ManufacturingAISolutions'));
+const RetailTechnologySolutions = lazy(() => import('./pages/solutions/RetailTechnologySolutions'));
+const GovernmentTechnologySolutions = lazy(() => import('./pages/solutions/GovernmentTechnologySolutions'));
+const EducationSolutions = lazy(() => import('./pages/solutions/EducationSolutions'));
 
 // Additional missing pages to fix broken links
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -151,7 +156,7 @@ const Webinars = lazy(() => import('./pages/Webinars'));
 const WhitePapers = lazy(() => import('./pages/WhitePapers'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
 const Support = lazy(() => import('./pages/HelpCenter'));
-const Docs = lazy(() => import('./pages/HelpCenter'));
+const Docs = lazy(() => import('./pages/Documentation'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const Community = lazy(() => import('./pages/CommunityPage'));
 
@@ -311,6 +316,18 @@ function App() {
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
                       <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                      <Route path="/solutions/finance" element={<FinancialSolutions />} />
+                      <Route path="/solutions/manufacturing" element={<ManufacturingAISolutions />} />
+                      <Route path="/solutions/retail" element={<RetailTechnologySolutions />} />
+                      <Route path="/solutions/government" element={<GovernmentTechnologySolutions />} />
+                      <Route path="/solutions/education" element={<EducationSolutions />} />
+                      
+                      {/* Alternative solution routes for SEO */}
+                      <Route path="/financial-solutions" element={<FinancialSolutions />} />
+                      <Route path="/manufacturing-ai-solutions" element={<ManufacturingAISolutions />} />
+                      <Route path="/retail-technology-solutions" element={<RetailTechnologySolutions />} />
+                      <Route path="/government-technology-solutions" element={<GovernmentTechnologySolutions />} />
+                      <Route path="/education-solutions" element={<EducationSolutions />} />
                       
                       {/* Legacy route redirects for SEO */}
                       <Route path="/comprehensive-services" element={<Services />} />

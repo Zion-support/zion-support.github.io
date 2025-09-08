@@ -38,7 +38,8 @@ import { Link } from 'react-router-dom';
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, LinkedIn, Instagram, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowUp as ArrowUpIcon, Phone as PhoneIcon, Mail as EnvelopeIcon, MapPin as MapPinIcon } from 'lucide-react';
 
 export function Footer() {
   const scrollToTop = () => {

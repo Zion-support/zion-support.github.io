@@ -1,413 +1,51 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  BookOpen, 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  FileText, 
-  Code, 
-  Download, 
-  ExternalLink,
-  ChevronDown,
-  ChevronRight,
-  Play,
-  FileCode,
-  Database,
-  Shield,
-  Cpu,
-  Brain,
-  Globe,
-  Zap,
-  Users,
-  Building
-} from 'lucide-react';
-
-export default function Documentation() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
-  const toggleSection = (sectionId: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionId) 
-        ? prev.filter(id => id !== sectionId)
-        : [...prev, sectionId]
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  Code, 
-  Database, 
-  Shield, 
-  Zap,
-  ChevronRight,
-  ChevronDown,
-  FileText,
-  Video,
-  Download,
-  ExternalLink,
-  Github,
-  Globe,
-  Terminal,
-  Settings,
-  Brain,
-  Rocket
-} from 'lucide-react';
-
-const Documentation = () => {
-  const [expandedSections, setExpandedSections] = useState<string[]>(['getting-started']);
-
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    );
-  };
-
-  const documentationSections = [
-    {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      id: 'ai-autonomous-systems',
-      title: 'AI Autonomous Systems',
-      icon: Brain,
-      description: 'Complete guide to AI autonomous systems',
-      color: 'from-cyan-500 to-blue-500',
-      articles: [
-        {
-          title: 'Getting Started with AI Autonomous Systems',
-          description: 'Setup and configuration guide',
-          path: '/docs/ai-autonomous-systems/getting-started',
-          type: 'guide',
-          difficulty: 'Beginner'
-        },
-        {
-          title: 'AI Autonomous Systems API Reference',
-          description: 'Complete API documentation',
-          path: '/docs/ai-autonomous-systems/api-reference',
-          type: 'reference',
-          difficulty: 'Advanced'
-        },
-        {
-          title: 'AI Autonomous Systems Best Practices',
-          description: 'Performance optimization and best practices',
-          path: '/docs/ai-autonomous-systems/best-practices',
-          type: 'guide',
-          difficulty: 'Intermediate'
-        }
-      ]
-    },
-    {
-      id: 'quantum-neural-networks',
-      title: 'Quantum Neural Networks',
-      icon: Brain,
-      description: 'Quantum computing and neural networks',
-      color: 'from-purple-500 to-pink-500',
-      articles: [
-        {
-          title: 'Quantum Neural Networks Overview',
-          description: 'Introduction to quantum neural networks',
-          path: '/docs/quantum-neural-networks/overview',
-          type: 'guide',
-          difficulty: 'Beginner'
-        },
-        {
-          title: 'Quantum Neural Networks Implementation',
-          description: 'Step-by-step implementation guide',
-          path: '/docs/quantum-neural-networks/implementation',
-          type: 'tutorial',
-          difficulty: 'Intermediate'
-        },
-        {
-          title: 'Quantum Neural Networks API',
-          description: 'API reference and examples',
-          path: '/docs/quantum-neural-networks/api',
-          type: 'reference',
-          difficulty: 'Advanced'
-        }
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      id: 'getting-started',
-      title: 'Getting Started',
-      icon: Rocket,
-      description: 'Quick start guides and basic setup',
-      articles: [
-        { title: 'Quick Start Guide', path: '/docs/quick-start', description: 'Get up and running in minutes', readTime: '5 min read' },
-        { title: 'Installation Guide', path: '/docs/installation', description: 'Step-by-step installation instructions', readTime: '10 min read' },
-        { title: 'First Project', path: '/docs/first-project', description: 'Create your first project', readTime: '15 min read' },
-        { title: 'Configuration', path: '/docs/configuration', description: 'Basic configuration settings', readTime: '8 min read' }
-      ]
-    },
-    {
-      id: 'ai-services',
-      title: 'AI Services',
-      icon: Brain,
-      description: 'AI and machine learning service documentation',
-      articles: [
-        { title: 'AI Business Intelligence', path: '/docs/ai-bi', description: 'AI analytics and insights API', readTime: '20 min read' },
-        { title: 'AI Marketing Automation', path: '/docs/ai-marketing', description: 'Marketing automation workflows', readTime: '25 min read' },
-        { title: 'AI HR & Recruitment', path: '/docs/ai-hr', description: 'Talent management AI services', readTime: '18 min read' },
-        { title: 'AI Legal Tech', path: '/docs/ai-legal', description: 'Legal process automation API', readTime: '22 min read' }
-      ]
-    },
-    {
-      id: 'api-reference',
-      title: 'API Reference',
-      icon: Code,
-      description: 'Complete API documentation and examples',
-      articles: [
-        { title: 'Authentication', path: '/docs/auth', description: 'API authentication methods', readTime: '12 min read' },
-        { title: 'Endpoints', path: '/docs/endpoints', description: 'All available API endpoints', readTime: '30 min read' },
-        { title: 'Rate Limits', path: '/docs/rate-limits', description: 'API usage limits and quotas', readTime: '8 min read' },
-        { title: 'Error Handling', path: '/docs/errors', description: 'Common errors and solutions', readTime: '15 min read' }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      ]
-    },
-    {
-      id: 'cybersecurity',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: 'Cybersecurity & Compliance',
-      icon: Shield,
-      description: 'Security and compliance documentation',
-      color: 'from-green-500 to-emerald-500',
-      articles: [
-        {
-          title: 'SOC2 Compliance Guide',
-          description: 'Complete SOC2 compliance documentation',
-          path: '/docs/cybersecurity/soc2-compliance',
-          type: 'guide',
-          difficulty: 'Intermediate'
-        },
-        {
-          title: 'Security Best Practices',
-          description: 'Security implementation guidelines',
-          path: '/docs/cybersecurity/security-best-practices',
-          type: 'guide',
-          difficulty: 'Intermediate'
-        },
-        {
-          title: 'Threat Detection API',
-          description: 'Threat detection system API reference',
-          path: '/docs/cybersecurity/threat-detection-api',
-          type: 'reference',
-          difficulty: 'Advanced'
-        }
-      ]
-    },
-    {
-      id: '5g-enterprise',
-      title: '5G Enterprise Solutions',
-      icon: Zap,
-      description: '5G network and enterprise solutions',
-      color: 'from-blue-500 to-indigo-500',
-      articles: [
-        {
-          title: '5G Enterprise Setup Guide',
-          description: '5G network setup and configuration',
-          path: '/docs/5g-enterprise/setup-guide',
-          type: 'guide',
-          difficulty: 'Intermediate'
-        },
-        {
-          title: '5G Network Optimization',
-          description: 'Performance optimization techniques',
-          path: '/docs/5g-enterprise/optimization',
-          type: 'guide',
-          difficulty: 'Advanced'
-        },
-        {
-          title: '5G Enterprise API Reference',
-          description: 'Complete API documentation',
-          path: '/docs/5g-enterprise/api-reference',
-          type: 'reference',
-          difficulty: 'Advanced'
-        }
-      ]
-    },
-    {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure',
-      icon: Cpu,
-      description: 'Infrastructure and cloud services',
-      color: 'from-orange-500 to-red-500',
-      articles: [
-        {
-          title: 'Cloud Migration Guide',
-          description: 'Step-by-step cloud migration process',
-          path: '/docs/it-infrastructure/cloud-migration',
-          type: 'guide',
-          difficulty: 'Intermediate'
-        },
-        {
-          title: 'IT Asset Management',
-          description: 'AI-powered asset management guide',
-          path: '/docs/it-infrastructure/asset-management',
-          type: 'guide',
-          difficulty: 'Beginner'
-        },
-        {
-          title: 'Infrastructure API Reference',
-          description: 'Infrastructure management APIs',
-          path: '/docs/it-infrastructure/api-reference',
-          type: 'reference',
-          difficulty: 'Advanced'
-        }
-      ]
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SAAS Solutions',
-      icon: Building,
-      description: 'Micro SAAS development and deployment',
-      color: 'from-yellow-500 to-orange-500',
-      articles: [
-        {
-          title: 'Micro SAAS Development Guide',
-          description: 'Building and deploying micro SAAS solutions',
-          path: '/docs/micro-saas/development-guide',
-          type: 'guide',
-          difficulty: 'Intermediate'
-        },
-        {
-          title: 'Micro SAAS Architecture',
-          description: 'Architecture patterns and best practices',
-          path: '/docs/micro-saas/architecture',
-          type: 'guide',
-          difficulty: 'Advanced'
-        },
-        {
-          title: 'Micro SAAS Deployment',
-          description: 'Deployment and scaling strategies',
-          path: '/docs/micro-saas/deployment',
-          type: 'tutorial',
-          difficulty: 'Intermediate'
-        }
-=======
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { BookOpen, Search, FileText, Code, Download, ArrowRight, ExternalLink, Users, Clock, Star } from 'lucide-react';
 
-export default function Documentation() {
-  const docCategories = [
+const Documentation: React.FC = () => {
+  const documentationCategories = [
     {
       title: 'Getting Started',
-      icon: '🚀',
-      description: 'Quick start guides and basic setup',
+      description: 'Quick start guides and setup instructions for our platforms',
+      icon: BookOpen,
       items: [
-        { title: 'Installation Guide', path: '/docs/installation', difficulty: 'Beginner' },
-        { title: 'First Steps', path: '/docs/first-steps', difficulty: 'Beginner' },
-        { title: 'Configuration', path: '/docs/configuration', difficulty: 'Beginner' },
-        { title: 'Hello World Example', path: '/docs/hello-world', difficulty: 'Beginner' }
-      ]
-    },
-    {
-      title: 'Core Concepts',
-      icon: '🧠',
-      description: 'Understanding the fundamentals',
-      items: [
-        { title: 'Architecture Overview', path: '/docs/architecture', difficulty: 'Intermediate' },
-        { title: 'Data Models', path: '/docs/data-models', difficulty: 'Intermediate' },
-        { title: 'Authentication & Security', path: '/docs/authentication', difficulty: 'Intermediate' },
-        { title: 'Error Handling', path: '/docs/error-handling', difficulty: 'Intermediate' }
+        'Installation Guide',
+        'First Steps',
+        'Configuration',
+        'Quick Start Examples'
       ]
     },
     {
       title: 'API Reference',
-      icon: '🔌',
-      description: 'Complete API documentation',
+      description: 'Complete API documentation with examples and endpoints',
+      icon: Code,
       items: [
-        { title: 'REST API', path: '/docs/api/rest', difficulty: 'Advanced' },
-        { title: 'GraphQL API', path: '/docs/api/graphql', difficulty: 'Advanced' },
-        { title: 'WebSocket API', path: '/docs/api/websocket', difficulty: 'Advanced' },
-        { title: 'Rate Limiting', path: '/docs/api/rate-limiting', difficulty: 'Advanced' }
+        'Authentication',
+        'Endpoints',
+        'Request/Response Formats',
+        'Error Handling'
       ]
     },
     {
-      title: 'SDKs & Libraries',
-      icon: '📚',
-      description: 'Client libraries and tools',
+      title: 'User Guides',
+      description: 'Step-by-step tutorials and best practices',
+      icon: Users,
       items: [
-        { title: 'JavaScript SDK', path: '/docs/sdks/javascript', difficulty: 'Intermediate' },
-        { title: 'Python SDK', path: '/docs/sdks/python', difficulty: 'Intermediate' },
-        { title: 'React Components', path: '/docs/sdks/react', difficulty: 'Intermediate' },
-        { title: 'CLI Tools', path: '/docs/sdks/cli', difficulty: 'Intermediate' }
+        'Basic Operations',
+        'Advanced Features',
+        'Troubleshooting',
+        'Best Practices'
       ]
     },
     {
-      title: 'Tutorials',
-      icon: '📖',
-      description: 'Step-by-step learning paths',
+      title: 'Developer Resources',
+      description: 'SDKs, libraries, and development tools',
+      icon: Download,
       items: [
-        { title: 'Building a Chat App', path: '/docs/tutorials/chat-app', difficulty: 'Intermediate' },
-        { title: 'AI Integration', path: '/docs/tutorials/ai-integration', difficulty: 'Advanced' },
-        { title: 'Real-time Features', path: '/docs/tutorials/realtime', difficulty: 'Advanced' },
-        { title: 'Deployment Guide', path: '/docs/tutorials/deployment', difficulty: 'Intermediate' }
-      ]
-    },
-    {
-      title: 'Best Practices',
-      icon: '⭐',
-      description: 'Production-ready guidelines',
-      items: [
-        { title: 'Performance Optimization', path: '/docs/best-practices/performance', difficulty: 'Advanced' },
-        { title: 'Security Guidelines', path: '/docs/best-practices/security', difficulty: 'Advanced' },
-        { title: 'Testing Strategies', path: '/docs/best-practices/testing', difficulty: 'Intermediate' },
-        { title: 'Monitoring & Logging', path: '/docs/best-practices/monitoring', difficulty: 'Advanced' }
->>>>>>> origin/cursor/website-audit-and-enhancement-4b12
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      title: 'Cybersecurity',
-      icon: Shield,
-      description: 'Security and compliance documentation',
-      articles: [
-        { title: 'Security Best Practices', path: '/docs/security', description: 'Security implementation guidelines', readTime: '20 min read' },
-        { title: 'Compliance Standards', path: '/docs/compliance', description: 'SOC2, GDPR, and other standards', readTime: '25 min read' },
-        { title: 'Threat Detection', path: '/docs/threat-detection', description: 'Security monitoring setup', readTime: '18 min read' },
-        { title: 'Incident Response', path: '/docs/incident-response', description: 'Security incident procedures', readTime: '22 min read' }
-      ]
-    },
-    {
-      id: 'cloud-infrastructure',
-      title: 'Cloud & Infrastructure',
-      icon: Database,
-      description: 'Cloud services and infrastructure setup',
-      articles: [
-        { title: 'Cloud Migration', path: '/docs/cloud-migration', description: 'Migrating to cloud infrastructure', readTime: '30 min read' },
-        { title: 'DevOps Automation', path: '/docs/devops', description: 'CI/CD and automation setup', readTime: '25 min read' },
-        { title: 'Network Configuration', path: '/docs/network', description: 'Network setup and optimization', readTime: '20 min read' },
-        { title: 'Monitoring & Logging', path: '/docs/monitoring', description: 'System monitoring and alerting', readTime: '18 min read' }
-      ]
-    },
-    {
-      id: 'integrations',
-      title: 'Integrations',
-      icon: Zap,
-      description: 'Third-party integrations and plugins',
-      articles: [
-        { title: 'CRM Integrations', path: '/docs/crm-integrations', description: 'Salesforce, HubSpot, and more', readTime: '20 min read' },
-        { title: 'Payment Gateways', path: '/docs/payment-gateways', description: 'Stripe, PayPal integration', readTime: '18 min read' },
-        { title: 'Communication Tools', path: '/docs/communication', description: 'Slack, Teams, email integration', readTime: '15 min read' },
-        { title: 'Analytics Platforms', path: '/docs/analytics', description: 'Google Analytics, Mixpanel setup', readTime: '22 min read' }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+        'SDKs & Libraries',
+        'Code Examples',
+        'Integration Guides',
+        'Development Tools'
       ]
     }
   ];
@@ -438,686 +76,362 @@ export default function Documentation() {
       readTime: "15 min read",;
       views: 634;
 
-<<<<<<< HEAD
-  const quickLinks = [
-    { title: 'API Playground', icon: Terminal, path: '/docs/api-playground', color: 'from-blue-500 to-cyan-500' },
-    { title: 'SDK Downloads', icon: Download, path: '/docs/sdks', color: 'from-green-500 to-emerald-500' },
-    { title: 'Code Examples', icon: Code, path: '/docs/examples', color: 'from-purple-500 to-pink-500' },
-    { title: 'Video Tutorials', icon: Video, path: '/docs/tutorials', color: 'from-orange-500 to-red-500' }
+  const popularDocs = [
+    {
+      title: 'AI Platform Setup Guide',
+      description: 'Complete setup and configuration for our AI platform',
+      category: 'Getting Started',
+      views: '2.5k',
+      rating: 4.8
+    },
+    {
+      title: 'API Authentication',
+      description: 'How to authenticate and secure your API requests',
+      category: 'API Reference',
+      views: '1.8k',
+      rating: 4.9
+    },
+    {
+      title: 'Machine Learning Models',
+      description: 'Guide to using pre-trained ML models and custom training',
+      category: 'User Guides',
+      views: '1.2k',
+      rating: 4.7
+    },
+    {
+      title: 'SDK Integration',
+      description: 'Integrate our SDKs into your applications',
+      category: 'Developer Resources',
+      views: '950',
+      rating: 4.6
+    }
   ];
 
-  const popularDocs = [
-    { title: 'Getting Started with AI Services', path: '/docs/ai-getting-started', category: 'AI Services', readTime: '15 min read' },
-    { title: 'API Authentication Guide', path: '/docs/api-auth', category: 'API Reference', readTime: '12 min read' },
-    { title: 'Security Implementation', path: '/docs/security-implementation', category: 'Cybersecurity', readTime: '25 min read' },
-    { title: 'Cloud Migration Checklist', path: '/docs/cloud-checklist', category: 'Cloud & Infrastructure', readTime: '20 min read' }
+  const recentUpdates = [
+    {
+      title: 'New AI Model APIs',
+      description: 'Added support for latest GPT-4 and Claude models',
+      date: '2024-01-15',
+      type: 'New Feature'
+    },
+    {
+      title: 'Enhanced Security Documentation',
+      description: 'Updated security best practices and compliance guidelines',
+      date: '2024-01-10',
+      type: 'Update'
+    },
+    {
+      title: 'SDK v2.0 Release',
+      description: 'Major update with improved performance and new features',
+      date: '2024-01-05',
+      type: 'Release'
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="container mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
-              <BookOpen className="w-8 h-8 text-white" />
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-blue/20 border border-zion-blue/30 text-zion-cyan mb-6">
+              <BookOpen className="w-4 h-4 mr-2" />
+              Documentation & Resources
             </div>
-            <div>
-              <h1 className="text-5xl font-bold text-white mb-2">Documentation</h1>
-              <p className="text-xl text-zion-slate-light">Comprehensive guides, API references, and tutorials</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Complete
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {' '}Documentation
+              </span>
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Everything you need to integrate, configure, and optimize our technology solutions. 
+              From quick start guides to advanced API documentation.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search documentation, APIs, or guides..."
+                  className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark/50 border border-zion-blue/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 transition-all duration-300"
+                />
+              </div>
             </div>
-          </div>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light" />
-              <input
-                type="text"
-                placeholder="Search documentation, APIs, and guides..."
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-2 rounded-lg font-semibold hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300">
-                Search
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="px-8 py-4 border border-zion-blue text-zion-cyan font-semibold rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
+                View All Docs
               </button>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Documentation Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Documentation Categories
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Find the information you need across our comprehensive documentation sections
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {documentationCategories.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
+                  <category.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
+                <p className="text-zion-slate-light mb-4">{category.description}</p>
+                <ul className="space-y-2">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-zion-slate-light text-sm">
+                      • {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Quick Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {quickLinks.map((link, index) => (
-            <Link
-              key={index}
-              to={link.path}
-              className="group bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
-            >
-              <div className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                <link.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                {link.title}
-              </h3>
-              <div className="flex items-center text-zion-slate-light group-hover:text-zion-cyan transition-colors">
-                <span className="text-sm">Explore</span>
-                <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
-            </Link>
-          ))}
-        </div>
+      {/* Popular Documentation */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Popular Documentation
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Most viewed and highly-rated documentation resources
+            </p>
+          </motion.div>
 
-        {/* Documentation Sections */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Browse Documentation</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {documentationSections.map((section) => (
-              <div key={section.id} className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
-                      <section.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">{section.title}</h3>
-                      <p className="text-zion-slate-light">{section.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {popularDocs.map((doc, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-zion-blue/20 border border-zion-blue/30 text-zion-cyan text-sm rounded-full">
+                    {doc.category}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-zion-slate-light text-sm">{doc.rating}</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{doc.title}</h3>
+                <p className="text-zion-slate-light mb-4">{doc.description}</p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4 text-zion-slate-light text-sm">
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      <span>{doc.views}</span>
                     </div>
                   </div>
-                  <button
-                    onClick={() => toggleSection(section.id)}
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    {expandedSections.includes(section.id) ? (
-                      <ChevronDown className="w-5 h-5" />
-                    ) : (
-                      <ChevronRight className="w-5 h-5" />
-                    )}
+                  <button className="px-4 py-2 border border-zion-blue text-zion-cyan font-medium rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-2 inline" />
                   </button>
                 </div>
-                
-                {expandedSections.includes(section.id) && (
-                  <div className="space-y-3">
-                    {section.articles.map((article, articleIndex) => (
-                      <Link
-                        key={articleIndex}
-                        to={article.path}
-                        className="block p-3 rounded-lg hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1">
-                            <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors">
-                              {article.title}
-                            </h4>
-                            <p className="text-sm text-zion-slate-light">{article.description}</p>
-                          </div>
-                          <div className="flex items-center space-x-3">
-                            <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
-                              {article.readTime}
-                            </span>
-                            <ChevronRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300" />
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const quickStartGuides = [
-    {
-      title: 'AI Autonomous Systems Quick Start',
-      description: 'Get up and running with AI autonomous systems in 15 minutes',
-      path: '/docs/quick-start/ai-autonomous-systems',
-      icon: Brain,
-      time: '15 min'
-    },
-    {
-      title: 'Quantum Neural Networks Setup',
-      description: 'Set up your first quantum neural network project',
-      path: '/docs/quick-start/quantum-neural-networks',
-      icon: Brain,
-      time: '30 min'
-    },
-    {
-      title: 'SOC2 Compliance Setup',
-      description: 'Begin your SOC2 compliance journey',
-      path: '/docs/quick-start/soc2-compliance',
-      icon: Shield,
-      time: '45 min'
-    },
-    {
-      title: '5G Enterprise Network',
-      description: 'Deploy your first 5G enterprise network',
-      path: '/docs/quick-start/5g-enterprise',
-      icon: Zap,
-      time: '60 min'
-    }
-  ];
-
-  const apiReferences = [
-    {
-      title: 'AI Autonomous Systems API',
-      description: 'Complete API reference for AI autonomous systems',
-      path: '/docs/api/ai-autonomous-systems',
-      icon: Code,
-      version: 'v2.1.0'
-    },
-    {
-      title: 'Quantum Neural Networks API',
-      description: 'API reference for quantum neural networks',
-      path: '/docs/api/quantum-neural-networks',
-      icon: Code,
-      version: 'v1.5.0'
-    },
-    {
-      title: 'Cybersecurity API',
-      description: 'Security and compliance API reference',
-      path: '/docs/api/cybersecurity',
-      icon: Code,
-      version: 'v3.0.0'
-    },
-    {
-      title: '5G Enterprise API',
-      description: '5G enterprise solutions API reference',
-      path: '/docs/api/5g-enterprise',
-      icon: Code,
-      version: 'v2.0.0'
-    }
-  ];
-
-  const filteredSections = documentationSections.filter(section =>
-    section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    section.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    section.articles.some(article =>
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
-            Documentation
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Comprehensive guides, tutorials, and API references for all Zion Tech Group services
-          </p>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search documentation, guides, and APIs..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Start Guides */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Quick Start Guides</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickStartGuides.map((guide) => (
-              <div key={guide.title} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <guide.icon className="w-8 h-8 text-cyan-400" />
-                  <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">
-                    {guide.time}
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2 text-cyan-400">{guide.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{guide.description}</p>
-                <Link
-                  to={guide.path}
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors text-sm"
-                >
-                  Get Started
-                  <Play className="w-4 h-4" />
-                </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* API References */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">API References</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {apiReferences.map((api) => (
-              <div key={api.title} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <api.icon className="w-8 h-8 text-cyan-400" />
-                  <span className="text-xs bg-gray-700/50 text-gray-400 px-2 py-1 rounded-full">
-                    {api.version}
-                  </span>
+      {/* Recent Updates */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Recent Updates
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Stay up to date with the latest documentation changes and new features
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            {recentUpdates.map((update, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 mb-4 hover:border-zion-cyan/50 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className={`px-3 py-1 text-sm rounded-full ${
+                        update.type === 'New Feature' 
+                          ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                          : update.type === 'Release'
+                          ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                          : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                      }`}>
+                        {update.type}
+                      </span>
+                      <span className="text-zion-slate-light text-sm">
+                        {new Date(update.date).toLocaleDateString()}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{update.title}</h3>
+                    <p className="text-zion-slate-light">{update.description}</p>
+                  </div>
+                  <button className="ml-4 px-4 py-2 border border-zion-blue text-zion-cyan font-medium rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
+                    View Details
+                    <ArrowRight className="w-4 h-4 ml-2 inline" />
+                  </button>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-cyan-400">{api.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{api.description}</p>
-                <Link
-                  to={api.path}
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors text-sm"
-                >
-                  View API Reference
-                  <FileCode className="w-4 h-4" />
-                </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
       </section>
 
-      {/* Documentation Sections */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Documentation Sections</h2>
-          <div className="space-y-6">
-            {filteredSections.map((section) => (
-              <div key={section.id} className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden">
-                <button
-                  onClick={() => toggleSection(section.id)}
-                  className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 bg-gradient-to-r ${section.color} rounded-xl flex items-center justify-center`}>
-                        <section.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold">{section.title}</h3>
-                        <p className="text-gray-400">{section.description}</p>
-                      </div>
-                    </div>
-                    {expandedSections.includes(section.id) ? (
-                      <ChevronDown className="w-6 h-6 text-gray-400" />
-                    ) : (
-                      <ChevronRight className="w-6 h-6 text-gray-400" />
-                    )}
-                  </div>
-                </button>
-                
-                {expandedSections.includes(section.id) && (
-                  <div className="px-6 pb-6 border-t border-gray-700">
-                    <div className="pt-6 space-y-4">
-                      {section.articles.map((article) => (
-                        <div key={article.title} className="flex items-start gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors">
-                          <div className="flex-shrink-0 mt-1">
-                            {article.type === 'guide' && <BookOpen className="w-5 h-5 text-cyan-400" />}
-                            {article.type === 'tutorial' && <Play className="w-5 h-5 text-purple-400" />}
-                            {article.type === 'reference' && <FileCode className="w-5 h-5 text-green-400" />}
-                          </div>
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-1">
-                              <h4 className="font-medium text-cyan-400">{article.title}</h4>
-                              <span className={`text-xs px-2 py-1 rounded-full ${
-                                article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                                article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                                'bg-red-500/20 text-red-400'
-                              }`}>
-                                {article.difficulty}
-                              </span>
-                            </div>
-                            <p className="text-gray-300 text-sm mb-2">{article.description}</p>
-                            <Link
-                              to={article.path}
-                              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors text-sm"
-                            >
-                              Read More
-                              <ChevronRight className="w-4 h-4" />
-                            </Link>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-                  </div>
-                )}
-=======
-  const quickLinks = [
-    { title: 'API Status', path: '/status', icon: '📊' },
-    { title: 'Changelog', path: '/docs/changelog', icon: '📝' },
-    { title: 'Migration Guide', path: '/docs/migration', icon: '🔄' },
-    { title: 'FAQ', path: '/docs/faq', icon: '❓' }
-  ];
+      {/* Additional Resources */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Additional Resources
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Extra tools and resources to help you succeed
+            </p>
+          </motion.div>
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
-            Documentation
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Comprehensive guides, API references, and tutorials to help you build amazing applications with Zion Tech Group.
-          </p>
-=======
-  const quickLinks = [
-    { title: 'API Playground', icon: Terminal, path: '/docs/api-playground', color: 'from-blue-500 to-cyan-500' },
-    { title: 'SDK Downloads', icon: Download, path: '/docs/sdks', color: 'from-green-500 to-emerald-500' },
-    { title: 'Code Examples', icon: Code, path: '/docs/examples', color: 'from-purple-500 to-pink-500' },
-    { title: 'Video Tutorials', icon: Video, path: '/docs/tutorials', color: 'from-orange-500 to-red-500' }
-  ];
-
-  const popularDocs = [
-
-      title: "Quick Start Guide", description: "Get up and running with Zion Tech Group services in minutes",
-
-      category: "Getting Started", readTime: "5 min read",
-      views: 1250
-    }, { title: "API Authentication",
-      description: "Learn how to authenticate and secure your API requests", category: "API Reference",
-      readTime: "8 min read", views: 980
-    }, { title: "AI Model Integration", description: "Integrate our AI models into your applications",
-      category: "Guides & Tutorials", readTime: "12 min read",
-      views: 756
-    }, { title: "Quantum Computing Basics",
-      description: "Introduction to quantum computing concepts and applications", category: "Guides & Tutorials",
-      readTime: "15 min read", views: 634
-
-  ];
-
-    <>
-      <SEO 
-        title=&quot;Documentation - Zion Tech Group | Technical Guides & API Reference&quot;
-        description=&quot;Comprehensive documentation for Zion Tech Group services. Find API references, guides, tutorials, and technical resources to help you build with our platform.&quot;
-        keywords=&quot;documentation, API reference, guides, tutorials, technical docs, Zion Tech Group&quot;
-      />&quot;
-      
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
-        {/* Hero Section */}&quot;
-        <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
-          <div className=&quot;container mx-auto px-4&quot;>&quot;"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <motion.div
-
-              className="text-center max-w-4xl mx-auto"
-            ></motion>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Documentation
-
-              </h1>
-              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Comprehensive guides, API references, and technical resources 
-                to help you build amazing solutions with our platform&quot;
-              </p>
-              
-              {/* Search Bar */}
-              <div className=&quot;max-w-2xl mx-auto&quot;>&quot;"
-                <div className=&quot;relative&quot;>&quot;"
-                  <Search className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />&quot;
-                  <input
-
-                </div>
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-8 h-8 text-white" />
               </div>
-
-        {/* Categories */}
-        <section className=&quot;py-16&quot;>&quot;"
-          <div className=&quot;container mx-auto px-4&quot;>&quot;"
-            <motion.div
-
-              className="text-center mb-12"
-            ></motion>
-              <h2 className="text-4xl font-bold text-white mb-4"></h>Browse Documentation</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Find the information you need organized by category and topic
-
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3">SDKs & Libraries</h3>
+              <p className="text-zion-slate-light mb-4">Download our official SDKs and libraries for popular programming languages</p>
+              <button className="px-6 py-3 border border-zion-blue text-zion-cyan font-medium rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
+                Download SDKs
+              </button>
             </motion.div>
 
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
-              {docCategories.map((category, index) => (&quot}
-                <motion.div
-
-                  key={category.title}
-
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <category.icon className=&quot;w-8 h-8 text-white&quot; />&quot;
-                  </div>
-
-                  </div>
-                )}
->>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-white mb-3">Community Support</h3>
+              <p className="text-zion-slate-light mb-4">Join our community forums and get help from other developers</p>
+              <button className="px-6 py-3 border border-zion-blue text-zion-cyan font-medium rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
+                Join Community
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">API Status</h3>
+              <p className="text-zion-slate-light mb-4">Check the real-time status of our APIs and services</p>
+              <button className="px-6 py-3 border border-zion-blue text-zion-cyan font-medium rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
+                Check Status
+              </button>
+            </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20">
-            <BookOpen className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold mb-4">Need More Help?</h2>
-            <p className="text-gray-300 mb-8 text-lg">
-              Can't find what you're looking for? Our support team is here to help
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Need Help with Documentation?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Can't find what you're looking for? Our team is here to help you succeed
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/help"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Visit Help Center
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-=======
-      </div>
-
-      {/* Getting Help Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 border border-cyan-500/30">
-            <h2 className="text-3xl font-bold mb-6">Need Help?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Can't find what you're looking for? Our developer support team is here to help.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/help"
-                className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
-              >
-                Help Center
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-colors duration-200"
->>>>>>> origin/cursor/website-audit-and-enhancement-4b12
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                 Contact Support
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-
-        {/* Popular Documentation */}
-
-              className="text-center mb-12"
-            ></motion>
-              <h2 className="text-4xl font-bold text-white mb-4"></h>Popular Documentation</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Most viewed and helpful documentation articles
-
-              </p>
-            </motion.div>
-
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-              {popularDocs.map((doc, index) => (&quot}
-                <motion.div
-
-                  key={doc.title}
-
-                    </span>
-                    <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
-                      <Users className=&quot;w-4 h-4 mr-1&quot; />
-                      {doc.views}&quot;
-                    </div>
-                  </div>
-                  
-
-                    </button>
-                  </div>
-                </motion.div>
-
-              ))}
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Resources */}
-
-              className="text-center mb-12"
-            ></motion>
-              <h2 className="text-4xl font-bold text-white mb-4"></h>Additional Resources</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Download guides, access code examples, and explore our developer resources
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }
-                whileInView={{ opacity: 1, y: 0 }
-                transition={{ duration: 0.8, delay: 0.1 }
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"
-              ></motion>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Download className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2"></h>SDK Downloads</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Download our SDKs for popular programming languages
-
-                </p>
-                <button className=&quot;px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors&quot;>
-                  Download SDKs&quot;
-                </button>
-              </motion.div>
-
-              <motion.div
-
-                </p>
-                <button className=&quot;px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors&quot;>
-                  View Examples&quot;
-                </button>
-              </motion.div>
-
-              <motion.div
-
-                </p>
-                <button className=&quot;px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors&quot;>
-                  Visit Portal&quot;
-                </button>
-              </motion.div>
+              </button>
+              <button className="px-8 py-4 border border-zion-blue text-zion-cyan font-semibold rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
+                Request Feature
+              </button>
             </div>
-          </div>
-        </section>
-      )}
-
-        {/* Support */}
-        <section className=&quot;py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
-          <div className=&quot;container mx-auto px-4&quot;>&quot;"
-            <motion.div
-
-              className="text-center max-w-4xl mx-auto"
-            ></motion>
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Need Help?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Can&apos;t find what you&apos;re looking for? Our support team is here to help 
-                you get the most out of our platform.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-
-                <a
-                  href=&quot;/help&quot;
-                  className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot;
-                >&quot;
-                  <BookOpen className=&quot;w-5 h-5 mr-2&quot; />
-                  Contact Support&quot;
-                </a>
-                <a
-                  href=&quot;/contact&quot;
-                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
-                >&quot;
-                  <ArrowRight className=&quot;w-5 h-5 mr-2&quot; />
-                  Get in Touch&quot;
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Additional Resources */}
-        <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Additional Resources</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Github className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">GitHub Repository</h3>
-              <p className="text-zion-slate-light mb-4">Access source code and examples</p>
-              <a
-                href="https://github.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                View on GitHub
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Video className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Video Tutorials</h3>
-              <p className="text-zion-slate-light mb-4">Step-by-step video guides</p>
-              <Link
-                to="/docs/tutorials"
-                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                Watch Tutorials
-                <ChevronRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Developer Portal</h3>
-              <p className="text-zion-slate-light mb-4">Advanced developer resources</p>
-              <Link
-                to="/developer-portal"
-                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                Visit Portal
-                <ChevronRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-              </Link>
-            </div>
-          </div>
+          </motion.div>
         </div>
 <<<<<<< HEAD
 =======
@@ -1127,19 +441,8 @@ export default function Documentation() {
 =======
       </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b12
-    </div>
-  );
-}
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Documentation;
-=======
-export default Documentation;
->>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

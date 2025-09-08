@@ -1,62 +1,71 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Brain, Shield, Database, Users, Clock, TrendingUp, CheckCircle } from 'lucide-react';
+import { GraduationCap, BookOpen, Users, Monitor, Brain, CheckCircle, Globe, TrendingUp } from 'lucide-react';
 
-const HealthcareSolutions: React.FC = () => {
+const EducationSolutions: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Diagnostics',
-      description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis'
+      icon: GraduationCap,
+      title: 'Digital Learning',
+      description: 'Comprehensive digital learning platforms and tools'
     },
     {
-      icon: Database,
-      title: 'Patient Data Analytics',
-      description: 'Comprehensive analysis of patient data for personalized treatment plans'
-    },
-    {
-      icon: Shield,
-      title: 'HIPAA Compliance',
-      description: 'Full compliance with healthcare data protection regulations'
+      icon: BookOpen,
+      title: 'Content Management',
+      description: 'AI-powered content creation and curriculum management'
     },
     {
       icon: Users,
-      title: 'Patient Engagement',
-      description: 'Digital tools to improve patient communication and care coordination'
+      title: 'Student Engagement',
+      description: 'Interactive learning experiences and collaboration tools'
     },
     {
-      icon: Clock,
-      title: '24/7 Monitoring',
-      description: 'Continuous health monitoring and early warning systems'
+      icon: Monitor,
+      title: 'Analytics & Insights',
+      description: 'Advanced analytics for student performance and learning outcomes'
+    },
+    {
+      icon: Brain,
+      title: 'Personalized Learning',
+      description: 'Adaptive learning paths tailored to individual students'
     },
     {
       icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'AI-driven insights to predict health outcomes and prevent complications'
+      title: 'Performance Tracking',
+      description: 'Comprehensive assessment and progress monitoring systems'
     }
   ];
 
   const solutions = [
     {
-      title: 'Electronic Health Records (EHR)',
-      description: 'Secure, interoperable EHR systems with AI-powered insights',
-      benefits: ['Improved accuracy', 'Better coordination', 'Reduced errors']
+      title: 'Digital Learning Platform',
+      description: 'Comprehensive platform for online education and blended learning environments',
+      benefits: ['Enhanced engagement', 'Flexible learning', 'Scalable delivery']
     },
     {
-      title: 'Telemedicine Platform',
-      description: 'Comprehensive virtual care solution with AI diagnostics',
-      benefits: ['Remote consultations', 'AI symptom analysis', 'Prescription management']
+      title: 'AI-Powered Tutoring',
+      description: 'Intelligent tutoring systems that adapt to individual learning styles',
+      benefits: ['Personalized learning', '24/7 availability', 'Adaptive content']
     },
     {
-      title: 'Medical Imaging AI',
-      description: 'Advanced image analysis for radiology and pathology',
-      benefits: ['Faster diagnosis', 'Higher accuracy', 'Reduced workload']
+      title: 'Learning Analytics',
+      description: 'Advanced analytics platform for tracking student progress and outcomes',
+      benefits: ['Data insights', 'Performance optimization', 'Intervention support']
     },
     {
-      title: 'Population Health Management',
-      description: 'Data-driven approach to managing community health outcomes',
-      benefits: ['Preventive care', 'Risk stratification', 'Resource optimization']
+      title: 'Virtual Reality Learning',
+      description: 'Immersive VR experiences for enhanced learning and engagement',
+      benefits: ['Interactive learning', 'Real-world simulation', 'Increased retention']
     }
+  ];
+
+  const technologies = [
+    'Artificial Intelligence & Machine Learning',
+    'Virtual Reality & Augmented Reality',
+    'Cloud Computing & Mobile Learning',
+    'Big Data Analytics & Learning Analytics',
+    'Natural Language Processing',
+    'Adaptive Learning Algorithms'
   ];
 
   return (
@@ -71,18 +80,18 @@ const HealthcareSolutions: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-blue/20 border border-zion-blue/30 text-zion-cyan mb-6">
-              <Heart className="w-4 h-4 mr-2" />
-              Healthcare Technology Solutions
+              <GraduationCap className="w-4 h-4 mr-2" />
+              Education Technology Solutions
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transforming Healthcare with
+              Transforming Education with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                {' '}AI Innovation
+                {' '}AI-Powered Learning
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Empowering healthcare providers with cutting-edge AI solutions that improve patient outcomes, 
-              streamline operations, and ensure compliance with healthcare regulations.
+              Revolutionize education delivery with cutting-edge technology solutions that enhance learning outcomes, 
+              improve student engagement, and enable personalized educational experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -106,10 +115,10 @@ const HealthcareSolutions: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Healthcare Features
+              Advanced Education Technology Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our healthcare solutions combine cutting-edge AI technology with deep healthcare domain expertise
+              Our education solutions combine innovation, engagement, and analytics to enhance learning outcomes
             </p>
           </motion.div>
 
@@ -143,10 +152,10 @@ const HealthcareSolutions: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Healthcare Solutions
+              Comprehensive Education Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From patient care to administrative efficiency, we provide end-to-end healthcare technology solutions
+              From digital learning platforms to AI-powered tutoring, we provide end-to-end education technology solutions
             </p>
           </motion.div>
 
@@ -175,8 +184,42 @@ const HealthcareSolutions: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Technologies Section */}
       <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Cutting-Edge Technologies
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              We leverage the latest advancements in technology to deliver superior education solutions
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center p-4 bg-zion-slate-dark/30 border border-zion-blue/20 rounded-lg"
+              >
+                <div className="w-3 h-3 bg-zion-cyan rounded-full mr-4"></div>
+                <span className="text-zion-slate-light">{tech}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -185,10 +228,10 @@ const HealthcareSolutions: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Healthcare Operations?
+              Ready to Transform Your Educational Institution?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join leading healthcare providers who are already leveraging AI to improve patient care and operational efficiency
+              Join leading educational institutions who are already leveraging technology to improve learning outcomes and student engagement
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -205,4 +248,4 @@ const HealthcareSolutions: React.FC = () => {
   );
 };
 
-export default HealthcareSolutions;
+export default EducationSolutions;
