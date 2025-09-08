@@ -1520,21 +1520,124 @@ const Index: NextPage = () => {
             </div>
           </section>
 
-          {/* Project Advantages & Unique Features */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🌟 Project Advantages & Unique Features</h2>
+          {/* Features Section */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Core Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🚀 Zero-Downtime Operations</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• 99.99% uptime guarantee</li>
-                  <li>• Automatic failover systems</li>
-                  <li>• Self-healing infrastructure</li>
-                  <li>• Continuous deployment</li>
-                  <li>• Real-time monitoring</li>
-                </ul>
-                <div className="text-cyan-400 text-sm font-semibold">
-                  Industry-leading reliability
+              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
+                <div className="text-3xl mb-3">🤖</div>
+                <h3 className="text-xl font-semibold mb-2 text-cyan-400">AI-Powered Automation</h3>
+                <p className="text-white/80 text-sm">
+                  Intelligent systems that learn, adapt, and optimize processes automatically without human intervention.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl hover:border-fuchsia-400/30 transition-all duration-300">
+                <div className="text-3xl mb-3">☁️</div>
+                <h3 className="text-xl font-semibold mb-2 text-fuchsia-400">Cloud Infrastructure</h3>
+                <p className="text-white/80 text-sm">
+                  Scalable, secure cloud solutions with 99.9% uptime guarantee and global edge distribution.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl hover:border-green-400/30 transition-all duration-300">
+                <div className="text-3xl mb-3">🔒</div>
+                <h3 className="text-xl font-semibold mb-2 text-green-400">Enterprise Security</h3>
+                <p className="text-white/80 text-sm">
+                  SOC 2 Type II certified with end-to-end encryption and advanced threat protection.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300">
+                <div className="text-3xl mb-3">📊</div>
+                <h3 className="text-xl font-semibold mb-2 text-blue-400">Real-time Analytics</h3>
+                <p className="text-white/80 text-sm">
+                  Live monitoring and insights with predictive analytics and automated reporting.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl hover:border-yellow-400/30 transition-all duration-300">
+                <div className="text-3xl mb-3">🚀</div>
+                <h3 className="text-xl font-semibold mb-2 text-yellow-400">Rapid Deployment</h3>
+                <p className="text-white/80 text-sm">
+                  CI/CD pipelines with automated testing and zero-downtime deployments.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl hover:border-purple-400/30 transition-all duration-300">
+                <div className="text-3xl mb-3">🌐</div>
+                <h3 className="text-xl font-semibold mb-2 text-purple-400">Global Scale</h3>
+                <p className="text-white/80 text-sm">
+                  Multi-region infrastructure with intelligent routing and edge computing capabilities.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <div className="bg-white/10 p-8 rounded-2xl border border-white/20 backdrop-blur-xl">
+              <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Platform Statistics</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+                  <div className="text-white/70 text-sm">Uptime</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-fuchsia-400 mb-2">50M+</div>
+                  <div className="text-white/70 text-sm">API Calls/Day</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                  <div className="text-white/70 text-sm">Monitoring</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">15+</div>
+                  <div className="text-white/70 text-sm">Global Regions</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Footer Section */}
+          <footer className="bg-black/20 backdrop-blur-xl border-t border-white/10 mt-20">
+            <div className="container mx-auto px-6 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                  <h3 className="text-lg font-bold mb-4 text-cyan-400">Company</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li><a href="/about" className="hover:text-cyan-400 transition-colors">About Us</a></li>
+                    <li><a href="/news" className="hover:text-cyan-400 transition-colors">News</a></li>
+                    <li><a href="/events" className="hover:text-cyan-400 transition-colors">Events</a></li>
+                    <li><a href="/contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-4 text-fuchsia-400">Services</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">AI Development</a></li>
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">Automation</a></li>
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">Cloud Infrastructure</a></li>
+                    <li><a href="/services" className="hover:text-fuchsia-400 transition-colors">Consulting</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-4 text-green-400">Resources</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li><a href="/blog" className="hover:text-green-400 transition-colors">Blog</a></li>
+                    <li><a href="/reports" className="hover:text-green-400 transition-colors">Reports</a></li>
+                    <li><a href="/api-documentation" className="hover:text-green-400 transition-colors">API Docs</a></li>
+                    <li><a href="/component-library" className="hover:text-green-400 transition-colors">Components</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-4 text-blue-400">Legal</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li><a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                    <li><a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                    <li><a href="/security" className="hover:text-blue-400 transition-colors">Security</a></li>
+                    <li><a href="/accessibility" className="hover:text-blue-400 transition-colors">Accessibility</a></li>
+                  </ul>
                 </div>
               </div>
 
