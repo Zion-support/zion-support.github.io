@@ -1,330 +1,370 @@
-import React from 'react';
+import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
+import { Download, BookOpen, Play, FileText, Users, Calendar, Star, ArrowRight } from 'lucide-react';
 
-export default function ResourcesPage() {
-  const whitepapers = [
+const Resources: NextPage = () => {
+  const resourceCategories = [
     {
-      id: 1,
-      title: "The Future of Autonomous AI Systems",
-      description: "Comprehensive analysis of autonomous AI technology trends and business implications",
-      category: "AI & Automation",
-      downloadCount: "2,847",
-      date: "2025-01-19",
-      size: "2.4 MB",
-      image: "📊"
+      title: "White Papers",
+      description: "In-depth research and insights on emerging technologies and industry trends",
+      icon: FileText,
+      count: "12+",
+      href: "/resources/white-papers"
     },
     {
-      id: 2,
-      title: "Cloud-Native Architecture Best Practices",
-      description: "Essential guidelines for building scalable and resilient cloud infrastructure",
-      category: "Cloud & Infrastructure",
-      downloadCount: "1,923",
-      date: "2025-01-17",
-      size: "1.8 MB",
-      image: "☁️"
+      title: "Case Studies",
+      description: "Real-world examples of how we've helped businesses transform and succeed",
+      icon: Users,
+      count: "25+",
+      href: "/resources/case-studies"
     },
     {
-      id: 3,
-      title: "DevOps Automation Strategies",
-      description: "Advanced techniques for automating software development and deployment pipelines",
-      category: "DevOps & CI/CD",
-      downloadCount: "1,456",
-      date: "2025-01-15",
-      size: "3.1 MB",
-      image: "⚡"
+      title: "Webinars",
+      description: "Live and recorded sessions on technology topics and industry insights",
+      icon: Play,
+      count: "50+",
+      href: "/resources/webinars"
     },
     {
-      id: 4,
-      title: "Machine Learning in Production",
-      description: "Practical guide to deploying and maintaining ML models in production environments",
-      category: "Machine Learning",
-      downloadCount: "1,234",
-      date: "2025-01-14",
-      size: "2.7 MB",
-      image: "🧠"
+      title: "Documentation",
+      description: "Comprehensive guides and technical documentation for our products and services",
+      icon: BookOpen,
+      count: "100+",
+      href: "/resources/documentation"
     }
   ];
 
-  const guides = [
+  const featuredResources = [
     {
-      id: 1,
-      title: "Getting Started with Autonomous Systems",
-      description: "Step-by-step guide to implementing your first autonomous technology solution",
-      level: "Beginner",
-      readTime: "15 min",
-      image: "🚀"
+      title: "The Future of AI in Business: 2025 Outlook",
+      type: "White Paper",
+      description: "Comprehensive analysis of AI trends and their impact on business transformation",
+      downloadCount: "2,500+",
+      rating: 4.8,
+      href: "/resources/white-papers/ai-business-outlook-2025",
+      category: "AI & ML"
     },
     {
-      id: 2,
-      title: "AI Ethics and Responsible Development",
-      description: "Essential principles for building fair, transparent, and beneficial AI systems",
-      level: "Intermediate",
-      readTime: "20 min",
-      image: "⚖️"
+      title: "Cloud Migration Success Story: Financial Services",
+      type: "Case Study",
+      description: "How we helped a major bank reduce costs by 40% through cloud migration",
+      downloadCount: "1,800+",
+      rating: 4.9,
+      href: "/resources/case-studies/cloud-migration-financial",
+      category: "Cloud"
     },
     {
-      id: 3,
-      title: "Performance Optimization Techniques",
-      description: "Advanced strategies for optimizing autonomous system performance and efficiency",
-      level: "Advanced",
-      readTime: "25 min",
-      image: "📈"
+      title: "Cybersecurity Best Practices for 2025",
+      type: "White Paper",
+      description: "Essential security strategies and practices for modern businesses",
+      downloadCount: "3,200+",
+      rating: 4.7,
+      href: "/resources/white-papers/cybersecurity-best-practices-2025",
+      category: "Security"
     },
     {
-      id: 4,
-      title: "Security Best Practices for AI Systems",
-      description: "Comprehensive security guidelines for protecting autonomous AI applications",
-      level: "Intermediate",
-      readTime: "18 min",
-      image: "🔒"
+      title: "Digital Transformation Roadmap Guide",
+      type: "Guide",
+      description: "Step-by-step guide to planning and executing digital transformation initiatives",
+      downloadCount: "4,100+",
+      rating: 4.9,
+      href: "/resources/guides/digital-transformation-roadmap",
+      category: "Transformation"
+    }
+  ];
+
+  const upcomingEvents = [
+    {
+      title: "AI & Machine Learning Workshop",
+      date: "March 15, 2025",
+      time: "2:00 PM EST",
+      type: "Virtual Workshop",
+      description: "Hands-on workshop covering AI implementation strategies and best practices",
+      registration: "Open"
+    },
+    {
+      title: "Cloud Security Summit",
+      date: "March 22, 2025",
+      time: "10:00 AM EST",
+      type: "Virtual Conference",
+      description: "Comprehensive overview of cloud security challenges and solutions",
+      registration: "Open"
+    },
+    {
+      title: "Digital Transformation Webinar",
+      date: "March 29, 2025",
+      time: "1:00 PM EST",
+      type: "Webinar",
+      description: "Strategies for successful digital transformation in enterprise environments",
+      registration: "Open"
     }
   ];
 
   const tools = [
     {
-      id: 1,
-      title: "Performance Benchmarking Tool",
-      description: "Open-source tool for measuring and comparing autonomous system performance",
-      category: "Development",
-      status: "Open Source",
-      image: "📊"
+      name: "ROI Calculator",
+      description: "Calculate the potential return on investment for technology projects",
+      icon: "💰",
+      href: "/tools/roi-calculator"
     },
     {
-      id: 2,
-      title: "AI Model Monitoring Dashboard",
-      description: "Real-time monitoring and alerting for machine learning models in production",
-      category: "Monitoring",
-      status: "Free Tier",
-      image: "📱"
+      name: "Technology Assessment",
+      description: "Evaluate your current technology stack and identify improvement opportunities",
+      icon: "🔍",
+      href: "/tools/technology-assessment"
     },
     {
-      id: 3,
-      title: "Automation Workflow Designer",
-      description: "Visual tool for designing and testing autonomous workflow processes",
-      category: "Design",
-      status: "Beta",
-      image: "🎨"
+      name: "Security Audit Tool",
+      description: "Comprehensive security assessment for your digital infrastructure",
+      icon: "🔒",
+      href: "/tools/security-audit"
     },
     {
-      id: 4,
-      title: "Security Assessment Framework",
-      description: "Comprehensive framework for assessing AI system security and compliance",
-      category: "Security",
-      status: "Open Source",
-      image: "🛡️"
-    }
-  ];
-
-  const webinars = [
-    {
-      id: 1,
-      title: "Autonomous AI Implementation Strategies",
-      description: "Learn from industry experts about successful autonomous AI deployment",
-      date: "2025-02-15",
-      duration: "60 min",
-      speaker: "Dr. Sarah Chen",
-      image: "🎥"
-    },
-    {
-      id: 2,
-      title: "Cloud-Native Security Best Practices",
-      description: "Essential security considerations for modern cloud infrastructure",
-      date: "2025-02-22",
-      duration: "45 min",
-      speaker: "Michael Rodriguez",
-      image: "🔐"
-    },
-    {
-      id: 3,
-      title: "The Future of DevOps Automation",
-      description: "Exploring next-generation automation in software development",
-      date: "2025-03-01",
-      duration: "75 min",
-      speaker: "Alex Thompson",
-      image: "🤖"
+      name: "Cloud Migration Planner",
+      description: "Plan and estimate your cloud migration journey",
+      icon: "☁️",
+      href: "/tools/cloud-migration-planner"
     }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Head>
-        <title>Resources | Zion Tech Group - Knowledge Hub</title>
-        <meta name="description" content="Access comprehensive resources including whitepapers, guides, tools, and webinars on autonomous technology and AI innovation." />
-        <meta property="og:title" content="Resources - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive resources on autonomous technology and AI innovation." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <title>Resources - Zion Tech Group | White Papers, Case Studies & Tools</title>
+        <meta name="description" content="Access valuable resources from Zion Tech Group including white papers, case studies, webinars, and interactive tools for technology insights." />
+        <meta name="keywords" content="resources, white papers, case studies, webinars, documentation, tools, technology insights" />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Resources
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Comprehensive knowledge hub featuring whitepapers, guides, tools, and webinars to accelerate your autonomous technology journey
-            </p>
-          </section>
 
-          <section className="mx-auto max-w-7xl space-y-20">
-            {/* Whitepapers */}
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Whitepapers & Research</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {whitepapers.map((paper) => (
-                  <div key={paper.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="text-4xl">{paper.image}</div>
-                      <div className="flex-1">
-                        <div className="mb-2">
-                          <span className="inline-block px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded border border-cyan-400/30">
-                            {paper.category}
-                          </span>
-                        </div>
-                        <h3 className="text-lg font-bold mb-2 text-white">{paper.title}</h3>
-                        <p className="text-white/70 text-sm mb-3">{paper.description}</p>
-                        <div className="flex items-center justify-between text-xs text-white/50">
-                          <span>📥 {paper.downloadCount} downloads</span>
-                          <span>📅 {paper.date}</span>
-                          <span>💾 {paper.size}</span>
-                        </div>
-                        <button className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
-                          Download Whitepaper
-                        </button>
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
-                    <p className="text-white/80 text-sm mb-6">{paper.description}</p>
-                    {paper.id === 'autonomous-systems-guide' ? (
-                  <Link 
-                    href="/resources/autonomous-systems-guide"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300"
-                  >
-                    Read Guide →
-                    <span aria-hidden>→</span>
-                  </Link>
-                ) : (
-                  <a 
-                    href={paper.downloadUrl}
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300"
-                  >
-                    Download Whitepaper
-                    <span aria-hidden>↓</span>
-                  </a>
-                )}
-                  </div>
-                ))}
-              </div>
-            </div>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 text-center text-white">
+        <div className="container mx-auto px-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Resources
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+            Access valuable insights, tools, and knowledge to help you navigate the complex 
+            world of technology and digital transformation.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Link href="/resources/white-papers" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Browse Resources
+            </Link>
+            <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Get Custom Content
+            </Link>
+          </div>
 
-            {/* Guides */}
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Implementation Guides</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {guides.map((guide) => (
-                  <div key={guide.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="text-4xl">{guide.image}</div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="inline-block px-2 py-1 bg-fuchsia-400/20 text-fuchsia-300 text-xs rounded border border-fuchsia-400/30">
-                            {guide.level}
-                          </span>
-                          <span className="text-white/50 text-xs">⏱️ {guide.readTime}</span>
-                        </div>
-                        <h3 className="text-lg font-bold mb-2 text-white">{guide.title}</h3>
-                        <p className="text-white/70 text-sm mb-3">{guide.description}</p>
-                        <button className="w-full px-4 py-2 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white font-semibold rounded-lg hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-200">
-                          Read Guide
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Tools */}
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Free Tools & Utilities</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {tools.map((tool) => (
-                  <div key={tool.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="text-4xl">{tool.image}</div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="inline-block px-2 py-1 bg-green-400/20 text-green-300 text-xs rounded border border-green-400/30">
-                            {tool.category}
-                          </span>
-                          <span className="inline-block px-2 py-1 bg-blue-400/20 text-blue-300 text-xs rounded border border-blue-400/30">
-                            {tool.status}
-                          </span>
-                        </div>
-                        <h3 className="text-lg font-bold mb-2 text-white">{tool.title}</h3>
-                        <p className="text-white/70 text-sm mb-3">{tool.description}</p>
-                        <button className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-400 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-500 transition-all duration-200">
-                          Access Tool
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Webinars */}
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Upcoming Webinars</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {webinars.map((webinar) => (
-                  <div key={webinar.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="text-center mb-4">
-                      <div className="text-4xl mb-2">{webinar.image}</div>
-                      <span className="inline-block px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded border border-purple-400/30">
-                        {webinar.duration}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold mb-2 text-white text-center">{webinar.title}</h3>
-                    <p className="text-white/70 text-sm mb-3 text-center">{webinar.description}</p>
-                    <div className="text-center text-xs text-white/50 mb-4">
-                      <p>📅 {webinar.date}</p>
-                      <p>👤 {webinar.speaker}</p>
-                    </div>
-                    <button className="w-full px-4 py-2 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-indigo-500 transition-all duration-200">
-                      Register Now
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Newsletter Signup */}
+          {/* Quick Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-12 border border-cyan-400/30">
-                <h2 className="text-3xl font-bold mb-4 text-cyan-400">Stay Updated</h2>
-                <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-                  Get the latest resources, insights, and updates on autonomous technology delivered to your inbox. 
-                  Join thousands of professionals staying ahead of the curve.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"
-                  />
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
-                    Subscribe
-                  </button>
-                </div>
-                <p className="text-white/60 text-sm mt-4">
-                  No spam, unsubscribe at any time. We respect your privacy.
-                </p>
-              </div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">200+</div>
+              <div className="text-sm md:text-base opacity-80">Resources</div>
             </div>
-          </section>
-        </main>
-      </div>
-    </>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">50K+</div>
+              <div className="text-sm md:text-base opacity-80">Downloads</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">4.8</div>
+              <div className="text-sm md:text-base opacity-80">Average Rating</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-sm md:text-base opacity-80">Access</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resource Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            Resource Categories
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {resourceCategories.map((category, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <category.icon className="w-8 h-8 text-blue-400" />
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-4">{category.title}</h3>
+                <p className="text-gray-300 mb-6 text-sm">{category.description}</p>
+                
+                <div className="text-2xl font-bold text-blue-400 mb-4">{category.count}</div>
+                
+                <Link href={category.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:text-blue-300 transition-colors">
+                  Explore {category.title} <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Resources */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            Featured Resources
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {featuredResources.map((resource, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="inline-block bg-blue-100/20 text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                    {resource.category}
+                  </span>
+                  <span className="text-sm text-gray-400">{resource.type}</span>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
+                <p className="text-gray-300 mb-4">{resource.description}</p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center">
+                      <Download className="w-4 h-4 text-gray-400 mr-1" />
+                      <span className="text-sm text-gray-400">{resource.downloadCount}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                      <span className="text-sm text-gray-400">{resource.rating}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <Link href={resource.href} className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors text-center block">
+                  Download Now
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Tools */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            Interactive Tools
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {tools.map((tool, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group">
+                <div className="text-4xl mb-4">{tool.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{tool.name}</h3>
+                <p className="text-gray-300 mb-6 text-sm">{tool.description}</p>
+                
+                <Link href={tool.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:text-blue-300 transition-colors">
+                  Try Tool <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            Upcoming Events
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="inline-block bg-green-100/20 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                    {event.registration}
+                  </span>
+                  <span className="text-sm text-gray-400">{event.type}</span>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{event.title}</h3>
+                <p className="text-gray-300 mb-4">{event.description}</p>
+                
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-400">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-400">
+                    <Play className="w-4 h-4 mr-2" />
+                    <span>{event.time}</span>
+                  </div>
+                </div>
+                
+                <Link href="/contact" className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-medium transition-colors text-center block">
+                  Register Now
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-white/20 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get the latest insights, resources, and updates delivered directly to your inbox. 
+              Join thousands of technology professionals who trust Zion Tech Group for industry knowledge.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                Subscribe
+              </button>
+            </div>
+            
+            <p className="text-sm text-gray-400 mt-4">
+              No spam, unsubscribe at any time. We respect your privacy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Custom Resources?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              We can create tailored content and resources specific to your industry and needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Request Custom Content
+              </Link>
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Call +1 302 464 0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Email Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default Resources;

@@ -137,14 +137,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     ],
     roi: 'Increase crop yields by 25% and reduce water usage by 30%',
     competitors: ['John Deere, Trimble, Raven Industries, AGCO'],
-    market_size: '$12.8B+ precision agriculture market',
-    growth_rate: '200% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'AI - powered precision agriculture platform with intelligent crop monitoring and optimization capabilities.',
-    launch_date: '2025 - 01 - 09',
+    marketSize: '$12.8B+ precision agriculture market',
+    growthRate: '200% YoY',
+    variant: 'default',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'AI-powered precision agriculture platform with intelligent crop monitoring and optimization capabilities.',
+    launchDate: '2025-01-09',
     customers: 234,
     rating: 4 && 4.8,
     reviews: 178,
@@ -450,11 +449,15 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     integrations: ['Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms'];
     useCases: ['Crop planning, Resource allocation, Efficiency optimization, Cost reduction'];
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
-    competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'];
-    marketSize: '$9.8B+ quantum agriculture market', growthRate: '380% YoY',
-    variant: 'ai-futuristic', contactInfo: contact,
-    realImplementation: true, implementationDetails: 'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
-    launchDate: '2025-01-15', customers: 34,
+    competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
+    marketSize: '$9.8B+ quantum agriculture market',
+    growthRate: '380% YoY',
+    variant: 'quantum',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
+    launchDate: '2025-01-15',
+    customers: 34,
     rating: 4.6,
     reviews: 26
   };
@@ -478,11 +481,15 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     integrations: ['Food safety systems, Quality control tools, Compliance databases, Analytics platforms'];
     useCases: ['Contamination detection, Quality monitoring, Safety compliance, Risk assessment'];
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
-    competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'];
-    marketSize: '$15.6B+ food safety market', growthRate: '220% YoY',
-    variant: 'ai-futuristic', contactInfo: contact,
-    realImplementation: true, implementationDetails: 'AI-powered food safety monitoring platform with intelligent contamination detection and quality control capabilities.',
-    launchDate: '2025-01-20', customers: 189,
+    competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
+    marketSize: '$15.6B+ food safety market',
+    growthRate: '220% YoY',
+    variant: 'default',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'AI-powered food safety monitoring platform with intelligent contamination detection and quality control capabilities.',
+    launchDate: '2025-01-20',
+    customers: 189,
     rating: 4.7,
     reviews: 145
   };
@@ -506,11 +513,15 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     integrations: ['Supply chain systems, IoT devices, QR codes, Payment platforms'];
     useCases: ['Food tracking, Supply chain transparency, Product authentication, Compliance management'];
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
-    competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'];
-    marketSize: '$18.4B+ food traceability market', growthRate: '320% YoY',
-    variant: 'ai-futuristic', contactInfo: contact,
-    realImplementation: true, implementationDetails: 'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',
-    launchDate: '2025-01-26', customers: 89,
+    competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
+    marketSize: '$18.4B+ food traceability market',
+    growthRate: '320% YoY',
+    variant: 'default',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',
+    launchDate: '2025-01-26',
+    customers: 89,
     rating: 4.5,
     reviews: 67
   };
@@ -528,24 +539,24 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     color: 'from-orange-600 to-red-700', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-powered-vertical-farming', marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.',
     targetAudience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers',
-    trialDays: 30, setupTime: '1 month',
-    category: 'Agriculture & Food Technology', realService: true,
-    technology: ['AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning'];
-    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'];
-    useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'];
-    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%'
-    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'];
-    marketSize: '$9 && 9.3B+ vertical farming market';
-    growthRate: '280% YoY';
-    variant: 'ai-futuristic';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
-    launchDate: '2025-02-02';
-    customers: 123;
-
-    rating: 4 && 4.6,
-
+    trialDays: 30,
+    setupTime: '1 month',
+    category: 'Agriculture & Food Technology',
+    realService: true,
+    technology: ['AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning'],
+    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'],
+    useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'],
+    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
+    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
+    marketSize: '$9.3B+ vertical farming market',
+    growthRate: '280% YoY',
+    variant: 'default',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
+    launchDate: '2025-02-02',
+    customers: 123,
+    rating: 4.6,
     reviews: 89
   }
 ];

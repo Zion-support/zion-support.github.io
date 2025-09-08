@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   const features = [
@@ -48,35 +49,79 @@ export default function HomePage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
-          <div className="relative container mx-auto px-6 py-20 lg:py-32">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl lg:text-2xl text-white/80 mb-8 max-w-3xl mx-auto">
-                Empowering businesses with cutting-edge AI solutions, advanced technology services, and innovative digital transformation strategies.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/services"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Explore Services
-                </Link>
-                <Link 
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-                >
-                  Get Started
+      <Header />
+      
+      {/* Hero Section */}
+      <main className="container mx-auto px-4 py-16">
+        <div className="text-center text-white mb-20">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+            Leading technology solutions provider helping businesses transform their digital presence 
+            with cutting-edge AI, cloud architecture, and innovative micro SAAS services.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Explore Our Services
+            </Link>
+            <Link href="/products" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              View Products
+            </Link>
+            <a href="tel:+13024640950" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Call +1 302 464 0950
+            </a>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">10+</div>
+              <div className="text-sm md:text-base opacity-80">Years Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">500+</div>
+              <div className="text-sm md:text-base opacity-80">Projects Delivered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-sm md:text-base opacity-80">Client Satisfaction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-sm md:text-base opacity-80">Support Available</div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Featured Services */}
+        <div className="mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Our Featured Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredServices.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="text-sm text-gray-300 flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-lg font-semibold text-blue-400">{service.price}</span>
+                  <Link href={service.href} className="text-blue-400 hover:text-blue-300 font-medium">
+                    Learn More →
+                  </Link>
+                </div>
+                <Link href="/contact" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors text-center block">
+                  Get Quote
                 </Link>
               </div>
             </motion.div>
@@ -171,8 +216,10 @@ export default function HomePage() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
   );
 }
