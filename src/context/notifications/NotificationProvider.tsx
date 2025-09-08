@@ -29,7 +29,6 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
         removeNotification(id);
       }, notification.duration || 5000);
     }
->>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
   };
 
   const removeNotification = (id: string) => {

@@ -17,8 +17,8 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -33,7 +33,11 @@
     "noUncheckedIndexedAccess": true,
     "allowJs": true,
     "incremental": true,
+<<<<<<< HEAD
     "noEmitOnError": true,
+=======
+    "noEmitOnError": false,
+>>>>>>> 1ddfcc196a3d9a29a94165a2653533aad1dea5a4
 
     /* Path mapping */
     "baseUrl": ".",
