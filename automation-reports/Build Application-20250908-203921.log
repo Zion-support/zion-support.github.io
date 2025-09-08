@@ -7,3 +7,22 @@ Skipping prebuild checks
 > operator-reminder-workflow@1.0.0 build
 > NODE_ENV=production vite build
 
+vite v6.3.6 building for production...
+transforming...
+✓ 108 modules transformed.
+rendering chunks...
+[plugin vite:reporter] 
+(!) /workspace/src/pages/NotFound.tsx is dynamically imported by /workspace/src/App.tsx but also statically imported by /workspace/src/layout/AppLayout.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+dist/index.html                    0.72 kB │ gzip:  0.40 kB
+dist/assets/Home-DhPSkjxT.js       1.61 kB │ gzip:  0.57 kB
+dist/assets/About-HU2l2-FA.js      1.89 kB │ gzip:  0.73 kB
+dist/assets/Contact-D_ayC0nk.js    3.42 kB │ gzip:  1.07 kB
+dist/assets/index-DoECzV-r.js    242.27 kB │ gzip: 76.78 kB
+✓ built in 1.24s
+
+> operator-reminder-workflow@1.0.0 postbuild
+> echo 'Build completed successfully' && npm run optimize
+
+Build completed successfully
