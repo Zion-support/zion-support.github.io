@@ -193,6 +193,7 @@
     "vite": "^5.0.8",
     "vitest": "^1.4.0",
     "@playwright/test": "^1.41.2"
+    ,"netlify-plugin-compress": "^7.1.1"
   },
   "engines": {
     "node": ">=18.0.0",
