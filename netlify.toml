@@ -10,6 +10,10 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
+  # Force Netlify to use npm even if yarn.lock exists to avoid Yarn v1 resolution issues
+  NETLIFY_USE_YARN = "false"
+  # Speed up npm install and reduce noise
+  NPM_FLAGS = "--no-audit --no-fund"
   # Avoid optional binary downloads (electron, playwright, cypress)
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
   PUPPETEER_SKIP_DOWNLOAD = "1"
