@@ -113,16 +113,29 @@ const AIEnergyManagementSystem = React.lazy(() => import('./pages/services/ai-en
 // Enhanced components
 const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 
-// Simple placeholder pages for missing ones
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
+// New pages I've created
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+
+// Additional missing pages
+const ZionHireAI = createLazyComponent(() => import('./pages/ZionHireAI'));
+const EnhancedServices = createLazyComponent(() => import('./pages/EnhancedServices'));
+const ITOnsiteServices = createLazyComponent(() => import('./pages/ITOnsiteServices'));
+
+// Error Fallback Component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+      <p className="text-zion-slate-light mb-6">We're working on fixing the problem.</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
+      >
+        Try again
+      </button>
     </div>
   </div>
 );
@@ -289,52 +302,80 @@ function App() {
                       <Route path="/legal" element={<Legal />} />
 
                     {/* New AI Services 2025 */}
-                    <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />
-                    <Route path="/services/ai-cybersecurity-platform" element={<ModernLayout><AICybersecurity /></ModernLayout>} />
-                    <Route path="/services/ai-healthcare-platform" element={<ModernLayout><AIHealthcare /></ModernLayout>} />
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<ModernLayout><AIQuantumHybridPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-autonomous-research-assistant" element={<ModernLayout><AIAutonomousResearchAssistant /></ModernLayout>} />
-                    <Route path="/services/ai-financial-trading-platform" element={<ModernLayout><AIFinancialTradingPlatform /></ModernLayout>} />
-                    <Route path="/services/blockchain-enterprise-solutions" element={<ModernLayout><BlockchainEnterpriseSolutions /></ModernLayout>} />
-
-                      {/* Enhanced 404 route */}
-                      <Route path="*" element={
-                        <div className="min-h-screen bg-futuristic flex items-center justify-center">
-                          <SEO 
-                            title="Page Not Found - Zion Tech Group"
-                            description="The page you're looking for doesn't exist."
-                            keywords="404, page not found, Zion Tech Group"
-                            ogType="website"
-                          />
-                          <div className="text-center text-white">
-                            <h1 className="text-6xl font-bold mb-4 animate-fade-in">404</h1>
-                            <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-200">Page Not Found</p>
-                            <p className="text-gray-400 mb-8 animate-fade-in animation-delay-400">The page you're looking for doesn't exist.</p>
-                            <button 
-                              onClick={() => window.history.back()} 
-                              className="btn-futuristic mr-4"
-                            >
-                              Go Back
-                            </button>
-                            <button 
-                              onClick={() => window.location.href = '/'} 
-                              className="btn-futuristic"
-                            >
-                              Go Home
-                            </button>
-                          </div>
-                        </div>
-                      } />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-                <ChatAssistant />
-              </div>
-            </ModernUIEnhancer>
-          </AccessibilityEnhancer>
-        </PerformanceOptimizer>
-      </Router>
+                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
+                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+                    <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+                    
+                    {/* Showcase pages */}
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    
+                    {/* 2031 Cutting-Edge Services */}
+                    <Route path="/zion-cutting-edge-services-2031" element={<ZionCuttingEdgeServices2031 />} />
+                    
+                    {/* Comprehensive Pricing Guide 2031 */}
+                    <Route path="/comprehensive-pricing-guide-2031" element={<ComprehensivePricingGuide2031 />} />
+                    
+                    {/* Additional pages */}
+                    <Route path="/solutions" element={<Solutions />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/request-quote" element={<RequestQuote />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/help" element={<Help />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/cookies" element={<Cookies />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/testimonials" element={<Testimonials />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/tutorials" element={<Tutorials />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/sustainability" element={<Sustainability />} />
+                    <Route path="/space-tech" element={<SpaceTech />} />
+                    <Route path="/startup-solutions" element={<StartupSolutions />} />
+                    <Route path="/supply-chain" element={<SupplyChain />} />
+                    <Route path="/talent" element={<Talent />} />
+                    <Route path="/video-call/:roomId" element={<VideoCall />} />
+                    <Route path="/wishlist" element={<Wishlist />} />
+                    
+                    {/* New pages I've created */}
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/events" element={<Events />} />
+                    
+                    {/* Additional missing pages */}
+                    <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+                    <Route path="/enhanced-services" element={<EnhancedServices />} />
+                    <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+                  </Routes>
+                </AnimatePresence>
+              </main>
+              
+              <Footer />
+              
+              {/* Enhanced Components */}
+              <EnhancedAccessibilityPanel />
+              <AdvancedPerformanceMonitor />
+              <InteractiveUserExperience />
+              <SecurityEnhancer />
+              <ChatAssistant />
+            </div>
+          </Router>
+        </ThemeProvider>
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }

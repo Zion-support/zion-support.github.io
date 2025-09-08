@@ -363,52 +363,39 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white flex items-center space-x-2">
-              <Zap className="w-5 h-5 text-blue-400" />
-              <span>Services</span>
-            </h4>
-            <div className="space-y-4">
-              {serviceCategories.slice(0, 3).map((category) => (
-                <div key={category.title} className="space-y-2">
-                  <div className="flex items-center space-x-2 text-blue-400">
-                    <category.icon className="w-4 h-4" />
-                    <span className="text-sm font-medium">{category.title}</span>
-                  </div>
-                  <div className="ml-6 space-y-1">
-                    {category.services.slice(0, 3).map((service) => (
-                      <Link
-                        key={link.name}
-                        to={link.path}
-                        className="block text-gray-400 hover:text-white transition-colors py-1 flex items-center space-x-2 group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:text-cyan-400 transition-colors" />
-                        <span>{link.name}</span>
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+          <div className="space-y-4">
+            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">
+              <Zap className="w-5 h-5 mr-2" />
+              Services
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
+              <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+              <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
+              <li><Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
+            </ul>
           </div>
 
           {/* Solutions */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white flex items-center space-x-2">
-              <Target className="w-5 h-5 text-green-400" />
-              <span>Solutions</span>
-            </h4>
-            <div className="space-y-2">
-              {solutions.slice(0, 8).map((solution) => (
-                <Link
-                  key={solution.name}
-                  to={solution.href}
-                  className="block text-sm text-gray-300 hover:text-green-400 transition-colors duration-200"
-                >
-                  {solution.name}
-                </Link>
-              ))}
-            </div>
+          <div className="space-y-4">
+            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">
+              <Brain className="w-5 h-5 mr-2" />
+              Solutions
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enterprise Solutions</Link></li>
+              <li><Link to="/services/healthcare-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare Tech</Link></li>
+              <li><Link to="/services/ai-financial-trading-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Solutions</Link></li>
+              <li><Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
+              <li><Link to="/services/ai-ecommerce-optimization-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail Solutions</Link></li>
+              <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
+              <li><Link to="/services/ai-educational-content-creation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
+              <li><Link to="/startup-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Startup Solutions</Link></li>
+            </ul>
           </div>
 
           {/* Resources */}
