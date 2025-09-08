@@ -1,20 +1,16 @@
 [build]
-  # Deploy prebuilt Next.js static export in `out/`
-  command = "echo 'Skipping build; deploying prebuilt static export'"
-  publish = "out"
+  # Build the Vite app and deploy from dist/
+  command = "npm run build"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  # Skip Netlify auto installers; rely on build command
-  NETLIFY_SKIP_INSTALL = "true"
-  # Disable mise shims entirely during Netlify builds
-  MISE_DISABLE = "1"
-  MISE_SHIMS = "0"
-  # Force mise to use system Python even during Netlify's dependency stage (defensive)
-  MISE_TOOL_VERSIONS__python = "system"
-  # Skip Electron binary downloads during install to prevent build failures
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
 
 ## Disable Next.js runtime plugin since we're deploying a static export
