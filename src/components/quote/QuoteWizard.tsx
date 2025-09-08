@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { WizardStep } from '@/context/RequestQuoteWizard';
-import { useQuery } from '@tanstack/react-query';
+import useSWR from 'swr';
 import { Loader2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -19,6 +19,22 @@ import { fetchServices, ServiceItem } from '@/api/services';
               Retry
             </Button>
           </div>)}
+
+function StepIndicator({ step }: { step: WizardStep }) {
+  const index = WIZARD_STEPS.indexOf(step);
+  return (
+    <div data-testid="step-indicator" className="text-sm text-muted-foreground">
+      Step {index + 1} of {WIZARD_STEPS.length}
+    </div>
+  );
+}
+
+const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
+
+const fetcher = (url: string) => fetch(url).then(res => {
+  if (!res.ok) throw new Error('Failed');
+  return res.json();
+});
 
 function StepIndicator({ step }: { step: WizardStep }) {
   const index = WIZARD_STEPS.indexOf(step);
@@ -86,39 +102,33 @@ export function QuoteWizard() {
         >
           Continue
         </Button>
-      </div>);
-    }
-    if (step === 2) {
-        return (<div data-testid="details-step" className="space-y-4">
-        <StepIndicator step={step}/>
-        {selectedItem && (<div data-testid="selected-item-name" className="text-lg font-semibold text-zion-slate-dark">
-            Selected {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}: {selectedItem.name}
-          </div>)}
-        {selectedItem && selectedItem.price !== undefined && (<div className="text-md text-muted-foreground">
-             Price: ${selectedItem.price.toFixed(2)}
-           </div>)}
-        <Textarea value={message} onChange={(e) => setMessage(e.target.value)} data-testid="message-input" placeholder={`Any specific details about your request for ${selectedItem?.name || 'the selected item'}?`} rows={4}/>
-        <div className="flex justify-between items-center">
-          <Button variant="outline" onClick={() => setStep(1)}>Back</Button>
-          <Button onClick={handleSubmit} disabled={!selectedItemId}>Submit Quote</Button>
-        </div>
-      </div>);
-    }
-    if (step === 3) {
-        return (<div data-testid="success-step" className="space-y-4 text-center py-12">
-        <StepIndicator step={step}/>
-        <div className="text-2xl font-semibold text-green-600">Quote Submitted Successfully!</div>
-        <p className="text-muted-foreground">
-          Thank you for your request regarding {selectedItem?.name || 'the selected item'}. We will get back to you shortly.
-        </p>
-        <Button onClick={() => {
-                setStep(1);
-                setSelectedItemId(null);
-                setMessage('');
-            }}>
-          Request Another Quote
-        </Button>
-      </div>);
-    }
-    return null;
+      </div>
+    );
+  }
+
+  if (step === 'Details') {
+    return (
+      <div data-testid="details-step" className="space-y-4">
+        <StepIndicator step={step} />
+        <Textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          data-testid="message-input"
+          placeholder="Your message"
+        />
+        <Button onClick={() => submitQuote(message)}>Submit</Button>
+      </div>
+    );
+  }
+
+  if (step === 'Success') {
+    return (
+      <div data-testid="success-step" className="space-y-4">
+        <StepIndicator step={step} />
+        <div>Quote Submitted</div>
+      </div>
+    );
+  }
+
+  return null;
 }

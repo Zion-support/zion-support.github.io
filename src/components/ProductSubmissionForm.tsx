@@ -255,32 +255,30 @@ if ( {) {
         logErrorToProduction ('Error invoking moderation:', { data: err });
       }
 
-import React from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import z from 'zod';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image;
-import { logErrorToProduction } from '@/utils/productionLogger';
+      let imagePublicUrl: string | undefined;
 
-          name: user.displayName || "Anonymous Creator",
-          id: user.id},
-        createdAt: new Date().toISOString()},
-              .single(),
+      // If we have an image, upload it
+      if (values.image) {
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(imagePath, values.image);
+          
+        if (uploadError) {
+          throw new Error(uploadError.message);
+        }
         
         // Get the public URL for the image
         const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(imagePath);
+        imagePublicUrl = publicUrlData.publicUrl;
           
         // Update the product with the image URL
         const { error: updateError } = await supabase
           .from('product_listings')
-          .update({ 
-            images: [publicUrlData.publicUrl]
+          .update({
+            images: [imagePublicUrl]
           })
           .eq('id', productRecord.id);
           
@@ -314,58 +312,20 @@ import { logErrorToProduction } from '@/utils/productionLogger';
         }
       }
 
-      // Upload model if provided
-      if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(modelPath, values.model);
-
-        if (uploadError) {
-          throw new Error(uploadError.message);
-        }
-
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(modelPath);
-
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ model_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id);
-
-        if (updateError) {
-          throw new Error(updateError.message);
-        }
+      // Send listing to moderation service
+      try {
+        await supabase.functions.invoke('moderate-listing', {
+          body: {
+            listingId: productRecord.id,
+            listingType: 'product',
+            description: values.description,
+            images: imagePublicUrl ? [imagePublicUrl] : [],
+            sellerId: user.id,
+          }
+        });
+      } catch (err) {
+        console.error('Error invoking moderation:', err);
       }
-
-      let imagePublicUrl: string | undefined;
-
-      // If we have an image, upload it;
-      if (values && values.image) {;
-        const imagePath = `product_images/${productRecord && productRecord.id}/${values && values.image.name}`;
-        const { error: uploadError } = await supabase && supabase.storage;
-          .from('products');
-          .upload(imagePath, values && values.image);
-
-        if (uploadError) {;
-          throw new Error(uploadError && uploadError.message);
-        }
-
-        // Get the public URL for the image;
-        const { data: publicUrlData } = supabase && supabase.storage;
-          .from('products');
-          .getPublicUrl(imagePath);
-        imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
-
-        // Update the product with the image URL;
-        const { error: updateError } = await supabase;
-          .from('product_listings');
-          .update({;
-      } catch (err) {;
-        logErrorToProduction('Error invoking moderation:', { data: err });
-      }
-
       
       // Show success message
       toast({
