@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 import { Card } from "@/components/ui/card";
 import Skeleton from "@/components/ui/skeleton";
+=======
+>>>>>>> main
 import { Button } from "@/components/ui/Button";
 
 export function TalentPlaceholder() {
