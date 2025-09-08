@@ -62,7 +62,7 @@ async function askZionGPT(prompt: string): Promise<string> {
   return `AI response to: ${prompt}`;
 }
 
-app.command('/zion', async (args: any) => {
+app.command('/zion', async (args: unknown) => {
   const { command, ack, respond } = args as { command: SlackCommand, ack: SlackAck, respond: SlackRespond };
   await ack();
   const [action, ...commandArgs] = command.text.split(/\s+/);

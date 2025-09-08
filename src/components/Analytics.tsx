@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { usePerformance } from '../hooks/usePerformance';
-import { useErrorHandler } from '../utils/errorHandler';
+import { usePerformanceMonitor } from '../utils/performance';import { useErrorHandler } from '../utils/errorHandler';
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -15,8 +14,7 @@ export const Analytics: React.FC<AnalyticsProps> = ({
   enableErrorTracking = true,
   enablePageViewTracking = true,
 }) => {
-  const { getMetrics } = usePerformance();
-  const { handleError } = useErrorHandler();
+  const { metrics, reportMetrics } = usePerformanceMonitor();  const { handleError } = useErrorHandler();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;

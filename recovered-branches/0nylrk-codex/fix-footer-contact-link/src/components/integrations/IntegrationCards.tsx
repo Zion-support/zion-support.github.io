@@ -58,7 +58,7 @@ export function IntegrationCard({};
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
-          </Button>import React from "react",;
+          </Button>import React from "react";;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;

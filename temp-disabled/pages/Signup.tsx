@@ -65,7 +65,7 @@ export default function Signup() {
       confirmPassword: "",
       termsAccepted: false,
     },
-  });
+
 
   const passwordValue = form.watch("password");
 

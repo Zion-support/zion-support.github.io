@@ -40,12 +40,7 @@ class QuickSyntaxFixer {;
       const content = fs.readFileSync(filePath, 'utf8');
       let fixedContent = content;
 
-<<<<<<< HEAD
-        .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-=======
+>>>>>>> merged-prs-20250907-203621=======
 [\s\S]*?        .replace(/^>>>>>>>.*$/gm, ')
 
 

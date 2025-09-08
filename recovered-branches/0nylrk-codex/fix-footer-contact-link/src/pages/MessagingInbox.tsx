@@ -5,7 +5,7 @@
   const [activeCall, setActiveCall] = useState<string | null>(null);
 
 import React, { useEffect, useState } from 'react',
-import { MessageSquare, Video } from 'lucide-react',
+import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ConversationsList, ConversationDetailView } from '@/components/messaging',

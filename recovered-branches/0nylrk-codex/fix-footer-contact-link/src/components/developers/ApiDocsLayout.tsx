@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input";
@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils",export function ApiDocsLayout({ children }: Api
   const location = useLocation(),
   const currentPath = location.pathname,
   
-import React from "react",;
+import React from "react";;
 import { Link, useLocation } from "react-router-dom",;
 import { Search } from "lucide-react",;
 import { Input } from "@/components/ui/input",;

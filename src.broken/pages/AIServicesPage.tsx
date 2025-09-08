@@ -8,7 +8,7 @@ import React from 'react';
 import { 
 
   Github
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function AIServicesPage() {
   const aiServices = $2;
@@ -289,7 +289,7 @@ import {;
   Linkedin,;
   Twitter,;
   Github;'
-} from 'lucide-react',;
+} from 'lucide-react';;
 export default function AIServicesPage() {;
   const aiServices = [;
     {;

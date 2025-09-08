@@ -494,6 +494,7 @@ class SEOAccessibilityScanner {}
     this.log(`${this.processName} started successfully`);,
   }
 }
+
 // Start the automation if this script is run directly;
 if (require.main === module) {}
   const scanner = new SEOAccessibilityScanner();,
@@ -503,3 +504,5 @@ if (require.main === module) {}
   });
 }
 module.exports = SEOAccessibilityScanner;
+
+

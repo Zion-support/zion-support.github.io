@@ -4,7 +4,7 @@ import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
-import React from "react",
+import React from "react";
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
@@ -16,7 +16,7 @@ interface TalentCardHeaderProps {
   availabilityType: string,;
   yearsExperience: number;
 }
-  availabilityType;import React from "react",
+  availabilityType;import React from "react";
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";

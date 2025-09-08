@@ -20,18 +20,17 @@ export const withLazyLoad = <P extends object>(
   );
 };
 
-// Lazy load pages
+// Lazy loaded pages
 export const LazyHome = lazy(() => import('../pages/Home'));
 export const LazyAbout = lazy(() => import('../pages/About'));
 export const LazyContact = lazy(() => import('../pages/Contact'));
 export const LazyNotFound = lazy(() => import('../pages/NotFound'));
-
 // Lazy load components
 export const LazyAnalytics = lazy(() => import('../components/Analytics'));
 export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceMonitor'));
 
 // Utility function to preload components
-export const preloadComponent = (importFn: () => Promise<unknown>) => {
+export const preloadComponent = (importFn: () => Promise<any>) => {
   const link = document.createElement('link');
   link.rel = 'preload';
   link.as = 'script';
@@ -128,3 +127,7 @@ export default {
   useIntersectionObserver,
   LazyImage,
 };
+
+// Lazy loaded components
+export const LazyAnalytics = lazy(() => import('../components/PerformanceDashboard'));
+export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceOptimizations'));

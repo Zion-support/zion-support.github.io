@@ -1,130 +1,21 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { execSync, spawn } from 'child_process';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-class ErrorMonitor {
-  constructor() {
-    this.logDir = path.join(__dirname, '..', 'logs');
-    this.errorReportDir = path.join(__dirname, '..', 'error-reports');
-    this.maxLogSize = 10 * 1024 * 1024; // 10MB
-    this.errorThreshold = 5; // Number of errors before triggering fixes
-    this.errors = [];
-    this.ensureDirectories();
-  }
-
-  ensureDirectories() {
-    [this.logDir, this.errorReportDir].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
-
-  log(level, message, error = null) {
-    const timestamp = new Date().toISOString();
-    const logEntry = {
-      timestamp,
-      level,
-      message,
-      error: error ? {
-        message: error.message,
-        stack: error.stack
-      } : null
-    };
-
-    console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
-    if (error) {
-      console.error(error);
-    }
-
-    // Write to log file
-    const logFile = path.join(this.logDir, 'error-monitor.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
-  }
-
-  async checkTypeScriptErrors() {
-    try {
-      this.log('info', 'Checking TypeScript errors...');
-      const result = execSync('npm run type-check', {
-        cwd: path.join(__dirname, '..'),
-        encoding: 'utf8',
-        timeout: 60000
-      });
-      this.log('info', 'TypeScript check passed');
-      return { success: true, errors: [] };
-    } catch (error) {
-      const errorOutput = error.stdout || error.stderr || error.message;
-      this.log('error', 'TypeScript errors detected', error);
-      const errors = this.parseTypeScriptErrors(errorOutput);
-      this.log('error', `TypeScript check failed with ${errors.length} errors`);
-      return { success: false, errors };
-    }
-  }
-
-  async checkLintingErrors() {
-    try {
-      this.log('info', 'Checking ESLint errors...');
-      const result = execSync('npm run lint', {
-        cwd: path.join(__dirname, '..'),
-        encoding: 'utf8',
-        timeout: 60000
-      });
-      this.log('info', 'ESLint check passed');
-      return { success: true, errors: [] };
-    } catch (error) {
+      this.log(';info', ';Checking build errors...');
+      const result = execSync(';npm run build', {;
+        "cwd": path.join(__dirname,
+,
+  ..'),
+        "encoding": 'utf8,
+        "timeout": 300000 // 5 minutes});
+      this.log(';info', ';Build check passed')      return { "success": true, "errors": [] }
+    } catch (error) {;
       const errorOutput = error.stdout || error.message;
-      const errors = this.parseESLintErrors(errorOutput);
-      this.log('error', `ESLint check failed with ${errors.length} errors`);
-      return { success: false, errors };
-    }
-  }
-
-  async checkBuildErrors() {
-    try {
-      this.log('info', 'Checking build errors...');
-      const result = execSync('npm run build', {
-        cwd: path.join(__dirname, '..'),
-        encoding: 'utf8',
-        timeout: 300000,
-      });
-      this.log('info', 'Build check passed');
-      return { success: true, errors: [] };
-    } catch (error) {
-      const errorOutput = error.stdout || error.stderr || error.message;
-      this.log('error', 'Build errors detected', error);
       const errors = this.parseBuildErrors(errorOutput);
-      this.log('error', `Build check failed with ${errors.length} errors`);
-      return { success: false, errors };
+      this.log(';error', `Build check failed with ${errors.length} errors`)      return { "success": false, errors }
     }
   }
 
   parseTypeScriptErrors(output) {
     const errors = [];
-    const lines = output.split('\n');
-    for (const line of lines) {
-      if (line.includes(': error TS')) {
-        const match = line.match(/^(.+?)\((\d+),(\d+)\): error (TS\d+): (.+)$/);
-        if (match) {
-          errors.push({
-            type: 'typescript',
-            file: match[1],
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            code: match[4],
-            message: match[5],
-            raw: line
-          });
-        }
-      }
-    }
-    return errors;
-  }
+
 
   parseESLintErrors(output) {
     const errors = [];
@@ -251,4 +142,5 @@ if (isMainModule) {
   });
 }
 
-export default ErrorMonitor;
+
+

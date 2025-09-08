@@ -1,36 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f0e1294785e083e3a9ce6b4bf5f6686fd9008276
-=======
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-#!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('🚀 Starting final merge conflict resolution...');
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts in this file
-    }
-    
-    console.log(`🔧 Resolving conflicts in: ${filePath}`);
-    
-    // Remove all merge conflict markers and keep the incoming changes (after =======)
-    let resolvedContent = content;
-    
-    // Pattern 1: Conflicts with file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(/const fs = require('fs');
 const path = require('path');
 
 console.log('🚀 Final comprehensive merge conflict resolution...');
@@ -122,19 +91,22 @@ if (remaining.length === 0) {
     remaining.forEach(file => console.log(`  - ${file}`));
 }
 =======
-=======
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
 console.log('🚀 Final comprehensive merge conflict resolution...\n');
 
 // Function to clean merge conflict markers
 function cleanMergeConflicts(content) {
   return content
-    .replace(/
-    .replace(/
-    .replace(/\n?[\s\S]*?
-    .replace(/
-    .replace(//g, '')
-    .replace(/
+    .replace(/<<<<<<< HEAD[\s\S]*?=======\n?/g, '')
+    .replace(/>>>>>>> [^\n]+/g, '')
+    .replace(/=======\n?[\s\S]*?>>>>>>> [^\n]+/g, '')
+    .replace(/<<<<<<< [^\n]+/g, '')
+    .replace(/=======/g, '')
+    .replace(/>>>>>>> [^\n]+/g, '')
     .replace(/\n\n\n+/g, '\n\n'); // Clean up excessive newlines
 }
 
@@ -145,7 +117,7 @@ function processFile(filePath) {
     
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('
+    if (!content.includes('')) return false;
     
     console.log(`📝 Processing: ${filePath}`);
     
@@ -181,7 +153,7 @@ function findConflictedFiles(dir, extensions = ['.js', '.ts', '.tsx', '.jsx', '.
           if (extensions.includes(ext)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('
+              if (content.includes('')) {
                 conflictedFiles.push(fullPath);
               }
             } catch (error) {
@@ -251,8 +223,4 @@ try {
   console.error('💥 Fatal error:', error.message);
   process.exit(1);
 }
-<<<<<<< HEAD
->>>>>>> f0e1294785e083e3a9ce6b4bf5f6686fd9008276
-=======
 
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
