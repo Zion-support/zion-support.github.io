@@ -19,7 +19,7 @@
           <Button 
             variant="outline" 
             className="border-zion-blue-light text-zion-slate-light"
-import React from "react",;
+import React from "react";;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { useToast } from "@/hooks/use-toast",;

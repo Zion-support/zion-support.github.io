@@ -1,6 +1,11 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'node:path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
+=======
+// import { fileURLToPath } from 'node:url'
+>>>>>>> main
+import path from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -19,17 +24,12 @@ export default defineConfig(({ mode }) => ({
       brotliSize: true,
       template: 'treemap', // Use treemap for better visualization
     })
-    })] : [])
   ].filter(Boolean),
   build: {
     // Disable source maps in production for smaller bundle
     sourcemap: false,
     // Use esbuild for faster minification
     minify: 'esbuild',
-    // Increase chunk size warning limit
-    chunkSizeWarningLimit: 1000,
-    // Enable CSS minification
-    cssMinify: true,
     // Optimize chunk splitting
     rollupOptions: {
       onwarn(warning, warn) {
@@ -46,46 +46,6 @@ export default defineConfig(({ mode }) => ({
           utils: ['axios', 'date-fns', 'lodash.debounce'],
           query: ['@tanstack/react-query'],
           forms: ['react-hook-form', 'formik', 'yup', 'zod'],
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('@radix-ui')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('@tanstack/react-query')) {
-              return 'vendor-query';
-            }
-            if (id.includes('react-router-dom')) {
-              return 'vendor-router';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-animation';
-            }
-            if (id.includes('axios') || id.includes('date-fns') || id.includes('lodash')) {
-              return 'vendor-utils';
-            }
-            if (id.includes('react-hook-form') || id.includes('formik') || id.includes('yup') || id.includes('zod')) {
-              return 'vendor-forms';
-            }
-            return 'vendor';
-          }
-          
-          // App chunks for better code splitting
-          if (id.includes('/src/pages/')) {
-            return 'pages';
-          }
-          if (id.includes('/src/components/')) {
-            return 'components';
-          }
-          if (id.includes('/src/utils/')) {
-            return 'utils';
-          }
-          if (id.includes('/src/context/')) {
-            return 'context';
-          }
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -108,53 +68,20 @@ export default defineConfig(({ mode }) => ({
     // Disable TypeScript checking during build
     logLevel: 'error',
   },
-export default defineConfig({
-  plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@components': path.resolve(__dirname, './src/components'),
-      '@pages': path.resolve(__dirname, './src/pages'),
-      '@utils': path.resolve(__dirname, './src/utils'),
-      '@hooks': path.resolve(__dirname, './src/hooks'),
-      '@types': path.resolve(__dirname, './src/types'),
-      '@styles': path.resolve(__dirname, './src/styles'),
-      '@assets': path.resolve(__dirname, './src/assets')
-    },
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
+      '@': path.resolve(__dirname, './src')
+    }
   },
-  css: {
-    postcss: false
-  },
-  esbuild: {
-    loader: 'tsx',
-    include: /src\/.*\.[jt]sx?$/,
-    exclude: []
-  },
-  // Exclude corrupted stray directories from dependency scanning
-  // and ensure Vite only serves from project root
-  publicDir: './public',
-  root: '.',
   server: {
     port: 3000,
-    host: true
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
+    host: true,
+    open: true,
+    cors: true,
+    // Enable HMR for better development experience
+    hmr: {
+      overlay: true,
     },
-    // Optimize server performance
-    fs: {
-      strict: false,
-    },
-    // Enable compression
-    middlewareMode: false,
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -174,62 +101,8 @@ export default defineConfig({
     exclude: ['@vite/client', '@vite/env'],
   },
   // Performance optimizations
-  esbuild: {
-    target: 'esnext',
-    format: 'esm',
-      '@tanstack/react-query',
-      'react-helmet-async',
-      'framer-motion',
-      'clsx',
-      'tailwind-merge',
-    ],
-    // Exclude problematic dependencies
-    exclude: ['@vite/client', '@vite/env'],
-    // Force pre-bundling for better performance
-    force: true,
-  },
   // CSS optimizations
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.js',
   },
 }))
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-animations';
-            }
-            if (id.includes('lucide-react') || id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('@tanstack/react-query')) {
-              return 'vendor-query';
-            }
-            if (id.includes('axios') || id.includes('swr')) {
-              return 'vendor-api';
-            }
-            // All other node_modules
-            return 'vendor';
-          }
-          // Page chunks
-          if (id.includes('/pages/')) {
-            return 'pages';
-          }
-          // Component chunks
-          if (id.includes('/components/')) {
-            return 'components';
-          }
-        }
-      }
-    }
-  }
-});

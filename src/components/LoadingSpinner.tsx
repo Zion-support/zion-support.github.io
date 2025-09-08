@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'small' | 'medium' | 'large';
-  color?: 'primary' | 'secondary' | 'white' | 'gray';
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'medium',
-  color = 'primary',
-  className = '',
-}) => {
-  const sizeClasses = {
-    small: 'h-4 w-4',
-    medium: 'h-8 w-8',
-    large: 'h-12 w-12',
-  };
-
-  const colorClasses = {
-    primary: 'text-blue-600',
-    secondary: 'text-purple-600',
-    white: 'text-white',
-    gray: 'text-gray-600',
-  };
-
-  return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <svg
-        className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]}`}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-        />
-        <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-        />
-      </svg>
-=======
 import React, { useState, useEffect } from 'react';
 
 interface LoadingSpinnerProps {
@@ -84,40 +34,72 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       case 'dots':
         return (
           <div className="flex space-x-1">
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-pulse`}
+                style={{
+                  animationDelay: `${i * 0.2}s`,
+                  animationDuration: '1s'
+                }}
+              />
+            ))}
           </div>
         );
+      
       case 'pulse':
         return (
-          <div className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-pulse`}></div>
+          <div className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-pulse`} />
         );
+      
       case 'wave':
         return (
           <div className="flex space-x-1">
-            <div className="w-1 h-8 bg-blue-600 rounded-full animate-pulse"></div>
-            <div className="w-1 h-8 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-1 h-8 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-            <div className="w-1 h-8 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+            {[0, 1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="w-1 bg-blue-600 rounded-full animate-pulse"
+                style={{
+                  height: `${20 + i * 8}px`,
+                  animationDelay: `${i * 0.1}s`,
+                  animationDuration: '1.5s'
+                }}
+              />
+            ))}
           </div>
         );
+      
       default:
         return (
-          <div className={`${sizeClasses[size]} border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin`}></div>
+          <div
+            className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
+            role="status"
+            aria-label="Loading"
+          />
         );
     }
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
-      {renderSpinner()}
-      {text && (
-        <p className="text-sm text-gray-600 dark:text-gray-400">
+    <div className={`flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 ${className}`}>
+      <div className="mb-6">
+        {renderSpinner()}
+      </div>
+      
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-white mb-2">
           {text}{dots}
+        </h2>
+        <p className="text-blue-300 text-sm">
+          Please wait while we prepare everything for you
         </p>
-      )}
->>>>>>> origin/main
+      </div>
+
+      {/* Progress indicator */}
+      <div className="mt-8 w-64 bg-gray-700 rounded-full h-2 overflow-hidden">
+        <div className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse" 
+             style={{ width: '100%' }} />
+      </div>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { usePerformanceMonitor } from '../utils/performance';
-import { useErrorHandler } from '../utils/errorHandler';
+import { usePerformanceMonitor } from '../utils/performance';import { useErrorHandler } from '../utils/errorHandler';
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -15,8 +14,7 @@ export const Analytics: React.FC<AnalyticsProps> = ({
   enableErrorTracking = true,
   enablePageViewTracking = true,
 }) => {
-  const { metrics, reportMetrics } = usePerformanceMonitor();
-  const { handleError } = useErrorHandler();
+  const { metrics, reportMetrics } = usePerformanceMonitor();  const { handleError } = useErrorHandler();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -29,7 +27,7 @@ export const Analytics: React.FC<AnalyticsProps> = ({
       document.head.appendChild(script);
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      function gtag(...args: unknown[]) {
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
@@ -130,8 +128,8 @@ export const Analytics: React.FC<AnalyticsProps> = ({
 // Declare global gtag function
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
   }
 }
 

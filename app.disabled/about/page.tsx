@@ -295,7 +295,7 @@ export default function AboutPage() {
   )
 }
 }
-=======
+
               className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View Services
@@ -306,7 +306,7 @@ export default function AboutPage() {
     </div>
   );
 }
-=======
-=======
+
+
   );
 }

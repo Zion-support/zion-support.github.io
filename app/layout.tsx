@@ -1,23 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import type { Metadata } from 'next';
->>>>>>> origin/main
-import { Inter } from 'next/font/google';
-import Link from 'next/link';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-const inter = Inter({ subsets: ['latin'] });
-
-<<<<<<< HEAD
-export const metadata = {
-=======
-export const metadata: Metadata = {
->>>>>>> origin/main
-  metadataBase: new URL('https://ziontechgroup.com'),
+export const metadata: Metadata = {  metadataBase: new URL('https://ziontechgroup.com'),
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
@@ -88,12 +70,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/main
-=======
-}
->>>>>>> origin/main
+}}

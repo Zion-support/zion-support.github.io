@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Zion Tech Group Website
-=======
-# Zion Tech Group - Advanced Technology Solutions
->>>>>>> origin/main
-
-A modern, high-performance web application built with React, TypeScript, and Vite.
-
-## 🚀 Features
-
-- **Modern Tech Stack**: React 18, TypeScript, Vite
-- **Performance Optimized**: Code splitting, lazy loading, bundle optimization
-- **Accessibility First**: WCAG 2.1 compliant, screen reader support
-- **SEO Ready**: Meta tags, structured data, sitemap generation
-- **Security Focused**: Input sanitization, CSRF protection, secure headers
-- **Testing Suite**: Jest, React Testing Library, Cypress
-- **Error Handling**: Global error boundary, user-friendly error messages
-- **Analytics**: Google Analytics integration, performance monitoring
-
-## 🛠️ Development
-
-### Prerequisites
-
-- Node.js >= 20.18.1
-- npm >= 10.0.0
-
-### Installation
-
-```bash
-npm install
-```
-
-### Development Server
-
-```bash
-npm run dev
-```
-
-<<<<<<< HEAD
-**Edit a file directly in GitHub**
-=======
 # Zion Tech Group - AI-Powered IT Solutions Platform
 
 A modern, full-stack web application built with React, TypeScript, and Vite, providing comprehensive IT solutions and AI-powered services.
@@ -86,90 +44,26 @@ A modern, full-stack web application built with React, TypeScript, and Vite, pro
    git clone https://github.com/Zion-Holdings/zion.app.git
    cd zion.app
    ```
->>>>>>> origin/main
-
 2. **Install dependencies**
    ```bash
    npm install
    ```
 
-<<<<<<< HEAD
-3. **Start development server**
-=======
 3. **Set up environment variables**
    ```bash
    cp .env.example .env.local
    ```
    Fill in the required environment variables.
 
-4. **Start development server**
->>>>>>> origin/main
-   ```bash
+4. **Start development server**   ```bash
    npm run dev
    ```
 
-<<<<<<< HEAD
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
-
-## 📜 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-
-## 🎨 Customization
-
-### Colors and Theme
-
-Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## Integrations
-
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
-
-## Product Media
-
-Product listings now support rich media. The `product_listings` table includes new
-`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
-through the product submission form and view it in the gallery tabs (Images, Video, 3D).
-
-## Troubleshooting
-
-### Network Issues
-
-If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
-
-1. Ensure you have internet connectivity
-2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
-3. Use a pre-downloaded `node_modules` directory if available
-
-### Package Manager Issues
-
-If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
-
-For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
-
-If you see a warning about `rimraf@3.0.2` being deprecated, run:
-
-```sh
-npm install rimraf@latest --save-dev
 =======
 ### Build
 
 ```bash
-npm run build
->>>>>>> origin/main
+npm run build>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 ```
 
 ### Testing
@@ -230,8 +124,7 @@ The application is configured for deployment on Netlify with:
 - Content Security Policy
 - Secure headers
 
-<<<<<<< HEAD
-When tests run on GitHub Actions, the workflow uploads the `coverage` directory
+=======When tests run on GitHub Actions, the workflow uploads the `coverage` directory
 using `actions/upload-artifact@v4`. Visit a workflow run and download the
 `coverage-report` artifact to retrieve the generated HTML coverage report.
 # Trigger new build with clean netlify.toml
@@ -351,14 +244,12 @@ The project includes comprehensive testing setup:
 - Google Analytics integration
 - Performance monitoring
 - Error tracking
-- User behavior analytics
->>>>>>> origin/main
+- User behavior analytics>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 ## 🤝 Contributing
 
 1. Fork the repository
-<<<<<<< HEAD
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
+=======2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Commit your changes: `git commit -m 'Add amazing feature'`
 4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
@@ -386,5 +277,4 @@ For support, email support@ziontechgroup.com or join our Discord community.
 
 ## 📄 License
 
-This project is licensed under the MIT License.
->>>>>>> origin/main
+This project is licensed under the MIT License.>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

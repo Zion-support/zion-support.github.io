@@ -1,45 +1,16 @@
 .App {
-  min-height: 100vh;
+  text-align: center;
+}
+
+.App-header {
   background: linear-gradient(135deg, #0A1024 0%, #141A3C 100%);
+  padding: 20px;
   color: white;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.main-content {
-  flex: 1;
-  padding: 2rem 0;
-}
-
-/* Responsive design improvements */
-@media (max-width: 768px) {
-  .main-content {
-    padding: 1rem 0;
-  }
-}
-
-/* Smooth transitions for route changes */
-.route-transition {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Loading states */
-.loading {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 200px;
+  justify-content: center;
 }
 
 .App-header h1 {
@@ -102,48 +73,45 @@
   border-radius: 12px;
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+<<<<<<< HEAD:src/App.css
+=======
 /* Error states */
 .error {
   text-align: center;
   padding: 2rem;
   color: #ff6b6b;
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204:src/App.css.disabled
 }
 
-/* Accessibility improvements */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
 }
 
-/* Focus states for better accessibility */
-*:focus {
-  outline: 2px solid #00FFFF;
-  outline-offset: 2px;
+.feature-card h3 {
+  color: #00FFFF;
+  margin-bottom: 1rem;
+  font-size: 1.5em;
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .App {
-    background: #000;
-    color: #fff;
-  }
+.feature-card p {
+  opacity: 0.8;
+  line-height: 1.6;
 }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .route-transition {
-    animation: none;
+@media (prefers-color-scheme: light) {
+  .App-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #213547;
   }
   
-  * {
-    transition: none !important;
+  .feature-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card h3 {
+    color: #007bff;
   }
   font-size: 1.5rem;
 }

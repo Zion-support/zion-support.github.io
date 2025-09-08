@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-=======
-// import { Button } from '@/components/ui/button';
->>>>>>> origin/main
-=======
-// import { Button } from '@/components/ui/button';
->>>>>>> origin/main
+
 import { useNavigate } from 'react-router-dom';
 
 interface CartItem {
@@ -77,27 +69,7 @@ export default function CartPage() {
                 onChange={e => updateQuantity(item.id, parseInt(e.target.value || '1', 10))}
                 className="w-16 bg-transparent border border-input rounded p-1 text-center"
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
-                Remove
-              </Button>
-=======
-              {/* <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
-                Remove
-=======
-              {/* <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
-                Remove
->>>>>>> origin/main
-              </Button> */}
-              <button className="border border-gray-300 px-3 py-1 rounded text-sm" onClick={() => removeItem(item.id)}>
-                Remove
-              </button>
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
-            </div>
+
           </li>
         ))}
       </ul>
@@ -105,26 +77,6 @@ export default function CartPage() {
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
-        Checkout
-      </Button>
-=======
-      {/* <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
-        Checkout
-=======
-      {/* <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
-        Checkout
->>>>>>> origin/main
-      </Button> */}
-      <button className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded" onClick={() => navigate('/checkout')}>
-        Checkout
-      </button>
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
-    </div>
+
   );
 }

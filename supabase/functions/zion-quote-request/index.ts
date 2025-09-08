@@ -41,15 +41,7 @@ function parseHumanNumber(token: string): number | undefined {
 
 function formatCurrency(amount: number, currency: string): string {
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // @ts-ignore - Deno Intl supports this in most regions
-=======
-    // @ts-expect-error - Deno Intl supports this in most regions
->>>>>>> origin/main
-=======
-    // @ts-expect-error - Deno Intl supports this in most regions
->>>>>>> origin/main
+
     return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount);
   } catch {
     return `$${amount.toFixed(0)}`;
@@ -129,19 +121,7 @@ async function analyzeWithOpenAI(projectOverview: string): Promise<{ summary?: s
       const parsed = JSON.parse(outputText);
       return { summary: parsed.summary, projectType: parsed.projectType };
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } catch (_) {}
-=======
-  } catch {
-    // Ignore parsing errors
-  }
->>>>>>> origin/main
-=======
-  } catch {
-    // Ignore parsing errors
-  }
->>>>>>> origin/main
+
   return {};
 }
 

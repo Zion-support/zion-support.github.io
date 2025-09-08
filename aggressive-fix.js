@@ -50,7 +50,7 @@ function fixFile(filePath) {
     fixedContent = fixedContent.replace(/
     
     // Fix import statements
-    fixedContent = fixedContent.replace(/import React from "react",/g, 'import React from "react";');
+    fixedContent = fixedContent.replace(/import React from "react";/g, 'import React from "react";');
     fixedContent = fixedContent.replace(/import React from 'react',/g, "import React from 'react';");
     
     // Fix export statements

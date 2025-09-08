@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Shield, Brain, Globe, Code, Cloud, BarChart3, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';

@@ -1,12 +1,11 @@
 
-import React from 'react';
-import { _useQuery } from "@tanstack/react-query";
-import { _supabase } from "@/integrations/supabase/client";
-import { _Card, _CardContent, _CardDescription, _CardHeader, _CardTitle } from "@/components/ui/card";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Skeleton from "@/components/ui/skeleton";
-import { _Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue } from "@/components/ui/select";
-import { _useState } from "react";
-import { _AnalyticsChart } from "./AnalyticsChart";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
+import { AnalyticsChart } from "./AnalyticsChart";
 
 type TimeRange = '7d' | '30d' | '90d' | '365d';
 
@@ -15,12 +14,12 @@ export function UserBehaviorStats() {
   
   const { data: behaviorData, isLoading } = useQuery({
     queryKey: ['user-behavior-data', timeRange],
-    _queryFn: async () => {
+    queryFn: async () => {
       // Convert timeRange to days
       const days = parseInt(timeRange.replace('d', ''));
       
       // Get events grouped by type and date
-      const { _data, _error } = await supabase.rpc('get_event_distribution', {
+      const { data, error } = await supabase.rpc('get_event_distribution', {
         days_back: days
       });
       
@@ -73,7 +72,7 @@ export function UserBehaviorStats() {
   };
   
   // Format event type names for better display
-  const formatEventType = (_type: string) => {
+  const formatEventType = (type: string) => {
     return type
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -86,7 +85,7 @@ export function UserBehaviorStats() {
         <EventTypeCard 
           title="Click Events" 
           description="Button and link interactions"
-          isLoading={_isLoading}
+          isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click || 0), 0) || 0
           }
@@ -97,7 +96,7 @@ export function UserBehaviorStats() {
         <EventTypeCard 
           title="Form Submissions" 
           description="Completed forms and sign-ups"
-          isLoading={_isLoading}
+          isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0
           }
@@ -108,7 +107,7 @@ export function UserBehaviorStats() {
         <EventTypeCard 
           title="Conversions" 
           description="Goal completions"
-          isLoading={_isLoading}
+          isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0
           }
@@ -124,8 +123,8 @@ export function UserBehaviorStats() {
         data={behaviorData || []}
         type="line"
         dataKeys={getEventTypes()}
-        timeRange={_timeRange}
-        onTimeRangeChange={(_range: TimeRange) => setTimeRange(range)}
+        timeRange={timeRange}
+        onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
       />
     </div>
   );
@@ -139,17 +138,17 @@ interface EventTypeCardProps {
   isLoading: boolean;
 }
 
-function EventTypeCard({ _title, _description, _count, _icon, _isLoading }: EventTypeCardProps) {
+function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-zion-cyan/20 flex items-center justify-center text-zion-cyan">
-            {_icon}
+            {icon}
           </div>
           <div>
-            <h4 className="text-lg font-medium text-white">{_title}</h4>
-            <p className="text-sm text-zion-slate-light">{_description}</p>
+            <h4 className="text-lg font-medium text-white">{title}</h4>
+            <p className="text-sm text-zion-slate-light">{description}</p>
             <div className="text-xl font-bold text-white mt-1">
               {isLoading ? (
                 <Skeleton className="h-7 w-16 bg-zion-blue-light" />

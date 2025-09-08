@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         alt: 'Zion Tech Group - Enterprise AI & IT Solutions'
       }
     ]
-=======
+
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -115,7 +115,7 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
               Explore Services
-=======
+
               className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Get Free Consultation
@@ -298,7 +298,7 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-=======
+
     <main className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}

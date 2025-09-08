@@ -1,9 +1,2 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-src && src.disabled/hooks/
-=======
-import { useEffect,useRef,useState } from';react' "export": function usePerformance() { const [metrics,setMetrics] = useState({ "fcp": 'nul',l,"lcp": 'nul',l,"fid": 'nul',l,"cls": 'nul',l,"ttfb": 'nul',l,"domLoad": 'nul',l,"windowLoad": 'null'}) const [observers,setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {'';''}
->>>>>>> origin/main
-=======
-import { useEffect,useRef,useState } from';react' "export": function usePerformance() { const [metrics,setMetrics] = useState({ "fcp": 'nul',l,"lcp": 'nul',l,"fid": 'nul',l,"cls": 'nul',l,"ttfb": 'nul',l,"domLoad": 'nul',l,"windowLoad": 'null'}) const [observers,setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {'';''}
->>>>>>> origin/main
+=======import { useEffect,useRef,useState } from';react' "export": function usePerformance() { const [metrics,setMetrics] = useState({ "fcp": 'nul',l,"lcp": 'nul',l,"fid": 'nul',l,"cls": 'nul',l,"ttfb": 'nul',l,"domLoad": 'nul',l,"windowLoad": 'null'}) const [observers,setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {'';''}=======
+import { useEffect,useRef,useState } from';react' "export": function usePerformance() { const [metrics,setMetrics] = useState({ "fcp": 'nul',l,"lcp": 'nul',l,"fid": 'nul',l,"cls": 'nul',l,"ttfb": 'nul',l,"domLoad": 'nul',l,"windowLoad": 'null'}) const [observers,setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {'';''}>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

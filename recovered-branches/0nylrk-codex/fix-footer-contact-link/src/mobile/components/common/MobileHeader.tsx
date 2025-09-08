@@ -60,7 +60,7 @@ export function MobileHeader({};
               <Bell className="h-5 w-5" />"
 
 
-import React from "react",;
+import React from "react";;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
 import { cn } from "@/lib/utils",;

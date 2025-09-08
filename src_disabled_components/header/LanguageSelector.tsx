@@ -1,5 +1,4 @@
 import React from 'react';
-import { Globe } from 'lucide-react';
 
 export const LanguageSelector: React.FC = () => {
   return (

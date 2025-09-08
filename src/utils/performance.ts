@@ -1,9 +1,6 @@
 /**
-<<<<<<< HEAD
- * Performance Monitoring Utility
- * Tracks and reports performance metrics
- */
 
+<<<<<<< HEAD
 export interface PerformanceMetric {
   name: string;
   value: number;

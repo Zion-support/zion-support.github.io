@@ -25,8 +25,6 @@ export const LazyHome = lazy(() => import('../pages/Home'));
 export const LazyAbout = lazy(() => import('../pages/About'));
 export const LazyContact = lazy(() => import('../pages/Contact'));
 export const LazyNotFound = lazy(() => import('../pages/NotFound'));
-
-<<<<<<< HEAD
 // Lazy load components
 export const LazyAnalytics = lazy(() => import('../components/Analytics'));
 export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceMonitor'));
