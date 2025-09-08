@@ -1,14 +1,12 @@
 [build]
-  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt static export'"
-  publish = "out"
+  # Build the Vite app and deploy from dist/
+  command = "npm run build"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  NETLIFY_SKIP_INSTALL = "true"
-  NETLIFY_SKIP_BUILD = "true"
   # Avoid optional binary downloads (electron, playwright, cypress)
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
   PUPPETEER_SKIP_DOWNLOAD = "1"
