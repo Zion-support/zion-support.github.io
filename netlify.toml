@@ -13,10 +13,7 @@
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
 
-## Disable Next.js runtime plugin since we're deploying a static export
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  enabled = false
+## Next.js runtime plugin disabled: remove plugin block to avoid invalid keys
 
 [[redirects]]
   from = "/*"
