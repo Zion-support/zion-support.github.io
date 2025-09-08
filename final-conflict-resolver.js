@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const fs = require('fs');
 const path = require('path');
 
@@ -98,7 +98,7 @@ function processFile(filePath) {
     
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD')) return false;
+    if (!content.includes('')) return false;
     
     console.log(`📝 Processing: ${filePath}`);
     
@@ -134,7 +134,7 @@ function findConflictedFiles(dir, extensions = ['.js', '.ts', '.tsx', '.jsx', '.
           if (extensions.includes(ext)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('<<<<<<< HEAD')) {
+              if (content.includes('')) {
                 conflictedFiles.push(fullPath);
               }
             } catch (error) {
@@ -204,4 +204,4 @@ try {
   console.error('💥 Fatal error:', error.message);
   process.exit(1);
 }
->>>>>>> 90ad6fa3e0a7272b4781c7e4c244699f9c2c03eb
+

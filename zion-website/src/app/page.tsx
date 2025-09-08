@@ -271,8 +271,8 @@ export default function Page() {
                 }
                 key={solution.name}
                 className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm "hover":bg - white / 10 transition - all duration - 300 "hover":scale-105">"
->>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
-=======      {/* CTA section */}
+
+      {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

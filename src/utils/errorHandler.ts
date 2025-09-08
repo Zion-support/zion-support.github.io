@@ -217,4 +217,4 @@ export function getErrorBoundaryFallback(error: Error): {
     message: 'An unexpected error occurred. Please try again.',
     action: 'Reload Page',
   };
-}>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+}

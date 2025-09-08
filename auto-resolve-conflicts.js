@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-
-console.log('🚀 Starting automatic merge conflict resolution...');
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+') && !content.includes('>>>>>>>')) {
       return false; // No conflicts in this file
     }
     
     console.log(`🔧 Resolving conflicts in: ${filePath}`);
     
-    // Remove all merge conflict markers and keep the incoming changes (after =======)
+    // Remove all merge conflict markers and keep the incoming changes (after )
     let resolvedContent = content;
     
     // Pattern 1: Conflicts with file paths

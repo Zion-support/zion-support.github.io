@@ -1,6 +1,6 @@
 
 
-import React from "react",
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -36,7 +36,7 @@ import { Button } from "@/components/ui/button",
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
                   <Badge key={index} variant="secondary" className="text-xs">
-import React from "react",;
+import React from "react";;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;

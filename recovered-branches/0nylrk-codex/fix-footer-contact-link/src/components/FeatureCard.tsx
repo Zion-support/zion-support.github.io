@@ -23,7 +23,7 @@ export function FeatureCard(): any ({;
 }
 
 import { cn } from "@/lib/utils",;
-import React from "react",;
+import React from "react";;
 ;
 interface FeatureCardProps {;
   title:string,,

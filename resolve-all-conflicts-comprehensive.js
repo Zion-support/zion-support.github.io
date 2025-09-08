@@ -12,26 +12,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts in this file
-    }
-    
-    console.log(`🔧 Resolving conflicts in: ${filePath}`);
-    
-    // Split content by conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = '';
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('<<<<<<<')) {
-        inConflict = true;
-        conflictType = 'incoming';
-        continue;
-      } else if (line.startsWith('=======')) {
+    if (!content.includes('')) {
         conflictType = 'current';
         continue;
       } else if (line.startsWith('>>>>>>>')) {
@@ -41,11 +22,11 @@ function resolveMergeConflicts(filePath) {
       }
       
       if (inConflict) {
-        // For most conflicts, prefer the incoming changes (after =======)
+        // For most conflicts, prefer the incoming changes (after )
         if (conflictType === 'current') {
           resolvedLines.push(line);
         }
-        // Skip lines from incoming changes (before =======)
+        // Skip lines from incoming changes (before )
       } else {
         resolvedLines.push(line);
       }
@@ -81,7 +62,7 @@ function findConflictFiles(dir) {
         // Check if file has merge conflict markers
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (content.includes('') || content.includes('>>>>>>>')) {
             conflictFiles.push(fullPath);
           }
         } catch (error) {
