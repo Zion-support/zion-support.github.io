@@ -81,16 +81,67 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
             </div>
           </section>
 
-          {/* Capabilities */}
-          <section className="mx-auto max-w-7xl px-0 pb-12">
-            <h2 className="text-center text-3xl font-bold text-white/90 mb-8">Platform Capabilities</h2>
+          {/* Featured Articles */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📰 Featured Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h3 className="text-cyan-400 font-semibold mb-2">Autonomous Cloud</h3>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Self-healing pipelines</li>
-                  <li>• Zero-downtime deploys</li>
-                  <li>• Intelligent scaling</li>
+              <Link href="/blog/ai-automation-trends-2025" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">AI Automation Trends 2025</h3>
+                <p className="text-white/70 text-sm">Discover the most impactful automation trends shaping the year ahead.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/autonomous-content-generation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Autonomous Content Generation</h3>
+                <p className="text-white/70 text-sm">How AI systems create, optimize, and scale content autonomously.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/performance-optimization" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Performance Optimization</h3>
+                <p className="text-white/70 text-sm">Techniques for high-performance, low-latency autonomous platforms.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-green-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+            </div>
+          </section>
+
+          {/* Developer & Architecture Docs */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Developer & Architecture Docs</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/ARCHITECTURE.md" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-indigo-400 mb-2">System Architecture</h3>
+                <p className="text-white/70 text-sm">High-level overview of platform components and data flows.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-indigo-300/90">Open <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/API.md" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">API Reference</h3>
+                <p className="text-white/70 text-sm">Endpoints, payloads, and usage examples.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/README.md" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Project Overview</h3>
+                <p className="text-white/70 text-sm">Getting started, scripts, and contributor guide.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-purple-300/90">Open <span aria-hidden>→</span></div>
+              </Link>
+            </div>
+          </section>
+
+          {/* Revolutionary Platform Capabilities */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🚀 Revolutionary Platform Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+              {/* Autonomous Cloud Systems */}
+              <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">☁️</span>
+                </div>
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">Autonomous Cloud Systems</h3>
+                <ul className="text-white/80 text-sm space-y-2">
+                  <li>• Self-healing CI/CD pipelines</li>
+                  <li>• Intelligent build orchestration</li>
+                  <li>• Automated dependency management</li>
+                  <li>• Real-time performance monitoring</li>
+                  <li>• Zero-downtime deployments</li>
                 </ul>
               </div>
               <div className="bg-white/10 rounded-xl p-6 border border-white/20">
