@@ -2,15 +2,22 @@ import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { SERVICES } from "@/data/servicesData";
 import { TrustedBySection } from "@/components/TrustedBySection";
-import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
-import { Button } from "@/components/ui/button";
+=======// import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
+// import { Button } from "@/components/ui/button";=======
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
+// import { Button } from "@/components/ui/button";>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 
 import useSWR from 'swr';
-import { captureException } from "@/utils/sentry";
+=======// import { captureException } from "@/utils/sentry";
+// import { captureException } from "@/utils/monitoring/sentry.client";
 import { SkeletonCard } from '@/components/ui';
-import { useDelayedError } from '@/hooks/useDelayedError';
+// import { useDelayedError } from '@/hooks/useDelayedError';=======
+// import { captureException } from "@/utils/sentry";
+// import { captureException } from "@/utils/monitoring/sentry.client";
+import { SkeletonCard } from '@/components/ui';
+// import { useDelayedError } from '@/hooks/useDelayedError';>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 // Filter options specific to services
 const SERVICE_FILTERS = [
@@ -30,7 +37,10 @@ async function fetchServices(): Promise<ProductListing[]> {
     }
     return (await res.json()) as ProductListing[];
   } catch (err) {
-    captureException(err);
+=======    // captureException(err);
+    console.error('Error fetching services:', err);=======
+    // captureException(err);
+    console.error('Error fetching services:', err);>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     throw err;
   }
 }
@@ -44,7 +54,10 @@ export default function ServicesPage() {
       revalidateOnFocus: false,
     }
   );
-  const delayedError = useDelayedError(error);
+=======  // const delayedError = useDelayedError(error);
+  const delayedError = error; // Temporary fallback=======
+  // const delayedError = useDelayedError(error);
+  const delayedError = error; // Temporary fallback>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
   const listings = data || SERVICES;
 
@@ -66,30 +79,34 @@ export default function ServicesPage() {
     return (
       <div data-testid="error-state" className="py-12 text-center space-y-4">
         <p className="text-red-400">Failed to load services. {delayedError?.message}</p>
-        <Button data-testid="retry-button" onClick={() => mutate()}>
+=======        {/* <Button data-testid="retry-button" onClick={() => mutate()}>
           Retry
-        </Button>
-      </div>
+>>>>>>> origin/main      </div>
     );
   }
 
   return (
-    <ErrorBoundary>
-    <>
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+=======>>>>>>> origin/main
+              {/* <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
-              </Button>
+              </Button> */}
+              <button className="border border-zion-purple text-zion-cyan hover:bg-zion-purple/10 py-2 px-4 rounded flex items-center">
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </button>
             </Link>
             <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+              {/* <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
-              </Button>
+=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+              </Button> */}
+              <button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-2 px-4 rounded">
+                Request a Quote
+              </button>>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </Link>
           </div>
         </div>
@@ -111,6 +128,10 @@ export default function ServicesPage() {
       </div>
       <TrustedBySection />
     </>
-    </ErrorBoundary>
+=======>>>>>>> origin/main
+<<<<<<< HEAD=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   );
 }

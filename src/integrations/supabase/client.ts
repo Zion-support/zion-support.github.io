@@ -1,24 +1,25 @@
 // Mock Supabase client for build
 export const supabase = {
-  from: (_table: string) => ({
-    select: (_columns: string) => ({
-      eq: (_column: string, _value: unknown) => ({
-        order: (_column: string, _options: unknown) => ({
-          data: [],
+=======>>>>>>> origin/main          data: [],
           error: null
         })
       })
     }),
-    update: (_data: unknown) => ({
-      eq: (_column: string, _value: unknown) => ({
-        eq: (_column2: string, _value2: unknown) => ({
+=======    update: () => ({
+      eq: () => ({
+        eq: () => ({=======
+    update: () => ({
+      eq: () => ({
+        eq: () => ({>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           error: null
         })
       })
     }),
     delete: () => ({
-      eq: (_column: string, _value: unknown) => ({
-        eq: (_column2: string, _value2: unknown) => ({
+=======      eq: () => ({
+        eq: () => ({=======
+      eq: () => ({
+        eq: () => ({>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           error: null
         })
       })

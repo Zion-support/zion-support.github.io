@@ -1,201 +1,462 @@
+
+
+=======
+=======
+=======
+=======
+=======
+=======
+
 #!/usr/bin/env node
-
-/**
- * PM2 Test Automation Script
- * Runs automated tests and monitors test health
- */
-
-import { execSync, spawn } from 'child_process';
-import fs from 'fs';
-import path from 'path';
-
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class TestAutomation {
   constructor() {
-    this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
-    this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
-    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';
-    this.parallelTests = process.env.PARALLEL_TESTS === 'true';
-    this.logFile = `logs/pm2/test-automation.log`;
-    this.errorFile = `logs/pm2/test-automation-error.log`;
-    this.outFile = `logs/pm2/test-automation-out.log`;
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log');
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json');
+    this.startTime = Date.now();
   }
-
-  log(message, level = 'INFO') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] [${this.processName}] ${message}`;
-    console.log(logMessage);
-    
-    // Write to log file
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  error(message) {
-    this.log(message, 'ERROR');
-    fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
-  }
-
-  async runTests() {
-    this.log('Starting test automation...');
-    
+    const logMessage = `[${timestamp}] ${message}\n`;
     try {
-      // Check if test script exists
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Error writing to log file:', error.message);
+    }
+  }
+  async runTests() {
+    try {
+      this.log('🧪 Running tests...');
+      const startTime = Date.now();
+      const testResult = execSync('npm test', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      const testTime = Date.now() - startTime;
+      return {
+        success: true,
+        output: testResult,
+        duration: testTime
+      };
+    } catch (error) {
+      this.log(`Tests failed: ${error.message}`);
+      return {
+        success: false,
+        output: error.stdout?.toString() || error.stderr?.toString() || '',
+        duration: 0,
+        error: error.message
+      };
+    }
+  }
+  async runSmokeTests() {
+    try {
+      this.log('💨 Running smoke tests...');
+      const startTime = Date.now();
+      const testResult = execSync('npm run test:smoke', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      const testTime = Date.now() - startTime;
+      return {
+        success: true,
+        output: testResult,
+        duration: testTime
+      };
+    } catch (error) {
+      this.log(`Smoke tests failed: ${error.message}`);
+      return {
+        success: false,
+        output: error.stdout?.toString() || error.stderr?.toString() || '',
+        duration: 0,
+        error: error.message
+      };
+    }
+  }
+  async checkTestCoverage() {
+    try {
+      this.log('📊 Checking test coverage...');
+      const coverageResult = execSync('npm run test:coverage', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      // Parse coverage from output
+      const coverageMatch = coverageResult.match(/All files\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)/);
+      if (coverageMatch) {
+        return {
+          statements: parseFloat(coverageMatch[1]),
+          branches: parseFloat(coverageMatch[2]),
+          functions: parseFloat(coverageMatch[3]),
+          lines: parseFloat(coverageMatch[4])
+        };
+      }
+      return null;
+    } catch (error) {
+      this.log(`Coverage check failed: ${error.message}`);
+      return null;
+    }
+  }
+  generateReport(tests, smokeTests, coverage) {
+    const coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD || '80');
+    const avgCoverage = coverage ?
+      (coverage.statements + coverage.branches + coverage.functions + coverage.lines) / 4 : 0;
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        testsPassed: tests.success,
+        smokeTestsPassed: smokeTests.success,
+        coverage: avgCoverage,
+        coverageThreshold,
+        coverageMet: avgCoverage >= coverageThreshold,
+        totalDuration: tests.duration + smokeTests.duration
+      },
+      tests,
+      smokeTests,
+      coverage,
+      recommendations: this.generateRecommendations(tests, smokeTests, coverage, coverageThreshold)
+    };
+    return report;
+  }
+  generateRecommendations(tests, smokeTests, coverage, threshold) {
+    const recommendations = [];
+    if (!tests.success) {
+      recommendations.push({
+        type: 'tests',
+        priority: 'high',
+        message: 'Unit tests are failing',
+        action: 'Fix failing tests to ensure code quality'
+      });
+    }
+    if (!smokeTests.success) {
+      recommendations.push({
+        type: 'smoke-tests',
+        priority: 'high',
+        message: 'Smoke tests are failing',
+        action: 'Fix critical functionality issues'
+      });
+    }
+    if (coverage && coverage.statements < threshold) {
+      recommendations.push({
+        type: 'coverage',
+        priority: 'medium',
+        message: `Test coverage ${coverage.statements.toFixed(1)}% is below threshold ${threshold}%`,
+        action: 'Add more tests to improve coverage'
+      });
+    }
+    return recommendations;
+  }
+  async saveReport(report) {
+    try {
+      const reportDir = path.dirname(this.reportFile);
+      if (!fs.existsSync(reportDir)) {
+        fs.mkdirSync(reportDir, { recursive: true });
+      }
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      this.log(`Report saved to: ${this.reportFile}`);
+    } catch (error) {
+      this.log(`Error saving report: ${error.message}`);
+    }
+  }
+  async run() {
+    this.log('🧪 Starting Test Automation...');
+    this.log(`Project root: ${this.projectRoot}`);
+    try {
+      // Create logs directory if it doesn't exist
+      const logsDir = path.dirname(this.logFile);
+      if (!fs.existsSync(logsDir)) {
+        fs.mkdirSync(logsDir, { recursive: true });
+      }
+      // Run tests
+      const tests = await this.runTests();
+      // Run smoke tests
+      const smokeTests = await this.runSmokeTests();
+      // Check coverage
+      const coverage = await this.checkTestCoverage();
+      // Generate report
+      const report = this.generateReport(tests, smokeTests, coverage);
+      // Save report
+      await this.saveReport(report);
+      const duration = Date.now() - this.startTime;
+      // Log summary
+      this.log('\n📊 Test Automation Report:');
+      this.log(`Unit tests: ${tests.success ? '✅' : '❌'}`);
+      this.log(`Smoke tests: ${smokeTests.success ? '✅' : '❌'}`);
+      this.log(`Coverage: ${coverage ? coverage.statements.toFixed(1) + '%' : 'N/A'}`);
+      this.log(`Duration: ${duration}ms`);
+      if (report.recommendations.length > 0) {
+        this.log('\n💡 Recommendations:');
+        report.recommendations.forEach(rec => {
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+          this.log(`    Action: ${rec.action}`);
+        });
+      }
+    } catch (error) {
+      this.log(`❌ Error running test automation: ${error.message}`);
+      process.exit(1);
+    }
+  }
+}
+// Run the test automation
+const testAutomation = new TestAutomation();
+testAutomation.run().catch(error => {
+  process.exit(1);
+});
+#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class TestAutomation { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "test-automation"; this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) | 80;" this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === "true";" this.parallelTests = process.env.PARALLEL_TESTS === "true";" this.logFile = path.join(__dirname, "././logs/pm2/test-automation.log"); this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async runTests() { try {" this.log("Starting test automation."); / Check if test script exists in package.json" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));" const testScript = packageJson.scripts?.test | packageJson.scripts?.["test:smoke"]; if (!testScript) {" this.log("No test script found in package.json");" return { success: false, message: "No test script configured" }; } / Run tests` const testCommand = this.parallelTests ? `${testScript} --run` : testScript;` this.log(`Running tests: ${testCommand}`); const result = execSync(testCommand, { " encoding: "utf8"," stdio: "pipe", cwd: process.cwd() });" this.log("Tests completed successfully");` this.log(`Test output: ${result}`); return { success: true, output: result }; } catch (error) {` this.log(`Test execution failed: ${error.message}`); if (this.autoRetryFailed) {" this.log("Retrying failed tests."); try {" const retryResult = execSync("npm test", { " encoding: "utf8"," stdio: "pipe", cwd: process.cwd() });" this.log("Retry successful"); return { success: true, output: retryResult, retried: true }; } catch (retryError) {` this.log(`Retry also failed: ${retryError.message}`); return { success: false, error: retryError.message, retried: true }; } } return { success: false, error: error.message }; } } async checkCoverage() { try {" this.log("Checking test coverage."); / Try to run coverage command" const coverageCommand = "npm run test:coverage | npm run coverage | npx jest --coverage"; const result = execSync(coverageCommand, { " encoding: "utf8"," stdio: "pipe", cwd: process.cwd() }); / Extract coverage percentage (simplified) const coverageMatch = result.match(/(\d+)%/); const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;` this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`); if (coverage < this.coverageThreshold) {` this.log(`WARNING: Coverage below threshold!`); return { coverage, belowThreshold: true }; } return { coverage, belowThreshold: false }; } catch (error) {` this.log(`Coverage check failed: ${error.message}`); return { coverage: 0, belowThreshold: true, error: error.message }; } } async generateReport() { const report = { timestamp: new Date().toISOString(), processName: this.processName, testResults: await this.runTests(), coverage: await this.checkCoverage(), environment: { NODE_ENV: process.env.NODE_ENV, coverageThreshold: this.coverageThreshold, autoRetry: this.autoRetryFailed, parallelTests: this.parallelTests } };" const reportFile = path.join(__dirname, "././logs/pm2/test-automation-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Test report generated: ${reportFile}`); return report; } async start() {` this.log(`${this.processName} started`); try { const report = await this.generateReport(); if (report.testResults.success) {" this.log("Test automation completed successfully"); } else {" this.log("Test automation completed with errors"); } if (report.coverage.belowThreshold) {" this.log("WARNING: Test coverage below threshold"); } } catch (error) {` this.log(`Test automation error: ${error.message}`); } }}/ Start the serviceif (require.main === module) { const testAutomation = new TestAutomation(); testAutomation.start().catch(console.error);}module.exports = TestAutomation;"`"`
+
+=======
+=======
+=======
+=======
+=======
+=======
+
+
+
+
+main
+
+=======
+
+#!/usr/bin/env node;
+/**
+ * PM2 Test Automation Service;
+ * Runs automated tests and reports results;
+ */
+=======
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+=======
+=======
+class TestAutomation {}
+  constructor() {}
+    this.processName = process.env.PM2_PROCESS_NAME ||test-automation';
+    this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
+    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED ===true;
+    this.parallelTests = process.env.PARALLEL_TESTS ===true;
+    this.logFile = path.join(__dirname,../../logs/pm2/test-automation.log');
+    this.ensureLogDir();
+  };
+  ensureLogDir() {}
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { recursive: true })
+});
+  log(message) {}
+    const timestamp = new Date().toISOString();
+
+=======
+=======
+=======
+=======
+=======
+
+    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
+    );
+
+
+
+
+main
+
+=======
+
+    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  async runTests() {}
+    try {}
+      this.log('Starting test automation...');
+
+      // Check if test script exists in package.json;
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
+
+=======
+      
+      // Check if test script exists in package.json;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
       
-      if (!testScript) {
-        this.log('No test script found in package.json', 'WARNING');
+=======
+      if (!testScript) {}
+        this.log('No test script found in package.json');
         return { success: false, message: 'No test script configured' };
-      }
+      };
+      // Run tests;
+      const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
+      this.log(`Running tests: ${testCommand}`);
 
-      this.log(`Running tests: ${testScript}`);
+=======
       
-      // Run tests with appropriate flags
-      let command = testScript;
-      if (this.parallelTests && testScript.includes('jest')) {
-        command += ' --runInBand';
+      
+=======
+
+
+
+      const result = execSync(testCommand, { })
+        encoding: utf8,
+        stdio: pipe,
+        cwd: process.cwd();
       }
-      
-      const result = execSync(command, { 
-        encoding: 'utf8',
-        stdio: 'pipe',
-        timeout: 300000 // 5 minutes timeout
-      });
-      
+});
+
       this.log('Tests completed successfully');
       this.log(`Test output: ${result}`);
-      
       return { success: true, output: result };
-      
-    } catch (error) {
-      this.error(`Test execution failed: ${error.message}`);
-      
-      if (this.autoRetryFailed) {
-        this.log('Retrying failed tests...');
-        return await this.retryTests();
-      }
-      
-      return { success: false, error: error.message };
-    }
-  }
+    } catch (error) {}
+      this.log(`Test execution failed: ${error.message}`);
+=======
 
-  async retryTests() {
-    this.log('Retrying failed tests...');
-    
-    try {
-      const result = execSync('npm test -- --passWithNoTests', { 
+      this.log('Tests completed successfully');
+      this.log(`Test output: ${result}`);
+
+      return { success: true, output: result };
+    } catch (error) {}
+      this.log(`Test execution failed: ${error.message}`);
+
+=======
+      
+      if (this.autoRetryFailed) {}
+        this.log('Retrying failed tests...');
+        try {}
+          const retryResult = execSync('npm test', { })
+            encoding: 'utf8',
+            stdio: 'pipe',
+            cwd: process.cwd();
+          }
+});
+          this.log('Retry successful');
+          return { success: true, output: retryResult, retried: true };
+        } catch (retryError) {}
+          this.log(`Retry also failed: ${retryError.message}`);
+=======
+
+          return { success: false, error: retryError.message, retried: true };
+      return { success: false, error: error.message };
+  async checkCoverage() {}
+    try {}
+      this.log('Checking test coverage...');
+
+=======
+      
+      
+      // Try to run coverage command;
+      const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
+      const result = execSync(coverageCommand, { })
         encoding: 'utf8',
         stdio: 'pipe',
-        timeout: 180000 // 3 minutes timeout
-      });
-      
-      this.log('Retry tests completed');
-      return { success: true, output: result };
-      
-    } catch (error) {
-      this.error(`Retry tests also failed: ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async checkTestCoverage() {
-    this.log('Checking test coverage...');
-    
-    try {
-      // Try to run coverage if available
-      const coverageResult = execSync('npm run test:coverage 2>/dev/null || npm test -- --coverage 2>/dev/null || echo "No coverage available"', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      this.log(`Coverage check result: ${coverageResult}`);
-      
-      // Extract coverage percentage if available
-      const coverageMatch = coverageResult.match(/(\d+)%/);
-      if (coverageMatch) {
-        const coverage = parseInt(coverageMatch[1]);
-        if (coverage < this.testCoverageThreshold) {
-          this.log(`Coverage ${coverage}% is below threshold ${this.testCoverageThreshold}%`, 'WARNING');
-          return { success: false, coverage, threshold: this.testCoverageThreshold };
-        }
-        this.log(`Coverage ${coverage}% meets threshold ${this.testCoverageThreshold}%`);
-        return { success: true, coverage };
+        cwd: process.cwd();
       }
-      
-      return { success: true, message: 'Coverage check completed' };
-      
-    } catch (error) {
-      this.log(`Coverage check failed: ${error.message}`, 'WARNING');
-      return { success: false, error: error.message };
-    }
-  }
+});
+=======
+=======
 
-  async generateTestReport() {
-    this.log('Generating test report...');
-    
-    const report = {
+      // Try to run coverage command;
+      const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
+      const result = execSync(coverageCommand, { })
+
+
+      // Extract coverage percentage (simplified);
+      const coverageMatch = result.match(/(\d+)%/);
+      const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
+      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
+
+      // Extract coverage percentage (simplified);
+      const coverageMatch = result.match(/(\d+)%/);
+      const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
+
+      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
+
+=======
+      
+      if (coverage < this.coverageThreshold) {}
+=======
+      `;
+      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
+      if (coverage < this.coverageThreshold) {}`;
+        this.log(`WARNING: Coverage below threshold!`);
+        return { coverage, belowThreshold: true };
+      return { coverage, belowThreshold: false };
+
+      return { coverage: 0, belowThreshold: true, error: error.message };
+  async generateReport() {}
+    const report = {}
       timestamp: new Date().toISOString(),
       processName: this.processName,
-      testResults: {},
-      coverage: {},
-      summary: {}
-    };
-    
-    try {
-      // Run tests and get results
-      const testResults = await this.runTests();
-      report.testResults = testResults;
-      
-      // Check coverage
-      const coverageResults = await this.checkTestCoverage();
-      report.coverage = coverageResults;
-      
-      // Generate summary
-      report.summary = {
-        testsPassed: testResults.success,
-        coverageMet: coverageResults.success,
-        overallStatus: testResults.success && coverageResults.success ? 'PASS' : 'FAIL'
+      testResults: await this.runTests(),
+      coverage: await this.checkCoverage(),
+      environment: {}
+        NODE_ENV: process.env.NODE_ENV,
+        coverageThreshold: this.coverageThreshold,
+        autoRetry: this.autoRetryFailed,
+        parallelTests: this.parallelTests;
       };
-      
-      // Save report
-      const reportFile = `reports/test-automation-report-${Date.now()}.json`;
-      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-      this.log(`Test report saved to ${reportFile}`);
-      
-      return report;
-      
-    } catch (error) {
-      this.error(`Failed to generate test report: ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
+    };
 
-  async start() {
-    this.log('Test automation service started');
-    
-    // Ensure log directory exists
-    fs.mkdirSync('logs/pm2', { recursive: true });
-    fs.mkdirSync('reports', { recursive: true });
-    
-    // Run initial test
-    await this.generateTestReport();
-    
-    // Set up periodic testing
-    setInterval(async () => {
-      this.log('Running scheduled test automation...');
-      await this.generateTestReport();
-    }, 3 * 60 * 60 * 1000); // Every 3 hours
-    
-    this.log('Test automation service is running');
-  }
-}
+    const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-// Start the service
-if (require.main === module) {
+=======
+
+    const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    
+=======
+    this.log(`Test report generated: ${reportFile}`);
+=======
+
+    return report;
+  async start() {}`;
+    this.log(`${this.processName} started`);
+
+    try {}
+      const report = await this.generateReport();
+
+=======
+    
+    try {}
+      const report = await this.generateReport();
+      
+=======
+=======
+      const report = await this.generateReport();
+      if (report.testResults.success) {}
+        this.log('Test automation completed successfully');
+      } else {}
+        this.log('Test automation completed with errors');
+      if (report.coverage.belowThreshold) {}
+        this.log('WARNING: Test coverage below threshold');
+
+// Start the service;
+if (require.main === module) {}
   const testAutomation = new TestAutomation();
-  testAutomation.start().catch(error => {
-    console.error('Test automation failed to start:', error);
-    process.exit(1);
-  });
-}
+  testAutomation.start().catch(console.error);
+module.exports = TestAutomation;module.exports = TestAutomation;
+module.exports = TestAutomation;module.exports = TestAutomation;
 
-export default TestAutomation;
+module.exports = TestAutomation;
+
+module.exports = TestAutomation;
+
+
+module.exports = TestAutomation;module.exports = TestAutomation;
+module.exports = TestAutomation;module.exports = TestAutomation;
+=======
+=======
+=======
+
+main
+
+=======
+
+=======
+
+

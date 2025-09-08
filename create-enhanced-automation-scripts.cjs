@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 
 class EnhancedAutomationScriptCreator {
   constructor() {

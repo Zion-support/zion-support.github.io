@@ -211,7 +211,8 @@ async function callOpenAI(payload: {
   let parsed: any;
   try {
     parsed = JSON.parse(content);
-  } catch (e) {
+=======  } catch {=======
+  } catch {>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     // Attempt to extract JSON substring
     const match = content.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("Failed to parse OpenAI JSON output");

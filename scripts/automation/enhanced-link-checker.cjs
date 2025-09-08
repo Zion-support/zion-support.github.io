@@ -1,276 +1,185 @@
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const https = require('https');
-const http = require('http');
-const { URL } = require('url')};
-    this.reportDir = path.join(process.cwd(), 'link-reports');
-    this.ensureReportDirectory();
-    this.checkedUrls = new Map(); // Use Map instead of Set for storing results}
-;
-  ensureReportDirectory() {;
-    if (!fs.existsSync(this.reportDir)) {;
-      fs.mkdirSync(this.reportDir { recursive: true })}
-  }
+=======
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+const https = require("https")
+const http = require("http")
+const { URL } = require("url")
+console.log(""� Starting Enhanced Link Checker Automation...")
+  "internal": { total: 0, "working": 0, "broken": 0, "results"}
+      "external": { total: 0, "working": 0, "broken": 0, "results"}
+      "summary": { total: 0, "working": 0, "broken": 0, "rate": 0 }};    this.reportDir = path.join(process.cwd(), "link-reports"
+  fs.mkdirSync(this.reportDir, { "recursive"})
+  console.log(""� Building project for link extraction...")
+  // Check if we"
+      if (fs.existsSync("vite.config.ts") || fs.existsSync("vite.config.js")
+  console.log(""� Vite project detected, running build...")
+        execSync("npm run build")
+  "stdio": "inherit"
+          "cwd": process.cwd()}
+});        console.log(" Build completed successfully")
+        return true} else if (fs.existsSync("next.config.js")
+  console.log("⚡ Next.js project detected, running build...")
+        execSync("npm run build")
+  "stdio": "inherit"
+          "cwd"
+// console.log(" Build completed successfully")
+  console.log("⚠ No recognized build system found, skipping build...")
+// console.log(" Build failed, but continuing with link checking...")
+      console.log(" This is normal if the project has build issues")
+  extractLinksFromHTML(content, baseUrl = ")
+    const hrefMatches = content.match(/href=[""]([^"]+)["]
+  const url = match.match(/href=["]([^"]+)["]
+      if (url && !url.startsWith("#") && !url.startsWith(""javascript": ")
+    const srcMatches = content.match(/src=["]([^""]+)[""]
+  const url = match.match(/src=["]([^"]+)["]
+      if (url && !url.startsWith(""data": ") && !url.startsWith("blob:")
+      content.match(/(?:url|link)\s*\(["]?([^"]+)["]
+  const url = match.match(/(?:url|link)\s*\([""]?([^""]+)["]
+  if (url.startsWith(""http": //") || url.startsWith("https://")
+    if (url.startsWith(")
+  return "https"
+    if (url.startsWith(`/`)) {return "https"`}
+    if (baseUrl && !url.startsWith(`http""`)
+  if (url.startsWith(""http": //") || url.startsWith("https://")
+    if (url.startsWith("//")
+  return "https"
+    if (url.startsWith("/")) {return "https"}
+    if (baseUrl && !url.startsWith("http"")
+  console.log("" Extracting links from build output...")
+    const distDir = path.join(process.cwd(), "dist"
+  console.log("" Build output directory not found")
+    const distDir = path.join(process.cwd(), "dist"
+  console.log(" Build output directory not found")
+    const walkDir = (dir, baseUrl = ")
+  const filePath = path.join(dir, ")
+  walkDir(filePath", baseUrl)} else if (file.endsWith(".html")
+  const content = fs.readFileSync(filePath, ")
+            const relativePath = path.relative(distDir, filePath);const fileBaseUrl = "https": //ziontechgroup.com/${relativePath.replace(/\\/g, "/"})
+  "url"
+                "source"
+                "type"
+  "url"
+                "source"
+                "type": "html"})})} catch (error) {  console.log(⚠ Could not read "file": ${filePath  }```)
+        } else if (file.endsWith(".css")
+  const content = fs.readFileSync(filePath, "utf8")
+              content.match(/url\(["]?([^"]+)["]
+  const url = match.match(/url\(["]?([^"]+)[""]
+              if (url && !url.startsWith(""data")
+  const normalizedUrl = this.normalizeUrl(url,"https": //ziontechgroup.com/${relativePath.replace(/\\/g, "/"})
+  "url"
+                  "source"
+                  "type": "css"
+  console.log(`⚠ Could not read CSS "file"`)
+  resolve({ url, "status": "timeout", "error": "Request timeout"})
+        const isHttps = urlObj.protocol === ""https": "
+  "method": "HEAD"
+            "timeout"
+            "headers": {User-Agent": "Zion-Link-"Checker/1.0""}
+              "status"
+              "working"
+              "headers"
+        req.on("error")
+            "status": "error"
+            "working"
+            "error"
+        req.on("timeout")
+            "status": "timeout"
+            "working"
+            "error": "Request timeout"
+          "status": "error"
+          "working"
+          "error"
+// console.log("" Checking all extracted links...")
+  console.log(" Checking all extracted links...")
+  if (link.url.includes("ziontechgroup.com") || link.url.startsWith("/")
+// console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
+  console.log("" Checking internal links...")
+// console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
+  console.log("" Checking internal links...")
+      await this.checkLinkBatch(internalLinks, "internal")
+  console.log(" Checking external links...")
+      await this.checkLinkBatch(externalLinks, "external")
+  console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
+    // Check internal links"
+    if (internalLinks.length > 0) {"}
+      console.log(")
+      await this.checkLinkBatch(internalLinks, "internal")
+  console.log(" Checking external links...")
+      await this.checkLinkBatch(externalLinks, "external")
+// console.log( "Progress")
+  console.log("� Generating link report...")
+  "timestamp"
+      "summary"
+      "internal"
+      "external"
+      "brokenLinks"
+        "external"
+      path.join(this.reportDir, "link-check-report.json")
+      path.join(this.reportDir, "LINK_CHECK_REPORT.md")
+      path.join(this.reportDir, "link-check-report.csv")
+// console.log("� Link report generated successfully")
+  console.log("� Generating link report...")
+  "timestamp"
+      "summary"
+      "internal"
+      "external"
+      "brokenLinks"
+        "external"
+      path.join(this.reportDir, "link-check-report.json")
+      path.join(this.reportDir, "LINK_CHECK_REPORT.md")
+      path.join(this.reportDir, "link-check-report.csv")
+    console.log("� Link report generated successfully")
+        .map(link =>- **${link.source}** → ${link.url} (${link.status}${link.error ? " - ${link.error} : ```)
+        .join("\n")
+    : "
+        .map(link =>- **${link.source}** → ${link.url} (${link.status}${link.error ? ` - ${link.error} : ""`)
+        "
+        .join("\n")
+    : "
+        .map(link =>- **${link.source}** → ${link.url} (${link.status}${link.error ? " - ${link.error} : ")
+        .join("\n")
+    : " No broken internal links found!"
+        .map(link =>- **${link.source}** → ${link.url} (${link.status}${link.error ? " - ${link.error} : ")
+        .join("\n")
+    : " No broken external links found!"
+    : "1.  All internal links are working correctly"
+    : "2.  All external links are working correctly"
+2. **Automated Fixes**: Implement automated link validation in ""CI/CD""
+2. **Automated Fixes**: Implement automated link validation in "CI/CD"
+  const allLinks = ["...report.internal.results.map(link => ({ ...link", ""type": "internal" }))", "...report.external.results.map(link => ({ ...link", ""type": "external" }))", "]
+    const csvHeaders = ["Type", "Source", "URL", "Status", "Working", "Error"]
+    const csvRows = allLinks.map(link => ["link.type", "link.source || "unknown"", "link.url", "link.status || "unknown"", "link.working ? "Yes" : "No"", "link.error || """, "")]
+    return ["csvHeaders", "...csvRows"].map(row => row.map(field => ""${field}"").join(",")
+      .join("\n")
+// console.log(""� Starting Enhanced Link Checker Automation...")
+  console.log(""⚠ Build failed, but continuing with link checking...")
+// console.log("� Starting Enhanced Link Checker Automation...")
+  console.log("⚠ Build failed, but continuing with link checking...")
+// console.log("⚠ No links found to check")
+      console.log("\n� Link Check "Summary": `);console.log(Total Links: ${report.summary.total}
+});console.log("Working": ${report.summary.working} `");console.log(""Broken": ${report.summary.broken} ");console.log("Success "Rate": ${report.summary.rate}%"`)
+// console.log(""\n� Broken Links "Found": ");console.log(`Internal: ${report.internal.broken}
+});console.log("External": ${report.external.broken}```)
+  console.log(")
+// console.log("\n� Link Check "Summary": ");console.log(Total Links: ${report.summary.total}
+});console.log("Working": ${report.summary.working} `");console.log(""Broken": ${report.summary.broken} ");console.log("Success "Rate": ${report.summary.rate}%"`)
+  console.log(""\n� Broken Links "Found": ");console.log(`Internal: ${report.internal.broken}
+});console.log("External": ${report.external.broken}```)
+// console.log("\n� Broken Links "Found": ");console.log("Internal: ${report.internal.broken}
+});console.log("External": ${report.external.broken}"")
+  console.log("\n All links are working correctly!")
+  console.error(" Link check "failed": ")
+  console.error(" Link checker automation "failed": ")
 
-        });
-        console.log('✅ Build completed successfully');
-        return true} else if (fs.existsSync('next.config.js')) {;
-        console.log('⚡ Next.js project detected, running build...');
-        execSync('npm run build' {;
-          stdio: 'inherit',;
-          cwd: process.cwd(),});
-        console.log('✅ Build completed successfully');
-        return true} else {;
-        console.log('⚠️ No recognized build system found, skipping build...');
-        return false}
-
-      console.log('❌ Build failed, but continuing with link checking...');
-      console.log('💡 This is normal if the project has build issues');
-      return false}
-  }
-;
-  extractLinksFromHTML(content, baseUrl = ') {;
-    const links = [];
-
-    // Extract href attributes;
-    const hrefMatches = content.match(/href=["']([^"']+)["']/g) || [];
-    hrefMatches.forEach(match => {;
-      const url = match.match(/href=["']([^"']+)["']/)[1];
-      if (url && !url.startsWith('#') && !url.startsWith('javascript:')) {;
-        links.push(this.normalizeUrl(url, baseUrl))}
-    });
-
-    // Extract src attributes;
-    const srcMatches = content.match(/src=["']([^"']+)["']/g) || [];
-    srcMatches.forEach(match => {;
-      const url = match.match(/src=["']([^"']+)["']/)[1];
-      if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {;
-        links.push(this.normalizeUrl(url, baseUrl))}
-    });
-
-      content.match(/(?:url|link)\s*\(["']?([^"']+)["']?\)/g) || [];
-    otherMatches.forEach(match => {;
-      const url = match.match(/(?:url|link)\s*\(["']?([^"']+)["']?\)/)[1];
-      if (url) {;
-        links.push(this.normalizeUrl(url, baseUrl))}
-    });
-
-      return new URL(url, baseUrl).href}
-;
-    return url}
-
-
-    const distDir = path.join(process.cwd(), 'dist');
-    if (!fs.existsSync(distDir)) {
-      console.log(`❌ Build output directory not found`);
-
-      return []}
-;
-    const allLinks = [];
-;
-    const walkDir = (dir, baseUrl = ') => {;
-      const files = fs.readdirSync(dir);
-      files.forEach(file => {;
-        const filePath = path.join(dir, 'file);
-        const stat = fs.statSync(filePath);
-;
-        if (stat.isDirectory()) {;
-          walkDir(filePath', baseUrl);
-
-            const relativePath = path.relative(distDir, filePath);const fileBaseUrl = https://ziontechgroup.com/${relativePath.replace(/\\/g, '/')};
-;
-            const links = this.extractLinksFromHTML(content, fileBaseUrl)})})} catch (error) {  console.log(⚠️ Could not read file: ${filePath  }``)}
-
-          }
-        }
-      })};
-;
-    walkDir(distDir);
-
-    // Remove duplicates and filter out invalid URLs;
-    const uniqueLinks = [];
-    const seen = new Set();
-;
-    allLinks.forEach(link => {;
-      if (!seen.has(link.url) && this.isValidUrl(link.url)) {;
-        seen.add(link.url);
-        uniqueLinks.push(link)}
-    });
-console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
-    return uniqueLinks}
-;
-  isValidUrl(url) {;
-    try {;
-      new URL(url);
-      return true} catch {;
-      return false}
-  }
-;
-  async checkLink(url, timeout = 10000) {;
-    if (this.checkedUrls.has(url)) {;
-      return this.checkedUrls.get(url)}
-
-      }, timeout);
-      
-      try {
-        const urlObj = new URL(url);
-        const isHttps = urlObj.protocol === 'https:';
-        const client = isHttps ? https : http;
-;
-        const req = client.request(;
-          url,;
-          {;
-            method: 'HEAD',;
-            timeout: timeout,;
-            headers: {User-Agent': 'Zion-Link-'Checker/1.0'',},},;
-          res => {;
-            clearTimeout(timer);
-            const result = {;
-              url,;
-              status: res.statusCode,;
-              working: res.statusCode >= 200 && res.statusCode < 400,;
-              headers: res.headers,};
-            this.checkedUrls.set(url, result);
-            resolve(result)}
-        );
-;
-        req.on('error', error => {;
-          clearTimeout(timer);
-          const result = {;
-            url,;
-            status: 'error',;
-            working: false,;
-            error: error.message,};
-          this.checkedUrls.set(url, result);
-          resolve(result)});
-;
-        req.on('timeout', () => {;
-          clearTimeout(timer);
-          req.destroy();
-          const result = {;
-            url,;
-            status: 'timeout',;
-            working: false,;
-            error: 'Request timeout',};
-          this.checkedUrls.set(url, result);
-          resolve(result)});
-;
-        req.end();
-
-        this.checkedUrls.set(url, result);
-        resolve(result)}
-    })}
-
-    const internalLinks = [];
-    const externalLinks = [];
-
-        internalLinks.push(link)} else {;
-        externalLinks.push(link)}
-    });
-
-      await this.checkLinkBatch(internalLinks, 'internal')}
-;
-    // Check external links;
-    if (externalLinks.length > 0) {;
-      console.log('🔍 Checking external links...');
-      await this.checkLinkBatch(externalLinks, 'external')}
-;
-    // Update summary;
-    this.updateSummary()}
-;
-  async checkLinkBatch(links, type) {;
-
-    const batchSize = 10; // Check 10 links concurrently;
-    const results = [];
-;
-    for (let i = 0; i < links.length; i += batchSize) {;
-      const batch = links.slice(i, i + batchSize);
-      const batchPromises = batch.map(async link => {;
-        const result = await this.checkLink(link.url);
-        return {;
-          ...link,;
-          ...result,}});
-;
-      const batchResults = await Promise.all(batchPromises);
-      results.push(...batchResults);
-
-    // Update results;
-    this.linkResults[type].results = results;
-    this.linkResults[type].total = results.length;
-    this.linkResults[type].working = results.filter(r => r.working).length;
-    this.linkResults[type].broken = results.filter(r => !r.working).length}
-;
-  updateSummary() {;
-    this.linkResults.summary.total =;
-      this.linkResults.internal.total + this.linkResults.external.total;
-    this.linkResults.summary.working =;
-      this.linkResults.internal.working + this.linkResults.external.working;
-    this.linkResults.summary.broken =;
-      this.linkResults.internal.broken + this.linkResults.external.broken;
-
-    return report}
-;
-  generateMarkdownReport(report) {;
-    const brokenInternal = report.brokenLinks.internal;
-    const brokenExternal = report.brokenLinks.external;
-
-## 📊 Summary;
-- **Total Links**: ${report.summary.total}
-- **Working Links**: ${report.summary.working} ✅;
-- **Broken Links**: ${report.summary.broken} ❌;
-- **Success Rate**: ${report.summary.rate}%;
-
-## 🔍 Internal Links;
-- **Total**: ${report.internal.total}
-- **Working**: ${report.internal.working} ✅;
-- **Broken**: ${report.internal.broken} ❌;
-
-## 🌐 External Links;
-- **Total**: ${report.external.total}
-- **Working**: ${report.external.working} ✅;
-- **Broken**: ${report.external.broken} ❌;
-
-## ❌ Broken Links}
-;
-## 🚨 Immediate Actions Required}
-;
-## 📚 Recommendations;
+=======
+  console.error(" Link checker automation "failed")
+=======
+  console.error(" Link checker automation "failed")
+=======
+=======
 
 
-*Report generated by Enhanced Link Checker Automation*}
-;
-  generateCSVReport(report) {;
-    const allLinks = ['...report.internal.results.map(link => ({ ...link', 'type: 'internal' }))', '...report.external.results.map(link => ({ ...link', 'type: 'external' }))', '];
-;
-    const csvHeaders = ['Type', 'Source', 'URL', 'Status', 'Working', 'Error']}
-
-      }
-;
-      const links = await this.extractAllLinks();
-
-        return}
-;
-      await this.checkAllLinks(links);
-      const report = await this.generateLinkReport();
-
-        console.log('\n✅ All links are working correctly!')}
-;
-      return report;
-
-      throw error}
-  }
-}
-
-  const linkChecker = new EnhancedLinkChecker();
-  
-  try {
-    await linkChecker.runLinkCheck();
-
-    console.error('❌ Link checker automation failed:', error);
-    process.exit(1)}
-}
-
-// Start the link checker;
-main().catch(console.error);

@@ -1,5 +1,6 @@
+
+=======
 #!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -32,4 +33,12 @@ const { execSync } = require('child_process')
         "issue"
         "action"
         "impact"
+
+=======
   console.error('Fatal "error")
+=======
+  console.error('Fatal "error")
+=======
+=======
+
+

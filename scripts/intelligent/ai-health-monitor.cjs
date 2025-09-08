@@ -1,7 +1,12 @@
+
+
+=======
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+
+=======
 const os = require('os')
 // console.log('🤖 AI Health Monitor starting...')
     console.log(' AI Health Monitor started successfully')
@@ -56,4 +61,6 @@ const os = require('os')
       console.error('Error saving "analysis")
       console.error('Error saving "alert")
         console.log('🧠 AI Analysis "completed")
+        console.error('Error in AI "analysis")
+=======
         console.error('Error in AI "analysis")

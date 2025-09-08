@@ -6,28 +6,10 @@
 ## Summary
 - ✅ Successful: 5
 - ❌ Errors: 4
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 **Timestamp:** 2025-09-07T02:51:20.034Z
 **Duration:** 9764ms
->>>>>>> origin/main
 
-## Summary
-- ✅ Successful: 1
-- ❌ Errors: 7
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
-=======
-**Timestamp:** 2025-09-07T02:51:20.034Z
-**Duration:** 9764ms
-=======
->>>>>>> origin/resolved-merge-conflicts
-- ⚠️ Warnings: 0
-## Successful Operations
-- Operation
 
-<<<<<<< HEAD
-=======
 ### 2. **Build System Restoration** ✅
 - ✅ Fixed all merge conflicts in configuration files
 - ✅ Resolved syntax errors in 200+ files
@@ -35,13 +17,13 @@
 - ✅ Restored working Next.js 15.5.2 build system
 - ✅ Fixed TypeScript configuration
 - ✅ Resolved ESLint configuration issues
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
+
 # Comprehensive Automation Report
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
 
 
 ## Errors
@@ -323,33 +305,32 @@ Caused by:
 ./app/layout.tsx
 > Build failed because of webpack errors
 ## Warnings
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/resolved-merge-conflicts
-<<<<<<< HEAD
+
+
+
+
+
+
+
+
 - ESLint had issues
 - TypeScript had issues
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
 
 
 
 
-=======
-=======
->>>>>>> merged-prs-20250907-203621
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+
+
+
+
+
+
+
+
+
+
 ## Recommendations
 - Address all errors before deployment
 

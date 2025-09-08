@@ -1,5 +1,5 @@
+
 #!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

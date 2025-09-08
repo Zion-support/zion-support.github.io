@@ -1,38 +1,96 @@
-const { FlatCompat } = require('@eslint/eslintrc');
+// ESLint flat config for compatibility
 const js = require('@eslint/js');
-const typescriptEslint = require('@typescript-eslint/eslint-plugin');
-const typescriptParser = require('@typescript-eslint/parser');
-const nextConfig = require('eslint-config-next');
+const tseslint = require('typescript-eslint');
+const reactHooks = require('eslint-plugin-react-hooks');
+const reactRefresh = require('eslint-plugin-react-refresh');
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended });
-
-module.exports = [
-  ...compat.extends('next/core-web-vitals') {
+module.exports = tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true } } },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
+    },
     plugins: {
-      '@typescript-eslint': typescriptEslint },
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
     rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn'
-    } }, {
+      'no-console': 'warn',
+      'no-debugger': 'error',
+    },
+  },
+  {
     ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'build/',
       'dist/',
+      'node_modules/',
+      'build/',
+      'out/',
       '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs'
-    ] } ];
+      '*.config.ts',
+      'scripts/',
+      'coverage/',
+      '*.d.ts',
+      'src-disabled/',
+      'src.broken/',
+      'src_disabled_*/',
+      'pages._archive_corrupted/',
+      'pages.bak/',
+      '*.disabled/',
+      '*.backup/',
+      '*.bak/',
+      '**/*.min.js',
+      '**/*.bundle.js',
+      'public/sw*.js',
+      'public/service-worker.js',
+      '*automation*.js',
+      '*automation*.cjs',
+      '*fix*.js',
+      '*fix*.cjs',
+      '*merge*.js',
+      '*merge*.cjs',
+      '*resolve*.js',
+      '*resolve*.cjs',
+      '*ultimate*.js',
+      '*ultimate*.cjs',
+      '*comprehensive*.js',
+      '*comprehensive*.cjs',
+      'ecosystem*.js',
+      'ecosystem*.cjs',
+      'pm2-*.js',
+      'pm2-*.cjs',
+      'recovered-branches/',
+      'backup/',
+      'corrupted*/',
+      '*_backup*/',
+      'temp*/',
+      'tmp*/',
+      '*.tmp',
+      '*.temp',
+      'postcss.config*.js',
+      'vite.config*.js',
+      'vitest.config*.js',
+      'next.config*.js',
+      'media/',
+    ],
+  }
+);

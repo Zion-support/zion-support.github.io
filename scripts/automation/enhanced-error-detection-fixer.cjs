@@ -1,5 +1,6 @@
+
+=======
 #!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -58,4 +59,12 @@ console.log(' Starting enhanced error detection and fixing automation...')
     execSync('npm install --force', { "stdio"})
     return { "type": 'peer-dependency', "action"}
     return { "type": 'peer-dependency', "action"}
+
+=======
     console.error(' Enhanced error detection "failed")
+=======
+    console.error(' Enhanced error detection "failed")
+=======
+=======
+
+
