@@ -15,7 +15,7 @@ export default function HomePage() {
       <Head>
         <title>Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
         <meta name="description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations. The most advanced autonomous platform ever built." />
-        <meta property="og:title" content="Zion Tech Group — World's Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
+        <meta property="og:title" content="Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
         <meta property="og:description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="autonomous systems, AI automation, cloud-native, redundancy systems, intelligent orchestration, self-healing systems, continuous deployment" />
@@ -397,6 +397,69 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* Project Core Features & Capabilities */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🌟 Project Core Features & Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🚀 Autonomous Systems</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• 227+ Intelligent Automations</li>
+                  <li>• Self-Running Cloud Systems</li>
+                  <li>• AI-Powered Content Generation</li>
+                  <li>• Autonomous Quality Assurance</li>
+                  <li>• Predictive Maintenance</li>
+                </ul>
+                <div className="space-y-2">
+                  <Link href="/FINAL_PROJECT_STATUS_2025-01-17.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    Project Status →
+                  </Link>
+                  <Link href="/AUTOMATION_COMPLETION_REPORT.md" className="block text-cyan-400 hover:text-cyan-400 text-sm font-semibold">
+                    Automation Report →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔄 Redundancy & Reliability</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Multi-Layer Redundancy</li>
+                  <li>• Zero-Downtime Operations</li>
+                  <li>• Self-Healing Infrastructure</li>
+                  <li>• Geographic Distribution</li>
+                  <li>• Continuous Health Monitoring</li>
+                </ul>
+                <div className="space-y-2">
+                  <Link href="/COMPREHENSIVE_REDUNDANCY_README.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Redundancy Guide →
+                  </Link>
+                  <Link href="/REDUNDANCY_SYSTEM_IMPLEMENTATION_SUMMARY.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Implementation Summary →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Performance & Optimization</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Smart Build Orchestration</li>
+                  <li>• Performance Monitoring</li>
+                  <li>• Automated Testing</li>
+                  <li>• Quality Assurance</li>
+                  <li>• Continuous Improvement</li>
+                </ul>
+                <div className="space-y-2">
+                  <Link href="/PERFORMANCE.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
+                    Performance Guide →
+                  </Link>
+                  <Link href="/TESTING.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
+                    Testing Guide →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Advanced Automation Systems Showcase */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🤖 Advanced Automation Systems</h2>
@@ -410,7 +473,17 @@ export default function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">Explore Redundancy Systems →</Link>
+                <div className="space-y-2">
+                  <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    Ultimate Redundancy V2 →
+                  </Link>
+                  <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    Comprehensive Redundancy →
+                  </Link>
+                  <Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    PM2 Redundancy →
+                  </Link>
+                </div>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -422,7 +495,17 @@ export default function HomePage() {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">Explore AI Systems →</Link>
+                <div className="space-y-2">
+                  <Link href="/AUTOMATION_COMPLETION_REPORT.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Automation Report →
+                  </Link>
+                  <Link href="/AUTOMATION_EXECUTION_SUMMARY.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Execution Summary →
+                  </Link>
+                  <Link href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Growth Automation →
+                  </Link>
+                </div>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -434,9 +517,17 @@ export default function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Explore Build Systems →
-                </Link>
+                <div className="space-y-2">
+                  <Link href="/README_GITHUB_ACTIONS.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
+                    GitHub Actions →
+                  </Link>
+                  <Link href="/README_CONTINUOUS_OPERATION.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
+                    Continuous Operation →
+                  </Link>
+                  <Link href="/PERFORMANCE.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
+                    Performance Guide →
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
@@ -525,8 +616,16 @@ export default function HomePage() {
                   <li>• Geographic distribution</li>
                   <li>• Real-time monitoring</li>
                 </ul>
-                <div className="text-cyan-400 text-sm font-semibold">
-                  Status: Active & Monitoring
+                <div className="space-y-2">
+                  <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    Ultimate Redundancy V2 →
+                  </Link>
+                  <Link href="/ULTIMATE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" className="block text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                    Implementation Summary →
+                  </Link>
+                  <div className="text-cyan-400 text-sm font-semibold">
+                    Status: Active & Monitoring
+                  </div>
                 </div>
               </div>
 
@@ -539,8 +638,16 @@ export default function HomePage() {
                   <li>• Quality assurance</li>
                   <li>• Performance analytics</li>
                 </ul>
-                <div className="text-fuchsia-400 text-sm font-semibold">
-                  Status: Continuously Learning
+                <div className="space-y-2">
+                  <Link href="/ai-content-factory-report.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    AI Content Factory →
+                  </Link>
+                  <Link href="/ai-content-autonomy-report.md" className="block text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                    Content Autonomy →
+                  </Link>
+                  <div className="text-fuchsia-400 text-sm font-semibold">
+                    Status: Continuously Learning
+                  </div>
                 </div>
               </div>
 
@@ -553,8 +660,16 @@ export default function HomePage() {
                   <li>• Error recovery</li>
                   <li>• Deployment automation</li>
                 </ul>
-                <div className="text-green-400 text-sm font-semibold">
-                  Status: Self-Optimizing
+                <div className="space-y-2">
+                  <Link href="/FINAL_WORKFLOW_FIX_SUMMARY.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
+                    Workflow Fix Summary →
+                  </Link>
+                  <Link href="/GITHUB_ACTIONS_IMPROVEMENTS.md" className="block text-green-400 hover:text-green-300 text-sm font-semibold">
+                    GitHub Actions →
+                  </Link>
+                  <div className="text-green-400 text-sm font-semibold">
+                    Status: Self-Optimizing
+                  </div>
                 </div>
               </div>
             </div>
