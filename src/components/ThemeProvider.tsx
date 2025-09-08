@@ -8,7 +8,7 @@ interface ThemeContextValue {
   actualTheme: 'light' | 'dark';
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
