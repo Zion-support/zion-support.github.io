@@ -7,21 +7,25 @@ const fs = require("child_process");
 const fs = require("child_process");
 
 
-=======
-#!/usr/bin/env node;
-const fs = require("child_process");
-=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 #!/usr/bin/env node;
 const fs = require("child_process");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+#!/usr/bin/env node;
+const fs = require("child_process");
+#!/usr/bin/env node;
+const fs = require("child_process");
+
+
+const path = require("path");
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
+
 class FileRestorer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -29,29 +33,76 @@ class FileRestorer {}
     this.errors = []};
   log(message) {}
     const timestamp = new Date().toISOString();
-
-      return false};
-  };
-  async findCorruptedFiles(dir) {}
-    const corruptedFiles = []
-    const scanDir = (currentDir) => {}
-      const items = fs.readdirSync(currentDir)
+                content.includes("return (") ||
+                content.includes("return (,")) {}"
+              corruptedFiles.push(fullPath)};
+          } catch (error) {}"
+            // Skip files that can"t be read};"
+                content.includes("return (") ||
+                content.includes("return (,")) {}"
+              corruptedFiles.push(fullPath)}
+          } catch (error) {}"
+            // Skip files that can"t be read};"
+    scanDir(dir)
+    return corruptedFiles}
+  async restoreCorruptedFiles() {}"
+    this.log("[INFO] Starting file restoration process");"
+    // Find corrupted files
+    const corruptedFiles = await this.findCorruptedFiles(this.projectRoot);`
+    this.log(`[INFO] Found ${corruptedFiles.length} potentially corrupted files`)
+  if($2) {}"
+      this.log("[INFO] No corrupted files found");"
+      return}
+    // Restore each corrupted file
   for($2) {}
-        const fullPath = path.join(currentDir, item)
-        const stat = fs.statSync(fullPath);"
-        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {}
-          scanDir(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".ts") || item.endsWith(".js"))) {}"
-            const content = fs.readFileSync(fullPath, "utf8");"
-            // Check for corruption patterns;"
-            if (content.includes(";) ||
-                content.includes(") ||
-                content.includes("from ) && content.includes() ||
+      await this.restoreFile(filePath)}
+    // Generate report
+    const report = {}"
+      "timestamp": new Date().toISOString()
+      summary: {totalFiles: corruptedFiles.length,"fixedFiles": this.fixedFiles.length;}"
+        errors: this.errors.length};"
+      "fixedFiles": this.fixedFiles;"
+      errors: this.errors};"
+                content.includes("return () ||
+                content.includes(return (,")) {}"
+              corruptedFiles.push(fullPath)}
+          } catch (error) {}
+            // Skip files that cant be read}"
+    scanDir(dir);
+    return corruptedFiles};
+  async restoreCorruptedFiles() {}"
+    this.log("[INFO] Starting file restoration process");"
+    // Find corrupted files;
+    const corruptedFiles = await this.findCorruptedFiles(this.projectRoot);`;
+    this.log(`[INFO] Found ${corruptedFiles.length} potentially corrupted files`);
+    if (corruptedFiles.length === 0) {}"
+      this.log("[INFO] No corrupted files found");"
+      return};
+    // Restore each corrupted file;
+    for (const filePath of corruptedFiles) {}
+      await this.restoreFile(filePath)};
+    // Generate report;
+    const report = {}"
+      "timestamp": new Date().toISOString();
+      summary: {totalFiles: corruptedFiles.length,"fixedFiles": this.fixedFiles.length;}"
+        errors: this.errors.length};"
+      "fixedFiles": this.fixedFiles;"
+      errors: this.errors};"
+      timestamp: new Date().toISOString();
+      summary: {totalFiles: corruptedFiles.length,"fixedFiles": this.fixedFiles.length;}
+        errors: this.errors.length}
+      "fixedFiles": this.fixedFiles;
+      errors: this.errors}
     const reportPath = path.join(this.projectRoot, "file-restoration-report.json");"
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"
 
 // Main execution;
 if (require.main === module) {}
   const restorer = new FileRestorer();
-<<<<<<< HEAD
   restorer.restoreCorruptedFiles().catch(console.error)};
 module.exports = FileRestorer;
+
+module.exports = FileRestorer;
+module.exports = FileRestorer;
+
+

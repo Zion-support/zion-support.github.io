@@ -36,7 +36,7 @@ const: FAQ: NextPage: = () => {
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>Frequently Asked Questions</h1>'
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
               Find answers to common questions about our services, pricing, and support.;
-              Can&apos;t find what you&aposre looking for? Contact us directly.
+              Can't find what you&aposre looking for? Contact us directly.
 
             </p>
           </div>

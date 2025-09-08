@@ -1,53 +1,129 @@
 #!/usr/bin/env node;
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-#!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
+#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class LinterWatcher {}
   constructor() {}
     this.isRunning = false;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      child.on(close', (code) => {}
-=======
+
+    this.watchPaths = ['components', 'pages', 'scripts'];
+    this.watchPaths = ['components', 'pages', 'scripts'];
+
+    this.interval = 30000; // 30 seconds;
+  };
+  async start() {}
+    console.log('Starting Linter Watcher...');
+    this.isRunning = true;
+    
+    // Initial lint check;
+    await this.runLint();
+    
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runLint()}, this.interval);
+    
+    // Initial lint check;
+    await this.runLint();
+
+    this.isRunning = true;
+    // Initial lint check;
+    await this.runLint();
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runLint()}, this.interval);
+
+    
+    
 
 
+    console.log('Linter Watcher started successfully')};
+  async runLint() {}
+    try {}
+      console.log('Running lint check...');
+      
+      const child = spawn('npm', ['run', 'lint'], {})
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd();
+      };);
 
->>>>>>> merged-prs-20250907-203621
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+});
+
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
+});
+
       child.on('close', (code) => {}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      child.on(close', (code) => {}
+
+
+
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
+      child.on('close', (code) => {}
         if ( {})
 
           console.log('Lint check passed ✓')) {}
      {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      child.on(close', (code) => {}
+<<<<<<< HEAD
 =======
+          console.log('Lint check passed ✓')}} else {}
+          console.log('Lint check failed ✗');
+          console.log(Lint check passed ✓')}} else {}
+          console.log('Lint check failed ✗);
+
+          
+          
+          console.log('Lint check passed ✓')}} else {}
+          console.log('Lint check failed ✗');
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
+          
+          // Attempt to auto-fix;
+          this.attemptAutoFix()};
+      })} catch (error) {}
+      console.error('Error running "lint": ', error.message)};
+  };
+  async attemptAutoFix() {}
+    try {}
       console.log('Attempting to auto-fix linting issues...');
->>>>>>> merged-prs-20250907-203621
+      
       const child = spawn('npm', ['run', '"lint": fix'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-      child.on('close', (code) => {}
->>>>>>> origin/chore/fix-lint-and-merge
-        if ( {})
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      child.on('close', (code) => {}
+        if ( {})
+
           console.log('Auto-fix completed ✓')) {}
      {}
+          console.log('Auto-fix completed ✓')}} else {}
+          console.log('Auto-fix failed ✗')};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
+      child.on(close', (code) => {}
+      console.log('Attempting to auto-fix linting issues...');
+      
+      
+      
+
+      
+      const child = spawn('npm', ['run', '"lint": fix'], {})
+        "stdio": 'inherit',
+        "cwd": process.cwd();
+      };);
+          console.log('Auto-fix completed ✓)) {}
+          console.log('Auto-fix completed ✓')) {}
+     {}
+          console.log('Auto-fix completed ✓')}} else {}
+          console.log('Auto-fix failed ✗')}
           console.log(Auto-fix completed ✓')}} else {}
           console.log('Auto-fix failed ✗)}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       })} catch (error) {}
       console.error('Error running auto-"fix": , error.message)};
   };
@@ -67,16 +143,18 @@ class LinterWatcher {}
   const watcher = new LinterWatcher) {}
   const watcher = new LinterWatcher}(;);
   
-  // Handle graceful shutdown;
-  process.on('SIGINT', () => {}
-    watcher.stop();
-    process.exit(0)}
-});
-  
   process.on('SIGTERM', () => {}
     watcher.stop();
     process.exit(0)}
 });
+  watcher.start().catch(console.error)};
+
   
   watcher.start().catch(console.error)};
 module.exports = LinterWatcher;
+module.exports = LinterWatcher;
+  // Handle graceful shutdown;
+
+  watcher.start().catch(console.error)};
+
+

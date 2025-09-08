@@ -1,3 +1,7 @@
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -19,7 +23,9 @@ const testReport = {}
     "coverage": 0;"
   },"
   "recommendations": [];"
-=======
+};
+
+function log(level, message) {}
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
@@ -27,34 +33,36 @@ async function runJestTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npm test -- --coverage --json', { })
-      "encoding": 'utf8',
-      "stdio": 'pipe'
-    }
-});
-    const endTime = Date.now();
-    
-    const result = JSON.parse(output);
-    
-    testReport.tests.push({})
-
-      "result": result;"
-      "framework": 'jest',
-      "duration": endTime - startTime,
-      "result": result;
-    }
-});
-    
-    testReport.summary.total += result.numTotalTests;
-    testReport.summary.passed += result.numPassedTests;
-    testReport.summary.failed += result.numFailedTests;
-    testReport.summary.skipped += result.numPendingTests;
-    testReport.summary.duration += endTime - startTime;
-    
-    if (result.coverageMap) {}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+const timestamp = new Date().toISOString()
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
+async function runJestTests() {}"
 
     
+
+      "result": result;"    testReport.summary.total += result.numTotalTests
+    testReport.summary.passed += result.numPassedTests
+    testReport.summary.failed += result.numFailedTests
+    testReport.summary.skipped += result.numPendingTests
+    testReport.summary.duration += endTime - startTime
+  if($2) {}
+
+    testReport.summary.total += result.total
+    testReport.summary.passed += result.passed
+    testReport.summary.failed += result.failed
+      "result": { passed: true, output };"
+    testReport.summary.passed++
+
+
+    testReport.summary.total += result.total;
+    testReport.summary.passed += result.passed;
+    testReport.summary.failed += result.failed;
+
+
+      "result": { passed: true, output };"
+    testReport.summary.passed++;
+    "
+      "result": { passed: false, "error": error.message };"
+    testReport.summary.failed++;"
 
     "
       "result": { passed: false, "error": error.message };"
@@ -68,35 +76,7 @@ async function runPlaywrightTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npx playwright test --reporter=json', { })
-      "encoding": 'utf8',
-      "stdio": 'pipe'
-    }
-});
-    const endTime = Date.now();
-    
-    const result = JSON.parse(output);
-    
-    testReport.tests.push({})
-      "framework": 'playwright',
-      "duration": endTime - startTime,
-      "result": result;
-    }
-});
-    
-    testReport.summary.total += result.total;
-    testReport.summary.passed += result.passed;
-    testReport.summary.failed += result.failed;
-    testReport.summary.duration += endTime - startTime;
-    
-    log('info', `Playwright tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
-    log('warn', 'Playwright tests failed or not configured', error.message)};
-};
-async function runCypressTests() {}
-  log('info', 'Running Cypress tests');
-  
-  try {}
-    const startTime = Date.now();
+const output = execSync('npx cypress run --reporter json', { });
     const output = execSync('npx cypress run --reporter json', { })
       "encoding": 'utf8',
       "stdio": 'pipe'
@@ -126,39 +106,7 @@ async function runLintTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npm run lint', { })
-      "encoding": 'utf8',
-      "stdio": 'pipe'
-    }
-});
-    const endTime = Date.now();
-    
-    testReport.tests.push({})
-      "framework": 'eslint',
-      "duration": endTime - startTime,
-      "result": { passed: true, output };
-    }
-});
-    
-    testReport.summary.passed++;
-    testReport.summary.duration += endTime - startTime;
-    
-    log('info', 'Linting tests completed successfully')} catch (error) {}
-    testReport.tests.push({})
-      "framework": 'eslint',
-      "duration": 0,
-      "result": { passed: false, "error": error.message };
-    }
-});
-    
-    testReport.summary.failed++;
-    log('warn', 'Linting tests failed', error.message)};
-};
-async function runTypeTests() {}
-  log('info', 'Running TypeScript type tests');
-  
-  try {}
-    const startTime = Date.now();
+const output = execSync('npx tsc --noEmit', { });
     const output = execSync('npx tsc --noEmit', { })
       "encoding": 'utf8',
       "stdio": 'pipe'
@@ -187,9 +135,10 @@ async function runTypeTests() {}
     testReport.summary.failed++;
     log('warn', 'TypeScript type tests failed', error.message)};
 };
-=======
+    log('warn, TypeScript type tests failed', error.message)}
+}
 
->>>>>>> origin/chore/fix-lint-and-merge
+
 function generateRecommendations() {}
   const recommendations = [];
   const { total, passed, failed, coverage } = testReport.summary;
@@ -197,16 +146,15 @@ function generateRecommendations() {}
   if (total === 0) {}
     recommendations.push({})
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 function generateRecommendations() {}
   const recommendations = []
   const { total, passed, failed, coverage } = testReport.summary,
   if($2) {}
     recommendations.push({})
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'

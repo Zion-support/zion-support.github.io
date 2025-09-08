@@ -8,14 +8,12 @@ console.log('=')
       recommendations.push('Fix failing tests before deployment')
       recommendations.push('Fix build issues before deployment')
       recommendations.push('Address multiple errors before deployment')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
 =======
       recommendations.push('All checks passed - ready for deployment')
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     this.log('Starting comprehensive test & deploy suite...')
     this.log('\\n COMPREHENSIVE SUITE SUMMARY')
     this.log('===')

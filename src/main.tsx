@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
+import App from './App';
 // import './index.css';
 
 // Import i18n configuration
 import './i18n';
 
 // Register service worker
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { _registerServiceWorker } from './serviceWorkerRegistration';
 
-// Error handling function (currently unused but kept for future use)
-// const showApiError = (error: unknown): void => {
-//   console.error('API Error:', error);
-// };
+// Error handling function
+const showApiError = (error: unknown): void => {
+  console.error('API Error:', error);
+};
 
 // Global error handler
 const handleGlobalError = (error: Error): void => {

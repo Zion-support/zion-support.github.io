@@ -1,7 +1,15 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const { execSync } = require('child_process')
-=======
+
+    console.log('\n "Recommendations")
+
+    console.log('\n "Recommendations")
+#!/usr/bin/env node;
+const fs = require('fs')
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
 
 const { execSync } = require(child_process')
 // console.log('� Starting dependency update check...)
@@ -20,24 +28,13 @@ const { execSync } = require(child_process')
 // console.log('\n� Outdated Packages")
     console.log(\n� Security "Vulnerabilities)
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
     console.log(\n Recommendations")
 
     console.log('\n "Recommendations)
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log('\n Recommendations")
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
@@ -46,6 +43,8 @@ const fs = require('fs')
 const { execSync } = require('child_process')
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
     const output = execSync('npm outdated --json', { "encoding"})

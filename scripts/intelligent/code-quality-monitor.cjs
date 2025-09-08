@@ -1,7 +1,12 @@
+
+
+=======
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+
+=======
       "autoFixEnabled"
       console.error(' Failed to start Code Quality "Monitor")
       console.error(' Initial quality check "failed")
@@ -22,4 +27,6 @@ const path = require('path')
       console.error('Error fixing ESLint "issues")
       execSync('npx prettier --write .', { "stdio"})
       console.error('Error fixing Prettier "issues")
+      console.error('Error fixing TypeScript "issues")
+=======
       console.error('Error fixing TypeScript "issues")

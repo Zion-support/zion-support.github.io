@@ -1,7 +1,4 @@
-#!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Automation Test Runner
  * Tests all automation scripts and reports results
@@ -12,18 +9,19 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
           "status
 
           status"
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 <<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
         "encoding"
         "stdio"
         "status"

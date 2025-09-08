@@ -2,7 +2,17 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-=======
+
+      console.log('\n Errors "encountered")
+
+      console.log('\n Errors "encountered")
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
 // console.log( Starting Automated Deployment...')
     console.log('� Starting deployment process...)
       console.error( Deployment "failed)
@@ -29,21 +39,27 @@ const { execSync } = require('child_process')
         "skippedSteps
 // console.log('\n Deployment Report")
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
       console.log(\n Errors "encountered)
 
       console.log(\n Errors encountered")
 
-=======
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-const { execSync } = require('child_process')
 <<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
+=======
+=======
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
 // console.log(' Starting Automated Deployment...')
     console.log('� Starting deployment process...')
       console.error(' Deployment "failed")
@@ -70,3 +86,8 @@ const { execSync } = require('child_process')
         "skippedSteps"
 // console.log('\n Deployment "Report")
       console.log('\n Errors "encountered")
+
+      console.log('\n Errors "encountered")
+      console.log('\n Errors "encountered")
+
+

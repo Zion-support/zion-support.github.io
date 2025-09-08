@@ -1,26 +1,79 @@
-#!/usr/bin/env node
-=======
 
 const { execSync } = require('child_process');
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+
+const fs = require('fs');
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 const path = require('path');
->>>>>>> origin/main
 class SEOOptimizer {
   // TODO: Implement
 }
   constructor() {
     this.projectRoot = process.cwd();
-    const seoReport = {
-      "timestamp": new Date().toISOString(),
-      "metrics": {
-        totalPages: 0,
-        "pagesWithTitle": 0,
-        "pagesWithMetaDescription": 0,
-        "pagesWithH1": 0,
-        "pagesWithImages": 0,
-        "averageTitleLength": 0,
-        "averageMetaLength": 0
-      },
+      "issues": [],
+      "recommendations": []
+      "issues: [],
+      recommendations": []
+    }
+  for($2) {
+      try {
+        const content = fs.readFileSync(file, 'utf8')
+        const analysis = this.analyzeFile(file, content)
+  if($2) {
+          seoReport.metrics.totalPages++
+          this.updateMetrics(seoReport.metrics, analysis)
+          this.checkIssues(seoReport, analysis)
+      } catch (error) {
+        this.log(`Error analyzing ${file}: ${error.message}`, 'WARN')
+    this.generateRecommendations(seoReport)
+    this.saveReport(seoReport)
+    this.log(`✅ SEO optimization completed! Analyzed ${seoReport.metrics.totalPages} pages.`)
+    return seoReport
+  analyzeFile($2) {
+    const relativePath = path.relative(this.projectRoot, filePath)
+    const analysis = {
+      "file": relativePath,
+      "hasTitle": false,
+      "hasMetaDescription": false,
+      "hasH1": false,
+      "hasImages": false,
+      "titleLength": 0,
+      "metaLength": 0,
+      "issues": []
+    }
+      "issues": [],
+      "recommendations": []
+    };
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        const analysis = this.analyzeFile(file, content);
+        if (analysis) {
+          seoReport.metrics.totalPages++;
+          this.updateMetrics(seoReport.metrics, analysis);
+          this.checkIssues(seoReport, analysis);
+        }
+      } catch (error) {
+        this.log(`Error analyzing ${file}: ${error.message}`, 'WARN');
+      }
+    }
+    this.generateRecommendations(seoReport);
+    this.saveReport(seoReport);
+    this.log(`✅ SEO optimization completed! Analyzed ${seoReport.metrics.totalPages} pages.`);
+    return seoReport;
+  }
+  analyzeFile(filePath, content) {
+    const relativePath = path.relative(this.projectRoot, filePath);
+    const analysis = {
+      "file": relativePath,
+      "hasTitle": false,
+      "hasMetaDescription": false,
+      "hasH1": false,
+      "hasImages": false,
+      "titleLength": 0,
+      "metaLength": 0,
+      "issues": []
+    };
     // Check for title tag
     const titleMatch = content.match(/<title[^>]*>([^<]*)<\/title>/i);
     if (titleMatch) {
@@ -28,37 +81,30 @@ class SEOOptimizer {
       analysis.titleLength = titleMatch[1].length;
     }
     // Check for meta description
-    // Check for H1 tag
-    analysis.hasH1 = /<h1[^>]*>.*<\/h1>/i.test(content);
-    // Check for images
-    analysis.hasImages = /<img[^>]*>/i.test(content);
-    return analysis;
-  }
-  updateMetrics(metrics, analysis) {
-    if (analysis.hasTitle) {
-      metrics.pagesWithTitle++;
-      metrics.averageTitleLength += analysis.titleLength;
-    }
-    if (analysis.hasMetaDescription) {
-      metrics.pagesWithMetaDescription++;
-      metrics.averageMetaLength += analysis.metaLength;
-    }
-    if (analysis.hasH1) metrics.pagesWithH1++;
-    if (analysis.hasImages) metrics.pagesWithImages++;
-  }
-  checkIssues(seoReport, analysis) {
-    if (!analysis.hasTitle) {
-      seoReport.issues.push(`${analysis.file}: Missing title tag`);
-    } else if (analysis.titleLength < 30) {
-      seoReport.issues.push(`${analysis.file}: Title too short (${analysis.titleLength} chars)`);
-    } else if (analysis.titleLength > 60) {
-      seoReport.issues.push(`${analysis.file}: Title too long (${analysis.titleLength} chars)`);
-    }
-    if (!analysis.hasMetaDescription) {
-      seoReport.issues.push(`${analysis.file}: Missing meta description`);
-    } else if (analysis.metaLength < 120) {
-      seoReport.issues.push(`${analysis.file}: Meta description too short (${analysis.metaLength} chars)`);
-    } else if (analysis.metaLength > 160) {
+      seoReport.issues.push(`${analysis.file}: Meta description too long (${analysis.metaLength} chars)`)
+  if($2) {
+      seoReport.issues.push(`${analysis.file}: Missing H1 tag`)
+  generateRecommendations($2) {
+    const metrics = seoReport.metrics
+  if($2) {
+      seoReport.recommendations.push('Add title tags to more pages ("target": 80%+)')
+  if($2) {
+      seoReport.recommendations.push('Add meta descriptions to more pages ("target": 80%+)')
+  if($2) {
+      seoReport.recommendations.push('Add H1 tags to more pages ("target": 90%+)')
+  if($2) {
+      metrics.averageTitleLength = Math.round(metrics.averageTitleLength / metrics.pagesWithTitle)
+  if($2) {
+      metrics.averageMetaLength = Math.round(metrics.averageMetaLength / metrics.pagesWithMetaDescription)
+  getAllFiles($2) {
+    const files = []
+    try {
+      const items = fs.readdirSync(dir)
+  for($2) {
+        const fullPath = path.join(dir, item)
+        const stat = fs.statSync(fullPath)
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          files.push(...this.getAllFiles(fullPath, extensions))
       seoReport.issues.push(`${analysis.file}: Meta description too long (${analysis.metaLength} chars)`);
     }
     if (!analysis.hasH1) {
@@ -97,10 +143,7 @@ class SEOOptimizer {
         }
       }
     } catch (error) {
-    try {
-      fs.writeFileSync(this.reportFile, JSON.stringify(seoReport, null, 2));
-      this.log(`📄 SEO report saved "to": ${this.reportFile}`);
-    } catch (error) {
+      this.log(`Failed to save SEO "report": ${error.message}`, 'ERROR')
   async run() {
     try {
       return await this.optimizeSEO();
@@ -110,8 +153,23 @@ class SEOOptimizer {
     }
   }
 }
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+// Run if called directly
+if (require.main === module) {
+  const optimizer = new SEOOptimizer();
+  optimizer.run().catch(console.error);
+}
+
+module.exports = SEOOptimizer;
+module.exports = SEOOptimizer;
+module.exports = SEOOptimizer;
+
+const optimizer = new SEOOptimizer();
+optimizer.run().catch(console.error);
+
+module.exports = SEOOptimizer;
+  }
+}
+
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();

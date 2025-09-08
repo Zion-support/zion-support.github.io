@@ -2,6 +2,26 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
+
+
+    log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
+    log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
+    log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
+    log('info', `"Critical": ${qualityReport.summary.critical}`);
+    log('info', `"High": ${qualityReport.summary.high}`);
+    log('info', `"Medium": ${qualityReport.summary.medium}`);
+    log('info', `"Low": ${qualityReport.summary.low}`);
+    log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`);
+    if (qualityReport.issues.length > 0) {
+
+main();
+
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
 console.log('')
 const content = fs.readFileSync(filePath, 'utf8');
@@ -9,11 +29,10 @@ const lines = content.split('\n');
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
-=======
+"severity"""
       "severity"""
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
+
+      "severity"""
       "message"""
       "recommendation"""
       "pattern": /password\s*=\s*['"][^]
@@ -26,14 +45,6 @@ const lines = content.split('\n');
       log('info', 'Quality "Recommendations")""`;
 
 
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
       "severity"
       "message"
       "recommendation"

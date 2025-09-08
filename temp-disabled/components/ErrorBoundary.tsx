@@ -27,15 +27,17 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-          <div className="text-center text-white p-8">
-            <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
-            <p className="text-lg mb-6">We're sorry, but something unexpected happened.</p>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800">
+          <div className="text-center p-8">
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-white text-red-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
             >
-              Reload Page
+              Refresh Page
             </button>
           </div>
         </div>
@@ -45,3 +47,8 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
+
+export default ErrorBoundary;
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e

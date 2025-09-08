@@ -1,19 +1,16 @@
 const fs = require('fs')
 const path = require('path')
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
 
 console.log('✨ Line break fixes completed!)
 
 console.log(✨ Line break fixes completed!')
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 console.log(' Fixing line breaks in className attributes...')
   '/workspace/pages/about.tsx'
   '/workspace/pages/ai-services.tsx'

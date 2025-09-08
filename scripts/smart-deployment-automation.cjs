@@ -2,7 +2,18 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-=======
+
+  console.log('� Application should be running on "http")
+
+  console.log('� Application should be running on "http")
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
+  console.log('� Application should be running on "http")
 console.log( Starting Smart Deployment Automation...')
   "environment
   status"
@@ -41,24 +52,15 @@ console.log( Starting Smart Deployment Automation...')
     applicationStatus"
     const pm2List = execSync(pm2 list --json, { "encoding})
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
   console.log('� Application should be running on http")
 
   console.log('� Application should be running on "http)
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   console.log('� Application should be running on http")
 =======
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-const { execSync } = require('child_process')
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 console.log(' Starting Smart Deployment Automation...')
   "environment"
   "status"

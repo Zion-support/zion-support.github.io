@@ -1,21 +1,41 @@
 #!/usr/bin/env node;
 const fs = require('fs').promises;
-=======
->>>>>>> merged-prs-20250907-203621
+
+
+#!/usr/bin/env node;
+const fs = require('fs').promises;
+const path = require('path');
+
+class ComprehensiveSyntaxErrorFixer {}
+  constructor() {}
+    this.projectRoot = path.join(__dirname, '..');
+
+#!/usr/bin/env node;
+
+const fs = require('fs').promises;
+const path = require('path');
+
+class ComprehensiveSyntaxErrorFixer {}
+  constructor() {}
+    this.projectRoot = path.join(__dirname, '..');
     this.fixedFiles = []};
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+#!/usr/bin/env node;
+
+const fs = require('fs').promises;
+const path = require('path');
+class ComprehensiveSyntaxErrorFixer {}
+  constructor() {}
+    this.projectRoot = path.join(__dirname, '..');
+
+    this.fixedFiles = []};
   async log(message) {}
     console.log(`[${new Date().toISOString()}] ${message})};
   async fixFile(filePath) {}
     try {}
 
       let fixedContent = content;
-
-      // Fix common syntax errors;
-      const fixes = [// Fix malformed imports;]
-
-      ];
 
       let hasChanges = false;
       for (const fix of fixes) {}
@@ -28,20 +48,10 @@ let fixedContent = content
   for($2) {}
         if (fixedContent.includes(fix.from)) {}
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
       return false};
-<<<<<<< HEAD
-  };
-  async run() {}
-    await this.log('Starting comprehensive syntax error fixing...');
-    
+
+
+
     const filesToFix = ['components/layout/ModernLayout.tsx',]
       'pages/partners.tsx',
       'pages/services/index.route.tsx'
@@ -56,6 +66,10 @@ let fixedContent = content
     return { "fixed": fixedCount, "files": this.fixedFiles }};"
 if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
-<<<<<<< HEAD
   fixer.run().catch(console.error)};
 module.exports = ComprehensiveSyntaxErrorFixer;
+
+module.exports = ComprehensiveSyntaxErrorFixer;
+module.exports = ComprehensiveSyntaxErrorFixer;
+
+

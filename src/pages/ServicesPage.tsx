@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Button } from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 
 const ServicesPage: React.FC = () => {
@@ -56,20 +54,14 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Professional IT services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-purple">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-600">
         {/* Header */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center text-white mb-16">
             <h1 className="text-5xl font-bold mb-6">
-              Our <span className="text-zion-cyan">Services</span>
+              Our <span className="text-cyan-400">Services</span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
               Comprehensive IT solutions tailored to your business needs. From AI development to cloud infrastructure, we've got you covered.
             </p>
           </div>
@@ -80,19 +72,22 @@ const ServicesPage: React.FC = () => {
               <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
-                <p className="text-zion-slate-light mb-4">{service.description}</p>
-                <div className="text-zion-cyan font-semibold mb-4">{service.price}</div>
+                <p className="text-blue-200 mb-4">{service.description}</p>
+                <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="text-sm text-zion-slate-light flex items-center">
-                      <span className="text-zion-cyan mr-2">✓</span>
+                    <li key={index} className="text-sm text-blue-200 flex items-center">
+                      <span className="text-cyan-400 mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Button asChild className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
-                  <Link to={`/contact?service=${service.title}`}>Get Quote</Link>
-                </Button>
+                <Link 
+                  to={`/contact?service=${service.title}`}
+                  className="w-full bg-cyan-400 hover:bg-cyan-500 text-blue-600 font-semibold py-2 px-4 rounded-lg text-center block transition-colors"
+                >
+                  Get Quote
+                </Link>
               </div>
             ))}
           </div>
@@ -100,21 +95,26 @@ const ServicesPage: React.FC = () => {
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            <p className="text-blue-200 mb-8 max-w-2xl mx-auto">
               Contact us today to discuss your project requirements and get a personalized quote.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-zion-blue">
-                <Link to="/">Back to Home</Link>
-              </Button>
+              <Link 
+                to="/contact"
+                className="bg-cyan-400 hover:bg-cyan-500 text-blue-600 font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link 
+                to="/"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                Back to Home
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </>
   );
 };
 

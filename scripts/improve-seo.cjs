@@ -3,12 +3,18 @@ const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
   try {}
+    const pagesDir = path.join(process.cwd(), 'pages;';);
+    const componentsDir = path.join(process.cwd(), 'components;';);
+    
+  )};
+      ";
+      // Generate sitemap;
+  )};"
+      ";"
+      // Generate sitemap;"
       const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=http": //www.sitemaps.org/schemas/sitemap/0.9">"
 </urlset>
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   <url>
 </url>
     <loc>https://ziontechgroup.com</loc>
@@ -26,6 +32,13 @@ function improveSEO() {}
     <priority>0.7</priority>
   </url>`
 </urlset;>;`;`
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
+      // Generate robots.txt;
+      const robotsContent = "User-"agent": *
+Allow: /
+Sitemap: https://ziontechgroup.com/sitemap.xml;";
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+
       
       fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
       
@@ -37,6 +50,9 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
       
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
       
+      
+      "
+
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
 

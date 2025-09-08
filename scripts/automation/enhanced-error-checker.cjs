@@ -1,8 +1,14 @@
+
+=======
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
+=======
+#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");"
 class EnhancedErrorChecker {}
   constructor() {}
     this.projectRoot = process.cwd();"
@@ -17,6 +23,7 @@ class EnhancedErrorChecker {}
     })};"
   log(message, level = "INFO") {}"
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${level}] ${message}`;`
     console.log(logMessage);
     try {}"
@@ -48,13 +55,13 @@ const result = execSync("npx tsc --noEmit --pretty", {});
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)}
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
 =======
     const logMessage = `[${timestamp}] [${level}] ${message}`;`
 =======
     const logMessage = `[${timestamp}] [${level}] ${message};`
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
     console.log(logMessage);
     try {}"
       fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {}
@@ -75,4 +82,11 @@ if (require.main === module) {}
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
+
+=======
 module.exports = EnhancedErrorChecker;
+=======
+module.exports = EnhancedErrorChecker;
+=======
+
+

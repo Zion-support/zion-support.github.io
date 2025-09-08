@@ -21,11 +21,15 @@ console.log(' Starting Master Automation Runner...')
     "script"
     execSync(automation.script, { "stdio"})
     recommendations.push('"CRITICAL")
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
   console.log(' Master Automation "Summary")
-=======
     recommendations.push('"CRITICAL")
   console.log(' Master Automation "Summary")
+
+  console.log(' Master Automation "Summary")
+  console.log(' Master Automation "Summary")
+
+  console.log(' Master Automation "Summary")
+

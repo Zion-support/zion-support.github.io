@@ -1,19 +1,16 @@
 #!/usr/bin/env node;
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-#!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
+#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class TypeChecker {}
   constructor() {}
     this.isRunning = false;
+
     this.interval = 120000; // 2 minutes;
   };
   async start() {}
@@ -27,6 +24,18 @@ class TypeChecker {}
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
     
+    // Initial type check;
+    await this.runTypeCheck();
+    // Initial type check;
+    await this.runTypeCheck();
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runTypeCheck()}, this.interval);
+
+    
+    
+
+
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -37,9 +46,6 @@ class TypeChecker {}
         "cwd": process.cwd();"
       };);
 
-      let output = ;';';
-      let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
@@ -48,32 +54,62 @@ class TypeChecker {}
         errorOutput += data.toString()}
 });
 
+
+
       child.on('close', (code) => {}
+
+
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       child.on('close, (code) => {}
-=======
 
 
+      child.on('close', (code) => {}
+        if ( {})
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          console.log('Type check passed ✓')) {}
+     {}
+          console.log('Type check passed ✓')}} else {}
+          console.log('Type check failed ✗');
+          
+          console.log('Type check passed ✓)}} else {}
+          console.log(Type check failed ✗');
+
+          console.log('Type check passed ✓')}} else {}
+          console.log('Type check failed ✗');
+          
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
+          
+          // Log type errors for manual review;
+          this.logTypeErrors(output + errorOutput)};
+      })} catch (error) {}
+      console.error('Error running type "check": ', error.message)};
+  };
+
   logTypeErrors(errorOutput) {}
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => )
-      console.log('TypeScript errors "found": ')) {}
-      console.log('TypeScript errors found:')};
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      typeErrors.forEach(error => {})
-        console.log(`  ${error}`)})};
-  stop() {}
+    console.log('Stopping Type Checker...');
+    this.isRunning = false;
+    
     if ( {})
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Type Checker stopped')) {}
-<<<<<<< HEAD
+    console.log('Type Checker stopped')}};
+    console.log('Stopping Type Checker...);
+
+    if ( {})
+      clearInterval(this.intervalId)}
+    console.log(Type Checker stopped')) {}
+    console.log('Type Checker stopped)}}
+    console.log('Stopping Type Checker...');
+    
+    this.isRunning = false;
+    
+    this.isRunning = false;
+    if ( {})
+      clearInterval(this.intervalId)};
+    console.log('Type Checker stopped')) {}
     console.log('Type Checker stopped')}}
 // Start the checker if run directly
   const checker = new TypeChecker) {}
@@ -89,6 +125,14 @@ class TypeChecker {}
     checker.stop()
     process.exit(0)}
 });
+  checker.start().catch(console.error)};
+
   
   checker.start().catch(console.error)};
 module.exports = TypeChecker;
+module.exports = TypeChecker;
+  // Handle graceful shutdown;
+
+  checker.start().catch(console.error)};
+
+

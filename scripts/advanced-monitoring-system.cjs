@@ -1,12 +1,19 @@
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+>>>>>>> merged-prs-20250907-203621
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-=======
->>>>>>> merged-prs-20250907-203621
 console.log(' Starting Advanced Monitoring System...')
     "status"
         "type"

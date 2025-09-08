@@ -13,6 +13,7 @@ find app/services -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \; | while read 
     /^<<<<<<< HEAD/ { in_head = 1; next }
     /^=======/ { in_head = 0; in_other = 1; next }
     /^    in_head || (!in_head && !in_other) { print }
+    /^    in_head || (!in_head && !in_other) { print }
     ' "$file" > "$temp_file"
     
     # Replace the original file

@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
-=======
+
 #!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -18,7 +17,6 @@ const { execSync } = require('child_process')
             .replace(/;\s*}/g, '}')
             .replace(/,\s+/g, ',')
             fs.writeFileSync(cssFile, optimizedContent, 'utf8')
->>>>>>> origin/chore/fix-lint-and-merge
           // Skip files that can'
     this.log('� Optimizing CSS...)
           const content = fs.readFileSync(cssFile, utf8')
@@ -29,16 +27,22 @@ const { execSync } = require('child_process')
             fs.writeFileSync(cssFile, optimizedContent, 'utf8)
           // Skip files that can
     this.log('⚡ Optimizing JavaScript...')
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          const content = fs.readFileSync(jsFile, 'utf8')
             .replace(/\/\*[\s\S]*?\*\//g, '')
             .replace(/\s+/g, ' ')
             .replace(/;\s*}/g, '}')
             .replace(/,\s+/g, ',')
             fs.writeFileSync(cssFile, optimizedContent, 'utf8')
           // Skip files that can'
-<<<<<<< HEAD
+    this.log('⚡ Optimizing JavaScript...')
+const content = fs.readFileSync(jsFile, 'utf8');
+            .replace(/\/\*[\s\S]*?\*\//g, '')
+            .replace(/\/\/.*$/gm, '')
+            .replace(/\s+/g, ' ')
+            .replace(/;\s*}/g, '}')
+            .replace(/,\s+/g, ',')
+            fs.writeFileSync(jsFile, optimizedContent, 'utf8')
 
-=======
     this.log('� Optimizing HTML...)
           const content = fs.readFileSync(htmlFile, utf8')
             .replace(/<!--[\s\S]*?-->/g, ')
@@ -85,14 +89,16 @@ const dep = match.match(/require\s*\(\s*['""]([^'"")];
       console.error('\n� Resource Optimizer "failed")
 
 
-      console.error('\n� Resource Optimizer failed")
-
-      console.error('\n� Resource Optimizer "failed)
-=======
 =======
       console.error('\n� Resource Optimizer failed")
 
 =======
+=======
+
+
+
+      console.error('\n� Resource Optimizer failed")
+
     this.log('� Optimizing HTML...')
           const content = fs.readFileSync(htmlFile, 'utf8')
             .replace(/<!--[\s\S]*?-->/g, '')
