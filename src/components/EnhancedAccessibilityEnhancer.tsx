@@ -1,17 +1,60 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-    Accessibility,
-    AlertTriangle,
-    CheckCircle,
-    Contrast,
-    Eye,
-    EyeOff,
-    Info,
-    X,
-    ZoomIn,
-    ZoomOut
-} from 'lucide-react';
-import { useCallback, useEffect, useState } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Eye, 
+  EyeOff, 
+  Volume2, 
+  VolumeX, 
+  Keyboard, 
+  MousePointer, 
+  Sun, 
+  Moon, 
+  Contrast, 
+  Type, 
+  Move, 
+  Settings, 
+  X, 
+  CheckCircle, 
+  AlertTriangle, 
+  Info,
+  Accessibility,
+  Braille,
+  Headphones,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Zap,
+  Shield,
+  Target,
+  Award,
+  BarChart3,
+  Palette,
+  RotateCcw,
+  Save} from 'lucide-react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  focusIndicators: boolean;
+  colorBlindSupport: boolean;
+  dyslexiaFriendly: boolean;
+  autoRead: boolean;
+  voiceControl: boolean;
+  gestureControl: boolean;
+  fontSize: number;
+  lineHeight: number;
+  letterSpacing: number;
+  colorScheme: 'light' | 'dark' | 'high-contrast' | 'sepia' | 'custom';
+  customColors: {
+    background: string;
+    text: string;
+    primary: string;
+    secondary: string;
+  };
+}
 
 interface AccessibilityFeature {
   id: string;

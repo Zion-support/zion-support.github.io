@@ -25,10 +25,7 @@ import {
   FileText,
   ShoppingCart,
   Home,
-  DollarSign,
-  Heart
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+  DollarSign} from 'lucide-react';
 
 const AISalesCopilot = () => {
   const features = [

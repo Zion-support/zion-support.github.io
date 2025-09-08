@@ -1,34 +1,121 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
-const ComprehensiveServicesLanding2025 = () => {
-    const [selectedIndustry, setSelectedIndustry] = useState('all');
-    const industries = [
-        { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },
-        { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },
-        { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },
-        { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },
-        { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },
-        { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },
-        { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },
-        { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
-    ];
-    const getServicesByIndustry = (industry) => {
-        if (industry === 'all')
-            return allEnhancedServices;
-        const industryMap = {
-            'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
-            'healthcare': ['Healthcare & AI'],
-            'manufacturing': ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
-            'energy': ['Energy & Sustainability'],
-            'logistics': ['Logistics & Transportation'],
-            'legal': ['Legal Tech & AI'],
-            'marketing': ['Marketing & AI']
-        };
-        return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category));
-    };
-    const filteredServices = getServicesByIndustry(selectedIndustry);
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+import { 
+  Search, 
+  Filter, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Globe, 
+  Cpu, 
+  Lock,
+  ArrowRight,
+  CheckCircle,
+  DollarSign,
+  Clock,
+  Users,
+  Target,
+  Award,
+  Sparkles,
+  Rocket,
+  BarChart3,
+  MessageSquare,
+  Mail,
+  Database,
+  Network,
+  Cloud,
+  Smartphone,
+  Palette,
+  Leaf,
+  Code,
+  Wallet,
+  Box,
+  Phone,
+  Mail as MailIcon,
+  MapPin,
+  Globe as GlobeIcon} from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
+
+const ComprehensiveServicesLanding2025: React.FC = () => {
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI & Automation':
+        return <Brain className="w-8 h-8" />;
+      case 'AI & Security':
+        return <Shield className="w-8 h-8" />;
+      case 'AI & Marketing':
+        return <BarChart3 className="w-8 h-8" />;
+      case 'AI & Sales':
+        return <TrendingUp className="w-8 h-8" />;
+      case 'AI & Customer Experience':
+        return <MessageSquare className="w-8 h-8" />;
+      case 'AI & Analytics':
+        return <Database className="w-8 h-8" />;
+      case 'Quantum Computing':
+        return <Box className="w-8 h-8" />;
+      case 'IoT & Edge Computing':
+        return <Network className="w-8 h-8" />;
+      case 'Blockchain & Web3':
+        return <Wallet className="w-8 h-8" />;
+      case 'Sustainability & Technology':
+        return <Leaf className="w-8 h-8" />;
+      default:
+        return <Sparkles className="w-8 h-8" />;
+    }
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI & Automation':
+        return 'from-purple-500 to-pink-500';
+      case 'AI & Security':
+        return 'from-red-500 to-orange-500';
+      case 'AI & Marketing':
+        return 'from-blue-500 to-cyan-500';
+      case 'AI & Sales':
+        return 'from-green-500 to-emerald-500';
+      case 'AI & Customer Experience':
+        return 'from-indigo-500 to-purple-500';
+      case 'AI & Analytics':
+        return 'from-cyan-500 to-blue-500';
+      case 'Quantum Computing':
+        return 'from-violet-500 to-purple-500';
+      case 'IoT & Edge Computing':
+        return 'from-orange-500 to-red-500';
+      case 'Blockchain & Web3':
+        return 'from-yellow-500 to-orange-500';
+      case 'Sustainability & Technology':
+        return 'from-green-500 to-teal-500';
+      default:
+        return 'from-gray-500 to-slate-500';
+    }
+  };
+
+  const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
+  const servicesByCategory = categories.map(category => ({
+    category,
+    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),
+    icon: getCategoryIcon(category),
+    color: getCategoryColor(category)
+  }));
+
+  const totalServices = INNOVATIVE_SERVICES_2025.length;
+  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
+  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {
+    const roi = parseInt(service.roi.replace('%', ''));
+    return sum + roi;
+  }, 0) / totalServices;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Comprehensive Services Landing 2025 - Zion Tech Group"
+        description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
+      />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

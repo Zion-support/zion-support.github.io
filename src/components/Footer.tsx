@@ -56,12 +56,17 @@ import {
   Satellite,
   Activity,
   MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette
-} from 'lucide-react';
+  Server,
+  ShoppingCart,
+  Smartphone,
+  Database,
+  Clock,
+  Code,
+  BookOpen,
+  Truck,
+  ExternalLink,
+  ChevronDown} from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {
   name: string;

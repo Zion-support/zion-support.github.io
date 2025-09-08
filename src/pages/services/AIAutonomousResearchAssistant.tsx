@@ -18,9 +18,7 @@ import {
   Lightbulb,
   Target,
   Award,
-  Rocket,
-  Sparkles
-} from 'lucide-react';
+  Rocket} from 'lucide-react';
 
 const AIAutonomousResearchAssistant = () => {
   const features = [

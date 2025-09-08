@@ -1,7 +1,175 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cookie, Shield, Settings, Eye, Database, Globe, Mail, Phone } from 'lucide-react';
+import { 
+  Shield, 
+  Cookie, 
+  Settings, 
+  Eye, 
+  EyeOff, 
+  Check, 
+  X, 
+  Info, 
+  AlertTriangle,
+  Lock,
+  Database,
+  Globe,
+  User,
+  Bell,
+  BarChart3,
+  Target,
+  Zap,
+  Heart,
+  Star,
+  Award,
+  TrendingUp,
+  Lightbulb,
+  Rocket,
+  Crown,
+  Sparkles,
+  ArrowRight,
+  ChevronDown} from 'lucide-react';
+
+const Cookies = () => {
+  const [expandedSections, setExpandedSections] = useState({
+    essential: true,
+    functional: false,
+    analytics: false,
+    marketing: false,
+    preferences: false
+  });
+
+  const toggleSection = (section) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
+
+  const cookieCategories = [
+    {
+      id: 'essential',
+      name: 'Essential Cookies',
+      description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500',
+      examples: [
+        'Authentication cookies',
+        'Security cookies',
+        'Session management',
+        'Load balancing'
+      ],
+      alwaysActive: true
+    },
+    {
+      id: 'functional',
+      name: 'Functional Cookies',
+      description: 'These cookies enable enhanced functionality and personalization.',
+      icon: Settings,
+      color: 'from-blue-500 to-cyan-500',
+      examples: [
+        'Language preferences',
+        'Region settings',
+        'User interface customization',
+        'Form data retention'
+      ],
+      alwaysActive: false
+    },
+    {
+      id: 'analytics',
+      name: 'Analytics Cookies',
+      description: 'These cookies help us understand how visitors interact with our website.',
+      icon: BarChart3,
+      color: 'from-purple-500 to-pink-500',
+      examples: [
+        'Page views and navigation',
+        'User behavior patterns',
+        'Performance metrics',
+        'Error tracking'
+      ],
+      alwaysActive: false
+    },
+    {
+      id: 'marketing',
+      name: 'Marketing Cookies',
+      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.',
+      icon: Target,
+      color: 'from-orange-500 to-red-500',
+      examples: [
+        'Ad personalization',
+        'Campaign effectiveness',
+        'Social media integration',
+        'Retargeting'
+      ],
+      alwaysActive: false
+    },
+    {
+      id: 'preferences',
+      name: 'Preference Cookies',
+      description: 'These cookies remember your choices and provide a more personalized experience.',
+      icon: Heart,
+      color: 'from-indigo-500 to-purple-500',
+      examples: [
+        'Content preferences',
+        'Notification settings',
+        'Accessibility options',
+        'Theme selection'
+      ],
+      alwaysActive: false
+    }
+  ];
+
+  const cookieTable = [
+    {
+      name: 'session_id',
+      purpose: 'Maintains your session while browsing the website',
+      duration: 'Session',
+      category: 'Essential',
+      provider: 'Zion Tech Group'
+    },
+    {
+      name: 'auth_token',
+      purpose: 'Stores your authentication status',
+      duration: '24 hours',
+      category: 'Essential',
+      provider: 'Zion Tech Group'
+    },
+    {
+      name: 'language',
+      purpose: 'Remembers your preferred language',
+      duration: '1 year',
+      category: 'Functional',
+      provider: 'Zion Tech Group'
+    },
+    {
+      name: 'theme',
+      purpose: 'Stores your theme preference (light/dark)',
+      duration: '1 year',
+      category: 'Functional',
+      provider: 'Zion Tech Group'
+    },
+    {
+      name: '_ga',
+      purpose: 'Google Analytics tracking for website usage',
+      duration: '2 years',
+      category: 'Analytics',
+      provider: 'Google'
+    },
+    {
+      name: '_fbp',
+      purpose: 'Facebook pixel for advertising optimization',
+      duration: '3 months',
+      category: 'Marketing',
+      provider: 'Facebook'
+    },
+    {
+      name: 'preferences',
+      purpose: 'Stores your website preferences and settings',
+      duration: '1 year',
+      category: 'Preferences',
+      provider: 'Zion Tech Group'
+    }
+  ];
 
 export default function Cookies() {}
   return (

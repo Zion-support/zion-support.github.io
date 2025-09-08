@@ -1,167 +1,56 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react';
-const mockSystemMetrics = [
-    {
-        id: '1',
-        name: 'CPU Usage',
-        value: 78.5,
-        unit: '%',
-        threshold: 85,
-        status: 'warning',
-        trend: 'up',
-        change: 5.2,
-        category: 'Processor',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '2',
-        name: 'Memory Usage',
-        value: 65.3,
-        unit: '%',
-        threshold: 80,
-        status: 'normal',
-        trend: 'stable',
-        change: 0.8,
-        category: 'Memory',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '3',
-        name: 'Disk I/O',
-        value: 1250,
-        unit: 'MB/s',
-        threshold: 1500,
-        status: 'normal',
-        trend: 'down',
-        change: -2.1,
-        category: 'Storage',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '4',
-        name: 'Network Latency',
-        value: 45,
-        unit: 'ms',
-        threshold: 50,
-        status: 'normal',
-        trend: 'stable',
-        change: 0.5,
-        category: 'Network',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '5',
-        name: 'Database Connections',
-        value: 89,
-        unit: 'connections',
-        threshold: 100,
-        status: 'warning',
-        trend: 'up',
-        change: 8.7,
-        category: 'Database',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '6',
-        name: 'Response Time',
-        value: 180,
-        unit: 'ms',
-        threshold: 200,
-        status: 'normal',
-        trend: 'down',
-        change: -3.2,
-        category: 'Performance',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
-];
-const mockPerformanceAlerts = [
-    {
-        id: '1',
-        type: 'performance',
-        severity: 'medium',
-        title: 'High CPU Usage Detected',
-        description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        affected: ['Web Server 1', 'Application Server 2'],
-        recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'],
-        status: 'active'
-    },
-    {
-        id: '2',
-        type: 'scalability',
-        severity: 'high',
-        title: 'Database Connection Pool Near Capacity',
-        description: 'Database connection pool is at 89% capacity, approaching the maximum limit.',
-        timestamp: '2024-01-15T09:45:00.000Z',
-        affected: ['Database Cluster', 'Application Servers'],
-        recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
-        status: 'acknowledged'
-    }
-];
-const mockScalabilityMetrics = [
-    {
-        id: '1',
-        name: 'User Sessions',
-        current: 15420,
-        capacity: 20000,
-        utilization: 77.1,
-        growth: 12.3,
-        prediction: 25000,
-        category: 'User Load',
-        unit: 'sessions'
-    },
-    {
-        id: '2',
-        name: 'API Requests',
-        current: 1250000,
-        capacity: 2000000,
-        utilization: 62.5,
-        growth: 18.7,
-        prediction: 3200000,
-        category: 'API Load',
-        unit: 'requests/hour'
-    },
-    {
-        id: '3',
-        name: 'Data Storage',
-        current: 2.8,
-        capacity: 5.0,
-        utilization: 56.0,
-        growth: 8.5,
-        prediction: 4.2,
-        category: 'Storage',
-        unit: 'TB'
-    }
-];
-export function AdvancedPerformanceMonitor() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [timeRange, setTimeRange] = useState('1h');
-    const [autoRefresh, setAutoRefresh] = useState(true);
-    const [showPredictions, setShowPredictions] = useState(true);
-    const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics);
-    const [performanceAlerts, setPerformanceAlerts] = useState(mockPerformanceAlerts);
-    const [scalabilityMetrics, setScalabilityMetrics] = useState(mockScalabilityMetrics);
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
-    const categories = ['all', 'Processor', 'Memory', 'Storage', 'Network', 'Database', 'Performance'];
-    const timeRanges = [
-        { value: '15m', label: '15 Minutes' },
-        { value: '1h', label: '1 Hour' },
-        { value: '6h', label: '6 Hours' },
-        { value: '24h', label: '24 Hours' }
-    ];
-    const filteredMetrics = selectedCategory === 'all'
-        ? systemMetrics
-        : systemMetrics.filter(metric => metric.category === selectedCategory);
-    const refreshData = async () => {
-        setIsRefreshing(true);
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false);
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle} from 'lucide-react';
+
+interface PerformanceMetrics {
+  fps: number;
+  memory: number;
+  loadTime: number;
+  networkLatency: number;
+  cpuUsage: number;
+  timestamp: number;
+}
+
+interface PerformanceAlert {
+  id: string;
+  type: 'warning' | 'error' | 'info' | 'success';
+  message: string;
+  metric: string;
+  value: number;
+  timestamp: number;
+}
+
+export const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 0,
+    memory: 0,
+    loadTime: 0,
+    networkLatency: 0,
+    cpuUsage: 0,
+    timestamp: Date.now()
+  });
+
+  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // FPS monitoring
+  const measureFPS = useCallback(() => {
+    let frameCount = 0;
+    let lastTime = performance.now();
+
+    const countFrames = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      
+      requestAnimationFrame(countFrames);
     };
     useEffect(() => {
         if (autoRefresh) {

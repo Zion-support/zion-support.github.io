@@ -11,9 +11,7 @@ import {
   TrendingUp, 
   AlertTriangle,
   CheckCircle,
-  Clock,
-  Cpu
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 
 interface PerformanceOptimizerProps {
   enabled: boolean;

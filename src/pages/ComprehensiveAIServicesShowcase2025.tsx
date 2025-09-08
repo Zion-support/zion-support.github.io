@@ -17,9 +17,7 @@ import {
   FileText,
   Heart,
   DollarSign,
-  Truck,
-  Target
-} from 'lucide-react';
+  Truck} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ComprehensiveAIServicesShowcase2025() {

@@ -212,22 +212,20 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     predictiveAnalytics: true
   },
   {
-    id: 4,
-    name: "Retail IoT Analytics",
-    category: "Retail IoT",
-    description: "Advanced retail IoT platform with customer behavior analysis, inventory management, and personalized shopping experiences",
-    pricing: "Professional",
-    price: 800,
-    pricingModel: "monthly",
+    id: 'connected-device-management',
+    title: 'Connected Smartphone Management Platform',
+    description: 'Comprehensive management platform for IoT devices and sensors',
+    longDescription: 'Manage thousands of IoT devices with our comprehensive platform. Features device provisioning, monitoring, updates, and security management.',
+    icon: 'Smartphone',
+    color: 'from-purple-500 to-pink-600',
+    category: 'connected-devices',
     features: [
-      "Customer behavior tracking",
-      "Inventory optimization",
-      "Smart shelves",
-      "Queue management",
-      "Personalized marketing",
-      "Loss prevention",
-      "Energy management",
-      "Performance analytics"
+      'Smartphone provisioning',
+      'Remote monitoring',
+      'Over-the-air updates',
+      'Security management',
+      'Performance analytics',
+      'Smartphone lifecycle management'
     ],
     benefits: [
       "Increased sales",
@@ -237,16 +235,20 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       "Data insights",
       "Competitive advantage"
     ],
-    targetAudience: ["Retail chains", "Department stores", "Supermarkets", "Shopping malls", "E-commerce companies"],
-    tags: ["Retail IoT", "Customer Analytics", "Inventory Management", "Smart Retail", "Marketing", "Analytics"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/retail-iot-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    useCases: [
+      'IoT deployments',
+      'Smartphone manufacturers',
+      'Service providers',
+      'Enterprise IoT'
+    ],
+    pricing: {
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'
     },
-    marketPrice: "$800-4,000/month",
-    competitors: ["Sensormatic", "RetailNext", "ShopperTrak", "Brickstream"],
+    estimatedTime: '6-12 weeks',
+    technologies: ['Smartphone Management', 'IoT Protocols', 'Cloud Computing', 'Security', 'Analytics', 'APIs'],
     iotScore: 95,
     useCases: ["Customer Analytics", "Inventory Management", "Loss Prevention", "Marketing Optimization", "Store Performance", "Customer Experience"],
     compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"],
@@ -357,27 +359,100 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       website: "https://ziontechgroup.com/energy-iot-grid",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$1,500-8,000/month",
-    competitors: ["Schneider Electric", "Siemens Energy", "ABB", "GE Grid Solutions"],
-    iotScore: 96,
-    useCases: ["Smart Grid Management", "Renewable Integration", "Demand Response", "Grid Monitoring", "Energy Storage", "Customer Engagement"],
-    compliance: ["NERC", "FERC", "ISO standards", "Cybersecurity standards"],
-    apiAccess: true,
-    whiteLabel: true,
-    customBranding: true,
-    prioritySupport: true,
-    trainingIncluded: true,
-    dataRetention: "20 years",
-    uptime: "99.99%",
-    securityFeatures: ["Grid security", "Cybersecurity", "Access controls", "Real-time monitoring"],
-    integrationTime: "6-12 weeks",
-    scalability: "Grid-wide deployment",
-    realTimeProcessing: true,
-    multilingualSupport: true,
-    industrySpecific: true,
-    edgeNative: true,
-    aiIntegration: true,
-    predictiveAnalytics: true
+    estimatedTime: '8-16 weeks',
+    technologies: ['Edge Computing', 'Kubernetes', 'Docker', 'Load Balancers', 'Storage', 'Networking'],
+    iotScore: 95,
+    marketPrice: '$2,499-$17,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Multi-node deployment',
+    deployment: 'Edge node installation with management'
+  },
+  {
+    id: 'iot-security-platform',
+    title: 'IoT Security & Privacy Platform',
+    description: 'Comprehensive security solutions for IoT devices and networks',
+    longDescription: 'Protect your IoT ecosystem with our comprehensive security platform. Features device authentication, network security, data encryption, and threat detection.',
+    icon: 'Shield',
+    color: 'from-red-500 to-orange-600',
+    category: 'iot-security',
+    features: [
+      'Smartphone authentication',
+      'Network security',
+      'Data encryption',
+      'Threat detection',
+      'Access control',
+      'Security monitoring'
+    ],
+    benefits: [
+      'Enhanced security',
+      'Data protection',
+      'Threat prevention',
+      'Compliance support'
+    ],
+    useCases: [
+      'IoT deployments',
+      'Smart cities',
+      'Industrial IoT',
+      'Connected devices'
+    ],
+    pricing: {
+      starter: '$2,999/month',
+      professional: '$7,999/month',
+      enterprise: '$19,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '6-12 weeks',
+    technologies: ['IoT Security', 'Encryption', 'Authentication', 'Network Security', 'Threat Detection', 'Compliance'],
+    iotScore: 98,
+    marketPrice: '$2,999-$19,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Security across all devices',
+    deployment: 'Security layer integration'
+  },
+  {
+    id: 'iot-data-analytics',
+    title: 'IoT Data Analytics Platform',
+    description: 'Advanced analytics and insights for IoT data streams',
+    longDescription: 'Unlock the value of your IoT data with our advanced analytics platform. Features real-time processing, predictive analytics, data visualization, and automated insights.',
+    icon: 'BarChart3',
+    color: 'from-indigo-500 to-purple-600',
+    category: 'data-analytics',
+    features: [
+      'Real-time processing',
+      'Predictive analytics',
+      'Data visualization',
+      'Automated insights',
+      'Data integration',
+      'Performance monitoring'
+    ],
+    benefits: [
+      'Data-driven insights',
+      'Predictive capabilities',
+      'Automated decision making',
+      'Improved efficiency'
+    ],
+    useCases: [
+      'IoT deployments',
+      'Smart cities',
+      'Industrial monitoring',
+      'Environmental tracking'
+    ],
+    pricing: {
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '4-8 weeks',
+    technologies: ['Big Data', 'AI/ML', 'Real-time Processing', 'Data Visualization', 'Analytics', 'Cloud Computing'],
+    iotScore: 95,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Unlimited data processing',
+    deployment: 'Cloud-based analytics platform'
   }
 ];
 

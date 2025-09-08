@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift } from 'lucide-react';
+import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield} from 'lucide-react';
 
 interface NewsletterFormData {
   email: string;

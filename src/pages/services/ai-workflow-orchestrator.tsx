@@ -20,9 +20,7 @@ import {
   Database,
   Network,
   Cpu,
-  Server,
-  ShoppingCart
-} from 'lucide-react';
+  Server} from 'lucide-react';
 
 const AIWorkflowOrchestrator = () => {
   const features = [

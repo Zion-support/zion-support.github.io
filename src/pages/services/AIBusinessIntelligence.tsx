@@ -1,130 +1,97 @@
 import { motion } from 'framer-motion';
-import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock } from 'lucide-react';
-const AIBusinessIntelligence = () => {
-    const features = [
-        {
-            icon: Brain,
-            title: "AI-Powered Analytics",
-            description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data",
-            benefits: ["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
-        },
-        {
-            icon: BarChart3,
-            title: "Real-time Dashboards",
-            description: "Interactive, customizable dashboards that provide instant visibility into key business metrics",
-            benefits: ["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
-        },
-        {
-            icon: TrendingUp,
-            title: "Predictive Analytics",
-            description: "Forecast future trends and outcomes using historical data and advanced statistical models",
-            benefits: ["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
-        },
-        {
-            icon: Target,
-            title: "Performance Tracking",
-            description: "Monitor and measure business performance against goals and benchmarks in real-time",
-            benefits: ["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
-        }
-    ];
-    const solutions = [
-        {
-            category: "Sales & Marketing",
-            icon: Users,
-            solutions: [
-                "Customer behavior analysis",
-                "Lead scoring and qualification",
-                "Campaign performance optimization",
-                "Market trend analysis",
-                "Customer lifetime value prediction"
-            ]
-        },
-        {
-            category: "Operations & Supply Chain",
-            icon: Activity,
-            solutions: [
-                "Inventory optimization",
-                "Supply chain risk assessment",
-                "Operational efficiency analysis",
-                "Quality control monitoring",
-                "Resource allocation optimization"
-            ]
-        },
-        {
-            category: "Financial Analytics",
-            icon: TrendingUp,
-            solutions: [
-                "Revenue forecasting",
-                "Cost analysis and optimization",
-                "Profitability analysis",
-                "Cash flow prediction",
-                "Investment decision support"
-            ]
-        },
-        {
-            category: "Human Resources",
-            icon: Users,
-            solutions: [
-                "Employee performance analytics",
-                "Talent acquisition insights",
-                "Workforce planning",
-                "Employee retention prediction",
-                "Training effectiveness analysis"
-            ]
-        }
-    ];
-    const technologies = [
-        {
-            name: "Machine Learning",
-            description: "Advanced ML algorithms for pattern recognition and prediction",
-            icon: Brain
-        },
-        {
-            name: "Big Data Processing",
-            description: "Scalable data processing for large datasets",
-            icon: Database
-        },
-        {
-            name: "Real-time Analytics",
-            description: "Instant data processing and insights delivery",
-            icon: Zap
-        },
-        {
-            name: "Cloud Infrastructure",
-            description: "Scalable cloud-based BI platform",
-            icon: Globe
-        },
-        {
-            name: "Data Security",
-            description: "Enterprise-grade security and compliance",
-            icon: Shield
-        },
-        {
-            name: "24/7 Monitoring",
-            description: "Continuous monitoring and alerting",
-            icon: Clock
-        }
-    ];
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+import { SEO } from '../../components/SEO';
+import { 
+  Brain, 
+  BarChart3, 
+  TrendingUp, 
+  Users, 
+  Target, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Globe,
+  Cpu,
+  Database,
+  PieChart,
+  LineChart} from 'lucide-react';
+
+export default function AIBusinessIntelligence() {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms that automatically identify patterns and insights in your business data."
+    },
+    {
+      icon: BarChart3,
+      title: "Real-Time Dashboards",
+      description: "Live monitoring and visualization of key performance indicators with customizable reporting."
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast future trends and outcomes using historical data and AI models."
+    },
+    {
+      icon: Users,
+      title: "User Behavior Analysis",
+      description: "Deep insights into customer interactions and engagement patterns."
+    },
+    {
+      icon: Target,
+      title: "Goal Tracking",
+      description: "Monitor progress towards business objectives with automated alerts and recommendations."
+    },
+    {
+      icon: Zap,
+      title: "Automated Insights",
+      description: "AI-generated recommendations and actionable insights delivered in real-time."
+    }
+  ];
+
+  const benefits = [
+    "Increase revenue by 15-25% through data-driven decision making",
+    "Reduce operational costs by 20-30% with optimized processes",
+    "Improve customer satisfaction by 35% with personalized insights",
+    "Accelerate time-to-market by 40% with predictive analytics",
+    "Enhance team productivity by 25% with automated reporting",
+    "Reduce risk by 30% with early warning systems"
+  ];
+
+  const useCases = [
+    {
+      industry: "E-commerce",
+      description: "Customer segmentation, inventory optimization, and sales forecasting"
+    },
+    {
+      industry: "Healthcare",
+      description: "Patient outcome prediction, resource allocation, and treatment optimization"
+    },
+    {
+      industry: "Finance",
+      description: "Risk assessment, fraud detection, and investment portfolio optimization"
+    },
+    {
+      industry: "Manufacturing",
+      description: "Predictive maintenance, quality control, and supply chain optimization"
+    },
+    {
+      industry: "Marketing",
+      description: "Campaign performance analysis, audience targeting, and ROI optimization"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AI Business Intelligence - Zion Tech Group"
+        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
+      />
+      
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>

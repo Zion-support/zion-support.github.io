@@ -29,14 +29,8 @@ import {
   Key,
   Fingerprint,
   Monitor,
-  Smartphone,
-  Tablet,
-  Laptop,
-  ShieldCheck,
-  Gauge,
-  TrendingUp,
-  BarChart3
-} from 'lucide-react';
+  Clock,
+  AlertTriangle} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Compliance() {

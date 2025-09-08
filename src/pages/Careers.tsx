@@ -1,9 +1,24 @@
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { MapPin, Clock, DollarSign, Users, Zap, Heart, Globe, Shield } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Briefcase, 
+  MapPin, 
+  Clock, 
+  DollarSign, 
+  Users, 
+  Heart, 
+  Zap, 
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Award} from 'lucide-react';
 
 export default function Careers() {
   const openPositions = [

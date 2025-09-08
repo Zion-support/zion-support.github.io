@@ -22,9 +22,7 @@ import {
   Bell,
   Phone,
   Mail,
-  MapPin,
-  Server
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIIncidentPostmortems() {

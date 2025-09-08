@@ -27,9 +27,7 @@ import {
   Smartphone,
   Eye,
   ShoppingCart,
-  Heart,
-  Leaf
-} from 'lucide-react';
+  Heart} from 'lucide-react';
 
 const AIAutonomousSupplyChain = () => {
   const features = [

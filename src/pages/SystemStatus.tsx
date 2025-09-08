@@ -1,24 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { 
-  CheckCircle, 
-  AlertTriangle, 
-  XCircle, 
-  Clock, 
-  Activity, 
-  Server, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Brain, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  RefreshCw, 
-  ExternalLink, 
-  TrendingUp 
-} from 'lucide-react';
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3} from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 interface ServiceStatus {
   id: string;

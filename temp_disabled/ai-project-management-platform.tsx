@@ -19,9 +19,7 @@ import {
   Star,
   DollarSign,
   Globe,
-  Smartphone,
-  Cloud
-} from 'lucide-react';
+  Smartphone} from 'lucide-react';
 
 export default function AIProjectManagementPlatform() {
   const features = [

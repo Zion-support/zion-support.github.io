@@ -19,40 +19,13 @@ import {
   Code,
   Database,
   Network,
-  Smartphone,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  ShoppingCart,
-  Headphones,
-  Mail,
-  Search,
-  HelpCircle,
-  ShieldCheck,
-  Globe2,
-  Leaf,
-  Sparkles,
-  Target,
-  DollarSign,
-  Clock,
-  Award,
-  Phone,
-  Mail as MailIcon,
-  MapPin,
-  Infinity,
-  Atom,
-  Eye,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City,
-  Play,
-  MailIcon as MailIcon2
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
+  Code,
+  Palette,
+  Gamepad2} from 'lucide-react';
+import { SEO } from "@/components/SEO";
+import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
+import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
+import { REVOLUTIONARY_PRICING_GUIDE_2030 } from "@/data/revolutionaryPricingGuide2030";
 
 export default function RevolutionaryServices2030() {
   const [activeCategory, setActiveCategory] = useState('all');

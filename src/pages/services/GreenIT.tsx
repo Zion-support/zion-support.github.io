@@ -21,9 +21,7 @@ import {
   Lightbulb,
   Gauge,
   Target,
-  Award,
-  BarChart3
-} from 'lucide-react';
+  Award} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function GreenIT() {

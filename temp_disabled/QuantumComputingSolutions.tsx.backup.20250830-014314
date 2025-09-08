@@ -14,9 +14,7 @@ import {
   Rocket,
   Target,
   Shield,
-  TrendingUp,
-  Layers
-} from 'lucide-react';
+  TrendingUp} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function QuantumComputingSolutions() {

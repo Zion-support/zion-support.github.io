@@ -10,34 +10,12 @@ import {
   ArrowRight,
   ArrowUp,
   ArrowDown,
-  ZoomIn,
-  ZoomOut,
-  RotateCw,
-  RotateCcw,
-  Move,
-  Settings,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Wifi,
-  Battery,
-  Signal,
-  Eye,
-  EyeOff,
-  Sun,
-  Moon,
-  Palette,
-  Type,
-  Layout,
-  Grid,
-  List,
-  Maximize,
-  Minimize,
-  Smartphone as PhoneIcon,
-  Tablet as TabletIcon,
-  Monitor as DesktopIcon
-} from 'lucide-react';
+  Pinch,
+  RotateCw as Rotate,
+  Shake,
+  MousePointer,
+  Clock,
+  DoubleArrow} from 'lucide-react';
 
 interface MobileOptimization {
   id: string;
@@ -619,8 +597,70 @@ export function MobileExperienceEnhancer() {
 
               {/* Content */}
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-                {/* Device Detection */}
-                <div className="mb-8 p-4 bg-gradient-to-r from-zion-green/10 to-zion-cyan/10 rounded-xl border border-zion-green/20">
+                {/* Smartphone Information */}
+                {deviceInfo && (
+                  <div className="mb-8">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                      Smartphone Information
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                      <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
+                        <div className="flex items-center justify-between mb-2">
+                          <PhoneIcon className="w-5 h-5 text-zion-green" />
+                          <span className="text-sm text-gray-500">Smartphone Type</span>
+                        </div>
+                        <div className="text-lg font-bold text-gray-900 dark:text-white capitalize">
+                          {deviceInfo.type}
+                        </div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400 capitalize">
+                          {deviceInfo.platform}
+                        </div>
+                      </div>
+                      
+                      <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
+                        <div className="flex items-center justify-between mb-2">
+                          <Monitor className="w-5 h-5 text-zion-blue" />
+                          <span className="text-sm text-gray-500">Screen</span>
+                        </div>
+                        <div className="text-lg font-bold text-gray-900 dark:text-white">
+                          {deviceInfo.screenSize.width} × {deviceInfo.screenSize.height}
+                        </div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
+                          {deviceInfo.pixelRatio}x density
+                        </div>
+                      </div>
+                      
+                      <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
+                        <div className="flex items-center justify-between mb-2">
+                          <WifiIcon className="w-5 h-5 text-zion-purple" />
+                          <span className="text-sm text-gray-500">Network</span>
+                        </div>
+                        <div className="text-lg font-bold text-gray-900 dark:text-white capitalize">
+                          {deviceInfo.networkType}
+                        </div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
+                          {deviceInfo.touchSupport ? 'Touch Enabled' : 'Touch Disabled'}
+                        </div>
+                      </div>
+                      
+                      <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
+                        <div className="flex items-center justify-between mb-2">
+                          <BatteryIcon className="w-5 h-5 text-zion-orange" />
+                          <span className="text-sm text-gray-500">Battery</span>
+                        </div>
+                        <div className="text-lg font-bold text-gray-900 dark:text-white">
+                          {deviceInfo.batteryLevel.toFixed(0)}%
+                        </div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400 capitalize">
+                          {deviceInfo.orientation}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Mobile Score */}
+                <div className="mb-8">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Device Detection
                   </h3>
@@ -855,16 +895,20 @@ export function MobileExperienceEnhancer() {
                               Enable animations
                             </span>
                           </label>
-                          <label className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              checked={mobileGestures}
-                              onChange={(e) => setMobileGestures(e.target.checked)}
-                              className="w-4 h-4 text-zion-green rounded focus:ring-zion-green"
-                            />
-                            <span className="text-sm text-gray-700 dark:text-gray-300">
-                              Enable touch gestures
-                            </span>
+                          <select
+                            value={settings.hapticIntensity}
+                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as any }))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
+                          >
+                            <option value="light">Light</option>
+                            <option value="medium">Medium</option>
+                            <option value="strong">Strong</option>
+                          </select>
+                        </div>
+                        
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Smartphone Orientation
                           </label>
                         </div>
                       </div>

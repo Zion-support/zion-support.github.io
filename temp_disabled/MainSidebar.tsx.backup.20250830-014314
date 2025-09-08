@@ -235,14 +235,7 @@ import { Home,
   Clock,
   Handshake,
   Leaf,
-  HardDrive,
-  RefreshCw
- } from 'lucide-react.ts';
-
-interface MainSidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyboolean;
-  onClose: ()  => void;
+  HardDrive} from 'lucide-react';
 
 }
 

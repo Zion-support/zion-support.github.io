@@ -1,73 +1,27 @@
 import React, { useState } from 'react';
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
-const UltimateServicesShowcase2025 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [sortBy, setSortBy] = useState('name');
-    // Combine all services
-    const allServices = [
-        ...ULTIMATE_MICRO_SAAS_SERVICES_2025,
-        ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025,
-        ...EMERGING_TECHNOLOGY_SOLUTIONS_2025
-    ];
-    // Get unique categories
-    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-    // Filter and sort services
-    const filteredServices = allServices
-        .filter(service => {
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
-        const priceMatch = selectedPriceRange === 'all' ||
-            (selectedPriceRange === 'low' && service.price < 5000) ||
-            (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||
-            (selectedPriceRange === 'high' && service.price >= 15000);
-        const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return categoryMatch && priceMatch && searchMatch;
-    })
-        .sort((a, b) => {
-        switch (sortBy) {
-            case 'price':
-                return a.price - b.price;
-            case 'name':
-                return a.title.localeCompare(b.title);
-            case 'category':
-                return a.category.localeCompare(b.category);
-            default:
-                return 0;
-        }
-    });
-    const formatPrice = (price) => {
-        if (price >= 1000) {
-            return `$${(price / 1000).toFixed(1)}K`;
-        }
-        return `$${price}`;
-    };
-    const getSupportLevelColor = (level) => {
-        switch (level) {
-            case 'enterprise':
-                return 'bg-purple-600';
-            case 'premium':
-                return 'bg-blue-600';
-            default:
-                return 'bg-green-600';
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Ultimate Services Showcase 2025
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms. 
-            Transform your business with cutting-edge technology solutions designed for the future.
-          </p>
-        </div>
+import { SEO } from "@/components/SEO";
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Database, 
+  Users, 
+  TrendingUp, 
+  Globe, 
+  Lock,
+  Cloud,
+  Briefcase,
+  Scale,
+  Rocket,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink} from 'lucide-react';
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
 
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6 mb-8 border border-blue-500/30">

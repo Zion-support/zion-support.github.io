@@ -31,17 +31,20 @@ import {
   Phone,
   Mail,
   ExternalLink,
-  ChevronRight,
-  Sparkles,
-  Flame,
-  Crown,
-  Infinity,
-  Sun,
-  Moon
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-import { EMERGING_TECH_INNOVATIVE_SERVICES_2025 } from '../data/emergingTechInnovativeServices2025';
+  Search,
+  Clock,
+  Wifi,
+  Chip,
+  Database as DatabaseIcon,
+  ShieldCheck,
+  Bot,
+  GitFork,
+  Eye as EyeIcon,
+  Sparkles as SparklesIcon} from 'lucide-react';
+import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
+import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
+import { comprehensivePricingGuide2028 } from '../data/comprehensivePricingGuide2028';
 
 export default function InnovativeServicesShowcase2028() {
   const [searchQuery, setSearchQuery] = useState('');

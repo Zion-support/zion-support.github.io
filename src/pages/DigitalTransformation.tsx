@@ -1,8 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Rocket, Zap, Shield, Users, TrendingUp, Globe, CheckCircle, Star, ArrowRight, Cpu, Database, Cloud } from 'lucide-react';
-import SEO from '../SEO';
+import { 
+  Rocket, 
+  Zap, 
+  Shield, 
+  Users, 
+  TrendingUp, 
+  Globe, 
+  CheckCircle, 
+  Star, 
+  ArrowRight, 
+  Cpu, 
+  Database, 
+  Cloud,
+  Target,
+  Award,
+  Lightbulb,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  Check,
+  BarChart3,
+  Lock,
+  Eye} from 'lucide-react';
 
 const transformationServices = [
   {

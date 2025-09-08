@@ -25,9 +25,7 @@ import {
   Building,
   FileText,
   MapPin,
-  Cloud,
-  Heart
-} from 'lucide-react';
+  Cloud} from 'lucide-react';
 
 export default function AIPoweredSEO() {
   const features = [

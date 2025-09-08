@@ -43,9 +43,7 @@ import {
   TrendingDown,
   Lightbulb,
   Wallet,
-  Receipt,
-  Banknote
-} from 'lucide-react';
+  Receipt} from 'lucide-react';
 
 export default function AIFinancialPlanning() {
   const features = [

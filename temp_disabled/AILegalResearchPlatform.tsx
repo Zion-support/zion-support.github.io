@@ -29,9 +29,7 @@ import {
   Search,
   Gavel,
   Library,
-  Briefcase,
-  Award
-} from 'lucide-react';
+  Briefcase} from 'lucide-react';
 
 export default function AILegalResearchPlatform() {
   const features = [

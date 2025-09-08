@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  FileText, 
-  Shield, 
-  Clock, 
-  Zap, 
-  Search, 
-  Eye,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe,
-  Users,
-  BarChart3,
-  Lock
-} from 'lucide-react';
-=======
-import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock } from 'lucide-react';
->>>>>>> e220500ccca44de2253ff84a9759db22263da039
+import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale} from 'lucide-react';
 
 export default function AILegalDocumentAutomation() {
   const features = [

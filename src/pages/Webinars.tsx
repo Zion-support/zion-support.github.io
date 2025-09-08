@@ -1,7 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Webinars: React.FC = () => {
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award} from 'lucide-react';
+
+export default function Webinars() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [filterType, setFilterType] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 }
+  ];
+
+  const filterTypes = [
+    { id: 'all', name: 'All Webinars', count: 0 },
+    { id: 'upcoming', name: 'Upcoming', count: 0 },
+    { id: 'on-demand', name: 'On-Demand', count: 0 },
+    { id: 'live', name: 'Live Now', count: 0 }
+  ];
+
   const webinars = [
     {
       title: "AI-Powered Cybersecurity: Next-Gen Threat Detection",

@@ -26,9 +26,7 @@ import {
   ShoppingCart,
   DollarSign,
   Heart,
-  GraduationCap,
-  Home
-} from 'lucide-react';
+  GraduationCap} from 'lucide-react';
 
 export default function DSRPortal() {
   const features = [

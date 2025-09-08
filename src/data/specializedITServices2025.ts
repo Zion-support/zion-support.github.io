@@ -124,9 +124,15 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/edge-ai-computing-platform",
-    technologyStack: ["TensorRT", "ONNX", "Docker", "Kubernetes", "Edge Devices", "5G Networks"],
-    roiMetrics: ["95% latency reduction", "80% bandwidth cost savings", "Millions of edge devices supported"]
+    technicalSpecs: {
+      technology: ["Edge computing platforms", "IoT protocols", "AI/ML frameworks", "Real-time databases", "Security protocols"],
+      integrations: ["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["Smartphone authentication", "Data encryption", "Secure communication", "Access controls"]
+    },
+    competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],
+    marketSize: "$15.7 billion by 2025"
   }
 ];
 

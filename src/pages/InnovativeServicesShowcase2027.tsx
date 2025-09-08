@@ -2,65 +2,35 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Heart, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Users, 
-  TrendingUp, 
-  Zap, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Atom,
-  Database,
-  Network,
-  Smartphone,
-  PenTool,
-  Target,
-  BarChart3,
-  ShoppingCart,
-  MessageCircle,
-  FileText,
-  Settings,
-  Key,
-  Leaf,
-  Scale,
-  Building2,
-  Car,
-  Factory,
-  City,
-  Eye,
-  Server,
-  Monitor,
-  Code,
-  GitFork,
-  Gauge,
-  Clock,
-  DollarSign,
-  Award,
-  Truck,
-  Home,
-  Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
-  pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
+  Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom, 
+  Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
+  ArrowRight, Search, Filter, Grid, List} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
+export default function InnovativeServicesShowcase2027() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'aiScore' | 'rating' | 'price'>('aiScore');
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
+  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const filteredServices = allServices
+    .filter(service => 
+      (selectedCategory === 'All' || service.category === selectedCategory) &&
+      (searchQuery === '' || 
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
+    )
+    .sort((a, b) => b[sortBy] - a[sortBy]);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
   };
   benefits: string[];
   useCases: string[];

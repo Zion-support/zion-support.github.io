@@ -24,14 +24,11 @@ import {
   Shield,
   Headphones,
   Rocket,
-  UserCheck,
-  FileText,
-  Briefcase,
-  GraduationCap,
-  Award,
   Heart,
-  Building
-} from 'lucide-react';
+  MessageCircle,
+  Phone,
+  Mail,
+  Award} from 'lucide-react';
 
 export default function AIHRPlatform() {
   const features = [

@@ -38,9 +38,7 @@ import { ArrowRight,
   Eye,
   PieChart,
   PenTool,
-  Shield,
-  Cloud
- } from 'lucide-react.ts';
+  Shield} from "lucide-react";
 
 export function FeatureCTAs(...args: any[]): any {
   const features = [

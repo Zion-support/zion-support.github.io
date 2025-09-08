@@ -27,9 +27,7 @@ import {
   Eye,
   FileText,
   Settings,
-  Users,
-  TrendingUp
-} from 'lucide-react';
+  Users} from 'lucide-react';
 
 export default function SmartContractRiskScanner() {
   const features = [

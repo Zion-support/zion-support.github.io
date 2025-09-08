@@ -24,9 +24,7 @@ import {
   MessageCircle,
   Phone,
   Mail,
-  MapPin,
-  TestTube
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 const AIQuantumHybridPlatform: React.FC = () => {
   const features = [

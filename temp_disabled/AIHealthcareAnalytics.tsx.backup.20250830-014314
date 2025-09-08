@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { 
-  Heart, 
-  Brain, 
-  BarChart3, 
-  Users, 
-  Shield, 
-  Zap, 
-  CheckCircle,
-  Star,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Server,
-  Network,
-  Database,
-  Cloud,
-  Lock,
-  Globe,
-  TrendingUp,
-  Activity,
-  Target,
-  Eye,
-  AlertTriangle
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-=======
-import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
->>>>>>> e220500ccca44de2253ff84a9759db22263da039
+import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock} from 'lucide-react';
 
 const AIHealthcareAnalytics = () => {
   const features = [

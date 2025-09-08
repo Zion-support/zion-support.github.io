@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar, Database, Network, BarChart3, Wifi, HeartPulse, Leaf, User, Award, Lightbulb, Handshake, BookOpen as BookOpenIcon, FileText as FileTextIcon, Users as UsersIcon, Code as CodeIcon, HelpCircle as HelpCircleIcon, DollarSign as DollarSignIcon, Users as UsersIcon2, Calendar as CalendarIcon, Shield as ShieldIcon, BookOpen as BookOpenIcon2} from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Workflow, Server } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -94,9 +95,41 @@ export function AppHeader() {
       icon: Cloud,
       color: 'from-green-600 to-emerald-600',
       services: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { 
+          name: 'Cloud & DevOps', 
+          href: '/services/cloud-devops', 
+          icon: Cloud, 
+          description: 'DevOps & Infrastructure',
+          featured: true
+        },
+        { 
+          name: 'IT Infrastructure', 
+          href: '/services/it-infrastructure', 
+          icon: Building, 
+          description: 'Enterprise Infrastructure',
+          featured: true
+        },
+        { 
+          name: 'Digital Twin Platform', 
+          href: '/services/digital-twin', 
+          icon: Globe, 
+          description: 'Virtual Replicas & Simulation',
+          featured: true
+        },
+        { 
+          name: 'IoT Edge Computing', 
+          href: '/services/iot-edge-computing', 
+          icon: Wifi, 
+          description: 'Smart Smartphone Networks',
+          featured: true
+        },
+        { 
+          name: 'Data Analytics', 
+          href: '/services/data-analytics', 
+          icon: BarChart3, 
+          description: 'Business Intelligence & Insights',
+          featured: true
+        }
       ]
     },
     {
@@ -253,8 +286,8 @@ export function AppHeader() {
                 </div>
               </Link>
             </div>
-
-            {/* Desktop Navigation */}
+            
+            {/* Monitor Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <div key={item.name} className="relative">

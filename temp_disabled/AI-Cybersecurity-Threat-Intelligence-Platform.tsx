@@ -23,9 +23,11 @@ import {
   Brain,
   Server,
   Network,
-  Code,
-  Search
-} from 'lucide-react';
+  Smartphone,
+  Cloud,
+  Database,
+  Cpu,
+  Brain} from 'lucide-react';
 
 export default function AICybersecurityThreatIntelligencePlatform() {
   const features = [

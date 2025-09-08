@@ -36,11 +36,26 @@ import {
   ExternalLink,
   Phone,
   Mail as MailIcon,
-  MapPin,
-  Globe as GlobeIcon
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
+  MapPin as MapPinIcon,
+  DollarSign as DollarSignIcon,
+  Star as StarIcon,
+  Award as AwardIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Handshake as HandshakeIcon,
+  Target as TargetIcon2,
+  Users2 as Users2Icon,
+  Briefcase as BriefcaseIcon,
+  Building as BuildingIcon,
+  Truck as TruckIcon,
+  Leaf as LeafIcon2,
+  Gamepad2 as Gamepad2Icon2,
+  Coins as CoinsIcon2,
+  Satellite as SatelliteIcon2,
+  Atom as AtomIcon,
+  Leaf as LeafIcon3,
+  Gamepad2 as Gamepad2Icon3,
+  Coins as CoinsIcon3} from 'lucide-react';
 
 const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

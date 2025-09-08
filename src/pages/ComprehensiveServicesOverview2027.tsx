@@ -13,11 +13,91 @@ import {
   Check,
   Star,
   Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-import { ADVANCED_MICRO_SAAS_SERVICES_2027 } from '../data/advancedMicroSaasServices2027';
-import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/specializedITInfrastructureServices2027';
+  MapPin,
+  ExternalLink,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ShoppingCart,
+  MessageCircle,
+  HelpCircle,
+  FileText,
+  Video,
+  Truck} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+// Sample data for demonstration
+const MICRO_SAAS_SERVICES = [
+  {
+    id: 'micro-crm',
+    title: 'Micro CRM',
+    description: 'Lightweight customer relationship management for small businesses',
+    category: 'Business Tools',
+    subcategory: 'CRM',
+    pricingModel: 'monthly',
+    price: 29,
+    rating: 4.8,
+    reviewCount: 156,
+    aiScore: 95,
+    featured: true,
+    createdAt: '2024-01-15',
+    href: '/services/micro-crm',
+    tags: ['CRM', 'Business', 'Automation'],
+    images: ['/images/micro-crm.jpg']
+  },
+  {
+    id: 'helpdesk-platform',
+    title: 'Helpdesk Platform',
+    description: 'Streamlined customer support and ticket management system',
+    category: 'Customer Support',
+    subcategory: 'Helpdesk',
+    pricingModel: 'monthly',
+    price: 39,
+    rating: 4.7,
+    reviewCount: 89,
+    aiScore: 92,
+    featured: false,
+    createdAt: '2024-02-01',
+    href: '/services/helpdesk-platform',
+    tags: ['Support', 'Helpdesk', 'Customer Service'],
+    images: ['/images/helpdesk.jpg']
+  },
+  {
+    id: 'website-analytics',
+    title: 'Website Analytics',
+    description: 'Comprehensive website performance and user behavior analytics',
+    category: 'Analytics',
+    subcategory: 'Web Analytics',
+    pricingModel: 'monthly',
+    price: 19,
+    rating: 4.9,
+    reviewCount: 234,
+    aiScore: 98,
+    featured: true,
+    createdAt: '2024-01-10',
+    href: '/services/website-analytics',
+    tags: ['Analytics', 'Web', 'Performance'],
+    images: ['/images/analytics.jpg']
+  }
+];
+
+const categories = [
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
+  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
+];
+
+const pricingModels = [
+  { id: 'all', name: 'All Pricing' },
+  { id: 'monthly', name: 'Monthly' },
+  { id: 'yearly', name: 'Yearly' },
+  { id: 'one-time', name: 'One-time' },
+  { id: 'usage-based', name: 'Usage-based' }
+];
 
 export default function ComprehensiveServicesOverview2027() {
   const [selectedCategory, setSelectedCategory] = useState('All');

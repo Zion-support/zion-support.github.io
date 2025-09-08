@@ -62,9 +62,7 @@ import {
   Trash2,
   Plus,
   Calendar,
-  Truck,
-  BarChart3
-} from 'lucide-react';
+  Truck} from 'lucide-react';
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);

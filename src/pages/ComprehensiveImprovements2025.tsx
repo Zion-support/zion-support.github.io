@@ -50,9 +50,7 @@ import {
   Settings,
   Palette,
   PhoneCall,
-  Mail as MailIcon,
-  MapPin as MapPinIcon
-} from 'lucide-react';
+  Mail as MailIcon} from 'lucide-react';
 import EnhancedSEOManager from '../components/EnhancedSEOManager';
 
 export default function ComprehensiveImprovements2025() {

@@ -1,6 +1,125 @@
 module.exports = {
   apps: [
-    // Error Fixing Automation
+    // Main application
+    {
+      name: 'zion-app',
+      script: 'npm',
+      args: 'start',
+      cwd: './',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      },
+      env_production: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      }
+    },
+    
+    // Backend server
+    {
+      name: 'zion-backend',
+      script: 'npm',
+      args: 'start',
+      cwd: './server',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      }
+    },
+
+    // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'intelligent-predictive-monitor',
+      script: './scripts/automation/intelligent-predictive-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // 🎯 NEW: PM2 Error Automation Orchestrator - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'pm2-error-automation-orchestrator',
+      script: './scripts/automation/pm2-error-automation-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // 🔧 NEW: Comprehensive Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // 🛡️ NEW: Intelligent Error Prevention - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'intelligent-error-prevention',
+      script: './scripts/automation/intelligent-error-prevention.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // 🤖 NEW: AI Code Optimizer - runs every hour
+    {
+      name: 'ai-code-optimizer',
+      script: './scripts/automation/ai-code-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // 📦 NEW: Smart Dependency Manager - runs every 6 hours
+    {
+      name: 'smart-dependency-manager',
+      script: './scripts/automation/smart-dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',
       script: 'scripts/error-fixer.js',

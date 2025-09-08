@@ -1,27 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Star, 
-  Clock, 
-  TrendingUp, 
-  Shield, 
-  Zap,
-  Brain,
-  Rocket,
-  Heart,
-  Crown,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_SERVICES_2026, SERVICE_CATEGORIES_2026, SERVICE_STATISTICS_2026 } from '../data/innovativeServices2026';
+import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 
 export default function InnovativeServicesShowcase2026() {
   const [activeCategory, setActiveCategory] = useState('all');

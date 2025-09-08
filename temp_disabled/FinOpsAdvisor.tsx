@@ -20,9 +20,7 @@ import {
   Building,
   DollarSign,
   PieChart,
-  LineChart,
-  Activity as ActivityIcon
-} from 'lucide-react';
+  LineChart} from 'lucide-react';
 
 const AIBusinessIntelligenceAnalytics = () => {
   const features = [

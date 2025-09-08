@@ -1,19 +1,58 @@
 import { motion } from 'framer-motion';
-import {
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
-  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
-  Atom, Network, Eye, PenTool, Heart, Building, Truck,
-  Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
-  Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
-  CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
-  Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon,
-  Calculator, PieChart, BarChart
-} from 'lucide-react';
-import {
-  revolutionaryMicroSaasServices2025,
-  advancedITInfrastructureServices2025,
-  revolutionaryAIServices2025
-} from '../data/comprehensiveServices2025';
+import { Link } from 'react-router-dom';
+import { 
+  DollarSign, 
+  CheckCircle, 
+  Star, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Rocket,
+  ArrowRight,
+  Users,
+  Building,
+  Globe,
+  Cpu,
+  Heart,
+  Scale,
+  PenTool,
+  TrendingUp,
+  Lock,
+  Server,
+  Smartphone,
+  Atom,
+  Leaf,
+  Building2,
+  Play,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Calculator,
+  BarChart3,
+  Target,
+  Award,
+  Clock,
+  Calendar,
+  FileText,
+  Settings,
+  Key,
+  ShieldCheck,
+  Globe2,
+  Home,
+  Car,
+  Factory,
+  City,
+  GraduationCap,
+  ShoppingCart,
+  Factory as FactoryIcon,
+  City as CityIcon,
+  Home as HomeIcon,
+  Car as CarIcon,
+  Factory as FactoryIcon2,
+  City as CityIcon2,
+  Home as HomeIcon2} from 'lucide-react';
 
 export default function ComprehensivePricingGuide2025() {
   const [searchTerm, setSearchTerm] = useState('');

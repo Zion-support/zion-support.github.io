@@ -29,9 +29,7 @@ import {
   GitBranch,
   FileText,
   Users as UsersIcon,
-  PieChart,
-  Activity
-} from 'lucide-react';
+  PieChart} from 'lucide-react';
 
 export default function AIProjectManagementPlatform() {
   const features = [

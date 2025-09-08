@@ -69,46 +69,24 @@ export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {
     warranty: "2 years manufacturer warranty",
     returnPolicy: "30-day return policy for unused items in original packaging"
   },
-  "audio-mixer-pro": {
-    id: "audio-mixer-pro",
-    name: "AudioMixer Pro Digital Mixing Console",
-    description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",
-    brand: "AudioTech",
-    category: "Equipment",
-    subcategory: "Audio",
-    images: [
-      "/images/equipment-placeholder.svg",
-      "/images/equipment-placeholder.svg"
-    ],
-    price: 3499,
-    currency: "$",
-    rating: 4.8,
-    reviewCount: 42,
-    inStock: true,
-    expectedShipping: "5-7 business days",
-    specifications: [
-      { name: "Channels", value: "32 input channels" },
-      { name: "Faders", value: "16 motorized faders" },
-      { name: "Preamps", value: "24 premium mic preamps" },
-      { name: "Sampling Rate", value: "Up to 96kHz" },
-      { name: "EQ", value: "4-band parametric per channel" },
-      { name: "Dynamics", value: "Compressor/Gate on all channels" },
-      { name: "Effects", value: "8 stereo effects processors" },
-      { name: "Recording", value: "64-channel USB interface" },
-      { name: "Weight", value: "32 lbs" }
-    ],
-    features: [
-      "32-channel digital mixer with 24 premium mic preamps",
-      "16 motorized faders with touch-sensitive control",
-      "7-inch high-resolution color touchscreen",
-      "Comprehensive routing matrix",
-      "Onboard multi-track recording to USB",
-      "iOS and Android remote control app",
-      "Configurable user layers",
-      "8 DCA groups and 6 mute groups",
-      "Integrated WiFi for wireless control"
-    ],
-    warranty: "3 years manufacturer warranty",
-    returnPolicy: "21-day return policy for items in original condition"
+  {
+    id: "2",
+    name: "Quantum Computing Simulator",
+    description: "Advanced quantum simulation platform",
+    price: 5000,
+    category: "Quantum",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop",
+    specs: ["100+ qubit simulation", "Real-time visualization", "API integration"],
+    availability: true
+  },
+  {
+    id: "3",
+    name: "Edge Computing Smartphone",
+    description: "IoT edge computing solution",
+    price: 800,
+    category: "IoT",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    specs: ["ARM Cortex-A72", "4GB RAM", "32GB eMMC", "WiFi 6"],
+    availability: true
   }
 };

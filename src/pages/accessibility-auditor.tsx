@@ -14,9 +14,7 @@ import {
   Accessibility,
   Monitor,
   Smartphone,
-  Tablet,
-  Laptop
-} from 'lucide-react';
+  Tablet} from 'lucide-react';
 
 const AccessibilityAuditor: React.FC = () => {
   const features = [

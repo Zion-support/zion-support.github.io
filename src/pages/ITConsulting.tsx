@@ -12,9 +12,7 @@ import {
   CheckCircle,
   Play,
   Clock,
-  Award,
-  MessageSquare
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 const features = [
   {

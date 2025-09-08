@@ -16,9 +16,7 @@ import {
   Phone,
   ExternalLink,
   Scale,
-  Gavel,
-  BookOpen
-} from 'lucide-react';
+  Gavel} from 'lucide-react';
 
 const TermsOfService = () => {
   const lastUpdated = '2025-01-15';

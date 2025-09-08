@@ -34,9 +34,7 @@ import {
   ShoppingCart,
   DollarSign,
   Heart,
-  Building,
-  GraduationCap
-} from 'lucide-react';
+  Building} from 'lucide-react';
 
 export default function SecurityHeadersCSP() {
   const features = [

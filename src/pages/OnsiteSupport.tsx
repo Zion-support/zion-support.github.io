@@ -1,4 +1,30 @@
 import { motion } from 'framer-motion';
+import { 
+  Users, 
+  MapPin, 
+  Clock, 
+  CheckCircle, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Rocket, 
+  Phone, 
+  Mail, 
+  Calendar, 
+  Star, 
+  Award, 
+  Building, 
+  Wrench, 
+  Settings, 
+  Database, 
+  Server, 
+  Network, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
+  Info, 
+  ArrowRight} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { 
   Wrench, 

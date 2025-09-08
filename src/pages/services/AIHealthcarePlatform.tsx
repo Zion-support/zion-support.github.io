@@ -28,9 +28,7 @@ import {
   FileText,
   Lock,
   Eye,
-  Cpu,
-  Network
-} from 'lucide-react';
+  Cpu} from 'lucide-react';
 
 const AIHealthcarePlatform = () => {
   const features = [

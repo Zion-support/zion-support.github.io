@@ -8,26 +8,19 @@ import {
   Clock, 
   CheckCircle, 
   Search, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Clock, 
-  CheckCircle,
-  AlertCircle,
-  HelpCircle,
-  BookOpen,
-  Video,
-  FileText,
-  Users,
-  Globe,
-  Building,
-  Rocket,
-  Brain,
-  Shield,
-  Cpu,
-  Star
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+  FileText, 
+  Video, 
+  BookOpen, 
+  HelpCircle, 
+  Star, 
+  MapPin, 
+  Globe, 
+  Calendar,
+  Send,
+  Ticket,
+  Headphones,
+  MessageSquare,
+  VideoCall} from 'lucide-react';
 
 const Support: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('general');

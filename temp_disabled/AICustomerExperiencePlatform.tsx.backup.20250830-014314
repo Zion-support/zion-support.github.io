@@ -1,36 +1,4 @@
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Brain, 
-  MessageSquare, 
-  Heart, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  Globe, 
-  ExternalLink,
-  Zap,
-  BarChart3,
-  Target,
-  Cpu,
-  Smartphone,
-  Monitor,
-  Activity,
-  Star,
-  Award,
-  Clock,
-  Target,
-  MessageCircle,
-  Bot,
-  Headphones
-} from 'lucide-react';
-=======
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star, Shield } from 'lucide-react';
->>>>>>> e220500ccca44de2253ff84a9759db22263da039
+import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star} from 'lucide-react';
 
 export default function AICustomerExperiencePlatform() {
   const features = [

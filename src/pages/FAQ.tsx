@@ -1,9 +1,29 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent } from "@/components/ui/card";
-import React from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Plus, 
+  Minus, 
+  Search, 
+  HelpCircle, 
+  MessageCircle, 
+  Mail, 
+  Phone,
+  Clock,
+  Users,
+  Shield,
+  Cloud,
+  Brain,
+  Zap} from 'lucide-react';
+
+interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+  icon: any;
+  tags: string[];
+}
 
 export default function FAQ() {
   const faqCategories = [

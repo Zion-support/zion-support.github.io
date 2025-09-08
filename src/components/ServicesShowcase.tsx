@@ -13,9 +13,7 @@ import {
   MessageCircle, 
   BookOpen, 
   DollarSign,
-  Gauge,
-  HelpCircle
-} from 'lucide-react';
+  Gauge} from 'lucide-react';
 
 export function ServicesShowcase() {
   const services = [

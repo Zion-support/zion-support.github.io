@@ -1,7 +1,30 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
-const AIServices = [
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  BarChart3,
+  Cpu,
+  Eye,
+  MessageSquare,
+  Database,
+  Network,
+  Rocket,
+  Target,
+  Award,
+  Clock,
+  Star} from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+const AIServicesPage = () => {
+  const aiServices = [
     {
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",

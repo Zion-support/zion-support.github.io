@@ -2,7 +2,346 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
+import { 
+  Search, 
+  Filter, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Heart, 
+  Zap, 
+  Globe, 
+  Star, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ExternalLink,
+  Award,
+  Clock,
+  Target,
+  BarChart3,
+  Cpu,
+  Lock,
+  ShoppingCart,
+  MessageCircle,
+  BookOpen,
+  Settings,
+  Palette,
+  Database,
+  Network,
+  Smartphone,
+  Monitor,
+  Server,
+  ShieldCheck,
+  Globe2,
+  Leaf,
+  Satellite,
+  Atom,
+  Code,
+  FileText,
+  GraduationCap,
+  Building,
+  Briefcase,
+  Lightbulb,
+  Sparkles,
+  DollarSign,
+  Users,
+  Eye,
+  ArrowUpRight,
+  Grid,
+  List,
+  ChevronRight,
+  ChevronDown,
+  Info,
+  Calendar,
+  UserCheck,
+  Globe,
+  Layers,
+  Activity,
+  PieChart,
+  BarChart,
+  LineChart,
+  TrendingDown,
+  Zap,
+  Target,
+  Award,
+  Clock,
+  Users,
+  Shield,
+  Lock,
+  Key,
+  Eye,
+  EyeOff,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle} from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { servicesCatalog } from '../data/servicesCatalog';
+
+// Enhanced category definitions with better organization
+const serviceCategories = [
+  {
+    id: 'all',
+    name: 'All Services',
+    icon: Grid,
+    color: 'from-blue-600 to-cyan-600',
+    description: 'Complete portfolio of all services',
+    count: 0
+  },
+  {
+    id: 'Micro SaaS',
+    name: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    color: 'from-purple-600 to-pink-600',
+    description: 'Scalable software-as-a-service solutions',
+    count: 0
+  },
+  {
+    id: 'IT Services',
+    name: 'IT Services',
+    icon: Server,
+    color: 'from-green-600 to-emerald-600',
+    description: 'Enterprise IT infrastructure and consulting',
+    count: 0
+  },
+  {
+    id: 'AI Solutions',
+    name: 'AI Solutions',
+    icon: Brain,
+    color: 'from-indigo-600 to-purple-600',
+    description: 'Advanced AI and machine learning solutions',
+    count: 0
+  },
+  {
+    id: 'Cybersecurity',
+    name: 'Cybersecurity',
+    icon: Shield,
+    color: 'from-red-600 to-pink-600',
+    description: 'Security and compliance solutions',
+    count: 0
+  },
+  {
+    id: 'Cloud & DevOps',
+    name: 'Cloud & DevOps',
+    icon: Cloud,
+    color: 'from-blue-600 to-cyan-600',
+    description: 'Cloud infrastructure and development operations',
+    count: 0
+  },
+  {
+    id: 'Emerging Tech',
+    name: 'Emerging Technologies',
+    icon: Sparkles,
+    color: 'from-yellow-600 to-orange-600',
+    description: 'Cutting-edge technologies and innovations',
+    count: 0
+  }
+];
+
+// Enhanced service features display
+const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | 'list' }) => {
+  const [expanded, setExpanded] = useState(false);
+  
+  const getCategoryIcon = (category: string) => {
+    const cat = serviceCategories.find(c => c.id === category);
+    return cat ? cat.icon : Grid;
+  };
+
+  const getCategoryColor = (category: string) => {
+    const cat = serviceCategories.find(c => c.id === category);
+    return cat ? cat.color : 'from-gray-600 to-gray-700';
+  };
+
+  if (viewMode === 'grid') {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100"
+      >
+        {/* Service Header */}
+        <div className={`bg-gradient-to-r ${getCategoryColor(service.category)} p-6 text-white`}>
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+              {React.createElement(getCategoryIcon(service.category), { className: 'w-6 h-6' })}
+            </div>
+            <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
+              {service.category}
+            </span>
+          </div>
+          <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+          <p className="text-white/80 text-sm leading-relaxed">{service.description}</p>
+        </div>
+
+        {/* Service Content */}
+        <div className="p-6">
+          {/* Pricing */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-2xl font-bold text-gray-900">{service.price}</div>
+            <span className="text-sm text-gray-500 capitalize">per {service.billing}</span>
+          </div>
+
+          {/* Features */}
+          <div className="mb-6">
+            <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+              Key Features
+            </h4>
+            <div className="space-y-2">
+              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+                <div key={idx} className="flex items-center space-x-2">
+                  <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">{feature}</span>
+                </div>
+              ))}
+              {service.features.length > 3 && (
+                <button
+                  onClick={() => setExpanded(!expanded)}
+                  className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                >
+                  {expanded ? 'Show less' : `+${service.features.length - 3} more features`}
+                  {expanded ? <ChevronDown className="w-4 h-4 ml-1" /> : <ChevronRight className="w-4 h-4 ml-1" />}
+                </button>
+              )}
+              {expanded && service.features.slice(3).map((feature: string, idx: number) => (
+                <div key={idx + 3} className="flex items-center space-x-2">
+                  <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <a
+            href={service.href}
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg flex items-center justify-center"
+          >
+            {service.ctaLabel}
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // List view
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+    >
+      <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+        {/* Service Info */}
+        <div className="flex-1">
+          <div className="flex items-center space-x-3 mb-3">
+            <div className={`w-10 h-10 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
+              {React.createElement(getCategoryIcon(service.category), { className: 'w-5 h-5 text-white' })}
+            </div>
+            <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+              {service.category}
+            </span>
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+          <p className="text-gray-600 mb-4">{service.description}</p>
+
+          {/* Features */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {service.features.slice(0, 4).map((feature: string, idx: number) => (
+              <div key={idx} className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                <span className="text-sm text-gray-600">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pricing and CTA */}
+        <div className="lg:text-right">
+          <div className="mb-4">
+            <div className="text-3xl font-bold text-gray-900">{service.price}</div>
+            <span className="text-sm text-gray-500 capitalize">per {service.billing}</span>
+          </div>
+          <a
+            href={service.href}
+            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            {service.ctaLabel}
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+// Sidebar component for better navigation
+const ServicesSidebar = ({ 
+  selectedCategory, 
+  onCategoryChange, 
+  categoriesWithCounts 
+}: { 
+  selectedCategory: string; 
+  onCategoryChange: (category: string) => void; 
+  categoriesWithCounts: any[];
+}) => {
+  return (
+    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+        <Filter className="w-5 h-5 mr-2 text-blue-600" />
+        Service Categories
+      </h3>
+      <div className="space-y-2">
+        {categoriesWithCounts.map((category) => (
+          <button
+            key={category.id}
+            onClick={() => onCategoryChange(category.id)}
+            className={`w-full text-left p-3 rounded-xl transition-all duration-200 flex items-center justify-between ${
+              selectedCategory === category.id
+                ? 'bg-blue-50 text-blue-700 border border-blue-200'
+                : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+            }`}
+          >
+            <div className="flex items-center space-x-3">
+              <div className={`w-8 h-8 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center`}>
+                {React.createElement(category.icon, { className: 'w-4 h-4 text-white' })}
+              </div>
+              <span className="font-medium">{category.name}</span>
+            </div>
+            <span className="text-sm bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
+              {category.count}
+            </span>
+          </button>
+        ))}
+      </div>
+      
+      {/* Quick Stats */}
+      <div className="mt-6 pt-6 border-t border-gray-200">
+        <h4 className="text-sm font-semibold text-gray-700 mb-3">Quick Stats</h4>
+        <div className="space-y-2 text-sm text-gray-600">
+          <div className="flex items-center justify-between">
+            <span>Total Services</span>
+            <span className="font-semibold text-gray-900">
+              {categoriesWithCounts.reduce((sum, cat) => sum + cat.count, 0)}
+            </span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span>Categories</span>
+            <span className="font-semibold text-gray-900">{categoriesWithCounts.length}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function ServicesOverview() {
     const serviceCategories = [
         {

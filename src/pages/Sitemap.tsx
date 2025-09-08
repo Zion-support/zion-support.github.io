@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import {
   BarChart3,
@@ -11,9 +10,7 @@ import {
   Mail,
   Video,
   Heart,
-  Globe,
-  ArrowRight
-} from 'lucide-react';
+  Globe} from 'lucide-react';
 
 interface SitemapLink {
   name: string;

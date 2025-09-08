@@ -39,8 +39,30 @@ import {
   Wallet,
   PiggyBank,
   CreditCard,
-  Receipt
-} from 'lucide-react';
+  Receipt,
+  Cloud,
+  Zap2,
+  Gauge,
+  BarChart4,
+  TrendingUp2,
+  Lightbulb,
+  Briefcase,
+  Strategy,
+  Brain,
+  Compass,
+  Shield,
+  RefreshCw,
+  TrendingUp3,
+  Layers,
+  Workflow,
+  Scale,
+  Award,
+  Lock,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Sensor,
+  Chip} from 'lucide-react';
 
 const FinOpsAdvisor = () => {
   const features = [
@@ -87,9 +109,9 @@ const FinOpsAdvisor = () => {
 
   const services = [
     {
-      icon: Wallet,
-      title: 'Cost Analysis',
-      description: 'Comprehensive analysis of current cloud spending patterns'
+      icon: Circuit,
+      title: 'Edge Smartphone Development',
+      description: 'Custom IoT edge device design and development'
     },
     {
       icon: PiggyBank,

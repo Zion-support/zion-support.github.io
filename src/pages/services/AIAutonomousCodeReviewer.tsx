@@ -18,9 +18,7 @@ import {
   Settings,
   Lock,
   Globe,
-  Smartphone,
-  Database
-} from 'lucide-react';
+  Smartphone} from 'lucide-react';
 
 const AIAutonomousCodeReviewer: React.FC = () => {
   const features = [

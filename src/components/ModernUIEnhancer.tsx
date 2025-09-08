@@ -1,74 +1,61 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
-export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [currentTheme, setCurrentTheme] = useState('auto');
-    const [showScrollToTop, setShowScrollToTop] = useState(false);
-    const [deviceType, setDeviceType] = useState('desktop');
-    const scrollToTopRef = useRef(null);
-    // Detect device type
-    useEffect(() => {
-        const updateDeviceType = () => {
-            const width = window.innerWidth;
-            if (width < 768) {
-                setDeviceType('mobile');
-            }
-            else if (width < 1024) {
-                setDeviceType('tablet');
-            }
-            else {
-                setDeviceType('desktop');
-            }
-        };
-        updateDeviceType();
-        window.addEventListener('resize', updateDeviceType);
-        return () => window.removeEventListener('resize', updateDeviceType);
-    }, []);
-    // Scroll effects
-    useEffect(() => {
-        if (!enableScrollEffects)
-            return;
-        const handleScroll = () => {
-            const scrollTop = window.pageYOffset;
-            setShowScrollToTop(scrollTop > 300);
-            // Parallax effect for background elements
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('[data-parallax]');
-            parallaxElements.forEach((element) => {
-                const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`;
-            });
-            // Fade in elements on scroll
-            const fadeElements = document.querySelectorAll('[data-fade-in]');
-            fadeElements.forEach((element) => {
-                const rect = element.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                if (isVisible) {
-                    element.classList.add('fade-in-visible');
-                }
-            });
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [enableScrollEffects]);
-    // Theme management
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'auto';
-        setCurrentTheme(savedTheme);
-        applyTheme(savedTheme);
-    }, []);
-    const applyTheme = (theme) => {
-        const root = document.documentElement;
-        if (theme === 'auto') {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            root.classList.toggle('dark', prefersDark);
-        }
-        else {
-            root.classList.toggle('dark', theme === 'dark');
-        }
-        localStorage.setItem('theme', theme);
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { 
+  Sparkles, 
+  Zap, 
+  Star, 
+  Palette, 
+  Eye, 
+  Layers,
+  Settings} from 'lucide-react';
+
+interface UISettings {
+  glassmorphism: boolean;
+  particleEffects: boolean;
+  smoothScrolling: boolean;
+  enhancedAnimations: boolean;
+  modernShadows: boolean;
+  colorThemes: boolean;
+  depthLayers: boolean;
+}
+
+export const ModernUIEnhancer: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<UISettings>({
+    glassmorphism: true,
+    particleEffects: true,
+    smoothScrolling: true,
+    enhancedAnimations: true,
+    modernShadows: true,
+    colorThemes: true,
+    depthLayers: true
+  });
+  
+  const [activeTheme, setActiveTheme] = useState('default');
+  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number }>>([]);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, -200]);
+
+  useEffect(() => {
+    // Initialize UI enhancements
+    initializeUIEnhancements();
+    
+    // Setup particle system
+    if (settings.particleEffects) {
+      setupParticleSystem();
+    }
+    
+    // Setup smooth scrolling
+    if (settings.smoothScrolling) {
+      setupSmoothScrolling();
+    }
+    
+    // Apply initial settings
+    applyUISettings();
+    
+    return () => {
+      cleanupUIEnhancements();
     };
     const toggleTheme = () => {
         const themes = ['light', 'dark', 'auto'];

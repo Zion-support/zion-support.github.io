@@ -17,9 +17,7 @@ import {
   Lock,
   DollarSign,
   Activity,
-  AlertTriangle,
-  Target
-} from 'lucide-react';
+  AlertTriangle} from 'lucide-react';
 
 export default function AIFinancialTradingRiskManagement() {
   const features = [

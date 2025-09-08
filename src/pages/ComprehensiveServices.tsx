@@ -1,27 +1,114 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
-export default function ComprehensiveServicesPage() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPricingTier, setSelectedPricingTier] = useState('all');
-    const filteredServices = useMemo(() => {
-        return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-            const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-            return matchesSearch && matchesCategory && matchesPricing;
-        });
-    }, [searchTerm, selectedCategory, selectedPricingTier]);
-    return (<div className="min-h-screen bg-zion-blue-dark">
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Cpu, 
+  Database, 
+  Rocket, 
+  Target, 
+  Users, 
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Workflow,
+  Atom,
+  MessageCircle,
+  PenTool,
+  Calendar,
+  Heart,
+  DollarSign,
+  ShoppingBag,
+  Settings,
+  Globe,
+  Award} from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+const ComprehensiveServices: React.FC = () => {
+  const serviceCategories = [
+    {
+      title: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions",
+      icon: Brain,
+      services: [
+        { name: "AI Business Intelligence", path: "/services/ai-business-intelligence" },
+        { name: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
+        { name: "AI Cybersecurity", path: "/services/ai-cybersecurity" },
+        { name: "AI Content Generation", path: "/services/ai-content-generator" }
+      ],
+      featured: true
+    },
+    {
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions",
+      icon: Atom,
+      services: [
+        { name: "Quantum Computing Solutions", path: "/services/quantum-computing-solutions" },
+        { name: "Quantum Neural Networks", path: "/services/quantum-neural-networks" },
+        { name: "Quantum Financial Trading", path: "/services/quantum-financial-trading" }
+      ],
+      featured: true
+    },
+    {
+      title: "Cloud & DevOps",
+      description: "Scalable infrastructure solutions",
+      icon: Cloud,
+      services: [
+        { name: "Cloud DevOps", path: "/services/cloud-devops" },
+        { name: "Cloud FinOps Optimization", path: "/services/cloud-finops-optimizer" },
+        { name: "IT Infrastructure", path: "/services/it-infrastructure" }
+      ]
+    },
+    {
+      title: "IoT & Edge Computing",
+      description: "Smart device solutions",
+      icon: Cpu,
+      services: [
+        { name: "IoT Edge Computing", path: "/services/iot-edge-computing" },
+        { name: "Digital Twin Platform", path: "/services/digital-twin" },
+        { name: "Smart Manufacturing", path: "/services/manufacturing-solutions" }
+      ]
+    },
+    {
+      title: "Micro SaaS Solutions",
+      description: "Productized business tools",
+      icon: Rocket,
+      services: [
+        { name: "Micro SaaS Solutions", path: "/services/micro-saas-solutions" },
+        { name: "Micro CRM", path: "/services/micro-crm" },
+        { name: "Website Analytics", path: "/services/website-analytics" }
+      ]
+    },
+    {
+      title: "Business Intelligence",
+      description: "Data-driven insights",
+      icon: BarChart3,
+      services: [
+        { name: "Data Analytics", path: "/services/data-analytics" },
+        { name: "AI Data Analytics", path: "/services/ai-data-analytics" },
+        { name: "Business Intelligence", path: "/services/ai-business-intelligence" }
+      ]
+    }
+  ];
+
+  const stats = [
+    { icon: Users, value: "500+", label: "Happy Clients" },
+    { icon: TrendingUp, value: "95%", label: "Success Rate" },
+    { icon: Award, value: "10+", label: "Years Experience" },
+    { icon: Globe, value: "25+", label: "Countries Served" }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Comprehensive Services - Zion Tech Group"
+        description="Explore our complete portfolio of innovative technology solutions including AI, Quantum Computing, Cloud DevOps, IoT, and Micro SaaS services."
+        keywords="technology services, AI solutions, quantum computing, cloud services, IoT solutions, Zion Tech Group"
+      />
+
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">

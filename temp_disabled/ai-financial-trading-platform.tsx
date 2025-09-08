@@ -20,8 +20,8 @@ import {
   Users,
   Lock,
   Eye,
-  PieChart
-} from 'lucide-react';
+  PieChart,
+  TrendingUp} from 'lucide-react';
 
 export default function AIFinancialTradingPlatform() {
   const features = [

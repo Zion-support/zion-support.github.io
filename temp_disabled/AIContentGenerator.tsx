@@ -15,9 +15,7 @@ import {
   Search,
   Target,
   BarChart3,
-  Users,
-  Sparkles
-} from 'lucide-react';
+  Users} from 'lucide-react';
 
 export default function AIContentGenerator() {
   const features = [

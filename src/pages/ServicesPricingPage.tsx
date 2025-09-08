@@ -1,11 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-import { SEO } from '@/components/SEO';
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { 
+  Check, 
+  X, 
+  Star, 
+  Zap, 
+  Shield, 
+  Globe, 
+  TrendingUp, 
+  Users, 
+  Building, 
+  Smartphone, 
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Truck,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  DollarSign} from "lucide-react";
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
+// Group services by category for better organization
+const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
+  if (!acc[service.category]) {
+    acc[service.category] = [];
+  }
+  acc[service.category].push(service);
+  return acc;
+}, {} as { [key: string]: typeof EXPANDED_SERVICES });
+// Pricing comparison features
+const pricingFeatures = [
+  "AI-Powered Solutions",
+  "24/7 Support",
+  "Global Coverage",
+  "Custom Integration",
+  "Training & Documentation",
+  "Regular Updates",
+  "Security Compliance",
+  "Scalable Architecture"
+];
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {

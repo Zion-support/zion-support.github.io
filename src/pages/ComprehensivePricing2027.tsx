@@ -1,8 +1,12 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Check, Star, Zap, TrendingUp, Users, Shield, Globe, Phone, Mail, MapPin, Award } from 'lucide-react';
-import { ADVANCED_MICRO_SAAS_SERVICES_2027 } from '../data/advancedMicroSaasServices2027';
-import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/specializedITInfrastructureServices2027';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Check, Star, Brain, Cpu, Database, Network, Shield, Zap, 
+  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
+  ChevronDown, ChevronUp, Search, Filter, Grid, List} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
 
 export default function ComprehensivePricing2027() {
   const [selectedCategory, setSelectedCategory] = useState('All');

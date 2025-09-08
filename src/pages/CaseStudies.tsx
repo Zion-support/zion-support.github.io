@@ -10,22 +10,7 @@ import {
   Users,
   DollarSign,
   Clock,
-  Target,
-  Zap,
-  Shield,
-  Globe,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  BarChart3,
-  Rocket,
-  Lightbulb,
-  Phone,
-  Mail,
-  MapPin,
-  ShoppingBag
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 const CaseStudies: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -11,10 +11,15 @@ import {
   Heart, 
   Cpu,
   TrendingUp,
-  Users,
-  Globe,
-  Award
-} from 'lucide-react';
+  Code,
+  Server,
+  Smartphone,
+  Database,
+  BookOpen,
+  HelpCircle,
+  Mail,
+  Video,
+  GraduationCap} from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');

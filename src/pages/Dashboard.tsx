@@ -46,9 +46,7 @@ import {
   Building,
   Truck,
   Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+  Phone} from 'lucide-react';
 
 export default function Dashboard() {
   const stats = [

@@ -168,8 +168,7 @@ import {
   NeutralFace,
   Expressionless,
   Husk,
-  RollingEyes,
-          } from 'lucide-react';
+  RollingEyes} from 'lucide-react';
 
 const AIAutonomousBusinessOperations = () => {
   const features = [

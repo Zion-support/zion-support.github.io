@@ -1,6 +1,72 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  TrendingUp, 
+  Award, 
+  Globe, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  Rocket,
+  Target,
+  Handshake,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  BarChart3,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Globe2,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Zap as ZapIcon,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  DollarSign,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  FileText,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette} from 'lucide-react';
+
+// Optimized futuristic animated background component
+const FuturisticBackground = React.memo(() => {
+  const particles = useMemo(() => 
+    [...Array(20)].map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: i * 0.1,
+      duration: 5 + i * 0.3
+    })), []
+  );
 
 export default function Home() {
   return (

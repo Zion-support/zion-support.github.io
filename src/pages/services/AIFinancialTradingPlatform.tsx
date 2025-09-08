@@ -31,9 +31,7 @@ import {
   Database,
   Network,
   Lock,
-  Eye,
-  AlertTriangle
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 export default function AIFinancialTradingPlatform() {
   const features = [

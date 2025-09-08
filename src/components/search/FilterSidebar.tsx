@@ -1,4 +1,5 @@
-import { Filter, X } from 'lucide-react';
+import React from 'react';
+import { Filter} from 'lucide-react';
 
 <<<<<<< HEAD
 

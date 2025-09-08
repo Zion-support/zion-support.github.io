@@ -18,8 +18,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  ArrowRight
-} from 'lucide-react';
+  ExternalLink,
+  Zap,
+  Shield,
+  Cpu} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_SERVICES_2026, SERVICE_STATISTICS_2026 } from '../data/innovativeServices2026';
 

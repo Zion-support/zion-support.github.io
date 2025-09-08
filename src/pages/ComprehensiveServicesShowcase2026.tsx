@@ -43,188 +43,29 @@ import {
   Settings,
   Palette,
   Clock,
-  DollarSign,
-  Globe,
-  Award,
-  Lightbulb,
-  Code,
-  MessageCircle,
-  UserCheck,
-  Handshake,
-  Briefcase,
-  Scale as ScaleIcon,
-  FileText as FileTextIcon,
-  HelpCircle,
-  Users2,
-  PenTool,
-  Calculator,
-  Video,
-  GraduationCap
-} from 'lucide-react';
-
-export default function ComprehensiveServicesShowcase2026() {
-  const serviceCategories = [
-    {
-      title: "AI & Automation Services",
-      icon: Brain,
-      color: "text-zion-cyan",
-      bgColor: "bg-zion-cyan/20",
-      description: "Cutting-edge AI solutions that transform business operations",
-      services: [
-        {
-          name: "AI Autonomous Legal Research Platform",
-          description: "Revolutionary AI-powered legal research with 80% time savings",
-          href: "/services/ai-autonomous-legal-research-platform",
-          price: "$299/month",
-          features: ["AI-powered case analysis", "Intelligent search & discovery", "Document analysis & summarization"]
-        },
-        {
-          name: "AI Sustainability Management Platform",
-          description: "Comprehensive environmental impact monitoring and optimization",
-          href: "/services/ai-sustainability-management-platform",
-          price: "$199/month",
-          features: ["Carbon footprint tracking", "Environmental analytics", "Automated compliance"]
-        },
-        {
-          name: "AI Business Intelligence Dashboard",
-          description: "Advanced analytics and insights for data-driven decisions",
-          href: "/services/ai-business-intelligence-dashboard",
-          price: "$399/month",
-          features: ["Real-time analytics", "Predictive insights", "Custom dashboards"]
-        },
-        {
-          name: "AI Customer Support Automation",
-          description: "Intelligent customer service with 24/7 availability",
-          href: "/services/ai-customer-support-automation",
-          price: "$249/month",
-          features: ["Natural language processing", "Multi-language support", "Seamless escalation"]
-        },
-        {
-          name: "AI Project Management Platform",
-          description: "AI-powered project planning, tracking, and optimization",
-          href: "/services/ai-project-management-platform",
-          price: "$349/month",
-          features: ["Smart scheduling", "Risk assessment", "Resource optimization"]
-        },
-        {
-          name: "AI Marketing Automation Platform",
-          description: "Intelligent marketing campaigns with personalized targeting",
-          href: "/services/ai-marketing-automation-platform",
-          price: "$299/month",
-          features: ["Behavioral analysis", "A/B testing", "ROI optimization"]
-        }
-      ]
-    },
-    {
-      title: "IT & Infrastructure Services",
-      icon: Server,
-      color: "text-zion-purple",
-      bgColor: "bg-zion-purple/20",
-      description: "Robust IT solutions for modern business infrastructure",
-      services: [
-        {
-          name: "IT Infrastructure Management",
-          description: "Comprehensive infrastructure monitoring and optimization",
-          href: "/services/it-infrastructure-management",
-          price: "$599/month",
-          features: ["24/7 monitoring", "Performance optimization", "Scalability planning"]
-        },
-        {
-          name: "Cloud & DevOps Solutions",
-          description: "Modern cloud infrastructure and deployment automation",
-          href: "/services/cloud-devops",
-          price: "$499/month",
-          features: ["Multi-cloud management", "CI/CD pipelines", "Infrastructure as code"]
-        },
-        {
-          name: "Cybersecurity Services",
-          description: "Advanced security solutions for enterprise protection",
-          href: "/services/cybersecurity",
-          price: "$799/month",
-          features: ["Threat detection", "Vulnerability assessment", "Incident response"]
-        },
-        {
-          name: "Blockchain Enterprise Solutions",
-          description: "Secure blockchain infrastructure for business applications",
-          href: "/services/blockchain-enterprise-solutions",
-          price: "$899/month",
-          features: ["Smart contracts", "Decentralized applications", "Security auditing"]
-        }
-      ]
-    },
-    {
-      title: "Micro SaaS Solutions",
-      icon: Rocket,
-      color: "text-zion-blue",
-      bgColor: "bg-zion-blue/20",
-      description: "Specialized software solutions for specific business needs",
-      services: [
-        {
-          name: "AI Workflow Orchestrator",
-          description: "Intelligent workflow automation and process optimization",
-          href: "/services/ai-workflow-orchestrator",
-          price: "$399/month",
-          features: ["Process automation", "Workflow optimization", "Integration management"]
-        },
-        {
-          name: "AI HR Platform",
-          description: "Comprehensive HR management with AI-powered insights",
-          href: "/services/ai-hr-platform",
-          price: "$299/month",
-          features: ["Talent acquisition", "Performance management", "Employee analytics"]
-        },
-        {
-          name: "AI Financial Risk Management",
-          description: "Advanced risk assessment and financial planning tools",
-          href: "/services/ai-financial-risk-management-enhanced",
-          price: "$449/month",
-          features: ["Risk modeling", "Compliance monitoring", "Financial forecasting"]
-        },
-        {
-          name: "AI Supply Chain Optimization",
-          description: "Intelligent supply chain management and optimization",
-          href: "/services/ai-supply-chain-optimization-enhanced",
-          price: "$549/month",
-          features: ["Demand forecasting", "Inventory optimization", "Route planning"]
-        }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Building2,
-      color: "text-zion-green",
-      bgColor: "bg-zion-green/20",
-      description: "Tailored solutions for specific industry requirements",
-      services: [
-        {
-          name: "Healthcare Analytics Platform",
-          description: "AI-powered healthcare data analysis and insights",
-          href: "/services/ai-healthcare-analytics-platform",
-          price: "$699/month",
-          features: ["Patient analytics", "Clinical insights", "Compliance management"]
-        },
-        {
-          name: "Financial Services Solutions",
-          description: "Advanced financial technology and risk management",
-          href: "/solutions/financial",
-          price: "Custom pricing",
-          features: ["Trading platforms", "Risk assessment", "Regulatory compliance"]
-        },
-        {
-          name: "Manufacturing Solutions",
-          description: "Smart manufacturing and industrial automation",
-          href: "/solutions/manufacturing",
-          price: "Custom pricing",
-          features: ["Process optimization", "Quality control", "Predictive maintenance"]
-        },
-        {
-          name: "Retail & E-commerce Solutions",
-          description: "Digital transformation for retail businesses",
-          href: "/solutions/retail",
-          price: "Custom pricing",
-          features: ["Omnichannel integration", "Customer analytics", "Inventory management"]
-        }
-      ]
+  CheckCircle} from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { 
+  revolutionaryMicroSaasServices2026,
+  revolutionaryITInfrastructureServices2026,
+  revolutionaryAIServices2026,
+  ALL_REVOLUTIONARY_SERVICES_2026
+} from '../data/comprehensiveServices2026';
+const ComprehensiveServicesShowcase2026: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
+  const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
+  const filteredServices = useMemo(() => {
+    let filtered = ALL_REVOLUTIONARY_SERVICES_2026;
+    if (searchTerm) {
+      const lowerQuery = searchTerm.toLowerCase();
+      filtered = filtered.filter(service => 
+        service.name.toLowerCase().includes(lowerQuery) ||
+        service.description.toLowerCase().includes(lowerQuery) ||
+        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+      );
     }
   ];
 

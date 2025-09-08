@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Brain,
+  Cloud,
+  Database,
+  Globe,
+  Heart,
+  Lock,
+  Rocket,
+  Search,
+  Shield,
+  Star,
+  TrendingUp,
+  Users,
+  Zap} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { 
   ArrowRight, 

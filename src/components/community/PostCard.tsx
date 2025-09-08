@@ -1,3 +1,4 @@
+
 interface PostCardProps {
   post: {
     id: string;

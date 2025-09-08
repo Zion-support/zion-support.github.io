@@ -19,9 +19,7 @@ import {
   TrendingUp,
   Clock,
   DollarSign,
-  Target,
-  Award
-} from 'lucide-react';
+  Target} from 'lucide-react';
 
 export default function AIContentGenerationPlatform() {
   const features = [

@@ -1,119 +1,211 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Events = () => {
-    const upcomingEvents = [
-        {
-            id: 1,
-            title: "AI in Enterprise: 2025 Trends & Strategies",
-            type: "Webinar",
-            date: "2025-01-15",
-            time: "2:00 PM EST",
-            duration: "60 minutes",
-            description: "Join our AI experts as they discuss the latest trends in enterprise AI adoption, implementation strategies, and ROI measurement.",
-            speakers: ["Dr. Sarah Chen", "Marcus Rodriguez"],
-            category: "AI & Machine Learning",
-            registrationUrl: "#",
-            isFree: true,
-            maxAttendees: 500
-        },
-        {
-            id: 2,
-            title: "Cybersecurity Summit 2025",
-            type: "Conference",
-            date: "2025-02-20",
-            time: "9:00 AM EST",
-            duration: "Full Day",
-            description: "A comprehensive one-day conference covering the latest cybersecurity threats, defense strategies, and compliance requirements.",
-            speakers: ["Alex Thompson", "Dr. Emily Watson", "David Kim"],
-            category: "Cybersecurity",
-            registrationUrl: "#",
-            isFree: false,
-            price: "$299",
-            maxAttendees: 200
-        },
-        {
-            id: 3,
-            title: "Cloud Migration Best Practices",
-            type: "Workshop",
-            date: "2025-01-28",
-            time: "1:00 PM EST",
-            duration: "3 hours",
-            description: "Hands-on workshop covering cloud migration strategies, cost optimization, and security best practices.",
-            speakers: ["David Kim", "Lisa Thompson"],
-            category: "Cloud & Infrastructure",
-            registrationUrl: "#",
-            isFree: false,
-            price: "$149",
-            maxAttendees: 50
-        },
-        {
-            id: 4,
-            title: "Digital Transformation Roadmap",
-            type: "Webinar",
-            date: "2025-02-05",
-            time: "3:00 PM EST",
-            duration: "90 minutes",
-            description: "Learn how to create and execute a successful digital transformation strategy for your organization.",
-            speakers: ["Lisa Thompson", "Dr. Sarah Chen"],
-            category: "Digital Transformation",
-            registrationUrl: "#",
-            isFree: true,
-            maxAttendees: 300
-        }
-    ];
-    const pastEvents = [
-        {
-            id: 5,
-            title: "AI Ethics & Responsible Development",
-            type: "Panel Discussion",
-            date: "2024-12-10",
-            description: "Expert panel discussion on ethical AI development, bias mitigation, and responsible AI deployment.",
-            speakers: ["Dr. Emily Watson", "Dr. James Wilson"],
-            category: "AI Ethics",
-            recordingUrl: "#"
-        },
-        {
-            id: 6,
-            title: "Quantum Computing Workshop",
-            type: "Workshop",
-            date: "2024-11-25",
-            description: "Introduction to quantum computing principles and their applications in AI and cryptography.",
-            speakers: ["Dr. James Wilson", "Marcus Rodriguez"],
-            category: "Quantum Computing",
-            recordingUrl: "#"
-        }
-    ];
-    const eventCategories = [
-        { name: "AI & Machine Learning", count: 8, color: "from-purple-500 to-pink-500" },
-        { name: "Cybersecurity", count: 6, color: "from-red-500 to-orange-500" },
-        { name: "Cloud & Infrastructure", count: 5, color: "from-blue-500 to-cyan-500" },
-        { name: "Digital Transformation", count: 4, color: "from-green-500 to-emerald-500" },
-        { name: "Quantum Computing", count: 3, color: "from-indigo-500 to-purple-500" }
-    ];
-    const formatDate = (dateString) => {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    };
-    const getEventTypeColor = (type) => {
-        switch (type) {
-            case 'Webinar':
-                return 'bg-blue-100 text-blue-800';
-            case 'Conference':
-                return 'bg-purple-100 text-purple-800';
-            case 'Workshop':
-                return 'bg-green-100 text-green-800';
-            case 'Panel Discussion':
-                return 'bg-orange-100 text-orange-800';
-            default:
-                return 'bg-gray-100 text-gray-800';
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  Video,
+  ExternalLink,
+  Filter,
+  Search,
+  ArrowRight,
+  Star,
+  Award,
+  Globe,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  TrendingUp,
+  MessageCircle,
+  BookOpen} from 'lucide-react';
+
+const events = [
+  {
+    id: 1,
+    title: "AI & Machine Learning Summit 2027",
+    type: "Conference",
+    date: "2027-03-15",
+    time: "9:00 AM - 6:00 PM EST",
+    location: "Virtual + New York City",
+    status: "upcoming",
+    category: "AI & ML",
+    description: "Join industry leaders for a comprehensive exploration of AI and machine learning innovations, featuring keynote speakers, workshops, and networking opportunities.",
+    speakers: ["Dr. Sarah Chen", "Prof. Michael Rodriguez", "AI Expert Lisa Wang"],
+    attendees: 500,
+    price: "$299",
+    highlights: [
+      "Keynote presentations from AI pioneers",
+      "Hands-on workshops with real datasets",
+      "Networking with industry professionals",
+      "Latest AI research and applications"
+    ],
+    image: "/images/ai-summit-2027.jpg"
+  },
+  {
+    id: 2,
+    title: "Cybersecurity Best Practices Workshop",
+    type: "Workshop",
+    date: "2027-02-28",
+    time: "2:00 PM - 5:00 PM EST",
+    location: "Virtual",
+    status: "upcoming",
+    category: "Cybersecurity",
+    description: "Learn essential cybersecurity practices for modern businesses, including threat detection, incident response, and compliance requirements.",
+    speakers: ["Security Expert John Smith", "Compliance Officer Maria Garcia"],
+    attendees: 150,
+    price: "Free",
+    highlights: [
+      "Threat detection strategies",
+      "Incident response protocols",
+      "Compliance best practices",
+      "Security tool demonstrations"
+    ],
+    image: "/images/cybersecurity-workshop.jpg"
+  },
+  {
+    id: 3,
+    title: "Cloud Computing & DevOps Conference",
+    type: "Conference",
+    date: "2027-01-20",
+    time: "8:00 AM - 7:00 PM EST",
+    location: "San Francisco, CA",
+    status: "upcoming",
+    category: "Cloud & DevOps",
+    description: "Explore the latest trends in cloud computing, containerization, and DevOps practices with hands-on demonstrations and expert insights.",
+    speakers: ["Cloud Architect David Lee", "DevOps Engineer Sarah Johnson"],
+    attendees: 300,
+    price: "$199",
+    highlights: [
+      "Cloud migration strategies",
+      "Container orchestration",
+      "CI/CD pipeline optimization",
+      "Cost optimization techniques"
+    ],
+    image: "/images/cloud-devops-conference.jpg"
+  },
+  {
+    id: 4,
+    title: "Data Analytics & Business Intelligence",
+    type: "Webinar",
+    date: "2027-01-10",
+    time: "1:00 PM - 3:00 PM EST",
+    location: "Virtual",
+    status: "upcoming",
+    category: "Data Analytics",
+    description: "Discover how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.",
+    speakers: ["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
+    attendees: 200,
+    price: "Free",
+    highlights: [
+      "Data visualization techniques",
+      "Predictive analytics models",
+      "Business intelligence tools",
+      "ROI measurement strategies"
+    ],
+    image: "/images/data-analytics-webinar.jpg"
+  },
+  {
+    id: 5,
+    title: "IoT & Edge Computing Symposium",
+    type: "Symposium",
+    date: "2026-12-15",
+    time: "10:00 AM - 4:00 PM EST",
+    location: "Virtual",
+    status: "past",
+    category: "IoT & Edge",
+    description: "Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.",
+    speakers: ["IoT Specialist Dr. James Brown", "Edge Computing Expert Lisa Chen"],
+    attendees: 180,
+    price: "$149",
+    highlights: [
+      "IoT architecture design",
+      "Edge computing optimization",
+      "Security considerations",
+      "Industry applications"
+    ],
+    image: "/images/iot-symposium.jpg"
+  },
+  {
+    id: 6,
+    title: "Digital Transformation Summit",
+    type: "Conference",
+    date: "2026-11-30",
+    time: "9:00 AM - 6:00 PM EST",
+    location: "Chicago, IL",
+    status: "past",
+    category: "Digital Transformation",
+    description: "Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.",
+    speakers: ["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
+    attendees: 400,
+    price: "$249",
+    highlights: [
+      "Transformation roadmaps",
+      "Change management strategies",
+      "Technology selection",
+      "Success metrics"
+    ],
+    image: "/images/digital-transformation-summit.jpg"
+  }
+];
+
+const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
+const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
+const statuses = ['All', 'upcoming', 'past'];
+
+export default function Events() {
+  const [selectedType, setSelectedType] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedStatus, setSelectedStatus] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredEvents = events.filter(event => {
+    const matchesType = selectedType === 'All' || event.type === selectedType;
+    const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
+    const matchesStatus = selectedStatus === 'All' || event.status === selectedStatus;
+    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         event.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    return matchesType && matchesCategory && matchesStatus && matchesSearch;
+  });
+
+  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
+  const pastEvents = filteredEvents.filter(event => event.status === 'past');
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI & ML': return Brain;
+      case 'Cybersecurity': return Shield;
+      case 'Cloud & DevOps': return Cloud;
+      case 'Data Analytics': return TrendingUp;
+      case 'IoT & Edge': return Zap;
+      case 'Digital Transformation': return Globe;
+      default: return BookOpen;
+    }
+  };
+
+  const getStatusBadge = (status: string) => {
+    if (status === 'upcoming') {
+      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
+    } else {
+      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

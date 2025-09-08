@@ -36,9 +36,7 @@ import {
   FileText,
   BarChart,
   LineChart,
-  AreaChart,
-  ScatterPlot
-} from 'lucide-react';
+  AreaChart} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const Analytics: React.FC = () => {

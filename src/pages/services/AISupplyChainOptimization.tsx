@@ -1,4 +1,44 @@
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Package, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { 
+  Truck, 
+  TrendingUp, 
+  BarChart3, 
+  Users, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Eye,
+  Star,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Play,
+  ArrowRight,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Clock,
+  Award,
+  Brain,
+  Target,
+  PieChart,
+  Activity,
+  MapPin,
+  Shield,
+  Settings,
+  DollarSign,
+  AlertCircle,
+  Calendar,
+  Package,
+  Route,
+  Warehouse,
+  Factory,
+  Ship,
+  Plane} from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
   const features = [

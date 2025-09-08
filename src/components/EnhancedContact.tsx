@@ -1,11 +1,101 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/Textarea';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe } from 'lucide-react';
-export const EnhancedContact = () => {
-    const [formData, setFormData] = useState({
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Send, 
+  CheckCircle, 
+  AlertCircle,
+  Clock,
+  MessageSquare,
+  Building} from 'lucide-react';
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  service: string;
+  message: string;
+}
+
+interface ContactFormErrors {
+  [key: string]: string;
+}
+
+export function EnhancedContact() {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    service: 'general',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const services = [
+    { value: 'general', label: 'General Inquiry' },
+    { value: 'ai-solutions', label: 'AI Solutions' },
+    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
+    { value: 'cybersecurity', label: 'Cybersecurity' },
+    { value: 'digital-transformation', label: 'Digital Transformation' },
+    { value: 'consulting', label: 'IT Consulting' },
+    { value: 'quantum-computing', label: 'Quantum Computing' },
+    { value: 'green-it', label: 'Green IT Solutions' }
+  ];
+
+  const validateForm = (): boolean => {
+    const newErrors: ContactFormErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleInputChange = (field: keyof ContactFormData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: '' }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setIsSubmitted(true);
+      setFormData({
         name: '',
         email: '',
         company: '',

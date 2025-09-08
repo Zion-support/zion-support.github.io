@@ -299,9 +299,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
           "Compliance reporting",
           "24/7 monitoring"
         ],
-        popular: true,
-        cta: "Get Protected",
-        href: "https://ziontechgroup.com/contact"
+        limitations: [
+          "Smartphone volume limits",
+          "Business hours support"
+        ],
+        bestFor: ["Medium IoT deployments", "Manufacturing", "Smart buildings"],
+        roi: "250-400%",
+        setupCost: 6000,
+        contractLength: "12 months"
       },
       {
         id: "enterprise",
@@ -323,269 +328,42 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         href: "https://ziontechgroup.com/contact"
       }
     ],
-    features: [
-      "AI-powered threat detection",
-      "Behavioral analysis",
-      "Autonomous incident response",
-      "Zero-day threat prevention",
-      "Advanced malware detection",
-      "Network traffic analysis",
-      "User behavior analytics",
-      "Compliance automation",
-      "Real-time monitoring",
-      "Automated remediation"
-    ],
-    benefits: [
-      "Detect threats 10x faster",
-      "Reduce false positives by 90%",
-      "Automated incident response",
-      "24/7 security monitoring",
-      "Regulatory compliance"
-    ],
-    useCases: [
-      "Enterprise security",
-      "Financial services",
-      "Healthcare organizations",
-      "Government agencies",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "CISOs and security teams",
-      "IT administrators",
-      "Compliance officers",
-      "Security analysts",
-      "Risk managers"
-    ],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,499 - $4,999/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-  // IT Infrastructure Services
-  {
-    id: "zero-trust-network-architecture",
-    title: "Zero Trust Network Architecture",
-    description: "Modern network security architecture that eliminates the concept of trust and continuously validates every user, device, and connection.",
-    category: "IT Infrastructure",
-    subcategory: "Network Security",
-    pricingTiers: [
-      {
-        id: "starter",
-        name: "Starter",
-        price: 1999,
-        currency: "$",
-        billing: "month",
-        description: "Basic zero trust for small networks",
-        features: [
-          "Basic identity management",
-          "Up to 100 users",
-          "Standard authentication",
-          "Basic monitoring",
-          "Email support"
-        ],
-        cta: "Start Securing",
-        href: "https://ziontechgroup.com/contact"
-      },
-      {
-        id: "professional",
-        name: "Professional",
-        price: 4999,
-        currency: "$",
-        billing: "month",
-        description: "Advanced zero trust for growing enterprises",
-        features: [
-          "Advanced identity management",
-          "Up to 1000 users",
-          "Multi-factor authentication",
-          "Advanced monitoring",
-          "Priority support",
-          "Compliance automation",
-          "Custom policies"
-        ],
-        popular: true,
-        cta: "Get Protected",
-        href: "https://ziontechgroup.com/contact"
-      },
-      {
-        id: "enterprise",
-        name: "Enterprise",
-        price: 9999,
-        currency: "$",
-        billing: "month",
-        description: "Full-scale zero trust for large enterprises",
-        features: [
-          "Enterprise identity management",
-          "Unlimited users",
-          "Advanced security features",
-          "24/7 monitoring",
-          "24/7 dedicated support",
-          "Custom development",
-          "Full compliance"
-        ],
-        cta: "Contact Sales",
-        href: "https://ziontechgroup.com/contact"
-      }
-    ],
-    features: [
-      "Identity-based access control",
-      "Continuous authentication",
-      "Micro-segmentation",
-      "Least privilege access",
-      "Real-time monitoring",
-      "Automated policy enforcement",
-      "Compliance automation",
-      "Threat intelligence integration",
-      "Scalable architecture",
-      "Cloud-native design"
-    ],
-    benefits: [
-      "Eliminate network vulnerabilities",
-      "Reduce attack surface",
-      "Compliance automation",
-      "Scalable security",
-      "Future-proof architecture"
-    ],
-    useCases: [
-      "Enterprise networks",
-      "Cloud environments",
-      "Remote workforces",
-      "Critical infrastructure",
-      "Government networks"
-    ],
-    targetAudience: [
-      "Network architects",
-      "Security engineers",
-      "IT directors",
-      "Compliance officers",
-      "System administrators"
-    ],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,999 - $8,999/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-  // Micro SaaS Services
-  {
-    id: "ai-workflow-orchestrator",
-    title: "AI Workflow Orchestrator",
-    description: "Intelligent workflow automation platform that uses AI to optimize, orchestrate, and execute complex business processes across multiple systems.",
-    category: "Micro SaaS",
-    subcategory: "Workflow Automation",
-    pricingTiers: [
-      {
-        id: "starter",
-        name: "Starter",
-        price: 399,
-        currency: "$",
-        billing: "month",
-        description: "Basic workflow automation for small teams",
-        features: [
-          "Basic workflow builder",
-          "Up to 10 workflows",
-          "Standard integrations",
-          "Email support",
-          "Basic analytics"
-        ],
-        cta: "Start Automating",
-        href: "https://ziontechgroup.com/contact"
-      },
-      {
-        id: "professional",
-        name: "Professional",
-        price: 899,
-        currency: "$",
-        billing: "month",
-        description: "Advanced automation for growing businesses",
-        features: [
-          "AI-powered optimization",
-          "Up to 50 workflows",
-          "Premium integrations",
-          "Priority support",
-          "Advanced analytics",
-          "Custom workflows",
-          "Multi-user collaboration"
-        ],
-        popular: true,
-        cta: "Get Started",
-        href: "https://ziontechgroup.com/contact"
-      },
-      {
-        id: "enterprise",
-        name: "Enterprise",
-        price: 1999,
-        currency: "$",
-        billing: "month",
-        description: "Full-scale automation for large enterprises",
-        features: [
-          "Full AI orchestration",
-          "Unlimited workflows",
-          "All integrations",
-          "24/7 dedicated support",
-          "Custom development",
-          "Advanced security",
-          "Full compliance"
-        ],
-        cta: "Contact Sales",
-        href: "https://ziontechgroup.com/contact"
-      }
-    ],
-    features: [
-      "AI-powered process optimization",
-      "Multi-system integration",
-      "Intelligent routing",
-      "Real-time monitoring",
-      "Predictive analytics",
-      "Automated decision making",
-      "Custom workflow builder",
-      "Performance analytics",
-      "Scalable architecture",
-      "API-first design"
-    ],
-    benefits: [
-      "Reduce process time by 60%",
-      "Eliminate manual errors",
-      "Improve efficiency",
-      "Scalable automation",
-      "Cost optimization"
-    ],
-    useCases: [
-      "Customer onboarding",
-      "Order processing",
-      "Invoice approval",
-      "Employee onboarding",
-      "Project management"
-    ],
-    targetAudience: [
-      "Business analysts",
-      "Process improvement teams",
-      "Operations managers",
-      "IT administrators",
-      "Product managers"
-    ],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$599 - $1,599/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    marketComparison: {
+      competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
+      averageMarketPrice: "$2,000 - $8,000/month",
+      ourAdvantage: [
+        "More advanced edge processing",
+        "Better analytics capabilities",
+        "Lower latency",
+        "More cost-effective"
+      ]
+    },
+    roiAnalysis: {
+      shortTerm: "90% reduction in latency",
+      longTerm: "250-600% ROI through operational efficiency",
+      paybackPeriod: "6-10 months",
+      totalValue: "$300K - $3M+ in operational optimization"
+    },
+    implementation: {
+      timeline: "6-10 weeks",
+      requirements: [
+        "IoT devices and sensors",
+        "Network infrastructure",
+        "Data access permissions",
+        "Performance requirements"
+      ],
+      support: [
+        "IoT specialists",
+        "Edge computing experts",
+        "24/7 monitoring",
+        "Performance optimization"
+      ],
+      training: [
+        "Platform administration",
+        "Smartphone management",
+        "Analytics interpretation",
+        "Performance monitoring"
+      ]
     }
   }
 ];

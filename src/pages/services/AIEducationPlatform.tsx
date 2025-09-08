@@ -30,9 +30,7 @@ import {
   Mic,
   PenTool,
   Users as UsersIcon,
-  Award,
-  Lightbulb
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 export default function AIEducationPlatform() {
   const features = [

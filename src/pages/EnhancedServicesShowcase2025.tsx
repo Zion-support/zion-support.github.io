@@ -44,12 +44,19 @@ import {
   Server,
   Code,
   Truck,
-  Building,
-  Smartphone,
-  Cube,
-  Gauge,
-  MessageCircle as MessageCircleIcon
-} from 'lucide-react';
+  DollarSign,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  FileText,
+  Cpu,
+  TrendingDown,
+  Calendar,
+  UserCheck,
+  ShieldCheck,
+  Zap as ZapIcon,
+  ShoppingCart,
+  Gauge} from 'lucide-react';
 import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
 
 const EnhancedServicesShowcase2025: React.FC = () => {

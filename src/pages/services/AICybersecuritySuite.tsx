@@ -26,9 +26,7 @@ import {
   AlertTriangle,
   Fingerprint,
   Key,
-  Monitor,
-  Activity
-} from 'lucide-react';
+  Monitor} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

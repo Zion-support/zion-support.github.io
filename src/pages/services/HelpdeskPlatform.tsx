@@ -29,9 +29,7 @@ import {
   ShoppingCart,
   Heart,
   GraduationCap,
-  Settings,
-  Smartphone
-} from 'lucide-react';
+  Settings} from 'lucide-react';
 
 export default function HelpdeskPlatform() {
   const features = [

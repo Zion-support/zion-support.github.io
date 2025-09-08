@@ -12,9 +12,7 @@ import {
   CheckCircle,
   Play,
   Code,
-  Settings,
-  Users
-} from 'lucide-react';
+  Settings} from 'lucide-react';
 
 export default function CloudSolutions() {
   const cloudServices = [

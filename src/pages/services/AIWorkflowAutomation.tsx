@@ -1,162 +1,70 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
-const AIWorkflowAutomation = () => {
-    const features = [
-        {
-            icon: Brain,
-            title: "AI-Powered Process Analysis",
-            description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential",
-            benefits: ["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
-        },
-        {
-            icon: Workflow,
-            title: "Intelligent Workflow Design",
-            description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
-            benefits: ["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
-        },
-        {
-            icon: Zap,
-            title: "Automated Decision Making",
-            description: "AI algorithms that make intelligent decisions based on data, rules, and historical patterns",
-            benefits: ["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"]
-        },
-        {
-            icon: Clock,
-            title: "Real-time Monitoring",
-            description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",
-            benefits: ["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
-        }
-    ];
-    const solutions = [
-        {
-            category: "Document Processing",
-            icon: Database,
-            solutions: [
-                "Automated document classification",
-                "Intelligent data extraction",
-                "Form processing automation",
-                "Document routing and approval",
-                "Compliance checking"
-            ]
-        },
-        {
-            category: "Customer Service",
-            icon: Users,
-            solutions: [
-                "Ticket routing and prioritization",
-                "Automated responses",
-                "Customer inquiry handling",
-                "Service level monitoring",
-                "Customer satisfaction tracking"
-            ]
-        },
-        {
-            category: "Financial Operations",
-            icon: TrendingUp,
-            solutions: [
-                "Invoice processing automation",
-                "Payment approval workflows",
-                "Expense report processing",
-                "Budget monitoring",
-                "Financial reporting"
-            ]
-        },
-        {
-            category: "HR & Recruitment",
-            icon: Users,
-            solutions: [
-                "Resume screening automation",
-                "Interview scheduling",
-                "Onboarding workflows",
-                "Performance review automation",
-                "Employee self-service"
-            ]
-        }
-    ];
-    const technologies = [
-        {
-            name: "Machine Learning",
-            description: "Advanced ML algorithms for process optimization and decision making",
-            icon: Brain
-        },
-        {
-            name: "Robotic Process Automation",
-            description: "RPA tools for repetitive task automation",
-            icon: Workflow
-        },
-        {
-            name: "Natural Language Processing",
-            description: "AI-powered text analysis and document processing",
-            icon: Database
-        },
-        {
-            name: "Workflow Engine",
-            description: "Scalable workflow orchestration platform",
-            icon: Zap
-        },
-        {
-            name: "Real-time Analytics",
-            description: "Instant performance monitoring and optimization",
-            icon: BarChart3
-        },
-        {
-            name: "API Integration",
-            description: "Seamless integration with existing systems",
-            icon: Globe
-        }
-    ];
-    const benefits = [
-        {
-            title: "Increased Efficiency",
-            description: "Automate repetitive tasks and improve process efficiency by 40-60%",
-            icon: TrendingUp
-        },
-        {
-            title: "Cost Reduction",
-            description: "Reduce operational costs by 25-35% through automation",
-            icon: Target
-        },
-        {
-            title: "Error Reduction",
-            description: "Minimize human errors and improve accuracy by 90%+",
-            icon: CheckCircle
-        },
-        {
-            title: "Scalability",
-            description: "Scale operations without proportional increase in resources",
-            icon: Users
-        }
-    ];
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6">
-              <Zap className="w-10 h-10 text-white"/>
+import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock} from 'lucide-react';
+
+export default function AIWorkflowAutomation() {
+  const features = [
+    'Intelligent process mapping and optimization',
+    'AI-powered decision trees and conditional logic',
+    'Multi-platform integration (Slack, Teams, Zapier)',
+    'Real-time workflow analytics and performance metrics',
+    'Automated error handling and fallback procedures',
+    'Custom workflow templates for common business processes',
+    'Role-based access control and approval workflows',
+    'Mobile workflow management and notifications'
+  ];
+
+  const tiers = [
+    { 
+      name: 'Starter', 
+      price: '$199/mo', 
+      details: ['Up to 10 workflows', '5 team members', 'Basic integrations', 'Email support'] 
+    },
+    { 
+      name: 'Professional', 
+      price: '$499/mo', 
+      details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support'] 
+    },
+    { 
+      name: 'Enterprise', 
+      price: '$1,299/mo', 
+      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support'] 
+    },
+  ];
+
+  const useCases = [
+    'Customer onboarding automation',
+    'Invoice processing and approval',
+    'Employee onboarding and offboarding',
+    'Project approval workflows',
+    'Quality assurance processes',
+    'Compliance documentation flows'
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Workflow className="w-4 h-4 mr-2" /> AI-Powered Business Process Automation
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Workflow Automation Platform</h1>
+          <p className="text-blue-100 text-xl">Transform your business processes with intelligent automation that learns, adapts, and scales with your organization.</p>
+        </div>
+      </section>
+
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary Features</h2>
+            <ul className="space-y-3">
+              {features.map((f) => (
+                <li key={f} className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-sm text-gray-600">
+              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime guarantee.
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent">

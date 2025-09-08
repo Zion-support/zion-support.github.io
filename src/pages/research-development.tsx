@@ -37,9 +37,7 @@ import {
   Microscope,
   TestTube,
   Atom,
-  Satellite,
-  Telescope
-} from 'lucide-react';
+  Satellite} from 'lucide-react';
 
 const researchAreas = [
   {

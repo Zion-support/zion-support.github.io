@@ -35,9 +35,7 @@ import {
   MapPin,
   GraduationCap,
   Heart,
-  TrendingDown,
-  Lightbulb
-} from 'lucide-react';
+  TrendingDown} from 'lucide-react';
 
 export default function AIEmployeePerformanceAnalytics() {
   const features = [

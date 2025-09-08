@@ -112,9 +112,7 @@ import {
   Atom as AtomIcon,
   Leaf as LeafIcon3,
   Gamepad2 as Gamepad2Icon3,
-  Coins as CoinsIcon3,
-  Satellite as SatelliteIcon3
-} from 'lucide-react';
+  Coins as CoinsIcon3} from 'lucide-react';
 
 export default function NewInnovativeServices2025() {
   const featuredServices = [

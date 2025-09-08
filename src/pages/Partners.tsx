@@ -14,9 +14,7 @@ import {
   Zap,
   CheckCircle,
   Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+  Mail} from 'lucide-react';
 
 export default function Partners() {
   const partnerCategories = [

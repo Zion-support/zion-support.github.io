@@ -21,9 +21,7 @@ import {
   Download,
   Upload,
   PieChart,
-  LineChart,
-  Activity
-} from 'lucide-react';
+  LineChart} from 'lucide-react';
 
 export default function AIDataAnalytics() {
   const features = [

@@ -52,9 +52,7 @@ import {
   GitBranch,
   GitCommit,
   GitPullRequest,
-  GitMerge,
-  GitCompare
-} from 'lucide-react';
+  GitMerge} from 'lucide-react';
 
 export default function Resources() {
   const resourceCategories = [

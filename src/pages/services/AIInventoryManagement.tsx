@@ -35,9 +35,7 @@ import {
   DollarSign,
   AlertCircle,
   Calendar,
-  MapPin,
-  Store
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 export default function AIInventoryManagement() {
   const features = [

@@ -43,14 +43,53 @@ import {
   Settings,
   Key,
   Leaf,
-  Scale,
-  Factory,
-  City,
-  Play,
-  Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+  Gauge,
+  CpuIcon,
+  DatabaseIcon,
+  NetworkIcon,
+  SmartphoneIcon,
+  BarChart3Icon,
+  CodeIcon,
+  ServerIcon,
+  ChipIcon,
+  WifiIcon,
+  ShieldCheckIcon,
+  BotIcon,
+  WorkflowIcon,
+  EyeIcon,
+  SparklesIcon,
+  PhoneIcon,
+  MailIcon,
+  MapPinIcon,
+  TargetIcon,
+  LightbulbIcon,
+  BarChartIcon,
+  PieChartIcon,
+  LineChartIcon,
+  ActivityIcon,
+  FileTextIcon,
+  MessageCircleIcon,
+  CalendarIcon,
+  SettingsIcon,
+  MonitorIcon,
+  TruckIcon,
+  CarIcon,
+  ClipboardIcon,
+  LinkIcon,
+  MicroscopeIcon,
+  XIcon,
+  AtomIcon,
+  HeartIcon} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
+import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031 } from '../data/specializedITInfrastructureServices2031';
+import { SPECIALIZED_AI_SERVICES_2031 } from '../data/specializedAIServices2031';
+
+interface ServiceContact {
+  mobile: string;
+  email: string;
+  address: string;
+  website: string;
+}
 
 const ComprehensiveServicesShowcase2031: React.FC = () => {
   const featuredServices = [

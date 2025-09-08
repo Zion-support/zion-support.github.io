@@ -15,9 +15,7 @@ import {
   Target,
   Smartphone,
   Mail,
-  Phone,
-  Bot
-} from 'lucide-react';
+  Phone} from 'lucide-react';
 
 export default function AICustomerSupport() {
   const features = [

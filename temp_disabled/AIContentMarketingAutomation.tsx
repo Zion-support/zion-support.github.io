@@ -23,9 +23,7 @@ import {
   Clock,
   DollarSign,
   Shield,
-  Headphones,
-  Rocket
-} from 'lucide-react';
+  Headphones} from 'lucide-react';
 
 export default function AIContentMarketingAutomation() {
   const features = [

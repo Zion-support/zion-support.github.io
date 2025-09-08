@@ -1,6 +1,5 @@
-import { motion  } from 'framer-motion';
-import { SEO  } from '@/components/SEO';
-import { Shield, 
+import { motion } from 'framer-motion';
+import { 
   FileText, 
   Shield, 
   Users, 
@@ -11,9 +10,7 @@ import { Shield,
   Lock,
   Mail,
   Phone,
-  MapPin,
-  Calendar
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Terms() {

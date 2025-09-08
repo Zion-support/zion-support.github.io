@@ -25,9 +25,7 @@ import {
   Sparkles,
   Atom,
   Infinity,
-  CpuIcon,
-  CircuitBoard
-} from 'lucide-react';
+  CpuIcon} from 'lucide-react';
 
 export default function QuantumAIPlatform() {
   const features = [

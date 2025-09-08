@@ -14,9 +14,7 @@ import {
   Star,
   MessageSquare,
   Zap,
-  TrendingUp,
-  Award
-} from 'lucide-react';
+  TrendingUp} from 'lucide-react';
 
 interface Notification {
   id: string;

@@ -21,9 +21,7 @@ import {
   UserCheck,
   Calendar,
   Video,
-  Download,
-  Share2
-} from 'lucide-react';
+  Download} from 'lucide-react';
 
 export default function InterviewAssessmentAI() {
   const features = [

@@ -21,13 +21,12 @@ import {
   ShieldCheck,
   Clock,
   DollarSign,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_SERVICES_INDEX_2030 } from '../data/comprehensiveServicesIndex2030';
+  Zap,
+  Target,
+  ArrowRight} from 'lucide-react';
+import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
 
 export default function ComprehensivePricingGuide2030() {
   const [selectedCategory, setSelectedCategory] = useState('all');

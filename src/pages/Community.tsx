@@ -19,9 +19,7 @@ import {
   Rocket,
   Heart,
   Award,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Community() {

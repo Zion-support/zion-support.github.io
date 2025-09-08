@@ -19,9 +19,7 @@ import {
   Database,
   Search,
   Filter,
-  Download,
-  Share2
-} from 'lucide-react';
+  Download} from 'lucide-react';
 
 export default function AIComplianceAssistant() {
   const frameworks = [

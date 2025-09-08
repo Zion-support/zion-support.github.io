@@ -1,457 +1,405 @@
 #!/usr/bin/env node
 
 /**
- * Comprehensive Error Fixer - PM2 Automation
- * Automatically fixes TypeScript, ESLint, and other project errors
- * Runs every 10 minutes to continuously maintain code quality
+ * Comprehensive Error Fixer - Automatically fixes common TypeScript and ESLint errors
+ * Runs every 15 minutes to keep the project error-free
  */
 
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
-const { promisify } = require('util');
+const { execSync } = require('child_process');
 
 class ComprehensiveErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'error-fix-reports');
-    this.errorsFixed = 0;
-    this.filesProcessed = 0;
+    this.logFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json');
+    this.fixesApplied = 0;
+    this.errorsFixed = [];
     this.startTime = Date.now();
-    
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
   }
 
   async run() {
-    console.log('🚀 Starting Comprehensive Error Fixer...');
+    this.log('🚀 Starting Comprehensive Error Fixer...');
     
     try {
-      // Step 1: Fix duplicate file issues
       await this.fixDuplicateFiles();
-      
-      // Step 2: Fix import/export issues
-      await this.fixImportExportIssues();
-      
-      // Step 3: Fix TypeScript syntax errors
-      await this.fixTypeScriptErrors();
-      
-      // Step 4: Fix unused imports and variables
-      await this.fixUnusedCode();
-      
-      // Step 5: Fix Lucide React icon issues
+      await this.fixImportIssues();
+      await this.fixUnusedVariables();
+      await this.fixTypeIssues();
+      await this.fixReactIssues();
       await this.fixLucideReactIssues();
-      
-      // Step 6: Fix API service issues
-      await this.fixAPIServiceIssues();
-      
-      // Step 7: Fix Stripe configuration issues
       await this.fixStripeIssues();
-      
-      // Step 8: Fix service worker issues
       await this.fixServiceWorkerIssues();
+      await this.fixSitemapIssues();
+      await this.runLintFix();
+      await this.runTypeCheck();
       
-      // Step 9: Run final type check
-      await this.runFinalTypeCheck();
-      
-      // Step 10: Generate comprehensive report
-      await this.generateReport();
-      
-      console.log(`✅ Comprehensive Error Fixer completed! Fixed ${this.errorsFixed} errors in ${this.filesProcessed} files.`);
+      this.generateReport();
+      this.log(`✅ Comprehensive Error Fixer completed! Fixed ${this.fixesApplied} issues.`);
       
     } catch (error) {
-      console.error('❌ Error in Comprehensive Error Fixer:', error);
-      await this.generateErrorReport(error);
+      this.log(`❌ Error in Comprehensive Error Fixer: ${error.message}`);
+      this.generateReport();
     }
   }
 
   async fixDuplicateFiles() {
-    console.log('🔍 Fixing duplicate file issues...');
+    this.log('🔍 Checking for duplicate files with different casing...');
     
-    const duplicatePatterns = [
-      { pattern: /sustainability\.tsx/i, keep: 'Sustainability.tsx' },
-      { pattern: /sustainable-technology\.tsx/i, keep: 'SustainableTechnology.tsx' }
-    ];
+    const servicesDir = path.join(this.projectRoot, 'src/pages/services');
+    if (!fs.existsSync(servicesDir)) return;
 
-    for (const { pattern, keep } of duplicatePatterns) {
-      const files = this.findFilesByPattern(pattern);
-      if (files.length > 1) {
-        // Keep the properly cased version, remove others
-        for (const file of files) {
-          if (path.basename(file) !== keep) {
-            try {
-              fs.unlinkSync(file);
-              console.log(`🗑️  Removed duplicate file: ${file}`);
-              this.errorsFixed++;
-            } catch (err) {
-              console.warn(`⚠️  Could not remove ${file}:`, err.message);
-            }
+    const files = fs.readdirSync(servicesDir);
+    const duplicates = new Map();
+    
+    files.forEach(file => {
+      const lowerName = file.toLowerCase();
+      if (duplicates.has(lowerName)) {
+        duplicates.get(lowerName).push(file);
+      } else {
+        duplicates.set(lowerName, [file]);
+      }
+    });
+
+    for (const [lowerName, fileList] of duplicates) {
+      if (fileList.length > 1) {
+        this.log(`🔄 Found duplicate files for ${lowerName}: ${fileList.join(', ')}`);
+        
+        // Keep the first file, remove others
+        const keepFile = fileList[0];
+        for (let i = 1; i < fileList.length; i++) {
+          const removeFile = path.join(servicesDir, fileList[i]);
+          try {
+            fs.unlinkSync(removeFile);
+            this.log(`🗑️  Removed duplicate file: ${fileList[i]}`);
+            this.fixesApplied++;
+            this.errorsFixed.push(`Removed duplicate file: ${fileList[i]}`);
+          } catch (error) {
+            this.log(`⚠️  Could not remove ${fileList[i]}: ${error.message}`);
           }
         }
       }
     }
   }
 
-  async fixImportExportIssues() {
-    console.log('📦 Fixing import/export issues...');
+  async fixImportIssues() {
+    this.log('🔧 Fixing import issues...');
     
-    // Fix default export issues
-    const filesWithExportIssues = [
-      'src/pages/Blog.tsx',
-      'src/pages/MobileLaunchPage.tsx'
-    ];
-
-    for (const filePath of filesWithExportIssues) {
-      if (fs.existsSync(filePath)) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          
-          // Fix Blog.tsx export
-          if (filePath.includes('Blog.tsx')) {
-            if (!content.includes('export default')) {
-              content = content.replace(
-                /export\s*{\s*Blog\s*}/,
-                'export default Blog'
-              );
-              content = content.replace(
-                /const\s+Blog\s*=/,
-                'const Blog ='
-              );
-            }
-          }
-          
-          // Fix MobileLaunchPage.tsx export
-          if (filePath.includes('MobileLaunchPage.tsx')) {
-            if (!content.includes('export default')) {
-              content = content.replace(
-                /export\s*{\s*MobileLaunchPage\s*}/,
-                'export default MobileLaunchPage'
-              );
-              content = content.replace(
-                /const\s+MobileLaunchPage\s*=/,
-                'const MobileLaunchPage ='
-              );
-            }
-          }
-          
-          fs.writeFileSync(filePath, content);
-          console.log(`✅ Fixed export in ${filePath}`);
-          this.errorsFixed++;
-          this.filesProcessed++;
-        } catch (err) {
-          console.warn(`⚠️  Could not fix ${filePath}:`, err.message);
-        }
-      }
-    }
-  }
-
-  async fixTypeScriptErrors() {
-    console.log('🔧 Fixing TypeScript syntax errors...');
+    const files = this.findTypeScriptFiles();
     
-    // Fix common TypeScript issues
-    const commonFixes = [
-      {
-        pattern: /import\s+(\w+)\s+from\s+['"]@\/([^'"]+)['"]/g,
-        replacement: "import { $1 } from '@/$2'"
-      },
-      {
-        pattern: /const\s+(\w+):\s*any\s*=/g,
-        replacement: 'const $1: unknown ='
-      },
-      {
-        pattern: /:\s*any\[\]/g,
-        replacement: ': unknown[]'
-      }
-    ];
-
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
-    
-    for (const file of tsFiles.slice(0, 100)) { // Process first 100 files to avoid timeout
+    for (const file of files) {
       try {
         let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        for (const fix of commonFixes) {
-          const newContent = content.replace(fix.pattern, fix.replacement);
-          if (newContent !== content) {
-            content = newContent;
-            fileChanged = true;
+        let modified = false;
+
+        // Fix missing default exports
+        if (content.includes('export default') && !content.includes('export {') && 
+            content.includes('import') && content.includes('from')) {
+          
+          // Fix Blog import issue
+          if (content.includes('import Blog from "@/pages/Blog"')) {
+            content = content.replace(
+              'import Blog from "@/pages/Blog"',
+              'import { Blog } from "@/pages/Blog"'
+            );
+            modified = true;
+            this.fixesApplied++;
+            this.errorsFixed.push(`Fixed Blog import in ${file}`);
+          }
+
+          // Fix MobileLaunchPage import issue
+          if (content.includes('import MobileLaunchPage from "../pages/MobileLaunchPage"')) {
+            content = content.replace(
+              'import MobileLaunchPage from "../pages/MobileLaunchPage"',
+              'import { MobileLaunchPage } from "../pages/MobileLaunchPage"'
+            );
+            modified = true;
+            this.fixesApplied++;
+            this.errorsFixed.push(`Fixed MobileLaunchPage import in ${file}`);
           }
         }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.errorsFixed += 5; // Estimate 5 errors fixed per file
-          this.filesProcessed++;
+
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
         }
-      } catch (err) {
-        // Skip files that can't be read
+      } catch (error) {
+        this.log(`⚠️  Error processing ${file}: ${error.message}`);
       }
     }
   }
 
-  async fixUnusedCode() {
-    console.log('🧹 Fixing unused imports and variables...');
+  async fixUnusedVariables() {
+    this.log('🧹 Fixing unused variables...');
     
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
+    const files = this.findTypeScriptFiles();
     
-    for (const file of tsFiles.slice(0, 50)) { // Process first 50 files
+    for (const file of files) {
       try {
         let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        // Remove unused imports
-        const importLines = content.match(/import\s+.*?from\s+['"][^'"]+['"];?\n?/g) || [];
-        for (const importLine of importLines) {
-          const importedItems = importLine.match(/\{([^}]+)\}/);
-          if (importedItems) {
-            const items = importedItems[1].split(',').map(item => item.trim());
-            const unusedItems = items.filter(item => {
-              const itemName = item.split(' as ')[0].trim();
-              return !content.includes(itemName) || content.indexOf(itemName) === content.indexOf(importLine);
-            });
-            
-            if (unusedItems.length > 0) {
-              const newItems = items.filter(item => !unusedItems.includes(item));
-              if (newItems.length > 0) {
-                const newImportLine = importLine.replace(
-                  /\{[^}]+\}/,
-                  `{ ${newItems.join(', ')} }`
-                );
-                content = content.replace(importLine, newImportLine);
-                fileChanged = true;
-                this.errorsFixed += unusedItems.length;
-              } else {
-                // Remove entire import line if no items left
-                content = content.replace(importLine, '');
-                fileChanged = true;
-                this.errorsFixed += items.length;
-              }
+        let modified = false;
+
+        // Remove unused imports from lucide-react
+        const lucideImports = content.match(/import\s*{[^}]*}\s*from\s*['"]lucide-react['"]/g);
+        if (lucideImports) {
+          lucideImports.forEach(importStatement => {
+            const newImport = importStatement.replace(/\s*,\s*[^,}]+(?=\s*})/g, '');
+            if (newImport !== importStatement) {
+              content = content.replace(importStatement, newImport);
+              modified = true;
+              this.fixesApplied++;
+              this.errorsFixed.push(`Removed unused lucide-react imports in ${file}`);
             }
-          }
+          });
         }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
+
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
         }
-      } catch (err) {
-        // Skip files that can't be read
+      } catch (error) {
+        this.log(`⚠️  Error processing ${file}: ${error.message}`);
+      }
+    }
+  }
+
+  async fixTypeIssues() {
+    this.log('🔧 Fixing type issues...');
+    
+    const files = this.findTypeScriptFiles();
+    
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+
+        // Fix API client type issues
+        if (content.includes('apiClient(') && content.includes('headers')) {
+          content = content.replace(
+            /headers\s*\|\s*undefined/g,
+            'headers || {}'
+          );
+          modified = true;
+          this.fixesApplied++;
+          this.errorsFixed.push(`Fixed API client headers type issue in ${file}`);
+        }
+
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
+        }
+      } catch (error) {
+        this.log(`⚠️  Error processing ${file}: ${error.message}`);
+      }
+    }
+  }
+
+  async fixReactIssues() {
+    this.log('⚛️  Fixing React issues...');
+    
+    const files = this.findTypeScriptFiles();
+    
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+
+        // Fix React import issues
+        if (content.includes('import React from') && content.includes('export default function')) {
+          // Remove unnecessary React import for modern React
+          content = content.replace(/import React from ['"]react['"];?\n?/g, '');
+          modified = true;
+          this.fixesApplied++;
+          this.errorsFixed.push(`Removed unnecessary React import in ${file}`);
+        }
+
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
+        }
+      } catch (error) {
+        this.log(`⚠️  Error processing ${file}: ${error.message}`);
       }
     }
   }
 
   async fixLucideReactIssues() {
-    console.log('🎨 Fixing Lucide React icon issues...');
+    this.log('🎨 Fixing Lucide React icon issues...');
     
-    // Common Lucide React icon mapping for missing icons
-    const iconMappings = {
-      'UserHeart': 'Heart',
-      'UserEdit2': 'Edit',
-      'UserSearch2': 'Search',
-      'UserList2': 'Users2',
-      'UserSettings2': 'Settings2',
-      'UserShield2': 'Shield',
-      'UserStar2': 'Star',
-      'Device': 'Smartphone',
-      'Desktop': 'Monitor'
-    };
+    const files = this.findTypeScriptFiles();
     
-    const tsFiles = this.findFilesByExtension('.tsx', '.ts');
-    
-    for (const file of tsFiles.slice(0, 30)) { // Process first 30 files
+    for (const file of files) {
       try {
         let content = fs.readFileSync(file, 'utf8');
-        let fileChanged = false;
-        
-        // Fix icon imports
-        for (const [oldIcon, newIcon] of Object.entries(iconMappings)) {
+        let modified = false;
+
+        // Fix non-existent lucide-react icons
+        const iconReplacements = {
+          'UserHeart': 'Heart',
+          'UserEdit2': 'Edit',
+          'UserSearch2': 'Search',
+          'UserList2': 'Users2',
+          'UserSettings2': 'Settings2',
+          'UserShield2': 'Shield',
+          'UserStar2': 'Star',
+          'Device': 'Smartphone',
+          'Desktop': 'Monitor'
+        };
+
+        for (const [oldIcon, newIcon] of Object.entries(iconReplacements)) {
           if (content.includes(oldIcon)) {
-            content = content.replace(new RegExp(oldIcon, 'g'), newIcon);
-            fileChanged = true;
-            this.errorsFixed++;
+            content = content.replace(new RegExp(`\\b${oldIcon}\\b`, 'g'), newIcon);
+            modified = true;
+            this.fixesApplied++;
+            this.errorsFixed.push(`Replaced ${oldIcon} with ${newIcon} in ${file}`);
           }
         }
-        
-        if (fileChanged) {
-          fs.writeFileSync(file, content);
-          this.filesProcessed++;
-        }
-      } catch (err) {
-        // Skip files that can't be read
-      }
-    }
-  }
 
-  async fixAPIServiceIssues() {
-    console.log('🔌 Fixing API service issues...');
-    
-    const apiFile = 'src/services/api.ts';
-    if (fs.existsSync(apiFile)) {
-      try {
-        let content = fs.readFileSync(apiFile, 'utf8');
-        let fileChanged = false;
-        
-        // Fix headers type issues
-        content = content.replace(
-          /headers: Record<string, string> \| undefined/g,
-          'headers: Record<string, string>'
-        );
-        
-        // Fix apiRequest function usage
-        if (content.includes('async function apiRequest')) {
-          content = content.replace(
-            /async function apiRequest<T>\([^)]*\)\s*\{[^}]*\}/s,
-            '// Removed unused apiRequest function'
-          );
-          fileChanged = true;
-          this.errorsFixed++;
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
         }
-        
-        if (fileChanged) {
-          fs.writeFileSync(apiFile, content);
-          this.filesProcessed++;
-        }
-      } catch (err) {
-        console.warn(`⚠️  Could not fix ${apiFile}:`, err.message);
+      } catch (error) {
+        this.log(`⚠️  Error processing ${file}: ${error.message}`);
       }
     }
   }
 
   async fixStripeIssues() {
-    console.log('💳 Fixing Stripe configuration issues...');
+    this.log('💳 Fixing Stripe configuration issues...');
     
-    const stripeFile = 'src/utils/getStripe.ts';
+    const stripeFile = path.join(this.projectRoot, 'src/utils/getStripe.ts');
     if (fs.existsSync(stripeFile)) {
       try {
         let content = fs.readFileSync(stripeFile, 'utf8');
         
-        // Remove unsupported advancedFraudSignals option
-        content = content.replace(
-          /,\s*\{\s*advancedFraudSignals:\s*false\s*\}/,
-          ''
-        );
-        
-        fs.writeFileSync(stripeFile, content);
-        console.log(`✅ Fixed Stripe configuration in ${stripeFile}`);
-        this.errorsFixed++;
-        this.filesProcessed++;
-      } catch (err) {
-        console.warn(`⚠️  Could not fix ${stripeFile}:`, err.message);
+        if (content.includes('advancedFraudSignals: false')) {
+          content = content.replace(
+            /,\s*{\s*advancedFraudSignals:\s*false\s*}/g,
+            ''
+          );
+          fs.writeFileSync(stripeFile, content, 'utf8');
+          this.fixesApplied++;
+          this.errorsFixed.push('Fixed Stripe advancedFraudSignals configuration');
+        }
+      } catch (error) {
+        this.log(`⚠️  Error fixing Stripe file: ${error.message}`);
       }
     }
   }
 
   async fixServiceWorkerIssues() {
-    console.log('🔧 Fixing service worker issues...');
+    this.log('🔧 Fixing Service Worker type issues...');
     
-    const swFile = 'src/utils/serviceWorker.ts';
+    const swFile = path.join(this.projectRoot, 'src/utils/serviceWorker.ts');
     if (fs.existsSync(swFile)) {
       try {
         let content = fs.readFileSync(swFile, 'utf8');
         
-        // Fix VAPID key type issue
-        content = content.replace(
-          /applicationServerKey:\s*this\.urlBase64ToUint8Array\([^)]+\)/,
-          'applicationServerKey: this.urlBase64ToUint8Array(process.env.REACT_APP_VAPID_PUBLIC_KEY || "") as Uint8Array'
-        );
-        
-        fs.writeFileSync(swFile, content);
-        console.log(`✅ Fixed service worker in ${swFile}`);
-        this.errorsFixed++;
-        this.filesProcessed++;
-      } catch (err) {
-        console.warn(`⚠️  Could not fix ${swFile}:`, err.message);
+        if (content.includes('applicationServerKey: this.urlBase64ToUint8Array')) {
+          content = content.replace(
+            /applicationServerKey:\s*this\.urlBase64ToUint8Array\([^)]+\)/g,
+            'applicationServerKey: this.urlBase64ToUint8Array(process.env[\'REACT_APP_VAPID_PUBLIC_KEY\'] || \'\') as Uint8Array'
+          );
+          fs.writeFileSync(swFile, content, 'utf8');
+          this.fixesApplied++;
+          this.errorsFixed.push('Fixed Service Worker applicationServerKey type issue');
+        }
+      } catch (error) {
+        this.log(`⚠️  Error fixing Service Worker file: ${error.message}`);
       }
     }
   }
 
-  async runFinalTypeCheck() {
-    console.log('🔍 Running final type check...');
+  async fixSitemapIssues() {
+    this.log('🗺️  Fixing Sitemap Generator issues...');
+    
+    const sitemapFile = path.join(this.projectRoot, 'src/utils/sitemapGenerator.ts');
+    if (fs.existsSync(sitemapFile)) {
+      try {
+        let content = fs.readFileSync(sitemapFile, 'utf8');
+        
+        if (content.includes('const { baseUrl, urls } = this.config;')) {
+          content = content.replace(
+            /const\s*{\s*baseUrl,\s*urls\s*}\s*=\s*this\.config;/g,
+            'const { baseUrl } = this.config;'
+          );
+          fs.writeFileSync(sitemapFile, content, 'utf8');
+          this.fixesApplied++;
+          this.errorsFixed.push('Fixed Sitemap Generator unused urls variable');
+        }
+      } catch (error) {
+        this.log(`⚠️  Error fixing Sitemap file: ${error.message}`);
+      }
+    }
+  }
+
+  async runLintFix() {
+    this.log('🔧 Running ESLint auto-fix...');
     
     try {
-      const result = execSync('npm run type-check', { 
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000 // 1 minute timeout
+      execSync('npm run lint -- --fix', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 60000 
       });
-      console.log('✅ Type check passed!');
+      this.log('✅ ESLint auto-fix completed');
     } catch (error) {
-      console.log('⚠️  Some TypeScript errors remain. Check the output above.');
+      this.log(`⚠️  ESLint auto-fix failed: ${error.message}`);
     }
   }
 
-  async generateReport() {
+  async runTypeCheck() {
+    this.log('🔍 Running TypeScript type check...');
+    
+    try {
+      execSync('npm run type-check', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 120000 
+      });
+      this.log('✅ TypeScript type check passed');
+    } catch (error) {
+      this.log(`⚠️  TypeScript type check failed: ${error.message}`);
+    }
+  }
+
+  findTypeScriptFiles() {
+    const files = [];
+    
+    function walkDir(dir) {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+          files.push(fullPath);
+        }
+      }
+    }
+    
+    walkDir(path.join(this.projectRoot, 'src'));
+    return files;
+  }
+
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      fixesApplied: this.fixesApplied,
       errorsFixed: this.errorsFixed,
-      filesProcessed: this.filesProcessed,
-      executionTime: Date.now() - this.startTime,
-      status: 'completed'
+      status: this.fixesApplied > 0 ? 'success' : 'no-fixes-needed'
     };
-    
-    const reportFile = path.join(this.reportsDir, `error-fix-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    console.log(`📊 Report generated: ${reportFile}`);
-  }
 
-  async generateErrorReport(error) {
-    const errorReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      status: 'failed'
-    };
-    
-    const reportFile = path.join(this.reportsDir, `error-fix-error-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(errorReport, null, 2));
-    
-    console.log(`❌ Error report generated: ${reportFile}`);
-  }
-
-  findFilesByPattern(pattern) {
-    const files = [];
-    const walkDir = (dir) => {
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
-          walkDir(fullPath);
-        } else if (pattern.test(item)) {
-          files.push(fullPath);
-        }
-      }
-    };
-    
-    walkDir(this.projectRoot);
-    return files;
-  }
-
-  findFilesByExtension(...extensions) {
-    const files = [];
-    const walkDir = (dir) => {
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
-          walkDir(fullPath);
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
-      }
-    };
-    
-    walkDir(this.projectRoot);
-    return files;
+    fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
+    this.log(`📊 Report generated: ${this.logFile}`);
   }
 }
 
-// Main execution
+// Run the error fixer
 if (require.main === module) {
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error);

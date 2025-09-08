@@ -20,9 +20,7 @@ import {
   Download,
   Upload,
   FileText,
-  Workflow,
-  Shield
-} from 'lucide-react';
+  Workflow} from 'lucide-react';
 
 export default function AIProjectManagement() {
   const features = [

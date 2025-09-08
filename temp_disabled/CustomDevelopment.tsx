@@ -22,9 +22,7 @@ import {
   Rocket,
   Building2,
   Cpu,
-  Network,
-  GitFork
-} from 'lucide-react';
+  Network} from 'lucide-react';
 
 export default function CustomDevelopment() {
   const services = [
