@@ -1,252 +1,404 @@
+// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
+if (process.env.NODE_ENV === 'development') {
+  console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
+  console.log('- globalThis.__extends:', !!(globalThis as any).__extends);
+  console.log('- globalThis.__assign:', !!(globalThis as any).__assign);
+  console.log('- globalThis.process:', !!(globalThis as any).process);
+}
+
+// CRITICAL: Import environment polyfill FIRST to prevent process.env errors
+import '../src/utils/env-polyfill';
+
+// Enhanced error logging - import early for comprehensive coverage
+import enhancedErrorLogger from '../src/utils/enhanced-error-logger';
+
+// Add global error handling for undefined components
+if (typeof window !== 'undefined') {
+  window.addEventListener('unhandledrejection', (event) => {
+    if (event.reason?.message?.includes('getInitialProps')) {
+      console.error('Component loading error caught:', event.reason);
+      event.preventDefault(); // Prevent the error from crashing the app
+    }
+  });
+  
+  // Additional error handling for process.env errors
+  window.addEventListener('error', (event) => {
+    if (event.message?.includes('Cannot read properties of undefined')) {
+      console.error('Runtime error caught:', event.error);
+      event.preventDefault();
+    }
+  });
+}
+
+import React, { useEffect, useState, Suspense } from 'react'; // Added Suspense
 import type { AppProps } from 'next/app';
-import SiteLayout from '../components/layout/SiteLayout';
+import { useRouter } from 'next/router';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Head from 'next/head';
+import dynamic from 'next/dynamic'; // Import dynamic
+import '../src/index.css';
+import { Provider as ReduxProvider } from 'react-redux';
+import { store } from '@/store';
 
-function Header(): any {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../src/i18n';
 
-  return (
-    <header className="header">
-      <nav className="header-nav">
-        <Link href="/" className="header-logo">
-          <span className="logo-text">Zion Tech Group</span>
-          <span className="logo-tagline">Innovative Technology Solutions</span>
-        </Link>
-        
-        <div className="header-nav-links">
-          <Link href="/" className="header-nav-link">Home</Link>
-          
-          {/* Services Dropdown */}
-          <div 
-            className="header-nav-dropdown"
-            onMouseEnter={() => setServicesDropdownOpen(true)}
-            onMouseLeave={() => setServicesDropdownOpen(false)}
+// Synchronously import core providers
+import { AuthProvider } from '../src/context/auth/AuthProvider';
+import { WhitelabelProvider } from '../src/context/WhitelabelContext';
+import { CartProvider } from '../src/context/CartContext';
+import { FeedbackProvider } from '../src/context/FeedbackContext';
+import { ThemeProvider } from '../src/context/ThemeContext';
+
+// Dynamically import potentially heavy providers
+const DynamicWalletProvider = dynamic(() =>
+  import('../src/context/WalletContext').then(mod => mod.WalletProvider),
+  { ssr: false, loading: () => <DynamicProviderFallback providerName="Wallet System" /> }
+);
+
+const DynamicAnalyticsProvider = dynamic(() =>
+  import('../src/context/AnalyticsContext').then(mod => mod.AnalyticsProvider),
+  { ssr: false, loading: () => <DynamicProviderFallback providerName="Analytics" /> }
+);
+
+// Fallback component for dynamic providers
+const DynamicProviderFallback: React.FC<{ providerName: string }> = ({ providerName }) => (
+  <div style={{ display: 'none' }} data-provider-loading={providerName}>
+    Loading {providerName}...
+  </div>
+);
+
+// Error boundary component
+class AppErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('App Error Boundary caught an error:', error, errorInfo);
+    
+    // Report to enhanced error logger
+    if (typeof window !== 'undefined') {
+      enhancedErrorLogger.captureReactError(error, errorInfo, errorInfo.componentStack || undefined);
+      enhancedErrorLogger.addBreadcrumb('error-boundary', `React error in component: ${error.name}`, 'error');
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ 
+          padding: '2rem', 
+          textAlign: 'center',
+          maxWidth: '600px',
+          margin: '0 auto',
+          fontFamily: 'Arial, sans-serif'
+        }}>
+          <h2>⚠️ Application Error</h2>
+          <p>Something went wrong while loading the application.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              marginTop: '1rem'
+            }}
           >
-            <span className="header-nav-link dropdown-trigger">
-              Services <span className="dropdown-arrow">▼</span>
-            </span>
-            <div className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
-              <Link href="/services" className="dropdown-item">All Services</Link>
-              <Link href="/micro-saas" className="dropdown-item">Micro SaaS Products</Link>
-              <Link href="/ai-services" className="dropdown-item">AI Services</Link>
-              <Link href="/it-services" className="dropdown-item">IT Services</Link>
-              <Link href="/services-catalog" className="dropdown-item">Services Catalog</Link>
-            </div>
-          </div>
-
-          <Link href="/about" className="header-nav-link">About</Link>
-          <Link href="/blog" className="header-nav-link">Blog</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
-          <Link href="/faq" className="header-nav-link">FAQ</Link>
-          <Link href="/request-quote" className="header-nav-link">Get Quote</Link>
-          <Link href="/contact" className="header-nav-cta">Contact</Link>
+            Reload Page
+          </button>
         </div>
+      );
+    }
 
+    return this.props.children;
+  }
+}
+
+// Loading screen component
+const LoadingScreen: React.FC<{ progress: number }> = ({ progress }) => (
+  <div style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#f8f9fa',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 9999,
+    fontFamily: 'Arial, sans-serif'
+  }}>
+    <div style={{
+      width: '120px',
+      height: '120px',
+      border: '8px solid #e9ecef',
+      borderTop: '8px solid #007bff',
+      borderRadius: '50%',
+      animation: 'spin 2s linear infinite'
+    }} />
+    <h2 style={{ marginTop: '2rem', color: '#495057' }}>
+      Initializing Zion App...
+    </h2>
+    <p style={{ color: '#6c757d', marginTop: '0.5rem' }}>
+      Loading components ({progress}%)
+    </p>
+    <div style={{
+      width: '200px',
+      height: '6px',
+      backgroundColor: '#e9ecef',
+      borderRadius: '3px',
+      marginTop: '1rem'
+    }}>
+      <div style={{
+        width: `${progress}%`,
+        height: '100%',
+        backgroundColor: '#007bff',
+        borderRadius: '3px',
+        transition: 'width 0.3s ease'
+      }} />
+    </div>
+    <style jsx>{`
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `}</style>
+  </div>
+);
+
+// Provider wrapper with error handling
+const ProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Note: Suspense for dynamic imports is handled individually by next/dynamic.
+  // A top-level Suspense here could be added if there are other suspense-using components.
+  return (
+    <AppErrorBoundary>
+      <ReduxProvider store={store}>
+        <I18nextProvider i18n={i18n}>
+          <AuthProvider>
+            <WhitelabelProvider>
+              <DynamicWalletProvider> {/* Use dynamic import */}
+                <DynamicAnalyticsProvider> {/* Use dynamic import */}
+                  <CartProvider>
+                    <FeedbackProvider>
+                      <ThemeProvider>
+                        {children}
+                      </ThemeProvider>
+                    </FeedbackProvider>
+                  </CartProvider>
+                </DynamicAnalyticsProvider>
+              </DynamicWalletProvider>
+            </WhitelabelProvider>
+          </AuthProvider>
+        </I18nextProvider>
+      </ReduxProvider>
+    </AppErrorBoundary>
+  );
+};
+
+function MyApp({ Component, pageProps }: AppProps) {
+  // Start with isLoading true to show the loading screen immediately.
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [initializationError, setInitializationError] = useState<string | null>(null);
+  const router = useRouter();
+  const [queryClient] = useState(() => new QueryClient());
+
+  useEffect(() => {
+    // Ensure loading screen is shown at the very start
+    setIsLoading(true);
+    setLoadingProgress(5); // Initial small progress
+
+    const initializeApp = async () => {
+      try {
+        // Simulate progressive loading with realistic steps
+        const steps = [
+          { name: 'Loading Core Components', duration: 300 },
+          { name: 'Initializing Providers', duration: 400 },
+          { name: 'Setting up Analytics', duration: 200 },
+          { name: 'Configuring Theme', duration: 200 },
+          { name: 'Final Setup', duration: 300 }
+        ];
+
+        let currentProgress = 0;
+        const progressStep = 100 / steps.length;
+
+        for (let i = 0; i < steps.length; i++) {
+          const step = steps[i];
+          if (!step) continue;
+          
+          // Update progress
+          currentProgress = (i + 1) * progressStep;
+          setLoadingProgress(Math.min(currentProgress, 95));
+
+          // Simulate async work
+          await new Promise(resolve => setTimeout(resolve, step.duration));
+        }
+
+        // Final progress update
+        setLoadingProgress(100);
+        
+        // Small delay to show completion
+        await new Promise(resolve => setTimeout(resolve, 200));
+
+        // PERFORMANCE: Initialize Web Vitals monitoring in production
+        if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+          try {
+            const { onCLS, onFCP, onINP, onLCP, onTTFB } = await import('web-vitals');
+
+            const reportWebVitalsSafely = (metric: any) => {
+              try { // Add specific try-catch within the callback
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', metric.name, {
+                    value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+                    event_label: metric.id,
+                    non_interaction: true,
+                  });
+                }
+
+                // Initialize comprehensive performance monitoring on first metric (still keeping the actual import commented for now as per previous step)
+                if (!(global as any).performanceMonitorInitialized) {
+                  (global as any).performanceMonitorInitialized = true;
+                  // import('@/utils/performance-monitor').then(...).catch(...);
+                  console.log('Performance monitor import is currently skipped.');
+                }
+              } catch (reportError) {
+                console.warn('Error during Web Vitals reporting:', reportError);
+              }
+            };
+            
+            // Wrap each listener setup in a try-catch as well, just in case
+            try { onCLS(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onCLS:', e); }
+            try { onFCP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onFCP:', e); }
+            try { onINP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onINP:', e); }
+            try { onLCP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onLCP:', e); }
+            try { onTTFB(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onTTFB:', e); }
+
+          } catch (webVitalsError) {
+            console.warn('Web Vitals main initialization failed:', webVitalsError);
+          }
+        }
+        
+        setIsLoading(false); // Crucial: ensure isLoading is set to false
+      } catch (error) {
+        console.error('App initialization error:', error);
+        setInitializationError('Failed to initialize application. Please refresh the page.');
+        setIsLoading(false);
+      }
+    };
+
+    // Force initialization completion after maximum 3 seconds
+    const forceInitTimeout = setTimeout(() => {
+      console.warn('Force completing app initialization due to timeout');
+      setLoadingProgress(100); // Ensure progress is full on timeout
+      setIsLoading(false);
+    }, 3000);
+
+    initializeApp().finally(() => {
+      clearTimeout(forceInitTimeout);
+    });
+
+    return () => {
+      clearTimeout(forceInitTimeout);
+    };
+  }, []);
+
+  // Handle router events for page transitions
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      // Could add route change loading if needed
+    };
+
+    const handleRouteChangeComplete = () => {
+      // Route change completed
+    };
+
+    const handleRouteChangeError = () => {
+      console.error('Route change error');
+    };
+
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    router.events.on('routeChangeError', handleRouteChangeError);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
+      router.events.off('routeChangeError', handleRouteChangeError);
+    };
+  }, [router]);
+
+  // Show loading screen during initialization
+  if (isLoading) {
+    return (
+      <>
+        <Head>
+          <title>Loading - Zion App</title>
+          <meta name="description" content="Zion App is loading..." />
+        </Head>
+        <LoadingScreen progress={loadingProgress} />
+      </>
+    );
+  }
+
+  // Show error screen if initialization failed
+  if (initializationError) {
+    return (
+      <div style={{ 
+        padding: '2rem', 
+        textAlign: 'center',
+        maxWidth: '600px',
+        margin: '0 auto',
+        fontFamily: 'Arial, sans-serif'
+      }}>
+        <h2>🚫 Initialization Error</h2>
+        <p>{initializationError}</p>
         <button 
-          className="mobile-menu-button"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
+          onClick={() => window.location.reload()}
+          style={{
+            padding: '10px 20px',
+            backgroundColor: '#dc3545',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            marginTop: '1rem'
+          }}
         >
-          ☰
+          Reload Application
         </button>
-      </nav>
-      
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-        <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-        <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
-        <Link href="/blog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-        <Link href="/request-quote" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Get Quote</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
     );
   }
 
+  // Main app render with all providers
   return (
-    <ProductionErrorBoundary>
-      <QueryClientProvider client={queryClient}>
-        <ProviderWrapper>
-          <Head>
-            <title>Zion App - AI Marketplace & DAO Platform</title>
-            <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <div className={`${inter.variable} ${poppins.variable}`}>
-            <ProductionErrorBoundary>
-              <RootErrorBoundary>
-                <HydrationErrorBoundary>
-                  <React.Suspense
-                    fallback={
-                      <div className="flex items-center justify-center min-h-screen">
-                        <div className="animate-pulse text-lg">Loading...</div>
-                      </div>
-                    }
-                  >
-                    <GlobalErrorBoundary>
-                      <QueryClientProvider client={queryClient}>
-                        <ApiErrorBoundary>
-                          <ReduxProvider store={store}>
-                            <I18nextProvider i18n={i18n}>
-                              <ErrorProvider>
-                                <AuthProvider>
-                                  <WhitelabelProvider>
-                                    <LanguageProviderWrapper>
-                                      <WalletProvider>
-                                        <CartProvider>
-                                          <AnalyticsProvider>
-                                            <FeedbackProvider>
-                                              <CommunityProvider>
-                                                <ThemeProvider>
-                                                  <AppLayout>
-                                                    <RouteChangeHandler
-                                                      resetScrollOnChange={true}
-                                                      forceRerender={false}
-                                                    />
-                                                    <ErrorBoundary>
-                                                      <Component
-                                                        key={router.asPath}
-                                                        {...pageProps}
-                                                      />
-                                                    </ErrorBoundary>
-                                                    <ErrorResetOnRouteChange />
-                                                    <ToastContainer />
-                                                    <OfflineIndicator />
-                                                    <IntercomChat />
-                                                    <PerformanceMonitor />
-                                                    <BundleAnalyzer />
-                                                    <QuickActions />
-                                                  </AppLayout>
-                                                </ThemeProvider>
-                                              </CommunityProvider>
-                                            </FeedbackProvider>
-                                          </AnalyticsProvider>
-                                        </CartProvider>
-                                      </WalletProvider>
-                                    </LanguageProviderWrapper>
-                                  </WhitelabelProvider>
-                                </AuthProvider>
-                              </ErrorProvider>
-                            </I18nextProvider>
-                          </ReduxProvider>
-                        </ApiErrorBoundary>
-                      </QueryClientProvider>
-                    </GlobalErrorBoundary>
-                  </React.Suspense>
-                </HydrationErrorBoundary>
-              </RootErrorBoundary>
-            </ProductionErrorBoundary>
-          </div>
-        </ProviderWrapper>
-      </QueryClientProvider>
-    </ProductionErrorBoundary>
-  );
-}
-
-function Footer(): any {
-  return (
-    <footer className="footer">
-      <div className="footer-content">
-        {/* Company Info */}
-        <div className="footer-section">
-          <div className="footer-logo">
-            <span className="logo-text">Zion Tech Group</span>
-            <span className="logo-tagline">Innovative Technology Solutions</span>
-          </div>
-          <p>
-            Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
-            Empowering businesses with cutting-edge technology and digital transformation.
-          </p>
-          <div className="contact-info">
-            <div className="contact-item">
-              <span className="contact-icon">📞</span>
-              <a href="tel:+13024640950" className="contact-link">+1 302 464 0950</a>
-            </div>
-            <div className="contact-item">
-              <span className="contact-icon">✉️</span>
-              <a href="mailto:kleber@ziontechgroup.com" className="contact-link">kleber@ziontechgroup.com</a>
-            </div>
-            <div className="contact-item">
-              <span className="contact-icon">📍</span>
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Services */}
-        <div className="footer-section">
-          <h3>Our Services</h3>
-          <div className="footer-links">
-            <Link href="/services" className="footer-link">All Services</Link>
-            <Link href="/micro-saas" className="footer-link">Micro SaaS Products</Link>
-            <Link href="/ai-services" className="footer-link">AI Services</Link>
-            <Link href="/it-services" className="footer-link">IT Services</Link>
-            <Link href="/services-catalog" className="footer-link">Services Catalog</Link>
-            <Link href="/pricing" className="footer-link">Pricing Plans</Link>
-          </div>
-          <div className="service-stats">
-            <div className="stat-item">• 120+ Micro SaaS Products</div>
-            <div className="stat-item">• 80+ AI Services</div>
-            <div className="stat-item">• 80+ IT Solutions</div>
-            <div className="stat-item">• 24/7 Support</div>
-          </div>
-        </div>
-
-        {/* Company */}
-        <div className="footer-section">
-          <h3>Company</h3>
-          <div className="footer-links">
-            <Link href="/" className="footer-link">Home</Link>
-            <Link href="/about" className="footer-link">About Us</Link>
-            <Link href="/blog" className="footer-link">Blog</Link>
-            <Link href="/contact" className="footer-link">Contact Us</Link>
-            <Link href="/faq" className="footer-link">FAQ</Link>
-            <Link href="/request-quote" className="footer-link">Request Quote</Link>
-            <Link href="/privacy" className="footer-link">Privacy Policy</Link>
-            <Link href="/terms" className="footer-link">Terms of Service</Link>
-          </div>
-        </div>
-
-        {/* Get Started */}
-        <div className="footer-section">
-          <h3>Get Started</h3>
-          <p className="footer-description">
-            Ready to transform your business with our innovative solutions? 
-            Let's discuss your project requirements.
-          </p>
-          <div className="footer-cta">
-            <Link href="/contact" className="footer-cta-button">Request Quote</Link>
-            <a href="tel:+13024640950" className="footer-cta-secondary">Call Now</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="footer-cta-secondary">Email Us</a>
-          </div>
-          <div className="social-links">
-            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              🌐 Main Website
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div className="footer-bottom">
-        <div className="footer-bottom-content">
-          <small>
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-          </small>
-          <div className="footer-bottom-links">
-            <Link href="/privacy" className="footer-bottom-link">Privacy Policy</Link>
-            <Link href="/terms" className="footer-bottom-link">Terms of Service</Link>
-            <Link href="/contact" className="footer-bottom-link">Contact</Link>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
+      <ProviderWrapper>
+        <Head>
+          <title>Zion App - AI Marketplace & DAO Platform</title>
+        <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+             <div>
+         <Component {...pageProps} />
+       </div>
+      </ProviderWrapper>
+    </QueryClientProvider>
   );
 }
 
