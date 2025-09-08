@@ -5,7 +5,7 @@
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "20.18.1"
   PYTHON_VERSION = "3.11"
 
 [[plugins]]
