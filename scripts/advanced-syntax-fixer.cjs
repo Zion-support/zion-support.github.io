@@ -12,6 +12,7 @@ function fixFile(filePath) {;
 
       );
       fixed = true;log(`Fixed missing semicolon before return in ${filePath}`, `yellow')}
+main
 
       return true}
 ;

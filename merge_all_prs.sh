@@ -1,13 +1,6 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# Script to merge all open PRs systematically
-# This script will attempt to merge each PR branch and resolve conflicts
-
-set -e  # Exit on any error
-
-echo "Starting systematic merge of all open PRs..."
-echo "============================================="
+==="
 
 # Function to resolve merge conflicts
 resolve_conflicts() {
@@ -141,9 +134,9 @@ main() {
 
 # Run the main function
 main "$@"
-=======
+
 echo "Starting automated PR merge process..."
-echo "====================================="
+echo "=="
 
 # Get the list of open PRs
 echo "Fetching open pull requests..."
@@ -198,4 +191,4 @@ echo "All PRs processed. Pushing changes to main branch..."
 git push origin main --force
 
 echo "Process complete!"
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+

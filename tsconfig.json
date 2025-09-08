@@ -41,6 +41,7 @@
     }
   },
   "include": [
+<<<<<<< HEAD
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
@@ -49,5 +50,49 @@
   ],
   "exclude": [
     "node_modules"
+=======
+
+    "src/**/*",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "src.disabled/**/*",
+    "src_disabled_*/**/*",
+    "**/tests/**",
+    "__tests__/**",
+    "temp_*/**",
+    "temp-*/**",
+    "temp*/**",
+    "temp_conflicts/**",
+    "temp_exclude/**",
+    "zion-*/**",
+    "zion_os/**",
+    "zion/**",
+    "apps/**",
+    "utils/**",
+    "types/**",
+    "src/components/ui/alert-dialog.tsx",
+    "src/components/ui/context-menu.tsx",
+    "src/components/ui/dropdown-menu.tsx",
+    "src/components/ui/hover-card.tsx",
+    "src/components/ui/navigation-menu.tsx",
+    "src/components/ui/radio-group.tsx",
+    "src/components/ui/scroll-area.tsx",
+    "src/components/ui/toggle-group.tsx"
+>>>>>>> 6b2c17c6b6de4bb46dbeae112005bcd173d304f8
   ]
 }

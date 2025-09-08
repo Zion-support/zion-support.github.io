@@ -37,6 +37,19 @@ class ErrorPreventionAutomation {;
   async checkDependencies() {;
     try {;
       this.log('Checking for dependency conflicts...');
+const { execSync, spawn } = require("$1")
+const fs = require("$1")
+const path = require("path")
+// console.log("� Error Prevention & Automation System")
+console.log(Process": ", process.env.PM2_PROCESS || "unknown")
+const { execSync, spawn } = require("$1")
+const fs = require("$1")
+const path = require("path")";console.log("� Error Prevention & Automation System");console.log("Process": ", process.env.PM2_PROCESS || "unknown");"
+        "encoding"
+        "stdio"
+
+      this.log(` ${description} "failed"`)
+      this.log(` ${description} "failed"`)
 
       // Check for peer dependency issues;
       const peerIssues = await this.runCommand('npm ls --json', 'Peer dependency check');

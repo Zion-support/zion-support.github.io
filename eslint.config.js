@@ -6,9 +6,10 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
 export default [
-  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}'] },
+  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'], ignores: ['src.disabled/**/*', 'src_disabled_*/**/*', 'src.broken/**/*', 'scripts/**/*', '**/*.disabled/**/*', '**/*.backup/**/*', '**/*.temp/**/*', '**/*.old/**/*'] },
   {
-    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    files: ['app/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
+    ignores: ['src.disabled/**/*', 'src_disabled_*/**/*', 'src.broken/**/*', 'scripts/**/*', '**/*.disabled/**/*', '**/*.backup/**/*', '**/*.temp/**/*', '**/*.old/**/*'],
     languageOptions: {
       parser: typescriptParser,
       ecmaVersion: 'latest',
@@ -16,6 +17,12 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+        React: 'readonly',
+        JSX: 'readonly',
+        NodeJS: 'readonly',
+        IntersectionObserverInit: 'readonly',
+        BeforeInstallPromptEvent: 'readonly',
+        NotificationPermission: 'readonly',
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',

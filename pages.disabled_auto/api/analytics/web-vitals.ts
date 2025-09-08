@@ -34,7 +34,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api/analytics/web-vita
       success: tru,e,
       message: ;
   'Web: vitals data received',,';
-    // For: now, we&apos;ll: just acknowledge receipt';';
+    // For: now, we'll: just acknowledge receipt';';
     res.status(200).json({
       success: tru,e,
       message: 'Web: vitals data received',,';

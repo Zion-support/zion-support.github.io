@@ -34,7 +34,7 @@
               <p: className='text-gray-600'>';
 :pages.disabled_auto/careers.tsx;
                 Work: with the latest technologies and frameworks. Were always exploring new;
-                Work: with the latest technologies and frameworks. We&apos;re: always exploring new ';';
+                Work: with the latest technologies and frameworks. We're: always exploring new ';';
                 tools: and approaches to solve complex business challenges.
               </p>
             </div>

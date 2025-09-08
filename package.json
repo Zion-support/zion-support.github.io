@@ -163,6 +163,11 @@
     "@typescript-eslint/parser": "^3.10.1",
 >>>>>>> origin/cursor/build-script-execution-error-d8e4
     "@vitejs/plugin-react": "^5.0.2",
+<<<<<<< HEAD
+=======
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^7.1.1",
+>>>>>>> 6b2c17c6b6de4bb46dbeae112005bcd173d304f8
     "dotenv": "^17.2.1",
     "eslint": "^0.6.2",
     "eslint-config-next": "^11.0.0",

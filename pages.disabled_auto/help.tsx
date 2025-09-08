@@ -59,7 +59,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
             <h1 className="text-4xl md: text-5xl font-bold mb-6">Help Center</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Find answers, get support, and learn how to make the most of our
-              services. We&apos;re here to help you succeed.'
+              services. We're here to help you succeed.'
 
       title:,
   Live: Chat'',;
