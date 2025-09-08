@@ -1,9 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
-  return (
-    <>
-      <Head><title>founder/backup - Zion App</title><meta name="description" content="founder/backup page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">founder/backup</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
-  );
+import AdminVaultPage from '../admin/vault';
 
-export default Backup;
+export default function FounderBackup() {
+  return (
+    <div>
+      <AdminVaultPage />
+      <div className="mt-8 p-4 border rounded">
+        <h2 className="text-xl font-semibold">Operator Prompt</h2>
+        <p className="text-sm text-gray-500">Summarize the most critical 10 items a Zion OS founder should back up to recover global protocol control in the event of loss or migration.</p>
+      </div>
+    </div>
+  );
+}

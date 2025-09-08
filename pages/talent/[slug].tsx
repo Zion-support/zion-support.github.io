@@ -1,23 +1,31 @@
-import { useRouter } from 'next/router';
-import React from 'react';
-import RequestInterviewButton from '../../components/interviews/RequestInterviewButton';
+import type { NextPage, GetStaticProps, GetStaticPaths } from 'next';
+import Head from 'next/head';
 
-export default function TalentProfile() {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
+type Props = { slug: string };
 
-  const talentId = slug || 'talent-1';
-  const clientId = typeof window !== 'undefined' ? (localStorage.getItem('demoUserId') || 'client-1') : 'client-1';
-
+const TalentSlugPage: NextPage<Props> = ({ slug }) => {
   return (
-    <div className="space-y-4">
-      <div className="enhanced-card">
-        <h1 className="text-2xl font-bold">Talent Profile: {talentId}</h1>
-        <p className="text-sm text-gray-600">Expertise summary and details go here.</p>
-      </div>
-      <div>
-        <RequestInterviewButton clientId={clientId} talentId={talentId} />
-      </div>
+    <div>
+      <Head>
+        <title>{slug} - Zion Tech Solutions</title>
+        <meta name="description" content={`${slug} page`} />
+      </Head>
+      
+      <main>
+        <h1>{slug}</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return { paths: [], fallback: true };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const slug = (params?.slug as string) || 'talent';
+  return { props: { slug } };
+};
+
+export default TalentSlugPage;

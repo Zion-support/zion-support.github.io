@@ -1,16 +1,20 @@
-import React from 'react';
-import RequestInterviewButton from '../../components/interviews/RequestInterviewButton';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-export default function ChatThreadDemo() {
-  const clientId = typeof window !== 'undefined' ? (localStorage.getItem('demoUserId') || 'client-1') : 'client-1';
-  const talentId = 'talent-1';
+const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
   return (
-    <div className="space-y-4">
-      <div className="enhanced-card">
-        <h1 className="text-xl font-semibold">AI Business Solutions Discussion</h1>
-        <p className="text-sm text-gray-600">Thread content here…</p>
-      </div>
-      <RequestInterviewButton clientId={clientId} talentId={talentId} />
+    <div>
+      <Head>
+        <title>AiPoweredBusinessSolutionsDiscussion - Zion Tech Solutions</title>
+        <meta name="description" content="AiPoweredBusinessSolutionsDiscussion page" />
+      </Head>
+      
+      <main>
+        <h1>AiPoweredBusinessSolutionsDiscussion</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export default AiPoweredBusinessSolutionsDiscussion;
