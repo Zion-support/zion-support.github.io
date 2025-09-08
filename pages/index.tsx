@@ -494,6 +494,14 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                 </div>
                 <p className="mt-2 text-white/70 text-sm">Human + AI collaboration</p>
               </Link>
+
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📜</span>
+                </div>
+                <h3 className="text-lg font-semibold text-red-400 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Privacy policy</p>
+              </Link>
             </div>
           </section>
 
@@ -800,7 +808,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SERVICE_GENERATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
                 </ul>
               </div>
