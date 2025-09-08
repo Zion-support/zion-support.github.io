@@ -1,57 +1,78 @@
-# GitHub Actions Workflows
+# PM2 Automation System
 
-This directory contains all the GitHub Actions workflows for the Zion Tech Group application. All workflows have been optimized for Node.js 20 and use Yarn as the package manager.
+This directory contains configuration and documentation for the PM2-based automation system that has replaced GitHub Actions workflows.
 
-## Workflow Overview
+## Automation Overview
 
-### 🔄 **CI (Continuous Integration)**
-- **File**: `ci.yml`
-- **Triggers**: Push to main, Pull requests to main
-- **Purpose**: Main CI pipeline for building and testing
-- **Features**:
-  - Linting and type checking
-  - Build verification
-  - Test execution (if available)
-  - Build artifact upload
+All automation tasks are now handled by PM2 processes running continuously on the server, providing real-time monitoring and automated execution.
 
-### 🧪 **Test**
-- **File**: `test.yml`
-- **Triggers**: Push to main, Pull requests to main
-- **Purpose**: Dedicated testing workflow
-- **Features**:
-  - Build verification
-  - Test execution
-  - Build artifact upload
+### 🔄 PM2 Automation Processes
 
-### 🚀 **Deploy**
-- **File**: `deploy.yml`
-- **Triggers**: Push to main, Pull requests to main, Manual dispatch
-- **Purpose**: Deployment pipeline with preview and production stages
-- **Features**:
-  - Build and test verification
-  - Security scanning
-  - Preview deployment for PRs
-  - Production deployment for main branch
-  - PR commenting with build status
+The following automation processes are managed by PM2:
 
-### 🔍 **CodeQL Security Analysis**
-- **File**: `codeql.yml`
-- **Triggers**: Push to main/develop, Pull requests, Daily schedule
-- **Purpose**: Automated security vulnerability scanning
-- **Features**:
-  - JavaScript/TypeScript analysis
-  - Daily scheduled scans
-  - Security event reporting
+#### High Priority Automations
+- **console-error-fixer**: Runs every 15 minutes - Automated console error detection and fixing
+- **link-checker**: Runs every 30 minutes - Automated broken link detection and reporting
+- **daily-build-test**: Runs every hour - Automated build testing and verification
+- **continuous-improvement**: Runs every 2 hours - Automated code improvement suggestions
+- **quality-checks**: Runs every 3 hours - Automated code quality and linting checks
+- **performance-monitor**: Runs every 2 hours - Performance monitoring and optimization
+- **link-integrity**: Runs every 2 hours - Link integrity validation and reporting
 
-### 🔗 **Link Crawler Factory**
-- **File**: `agent-factory.yml`
-- **Triggers**: Daily schedule (6 AM UTC), Manual dispatch
-- **Purpose**: Automated link checking and broken link detection
-- **Features**:
-  - Parallel URL checking with sharding
-  - Broken link reporting
-  - Automatic issue creation
-  - Queue management for URLs
+#### Scheduled Automations
+- **security-audit**: Runs every 4 hours - Security vulnerability scanning and reporting
+- **front-maximizer**: Runs every 4 hours - Frontend optimization and enhancement
+- **dependency-updates**: Runs every 6 hours - Automated dependency management
+- **sitemap-runner**: Runs every 6 hours - Sitemap generation and validation
+
+### 🚀 Main Applications
+- **zion-app**: Main frontend application
+- **zion-backend**: Backend server application
+
+## PM2 Configuration
+
+The automation system is configured in `ecosystem.config.cjs` at the root of the project.
+
+### Key Features
+- **Auto-restart**: All processes automatically restart on failure
+- **Memory management**: Configurable memory limits with automatic restarts
+- **Environment-specific configs**: Production and development configurations
+- **Process monitoring**: Real-time status monitoring and logging
+
+## Monitoring and Management
+
+### PM2 Commands
+```bash
+# View all processes
+pm2 status
+
+# Monitor processes in real-time
+pm2 monit
+
+# View logs for a specific process
+pm2 logs <process-name>
+
+# Restart a process
+pm2 restart <process-name>
+
+# Stop all processes
+pm2 stop all
+
+# Start all processes
+pm2 start ecosystem.config.cjs
+```
+
+### Process Status
+All automation processes run continuously and can be monitored through PM2's built-in monitoring tools.
+
+## Benefits of PM2 over GitHub Actions
+
+1. **Real-time execution**: Processes run continuously instead of waiting for triggers
+2. **Immediate feedback**: Instant error detection and resolution
+3. **Resource efficiency**: Better resource utilization and monitoring
+4. **Customizable scheduling**: Flexible timing and interval configurations
+5. **Local execution**: No dependency on external CI/CD services
+6. **Cost effective**: No GitHub Actions minutes consumption
 
 ### 🔄 **Continuous Improvement**
 - **File**: `continuous-improvement.yml`
@@ -73,99 +94,21 @@ This directory contains all the GitHub Actions workflows for the Zion Tech Group
   - NPM publishing
   - Yarn-based workflow
 
-### 🔧 **Dependency Update**
-- **File**: `dependency-update.yml`
-- **Triggers**: Weekly schedule (Monday 4 AM UTC), Manual dispatch
-- **Purpose**: Automated dependency updates
-- **Features**:
-  - Outdated package detection
-  - Automated updates
-  - Build verification
-  - PR creation with detailed information
+## Environment Variables
 
-### ✨ **Code Quality**
-- **File**: `code-quality.yml`
-- **Triggers**: Push to main/develop, Pull requests, Manual dispatch
-- **Purpose**: Comprehensive code quality checks
-- **Features**:
-  - ESLint and TypeScript checking
-  - Code formatting verification
-  - Console statement detection
-  - TODO comment tracking
-  - Bundle size verification
-
-## Common Features
-
-### 🔧 **Environment Setup**
-- **Node.js Version**: 20.x
-- **Package Manager**: Yarn
-- **Cache Strategy**: Yarn cache for faster builds
-
-### 📊 **Artifact Management**
-- Build outputs stored for 7 days
-- Separate artifacts for different job types
-- Efficient artifact upload/download
-
-### 🚦 **Concurrency Control**
-- Prevents multiple workflows from running simultaneously
-- Cancels in-progress workflows when new ones start
-- Optimized for resource usage
-
-### 🔒 **Security**
-- Minimal required permissions
-- Security scanning integration
-- Vulnerability reporting
-
-## Usage
-
-### Manual Trigger
-All workflows can be triggered manually via the GitHub Actions tab:
-1. Go to Actions tab in your repository
-2. Select the desired workflow
-3. Click "Run workflow"
-4. Choose branch and any required inputs
-
-### Scheduled Runs
-- **Link Crawler**: Daily at 6 AM UTC
-- **Continuous Improvement**: Daily at 2 AM UTC
-- **Dependency Updates**: Weekly on Monday at 4 AM UTC
-- **CodeQL**: Daily at 1:33 AM UTC
-
-### Branch Protection
-- Main branch workflows run on push and PR
-- Develop branch workflows run on push and PR
-- Feature branches can trigger specific workflows
-
-## Configuration
-
-### Required Secrets
-- `NPM_TOKEN`: For NPM publishing (if applicable)
-- `GITHUB_TOKEN`: Automatically provided by GitHub
-
-### Environment Variables
-- Production environment for deployment workflows
-- Branch-specific configurations
-- Workflow-specific variables
-
-## Monitoring
-
-### Workflow Status
-- All workflows provide detailed logging
-- Artifact uploads for debugging
-- Failure notifications via GitHub
-
-### Performance Metrics
-- Build times tracked
-- Cache hit rates monitored
-- Resource usage optimized
+The PM2 processes use the following environment variables:
+- `NODE_ENV`: Set to 'production' for all automation processes
+- `AUTOMATION_INTERVAL`: Configurable intervals for each automation process
+- `NODE_OPTIONS`: Memory and legacy provider configurations
 
 ## Troubleshooting
 
 ### Common Issues
-1. **Build Failures**: Check Node.js version compatibility
-2. **Cache Issues**: Clear Yarn cache if needed
-3. **Permission Errors**: Verify workflow permissions
-4. **Timeout Issues**: Adjust workflow timeouts
+
+1. **Process Failures**: Check PM2 logs with `pm2 logs <process-name>`
+2. **Memory Issues**: Adjust `max_memory_restart` values in ecosystem.config.cjs
+3. **Restart Loops**: Check for script errors or missing dependencies
+4. **Performance Issues**: Monitor resource usage with `pm2 monit`
 
 ### Debug Steps
 1. Check workflow logs in Actions tab
@@ -173,7 +116,11 @@ All workflows can be triggered manually via the GitHub Actions tab:
 3. Test locally with same Node.js version
 4. Check Yarn lock file consistency
 
-## Best Practices
+To debug processes:
+1. Check individual process logs
+2. Monitor resource usage
+3. Verify script paths and dependencies
+4. Check environment variable configurations
 
 ### ✅ **Do's**
 - Keep workflows focused and single-purpose
@@ -182,22 +129,30 @@ All workflows can be triggered manually via the GitHub Actions tab:
 - Cache dependencies for faster builds
 - Use latest GitHub Actions versions
 
-### ❌ **Don'ts**
-- Don't run workflows unnecessarily
-- Don't skip security checks
-- Don't ignore build failures
-- Don't use deprecated actions
-- Don't hardcode secrets
+When modifying automation processes:
+
+1. Update the ecosystem.config.cjs file
+2. Test changes locally before deployment
+3. Monitor process stability after changes
+4. Update this documentation as needed
 
 ## Support
 
-For workflow issues or improvements:
-1. Check the workflow logs
-2. Review the workflow configuration
-3. Test changes in a feature branch
-4. Create an issue for complex problems
+For automation issues:
+1. Check PM2 process status
+2. Review process logs for errors
+3. Verify configuration file syntax
+4. Monitor resource usage and performance
 
----
+## Migration from GitHub Actions
 
-*Last updated: $(date)*
-*Workflow count: 9 active workflows*
+This system replaces the following GitHub Actions workflows:
+- CI/CD Pipeline
+- Security & Dependency Management
+- Testing & Quality Assurance
+- Release Management
+- Dependency Management
+- Continuous Improvement
+- Link Crawler Factory
+
+All functionality is now handled by PM2 automation processes running continuously on the server.
