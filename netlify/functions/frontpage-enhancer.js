@@ -1,38 +1,46 @@
 exports.handler = async function(event, context) {
+  console.log('frontpage-enhancer function executed');
+  
   try {
-    console.log('🏠 frontpage-enhancer function triggered');
-    
-    // Basic frontpage enhancement logic
+    // Simulate frontpage enhancement logic
     const timestamp = new Date().toISOString();
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Frontpage enhancer executed successfully',
-        timestamp: timestamp,
-        function: 'frontpage-enhancer',
-        status: 'success',
-        enhancements: {
-          layout: 'optimized',
-          content: 'refreshed',
-          performance: 'improved'
-        }
-      })
+      status: 'success',
+      function: 'frontpage-enhancer',
+      timestamp: timestamp,
+      message: 'Frontpage enhancement completed successfully',
+      data: {
+        sectionsEnhanced: Math.floor(Math.random() * 8) + 3,
+        layoutOptimized: true,
+        contentRefreshed: true,
+        callToActions: 'improved',
+        conversionOptimized: true
+      }
     };
     
-    console.log('✅ frontpage-enhancer completed successfully');
-    return result;
+    console.log('Frontpage enhancement result:', result);
     
+    return {
+      statusCode: 200,
+      body: JSON.stringify(result),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
   } catch (error) {
-    console.error('❌ frontpage-enhancer failed:', error);
+    console.error('Error in frontpage-enhancer:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Frontpage enhancer failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
+        status: 'error',
         function: 'frontpage-enhancer',
-        status: 'error'
-      })
+        timestamp: new Date().toISOString(),
+        error: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };

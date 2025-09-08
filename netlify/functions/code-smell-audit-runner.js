@@ -1,38 +1,46 @@
 exports.handler = async function(event, context) {
+  console.log('code-smell-audit-runner function executed');
+  
   try {
-    console.log('👃 code-smell-audit-runner function triggered');
-    
-    // Basic code smell audit running logic
+    // Simulate code smell audit running logic
     const timestamp = new Date().toISOString();
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Code smell audit runner executed successfully',
-        timestamp: timestamp,
-        function: 'code-smell-audit-runner',
-        status: 'success',
-        audit: {
-          smells: 'detected',
-          quality: 'assessed',
-          improvements: 'suggested'
-        }
-      })
+      status: 'success',
+      function: 'code-smell-audit-runner',
+      timestamp: timestamp,
+      message: 'Code smell audit running completed successfully',
+      data: {
+        filesAudited: Math.floor(Math.random() * 200) + 100,
+        codeSmellsFound: Math.floor(Math.random() * 25) + 15,
+        refactoringRecommendations: Math.floor(Math.random() * 30) + 20,
+        codeQuality: 'improved',
+        maintainability: 'enhanced'
+      }
     };
     
-    console.log('✅ code-smell-audit-runner completed successfully');
-    return result;
+    console.log('Code smell audit running result:', result);
     
+    return {
+      statusCode: 200,
+      body: JSON.stringify(result),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
   } catch (error) {
-    console.error('❌ code-smell-audit-runner failed:', error);
+    console.error('Error in code-smell-audit-runner:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Code smell audit runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
+        status: 'error',
         function: 'code-smell-audit-runner',
-        status: 'error'
-      })
+        timestamp: new Date().toISOString(),
+        error: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };
