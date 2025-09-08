@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { Button } from '@/components/ui/button';
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 =======
 // import { Button } from '@/components/ui/button';
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// import { Button } from '@/components/ui/button';
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { useNavigate } from 'react-router-dom';
 
 interface CartItem {
@@ -78,9 +87,12 @@ export default function CartPage() {
                 className="w-16 bg-transparent border border-input rounded p-1 text-center"
               />
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove
@@ -88,15 +100,28 @@ export default function CartPage() {
 =======
               {/* <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              {/* <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
+                Remove
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </Button> */}
               <button className="border border-gray-300 px-3 py-1 rounded text-sm" onClick={() => removeItem(item.id)}>
                 Remove
               </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </div>
           </li>
         ))}
@@ -106,9 +131,12 @@ export default function CartPage() {
         <span>${subtotal.toFixed(2)}</span>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
         Checkout
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
       <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
         Checkout
@@ -116,15 +144,28 @@ export default function CartPage() {
 =======
       {/* <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
         Checkout
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+      {/* <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
+        Checkout
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </Button> */}
       <button className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded" onClick={() => navigate('/checkout')}>
         Checkout
       </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     </div>
   );
 }

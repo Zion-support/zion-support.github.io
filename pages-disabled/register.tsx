@@ -3,11 +3,14 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 export default function RegisterPage() {}
   const [showPassword, setShowPassword] = useState(false);
@@ -19,7 +22,16 @@ export default function RegisterPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+export default function RegisterPage() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [formData, setFormData] = useState({
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     firstName: '',
     lastName: '',
     email: '',
@@ -28,11 +40,14 @@ export default function RegisterPage() {
     company: '',
     agreeToTerms: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
     subscribeNewsletter: false
   });
 
   const [passwordRequirements, setPasswordRequirements] = useState({
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     subscribeNewsletter: false;
   }
@@ -45,20 +60,39 @@ export default function RegisterPage() {
 
   const [passwordRequirements, setPasswordRequirements] = useState({
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    subscribeNewsletter: false
+  });
+
+  const [passwordRequirements, setPasswordRequirements] = useState({
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     length: false,
     uppercase: false,
     lowercase: false,
     number: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
     special: false
   });
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     special: false;
   }
 });
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    special: false
+  });
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,10 +107,13 @@ export default function RegisterPage() {
     }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Check password requirements
     if (name === 'password') {
       setPasswordRequirements({
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     // Check password requirements;
     if (name === 'password') {}
       setPasswordRequirements({})
@@ -100,16 +137,27 @@ export default function RegisterPage() {
     if (name === 'password') {
       setPasswordRequirements({
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    // Check password requirements
+    if (name === 'password') {
+      setPasswordRequirements({
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         length: value.length >= 8,
         uppercase: /[A-Z]/.test(value),
         lowercase: /[a-z]/.test(value),
         number: /\d/.test(value),
 <<<<<<< HEAD
+<<<<<<< HEAD
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
       });
     }
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value);
       }
@@ -120,7 +168,15 @@ export default function RegisterPage() {
       });
     }
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
+      });
+    }
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   };
 
   const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
@@ -130,9 +186,12 @@ export default function RegisterPage() {
                      isPasswordValid && formData.agreeToTerms;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <Layout
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
   return ()
     <Layout;
@@ -140,7 +199,14 @@ export default function RegisterPage() {
   return (
     <Layout
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+  return (
+    <Layout
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       title="Register - Zion Tech Group"
       description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources."
       keywords="register, sign up, create account, Zion Tech Group, new user"
@@ -148,22 +214,36 @@ export default function RegisterPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
           <motion.div;
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
 =======
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             className="text-center"
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -171,11 +251,19 @@ export default function RegisterPage() {
             </div>
             <h2 className="mt-6 text-3xl font-bold text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Create your account
 =======
 <<<<<<< HEAD
               Create your account;
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+              Create your account;
+=======
+              Create your account
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </h2>
             <p className="mt-2 text-sm text-gray-300">
               Join Zion Tech Group and start your digital transformation journey
@@ -183,7 +271,10 @@ export default function RegisterPage() {
           </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           <motion.div;
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
@@ -196,15 +287,26 @@ export default function RegisterPage() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
@@ -212,19 +314,29 @@ export default function RegisterPage() {
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     First name
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                     First name;
 =======
                     First name
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    First name
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <User className="h-5 w-5 text-gray-400" />
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <input
                       id="firstName"
@@ -234,6 +346,8 @@ export default function RegisterPage() {
                       value={formData.firstName}
                       onChange={handleChange}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                     <input;
                       id="firstName"
@@ -251,7 +365,19 @@ export default function RegisterPage() {
                       value={formData.firstName}
                       onChange={handleChange}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
                     />
@@ -261,21 +387,32 @@ export default function RegisterPage() {
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Last name
 =======
 <<<<<<< HEAD
                     Last name;
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                    Last name;
+=======
+                    Last name
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </label>
                   <input
                     id="lastName"
                     name="lastName"
                     type="text"
 <<<<<<< HEAD
+<<<<<<< HEAD
                     required
                     value={formData.lastName}
                     onChange={handleChange}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     required;
                     value={formData.lastName};
                     onChange={handleChange};
@@ -290,7 +427,15 @@ export default function RegisterPage() {
                     value={formData.lastName}
                     onChange={handleChange}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    required
+                    value={formData.lastName}
+                    onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
                   />
@@ -300,37 +445,58 @@ export default function RegisterPage() {
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Email address
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   Email address;
 =======
                   Email address
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  Email address
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <input
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   <input;
 =======
                   <input
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  <input
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     id="email"
                     name="email"
                     type="email"
                     autoComplete="email"
 <<<<<<< HEAD
+<<<<<<< HEAD
                     required
                     value={formData.email}
                     onChange={handleChange}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                     required;
                     value={formData.email};
@@ -340,7 +506,15 @@ export default function RegisterPage() {
                     value={formData.email}
                     onChange={handleChange}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
@@ -350,20 +524,31 @@ export default function RegisterPage() {
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Company (optional)
 =======
 <<<<<<< HEAD
                   Company (optional);
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  Company (optional);
+=======
+                  Company (optional)
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </label>
                 <input
                   id="company"
                   name="company"
                   type="text"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   value={formData.company}
                   onChange={handleChange}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   value={formData.company};
                   onChange={handleChange};
 =======
@@ -376,7 +561,14 @@ export default function RegisterPage() {
                   value={formData.company}
                   onChange={handleChange}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  value={formData.company}
+                  onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 />
@@ -385,25 +577,42 @@ export default function RegisterPage() {
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Password
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   Password;
 =======
                   Password
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  Password
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <input
 =======
 <<<<<<< HEAD
                   <input;
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  <input;
+=======
+                  <input
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     id="password"
                     name="password"
                     type={showPassword ? 'text' : 'password'}
@@ -441,8 +650,11 @@ export default function RegisterPage() {
                       </span>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   ))}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   ))};
 =======
                   <input
@@ -484,32 +696,55 @@ export default function RegisterPage() {
                     </div>
                   ))}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  ))}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </div>
               </div>
 
               <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-300 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Confirm password
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   Confirm password;
 =======
                   Confirm password
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  Confirm password
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <input
 =======
 <<<<<<< HEAD
                   <input;
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  <input;
+=======
+                  <input
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     id="confirmPassword"
                     name="confirmPassword"
                     type={showConfirmPassword ? 'text' : 'password'}
@@ -535,8 +770,11 @@ export default function RegisterPage() {
                 {formData.confirmPassword && formData.password !== formData.confirmPassword && (
                   <p className="mt-1 text-xs text-red-400">Passwords do not match</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 )}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 )};
 =======
                   <input
@@ -566,17 +804,31 @@ export default function RegisterPage() {
                   <p className="mt-1 text-xs text-red-400">Passwords do not match</p>
                 )}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                )}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <input
 =======
 <<<<<<< HEAD
                   <input;
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  <input;
+=======
+                  <input
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     id="agreeToTerms"
                     name="agreeToTerms"
                     type="checkbox"
@@ -593,8 +845,11 @@ export default function RegisterPage() {
                     and{' '}
                     <Link href="/privacy" className="text-blue-400 hover:text-blue-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
                       Privacy Policy
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                       Privacy Policy;
 =======
                   <input
@@ -615,18 +870,32 @@ export default function RegisterPage() {
                     <Link href="/privacy" className="text-blue-400 hover:text-blue-300">
                       Privacy Policy
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                      Privacy Policy
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     </Link>
                   </label>
                 </div>
 
                 <div className="flex items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <input
 =======
 <<<<<<< HEAD
                   <input;
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  <input;
+=======
+                  <input
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     id="subscribeNewsletter"
                     name="subscribeNewsletter"
                     type="checkbox"
@@ -636,8 +905,11 @@ export default function RegisterPage() {
                   />
                   <label htmlFor="subscribeNewsletter" className="ml-2 block text-sm text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Subscribe to our newsletter for updates and insights
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     Subscribe to our newsletter for updates and insights;
 =======
                   <input
@@ -651,17 +923,26 @@ export default function RegisterPage() {
                   <label htmlFor="subscribeNewsletter" className="ml-2 block text-sm text-gray-300">
                     Subscribe to our newsletter for updates and insights
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    Subscribe to our newsletter for updates and insights
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </label>
                 </div>
               </div>
 
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <button
                   type="submit"
                   disabled={!isFormValid}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 <button;
                   type="submit"
@@ -671,26 +952,44 @@ export default function RegisterPage() {
                   type="submit"
                   disabled={!isFormValid}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                <button
+                  type="submit"
+                  disabled={!isFormValid}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Create account
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   Create account;
 =======
                   Create account
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  Create account
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </button>
               </div>
 
               <div className="text-center">
                 <p className="text-sm text-gray-300">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Already have an account?{' '}
                   <Link
@@ -699,6 +998,8 @@ export default function RegisterPage() {
                   >
                     Sign in here
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   Already have an account?{' '};
                   <Link;
@@ -714,7 +1015,18 @@ export default function RegisterPage() {
                   >
                     Sign in here
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  Already have an account?{' '}
+                  <Link
+                    href="/login"
+                    className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    Sign in here
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </Link>
                 </p>
               </div>

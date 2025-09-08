@@ -378,8 +378,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default BuildMonitor;
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 monitorBuild();
 =======
 <<<<<<< HEAD
@@ -777,4 +780,10 @@ const monitor = new BuildMonitor();
 monitor.run().catch(console.error);
 >>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+export default BuildMonitor;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

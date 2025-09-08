@@ -2,11 +2,19 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 =======
 <<<<<<< HEAD
 import { FilterSidebar } from "@/components/talent/FilterSidebar";
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+import { FilterSidebar } from "@/components/talent/FilterSidebar";
+=======
+import { FilterSidebar } from "@/components/search/FilterSidebar";
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { TalentResults } from "@/components/talent/TalentResults";
 // import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
 // import { ErrorBanner } from "@/components/talent/ErrorBanner";
@@ -17,7 +25,10 @@ import { X } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import {
   Pagination,
   PaginationContent,
@@ -37,7 +48,12 @@ import { SORT_OPTIONS } from "@/data/sortOptions";
 import { X } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 // import {
 //   Pagination,
 //   PaginationContent,
@@ -47,9 +63,15 @@ import { TalentProfile } from "@/types/talent";
 //   PaginationPrevious,
 // } from "@/components/ui/pagination";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 export default function TalentDirectory() {
   const navigate = useNavigate();
@@ -112,19 +134,33 @@ export default function TalentDirectory() {
     return (
       <div className="container mx-auto px-4 py-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         <TalentSkeleton />
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+        <TalentSkeleton />
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         {/* <TalentSkeleton /> */}
         <div className="text-center py-8">
           <p className="text-muted-foreground">Loading talent profiles...</p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </div>
     );
   }
@@ -133,19 +169,33 @@ export default function TalentDirectory() {
     return (
       <div className="container mx-auto px-4 py-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         <ErrorBanner msg="Unable to load talent profiles." />
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+        <ErrorBanner msg="Unable to load talent profiles." />
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         {/* <ErrorBanner msg="Unable to load talent profiles." /> */}
         <div className="text-center py-8">
           <p className="text-red-500">Unable to load talent profiles.</p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </div>
     );
   }
@@ -188,25 +238,42 @@ export default function TalentDirectory() {
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* <Button
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <Button
 =======
               {/* <Button
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              {/* <Button
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 onClick={() => setIsMobileFilterOpen(true)}
                 variant="outline"
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
               >
                 Filter & Sort
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               </Button>
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+              </Button>
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </Button> */}
               <button
                 onClick={() => setIsMobileFilterOpen(true)}
@@ -215,22 +282,37 @@ export default function TalentDirectory() {
                 Filter & Sort
               </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </div>
             
             {/* Results and Pagination Wrapper for ErrorBoundary */}
             <div className="flex-1"> {/* Added a wrapper div to contain Results and Pagination */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}> */}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}>
 =======
               {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}> */}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}> */}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 <TalentResults
                   talents={paginatedTalents}
                   totalCount={filteredTalents.length}
@@ -256,14 +338,23 @@ export default function TalentDirectory() {
                 {totalPages > 1 && (
                   <div className="mt-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {/* <Pagination className="justify-center">
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                     <Pagination className="justify-center">
 =======
                     {/* <Pagination className="justify-center">
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    {/* <Pagination className="justify-center">
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                       <PaginationContent>
                         <PaginationItem>
                           <PaginationPrevious
@@ -297,6 +388,7 @@ export default function TalentDirectory() {
                         </PaginationItem>
                       </PaginationContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </Pagination> */}
                     
                     <div className="flex justify-center space-x-2">
@@ -328,6 +420,8 @@ export default function TalentDirectory() {
                 )}
               {/* </ErrorBoundary> */}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                     </Pagination>
                   </div>
@@ -365,7 +459,42 @@ export default function TalentDirectory() {
                 )}
               {/* </ErrorBoundary> */}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    </Pagination> */}
+                    
+                    <div className="flex justify-center space-x-2">
+                      <button
+                        onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 border rounded disabled:opacity-50"
+                      >
+                        Previous
+                      </button>
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <button
+                          key={page}
+                          onClick={() => setCurrentPage(page)}
+                          className={`px-3 py-1 border rounded ${page === currentPage ? 'bg-blue-600 text-white' : ''}`}
+                        >
+                          {page}
+                        </button>
+                      ))}
+                      <button
+                        onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 border rounded disabled:opacity-50"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                )}
+              {/* </ErrorBoundary> */}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </div>
             
             {/* Mobile filter sidebar */}
@@ -375,14 +504,23 @@ export default function TalentDirectory() {
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-bold text-white">Filter & Sort</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {/* <Button
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                     <Button
 =======
                     {/* <Button
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                    {/* <Button
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                       variant="ghost"
                       size="sm"
                       onClick={() => setIsMobileFilterOpen(false)}
@@ -391,11 +529,19 @@ export default function TalentDirectory() {
                       <X className="h-4 w-4" />
                       <span className="sr-only">Close</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                     </Button>
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                    </Button>
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     </Button> */}
                     <button
                       onClick={() => setIsMobileFilterOpen(false)}
@@ -405,9 +551,15 @@ export default function TalentDirectory() {
                       <span className="sr-only">Close</span>
                     </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </div>
                   <FilterSidebar
                     searchTerm={searchTerm}

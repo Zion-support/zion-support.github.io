@@ -26,10 +26,17 @@
   NODE_ENV = "production"
 
 [context.deploy-preview]
+<<<<<<< HEAD
   command = "npm ci --no-audit --no-fund && npm run build"
 
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund && npm run build"
+=======
+  command = "echo 'Skipping build; using prebuilt out/ directory'"
+
+[context.branch-deploy]
+  command = "echo 'Skipping build; using prebuilt out/ directory'"
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 # Vite/React SPA configuration
 [[redirects]]

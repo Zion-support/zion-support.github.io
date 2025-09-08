@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -7,6 +8,8 @@ import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } fro
 const features = [;
   {}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
@@ -30,7 +33,19 @@ import {
 const industries = [
   {
     name: 'Healthcare',
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+import Layout from '../../components/Layout';
+import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     icon: Heart,
     title: 'Patient Data Management,',
     description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.',
@@ -169,9 +184,12 @@ export default function HealthcareSolutions() {  return (
     <>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>Healthcare Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive healthcare technology solutions including patient data management, security, analytics, and provider management." />
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         <title>Industry Solutions - Zion Tech Group</title>
         <meta name="description" content="Industry-specific technology solutions for healthcare, finance, education, manufacturing, retail, and government sectors." />
 =======
@@ -322,7 +340,14 @@ export default function HealthcareSolutions() {  return (
         <title>Healthcare Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive healthcare technology solutions including patient data management, security, analytics, and provider management." />
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        <title>Healthcare Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive healthcare technology solutions including patient data management, security, analytics, and provider management." />
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </Head>
 
       <div className="min-h-screen bg-gray-50">
@@ -336,11 +361,14 @@ export default function HealthcareSolutions() {  return (
               className="text-center"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Healthcare Solutions</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Secure and compliant healthcare technology solutions designed for healthcare providers. 
                 From patient data management to analytics and provider management.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Industry Solutions</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -352,21 +380,39 @@ export default function HealthcareSolutions() {  return (
                 Secure and compliant healthcare technology solutions designed for healthcare providers. 
                 From patient data management to analytics and provider management.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Healthcare Solutions</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Secure and compliant healthcare technology solutions designed for healthcare providers. 
+                From patient data management to analytics and provider management.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </p>
             </motion.div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Features Section */}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 
         {/* Industries Grid */}
 =======
         {/* Features Section */}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        {/* Features Section */}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -376,18 +422,29 @@ export default function HealthcareSolutions() {  return (
               className="text-center mb-12"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Healthcare Technology Features</h2>
 =======
 <<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
+=======
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Healthcare Technology Features</h2>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our healthcare solutions are built with security and compliance in mind.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
@@ -399,7 +456,14 @@ export default function HealthcareSolutions() {  return (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -409,11 +473,19 @@ export default function HealthcareSolutions() {  return (
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <feature.icon className="w-6 h-6 text-blue-600" />
 =======
 <<<<<<< HEAD
                     <industry.icon className="w-6 h-6 text-blue-600" />
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                    <industry.icon className="w-6 h-6 text-blue-600" />
+=======
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -542,7 +614,10 @@ export default function HealthcareSolutions() {  return (
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 =======
                     <feature.icon className="w-6 h-6 text-blue-600" />
@@ -674,7 +749,12 @@ export default function HealthcareSolutions() {  return (
           </div>
         </section>
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -685,11 +765,14 @@ export default function HealthcareSolutions() {  return (
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Ready for Healthcare Solutions?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our healthcare solutions can support your organization.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 Ready for Industry-Specific Solutions?
               </h2>
@@ -701,7 +784,16 @@ export default function HealthcareSolutions() {  return (
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our healthcare solutions can support your organization.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                Ready for Healthcare Solutions?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our healthcare solutions can support your organization.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -723,13 +815,22 @@ export default function HealthcareSolutions() {  return (
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>  );
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     </>
   );
 =======
     </Layout>  );
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    </Layout>  );
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 }

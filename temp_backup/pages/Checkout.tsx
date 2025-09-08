@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,7 +26,15 @@ import {
 // import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 // import { getStripe } from '@/utils/getStripe';
 // import {
 //   Form,
@@ -34,9 +45,15 @@ import { useNavigate } from 'react-router-dom';
 //   FormMessage,
 // } from '@/components/ui/form';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 interface CartItem {
   id: string;
@@ -81,7 +98,10 @@ export default function CheckoutPage() {
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
       const stripe = await getStripe();
       if (stripe && result.clientSecret) {
@@ -96,7 +116,12 @@ export default function CheckoutPage() {
         navigate(`/orders/${result.id}`);
       }
 =======
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       // const stripe = await getStripe();
       // const stripe = null; // Temporary fallback
       // if (stripe && result.clientSecret) {
@@ -114,9 +139,15 @@ export default function CheckoutPage() {
       safeStorage.removeItem('cart');
       navigate('/orders/success');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     } catch (err) {
       console.error('Payment failed', err);
     }
@@ -127,14 +158,23 @@ export default function CheckoutPage() {
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <div className="grid gap-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* <Form {...form}>
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
         <Form {...form}>
 =======
         {/* <Form {...form}>
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        {/* <Form {...form}>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
@@ -187,17 +227,28 @@ export default function CheckoutPage() {
                 <span>${subtotal.toFixed(2)}</span>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
 =======
 <<<<<<< HEAD
               <Button className="w-full" type="submit">
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+              <Button className="w-full" type="submit">
+=======
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 Pay with Stripe (test)
               </button>
             </div>
           </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         </Form>
 =======
               <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
@@ -205,7 +256,12 @@ export default function CheckoutPage() {
               </button>
             </div>
           </form>
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         </Form> */}
         
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -240,9 +296,15 @@ export default function CheckoutPage() {
           </div>
         </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </div>
     </div>
   );

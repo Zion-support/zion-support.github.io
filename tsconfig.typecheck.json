@@ -3,6 +3,7 @@
   "compilerOptions": {
     "noEmit": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "skipLibCheck": true,
     "incremental": false,
     "composite": false,
@@ -12,6 +13,8 @@
     "src/**/*.ts",
     "src/**/*.tsx"
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     "skipLibCheck": true
   },
@@ -29,7 +32,20 @@
     "src/**/*.ts",
     "src/**/*.tsx"
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    "skipLibCheck": true,
+    "incremental": false,
+    "composite": false,
+    "tsBuildInfoFile": ".tsbuildinfo.typecheck"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   ],
   "exclude": [
     "node_modules",
@@ -61,16 +77,26 @@
     "pages/**",
     "app/**",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "vite.config-backup.ts",
     "zion-os/**"
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     "vite.config-backup.ts"
 =======
     "vite.config-backup.ts",
     "zion-os/**"
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    "vite.config-backup.ts",
+    "zion-os/**"
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   ]
 }
 

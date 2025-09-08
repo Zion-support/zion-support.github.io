@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export interface User {
@@ -22,19 +26,79 @@ export interface AuthContextType extends AuthState {
   logout: () => Promise<void>;
   register: (email: string, password: string, name?: string) => Promise<void>;
   clearError: () => void;
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+import React, { createContext, useContext, useState } from 'react';
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 }
 
 export interface AuthContextType extends AuthState {
   login: (email: string, password: string) => Promise<void>;
+<<<<<<< HEAD
   logout: () => Promise<void>;
   register: (email: string, password: string, name?: string) => Promise<void>;
   clearError: () => void;
+=======
+  logout: () => void;
+  loading: boolean;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 // Remove this since we have useAuth in hooks/useAuth.ts
+=======
+<<<<<<< HEAD
+export const useAuth = (): AuthContextType => {
+=======
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const login = async (email: string, password: string) => {
+    setLoading(true);
+    // Simulate login
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setUser({ id: '1', email, name: 'User' });
+    setLoading(false);
+  };
+
+  const logout = () => {
+    setUser(null);
+  };
+
+  return (
+    <AuthContext.Provider value={{ 
+      user, 
+      isAuthenticated: !!user, 
+      login, 
+      logout, 
+      loading 
+    }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+>>>>>>> origin/main
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+<<<<<<< HEAD
+};
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -187,4 +251,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 };

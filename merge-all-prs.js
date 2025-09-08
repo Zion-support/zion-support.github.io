@@ -120,10 +120,13 @@ function processAllBranches() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Step 3: Resolve conflicts in a specific file
 function resolveConflictsInFile(filePath) {
   console.log(`🔧 Resolving conflicts in ${filePath}...`);
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 // Step 3: Fix syntax errors and merge conflicts in files
 function fixSyntaxAndConflicts() {
   console.log('\n🔧 Fixing syntax errors and merge conflicts...');
@@ -206,7 +209,15 @@ function githubAPI(endpoint, method = 'GET', data = null) {
   if (data) {
     curlCommand += \` -d '\${JSON.stringify(data)}'\`;
   }
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// Step 3: Resolve conflicts in a specific file
+function resolveConflictsInFile(filePath) {
+  console.log(`🔧 Resolving conflicts in ${filePath}...`);
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   
   try {
     if (!fs.existsSync(filePath)) {

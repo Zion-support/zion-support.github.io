@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import MainLayout from './components/layout/MainLayout';
 
 const About = () => {
   return (
     <MainLayout 
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import Layout from "../components/Layout";
 
@@ -18,7 +21,17 @@ const About = () => {
   return (
     <MainLayout 
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+import MainLayout from './components/layout/MainLayout';
+
+const About = () => {
+  return (
+    <MainLayout 
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions."
     >
@@ -31,9 +44,12 @@ const About = () => {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
               We are a leading technology solutions provider dedicated to transforming businesses 
               through innovative AI, cloud architecture, and cutting-edge development services.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               We are a leading technology solutions provider dedicated to
               transforming businesses through innovative AI, cloud architecture,
@@ -42,7 +58,14 @@ const About = () => {
               We are a leading technology solutions provider dedicated to transforming businesses 
               through innovative AI, cloud architecture, and cutting-edge development services.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              We are a leading technology solutions provider dedicated to transforming businesses 
+              through innovative AI, cloud architecture, and cutting-edge development services.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </p>
           </div>
 
@@ -51,12 +74,15 @@ const About = () => {
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-4xl mb-4">🎯</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
               <p className="text-gray-600 text-lg">
                 To empower businesses with cutting-edge technology solutions that drive growth, 
                 efficiency, and innovation. We believe in delivering exceptional value through 
                 personalized service and world-class expertise.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 Our Mission
@@ -73,11 +99,22 @@ const About = () => {
                 efficiency, and innovation. We believe in delivering exceptional value through 
                 personalized service and world-class expertise.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+              <p className="text-gray-600 text-lg">
+                To empower businesses with cutting-edge technology solutions that drive growth, 
+                efficiency, and innovation. We believe in delivering exceptional value through 
+                personalized service and world-class expertise.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-4xl mb-4">🔮</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
               <p className="text-gray-600 text-lg">
@@ -85,6 +122,8 @@ const About = () => {
                 harness the power of AI, cloud computing, and digital innovation to create 
                 a more connected and efficient world.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 Our Vision
@@ -100,7 +139,17 @@ const About = () => {
                 harness the power of AI, cloud computing, and digital innovation to create 
                 a more connected and efficient world.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+              <p className="text-gray-600 text-lg">
+                To be the global leader in technology transformation, helping businesses 
+                harness the power of AI, cloud computing, and digital innovation to create 
+                a more connected and efficient world.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </p>
             </div>
           </div>
@@ -108,13 +157,22 @@ const About = () => {
           {/* Our Story */}
           <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Story</h2>
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
               Our Story
             </h2>
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Story</h2>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-600 mb-6">
                 Founded in 2020, Zion Tech Group emerged from a simple yet powerful vision: 
@@ -130,10 +188,13 @@ const About = () => {
               </p>
               <p className="text-lg text-gray-600">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Today, we're proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
                 to excellence, innovation, and client success continues to drive everything we do.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 Today, we're proud to have helped over 150+ businesses transform
                 their digital presence, from small startups to enterprise-level
                 organizations. Our commitment to excellence, innovation, and
@@ -158,7 +219,15 @@ const About = () => {
                 presence, from small startups to enterprise-level organizations. Our commitment 
                 to excellence, innovation, and client success continues to drive everything we do.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                Today, we're proud to have helped over 150+ businesses transform their digital 
+                presence, from small startups to enterprise-level organizations. Our commitment 
+                to excellence, innovation, and client success continues to drive everything we do.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </p>
             </div>
           </div>
@@ -166,22 +235,34 @@ const About = () => {
           {/* Values */}
           <div className="mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
               Our Core Values
             </h2>
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl mb-4">💡</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
                 <p className="text-gray-600">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   We constantly push the boundaries of what's possible, embracing new technologies 
                   and methodologies to deliver cutting-edge solutions.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   We constantly push the boundaries of what's possible,
                   embracing new technologies and methodologies to deliver
                   cutting-edge solutions.
@@ -195,17 +276,27 @@ const About = () => {
                   We constantly push the boundaries of what's possible, embracing new technologies 
                   and methodologies to deliver cutting-edge solutions.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  We constantly push the boundaries of what's possible, embracing new technologies 
+                  and methodologies to deliver cutting-edge solutions.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-4">🤝</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
                 <p className="text-gray-600">
                   We believe in building long-term relationships with our clients, working as 
                   an extension of their team to achieve shared success.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   Partnership
@@ -220,17 +311,29 @@ const About = () => {
                   We believe in building long-term relationships with our clients, working as 
                   an extension of their team to achieve shared success.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
+                <p className="text-gray-600">
+                  We believe in building long-term relationships with our clients, working as 
+                  an extension of their team to achieve shared success.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-4">⭐</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
                 <p className="text-gray-600">
                   We maintain the highest standards in everything we do, from project planning 
                   to final delivery, ensuring exceptional results every time.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   Excellence
@@ -245,7 +348,16 @@ const About = () => {
                   We maintain the highest standards in everything we do, from project planning 
                   to final delivery, ensuring exceptional results every time.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
+                <p className="text-gray-600">
+                  We maintain the highest standards in everything we do, from project planning 
+                  to final delivery, ensuring exceptional results every time.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </p>
               </div>
             </div>
@@ -254,8 +366,11 @@ const About = () => {
           {/* Team Section */}
           <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
               Meet Our Team
@@ -263,12 +378,19 @@ const About = () => {
 =======
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-blue-600">K</span>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Kleber</h3>
                 <p className="text-blue-600 font-medium mb-2">Founder & CEO</p>
@@ -276,6 +398,8 @@ const About = () => {
                   Technology visionary with 15+ years of experience in software development 
                   and business strategy.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Kleber
@@ -291,7 +415,17 @@ const About = () => {
                   Technology visionary with 15+ years of experience in software development 
                   and business strategy.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Kleber</h3>
+                <p className="text-blue-600 font-medium mb-2">Founder & CEO</p>
+                <p className="text-gray-600 text-sm">
+                  Technology visionary with 15+ years of experience in software development 
+                  and business strategy.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </p>
               </div>
               <div className="text-center">
@@ -299,12 +433,15 @@ const About = () => {
                   <span className="text-2xl font-bold text-green-600">A</span>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Alex</h3>
                 <p className="text-blue-600 font-medium mb-2">CTO</p>
                 <p className="text-gray-600 text-sm">
                   AI and machine learning expert with a passion for creating intelligent 
                   solutions that solve real-world problems.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Alex
@@ -320,7 +457,17 @@ const About = () => {
                   AI and machine learning expert with a passion for creating intelligent 
                   solutions that solve real-world problems.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Alex</h3>
+                <p className="text-blue-600 font-medium mb-2">CTO</p>
+                <p className="text-gray-600 text-sm">
+                  AI and machine learning expert with a passion for creating intelligent 
+                  solutions that solve real-world problems.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </p>
               </div>
               <div className="text-center">
@@ -328,12 +475,15 @@ const About = () => {
                   <span className="text-2xl font-bold text-purple-600">S</span>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Sarah</h3>
                 <p className="text-blue-600 font-medium mb-2">Head of Design</p>
                 <p className="text-gray-600 text-sm">
                   Creative director focused on user experience and interface design, 
                   ensuring our solutions are both powerful and intuitive.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Sarah
@@ -350,7 +500,17 @@ const About = () => {
                   Creative director focused on user experience and interface design, 
                   ensuring our solutions are both powerful and intuitive.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Sarah</h3>
+                <p className="text-blue-600 font-medium mb-2">Head of Design</p>
+                <p className="text-gray-600 text-sm">
+                  Creative director focused on user experience and interface design, 
+                  ensuring our solutions are both powerful and intuitive.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </p>
               </div>
             </div>
@@ -361,11 +521,14 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Let's discuss how we can help transform your business with our technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               Let's discuss how we can help transform your business with our
               technology solutions.
@@ -378,21 +541,39 @@ const About = () => {
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              Let's discuss how we can help transform your business with our technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a 
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get in Touch
               </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a 
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <a
 =======
               <a 
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              <a 
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 href="/services"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
@@ -403,17 +584,28 @@ const About = () => {
         </main>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </MainLayout>
 =======
 <<<<<<< HEAD
     </Layout>
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+    </Layout>
+=======
+    </MainLayout>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default About;
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 export default About;
 =======
     </MainLayout>
@@ -422,4 +614,10 @@ export default About;
 
 export default About;
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+export default About;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

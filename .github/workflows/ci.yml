@@ -5,6 +5,7 @@ on:
     branches: [ main, develop ]
   pull_request:
 <<<<<<< HEAD
+<<<<<<< HEAD
     branches: [ main ]
 
 jobs:
@@ -12,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     branches: [ main, develop ]
 
 jobs:
@@ -23,7 +26,18 @@ jobs:
       matrix:
         node-version: [20.x]
     
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -32,15 +46,23 @@ jobs:
       uses: actions/setup-node@v4
       with:
 <<<<<<< HEAD
+<<<<<<< HEAD
         node-version: '20'
 =======
         node-version: ${{ matrix.node-version }}
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+        node-version: ${{ matrix.node-version }}
+=======
+        node-version: '20'
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         cache: 'npm'
         
     - name: Install dependencies
       run: npm ci
       
+<<<<<<< HEAD
 <<<<<<< HEAD
     - name: Run linting
       run: npm run lint
@@ -48,6 +70,8 @@ jobs:
     - name: Run tests
       run: npm run test
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     - name: Run type checking
       run: npm run type-check
       
@@ -85,22 +109,41 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    - name: Run linting
+      run: npm run lint
+      
+    - name: Run tests
+      run: npm run test
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       
     - name: Build application
       run: npm run build
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     - name: Analyze bundle
       run: npm run analyze
       
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+    - name: Analyze bundle
+      run: npm run analyze
+      
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-files
         path: dist/
+<<<<<<< HEAD
 <<<<<<< HEAD
         
   deploy:
@@ -108,6 +151,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         retention-days: 7
 
   security:
@@ -144,6 +189,20 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
+<<<<<<< HEAD
+=======
+=======
+        
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     - name: Download build artifacts
@@ -153,9 +212,12 @@ jobs:
         path: dist/
         
 <<<<<<< HEAD
+<<<<<<< HEAD
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v3.0
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     - name: Run performance tests
       run: npm run test:performance
       
@@ -190,17 +252,27 @@ jobs:
       
     - name: Deploy to Netlify Staging
       uses: nwtgck/actions-netlify@v2.0
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v3.0
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       with:
         publish-dir: './dist'
         production-branch: main
         github-token: ${{ secrets.GITHUB_TOKEN }}
         deploy-message: "Deploy from GitHub Actions"
 <<<<<<< HEAD
+<<<<<<< HEAD
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         enable-pull-request-comment: false
         enable-commit-comment: true
         overwrites-pull-request-comment: true
@@ -258,4 +330,12 @@ jobs:
         channel: '#deployments'
         webhook_url: ${{ secrets.SLACK_WEBHOOK }}
       if: always()
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

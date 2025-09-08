@@ -1,10 +1,27 @@
+<<<<<<< HEAD
 import React, { memo, Suspense, lazy, ComponentType, ReactNode, useState, useEffect, useRef } from 'react';
+=======
+<<<<<<< HEAD
+import React, { memo, Suspense, lazy, ComponentType, ReactNode } from 'react';
+import { useLazyComponent } from '../hooks/useLazyLoad';
+=======
+import React, { memo, Suspense, ReactNode } from 'react';
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
   enableLazyLoading?: boolean;
+<<<<<<< HEAD
   lazyImport?: () => Promise<{ default: ComponentType<unknown> }>;
+=======
+<<<<<<< HEAD
+  lazyImport?: () => Promise<{ default: ComponentType<any> }>;
+=======
+  lazyImport?: () => Promise<{ default: React.ComponentType<any> }>;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   memoize?: boolean;
   className?: string;
 }
@@ -32,11 +49,23 @@ const useLazyComponent = (importFn: () => Promise<{ default: ComponentType<unkno
 };
 
 /**
+<<<<<<< HEAD
  * Performance wrapper component that provides lazy loading and memoization
+=======
+<<<<<<< HEAD
+ * Performance wrapper component that provides lazy loading and memoization
+=======
+ * Performance wrapper component that provides basic performance optimizations
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
  */
 const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   children,
   fallback = <div>Loading...</div>,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   enableLazyLoading = false,
   lazyImport,
   memoize = true,
@@ -122,4 +151,22 @@ export const useMemoizedValue = <T,>(
   deps: React.DependencyList
 ): T => {
   return React.useMemo(factory, deps);
+<<<<<<< HEAD
 };
+=======
+};
+=======
+  className,
+}) => {
+  return (
+    <div className={className}>
+      <Suspense fallback={fallback}>
+        {children}
+      </Suspense>
+    </div>
+  );
+};
+
+export default memo(PerformanceWrapper);
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

@@ -8,29 +8,48 @@ import { Input } from "@/components/ui/input"; // Added
 import { Menu, X, Search } from 'lucide-react'; // Added Search
 import { MobileMenu } from '@/components/header/MobileMenu';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { useIsMobile } from '@/hooks/use-mobile';
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import { useIsMobile } from '@/hooks/use-mobile';
 =======
 // import { useIsMobile } from '@/hooks/use-mobile';
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// import { useIsMobile } from '@/hooks/use-mobile';
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   // const isMobile = useIsMobile();
   const isMobile = false; // Temporary fallback
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
   const isMobile = useIsMobile();
 =======
   // const isMobile = useIsMobile();
   const isMobile = false; // Temporary fallback
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+  // const isMobile = useIsMobile();
+  const isMobile = false; // Temporary fallback
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   
   // Try to access the messaging context, but provide a fallback value if it's not available
   let unreadCount = 0;

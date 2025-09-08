@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -12,6 +13,8 @@ const features = [;
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'';
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
@@ -34,7 +37,24 @@ const features = [
     icon: Rocket,
     title: 'Rapid Prototyping',
     description: 'Quick MVP development to validate your ideas and get to market fast'
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+import Layout from '../../components/Layout';
+import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: ShoppingCart,
+    title: 'E-commerce Platforms,',
+    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'';
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   },
   {}
     icon: Users,
@@ -152,9 +172,12 @@ export default function RetailSolutions() {  return (
     <>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>Retail Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         <title>Startup Solutions - Zion Tech Group</title>
         <meta name="description" content="Technology solutions designed for startups and growing companies." />
 =======
@@ -289,20 +312,36 @@ export default function RetailSolutions() {  return (
         <title>Retail Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        <title>Retail Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
         <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-20">
 =======
         <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -311,10 +350,13 @@ export default function RetailSolutions() {  return (
               className="text-center"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
                 Transform your retail business with cutting-edge technology solutions.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Startup Solutions</h1>
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
@@ -324,18 +366,34 @@ export default function RetailSolutions() {  return (
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
                 Transform your retail business with cutting-edge technology solutions.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Transform your retail business with cutting-edge technology solutions.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </p>
             </motion.div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -346,18 +404,29 @@ export default function RetailSolutions() {  return (
               className="text-center mb-12"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Retail Features</h2>
 =======
 <<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Startup Features</h2>
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Startup Features</h2>
+=======
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Retail Features</h2>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -369,7 +438,14 @@ export default function RetailSolutions() {  return (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -378,6 +454,7 @@ export default function RetailSolutions() {  return (
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
 =======
@@ -385,6 +462,15 @@ export default function RetailSolutions() {  return (
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-orange-600" />
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-6 h-6 text-orange-600" />
+=======
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-6 h-6 text-green-600" />
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -514,8 +600,11 @@ export default function RetailSolutions() {  return (
         </section>
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20 bg-green-600">
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         <section className="py-20 bg-orange-600">
 =======
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -650,7 +739,13 @@ export default function RetailSolutions() {  return (
         {/* CTA Section */}
         <section className="py-20 bg-green-600">
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        <section className="py-20 bg-green-600">
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -659,11 +754,14 @@ export default function RetailSolutions() {  return (
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Ready to Transform Your Retail Business?
               </h2>
               <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our retail solutions can boost your sales.
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                 Ready to Launch Your Startup?
               </h2>
@@ -675,20 +773,38 @@ export default function RetailSolutions() {  return (
               <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our retail solutions can boost your sales.
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                Ready to Transform Your Retail Business?
+              </h2>
+              <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our retail solutions can boost your sales.
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="inline-flex items-center px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   className="inline-flex items-center px-8 py-3 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
 =======
                   className="inline-flex items-center px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  className="inline-flex items-center px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 >
                   Contact Sales
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -696,14 +812,23 @@ export default function RetailSolutions() {  return (
                 <Link
                   href="/solutions"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold"
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-colors font-semibold"
 =======
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold"
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold"
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 >
                   View Solutions
                 </Link>
@@ -713,13 +838,22 @@ export default function RetailSolutions() {  return (
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>  );
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     </>
   );
 =======
     </Layout>  );
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    </Layout>  );
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 }

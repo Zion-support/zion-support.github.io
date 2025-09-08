@@ -8,18 +8,29 @@ import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucid
 
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { registerUser } from "@/services/authService";
 =======
 <<<<<<< HEAD
 import { registerUser } from "@/services/authService";
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+import { registerUser } from "@/services/authService";
+=======
+// import { registerUser } from "@/services/authService";
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { toast } from "@/hooks/use-toast";
 // import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { Checkbox } from "@/components/ui/checkbox";
 // import { Alert, AlertDescription } from "@/components/ui/alert";
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 =======
@@ -30,7 +41,14 @@ import { Input } from "@/components/ui/input";
 // import { Checkbox } from "@/components/ui/checkbox";
 // import { Alert, AlertDescription } from "@/components/ui/alert";
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// import { Checkbox } from "@/components/ui/checkbox";
+// import { Alert, AlertDescription } from "@/components/ui/alert";
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import { safeStorage } from "@/utils/safeStorage";
 import {
@@ -101,7 +119,10 @@ export default function Signup() {
     setIsSubmitting(true);
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
       const { res, data: resData } = await registerUser(
         data.displayName,
@@ -109,7 +130,12 @@ export default function Signup() {
         data.password
       );
 =======
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       // const { res, data: resData } = await registerUser(
       //   data.displayName,
       //   data.email,
@@ -119,9 +145,15 @@ export default function Signup() {
       const res = { ok: true, status: 201 };
       const resData = { message: 'Registration successful' };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
       if (res.status !== 201) {
         const message = resData?.message || "Registration failed";
@@ -264,10 +296,13 @@ export default function Signup() {
                             />
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <button
                               type="button"
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan p-1"
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                             <Button
                               type="button"
@@ -279,7 +314,15 @@ export default function Signup() {
                               type="button"
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan p-1"
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                            <button
+                              type="button"
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan p-1"
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                               onClick={() => setShowPassword(!showPassword)}
                             >
                               {showPassword ? (
@@ -291,14 +334,23 @@ export default function Signup() {
                                 {showPassword ? "Hide password" : "Show password"}
                               </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             </button>
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                             </Button>
 =======
                             </button>
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                            </button>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                           </div>
                         </FormControl>
                         <FormMessage className="text-red-400" />
@@ -333,14 +385,23 @@ export default function Signup() {
                             />
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {/* <Button
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                             <Button
 =======
                             {/* <Button
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                            {/* <Button
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                               type="button"
                               variant="ghost"
                               size="sm"
@@ -356,11 +417,19 @@ export default function Signup() {
                                 {showConfirmPassword ? "Hide password" : "Show password"}
                               </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                             </Button>
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                            </Button>
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                             </Button> */}
                             <button
                               type="button"
@@ -377,9 +446,15 @@ export default function Signup() {
                               </span>
                             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                           </div>
                         </FormControl>
                         <FormMessage className="text-red-400" />
@@ -396,11 +471,14 @@ export default function Signup() {
                       <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                         <FormControl>
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {/* <Checkbox
                             checked={field.value}
                             onCheckedChange={field.onChange}
                             className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                           <Checkbox
                             checked={field.value}
@@ -411,7 +489,16 @@ export default function Signup() {
                             checked={field.value}
                             onCheckedChange={field.onChange}
                             className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                          {/* <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                           /> */}
                           <input
                             type="checkbox"
@@ -419,9 +506,15 @@ export default function Signup() {
                             onChange={(e) => field.onChange(e.target.checked)}
                             className="w-4 h-4 text-zion-purple bg-zion-blue border-zion-blue-light rounded focus:ring-zion-purple focus:ring-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                           />
                         </FormControl>
                         <div className="space-y-1 leading-none">
@@ -442,14 +535,23 @@ export default function Signup() {
                   />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {/* <Button
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   <Button
 =======
                   {/* <Button
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  {/* <Button
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     disabled={isSubmitting}
@@ -463,11 +565,19 @@ export default function Signup() {
                       "Create Account"
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                   </Button>
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  </Button>
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </Button> */}
                   <button
                     type="submit"
@@ -484,9 +594,15 @@ export default function Signup() {
                     )}
                   </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </form>
               </Form>
 
@@ -502,14 +618,23 @@ export default function Signup() {
 
                 <div className="mt-6 grid grid-cols-3 gap-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {/* <Button
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   <Button
 =======
                   {/* <Button
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+                  {/* <Button
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -524,12 +649,20 @@ export default function Signup() {
                       <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />
                     </svg>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   </Button>
                   <Button
 =======
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </Button> */}
                   <button
                     type="button"
@@ -547,9 +680,15 @@ export default function Signup() {
                   </button>
                   {/* <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -559,12 +698,20 @@ export default function Signup() {
                     <span className="sr-only">Sign in with Facebook</span>
                     <Facebook className="h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
                   </Button>
                   <Button
 =======
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </Button> */}
                   <button
                     type="button"
@@ -577,9 +724,15 @@ export default function Signup() {
                   </button>
                   {/* <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -589,11 +742,19 @@ export default function Signup() {
                     <span className="sr-only">Sign in with Twitter</span>
                     <Twitter className="h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                   </Button>
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+                  </Button>
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                   </Button> */}
                   <button
                     type="button"
@@ -605,9 +766,15 @@ export default function Signup() {
                     <Twitter className="h-5 w-5" />
                   </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
                 </div>
               </div>
             </div>

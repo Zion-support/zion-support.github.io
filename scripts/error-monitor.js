@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    this.ensureDirectories()}
+    
+    fs.appendFileSync(this.logFile, logMessage);
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -17,12 +26,16 @@ class ErrorMonitor {
     this.errorThreshold = 5; // Number of errors before triggering fixes
     this.errors = [];
     this.ensureDirectories();
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     this.ensureDirectories()}
     
     fs.appendFileSync(this.logFile, logMessage);
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   }
 
   ensureDirectories() {
@@ -88,6 +101,7 @@ class ErrorMonitor {
       const errorOutput = error.stdout || error.message;
       const errors = this.parseESLintErrors(errorOutput);
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.log('error', `ESLint check failed with ${errors.length} errors`);
       return { success: false, errors };
     }
@@ -110,6 +124,8 @@ class ErrorMonitor {
       this.log('error', `Build check failed with ${errors.length} errors`);
       return { success: false, errors };
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       this.log(;
   'error', `ESLint check failed with ${errors.length} errors`)      return { success: false, errors }
 =======
@@ -223,12 +239,39 @@ const __dirname = path.dirname(__filename);
       const errors = this.parseBuildErrors(errorOutput);
       this.log(';error', `Build check failed with ${errors.length} errors`)      return { "success": false, errors }
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+      this.log('error', `ESLint check failed with ${errors.length} errors`);
+      return { success: false, errors };
+    }
+  }
+
+  async checkBuildErrors() {
+    try {
+      this.log('info', 'Checking build errors...');
+      const result = execSync('npm run build', {
+        cwd: path.join(__dirname, '..'),
+        encoding: 'utf8',
+        timeout: 300000,
+      });
+      this.log('info', 'Build check passed');
+      return { success: true, errors: [] };
+    } catch (error) {
+      const errorOutput = error.stdout || error.stderr || error.message;
+      this.log('error', 'Build errors detected', error);
+      const errors = this.parseBuildErrors(errorOutput);
+      this.log('error', `Build check failed with ${errors.length} errors`);
+      return { success: false, errors };
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     }
   }
 
   parseTypeScriptErrors(output) {
     const errors = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
     const lines = output.split('\n');
     for (const line of lines) {
@@ -250,6 +293,8 @@ const __dirname = path.dirname(__filename);
     return errors;
   }
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     const lines = output.split(,;
   \n');
@@ -329,7 +374,31 @@ const __dirname = path.dirname(__filename);
           typ,
     e:;
   'build,
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    const lines = output.split('\n');
+    for (const line of lines) {
+      if (line.includes(': error TS')) {
+        const match = line.match(/^(.+?)\((\d+),(\d+)\): error (TS\d+): (.+)$/);
+        if (match) {
+          errors.push({
+            type: 'typescript',
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            code: match[4],
+            message: match[5],
+            raw: line
+          });
+        }
+      }
+    }
+    return errors;
+  }
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
   parseESLintErrors(output) {
     const errors = [];
@@ -457,8 +526,11 @@ if (isMainModule) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ErrorMonitor;
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 export default ErrorMonitor;
 
 
@@ -760,4 +832,10 @@ const monitor = new ErrorMonitor();
 monitor.run().catch(console.error);
 >>>>>>> 38bcf70637601b0eee09497aa7066b5435ff1282
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+export default ErrorMonitor;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

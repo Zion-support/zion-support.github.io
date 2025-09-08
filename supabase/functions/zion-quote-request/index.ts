@@ -42,14 +42,23 @@ function parseHumanNumber(token: string): number | undefined {
 function formatCurrency(amount: number, currency: string): string {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // @ts-expect-error - Deno Intl supports this in most regions
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
     // @ts-ignore - Deno Intl supports this in most regions
 =======
     // @ts-expect-error - Deno Intl supports this in most regions
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+    // @ts-expect-error - Deno Intl supports this in most regions
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount);
   } catch {
     return `$${amount.toFixed(0)}`;
@@ -130,10 +139,13 @@ async function analyzeWithOpenAI(projectOverview: string): Promise<{ summary?: s
       return { summary: parsed.summary, projectType: parsed.projectType };
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch {
     // Ignore parsing errors
   }
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
   } catch (_) {}
 =======
@@ -141,7 +153,15 @@ async function analyzeWithOpenAI(projectOverview: string): Promise<{ summary?: s
     // Ignore parsing errors
   }
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+  } catch {
+    // Ignore parsing errors
+  }
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   return {};
 }
 

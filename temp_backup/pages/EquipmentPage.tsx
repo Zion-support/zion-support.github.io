@@ -5,14 +5,23 @@ import { useQuery } from "@tanstack/react-query";
 import apiClient from "@/services/apiClient";
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { Button } from "@/components/ui/button";
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 =======
 // import { Button } from "@/components/ui/button";
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// import { Button } from "@/components/ui/button";
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { Loader2, Sparkles } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
@@ -20,9 +29,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import useSWRMutation from "swr/mutation";
 import Skeleton from "@/components/ui/skeleton";
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { useDelayedError } from '@/hooks/useDelayedError';
 // import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import { useDelayedError } from '@/hooks/useDelayedError';
 import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
@@ -30,7 +42,14 @@ import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import Erro
 // import { useDelayedError } from '@/hooks/useDelayedError';
 // import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// import { useDelayedError } from '@/hooks/useDelayedError';
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 // The EQUIPMENT_LISTINGS constant has been removed as it was commented out
 // and the page primarily relies on API calls and dynamic data generation.
@@ -78,16 +97,26 @@ export default function EquipmentPage() {
     queryFn: fetchEquipment,
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
   // const delayedError = useDelayedError(equipmentError);
   const delayedError = equipmentError; // Temporary fallback
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
   const delayedError = useDelayedError(equipmentError);
 =======
   // const delayedError = useDelayedError(equipmentError);
   const delayedError = equipmentError; // Temporary fallback
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+  // const delayedError = useDelayedError(equipmentError);
+  const delayedError = equipmentError; // Temporary fallback
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
   useEffect(() => {
     if (fetchedEquipment) {
@@ -189,9 +218,12 @@ export default function EquipmentPage() {
       <div data-testid="error-state-equipment" className="py-12 text-center space-y-4">
         <p className="text-red-400">Failed to load equipment: {delayedError.message}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
           Retry
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
         <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
           Retry
@@ -199,15 +231,28 @@ export default function EquipmentPage() {
 =======
         {/* <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
           Retry
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        {/* <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
+          Retry
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         </Button> */}
         <button data-testid="retry-button-equipment" onClick={() => refetchEquipment()} className="bg-blue-600 text-white py-2 px-4 rounded">
           Retry
         </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </div>
     );
   }
@@ -217,20 +262,30 @@ export default function EquipmentPage() {
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex justify-end">
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* <Button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
           <Button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 =======
           {/* <Button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+          {/* <Button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             {isFetchingRecommendations ? (
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             ) : (
               <Sparkles className="h-4 w-4 mr-2" />
             )}
             AI Recommendations
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Button> */}
           <button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white py-2 px-4 rounded flex items-center">
@@ -245,6 +300,8 @@ export default function EquipmentPage() {
       </div>
       {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load equipment content. Please try again later.</p>}> */}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
           </Button>
         </div>
@@ -264,7 +321,24 @@ export default function EquipmentPage() {
       </div>
       {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load equipment content. Please try again later.</p>}> */}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+          </Button> */}
+          <button onClick={handleRecommendations} disabled={isFetchingRecommendations} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white py-2 px-4 rounded flex items-center">
+            {isFetchingRecommendations ? (
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            ) : (
+              <Sparkles className="h-4 w-4 mr-2" />
+            )}
+            AI Recommendations
+          </button>
+        </div>
+      </div>
+      {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load equipment content. Please try again later.</p>}> */}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         {isFetchingRecommendations ? ( // This is the skeleton for AI recommendations, keep as is
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2, 3, 4].map((i) => (
@@ -295,14 +369,23 @@ export default function EquipmentPage() {
           />
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* </ErrorBoundary> */}
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
       </ErrorBoundary>
 =======
       {/* </ErrorBoundary> */}
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+      {/* </ErrorBoundary> */}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     </>
   );
 }

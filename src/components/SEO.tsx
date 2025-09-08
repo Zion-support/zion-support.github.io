@@ -1,9 +1,46 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
   description?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: object;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  ogType?: 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other' | 'business.business'  ;
+  author?: string;
+  canonical?: string;
+}
+
+export function SEO({
+  title = "Zion Tech Group - Advanced Technology Solutions",
+  description = "Leading provider of AI, cybersecurity, cloud solutions, and digital transformation services for businesses worldwide.",
+  keywords = "AI, artificial intelligence, cybersecurity, cloud computing, digital transformation, technology solutions",
+  ogImage = "/images/og-image.jpg",
+  canonicalUrl,
+  structuredData,
+  twitterCard = "summary_large_image",
+  ogType = "website",
+  author = "Zion Tech Group",
+  canonical
+}: SEOProps) {
+  const siteUrl = "https://ziontechgroup.com";
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  const fullCanonical = canonical || canonicalUrl || `${siteUrl}${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   keywords?: string[];
   author?: string;
   canonical?: string;
@@ -345,12 +382,86 @@ export function BlogPostSEO({
         dateModified: publishedDate,
         mainEntityOfPage: {
           '@type': 'WebPage',
+<<<<<<< HEAD
           '@id': typeof window !== 'undefined' ? window.location.href : ''
         }
       }}
     />
   );
 }
+=======
+          '@id': fullUrl,
+        },
+      };
+    }
+
+    if (type === 'service') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: title,
+        description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: 'United States',
+        },
+        serviceType: section || 'Technology Services',
+      };
+    }
+
+    return structuredData || baseStructuredData;
+  };
+>>>>>>> origin/main
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+<<<<<<< HEAD
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      <link rel="canonical" href={fullCanonical} />
+
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`} />
+
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+    </Helmet>
+  );
+}
+=======
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content={author} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Language" content={locale} />
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 export function ContactPageSEO() {
   return (
@@ -366,4 +477,98 @@ export function ContactPageSEO() {
       }}
     />
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+// SEO hook for dynamic updates
+export const useSEO = (seoProps: SEOProps) => {
+  const [seo, setSEO] = React.useState<SEOProps>(seoProps);
+
+  const updateSEO = React.useCallback((newProps: Partial<SEOProps>) => {
+    setSEO(prev => ({ ...prev, ...newProps }));
+  }, []);
+
+  return { seo, updateSEO };
+};
+
+// Page-specific SEO components
+export const HomePageSEO: React.FC = () => (
+  <SEO
+    title="Zion Tech Group - AI, IT & Micro SaaS Solutions"
+    description="Transform your business with cutting-edge AI solutions, comprehensive IT services, and innovative Micro SaaS products. Expert team delivering results."
+    keywords={[
+      'AI solutions',
+      'IT services',
+      'Micro SaaS',
+      'business automation',
+      'digital transformation',
+      'cloud computing',
+      'cybersecurity',
+      'machine learning',
+      'data analytics',
+      'software development'
+    ]}
+    type="website"
+  />
+);
+
+export const ServicesPageSEO: React.FC = () => (
+  <SEO
+    title="Our Services - AI, IT & Micro SaaS Solutions"
+    description="Comprehensive range of technology services including AI development, IT consulting, Micro SaaS solutions, cybersecurity, and cloud migration."
+    keywords={[
+      'AI development services',
+      'IT consulting',
+      'Micro SaaS development',
+      'cybersecurity services',
+      'cloud migration',
+      'mobile app development',
+      'web development',
+      'data science',
+      'machine learning consulting'
+    ]}
+    type="service"
+    section="Technology Services"
+  />
+);
+
+export const AboutPageSEO: React.FC = () => (
+  <SEO
+    title="About Us - Zion Tech Group"
+    description="Learn about Zion Tech Group's mission to revolutionize business through AI, IT solutions, and Micro SaaS products. Meet our expert team."
+    keywords={[
+      'about zion tech group',
+      'company mission',
+      'expert team',
+      'technology leadership',
+      'innovation',
+      'business solutions',
+      'AI expertise',
+      'IT specialists'
+    ]}
+    type="website"
+  />
+);
+
+export const ContactPageSEO: React.FC = () => (
+  <SEO
+    title="Contact Us - Get in Touch with Zion Tech Group"
+    description="Contact Zion Tech Group for AI solutions, IT services, and Micro SaaS development. Get a free consultation and project quote."
+    keywords={[
+      'contact zion tech group',
+      'free consultation',
+      'project quote',
+      'AI consultation',
+      'IT support',
+      'custom development',
+      'business inquiry'
+    ]}
+    type="website"
+  />
+);
+
+export default SEO;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

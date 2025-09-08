@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 /*
  Automates merging open PRs targeting main using GITHUB token from origin remote.
 */
@@ -92,7 +99,10 @@ async function tryMerge(number) {
   process.exit(1);
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 =======
 /*
@@ -184,4 +194,9 @@ async function tryMerge(number) {
   process.exit(1);
 });
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

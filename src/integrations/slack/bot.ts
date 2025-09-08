@@ -33,10 +33,13 @@ declare const globalThis: {
 // Mock App class that mimics the Slack Bolt SDK behavior
 class MockApp {
 <<<<<<< HEAD
+<<<<<<< HEAD
   private commandHandlers: Record<string, (args: unknown) => Promise<void>> = {};
 
   command(commandName: string, handler: (args: unknown) => Promise<void>) {
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
   private commandHandlers: Record<string, Function> = {};
 
@@ -46,7 +49,15 @@ class MockApp {
 
   command(commandName: string, handler: (args: any) => Promise<void>) {
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+  private commandHandlers: Record<string, (args: unknown) => Promise<void>> = {};
+
+  command(commandName: string, handler: (args: unknown) => Promise<void>) {
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     this.commandHandlers[commandName] = handler;
     return this;
   }
@@ -71,13 +82,22 @@ async function askZionGPT(prompt: string): Promise<string> {
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 =======
   await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+  await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   return `AI response to: ${prompt}`;
 }
 

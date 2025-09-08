@@ -4,14 +4,23 @@ import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import ForumCategories from "@/components/community/ForumCategories";
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import ForumCategories from "@/components/community/ForumCategories";
 =======
 // import ForumCategories from "@/components/community/ForumCategories";
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+// import ForumCategories from "@/components/community/ForumCategories";
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
@@ -128,14 +137,23 @@ export default function CommunityPage() {
         </div>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
 =======
         {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
@@ -144,10 +162,13 @@ export default function CommunityPage() {
           
           <TabsContent value="categories">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="text-center py-8">
               <p className="text-muted-foreground">Forum categories coming soon...</p>
             </div>
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
             <ForumCategories />
 =======
@@ -155,7 +176,15 @@ export default function CommunityPage() {
               <p className="text-muted-foreground">Forum categories coming soon...</p>
             </div>
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">Forum categories coming soon...</p>
+            </div>
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           </TabsContent>
           
           <TabsContent value="featured">
@@ -174,11 +203,19 @@ export default function CommunityPage() {
             </div>
           </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         </Tabs>
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+        </Tabs>
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         </Tabs> */}
         
         <div className="mb-8">
@@ -226,9 +263,15 @@ export default function CommunityPage() {
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </div>
     </>
   );

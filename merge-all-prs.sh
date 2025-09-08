@@ -1,10 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env bash
 set -euo pipefail
 =======
 <<<<<<< HEAD
 #!/bin/bash
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/bin/bash
+=======
+#!/usr/bin/env bash
+set -euo pipefail
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 # Comprehensive PR merge script for zion.app
 # This script fetches open PRs from GitHub and merges them into main
@@ -223,9 +233,12 @@ main() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Run main function
 main "$@"
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 echo "Process completed."
 =======
 #!/usr/bin/env bash
@@ -450,4 +463,11 @@ main() {
 # Run main function
 main "$@"
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+# Run main function
+main "$@"
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
 module.exports = {};
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -121,4 +124,11 @@ export: default Header}}
 export {};
 module.exports = {};
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+export {};
+module.exports = {};
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

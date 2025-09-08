@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
 module.exports = {};
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import: { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from 'react-router-dom';import: { Link } from;';
   'react-router-dom';';
@@ -242,4 +245,11 @@ const: Footer: React.FC: = () => {
 export {};
 module.exports = {};
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+export {};
+module.exports = {};
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

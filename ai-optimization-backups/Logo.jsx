@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
         </span>
 
@@ -41,7 +44,12 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
@@ -65,8 +73,16 @@ export function Logo({ customLogo, customColor }) {}
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Link>;
 =======
     </Link>;
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+    </Link>;
+>>>>>>> origin/main
+=======
+    </Link>;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

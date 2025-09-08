@@ -1,5 +1,6 @@
 import { useState } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from "framer-motion";
 // import { Header } from "@/components/Header";
 // import { Footer } from "@/components/Footer";
@@ -17,6 +18,8 @@ import { Mail, MessageSquare, MapPin, Phone, Clock, CheckCircle } from "lucide-r
 import { AppLayout } from "@/layout/AppLayout";
 // import api from '@/lib/api';
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -51,7 +54,28 @@ import { Mail, MessageSquare, MapPin, Phone, Clock, CheckCircle } from "lucide-r
 import { AppLayout } from "@/layout/AppLayout";
 // import api from '@/lib/api';
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+import { motion } from "framer-motion";
+// import { Header } from "@/components/Header";
+// import { Footer } from "@/components/Footer";
+// import { SEO } from "@/components/SEO";
+// import { GradientHeading } from "@/components/GradientHeading";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Card } from "@/components/ui/card";
+// import { toast } from "@/components/ui/use-toast";
+// import { apiClient } from "@/utils/apiClient";
+// import z from "zod";
+// import { ChatAssistant } from "@/components/ChatAssistant";
+import { Mail, MessageSquare, MapPin, Phone, Clock, CheckCircle } from "lucide-react";
+import { AppLayout } from "@/layout/AppLayout";
+// import api from '@/lib/api';
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -119,7 +143,10 @@ export default function Contact() {
     } catch (error) {
       console.error("Error in AI chat:", error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
       toast({
         title: "Chat Error",
@@ -127,7 +154,12 @@ export default function Contact() {
         variant: "destructive"
       });
 =======
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       // toast({
       //   title: "Chat Error",
       //   description: "There was an error communicating with our AI assistant. Please try again.",
@@ -135,9 +167,15 @@ export default function Contact() {
       // });
       console.error("Chat Error: There was an error communicating with our AI assistant. Please try again.");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       return Promise.resolve();
     }
   };

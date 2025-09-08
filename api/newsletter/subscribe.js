@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 const { withSentry } = require('../withSentry.cjs');
 const { isValidEmail } = require('../emailUtils.cjs');
 const fs = require('fs');
@@ -52,10 +60,18 @@ async function handler() { return null; }
     
     if (!email) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       res.statusCode = 400;
       res.json({ error: 'Email is required' });
       return;
@@ -97,6 +113,11 @@ async function handler() { return null; }
 
 module.exports = withSentry(handler);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 module.exports = withErrorLogging(handler);
 
     res.json({ error: err.message || 'Subscription failed' });
@@ -166,6 +187,10 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 module."exports": = withErrorLogging(handler);""
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);''
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useRef, useCallback } from 'react';
 import { PerformanceMonitor, debounce, throttle } from '../utils/performance';
 
@@ -73,6 +74,8 @@ export function usePerformance() {
   };
 }
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 import { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceData {
@@ -158,4 +161,82 @@ export const usePerformance = () => {
     optimizeForSlowConnection
   };
 };
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+import { useEffect, useRef, useCallback } from 'react';
+import { PerformanceMonitor, debounce, throttle } from '../utils/performance';
+
+/**
+ * Hook for performance monitoring and optimization
+ */
+export function usePerformance() {
+  const monitor = PerformanceMonitor.getInstance();
+  const observerRef = useRef<PerformanceObserver | null>(null);
+
+  // Monitor Core Web Vitals
+  useEffect(() => {
+    if ('PerformanceObserver' in window) {
+      observerRef.current = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          } else if (entry.entryType === 'first-input') {
+            console.log('FID:', (entry as any).processingStart - entry.startTime);
+          } else if (entry.entryType === 'layout-shift') {
+            console.log('CLS:', (entry as any).value);
+          }
+        });
+      });
+
+      try {
+        observerRef.current.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      } catch (e) {
+        console.warn('Performance Observer not supported:', e);
+      }
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
+  // Debounced function creator
+  const createDebounced = useCallback(
+    <T extends (...args: any[]) => any>(func: T, delay: number) => {
+      return debounce(func, delay);
+    },
+    []
+  );
+
+  // Throttled function creator
+  const createThrottled = useCallback(
+    <T extends (...args: any[]) => any>(func: T, delay: number) => {
+      return throttle(func, delay);
+    },
+    []
+  );
+
+  // Start timing
+  const startTiming = useCallback((name: string) => {
+    monitor.startTiming(name);
+  }, [monitor]);
+
+  // End timing
+  const endTiming = useCallback((name: string) => {
+    return monitor.endTiming(name);
+  }, [monitor]);
+
+  return {
+    startTiming,
+    endTiming,
+    createDebounced,
+    createThrottled,
+    getMetrics: monitor.getMetrics.bind(monitor),
+  };
+}
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

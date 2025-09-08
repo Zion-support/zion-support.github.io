@@ -87,10 +87,13 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default HireNowCTA;        e.preventDefault();        if (onHire) {
             onHire(formData);
         }
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
 export default HireNowCTA;import React, { useState } from 'react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
@@ -118,15 +121,29 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 export default HireNowCTA;        e.preventDefault();        if (onHire) {
             onHire(formData);
         }
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+export default HireNowCTA;        e.preventDefault();        if (onHire) {
+            onHire(formData);
+        }
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         // Reset form and close
         setFormData({
             projectDescription: '',
             budget: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
             startDate: '',
 :src/components/profile/HireNowCTA.jsx
             message: ''}
@@ -135,9 +152,12 @@ export default HireNowCTA;        e.preventDefault();        if (onHire) {
             message: ''
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         setIsFormOpen(false);
     };
 =======
+=======
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 <<<<<<< HEAD
         setIsFormOpen(false)
 };    const handleChange = (e) => {
@@ -213,4 +233,11 @@ export default HireNowCTA;        e.preventDefault();        if (onHire) {
         setIsFormOpen(false);
     };
 >>>>>>> origin/main
+<<<<<<< HEAD
 >>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+=======
+        setIsFormOpen(false);
+    };
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
