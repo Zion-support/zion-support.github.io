@@ -1,1 +1,0 @@
-type Member = any;

@@ -88,25 +88,28 @@ export default function AIMeetingAssistantPage() {
             Get Started
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <TestimonialCard
-            quote="The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate."
-            author="Jennifer Martinez"
-            role="Account Director"
-            company="Marketing Agency Pro"
-          />
-          <TestimonialCard
-            quote="Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work."
-            author="David Kim"
-            role="Engineering Manager"
-            company="TechCorp Solutions"
-          />
-          <TestimonialCard
-            quote="As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly."
-            author="Lisa Thompson"
-            role="Management Consultant"
-            company="Strategic Insights LLC"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 mb-4 italic">
+              "The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate."
+            </p>
+            <div className="font-semibold text-gray-900">Jennifer Martinez</div>
+            <div className="text-sm text-gray-500">Account Director, Marketing Agency Pro</div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 mb-4 italic">
+              "Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work."
+            </p>
+            <div className="font-semibold text-gray-900">David Kim</div>
+            <div className="text-sm text-gray-500">Engineering Manager, TechCorp Solutions</div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 mb-4 italic">
+              "As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly."
+            </p>
+            <div className="font-semibold text-gray-900">Lisa Thompson</div>
+            <div className="text-sm text-gray-500">Management Consultant, Strategic Insights LLC</div>
+          </div>
         </div>
       </section>
 

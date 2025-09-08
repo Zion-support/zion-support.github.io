@@ -14,8 +14,8 @@ export type TalentProfile = {
   bookings?: number; // number of hires/engagements
 };
 
-// Stub talent data - placeholder for missing functionality;
-export const TALENT_PROFILES = [;
+// Stub talent data - placeholder for missing functionality
+export const TALENT_PROFILES = [
 
   {
     slug: 'ava-chen',

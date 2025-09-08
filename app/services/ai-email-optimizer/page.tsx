@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
-=======
->>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
-=======
->>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
 export const metadata = {
   title: 'AI Email Optimizer | Zion Tech Group',
   description: 'Professional AI email optimization services to improve your email marketing campaigns.',
-  keywords: 'ai-email-optimizer, email marketing, optimization, AI services'
 };
 
 export default function ServicePage() {
@@ -20,128 +13,64 @@ export default function ServicePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Email Optimizer
           </h1>
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Maximize your email marketing ROI with AI-powered optimization that improves open rates, 
-            click-through rates, and conversions.
+            Boost your email marketing performance with AI-powered optimization that 
+            increases open rates, click-through rates, and conversions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our AI Email Optimizer?</h2>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Subject Line Optimization</h3>
-                  <p className="text-gray-300">AI-generated subject lines that increase open rates</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Content Personalization</h3>
-                  <p className="text-gray-300">Tailored content for each recipient based on their behavior</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Send Time Optimization</h3>
-                  <p className="text-gray-300">Optimal timing for maximum engagement</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-gray-800 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
-            <ul className="space-y-3">
-              <li className="text-gray-300 flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                A/B Testing Automation
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Smart Email Optimization
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Our AI analyzes your email content, subject lines, and send times to 
+              optimize every aspect of your email campaigns for maximum engagement.
+            </p>
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-center">
+                <span className="text-green-400 mr-3">✓</span>
+                AI-powered subject line optimization
               </li>
-              <li className="text-gray-300 flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Performance Analytics
+              <li className="flex items-center">
+                <span className="text-green-400 mr-3">✓</span>
+                Content personalization and A/B testing
               </li>
-              <li className="text-gray-300 flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Segmentation Intelligence
+              <li className="flex items-center">
+                <span className="text-green-400 mr-3">✓</span>
+                Optimal send time recommendations
               </li>
-              <li className="text-gray-300 flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Content Generation
-              </li>
-              <li className="text-gray-300 flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Deliverability Optimization
+              <li className="flex items-center">
+                <span className="text-green-400 mr-3">✓</span>
+                Spam score reduction and deliverability
               </li>
             </ul>
+          </div>
+          <div className="bg-gray-800 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold text-white mb-4">Optimization Features</h3>
+            <div className="space-y-4">
+              <div className="border-l-4 border-blue-500 pl-4">
+                <h4 className="text-lg font-semibold text-white">Subject Line AI</h4>
+                <p className="text-gray-300">Generate compelling subject lines that increase open rates</p>
+              </div>
+              <div className="border-l-4 border-green-500 pl-4">
+                <h4 className="text-lg font-semibold text-white">Content Analysis</h4>
+                <p className="text-gray-300">Optimize email content for better engagement</p>
+              </div>
+              <div className="border-l-4 border-purple-500 pl-4">
+                <h4 className="text-lg font-semibold text-white">Send Time Optimization</h4>
+                <p className="text-gray-300">Find the best times to send emails to each recipient</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Optimize Your Emails?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Start improving your email marketing performance with our AI-powered optimization tools.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-              Get Started
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-              Learn More
-            </button>
-          </div>
+          <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+            Get Started Today
+          </button>
         </div>
-=======
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai email optimizer services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-        </div>
-<<<<<<< HEAD
->>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
-=======
->>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
       </div>
     </div>
   );

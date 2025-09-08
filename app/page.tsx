@@ -28,279 +28,138 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Welcome to Zion Tech
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+            Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Your trusted partner for AI and IT solutions. We help businesses transform through
-            cutting-edge technology and innovative solutions.
+            Leading technology solutions provider specializing in AI development, 
+            cloud architecture, and digital transformation for modern businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-flex items-center"
+            <Link 
+              href="/services" 
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
             >
-              Get Started
+              Our Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link
-              href="/about"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
+            <Link 
+              href="/contact" 
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
             >
-              Learn More
+              Get Started
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-white">
+      {/* Features Section */}
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Projects Completed</div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver cutting-edge technology solutions with measurable results 
+              and exceptional customer service.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                Cutting-Edge Technology
+              </h3>
+              <p className="text-gray-600">
+                We leverage the latest technologies including AI, machine learning, 
+                and cloud computing to deliver innovative solutions.
+              </p>
             </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
+            
+            <div className="text-center">
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                Proven Results
+              </h3>
+              <p className="text-gray-600">
+                Our solutions have helped hundreds of businesses improve efficiency, 
+                reduce costs, and drive growth.
+              </p>
             </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">10+</div>
-              <div className="text-gray-600">Years Experience</div>
+            
+            <div className="text-center">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                Expert Team
+              </h3>
+              <p className="text-gray-600">
+                Our team of experienced developers and consultants brings deep 
+                expertise across multiple technology domains.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer comprehensive technology solutions to help your business thrive in the digital age.
+              Comprehensive technology solutions tailored to your business needs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
-              title="AI Solutions"
-              description="Harness the power of artificial intelligence to automate processes and gain insights."
+              title="AI Development"
+              description="Custom AI solutions including machine learning models, natural language processing, and automation systems."
               icon={<Zap className="w-6 h-6" />}
-              href="/services"
+              href="/services/ai-services"
             />
             <Card
-              title="IT Consulting"
-              description="Expert guidance to optimize your technology infrastructure and strategy."
-              icon={<Users className="w-6 h-6" />}
-              href="/services"
-            />
-            <Card
-              title="Custom Development"
-              description="Tailored software solutions designed to meet your specific business needs."
+              title="Cloud Architecture"
+              description="Scalable cloud infrastructure design and migration services for optimal performance and cost efficiency."
               icon={<Award className="w-6 h-6" />}
-              href="/services"
+              href="/services/cloud-architecture"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Why Choose Us?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver exceptional results through our commitment to quality, innovation, and customer satisfaction.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">
-                Proven Expertise
-              </h3>
-              <p className="text-gray-600">
-                Years of experience delivering successful projects across various industries
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Star className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">
-                Quality Assurance
-              </h3>
-              <p className="text-gray-600">
-                Rigorous testing and quality control processes ensure reliable solutions
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">
-                Innovation Focus
-              </h3>
-              <p className="text-gray-600">
-                We stay ahead of technology trends to provide cutting-edge solutions
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied clients have to say.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6">
-                "Zion Tech transformed our business with their AI solutions. The results exceeded our expectations."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
-                  <Users className="w-6 h-6 text-gray-600" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">John Smith</div>
-                  <div className="text-gray-600">CEO, TechCorp</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6">
-                "Professional, reliable, and innovative. Zion Tech is our go-to partner for all IT needs."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
-                  <Users className="w-6 h-6 text-gray-600" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Sarah Johnson</div>
-                  <div className="text-gray-600">CTO, InnovateLab</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6">
-                "Outstanding service and support. They delivered exactly what we needed, on time and on budget."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
-                  <Users className="w-6 h-6 text-gray-600" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Mike Chen</div>
-                  <div className="text-gray-600">Founder, StartupXYZ</div>
-                </div>
-              </div>
-=======
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold mb-3">AI Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Cutting-edge artificial intelligence solutions for your business needs.
-              </p>
-              <Link href="/services" className="text-blue-600 hover:text-blue-700 font-semibold">
-                Learn More →
-              </Link>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="text-4xl mb-4">💻</div>
-              <h3 className="text-xl font-semibold mb-3">IT Services</h3>
-              <p className="text-gray-600 mb-4">
-                Comprehensive IT services and infrastructure management.
-              </p>
-              <Link href="/services" className="text-blue-600 hover:text-blue-700 font-semibold">
-                Learn More →
-              </Link>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-xl font-semibold mb-3">Cloud Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Scalable cloud infrastructure and migration services.
-              </p>
-              <Link href="/services" className="text-blue-600 hover:text-blue-700 font-semibold">
-                Learn More →
-              </Link>
->>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
-            </div>
+            <Card
+              title="Digital Transformation"
+              description="Complete digital transformation strategies to modernize your business processes and technology stack."
+              icon={<Star className="w-6 h-6" />}
+              href="/services/digital-transformation"
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600 text-white">
+      <section className="py-20 px-4 bg-blue-600">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Let's discuss how we can help you achieve your goals with our technology solutions.
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our technology solutions can help you achieve your goals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href="/about"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
-            >
-              Learn More About Us
-            </Link>
-          </div>
+          <Link 
+            href="/contact" 
+            className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+          >
+            Get Started Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
         </div>
       </section>
     </div>

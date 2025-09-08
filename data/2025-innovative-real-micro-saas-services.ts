@@ -1,13 +1,5 @@
 
-export interface InnovativeMicroSaasService {
-
-export interface InnovativeMicroSaasService {;
-
 import { ServiceVariant } from '../types/service-variants';
-
-export interface InnovativeMicroSaasService {
-
-export interface InnovativeMicroSaasService {;
 
 export interface InnovativeMicroSaasService {
 

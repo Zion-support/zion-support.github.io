@@ -1,1 +1,0 @@
-export default function ChatContentA() { return <div className="text-gray-600 dark:text-gray-300">Content coming soon.</div>; }
