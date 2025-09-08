@@ -107,12 +107,14 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
   };
 
   const navigation = [
-    { name: 'Home', href: '/', current: location.pathname === '/' },
-    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services'), hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions'), hasDropdown: true },
-    { name: 'Resources', href: '/resources', current: location.pathname.startsWith('/resources'), hasDropdown: true },
-    { name: 'About', href: '/about', current: location.pathname === '/about' },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Blog', href: '/blog', current: false },
   ];
 
   const services = [
@@ -311,61 +313,54 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
-    { 
-      name: 'Government Solutions', 
-      href: '/solutions/government', 
-      icon: Shield, 
-      description: 'Public sector solutions',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
+    {
+      name: 'Government Solutions',
+      href: '/solutions/government',
+      icon: Shield,
+      description: 'Public sector innovation',
+      featured: true
     },
-    { 
-      name: 'Healthcare Solutions', 
-      href: '/solutions/healthcare', 
-      icon: Heart, 
-      description: 'Healthcare & medical solutions',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
+    {
+      name: 'SMB Solutions',
+      href: '/solutions/smb',
+      icon: Building,
+      description: 'Small to medium business growth',
+      featured: true
     },
-    { 
-      name: 'Financial Solutions', 
-      href: '/solutions/financial', 
-      icon: DollarSign, 
-      description: 'Fintech & banking solutions',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
+    {
+      name: 'Startup Solutions',
+      href: '/solutions/startup',
+      icon: Rocket,
+      description: 'Accelerate your startup growth',
+      featured: true
     },
-    { 
-      name: 'Education Solutions', 
-      href: '/solutions/education', 
-      icon: BookOpen, 
-      description: 'Educational technology solutions',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions/manufacturing',
+      icon: Factory,
+      description: 'Industry 4.0 & Smart Manufacturing',
+      featured: true
     },
-    { 
-      name: 'Manufacturing Solutions', 
-      href: '/solutions/manufacturing', 
-      icon: Settings, 
-      description: 'Industrial & manufacturing solutions',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
+    {
+      name: 'Retail Solutions',
+      href: '/solutions/retail',
+      icon: ShoppingCart,
+      description: 'E-commerce & Retail Innovation',
+      featured: true
     },
-    { 
-      name: 'Retail Solutions', 
-      href: '/solutions/retail', 
-      icon: ShoppingCart, 
-      description: 'E-commerce & retail solutions',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
+    {
+      name: 'Education Solutions',
+      href: '/solutions/education',
+      icon: BookOpenIcon,
+      description: 'Modern learning environments',
+      featured: true
     },
-    { 
-      name: 'Transportation Solutions', 
-      href: '/solutions/transportation', 
-      icon: Truck, 
-      description: 'Logistics & transportation solutions',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
+    {
+      name: 'Energy Solutions',
+      href: '/solutions/energy',
+      icon: Zap,
+      description: 'Smart energy management',
+      featured: true
     }
   ];
 

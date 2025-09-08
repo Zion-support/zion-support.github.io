@@ -48,6 +48,9 @@ const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Press = React.lazy(() => import('./pages/Press'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 const Services2026 = React.lazy(() => import('./pages/Services2026'));
@@ -155,8 +158,36 @@ const ComprehensiveServicesShowcase2031 = createLazyComponent(() => import('./pa
 // Innovative Services Showcase 2032
 const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2032'));
 
-// Innovative Services Showcase 2033
-const InnovativeServicesShowcase2033 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2033'));
+// Additional missing imports for existing routes
+const AIServices = lazy(() => import('./pages/AIServices'));
+const ITServices = lazy(() => import('./pages/ITServices'));
+const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
+const Team = lazy(() => import('./pages/Team'));
+const News = lazy(() => import('./pages/News'));
+const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+const AiSolutions = lazy(() => import('./pages/AiSolutions'));
+const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
+const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = lazy(() => import('./pages/solutions/Financial'));
+const GovernmentSolutions = lazy(() => import('./pages/solutions/Government'));
+const SMBSolutions = lazy(() => import('./pages/solutions/SMB'));
+const StartupSolutions = lazy(() => import('./pages/solutions/Startup'));
+const ManufacturingSolutions = lazy(() => import('./pages/solutions/Manufacturing'));
+const RetailSolutions = lazy(() => import('./pages/solutions/Retail'));
+const EducationSolutions = lazy(() => import('./pages/solutions/Education'));
+const EnergySolutions = lazy(() => import('./pages/solutions/Energy'));
+const AISalesCopilot = lazy(() => import('./pages/services/AISalesCopilot'));
+const CloudFinOpsOptimizer = lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
+const AIComplianceAssistant = lazy(() => import('./pages/services/AIComplianceAssistant'));
+const AIAutoEmailResponder = lazy(() => import('./pages/services/AIAutoEmailResponder'));
+const CustomerFeedbackSurveys = lazy(() => import('./pages/services/CustomerFeedbackSurveys'));
+const AIComplianceCopilot = lazy(() => import('./pages/services/AIComplianceCopilot'));
+const LLMContentStudio = lazy(() => import('./pages/services/LLMContentStudio'));
+const FinOpsAdvisor = lazy(() => import('./pages/services/FinOpsAdvisor'));
+const ReturnsManagement = lazy(() => import('./pages/services/ReturnsManagement'));
+const EmailSequencer = lazy(() => import('./pages/services/EmailSequencer'));
+const PodcastTranscription = lazy(() => import('./pages/services/PodcastTranscription'));
+const MicroCRM = lazy(() => import('./pages/services/MicroCRM'));
 
 // Comprehensive Pricing Guide 2032
 const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
@@ -288,7 +319,10 @@ function App() {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
-                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/press" element={<Press />} />
+                <Route path="/search" element={<SearchPage />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Resources />} />
@@ -307,7 +341,28 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 
-                {/* Service Routes - only for existing pages */}
+                {/* New pricing guide route */}
+                <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                
+                {/* Service Routes */}
+                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/it-services" element={<ITServices />} />
+                <Route path="/micro-saas" element={<MicroSaaS />} />
+                
+                {/* New sitemap routes */}
+                <Route path="/ai-solutions" element={<AiSolutions />} />
+                <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+                <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                <Route path="/solutions/government" element={<GovernmentSolutions />} />
+                <Route path="/solutions/smb" element={<SMBSolutions />} />
+                <Route path="/solutions/startup" element={<StartupSolutions />} />
+                <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
+                <Route path="/solutions/retail" element={<RetailSolutions />} />
+                <Route path="/solutions/education" element={<EducationSolutions />} />
+                <Route path="/solutions/energy" element={<EnergySolutions />} />
+                
+                {/* Service routes */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />

@@ -153,14 +153,16 @@
       title: 'Industry Solutions',
       featured: false,
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions', featured: false },
-        { name: 'SMB Solutions', href: '/solutions', featured: false },
-        { name: 'Startup Solutions', href: '/solutions', featured: false },
-        { name: 'Healthcare Solutions', href: '/solutions', featured: false },
-        { name: 'Financial Solutions', href: '/solutions', featured: false },
-        { name: 'Manufacturing Solutions', href: '/solutions', featured: false },
-        { name: 'Retail Solutions', href: '/solutions', featured: false },
-        { name: 'Government Solutions', href: '/solutions', featured: false }
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', featured: true },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', featured: true },
+        { name: 'Financial Solutions', href: '/solutions/financial', featured: true },
+        { name: 'Government Solutions', href: '/solutions/government', featured: true },
+        { name: 'SMB Solutions', href: '/solutions/smb', featured: true },
+        { name: 'Startup Solutions', href: '/solutions/startup', featured: true },
+        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', featured: true },
+        { name: 'Retail Solutions', href: '/solutions/retail', featured: true },
+        { name: 'Education Solutions', href: '/solutions/education', featured: true },
+        { name: 'Energy Solutions', href: '/solutions/energy', featured: true }
       ]
     },
     {
