@@ -53,48 +53,65 @@ const reportWebVitals = (metric: any) => {
   // In production, you could send this to analytics
 };
 
-// Error boundary for the root
-class RootErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  { hasError: boolean; error?: Error }
-> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
+// Import analytics provider
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+import { CartProvider } from './context/CartContext';
+import { UnitProvider } from './context/UnitContext';
+import { registerServiceWorker } from './serviceWorkerRegistration';
 
   static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Root error boundary caught an error:', error, errorInfo);
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-          <div className="text-center max-w-md">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <h1 className="text-2xl font-bold text-white mb-2">Application Error</h1>
-            <p className="text-gray-400 mb-6">Something went wrong with the application. Please refresh the page.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
+try {
+  console.log("main.tsx: Before ReactDOM.createRoot");
+  // Render the app with proper provider structure
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ViewModeProvider>
+                        <UnitProvider>
+                          <CartProvider>
+                            <AppLayout>
+                              <App />
+                            </AppLayout>
+                          </CartProvider>
+                        </UnitProvider>
+                      </ViewModeProvider>
+                      <LanguageDetectionPopup />
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </React.StrictMode>,
+  );
+  console.log("main.tsx: After ReactDOM.createRoot");
+} catch (error) {
+  console.error("Global error caught in main.tsx:", error);
+  console.log("main.tsx: Global error caught");
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    rootElement.innerHTML = `
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>Application Error</h1>
+        <p>A critical error occurred while loading the application.</p>
+        <p>Error: ${(error as Error).message}</p>
+        <pre>${(error as Error).stack}</pre>
+        <p>Please check the console for more details.</p>
+      </div>
+    `;
   }
 }
 
