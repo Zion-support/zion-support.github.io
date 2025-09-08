@@ -6,7 +6,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
+  PYTHON_VERSION = "3.10"
+  PIP_CACHE_DIR = "/opt/buildhome/.cache/pip"
+  PIP_NO_CACHE_DIR = "false"
 
 [[plugins]]
   package = "netlify-plugin-compress"
