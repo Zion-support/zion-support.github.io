@@ -201,7 +201,7 @@
 
 [[scheduled.functions]]
   name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"}  
+  schedule = "*/20 * * * *"
 
 [[scheduled.functions]]
   name = "todo-summary-runner"
@@ -249,9 +249,5 @@
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "repo-velocity-runner"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "redirects-synthesizer"
-  schedule = "*/15 * * * *"
+  name = "cache-warmer"
+  schedule = "*/5 * * * *" # every 5 minutes

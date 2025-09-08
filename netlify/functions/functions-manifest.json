@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:41:49.078Z",
+  "generatedAt": "2025-08-11T23:00:34.883Z",
   "functions": [
     "a11y-alt-text-runner",
     "a11y-audit-runner",
@@ -57,11 +57,7 @@
     "broken-image-scanner",
     "broken-image-scanner-runner",
     "cache-warmer",
-    "canonical-auditor",
-    "cloud-brain-orchestrator",
-    "cloud-heartbeat",
-    "cloud-swarm-committer",
-    "cloud-trigger-hub",
+    "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
     "code-hotspots-radar",
     "code-ownership-map-runner",
