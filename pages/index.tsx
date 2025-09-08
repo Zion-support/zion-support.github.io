@@ -845,8 +845,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security Guide →
+                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Security & Privacy →
                 </Link>
               </div>
 
@@ -859,8 +859,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Testing Guide →
+                <Link href="/blog/ai-automation-trends-2025" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Learn About Our QA Approach →
                 </Link>
               </div>
 
@@ -873,8 +873,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
+                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Explore Performance Insights →
                 </Link>
               </div>
             </div>
