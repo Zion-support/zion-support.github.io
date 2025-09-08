@@ -17,8 +17,8 @@
 | Performance | ✅ PASS | Hello, this is AnupamAS01!
 ... |
 | Accessibility | ✅ PASS | Lint check failed: Command failed: npm run lint
-Invalid option '--ext' - perhaps you meant '-c'?
-You... |
+sh: 1: eslint: not found
+... |
 | Coverage | ✅ PASS | Coverage generation failed
 ... |
 
