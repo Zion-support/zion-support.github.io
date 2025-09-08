@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-import React from 'react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+import React from 'react';
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
@@ -21,14 +9,6 @@ describe('AppMinimal', () => {
 <<<<<<< HEAD
 
   });
-
-
-
-
-=======
-  });
-
-
   it('displays correct content', () => {
     render(<AppMinimal />);
     expect(screen.getByText('Zion Tech Group - Minimal App')).toBeInTheDocument();
@@ -100,11 +80,9 @@ ursor/automate-test-improve-and-merge-code-2480
     render(<AppMinimal />);
     expect(screen.getByText('Zion Tech Group - Minimal')).toBeInTheDocument();
   });
-
   it('handles user interactions', () => {
     render(<AppMinimal />);
     // Add interaction tests here
     expect(screen.getByText(/Building the future/i)).toBeInTheDocument();
   });
 });
->>>>>>> origin/cursor/delete-old-data-records-6bba

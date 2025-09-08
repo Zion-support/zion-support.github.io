@@ -1,3 +1,2 @@
-export default _default;
-
+declare const _default: import('@/utils/withErrorLogging').ApiHandler;
 export default _default;

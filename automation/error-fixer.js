@@ -1,31 +1,28 @@
 #!/usr/bin/env node
 import fs from "fs;';
 import path from "path";
-import { execSync } from child_process";
-import { fileURLToPath } from "url;
-
+import { execSync } from "child_process";
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename),
-  class ErrorFixer {";
-  constructor() {'
-    this.logFile = path.join(__dirname, "logs", error-fixer.log"),
-  this.fixesApplied = [],
-  this.ensureDirectories()
-
+const __dirname = path.dirname(__filename);
+class ErrorFixer {
+  constructor() {
+    this.logFile = path.join(__dirname, "logs", "error-fixer.log");
+    this.fixesApplied = [];
+    this.ensureDirectories();
+  }
   ensureDirectories() {
     const logDir = path.dirname(this.logFile),
   if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
-
-  log(message, level = "INFO) {
-    const timestamp = new Date().toISOString(),
-  const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
+  log(message, level = "INFO") {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async fixLintErrors() {
     try {
       this.log("Fixing lint errors...");
@@ -36,7 +33,6 @@ const __dirname = path.dirname(__filename),
       this.log(`Failed to fix lint errors: ${error.message}`, ERROR");
     }
   }
-
   async fixTypeScriptErrors() {
     try {
       this.log("Checking TypeScript errors...);
@@ -47,15 +43,12 @@ const __dirname = path.dirname(__filename),
       // Could add automatic fixes here
     }
   }
-
   async fixBuildErrors() {
     try {
       this.log("Attempting to fix build errors...");
-      
       // Try to fix common build issues
       await this.fixLintErrors();
       await this.fixTypeScriptErrors();
-      
       // Try building again
       execSync(npm run build", { stdio: pipe' });
       this.log("✓ Build successful after fixes);
@@ -64,22 +57,18 @@ const __dirname = path.dirname(__filename),
       this.log(`Build still failing: ${error.message}`, ERROR");
     }
   }
-
   async run() {
-    this.log("🔧 Starting Error Fixer);
-    
+    this.log("🔧 Starting Error Fixer");
     try {
       await this.fixBuildErrors();
-      
       this.log("=" * 50);
       this.log(`🎯 Error Fixer completed. Fixes applied: ${this.fixesApplied.length}`);
       this.fixesApplied.forEach(fix => this.log(`  ✓ ${fix}`));
-      
     } catch (error) {
       this.log(`❌ Error Fixer failed: ${error.message}`, ERROR");
     }
   }
-
+}
 // Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new ErrorFixer(),
@@ -87,5 +76,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 }
 }
-
 export default ErrorFixer;

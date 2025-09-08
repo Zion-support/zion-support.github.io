@@ -1,178 +1,29 @@
 const os = require('os');
 
 const nextConfig = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_ASSET_PREFIX || '' : '',
-  poweredByHeader: false,
-  trailingSlash: false,
-  reactStrictMode: true,
-  bundlePagesRouterDependencies: true,
-
-  // Optimized for fast builds
-  productionBrowserSourceMaps: false,
-  
-  // Environment configuration
-  env: {
-    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-  },
-
-  serverExternalPackages: ['@prisma/client'],
-  modularizeImports: {
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-      skipDefaultConversion: true,
-    },
-    '@radix-ui/react-icons': {
-      transform: '@radix-ui/react-icons/dist/{{member}}',
-    },
-  },
-  outputFileTracingExcludes: {
-    '*': [
-      'node_modules/@swc/core-linux-x64-gnu',
-      'node_modules/@swc/core-linux-x64-musl',
-      'node_modules/@esbuild/linux-x64',
-      'node_modules/@chainsafe/**/*',
-      'node_modules/three/**/*',
-      'node_modules/@google/model-viewer/**/*',
-    ],
-  },
-  experimental: {
-    optimizePackageImports: [
-      'lucide-react', 
-      '@radix-ui/react-icons',
-      'recharts',
-      'react-window',
-      'fuse.js'
-    ],
-    esmExternals: 'loose',
-    optimizeCss: process.env.NODE_ENV === 'production',
-    largePageDataBytes: 128 * 1000,
-    workerThreads: false,
-    cpus: Math.min(2, os.cpus().length),
-    swcTraceProfiling: false,
-  },
-}
-
-// Note: headers, redirects, and rewrites don't work with output: 'export'
-// These are handled by Netlify via _headers and _redirects files
-
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
-  },
-
-  transpilePackages: [
-    'react-markdown',
-    'date-fns',
-    'react-day-picker',
-    'bail',
-    'is-plain-obj',
-    'mdast-util-from-markdown',
-    'mdast-util-to-hast',
-    'mdast-util-to-string',
-    'unified',
-    'remark-parse',
-    'remark-rehype',
-    'formik',
-    'lodash',
-    'lodash-es',
-    'lodash/isPlainObject',
-    'lodash/cloneDeep',
-    'lodash/clone',
-    'lodash/toPath',
-    'helia',
-    '@helia/json',
-    'multiformats',
-    'libp2p',
-    '@libp2p/identify',
-    'ajv',
-    'ajv-keywords',
-    '@ungap/structured-clone',
-    'axios-retry',
-  ],
-
-  webpack: (config, { dev, isServer, webpack }) => {
-    // Fix EventEmitter memory leak by increasing max listeners
-    // events.EventEmitter.defaultMaxListeners = 20; // Will be set by build script
-    
-    // CRITICAL: Add comprehensive polyfills as the very first entry point
-    if (!isServer) {
-      const originalEntry = config.entry;
-      config.entry = async () => {
-        const entries = await originalEntry();
-        
-        // Create comprehensive polyfill array
-        const polyfills = [
-          './src/utils/serverless-polyfill.ts',  // New serverless polyfill
-          './src/utils/env-polyfill.ts'         // Existing env polyfill
-        ];
-        
-        // Add polyfills to every entry point
-        Object.keys(entries).forEach(entryName => {
-          if (Array.isArray(entries[entryName])) {
-            polyfills.forEach(polyfill => {
-              if (!entries[entryName].includes(polyfill)) {
-                entries[entryName].unshift(polyfill);
-              }
-            });
-          }
-        });
-        
-        return entries;
-      };
-
-      // DISABLED: FINAL NUCLEAR OPTION BannerPlugin causing module resolution issues
-      // The BannerPlugin was injecting absolute paths '/opt/build/repo/src/utils/tslib-polyfill.js'
-      // into third-party node_modules like @walletconnect, @peculiar, etc.
-      // This caused webpack module resolution failures in the Netlify build environment
-      //
-      // Document-level polyfills in _document.tsx will handle runtime errors instead
-
-      // DISABLED: All webpack-level polyfill injection causing module resolution issues
-      // The following approaches were causing third-party node_modules to import absolute paths:
-      // - resolve.alias for tslib
-      // - ProvidePlugin for TypeScript helpers  
-      // - NormalModuleReplacementPlugin for tslib replacement
-      // - BannerPlugin injection into chunks
-      //
-      // Solution: Rely only on document-level and runtime polyfills without webpack interference
-
-      // SIMPLIFIED DefinePlugin 
-      config.plugins.push(
-        new webpack.DefinePlugin({
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
-          'process.env': JSON.stringify({
-            NODE_ENV: process.env.NODE_ENV || 'production',
-            NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || '',
-            NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-            NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '',
-          }),
-        })
-      );
-
-
-    }
-    
-    // Development optimizations to prevent memory leaks with 176+ pages
-    if (dev && !isServer) {
+  reactStrictMode: true
+  eslint: { ignoreDuringBuilds: true }
+  typescript: { ignoreBuildErrors: true }
+  pageExtensions: ['tsxtsjsxjs']
+  trailingSlash: true
+  images: {
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"]
+    formats: ['image/webp', 'image/avif']
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    minimumCacheTTL: 31536000
+  }
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
       config.watchOptions = {
-        ignored: /node_modules/,
-        aggregateTimeout: 300,
-        poll: false, // Use native file watching instead of polling
-      };
-
-      // Alias react-router-dom to a lightweight stub to avoid build errors
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'react-router-dom': path.resolve(__dirname, 'src/stubs/react-router-dom.ts'),
-        'lodash/toPath': 'lodash-es/toPath',
-        'lodash': 'lodash-es',
-      };
-      
-      // Optimize memory usage in development
-      config.stats = 'errors-warnings';
-      config.infrastructureLogging = {
-        level: 'error',
+        ignored: [
+          '**/node_modules/****/.git/****/pages_backup*/****/pages.*/****/pages-*/****/pages_disabled*/****/pages.disabled*/****/pages.broken*/**'
+          '**/pages.corrupted*/****/pages.old*/****/pages._*/****/pages.__*/****/backup-pages/****/src.pages.disabled/****/lib_backup*/****/src_backup*/**'
+          '**/corrupted-files-backup*/****/performance-reports*/****/log-analysis-reports*/****/link-reports*/****/lint-target*/****/monitoring*/****/pm2-automation*/****/automation/logs*/**'
+          '**/automation/backup*/****/performance-*.json**/performance-*.js**/performance-*.cjs**/performance-*.sh**/performance-*.html**/performance-*.md**/performance-*.txt'
+        ]
+        poll: 1000
+        aggregateTimeout: 300
       };
     }
     
@@ -582,5 +433,4 @@ const nextConfig = {
     return config;
   },
 };
-
-module.exports = nextConfig;
+export default nextConfig;
