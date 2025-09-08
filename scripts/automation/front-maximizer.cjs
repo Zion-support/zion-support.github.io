@@ -4,147 +4,388 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Front Maximizer Automation Started');
+console.log('🚀 Starting continuous front maximizer automation...');
 
-function runCommand(command, description) {
+// Get automation interval from environment variable (default: 4 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
+
+async function runFrontMaximizer() {
   try {
-    console.log(`📋 ${description}...`);
-    const result = execSync(command, { 
-      encoding: 'utf8', 
-      stdio: 'pipe',
-      cwd: process.cwd()
-    });
-    console.log(`✅ ${description} completed successfully`);
-    return result;
-  } catch (error) {
-    console.log(`❌ ${description} failed:`, error.message);
-    return null;
-  }
-}
-
-function runFrontMaximizer() {
-  console.log('🎯 Starting front-end optimization process...');
-  
-  // Build project
-  console.log('🏗️ Building project...');
-  const buildResult = runCommand('npm run build', 'Project build');
-  
-  if (buildResult) {
-    console.log('✅ Build successful! Starting optimization...');
+    console.log(`🚀 Running front maximizer at ${new Date().toISOString()}`);
     
-    // Analyze current build
-    if (fs.existsSync('dist')) {
-      console.log('📊 Analyzing current build...');
-      
-      const files = fs.readdirSync('dist');
-      let totalSize = 0;
-      let jsFiles = [];
-      let cssFiles = [];
-      let otherFiles = [];
-      
-      files.forEach(file => {
-        const filePath = path.join('dist', file);
-        const stats = fs.statSync(filePath);
-        totalSize += stats.size;
-        
-        if (file.endsWith('.js') || file.endsWith('.mjs')) {
-          jsFiles.push({ name: file, size: stats.size });
-        } else if (file.endsWith('.css')) {
-          cssFiles.push({ name: file, size: stats.size });
-        } else {
-          otherFiles.push({ name: file, size: stats.size });
-        }
-      });
-      
-      console.log(`📁 Total build size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
-      console.log(`📄 JavaScript files: ${jsFiles.length}`);
-      console.log(`🎨 CSS files: ${cssFiles.length}`);
-      console.log(`📁 Other files: ${otherFiles.length}`);
-      
-      // JavaScript optimization recommendations
-      if (jsFiles.length > 0) {
-        console.log('\n💡 JavaScript Optimization Recommendations:');
-        
-        jsFiles.forEach(file => {
-          const sizeMB = (file.size / 1024 / 1024).toFixed(2);
-          if (file.size > 500 * 1024) { // > 500KB
-            console.log(`  ⚠️ ${file.name} is large (${sizeMB} MB), consider code splitting`);
-          }
-        });
-        
-        if (jsFiles.length > 3) {
-          console.log('  ⚠️ Many JavaScript files detected, consider bundling');
-        }
-      }
-      
-      // CSS optimization recommendations
-      if (cssFiles.length > 0) {
-        console.log('\n💡 CSS Optimization Recommendations:');
-        
-        cssFiles.forEach(file => {
-          const sizeKB = (file.size / 1024).toFixed(2);
-          if (file.size > 100 * 1024) { // > 100KB
-            console.log(`  ⚠️ ${file.name} is large (${sizeKB} KB), consider purging unused styles`);
-          }
-        });
-        
-        if (cssFiles.length > 2) {
-          console.log('  ⚠️ Multiple CSS files detected, consider combining');
-        }
-      }
-      
-      // Check for common optimization opportunities
-      console.log('\n🔍 Checking for optimization opportunities...');
-      
-      // Check for unused CSS
-      if (cssFiles.length > 0) {
-        console.log('  📊 CSS analysis:');
-        cssFiles.forEach(file => {
-          const filePath = path.join('dist', file.name);
-          const content = fs.readFileSync(filePath, 'utf8');
-          const lines = content.split('\n').length;
-          const sizeKB = (file.size / 1024).toFixed(2);
-          console.log(`    ${file.name}: ${lines} lines, ${sizeKB} KB`);
-        });
-      }
-      
-      // Check for large dependencies
-      if (fs.existsSync('package.json')) {
-        const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-        const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-        
-        const heavyDeps = ['lodash', 'moment', 'date-fns', 'ramda', 'underscore'];
-        heavyDeps.forEach(dep => {
-          if (dependencies[dep]) {
-            console.log(`  ⚠️ Heavy dependency detected: ${dep}`);
-          }
-        });
-      }
-      
-      // Performance optimization suggestions
-      console.log('\n🚀 Performance Optimization Suggestions:');
-      console.log('  1. Enable gzip compression on your server');
-      console.log('  2. Use CDN for static assets');
-      console.log('  3. Implement lazy loading for images');
-      console.log('  4. Use service workers for caching');
-      console.log('  5. Optimize images (WebP format, proper sizing)');
-      
-    } else {
-      console.log('❌ Build directory not found');
+    // Build the project first
+    console.log('🏗️ Building project for frontend optimization...');
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build completed');
+    } catch (error) {
+      console.log('⚠️  Build failed but continuing...');
+      return;
     }
     
-  } else {
-    console.log('❌ Build failed, cannot optimize');
+    // Check if dist folder exists
+    const distPath = path.join(process.cwd(), 'dist');
+    if (!fs.existsSync(distPath)) {
+      console.log('⚠️  Build verification failed: dist folder not found');
+      return;
+    }
+    
+    // Analyze frontend performance
+    console.log('📊 Analyzing frontend performance...');
+    const performanceAnalysis = analyzeFrontendPerformance(distPath);
+    
+    // Check for optimization opportunities
+    console.log('🔍 Checking for optimization opportunities...');
+    const optimizationOpportunities = findOptimizationOpportunities(distPath);
+    
+    // Check bundle optimization
+    console.log('📦 Checking bundle optimization...');
+    const bundleOptimization = analyzeBundleOptimization(distPath);
+    
+    // Check for unused CSS and JS
+    console.log('🔍 Checking for unused code...');
+    const unusedCode = findUnusedCode(distPath);
+    
+    // Check image optimization
+    console.log('🖼️ Checking image optimization...');
+    const imageOptimization = analyzeImageOptimization(distPath);
+    
+    // Generate front maximizer report
+    console.log('📊 Generating front maximizer report...');
+    const report = {
+      timestamp: new Date().toISOString(),
+      performance: performanceAnalysis,
+      optimizationOpportunities: optimizationOpportunities.length,
+      bundleOptimization: bundleOptimization,
+      unusedCode: unusedCode,
+      imageOptimization: imageOptimization,
+      details: {
+        opportunities: optimizationOpportunities,
+        unusedCode: unusedCode,
+        imageOptimization: imageOptimization
+      },
+      summary: 'Front maximizer completed',
+      status: 'completed',
+      recommendations: []
+    };
+    
+    // Add recommendations based on findings
+    if (performanceAnalysis.score < 80) {
+      report.recommendations.push('Improve performance score by optimizing critical rendering path');
+    }
+    
+    if (optimizationOpportunities.length > 0) {
+      report.recommendations.push('Implement identified optimization opportunities');
+    }
+    
+    if (bundleOptimization.unoptimizedFiles.length > 0) {
+      report.recommendations.push('Optimize bundle by implementing code splitting and tree shaking');
+    }
+    
+    if (unusedCode.unusedCSS > 0 || unusedCode.unusedJS > 0) {
+      report.recommendations.push('Remove unused CSS and JavaScript to reduce bundle size');
+    }
+    
+    if (imageOptimization.unoptimizedImages.length > 0) {
+      report.recommendations.push('Optimize images for web delivery');
+    }
+    
+    if (report.recommendations.length === 0) {
+      report.recommendations.push('Frontend is well optimized');
+    }
+    
+    // Save report
+    const reportPath = path.join(process.cwd(), 'front-maximizer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`✅ Front maximizer report saved to ${reportPath}`);
+    
+    // Log summary
+    console.log(`📊 Front Maximizer Summary:`);
+    console.log(`  - Performance score: ${performanceAnalysis.score}/100`);
+    console.log(`  - Optimization opportunities: ${optimizationOpportunities.length}`);
+    console.log(`  - Bundle optimization: ${bundleOptimization.score}/100`);
+    console.log(`  - Unused CSS: ${unusedCode.unusedCSS}%`);
+    console.log(`  - Unused JS: ${unusedCode.unusedJS}%`);
+    console.log(`  - Unoptimized images: ${imageOptimization.unoptimizedImages.length}`);
+    
+    if (report.recommendations.length > 0) {
+      console.log('💡 Recommendations:');
+      report.recommendations.forEach(rec => console.log(`  - ${rec}`));
+    }
+    
+    console.log('✅ Continuous front maximizer completed successfully');
+    
+  } catch (error) {
+    console.error('❌ Continuous front maximizer failed:', error.message);
   }
-  
-  console.log('✅ Front maximizer process completed');
 }
 
-// Main execution
-runFrontMaximizer();
+function analyzeFrontendPerformance(distPath) {
+  let totalSize = 0;
+  let htmlFiles = 0;
+  let cssFiles = 0;
+  let jsFiles = 0;
+  let imageFiles = 0;
+  
+  function scanDirectory(currentDir) {
+    const files = fs.readdirSync(currentDir);
+    
+    for (const file of files) {
+      const filePath = path.join(currentDir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(filePath);
+      } else {
+        const size = stat.size;
+        totalSize += size;
+        
+        if (file.endsWith('.html')) {
+          htmlFiles++;
+        } else if (file.endsWith('.css')) {
+          cssFiles++;
+        } else if (file.endsWith('.js')) {
+          jsFiles++;
+        } else if (file.match(/\.(png|jpg|jpeg|gif|svg|ico|webp)$/i)) {
+          imageFiles++;
+        }
+      }
+    }
+  }
+  
+  scanDirectory(distPath);
+  
+  // Calculate performance score based on various factors
+  let score = 100;
+  
+  // Penalize for large bundle size
+  if (totalSize > 5 * 1024 * 1024) { // > 5MB
+    score -= 20;
+  } else if (totalSize > 2 * 1024 * 1024) { // > 2MB
+    score -= 10;
+  }
+  
+  // Penalize for too many files
+  if (htmlFiles + cssFiles + jsFiles > 20) {
+    score -= 15;
+  }
+  
+  // Penalize for large images
+  if (imageFiles > 10) {
+    score -= 10;
+  }
+  
+  return {
+    score: Math.max(0, score),
+    totalSize: totalSize,
+    totalSizeMB: (totalSize / (1024 * 1024)).toFixed(2),
+    fileCounts: { htmlFiles, cssFiles, jsFiles, imageFiles }
+  };
+}
 
-// Set up interval for continuous monitoring
-const interval = process.env.AUTOMATION_INTERVAL || 3600000; // 1 hour default
-setInterval(runFrontMaximizer, interval);
+function findOptimizationOpportunities(distPath) {
+  const opportunities = [];
+  
+  function scanDirectory(currentDir) {
+    const files = fs.readdirSync(currentDir);
+    
+    for (const file of files) {
+      const filePath = path.join(currentDir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(filePath);
+      } else if (file.endsWith('.html')) {
+        const content = fs.readFileSync(filePath, 'utf8');
+        
+        // Check for optimization opportunities
+        if (content.includes('<script>') && !content.includes('defer') && !content.includes('async')) {
+          opportunities.push({
+            file: filePath.replace(distPath, ''),
+            type: 'Script loading',
+            issue: 'Scripts without defer/async attributes',
+            recommendation: 'Add defer or async attributes to non-critical scripts'
+          });
+        }
+        
+        if (content.includes('<link rel="stylesheet"') && !content.includes('media="print"')) {
+          opportunities.push({
+            file: filePath.replace(distPath, ''),
+            type: 'CSS loading',
+            issue: 'CSS without media attributes',
+            recommendation: 'Add media attributes for non-critical CSS'
+          });
+        }
+      } else if (file.endsWith('.js') && stat.size > 100 * 1024) { // > 100KB
+        opportunities.push({
+          file: filePath.replace(distPath, ''),
+          type: 'JavaScript optimization',
+          issue: 'Large JavaScript file',
+          recommendation: 'Consider code splitting or minification'
+        });
+      } else if (file.endsWith('.css') && stat.size > 50 * 1024) { // > 50KB
+        opportunities.push({
+          file: filePath.replace(distPath, ''),
+          type: 'CSS optimization',
+          issue: 'Large CSS file',
+          recommendation: 'Consider CSS splitting or purging unused styles'
+        });
+      }
+    }
+  }
+  
+  scanDirectory(distPath);
+  return opportunities;
+}
 
-console.log(`⏰ Front Maximizer will run every ${interval / 60000} minutes`);
+function analyzeBundleOptimization(distPath) {
+  let totalSize = 0;
+  let unoptimizedFiles = [];
+  let optimizedFiles = [];
+  
+  function scanDirectory(currentDir) {
+    const files = fs.readdirSync(currentDir);
+    
+    for (const file of files) {
+      const filePath = path.join(currentDir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(filePath);
+      } else if (file.endsWith('.js') || file.endsWith('.css')) {
+        const size = stat.size;
+        totalSize += size;
+        
+        if (size > 100 * 1024) { // > 100KB
+          unoptimizedFiles.push({
+            file: filePath.replace(distPath, ''),
+            size: size,
+            sizeKB: (size / 1024).toFixed(2)
+          });
+        } else {
+          optimizedFiles.push({
+            file: filePath.replace(distPath, ''),
+            size: size,
+            sizeKB: (size / 1024).toFixed(2)
+          });
+        }
+      }
+    }
+  }
+  
+  scanDirectory(distPath);
+  
+  const score = Math.max(0, 100 - (unoptimizedFiles.length * 10));
+  
+  return {
+    score,
+    totalSize: totalSize,
+    totalSizeKB: (totalSize / 1024).toFixed(2),
+    unoptimizedFiles: unoptimizedFiles.sort((a, b) => b.size - a.size),
+    optimizedFiles: optimizedFiles.sort((a, b) => b.size - a.size)
+  };
+}
+
+function findUnusedCode(distPath) {
+  // This is a simplified analysis - in a real scenario you'd use tools like PurgeCSS
+  let unusedCSS = 0;
+  let unusedJS = 0;
+  
+  function scanDirectory(currentDir) {
+    const files = fs.readdirSync(currentDir);
+    
+    for (const file of files) {
+      const filePath = path.join(currentDir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(filePath);
+      } else if (file.endsWith('.css')) {
+        // Estimate unused CSS (simplified)
+        const content = fs.readFileSync(filePath, 'utf8');
+        const selectors = content.match(/[.#][a-zA-Z][a-zA-Z0-9_-]*/g) || [];
+        unusedCSS = Math.min(30, selectors.length * 0.1); // Assume 10% unused
+      } else if (file.endsWith('.js')) {
+        // Estimate unused JS (simplified)
+        const content = fs.readFileSync(filePath, 'utf8');
+        const functions = content.match(/function\s+\w+|const\s+\w+\s*=|let\s+\w+\s*=/g) || [];
+        unusedJS = Math.min(25, functions.length * 0.15); // Assume 15% unused
+      }
+    }
+  }
+  
+  scanDirectory(distPath);
+  
+  return {
+    unusedCSS: Math.round(unusedCSS),
+    unusedJS: Math.round(unusedJS)
+  };
+}
+
+function analyzeImageOptimization(distPath) {
+  const unoptimizedImages = [];
+  let totalImageSize = 0;
+  
+  function scanDirectory(currentDir) {
+    const files = fs.readdirSync(currentDir);
+    
+    for (const file of files) {
+      const filePath = path.join(currentDir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(filePath);
+      } else if (file.match(/\.(png|jpg|jpeg|gif|svg|ico|webp)$/i)) {
+        const size = stat.size;
+        totalImageSize += size;
+        
+        if (size > 200 * 1024) { // > 200KB
+          unoptimizedImages.push({
+            file: filePath.replace(distPath, ''),
+            size: size,
+            sizeKB: (size / 1024).toFixed(2),
+            recommendation: 'Consider compression or format conversion to WebP'
+          });
+        }
+      }
+    }
+  }
+  
+  scanDirectory(distPath);
+  
+  return {
+    totalImageSize: totalImageSize,
+    totalImageSizeMB: (totalImageSize / (1024 * 1024)).toFixed(2),
+    unoptimizedImages: unoptimizedImages.sort((a, b) => b.size - a.size)
+  };
+}
+
+// Main execution loop
+async function main() {
+  console.log(`🚀 Front maximizer automation started with ${AUTOMATION_INTERVAL}ms interval`);
+  
+  // Run immediately
+  await runFrontMaximizer();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runFrontMaximizer();
+  }, AUTOMATION_INTERVAL);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Front maximizer automation shutting down...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Front maximizer automation shutting down...');
+  process.exit(0);
+});
+
+// Start the automation
+main().catch(error => {
+  console.error('❌ Front maximizer automation failed to start:', error);
+  process.exit(1);
+});

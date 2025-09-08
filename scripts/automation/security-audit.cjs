@@ -4,102 +4,177 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔒 Security Audit Automation Started');
+console.log('🔒 Starting continuous security audit automation...');
 
-function runCommand(command, description) {
-  try {
-    console.log(`📋 ${description}...`);
-    const result = execSync(command, { 
-      encoding: 'utf8', 
-      stdio: 'pipe',
-      cwd: process.cwd()
-    });
-    console.log(`✅ ${description} completed successfully`);
-    return result;
-  } catch (error) {
-    console.log(`❌ ${description} failed:`, error.message);
-    return null;
-  }
-}
+// Get automation interval from environment variable (default: 4 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
 
-function runSecurityAudit() {
-  console.log('🛡️ Starting security audit process...');
-  
-  // Run npm audit
-  console.log('🔍 Running npm security audit...');
+async function runSecurityAudit() {
   try {
-    const auditResult = execSync('npm audit --json', { 
-      encoding: 'utf8', 
-      stdio: 'pipe',
-      cwd: process.cwd()
-    });
+    console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
     
-    const audit = JSON.parse(auditResult);
-    const vulnerabilities = audit.metadata.vulnerabilities;
-    
-    console.log('📊 Security vulnerabilities found:');
-    Object.keys(vulnerabilities).forEach(severity => {
-      const count = vulnerabilities[severity];
-      if (count > 0) {
-        console.log(`  ${severity.toUpperCase()}: ${count}`);
-      }
-    });
-    
-    if (audit.advisories) {
-      console.log('⚠️ Security advisories:');
-      Object.keys(audit.advisories).forEach(id => {
-        const advisory = audit.advisories[id];
-        console.log(`  ${advisory.module_name}: ${advisory.title}`);
-        console.log(`    Severity: ${advisory.severity}`);
-        console.log(`    Recommendation: ${advisory.recommendation}`);
-      });
+    // Install dependencies if needed
+    console.log('📦 Installing dependencies...');
+    try {
+      execSync('npm ci', { stdio: 'inherit' });
+      console.log('✅ Dependencies installed');
+    } catch (error) {
+      console.log('⚠️  Dependency installation failed but continuing...');
     }
     
-  } catch (error) {
-    console.log('✅ No security vulnerabilities found');
-  }
-  
-  // Check for outdated packages with security implications
-  console.log('📦 Checking for outdated packages...');
-  try {
-    const outdatedResult = execSync('npm outdated --json', { 
-      encoding: 'utf8', 
-      stdio: 'pipe',
-      cwd: process.cwd()
-    });
+    // Run npm audit
+    console.log('🔍 Running npm audit...');
+    let auditResult = { vulnerabilities: 0, details: '' };
     
-    if (outdatedResult.trim()) {
-      const outdated = JSON.parse(outdatedResult);
-      console.log(`⚠️ Found ${Object.keys(outdated).length} outdated packages`);
+    try {
+      const auditOutput = execSync('npm audit --audit-level=moderate --json', { 
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
       
-      // Focus on security-critical packages
-      const securityPackages = ['react', 'react-dom', 'typescript', 'eslint'];
-      securityPackages.forEach(pkg => {
-        if (outdated[pkg]) {
-          const current = outdated[pkg].current;
-          const latest = outdated[pkg].latest;
-          console.log(`  🔴 ${pkg}: ${current} → ${latest} (Security critical)`);
+      try {
+        const auditData = JSON.parse(auditOutput);
+        auditResult.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0;
+        auditResult.details = auditData;
+      } catch (parseError) {
+        auditResult.details = auditOutput;
+      }
+    } catch (error) {
+      console.log('⚠️  npm audit failed, checking for vulnerabilities manually...');
+      try {
+        const manualAudit = execSync('npm audit --audit-level=moderate', { 
+          stdio: 'pipe',
+          encoding: 'utf8'
+        });
+        if (manualAudit.includes('found')) {
+          auditResult.vulnerabilities = 1; // At least one vulnerability found
         }
-      });
+        auditResult.details = manualAudit;
+      } catch (manualError) {
+        console.log('⚠️  Manual audit also failed');
+      }
     }
+    
+    // Check for outdated packages
+    console.log('🔍 Checking for outdated packages...');
+    let outdatedPackages = [];
+    
+    try {
+      const outdatedOutput = execSync('npm outdated --json', { 
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      
+      try {
+        const outdatedData = JSON.parse(outdatedOutput);
+        outdatedPackages = Object.keys(outdatedData);
+      } catch (parseError) {
+        console.log('⚠️  Could not parse outdated packages output');
+      }
+    } catch (error) {
+      console.log('✅ No outdated packages found or check failed');
+    }
+    
+    // Check for known security issues in package-lock.json
+    console.log('🔍 Checking package-lock.json for security issues...');
+    const packageLockPath = path.join(process.cwd(), 'package-lock.json');
+    let packageLockIssues = [];
+    
+    if (fs.existsSync(packageLockPath)) {
+      try {
+        const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'));
+        // Check for packages with known security issues
+        if (packageLock.vulnerabilities) {
+          packageLockIssues = Object.keys(packageLock.vulnerabilities);
+        }
+      } catch (error) {
+        console.log('⚠️  Could not parse package-lock.json');
+      }
+    }
+    
+    // Generate security report
+    console.log('📊 Generating security audit report...');
+    const report = {
+      timestamp: new Date().toISOString(),
+      vulnerabilities: auditResult.vulnerabilities,
+      outdatedPackages: outdatedPackages.length,
+      packageLockIssues: packageLockIssues.length,
+      details: {
+        audit: auditResult.details,
+        outdated: outdatedPackages,
+        packageLockIssues: packageLockIssues
+      },
+      summary: 'Security audit completed',
+      status: 'completed',
+      recommendations: []
+    };
+    
+    // Add recommendations based on findings
+    if (auditResult.vulnerabilities > 0) {
+      report.recommendations.push('Run npm audit fix to resolve vulnerabilities');
+    }
+    
+    if (outdatedPackages.length > 0) {
+      report.recommendations.push('Update outdated packages to latest versions');
+    }
+    
+    if (packageLockIssues.length > 0) {
+      report.recommendations.push('Review package-lock.json for security issues');
+    }
+    
+    if (report.recommendations.length === 0) {
+      report.recommendations.push('No immediate security actions required');
+    }
+    
+    // Save report
+    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`✅ Security audit report saved to ${reportPath}`);
+    
+    // Log summary
+    console.log(`📊 Security Audit Summary:`);
+    console.log(`  - Vulnerabilities: ${auditResult.vulnerabilities}`);
+    console.log(`  - Outdated packages: ${outdatedPackages.length}`);
+    console.log(`  - Package-lock issues: ${packageLockIssues.length}`);
+    
+    if (report.recommendations.length > 0) {
+      console.log('💡 Recommendations:');
+      report.recommendations.forEach(rec => console.log(`  - ${rec}`));
+    }
+    
+    console.log('✅ Continuous security audit completed successfully');
+    
   } catch (error) {
-    console.log('✅ All packages are up to date');
+    console.error('❌ Continuous security audit failed:', error.message);
   }
-  
-  // Check package-lock.json for integrity
-  if (fs.existsSync('package-lock.json')) {
-    console.log('🔐 Verifying package lock integrity...');
-    runCommand('npm ci --only=production', 'Package integrity check');
-  }
-  
-  console.log('✅ Security audit process completed');
 }
 
-// Main execution
-runSecurityAudit();
+// Main execution loop
+async function main() {
+  console.log(`🚀 Security audit automation started with ${AUTOMATION_INTERVAL}ms interval`);
+  
+  // Run immediately
+  await runSecurityAudit();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runSecurityAudit();
+  }, AUTOMATION_INTERVAL);
+}
 
-// Set up interval for continuous monitoring
-const interval = process.env.AUTOMATION_INTERVAL || 7200000; // 2 hours default
-setInterval(runSecurityAudit, interval);
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Security audit automation shutting down...');
+  process.exit(0);
+});
 
-console.log(`⏰ Security Audit will run every ${interval / 60000} minutes`);
+process.on('SIGTERM', () => {
+  console.log('🛑 Security audit automation shutting down...');
+  process.exit(0);
+});
+
+// Start the automation
+main().catch(error => {
+  console.error('❌ Security audit automation failed to start:', error);
+  process.exit(1);
+});
