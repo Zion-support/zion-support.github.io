@@ -13,10 +13,10 @@ export default function HomePage() {
   return (
     <div>
       <Head>
-        <title>Zion Tech Group — World's Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
-        <meta name="description" content="Revolutionary autonomous technology platform featuring 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and self-healing capabilities. Experience the future of autonomous innovation." />
-        <meta property="og:title" content="Zion Tech Group — World's Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
-        <meta property="og:description" content="Revolutionary autonomous technology platform with 227+ intelligent automations, AI-powered cloud systems, and comprehensive redundancy infrastructure." />
+        <title>Zion Tech Group — Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
+        <meta name="description" content="Leading-edge autonomous technology platform with 227+ automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and 2960+ pages of content. Experience the future of autonomous innovation." />
+        <meta property="og:title" content="Zion Tech Group — Autonomous Innovation Hub & AI-Powered Cloud Platform" />
+        <meta property="og:description" content="Leading-edge autonomous technology platform with 227+ automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and 2960+ pages of content." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="autonomous systems, AI automation, cloud-native, redundancy systems, intelligent orchestration, self-healing systems, continuous deployment" />
       </Head>
@@ -74,7 +74,49 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Revolutionary Autonomous Systems */}
+          {/* Platform Overview & Statistics */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📊 Platform Overview & Statistics</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-semibold text-blue-400 mb-2">227+ Automations</h3>
+                <p className="text-white/70 text-sm">Autonomous agents & systems</p>
+                <Link href="/automation" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">Explore →</Link>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">📄</span>
+                </div>
+                <h3 className="text-xl font-semibold text-green-400 mb-2">2960+ Pages</h3>
+                <p className="text-white/70 text-sm">Dynamic content generation</p>
+                <Link href="/reports" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">Browse →</Link>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">⚙️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-purple-400 mb-2">12 Components</h3>
+                <p className="text-white/70 text-sm">Reusable UI elements</p>
+                <Link href="/components" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">View →</Link>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-semibold text-yellow-400 mb-2">100% Autonomous</h3>
+                <p className="text-white/70 text-sm">Self-running systems</p>
+                <Link href="/automation-health" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">Monitor →</Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Core Features & Capabilities */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-5xl font-bold tracking-wide text-white/90 mb-4">🤖 Revolutionary Autonomous Systems</h2>
             <p className="text-center text-xl text-white/70 mb-12 max-w-4xl mx-auto">
@@ -96,6 +138,9 @@ export default function HomePage() {
                   <li>• Continuous health monitoring</li>
                   <li>• Geographic distribution</li>
                 </ul>
+                <div className="mt-4 text-center">
+                  <Link href="/automation" className="text-cyan-400 text-sm hover:underline">Learn More →</Link>
+                </div>
               </div>
 
               {/* AI-Powered Automation Engine */}
@@ -111,6 +156,9 @@ export default function HomePage() {
                   <li>• Smart error recovery</li>
                   <li>• Predictive analytics</li>
                 </ul>
+                <div className="mt-4 text-center">
+                  <Link href="/automation" className="text-fuchsia-400 text-sm hover:underline">Explore →</Link>
+                </div>
               </div>
 
               {/* Self-Healing CI/CD Pipeline */}
@@ -126,6 +174,9 @@ export default function HomePage() {
                   <li>• Automated testing & validation</li>
                   <li>• Smart rollback systems</li>
                 </ul>
+                <div className="mt-4 text-center">
+                  <Link href="/automation-health" className="text-green-400 text-sm hover:underline">Monitor →</Link>
+                </div>
               </div>
 
               {/* Comprehensive Monitoring Dashboard */}
@@ -141,6 +192,9 @@ export default function HomePage() {
                   <li>• Performance optimization</li>
                   <li>• Security threat detection</li>
                 </ul>
+                <div className="mt-4 text-center">
+                  <Link href="/live-dashboard" className="text-yellow-400 text-sm hover:underline">View →</Link>
+                </div>
               </div>
 
               {/* Advanced Security Framework */}
@@ -156,6 +210,9 @@ export default function HomePage() {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
+                <div className="mt-4 text-center">
+                  <Link href="/security" className="text-red-400 text-sm hover:underline">Secure →</Link>
+                </div>
               </div>
 
               {/* Global Infrastructure Network */}
@@ -171,6 +228,9 @@ export default function HomePage() {
                   <li>• Geographic redundancy</li>
                   <li>• Load balancing intelligence</li>
                 </ul>
+                <div className="mt-4 text-center">
+                  <Link href="/deployment" className="text-purple-400 text-sm hover:underline">Deploy →</Link>
+                </div>
               </div>
             </div>
           </section>
@@ -189,7 +249,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-blue-400 mb-2">Next.js 15</h3>
                 <p className="text-white/70 text-sm">React framework with SSR/SSG</p>
-                <p className="text-blue-300/70 text-xs mt-2">Latest version with optimizations</p>
+                <Link href="/performance" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">Performance →</Link>
               </div>
               
               <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-xl rounded-xl p-6 border border-green-400/30 text-center">
@@ -198,7 +258,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-green-400 mb-2">Docker & PM2</h3>
                 <p className="text-white/70 text-sm">Container orchestration</p>
-                <p className="text-green-300/70 text-xs mt-2">Process management & scaling</p>
+                <Link href="/deployment" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">Deploy →</Link>
               </div>
               
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-xl p-6 border border-purple-400/30 text-center">
@@ -207,7 +267,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-purple-400 mb-2">Netlify Functions</h3>
                 <p className="text-white/70 text-sm">Serverless backend services</p>
-                <p className="text-purple-300/70 text-xs mt-2">Edge computing capabilities</p>
+                <Link href="/api-documentation" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">API Docs →</Link>
               </div>
               
               <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-xl rounded-xl p-6 border border-yellow-400/30 text-center">
@@ -216,7 +276,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2">GitHub Actions</h3>
                 <p className="text-white/70 text-sm">CI/CD automation</p>
-                <p className="text-yellow-300/70 text-xs mt-2">Advanced workflow orchestration</p>
+                <Link href="/automation" className="text-cyan-400 text-xs hover:underline mt-2 inline-block">Automate →</Link>
               </div>
             </div>
           </section>
@@ -299,15 +359,13 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Platform Navigation Hub */}
+          {/* Comprehensive Navigation Hub */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-5xl font-bold tracking-wide text-white/90 mb-4">🔗 Platform Navigation Hub</h2>
-            <p className="text-center text-xl text-white/70 mb-12 max-w-4xl mx-auto">
-              Explore every aspect of our comprehensive autonomous technology platform and discover how it can transform your digital operations.
-            </p>
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔗 Explore Our Complete Platform</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/about" className="group bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-xl rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300 text-center">
+            {/* Main Navigation Categories */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <Link href="/about" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">🏢</span>
                 </div>
@@ -342,23 +400,91 @@ export default function HomePage() {
                 <p className="text-white/70 text-sm">Real-world implementations</p>
                 <p className="text-yellow-300/70 text-xs mt-2">Proven results & outcomes</p>
               </Link>
-              
-              <Link href="/blog" className="group bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/50 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">🏗️</span>
+            </div>
+
+            {/* Advanced Platform Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <Link href="/automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">⚙️</span>
                 </div>
-                <h3 className="text-lg font-semibold text-purple-400 mb-2">Latest Insights</h3>
-                <p className="text-white/70 text-sm">Industry trends & updates</p>
-                <p className="text-purple-300/70 text-xs mt-2">Expert analysis & commentary</p>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Automation Hub</h3>
+                <p className="text-white/70 text-sm">227+ autonomous systems</p>
+              </Link>
+              
+              <Link href="/live-dashboard" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📊</span>
+                </div>
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Live Dashboard</h3>
+                <p className="text-white/70 text-sm">Real-time monitoring</p>
+              </Link>
+              
+              <Link href="/component-library" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🧩</span>
+                </div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Component Library</h3>
+                <p className="text-white/70 text-sm">12 reusable components</p>
+              </Link>
+              
+              <Link href="/blog" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">✍️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Blog & Insights</h3>
+                <p className="text-white/70 text-sm">Latest technology trends</p>
+              </Link>
+              
+              <Link href="/reports" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📋</span>
+                </div>
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Reports & Analytics</h3>
+                <p className="text-white/70 text-sm">Performance insights</p>
               </Link>
               
               <Link href="/contact" className="group bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-xl rounded-xl p-6 border border-green-400/30 hover:border-green-400/50 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">💬</span>
                 </div>
-                <h3 className="text-lg font-semibold text-green-400 mb-2">Get Started Today</h3>
-                <p className="text-white/70 text-sm">Begin your transformation</p>
-                <p className="text-green-300/70 text-xs mt-2">Expert consultation available</p>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Contact & Support</h3>
+                <p className="text-white/70 text-sm">Get in touch</p>
+              </Link>
+            </div>
+
+            {/* Technical Documentation & Tools */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link href="/api-documentation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🔌</span>
+                </div>
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">API Docs</h3>
+                <p className="text-white/70 text-sm">Integration guides</p>
+              </Link>
+              
+              <Link href="/performance" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">⚡</span>
+                </div>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Performance</h3>
+                <p className="text-white/70 text-sm">Optimization metrics</p>
+              </Link>
+              
+              <Link href="/testing" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🧪</span>
+                </div>
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Testing</h3>
+                <p className="text-white/70 text-sm">Quality assurance</p>
+              </Link>
+              
+              <Link href="/deployment" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🚀</span>
+                </div>
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Deployment</h3>
+                <p className="text-white/70 text-sm">Infrastructure guides</p>
               </Link>
             </div>
           </section>
