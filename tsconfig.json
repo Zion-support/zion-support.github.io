@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
-    "useDefineForClassFields": true,
+    "target": "es5",
     "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
     "module": "ESNext",
     "baseUrl": ".",
@@ -14,13 +13,10 @@
       "@/pages/*": ["./src/pages/*"]
     },
     "types": ["vite/client", "react", "react-router-dom", "node"],
-
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
     "strict": false,
     "noUnusedLocals": false,
@@ -40,32 +36,15 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-    "skipLibCheck": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "skipLibCheck": true
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/index.css",
-    "src/layout/AppLayout.tsx",
-    "src/context/**/*.tsx",
-    "src/components/ui/**/*.tsx",
-    "src/components/PerformanceWrapper.tsx",
-    "src/components/support/ChatBotPanel.tsx"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "src/pages",
-    "src/routes",
-    "src/components",
-    "src/hooks",
-    "src/services",
-    "src/data",
-    "src/layout",
-    "src/context/WalletContext.tsx"
+    "node_modules"
   ]
 }

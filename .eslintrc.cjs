@@ -1,23 +1,25 @@
 module.exports = {
-
+  root: true,
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended' ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
-    '@typescript-eslint/no-unused-vars': ['warn' { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
     'prefer-const': 'error',
     'no-var': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off' },
+    'react/no-unescaped-entities': 'off'
+  },
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
     'dist/',
+    'build/',
     'api-backup/',
     'pages.disabled/',
     'backup-pages/',
@@ -27,4 +29,32 @@ module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/' ] };
+    'hardhat/',
+    'src.disabled/',
+    'src_disabled_*/',
+    '**/*.disabled/',
+    '**/*.backup/',
+    '**/*.temp/',
+    '**/*.old/',
+    '**/*.test.*',
+    '**/*.spec.*',
+    'supabase/functions/',
+    'tests/',
+    '__tests__/',
+    'cypress/',
+    'e2e/',
+    'tools/',
+    'utils/',
+    '*.cjs',
+    '*.config.js',
+    '*.config.ts',
+    '*.min.js',
+    '*.backup.*',
+    '*.disabled.*',
+    '*.temp.*',
+    '*.old.*',
+    '.eslintrc.*',
+    '*.mjs',
+    '*.min.*'
+  ]
+};
