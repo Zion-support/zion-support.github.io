@@ -7,10 +7,37 @@ const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
 });
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+const supabase = createClient(
+  Deno.env.get('SUPABASE_URL') || '',
+  Deno.env.get('SUPABASE_ANON_KEY') || ''
+);
+=======
+// const supabase = createClient(
+//   Deno.env.get('SUPABASE_URL') || '',
+//   Deno.env.get('SUPABASE_ANON_KEY') || ''
+// );
+>>>>>>> origin/main
+
+serve(async (req) => {
+  if (req.method === 'POST') {
+    const body = await req.text();
+<<<<<<< HEAD
+    const signature = req.headers.get('stripe-signature');
+    
+    if (!signature) {
+      return new Response('No signature provided', { status: 400 });
+    }
+=======
+    const signature = req.headers.get('stripe-signature') || '';
+>>>>>>> origin/main
+=======
 serve(async req => {
   if (req.method === 'POST') {
     const body = await req.text();
     const signature = req.headers.get('stripe-signature') || '';
+>>>>>>> origin/main
 
     let event;
     try {

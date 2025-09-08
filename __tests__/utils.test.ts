@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
 // Mock test for utils
 describe("Utils", () => {
   it("should work correctly", () => {

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({

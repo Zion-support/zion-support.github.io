@@ -8,16 +8,28 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  NPM_FLAGS = "--omit=optional"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NETLIFY_FUNCTIONS_TIMEOUT = "30"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
+
+# Function bundling optimization
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["aws-sdk"]
 
 [context.production.environment]
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "echo 'Skipping build; using prebuilt out/ directory'"
 
 [context.branch-deploy]
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "echo 'Skipping build; using prebuilt out/ directory'"
 
 # Vite/React SPA configuration
 [[redirects]]

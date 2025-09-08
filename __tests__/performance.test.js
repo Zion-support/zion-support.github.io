@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
   test("lighthouse performance audit", async ({ page }) => {
     await page.goto("/");
 describe('Performance Tests', () => {

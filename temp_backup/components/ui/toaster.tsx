@@ -7,7 +7,14 @@ export function HotToasts() {
     <HotToaster position="top-right" />
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
+=======
+
+>>>>>>> origin/main
 import { cn } from '@/lib/utils';
 
 export interface Toast {
