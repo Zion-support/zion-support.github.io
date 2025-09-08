@@ -1,24 +1,24 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
+import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { TalentResults } from "@/components/talent/TalentResults";
-import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
-import { ErrorBanner } from "@/components/talent/ErrorBanner";
-import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+// import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
+// import { ErrorBanner } from "@/components/talent/ErrorBanner";
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 import { useTalentDirectory } from "@/hooks/useTalentDirectory";
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationButton,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
+// import {
+//   Pagination,
+//   PaginationContent,
+//   PaginationItem,
+//   PaginationButton,
+//   PaginationNext,
+//   PaginationPrevious,
+// } from "@/components/ui/pagination";
 
 export default function TalentDirectory() {
   const navigate = useNavigate();
@@ -80,7 +80,10 @@ export default function TalentDirectory() {
   if (isLoading) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <TalentSkeleton />
+        {/* <TalentSkeleton /> */}
+        <div className="text-center py-8">
+          <p className="text-muted-foreground">Loading talent profiles...</p>
+        </div>
       </div>
     );
   }
@@ -88,7 +91,10 @@ export default function TalentDirectory() {
   if (error) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <ErrorBanner msg="Unable to load talent profiles." />
+        {/* <ErrorBanner msg="Unable to load talent profiles." /> */}
+        <div className="text-center py-8">
+          <p className="text-red-500">Unable to load talent profiles.</p>
+        </div>
       </div>
     );
   }
@@ -130,18 +136,24 @@ export default function TalentDirectory() {
             
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
-              <Button
+              {/* <Button
                 onClick={() => setIsMobileFilterOpen(true)}
                 variant="outline"
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
               >
                 Filter & Sort
-              </Button>
+              </Button> */}
+              <button
+                onClick={() => setIsMobileFilterOpen(true)}
+                className="w-full border border-zion-blue-light text-zion-purple hover:bg-zion-blue-light py-2 px-4 rounded"
+              >
+                Filter & Sort
+              </button>
             </div>
             
             {/* Results and Pagination Wrapper for ErrorBoundary */}
             <div className="flex-1"> {/* Added a wrapper div to contain Results and Pagination */}
-              <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}>
+              {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}> */}
                 <TalentResults
                   talents={paginatedTalents}
                   totalCount={filteredTalents.length}
@@ -166,7 +178,7 @@ export default function TalentDirectory() {
 
                 {totalPages > 1 && (
                   <div className="mt-6">
-                    <Pagination className="justify-center">
+                    {/* <Pagination className="justify-center">
                       <PaginationContent>
                         <PaginationItem>
                           <PaginationPrevious
@@ -199,10 +211,36 @@ export default function TalentDirectory() {
                           />
                         </PaginationItem>
                       </PaginationContent>
-                    </Pagination>
+                    </Pagination> */}
+                    
+                    <div className="flex justify-center space-x-2">
+                      <button
+                        onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 border rounded disabled:opacity-50"
+                      >
+                        Previous
+                      </button>
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <button
+                          key={page}
+                          onClick={() => setCurrentPage(page)}
+                          className={`px-3 py-1 border rounded ${page === currentPage ? 'bg-blue-600 text-white' : ''}`}
+                        >
+                          {page}
+                        </button>
+                      ))}
+                      <button
+                        onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 border rounded disabled:opacity-50"
+                      >
+                        Next
+                      </button>
+                    </div>
                   </div>
                 )}
-              </ErrorBoundary>
+              {/* </ErrorBoundary> */}
             </div>
             
             {/* Mobile filter sidebar */}
@@ -211,7 +249,7 @@ export default function TalentDirectory() {
                 <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-bold text-white">Filter & Sort</h3>
-                    <Button
+                    {/* <Button
                       variant="ghost"
                       size="sm"
                       onClick={() => setIsMobileFilterOpen(false)}
@@ -219,7 +257,14 @@ export default function TalentDirectory() {
                     >
                       <X className="h-4 w-4" />
                       <span className="sr-only">Close</span>
-                    </Button>
+                    </Button> */}
+                    <button
+                      onClick={() => setIsMobileFilterOpen(false)}
+                      className="text-zion-slate-light h-8 w-8 p-0 rounded"
+                    >
+                      <X className="h-4 w-4" />
+                      <span className="sr-only">Close</span>
+                    </button>
                   </div>
                   <FilterSidebar
                     searchTerm={searchTerm}
