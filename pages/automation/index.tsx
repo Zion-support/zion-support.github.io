@@ -183,21 +183,27 @@ const Index: NextPage = () => {
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Content Freshness Auditor</h2>
-            <p className="text-white/70">Analyzes repo content freshness and publishes a report.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/content-freshness-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">A11y Audit</h2>
+            <p className="text-white/70">Scans pages/components for missing alt text and empty anchors; writes reports and syncs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/a11y-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Internal Anchor Auditor</h2>
-            <p className="text-white/70">Detects broken in-page anchors across TSX/MD content.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/internal-anchor-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Alt Text Suggester</h2>
+            <p className="text-white/70">Suggests alt text for images in public and writes suggestions to docs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/alt-text-suggester-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Orphan Asset Scanner</h2>
-            <p className="text-white/70">Finds unreferenced files in public/ for cleanup planning.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/orphan-asset-report-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Docs Gap Finder</h2>
+            <p className="text-white/70">Finds TODO/FIXME/TBD markers and compiles a docs gaps report.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/docs-gap-finder-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Code Churn Heatmap</h2>
+            <p className="text-white/70">Analyzes git history to highlight most‑changed files and hotspots.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/code-churn-heatmap-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
         </ul>
 </main>
