@@ -1,5 +1,9 @@
 [build]
+<<<<<<< HEAD
   # Build the Vite project on Netlify
+=======
+  # Build the project on Netlify
+>>>>>>> main
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
@@ -8,7 +12,11 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
+<<<<<<< HEAD
   NPM_FLAGS = "--legacy-peer-deps"
+=======
+  NPM_FLAGS = "--omit=optional"
+>>>>>>> main
 
 [context.production.environment]
   NODE_ENV = "production"
@@ -18,8 +26,15 @@
 
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund && npm run build"
+<<<<<<< HEAD
 
 # Vite/React SPA configuration
+=======
+# Vite/React SPA configuration
+
+
+
+>>>>>>> main
 [[redirects]]
   from = "/*"
   to = "/index.html"
