@@ -1,3 +1,4 @@
+import React from 'react';
 // Core application types
 export interface AppConfig {
   name: string;

@@ -65,7 +65,7 @@ export default function Signup() {
       confirmPassword: "",
       termsAccepted: false,
     },
-  }) as UseFormReturn<SignupFormValues>;
+
 
   const passwordValue = form.watch("password");
 

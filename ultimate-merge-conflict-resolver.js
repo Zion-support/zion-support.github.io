@@ -36,7 +36,7 @@ function fixSyntaxAndConflicts() {console.log('\n🔧 Fixing syntax errors and m
       content = content.replace(/      content = content.replace(/[\s\S]*?      content = content.replace(/      content = content.replace(//g, '')content = content.replace(/;
       content = content.replace(/      content = content.replace(/      content = content.replace(/      content = content.replace(/      content = content.replace(/;
       // Fix import statements;
-      content = content.replace(/import React from "react",/g, 'import React from "react";')content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';")content = content.replace(/import Link from 'next\/link',/g, "import Link from 'next/link';")content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';")content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';")content = content.replace(/from '..\/components\/Layout',/g, "from '../components/Layout';")content = content.replace(/from '..\/components\/layout\/MainLayout',/g, "from '../components/layout/MainLayout';")// Fix semicolons in imports;
+      content = content.replace(/import React from "react";/g, 'import React from "react";')content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';")content = content.replace(/import Link from 'next\/link',/g, "import Link from 'next/link';")content = content.replace(/} from 'lucide-react';/g, "} from 'lucide-react';")content = content.replace(/} from 'framer-motion';/g, "} from 'framer-motion';")content = content.replace(/from '..\/components\/Layout',/g, "from '../components/Layout';")content = content.replace(/from '..\/components\/layout\/MainLayout',/g, "from '../components/layout/MainLayout';")// Fix semicolons in imports;
       content = content.replace(/import ([^;]+)(?<!;)$/gm, 'import $1;')// Fix array and object syntax;
       content = content.replace(/\[\s*\{\s*\}/g, '[')content = content.replace(/\{\s*\}\s*([a-zA-Z])/g, ',\n  {\n    $1')content = content.replace(/\[\s*([a-zA-Z])/g, '[\n  {\n    $1')// Fix specific syntax issues;
       content = content.replace(/Play;/g, 'Play')content = content.replace(/CheckCircle ;/g, 'CheckCircle')content = content.replace(/Shield;/g, 'Shield')content = content.replace(/Handshake ;/g, 'Handshake')content = content.replace(/Heart;/g, 'Heart')content = content.replace(/Gamepad2;/g, 'Gamepad2')content = content.replace(/Filter;/g, 'Filter')if (content !== originalContent) {fs.writeFileSync(file, content)console.log(`✅ Fixed ${file}`)fixedCount++;
@@ -79,11 +79,11 @@ function fixSyntaxAndConflicts() {
       // Remove merge conflict markers
       content = content.replace(/      
       // Fix import statements
-      content = content.replace(/import React from "react",/g, 'import React from "react";');
+      content = content.replace(/import React from "react";/g, 'import React from "react";');
       content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");
       content = content.replace(/import Link from 'next\/link',/g, "import Link from 'next/link';");
-      content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");
-      content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';");
+      content = content.replace(/} from 'lucide-react';/g, "} from 'lucide-react';");
+      content = content.replace(/} from 'framer-motion';/g, "} from 'framer-motion';");
       content = content.replace(/from '..\/components\/Layout',/g, "from '../components/Layout';");
       content = content.replace(/from '..\/components\/layout\/MainLayout',/g, "from '../components/layout/MainLayout';");
       
@@ -151,7 +151,7 @@ const REPO_NAME  = 'zion.app';function githubAPI() {const url  = \`https://api.g
 function runComprehensiveImprovements() {console.log('\n🚀 Running comprehensive improvements...')// Create improvement scripts;
   const improvements = {'syntax-fixer.js': `#!/usr/bin/env node;
 console.log('🔧 Running comprehensive syntax fixer...')function fixSyntaxErrors() {const files = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -50', { encoding: 'utf8' }).split('\\n').filter(f => f.trim())let fixedCount  = 0;for (const file of files) {try {let content = fs.readFileSync(file, 'utf8')let originalContent  = content;// Fix common syntax issues;
-      content = content.replace(/import React from "react",/g, 'import React from "react";')content = content.replace(/import Head from 'next\\/head',/g, "import Head from 'next/head';")content = content.replace(/import Link from 'next\\/link',/g, "import Link from 'next/link';")content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';")content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';")content = content.replace(/from '..\\/components\\/Layout',/g, "from '../components/Layout';")content = content.replace(/from '..\\/components\\/layout\\/MainLayout',/g, "from '../components/layout/MainLayout';")if (content !== originalContent) {fs.writeFileSync(file, content)fixedCount++;
+      content = content.replace(/import React from "react";/g, 'import React from "react";')content = content.replace(/import Head from 'next\\/head',/g, "import Head from 'next/head';")content = content.replace(/import Link from 'next\\/link',/g, "import Link from 'next/link';")content = content.replace(/} from 'lucide-react';/g, "} from 'lucide-react';")content = content.replace(/} from 'framer-motion';/g, "} from 'framer-motion';")content = content.replace(/from '..\\/components\\/Layout',/g, "from '../components/Layout';")content = content.replace(/from '..\\/components\\/layout\\/MainLayout',/g, "from '../components/layout/MainLayout';")if (content !== originalContent) {fs.writeFileSync(file, content)fixedCount++;
         console.log(\`✅ Fixed \${file}\`)}
     } catch (error) {console.log(\`❌ Error fixing \${file}: \${error.message}\`)}
   }console.log(\`\\n📊 Fixed \${fixedCount} files\`)}fixSyntaxErrors()`,'build-optimizer.js': `#!/usr/bin/env node;

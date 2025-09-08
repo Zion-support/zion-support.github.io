@@ -1,45 +1,4 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync, spawn } = require("child_process");
-    this.logDir = path.join(this.projectRoot, "logs")
-    this.reportsDir = path.join(this.projectRoot, "reports")
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 
-#!/usr/bin/env node;
-
-class ComprehensiveBuildAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logDir = path.join(this.projectRoot, 'logs');
-    this.reportsDir = path.join(this.projectRoot, 'reports');
-    this.buildResults = {
-      timestamp: new Date().toISOString(),
-      steps: [],
-      errors: [],
-      warnings: [],
-      metrics: {},
-      overallStatus: 'pending'
-    };
-    
-    // Ensure directories exist
-    [this.logDir, this.reportsDir].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir { recursive: true })}
-    })}
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
-    // Write to log file
-    const logFile = path.join(this.logDir, 'build-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n')}
 
   async runStep(name, command, options = {}) {
     this.log(`Starting step: ${name}`);

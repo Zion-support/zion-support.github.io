@@ -1,3 +1,4 @@
+
 {
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
@@ -31,6 +32,12 @@
     "seoOptimization": {
       "success": false,
       "duration": 39,
+"errors": [],
+      "success": true,
+      "duration": 46,
+      "errors": [],
+      "success": true,
+      "duration": 46,
       "errors": [],
       "warnings": []
     },

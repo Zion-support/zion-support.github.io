@@ -1,161 +1,235 @@
 
-const { execSync, spawn } = require('child_process');
+=======
+#!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+/**
+ * Link Checker Automation;
+ * Checks for broken links and validates URLs;
+ */
 const fs = require('fs');
 const path = require('path');
-;
-class LinkCheckerAutomation {;
-  constructor() {;
-    this.projectRoot = path.resolve(__dirname, '../../');
-    this.logFile = path.join(;
-      this.projectRoot,link-reports',;
-      'link-checker-automation.log';
-    );
-    this.reportFile = path.join(;
-      this.projectRoot,link-reports',;
-      'link-checker-report.json';
-    );
-    this.ensureDirectories()}
+const https = require('https';);
+const http = require('http';);
+const { URL } = require('url');
+=======
+class LinkCheckerAutomation {}
+    constructor() {}
+        this.projectRoot = process.cwd();
 
-        fs.mkdirSync(dir { recursive: true })}
-    })}
+        if () {}
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
 
-  }
-;
-  async runCommand(command, cwd = this.projectRoot) {;
+        console.log(message)};
+    findLinksInFiles() {}
+        this.log('Finding links in project files...');
+        const linkPattern = /https?:\/\/[^\s"'<>]+;/;g;
+        const files = this.findSourceFiles(;);
+        const links = [];
+=======
+        console.log(message)};
+    findLinksInFiles() {}"
 
-    return new Promise((resolve, reject) => {this.log(Running command: ${command}`);
+        const files = this.findSourceFiles(;);
+        const links = [];
+        
+=======
+        for (const file of files) {}
+            try {}
 
-        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
-          resolve({ code, stdout, stderr })} else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`))}
-      });
+                const matches = content.match(linkPattern;);
+=======
+                if ( {})
+                    for (const match of matches) {}
+                        links.push({})
 
-        reject(error)})})}
+        this.log(`Found ${links.length} links in project files`)) {`}
+     {}
+                        links.push({})"
 
-      return true} catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
-      return false}
-  }
+        const files = [];
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+            const items = fs.readdirSync(dir;);
+            for (const item of items) {}
+                const fullPath = path.join(dir, item;);
+                const stat = fs.statSync(fullPath;);
+                if (&& !item.startsWith('.') && item !== 'node_modules') {}
+                    scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
+                    files.push(fullPath)};
+            };
+        }) {}
+    && !item.startsWith('.') && item !== 'node_modules') {}
+                    scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
+                    files.push(fullPath)};
+            };
+=======
 
-      return true} catch (error) {  this.log(`Failed to install linkinator: ${error.message  }`, `ERROR`);
-      return false}
-  }
+        }};
+        scanDirectory(this.projectRoot);
+        return files};
+    findLineNumber(content, searchText) {}
+        const lines = content.split('\n';);
+        for (let i = ;0; i < lines.length i++) {}
+                return i + 1) {}
+    ) {}
+                return i + 1}};
+        return -1};
+    async checkLink(url) {}
+        return new Promise((resolve) => {;}
+                const urlObj = new URL(ur;l;);
+                const options = {}
+                    "hostname": urlObj.hostname,
+                    "port": urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
+                    "path": urlObj.pathname + urlObj.search,
+                    "method": 'HEAD',
+                    "timeout": 10000;
+               };
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
+                const req = client.request(options, (res) => {}
+                    resolve({})
+                        "url": url,
+                        "status": res.statusCode,
+                        "statusText": res.statusMessage,
+                        "valid": res.statusCode < 400;
+                    })};);
+                req.on('error', (error) => {}
+                    resolve({})
+                        "url": url,
+                        "status": 0,
+                        "statusText": error.message,
+                        "valid": false;
+                    })}
+});
+                req.on('timeout', () => {}
+                    req.destroy();
+                    resolve({})
+                        "url": url,
+                        "status": 0,
+                        "statusText": 'Timeout',
+                        "valid": false;
+                    })}
+});
+=======
 
-      return true} catch (error) {  this.log(`Build failed: ${error.message  }`, `ERROR`);
-      return false}
-  }
+                    "timeout": 10000;"
+                "
 
-      );
-;
-      return {;
-        success: brokenLinks.length === 0,;
-        totalLinks: linkData.links?.length || 0,;
-        brokenLinks: brokenLinks,;
-        allLinks: linkData.links || [],};
+                req.setTimeout(10000);
+                req.end()} catch (error) {}
+                resolve({})"
 
-      // Extract external URLs from HTML files;
-      const externalUrls = [];
-;
-      const htmlFiles = this.findHtmlFiles(distPath);
+        this.log(`Checking ${links.length} links...`);
+        const results = [];
+        const uniqueUrls = [...new Set(links.map(link => link.url))];
+        for (let i = ;0; i < uniqueUrls.length i++) {}
+            const url = uniqueUrls[i];
+            this.log(`Checking link ${i + 1}/${uniqueUrls.length}: ${url}`);
+            const result = await this.checkLink(url;);
+            results.push(result);
+        const results = [];
+        const uniqueUrls = [...new Set(links.map(link => link.url))];
+        for (let i = ;0; i < uniqueUrls.length i++) {}
 
-      // Remove duplicates;
-      const uniqueUrls = [...new Set(externalUrls)];this.log(`Found ${uniqueUrls.length} unique external URLs to check`);
-;
-      if (uniqueUrls.length === 0) {;
-        return {;
-          success: true,;
-          totalLinks: 0,;
-          brokenLinks: [],;
-          allLinks: [],}}
+            const result = await this.checkLink(url;);
+            results.push(result);
+            
+=======
+            // Add a small delay to avoid overwhelming servers;
+            await new Promise(resolve => setTimeout(resolve, 100))};
+        const validLinks = results.filter(r => r.valid;);
+        const brokenLinks = results.filter(r => !r.valid;);
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        return {;}
+            "total": results.length,
+            "valid": validLinks.length,
+            "broken": brokenLinks.length,
+            "results": results;
+        }};
+    generateLinkReport() {}
+        this.log('Generating link checker report...');
+        const links = this.findLinksInFiles(;);
+=======
+        "`;
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);"
+        return {;}"
+            "total": results.length,
+            "valid": validLinks.length,
+            "broken": brokenLinks.length,
+            "results": results;"
+    generateLinkReport() {}"
 
-      );
-;
-      const linkData = JSON.parse(result.stdout);
+        const links = this.findLinksInFiles(;);
+        return this.checkAllLinks(links).then(checkResults => {;})
+            const report = {}
 
-      );
-;
-      return {;
-        success: brokenLinks.length === 0,;
-        totalLinks: linkData.links?.length || 0,;
-        brokenLinks: brokenLinks,;
-        allLinks: linkData.links || [],}}}
-  }
-;
-  findHtmlFiles(dir) {;
-    const files = [];
-    const items = fs.readdirSync(dir);
-;
-    for (const item of items) {;
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-;
-      if (stat.isDirectory()) {;
-        files.push(...this.findHtmlFiles(fullPath))} else if (item.endsWith('.html')) {;
-        files.push(fullPath)}
-    }
-;
-    return files}
-;
-  async generateLinkReport(internalResult, externalResult) {;
-    this.log('Generating link report...');
-;
-    const allLinks = [
-      ...(internalResult.allLinks || []),;
-      ...(externalResult.allLinks || ['])', '];
-;
-    const brokenLinks = [
-      ...(internalResult.brokenLinks || []),;
-      ...(externalResult.brokenLinks || ['])', '];
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalLinks: allLinks.length,;
-        brokenLinks: brokenLinks.length,;
-        workingLinks: allLinks.length - brokenLinks.length,;
-        internalLinks: internalResult.totalLinks || 0,;
-        externalLinks: externalResult.totalLinks || 0,},;
-      brokenLinks: brokenLinks.map(link => ({;
-        source: link.parent || 'unknown',;
-        target: link.url || 'unknown',;
-        status: link.status || 'unknown',;
-        type: link.url?.startsWith('http') ? 'external' : 'internal',})),;
-      recommendations: [],}});
-;
-      const externalBroken = brokenLinks.filter(link =>;
-        link.url?.startsWith('http');
-      );
+                "links": {}"
+                    found: links.length,"
+                    "checked": checkResults.total,
+                    "valid": checkResults.valid,
+                    "broken": checkResults.broken,
+                    "results": checkResults.results;
+                },
+                "recommendations": this.generateLinkRecommendations(checkResults);
+           };
+            fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+            this.log(`Link checker report saved to ${this.reportFile}`);
+            return report})};
+    generateLinkRecommendations(checkResults) {}
+        const recommendations = [];
 
-    );
-    fs.writeFileSync(markdownFile, markdownReport);
-this.log(`Link report generated: ${this.reportFile}`);this.log(`Markdown report generated: ${markdownFile}`);
-;
-    return report}
-;
-  generateMarkdownReport(report) {;
-    const { summary, brokenLinks, recommendations } = report;
-let markdown = `# Link Check Report - ${new Date().toLocaleDateString()}\n\n`;markdown += `## Summary\n`;markdown += `- **Total links checked**: ${summary.totalLinks}\n`;markdown += `- **Working links**: ${summary.workingLinks}\n`;markdown += `- **Broken links**: ${summary.brokenLinks}\n`;markdown += `- **Internal links**: ${summary.internalLinks}\n`;markdown += `- **External links**: ${summary.externalLinks}\n`;markdown += `- **Report generated**: ${new Date().toLocaleString()}\n\n`;
-;
-    if (brokenLinks.length > 0) {markdown += `## Broken Links\n\n`;markdown += `| Source | Target | Status | Type |\n`;markdown += `|--------|--------|--------|------|\n`});
-markdown += `\n## Recommendations\n\n`;
-      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`})} else {markdown += `## ✅ No Broken Links Found!\n\n`;markdown += `All links are working correctly.\n\n`;markdown += `## Recommendations\n\n`;
-      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`})}
-;
-    return markdown}
+            return report})};
+    generateLinkRecommendations(checkResults) {}
+        const recommendations = [];
+        
+        if ( {})
+=======
+        if ( {})"
+            recommendations.push('Fix or remove broken links')) {}
 
-    // Install linkinator;
-    const linkinatorResult = await this.installLinkinator();
-    if (!linkinatorResult) {;
-      this.log(Skipping link check due to linkinator installation failure',;
-        'ERROR';
-      );
-      return}
+            recommendations.push('Fix or remove broken links')};
+            recommendations.push('Implement automated link checking in CI/CD')};
+        recommendations.push('Use relative URLs for internal links when possible');
+        recommendations.push('Implement link validation in your build process');
+        recommendations.push('Consider using a link checker service for large projects');
+        return recommendations};
+    async run() {}
+        this.log('Link Checker Automation started');
+        try {}
+            const report = await this.generateLinkReport(;);
+            this.log('Link Checker Automation completed successfully');
+            return report} catch (error) {}
+            this.log(`Link Checker Automation "failed": ${error.message}`);
+=======
+        return recommendations};
+    async run() {}
+        this.log('Link Checker Automation started');
 
-      )}
-  }
-}
+            throw error};
+// Run the automation if this script is executed directly;
+    const automation = new LinkCheckerAutomation) {}
+    const automation = new LinkCheckerAutomation}(;);
+    automation.run().catch(console.error)};
 
-  const linkChecker = new LinkCheckerAutomation();
-  linkChecker.run().catch(error => {
-    console.error('Link checker automation failed:', error);
-    process.exit(1)})}
-;
+=======
 module.exports = LinkCheckerAutomation;
+=======
+module.exports = LinkCheckerAutomation;
+=======
+
+module.exports = LinkCheckerAutomation;
+
+=======

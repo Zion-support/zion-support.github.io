@@ -101,7 +101,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from '@/components/ui/button',
 import { toast } from '@/hooks/use-toast',
-import { Share, Users } from 'lucide-react',
+import { Share, Users } from 'lucide-react';
   const { isAuthenticated } = useAuth(),  const {
     isLoading,
     referralCode,
@@ -140,7 +140,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
-import { Share, Users } from 'lucide-react',;
+import { Share, Users } from 'lucide-react';;
 import { useNavigate } from 'react-router-dom',;
 ;
 export default function ReferralsPage() {;
