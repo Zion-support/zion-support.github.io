@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { fileURLToPath } from 'node:url'
 import path from 'path'
-
-const srcDir = fileURLToPath(new URL('./src', import.meta.url))
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,13 +12,13 @@ export default defineConfig({
       output: {
         inlineDynamicImports: false,
       },
-      external: [], 
+      external: [],
     },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
-    }
+      '@': path.resolve(__dirname, './src'),
+    },
   },
   server: {
     port: 3000,
