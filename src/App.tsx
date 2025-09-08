@@ -8,6 +8,9 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { AdvancedPerformanceOptimizer } from './components/AdvancedPerformanceOptimizer';
+import { EnhancedSEO } from './components/EnhancedSEO';
+import { EnhancedAnalytics } from './components/EnhancedAnalytics';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Pages - Lazy loaded for better performance
@@ -31,6 +34,7 @@ const FAQ = lazy(() => import('./pages/FAQ'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Support = lazy(() => import('./pages/Support'));
+const EnhancedMicroSAAS = lazy(() => import('./pages/EnhancedMicroSAAS'));
 
 function App() {
   return (
@@ -42,6 +46,8 @@ function App() {
               <ScrollToTop />
               <PerformanceMonitor />
               <PerformanceOptimizer enableMonitoring={import.meta.env.DEV} />
+              <AdvancedPerformanceOptimizer enableMonitoring={true} enableAutoOptimization={true} />
+              <EnhancedAnalytics />
               {import.meta.env.DEV && <PerformanceDashboard />}
               {/* SEO Meta Tags */}
               <Helmet>
@@ -69,6 +75,7 @@ function App() {
                     <Route path="/services/ai-services" element={<AIServices />} />
                     <Route path="/services/it-services" element={<ITServices />} />
                     <Route path="/services/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/enhanced-micro-saas" element={<EnhancedMicroSAAS />} />
                     <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                     <Route path="/services/cloud-solutions" element={<CloudMigration />} />
                     <Route path="/services/mobile-development" element={<MobileDevelopment />} />
