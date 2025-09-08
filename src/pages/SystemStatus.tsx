@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  CheckCircle, 
-  AlertCircle, 
-  XCircle, 
-  Clock, 
-  Activity,
-  Server,
-  Database,
-  Globe,
-  Shield,
-  Zap
-} from 'lucide-react';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp } from 'lucide-react';
 
 export default function SystemStatus() {
   const [services, setServices] = useState([
@@ -106,7 +95,7 @@ export default function SystemStatus() {
       case 'maintenance':
         return <Clock className="w-5 h-5 text-blue-500" />;
       default:
-        return <Activity className="w-5 h-5 text-gray-500" />;
+        return <Clock className="w-5 h-5 text-gray-500" />;
     }
   };
 
@@ -121,26 +110,34 @@ export default function SystemStatus() {
       case 'maintenance':
         return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
       default:
-        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+        return 'bg-gray-500';
     }
   };
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'low':
-        return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
-      case 'medium':
-        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
-      case 'high':
-        return 'text-red-400 bg-red-400/10 border-red-400/20';
-      case 'critical':
-        return 'text-red-600 bg-red-600/10 border-red-600/20';
-      default:
-        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-    }
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
   };
 
-  const overallStatus = services.every(service => service.status === 'operational') 
+  const refreshStatus = async () => {
+    setIsRefreshing(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setLastUpdated(new Date());
+    setIsRefreshing(false);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(refreshStatus, 30000); // Auto-refresh every 30 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  const overallStatus = services.every(s => s.status === 'operational') 
     ? 'operational' 
     : services.some(service => service.status === 'outage') 
     ? 'outage' 
@@ -202,30 +199,89 @@ export default function SystemStatus() {
             Service Status
           </h2>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="text-zion-cyan">{service.icon}</div>
-                    <div className="flex items-center gap-2">
-                      {getStatusIcon(service.status)}
-                      <span className="text-sm text-zion-slate-light">Operational</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="text-2xl">{service.icon}</div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                        <p className="text-sm text-slate-400">{service.description}</p>
+                      </div>
+                    </div>
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
+                      {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
+                      {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                    <p className="text-sm text-gray-400">{service.description}</p>
+
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-400 text-sm">Uptime</span>
+                      <span className="text-white font-medium">{service.uptime}%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-400 text-sm">Response Time</span>
+                      <span className="text-white font-medium">{service.responseTime}ms</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-400 text-sm">Last Updated</span>
+                      <span className="text-white font-medium text-sm">
+                        {new Date(service.lastUpdated).toLocaleTimeString()}
+                      </span>
+                    </div>
                   </div>
-                  
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)} mt-4 inline-block`}>
-                    {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
-                    {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Incidents */}
+      {incidents.length > 0 && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+          >
+            <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
+            <div className="space-y-4">
+              {incidents.map((incident, index) => (
+                <motion.div
+                  key={incident.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+                  className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(incident.severity)}`}>
+                          {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)}
+                        </div>
+                        <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          incident.status === 'resolved' 
+                            ? 'text-green-400 bg-green-400/10 border border-green-400/20'
+                            : incident.status === 'monitoring'
+                            ? 'text-blue-400 bg-blue-400/10 border border-blue-400/20'
+                            : 'text-yellow-400 bg-yellow-400/10 border border-yellow-400/20'
+                        }`}>
+                          {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
+                        </div>
+                      </div>
+                      <h3 className="text-lg font-semibold text-white mb-2">{incident.title}</h3>
+                      <p className="text-gray-300 mb-3">{incident.description}</p>
+                    </div>
                   </div>
 
                   <div className="space-y-3 mt-4">
@@ -470,6 +526,6 @@ export default function SystemStatus() {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

@@ -97,7 +97,148 @@ export default function Categories() {
     }
   ];
 
-  const industryCategories = [
+  const subCategories = {
+    'ai-ml': [
+      {
+        name: 'Natural Language Processing',
+        description: 'Text analysis, language models, and conversational AI',
+        icon: <Brain className="w-6 h-6" />,
+        services: 12,
+        talent: 8,
+        equipment: 3
+      },
+      {
+        name: 'Computer Vision',
+        description: 'Image recognition, object detection, and visual AI',
+        icon: <Eye className="w-6 h-6" />,
+        services: 9,
+        talent: 6,
+        equipment: 4
+      },
+      {
+        name: 'Machine Learning Platforms',
+        description: 'ML model training, deployment, and management',
+        icon: <Cpu className="w-6 h-6" />,
+        services: 15,
+        talent: 12,
+        equipment: 7
+      },
+      {
+        name: 'AI Consulting',
+        description: 'Strategic AI implementation and optimization',
+        icon: <Target className="w-6 h-6" />,
+        services: 8,
+        talent: 5,
+        equipment: 1
+      }
+    ],
+    'cloud': [
+      {
+        name: 'Cloud Migration',
+        description: 'Legacy system migration and cloud transformation',
+        icon: <Rocket className="w-6 h-6" />,
+        services: 11,
+        talent: 7,
+        equipment: 2
+      },
+      {
+        name: 'DevOps & CI/CD',
+        description: 'Automated deployment and infrastructure management',
+        icon: <Zap className="w-6 h-6" />,
+        services: 14,
+        talent: 9,
+        equipment: 3
+      },
+      {
+        name: 'Serverless Computing',
+        description: 'Event-driven and serverless architecture',
+        icon: <Cloud className="w-6 h-6" />,
+        services: 7,
+        talent: 4,
+        equipment: 1
+      }
+    ],
+    'cybersecurity': [
+      {
+        name: 'Threat Detection',
+        description: 'Advanced threat detection and response systems',
+        icon: <Shield className="w-6 h-6" />,
+        services: 13,
+        talent: 8,
+        equipment: 5
+      },
+      {
+        name: 'Compliance & Governance',
+        description: 'Security compliance and policy management',
+        icon: <Lock className="w-6 h-6" />,
+        services: 9,
+        talent: 6,
+        equipment: 2
+      },
+      {
+        name: 'Penetration Testing',
+        description: 'Security assessment and vulnerability testing',
+        icon: <Target className="w-6 h-6" />,
+        services: 6,
+        talent: 4,
+        equipment: 3
+      }
+    ],
+    'data': [
+      {
+        name: 'Business Intelligence',
+        description: 'Data visualization and business analytics',
+        icon: <BarChart3 className="w-6 h-6" />,
+        services: 18,
+        talent: 11,
+        equipment: 4
+      },
+      {
+        name: 'Big Data Processing',
+        description: 'Large-scale data processing and analytics',
+        icon: <Database className="w-6 h-6" />,
+        services: 12,
+        talent: 8,
+        equipment: 6
+      },
+      {
+        name: 'Data Engineering',
+        description: 'Data pipeline development and ETL processes',
+        icon: <Network className="w-6 h-6" />,
+        services: 6,
+        talent: 5,
+        equipment: 2
+      }
+    ],
+    'development': [
+      {
+        name: 'Web Development',
+        description: 'Frontend and backend web applications',
+        icon: <Code className="w-6 h-6" />,
+        services: 22,
+        talent: 15,
+        equipment: 3
+      },
+      {
+        name: 'Mobile Development',
+        description: 'iOS and Android mobile applications',
+        icon: <Smartphone className="w-6 h-6" />,
+        services: 16,
+        talent: 12,
+        equipment: 2
+      },
+      {
+        name: 'API Development',
+        description: 'RESTful APIs and microservices',
+        icon: <Network className="w-6 h-6" />,
+        services: 13,
+        talent: 8,
+        equipment: 1
+      }
+    ]
+  };
+
+  const featuredItems = [
     {
       id: 'finance',
       name: 'Financial Services',

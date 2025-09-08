@@ -1,150 +1,9 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
-  MessageSquare, 
-  Globe, 
-  Building,
-  CheckCircle,
-  AlertCircle
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 
-export default function Contact() {
-  const [activeForm, setActiveForm] = useState('general');
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setSubmitStatus('success');
-    setIsSubmitting(false);
-    
-    // Reset form after success
-    setTimeout(() => {
-      setSubmitStatus('idle');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
-        timeline: ''
-      });
-    }, 5000);
-  };
-
-  const getFormFields = () => {
-    const baseFields = [
-      { name: 'firstName', label: 'First Name', type: 'text', required: true },
-      { name: 'lastName', label: 'Last Name', type: 'text', required: true },
-      { name: 'email', label: 'Email Address', type: 'email', required: true },
-      { name: 'company', label: 'Company', type: 'text', required: false },
-      { name: 'phone', label: 'Phone Number', type: 'tel', required: false },
-      { name: 'subject', label: 'Subject', type: 'text', required: true },
-      { name: 'message', label: 'Message', type: 'textarea', required: true }
-    ];
-
-    if (activeForm === 'sales') {
-      return [
-        ...baseFields.slice(0, 6),
-        { name: 'budget', label: 'Budget Range', type: 'select', required: false, options: ['$10K - $50K', '$50K - $100K', '$100K - $500K', '$500K+'] },
-        { name: 'timeline', label: 'Project Timeline', type: 'select', required: false, options: ['1-3 months', '3-6 months', '6-12 months', '12+ months'] },
-        { name: 'projectType', label: 'Project Type', type: 'select', required: false, options: ['AI Implementation', 'Cloud Migration', 'Digital Transformation', 'Custom Development', 'Consulting'] },
-        { name: 'teamSize', label: 'Team Size', type: 'select', required: false, options: ['1-10', '11-50', '51-200', '200+'] },
-        baseFields[6]
-      ];
-    }
-
-    if (activeForm === 'partnership') {
-      return [
-        ...baseFields.slice(0, 6),
-        { name: 'projectType', label: 'Partnership Type', type: 'select', required: false, options: ['Technology Integration', 'Joint Development', 'Reseller Partnership', 'Strategic Alliance', 'Investment'] },
-        { name: 'timeline', label: 'Partnership Timeline', type: 'select', required: false, options: ['Immediate', '1-3 months', '3-6 months', '6+ months'] },
-        baseFields[6]
-      ];
-    }
-
-    return baseFields;
-  };
-
-  const renderField = (field: any) => {
-    if (field.type === 'textarea') {
-      return (
-        <textarea
-          name={field.name}
-          value={formData[field.name as keyof typeof formData] as string}
-          onChange={handleInputChange}
-          required={field.required}
-          rows={4}
-          className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-          placeholder={field.label}
-        />
-      );
-    }
-
-    if (field.type === 'select') {
-      return (
-        <select
-          name={field.name}
-          value={formData[field.name as keyof typeof formData] as string}
-          onChange={handleInputChange}
-          required={field.required}
-          className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        >
-          <option value="">Select {field.label}</option>
-          {field.options?.map((option: string) => (
-            <option key={option} value={option} className="bg-slate-800 text-white">
-              {option}
-            </option>
-          ))}
-        </select>
-      );
-    }
-
-    return (
-      <input
-        type={field.type}
-        name={field.name}
-        value={formData[field.name as keyof typeof formData] as string}
-        onChange={handleInputChange}
-        required={field.required}
-        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        placeholder={field.label}
-      />
-    );
-  };
 
   const contactMethods = [
     {
@@ -173,31 +32,11 @@ export default function Contact() {
     }
   ];
 
-  const services = [
-    'AI Development & Consulting',
-    'Cloud Infrastructure',
-    'Cybersecurity Solutions',
-    'Digital Transformation',
-    'Custom Software Development',
-    'Data Analytics & BI',
-    'IT Consulting',
-    'Other'
-  ];
-
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+'
-  ];
-
-  const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Long-term (6+ months)',
-    'Not sure yet'
+  const quickLinks = [
+    { title: 'Services', url: '/services', icon: '🚀' },
+    { title: 'About Us', url: '/about', icon: '🏢' },
+    { title: 'Pricing', url: '/pricing', icon: '💰' },
+    { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
   ];
 
   return (
@@ -549,6 +388,12 @@ export default function Contact() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}

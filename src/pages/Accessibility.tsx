@@ -1,8 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Accessibility, 
+import { motion  } from 'framer-motion';
+import { Accessibility, 
   Eye, 
   Ear, 
   MousePointer, 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { Users, 
   Target, 
   Award, 
   TrendingUp, 
@@ -14,71 +15,109 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
-  Play,
-  Quote
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+  Star,
+  TrendingUp,
+  Lightbulb,
+  Cpu,
+  Brain,
+  Cloud,
+  Lock,
+  Database,
+  Handshake
+ } from 'lucide-react';
 
-export default function About() {
-  const values = [
-    {
-      icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
-      color: 'from-yellow-500 to-orange-600'
-    },
-    {
-      icon: Users,
-      title: 'People-Centric',
-      description: 'Our team is our greatest asset. We invest in talent, foster collaboration, and celebrate diversity.',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      icon: Shield,
-      title: 'Trust & Security',
-      description: 'We build secure, reliable solutions that protect our clients\' data and maintain the highest ethical standards.',
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      icon: Rocket,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, delivering exceptional results that exceed expectations.',
-      color: 'from-purple-500 to-pink-600'
-    }
-  ];
+const stats = [
+  { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
+  { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
+  { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },
+  { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' }
+];
 
-  const milestones = [
-    {
-      year: '2020',
-      title: 'Company Founded',
-      description: 'Zion Tech Group was established with a vision to democratize AI technology for businesses of all sizes.',
-      achievement: 'Started with 5 team members'
-    },
-    {
-      year: '2021',
-      title: 'First Major Client',
-      description: 'Successfully delivered our first enterprise AI solution, establishing our reputation for quality.',
-      achievement: '100% client satisfaction'
-    },
-    {
-      year: '2022',
-      title: 'Team Expansion',
-      description: 'Grew our team to 25+ experts and opened our San Francisco headquarters.',
-      achievement: '300% team growth'
-    },
-    {
-      year: '2023',
-      title: 'Industry Recognition',
-      description: 'Received multiple industry awards and expanded our service portfolio.',
-      achievement: '5 industry awards'
-    },
-    {
-      year: '2024',
-      title: 'Global Expansion',
-      description: 'Launched international operations and served clients across 15+ countries.',
-      achievement: '15+ countries served'
-    }
-  ];
+const values = [
+  {
+    icon: Lightbulb,
+    title: 'Innovation First',
+    description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    icon: Award,
+    title: 'Excellence in Execution',
+    description: 'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.',
+    color: 'from-blue-500 to-cyan-500'
+  },
+  {
+    icon: Handshake,
+    title: 'Partnership Approach',
+    description: 'We work as an extension of your team, building long-term relationships based on trust and mutual success.',
+    color: 'from-green-500 to-emerald-500'
+  },
+  {
+    icon: Shield,
+    title: 'Security & Trust',
+    description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
+    color: 'from-red-500 to-orange-500'
+  }
+];
+
+const teamMembers = [
+  {
+    name: 'Kleber Santos',
+    role: 'CEO & Founder',
+    bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
+    expertise: ['AI Strategy', 'Digital Transformation', 'Business Innovation'],
+    image: '/images/team/kleber-santos.jpg'
+  },
+  {
+    name: 'Dr. Sarah Chen',
+    role: 'CTO & AI Research Lead',
+    bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.',
+    expertise: ['Machine Learning', 'AI Research', 'Technical Architecture'],
+    image: '/images/team/sarah-chen.jpg'
+  },
+  {
+    name: 'Marcus Rodriguez',
+    role: 'Head of Cloud & DevOps',
+    bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.',
+    expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure'],
+    image: '/images/team/marcus-rodriguez.jpg'
+  },
+  {
+    name: 'Dr. Emily Watson',
+    role: 'Cybersecurity Director',
+    bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
+    expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],
+    image: '/images/team/emily-watson.jpg'
+  }
+];
+
+const milestones = [
+  {
+    year: '2018',
+    title: 'Company Founded',
+    description: 'Zion Tech Group established with a vision to democratize AI technology.'
+  },
+  {
+    year: '2020',
+    title: 'First AI Product Launch',
+    description: 'Successfully launched our flagship AI compliance assistant.'
+  },
+  {
+    year: '2022',
+    title: 'Global Expansion',
+    description: 'Expanded operations to 25+ countries with 100+ enterprise clients.'
+  },
+  {
+    year: '2024',
+    title: 'Quantum Computing Initiative',
+    description: 'Launched quantum computing research and development program.'
+  },
+  {
+    year: '2025',
+    title: 'AI Ethics Leadership',
+    description: 'Recognized as industry leader in responsible AI development.'
+  }
+];
 
   const teamMembers = [
     {
@@ -292,6 +331,9 @@ export default function About() {
           </div>
         </div>
       </section>
+    </div>
+  );
+};
 
       {/* Team Section */}
       <section className="py-16 bg-slate-800/50">

@@ -49,11 +49,9 @@ interface SEOProps {
   author?: string;
   section?: string;
   tags?: string[];
-  structuredData?: object;
   noindex?: boolean;
   canonical?: string;
   ogLocale?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   twitterCreator?: string;
   twitterSite?: string;
 }

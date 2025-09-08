@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Headphones, 
-  MessageSquare, 
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { HelpCircle, 
+  MessageCircle, 
+  Mail, 
   Phone, 
   Mail, 
   Search, 

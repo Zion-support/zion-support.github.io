@@ -16,25 +16,8 @@ import {
   Brain,
   Shield,
   Rocket,
-  Cloud,
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  PenTool,
-  MessageCircle,
-  Calendar,
-  Award,
-  Atom,
-  Satellite,
-  Leaf,
-  Eye,
-  Clock,
-  BarChart,
-  ChevronDown,
-  ChevronRight
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+  Api
+ } from 'lucide-react';
 
 const Documentation: React.FC = () => {
   const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set(['getting-started']));
@@ -136,7 +119,28 @@ const Documentation: React.FC = () => {
       case 'Expert': return 'bg-red-500/20 text-red-400 border-red-500/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
+  ];
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'api': return <Api className="w-4 h-4" />;
+      case 'guide': return <BookOpen className="w-4 h-4" />;
+      case 'tutorial': return <Code className="w-4 h-4" />;
+      case 'reference': return <FileText className="w-4 h-4" />;
+      default: return <FileText className="w-4 h-4" />;
+    }
   };
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? docCategories : docCategories.filter(category => category.id === selectedCategory);
+
+  const searchResults = searchQuery 
+    ? docCategories.flatMap(category => 
+        category.articles.filter(article => 
+          article.title.toLowerCase().includes(searchQuery.toLowerCase())
+        ).map(article => ({ ...category, article }))
+      )
+    : [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">

@@ -18,7 +18,7 @@ export const innovativeMicroSaasServices2025 = [
             "Quantum machine learning models",
             "Secure quantum communication"
         ],
-        benefits[
+        benefits: [
             "1000x faster AI training",
             "Unbreakable quantum encryption",
             "Revolutionary drug discovery",

@@ -3,7 +3,6 @@ import React, { Suspense, useState, useEffect, useMemo } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 
-
 import { SEO  } from '@/components/SEO';
 import { HeroSection  } from '@/components/HeroSection';
 import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
@@ -21,7 +20,7 @@ const FuturisticBackground = React.memo(() => {
   );
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {particles.map((particle) => (
         <div
           key={particle.id}
@@ -302,7 +301,6 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group"
                 whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />

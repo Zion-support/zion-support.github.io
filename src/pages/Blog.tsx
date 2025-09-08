@@ -179,94 +179,74 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/30 border border-slate-600/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                      activeCategory === category.id
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                        : 'bg-slate-700/30 text-gray-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'
-                    }`}
-                  >
-                    <category.icon className="w-4 h-4 mr-2" />
-                    {category.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Post */}
-      {featuredPost && (
-        <section className="py-8">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="bg-slate-700/30 rounded-2xl border border-slate-600/30 p-8 hover:border-cyan-500/50 transition-all duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  <span className="bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Featured
-                  </span>
-                  <span className="ml-4 text-gray-400 text-sm">{formatDate(featuredPost.date)}</span>
-                </div>
-                
-                <h2 className="text-3xl font-bold text-white mb-4">{featuredPost.title}</h2>
-                <p className="text-gray-300 text-lg mb-6 leading-relaxed">{featuredPost.excerpt}</p>
-                
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center text-gray-400">
-                      <User className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{featuredPost.author}</span>
-                    </div>
-                    <div className="flex items-center text-gray-400">
-                      <Clock className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{featuredPost.readTime}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    {featuredPost.tags.slice(0, 3).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-xs text-cyan-400"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                <Link
-                  to={`/blog/${featuredPost.id}`}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+      {/* Featured Posts */}
+      {!searchQuery && (
+        <section className="py-20 bg-slate-900">
+          <div className="container mx-auto px-4">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Featured Articles
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Our most popular and insightful content on technology trends and innovations
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {featuredPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
                 >
-                  Read Full Article
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </motion.div>
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
+                    <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                      <div className="text-6xl">📱</div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                          {categories.find(c => c.id === post.category)?.name}
+                        </span>
+                        <span className="text-slate-400 text-sm">•</span>
+                        <span className="text-slate-400 text-sm">{post.readTime}</span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                        {post.title}
+                      </h3>
+                      
+                      <p className="text-slate-300 mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <User className="w-4 h-4 text-cyan-400" />
+                          </div>
+                          <div>
+                            <p className="text-sm text-white font-medium">{post.author}</p>
+                            <p className="text-xs text-slate-400">{post.date}</p>
+                          </div>
+                        </div>
+                        
+                        <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>

@@ -74,6 +74,28 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       setCurrentTheme(theme)}
   }, [theme]);
 
+  // Voice recognition setup
+  useEffect(() => {
+    if (enableVoice && 'webkitSpeechRecognition' in window) {
+      const SpeechRecognition = (window as any).webkitSpeechRecognition;
+      recognitionRef.current = new SpeechRecognition();
+      recognitionRef.current.continuous = false;
+      recognitionRef.current.interimResults = false;
+      recognitionRef.current.lang = 'en-US';
+
+      recognitionRef.current.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        setInputValue(transcript);
+        setIsListening(false);
+      };
+
+      recognitionRef.current.onerror = (event) => {
+        console.error('Speech recognition error: ', event.error);
+        setIsListening(false);
+      };
+    }
+  }, [enableVoice]);
+
   // Initialize with welcome message
   useEffect(() => {
     if (enabled && messages.length === 0) {

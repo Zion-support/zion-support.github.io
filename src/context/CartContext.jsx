@@ -1,8 +1,6 @@
 
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
-
 const initialState = { items: [] };
-
 function cartReducer(state, action) {
     switch (action.type) {
         case 'ADD_ITEM': {;
@@ -22,8 +20,6 @@ const existing = state.items.find(i => i.id === action.payload.id);
             return { items: state.items.filter(i => i.id !== action.payload) };
         case 'CLEAR_CART':
             return { items: [] };
-        case 'SET_ITEMS':
-            return { items: action.payload };
         default:
             return state;
     }
