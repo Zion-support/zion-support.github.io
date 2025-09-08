@@ -1,0 +1,6 @@
+[tools]
+python = "3.11.9"
+
+[settings]
+# Prefer precompiled Python on CI to avoid build failures/timeouts
+python.compile = false
