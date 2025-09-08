@@ -9,6 +9,20 @@ console.log('Process:', process.env.PM2_PROCESS || 'unknown');
 ;
 class ComprehensiveErrorFixer {;
   constructor() {;
+
+#!/usr/bin/env node;
+#!/usr/bin/env node
+/**
+ * Comprehensive Error Fixer
+ * Automatically fixes common syntax and import errors
+ */
+const fs = require("child_process");
+const path = require("child_process");
+
+const { execSync } = require("child_process");
+class ComprehensiveErrorFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
     this.logs = [];
     this.errors = [];
     this.fixes = []}
@@ -223,3 +237,9 @@ process.on('SIGINT', () => {;
   process.exit(0)});
 
   process.exit(1)});
+  fixer.run().catch(console.error)};
+
+module.exports = ComprehensiveErrorFixer;
+module.exports = ComprehensiveErrorFixer;
+
+

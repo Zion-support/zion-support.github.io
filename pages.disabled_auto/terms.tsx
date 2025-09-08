@@ -62,7 +62,7 @@ const Terms: React.FC = () => {
 :pages.disabled_auto/terms.tsx;
         description='Read our Terms of Service to understand the terms and conditions for using Zion Tech Group;
   's AI services and solutions.';
-        description='Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions.''/>{/* Hero Section */}
+        description='Read our Terms of Service to understand the terms and conditions for using Zion Tech Group's AI services and solutions.''/>{/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-7xl mx-auto text-center'>
