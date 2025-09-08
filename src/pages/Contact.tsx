@@ -367,21 +367,21 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email Us',
-      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
-      action: 'mailto:info@ziontechgroup.com'
+      title: 'Email',
+      details: ['kleber@ziontechgroup.com', 'support@ziontechgroup.com'],
+      href: 'mailto:kleber@ziontechgroup.com'
     },
     {
       icon: Phone,
-      title: 'Call Us',
-      details: ['+1 (302) 464-0950', '+1 (800) ZION-TECH'],
-      action: 'tel:+13024640950'
+      title: 'Phone',
+      details: ['+1 302 464 0950'],
+      href: 'tel:+13024640950'
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: ['123 Innovation Drive', 'Wilmington, DE 19801', 'United States'],
-      action: '#'
+      title: 'Office',
+      details: ['364 E Main St STE 1008', 'Middletown DE 19709'],
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       icon: Clock,

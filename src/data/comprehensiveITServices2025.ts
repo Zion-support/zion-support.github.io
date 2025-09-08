@@ -1,615 +1,534 @@
-export interface ComprehensiveITService2025 {
+export type ITServiceItem = {
   id: string;
   title: string;
   description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  category: 'IT Infrastructure' | 'Cybersecurity' | 'Cloud Services' | 'Data Management' | 'Network Solutions' | 'Digital Transformation' | 'IT Consulting' | 'Managed Services';
+  price: string;
+  billing: 'month' | 'project' | 'hour' | 'year';
   features: string[];
   benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
   marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  websiteUrl: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-  technologyStack: string[];
-  complianceStandards: string[];
-  integrationCapabilities: string[];
-  roiMetrics: string[];
-  competitiveAdvantages: string[];
-  marketSize: string;
-  competitors: string[];
-}
+  ctaLabel: string;
+  href: string;
+  external?: boolean;
+};
 
-export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService2025[] = [
-  // Cloud-Native Application Development
+export const comprehensiveITServices2025: ITServiceItem[] = [
+  // IT Infrastructure Services
   {
-    id: "cloud-native-app-development",
-    title: "Cloud-Native Application Development",
-    description: "End-to-end cloud-native application development services using microservices architecture, containerization, and DevOps practices for scalable, resilient applications.",
-    category: "Cloud & DevOps",
-    subcategory: "Application Development",
-    price: 15000,
-    currency: "$",
-    pricingModel: "project",
+    id: 'enterprise-network-infrastructure',
+    title: 'Enterprise Network Infrastructure Design',
+    description: 'Comprehensive network infrastructure design and implementation for enterprise environments',
+    category: 'IT Infrastructure',
+    price: '$15,000',
+    billing: 'project',
     features: [
-      "Microservices architecture design",
-      "Container orchestration with Kubernetes",
-      "CI/CD pipeline implementation",
-      "Cloud-native database design",
-      "Auto-scaling and load balancing",
-      "Monitoring and observability",
-      "Security and compliance",
-      "Performance optimization",
-      "Multi-cloud deployment",
-      "24/7 support and maintenance"
+      'Network architecture design',
+      'High-availability solutions',
+      'Load balancing configuration',
+      'Network security implementation',
+      'Performance optimization',
+      'Documentation and training'
     ],
     benefits: [
-      "99.9% uptime guarantee",
-      "Auto-scaling capabilities",
-      "Faster time to market",
-      "Reduced infrastructure costs",
-      "Improved performance and reliability"
+      'Improved network performance',
+      'Enhanced security posture',
+      'Scalable infrastructure',
+      'Reduced downtime'
     ],
-    useCases: [
-      "E-commerce platforms",
-      "SaaS applications",
-      "Enterprise applications",
-      "Mobile app backends",
-      "API services"
+    marketPrice: '$20,000-50,000',
+    ctaLabel: 'Schedule Consultation',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'data-center-optimization',
+    title: 'Data Center Optimization & Migration',
+    description: 'Optimize existing data centers and migrate to modern infrastructure solutions',
+    category: 'IT Infrastructure',
+    price: '$25,000',
+    billing: 'project',
+    features: [
+      'Infrastructure assessment',
+      'Migration planning',
+      'Performance optimization',
+      'Energy efficiency improvements',
+      'Disaster recovery setup',
+      'Monitoring implementation'
     ],
-    targetAudience: [
-      "Startups",
-      "Enterprise companies",
-      "E-commerce businesses",
-      "SaaS companies",
-      "Digital agencies"
+    benefits: [
+      'Reduced operational costs',
+      'Improved performance',
+      'Enhanced reliability',
+      'Better resource utilization'
     ],
-    tags: ["Cloud Native", "Microservices", "Kubernetes", "DevOps", "Docker"],
-    estimatedDelivery: "12-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$15,000 - $100,000/project",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/cloud-native-development",
-    technologyStack: ["Kubernetes", "Docker", "AWS", "Azure", "GCP", "React", "Node.js"],
-    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
-    integrationCapabilities: ["CI/CD Tools", "Monitoring Tools", "Security Tools", "Cloud Services"],
-    roiMetrics: ["99.9% uptime", "Auto-scaling", "300-500% ROI"],
-    competitiveAdvantages: ["Cloud-native expertise", "Microservices architecture", "DevOps practices"],
-    marketSize: "$89.2 billion by 2025",
-    competitors: ["Accenture", "Deloitte", "Infosys", "TCS"]
+    marketPrice: '$30,000-100,000',
+    ctaLabel: 'Get Assessment',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'virtualization-solutions',
+    title: 'Enterprise Virtualization Solutions',
+    description: 'Complete virtualization infrastructure for servers, desktops, and applications',
+    category: 'IT Infrastructure',
+    price: '$12,000',
+    billing: 'project',
+    features: [
+      'Server virtualization',
+      'Desktop virtualization (VDI)',
+      'Application virtualization',
+      'Storage virtualization',
+      'Performance monitoring',
+      'Backup and recovery'
+    ],
+    benefits: [
+      'Reduced hardware costs',
+      'Improved resource utilization',
+      'Enhanced disaster recovery',
+      'Simplified management'
+    ],
+    marketPrice: '$15,000-40,000',
+    ctaLabel: 'Start Free Assessment',
+    href: 'https://ziontechgroup.com/contact'
   },
 
-  // AI-Powered Data Analytics Platform
+  // Cybersecurity Services
   {
-    id: "ai-data-analytics-platform",
-    title: "AI-Powered Data Analytics Platform",
-    description: "Comprehensive data analytics platform using AI and machine learning to transform raw data into actionable insights for business decision-making.",
-    category: "AI & Analytics",
-    subcategory: "Data Analytics",
-    price: 8500,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'zero-trust-security-implementation',
+    title: 'Zero Trust Security Implementation',
+    description: 'Implement comprehensive zero trust security architecture for modern enterprise environments',
+    category: 'Cybersecurity',
+    price: '$18,000',
+    billing: 'project',
     features: [
-      "Real-time data processing",
-      "AI-powered insights generation",
-      "Predictive analytics",
-      "Custom dashboard creation",
-      "Data visualization tools",
-      "Machine learning models",
-      "Data integration capabilities",
-      "Advanced reporting",
-      "Mobile app access",
-      "API access"
+      'Identity and access management',
+      'Network segmentation',
+      'Multi-factor authentication',
+      'Continuous monitoring',
+      'Threat detection',
+      'Incident response planning'
     ],
     benefits: [
-      "Reduce analysis time by 80%",
-      "Improve decision accuracy by 60%",
-      "Real-time insights",
-      "Predictive capabilities",
-      "Scalable analytics infrastructure"
+      'Enhanced security posture',
+      'Reduced attack surface',
+      'Compliance with regulations',
+      'Improved threat detection'
     ],
-    useCases: [
-      "Business intelligence",
-      "Customer analytics",
-      "Financial analysis",
-      "Operational analytics",
-      "Market research"
+    marketPrice: '$25,000-75,000',
+    ctaLabel: 'Security Assessment',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'advanced-threat-detection',
+    title: 'Advanced Threat Detection & Response',
+    description: 'AI-powered threat detection and automated incident response system',
+    category: 'Cybersecurity',
+    price: '$2,500',
+    billing: 'month',
+    features: [
+      'AI threat detection',
+      'Behavioral analysis',
+      'Automated response',
+      'Threat intelligence',
+      'Incident investigation',
+      'Forensic analysis'
     ],
-    targetAudience: [
-      "Business analysts",
-      "Data scientists",
-      "Executives",
-      "Marketing teams",
-      "Sales teams"
+    benefits: [
+      'Faster threat detection',
+      'Reduced response time',
+      'Automated mitigation',
+      'Comprehensive protection'
     ],
-    tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence", "Predictive Analytics"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,500 - $25,000/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-analytics",
-    technologyStack: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
-    complianceStandards: ["SOC 2", "GDPR", "HIPAA", "ISO 27001"],
-    integrationCapabilities: ["CRM Systems", "ERP Systems", "Databases", "Cloud Services", "APIs"],
-    roiMetrics: ["80% reduction in analysis time", "60% improvement in decision accuracy", "250-400% ROI"],
-    competitiveAdvantages: ["AI-powered insights", "Real-time processing", "Predictive analytics"],
-    marketSize: "$103.9 billion by 2025",
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik"]
+    marketPrice: '$3,000-8,000/month',
+    ctaLabel: 'Start Free Trial',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'compliance-management-suite',
+    title: 'Compliance Management Suite',
+    description: 'Comprehensive compliance management for SOX, GDPR, HIPAA, and other regulations',
+    category: 'Cybersecurity',
+    price: '$1,800',
+    billing: 'month',
+    features: [
+      'Regulatory compliance tracking',
+      'Automated assessments',
+      'Policy management',
+      'Audit preparation',
+      'Risk assessment',
+      'Reporting automation'
+    ],
+    benefits: [
+      'Ensure compliance',
+      'Reduce audit risks',
+      'Automated reporting',
+      'Risk mitigation'
+    ],
+    marketPrice: '$2,500-6,000/month',
+    ctaLabel: 'Compliance Check',
+    href: 'https://ziontechgroup.com/contact'
   },
 
-  // Cybersecurity Managed Services
+  // Cloud Services
   {
-    id: "cybersecurity-managed-services",
-    title: "Cybersecurity Managed Services",
-    description: "Comprehensive cybersecurity managed services including threat monitoring, incident response, vulnerability management, and security consulting.",
-    category: "Cybersecurity",
-    subcategory: "Managed Services",
-    price: 3500,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'multi-cloud-strategy',
+    title: 'Multi-Cloud Strategy & Implementation',
+    description: 'Design and implement multi-cloud strategies for optimal performance and cost management',
+    category: 'Cloud Services',
+    price: '$22,000',
+    billing: 'project',
     features: [
-      "24/7 threat monitoring",
-      "Incident response team",
-      "Vulnerability assessments",
-      "Security awareness training",
-      "Compliance monitoring",
-      "Penetration testing",
-      "Security policy development",
-      "Risk assessments",
-      "Security reporting",
-      "Emergency response"
+      'Cloud strategy development',
+      'Multi-cloud architecture',
+      'Cost optimization',
+      'Security implementation',
+      'Migration planning',
+      'Performance monitoring'
     ],
     benefits: [
-      "Reduce security incidents by 70%",
-      "24/7 security monitoring",
-      "Expert security team",
-      "Compliance assurance",
-      "Peace of mind"
+      'Optimized cloud costs',
+      'Improved performance',
+      'Enhanced reliability',
+      'Vendor flexibility'
     ],
-    useCases: [
-      "Enterprise security",
-      "Small business security",
-      "Healthcare security",
-      "Financial security",
-      "Government security"
+    marketPrice: '$30,000-80,000',
+    ctaLabel: 'Cloud Strategy Session',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'cloud-cost-optimization',
+    title: 'Cloud Cost Optimization Platform',
+    description: 'AI-powered cloud cost optimization and resource management platform',
+    category: 'Cloud Services',
+    price: '$899',
+    billing: 'month',
+    features: [
+      'Cost analysis and tracking',
+      'Resource optimization',
+      'Automated scaling',
+      'Budget management',
+      'ROI tracking',
+      'Cost forecasting'
     ],
-    targetAudience: [
-      "Small businesses",
-      "Medium businesses",
-      "Large enterprises",
-      "Healthcare providers",
-      "Financial institutions"
+    benefits: [
+      'Reduce cloud costs by 30%',
+      'Optimize resource usage',
+      'Better budget control',
+      'Automated optimization'
     ],
-    tags: ["Cybersecurity", "Managed Services", "Threat Monitoring", "Incident Response", "Compliance"],
-    estimatedDelivery: "2-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,500 - $15,000/month",
-    roi: "200-350%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/cybersecurity-services",
-    technologyStack: ["SIEM Tools", "EDR Solutions", "Firewalls", "VPN", "Security Tools"],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-    integrationCapabilities: ["Security Tools", "Network Infrastructure", "Cloud Services", "Monitoring Tools"],
-    roiMetrics: ["70% reduction in security incidents", "24/7 monitoring", "200-350% ROI"],
-    competitiveAdvantages: ["24/7 monitoring", "Expert team", "Comprehensive coverage"],
-    marketSize: "$45.8 billion by 2025",
-    competitors: ["CrowdStrike", "SentinelOne", "FireEye", "Palo Alto Networks"]
+    marketPrice: '$1,200-3,000/month',
+    ctaLabel: 'Cost Analysis',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'serverless-architecture',
+    title: 'Serverless Architecture Implementation',
+    description: 'Design and implement serverless architectures for scalable and cost-effective applications',
+    category: 'Cloud Services',
+    price: '$16,000',
+    billing: 'project',
+    features: [
+      'Architecture design',
+      'Function development',
+      'API integration',
+      'Monitoring setup',
+      'Performance optimization',
+      'Cost analysis'
+    ],
+    benefits: [
+      'Reduced infrastructure costs',
+      'Automatic scaling',
+      'Faster development',
+      'Improved reliability'
+    ],
+    marketPrice: '$20,000-60,000',
+    ctaLabel: 'Serverless Assessment',
+    href: 'https://ziontechgroup.com/contact'
   },
 
-  // Digital Transformation Consulting
+  // Data Management Services
   {
-    id: "digital-transformation-consulting",
-    title: "Digital Transformation Consulting",
-    description: "Strategic digital transformation consulting services to help businesses modernize their operations, processes, and technology infrastructure.",
-    category: "Digital Transformation",
-    subcategory: "Consulting",
-    price: 25000,
-    currency: "$",
-    pricingModel: "project",
+    id: 'data-lake-implementation',
+    title: 'Enterprise Data Lake Implementation',
+    description: 'Build scalable data lakes for big data analytics and machine learning',
+    category: 'Data Management',
+    price: '$28,000',
+    billing: 'project',
     features: [
-      "Digital maturity assessment",
-      "Strategy development",
-      "Technology roadmap",
-      "Change management",
-      "Process optimization",
-      "Technology implementation",
-      "Training and support",
-      "Performance monitoring",
-      "Continuous improvement",
-      "Expert guidance"
+      'Data lake architecture',
+      'ETL pipeline development',
+      'Data governance',
+      'Security implementation',
+      'Analytics integration',
+      'Performance optimization'
     ],
     benefits: [
-      "Increase operational efficiency by 40%",
-      "Reduce costs by 30%",
-      "Improve customer experience",
-      "Enable innovation",
-      "Future-proof business"
+      'Centralized data storage',
+      'Improved analytics',
+      'Better data quality',
+      'Scalable architecture'
     ],
-    useCases: [
-      "Business process optimization",
-      "Technology modernization",
-      "Customer experience improvement",
-      "Operational efficiency",
-      "Innovation enablement"
+    marketPrice: '$35,000-100,000',
+    ctaLabel: 'Data Strategy Session',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'real-time-analytics-platform',
+    title: 'Real-Time Analytics Platform',
+    description: 'Real-time data processing and analytics platform for instant business insights',
+    category: 'Data Management',
+    price: '$1,200',
+    billing: 'month',
+    features: [
+      'Real-time data processing',
+      'Stream analytics',
+      'Dashboard creation',
+      'Alert system',
+      'Data visualization',
+      'Performance monitoring'
     ],
-    targetAudience: [
-      "Large enterprises",
-      "Medium businesses",
-      "Government agencies",
-      "Healthcare organizations",
-      "Financial institutions"
+    benefits: [
+      'Instant business insights',
+      'Faster decision making',
+      'Real-time monitoring',
+      'Improved responsiveness'
     ],
-    tags: ["Digital Transformation", "Consulting", "Strategy", "Change Management", "Technology"],
-    estimatedDelivery: "16-32 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$25,000 - $500,000/project",
-    roi: "400-600%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/digital-transformation",
-    technologyStack: ["Strategy Tools", "Process Tools", "Technology Platforms", "Analytics Tools"],
-    complianceStandards: ["Industry Standards", "Best Practices", "Regulatory Requirements"],
-    integrationCapabilities: ["Existing Systems", "New Technologies", "Processes", "People"],
-    roiMetrics: ["40% increase in efficiency", "30% cost reduction", "400-600% ROI"],
-    competitiveAdvantages: ["Expert consultants", "Proven methodology", "Comprehensive approach"],
-    marketSize: "$1.2 trillion by 2025",
-    competitors: ["McKinsey", "BCG", "Bain", "Deloitte"]
+    marketPrice: '$1,800-5,000/month',
+    ctaLabel: 'Analytics Demo',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'data-quality-management',
+    title: 'Data Quality Management Platform',
+    description: 'Comprehensive data quality management with automated monitoring and improvement',
+    category: 'Data Management',
+    price: '$999',
+    billing: 'month',
+    features: [
+      'Data quality assessment',
+      'Automated monitoring',
+      'Data cleansing',
+      'Quality scoring',
+      'Compliance tracking',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Improved data quality',
+      'Reduced errors',
+      'Better decision making',
+      'Compliance assurance'
+    ],
+    marketPrice: '$1,500-4,000/month',
+    ctaLabel: 'Quality Assessment',
+    href: 'https://ziontechgroup.com/contact'
   },
 
-  // IoT Solutions Development
+  // Network Solutions
   {
-    id: "iot-solutions-development",
-    title: "IoT Solutions Development",
-    description: "End-to-end IoT solutions development including hardware design, software development, cloud infrastructure, and data analytics for connected devices.",
-    category: "IoT & Edge Computing",
-    subcategory: "Solution Development",
-    price: 18000,
-    currency: "$",
-    pricingModel: "project",
+    id: 'sd-wan-implementation',
+    title: 'SD-WAN Implementation & Optimization',
+    description: 'Software-defined wide area network implementation for improved performance and cost efficiency',
+    category: 'Network Solutions',
+    price: '$20,000',
+    billing: 'project',
     features: [
-      "IoT hardware design",
-      "Embedded software development",
-      "Cloud infrastructure setup",
-      "Data analytics platform",
-      "Mobile applications",
-      "Real-time monitoring",
-      "Security implementation",
-      "Scalability planning",
-      "Integration services",
-      "Ongoing support"
+      'SD-WAN design',
+      'Implementation planning',
+      'Performance optimization',
+      'Security integration',
+      'Monitoring setup',
+      'Staff training'
     ],
     benefits: [
-      "Real-time data collection",
-      "Automated processes",
-      "Improved efficiency",
-      "Cost savings",
-      "New business opportunities"
+      'Improved network performance',
+      'Reduced costs',
+      'Better reliability',
+      'Simplified management'
     ],
-    useCases: [
-      "Smart manufacturing",
-      "Connected healthcare",
-      "Smart cities",
-      "Asset tracking",
-      "Environmental monitoring"
+    marketPrice: '$25,000-70,000',
+    ctaLabel: 'Network Assessment',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'network-performance-monitoring',
+    title: 'Network Performance Monitoring Suite',
+    description: 'Comprehensive network monitoring and performance optimization platform',
+    category: 'Network Solutions',
+    price: '$799',
+    billing: 'month',
+    features: [
+      'Real-time monitoring',
+      'Performance analytics',
+      'Alert system',
+      'Capacity planning',
+      'Troubleshooting tools',
+      'Reporting automation'
     ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Healthcare providers",
-      "City governments",
-      "Logistics companies",
-      "Utility companies"
+    benefits: [
+      'Proactive issue detection',
+      'Improved performance',
+      'Reduced downtime',
+      'Better planning'
     ],
-    tags: ["IoT", "Edge Computing", "Hardware", "Software", "Cloud", "Analytics"],
-    estimatedDelivery: "16-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$18,000 - $150,000/project",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/iot-solutions",
-    technologyStack: ["IoT Platforms", "Cloud Services", "Embedded Systems", "React", "Node.js"],
-    complianceStandards: ["IoT Security Standards", "Data Privacy", "Industry Regulations"],
-    integrationCapabilities: ["Existing Systems", "Cloud Services", "Mobile Apps", "Analytics Tools"],
-    roiMetrics: ["Real-time data collection", "Automated processes", "250-400% ROI"],
-    competitiveAdvantages: ["End-to-end solutions", "Hardware expertise", "Cloud integration"],
-    marketSize: "$1.1 trillion by 2025",
-    competitors: ["Siemens", "GE Digital", "Bosch", "Honeywell"]
+    marketPrice: '$1,000-3,000/month',
+    ctaLabel: 'Monitoring Demo',
+    href: 'https://ziontechgroup.com/contact'
   },
 
-  // Blockchain Development Services
+  // Digital Transformation
   {
-    id: "blockchain-development-services",
-    title: "Blockchain Development Services",
-    description: "Comprehensive blockchain development services including smart contracts, decentralized applications, and enterprise blockchain solutions.",
-    category: "Blockchain & Web3",
-    subcategory: "Development Services",
-    price: 22000,
-    currency: "$",
-    pricingModel: "project",
+    id: 'digital-workplace-transformation',
+    title: 'Digital Workplace Transformation',
+    description: 'Transform traditional workplaces into modern, digital-first environments',
+    category: 'Digital Transformation',
+    price: '$35,000',
+    billing: 'project',
     features: [
-      "Smart contract development",
-      "DApp development",
-      "Enterprise blockchain solutions",
-      "DeFi platform development",
-      "NFT marketplace development",
-      "Blockchain consulting",
-      "Security auditing",
-      "Performance optimization",
-      "Integration services",
-      "Ongoing maintenance"
+      'Workplace assessment',
+      'Technology strategy',
+      'Implementation planning',
+      'Change management',
+      'Training programs',
+      'Performance measurement'
     ],
     benefits: [
-      "Transparent and secure transactions",
-      "Reduced intermediaries",
-      "Improved efficiency",
-      "New business models",
-      "Competitive advantage"
+      'Improved productivity',
+      'Better collaboration',
+      'Enhanced employee experience',
+      'Cost optimization'
     ],
-    useCases: [
-      "Supply chain management",
-      "Financial services",
-      "Healthcare records",
-      "Digital identity",
-      "Asset tokenization"
+    marketPrice: '$50,000-150,000',
+    ctaLabel: 'Transformation Session',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'legacy-system-modernization',
+    title: 'Legacy System Modernization',
+    description: 'Modernize legacy systems with cloud-native technologies and microservices architecture',
+    category: 'Digital Transformation',
+    price: '$45,000',
+    billing: 'project',
+    features: [
+      'System assessment',
+      'Modernization strategy',
+      'Architecture design',
+      'Migration planning',
+      'Implementation',
+      'Testing and validation'
     ],
-    targetAudience: [
-      "Financial institutions",
-      "Healthcare providers",
-      "Supply chain companies",
-      "Government agencies",
-      "Technology companies"
+    benefits: [
+      'Improved performance',
+      'Reduced maintenance costs',
+      'Enhanced scalability',
+      'Better user experience'
     ],
-    tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFTs", "DApps"],
-    estimatedDelivery: "12-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$22,000 - $200,000/project",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/blockchain-development",
-    technologyStack: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
-    complianceStandards: ["Regulatory Compliance", "Security Standards", "Industry Regulations"],
-    integrationCapabilities: ["Existing Systems", "APIs", "Cloud Services", "Mobile Apps"],
-    roiMetrics: ["Transparent transactions", "Reduced intermediaries", "300-500% ROI"],
-    competitiveAdvantages: ["Blockchain expertise", "Security focus", "Performance optimization"],
-    marketSize: "$67.4 billion by 2025",
-    competitors: ["ConsenSys", "Chainalysis", "Alchemy", "Infura"]
+    marketPrice: '$60,000-200,000',
+    ctaLabel: 'Modernization Assessment',
+    href: 'https://ziontechgroup.com/contact'
   },
 
-  // AI-Powered Customer Service Platform
+  // IT Consulting
   {
-    id: "ai-customer-service-platform",
-    title: "AI-Powered Customer Service Platform",
-    description: "Intelligent customer service platform using AI chatbots, natural language processing, and automation to provide 24/7 customer support.",
-    category: "AI & Customer Service",
-    subcategory: "Support Platform",
-    price: 3800,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'technology-roadmap-development',
+    title: 'Technology Roadmap Development',
+    description: 'Strategic technology roadmap development aligned with business objectives',
+    category: 'IT Consulting',
+    price: '$8,000',
+    billing: 'project',
     features: [
-      "AI chatbots",
-      "Natural language processing",
-      "Multi-language support",
-      "Integration with CRM systems",
-      "Analytics and reporting",
-      "Customizable responses",
-      "Human handoff capabilities",
-      "Knowledge base management",
-      "Mobile app support",
-      "API access"
+      'Business alignment analysis',
+      'Technology assessment',
+      'Roadmap development',
+      'Implementation planning',
+      'Risk assessment',
+      'ROI analysis'
     ],
     benefits: [
-      "24/7 customer support",
-      "Reduce support costs by 60%",
-      "Improve response time by 80%",
-      "Increase customer satisfaction",
-      "Scalable support operations"
+      'Clear technology direction',
+      'Better resource planning',
+      'Risk mitigation',
+      'Improved ROI'
     ],
-    useCases: [
-      "Customer support",
-      "Sales support",
-      "Technical support",
-      "FAQ management",
-      "Lead qualification"
+    marketPrice: '$10,000-30,000',
+    ctaLabel: 'Strategy Session',
+    href: 'https://ziontechgroup.com/contact'
+  },
+  {
+    id: 'it-governance-framework',
+    title: 'IT Governance Framework Implementation',
+    description: 'Implement comprehensive IT governance frameworks for better decision making and risk management',
+    category: 'IT Consulting',
+    price: '$12,000',
+    billing: 'project',
+    features: [
+      'Governance assessment',
+      'Framework design',
+      'Policy development',
+      'Process implementation',
+      'Training programs',
+      'Performance monitoring'
     ],
-    targetAudience: [
-      "E-commerce companies",
-      "SaaS companies",
-      "Service businesses",
-      "Retail companies",
-      "Technology companies"
+    benefits: [
+      'Better decision making',
+      'Risk reduction',
+      'Compliance assurance',
+      'Improved efficiency'
     ],
-    tags: ["AI", "Customer Service", "Chatbots", "NLP", "Automation", "Support"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,800 - $15,000/month",
-    roi: "200-350%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-customer-service",
-    technologyStack: ["Python", "TensorFlow", "NLP", "React", "Node.js", "Chatbot Platforms"],
-    complianceStandards: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
-    integrationCapabilities: ["CRM Systems", "Help Desk Tools", "Communication Platforms", "Analytics Tools"],
-    roiMetrics: ["60% cost reduction", "80% faster response time", "200-350% ROI"],
-    competitiveAdvantages: ["AI-powered support", "24/7 availability", "Multi-language support"],
-    marketSize: "$25.7 billion by 2025",
-    competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"]
+    marketPrice: '$15,000-50,000',
+    ctaLabel: 'Governance Assessment',
+    href: 'https://ziontechgroup.com/contact'
   },
 
-  // Enterprise Resource Planning (ERP) Solutions
+  // Managed Services
   {
-    id: "erp-solutions",
-    title: "Enterprise Resource Planning (ERP) Solutions",
-    description: "Custom ERP solutions designed to streamline business operations, manage resources, and provide real-time insights across all departments.",
-    category: "Enterprise Software",
-    subcategory: "ERP Solutions",
-    price: 45000,
-    currency: "$",
-    pricingModel: "project",
+    id: 'managed-it-services',
+    title: 'Comprehensive Managed IT Services',
+    description: 'End-to-end managed IT services including infrastructure, security, and support',
+    category: 'Managed Services',
+    price: '$3,500',
+    billing: 'month',
     features: [
-      "Financial management",
-      "Inventory management",
-      "Human resources",
-      "Customer relationship management",
-      "Supply chain management",
-      "Project management",
-      "Business intelligence",
-      "Mobile applications",
-      "API integration",
-      "Custom reporting"
+      '24/7 monitoring',
+      'Proactive maintenance',
+      'Help desk support',
+      'Security management',
+      'Backup and recovery',
+      'Performance optimization'
     ],
     benefits: [
-      "Streamline operations",
-      "Improve efficiency by 40%",
-      "Reduce costs by 25%",
-      "Real-time insights",
-      "Better decision making"
+      'Reduced IT overhead',
+      'Improved reliability',
+      'Expert support',
+      'Predictable costs'
     ],
-    useCases: [
-      "Manufacturing",
-      "Retail",
-      "Healthcare",
-      "Financial services",
-      "Professional services"
-    ],
-    targetAudience: [
-      "Medium businesses",
-      "Large enterprises",
-      "Manufacturing companies",
-      "Service businesses",
-      "Multi-location businesses"
-    ],
-    tags: ["ERP", "Enterprise Software", "Business Management", "Operations", "Integration"],
-    estimatedDelivery: "20-32 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$45,000 - $500,000/project",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/erp-solutions",
-    technologyStack: ["React", "Node.js", "PostgreSQL", "Redis", "Cloud Services"],
-    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "Industry Standards"],
-    integrationCapabilities: ["Existing Systems", "Cloud Services", "Mobile Apps", "Analytics Tools"],
-    roiMetrics: ["40% efficiency improvement", "25% cost reduction", "300-500% ROI"],
-    competitiveAdvantages: ["Custom solutions", "Modern technology", "Comprehensive features"],
-    marketSize: "$96.7 billion by 2025",
-    competitors: ["SAP", "Oracle", "Microsoft Dynamics", "NetSuite"]
+    marketPrice: '$5,000-15,000/month',
+    ctaLabel: 'Service Assessment',
+    href: 'https://ziontechgroup.com/contact'
   },
-
-  // Mobile App Development Services
   {
-    id: "mobile-app-development-services",
-    title: "Mobile App Development Services",
-    description: "Professional mobile app development services for iOS and Android platforms, including native, cross-platform, and hybrid app solutions.",
-    category: "Mobile Development",
-    subcategory: "App Development",
-    price: 25000,
-    currency: "$",
-    pricingModel: "project",
+    id: 'managed-security-services',
+    title: 'Managed Security Services',
+    description: 'Comprehensive managed security services including monitoring, incident response, and compliance',
+    category: 'Managed Services',
+    price: '$2,800',
+    billing: 'month',
     features: [
-      "Native iOS development",
-      "Native Android development",
-      "Cross-platform development",
-      "UI/UX design",
-      "Backend development",
-      "API integration",
-      "Testing and quality assurance",
-      "App store submission",
-      "Maintenance and updates",
-      "Analytics integration"
+      'Security monitoring',
+      'Incident response',
+      'Vulnerability management',
+      'Compliance tracking',
+      'Security assessments',
+      'Staff training'
     ],
     benefits: [
-      "Professional app development",
-      "Cross-platform compatibility",
-      "Optimized performance",
-      "User-friendly design",
-      "Ongoing support"
+      'Enhanced security',
+      'Expert security team',
+      'Compliance assurance',
+      'Reduced risks'
     ],
-    useCases: [
-      "Business applications",
-      "E-commerce apps",
-      "Social media apps",
-      "Utility apps",
-      "Entertainment apps"
-    ],
-    targetAudience: [
-      "Startups",
-      "Small businesses",
-      "Medium businesses",
-      "Large enterprises",
-      "Individual entrepreneurs"
-    ],
-    tags: ["Mobile Development", "iOS", "Android", "Cross-Platform", "UI/UX", "Apps"],
-    estimatedDelivery: "12-20 weeks",
-    supportLevel: "premium",
-    marketPrice: "$25,000 - $200,000/project",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/mobile-development",
-    technologyStack: ["React Native", "Flutter", "Swift", "Kotlin", "Node.js", "Cloud Services"],
-    complianceStandards: ["App Store Guidelines", "Google Play Policies", "Security Standards"],
-    integrationCapabilities: ["Backend Services", "APIs", "Analytics Tools", "Payment Systems"],
-    roiMetrics: ["Professional development", "Cross-platform compatibility", "250-400% ROI"],
-    competitiveAdvantages: ["Multi-platform expertise", "Modern frameworks", "Quality assurance"],
-    marketSize: "$935.2 billion by 2025",
-    competitors: ["App Development Agencies", "Freelancers", "In-house Teams"]
+    marketPrice: '$4,000-12,000/month',
+    ctaLabel: 'Security Assessment',
+    href: 'https://ziontechgroup.com/contact'
   }
 ];
 
-export default COMPREHENSIVE_IT_SERVICES_2025;
+export default comprehensiveITServices2025;

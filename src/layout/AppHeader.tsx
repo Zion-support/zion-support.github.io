@@ -72,85 +72,59 @@ export function AppHeader() {
     }
   };
 
-  const mainNavigation = [
-    { 
-      name: 'Home', 
-      href: '/', 
-      current: true 
-    },
-    { 
-      name: 'Services', 
-      href: '/services-overview', 
-      current: false, 
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
-        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
-        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
-        { name: 'All Services 2027', href: '/all-services-2027', description: 'Latest service catalog' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', description: 'Future-ready solutions' }
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      href: '/ai-services', 
-      current: false, 
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent Process Automation' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-Powered Data Protection' },
-        { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
-        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
-        { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
-        { name: 'IoT & Edge', href: '/services/iot-edge', description: 'Smart Devices & Networks' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Ultra-Low Latency Processing' },
-        { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', description: 'DeFi & Smart Contracts' },
-        { name: 'Healthcare Tech', href: '/services/healthcare-tech', description: 'AI Medicine & Diagnostics' },
-        { name: 'Sustainability', href: '/services/sustainability', description: 'Green IT Solutions' },
-        { name: 'Micro SaaS', href: '/services/micro-saas-solutions', description: 'Productized SaaS for niches' },
-        { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', description: 'Faster replies, CRM logging' },
-        { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'NPS/CSAT with AI insights' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'On-brand AI content' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' },
-        { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', description: 'Fully autonomous business operations' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', description: 'Next-generation computational power' }
-      ]
-    },
-    { 
-      name: 'Company', 
-      href: '/about', 
-      current: false, 
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'About Us', href: '/about', description: 'Our story and mission' },
-        { name: 'Team', href: '/team', description: 'Meet our experts' },
-        { name: 'Careers', href: '/careers', description: 'Join our team' },
-        { name: 'Press', href: '/press', description: 'Latest news and media' },
-        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
-      ]
-    },
-    { 
-      name: 'Resources', 
-      href: '/help', 
-      current: false, 
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Help Center', href: '/help', description: 'Support and documentation' },
-        { name: 'Blog', href: '/blog', description: 'Industry insights and updates' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'Webinars', href: '/webinars', description: 'Educational content' },
-        { name: 'White Papers', href: '/white-papers', description: 'Research and analysis' },
-        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
-      ]
-    },
-    { 
-      name: 'Contact', 
-      href: '/contact', 
-      current: false 
-    }
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ];
+
+  const services = [
+    // AI & Analytics Services
+    { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', icon: Brain, description: 'Multi-agent AI coordination & workflow automation' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'AI Predictive Analytics', href: '/services/ai-predictive-analytics', icon: Brain, description: 'Advanced forecasting with 95% accuracy' },
+    { name: 'AI Customer Behavior Analytics', href: '/services/ai-customer-behavior-analytics', icon: Brain, description: 'Deep customer insights & personalization' },
+    
+    // AI Automation & Security
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Settings, description: 'Intelligent process automation' },
+    { name: 'AI Threat Detection', href: '/services/ai-threat-detection', icon: Shield, description: 'Advanced security with 97% accuracy' },
+    { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection', icon: Shield, description: 'Real-time fraud prevention' },
+    { name: 'AI Identity Verification', href: '/services/ai-identity-verification', icon: Shield, description: 'Biometric & document verification' },
+    
+    // AI Healthcare & Finance
+    { name: 'AI Medical Diagnosis', href: '/services/ai-medical-diagnosis', icon: Heart, description: 'AI-powered diagnostic support' },
+    { name: 'AI Trading Algorithms', href: '/services/ai-trading-algorithms', icon: DollarSign, description: 'Advanced trading intelligence' },
+    { name: 'AI Credit Risk Assessment', href: '/services/ai-credit-risk-assessment', icon: DollarSign, description: 'Intelligent risk scoring' },
+    
+    // AI Marketing & Operations
+    { name: 'AI Marketing Optimization', href: '/services/ai-marketing-optimization', icon: TrendingUp, description: 'Campaign & content optimization' },
+    { name: 'AI Content Generation', href: '/services/ai-content-generation', icon: BookOpen, description: 'Human-like content creation' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'End-to-end supply chain intelligence' },
+    { name: 'AI Quality Control', href: '/services/ai-quality-control', icon: CheckCircle, description: 'Computer vision inspection' },
+    
+    // Infrastructure & Emerging Tech
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Zap, description: 'Next-Generation Quantum Computing' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
+    
+    // Micro SaaS Solutions
+    { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: TrendingUp, description: 'Prioritize deals with ML' },
+    { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: '24/7 on-site assistant' },
+    { name: 'AI Content Optimizer Pro', href: '/services/ai-content-optimizer-pro', icon: BookOpen, description: 'AI-powered content optimization' },
+    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: TrendingUp, description: 'Sales automation & intelligence' },
+    { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', icon: Users, description: 'Customer success automation' },
+    { name: 'AI HR Talent Acquisition', href: '/services/ai-hr-talent-acquisition', icon: Users, description: 'AI-powered recruitment' },
+    
+    // Specialized Solutions
+    { name: 'Healthcare Technology', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability Solutions', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' }
   ];
 
   const servicesCategories = [
@@ -283,6 +257,15 @@ export function AppHeader() {
                             >
                               Contact Us
                             </Link>
+                            <div className="mt-3">
+                              <Link
+                                to="/comprehensive-services-showcase-2025-new"
+                                className="inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-700"
+                              >
+                                Comprehensive Services Showcase
+                                <ArrowRight className="ml-1 w-4 h-4" />
+                              </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
