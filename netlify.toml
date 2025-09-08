@@ -18,7 +18,7 @@
 # Attempt to disable Next.js plugin if installed via file-based config
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  enabled = false
+  pinned_version = "5"
 
 [[redirects]]
   from = "/*"
