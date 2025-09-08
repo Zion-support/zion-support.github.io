@@ -1,103 +1,71 @@
-interface ApiResponse<T = unknown> {
-  data?: T;
-  error?: string;
-  success: boolean;
-}
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
 
-interface RequestOptions extends RequestInit {
-  timeout?: number;
-}
+export class ApiClient {
+  private baseURL: string;
+  private defaultHeaders: Record<string, string>;
 
-// Add global type definitions for Node.js environment
-interface RequestInit {
-  method?: string;
-  headers?: Record<string, string>;
-  body?: string;
-  signal?: AbortSignal;
-  timeout?: number;
-}
-
-interface AbortSignal {
-  aborted: boolean;
-  addEventListener(type: string, listener: () => void): void;
-  removeEventListener(type: string, listener: () => void): void;
-}
-
-class AbortController {
-  signal: AbortSignal;
-  abort(): void;
-}
-
-class ApiClient {
-  private baseUrl: string;
-  private defaultTimeout: number;
-
-  constructor(baseUrl: string = '', defaultTimeout: number = 10000) {
-    this.baseUrl = baseUrl;
-    this.defaultTimeout = defaultTimeout;
+  constructor(baseURL: string = API_BASE_URL) {
+    this.baseURL = baseURL;
+    this.defaultHeaders = {
+      'Content-Type': 'application/json',
+    };
   }
 
   private async request<T>(
-    endpoint: string;
-    options: RequestOptions = {}
-  ): Promise<ApiResponse<T>> {
-    const { timeout = this.defaultTimeout, ...fetchOptions } = options;
-    
+    endpoint: string,
+    options: RequestInit = {}
+  ): Promise<T> {
+    const url = `${this.baseURL}${endpoint}`;
+    const config: RequestInit = {
+      ...options,
+      headers: {
+        ...this.defaultHeaders,
+        ...options.headers,
+      },
+    };
+
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-      const response = await fetch(`${this.baseUrl}${endpoint}`, {
-        ...fetchOptions;
-        signal: controller.signal;
-        headers: {
-          'Content-Type': 'application/json';
-          ...fetchOptions.headers;
-        };
-      });
-
-      clearTimeout(timeoutId);
-
+      const response = await fetch(url, config);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
-      const data = await response.json();
-      return { data, success: true };
+      return await response.json();
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error('API request failed:', error);
-      return {
-        error: error instanceof Error ? error.message : 'Unknown error occurred';
-        success: false;
-      };
+      throw error;
     }
   }
 
-  async get<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { ...options, method: 'GET' });
-  }
-
-  async post<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async get<T>(endpoint: string, options?: RequestInit): Promise<T> {
     return this.request<T>(endpoint, {
-      ...options;
-      method: 'POST';
-      body: data ? JSON.stringify(data) : undefined;
+      ...options,
+      method: 'GET',
     });
   }
 
-  async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async post<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
     return this.request<T>(endpoint, {
-      ...options;
-      method: 'PUT';
-      body: data ? JSON.stringify(data) : undefined;
+      ...options,
+      method: 'POST',
+      body: data ? JSON.stringify(data) : undefined,
     });
   }
 
-  async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
+  async put<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'PUT',
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+
+  async delete<T>(endpoint: string, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'DELETE',
+    });
   }
 }
 
 export const apiClient = new ApiClient();
-export type { ApiResponse, RequestOptions };
+export default apiClient;

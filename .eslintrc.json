@@ -1,11 +1,38 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": [
+    "next/core-web-vitals",
+    "@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "warn",
-    "no-unused-vars": "off",
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off"
-  }
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react/no-unescaped-entities": "warn",
+    "no-console": "warn"
+  },
+  "ignorePatterns": [
+    "pages.disabled*",
+    "pages._archive*",
+    "pages.corrupted*",
+    "pages.broken*",
+    "pages.bak*",
+    "pages-quarantine*",
+    "pages-backup*",
+    "pages.blog.disabled*",
+    "pages.disabled_auto*",
+    "pages_api.disabled*",
+    "pages_backup_conflict*",
+    "temp_*",
+    "tests.disabled*",
+    "lib.broken*",
+    "lib.disabled*",
+    "lib_backup*",
+    "hooks.disabled*",
+    "*.min.js",
+    "node_modules/",
+    ".next/",
+    "out/",
+    "dist/"
+  ]
 }
