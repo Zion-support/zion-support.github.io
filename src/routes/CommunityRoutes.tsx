@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
+import ErrorBoundary from "../components/ErrorBoundary";
 import CommunityPage from "../pages/CommunityPage";
 import { CommunityProvider } from "../context";
 import ForumCategoryPage from "../pages/ForumCategoryPage";
@@ -13,32 +14,41 @@ const CommunityRoutes = () => {
   return (
     <Routes>
       {/* Public routes */}
+      <Route path="/community" element={<CommunityPage />} />
+      <Route path="/forum" element={<CommunityPage />} />
       <Route
-        path="/community"
+        path="/community/category/:categoryId"
         element={
-          <CommunityProvider>
-            <CommunityPage />
-          </CommunityProvider>
+          <ErrorBoundary>
+            <ForumCategoryPage />
+          </ErrorBoundary>
         }
       />
       <Route
-        path="/forum"
+        path="/community/post/:postId"
         element={
-          <CommunityProvider>
-            <CommunityPage />
-          </CommunityProvider>
+          <ErrorBoundary>
+            <ForumPostPage />
+          </ErrorBoundary>
         }
       />
-      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />
-      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+      <Route
+        path="/community/profile/:userId"
+        element={
+          <ErrorBoundary>
+            <CommunityProfilePage />
+          </ErrorBoundary>
+        }
+      />
       
       {/* Protected routes */}
       <Route
         path="/community/create"
         element={
           <ProtectedRoute>
-            <CreatePostPage />
+            <ErrorBoundary>
+              <CreatePostPage />
+            </ErrorBoundary>
           </ProtectedRoute>
         }
       />
@@ -46,7 +56,9 @@ const CommunityRoutes = () => {
         path="/community/edit/:postId"
         element={
           <ProtectedRoute>
-            <EditPostPage />
+            <ErrorBoundary>
+              <EditPostPage />
+            </ErrorBoundary>
           </ProtectedRoute>
         }
       />
