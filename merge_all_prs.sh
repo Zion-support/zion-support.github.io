@@ -1,5 +1,7 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+=======
 ==="
 
 # Function to resolve merge conflicts
@@ -135,6 +137,7 @@ main() {
 # Run the main function
 main "$@"
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 echo "Starting automated PR merge process..."
 echo "=="
 
@@ -191,4 +194,7 @@ echo "All PRs processed. Pushing changes to main branch..."
 git push origin main --force
 
 echo "Process complete!"
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

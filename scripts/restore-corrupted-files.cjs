@@ -7,6 +7,15 @@ const fs = require("child_process");
 const fs = require("child_process");
 
 
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+=======
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 
 #!/usr/bin/env node;
 const fs = require("child_process");
@@ -15,6 +24,7 @@ const fs = require("child_process");
 
 
 const path = require("path");
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
 class FileRestorer {}
   constructor() {}
@@ -23,61 +33,6 @@ class FileRestorer {}
     this.errors = []};
   log(message) {}
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message})};
-  async restoreFile(filePath) {}
-    try {}"
-      const content = fs.readFileSync(filePath, "utf8");"
-      // Fix common corruption patterns;
-      let fixedContent = content;
-        // Remove extra semicolons and quotes at end of lines;"
-
-        // Fix unterminated strings;"
-        .replace(/from "([^"]*);$/gm, "from "$1);
-        .replace(/from "([^"]*);$/gm, "from "$1);"
-        // Fix malformed imports;"
-        .replace(/import type { AppProps } from "next \/ app",/g, "import type { AppProps } from "next/app);
-        .replace(/import "([^"]*);$/gm, "import "$1);
-        .replace(/import "([^"]*);$/gm, "import "$1);"
-        // Fix malformed JSX returns;"
-        .replace(/return \(/g, "return (");
-        .replace(/return \(,/g, "return (");
-        .replace(/<([^>]*);$/gm, "<$1>");
-        .replace(/<([^>]*),$/gm, "<$1>");"
-        // Fix malformed component syntax;"
-        .replace(/<([A-Z][a-zA-Z]*)\s+([^>]*);$/gm, "<$1 $2>");
-        .replace(/<([A-Z][a-zA-Z]*)\s+([^>]*),$/gm, "<$1 $2>");"
-        // Remove stray import statements inside JSX;"
-        .replace(/\s+import\s+[^]+;/g, );"
-        // Fix malformed quotes in attributes;"
-        .replace(/title\s*=\s*"([^"]*)/g, "title="$1);
-        .replace(/description\s*=\s*"([^"]*)/g, "description="$1);"
-        // Fix malformed closing tags;"
-        .replace(/<\/>;/g, "</>");
-        .replace(/<\/>,/g, "</>");"
-        // Clean up extra whitespace and newlines;"
-        .replace(/\n\s*\n\s*\n/g, "\n\n");"
-        .trim();
-      // Only write if content actually changed;
-      if (fixedContent !== content) {}"
-        fs.writeFileSync(filePath, fixedContent, "utf8");"
-        fs.writeFileSync(filePath, fixedContent, "utf8);
-
-      return false};
-  };
-  async findCorruptedFiles(dir) {}
-    const corruptedFiles = []
-    const scanDir = (currentDir) => {}
-      const items = fs.readdirSync(currentDir)
-  for($2) {}
-        const fullPath = path.join(currentDir, item)
-        const stat = fs.statSync(fullPath);"
-        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {}
-          scanDir(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".ts") || item.endsWith(".js"))) {}"
-            const content = fs.readFileSync(fullPath, "utf8");"
-            // Check for corruption patterns;"
-            if (content.includes(";) ||
-                content.includes(") ||
-                content.includes("from ) && content.includes() ||
                 content.includes("return (") ||
                 content.includes("return (,")) {}"
               corruptedFiles.push(fullPath)};

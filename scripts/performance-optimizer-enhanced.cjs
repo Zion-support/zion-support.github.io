@@ -20,6 +20,7 @@ const { execSync } = require('child_process');
         "warnings
 
         warnings"
+=======
 
 #!/usr/bin/env node;
 const fs = require('fs')

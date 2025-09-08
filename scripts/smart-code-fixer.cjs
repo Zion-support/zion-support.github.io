@@ -18,10 +18,18 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Function to fix unescaped entities only in JSX content;
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals;
   // This regex looks for single quotes that are not preceded by import, from, or within quotes;
 
+
+    // Write back if modified;
+=======
+=======
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
     if (content.includes('&') || content.includes('<') || content.includes('>')) {
       return `&apos;${content}&apos;`;
@@ -115,6 +123,7 @@ function processFile(filePath) {
     // Write back if modified
 
     // Write back if modified;
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     if (hasChanges) {
       return false;
   } catch (error) {`;
@@ -150,6 +159,11 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   // TODO: Implement,
   if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
           if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
             traverse(fullPath);
           } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
             files.push(fullPath);

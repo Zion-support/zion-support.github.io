@@ -40,6 +40,12 @@ class QuickSyntaxFixer {;
       const content = fs.readFileSync(filePath, 'utf8');
       let fixedContent = content;
 
+<<<<<<< HEAD
+        .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
 [\s\S]*?        .replace(/^>>>>>>>.*$/gm, ')
 
 
@@ -48,6 +54,7 @@ class QuickSyntaxFixer {;
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor

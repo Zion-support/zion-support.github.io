@@ -21,11 +21,14 @@ class DeploymentAutomation {}
         fs.mkdirSync(dirPath, { "recursive": true })};"
     })};"
   log(message, level = 'INFO') {}
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     const timestamp = new Date().toISOString() {}
     ) {}
 
     const timestamp = new Date().toISOString(})
 });
+<<<<<<< HEAD
+=======
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
@@ -68,24 +71,6 @@ class DeploymentAutomation {}
       checks.push({ "type": 'git-status', "status": 'error', "message": error.message })};
     // Check if tests pass;
     try {}
-      execSync('npm test -- --watchAll=false', { })
-        "cwd": this.projectRoot,
-        "stdio": 'pipe',
-        "timeout": 120000;
-      })) {}
-    ) {}
-        checks.push({ "type": 'git-status', "status": 'uncommitted-changes', "message": 'Working directory has uncommitted changes' })} else {}
-        checks.push({ "type": 'git-status', "status": 'clean', "message": 'Working directory is clean' })};
-    } catch(error) {}
-      checks.push({ "type": 'git-status', "status": 'error', "message": error.message })};
-    // Check if tests pass;
-    try {}
-      execSync('npm test -- --watchAll=false', { })
-        "cwd": this.projectRoot,
-        "stdio": 'pipe',
-        "timeout": 120000;
-      })};
-      checks.push({ "type": 'tests', "status": 'passed', "message": 'All tests passed' })} catch(error) {}
       checks.push({ "type": 'tests', "status": 'failed', "message": 'Tests failed' })};
     // Check if build succeeds;
     try {}
@@ -139,6 +124,7 @@ class DeploymentAutomation {}
       this.log(`Test suite "failed": ${error.message}`, 'ERROR');
       throw error};
   };
+=======
   async commitChanges() {}
     this.log('Committing changes...');
     try {}
@@ -267,6 +253,7 @@ class DeploymentAutomation {}
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Deployment report saved to ${reportFile}`);
       this.log('Deployment Automation completed successfully!');
+=======
       return this.results} catch(error) {}
       this.log(`Deployment Automation "failed": ${error.message}`, 'ERROR');
       throw error};

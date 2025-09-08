@@ -52,11 +52,16 @@ const { execSync } = require('child_process')
 // console.log(\n "RECOMMENDATIONS)
     console.log('\n� Final report saved to")
 
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
     console.error('Ultimate automation orchestrator "failed)
 
     console.error('Ultimate automation orchestrator failed")
 
+<<<<<<< HEAD
+=======
+=======
+=======
 
 #!/usr/bin/env node;
 const fs = require('fs')
