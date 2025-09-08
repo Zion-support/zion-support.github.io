@@ -81,45 +81,12 @@ export function EnhancedFooter() {
     {
       title: "Industry Solutions",
       links: [
-        { name: "Enterprise Solutions", href: "/solutions/enterprise", icon: Building },
-        { name: "Healthcare Solutions", href: "/solutions/healthcare", icon: Heart },
-        { name: "Financial Services", href: "/solutions/financial", icon: DollarSign },
-        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Truck },
-        { name: "Government", href: "/solutions/government", icon: Building },
-        { name: "Education", href: "/solutions/education", icon: GraduationCap }
-      ]
-    },
-    {
-      title: "Company",
-      links: [
-        { name: "About Us", href: "/about", icon: Users },
-        { name: "Our Team", href: "/team", icon: Users },
-        { name: "Careers", href: "/careers", icon: Star },
-        { name: "Partners", href: "/partners", icon: Handshake },
-        { name: "News", href: "/news", icon: Newspaper },
-        { name: "Blog", href: "/blog", icon: BookOpen }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { name: "Documentation", href: "/documentation", icon: FileText },
-        { name: "API Reference", href: "/api", icon: Code },
-        { name: "Developer Portal", href: "/developers", icon: Terminal },
-        { name: "Help Center", href: "/help", icon: HelpCircle },
-        { name: "Training", href: "/training", icon: BookOpen },
-        { name: "White Papers", href: "/white-papers", icon: FileText }
-      ]
-    },
-    {
-      title: "Support",
-      links: [
-        { name: "Contact Us", href: "/contact", icon: MessageCircle },
-        { name: "Support Portal", href: "/support", icon: HelpCircle },
-        { name: "Status Page", href: "/status", icon: CheckCircle },
-        { name: "FAQ", href: "/faq", icon: MessageCircle },
-        { name: "Request Quote", href: "/request-quote", icon: DollarSign },
-        { name: "Live Chat", href: "/chat", icon: MessageCircle }
+        { name: 'Help Center', href: '/help' },
+        { name: 'System Status', href: '/status' },
+        { name: 'API Documentation', href: '/api' },
+        { name: 'Developer Portal', href: '/developer-portal' },
+        { name: 'Community', href: '/community' },
+        { name: 'Contact Support', href: '/contact' }
       ]
     }
   ];
@@ -131,13 +98,6 @@ export function EnhancedFooter() {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
-  ];
-
-  const contactInfo = [
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: 'https://maps.google.com' },
-    { icon: Globe, text: 'https://ziontechgroup.com', href: 'https://ziontechgroup.com' }
   ];
 
   return (

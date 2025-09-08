@@ -27,15 +27,39 @@ import InteractiveUserExperience from './components/InteractiveUserExperience';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Service pages
-const AISolutionsPage = lazy(() => import('./pages/services/ai-solutions').then(module => ({ default: module.AISolutionsPage })));
-const QuantumComputingPage = lazy(() => import('./pages/services/quantum-computing').then(module => ({ default: module.QuantumComputingPage })));
-const CybersecurityPage = lazy(() => import('./pages/services/cybersecurity').then(module => ({ default: module.CybersecurityPage })));
-const CloudDevOpsPage = lazy(() => import('./pages/services/cloud-devops').then(module => ({ default: module.CloudDevOpsPage })));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Services2026 = createLazyComponent(() => import('./pages/Services2026'));
+const Services2027 = createLazyComponent(() => import('./pages/InnovativeServices2027'));
+const AIServices = createLazyComponent(() => import('./pages/services/AIServices'));
+const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
+const ITServices = createLazyComponent(() => import('./pages/services/ITServices'));
+const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/MicroSAASSolutions'));
+const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
 
-// New pages
-const Solutions = React.lazy(() => import('./pages/Solutions'));
-const Resources = React.lazy(() => import('./pages/Resources'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+// New service pages
+const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
+const CloudDevOps = createLazyComponent(() => import('./pages/CloudDevOps'));
+const Cybersecurity = createLazyComponent(() => import('./pages/Cybersecurity'));
+
+// Solution pages
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const SolutionsEnterprise = createLazyComponent(() => import('./pages/solutions/Enterprise'));
+const SolutionsSMB = createLazyComponent(() => import('./pages/solutions/SMB'));
+const SolutionsIndustries = createLazyComponent(() => import('./pages/solutions/Industries'));
+const SolutionsCloud = createLazyComponent(() => import('./pages/solutions/Cloud'));
+
+// Resource pages
+const Resources = createLazyComponent(() => import('./pages/Resources'));
+
+// Additional pages
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const Developers = createLazyComponent(() => import('./pages/Developers'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Status = createLazyComponent(() => import('./pages/Status'));
 
 // Additional service pages
 const CloudDevOps = createLazyComponent(() => import('./pages/cloud-devops'));
@@ -350,8 +374,49 @@ function App() {
                 <Route path="/services/ai-healthcare-diagnosis" element={<AIHealthcareDiagnosis />} />
                 <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
 
-                {/* Site Map */}
-                <Route path="/sitemap" element={<Sitemap />} />
+                  {/* Service Routes */}
+                  <Route path="/ai-services" element={<AIServices />} />
+                  <Route path="/ai-solutions" element={<AISolutions />} />
+                  <Route path="/it-services" element={<ITServices />} />
+                  <Route path="/micro-saas" element={<MicroSaaS />} />
+                  <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+                  <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+                  
+                  {/* New Service Routes */}
+                  <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                  <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                  
+                  {/* Solution Routes */}
+                  <Route path="/solutions" element={<Solutions />} />
+                  <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+                  <Route path="/solutions/smb" element={<SolutionsSMB />} />
+                  <Route path="/solutions/industries" element={<SolutionsIndustries />} />
+                  <Route path="/solutions/cloud" element={<SolutionsCloud />} />
+                  
+                  {/* Resource Routes */}
+                  <Route path="/resources" element={<Resources />} />
+                  <Route path="/mobile-launch" element={<MobileLaunch />} />
+                  <Route path="/analytics" element={<Analytics />} />
+                  <Route path="/match" element={<Match />} />
+                  <Route path="/search" element={<SearchPage />} />
+                  <Route path="/case-studies" element={<CaseStudies />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  <Route path="/white-papers" element={<WhitePapers />} />
+                  <Route path="/press" element={<Press />} />
+                  <Route path="/webinars" element={<Webinars />} />
+                  <Route path="/training" element={<Training />} />
+                  <Route path="/support" element={<Support />} />
+                  <Route path="/documentation" element={<Documentation />} />
+                  <Route path="/developers" element={<Developers />} />
+                  <Route path="/research-development" element={<ResearchDevelopment />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/green-it" element={<GreenIT />} />
+                  <Route path="/space-tech" element={<GreenIT />} />
+                  <Route path="/quantum-technology" element={<GreenIT />} />
+                  <Route path="/financial-solutions" element={<GreenIT />} />
+                  <Route path="/mobile" element={<GreenIT />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

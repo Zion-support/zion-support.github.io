@@ -1,168 +1,252 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Building, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Database, 
-  Network, 
-  Globe, 
+import {
+  Building,
+  Users,
+  Database,
+  Shield,
+  Cloud,
+  BarChart3,
+  Workflow,
   Zap,
-  CheckCircle,
-  ArrowRight,
+  Globe,
+  Lock,
   Cpu,
+  Server,
+  Network,
   Brain,
   Rocket,
   Target,
-  Award,
+  CheckCircle,
+  ArrowRight,
   Star,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  FileText,
-  BarChart3,
-  Settings,
-  ShoppingCart,
+  Award,
+  TrendingUp,
   DollarSign,
-  Lightbulb
+  Clock,
+  MessageCircle,
+  Smartphone,
+  CreditCard,
+  ShoppingCart,
+  FileText
 } from 'lucide-react';
 
-const SMBSolutions = () => {
+export default function SMBSolutions() {
   const solutions = [
     {
-      title: 'Business Process Automation',
-      description: 'Streamline operations and reduce manual work with AI-powered automation solutions',
-      features: ['Workflow automation', 'Document processing', 'Customer service bots', 'Data entry automation'],
+      title: 'AI-Powered Business Tools',
+      description: 'Affordable AI solutions designed for small and medium businesses',
       icon: Brain,
-      href: '/services/ai-workflow-orchestrator'
+      features: [
+        'AI content creation',
+        'Customer service automation',
+        'Marketing optimization',
+        'Data analysis tools',
+        'Process automation'
+      ],
+      href: '/services/ai-content-creation'
     },
     {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and cost-effective cloud solutions designed for growing businesses',
-      features: ['Cloud migration', 'Managed services', 'Backup & recovery', '24/7 monitoring'],
+      title: 'Cloud Business Suite',
+      description: 'Scalable cloud solutions that grow with your business',
       icon: Cloud,
+      features: [
+        'Cloud storage and backup',
+        'Collaboration tools',
+        'Business applications',
+        'Scalable infrastructure',
+        'Cost optimization'
+      ],
       href: '/services/cloud-devops'
     },
     {
-      title: 'Digital Marketing & Analytics',
-      description: 'Data-driven marketing solutions to grow your customer base and revenue',
-      features: ['SEO optimization', 'Social media management', 'Analytics dashboard', 'Lead generation'],
-      icon: BarChart3,
-      href: '/services/ai-marketing-automation'
+      title: 'Cybersecurity Essentials',
+      description: 'Essential security solutions for business protection',
+      icon: Shield,
+      features: [
+        'Virus protection',
+        'Firewall security',
+        'Data backup',
+        'Employee training',
+        'Security monitoring'
+      ],
+      href: '/services/cybersecurity'
     },
     {
-      title: 'Cybersecurity & Compliance',
-      description: 'Protect your business with enterprise-grade security at SMB-friendly pricing',
-      features: ['Threat protection', 'Data encryption', 'Compliance monitoring', 'Security training'],
-      icon: Shield,
-      href: '/services/ai-cybersecurity-suite'
+      title: 'Business Intelligence',
+      description: 'Data-driven insights to make better business decisions',
+      icon: BarChart3,
+      features: [
+        'Sales analytics',
+        'Customer insights',
+        'Performance tracking',
+        'Financial reporting',
+        'Market analysis'
+      ],
+      href: '/services/data-analytics'
+    },
+    {
+      title: 'Workflow Automation',
+      description: 'Streamline operations and improve efficiency',
+      icon: Workflow,
+      features: [
+        'Process automation',
+        'Task management',
+        'Document workflows',
+        'Integration tools',
+        'Performance metrics'
+      ],
+      href: '/services/ai-workflow-orchestrator'
+    },
+    {
+      title: 'E-commerce Solutions',
+      description: 'Complete online business solutions',
+      icon: ShoppingCart,
+      features: [
+        'Online store setup',
+        'Payment processing',
+        'Inventory management',
+        'Customer management',
+        'Marketing tools'
+      ],
+      href: '/services/ecommerce-solutions'
     }
   ];
 
-  const industries = [
-    'Retail',
-    'Manufacturing',
-    'Professional Services',
-    'Healthcare',
-    'Real Estate',
-    'Restaurants'
+  const benefits = [
+    {
+      title: 'Affordable',
+      description: 'Cost-effective solutions for growing businesses',
+      icon: DollarSign
+    },
+    {
+      title: 'Scalable',
+      description: 'Grow with your business needs',
+      icon: TrendingUp
+    },
+    {
+      title: 'Easy to Use',
+      description: 'Simple interfaces and quick setup',
+      icon: Zap
+    },
+    {
+      title: 'Support',
+      description: 'Dedicated support for your business',
+      icon: MessageCircle
+    }
   ];
 
-  const benefits = [
-    'Cost-effective solutions',
-    'Scalable growth',
-    'Quick implementation',
-    'Dedicated support',
-    'ROI-focused approach',
-    'Flexible pricing models'
+  const businessTypes = [
+    'Retail & E-commerce',
+    'Professional Services',
+    'Healthcare',
+    'Manufacturing',
+    'Restaurants',
+    'Real Estate',
+    'Consulting',
+    'Technology Startups'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              SMB Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Technology solutions designed specifically for small to medium businesses to drive growth and efficiency
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/schedule-demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-orange-500 text-orange-400 font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
-            </div>
+            SMB
+            <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent"> Solutions</span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Powerful, affordable technology solutions designed specifically for small and medium businesses. 
+            Level the playing field with enterprise-grade tools at SMB prices.
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/comprehensive-pricing-guide-2025"
+              className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
           </motion.div>
         </div>
       </section>
 
       {/* Solutions Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
             className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Comprehensive SMB Solutions
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Solutions Built for Growing Businesses
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From automation to cybersecurity, we provide the tools you need to compete with larger enterprises
+              From AI-powered tools to essential business applications, we provide the technology 
+              foundation your business needs to compete and grow.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-8 border border-slate-600 hover:border-orange-500 transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg mr-4">
-                    <solution.icon className="h-8 w-8 text-white" />
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <solution.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
+                  <h3 className="text-xl font-semibold text-white group-hover:text-green-400 transition-colors">
+                    {solution.title}
+                  </h3>
                 </div>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
+                <p className="text-gray-300 mb-4">{solution.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                  {solution.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   to={solution.href}
-                  className="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold transition-colors duration-300"
+                  className="inline-flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors font-medium"
                 >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -170,70 +254,79 @@ const SMBSolutions = () => {
         </div>
       </section>
 
-      {/* Industries Served */}
-      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div 
             className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Industries We Serve
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why SMBs Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored solutions for various small to medium business sectors
+              We understand the unique challenges of growing businesses and provide solutions 
+              that deliver immediate value and long-term growth.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
-                key={industry}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg p-6 text-center border border-slate-600 hover:border-orange-500 transition-all duration-300"
+                key={benefit.title}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <Building className="h-12 w-12 text-orange-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white">{industry}</h3>
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+      {/* Business Types Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
             className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Why Choose Our SMB Solutions?
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Solutions for Every Business Type
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of working with a technology partner that understands small business needs
+              Whether you're in retail, services, healthcare, or technology, we have 
+              specialized solutions designed for your industry.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {businessTypes.map((businessType, index) => (
               <motion.div
-                key={benefit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                key={businessType}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 text-center hover:border-green-500/50 transition-all duration-300 group"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <div className="p-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                  <Star className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{benefit}</h3>
+                <Building className="w-8 h-8 text-green-400 mx-auto mb-3 group-hover:text-green-300 transition-colors" />
+                <h3 className="text-white font-medium group-hover:text-green-400 transition-colors">
+                  {businessType}
+                </h3>
               </motion.div>
             ))}
           </div>
@@ -241,66 +334,40 @@ const SMBSolutions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Grow Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our SMB solutions can help you compete and grow in today's digital economy
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our SMB solutions can help you compete, grow, and succeed 
+              in today's digital marketplace.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <MessageCircle className="w-5 h-5" />
+                <span>Contact Us</span>
               </Link>
               <Link
-                to="/schedule-demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-orange-500 text-orange-400 font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300"
+                to="/case-studies"
+                className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
               >
-                Schedule a Demo
+                <FileText className="w-5 h-5" />
+                <span>View Case Studies</span>
               </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-16 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-orange-400 mb-4" />
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-orange-400 mb-4" />
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-orange-400 mb-4" />
-                <p className="text-gray-300 text-center">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default SMBSolutions;
+}

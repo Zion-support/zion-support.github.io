@@ -60,7 +60,46 @@ import { Menu,
   Atom as AtomIcon,
   Rocket as RocketIcon,
   Leaf as LeafIcon,
-  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  BarChart3,
+  Palette,
+  Camera,
+  Music,
+  Gamepad2,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Bus,
+  Bicycle,
+  Motorcycle,
+  Truck as TruckIcon,
+  Building2,
+  Factory,
+  Warehouse,
+  Store,
+  Bank,
+  Sun,
+  Moon,
+  Hospital,
+  School,
+  University,
+  Library,
+  Museum,
+  Theater,
+  Stadium,
+  Park,
+  Beach,
+  Mountain,
+  Forest,
+  Desert,
+  Island,
+  Ocean,
+  River,
+  Lake,
+  Stream,
+  Waterfall,
   Home,
   Calendar
 } from 'lucide-react';
@@ -225,10 +264,57 @@ export function EnhancedHeader({ onMenuClick }: EnhancedHeaderProps) {
     }
   ];
 
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign, variant: 'primary' },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, variant: 'secondary' },
-    { name: 'Contact Sales', href: '/contact', icon: MessageCircle, variant: 'outline' }
+  const mainNavigation = [
+    { name: 'Home', href: '/', hasDropdown: false },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Solutions', href: '/ai-services', description: 'Advanced AI and machine learning services' },
+        { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT infrastructure and support' },
+        { name: 'Micro SAAS', href: '/micro-saas', description: 'Scalable software-as-a-service solutions' },
+        { name: 'Quantum Computing', href: '/services/ai-quantum-computing-platform', description: 'Next-generation quantum solutions' },
+        { name: 'Space Technology', href: '/services/ai-space-technology-platform', description: 'Cutting-edge space tech innovations' },
+        { name: 'Financial Technology', href: '/services/ai-financial-technology-platform', description: 'Advanced fintech solutions' },
+        { name: 'All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete service portfolio' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
+        { name: 'SMB Solutions', href: '/solutions/smb', description: 'Small and medium business solutions' },
+        { name: 'Industry Solutions', href: '/solutions/industries', description: 'Industry-specific solutions' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud', description: 'Cloud infrastructure and services' }
+      ]
+    },
+    { 
+      name: 'Showcase', 
+      href: '/comprehensive-services-showcase-2025', 
+      hasDropdown: true,
+      dropdownItems: [
+        { name: '2025 Services', href: '/comprehensive-services-showcase-2025', description: 'Current year service showcase' },
+        { name: '2026 Services', href: '/innovative-services-showcase-2026', description: 'Next year innovations' },
+        { name: '2029 Services', href: '/zion-cutting-edge-services-2029', description: 'Future cutting-edge services' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources', 
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories and implementations' },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth technical documentation' },
+        { name: 'Documentation', href: '/documentation', description: 'Technical guides and APIs' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational sessions and training' }
+      ]
+    },
+    { name: 'About', href: '/about', hasDropdown: false },
+    { name: 'Contact', href: '/contact', hasDropdown: false }
   ];
 
   return (
@@ -303,6 +389,39 @@ export function EnhancedHeader({ onMenuClick }: EnhancedHeaderProps) {
                   >
                     {item.name}
                   </Link>
+                )}
+
+                {/* Dynamic Dropdown */}
+                {item.hasDropdown && activeDropdown === item.name && item.dropdownItems && (
+                  <motion.div
+                    className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="p-6 grid grid-cols-1 gap-3">
+                      {item.dropdownItems.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          to={dropdownItem.href}
+                          className="group p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+                        >
+                          <div className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                              <h4 className="text-white font-medium group-hover:text-cyan-300">
+                                {dropdownItem.name}
+                              </h4>
+                              <p className="text-gray-400 text-sm">
+                                {dropdownItem.description}
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
                 )}
               </div>
             ))}
