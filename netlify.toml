@@ -9,8 +9,6 @@
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
   NPM_FLAGS = "--omit=optional"
-  # Skip the Next.js plugin when deploying a prebuilt static dist
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 
 # Next.js plugin is disabled via UI for prebuilt static deploys
