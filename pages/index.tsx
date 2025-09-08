@@ -872,29 +872,6 @@ const Index: NextPage = () => {
                 </a>
               </div>
 
-              {/* System Reports */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-fuchsia-400 mb-4">📊 System Reports</h3>
-                <Link href="/performance-weekly-report.md" className="group block relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 backdrop-blur-xl hover:border-fuchsia-400/30 transition-all duration-300">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-fuchsia-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h4 className="text-sm font-semibold">Performance Weekly Report</h4>
-                  <p className="text-xs text-white/75 mt-1">System performance metrics</p>
-                  <div className="mt-2 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">View →</div>
-                </Link>
-                <Link href="/workflow-health-report.md" className="group block relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 backdrop-blur-xl hover:border-fuchsia-400/30 transition-all duration-300">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-fuchsia-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h4 className="text-sm font-semibold">Workflow Health Report</h4>
-                  <p className="text-xs text-white/75 mt-1">Automation system status</p>
-                  <div className="mt-2 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">View →</div>
-                </Link>
-                <Link href="/ci-lint-types-build-report.md" className="group block relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 backdrop-blur-xl hover:border-fuchsia-400/30 transition-all duration-300">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-fuchsia-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h4 className="text-sm font-semibold">CI/CD Build Report</h4>
-                  <p className="text-xs text-white/75 mt-1">Build system performance</p>
-                  <div className="mt-2 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">View →</div>
-                </Link>
-              </div>
-
               {/* Automation Reports */}
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-green-400 mb-4">🔧 Automation Reports</h3>
@@ -1036,26 +1013,6 @@ const Index: NextPage = () => {
                 <a href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </a>
-              </div>
-            </div>
-          </section>
-
-          {/* Revolutionary Technology Showcase */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🚀 Revolutionary Technology Showcase</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">🌐 Global Infrastructure</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Multi-region deployment</li>
-                  <li>• Edge computing optimization</li>
-                  <li>• Global CDN integration</li>
-                  <li>• Geographic redundancy</li>
-                  <li>• Low-latency routing</li>
-                </ul>
-                <Link href="/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
-                  View Architecture →
-                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
