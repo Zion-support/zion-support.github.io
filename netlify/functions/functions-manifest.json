@@ -1,11 +1,9 @@
 {
-  "generatedAt": "2025-08-11T23:02:48.594Z",
+  "generatedAt": "2025-08-11T23:11:07.285Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
     "ai-trends-radar-runner",
-    "alt-text-suggester-runner",
-    "auto-discovery-runner",
     "auto-scheduler",
     "automation-catalog",
     "automation-guardian-runner",
@@ -87,7 +85,7 @@
     "schedule-site-health",
     "schema-org-enhancer",
     "security-audit-runner",
-    "seo-schema-audit-runner",
+    "seo-audit-runner",
     "site-crawler",
     "sitemap-pinger",
     "sitemap_runner",

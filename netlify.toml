@@ -201,12 +201,12 @@
   schedule = "53 */6 * * *"
 
 [[scheduled.functions]]
-  name = "redirect-manager"
-  schedule = "*/30 * * * *"
+  name = "ai-trends-radar-runner"
+  schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"
+  name = "seo-audit-runner"
+  schedule = "*/30 * * * *"
 
 [[scheduled.functions]]
   name = "todo-summary-runner"
