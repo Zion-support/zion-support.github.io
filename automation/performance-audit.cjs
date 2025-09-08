@@ -1,124 +1,129 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
+const axios = require('axios');
 
-const OUT_DIR = path.join(__dirname, '..', 'public', 'reports', 'performance');
+async function fetchPsi(url, strategy = 'mobile') {
+  const api = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${strategy}&category=PERFORMANCE`;
+  const res = await axios.get(api, { timeout: 60000 });
+  return res.data;
+}
 
-function getBaseUrl() {
-  const url = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
-  return url || '';
+function extractMetrics(lhJson) {
+  const audits = lhJson?.lighthouseResult?.audits || {};
+  const cats = lhJson?.lighthouseResult?.categories || {};
+  const perfScore = (cats.performance?.score ?? null) === null ? null : Math.round(cats.performance.score * 100);
+  const getNum = (id) => audits[id]?.numericValue ?? null;
+  return {
+    performanceScore: perfScore,
+    fcpMs: getNum('first-contentful-paint'),
+    lcpMs: getNum('largest-contentful-paint'),
+    tbtMs: getNum('total-blocking-time'),
+    cls: audits['cumulative-layout-shift']?.numericValue ?? null,
+    speedIndexMs: getNum('speed-index'),
+    interactiveMs: getNum('interactive'),
+  };
 }
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
-function fetchJson(url) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, { headers: { 'User-Agent': 'zion.app-automation' } }, (res) => {
-      let data = '';
-      res.on('data', (chunk) => { data += chunk; });
-      res.on('end', () => {
-        try {
-          const json = JSON.parse(data);
-          resolve(json);
-        } catch (e) {
-          reject(new Error(`Invalid JSON from ${url}: ${e.message}`));
-        }
-      });
-    });
-    req.on('error', (err) => reject(err));
-    req.setTimeout(15000, () => { req.destroy(new Error('timeout')); });
-  });
+function writeJson(filePath, data) {
+  ensureDir(path.dirname(filePath));
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
-function scoreOf(json, category) {
-  try {
-    const cat = json.lighthouseResult.categories[category];
-    return typeof cat.score === 'number' ? Math.round(cat.score * 100) : null;
-  } catch (_) {
-    return null;
-  }
-}
+function writeHtml(filePath, summary) {
+  const rows = summary.results.map(r => {
+    const s = r.metrics;
+    return `<tr>
+<td>${r.url}</td>
+<td>${r.strategy}</td>
+<td>${s.performanceScore ?? ''}</td>
+<td>${s.lcpMs ? Math.round(s.lcpMs) : ''}</td>
+<td>${s.cls ?? ''}</td>
+<td>${s.tbtMs ? Math.round(s.tbtMs) : ''}</td>
+<td>${s.fcpMs ? Math.round(s.fcpMs) : ''}</td>
+</tr>`;
+  }).join('\n');
 
-function renderHTML(results) {
-  const rows = results.map(r => `
-    <tr>
-      <td><a href="${r.page}" target="_blank" rel="noopener">${r.page}</a></td>
-      <td>${r.strategy}</td>
-      <td>${r.performance ?? ''}</td>
-      <td>${r.accessibility ?? ''}</td>
-      <td>${r.seo ?? ''}</td>
-      <td>${r.bestPractices ?? ''}</td>
-    </tr>`).join('\n');
-  return `<!doctype html>
+  const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Performance Audit</title>
 <style>
-  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; margin: 24px; }
-  table { border-collapse: collapse; width: 100%; }
-  th, td { border: 1px solid #e5e7eb; padding: 8px; font-size: 14px; }
-  th { background: #f3f4f6; text-align: left; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial; background:#0b1020; color:#e6e6f0; padding: 24px; }
+.container { max-width: 1000px; margin: 0 auto; }
+h1 { font-size: 24px; margin-bottom: 8px; }
+p { color:#9aa3b2; }
+.table { width:100%; border-collapse: collapse; margin-top: 16px; }
+.table th, .table td { border: 1px solid #23304a; padding: 8px 10px; font-size: 14px; }
+.table th { background:#111a2e; text-align:left; }
+small { color:#8292a6; }
+.badge { display:inline-block; padding:2px 8px; border-radius:999px; background:#12223e; border:1px solid #23304a; font-size:12px; }
 </style>
 </head>
 <body>
+<div class="container">
   <h1>Performance Audit</h1>
-  <p>Autonomously generated via Google PageSpeed Insights. Strategies: mobile and desktop.</p>
-  <table>
+  <p>Autonomously generated via PageSpeed Insights. <span class="badge">${new Date(summary.timestamp).toISOString()}</span></p>
+  <table class="table">
     <thead>
-      <tr><th>Page</th><th>Strategy</th><th>Performance</th><th>Accessibility</th><th>SEO</th><th>Best Practices</th></tr>
+      <tr>
+        <th>URL</th>
+        <th>Strategy</th>
+        <th>Perf</th>
+        <th>LCP (ms)</th>
+        <th>CLS</th>
+        <th>TBT (ms)</th>
+        <th>FCP (ms)</th>
+      </tr>
     </thead>
     <tbody>
       ${rows}
     </tbody>
   </table>
+</div>
 </body>
 </html>`;
+  ensureDir(path.dirname(filePath));
+  fs.writeFileSync(filePath, html);
 }
 
 async function main() {
-  const base = getBaseUrl();
-  if (!base) {
-    console.log('No base URL available; skipping performance audit');
-    return;
-  }
-  const key = process.env.GOOGLE_API_KEY || '';
-  const pages = ['/', '/main/front', '/newsroom', '/site-health'];
-  const strategies = ['mobile', 'desktop'];
+  const base = process.env.SITE_BASE_URL || 'https://zion.app';
+  const urls = [
+    process.env.SITE_HOMEPAGE_URL || `${base}/`,
+    `${base}/automation`,
+    `${base}/main/front`,
+    `${base}/reports/seo`,
+  ];
 
+  const strategies = ['mobile', 'desktop'];
   const results = [];
-  for (const page of pages) {
-    for (const strategy of strategies) {
-      const fullUrl = encodeURIComponent(`${base}${page}`);
-      const api = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${fullUrl}&strategy=${strategy}${key ? `&key=${key}` : ''}`;
+  for (const url of urls) {
+    for (const strat of strategies) {
       try {
-        const json = await fetchJson(api);
-        results.push({
-          page: `${base}${page}`,
-          strategy,
-          performance: scoreOf(json, 'performance'),
-          accessibility: scoreOf(json, 'accessibility'),
-          seo: scoreOf(json, 'seo'),
-          bestPractices: scoreOf(json, 'best-practices'),
-        });
+        const json = await fetchPsi(url, strat);
+        results.push({ url, strategy: strat, metrics: extractMetrics(json) });
       } catch (e) {
-        results.push({ page: `${base}${page}`, strategy, error: String(e.message || e) });
+        results.push({ url, strategy: strat, metrics: { error: true, message: e.message } });
       }
     }
   }
 
-  ensureDir(OUT_DIR);
-  const payload = { generatedAt: new Date().toISOString(), base, results };
-  fs.writeFileSync(path.join(OUT_DIR, 'latest.json'), JSON.stringify(payload, null, 2));
-  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderHTML(results));
+  const summary = { timestamp: Date.now(), results };
+  const jsonPath = path.resolve(__dirname, '..', 'public', 'reports', 'perf', 'latest.json');
+  const htmlPath = path.resolve(__dirname, '..', 'public', 'reports', 'perf', 'index.html');
+  writeJson(jsonPath, summary);
+  writeHtml(htmlPath, summary);
+
+  console.log('Performance report written to', htmlPath);
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exitCode = 1;
+main().catch((err) => {
+  console.error('Performance audit failed:', err);
+  process.exitCode = 0; // best-effort, do not fail pipelines
 });
