@@ -206,3 +206,24 @@
 [[edge_functions]]
   function = "newsletter_digest"
   path = "/api/newsletter-digest"
+
+# Scheduled functions
+[[scheduled.functions]]
+  name = "hyper-front-index-accelerator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "dead-code-report"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "stale-content-auditor"
+  schedule = "0 2 * * *" # daily at 2 AM
+
+[[scheduled.functions]]
+  name = "auto-deps-maintainer"
+  schedule = "0 3 * * *" # daily at 3 AM
+
+[[scheduled.functions]]
+  name = "front-upgrader"
+  schedule = "0 4 * * *" # daily at 4 AM
