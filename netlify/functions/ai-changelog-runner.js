@@ -1,43 +1,26 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 ai-changelog-runner function triggered');
+    console.log('ai-changelog-runner function triggered');
     
-    // Simulate AI changelog generation logic
-    const timestamp = new Date().toISOString();
+    // Basic AI changelog generation logic
     const result = {
-      status: 'success',
-      function: 'ai-changelog-runner',
-      timestamp: timestamp,
-      message: 'AI changelog generation completed successfully',
-      data: {
-        commitsAnalyzed: Math.floor(Math.random() * 100) + 50,
-        changelogEntries: Math.floor(Math.random() * 20) + 10,
-        aiConfidence: (Math.random() * 0.2 + 0.8).toFixed(4),
-        categories: ['Features', 'Bug Fixes', 'Improvements', 'Documentation'],
-        lastGenerated: timestamp
-      }
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'ai-changelog-runner executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'ai-changelog-runner'
+      })
     };
     
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
-    };
+    return result;
   } catch (error) {
-    console.error('❌ ai-changelog-runner error:', error);
+    console.error('Error in ai-changelog-runner:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify({
-        status: 'error',
-        function: 'ai-changelog-runner',
-        error: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message,
+        function: 'ai-changelog-runner'
       })
     };
   }

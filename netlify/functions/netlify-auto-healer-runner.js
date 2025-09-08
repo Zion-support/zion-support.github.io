@@ -1,47 +1,27 @@
 exports.handler = async function(event, context) {
-  console.log('netlify-auto-healer-runner function executed');
-  
   try {
-    // Simulate Netlify auto healing logic
-    const timestamp = new Date().toISOString();
+    console.log('netlify-auto-healer-runner function triggered');
+    
+    // Basic netlify-auto-healer-runner logic
     const result = {
-      status: 'success',
-      function: 'netlify-auto-healer-runner',
-      timestamp: timestamp,
-      message: 'Netlify auto healing completed successfully',
-      data: {
-        issuesDetected: 7,
-        autoFixesApplied: 5,
-        manualInterventions: 2,
-        systemHealth: 'optimal',
-        uptime: '99.99%',
-        performance: 'restored'
-      }
-    };
-    
-    console.log('Netlify auto healing result:', result);
-    
-    return {
       statusCode: 200,
-      body: JSON.stringify(result),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({
+        message: 'netlify-auto-healer-runner executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'netlify-auto-healer-runner'
+      })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in netlify-auto-healer-runner:', error);
-    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        status: 'error',
-        function: 'netlify-auto-healer-runner',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: 'Internal server error',
+        message: error.message,
+        function: 'netlify-auto-healer-runner'
+      })
     };
   }
 };

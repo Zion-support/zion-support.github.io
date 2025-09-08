@@ -1,47 +1,27 @@
 exports.handler = async function(event, context) {
-  console.log('dead-code-report function executed');
-  
   try {
-    // Simulate dead code reporting logic
-    const timestamp = new Date().toISOString();
+    console.log('dead-code-report function triggered');
+    
+    // Basic dead-code-report logic
     const result = {
-      status: 'success',
-      function: 'dead-code-report',
-      timestamp: timestamp,
-      message: 'Dead code report completed successfully',
-      data: {
-        filesAnalyzed: 89,
-        deadCodeFound: 23,
-        unusedFunctions: 15,
-        unusedVariables: 8,
-        cleanupRecommendations: 18,
-        codeQuality: 'improved'
-      }
-    };
-    
-    console.log('Dead code report result:', result);
-    
-    return {
       statusCode: 200,
-      body: JSON.stringify(result),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({
+        message: 'dead-code-report executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'dead-code-report'
+      })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in dead-code-report:', error);
-    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        status: 'error',
-        function: 'dead-code-report',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: 'Internal server error',
+        message: error.message,
+        function: 'dead-code-report'
+      })
     };
   }
 };

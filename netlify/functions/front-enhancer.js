@@ -1,42 +1,26 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🎨 front-enhancer function triggered');
+    console.log('front-enhancer function triggered');
     
-    // Simulate front-end enhancement logic
-    const timestamp = new Date().toISOString();
+    // Basic front-enhancer logic
     const result = {
-      status: 'success',
-      function: 'front-enhancer',
-      timestamp: timestamp,
-      message: 'Front-end enhancement completed successfully',
-      data: {
-        componentsEnhanced: Math.floor(Math.random() * 15) + 3,
-        performanceImprovement: (Math.random() * 0.25 + 0.15).toFixed(4),
-        accessibilityScore: (Math.random() * 0.2 + 0.8).toFixed(4),
-        userExperienceRating: (Math.random() * 0.3 + 0.7).toFixed(4)
-      }
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'front-enhancer executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'front-enhancer'
+      })
     };
     
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
-    };
+    return result;
   } catch (error) {
-    console.error('❌ front-enhancer error:', error);
+    console.error('Error in front-enhancer:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify({
-        status: 'error',
-        function: 'front-enhancer',
-        error: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message,
+        function: 'front-enhancer'
       })
     };
   }

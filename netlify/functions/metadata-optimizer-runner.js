@@ -1,46 +1,27 @@
 exports.handler = async function(event, context) {
-  console.log('metadata-optimizer-runner function executed');
-  
   try {
-    // Simulate metadata optimization running logic
-    const timestamp = new Date().toISOString();
+    console.log('metadata-optimizer-runner function triggered');
+    
+    // Basic metadata-optimizer-runner logic
     const result = {
-      status: 'success',
-      function: 'metadata-optimizer-runner',
-      timestamp: timestamp,
-      message: 'Metadata optimization running completed successfully',
-      data: {
-        pagesOptimized: Math.floor(Math.random() * 100) + 50,
-        seoScore: '95%+',
-        metaTagsOptimized: true,
-        structuredData: 'enhanced',
-        performance: 'optimal'
-      }
-    };
-    
-    console.log('Metadata optimization running result:', result);
-    
-    return {
       statusCode: 200,
-      body: JSON.stringify(result),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({
+        message: 'metadata-optimizer-runner executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'metadata-optimizer-runner'
+      })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in metadata-optimizer-runner:', error);
-    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        status: 'error',
-        function: 'metadata-optimizer-runner',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: 'Internal server error',
+        message: error.message,
+        function: 'metadata-optimizer-runner'
+      })
     };
   }
 };

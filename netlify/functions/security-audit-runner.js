@@ -1,46 +1,26 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🔒 security-audit-runner function triggered');
+    console.log('security-audit-runner function triggered');
     
-    // Simulate security audit logic
-    const timestamp = new Date().toISOString();
+    // Basic security-audit-runner logic
     const result = {
-      status: 'success',
-      function: 'security-audit-runner',
-      timestamp: timestamp,
-      message: 'Security audit completed successfully',
-      data: {
-        vulnerabilitiesFound: Math.floor(Math.random() * 5),
-        securityScore: (Math.random() * 0.2 + 0.8).toFixed(4),
-        lastScan: timestamp,
-        recommendations: [
-          'Update dependencies',
-          'Review access controls',
-          'Monitor logs'
-        ]
-      }
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'security-audit-runner executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'security-audit-runner'
+      })
     };
     
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
-    };
+    return result;
   } catch (error) {
-    console.error('❌ security-audit-runner error:', error);
+    console.error('Error in security-audit-runner:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify({
-        status: 'error',
-        function: 'security-audit-runner',
-        error: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message,
+        function: 'security-audit-runner'
       })
     };
   }

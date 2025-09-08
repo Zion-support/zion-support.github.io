@@ -1,47 +1,27 @@
 exports.handler = async function(event, context) {
-  console.log('home-visionary-expander function executed');
-  
   try {
-    // Simulate home visionary expansion logic
-    const timestamp = new Date().toISOString();
+    console.log('home-visionary-expander function triggered');
+    
+    // Basic home-visionary-expander logic
     const result = {
-      status: 'success',
-      function: 'home-visionary-expander',
-      timestamp: timestamp,
-      message: 'Home visionary expansion completed successfully',
-      data: {
-        homeVisionsExpanded: Math.floor(Math.random() * 15) + 8,
-        innovationApplied: true,
-        futureReady: true,
-        creativityEnhanced: true,
-        strategicGrowth: 'accelerated',
-        homeExperience: 'transformed'
-      }
-    };
-    
-    console.log('Home visionary expansion result:', result);
-    
-    return {
       statusCode: 200,
-      body: JSON.stringify(result),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({
+        message: 'home-visionary-expander executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'home-visionary-expander'
+      })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in home-visionary-expander:', error);
-    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        status: 'error',
-        function: 'home-visionary-expander',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: 'Internal server error',
+        message: error.message,
+        function: 'home-visionary-expander'
+      })
     };
   }
 };

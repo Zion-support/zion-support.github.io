@@ -1,48 +1,26 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🔍 seo-audit-runner function triggered');
+    console.log('seo-audit-runner function triggered');
     
-    // Simulate SEO audit logic
-    const timestamp = new Date().toISOString();
+    // Basic seo-audit-runner logic
     const result = {
-      status: 'success',
-      function: 'seo-audit-runner',
-      timestamp: timestamp,
-      message: 'SEO audit completed successfully',
-      data: {
-        pagesAudited: Math.floor(Math.random() * 50) + 25,
-        seoScore: (Math.random() * 0.3 + 0.7).toFixed(4),
-        issuesFound: Math.floor(Math.random() * 8) + 2,
-        recommendations: [
-          'Optimize meta descriptions',
-          'Improve page load speed',
-          'Add structured data',
-          'Fix broken links'
-        ],
-        lastAudit: timestamp
-      }
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'seo-audit-runner executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'seo-audit-runner'
+      })
     };
     
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
-    };
+    return result;
   } catch (error) {
-    console.error('❌ seo-audit-runner error:', error);
+    console.error('Error in seo-audit-runner:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify({
-        status: 'error',
-        function: 'seo-audit-runner',
-        error: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message,
+        function: 'seo-audit-runner'
       })
     };
   }

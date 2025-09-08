@@ -1,48 +1,26 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🧪 innovation-lab function triggered');
+    console.log('innovation-lab function triggered');
     
-    // Simulate innovation lab logic
-    const timestamp = new Date().toISOString();
+    // Basic innovation-lab logic
     const result = {
-      status: 'success',
-      function: 'innovation-lab',
-      timestamp: timestamp,
-      message: 'Innovation lab completed successfully',
-      data: {
-        experimentsRun: Math.floor(Math.random() * 15) + 5,
-        innovationsGenerated: Math.floor(Math.random() * 8) + 3,
-        successRate: (Math.random() * 0.3 + 0.7).toFixed(4),
-        breakthroughIdeas: [
-          'AI-powered automation',
-          'Smart caching strategies',
-          'Predictive analytics',
-          'Self-healing systems'
-        ],
-        lastInnovation: timestamp
-      }
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'innovation-lab executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'innovation-lab'
+      })
     };
     
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
-    };
+    return result;
   } catch (error) {
-    console.error('❌ innovation-lab error:', error);
+    console.error('Error in innovation-lab:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify({
-        status: 'error',
-        function: 'innovation-lab',
-        error: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message,
+        function: 'innovation-lab'
       })
     };
   }
