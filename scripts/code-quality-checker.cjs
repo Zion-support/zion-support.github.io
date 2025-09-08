@@ -1,35 +1,4 @@
-const fs = require('fs')
-const path = require('path')
-  log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'FIX': ''
-    }[type] || 'ℹ'
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split('\n')
-      this.log(`Fixed ${fileFixes} issues in ${path.relative(this.projectRoot, filePath)}`, 'FIX'
-      this.log(`Found ${fileIssues} issues in ${path.relative(this.projectRoot, filePath)}`, 'WARNING'
-    const lines = content.split('\n')
-      if (line.includes('console.log') && !line.includes('//')
-          type: 'console.log'
-          message: 'Console.log statement found'
-          severity: 'warning'
-      if (line.includes('TODO') || line.includes('FIXME')
-          type: 'todo'
-          message: 'TODO/FIXME comment found'
-          severity: 'info'
-      if (line.includes('import') && !line.includes('from')
-          type: 'unused_import'
-          message: 'Potential unused import'
-          severity: 'warning'
-          type: 'long_line'
-          severity: 'warning'
-      if (line.trim() && !line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}') && !line.trim().startsWith('//')
-          type: 'missing_semicolon'
-          message: 'Missing semicolon'
-          severity: 'error'
+
     const lines = content.split('\n')
       case 'console.log'
         lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''

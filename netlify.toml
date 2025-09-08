@@ -1,6 +1,11 @@
 [build]
+<<<<<<< HEAD
+  # Build the Vite project on Netlify
+  command = "npm ci --no-audit --no-fund && npm run build"
+=======
   # Build the project on Netlify
   command = "npm ci && npm run build"
+>>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -8,12 +13,34 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
+<<<<<<< HEAD
+  NPM_FLAGS = "--legacy-peer-deps"
+=======
   NPM_FLAGS = "--omit=optional"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NETLIFY_FUNCTIONS_TIMEOUT = "30"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
+
+# Function bundling optimization
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["aws-sdk"]
+>>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 # Vite/React SPA configuration
-
-
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -33,4 +60,8 @@
 [[headers]]
   for = "/*"
   [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=300"

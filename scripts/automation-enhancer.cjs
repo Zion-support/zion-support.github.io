@@ -1,67 +1,4 @@
 #!/usr/bin/env node;
-=======
-#!/usr/bin/env node
-
-/**
- * Automation Enhancer Script
- * Enhances existing automation scripts and creates new ones
- */
-
-const fs = require('fs');
-const path = require('path');
-
-class AutomationEnhancer {
-  constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
-    this.enhancements = []}
-
-  async enhanceAutomation() {
-    console.log('🚀 Starting Automation Enhancement...');
-    
-    try {
-      await this.enhancePM2Scripts();
-      await this.enhanceBuildScripts();
-      await this.createNewAutomations();
-      await this.optimizePerformance();
-      
-      console.log('✅ Automation enhancement completed successfully!');
-      this.saveReport()} catch (error) {
-      console.error('❌ Error enhancing automation:', error)}
-  }
-
-  async enhancePM2Scripts() {
-    console.log('⚙️ Enhancing PM2 automation scripts...');
-    
-    // Enhance ecosystem config
-    const ecosystemPath = path.join(this.projectRoot, 'ecosystem.config.cjs');
-    if (fs.existsSync(ecosystemPath)) {
-      const ecosystem = fs.readFileSync(ecosystemPath, 'utf8');
-      
-      // Add health checks and monitoring
-      const enhancedEcosystem = ecosystem.replace(
-        /pmx: true/g,
-        `pmx: true,
-      health_check_grace_period: 3000,
-      health_check_fatal_exceptions: true,
-      kill_timeout: 5000,
-      listen_timeout: 3000,
-      shutdown_with_message: true`
-      );
-      
-      fs.writeFileSync(ecosystemPath, enhancedEcosystem);
-      this.enhancements.push('Enhanced PM2 ecosystem configuration')}
-  }
-
-  async enhanceBuildScripts() {
-    console.log('🔨 Enhancing build automation...');
-    
-    // Create enhanced build script
-    const buildScript = `#!/bin/bash
-
-# Enhanced Build Script
-echo "🚀 Starting enhanced build process..."
-
-# Clean previous builds
 echo "🧹 Cleaning previous builds..."
 echo "� Installing dependencies..."
 echo " Running linting..."
@@ -110,12 +47,7 @@ echo " Deployment completed successfully!"
     fs.chmodSync(deployScriptPath, "755")
     const monitorScript = "
 const pm2 = require("$1")
-<<<<<<< HEAD
 
-=======
-const fs = require("$1")
-const path = require("path")
->>>>>>> merged-prs-20250907-203621
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")
     console.log(" Starting advanced monitoring...")
     const logEntry = \"[\${timestamp}] System health check completed\\n\"
@@ -135,11 +67,27 @@ const path = require("path")
     this.enhancements.push("Created advanced monitoring script")
     console.log("⚡ Optimizing automation performance...")
     const perfScript = "
-<<<<<<< HEAD
 
 # Deploy to production
 echo "🚀 Deploying to production..."
 pm2 restart ecosystem.config.cjs --env production
+const fs = require("$1")
+const path = require("path")
+    this.projectRoot = path.resolve(__dirname, "..")
+// console.log("⚡ Starting performance optimization...")
+    console.log(" Performance optimization completed!")
+// console.log("� Optimizing images...")
+    console.log("� Optimizing code...")
+    console.log("� Optimizing dependencies...")
+"
+    const perfScriptPath = path.join(this.projectRoot, "scripts", "performance-optimizer-enhanced.js")
+    this.enhancements.push("Created enhanced performance optimizer")
+      "timestamp"
+      "enhancements"
+      "totalEnhancements"
+
+    const reportPath = path.join(this.projectRoot, ")
+    const reportPath = path.join(this.projectRoot, ")
 
 # Health check
 echo "🏥 Running health check..."

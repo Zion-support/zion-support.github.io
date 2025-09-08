@@ -2,18 +2,21 @@
 
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+=======
+
+
 const fs = require('fs');
 const path = require('path');
 
 /**
  * Generate search index for the application
  */
-<<<<<<< HEAD
-=======
-=======
-=======
+
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 /**
  * Search Index Generator;
  * Generates search index for the application;
@@ -21,14 +24,22 @@ const path = require('path');
 
 const fs = require('fs');
 const path = require('path');
->>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 class SearchIndexGenerator {
   // TODO: Implement
 }
   constructor() {
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+=======
+
     this.index = {
       pages: [],
       metadata: {
@@ -277,10 +288,10 @@ class SearchIndexGenerator {
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+
 // Run the search index generator
 if (require.main === module) {
   const generator = new SearchIndexGenerator();
@@ -288,10 +299,10 @@ if (require.main === module) {
 }
 
 module.exports = SearchIndexGenerator;
-=======
+
 
 module.exports = SearchIndexGenerator;
-=======
+
 
 
   generateIndex() {
@@ -304,5 +315,6 @@ module.exports = SearchIndexGenerator;
 
 const generator = new SearchIndexGenerator();
 generator.generateIndex();
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

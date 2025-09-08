@@ -1,22 +1,24 @@
+
+=======
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Real-time Health Dashboard
- * Comprehensive monitoring dashboard for PM2 processes
+ * Real-time Health Dashboard;
+ * Comprehensive monitoring dashboard for PM2 processes;
  */
 
+
+
+=======
+
+=======
 const pm2 = require('pm2')
 
 const fs = require('fs')
 const path = require('path')
 const http = require('http')
 const { execSync } = require('child_process')
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
     this.logFile = path.join(this.projectRoot, 'logs', 'health-dashboard.log')
     this.dashboardFile = path.join(this.projectRoot, 'logs', 'dashboard-data.json')
       await fs.mkdir(path.join(this.projectRoot, 'logs')
@@ -63,4 +65,12 @@ const { execSync } = require('child_process')
             \"
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
+
+=======
       this.log(` Fatal "error"`)
+=======
+      this.log(` Fatal "error"`)
+=======
+=======
+
+

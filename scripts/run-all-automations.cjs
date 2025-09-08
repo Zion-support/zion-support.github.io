@@ -1,3 +1,4 @@
+
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -9,6 +10,10 @@
         cwd: process.cwd(), 
         timeout: 120000, 
         ...options 
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 120000,
+        ...options
       });
       return { success: true, stdout, stderr };
     } catch (error) {
@@ -65,22 +70,6 @@
       { name: 'Git Push', command: 'git push origin main' }
     ];
 
-    // Run each automation
-    for (const automation of automations) {
-      await this.runAutomation(automation.name, automation.command);
-    }
-
-    // Generate comprehensive report
-    this.generateReport();
-    
-    this.log('🎉 Comprehensive automation run completed');
-    this.log(`✅ Successful: ${this.results.success.length}`);
-    this.log(`❌ Failed: ${this.results.failed.length}`);
-    this.log(`⚠️ Warnings: ${this.results.warnings.length}`);
-
-    return this.results;
-  }
-
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -126,6 +115,9 @@ if (require.main === module) {
 }
 
 module.exports = RunAllAutomations;
+#!/usr/bin/env node;
+module.exports = RunAllAutomations;
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

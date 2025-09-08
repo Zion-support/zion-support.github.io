@@ -39,7 +39,7 @@ origin/automation-improvements-final
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">,
         <div className="text-center mb-12">,
           <h1 className="text-4xl font-bold text-gray-900 mb-4">,
-    { &quot;to&quot;: &quot;/services/ai-seo-optimizer&quot;, &quot;label&quot;: &quot;AI SEO Optimizer&quot; };
+    { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" };
 
   ],
   return (,
@@ -103,10 +103,10 @@ import path from "path", const criticalFiles = [ "src/pages/services/index && in
 import { Link } from "react-router-dom", const ServicesIndex: React.FC = () => { const links = [ { to: "/ai-services",label: "AI Services" },{ to: "/it-services",label: "IT Services" },{ to: "/micro-saas",label: "Micro SaaS" },{ to: "/services/ai-email-responder",label: "AI Email Responder" },{ to: "/services/automated-follow-ups",label: "Automated Follow-Ups" },{ to: "/services/ai-seo-optimizer",label: "AI SEO Optimizer" } ], return (, <div className="min-h-screen bg-gray-50 py-12">, <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">, <div className="text-center mb-12">, <h1 className="text-4xl font-bold text-gray-900 mb-4">, Our Services, </h1>, <p className="text-xl text-gray-600">, Comprehensive technology solutions for your business, </p>, </div>, , <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">, {links && links.map((link,index) => (, <Link, key={index} to={link && link.to} className="block p-6 bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow", >, <h3 className="text-lg font-semibold text-gray-900">, {link && link.label} </h3>, </Link>))} </div>, </div>, </div>, )} export default ServicesIndex, `, fs && fs.writeFileSync("src/pages/services/index && index.tsx",content), console && console.log("Fixed src/pages/services/index ;
 import Head from "next/head";
 
-    <div className=&quot;min-h-screen bg-gray-50 py-12&quot;>,
-      <div className=&quot;max-w-7xl mx-auto px-4 &quot;sm&quot;: px-6 lg: px-8&quot;>,
-        <div className=&quot;text-center mb-12&quot;>,
-          <h1 className=&quot;text-4xl font-bold text-gray-900 mb-4&quot;>,
+    <div className="min-h-screen bg-gray-50 py-12">,
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">,
+        <div className="text-center mb-12">,
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">,
   fixServicesIndex(),
   fixSolutions(),
   fixTailwindConfig(),
@@ -114,10 +114,10 @@ import Head from "next/head";
   fixVitestConfig(),
   console.log("All critical files have been fixed!")} catch (error) {,
   console.error("Error fixing "files": ", error),
-    <div className=&quot;min-h-screen bg-gray-50 py-12&quot;>,
-      <div className=&quot;max-w-7xl mx-auto px-4 &quot;sm&quot;: px-6 lg: px-8&quot;>,
-        <div className=&quot;text-center mb-12&quot;>,
-          <h1 className=&quot;text-4xl font-bold text-gray-900 mb-4&quot;>,
+    <div className="min-h-screen bg-gray-50 py-12">,
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">,
+        <div className="text-center mb-12">,
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">,
 
 
 #!/usr/bin/env node, import fs from "fs";
@@ -370,17 +370,17 @@ import react from "@vitejs/plugin-react", export default defineConfig({ plugin: 
       <div className="max - w-7xl mx - auto px - 4 "sm": px - 6 lg: px - 8">,
         <div className="text - center mb - 12">,
           <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">,
-    { &quot;to & quot;: &quot;/services / ai - seo - optimizer & quot;, &quot;label & quot;: &quot;AI SEO Optimizer & quot; }
+    { "to & quot;: "/services / ai - seo - optimizer & quot;, "label & quot;: "AI SEO Optimizer & quot; }
 ;
   ],
   return (,
-    <div className=&quot;min - h-screen bg - gray - 50 py - 12 & quot;>,
-      <div className=&quot;max - w-7xl mx - auto px - 4 &quot;sm & quot;: px - 6 lg: px - 8&quot;>,
-        <div className=&quot;text - center mb - 12 & quot;>,
-          <h1 className=&quot;text - 4xl font - bold text - gray - 900 mb - 4&quot;>,
+    <div className="min - h-screen bg - gray - 50 py - 12 & quot;>,
+      <div className="max - w-7xl mx - auto px - 4 "sm & quot;: px - 6 lg: px - 8">,
+        <div className="text - center mb - 12 & quot;>,
+          <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">,
             Our Services,
           </h1>,
-          <p className=&quot;text - xl text - gray - 600 & quot;>,
+          <p className="text - xl text - gray - 600 & quot;>,
             Comprehensive technology solutions for your business,
           </p>,
         </div>,
