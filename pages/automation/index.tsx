@@ -38,17 +38,19 @@ const Index: NextPage = () => {
             <a className="text-cyan-300 underline" href="/.netlify/functions/website-search-index-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Dependency Health Radar</h2>
-            <p className="text-white/70">Audits npm dependencies and publishes a live report to /reports/deps.</p>
-            <div className="flex items-center gap-4 mt-2">
-              <a className="text-cyan-300 underline" href="/.netlify/functions/dependency-health-radar-runner" target="_blank" rel="noopener">Trigger / View</a>
-              <a className="text-cyan-300 underline" href="/reports/deps" target="_blank" rel="noopener">Open Report</a>
-            </div>
+            <h2 className="text-xl font-bold">Innovation Generator</h2>
+            <p className="text-white/70">Synthesizes new promos, updates homepage, and syncs to main.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/innovation-generator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Meta Accelerator</h2>
-            <p className="text-white/70">Refreshes docs, README, knowledge graph, and TODOs every 2 minutes; commits to main.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/meta-accelerator" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Dependency Health Runner</h2>
+            <p className="text-white/70">Auto-upgrades dependencies safely and syncs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/dependency-health-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Changelog Publisher</h2>
+            <p className="text-white/70">Publishes AI-generated changelog and commits updates.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/changelog-publisher" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Homepage Updates</h2>
