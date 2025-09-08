@@ -37,18 +37,13 @@ import {
   ArrowRight,
   Star,
   Award,
-  Lock,
-  Eye,
-  Atom,
-  Code,
+  Users,
+  CheckCircle,
+  Target,
   BookOpen,
-  Truck,
-  ExternalLink,
-  ChevronDown,
-  Copyright,
+  HelpCircle,
   MessageCircle,
-  Server,
-  BarChart3
+  DollarSign
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -154,14 +149,19 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: 'Services',
-      links: [
-        { name: 'AI Solutions', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/cloud-solutions' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
+      title: "AI & Machine Learning",
+      icon: Brain,
+      services: [
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
+        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
+        { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
+        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
+        { name: "AI Project Management", href: "/services/ai-project-management" },
+        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Healthcare Platform", href: "/services/ai-healthcare-platform" },
+        { name: "AI Quantum Hybrid", href: "/services/ai-quantum-hybrid-platform" }
       ]
     },
     {
@@ -196,7 +196,73 @@ export function Footer() {
         { name: 'Blog', href: '/blog' },
         { name: 'Research', href: '/research-development' }
       ]
+    },
+    {
+      title: "Digital Transformation",
+      icon: Rocket,
+      services: [
+        { name: "Digital Twin Solutions", href: "/services/digital-twin" },
+        { name: "IoT Edge Computing", href: "/services/iot-edge-computing" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
+        { name: "5G Enterprise Solutions", href: "/services/5g-enterprise-solutions" }
+      ]
+    },
+    {
+      title: "Micro SaaS",
+      icon: Code,
+      services: [
+        { name: "Custom SaaS Development", href: "/services/micro-saas-solutions" },
+        { name: "API Development", href: "/services/api-development" },
+        { name: "Mobile App Development", href: "/services/mobile-development" },
+        { name: "Web Application Development", href: "/services/web-development" }
+      ]
     }
+  ];
+
+  const solutions = [
+    { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+    { name: "Financial Solutions", href: "/solutions/financial" },
+    { name: "Manufacturing Solutions", href: "/solutions/manufacturing" },
+    { name: "Government Solutions", href: "/solutions/government" },
+    { name: "Retail Solutions", href: "/solutions/retail" },
+    { name: "Education Solutions", href: "/solutions/education" },
+    { name: "Startup Solutions", href: "/solutions/startup" },
+    { name: "Enterprise Solutions", href: "/enterprise" }
+  ];
+
+  const resources = [
+    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "White Papers", href: "/white-papers" },
+    { name: "Webinars", href: "/webinars" },
+    { name: "Documentation", href: "/documentation" },
+    { name: "API Reference", href: "/api" },
+    { name: "Help Center", href: "/help" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Training", href: "/training" },
+    { name: "Tutorials", href: "/tutorials" },
+    { name: "Research & Development", href: "/research-development" }
+  ];
+
+  const company = [
+    { name: "About Us", href: "/about" },
+    { name: "Leadership", href: "/leadership" },
+    { name: "Careers", href: "/careers" },
+    { name: "Partners", href: "/partners" },
+    { name: "News", href: "/news" },
+    { name: "Events", href: "/events" },
+    { name: "Contact", href: "/contact" },
+    { name: "Request Quote", href: "/request-quote" },
+    { name: "Schedule Demo", href: "/schedule-demo" }
+  ];
+
+  const legal = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Accessibility", href: "/accessibility" },
+    { name: "Security", href: "/security" },
+    { name: "Compliance", href: "/compliance" }
   ];
 
   const socialLinks = [
@@ -220,14 +286,21 @@ export function Footer() {
     },
     {
       icon: MapPin,
-      text: 'Middletown, DE',
-      href: '#'
+      text: '364 E Main St STE 1008, Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008,+Middletown+DE+19709'
     },
     {
       icon: Clock,
       text: 'Mon-Fri: 9AM-6PM EST',
       href: '#'
     }
+  ];
+
+  const quickLinks = [
+    { name: "Get Started", href: "/get-started", icon: Rocket },
+    { name: "Pricing", href: "/pricing", icon: DollarSign },
+    { name: "Support", href: "/help", icon: HelpCircle },
+    { name: "Documentation", href: "/documentation", icon: BookOpen }
   ];
 
   return (
@@ -250,18 +323,14 @@ export function Footer() {
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <span>info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span>123 Innovation Drive, Tech City, TC 12345</span>
-              </div>
+              {contactInfo.map((contact) => (
+                <div key={contact.text} className="flex items-center space-x-3 text-gray-300">
+                  <contact.icon className="w-4 h-4 text-blue-400" />
+                  <a href={contact.href} className="hover:text-blue-400 transition-colors">
+                    {contact.text}
+                  </a>
+                </div>
+              ))}
             </div>
 
             {/* Social Links */}
@@ -281,39 +350,21 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title} className="space-y-4">
-              <button
-                onClick={() => toggleSection(section.title)}
-                className="flex items-center justify-between w-full text-left text-white font-semibold hover:text-cyan-400 transition-colors lg:hidden"
-              >
-                <span className="flex items-center space-x-2">
-                  <section.icon className="w-5 h-5" />
-                  <span>{section.title}</span>
-                </span>
-                <ChevronDown 
-                  className={`w-4 h-4 transition-transform ${expandedSections.has(section.title) ? 'rotate-180' : ''}`} 
-                />
-              </button>
-              
-              <div className="hidden lg:block">
-                <h3 className="text-white font-semibold mb-4 flex items-center space-x-2">
-                  <section.icon className="w-5 h-5" />
-                  <span>{section.title}</span>
-                </h3>
-              </div>
-
-              <AnimatePresence>
-                {(expandedSections.has(section.title) || window.innerWidth >= 1024) && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="space-y-2"
-                  >
-                    {section.links.map((link) => (
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white flex items-center space-x-2">
+              <Zap className="w-5 h-5 text-blue-400" />
+              <span>Services</span>
+            </h4>
+            <div className="space-y-4">
+              {serviceCategories.slice(0, 3).map((category) => (
+                <div key={category.title} className="space-y-2">
+                  <div className="flex items-center space-x-2 text-blue-400">
+                    <category.icon className="w-4 h-4" />
+                    <span className="text-sm font-medium">{category.title}</span>
+                  </div>
+                  <div className="ml-6 space-y-1">
+                    {category.services.slice(0, 3).map((service) => (
                       <Link
                         key={link.name}
                         to={link.path}
@@ -327,7 +378,109 @@ export function Footer() {
                 )}
               </AnimatePresence>
             </div>
-          ))}
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white flex items-center space-x-2">
+              <Target className="w-5 h-5 text-green-400" />
+              <span>Solutions</span>
+            </h4>
+            <div className="space-y-2">
+              {solutions.slice(0, 8).map((solution) => (
+                <Link
+                  key={solution.name}
+                  to={solution.href}
+                  className="block text-sm text-gray-300 hover:text-green-400 transition-colors duration-200"
+                >
+                  {solution.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white flex items-center space-x-2">
+              <BookOpen className="w-5 h-5 text-purple-400" />
+              <span>Resources</span>
+            </h4>
+            <div className="space-y-2">
+              {resources.slice(0, 8).map((resource) => (
+                <Link
+                  key={resource.name}
+                  to={resource.href}
+                  className="block text-sm text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                >
+                  {resource.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white flex items-center space-x-2">
+              <Users className="w-5 h-5 text-cyan-400" />
+              <span>Company</span>
+            </h4>
+            <div className="space-y-2">
+              {company.slice(0, 8).map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Links Section */}
+        <div className="mt-16 pt-8 border-t border-slate-700">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Quick Access</h3>
+            <p className="text-gray-400">Get started with our services quickly</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="flex flex-col items-center p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-all duration-200 group"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <link.icon className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-white font-medium text-center group-hover:text-blue-400 transition-colors">
+                  {link.name}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Achievements Section */}
+        <div className="mt-16 pt-8 border-t border-slate-700">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Our Achievements</h3>
+            <p className="text-gray-400">Delivering exceptional results for our clients worldwide</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+            {achievements.map((achievement) => (
+              <div key={achievement.label} className="text-center">
+                <div className="flex justify-center mb-3">
+                  <achievement.icon className="w-8 h-8 text-blue-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-1">{achievement.number}</div>
+                <div className="text-sm text-gray-400">{achievement.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Newsletter Signup */}
