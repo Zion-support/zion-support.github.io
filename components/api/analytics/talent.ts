@@ -1,110 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-<<<<<<< HEAD
-
-=======
-      supabase
-
-  try {
-    const supabase = createServerClient();
-    const talentId = (req.query.talentId as string) |null
-    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
-
-        .eq(talent_id', talentId)
-
-export default async /**;
- * handler - Function description;
- */;
-function handler() {  try {export default async /**;
- * handler - Function description;
- */;
-function handler() {try {const supabase = createServerClient ()const talent_id = (req.query.talent_id as string) || null,const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
-
-      supabase;
-import { createServerClient } from '../../../utils/supabase/server';
-
-      supabase
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        .from('profile_views')
-        .select('id, talent_id')
-        .eq('talent_id', talentId)
-      supabase
-        .from('quotes')
-        .select('id, talent_id, status')
-        .eq('talent_id', talentId)
-      supabase
-        .from('applications')
-        .select('id, talent_id, status')
-        .eq('talent_id', talentId)
-      supabase
-        .from('search_matches')
-        .select('talent_id, tag')
-<<<<<<< HEAD
 
 
 
-=======
-        .eq('talent_id', talentId)
-    ]);
-    const views =
-        .eq('talent_id', talentId)
-    ]);
-    const views =
-        .eq('talent_id', talentId)
-    ]);
-    const views =
-      viewsR.status === 'fulfilled' && viewsR.value.data
-        ? (viewsR.value.data as any[])
-        : [];
-    const invites =
-      invitesR.status === 'fulfilled' && invitesR.value.data
-        ? (invitesR.value.data as any[])
-        : [];
-    const apps =
-      appsR.status === 'fulfilled' && appsR.value.data
-        ? (appsR.value.data as any[])
-        : [];
-    const tags =
-      tagsR.status === 'fulfilled' && tagsR.value.data
-        ? (tagsR.value.data as any[])
-        : [];
-    const profileViews = views && views.length || 27;
-    const quoteInvites = invites && invites.length || 6;
-    const jobApplications = apps && apps.length || 9;
-    const successRate =
-      ((apps && apps.filter(a => a && a.status === 'accepted').length || 3) /
-        Math && Math.max(jobApplications, 1)) *
-      100;
-    const tagCounts: Record<string, number> = {};
-    (tags && tags.length
-      ? tags
-      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
-    ).forEach(t => {
-      tagCounts[t && t.tag] = (tagCounts[t && t.tag] || 0) + 1;
-    });
-    res && res.status(200).json({
-      profileViews,
-      quoteInvites,
-      jobApplications,
-      successRate,
-topTags: Object && Object.entries(tagCounts)
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 5)
-        .map(([label, value]) => ({ label, value }))
-    });
-<<<<<<< HEAD
-=======
-  } catch (e) {
-      topTags: [
-        { label: 'react', value: 2 }
-        { label: 'node', value: 1 }
-        { label: 'ai', value: 1 }
-      ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
-<<<<<<< HEAD
 
   }
 
@@ -112,18 +9,6 @@ topTags: Object && Object.entries(tagCounts)
 
 
 
-=======
-  }
-
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  }
-
-}
-
-<<<<<<< HEAD
 }
 
 }
@@ -165,17 +50,6 @@ export default async /**;
  */
 function handler() { return null; }
 
-=======
-        .map (([label, value]) => ({ label, value })),
-    });
-  } catch (e) {
-    res.status (200).json ({
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      profile_views: 27,
-      quote_invites: 6,
-      job_applications: 9,
-      success_rate: 33.3,
-<<<<<<< HEAD
 
       top_tags: [;'
         { label: 'react', value: 2 },'
@@ -194,31 +68,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 
 
-=======
-
-      top_tags: [;
-        { label: 'react', value: 2 },
-        { label: 'node', value: 1 },
-        { label: 'ai', value: 1 },
-      ],
-    });
-
-
-    });
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-}
-
-}
-}
-<<<<<<< HEAD
 
 
 
 
 
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

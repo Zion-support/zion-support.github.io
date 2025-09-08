@@ -1,10 +1,3 @@
-<<<<<<< HEAD
 
 
 
-=======
-
-"export\": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
-export: const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [""
-"export": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = ["]"
->>>>>>> origin/cursor/delete-old-data-records-6bba

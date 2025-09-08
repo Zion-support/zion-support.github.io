@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -226,8 +225,3 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 
 
 
-=======
-},
-
-,
->>>>>>> origin/cursor/delete-old-data-records-6bba

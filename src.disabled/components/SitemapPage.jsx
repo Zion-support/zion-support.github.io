@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
@@ -14,8 +13,3 @@ import _React from';react' "export": default function SitemapPage() { const publ
 
 
 
-=======
-import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>\'';
-const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
-import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
->>>>>>> origin/cursor/delete-old-data-records-6bba

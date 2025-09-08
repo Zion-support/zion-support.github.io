@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 dotenv.config(),;
@@ -113,10 +112,4 @@ return;
 
 
 
-
-=======
-import { App } from '@slack/bolt';
-import dotenv from 'dotenv';
-import fetch from 'node-fetch';
->>>>>>> origin/cursor/delete-old-data-records-6bba
 

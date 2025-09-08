@@ -1,139 +1,22 @@
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-const { upsertFile } = require('./_lib/github');
-const fs = require('fs');
-const path = require('path');
-async function getLatest(pkg) {
-  try {
-<<<<<<< HEAD
 
   // TODO: Implement
 }
 
-=======
-  // TODO: Implement
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`);
-    if (!resp.ok) return null;
-    const json = await resp.json();
-
-    return json.version |null;
-  } catch (_) {
-    return null;
-<<<<<<< HEAD
 
 exports.handler = async function () {
   // TODO: Implement
 
-=======
-exports.handler = async function () {
-  // TODO: Implement
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const pkgPath = path.join(process.cwd(), 'package.json');
-    const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
-    const deps = {
-      ...(pkg.dependencies |{})
-      ...(pkg.devDependencies |{})
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const entries = [];
-    for (const [name, current] of Object.entries(deps)) {
-      const latest = await getLatest(name);
-      if (!latest) continue;
-      entries.push({
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        name;
-        current;
-        latest;)
-        outOfDate: current.replace(/^[^0-9]*/, ) !== latest;
-      });
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const report = { updatedAt: Date.now(), entries }
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
-    if (owner && repo && token) {
-      await upsertFile({
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        owner;
-        repo;
-        path: 'data/reports/deps/weekly-dependencies.json,)
-  content: JSON.stringify(report, null, 2)
-        message: 'chore(automation): weekly dependency insights
-        token;
-    return {
-  // TODO: Implement
-      statusCode: 200;,
-  body: JSON.stringify({ ok: true, count: entries.length })
-  } catch (e) {
-<<<<<<< HEAD
-
-=======
-    }
-    return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
-  }
-};async function getLatest() {
-  }
-};async function getLatest(pkg) {
-  try {
 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-exports.handler = async function() {
-  try {
 
-    const pkgPath = path.join(process.cwd(), 'package.json')
-    const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
-    const deps = { ...(pkg.dependencies |{}), ...(pkg.devDependencies |{}) }
-    const entries = []
-    for (const [name, current] of Object.entries(deps)) {
-      const latest = await getLatest(name)
-      if (!latest) continue
-      entries.push({ name, current, latest, outOfDate: current.replace(/^[^0-9]*/, '') !== latest })
-    }
-<<<<<<< HEAD
 
-=======
-    const report = { updatedAt: Date.now(), entries }
-    const owner = process.env.GITHUB_OWNER
-    const repo = process.env.GITHUB_REPO
-    const token = process.env.GITHUB_TOKEN
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-};async function getLatest(pkg) {
-  // TODO: Implement
-}`;
-    const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`)
-    const json = await resp.json()
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
-    }
-
-<<<<<<< HEAD
 
   }
 
@@ -143,31 +26,3 @@ exports.handler = async function() {
 
 
 
-=======
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-
-
-:netlify/functions/cron-weekly-deps.js
-
-}
-
-},
-main:netlify/functions/cron-weekly-deps.js
-:backup-problematic-files/netlify/functions/cron-weekly-deps.js
-:netlify/functions/cron-weekly-deps.js
-
-}
-main:netlify/functions/cron-weekly-deps.js
-:backup-problematic-files/netlify/functions/cron-weekly-deps.js
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba

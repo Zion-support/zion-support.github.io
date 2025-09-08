@@ -1,38 +1,10 @@
 
-<<<<<<< HEAD
-=======
-import { QuoteRequestSteps } from "../QuoteRequestForm";
-import { CheckIcon } from "@/components/icons";
-import { cn } from "@/lib/utils";
-interface StepProgressProps {
-
-interface StepProgressProps {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  currentStep: QuoteRequestSteps
-
-}
-
-<<<<<<< HEAD
-
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
-        <div"
-          className="absolute h-full bg-zion-purple transition-all duration-500"
-          style={{}
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
-          }}
-        />
-      </div>"
-      <div className="flex justify-between relative">
-
-<<<<<<< HEAD
         {steps.map((step) => {
 
             <div key={step.id} className="flex flex-col items-center relative">
@@ -91,5 +63,3 @@ function StepProgress() {
 ;
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

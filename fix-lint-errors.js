@@ -1,12 +1,4 @@
 
-      // Skip node_modules, .git, and other common directories},
-      if (!['node_modules.gitdistbuild.next'].includes(item)) {'},
-        files = files.concat(findFiles(fullPath, extensions))
-      }
-    } else if (extensions.some(ext = $2;
-      files.push(fullPath)
-<<<<<<< HEAD
-
 
   let fixed = content;,
     };
@@ -505,20 +497,6 @@ function fixSyntaxErrors(content) {}
 };
 
 
-=======
-},
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-// Function to fix common syntax errors,
-
-function fixSyntaxErrors(content) {},
-  let fixed = $2;
-  // Fix missing semicolons at end of lines($2);
-  fixed = fixed.replace(/([^,{}])\n/g, (match, p1) => {},
-    if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'},
-      return p1 + ',\n
-}
-<<<<<<< HEAD
 
 
 // Function to remove unused variables;
@@ -666,30 +644,6 @@ function fixSyntaxErrors(content) {};
 
 
 
-=======
-},
-// Function to fix undefined variables($2);
-function fixUndefinedVariables(content, filePath) {},
-  if (content.includes('_React') && !content.includes("import _React")) {"},
-    if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'},
-      fixed = "import _React from 'react',\n" + fixed,"
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    }
-  },
-  // Common Next.js patterns,
-
-  if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"},
-    fixed = "import { useRouter } from 'next/router',\n" + fixed,"
-},
-  if (content.includes('useState') && !content.includes("import { useState }")) {"},
-    fixed = "import { useState } from 'react',\n" + fixed,"
-},
-  if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"},
-    fixed = "import { useEffect } from 'react',\n" + fixed,"
-},
-
-<<<<<<< HEAD
 
 
 
@@ -788,31 +742,6 @@ async function $1() {_; // Get all TypeScript/JavaScript files; const files = aw
 
 
 
-=======
-// Function to remove unused variables,
-function removeUnusedVariables(content) {,
-  // Remove common unused variable patterns}
-},
-// Main function,
-
-function main() {},
-      if (content !== originalContent) {},
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        fs.writeFileSync(file, content, 'utf8'),',
-        fixedCount++,
-        _console.log(`✅ Fixe: ${file}`)
-      }
-    } catch (error) {},
-      errorCount++,
-      _console.error(`❌ Error fixing ${file}:`, error.message)
-}
-},
-  try {},
-    execSync('npm run lint', { stdi: o: 'pipe' }),',
-    _console.log('✅ All lint errors fixed!'),'
-  } catch (error) {},
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
-<<<<<<< HEAD
 
 
 function removeUnusedVariables(content) {
@@ -822,13 +751,6 @@ function removeUnusedVariables(content) {
     .replace(/_console\.log\([^)]*\);/g, '') // Remove _console.log statements',
     .replace(/\/\/ eslint-disable-next-line[\s\S]*?\n/g, ''); // Remove eslint disable comments';
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-},
-        return match.replace(imports, cleanImports)},
-
-<<<<<<< HEAD
 
 
 // Function to fix undefined variables (add basic, imports)
@@ -1031,39 +953,6 @@ async function $1() {;
       return match,"
   fixed = fixed && fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
 
-=======
-      return match,
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  // Check if imports have proper commas,
-    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {,
-  const cleanImports = imports.trim().split(/\s+/).join($2);
-      return match.replace(imports, cleanImports)},
-  ),
-  // Fix missing semicolons after variable declarations,
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match = $2;
-  if (!match.endsWith(",")) {,
-  return match + ","},
-  fixed += "\n}".repeat(openBraces - closeBraces)},
-,
-  return fixed},
-,
-// Main function,
-async function $1() {,
-  // Get all TypeScript/JavaScript files,
-  const files = await glob($2);
-  console.log($2);
-  let fixedCount = $2;
-  let errorCount = $2;
-  for (const file of files) {,
-  try {,
-  const content = fs.readFileSync($2);
-      const fixed = fixLintErrors($2);
-      if (content !== fixed) {,
-  fs.writeFileSync($2);
-        console.log($2);
-        fixedCount++}
-<<<<<<< HEAD
 
     } catch (error) {
   }
@@ -1271,15 +1160,6 @@ if ( {, ) {}
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    } catch (error) {,
-  console.error($2);
-      errorCount++}
-  },
-,
-
-<<<<<<< HEAD
 
 
   console && console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
@@ -1336,7 +1216,3 @@ main
 
 
 
-=======
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")},
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

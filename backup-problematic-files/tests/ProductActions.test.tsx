@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
 import '@testing-library/jest-dom',;
@@ -50,5 +49,3 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
   );
 }
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -22,5 +21,3 @@ describe('SecurityHeaders', () => {
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

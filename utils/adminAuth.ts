@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 export interface Session {
 
@@ -255,11 +253,3 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
-=======
-// Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = $2;
-export const isAdmin = $2;
-// Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = $2;
-export const isAdmin = $2;
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,20 +18,3 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
-}
-}
-<
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import React from 'react';
-interface EmailautomationProps {
-  // Add props here as needed
-}
-export default function Emailautomation({ }: EmailautomationProps) {
-  return (
-    <div>
-      <h1>Emailautomation</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );

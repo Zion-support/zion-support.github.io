@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 :temp_exclude/src.disabled/components/ServicesOverview.jsx;
 '"
@@ -8,7 +7,3 @@
 ' '''";";""
 
 
-=======
-
-' '''";";""
->>>>>>> origin/cursor/delete-old-data-records-6bba

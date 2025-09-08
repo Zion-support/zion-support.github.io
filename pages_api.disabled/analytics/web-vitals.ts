@@ -1,33 +1,6 @@
 
-<<<<<<< HEAD
-
-=======
-  'next';
-interface WebVitalsData {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  "name": string;
-  value: number;
-  id: string;
-  delta: number;
-  timestamp: number;
-  url: string;
-  userAgent: string}
-<<<<<<< HEAD
 
 
-=======
-}
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default async function handler(
-  "req": NextApiReques t, "res": NextApiRespons e
-) {
-  if (req.method !==, POST') {'
-    return res.status(405).json({ "error": 'Method not allowed });'
-  }
-
-<<<<<<< HEAD
   try {
     const "data": WebVitalsDat a = req.body;
     // Validate required fields
@@ -71,5 +44,3 @@ import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData {
 import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string, value: number, id: string, delta: number, timestamp: number, url: string, userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req && req.method !==,POST') {' return res && res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req && req.body; if (!data && data.name || typeof data && data.value !==,number') {' return res && res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console && console.log('Web Vitals: ,{' metric: dat a && a.name,value: dat a && a.value,url: dat a && a.url,timestamp: new Date(data && data.timestamp).toISOString(),}); res && res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a && a.name,value: dat a && a.value })} catch (error) { console && console.error( 'Error processing web vitals:,' ,error); res && res.status(500).json({ error: 'Internal server error });' } }
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

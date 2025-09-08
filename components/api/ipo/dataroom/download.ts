@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
   res && res.setHeader("Content-Type", contentType);
   res && res.setHeader("
     "Content-Disposition","
@@ -14,16 +12,6 @@
     "Content-Disposition",
     `attachment, filename="${path && path.basename(fullPath)}"`,
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import mime from 'mime-types';
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   if (!requireSuperadminApi(req, res)) return;
 
@@ -74,17 +62,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.createReadStream (full_path).pipe (res);
 
 
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-  const section = String(req.query.section || 'General');
-  const file = String(req.query.file || '');
-  if (!file) return res.status(400).json({ error: 'Missing file' });
-<<<<<<< HEAD
 
 
 
@@ -92,6 +69,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

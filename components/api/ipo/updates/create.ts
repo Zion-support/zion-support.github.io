@@ -1,8 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
-<<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -20,6 +15,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

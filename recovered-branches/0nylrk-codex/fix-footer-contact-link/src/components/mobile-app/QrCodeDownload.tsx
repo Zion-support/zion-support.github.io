@@ -1,48 +1,7 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from "react";
-import { QrCode } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export const QrCodeDownload: React.FC = () => {
-  // App store links - these would come from environment variables in production
-  const appStoreUrl = "#"; // Replace with actual App Store URL
-  const googlePlayUrl = "#"; // Replace with actual Google Play URL
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return (
-    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-            <div className="flex-1">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Download <span className="text-zion-cyan">Zion</span> to Your
-                Device
-              </h2>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-              <p className="text-lg text-gray-300 mb-8">
-                Scan the QR code with your phone camera to download the app;
-                instantly, or use the buttons below to get it from your app;
-                store of choice.
-              </p>
-
-<<<<<<< HEAD
   )
 
 },
@@ -72,62 +31,6 @@ export const QrCodeDownload:React.FC = () => {;
   return (;
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
 
-=======
-              <AppStoreButtons 
-                className="mb-8" 
-
-              <AppStoreButtons 
-                className="mb-8" 
-
-              <AppStoreButtons
-                className="mb-8"
-              <AppStoreButtons 
-                className="mb-8" 
-
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
-
-              <AppStoreButtons
-                className="mb-8"
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
-
-  );
-
-};
-
-  );
-
-
-};
-
-  )
-
-},
-import { AppStoreButtons } from "./AppStoreButtons",;"
-export const "QrCodeDownload": React.FC = () => {;
-  // App store links - these would come from environment variables in production;
-  }
-  const appStoreUrl = "#", // Replace with actual App Store URL;"
-  const googlePlayUrl = "#", // Replace with actual Google Play URL;
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <div className="container mx-auto px-4">;
-        <div className="max-w-5xl mx-auto">;
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;
-            <div className="flex-1">;
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
-
-                Download <span className="text-zion-cyan">Zion</span> to Your Device;
-              </h2>;"
-              <p className="text-lg text-gray-300 mb-8">;
-                Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.;
-              </p>;
-
-<<<<<<< HEAD
               ;
               <AppStoreButtons ;
                 className="mb-8" ;
@@ -148,19 +51,6 @@ export const "QrCodeDownload": React.FC = () => {;
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                  Scan to download;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-<<<<<<< HEAD
 export default QrCodeDownload;
 
     </section>;
@@ -180,6 +70,3 @@ export default QrCodeDownload;
 
 
 
-=======
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 
 // Fix remaining corrupted files;
 
@@ -518,21 +516,6 @@ remainingCorruptedFiles.forEach(filePath => {,
     console.log(`✓ Fixed ${filePath}`)} catch (error) {;,// Function to extract display name from service name,
     console.log(`✓ Fixed ${filePath}`)} catch (error) {;
 
-=======
-    .join("")},
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-,
-// Function to extract display name from service name,
-function getDisplayName(serviceName) {,
-  // Remove common prefixes and convert to readable format,
-  return serviceName,
-    .replace($2);
-    .replace(/([A-Z])/g, " $1"),
-    .trim()},
-,
-// Fix remaining corrupted files,
-<<<<<<< HEAD
 
 remainingCorruptedFiles.forEach(filePath => {,
 
@@ -548,22 +531,6 @@ remainingCorruptedFiles.forEach(filePath => {,
 
     console.log(`Fixing ${filePath}...`),
 
-=======
-remainingCorruptedFiles.forEach($2);
-    const displayName = getDisplayName($2);
-    console.log($2);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    // Ensure directory exists,
-    const dir = path.dirname($2);
-    if (!fs.existsSync(dir)) {,
-  fs.mkdirSync(dir, { "recursive": true })},
-    ,
-    // Write the fixed content,
-    const content = servicePageTemplate($2);
-    fs.writeFileSync($2);
-    console.log(`✓ Fixed ${filePath}`)} catch (error) {,
-
-<<<<<<< HEAD
 
 
     console.log(`✓ Fixed ${filePath}`)} catch (error) {console.error(`✗ Error fixing ${filePath} `, error.message)};  // Remove common prefixes and convert to readable format;
@@ -673,7 +640,3 @@ function getDisplayName() { return service_name; .replace (/^AI/, ""); .replace 
 
 
 
-=======
-  console.error(`✗ Error fixing ${filePath}:`, error.message)},
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

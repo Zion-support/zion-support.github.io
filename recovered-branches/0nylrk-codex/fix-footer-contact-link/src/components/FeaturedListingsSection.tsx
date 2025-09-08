@@ -1,150 +1,18 @@
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 
 
-=======
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-
-import { ProductListingCard } from '@/components / ProductListingCard';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import { Link } from './react-router-dom';
-
-interface FeaturedListingsSectionProps {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface FeaturedListingsSectionProps {
-
-  show_title?: boolean;
-}
-
-interface FeaturedListingsSectionProps {
-  showTitle?: boolean
-}
-
-export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {
-  const featuredListings = [
-    {
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      id: "advanced-nlp-model",
-
-      title: "Advanced NLP Model for Text Analysis",
-
-      description: "State-of-the-art natural language processing with 98% accuracy",
-      price: 4999,"
-      currency: "$",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-11-15T14:48:00.000Z",
-      rating: 4.8,
-      reviewCount: 124,
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      author: {
-        name: "TechAI Labs"
-        id: "tech-ai-labs"
-
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
-      }
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    },
-    {"
-      id: "image-generation-service","
-      title: "AI Image Generation Service","
-      description: "Create stunning visuals with our advanced AI image generator",
-      price: 2499,"
-      currency: "$","
-      category: "Content Creation","
-      tags: ["AI", "Images", "Generation"],"
-      images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],"
-
-      createdAt: "2023-10-20T11:15:00.000Z",
-      rating: 4.7,
-      reviewCount: 89,
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      author: {
-        name: "VisualAI"
-        id: "visual-ai"
-      }
 
 
-<<<<<<< HEAD
-=======
-    },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    {
-      id: "fullstack-ai-dev"
-      title: "Full-Stack AI Development"
-      description: "End-to-end development for AI-powered applications"
-      price: null, // Custom pricing
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      currency: "$",
-      category: "Services",
-      tags: ["Development", "Full-stack", "AI"],
-      images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
-
-      createdAt: "2023-12-15T09:45:00.000Z",
-      rating: 4.9,
-      reviewCount: 56,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      author: {
-        name: "DataMinds Consulting"
-        id: "dataminds-consulting"
-      }
-
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-
-import {Link} from "react-router-dom";
-"
-      tags: ["API", "Sentiment", "Analytics"];"
-      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]"
-      createdAt: "2024-01-05T11:15:00.000Z"
-
-      author: {
-<<<<<<< HEAD
         name: "SocialAI"
 
         id: "social-ai"
@@ -314,17 +182,6 @@ import { Link } from "react-router-dom",;
 
 
 
-=======
-        name: "DataMinds Consulting"
-        id: "dataminds-consulting"
-      }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-
-<<<<<<< HEAD
 
 
               key={listing.id}
@@ -332,32 +189,6 @@ import {Link} from "react-router-dom";
 
 
 
-=======
-      tags: ["API", "Sentiment", "Analytics"];
-      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]
-      createdAt: "2024-01-05T11:15:00.000Z"
-      rating: 4.6
-
-              key={listing.id}
-              listing={listing}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              view="grid"
-
-}
-  show_title?: boolean;
-export /**
- * FeaturedListingsSection - Function description;
-pr-12325
-
-              key={listing.id}
-              listing={listing}
-              view="grid";
-import { ProductListingCard } from "@/components/ProductListingCard",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Link } from "react-router-dom",;
-
-<<<<<<< HEAD
 
               Featured Listings;
             </GradientHeading>;
@@ -370,87 +201,8 @@ import { Link } from "react-router-dom",;
           {featured_listings.map ((listing) => (
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <ProductListingCard
-              key={listing.id}
-              listing={listing}
 
 
-<<<<<<< HEAD
-
-=======
-view="grid"
-              onRequestQuote={() => {}}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              view="grid"
-              onRequestQuote={() => {}}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredListings.map((listing) => (
-            <ProductListingCard
-              key={listing.id}
-            <ProductListingCard;
-              key={listing.id}
-              listing={listing}
-
-              view="grid"
-              onRequestQuote={() => {}}
-            />
-          ))}
-        </div>"
-        <div className="mt-10 text-center">
-          <Button"
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
-            asChild;
-          >"
-            <Link to="/marketplace">View All Listings</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  )
-
-              view="grid"
-              onRequestQuote={() => {}}
-
-        </div>;
-"
-        <div className="mt-10 text-center">;
-
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
-
-              onRequestQuote={() => {}}
-        </div>;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <div className="mt-10 text-center">;
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
-              view="grid""
-
-        <div className="mt-10 text-center">"
-          <Button;"
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6""
-            asChild;
-          >
-            <Link to="/marketplace">View All Listings"
-    </section>
-</Button>"
-            <Link to="/marketplace">View All Listings</Link>"
-
-          </Button>
-        </div>
-      </div>
-    </section>
-
-        </div>;"
-        <div className="mt-10 text-center">;"
-            asChild>;
-<<<<<<< HEAD
 
             />))}
         </div>;
@@ -459,77 +211,14 @@ view="grid"
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";
             as_child;
             />;
-=======
-
-
-        <div className="mt - 10 text - center">;"
-            className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";"
-            as_child;
-/>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          ))}
-        </div>;
-        ;
-        <div className="mt-10 text-center">;
-          <Button ;
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
-            asChild;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-        </div>;
-        <div className="mt-10 text-center">;
-          <Button;
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
-            asChild;
-          >;
-<<<<<<< HEAD
-
-
-
-=======
-
-              onRequestQuote={() => {}}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <Link to="/marketplace">View All Listings</Link>;
-          </Button>;
-        </div>;
-      </div>;
-
-
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-</section>);
-}
-
-    </section>);
-}
-<<<<<<< HEAD
-=======
-
-    </section>;
-  );}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
 
 
 
-=======
-}
-;
-    </section>);
 
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+

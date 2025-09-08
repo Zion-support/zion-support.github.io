@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,5 +29,3 @@ const DisputeDashboard = ({ className }) => {
 };
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD:pages/_app.tsx
 import React from 'react';
 import Head from 'next/head';
 
@@ -29,23 +24,5 @@ export default function _app() {
       </div>
     </>
   );
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import type { AppProps } from 'next/app';
 
-import '../styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   );
-=======
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:backup-problematic-files/temp_broken_files/src/pages/_app.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}

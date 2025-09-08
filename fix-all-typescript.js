@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
@@ -27,40 +26,6 @@ function fixTypeScriptFiles(dir) {,
 
   })};
 
-=======
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ;
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-function fixTypeScriptFiles(dir) {;
-  if (!fs.existsSync(dir)) return;
-  const items = fs.readdirSync(dir);
-  items.forEach(item => {;
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-      fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
-      try {;
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {;
-          console.log(`Fixing "file": ${fullPath}`);
-          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
-      } catch (error) {;
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
-#!/usr/bin/env node,
-const fs = require($2);
-const path = require($2);
-function fixTypeScriptFiles(dir) {,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  if (!fs.existsSync(dir)) return,
-  const items = fs.readdirSync(dir),
-  items.forEach(item => {,
-    const fullPath = path.join(dir, item),
-    const stat = fs.statSync(fullPath),
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {,
-      fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {,
-<<<<<<< HEAD
 
 
 
@@ -112,8 +77,6 @@ origin/main
 }
 
 
-=======
-<<<<<<< HEAD
       try {,
         const content = fs.readFileSync(fullPath, 'utf8'),
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {,
@@ -190,7 +153,6 @@ function fixTypeScriptFiles(dir) {,
     const stat = fs.statSync($2);
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {,
       fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {,
->>>>>>> origin/cursor/delete-old-data-records-6bba
       try {,
         const content = fs.readFileSync($2);
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {,
@@ -206,7 +168,6 @@ function fixTypeScriptFiles(dir) {,
 }
   })},
 
-<<<<<<< HEAD
 
 const items = fs && fs.readdirSync(dir)items && items.forEach((item) => { const fullPath = path && path.join(dir,item)const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory() && !item && item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item && item.endsWith('.ts') || item && item.endsWith('.tsx')) { try { const content = fs && fs.readFileSync(fullPath,'utf8')if (content && content.trim() === '' || !content && content.includes('export') && !content && content.includes('import')) { console && console.log(`Fixing "file": ${fullPat,`}`)fs && fs.writeFileSync(fullPath,' } catch (error) { console && console.log(`Error processing ${fullPath}: ${error && error.message}`)} } })} console && console.log('🔧 Fixing all TypeScript files...')fixTypeScriptFiles(__dirname)console && console.log('✅ All TypeScript files fixed!')#!/usr/bin/env node const fs = require('fs';'  const path = require('path')function fixTypeScriptFiles() { if (!fs && fs.existsSync(dir));'
   }
@@ -262,5 +223,3 @@ const content = fs.readFileSync(fullPath, 'utf8'),;'
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

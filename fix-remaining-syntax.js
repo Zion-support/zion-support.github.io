@@ -1,6 +1,3 @@
-
-
-<<<<<<< HEAD
 }});
   }
 });
@@ -282,17 +279,6 @@ errorFiles.forEach(file => {}
 console.log(`Fixed ${fixedCount} files`);
 
 ;
-=======
-  }
-}),
-console.log($2);
-,
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  };
-}),
-console.log(`Fixed ${fixedCount} files`),
-,
-<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -418,7 +404,3 @@ const __filename = fileURLToPath(import.meta.url)const __dirname = path.dirname(
 
 
 
-=======
-}});
-console.log(`Fixed ${fixedCount} files`);
->>>>>>> origin/cursor/delete-old-data-records-6bba

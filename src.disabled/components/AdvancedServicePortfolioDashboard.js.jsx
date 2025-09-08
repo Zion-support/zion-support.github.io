@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 :src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx
@@ -10,22 +9,3 @@ import React from\';react\' const AdvancedServicePortfolioDashboard = () => { co
 
 
 
-=======
-import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-:temp_exclude/src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"
-
-import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5'
-import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-:temp_exclude/src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx;
-'
-import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-
-const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"
-import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"

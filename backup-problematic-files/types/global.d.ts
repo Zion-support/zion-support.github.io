@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
@@ -75,5 +74,3 @@ declare namespace NodeJS {
 }
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,7 +1,3 @@
-#!/usr/bin/env node;
-// SEO Optimization Implementation Script;
-
-<<<<<<< HEAD
 
 
 const fs = require('fs'),;
@@ -13,5 +9,3 @@ console.log('🚀 Implementing SEO Optimizations...'),;
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

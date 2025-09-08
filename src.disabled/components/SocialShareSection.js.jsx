@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 
 export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
 
@@ -19,7 +17,3 @@ export: function SocialShareSection () { const socialPlatforms = [" { name: "Twi
 
 export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-"export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
-export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"

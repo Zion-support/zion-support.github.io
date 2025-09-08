@@ -1,7 +1,3 @@
-#!/usr/bin/env node;
-// Code Splitting Implementation Script;
-
-<<<<<<< HEAD
 
 
 const fs = require('fs'),;
@@ -14,5 +10,3 @@ console.log('🚀 Implementing Code Splitting...'),;
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
   theme: {
     extend: {
       colors: {
@@ -36,14 +34,3 @@
 
 
 
-=======
-module && module.exports = {
-
-        sm: "calc(var(--radius) - 4px)",
-      },
-    },
-  },
-  plugins: [],
-
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,55 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-lastMessage: string,;
-  timestamp: string,;
-  unreadCount: number,;
-  isTyping?: boolean;
-}
-
-interface MobileConversationListProps {;
-  conversations: Conversation[],;
-
-import React from "react",
-import { Card } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Search } from "lucide-react",
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-interface Conversation {
-
-  id: string
-
-
-<<<<<<< HEAD
-=======
-  lastMessage: string,;
-  timestamp: string,;
-  unreadCount: number,;
-  isTyping?: boolean;
-}
-
-interface MobileConversationListProps {;
-  conversations: Conversation[],;
-
-  onSelectConversation: (id: string) => void
-}
-import { Input } from "@/components/ui/input",
-import { cn } from "@/lib/utils",
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface Conversation {
-
-  id: string,
-  name: string,
-  avatar?: string,
-  lastMessage: string,
-  timestamp: string,
-  unreadCount: number,
-
-<<<<<<< HEAD
   isTyping?: boolean
 
   onSelectConversation;
@@ -58,92 +7,11 @@ interface Conversation {
   return (;
     <div className="space-y-4">;
 
-=======
-
-export function MobileConversationList({
-
-export function MobileConversationList(): any ({;
-  activeConversation?: string;
-  onSelectConversation: (id: string) => void;
-}
-
-import { cn } from "@/lib/utils",;
-interface Conversation {;
-  id: string,;
-  name: string,;
-  avatar?: string,;
-  lastMessage: string,;
-  timestamp: string,;
-  unreadCount: number,;
-  isTyping?: boolean;
-}
-;
-interface MobileConversationListProps {;
-  conversations: Conversation[],;
-  activeConversation?: string,;
-  onSelectConversation: (id: string) => void;
-}
-
-  activeConversation?: string;
-  onSelectConversation: (id: string) => void;
-}
-export function MobileConversationList(): any ({;
-
-  conversations;
-  activeConversation;
-  onSelectConversation;
-  onSelectConversation;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <div className="px-4 mb-2">;
-        <div className="relative">;
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
-          <Input;
-            placeholder="Search messages...";
-            className="pl-9";
-          />;
-        </div>;
-      </div>;
-      ;
-      <div className="px-4 pb-4 space-y-2">;
-        <div className="flex space-x-2">;
-          <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
-          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>;
-          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>;
-          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
 
               "px-4";
 
               "px-4",
 
-=======
-
-
-      <div className="space-y-2 pb-24">;
-        {conversations && conversations.map((conversation) => (;
-
-          <div
-            key={conversation && conversation.id}
-            className={cn(
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              activeConversation === conversation.id && "bg-primary/5"
-            )}
-            onClick={() => onSelectConversation(conversation.id)}
-          >"
-
-            <div className="flex items-center gap-3 py-3 cursor-pointer">
-
-              <Avatar>
-
-                <AvatarImage src={conversation.avatar} />
-
-                <AvatarFallback>
-<<<<<<< HEAD
 
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
@@ -159,39 +27,6 @@ export function MobileConversationList(): any ({;
                   <p className="text-sm text-muted-foreground truncate">
 
 
-=======
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      ? <em>Typing...</em>
-                      : conversation.lastMessage}
-                  </p>
-                  {conversation.unreadCount > 0 && ("
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
-                      {conversation.unreadCount}
-                    </Badge>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              activeConversation === conversation && conversation.id && "bg-primary/5"
-            )}
-            onClick={() => onSelectConversation(conversation && conversation.id)}
-          >;"
-            <div className="flex items-center gap-3 py-3 cursor-pointer">;
-
-              <Avatar>;
-
-                <AvatarImage src={conversation && conversation.avatar} />;
-
-                <AvatarFallback>;
-<<<<<<< HEAD
 
                   {conversation && conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>;
@@ -249,28 +84,6 @@ export function MobileConversationList(): any ({;
                   {conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation.unreadCount}
-=======
-
-
-                      ? <em>Typing...</em> ;
-                  </p>;"
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
-
-</Badge>
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    </Badge>;
-
-                  )}
-                </div>;
-              </div>;
-            </div>;"
-            <div className="border-t border-border ml-12"></div>;
-          </div>;
-        ))}
-
-<<<<<<< HEAD
       </div>;
     </div>;
 import React from './react';
@@ -330,6 +143,3 @@ interface Conversation {
 
 
 
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

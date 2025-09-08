@@ -1,8 +1,5 @@
 
 
-<<<<<<< HEAD
-
-
 import fs from 'fs')
 import path from 'path')
 }
@@ -995,49 +992,6 @@ if (import.meta.url === `file: //${process.argv[1];}`) {;
     console.log(`[${level}] ${message}`),
     fs.appendFileSync(this.logFile, logMessage),
 
-=======
-    }
-  },
-,
-  log(message, level = $2;
-    const timestamp = new Date().toISOString($2);
-    const logMessage = $2;
-    console.log($2);
-    fs.appendFileSync(this.logFile, logMessage)
-  },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-,
-  async runSecurityAudit() {,
-    try {,
-      this.log($2);
-      const output = execSync($2);
-      const auditResult = $2;
-,
-      if (auditResult.vulnerabilities) {,
-        const vulnCount = $2;
-        this.vulnerabilities.push($2);
-        this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
-      } else {,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        this.log("✓ No vulnerabilities found")
-      }
-    } catch (error) {,
-      this.log(`Security audit: failed: ${error.message}`, "ERROR")
-    }
-  },
-,
-  async checkSecrets() {,
-    try {,
-      this.log($2);
-      const files = this.getSourceFiles($2);
-      let secretCount = $2;
-,
-      files.forEach($2);
-        const secretPatterns = $2;
-          /api[_-]?key\s*[:=]\s*["'][^"']+["']/gi,
-          /secret\s*[:=]\s*["'][^"']+["']/gi,
-          /password\s*[:=]\s*["'][^"']+["']/gi,
-<<<<<<< HEAD
 
           /token\s*[:=]\s*["'][^"']+["']/gi,
         ],
@@ -1440,88 +1394,17 @@ if (vulnerabilities.critical > 0) {
 
 
 
-=======
-          /token\s*[:=]\s*["'][^"']+["']/gi
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        ],
-,
-        secretPatterns.forEach(pattern = $2;
-          if (pattern.test(content)) {,
-            secretCount++
-          }
-        })
-      }),
-,
-<<<<<<< HEAD
 
 
 
-=======
-      if (secretCount > 0) {,
-        this.vulnerabilities.push($2);
-        this.log(`Found ${secretCount} potential secrets`, "WARN")
-      } else {,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        this.log("✓ No exposed secrets found")
-      }
-    } catch (error) {,
-      this.log(`Secret check: failed: ${error.message}`, "ERROR")
-    }
-  },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-,
-  getSourceFiles() {,
-    const files = $2;
-    const srcDir = path.join(process.cwd(), "src"),
-,
-    if (fs.existsSync(srcDir)) {,
-      const walkDir = $2;
-        const items = fs.readdirSync($2);
-        items.forEach($2);
-          const stat = fs.statSync($2);
-,
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
-<<<<<<< HEAD
-
-
-=======
-            walkDir(fullPath)
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            files.push(fullPath)
-          }
-        })
-      },
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-,
-      walkDir(srcDir)
-    },
-,
-    return files
-  },
-,
-  async generateReport() {,
-<<<<<<< HEAD
+
+
 
     const report = {,
 
-=======
-    const report = $2;
-      timestam: new Date().toISOString($2);
-      vulnerabilitie: this.vulnerabilities,
-      recommendation: [,
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        "Run npm audit fix to address vulnerabilities",
-        "Review and remove any hardcoded secrets",
-        "Use environment variables for sensitive data",
-        "Implement proper authentication and authorization",
-<<<<<<< HEAD
 
 
 
@@ -1530,51 +1413,11 @@ if (vulnerabilities.critical > 0) {
     this.log(`Security report saved to: ${reportFile}`),
   };
 
-=======
-        "Regularly update dependencies"
-      ]
-    },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-,
-    const reportFile = path.join($2);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
-    this.log(`Security report saved: to: ${reportFile}`)
-  },
-,
-  async run() {,
-    this.log($2);
-,
-    try {,
-      await this.runSecurityAudit($2);
-      await this.checkSecrets($2);
-      await this.generateReport($2);
-,
-<<<<<<< HEAD
-
-
-=======
-      this.log($2);
-      this.log($2);
-      this.vulnerabilities.forEach(vuln = $2;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      this.log(`❌ Security Scanner: failed: ${error.message}`, "ERROR")
-    }
-  }
-},
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-,
-// Main execution,
-if (import.meta.url = $2;
-  const scanner = new SecurityScanner($2);
-  scanner.run().catch(console.error)
-},
-,
-<<<<<<< HEAD
+
+
 
 export default SecurityScanner,
 
@@ -1622,6 +1465,3 @@ export default SecurityScanner;
 
 
 
-=======
-export default SecurityScanner,
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Brain  } from 'lucide-react';'
 const 'Loading': React.FC = () => {import React from 'react';'
 }
@@ -34,8 +31,6 @@ return (;
       </div>{' '}'
     </div>;
   )}export default Loading;import React from 'react'; import { Brain } from 'lucide-react'; const 'Loading': React.FC = () => { return ( <div className='min-h-screen bg-gray-900 flex items-center justify-center'> {' '} <div className='text-center'> {' '} {}{' '} <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse'> {' '} <Brain className='w-10 h-10 text-white' />{' '} </div>{' '} {}{' '} <h2 className='text-2xl font-bold text-white mb-4'>Zion Tech Group</h2>{' '} <p className='text-gray-400 mb-8'>Loading amazing experiences...</p> {}{' '} <div className='flex justify-center'> {' '} <div className='w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin'></div>{' '} </div>{' '} </div>{' '} </div> )}export default Loading;import * as React from 'react'; import { Brain } from 'lucide-react'; const 'Loading': React.FC = () => { return ( <div className='min-h-screen bg-gray-900 flex items-center justify-center'> {' '} <div className='text-center'> {' '} {}{' '} <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse'> {' '} <Brain className='w-10 h-10 text-white' />{' '} </div>{' '} {}{' '} <h2 className='text-2xl font-bold text-white mb-4'>Zion Tech Group</h2>{' '} <p className='text-gray-400 mb-8'>Loading amazing experiences...</p> {}{' '} <div className='flex justify-center'> {' '} <div className='w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin'></div>{' '} </div>{' '} </div>{' '} </div> )}export default Loading;ursor/automate-test-improve-and-merge-code-646c;'
-=======
-<<<<<<< HEAD
 import { Brain  } from 'lucide-react';
 const Loading: React.FC = () => {import React from 'react';
 const Loading: React.FC = () => {ursor/automate-test-improve-and-merge-code-646c;
@@ -68,7 +63,6 @@ const "Loading": React.FC = () => {
       </div>{' '}
     </div>;
   )}export default Loading;import React from react'; import { Brain } from 'lucide-react; const Loading: React.FC = () => { return ( <div className=min-h-screen bg-gray-900 flex items-center justify-center"> { '} <div className="text-center> {' } {}{ '} <div className=w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> {' } <Brain className="w-10 h-10 text-white />{ '} </div>{' } {}{ '} <h2 className=text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' } <p className="text-gray-400 mb-8>Loading amazing experiences...</p> {}{ '} <div className=flex justify-center"> {' } <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin></div>{ '} </div>{' } </div>{ '} </div> )}export default Loading;import * as React from 'react; import { Brain } from lucide-react'; const Loading: React.FC = () => { return ( <div className=min-h-screen bg-gray-900 flex items-center justify-center"> {' } <div className="text-center> { '} {}{' } <div className=w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> { '} <Brain className="w-10 h-10 text-white />{' } </div>{ '} {}{' } <h2 className=text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{ '} <p className="text-gray-400 mb-8>Loading amazing experiences...</p> {}{' } <div className=flex justify-center"> { '} <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin></div>{' } </div>{ '} </div>{' } </div> )}export default Loading;ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/resolved-merge-conflicts
   )}export default Loading;
     </div>
   );
@@ -76,86 +70,6 @@ const "Loading": React.FC = () => {
   );
 };
 export default Loading;
-<<<<<<< HEAD
 import React from 'react'; import { Brain } from 'lucide-react'; const 'Loading': React.FC = () => { return ( <div className='min-h-screen bg-gray-900 flex items-center justify-center'> {' '} <div className='text-center'> {' '} {}{' '} <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse'> {' '} <Brain className='w-10 h-10 text-white' />{' '} </div>{' '} {}{' '} <h2 className='text-2xl font-bold text-white mb-4'>Zion Tech Group</h2>{' '} <p className='text-gray-400 mb-8'>Loading amazing experiences...</p> {}{' '} <div className='flex justify-center'> {' '} <div className='w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin'></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;'
 import * as React from 'react'; import { Brain } from 'lucide-react'; const 'Loading': React.FC = () => { return ( <div className='min-h-screen bg-gray-900 flex items-center justify-center'> {' '} <div className='text-center'> {' '} {}{' '} <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse'> {' '} <Brain className='w-10 h-10 text-white' />{' '} </div>{' '} {}{' '} <h2 className='text-2xl font-bold text-white mb-4'>Zion Tech Group</h2>{' '} <p className='text-gray-400 mb-8'>Loading amazing experiences...</p> {}{' '} <div className='flex justify-center'> {' '} <div className='w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin'></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;'
-=======
-import React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className="min-h-screen bg-gray-900 flex items-center justify-center"> {' '} <div className="text-center"> {' '} {}{' '} <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> {' '} <Brain className="w-10 h-10 text-white" />{' '} </div>{' '} {}{' '} <h2 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' '} <p className="text-gray-400 mb-8">Loading amazing experiences...</p> {}{' '} <div className="flex justify-center"> {' '} <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-import * as React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className="min-h-screen bg-gray-900 flex items-center justify-center"> {' '} <div className="text-center"> {' '} {}{' '} <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> {' '} <Brain className="w-10 h-10 text-white" />{' '} </div>{' '} {}{' '} <h2 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' '} <p className="text-gray-400 mb-8">Loading amazing experiences...</p> {}{' '} <div className="flex justify-center"> {' '} <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-}
-export default Loading;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-import React from 'react';
-import { Brain } from 'lucide-react';
-const "Loading": React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-import { Brain  } from 'lucide-react';
-const Loading: React.FC = () => {import React from 'react';
-const Loading: React.FC = () => {;}
-const \"Loading\": React.FC = () => {return (<div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" />;}
-import { Brain } from 'lucide-react';
-const Loading: React.FC = () => {
-import React from 'react';
-const \"Loading\": React.FC = () => {
-  return (}
-    <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" />}
-      {' '}
-      <div className=\"text-center\" />;
-        {' '}
-        {}{' '}
-        <div className=\"w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse\" />;
-          {' '}
-          <Brain className=\"w-10 h-10 text-white\" />{' '}
-        </div>{' '}
-        {}{' '}
-        <h2 className=\"text-2xl font-bold text-white mb-4\" />Zion Tech Group</h2>{' '}
-        <p className=\"text-gray-400 mb-8\" />Loading amazing experiences...</p> {}{' '}
-        <div className=\"flex justify-center\" />;
-          {' '}
-          <div className=\"w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin\" /></div>{' '}
-        </div>{' '}
-      </div>{' '}
-    </div>;
-  )}export default Loading;import React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" /> {' ';} <div className=\"text-center\" /> {' '} {}{' '} <div className=\"w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse\" /> {' '} <Brain className=\"w-10 h-10 text-white\" />{' '} </div>{' '} {}{' '} <h2 className=\"text-2xl font-bold text-white mb-4\" />Zion Tech Group</h2>{' '} <p className=\"text-gray-400 mb-8\" />Loading amazing experiences...</p> {}{' '} <div className=\"flex justify-center\" /> {' '} <div className=\"w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin\" /></div>{' '} </div>{' '} </div>{' '} </div> )}export default Loading;import * as React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" /> {' ';} <div className=\"text-center\" /> {' '} {}{' '} <div className=\"w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse\" /> {' '} <Brain className=\"w-10 h-10 text-white\" />{' '} </div>{' '} {}{' '} <h2 className=\"text-2xl font-bold text-white mb-4\" />Zion Tech Group</h2>{' '} <p className=\"text-gray-400 mb-8\" />Loading amazing experiences...</p> {}{' '} <div className=\"flex justify-center\" /> {' '} <div className=\"w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin\" /></div>{' '} </div>{' '} </div>{' '} </div> )}export default Loading;;
-  )}export default Loading;
-    </div>
-  );
-};
-export default Loading;
-
-
-import React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className="min-h-screen bg-gray-900 flex items-center justify-center"> {' '} <div className="text-center"> {' '} {}{' '} <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> {' '} <Brain className="w-10 h-10 text-white" />{' '} </div>{' '} {}{' '} <h2 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' '} <p className="text-gray-400 mb-8">Loading amazing experiences...</p> {}{' '} <div className="flex justify-center"> {' '} <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-
-import * as React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className="min-h-screen bg-gray-900 flex items-center justify-center"> {' '} <div className="text-center"> {' '} {}{' '} <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> {' '} <Brain className="w-10 h-10 text-white" />{' '} </div>{' '} {}{' '} <h2 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' '} <p className="text-gray-400 mb-8">Loading amazing experiences...</p> {}{' '} <div className="flex justify-center"> {' '} <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-
-
-
-
-
-import React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className="min-h-screen bg-gray-900 flex items-center justify-center"> {' ';} <div className="text-center"> {' '} {}{' '} <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> {' '} <Brain className="w-10 h-10 text-white" />{' '} </div>{' '} {}{' '} <h2 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' '} <p className="text-gray-400 mb-8">Loading amazing experiences...</p> {}{' '} <div className="flex justify-center"> {' '} <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-import * as React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className="min-h-screen bg-gray-900 flex items-center justify-center"> {' ';} <div className="text-center"> {' '} {}{' '} <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse"> {' '} <Brain className="w-10 h-10 text-white" />{' '} </div>{' '} {}{' '} <h2 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' '} <p className="text-gray-400 mb-8">Loading amazing experiences...</p> {}{' '} <div className="flex justify-center"> {' '} <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-const "Loading": React.FC = () => {"
-  return ("
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">"
-</div>"
-      <div className="text-center">"
-        <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse">"
-          <Brain className="w-10 h-10 text-white" />{' '}
-
-        </div>{' '}
-        <h2 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h2>{' '}
-        <p className="text-gray-400 mb-8">Loading amazing experiences...</p> {}{' '}
-        <div className="flex justify-center">"
-          <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>{' '}
-    </div>)
-pr-12325
-import React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" /> {' ';} <div className=\"text-center\" /> {' '} {}{' '} <div className=\"w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse\" /> {' '} <Brain className=\"w-10 h-10 text-white\" />{' '} </div>{' '} {}{' '} <h2 className=\"text-2xl font-bold text-white mb-4\" />Zion Tech Group</h2>{' '} <p className=\"text-gray-400 mb-8\" />Loading amazing experiences...</p> {}{' '} <div className=\"flex justify-center\" /> {' '} <div className=\"w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin\" /></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-import * as React from 'react'; import { Brain } from 'lucide-react'; const Loading: React.FC = () => { return ( <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" /> {' ';} <div className=\"text-center\" /> {' '} {}{' '} <div className=\"w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 animate-pulse\" /> {' '} <Brain className=\"w-10 h-10 text-white\" />{' '} </div>{' '} {}{' '} <h2 className=\"text-2xl font-bold text-white mb-4\" />Zion Tech Group</h2>{' '} <p className=\"text-gray-400 mb-8\" />Loading amazing experiences...</p> {}{' '} <div className=\"flex justify-center\" /> {' '} <div className=\"w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin\" /></div>{' '} </div>{' '} </div>{' '} </div> )}; export default Loading;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/resolved-merge-conflicts
->>>>>>> origin/cursor/delete-old-data-records-6bba

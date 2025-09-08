@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Polyfill fetch and enable fetch mocks
 import 'whatwg-fetch';
@@ -12,42 +11,6 @@ beforeEach(() => {
 });
 
 // Jest-DOM matchers
-=======
-// Basic Jest setup for Next.js
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import '@testing-library/jest-dom';
-
-// Mock window.matchMedia for Jest
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
-});
-
-// Mock ResizeObserver
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn()
-}));
-
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-  takeRecords: jest.fn(() => [])
-}));
-
-<<<<<<< HEAD
 // Polyfill for BroadcastChannel
 if (typeof BroadcastChannel === 'undefined') {
   // @ts-expect-error - BroadcastChannel polyfill for test environment
@@ -338,17 +301,3 @@ if (!global.vi.advanceTimersByTime) {
   global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);
 }
 
-=======
-// Mock fetch
-global.fetch = jest.fn();
-
-// Mock console methods to reduce noise in tests
-global.console = {
-  ...console,
-  log: jest.fn(),
-  debug: jest.fn(),
-  info: jest.fn(),
-  warn: jest.fn(),
-  error: jest.fn(),
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
   const fallback = () => {
@@ -68,23 +67,6 @@ question: `Which topic is central to ${moduleTitl,) => {
         }
       ]
     })
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { moduleTitle, moduleContent } = req.body || {},
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'}
-});
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-};
-
-
-<<<<<<< HEAD
 
 
   if (!apiKey) return fallback();
@@ -92,140 +74,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const client = new OpenAI({ apiKey });
 
         { role: 'user', content: prompt }];
-=======
-  if (!apiKey) return fallback($2);
-  try {
-    const client = new OpenAI($2);
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`,
 
-    const completion = await client.chat.completions.create($2);
-    const text = $2;
-    try {
-    });
-
-const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
-      temperature: 0 && 0.2,
-    });
-    const text = completion && completion.choices?.[0]?.message?.content ?? '';
-    try {
-
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
-
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
-
-
-        { role: 'user', content: prompt }];
-      temperature: 0.2});
-    const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON.parse(text);
-      return res.status(200).json(json);
-
-      const json = JSON && JSON.parse(text);
-      return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
-        { role: 'user', content: prompt }];
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      temperature: 0 && 0.2});
-    const text = completion && completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON && JSON.parse(text);
-      return res && res.status(200).json(json);
-      const json = JSON.parse (text);
-      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }];
-      temperature: 0.2});
-;
-    const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON.parse (text);
-      return res.status (200).json (json);
-    } catch {
-      }
-      return fallback ();
-    }
-  } catch (err) {
-        {question: 'Which docs are needed for launch?';
-          options: [;
-            'Whitepaper + governance docs';
-            'Novel';
-            'Recipe book';
-            'None';
-          ];
-          answerIndex: 0;
-        }
-      ];
-    })}question: 'Which docs are needed for launch?';
-          options: ['Whitepaper + governance docsNovelRecipe bookNone'];
-          answerIndex: 0}]})'Whitepaper + governance docs','Novel','Recipe book','None',],answerIndex: 0,},],})}if (!apiKey) return fallback()try {const client = new OpenAI({ apiKey })const prompt  = `Create a 5-question multiple-choice quiz in JSON with the shape {'questions':[{'question':string,'options':string[],'answerIndex':number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;{const completion = await client.chat.completions.create({model: 'gpt-4o-mini';
-      messages: [;
-{role: 'system',content: 'You are an expert course designer for founders.',},{ role: 'user', content: prompt },],temperature: 0 && 0.2,})const text = completion && completion.choices?.[0]?.message?.content ?? '';
-    try {return res.status(200).json(json){ role: 'system', content: 'You are an expert course designer for founders.' }{ role: 'user', content: prompt }];
-      temperature: 0 && 0.2})const text = completion && completion.choices?.[0]?.message?.content ?? '';
-    try {const json = JSON && JSON.parse(text)return res && res.status(200).json(json)const json = JSON.parse (text)return res.status (200).json (json){ role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }];
-      temperature: 0.2})const text = completion.choices?.[0]?.message?.content ?? '';
-    try {const json = JSON.parse (text)return res.status (200).json (json)temperature: 0.2,})const text = completion.choices?.[0]?.message?.content ?? '';
-    try {const json = JSON.parse(text)return res.status(200).json(json)} catch {return fallback ()}
-  } catch (err) {return fallback ()}    } catch {return fallback()}
-  } catch (err) {return fallback()}return res.status(200).json(json)const text = completion.choices?.[0]?.message?.content ?? '';
-    try {const json = JSON.parse(text)return fallback ()}
-  } catch (err) {return fallback ()}
-    return fallback ();
-  }    } catch {
-
-<<<<<<< HEAD
-
-=======
-      const json = JSON.parse($2);
-      return res.status(200).json(json)
-    } catch {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      return fallback()
-    }
-  } catch (err) {
-    return fallback()
-<<<<<<< HEAD
-  }
-=======
-
-      return fallback ();
-    }
-  } catch (err) {}
-    return fallback ();
-  }    } catch {}
-      return fallback()
-    }
-  } catch (err) {}
-    return fallback()
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-
-
-=======
-    return fallback();
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return fallback();
   }
 
-      const json = JSON.parse(text);}
-return res.status(200).json(json);}
-    } catch {}
-      return fallback ();}
-    }
-  } catch (e) {
-    return fallback();}
-  }
-
-"
-      return res.status(200).json(json);
-
-    const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON.parse(text);
->>>>>>> origin/cursor/delete-old-data-records-6bba
 

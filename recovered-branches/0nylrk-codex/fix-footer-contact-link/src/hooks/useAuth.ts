@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
   if (context === undefined) {
     }
     throw new Error("useAuth must be used within an AuthProvider");"
@@ -31,17 +29,6 @@ if ( {) {
     throw new Error ('use_auth must be used within an AuthProvider');
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useContext } from 'react',;
-import { AuthContext } from '@/context/auth/AuthContext',;
-import type { AuthContextType } from '@/types/auth',;
-export const useAuth = (): AuthContextType => {;
-  const context = useContext(AuthContext);
-  if (context === undefined) {;
-    throw new Error('useAuth must be used within an AuthProvider');
-
-<<<<<<< HEAD
 
 
   }
@@ -65,13 +52,3 @@ export const useAuth = (): AuthContextType => {;
 
 
 
-=======
-  }
-  // TypeScript can sometimes lose the narrowing performed above and;
-  // assume `context` might still be `{}`. Casting here ensures the;
-  }
-  // TypeScript can sometimes lose the narrowing performed above and;
-  // assume `context` might still be `{}`. Casting here ensures the;
-
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba

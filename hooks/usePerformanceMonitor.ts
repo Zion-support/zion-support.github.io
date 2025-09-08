@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
@@ -131,8 +129,3 @@ if ( {) {
 
 }
 
-=======
-};
-;
-export default usePerformanceMonitor;
->>>>>>> origin/cursor/delete-old-data-records-6bba
