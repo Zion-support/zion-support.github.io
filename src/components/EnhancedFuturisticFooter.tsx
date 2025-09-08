@@ -55,25 +55,43 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+      title: 'Innovative Services 2027',
+      featured: true,
+      links: [
+        { name: 'Innovative Services Showcase 2027', href: '/innovative-services-showcase-2027', featured: true },
+        { name: 'Comprehensive Pricing Guide 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', featured: true },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },
+        { name: 'AI-Powered Cybersecurity', href: '/services/cybersecurity', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
+        { name: 'AI-Powered Micro CRM', href: '/services/micro-crm', featured: true },
+        { name: 'Space Technology Platform', href: '/services/space-tech', featured: true }
+      ]
+    },
+    {
       title: 'AI & Analytics Services',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Predictive Analytics', href: '/services/ai-predictive-analytics' },
-        { name: 'AI Customer Behavior Analytics', href: '/services/ai-customer-behavior-analytics' },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
-        { name: 'AI Document Processing', href: '/services/ai-document-processing' },
-        { name: 'AI Customer Service Automation', href: '/services/ai-customer-service-automation' },
-        { name: 'AI Threat Detection', href: '/services/ai-threat-detection' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
-        { name: 'AI Identity Verification', href: '/services/ai-identity-verification' },
-        { name: 'AI Medical Diagnosis', href: '/services/ai-medical-diagnosis' },
-        { name: 'AI Trading Algorithms', href: '/services/ai-trading-algorithms' },
-        { name: 'AI Marketing Optimization', href: '/services/ai-marketing-optimization' },
-        { name: 'AI Content Generation', href: '/services/ai-content-generation' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
-        { name: 'AI Quality Control', href: '/services/ai-quality-control' }
+        { name: 'All Services', href: '/services', featured: true },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
+        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
+        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
+        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
+        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
+        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true },
+        { name: 'AI Marketing Automation', href: '/services#ai-marketing-automation', featured: true },
+        { name: 'AI Customer Support', href: '/services#ai-customer-support', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services#ai-hr', featured: true },
+        { name: 'AI Content Creation', href: '/services#ai-content-creation', featured: true }
       ]
     },
     {

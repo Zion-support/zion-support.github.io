@@ -656,14 +656,88 @@ export default function Services() {
                   : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-zion-cyan/30'
               }`}
             >
-              Get Started
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{SERVICE_STATISTICS_2030.totalServices}</div>
+                <div className="text-sm text-slate-300">Total Services</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-purple-400 mb-2">{SERVICE_STATISTICS_2030.totalCategories}</div>
+                <div className="text-sm text-slate-300">Categories</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-green-400 mb-2">{SERVICE_STATISTICS_2030.aiServices}</div>
+                <div className="text-sm text-slate-300">AI Services</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-yellow-400 mb-2">{SERVICE_STATISTICS_2030.emergingTechServices}</div>
+                <div className="text-sm text-slate-300">Emerging Tech</div>
+              </div>
+            </motion.div>
+
+            {/* Search and Filter Controls */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
             >
-              View Pricing
-            </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent w-80"
+                  />
+                </div>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="reviews">Sort by Reviews</option>
+                  <option value="name">Sort by Name</option>
+                </select>
+              </div>
+            </motion.div>
+
+            {/* Category Filter */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mb-8"
+            >
+              <div className="flex flex-wrap justify-center gap-3">
+                <button
+                  onClick={() => setActiveCategory('all')}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                    activeCategory === 'all'
+                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
+                      : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
+                  }`}
+                >
+                  All Services ({COMPREHENSIVE_SERVICES_INDEX_2030.length})
+                </button>
+                {categories.slice(1).map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                      activeCategory === category.id
+                        ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
+                        : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
+                    }`}
+                  >
+                    {category.icon} {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

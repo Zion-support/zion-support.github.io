@@ -82,49 +82,102 @@ export function AppHeader() {
   ];
 
   const services = [
-    // AI & Analytics Services
-    { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', icon: Brain, description: 'Multi-agent AI coordination & workflow automation' },
-    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'AI Predictive Analytics', href: '/services/ai-predictive-analytics', icon: Brain, description: 'Advanced forecasting with 95% accuracy' },
-    { name: 'AI Customer Behavior Analytics', href: '/services/ai-customer-behavior-analytics', icon: Brain, description: 'Deep customer insights & personalization' },
-    
-    // AI Automation & Security
-    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Settings, description: 'Intelligent process automation' },
-    { name: 'AI Threat Detection', href: '/services/ai-threat-detection', icon: Shield, description: 'Advanced security with 97% accuracy' },
-    { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection', icon: Shield, description: 'Real-time fraud prevention' },
-    { name: 'AI Identity Verification', href: '/services/ai-identity-verification', icon: Shield, description: 'Biometric & document verification' },
-    
-    // AI Healthcare & Finance
-    { name: 'AI Medical Diagnosis', href: '/services/ai-medical-diagnosis', icon: Heart, description: 'AI-powered diagnostic support' },
-    { name: 'AI Trading Algorithms', href: '/services/ai-trading-algorithms', icon: DollarSign, description: 'Advanced trading intelligence' },
-    { name: 'AI Credit Risk Assessment', href: '/services/ai-credit-risk-assessment', icon: DollarSign, description: 'Intelligent risk scoring' },
-    
-    // AI Marketing & Operations
-    { name: 'AI Marketing Optimization', href: '/services/ai-marketing-optimization', icon: TrendingUp, description: 'Campaign & content optimization' },
-    { name: 'AI Content Generation', href: '/services/ai-content-generation', icon: BookOpen, description: 'Human-like content creation' },
-    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'End-to-end supply chain intelligence' },
-    { name: 'AI Quality Control', href: '/services/ai-quality-control', icon: CheckCircle, description: 'Computer vision inspection' },
-    
-    // Infrastructure & Emerging Tech
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Zap, description: 'Next-Generation Quantum Computing' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
-    
-    // Micro SaaS Solutions
-    { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: TrendingUp, description: 'Prioritize deals with ML' },
-    { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: '24/7 on-site assistant' },
-    { name: 'AI Content Optimizer Pro', href: '/services/ai-content-optimizer-pro', icon: BookOpen, description: 'AI-powered content optimization' },
-    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: TrendingUp, description: 'Sales automation & intelligence' },
-    { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', icon: Users, description: 'Customer success automation' },
-    { name: 'AI HR Talent Acquisition', href: '/services/ai-hr-talent-acquisition', icon: Users, description: 'AI-powered recruitment' },
-    
-    // Specialized Solutions
-    { name: 'Healthcare Technology', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Sustainability Solutions', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
-    { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' }
+    { 
+      name: 'Innovative Services Showcase 2027', 
+      href: '/innovative-services-showcase-2027', 
+      icon: Rocket, 
+      description: 'Complete Services Portfolio',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Comprehensive Pricing Guide 2027', 
+      href: '/comprehensive-pricing-guide-2027', 
+      icon: DollarSign, 
+      description: 'Transparent Pricing & Plans',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: Scale, 
+      description: 'Legal AI & Compliance',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI & Analytics',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: 'Healthcare AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'Trading AI & Risk Management',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'Quantum AI Trading Platform', 
+      href: '/services/quantum-ai-trading-platform', 
+      icon: Atom, 
+      description: 'Quantum Computing Trading',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Workflow Orchestrator', 
+      href: '/services/ai-workflow-orchestrator', 
+      icon: GitFork, 
+      description: 'Workflow Automation AI',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI-Powered Cybersecurity', 
+      href: '/services/cybersecurity', 
+      icon: Shield, 
+      description: 'AI Security & Threat Detection',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'IoT & Virtual Replicas',
+      featured: true,
+      color: 'from-teal-500 to-cyan-500'
+    },
+    { 
+      name: 'AI-Powered Micro CRM', 
+      href: '/services/micro-crm', 
+      icon: Users, 
+      description: 'CRM with AI Insights',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'Space Technology Platform', 
+      href: '/services/space-tech', 
+      icon: Rocket, 
+      description: 'Satellite & Space Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    }
   ];
 
   const servicesCategories = [

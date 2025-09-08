@@ -1,415 +1,692 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
   Zap, 
-  Rocket, 
+  Brain, 
   Shield, 
-  TrendingUp, 
+  Cloud, 
+  Rocket, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  Heart, 
   Users, 
+  ShoppingCart, 
+  BookOpen, 
+  MessageCircle, 
+  HelpCircle, 
+  DollarSign, 
+  Gauge, 
+  BarChart3, 
+  Target, 
+  Lightbulb, 
+  Database, 
+  Network, 
+  Eye, 
+  Globe2, 
+  Smartphone, 
+  Monitor, 
+  Server, 
+  Atom, 
+  Car, 
+  Scale, 
+  Leaf, 
+  Factory, 
+  Building, 
   Clock, 
-  CheckCircle,
-  ArrowRight,
-  BarChart3,
-  Cpu,
-  Database,
-  Network,
-  Globe,
-  Lock,
-  Star,
-  Crown,
-  Sparkles,
-  Target,
+  Phone, 
+  Mail, 
+  MapPin, 
+  TrendingUp,
+  Truck,
+  GitFork,
   Award,
   Code,
-  Server,
-  Cloud,
-  Heart,
-  Leaf,
-  DollarSign,
-  Calendar,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Building,
-  Gauge,
-  GitFork,
-  Atom,
-  Eye,
-  Smartphone,
-  Truck,
-  Factory,
-  City,
-  CheckCircle2,
-  PenTool,
-  Image,
-  Video,
-  FileText,
-  Layers,
-  Type,
-  Share2,
-  ShoppingCart,
-  Home,
-  Palette,
-  Camera,
-  Mic,
-  Play,
-  Music,
-  Network2,
-  AlertTriangle,
+  Settings,
   Key,
-  Fingerprint,
-  ServerCrash
+  FileText,
+  PenTool,
+  Target as TargetIcon,
+  BarChart3 as BarChart3Icon,
+  ShoppingCart as ShoppingCartIcon,
+  MessageCircle as MessageCircleIcon,
+  FileText as FileTextIcon,
+  Settings as SettingsIcon,
+  Key as KeyIcon,
+  Leaf as LeafIcon,
+  Scale as ScaleIcon,
+  Building2,
+  Car as CarIcon,
+  Factory as FactoryIcon,
+  City,
+  Eye as EyeIcon,
+  Server as ServerIcon,
+  Monitor as MonitorIcon,
+  Code as CodeIcon,
+  Gauge as GaugeIcon,
+  Clock as ClockIcon,
+  DollarSign as DollarSignIcon,
+  Award as AwardIcon,
+  Truck as TruckIcon,
+  Home,
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+  MapPin as MapPinIcon
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  icon: React.ComponentType<any>;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+  };
+  href: string;
+  color: string;
+  category: string;
+  featured: boolean;
+}
+
+const services: Service[] = [
+  {
+    id: 'ai-legal-document-analysis',
+    name: 'AI Legal Document Analysis',
+    description: 'Advanced AI-powered legal document review, contract analysis, and compliance checking with 99.9% accuracy.',
+    icon: Scale,
+    features: [
+      'Contract clause analysis and risk assessment',
+      'Regulatory compliance checking',
+      'Legal precedent research automation',
+      'Document comparison and version control',
+      'Multi-language legal document support',
+      'Real-time compliance alerts'
+    ],
+    benefits: [
+      'Reduce legal review time by 80%',
+      'Minimize compliance risks',
+      'Cost-effective legal operations',
+      '24/7 document processing'
+    ],
+    useCases: [
+      'Law firms and legal departments',
+      'Corporate compliance teams',
+      'Contract management',
+      'Regulatory reporting'
+    ],
+    pricing: {
+      starter: '$299/month',
+      professional: '$799/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/ai-legal-document-analysis',
+    color: 'from-blue-600 to-indigo-700',
+    category: 'AI & Legal Tech',
+    featured: true
+  },
+  {
+    id: 'ai-supply-chain-optimization',
+    name: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with predictive analytics, demand forecasting, and real-time optimization.',
+    icon: Truck,
+    features: [
+      'Predictive demand forecasting',
+      'Real-time inventory optimization',
+      'Route optimization and logistics',
+      'Supplier performance analytics',
+      'Risk assessment and mitigation',
+      'Sustainability tracking'
+    ],
+    benefits: [
+      'Reduce inventory costs by 25%',
+      'Improve delivery times by 40%',
+      'Enhanced supplier relationships',
+      'Real-time visibility and control'
+    ],
+    useCases: [
+      'Manufacturing companies',
+      'Retail and e-commerce',
+      'Logistics providers',
+      'Distribution networks'
+    ],
+    pricing: {
+      starter: '$499/month',
+      professional: '$1,299/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/ai-supply-chain-optimization',
+    color: 'from-green-600 to-emerald-700',
+    category: 'AI & Operations',
+    featured: true
+  },
+  {
+    id: 'ai-healthcare-analytics',
+    name: 'AI Healthcare Analytics Platform',
+    description: 'Comprehensive healthcare analytics with patient insights, predictive diagnostics, and operational optimization.',
+    icon: Heart,
+    features: [
+      'Patient outcome prediction',
+      'Diagnostic accuracy improvement',
+      'Operational efficiency analytics',
+      'Population health insights',
+      'Clinical trial optimization',
+      'Healthcare cost analysis'
+    ],
+    benefits: [
+      'Improve diagnostic accuracy by 30%',
+      'Reduce healthcare costs by 20%',
+      'Enhanced patient outcomes',
+      'Compliance with healthcare regulations'
+    ],
+    useCases: [
+      'Hospitals and clinics',
+      'Healthcare systems',
+      'Medical research institutions',
+      'Health insurance companies'
+    ],
+    pricing: {
+      starter: '$599/month',
+      professional: '$1,499/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/ai-healthcare-analytics',
+    color: 'from-red-600 to-pink-700',
+    category: 'AI & Healthcare',
+    featured: true
+  },
+  {
+    id: 'ai-financial-trading',
+    name: 'AI Financial Trading Platform',
+    description: 'Advanced algorithmic trading with machine learning, risk management, and real-time market analysis.',
+    icon: TrendingUp,
+    features: [
+      'Algorithmic trading strategies',
+      'Real-time market analysis',
+      'Risk management and compliance',
+      'Portfolio optimization',
+      'Sentiment analysis',
+      'Backtesting and simulation'
+    ],
+    benefits: [
+      'Increase trading efficiency by 60%',
+      'Reduce risk exposure',
+      '24/7 market monitoring',
+      'Compliance automation'
+    ],
+    useCases: [
+      'Investment firms',
+      'Hedge funds',
+      'Individual traders',
+      'Financial institutions'
+    ],
+    pricing: {
+      starter: '$999/month',
+      professional: '$2,999/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/ai-financial-trading',
+    color: 'from-yellow-600 to-orange-700',
+    category: 'AI & Fintech',
+    featured: true
+  },
+  {
+    id: 'quantum-ai-trading',
+    name: 'Quantum AI Trading Platform',
+    description: 'Next-generation quantum computing-powered trading with unprecedented speed and accuracy.',
+    icon: Atom,
+    features: [
+      'Quantum algorithm optimization',
+      'Ultra-fast market analysis',
+      'Quantum risk assessment',
+      'Portfolio quantum optimization',
+      'Real-time quantum simulations',
+      'Quantum machine learning models'
+    ],
+    benefits: [
+      '1000x faster processing speed',
+      'Quantum advantage in complex calculations',
+      'Enhanced prediction accuracy',
+      'Future-proof technology'
+    ],
+    useCases: [
+      'High-frequency trading',
+      'Complex financial modeling',
+      'Risk assessment',
+      'Portfolio optimization'
+    ],
+    pricing: {
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/quantum-ai-trading-platform',
+    color: 'from-purple-600 to-pink-700',
+    category: 'Quantum Computing',
+    featured: true
+  },
+  {
+    id: 'ai-workflow-orchestrator',
+    name: 'AI Workflow Orchestrator',
+    description: 'Intelligent workflow automation with AI-powered decision making and process optimization.',
+    icon: GitFork,
+    features: [
+      'Intelligent process automation',
+      'AI decision making',
+      'Workflow optimization',
+      'Integration management',
+      'Performance analytics',
+      'Custom workflow builder'
+    ],
+    benefits: [
+      'Increase productivity by 50%',
+      'Reduce manual errors',
+      'Streamlined operations',
+      'Real-time process insights'
+    ],
+    useCases: [
+      'Business process automation',
+      'Customer service operations',
+      'Marketing automation',
+      'HR process management'
+    ],
+    pricing: {
+      starter: '$399/month',
+      professional: '$999/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/ai-workflow-orchestrator',
+    color: 'from-indigo-600 to-blue-700',
+    category: 'AI & Automation',
+    featured: true
+  },
+  {
+    id: 'cybersecurity-platform',
+    name: 'AI-Powered Cybersecurity Platform',
+    description: 'Advanced threat detection and prevention with machine learning and behavioral analysis.',
+    icon: Shield,
+    features: [
+      'Real-time threat detection',
+      'Behavioral analysis',
+      'Automated incident response',
+      'Vulnerability assessment',
+      'Compliance monitoring',
+      'Security analytics dashboard'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 80%',
+      '24/7 security monitoring',
+      'Compliance automation'
+    ],
+    useCases: [
+      'Enterprise security',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Government agencies'
+    ],
+    pricing: {
+      starter: '$599/month',
+      professional: '$1,299/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/cybersecurity',
+    color: 'from-green-600 to-teal-700',
+    category: 'Cybersecurity',
+    featured: true
+  },
+  {
+    id: 'digital-twin-platform',
+    name: 'Digital Twin Platform',
+    description: 'Create virtual replicas of physical assets for monitoring, simulation, and predictive maintenance.',
+    icon: Globe,
+    features: [
+      '3D asset modeling',
+      'Real-time monitoring',
+      'Predictive maintenance',
+      'Simulation capabilities',
+      'IoT integration',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Reduce downtime by 40%',
+      'Optimize asset performance',
+      'Predictive maintenance savings',
+      'Enhanced operational visibility'
+    ],
+    useCases: [
+      'Manufacturing facilities',
+      'Smart cities',
+      'Energy infrastructure',
+      'Transportation systems'
+    ],
+    pricing: {
+      starter: '$799/month',
+      professional: '$1,999/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/digital-twin',
+    color: 'from-teal-600 to-cyan-700',
+    category: 'IoT & Digital Twins',
+    featured: true
+  },
+  {
+    id: 'micro-crm',
+    name: 'AI-Powered Micro CRM',
+    description: 'Intelligent customer relationship management with AI insights and automation.',
+    icon: Users,
+    features: [
+      'AI customer insights',
+      'Automated lead scoring',
+      'Smart email campaigns',
+      'Customer behavior analysis',
+      'Sales forecasting',
+      'Integration capabilities'
+    ],
+    benefits: [
+      'Increase sales by 35%',
+      'Improve customer retention',
+      'Automated lead nurturing',
+      'Data-driven insights'
+    ],
+    useCases: [
+      'Small businesses',
+      'Sales teams',
+      'Marketing agencies',
+      'Startups'
+    ],
+    pricing: {
+      starter: '$99/month',
+      professional: '$299/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/micro-crm',
+    color: 'from-blue-600 to-purple-700',
+    category: 'CRM & Sales',
+    featured: true
+  },
+  {
+    id: 'space-tech-platform',
+    name: 'Space Technology Platform',
+    description: 'Advanced space technology solutions including satellite management and space debris tracking.',
+    icon: Rocket,
+    features: [
+      'Satellite constellation management',
+      'Space debris tracking',
+      'Orbital optimization',
+      'Space weather monitoring',
+      'Launch vehicle optimization',
+      'Space mission planning'
+    ],
+    benefits: [
+      'Optimize satellite operations',
+      'Reduce collision risks',
+      'Enhanced mission success',
+      'Cost-effective space operations'
+    ],
+    useCases: [
+      'Satellite operators',
+      'Space agencies',
+      'Aerospace companies',
+      'Research institutions'
+    ],
+    pricing: {
+      starter: '$1,499/month',
+      professional: '$3,999/month',
+      enterprise: 'Custom pricing'
+    },
+    href: '/services/space-tech',
+    color: 'from-indigo-600 to-purple-700',
+    category: 'Space Technology',
+    featured: true
+  }
+];
+
+const categories = [
+  { name: 'AI & Machine Learning', count: 6, color: 'from-purple-500 to-pink-500' },
+  { name: 'Cybersecurity', count: 2, color: 'from-green-500 to-blue-500' },
+  { name: 'Quantum Computing', count: 1, color: 'from-purple-500 to-indigo-500' },
+  { name: 'IoT & Digital Twins', count: 2, color: 'from-teal-500 to-cyan-500' },
+  { name: 'Space Technology', count: 1, color: 'from-indigo-500 to-purple-500' },
+  { name: 'CRM & Sales', count: 1, color: 'from-blue-500 to-purple-500' }
+];
 
 export default function ComprehensiveServicesLanding2027() {
-  const featuredServices = [
-    {
-      title: 'AI Autonomous Business Operations Platform',
-      description: 'Transform your business with autonomous AI operations. Our platform makes intelligent decisions, optimizes processes, and drives unprecedented efficiency 24/7.',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      href: '/services/ai-autonomous-business-operations-platform',
-      features: [
-        'AI-Powered Decision Making',
-        'Autonomous Process Optimization',
-        'Predictive Analytics',
-        'Real-time Monitoring',
-        'Intelligent Resource Allocation',
-        'Automated Risk Management'
-      ],
-      pricing: {
-        starter: 299,
-        professional: 799,
-        enterprise: 1999
-      },
-      benefits: [
-        'Reduce operational costs by up to 40%',
-        'Increase efficiency by 60%',
-        'Improve decision accuracy by 95%',
-        '24/7 autonomous operations'
-      ]
-    },
-    {
-      title: 'AI Sales Intelligence Platform',
-      description: 'Revolutionize your sales process with AI-powered intelligence. Automate lead scoring, predict outcomes, and optimize every sales interaction for maximum conversion.',
-      icon: TrendingUp,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/ai-sales-intelligence-platform',
-      features: [
-        'AI-Powered Lead Scoring',
-        'Predictive Sales Analytics',
-        'Real-time Market Intelligence',
-        'Automated Sales Outreach',
-        'Customer Behavior Analysis',
-        'Sales Performance Optimization'
-      ],
-      pricing: {
-        starter: 199,
-        professional: 499,
-        enterprise: 1299
-      },
-      benefits: [
-        'Increase sales conversion rates by up to 300%',
-        'Reduce lead qualification time by 80%',
-        'Improve sales forecasting accuracy by 95%',
-        'Automate repetitive sales tasks'
-      ]
-    },
-    {
-      title: 'Quantum AI Cybersecurity Platform',
-      description: 'Future-proof your security with quantum-resistant encryption and AI-powered threat detection. Our platform provides unparalleled protection against emerging cyber threats.',
-      icon: Shield,
-      color: 'from-indigo-500 to-purple-500',
-      href: '/services/quantum-ai-cybersecurity-platform',
-      features: [
-        'Quantum-Resistant Encryption',
-        'AI-Powered Threat Detection',
-        'Zero-Trust Architecture',
-        'Advanced Behavioral Analytics',
-        'Automated Incident Response',
-        'Quantum Key Distribution'
-      ],
-      pricing: {
-        starter: 399,
-        professional: 899,
-        enterprise: 2499
-      },
-      benefits: [
-        'Protect against quantum computing attacks',
-        'Reduce security incidents by up to 95%',
-        'Real-time threat detection and response',
-        'Compliance with international security standards'
-      ]
-    },
-    {
-      title: 'AI Content Creation Studio',
-      description: 'Transform your content strategy with AI-powered creation. Generate engaging, SEO-optimized content at scale while maintaining your unique brand voice.',
-      icon: PenTool,
-      color: 'from-emerald-500 to-teal-500',
-      href: '/services/ai-content-creation-studio',
-      features: [
-        'AI Text Generation',
-        'Visual Content Creation',
-        'Multi-Format Output',
-        'Brand Voice Consistency',
-        'SEO Optimization',
-        'Content Analytics'
-      ],
-      pricing: {
-        starter: 99,
-        professional: 299,
-        enterprise: 799
-      },
-      benefits: [
-        'Increase content production by up to 500%',
-        'Reduce content creation costs by 70%',
-        'Improve SEO rankings with optimized content',
-        'Maintain consistent brand voice'
-      ]
-    }
-  ];
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  const additionalServices = [
-    {
-      title: 'AI Healthcare Analytics Platform',
-      description: 'Advanced healthcare analytics with AI-powered insights for improved patient outcomes and operational efficiency.',
-      icon: Heart,
-      color: 'from-pink-500 to-red-500',
-      href: '/services/ai-healthcare-analytics',
-      pricing: 'Starting at $599/month'
-    },
-    {
-      title: 'AI Financial Trading Platform',
-      description: 'Intelligent trading algorithms with real-time market analysis and automated portfolio optimization.',
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/ai-financial-trading',
-      pricing: 'Starting at $799/month'
-    },
-    {
-      title: 'AI Supply Chain Optimization',
-      description: 'End-to-end supply chain visibility with AI-driven optimization and predictive analytics.',
-      icon: Truck,
-      color: 'from-orange-500 to-yellow-500',
-      href: '/services/ai-supply-chain-optimization',
-      pricing: 'Starting at $699/month'
-    },
-    {
-      title: 'AI Legal Document Analysis',
-      description: 'Automated legal document review and analysis with AI-powered contract intelligence.',
-      icon: FileText,
-      color: 'from-indigo-500 to-blue-500',
-      href: '/services/ai-legal-document-analysis',
-      pricing: 'Starting at $399/month'
-    }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
-        title="Comprehensive AI & Micro SAAS Services 2027 | Zion Tech Group"
-        description="Discover our comprehensive suite of AI-powered micro SAAS services. From autonomous business operations to quantum cybersecurity, transform your business with cutting-edge technology."
-        keywords="AI services, micro SAAS, business automation, cybersecurity, sales intelligence, content creation, Zion Tech Group"
+        title="Comprehensive Services Landing 2027 | Zion Tech Group"
+        description="Transform your business with our comprehensive suite of innovative AI, cybersecurity, quantum computing, and micro SAAS services. Expert solutions for the digital age."
+        keywords="AI services, cybersecurity, quantum computing, micro SAAS, digital transformation, IT services, Zion Tech Group, comprehensive solutions"
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
-              Revolutionary AI Services 2027
-            </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive AI &
-              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Micro SAAS Services
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Comprehensive Services Landing 2027
               </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with our cutting-edge AI-powered micro SAAS solutions. 
-              From autonomous operations to quantum cybersecurity, we provide the tools you need to succeed.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our comprehensive suite of innovative AI, cybersecurity, quantum computing, 
+              and micro SAAS services. Expert solutions designed for the digital age.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="#services"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-purple-500/30 text-purple-300 font-semibold hover:bg-purple-500/10 transition-all duration-300"
+                to="/comprehensive-pricing-guide-2027"
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
-                Explore Services
+                View Pricing
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Featured Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Contact Information */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-xl p-8 border border-slate-600"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured AI Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our flagship services designed to revolutionize your business operations
-            </p>
+            <h2 className="text-2xl font-bold text-white text-center mb-6">Contact Us for Expert Consultation</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <Phone className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold mb-2">Phone</h3>
+                <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="text-center">
+                <Mail className="w-8 h-8 text-pink-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold mb-2">Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-pink-400 hover:text-pink-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="text-center">
+                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold mb-2">Address</h3>
+                <p className="text-blue-400 text-sm">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
+              </div>
+            </div>
           </motion.div>
-
-          <div className="space-y-12">
-            {featuredServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-3xl blur-3xl"></div>
-                <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 lg:p-12">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} mb-6`}>
-                        <service.icon className="w-8 h-8 text-white" />
-                      </div>
-                      
-                      <h3 className="text-3xl font-bold text-white mb-4">{service.title}</h3>
-                      <p className="text-xl text-gray-300 mb-6">{service.description}</p>
-                      
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                        {service.benefits.slice(0, 4).map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center space-x-3">
-                            <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
-                            <span className="text-gray-300">{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                          to={service.href}
-                          className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                        >
-                          Learn More
-                          <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
-                        <Link
-                          to="/contact"
-                          className="inline-flex items-center px-6 py-3 rounded-lg border border-purple-500/30 text-purple-300 font-semibold hover:bg-purple-500/10 transition-all duration-300"
-                        >
-                          Get Quote
-                        </Link>
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <div className="bg-slate-700/30 rounded-2xl p-6 mb-6">
-                        <h4 className="text-xl font-semibold text-white mb-4">Pricing Plans</h4>
-                        <div className="space-y-3">
-                          <div className="flex justify-between items-center">
-                            <span className="text-gray-300">Starter</span>
-                            <span className="text-white font-semibold">${service.pricing.starter}/month</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-gray-300">Professional</span>
-                            <span className="text-white font-semibold">${service.pricing.professional}/month</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-gray-300">Enterprise</span>
-                            <span className="text-white font-semibold">${service.pricing.enterprise}/month</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-slate-700/30 rounded-2xl p-6">
-                        <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
-                        <div className="grid grid-cols-1 gap-2">
-                          {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-3">
-                              <div className="w-2 h-2 rounded-full bg-purple-400"></div>
-                              <span className="text-gray-300 text-sm">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Additional Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Category Filter */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Additional AI Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore our complete portfolio of AI-powered solutions
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-4">Filter by Category</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === 'all'
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                }`}
+              >
+                All Categories ({services.length})
+              </button>
+              {categories.map((category) => (
+                <button
+                  key={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    selectedCategory === category.name
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
           </motion.div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {additionalServices.map((service, index) => (
+      {/* Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredServices.map((service, serviceIndex) => (
               <motion.div
-                key={index}
+                key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative group"
+                transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-8 border border-slate-600 hover:border-slate-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 h-full hover:border-purple-500/50 transition-all duration-300">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} mb-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
+                {/* Service Header */}
+                <div className="text-center mb-6">
+                  <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                    <service.icon className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-purple-300 font-semibold mb-4">{service.pricing}</div>
+                  <h2 className="text-2xl font-bold text-white mb-3">{service.name}</h2>
+                  <p className="text-lg text-gray-300 mb-4">{service.description}</p>
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 bg-slate-700 text-purple-300 text-sm rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">Key Features:</h3>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Pricing */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">Pricing:</h3>
+                  <div className="grid grid-cols-3 gap-4 text-sm">
+                    <div className="text-center">
+                      <div className="text-gray-400">Starter</div>
+                      <div className="text-white font-semibold">{service.pricing.starter}</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-gray-400">Professional</div>
+                      <div className="text-white font-semibold">{service.pricing.professional}</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-gray-400">Enterprise</div>
+                      <div className="text-white font-semibold">{service.pricing.enterprise}</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Benefits and Use Cases */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.slice(0, 2).map((benefit, index) => (
+                        <li key={index} className="flex items-start text-gray-300 text-sm">
+                          <Zap className="h-4 w-4 text-yellow-400 mr-2 flex-shrink-0 mt-0.5" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-white mb-2">Use Cases:</h4>
+                    <ul className="space-y-1">
+                      {service.useCases.slice(0, 2).map((useCase, index) => (
+                        <li key={index} className="flex items-start text-gray-300 text-sm">
+                          <Target className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
+                          {useCase}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     to={service.href}
-                    className="inline-flex items-center text-purple-300 hover:text-purple-200 transition-colors duration-300"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-sm"
                   >
                     Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm"
+                  >
+                    Get Quote
                   </Link>
                 </div>
               </motion.div>
@@ -418,7 +695,7 @@ export default function ComprehensiveServicesLanding2027() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -430,41 +707,23 @@ export default function ComprehensiveServicesLanding2027() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get in touch with our team to discuss your specific needs and discover how our AI services can help you succeed
+              Contact our experts to discuss how our comprehensive services can drive your business forward
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex flex-col items-center space-y-2">
-                <Phone className="w-6 h-6 text-purple-400" />
-                <span className="text-gray-300">{contactInfo.phone}</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <Mail className="w-6 h-6 text-purple-400" />
-                <span className="text-gray-300">{contactInfo.email}</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <MapPin className="w-6 h-6 text-purple-400" />
-                <span className="text-gray-300 text-center">{contactInfo.address}</span>
-              </div>
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Us
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href={contactInfo.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-purple-500/30 text-purple-300 font-semibold hover:bg-purple-500/10 transition-all duration-300"
+              <Link
+                to="/schedule-demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
-                Visit Website
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                Schedule Demo
+              </Link>
             </div>
           </motion.div>
         </div>
