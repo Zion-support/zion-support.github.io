@@ -76,16 +76,12 @@ export function EnhancedHeader() {
   }
 ;
   const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Services', href: '/services', icon: Code, hasDropdown: true },
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Server },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
-    { name: 'Solutions', href: '/solutions', icon: Target },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'News', href: '/news', icon: Newspaper },
-    { name: 'Contact', href: '/contact', icon: MessageCircle }
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Pricing', href: '/services-pricing', current: false },
+    { name: 'Contact', href: '/contact', current: false },
   ];
 
   const serviceCategories = [
@@ -227,8 +223,128 @@ export function EnhancedHeader() {
 
 
 
-            </svg>
-          </button>
+            {/* Support Dropdown */}
+            <div className="relative group">
+              <button
+                className={`flex items-center text-sm font-medium transition-colors ${
+                  scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+                }`}
+                onMouseEnter={() => setActiveDropdown('support')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                Support
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              
+              <AnimatePresence>
+                {activeDropdown === 'support' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 p-6"
+                    onMouseEnter={() => setActiveDropdown('support')}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <div className="grid grid-cols-1 gap-4">
+                      {supportLinks.map((link) => (
+                        <Link
+                          key={link.name}
+                          to={link.href}
+                          className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        >
+                          <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <HelpCircle className="w-4 h-4 text-purple-600" />
+                          </div>
+                          <div>
+                            <div className="font-medium text-gray-900 group-hover:text-purple-600">
+                              {link.name}
+                            </div>
+                            <div className="text-sm text-gray-500">
+                              {link.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Direct Links */}
+            <Link 
+              to="/services-pricing" 
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+              }`}
+            >
+              Pricing
+            </Link>
+
+            <Link 
+              to="/contact" 
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+              }`}
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* Right Side Actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <form onSubmit={handleSearch} className="hidden md:flex items-center">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className={`w-64 pl-10 pr-4 py-2 rounded-lg border transition-colors ${
+                    scrolled 
+                      ? 'bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500' 
+                      : 'bg-white/20 border-white/30 text-white placeholder-white/70'
+                  } focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                />
+                <Search className={`absolute left-3 top-2.5 h-5 w-5 ${
+                  scrolled ? 'text-gray-400' : 'text-white/70'
+                }`} />
+              </div>
+            </form>
+
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center space-x-3">
+              <Link
+                to="/request-quote"
+                className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+              >
+                Get Quote
+              </Link>
+              <Link
+                to="/contact"
+                className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Start Project
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={`lg:hidden p-2 rounded-lg transition-colors ${
+                scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              }`}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
