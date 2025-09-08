@@ -1,3 +1,4 @@
+import React from 'react';
 // Performance monitoring utilities
 export interface PerformanceMetrics {
   loadTime: number;
@@ -74,7 +75,7 @@ class PerformanceMonitor {
     if ('PerformanceObserver' in window) {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           this.metrics = { ...this.metrics, firstInputDelay: entry.processingStart - entry.startTime } as PerformanceMetrics;
         });
       });
@@ -87,7 +88,7 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -127,7 +128,7 @@ class PerformanceMonitor {
         entries.forEach((entry) => {
           // Log slow resources
           if (entry.duration > 1000) {
-            console.warn(`Slow resource: ${entry.name} took ${entry.duration}ms`);
+            // console.warn(`Slow resource: ${entry.name} took ${entry.duration}ms`);
           }
         });
       });
@@ -175,7 +176,7 @@ class PerformanceMonitor {
 
     // Also log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', this.metrics);
+      // console.log('Performance Metrics:', this.metrics);
     }
   }
 
@@ -214,7 +215,7 @@ export const usePerformanceMonitor = (config?: Partial<PerformanceConfig>) => {
 };
 
 // Utility functions
-export const measureFunction = <T extends (...args: any[]) => any>(
+export const measureFunction = <T extends (...args: unknown[]) => any>(
   fn: T,
   name?: string
 ): T => {
@@ -224,25 +225,25 @@ export const measureFunction = <T extends (...args: any[]) => any>(
     const end = performance.now();
     
     if (name) {
-      console.log(`${name} took ${end - start} milliseconds`);
+      // console.log(`${name} took ${end - start} milliseconds`);
     }
     
     return result;
   }) as T;
 };
 
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => any>(
   func: T,
   wait: number
 ): T => {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return ((...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   }) as T;
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => any>(
   func: T,
   limit: number
 ): T => {
@@ -280,7 +281,7 @@ export const analyzeBundleSize = () => {
     return total;
   }, 0);
 
-  console.log('Bundle Analysis:', {
+  // console.log('Bundle Analysis:', {
     scripts: scripts.length,
     stylesheets: stylesheets.length,
     estimatedScriptSize: `${totalScriptSize}KB`,

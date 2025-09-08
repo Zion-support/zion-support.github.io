@@ -101,7 +101,7 @@
 :pages.disabled_auto/solutions/startups.tsx;
       description='Accelerate your startup,
   s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure.';
-      description='Accelerate your startup&apos;s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure.''>{/* Hero Section */}
+      description='Accelerate your startup's growth with our comprehensive technology solutions. From MVP development to scaling infrastructure.''>{/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
         <div className='container mx-auto px-4 text-center>
           <h1 className='text-5xl md: text-6xl font-bold mb-6>
@@ -111,7 +111,7 @@
     d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
 :pages.disabled_auto/solutions/startups.tsx;
             Accelerate your startups growth with our comprehensive technology solutions.;
-            Accelerate your startup&apos;s growth with our comprehensive technology solutions. '
+            Accelerate your startup's growth with our comprehensive technology solutions. '
 
             From MVP development to scaling infrastructure, we help startups succeed.
           </p>'

@@ -73,7 +73,7 @@ export function ProductSubmissionForm() {
   };
 
   // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
+  const handleApplyGenerated = (content: unknown) => {
     form.setValue("description", content.description);
     form.setValue("tags", content.tags.join(", "));
     

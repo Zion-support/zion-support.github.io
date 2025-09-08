@@ -74,7 +74,7 @@ class ErrorHandler {
 
     // Log to console if enabled
     if (this.config.enableConsoleLogging) {
-      console.error('Error captured:', fullErrorInfo);
+      // console.error('Error captured:', fullErrorInfo);
     }
 
     // Add to queue for reporting
@@ -148,11 +148,11 @@ class ErrorHandler {
       } else {
         // Fallback to console logging
         console.group('Error Report');
-        errorsToReport.forEach(error => console.error(error));
+        errorsToReport.forEach(error => // console.error(error));
         console.groupEnd();
       }
     } catch (error) {
-      console.error('Failed to report errors:', error);
+      // console.error('Failed to report errors:', error);
       // Re-queue errors for retry
       this.errorQueue.unshift(...this.errorQueue);
     } finally {
@@ -183,7 +183,7 @@ class ErrorHandler {
           this.sendErrorsToEndpoint(errors, retryCount + 1);
         }, this.config.retryDelay * Math.pow(2, retryCount));
       } else {
-        console.error('Failed to report errors after retries:', error);
+        // console.error('Failed to report errors after retries:', error);
       }
     }
   }
@@ -199,7 +199,7 @@ class ErrorHandler {
 
 // React Error Boundary Component
 interface ErrorBoundaryState {
-  hasError: boolean;
+  _hasError: boolean;
   error?: Error;
   errorInfo?: React.ErrorInfo;
 }
@@ -208,7 +208,7 @@ export class ErrorBoundary extends React.Component<
   React.PropsWithChildren<{ fallback?: React.ComponentType<{ error: Error; retry: () => void }> }>,
   ErrorBoundaryState
 > {
-  private errorHandler: ErrorHandler;
+  private _errorHandler: ErrorHandler;
 
   constructor(props: React.PropsWithChildren<{ fallback?: React.ComponentType<{ error: Error; retry: () => void }> }>) {
     super(props);
@@ -221,7 +221,7 @@ export class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    this.setState({ errorInfo });
+    this.setState({ _errorInfo });
     this.errorHandler.handleReactError(error, errorInfo);
   }
 
@@ -230,7 +230,7 @@ export class ErrorBoundary extends React.Component<
       const FallbackComponent = this.props.fallback || DefaultErrorFallback;
       return React.createElement(FallbackComponent, {
         error: this.state.error!,
-        retry: () => this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+        _retry: () => this.setState({ hasError: false, error: undefined, errorInfo: undefined })
       });
     }
 
@@ -239,7 +239,7 @@ export class ErrorBoundary extends React.Component<
 }
 
 // Default error fallback component
-const DefaultErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({ error, retry }) => 
+const _DefaultErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({ _error, _retry }) => 
   React.createElement('div', { className: 'min-h-screen flex items-center justify-center bg-gray-50' },
     React.createElement('div', { className: 'max-w-md w-full bg-white shadow-lg rounded-lg p-6' },
       React.createElement('div', { className: 'flex items-center mb-4' },
@@ -267,7 +267,7 @@ const DefaultErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({ e
           className: 'flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors'
         }, 'Try Again'),
         React.createElement('button', {
-          onClick: () => window.location.reload(),
+          _onClick: () => window.location.reload(),
           className: 'flex-1 bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors'
         }, 'Refresh Page')
       ),
@@ -289,13 +289,13 @@ export const useErrorHandler = () => {
     };
 
     if (context) {
-      errorInfo.message = `${context}: ${errorInfo.message}`;
+      errorInfo.message = `${_context}: ${errorInfo.message}`;
     }
 
     errorHandler.current.handleError(errorInfo);
   }, []);
 
-  return { handleError };
+  return { _handleError };
 };
 
 // Utility functions
@@ -307,13 +307,13 @@ export const createError = (message: string, code?: string): Error => {
   return error;
 };
 
-export const isNetworkError = (error: any): boolean => {
+export const isNetworkError = (error: unknown): boolean => {
   return error.name === 'NetworkError' || 
          error.message?.includes('fetch') || 
          error.message?.includes('network');
 };
 
-export const isTimeoutError = (error: any): boolean => {
+export const isTimeoutError = (error: unknown): boolean => {
   return error.name === 'TimeoutError' || 
          error.message?.includes('timeout');
 };

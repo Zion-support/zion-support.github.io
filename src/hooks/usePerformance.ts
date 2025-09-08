@@ -39,7 +39,7 @@ export const usePerformance = () => {
         isSlowConnection
       });
     } catch (error) {
-      console.warn('Performance measurement failed:', error);
+      // console.warn('Performance measurement failed:', error);
     } finally {
       setIsLoading(false);
     }

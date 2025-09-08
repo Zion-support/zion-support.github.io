@@ -147,7 +147,7 @@ function Pricing() {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your DevOps?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let&apos;s implement DevOps automation that accelerates your development cycle and improves reliability.
+          Let's implement DevOps automation that accelerates your development cycle and improves reliability.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

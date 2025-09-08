@@ -5,7 +5,7 @@ interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
   enableLazyLoading?: boolean;
-  lazyImport?: () => Promise<{ default: ComponentType<any> }>;
+  lazyImport?: () => Promise<{ default: ComponentType<unknown> }>;
   memoize?: boolean;
   className?: string;
 }
@@ -21,9 +21,12 @@ const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   memoize = true,
   className,
 }) => {
+  // Always call hooks at the top level
+  const lazyResult = enableLazyLoading && lazyImport ? useLazyComponent(lazyImport) : null;
+  
   // If lazy loading is enabled and import function is provided
-  if (enableLazyLoading && lazyImport) {
-    const { ref, Component, isLoading, isError } = useLazyComponent(lazyImport);
+  if (enableLazyLoading && lazyImport && lazyResult) {
+    const { ref, Component, isLoading, isError } = lazyResult;
 
     if (isError) {
       return <div className={className}>Error loading component</div>;
@@ -83,7 +86,7 @@ export const withMemoization = <P extends object>(
 /**
  * Hook for creating memoized callbacks
  */
-export const useMemoizedCallback = <T extends (...args: any[]) => any>(
+export const useMemoizedCallback = <T extends (...args: unknown[]) => any>(
   callback: T,
   deps: React.DependencyList
 ): T => {

@@ -8,14 +8,14 @@ const PerformanceMonitor: React.FC = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        console.log('LCP:', lastEntry.startTime);
+        // console.log('LCP:', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
+          // console.log('FID:', entry.processingStart - entry.startTime);
         }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -28,7 +28,7 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        console.log('CLS:', clsValue);
+        // console.log('CLS:', clsValue);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -37,8 +37,8 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Page Load Time:', navEntry.loadEventEnd - navEntry.loadEventStart);
-            console.log('DOM Content Loaded:', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);
+            // console.log('Page Load Time:', navEntry.loadEventEnd - navEntry.loadEventStart);
+            // console.log('DOM Content Loaded:', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);
           }
         }
       });

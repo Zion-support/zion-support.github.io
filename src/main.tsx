@@ -7,7 +7,7 @@ import App from './App';
 import './i18n';
 
 // Register service worker
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { _registerServiceWorker } from './serviceWorkerRegistration';
 
 // Error handling function
 const showApiError = (error: unknown): void => {

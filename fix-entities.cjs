@@ -1,62 +1,48 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
-const path = require('path');
 
-// List of files that need fixing based on the lint output
-const filesToFix = [
-  'pages/ai-services.tsx',
-  'pages/blog.tsx', 
-  'pages/help.tsx',
-  'pages/it-services.tsx',
-  'pages/micro-saas.tsx',
-  'pages/pricing.tsx',
-  'pages/privacy.tsx',
-  'pages/services/ai-development.tsx',
-  'pages/services/cloud-services.tsx',
-  'pages/services/web-development.tsx',
-  'pages/terms.tsx',
-  'components/ContactForm.tsx',
-  'components/TestimonialsSection.tsx'
-];
-
-function fixUnescapedEntities(content) {
-  // Fix unescaped apostrophes in JSX text content
-  // This is a more targeted approach to avoid breaking existing HTML entities
-  content = content.replace(/(?<!&)(?<!&#39;)(?<!&apos;)(?<!&lsquo;)(?<!&rsquo;)(?<!&amp;)'/g, '&apos;');
-  
-  // Fix unescaped quotes in JSX text content  
-  content = content.replace(/(?<!&)(?<!&quot;)(?<!&ldquo;)(?<!&rdquo;)(?<!&&#34;)(?<!&amp;)"/g, '&quot;');
-  
-  return content}
-
-function fixFile(filePath) {
-  try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false}
-    
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    content = fixUnescapedEntities(content);
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true}
-    
-    return false} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false}
+// Fix unescaped entities in JSX
+function fixEntities(content) {
+  return content
+    .replace(/'/g, '&apos;')
+    .replace(/"/g, '&quot;');
 }
 
-console.log('Fixing unescaped entities in files...');
+// Files with entity issues
+const files = [
+  'app/about/page.tsx',
+  'app/page.tsx',
+  'app/services/ai-meeting-assistant/page.tsx',
+  'app/services/ai-social-media-scheduler/page.tsx',
+  'app/services/blockchain-solutions/page.tsx',
+  'app/services/data-analytics/page.tsx',
+  'app/services/it-services/page.tsx',
+  'src/components/EnhancedContactForm.tsx',
+  'src/components/EnhancedServicesShowcase.tsx',
+  'src/components/ErrorBoundary.tsx',
+  'src/components/ModernTestimonials.tsx',
+  'src/components/ProductSubmissionForm.tsx',
+  'src/components/TestimonialCarousel.tsx',
+  'src/components/TrustedBySection.tsx',
+  'src/components/hiring-tracker/KanbanBoard.tsx',
+  'src/components/projects/milestones/MilestoneActivities.tsx',
+  'src/pages/AboutPage.tsx',
+  'src/pages/HomePage.tsx',
+  'src/pages/NotFound.tsx',
+  'src/pages/NotFoundPage.tsx',
+  'src/pages/ServicesPage.tsx',
+  'src/components/auth/login/LoginCard.tsx'
+];
 
-let fixedCount = 0;
-filesToFix.forEach(filePath => {
-  if (fixFile(filePath)) {
-    fixedCount++}
+files.forEach(file => {
+  if (fs.existsSync(file)) {
+    let content = fs.readFileSync(file, 'utf8');
+    const original = content;
+    content = fixEntities(content);
+    if (content !== original) {
+      fs.writeFileSync(file, content);
+      console.log(`Fixed entities in ${file}`);
+    }
+  }
 });
 
-console.log(`Fixed ${fixedCount} files`);
+console.log('Entity fixes complete');

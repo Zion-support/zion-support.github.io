@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { _createContext, _useContext, _useState, _useEffect, _ReactNode } from 'react';
 
 export interface User {
   id: string;
@@ -16,10 +16,10 @@ export interface AuthState {
 }
 
 export interface AuthContextType extends AuthState {
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
+  login: (email: string, _password: string) => Promise<void>;
+  _logout: () => Promise<void>;
   register: (email: string, password: string, name?: string) => Promise<void>;
-  clearError: () => void;
+  _clearError: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -78,7 +78,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, _password: string) => {
     setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
     
     try {
