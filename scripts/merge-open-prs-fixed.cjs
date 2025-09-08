@@ -51,7 +51,15 @@ async function ghRequest(path, method = 'GET', body) {
 
 async function getOpenPRs(owner, repo) {
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open`);
+=======
     const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
+>>>>>>> origin/main
+=======
+    const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
+>>>>>>> origin/main
     return prs || [];
   } catch (error) {
     console.error('Error fetching PRs:', error.message);
@@ -59,6 +67,11 @@ async function getOpenPRs(owner, repo) {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
 async function readyForReview(owner, repo, number) {
   try {
     await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, 'POST');
@@ -77,6 +90,10 @@ async function updateBranch(owner, repo, number) {
   }
 }
 
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
 async function mergePR(owner, repo, number) {
   try {
     const result = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, 'PUT', {
@@ -111,15 +128,35 @@ async function main() {
       console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
       
       if (pr.draft) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        console.log('   ⏸️  Skipping draft PR');
+        continue;
+      }
+      
+      if (pr.mergeable === false) {
+        console.log('   ⚠️  PR has merge conflicts, skipping');
+        continue;
+=======
         const readied = await readyForReview(owner, repo, pr.number);
         console.log(`   📝 Draft -> ready_for_review: ${readied ? 'ok' : 'not permitted'}`);
       }
       
+=======
+        const readied = await readyForReview(owner, repo, pr.number);
+        console.log(`   📝 Draft -> ready_for_review: ${readied ? 'ok' : 'not permitted'}`);
+      }
+      
+>>>>>>> origin/main
       // Ask GitHub to update the PR branch before merging
       const updated = await updateBranch(owner, repo, pr.number);
       if (updated) {
         console.log('   🔄 Requested update-branch');
         await new Promise(r => setTimeout(r, 2500));
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
       }
       
       const mergeResult = await mergePR(owner, repo, pr.number);

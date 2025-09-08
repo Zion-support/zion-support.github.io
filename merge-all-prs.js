@@ -119,9 +119,94 @@ function processAllBranches() {
   return { mergedCount, conflictCount };
 }
 
+<<<<<<< HEAD
+// Step 3: Fix syntax errors and merge conflicts in files
+function fixSyntaxAndConflicts() {
+  console.log('\n🔧 Fixing syntax errors and merge conflicts...');
+  
+  // Find all TypeScript/JavaScript files
+  const files = runCommand('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -100', 'Finding files to fix');
+  if (!files) return 0;
+  
+  const fileList = files.split('\n').filter(f => f.trim());
+  let fixedCount = 0;
+  
+  for (const file of fileList) {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      let originalContent = content;
+      
+      // Remove merge conflict markers
+<<<<<<< HEAD
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+=======
+>>>>>>> origin/main
+      content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+      
+      // Fix import statements
+      content = content.replace(/import React from "react",/g, 'import React from "react";');
+      content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");
+      content = content.replace(/import Link from 'next\/link',/g, "import Link from 'next/link';");
+      content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");
+      content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';");
+      
+      // Fix semicolons in imports
+      content = content.replace(/import ([^;]+)(?<!;)$/gm, 'import $1;');
+      
+      // Fix specific syntax issues
+      content = content.replace(/Play;/g, 'Play');
+      content = content.replace(/CheckCircle ;/g, 'CheckCircle');
+      content = content.replace(/Shield;/g, 'Shield');
+      content = content.replace(/Handshake ;/g, 'Handshake');
+      content = content.replace(/Heart;/g, 'Heart');
+      content = content.replace(/Gamepad2;/g, 'Gamepad2');
+      content = content.replace(/Filter;/g, 'Filter');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content);
+        console.log(`✅ Fixed ${file}`);
+        fixedCount++;
+      }
+    } catch (error) {
+      console.log(`❌ Error fixing ${file}: ${error.message}`);
+    }
+  }
+  
+  console.log(`\n📊 Fixed ${fixedCount} files`);
+  return fixedCount;
+}
+
+// Step 4: Create GitHub PR automation script
+function createGitHubPRAutomation() {
+  console.log('\n🔧 Creating GitHub PR automation...');
+  
+  const prScript = `#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
+const REPO_OWNER = 'Zion-Holdings';
+const REPO_NAME = 'zion.app';
+
+function githubAPI(endpoint, method = 'GET', data = null) {
+  const url = \`https://api.github.com/repos/\${REPO_OWNER}/\${REPO_NAME}\${endpoint}\`;
+  
+  let curlCommand = \`curl -s -X \${method} \\
+    -H "Authorization: token \${GITHUB_TOKEN}" \\
+    -H "Accept: application/vnd.github.v3+json" \\
+    -H "Content-Type: application/json" \\
+    "\${url}"\`;
+  
+  if (data) {
+    curlCommand += \` -d '\${JSON.stringify(data)}'\`;
+  }
+=======
 // Step 3: Resolve conflicts in a specific file
 function resolveConflictsInFile(filePath) {
   console.log(`🔧 Resolving conflicts in ${filePath}...`);
+>>>>>>> origin/main
   
   try {
     if (!fs.existsSync(filePath)) {

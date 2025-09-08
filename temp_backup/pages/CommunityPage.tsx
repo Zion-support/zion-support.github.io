@@ -3,7 +3,15 @@ import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
+<<<<<<< HEAD
+import ForumCategories from "@/components/community/ForumCategories";
+=======
 // import ForumCategories from "@/components/community/ForumCategories";
+>>>>>>> origin/main
+=======
+// import ForumCategories from "@/components/community/ForumCategories";
+>>>>>>> origin/main
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
@@ -119,7 +127,15 @@ export default function CommunityPage() {
           <CreatePostButton />
         </div>
         
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+=======
         {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+>>>>>>> origin/main
+=======
+        {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+>>>>>>> origin/main
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
@@ -127,9 +143,19 @@ export default function CommunityPage() {
           </TabsList>
           
           <TabsContent value="categories">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <ForumCategories />
+=======
             <div className="text-center py-8">
               <p className="text-muted-foreground">Forum categories coming soon...</p>
             </div>
+>>>>>>> origin/main
+=======
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">Forum categories coming soon...</p>
+            </div>
+>>>>>>> origin/main
           </TabsContent>
           
           <TabsContent value="featured">
@@ -147,6 +173,12 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </Tabs>
+=======
+=======
+>>>>>>> origin/main
         </Tabs> */}
         
         <div className="mb-8">
@@ -193,6 +225,10 @@ export default function CommunityPage() {
             </div>
           )}
         </div>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
       </div>
     </>
   );
