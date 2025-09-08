@@ -23938,3 +23938,112 @@ fatal: couldn't find remote ref cursor/fix-lint-push-and-merge-to-main-7be9
 [2025-09-08T21:32:22.381Z] ✅ Success: Get git status
 [2025-09-08T21:32:22.381Z] 📄 Found 0 conflicted files
 [2025-09-08T21:32:22.381Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:32:22.490Z] ✅ Success: Add resolved files
+[2025-09-08T21:32:22.490Z] 🚀 Commit merge for cursor/fix-lint-push-and-merge-to-main-7be9: git commit -m "Resolve conflicts and merge cursor/fix-lint-push-and-merge-to-main-7be9"
+[2025-09-08T21:32:22.563Z] ✅ Success: Commit merge for cursor/fix-lint-push-and-merge-to-main-7be9
+[2025-09-08T21:32:22.563Z] ✅ Successfully resolved conflicts and merged: cursor/fix-lint-push-and-merge-to-main-7be9
+[2025-09-08T21:32:22.563Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-7ce5
+[2025-09-08T21:32:22.563Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-7ce5: git fetch origin cursor/fix-lint-push-and-merge-to-main-7ce5
+[2025-09-08T21:32:22.908Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-7ce5
+[2025-09-08T21:32:22.909Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-7ce5: git merge origin/cursor/fix-lint-push-and-merge-to-main-7ce5 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-7ce5 into main"
+[2025-09-08T21:32:23.358Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-7ce5
+[2025-09-08T21:32:23.358Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-7ce5
+[2025-09-08T21:32:24.359Z] 📦 Processing batch 294/509
+[2025-09-08T21:32:24.359Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-7dd2
+[2025-09-08T21:32:24.360Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-7dd2: git fetch origin cursor/fix-lint-push-and-merge-to-main-7dd2
+[2025-09-08T21:32:24.714Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-7dd2
+[2025-09-08T21:32:24.714Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-7dd2: git merge origin/cursor/fix-lint-push-and-merge-to-main-7dd2 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-7dd2 into main"
+[2025-09-08T21:32:25.153Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-7dd2
+[2025-09-08T21:32:25.153Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-7dd2
+[2025-09-08T21:32:25.153Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-7dea
+[2025-09-08T21:32:25.153Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-7dea: git fetch origin cursor/fix-lint-push-and-merge-to-main-7dea
+[2025-09-08T21:32:25.504Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-7dea
+[2025-09-08T21:32:25.505Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-7dea: git merge origin/cursor/fix-lint-push-and-merge-to-main-7dea --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-7dea into main"
+[2025-09-08T21:32:26.028Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-7dea
+[2025-09-08T21:32:26.028Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-7dea
+[2025-09-08T21:32:26.028Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-7e28
+[2025-09-08T21:32:26.028Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-7e28: git fetch origin cursor/fix-lint-push-and-merge-to-main-7e28
+[2025-09-08T21:32:26.433Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-7e28
+[2025-09-08T21:32:26.433Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-7e28: git merge origin/cursor/fix-lint-push-and-merge-to-main-7e28 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-7e28 into main"
+[2025-09-08T21:32:26.922Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-7e28
+[2025-09-08T21:32:26.922Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-7e28
+[2025-09-08T21:32:26.922Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-825b
+[2025-09-08T21:32:26.922Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-825b: git fetch origin cursor/fix-lint-push-and-merge-to-main-825b
+[2025-09-08T21:32:27.314Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-825b
+[2025-09-08T21:32:27.314Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-825b: git merge origin/cursor/fix-lint-push-and-merge-to-main-825b --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-825b into main"
+[2025-09-08T21:32:27.760Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-825b
+[2025-09-08T21:32:27.761Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-825b
+[2025-09-08T21:32:27.761Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-8402
+[2025-09-08T21:32:27.761Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-8402: git fetch origin cursor/fix-lint-push-and-merge-to-main-8402
+[2025-09-08T21:32:28.106Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-8402
+[2025-09-08T21:32:28.106Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-8402: git merge origin/cursor/fix-lint-push-and-merge-to-main-8402 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-8402 into main"
+[2025-09-08T21:32:28.540Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-8402
+[2025-09-08T21:32:28.540Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-8402
+[2025-09-08T21:32:28.540Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-85a3
+[2025-09-08T21:32:28.540Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-85a3: git fetch origin cursor/fix-lint-push-and-merge-to-main-85a3
+[2025-09-08T21:32:28.919Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-85a3
+[2025-09-08T21:32:28.919Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-85a3: git merge origin/cursor/fix-lint-push-and-merge-to-main-85a3 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-85a3 into main"
+[2025-09-08T21:32:29.430Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-85a3
+[2025-09-08T21:32:29.430Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-85a3
+[2025-09-08T21:32:29.430Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-885e
+[2025-09-08T21:32:29.430Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-885e: git fetch origin cursor/fix-lint-push-and-merge-to-main-885e
+[2025-09-08T21:32:29.806Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-885e
+[2025-09-08T21:32:29.807Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-885e: git merge origin/cursor/fix-lint-push-and-merge-to-main-885e --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-885e into main"
+[2025-09-08T21:32:30.251Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-885e
+[2025-09-08T21:32:30.252Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-885e
+[2025-09-08T21:32:30.252Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-88cd
+[2025-09-08T21:32:30.252Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-88cd: git fetch origin cursor/fix-lint-push-and-merge-to-main-88cd
+[2025-09-08T21:32:30.580Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-88cd
+[2025-09-08T21:32:30.580Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-88cd: git merge origin/cursor/fix-lint-push-and-merge-to-main-88cd --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-88cd into main"
+[2025-09-08T21:32:31.031Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-88cd
+[2025-09-08T21:32:31.031Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-88cd
+[2025-09-08T21:32:31.031Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-8a62
+[2025-09-08T21:32:31.031Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-8a62: git fetch origin cursor/fix-lint-push-and-merge-to-main-8a62
+[2025-09-08T21:32:31.366Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-8a62
+[2025-09-08T21:32:31.366Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-8a62: git merge origin/cursor/fix-lint-push-and-merge-to-main-8a62 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-8a62 into main"
+[2025-09-08T21:32:31.827Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-8a62
+[2025-09-08T21:32:31.827Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-8a62
+[2025-09-08T21:32:31.827Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-8b38
+[2025-09-08T21:32:31.827Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-8b38: git fetch origin cursor/fix-lint-push-and-merge-to-main-8b38
+[2025-09-08T21:32:32.198Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-8b38
+[2025-09-08T21:32:32.198Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-8b38: git merge origin/cursor/fix-lint-push-and-merge-to-main-8b38 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-8b38 into main"
+[2025-09-08T21:32:32.633Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-8b38
+[2025-09-08T21:32:32.634Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-8b38
+[2025-09-08T21:32:33.635Z] 📦 Processing batch 295/509
+[2025-09-08T21:32:33.635Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-8c97
+[2025-09-08T21:32:33.635Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-8c97: git fetch origin cursor/fix-lint-push-and-merge-to-main-8c97
+[2025-09-08T21:32:34.014Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-8c97
+[2025-09-08T21:32:34.014Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-8c97: git merge origin/cursor/fix-lint-push-and-merge-to-main-8c97 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-8c97 into main"
+[2025-09-08T21:32:34.451Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-8c97
+[2025-09-08T21:32:34.451Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-8c97
+[2025-09-08T21:32:34.451Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-90a9
+[2025-09-08T21:32:34.451Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-90a9: git fetch origin cursor/fix-lint-push-and-merge-to-main-90a9
+[2025-09-08T21:32:34.800Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-90a9
+[2025-09-08T21:32:34.800Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-90a9: git merge origin/cursor/fix-lint-push-and-merge-to-main-90a9 --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-90a9 into main"
+[2025-09-08T21:32:35.236Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-90a9
+[2025-09-08T21:32:35.236Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-90a9
+[2025-09-08T21:32:35.236Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-91ba
+[2025-09-08T21:32:35.236Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-91ba: git fetch origin cursor/fix-lint-push-and-merge-to-main-91ba
+[2025-09-08T21:32:35.568Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-91ba
+[2025-09-08T21:32:35.568Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-91ba: git merge origin/cursor/fix-lint-push-and-merge-to-main-91ba --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-91ba into main"
+[2025-09-08T21:32:36.007Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-91ba
+[2025-09-08T21:32:36.007Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-91ba
+[2025-09-08T21:32:36.007Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-91da
+[2025-09-08T21:32:36.007Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-91da: git fetch origin cursor/fix-lint-push-and-merge-to-main-91da
+[2025-09-08T21:32:36.377Z] ✅ Success: Fetch origin/cursor/fix-lint-push-and-merge-to-main-91da
+[2025-09-08T21:32:36.377Z] 🚀 Merge cursor/fix-lint-push-and-merge-to-main-91da: git merge origin/cursor/fix-lint-push-and-merge-to-main-91da --no-ff -m "Merge branch cursor/fix-lint-push-and-merge-to-main-91da into main"
+[2025-09-08T21:32:36.810Z] ✅ Success: Merge cursor/fix-lint-push-and-merge-to-main-91da
+[2025-09-08T21:32:36.810Z] ✅ Successfully merged: cursor/fix-lint-push-and-merge-to-main-91da
+[2025-09-08T21:32:36.810Z] 🔄 Attempting to merge branch: cursor/fix-lint-push-and-merge-to-main-921a
+[2025-09-08T21:32:36.810Z] 🚀 Fetch origin/cursor/fix-lint-push-and-merge-to-main-921a: git fetch origin cursor/fix-lint-push-and-merge-to-main-921a
+[2025-09-08T21:32:36.929Z] ❌ Error in Fetch origin/cursor/fix-lint-push-and-merge-to-main-921a: Command failed: git fetch origin cursor/fix-lint-push-and-merge-to-main-921a
+fatal: couldn't find remote ref cursor/fix-lint-push-and-merge-to-main-921a
+
+[2025-09-08T21:32:36.930Z] ❌ Failed to merge cursor/fix-lint-push-and-merge-to-main-921a: Command failed: git fetch origin cursor/fix-lint-push-and-merge-to-main-921a
+fatal: couldn't find remote ref cursor/fix-lint-push-and-merge-to-main-921a
+
+[2025-09-08T21:32:36.931Z] 🔧 Attempting to resolve conflicts for: cursor/fix-lint-push-and-merge-to-main-921a
+[2025-09-08T21:32:36.931Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:32:37.005Z] ✅ Success: Get git status
+[2025-09-08T21:32:37.005Z] 📄 Found 0 conflicted files
+[2025-09-08T21:32:37.005Z] 🚀 Add resolved files: git add .
