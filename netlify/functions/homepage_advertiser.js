@@ -1,3 +1,7 @@
+#!/usr/bin/env node
+
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 
@@ -80,81 +84,75 @@ function ensureMarkers(content) {
   return content.slice(0, insertAt) + '\n' + section + '\n' + content.slice(insertAt);
 }
 
+// Netlify function handler
 exports.handler = async function(event, context) {
   try {
-    // Check if this is a scheduled invocation
-    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
-      console.log('Running homepage advertiser automation...');
+    console.log('🤖 Starting homepage_advertiser function...');
+    
+    if (!fs.existsSync(INDEX_PAGE)) {
+      console.error('index.tsx not found');
+      return {
+        statusCode: 404,
+        body: JSON.stringify({ error: 'index.tsx not found' })
+      };
+    }
+    
+    let content = fs.readFileSync(INDEX_PAGE, 'utf8');
+    content = ensureMarkers(content);
+
+    const functionNames = listFunctions();
+    const section = buildToolsSection(functionNames);
+
+    if (!content.includes(START) || !content.includes(END)) {
+      console.error('Failed to ensure markers');
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Failed to ensure markers' })
+      };
+    }
+
+    const updated = content.replace(new RegExp(`${START}[\s\S]*?${END}`), section);
+    if (updated !== content) {
+      fs.writeFileSync(INDEX_PAGE, updated, 'utf8');
+      console.log('Homepage tools section updated.');
       
-      if (!fs.existsSync(INDEX_PAGE)) {
-        console.error('index.tsx not found');
-        return {
-          statusCode: 404,
-          body: JSON.stringify({ error: 'index.tsx not found' })
-        };
+      // Commit the changes
+      const { execSync } = require('child_process');
+      try {
+        execSync('git add ' + INDEX_PAGE, { stdio: 'inherit' });
+        execSync('git commit -m "🤖 Update homepage tools section via Netlify function [skip ci]"', { stdio: 'inherit' });
+        execSync('git push', { stdio: 'inherit' });
+        console.log('✅ Changes committed and pushed');
+      } catch (gitError) {
+        console.log('Git error:', gitError.message);
       }
-
-      let content = fs.readFileSync(INDEX_PAGE, 'utf8');
-      content = ensureMarkers(content);
-
-      const functionNames = listFunctions();
-      const section = buildToolsSection(functionNames);
-
-      if (!content.includes(START) || !content.includes(END)) {
-        console.error('Failed to ensure markers');
-        return {
-          statusCode: 500,
-          body: JSON.stringify({ error: 'Failed to ensure markers' })
-        };
-      }
-
-      const updated = content.replace(new RegExp(`${START}[\s\S]*?${END}`), section);
-      if (updated !== content) {
-        fs.writeFileSync(INDEX_PAGE, updated, 'utf8');
-        console.log('Homepage tools section updated.');
-        return {
-          statusCode: 200,
-          body: JSON.stringify({ 
-            success: true, 
-            message: 'Homepage tools section updated',
-            functionsCount: functionNames.length
-          })
-        };
-      } else {
-        console.log('No changes to homepage tools section.');
-        return {
-          statusCode: 200,
-          body: JSON.stringify({ 
-            success: true, 
-            message: 'No changes to homepage tools section',
-            functionsCount: functionNames.length
-          })
-        };
-      }
-    } else {
-      // HTTP request - return status
-      const functionNames = listFunctions();
+      
       return {
         statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          function: 'homepage_advertiser',
-          status: 'active',
+        body: JSON.stringify({ 
+          message: 'Homepage tools section updated successfully',
           functionsCount: functionNames.length,
-          lastRun: new Date().toISOString(),
-          description: 'Auto-advertise homepage features and links'
+          timestamp: new Date().toISOString()
+        })
+      };
+    } else {
+      console.log('No changes to homepage tools section.');
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ 
+          message: 'No changes needed',
+          functionsCount: functionNames.length,
+          timestamp: new Date().toISOString()
         })
       };
     }
   } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
+    console.error('❌ homepage_advertiser function failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({ 
-        error: 'Internal server error',
-        message: error.message 
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

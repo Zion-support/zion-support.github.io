@@ -1,71 +1,279 @@
+#!/usr/bin/env node
+
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..', '..');
+const FUNCTIONS_DIR = path.join(ROOT, 'netlify', 'functions');
+const LOGS_DIR = path.join(ROOT, 'automation', 'logs');
+const AUTOMATION_DIR = path.join(ROOT, 'automation');
 
-exports.handler = async function(event, context) {
+function ensureDir(dir) {
+  try { fs.mkdirSync(dir, { recursive: true }); } catch (_) {}
+}
+
+function log(message) {
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] ${message}`);
+}
+
+function getQuickStatus() {
+  const status = {
+    timestamp: new Date().toISOString(),
+    functions: 0,
+    logs: 0,
+    gitStatus: 'clean'
+  };
+  
   try {
-    // Check if this is a scheduled invocation
-    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
-      console.log('Running ultrafast orchestrator...');
-      
-      // Simulate ultrafast orchestration tasks
-      const tasks = [
-        'Instant health check',
-        'Lightning-fast resource sync',
-        'Immediate status broadcast',
-        'Ultra-rapid coordination'
-      ];
-      
-      const results = [];
-      for (const task of tasks) {
-        console.log(`Executing: ${task}`);
-        // Simulate ultrafast task execution
-        await new Promise(resolve => setTimeout(resolve, 25));
-        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
+    // Quick function count
+    if (fs.existsSync(FUNCTIONS_DIR)) {
+      status.functions = fs.readdirSync(FUNCTIONS_DIR).filter(f => f.endsWith('.js')).length;
+    }
+    
+    // Quick log count
+    if (fs.existsSync(LOGS_DIR)) {
+      status.logs = fs.readdirSync(LOGS_DIR).filter(f => f.endsWith('.json')).length;
+    }
+    
+    // Quick git status
+    try {
+      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' }).trim();
+      status.gitStatus = gitStatus ? 'dirty' : 'clean';
+    } catch (error) {
+      status.gitStatus = 'error';
+    }
+    
+  } catch (error) {
+    log(`Error getting quick status: ${error.message}`);
+  }
+  
+  return status;
+}
+
+function executeUltraFastTasks() {
+  const tasks = [];
+  const startTime = Date.now();
+  
+  try {
+    // Task 1: Quick health check
+    const healthCheck = getQuickStatus();
+    tasks.push({
+      name: 'health_check',
+      status: 'completed',
+      duration: Date.now() - startTime,
+      result: healthCheck
+    });
+    
+    // Task 2: Quick log rotation (if needed)
+    if (healthCheck.logs > 15) {
+      try {
+        const logFiles = fs.readdirSync(LOGS_DIR).filter(f => f.endsWith('.json'));
+        const sortedFiles = logFiles
+          .map(f => ({ name: f, path: path.join(LOGS_DIR, f), mtime: fs.statSync(path.join(LOGS_DIR, f)).mtime }))
+          .sort((a, b) => b.mtime - a.mtime);
+        
+        const filesToDelete = sortedFiles.slice(15);
+        filesToDelete.forEach(f => {
+          try {
+            fs.unlinkSync(f.path);
+          } catch (error) {
+            // Ignore deletion errors
+          }
+        });
+        
+        tasks.push({
+          name: 'log_rotation',
+          status: 'completed',
+          duration: Date.now() - startTime,
+          filesDeleted: filesToDelete.length
+        });
+      } catch (error) {
+        tasks.push({
+          name: 'log_rotation',
+          status: 'failed',
+          duration: Date.now() - startTime,
+          error: error.message
+        });
       }
-      
-      console.log('Ultrafast orchestration completed successfully');
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ 
-          success: true, 
-          message: 'Ultrafast orchestration completed',
-          tasksExecuted: results.length,
-          executionSpeed: 'ultrafast',
-          results
-        })
-      };
+    }
+    
+    // Task 3: Quick manifest update
+    try {
+      execSync('npm run netlify:manifest', { stdio: 'pipe' });
+      tasks.push({
+        name: 'manifest_update',
+        status: 'completed',
+        duration: Date.now() - startTime
+      });
+    } catch (error) {
+      tasks.push({
+        name: 'manifest_update',
+        status: 'failed',
+        duration: Date.now() - startTime,
+        error: error.message
+      });
+    }
+    
+  } catch (error) {
+    log(`❌ Error executing ultra-fast tasks: ${error.message}`);
+    tasks.push({
+      name: 'ultra_fast_orchestration',
+      status: 'failed',
+      duration: Date.now() - startTime,
+      error: error.message
+    });
+  }
+  
+  return tasks;
+}
+
+function generateUltraFastReport(tasks) {
+  try {
+    const totalDuration = tasks.reduce((sum, task) => sum + (task.duration || 0), 0);
+    const completedTasks = tasks.filter(t => t.status === 'completed').length;
+    const failedTasks = tasks.filter(t => t.status === 'failed').length;
+    
+    const reportContent = `# Ultra-Fast Orchestration Report
+
+Generated: ${new Date().toISOString()}
+
+## Performance Summary
+- **Total Duration**: ${totalDuration}ms
+- **Tasks Completed**: ${completedTasks}
+- **Tasks Failed**: ${failedTasks}
+- **Success Rate**: ${((completedTasks / tasks.length) * 100).toFixed(1)}%
+
+## Task Details
+${tasks.map(task => {
+  if (task.status === 'completed') {
+    return `- ✅ ${task.name} (${task.duration}ms)`;
+  } else {
+    return `- ❌ ${task.name} (${task.duration}ms) - ${task.error}`;
+  }
+}).join('\n')}
+
+## Health Status
+${tasks.find(t => t.name === 'health_check')?.result ? 
+  `- **Functions**: ${tasks.find(t => t.name === 'health_check').result.functions}
+- **Logs**: ${tasks.find(t => t.name === 'health_check').result.logs}
+- **Git**: ${tasks.find(t => t.name === 'health_check').result.gitStatus}` : 
+  '- Health check not available'}
+
+## Next Actions
+- Monitor performance metrics
+- Address any failures
+- Optimize task execution
+
+This report is automatically generated by the Netlify function \`ultrafast-orchestrator\`.
+`;
+    
+    const reportPath = path.join(ROOT, 'ULTRAFAST_ORCHESTRATION_REPORT.md');
+    fs.writeFileSync(reportPath, reportContent, 'utf8');
+    log('✅ Ultra-fast orchestration report generated');
+    return true;
+  } catch (error) {
+    log(`❌ Error generating ultra-fast report: ${error.message}`);
+    return false;
+  }
+}
+
+function quickCommit() {
+  try {
+    const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' }).trim();
+    
+    if (gitStatus) {
+      execSync('git add .', { stdio: 'pipe' });
+      execSync('git commit -m "🤖 Ultra-fast orchestration via Netlify function [skip ci]"', { stdio: 'pipe' });
+      execSync('git push', { stdio: 'pipe' });
+      log('✅ Quick commit completed');
+      return { success: true, changes: gitStatus.split('\n').length };
     } else {
-      // HTTP request - return status
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          function: 'ultrafast-orchestrator',
-          status: 'active',
-          description: 'Ultrafast orchestration operations',
-          lastRun: new Date().toISOString(),
-          schedule: 'Every minute',
-          capabilities: [
-            'Instant health checks',
-            'Lightning-fast sync',
-            'Immediate broadcasting',
-            'Ultra-rapid coordination'
-          ]
-        })
-      };
+      log('No changes to commit');
+      return { success: true, changes: 0 };
     }
   } catch (error) {
-    console.error('Error in ultrafast-orchestrator:', error);
+    log(`❌ Quick commit failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
+
+// Netlify function handler
+exports.handler = async function(event, context) {
+  const functionStartTime = Date.now();
+  
+  try {
+    log('🤖 Starting ultrafast-orchestrator function...');
+    
+    ensureDir(LOGS_DIR);
+    
+    // Execute ultra-fast tasks
+    const tasks = executeUltraFastTasks();
+    log(`Executed ${tasks.length} ultra-fast tasks`);
+    
+    // Generate report
+    const reportGenerated = generateUltraFastReport(tasks);
+    
+    // Quick commit
+    const commitResult = quickCommit();
+    
+    // Generate JSON report
+    const report = {
+      timestamp: new Date().toISOString(),
+      function: 'ultrafast-orchestrator',
+      status: 'completed',
+      performance: {
+        totalDuration: Date.now() - functionStartTime,
+        tasksExecuted: tasks.length,
+        tasksCompleted: tasks.filter(t => t.status === 'completed').length,
+        tasksFailed: tasks.filter(t => t.status === 'failed').length
+      },
+      summary: {
+        reportGenerated: reportGenerated,
+        gitChanges: commitResult.changes || 0
+      },
+      tasks,
+      gitResult: commitResult
+    };
+    
+    // Write report
+    const reportPath = path.join(LOGS_DIR, 'ultrafast-orchestrator-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    log(`✅ ultrafast-orchestrator completed in ${Date.now() - functionStartTime}ms`);
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify(report)
+    };
+    
+  } catch (error) {
+    const functionDuration = Date.now() - functionStartTime;
+    log(`❌ ultrafast-orchestrator function failed after ${functionDuration}ms: ${error.message}`);
+    
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      function: 'ultrafast-orchestrator',
+      status: 'failed',
+      duration: functionDuration,
+      error: error.message,
+      stack: error.stack
+    };
+    
+    // Write error report
+    try {
+      const errorPath = path.join(LOGS_DIR, 'ultrafast-orchestrator-error.json');
+      fs.writeFileSync(errorPath, JSON.stringify(errorReport, null, 2));
+    } catch (writeError) {
+      log(`Failed to write error report: ${writeError.message}`);
+    }
+    
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
-        error: 'Internal server error',
-        message: error.message 
-      })
+      body: JSON.stringify(errorReport)
     };
   }
 };
