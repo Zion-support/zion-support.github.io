@@ -3,17 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-// Import i18n configuration
-import './i18n';
-
-// Register service worker
-import { registerServiceWorker } from './serviceWorkerRegistration';
-
-// Error handling function
-const showApiError = (error: unknown): void => {
-  console.error('API Error:', error);
-};
-
 // Global error handler
 const handleGlobalError = (error: Error): void => {
   console.error('Global error caught:', error);
@@ -53,11 +42,6 @@ try {
       <App />
     </React.StrictMode>,
   );
-
-  // Register service worker in production
-  if (process.env.NODE_ENV === 'production') {
-    registerServiceWorker();
-  }
 } catch (error) {
   handleGlobalError(error as Error);
 }
