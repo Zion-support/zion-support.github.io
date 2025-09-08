@@ -6,7 +6,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.12"
+=======
   PYTHON_VERSION = "3.11.10"
+>>>>>>> origin/cursor/install-project-dependencies-with-python-version-error-521b
 
 [[plugins]]
   package = "netlify-plugin-compress"
