@@ -176,7 +176,8 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
                 const params = new URLSearchParams(location.search);
                 const next = params.get('next');
                 if (next) {
-                  navigate(decodeURIComponent(next), { replace: true });
+                  const dest = decodeURIComponent(next);
+                  navigate(dest, { replace: true });
                 }
               }
             } else if (error) {

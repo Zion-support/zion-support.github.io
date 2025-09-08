@@ -48,32 +48,6 @@ export default function Checkout() {
     ]);
   }, [searchParams]);
 
-  const createSession = async (body: any) => {
-    try {
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error || 'Failed');
-      const stripe = await getStripe();
-      if (stripe && result.clientSecret) {
-        const payment = await stripe.confirmCardPayment(result.clientSecret, {
-          payment_method: {
-            card: { token: 'tok_visa' },
-            billing_details: { name: data.name, email: data.email },
-          },
-        });
-        if (payment.error) throw payment.error;
-        safeStorage.removeItem('cart');
-        navigate(`/orders/${result.id}`);
-      }
-    } catch (err) {
-      console.error('Payment failed', err);
-    }
-  };
-
   const handleCheckout = async () => {
     const product = items[0];
     try {
