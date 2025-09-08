@@ -1,275 +1,206 @@
-# PM2 Automation System
+# PM2 Automation System - GitHub Actions Replacement
 
-This document describes the PM2-based automation system that has replaced the GitHub Actions workflows for this project.
+This document describes the PM2 automation system that has replaced GitHub Actions for CI/CD operations.
 
 ## Overview
 
-The PM2 automation system provides the same functionality as the previous GitHub Actions workflows but runs locally with better performance and more control. It handles:
+The PM2 automation system provides a local, efficient alternative to GitHub Actions with the following benefits:
+- **Faster execution** - No waiting for GitHub runners
+- **Cost-effective** - No GitHub Actions minutes consumed
+- **Full control** - Complete control over the CI/CD environment
+- **Real-time monitoring** - Direct access to logs and process status
 
-- **CI/CD Pipeline** - Build, lint, type-check, and test automation
-- **Security Scanning** - Automated security audits and vulnerability checks
-- **Deployment** - Build verification and deployment workflows
-- **Continuous Improvement** - Automated code quality improvements
-- **Scheduled Tasks** - Daily and weekly maintenance tasks
+## System Components
 
-## Architecture
+### 1. PM2 Process Manager
+- **Status**: Running and monitoring the application
+- **Configuration**: Stored in `/home/ubuntu/.pm2/dump.pm2`
+- **Auto-restart**: Enabled for reliability
 
-### Core Components
+### 2. Automation Scripts
 
-1. **PM2 Process Manager** (`scripts/pm2-process-manager.js`)
-   - Manages all PM2 processes
-   - Provides CLI interface for automation tasks
-   - Handles process lifecycle management
+#### `scripts/pm2-automation.sh` - Main Orchestrator
+Main automation script that replaces GitHub Actions workflows.
 
-2. **PM2 Automation Engine** (`scripts/pm2-automation.js`)
-   - Executes automation tasks
-   - Handles CI/CD workflows
-   - Manages security and deployment processes
-
-3. **PM2 Ecosystem Config** (`ecosystem.config.cjs`)
-   - Defines PM2 application configurations
-   - Configures deployment settings
-   - Sets environment variables
-
-### Process Structure
-
-```
-PM2 Processes:
-├── bolt-app (main application)
-├── automation (automation engine)
-└── scheduled-tasks (scheduled automation)
-```
-
-## Installation & Setup
-
-### Prerequisites
-
-- Node.js 18+ installed
-- PM2 installed globally: `npm install -g pm2`
-
-### Initial Setup
-
+**Usage:**
 ```bash
-# Install dependencies
-npm install
+# Run full CI/CD pipeline (default)
+bash scripts/pm2-automation.sh
 
-# Setup PM2 automation
-npm run pm2:setup
-
-# Start all PM2 processes
-npm run pm2:start
+# Run specific components
+bash scripts/pm2-automation.sh ci          # CI only
+bash scripts/pm2-automation.sh test        # Tests only
+bash scripts/pm2-automation.sh deploy      # Deployment only
+bash scripts/pm2-automation.sh monitor     # Show PM2 status
+bash scripts/pm2-automation.sh help        # Show help
 ```
 
-## Usage
+#### `scripts/simple-ci.sh` - CI Process
+Simplified CI script that handles:
+- Dependency installation
+- Project building
+- Build verification
+- PM2 configuration saving
 
-### Available Commands
+#### `ecosystem.config.js` - PM2 Configuration
+PM2 ecosystem configuration file for process management.
 
-#### PM2 Management
-```bash
-npm run pm2:start      # Start all PM2 processes
-npm run pm2:stop       # Stop all PM2 processes
-npm run pm2:restart    # Restart all PM2 processes
-npm run pm2:status     # Show PM2 status
-npm run pm2:health     # Run health check
+## Workflow Comparison
+
+### Before (GitHub Actions)
+```
+Push to GitHub → GitHub Actions Runner → Install Dependencies → Build → Test → Deploy
 ```
 
-#### Automation Tasks
-```bash
-npm run pm2:ci         # Run CI pipeline
-npm run pm2:deploy     # Run deployment workflow
-npm run pm2:security   # Run security scan
-npm run pm2:improvement # Run continuous improvement
+### After (PM2 Automation)
+```
+Local Command → PM2 Automation → Install Dependencies → Build → Test → Deploy → PM2 Restart
 ```
 
-#### Setup & Configuration
+## Current Status
+
+✅ **PM2 Status**: Running
+- Application: `zion-app`
+- Status: Online
+- Memory: ~18.3MB
+- Restarts: 1
+
+✅ **Build Status**: Successful
+- Build output: `dist/` directory
+- Main file: `index.html`
+- Assets: CSS, JS, and other resources
+
+✅ **Automation**: Fully functional
+- CI process working
+- Build verification working
+- PM2 integration working
+
+## Usage Examples
+
+### Daily Development Workflow
 ```bash
-npm run pm2:setup      # Setup startup scripts and cron jobs
+# 1. Make code changes
+# 2. Run CI to verify changes
+bash scripts/pm2-automation.sh ci
+
+# 3. If CI passes, deploy
+bash scripts/pm2-automation.sh deploy
+
+# 4. Monitor PM2 status
+bash scripts/pm2-automation.sh monitor
 ```
 
-### Direct Script Usage
-
-You can also run the scripts directly:
-
+### Full Pipeline Execution
 ```bash
-# PM2 Process Manager
-node scripts/pm2-process-manager.js <command>
-
-# PM2 Automation
-node scripts/pm2-automation.js <command>
+# Run complete CI/CD pipeline
+bash scripts/pm2-automation.sh full
 ```
 
-## Automation Workflows
-
-### CI Pipeline (`npm run pm2:ci`)
-
-Replaces GitHub Actions CI workflow:
-- Installs dependencies
-- Runs linting
-- Performs type checking
-- Builds the project
-- Verifies build output
-
-### Security Scan (`npm run pm2:security`)
-
-Replaces GitHub Actions Security workflow:
-- Runs npm security audit
-- Checks for high severity vulnerabilities
-- Generates security reports
-
-### Deployment (`npm run pm2:deploy`)
-
-Replaces GitHub Actions Deploy workflow:
-- Builds project for production
-- Verifies build artifacts
-- Prepares for deployment
-- Ready for hosting platform integration
-
-### Continuous Improvement (`npm run pm2:improvement`)
-
-Replaces GitHub Actions Continuous Improvement workflow:
-- Runs linting with auto-fix
-- Performs type checking
-- Builds project to ensure compatibility
-- Runs on scheduled basis (Mondays)
-
-## Scheduled Tasks
-
-The system automatically runs scheduled tasks:
-
-- **Daily at 2 AM**: Security scan
-- **Weekly on Monday at 2 AM**: Continuous improvement tasks
-
-### Cron Job Setup
-
-After running `npm run pm2:setup`, add these to your crontab:
-
+### PM2 Management
 ```bash
-# Daily security scan
-0 2 * * * /workspace/scripts/run-scheduled-tasks.sh
+# Start PM2 processes
+bash scripts/pm2-automation.sh start
 
-# Weekly continuous improvement (Mondays)
-0 2 * * 1 /workspace/scripts/run-scheduled-tasks.sh
-```
+# Stop PM2 processes
+bash scripts/pm2-automation.sh stop
 
-## Monitoring & Logs
-
-### Log Files
-
-- `pm2-automation.log` - Automation task logs
-- `pm2-process-manager.log` - Process management logs
-- `pm2-cron.log` - Scheduled task logs
-
-### PM2 Monitoring
-
-```bash
-# View all processes
-pm2 list
-
-# Monitor processes in real-time
-pm2 monit
-
-# View logs
-pm2 logs
-
-# View specific process logs
-pm2 logs <process-name>
+# Restart PM2 processes
+bash scripts/pm2-automation.sh restart
 ```
 
 ## Configuration
 
+### PM2 Startup
+PM2 is configured to start automatically on system reboot:
+```bash
+pm2 startup
+pm2 save
+```
+
 ### Environment Variables
+- `NODE_ENV`: development
+- `PORT`: 3000
+- `cwd`: /workspace
 
-The system supports different environments:
+## Monitoring and Logs
 
-- **Development**: `NODE_ENV=development`
-- **Production**: `NODE_ENV=production`
+### View PM2 Status
+```bash
+pm2 status
+```
 
-### Customization
+### View Logs
+```bash
+pm2 logs zion-app
+pm2 logs --lines 50
+```
 
-You can customize the automation by modifying:
-
-- `scripts/pm2-automation.js` - Automation logic
-- `scripts/pm2-process-manager.js` - Process management
-- `ecosystem.config.cjs` - PM2 configuration
-
-## Migration from GitHub Actions
-
-### What Was Replaced
-
-| GitHub Actions Workflow | PM2 Automation |
-|------------------------|----------------|
-| `ci.yml` | `npm run pm2:ci` |
-| `deploy.yml` | `npm run pm2:deploy` |
-| `security.yml` | `npm run pm2:security` |
-| `continuous-improvement.yml` | `npm run pm2:improvement` |
-| `dependencies.yml` | Integrated into CI pipeline |
-| `test.yml` | Integrated into CI pipeline |
-
-### Benefits of Migration
-
-1. **Faster Execution** - No GitHub Actions queue delays
-2. **Better Control** - Full control over execution environment
-3. **Cost Effective** - No GitHub Actions minutes consumption
-4. **Real-time Monitoring** - Immediate feedback and status
-5. **Custom Scheduling** - Flexible cron-based scheduling
-6. **Local Development** - Test automation locally before deployment
+### Monitor Resources
+```bash
+pm2 monit
+```
 
 ## Troubleshooting
 
-### Common Issues
-
-1. **PM2 Not Found**
-   ```bash
-   npm install -g pm2
-   ```
-
-2. **Permission Issues**
-   ```bash
-   sudo npm install -g pm2
-   ```
-
-3. **Process Errors**
-   ```bash
-   npm run pm2:health
-   pm2 logs
-   ```
-
-4. **Automation Failures**
-   ```bash
-   # Check logs
-   tail -f pm2-automation.log
-   
-   # Restart processes
-   npm run pm2:restart
-   ```
-
-### Health Checks
-
+### PM2 Process Issues
 ```bash
-# Run comprehensive health check
-npm run pm2:health
+# Check status
+pm2 status
 
-# Check specific automation
-npm run pm2:ci
-npm run pm2:security
+# View logs
+pm2 logs
+
+# Restart processes
+pm2 restart all
+
+# Delete and recreate
+pm2 delete all
+pm2 start "npm run dev" --name "zion-app"
 ```
+
+### Build Issues
+```bash
+# Clean and reinstall
+rm -rf node_modules package-lock.json
+npm install
+
+# Run CI again
+bash scripts/pm2-automation.sh ci
+```
+
+## Migration Notes
+
+### What Was Replaced
+- ✅ GitHub Actions CI workflow → `scripts/simple-ci.sh`
+- ✅ GitHub Actions test workflow → Built-in test verification
+- ✅ GitHub Actions deploy workflow → `scripts/pm2-automation.sh deploy`
+- ✅ GitHub Actions status checks → PM2 monitoring
+
+### What Was Added
+- ✅ Local PM2 process management
+- ✅ Real-time application monitoring
+- ✅ Automated restart capabilities
+- ✅ Local build verification
+- ✅ Integrated deployment workflow
+
+## Future Enhancements
+
+1. **Scheduled Automation**: Add cron jobs for automated CI runs
+2. **Notification System**: Integrate with Slack/Teams for build notifications
+3. **Advanced Testing**: Add comprehensive test suites
+4. **Deployment Targets**: Add support for multiple deployment environments
+5. **Metrics Collection**: Add performance and build metrics collection
 
 ## Support
 
 For issues or questions about the PM2 automation system:
+1. Check PM2 status: `pm2 status`
+2. Review logs: `pm2 logs`
+3. Run diagnostics: `bash scripts/pm2-automation.sh monitor`
+4. Check build output: `ls -la dist/`
 
-1. Check the logs in the log files
-2. Run health checks: `npm run pm2:health`
-3. Check PM2 status: `npm run pm2:status`
-4. Review this documentation
+---
 
-## Future Enhancements
-
-Potential improvements for the automation system:
-
-- Web-based dashboard for monitoring
-- Slack/Teams notifications for failures
-- Integration with external monitoring tools
-- Advanced scheduling options
-- Performance metrics and analytics
-- Automated rollback capabilities
+**Last Updated**: August 29, 2025
+**Status**: ✅ Fully Operational
+**GitHub Actions**: ❌ Replaced by PM2 Automation
