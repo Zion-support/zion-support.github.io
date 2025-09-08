@@ -1,3 +1,6 @@
+<<<<<<< HEAD:temp_disabled/GreenIT.js
+export {};
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
@@ -24,3 +27,4 @@ const $service = () => {
     </div>);
 };
 export default $service;
+>>>>>>> main:src/pages/services/GreenIT.js
