@@ -53,4 +53,5 @@ declare module 'react-dom/client';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
-declare module 'zod';
+declare module 'react-cookie-consent';
+declare module 'js-cookie';

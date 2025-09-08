@@ -7,6 +7,8 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { ConsentProvider } from "./context/ConsentContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import PwaInstallButton from "./components/PwaInstallButton";
+import { CookieBanner } from "./components/CookieBanner";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -20,28 +22,36 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-const Home = React.lazy(() => import('./pages/Home'));
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
-const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
-const Analytics = React.lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
-const Categories = React.lazy(() => import('./pages/Categories'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
-const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
+import Home from './pages/Home';
+import AIMatcherPage from './pages/AIMatcher';
+import TalentDirectory from './pages/TalentDirectory';
+import TalentsPage from './pages/TalentsPage';
+import MoreTalentsPage from './pages/MoreTalentsPage';
+import AdditionalTalentsPage from './pages/AdditionalTalentsPage';
+import ServicesPage from './pages/ServicesPage';
+import EquipmentPage from './pages/EquipmentPage';
+import EquipmentDetail from './pages/EquipmentDetail';
+import Analytics from './pages/Analytics';
+import MobileLaunchPage from './pages/MobileLaunchPage';
+import CommunityPage from './pages/CommunityPage';
+import Categories from './pages/Categories';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import NewProductsPage from './pages/NewProductsPage';
+import NewServicesPage from './pages/NewServicesPage';
+import Sitemap from './pages/Sitemap';
+import PartnersPage from './pages/Partners';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+import OpenAppRedirect from './pages/OpenAppRedirect';
+import ContactPage from './pages/Contact';
+import ZionHireAI from './pages/ZionHireAI';
+import RequestQuotePage from './pages/RequestQuote';
+import WishlistPage from './pages/Wishlist';
+import CartPage from './pages/Cart';
+import Checkout from './pages/Checkout';
+import PrivacySettings from './pages/PrivacySettings';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -68,13 +78,18 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/wishlist', element: <WishlistPage /> },
+  { path: '/cart', element: <CartPage /> },
+  { path: '/checkout', element: <Checkout /> },
+  { path: '/privacy-settings', element: <PrivacySettings /> },
 ];
 
 const App = () => {
   return (
     <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+      <ConsentProvider>
+        <ThemeProvider defaultTheme="dark">
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <ErrorBoundary>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
@@ -97,9 +112,10 @@ const App = () => {
         <OfflineToast />
         <Toaster />
         <SonnerToaster position="top-right" />
-        <SupportChatbot />
-        <PwaInstallButton />
-      </ThemeProvider>
+          <CookieBanner />
+          <PwaInstallButton />
+        </ThemeProvider>
+      </ConsentProvider>
     </WhitelabelProvider>
   );
 }
