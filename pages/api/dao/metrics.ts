@@ -1,5 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 const configPath = path.join(process.cwd(), 'datadaoconfig.json');
 const cachePath = path.join(process.cwd(), 'datadaometrics.json');
 
@@ -80,4 +81,5 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to load DAO metrics' });
   }
+}
 }

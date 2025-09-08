@@ -37,8 +37,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
           { role: 'user', content: prompt }
         ],
         temperature: 0.6,
-        response_format: { type: 'json_object' } as any
-      });
+        response_format: { type: 'json_object' } as any});
       const raw = chat.choices?.[0]?.message?.content || '{}';
       const parsed = JSON.parse(raw);
       title = parsed.title || title;

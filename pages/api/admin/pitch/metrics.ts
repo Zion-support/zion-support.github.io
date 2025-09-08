@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     mrr: 82000,
     yoyGrowth: 1.85,
     completedProjects: 3275,
-    globalReach: ['USEUAPACLATAM'],
+    globalReach: ['US', 'EU', 'APAC', 'LATAM'],
     funnel: [
       { stage: 'Visitors', value: 250000 },
       { stage: 'Leads', value: 38000 },
@@ -20,9 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ],
     clients: [
       { name: 'Fortune 500 Co', summary: 'Automated LLM evaluation pipeline, 23% cost reduction' },
-      { name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }
-    ]
-  };
+      { name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }]};
 
   res.status(200).json(data);
 }

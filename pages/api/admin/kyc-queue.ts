@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (req.method === 'POST') {
-    const { userId, action, reason } = req.body as { userId?: string; action?: 'approve' | 'reject' | 'needs_more_info'; reason?: string };
+    const { userId, action, reason } = req.body as { userId?: string, action?: 'approve' | 'reject' | 'needs_more_info', reason?: string };
     if (!userId || !action) return res.status(400).json({ error: 'Missing userId or action' });
     const profile = db[userId];
     if (!profile) return res.status(404).json({ error: 'Profile not found' });

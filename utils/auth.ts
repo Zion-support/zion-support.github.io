@@ -1,24 +1,34 @@
-import type { NextApiRequest } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { User, UserRole } from './messaging/types';
 
 export interface User {
   id: string;
   email: string;
-  role: 'admin' | 'user' | 'guest';
-  isAdmin: boolean;
+  role?: string;
+  isAdmin?: boolean;
 }
 
-export function parseUserFromRequest(req: NextApiRequest): User {
-  // For now, return a mock admin user
-  // In a real implementation, this would parse JWT tokens or session data
+export function parseUserFromRequest(req: NextApiRequest): User | null {
+  // This is a placeholder implementation
+  // In a real application, you would parse the user from the request headers, cookies, or JWT tokens
+  const userId = req.headers['x-user-id'] as string;
+  const userEmail = req.headers['x-user-email'] as string;
+  const userRole = req.headers['x-user-role'] as string;
+  
+  if (!userId || !userEmail) {
+    return null;
+  }
+  
   return {
-    id: 'admin-1',
-    email: 'admin@ziontechgroup.com',
-    role: 'admin',
-    isAdmin: true
+    id: userId,
+    email: userEmail,
+    role: userRole,
+    isAdmin: userRole === 'admin'
   };
 }
 
-export function ensureAdmin(user: User): void {
+export function ensureAdmin(user: User | null): void {
   if (!user || !user.isAdmin) {
     const error = new Error('Forbidden');
     (error as any).statusCode = 403;
@@ -26,48 +36,68 @@ export function ensureAdmin(user: User): void {
   }
 }
 
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean; user?: User }> {
-  try {
-    const user = parseUserFromRequest(req);
-    ensureAdmin(user);
-    return { allowed: true, user };
-  } catch (error) {
-    return { allowed: false };
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+  const user = parseUserFromRequest(req);
+  return { allowed: user?.isAdmin || false };
+}
+
+export function getSessionFromReq(req: NextApiRequest): User | null {
+  return parseUserFromRequest(req);
+}
+
+export function isInternalAgentRequest(req: NextApiRequest): boolean {
+  const userAgent = req.headers['user-agent'] || '';
+  return userAgent.includes('internal-agent') || userAgent.includes('zion-bot');
+}
+
+// Additional auth functions for the login/logout endpoints
+const users: User[] = [];
+
+export function ensureDemoUsers(): void {
+  if (users.length === 0) {
+    users.push({
+      id: 'demo-admin',
+      name: 'Demo Admin',
+      role: 'admin',
+      email: 'admin@demo.com',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    });
+    users.push({
+      id: 'demo-user',
+      name: 'Demo User',
+      role: 'user',
+      email: 'user@demo.com',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    });
   }
 }
 
-// Additional functions for auth system
-export function ensureDemoUsers(): void {
-  // Mock function for demo users
-}
-
-export function generateUser(name: string, role: string): User {
+export function generateUser(name: string, role: UserRole): User {
   return {
-    id: `user_${Date.now()}`,
-    email: `${name.toLowerCase()}@example.com`,
-    role: role as 'admin' | 'user' | 'guest',
-    isAdmin: role === 'admin'
+    id: uuidv4(),
+    name,
+    role,
+    email: `${name.toLowerCase().replace(/\s+/g, '.')}@demo.com`,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
   };
 }
 
 export function upsertUser(user: User): void {
-  // Mock function for user storage
+  const existingIndex = users.findIndex(u => u.id === user.id);
+  if (existingIndex >= 0) {
+    users[existingIndex] = { ...user, updatedAt: new Date().toISOString() };
+  } else {
+    users.push(user);
+  }
 }
 
-export function setUserCookie(res: any, user: User): void {
-  // Mock function for setting user cookie
+export function setUserCookie(res: NextApiResponse, user: User): void {
+  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly; SameSite=Strict`);
 }
 
-export function clearUserCookie(res: any): void {
-  // Mock function for clearing user cookie
-}
-
-export function getUserFromRequest(req: NextApiRequest): User | null {
-  // Mock function for getting user from request
-  return {
-    id: 'user-1',
-    email: 'user@example.com',
-    role: 'user',
-    isAdmin: false
-  };
+export function clearUserCookie(res: NextApiResponse): void {
+  res.setHeader('Set-Cookie', 'user=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0');
 }
