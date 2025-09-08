@@ -2700,6 +2700,14 @@
   optionalDependencies:
     "@lit/react" "1.0.8"
 
+<<<<<<< HEAD
+"@rolldown/pluginutils@1.0.0-beta.34":
+  version "1.0.0-beta.34"
+  resolved "https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.34.tgz"
+  integrity sha512-LyAREkZHP5pMom7c24meKmJCdhf2hEyvam2q0unr3or9ydwDL+DJ8chTF6Av/RFPb3rH8UFBdMzO5MxTZW97oA==
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7753
 "@rollup/rollup-linux-x64-gnu@4.50.1":
   version "4.50.1"
   resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.50.1.tgz"
@@ -3514,6 +3522,21 @@
   resolved "https://registry.npmjs.org/@unrs/resolver-binding-linux-x64-musl/-/resolver-binding-linux-x64-musl-1.11.1.tgz"
   integrity sha512-rV0YSoyhK2nZ4vEswT/QwqzqQXw5I6CjoaYMOX0TqBlWhojUf8P94mvI7nuJTeaCkkds3QE4+zS8Ko+GdXuZtA==
 
+<<<<<<< HEAD
+"@vitejs/plugin-react@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-5.0.2.tgz"
+  integrity sha512-tmyFgixPZCx2+e6VO9TNITWcCQl8+Nl/E8YbAyPVv85QCc7/A3JrdfG2A8gIzvVhWuzMOVrFW1aReaNxrI6tbw==
+  dependencies:
+    "@babel/core" "^7.28.3"
+    "@babel/plugin-transform-react-jsx-self" "^7.27.1"
+    "@babel/plugin-transform-react-jsx-source" "^7.27.1"
+    "@rolldown/pluginutils" "1.0.0-beta.34"
+    "@types/babel__core" "^7.20.5"
+    react-refresh "^0.17.0"
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7753
 "@vitest/expect@3.2.4":
   version "3.2.4"
   resolved "https://registry.npmjs.org/@vitest/expect/-/expect-3.2.4.tgz"
