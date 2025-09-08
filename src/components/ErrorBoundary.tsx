@@ -1,43 +1,20 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button    } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Mail    } from 'lucide-react';
-
-
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo)    => void;
-
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+interface Props {
+  children: ReactNode
 }
-
 interface State {
-
-
-
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-
-
-
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
-
-export class ErrorBoundary extends Component<Props, State> {
-  public state: State = { hasError: false
-   };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
   }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
-    };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       errorInfo
@@ -58,90 +35,6 @@ export class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
   }
-
-  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)    => {
-    try {
-      // Example: Send to error logging service
-      const errorData = {
-        id: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        // Add  other relevant information
-      };
-
-      // Example: Send to your API endpoint
-      fetch('/api/errors', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorData),
-      }).catch(()    => {
-        // Silently fail if error logging fails
-      });
-    } catch (logError) {
-      // console.error('Failed to log error:', logError);
-    }
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showStack: false
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleCopyError = () => {
-    if (this.state.error && this.state.errorInfo) {
-      const errorText = `
-Error Details:
-Message: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-Error ID: ${this.state.errorId}
-Timestamp: ${new Date().toISOString()}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
-      `.trim();
-
-      navigator.clipboard.writeText(errorText).then(() => {
-        // Show success feedback
-        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
-        if (button) {
-          const originalText = button.innerHTML;
-          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
-          button.classList.add('text-green-600');
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.classList.remove('text-green-600');
-          }, 2000);
-        }
-      }).catch(() => {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = errorText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-      });
-    }
-  };
-
-  private toggleStack = () => {
-    this.setState(prev => ({ showStack: !prev.showStack }));
-  };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -186,48 +79,9 @@ User Agent: ${navigator.userAgent}
             </div>
           </div>
         </div>
-      );
+      )
     }
-
-    return this.props.children}
-  {/* Removed stray closing brace */}
-
-// Hook for functional components to catch errors
-export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [error, setError] = React.useState<any>(null);
-
-  React.useEffect(() => {
-    const handleError = (event: anyErrorEvent)    => {
-      setError(event.error);
-    };
-
-    const handleUnhandledRejection = (event: anyPromiseRejectionEvent)    => {
-      setError(new Error(event.reason));
-    };
-
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-    return () => {
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, []);
-
-  return error;
-};
-
-// Higher-order component for error boundaries
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Partial<Props>
-)    => {
-  const WrappedComponent = (props: anyP)    => (
-    <ErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
-    </ErrorBoundary>
-  );
-
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
-};
+    return this.props.children
+  }
+}
+export default ErrorBoundary
