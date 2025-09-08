@@ -1125,7 +1125,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="/docs/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
                 </Link>
               </div>
@@ -1139,7 +1139,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   View Testing Guide →
                 </a>
               </div>
@@ -1153,7 +1153,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </a>
               </div>
@@ -1173,7 +1173,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/ultimate-redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1187,7 +1187,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/COMPREHENSIVE_REDUNDANCY_README.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1201,7 +1201,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/pm2-redundancy" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
