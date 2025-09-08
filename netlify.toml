@@ -218,59 +218,9 @@
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "content-freshness-runner"
+  name = "deps-auto-upgrade-runner"
   schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "internal-anchor-audit-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "orphan-asset-report-runner"
-  schedule = "17 */6 * * *" # every 6 hours
-
-# From main (keep)
-[[scheduled.functions]]
-  name = "autonomous-innovation-generator"
-  schedule = "*/2 * * * *" # every 2 minutes
-
-[[scheduled.functions]]
-  name = "seo-audit-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "ai-trends-radar-runner"
-  schedule = "0 * * * *"
-
-[[scheduled.functions]]
-  name = "website-search-index-runner"
-  schedule = "29 */4 * * *"
-
-# From feature branch (keep)
-[[scheduled.functions]]
-  name = "automation-guardian-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "auto-discovery-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "content-keywords-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
-
-[[scheduled.functions]]
-  name = "orphan-page-audit-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "meta-og-enhancer-runner"
-  schedule = "0 */12 * * *"
-
-[[scheduled.functions]]
-  name = "rss-feed-generator"
-  schedule = "0 * * * *"
+  name = "sitemap-pinger"
+  schedule = "17 */2 * * *" # every 2 hours

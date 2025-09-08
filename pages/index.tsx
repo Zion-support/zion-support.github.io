@@ -172,116 +172,14 @@ export default function Home() {
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
             </a>
           </div>
-        </section>
-
-        {/* New Autonomous Automations */}
-        <section className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">New Autonomous Automations</h2>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="/.netlify/functions/innovation-scout" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Innovation Scout</h3>
-              <p className="mt-1 text-sm text-white/75">AI trends radar that feeds homepage promos in near‑real time.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/content-curator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">LLM Content Curator</h3>
-              <p className="mt-1 text-sm text-white/75">Curates useful links and content, commits, and updates the front.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/knowledge-graph-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Knowledge Graph</h3>
-              <p className="mt-1 text-sm text-white/75">Auto‑rebuilds the repository knowledge graph and radar metrics.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/code-health-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Code Health Orchestrator</h3>
-              <p className="mt-1 text-sm text-white/75">Dead code, links, and assets optimized with auto‑push to main.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/security-audit-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Security Audit</h3>
-              <p className="mt-1 text-sm text-white/75">Automated security scanning with artifacts committed to the repo.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/media-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Media Orchestrator</h3>
-              <p className="mt-1 text-sm text-white/75">OG image refresh and automated media releases.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
-            </a>
-          </div>
-        </section>
-
-        {/* Benefits */}
-        <section className="mx-auto max-w-7xl px-6 pb-20">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
-            {[
-              '24/7 progress without human intervention',
-              'Rapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branch',
-              'Fewer regressions via layered checks and reports',
-              'Discoverable features with deep links across the app',
-              'Futuristic UX that boosts engagement and clarity',
-              'Netlify scheduled automations (no GitHub Actions needed)',
-            ].map((b) => (
-              <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-                <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-                <span className="text-sm text-white/80">{b}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="mx-auto max-w-7xl px-6 pb-24">
-          <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
-            <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
-            <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
-              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Futuristic Spotlight */}
-        <section className="mx-auto max-w-7xl px-6 pb-20">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore Zion</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Dive into the hubs and reports that showcase our features, capabilities, and benefits.</p>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: 'Front Systems Hub', desc: 'A curated, futuristic front experience.', href: '/main/front' },
-              { title: 'Automation Hub', desc: 'Factories, agents, and live workflows.', href: '/automation' },
-              { title: 'Site Health', desc: 'A11y, performance, and link integrity.', href: '/site-health' },
-              { title: 'SEO Audit', desc: 'Continuous on‑site improvements and artifacts.', href: '/reports/seo' },
-              { title: 'AI Trends', desc: 'Ecosystem signals that inspire new factories.', href: '/reports/ai-trends' },
-              { title: 'Newsroom', desc: 'Autonomous updates and product evolution.', href: '/newsroom' },
-              { title: 'Cloud Automations', desc: 'Netlify scheduled jobs powering the platform.', href: '/automation' },
-            ].map((card) => (
-              <Link key={card.title} href={card.href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold">{card.title}</h3>
-                  <p className="mt-1 text-sm text-white/75">{card.desc}</p>
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-                </a>
-              </Link>
-            ))}
-          </div>
-        </section>
+                </section>
  
-        {/* Automation Engine — New Tools */}
-        <section className="mx-auto max-w-7xl px-6 pb-20">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Engine — New Tools</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Now powered by scheduled cloud functions — no GitHub Actions required. Live homepage promos, health checks, and link integrity run automatically.</p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        {[
+         {/* Automation Engine — New Tools */}
+         <section className="mx-auto max-w-7xl px-6 pb-20">
+           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Engine — New Tools</h2>
+           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Now powered by scheduled cloud functions — no GitHub Actions required. Live homepage promos, health checks, and link integrity run automatically.</p>
+           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+             {[
                { title: 'Frontpage Enhancer', desc: 'Auto‑advertises features and refreshes homepage content hourly.', href: '/.netlify/functions/frontpage-enhancer' },
                { title: 'Link & Health Scheduler', desc: 'Runs link checks, health scans, and sitemap updates every 6h.', href: '/.netlify/functions/link-and-health-scheduler' },
                { title: 'Marketing & Features Promo', desc: 'Regenerates homepage promos and deep links every 2h.', href: '/.netlify/functions/marketing-and-features-promo' },
@@ -307,72 +205,22 @@ export default function Home() {
                { title: 'External Link Check', desc: 'Crawls external links and opens fixes for rot and redirects.', href: '/.netlify/functions/external-link-check-runner' },
                { title: 'OG Image Update', desc: 'Regenerates Open Graph images for rich social sharing.', href: '/.netlify/functions/og-image-update-runner' },
                { title: 'Docs Search Index', desc: 'Refreshes the site search index for instant discovery.', href: '/.netlify/functions/docs-search-index-runner' },
-               { title: 'SEO Audit Runner', desc: 'Generates SEO report for all pages.', href: '/.netlify/functions/seo-audit-runner' },
-               { title: 'AI Trends Radar', desc: 'Aggregates trending AI topics and publishes a live report.', href: '/reports/ai-trends' },
-               { title: 'Website Search Index Runner', desc: 'Regenerates the full site search index.', href: '/.netlify/functions/website-search-index-runner' },
                { title: 'Netlify Auto‑Healer', desc: 'Monitors and self-heals Netlify deploy issues.', href: '/.netlify/functions/netlify-auto-healer-runner' },
                { title: 'Innovation Lab (10m)', desc: 'Invents, curates, and promotes fresh ideas across the site.', href: '/.netlify/functions/innovation-lab' },
-               { title: 'Autonomous Innovation Generator (2m)', desc: 'Synthesizes front promos and homepage refresh, then syncs to main.', href: '/.netlify/functions/autonomous-innovation-generator' },
                { title: 'Auto Scheduler (15m)', desc: 'Smart time-based runner that chooses and executes the best tasks.', href: '/.netlify/functions/auto-scheduler' },
                { title: 'Broken Image Scanner (6h)', desc: 'Finds broken images, optimizes assets, and syncs fixes.', href: '/.netlify/functions/broken-image-scanner' },
-               { title: 'Automation Guardian (10m)', desc: 'Runs improvement, orchestrators, quick fixes and syncs to main.', href: '/.netlify/functions/automation-guardian-runner' },
-               { title: 'Auto Discovery Runner (30m)', desc: 'Discovers and runs high‑value orchestrators autonomously.', href: '/.netlify/functions/auto-discovery-runner' },
-               { title: 'Cloud Autonomous Orchestrator (15m)', desc: 'Runs cloud orchestrations, then syncs and rebuilds.', href: '/.netlify/functions/cloud-autonomous-orchestrator-runner' },
-               { title: 'Smart Redirect Manager', desc: 'Fixes internal 404s by auto-adding redirects; writes a public report.', href: '/.netlify/functions/redirect-manager' },
-               { title: 'A11y Alt-Text Auditor', desc: 'Scans for missing alt text and publishes a report.', href: '/.netlify/functions/a11y-audit-runner' },
-               { title: 'Branch Cleanup Runner (daily)', desc: 'Deletes merged or stale ephemeral branches via GitHub API.', href: '/.netlify/functions/branch-cleanup-runner' },
-               { title: 'Redirect Healer', desc: 'Heals broken internal links by auto-adding smart redirects.', href: '/.netlify/functions/redirect-healer' },
-               { title: 'Sitemap Prioritizer', desc: 'Regenerates sitemap with popularity-weighted priorities.', href: '/.netlify/functions/sitemap-prioritizer' },
-               { title: 'Orphan Page Auditor', desc: 'Detects pages with no inbound links and publishes a report.', href: '/.netlify/functions/orphan-page-audit-runner' },
-               { title: 'Meta OG Enhancer', desc: 'Adds missing Open Graph/Twitter meta tags to pages.', href: '/.netlify/functions/meta-og-enhancer-runner' },
-               { title: 'RSS Feed Generator', desc: 'Generates an RSS feed for key updates and reports.', href: '/feed.xml' },
-            ].map((tool) => (
-              <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">{tool.title}</h3>
-                <p className="mt-1 text-sm text-white/75">{tool.desc}</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-              </a>
-            ))}
-          </div>
-        </section>
- 
-        {/* New Cloud Automations */}
-        <section className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Cloud Automations — Live</h2>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="/.netlify/functions/ultrafast-repo-healer" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Ultrafast Repo Healer</h3>
-              <p className="mt-1 text-sm text-white/75">Scans, heals, and syncs every 2 minutes.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/knowledge-graph-orchestrator" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Knowledge Graph</h3>
-              <p className="mt-1 text-sm text-white/75">Builds repo graph hourly and commits artifacts.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/newsroom-orchestrator" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Newsroom Orchestrator</h3>
-              <p className="mt-1 text-sm text-white/75">Publishes autonomous updates every 30 minutes.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/image-optimizer-scheduler" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Image Optimizer</h3>
-              <p className="mt-1 text-sm text-white/75">Optimizes images and OG assets every 6 hours.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/repo-radar-scheduler" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Repo Radar</h3>
-              <p className="mt-1 text-sm text-white/75">Generates metrics and changelogs every 4 hours.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-          </div>
-        </section>
+               { title: 'Deps Auto‑Upgrade (cloud)', desc: 'Continuously bumps deps and pushes PRs safely.', href: '/.netlify/functions/deps-auto-upgrade-runner' },
+               { title: 'Sitemap Pinger', desc: 'Regenerates sitemap and pings search engines.', href: '/.netlify/functions/sitemap-pinger' },
+             ].map((tool) => (
+               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                 <h3 className="text-lg font-semibold">{tool.title}</h3>
+                 <p className="mt-1 text-sm text-white/75">{tool.desc}</p>
+                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+               </a>
+             ))}
+           </div>
+         </section>
 
         {/* AUTO-GENERATED: HOME_UPDATER_START */}
 
