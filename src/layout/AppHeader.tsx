@@ -378,37 +378,33 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
-    { 
-      name: 'White Papers', 
-      href: '/white-papers', 
-      icon: BookOpen, 
-      description: 'Research & insights',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
+    {
+      name: 'Case Studies',
+      href: '/resources',
+      icon: Target,
+      description: 'Real-world success stories',
+      featured: true
     },
-    { 
-      name: 'Webinars', 
-      href: '/webinars', 
-      icon: Video, 
-      description: 'Live & recorded sessions',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
+    {
+      name: 'White Papers',
+      href: '/resources',
+      icon: FileText,
+      description: 'In-depth research and analysis',
+      featured: false
     },
-    { 
-      name: 'Documentation', 
-      href: '/docs', 
-      icon: FileText, 
-      description: 'Technical documentation',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
+    {
+      name: 'Webinars',
+      href: '/resources',
+      icon: Users,
+      description: 'Expert-led learning sessions',
+      featured: false
     },
-    { 
-      name: 'API Documentation', 
-      href: '/api-docs', 
-      icon: Code, 
-      description: 'Developer resources',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
+    {
+      name: 'Documentation',
+      href: '/resources',
+      icon: Code,
+      description: 'Technical guides and APIs',
+      featured: false
     },
     { 
       name: 'Training', 
