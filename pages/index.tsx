@@ -28,9 +28,23 @@ export default function HomePage({ pageLinks }: HomePageProps) {
 
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          {/* Hero */}
-          <section className="text-center mb-16">
-            <h1 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
+          {/* Top Navigation */}
+          <header className="mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <Link href="/" className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </Link>
+            <nav className="flex flex-wrap items-center gap-3 sm:gap-6 text-white/90">
+              <Link href="/about" className="hover:text-cyan-300 transition-colors">About</Link>
+              <Link href="/services" className="hover:text-fuchsia-300 transition-colors">Services</Link>
+              <Link href="/blog" className="hover:text-purple-300 transition-colors">Blog</Link>
+              <Link href="/resources" className="hover:text-blue-300 transition-colors">Resources</Link>
+              <Link href="/case-studies" className="hover:text-yellow-300 transition-colors">Case Studies</Link>
+              <Link href="/contact" className="hover:text-green-300 transition-colors">Contact</Link>
+            </nav>
+          </header>
+          {/* Hero Section */}
+          <section className="text-center mb-20">
+            <h1 className="text-6xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>
             <p className="text-xl text-white/90 max-w-4xl mx-auto">
@@ -848,7 +862,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/docs/ultimate-redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1177,211 +1191,18 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               </div>
             </div>
           </section>
-
-          {/* Innovation & Research Hub */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔬 Innovation & Research Hub</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
-              {/* AI Trends Research */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">📈 AI Trends Radar</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Market trend analysis</li>
-                  <li>• Technology forecasting</li>
-                  <li>• Innovation insights</li>
-                  <li>• Competitive intelligence</li>
-                  <li>• Future predictions</li>
-                </ul>
-                <Link href="/ai-trends-radar-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Research →
-                </Link>
-              </div>
-
-              {/* Content Generation Factory */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🏭 Content Factory</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Autonomous content creation</li>
-                  <li>• Multi-format generation</li>
-                  <li>• Quality optimization</li>
-                  <li>• SEO enhancement</li>
-                  <li>• Performance analytics</li>
-                </ul>
-                <Link href="/ai-content-factory-report.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Factory →
-                </Link>
-              </div>
-
-              {/* Marketing Automation */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📢 Marketing AI</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Social media automation</li>
-                  <li>• Content distribution</li>
-                  <li>• Engagement optimization</li>
-                  <li>• Campaign management</li>
-                  <li>• ROI tracking</li>
-                </ul>
-                <Link href="/marketing-daily-report.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Marketing →
-                </Link>
-              </div>
+          {/* Footer */}
+          <footer className="mx-auto max-w-7xl px-6 pb-8 text-center text-sm text-white/60">
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/README.md" className="hover:text-white/80">README</Link>
+              <Link href="/SECURITY.md" className="hover:text-white/80">Security</Link>
+              <Link href="/TESTING.md" className="hover:text-white/80">Testing</Link>
+              <Link href="/PERFORMANCE.md" className="hover:text-white/80">Performance</Link>
+              <Link href="/privacy" className="hover:text-white/80">Privacy</Link>
+              <Link href="/resources" className="hover:text-white/80">Resources</Link>
             </div>
-          </section>
-
-          {/* Project Statistics & Achievements */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚙️ Advanced Automation Systems Showcase</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Ultimate Redundancy V2</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Multi-layer redundancy systems</li>
-                  <li>• Automatic failover protection</li>
-                  <li>• Self-healing infrastructure</li>
-                  <li>• Geographic distribution</li>
-                  <li>• Real-time health monitoring</li>
-                </ul>
-                <div className="text-cyan-400 text-sm font-semibold mb-3">
-                  Status: Active & Monitoring
-                </div>
-                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Documentation →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 Comprehensive Automation</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• AI-powered content generation</li>
-                  <li>• Intelligent orchestration</li>
-                  <li>• Autonomous agents (227+)</li>
-                  <li>• Continuous learning systems</li>
-                  <li>• Innovation automation</li>
-                </ul>
-                <div className="text-fuchsia-400 text-sm font-semibold mb-3">
-                  Status: Continuously Learning
-                </div>
-                <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Documentation →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build & Deploy Systems</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Smart build orchestration</li>
-                  <li>• Automated testing & QA</li>
-                  <li>• Performance optimization</li>
-                  <li>• Self-healing deployments</li>
-                  <li>• Continuous monitoring</li>
-                </ul>
-                <div className="text-green-400 text-sm font-semibold mb-3">
-                  Status: Self-Optimizing
-                </div>
-                <Link href="/README_BUILD_AUTOMATION.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Documentation →
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Comprehensive Documentation Hub */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Comprehensive Documentation Hub</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
-              {/* Project Overview */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">📖 Project Overview</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Complete project documentation</li>
-                  <li>• Architecture overview</li>
-                  <li>• Technology stack details</li>
-                  <li>• Development guidelines</li>
-                  <li>• Best practices</li>
-                </ul>
-                <Link href="/README.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Documentation →
-                </Link>
-              </div>
-
-              {/* Redundancy Systems */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔄 Redundancy Systems</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Ultimate redundancy guide</li>
-                  <li>• Comprehensive systems</li>
-                  <li>• PM2 orchestration</li>
-                  <li>• Automation status</li>
-                  <li>• Implementation guides</li>
-                </ul>
-                <Link href="/README_ULTIMATE_REDUNDANCY.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Systems →
-                </Link>
-              </div>
-
-              {/* Development Resources */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🛠️ Development</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Contributing guidelines</li>
-                  <li>• API documentation</li>
-                  <li>• Testing procedures</li>
-                  <li>• Deployment guides</li>
-                  <li>• Security protocols</li>
-                </ul>
-                <Link href="/CONTRIBUTING.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Resources →
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Footer Navigation */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🏗️ Infrastructure & Deployment Excellence</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">🐳</span>
-                </div>
-                <h3 className="text-lg font-semibold text-blue-400 mb-2">PM2 Process Management</h3>
-                <p className="text-white/70 text-sm">Advanced process orchestration with automatic restart and monitoring</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-fuchsia-400 mb-4">Resources</h3>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/blog" className="hover:text-fuchsia-300 transition-colors">Blog & Insights</Link></li>
-                  <li><Link href="/resources" className="hover:text-fuchsia-300 transition-colors">Tools & Guides</Link></li>
-                  <li><Link href="/reports/updates/update-2025-08-15-0406" className="hover:text-fuchsia-300 transition-colors">Reports</Link></li>
-                  <li><Link href="/privacy" className="hover:text-fuchsia-300 transition-colors">Privacy Policy</Link></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-green-400 mb-4">Documentation</h3>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/docs/readme" className="hover:text-green-300 transition-colors">Project Overview</Link></li>
-                  <li><Link href="/docs/architecture" className="hover:text-green-300 transition-colors">Architecture</Link></li>
-                  <li><Link href="/docs/api" className="hover:text-green-300 transition-colors">API Docs</Link></li>
-                  <li><Link href="/docs/contributing" className="hover:text-green-300 transition-colors">Contributing</Link></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-yellow-400 mb-4">Automation</h3>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/docs/comprehensive-redundancy" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
-                  <li><Link href="/docs/ultimate-redundancy" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
-                  <li><Link href="/docs/pm2-redundancy" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
-                  <li><Link href="/docs/automation-completion-report" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
-                </ul>
-              </div>
-            </div>
-          </section>
+            <div className="mt-3">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
+          </footer>
         </main>
 
         {/* Footer */}
