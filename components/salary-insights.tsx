@@ -394,71 +394,6 @@ const payload = {
     })();
   }
 
-
-
-  const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
-
-
-=======
-  const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
-        alert('Insight saved locally')
-      } catch {}
-  const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
-        alert('Insight saved locally')
-      } catch {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    })()
-  }
-  const donutData = useMemo(() => {
-
-    if (!data) return [] as { label: string, value: number }[],
-
-<<<<<<< HEAD
-
-
-=======
-      try {;
-        const key = 'zion && zion.salary-insights && insights.history';
-        const history = JSON && JSON.parse(localStorage && localStorage.getItem(key) || '[]');
-        history && history.unshift(payload);
-        localStorage && localStorage.setItem(key, JSON && JSON.stringify(history && history.slice(0, 50)));
-        alert('Insight saved locally');
-      } catch {}
-    })();
-  }
-        alert('Insight saved locally')
-      } catch {}
-    })()
-  }
-const donutData = useMemo(() => {
-    if (!data) return [] as { label: string, value: number }[],
-            user_id: user.data.user.id
-            payload
-          });
-          alert('Insight saved to your profile');
-          return;
-        }
-      } catch {
-        // fall back      }          alert('Insight saved to your profile');
-          return
-        }
-      } catch {
-        // fall back;
-      }
-      try {
-        const key = 'zion.salary-insights.history';
-        const history = JSON.parse(localStorage.getItem(key) |'[]');
-        history.unshift(payload);
-        localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
-        alert('Insight saved locally');
-      } catch {}
-    })();
-  }
-
-
       } catch {}
     })();
   }
@@ -908,7 +843,13 @@ key={d.label}
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               )}
 
+            </div>
+          </div>
+          {data?.gptRecommendation && (
 
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+
+              )}
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -985,12 +926,15 @@ key={
                         {d.label}
                       </span>                    ))}
                   </div>;
-                </div>) : (<div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items-center gap-3">;
+                </div>) : (
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items-center gap-3">;
                   <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
                   <div className="flex gap - 2 flex - wrap justify-center text-xs">;
-                    {donut_data.map ((d) => (<span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px-2 py-0.5">{d.label}</span>;
+                    {donut_data.map ((d) => (
+                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px-2 py-0.5">{d.label}</span>;
                   </div>;
-                </div>) : (<div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />)}
+                </div>) : (
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />)}
             </div>;
           {data?.gpt_recommendation && (<div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;
@@ -1017,7 +961,8 @@ key={
               <h3 className="font-medium mb-3">Signals</h3>;
               <div className="flex gap-2 flex-wrap">;
                 <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
-                {data.tags.map ((t) => (<span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs">{t}</span>;
+                {data.tags.map ((t) => (
+                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs">{t}</span>;
               </div>;
             </div>)}
         </div>;

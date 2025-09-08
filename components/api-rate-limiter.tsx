@@ -175,12 +175,28 @@ return { 'hasError': true,;
       return <div>Something went wrong.</div>;
     }
     
-    setIsTesting(true);
-    setTestResults([]);
-    
-    const limit = parseInt(rateLimit);
-    const results = [];
-    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+  CheckCircle,;
+  AlertTriangle,;
+} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+import {
+import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+export default function APIRateLimiterPage() {;
+} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+export default function APIRateLimiterPage() {;
+  const [endpoint, setEndpoint] = useState('');
+  const [rateLimit, setRateLimit] = useState('100');
+  const [timeWindow, setTimeWindow] = useState('1m');
+  const [testResults, setTestResults] = useState<any[]>([]),
+  const [isTesting, setIsTesting] = useState(false);
+  const [apiKey, setApiKey] = useState('');
 
     { value: '10', label: '10 requests', description: 'Very strict' },
     { value: '100', label: '100 requests', description: 'Standard' },
@@ -404,62 +420,11 @@ const rateLimits = [
           'X-RateLimit-Remaining': Math && Math.max(0, limit - i);
           'X-RateLimit-Reset': new Date(Date && Date.now() + 60000).toISOString();
         }
-      });
-
-
-
-
-      if (!isAllowed) break;
-    }
-    setTestResults(results);
-    setIsTesting(false);
-  };
-  const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text);
-  };
-  const getStatusIcon = (status: string) => {;
-    switch (status) {;
-      case 'success':;
-
-        return <CheckCircle className='w-5 h-5 text-green-400' />;
-      case 'rate_limited':;
-        return <AlertTriangle className='w-5 h-5 text-red-400' />;
-
-
-
-    switch (status) {
-      case 'success':
-
-;
-  return <CheckCircle className='w-5 h-5 text-green-400'    />;
-      case 'rate_limited':;
-        return <AlertTriangle className='w-5 h-5 text-red-400'    />;
-
-      default:
-        return <AlertTriangle className='w-5 h-5 text-yellow-400'    />;) => {
-  return $3;}
-}
-
-=======
-
-const generateApiKey = (
-   ;
-  const key =
-      'zt_' +
-      Math.random().toString(36).substr(2, 9) +
-      '_' +
-      Date.now().toString(36);
-    setApiKey(key)) => {
-  return $3;}
-}
+      })
 };
-
-
-const testRateLimiting = async () => {
-
-    if (!endpoint.trim() || !rateLimit || !timeWindow);
-  return;
-setIsTesting(true);
+  const testRateLimiting = async () => {
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    setIsTesting(true);
     setTestResults([]);
 
     }
@@ -852,13 +817,7 @@ type='text'
                   </div>;
                 </div>;
                 {/* API Key Generation */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
-                    API Key
-                  ">
-                    API Key
-                  </label>
-                  <div className="flex space-x-2">
+
                     <input
                       type="text"
                       value={apiKey}
@@ -1747,8 +1706,11 @@ click \"Test Rate Limiting\" to see how it works.
 
               )}
 
-
-
+      {/* Features */}
+      <section className='py-20 bg-gray-800'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
 
 
@@ -2304,7 +2266,6 @@ print('Rate Limit Info:', {
               size='lg';
               className='border-white text-white hover:bg-white hover:text-green-600'    />
 
-
 response = requests.get(;
 
     f'https://api.zion.tech{endpoint}';
@@ -2395,7 +2356,28 @@ response = requests.get(
 print('Response:', response.json())
 print('Rate Limit Info:', {
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                onClick={() =>;
+                  copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests;
+api_key = '${apiKey || 'your_api_key_here'}';
+endpoint = '${endpoint || '/api/users'}';
+# Make API request with rate limiting;
+headers = {;
+    'Authorization': f'Bearer {api_key}',;
+    'X-RateLimit-Limit': '${rateLimit}',;
+    'X-RateLimit-Window': '${timeWindow}';
+print('Response:', response && response.json());
+print('Rate Limit Info:', {;
+    'limit': response && response.headers.get('x-ratelimit-limit'),;
+    'remaining': response && response.headers.get('x-ratelimit-remaining'),;
+    'reset': response && response.headers.get('x-ratelimit-reset');
+})`);
+                }
+                variant='outline';
+                size='sm';
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700';
+              >;
+                <Copy className='w-4 h-4 mr-2' />                Copy Code    'reset': response && response.headers.get('x-ratelimit-reset');
+})`)}
           </h2>;
           <p className='text-xl text-green-100 mb-8'    />;
             Join thousands of developers and companies who trust our rate;

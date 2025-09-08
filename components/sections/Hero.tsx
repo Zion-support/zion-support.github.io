@@ -128,10 +128,12 @@ const Hero: React.FC<HeroProps> = ({
                   href={primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                  style={{ animationDelay: '0.2s' }}
-                >
-                  {primaryAction.text}
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (
+            {title}
+          </h1>;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading-relaxed font-light">;
+            {subtitle}
+          </p>;
+          {/* Action Buttons */}
                 <Button
                   href={primaryAction.href}
                   size="lg"
@@ -172,18 +174,10 @@ const Hero: React.FC<HeroProps> = ({
                     className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}
                   >
                     {stat.value}
-                  </div>
-                  <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-                </div>
-                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative">
-                  <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
-                    {stat.value}
-                  </div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
+                  </div>;
+                  <div className="absolute -inset - 2 bg - gradient - to - r from - transparent via - blue - 500 / 5 to - transparent rounded - lg opacity - 0 group - hover:opacity - 100 transition-opacity duration-300" />;
+                </div>;
+                <div className="text - gray - 400 text - xs sm:text - sm md:text-base font-medium">;
                   {stat.label}
                 </div>
               </div>
@@ -237,4 +231,60 @@ const Hero: React.FC<HeroProps> = ({
       />
   );
 }
+}
+}
+
+      <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+      <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+    </section>
+  )
+};
+
 export default Hero;
+                </div>;
+              </div>))}
+          </div>)}
+        {/* Trust Indicators */}
+        <div;
+          className='mt - 16 md:mt - 20 animate - fade - in';
+          style={{ animation_delay: '0.8s' }}
+        >;
+          <div className='flex flex - col sm:flex - row items - center justify - center gap - 4 sm:gap - 8 text - gray - 400 text - xs sm:text - sm'>;
+            <div className='flex items - center gap - 2'>;
+              <Shield className='w - 4 h - 4' />;
+              <span > Enterprise Security</span>;
+            </div>              <span > Enterprise Security</span>;
+            </div>;
+            <div className="flex items-center gap-2">;
+              <Users className="w-4 h-4" />;
+              <span > 10, 000+ Developers</span>;
+            </div>;
+            <div className='flex items - center gap - 2'>;
+              <Users className='w - 4 h - 4' />;
+              <span > 10, 000+ Developers</span>;
+            </div>;
+            <div className='flex items - center gap - 2'>;
+              <Star className='w - 4 h - 4 text - yellow - 400' />              <span > 99.9% Uptime</span>            <div className="flex items-center gap-2">;
+              <Star className="w - 4 h - 4 text-yellow-400" />;
+              <span > 99.9% Uptime</span>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Scroll Indicator */}
+      <div className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2 animate - bounce'>;
+        <div className='w - 6 h - 10 border - 2 border - white / 20 rounded - full flex justify - center'>;
+          <div className='w - 1 h - 3 bg - blue - 500 rounded - full mt - 2 animate - pulse' />        </div>;
+      </div>;
+      {/* Decorative Elements */}      <div className="absolute bottom - 8 left - 1/2 transform -translate-x-1 / 2 animate-bounce">;
+        <div className="w - 6 h - 10 border - 2 border - white / 20 rounded-full flex justify-center">;
+          <div className="w - 1 h - 3 bg - blue - 500 rounded - full mt-2 animate-pulse" />;
+        </div>;
+      </div>;
+      {/* Decorative Elements */}
+
+        </div>
+      </div>
+
+      {/* Decorative Elements */}

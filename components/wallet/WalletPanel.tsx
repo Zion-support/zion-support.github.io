@@ -1,8 +1,5 @@
 
 
-<<<<<<< HEAD
-
-
 type Tx = {
 
 
@@ -48,7 +45,9 @@ function getUserId(): string {
   const generated = 'demo-user';
   window.localStorage.setItem('zion_user_id', generated);
   return generated;
-export default function WalletPanel() {
+
+export default function WalletPanel() {;
+
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -454,8 +453,8 @@ if ( {) {
       const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),;
       setEthAddress(accounts?.[0] || null);
     } catch (e) {;
-      console && console.error(e);
-    };
+      console && console.error(e)
+};
   }
 <<<<<<< HEAD
 
@@ -1291,7 +1290,7 @@ export default function WalletPanel() {
 
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
-            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
+            </div>          </div>            <div className="text - xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
           </div>)}
       </div>;
     </div>);

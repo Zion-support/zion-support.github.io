@@ -1,8 +1,8 @@
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-export default function RequestQuote() {
-
+import { Footer } from "@/components/Footer",
+import { QuoteRequestForm } from "@/components/QuoteRequestForm",export default function RequestQuote() {
   return (
     <>
       <Header />"
@@ -15,12 +15,25 @@ export default function RequestQuote() {
       </div>
       <Footer />
     </>
-  );
-=======
+  )
 
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {QuoteRequestForm} from "@/components/QuoteRequestForm";
+
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+
+export default function RequestQuote() {;
+  return (
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue">;
+        <QuoteRequestForm />;
+      </div>;
+      <Footer />;
     </>;  );
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 import { Header } from "@/components/Header";""
@@ -61,61 +74,10 @@ function RequestQuote() {
 
     <>;
       <Header />;
-
-  );
-
-  );
-
-}
-import { Header } from '@/components / Header';'
-import { Footer } from '@/components / Footer';'
-import { QuoteRequestForm } from '@/components / QuoteRequestForm';
-export default /**;
- * RequestQuote - Function description;
- */
-function RequestQuote() {}
-  return (
-    <>;
-
+      <div className="min - h-screen bg - zion-blue">;
         <QuoteRequestForm />;
       </div>;
       <Footer />;
     </>);
 }
-
-
-;
-
- * RequestQuote - Function description;
- */
-function RequestQuote() {
-    <>;
-      <Header />;
-
 <<<<<<< HEAD
-=======
-
-      <div className="min - h-screen bg - zion - blue">;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-
-<<<<<<< HEAD
-=======
-      <Footer />;
-)
-    </>);
-}
-
-;
-  ),;
-
-
-} export default function RequestQuote () {
-  return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </> 
-  );
-}
-
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba

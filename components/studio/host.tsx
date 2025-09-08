@@ -14,11 +14,10 @@ export default function StudioHostPage() {
     voice: 'Visionary',
     language: 'English',;
 
-
-const [topic, setTopic] = useState('');
-
-
-
+  });
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
 
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);

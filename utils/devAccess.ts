@@ -1,26 +1,36 @@
-export interface DevAccessConfig {
-  isDevMode: boolean;
-  allowedIPs: string[];
-  allowedUsers: string[];
-}
+export interface DevIdentity {
 
-export function checkDevAccess(req: any): boolean {
-  // Mock implementation - in production, this would check actual dev access
-  if (process.env.NODE_ENV === 'development') {
-    return true;
+export interface DevIdentity {;
+  isAuthenticated: boolean;    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+      stdio: ['ignore', 'pipe', 'ignore']
+    })
+      .toString()
+      .trim();
+    return { connected: true, branch }
+  } catch {
+    return { connected: false }
   }
-  
-  // Check IP whitelist, user authentication, etc.
-  const clientIP = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  const allowedIPs = process.env.DEV_ACCESS_IPS?.split(',') || [];
-  
-  return allowedIPs.includes(clientIP);
 }
 
-export function getDevAccessConfig(): DevAccessConfig {
-  return {
-    isDevMode: process.env.NODE_ENV === 'development',
-    allowedIPs: process.env.DEV_ACCESS_IPS?.split(',') || [],
-    allowedUsers: process.env.DEV_ACCESS_USERS?.split(',') || []
-  };
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+
+  // TODO: integrate real auth; for now, check a header and env var for dev
+
+  const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
+  const adminToken = process && process.env.ADMIN_TOKEN;
+
+  if (token && adminToken && token === adminToken) {
+  }
+  return { isAuthenticated: false, roles: [] }
 }
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+

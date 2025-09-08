@@ -75,40 +75,14 @@ interface ActiveFiltersProps {
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src-disabled/components/talent/ActiveFilters.tsx
-=======
-<<<<<<< HEAD
-export function ActiveFilters({
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
 
-  selectedSkills
-  toggleSkill
-  selectedAvailability
-  toggleAvailability
-  selectedRegions
-  toggleRegion
-  priceRange
-  setPriceRange
-  experienceRange
-  setExperienceRange
-  clearFilters
-}: ActiveFiltersProps) {
-  // Check if any filters are active
-  const hasActiveFilters =
-    selectedSkills.length > 0 |
-    selectedAvailability.length > 0 |
-    selectedRegions.length > 0 |
-    experienceRange[0] !== 0 |
-    experienceRange[1] !== 15 |
-    priceRange[0] !== 50 |
-    priceRange[1] !== 200
-  if (!hasActiveFilters) return null
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
@@ -188,10 +162,32 @@ export function ActiveFilters({
 
 import { X } from 'lucide-react';
 
+interface ActiveFiltersProps {;
+  selectedSkills: string[];
+  toggleSkill: (skill: string) => void;
+  selectedAvailability: string[];
+  toggleAvailability: (status: string) => void;
+  selectedRegions: string[];
+  toggleRegion: (region: string) => void;
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
+  clearFilters: () => void;interface ActiveFiltersProps {;
+  selectedSkills: string[],;
+  toggleSkill: (skill: string,) => void,;
+  selectedAvailability: string[],;
+  toggleAvailability: (status: string,) => void,;
+  selectedRegions: string[],;
+  toggleRegion: (region: string,) => void,;
+  priceRange: [number, number],;
+  setPriceRange: (range: [number, number],) => void,;
+  experienceRange: [number, number],;
+  setExperienceRange: (range: [number, number],) => void,;
+  clearFilters: () => void;
+}
 
-
-  selectedSkills,;
-
+export function ActiveFilters(): any ({;  selectedSkills,;
   toggleSkill,;
   selectedAvailability,;
   toggleAvailability,;
@@ -201,52 +197,38 @@ import { X } from 'lucide-react';
   setPriceRange,;
   experienceRange,;
   setExperienceRange,;
-
-  clearFilters;
+  clearFilters,;
 }: ActiveFiltersProps) {;
   // Check if any filters are active;
   const hasActiveFilters =;
-    selectedSkills.length > 0 ||;
-    selectedAvailability.length > 0 ||;
-    selectedRegions.length > 0 ||;
-
-    experienceRange[0] !== 0 ||;
+    selectedSkills && selectedSkills.length > 0 ||;
+    selectedAvailability && selectedAvailability.length > 0 ||;
+    selectedRegions && selectedRegions.length > 0 ||;    experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200;
-  if (!hasActiveFilters) return null;
-  return (;
-    <div className="mb-6 flex flex-wrap gap-2 items-center">;
-      <span className="text-zion-slate-light text-sm">Active filters:</span>;
-      {selectedSkills.map(skill => (;
-        <ClickableBadge;
-          key={skill}
-
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={() => toggleSkill(skill)}
-        >;
-          {skill}
-          <X className="h-3 w-3" />
-        </ClickableBadge>
-
-      ))}
-
-
       ))}
 
       {selectedAvailability && selectedAvailability.map(status => (;
 
-
-          key={region}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleRegion(region)}
-        >;
-          {region}
-
+        <ClickableBadge
+          key={status}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleRegion(region)}        >;
-          {region}
+          onClick={() => toggleAvailability(status)}        >;
+          {status === 'full-time';
+            ? 'Full-time';
+            : status === 'part-time';
+              ? 'Part-time';
+              : 'Project-based'}
+          <X className='h-3 w-3' />;
+        </ClickableBadge>;      ))}
 
+      {selectedRegions && selectedRegions.map(region => (;
+
+        <ClickableBadge
+          key={region}
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => toggleRegion(region)}        >;          {region}
 
           {region}
 
@@ -269,11 +251,11 @@ import { X } from 'lucide-react';
 
 
 
-
         </ClickableBadge>
       ))}
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
 
+          ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
@@ -291,7 +273,6 @@ import { X } from 'lucide-react';
         </ClickableBadge>
       )}
 
-
       <Button
 
 
@@ -299,28 +280,27 @@ import { X } from 'lucide-react';
         size='sm'
         onClick={clearFilters}
 
+        Clear All
+      </Button>
+    </div>
+  )
+};
+}
+
+      
+      <Button 
+        variant="ghost" 
+        size="sm" 
+        onClick={clearFilters}
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
+      >
+
+        Clear All
+      </Button>
+    </div>
+  )
 
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      ))}
-;,
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;,
-        <ClickableBadge;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";",
-          onClick={() => setPriceRange([50, 200])}
-        >;
-          ${priceRange[0]}-${priceRange[1]}/hr;,
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      )}
-;,
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;,
-        <ClickableBadge;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";",
-          onClick={() => setExperienceRange([0, 15])}
-        >;
-          {experienceRange[0]}-{experienceRange[1]} years;,
 
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -358,21 +338,10 @@ import { X } from 'lucide-react';
       </Button>;
     </div>;
   );
+
 }
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
 

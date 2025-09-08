@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-
+import { GetServerSideProps } from 'next'
+};      permanent: false}}
 
 =======
 export default function LaunchRedirect() {;
@@ -31,8 +31,5 @@ export default /**;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-
-=======
-  return null
 }
 >>>>>>> origin/cursor/delete-old-data-records-6bba

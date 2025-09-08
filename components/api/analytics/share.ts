@@ -3,7 +3,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+  res.status(200).json({ ok: true });  const entry = { url, title, network, utm, ts: new Date().toISOString(), ua: req.headers['user-agent'] || '' };
 
+  const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
+  list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
 
   res.status(200).json({ ok: true })

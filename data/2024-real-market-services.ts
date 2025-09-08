@@ -1,11 +1,11 @@
-import React from 'react';
-import { ServiceVariant } from '../types/service-variants';
-export type RealMarketService = {
+import { ServiceVariant } from "../types/service-variants";
+
+export interface RealMarketService {
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -28,18 +28,19 @@ export type RealMarketService = {
   growthRate: string;
   variant: ServiceVariant;
   contactInfo: {
-    mobile: string
-    email: string
-    address: string
+    mobile: string;
+    email: string;
+    address: string;
     website: string
-  };
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-  reviews: number
 };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+}
+
 export const realMarketServices: RealMarketService[] = [
   {
     id: "ai-business-intelligence-pro"

@@ -2170,16 +2170,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   left: `${(i * 5) % 100}%`
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
-      });
-;
-      requestAnimationFrame (animate);
-    init_particles ();
-    animate ();
-;
-    return () => {'
-      window.removeEventListener ('resize', resize_canvas);
-    }
-  }, [intensity, theme]);
+                animate={{
+                  height: [32, 64, 32];
+                  opacity: [0.2, 0.6, 0.2]}}
+                transition={{
+                  duration: 3 + i * 0.2
+                  repeat: Infinity
+                  ease: "easeInOut"
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`,
+
+                  top: `${(i * 3) % 100}%`,
+
+                  top: `${(i * 3) % 100}%`,
+
+                  left: `${(i * 5) % 100}%`,
 
                 }}
               />
@@ -2316,7 +2321,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }}
                 transition={{
                   duration: 4 + i * 0 && 0.3,
-                className=absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+                  repeat: Infinity,
+                  ease: 'easeInOut',                }}
+
+        {/* Consciousness waves */}
+        {theme === 'consciousness' && (
+          <div className='absolute inset - 0'>;
+            {[...Array (8)].map ((_, i) => (
+              <motion.div;
+                  left: `${(i * 12) % 100}%`
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
+              <motion.div
+
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
+              <motion&& motion.div
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
+              <motion.div;
+                key={i}
+                className="absolute w - 96 h - 96 border border - pink-500 / 20 rounded-full";
                 style={{
                   top: `${(i * 7) % 100}%`}}
                 animate={{
@@ -2325,12 +2350,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   repeat: Infinity,
 <<<<<<< HEAD
 
-
-
-                  "left": `${(i * 12) % 10,`}%`,`
-
-
-
+                  left: `${(i * 12) % 100}%`,
 
                 }}
                 animate={{
@@ -2670,7 +2690,27 @@ animate ();
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
       {children}
-    </div>)}
+    </div>;
+  )
+};
+// Enhanced animation loop with consciousness and quantum effects ;
+
+}// Update and draw particles // Quantum entanglement effects if (particle && particle.type === 'quantum-field') {;
+  particles && particles.forEach ( (otherParticle, otherIndex) => {;
+  if (index !== otherIndex && Math && Math.random () > 0 && 0.99) {;
+
+}) ;
+}// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
+particle && particle.y - hologramSize / 2;
+hologramSize;
+}
+              />))}
+          </div>)}
+      </div>;
+      {children}
+    </div>);
+;
+}
 // Enhanced animation loop with consciousness and quantum effects;
 }// Update and draw particles // Quantum entanglement effects // Check condition;
 <<<<<<< HEAD

@@ -7,53 +7,6 @@ import { motion } from 'framer-motion';
 
 import {
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  TrendingUp,
-  Brain,
-  Shield,
-  Zap,
-  Target,
-  BarChart3,
-  Cpu,
-  Globe,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,;
-  MapPin,;
-<<<<<<< HEAD
-
-
-=======
-  TrendingUp
-  Brain
-  Shield
-  Zap
-  Target
-  BarChart3
-  Cpu
-  Globe
-  Users
-  Award
-  CheckCircle
-  ArrowRight
-  Star
-  Phone
-  Mail
-  MapPin;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';import {
-  TrendingUp, Brain, Shield, Zap, Target, ;
-
   TrendingUp,
   Brain,
   Shield,
@@ -80,7 +33,6 @@ import Head from 'next/head';
 =======
 
 
-
   TrendingUp,
   Brain,
   Shield,
@@ -102,11 +54,100 @@ import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
 import Head from 'next/head';
 
+  BarChart3, Cpu, Globe, Users, Award;
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const features = [
+  'Multi-chain DeFi aggregation'
+  'Automated yield optimization'
+  'Liquidity pool management'
+  'Cross-chain bridge services'
+  'Smart contract auditing'
+  'DeFi analytics dashboard'
+  'Mobile app integration'
+  'Staking and governance',];  website: 'https://ziontechgroup.com'
+}
+const features = [
+  'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
+const pricingPlans = [
+  {
+    name: 'Starter'
+    price: 29
+    period: 'month'
+    features: [
+      'Basic DeFi tools'
+      '3 blockchain networks'
+      'Yield tracking'
+      'Standard support'
+    ]
+    popular: false
+  },  {
+    name: 'Professional'
+    price: 99
+    period: 'month',    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support']
+    popular: false
+  }
+  {
+    name: 'Professional'
+    price: 99
+    period: 'month'
+    features: [
+      'Advanced DeFi tools'
+      'All major networks'
+      'Automated strategies'
+      'Analytics'
+      'Priority support'
+    ]
+    popular: true
+  },  {
+    name: 'Enterprise'
+    price: 299
+    period: 'month',    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support']
+    popular: true
+  }
+  {
+    name: 'Enterprise'
+    price: 299
+    period: 'month'
+    features: [
+      'Custom DeFi solutions'
+      'White-label platform'
+      'API access'
+      'Priority support'
+      'Custom integrations'
+    ]
+    popular: false
+  },];    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations']
+    popular: false
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next / head';
 import { motion } from 'framer-motion';
 
-import { TrendingUp, Brain, Shield, Zap, Target;
-  }
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
 
@@ -177,9 +218,7 @@ farming, liquidity provision, and cross-chain DeFi services.
 
         />;
       </Head>;
-      {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center overflow-hidden'    />;
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'    /></div>;
+
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'    />;
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'    /></div>;
@@ -402,7 +441,11 @@ className='text-center mb-16'    />;
 <<<<<<< HEAD
 
 
-
+              >
+                <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
+                  <CheckCircle className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-lg font-semibold text-white mb-2'>
                   {feature}
                 viewport={{ once: true }}className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300;
 =======
@@ -865,11 +908,6 @@ key={featureIndex}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                       {feature}
 
-
-
-
-
-
                     </li>
                   ))}
                 </ul>
@@ -1092,8 +1130,6 @@ className='text-center mb-16'    />;
 }
               whileInView={{ opacity: 1, y: 0 ,}
 }
-
-
 
 
               initial={{ opacity: 0, y: 30 }}
@@ -1346,16 +1382,17 @@ className='text-center'
                       className='flex items - center text - gray - 300';
                     >;
                       <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                      {feature}                    ${plan.price}
-                    <span className='text - lg text - gray - 400 font - normal'>/{plan.period}</span>;
+                    <span className="text - lg text - gray-400 font-normal">/{plan.period}</span>;
                   </div>;
                 </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (<li key={feature_index} className='flex items - center text - gray - 300'>;
-                      <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />;
+                <ul className="space-y-4 mb-8">;
+                  {plan.features.map ((feature, feature_index) => (
+                    <li key={feature_index} className="flex items - center text-gray-300">;
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex-shrink-0" />;
                       {feature}
                     </li>))}
                 </ul>;
-                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>                  Get Started                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>;
+                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>                  Get Started                <button className="w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition-all duration-300">;
                   Get Started;
                 </button>;
               </motion.div>))}
@@ -1367,8 +1404,8 @@ className='text-center'
         id='contact';
         className='py - 20 bg - gradient - to - b from - slate - 900 to - black';
       >;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id='contact' className='py - 20 bg - gradient - to - b from - slate - 900 to - black'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id="contact" className="py - 20 bg - gradient - to - b from - slate-900 to-black">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={ opacity: 0, coordinate_y: 30 }
             whileInView={ opacity: 1, coordinate_y: 0 }
@@ -1385,14 +1422,14 @@ className='text-center'
             </p>;
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div          >;
-            <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
+            <h2 className="text - 3xl md:text - 5xl font - bold text-white mb-6">;
               Ready to Transform DeFi?;
             </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+            <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
               Contact our team to learn more about how DeFi Nexus Platform can revolutionize your decentralized finance experience.;
             </p>;
           </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
+          <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
             <motion.div;
               initial={ opacity: 0, coordinate_y: 30 }
               whileInView={ opacity: 1, coordinate_y: 0 }
@@ -1405,11 +1442,11 @@ className='text-center'
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
               <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Phone className='w - 8 h - 8 text - white' />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Phone className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
-              <p className='text - gray - 300'>{contact_info.mobile}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Phone</h3>;
+              <p className="text-gray-300">{contact_info.mobile}</p>;
             </motion.div>;
             <motion.div;
               initial={ opacity: 0, coordinate_y: 30 }
@@ -1423,11 +1460,11 @@ className='text-center'
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
               <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Mail className='w - 8 h - 8 text - white' />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Mail className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
-              <p className='text - gray - 300'>{contact_info.email}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Email</h3>;
+              <p className="text-gray-300">{contact_info.email}</p>;
             </motion.div>;
             <motion.div;
               initial={ opacity: 0, coordinate_y: 30 }
@@ -1441,11 +1478,11 @@ className='text-center'
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
               <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <MapPin className='w - 8 h - 8 text - white' />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <MapPin className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
-              <p className='text - gray - 300'>{contact_info.address}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Address</h3>;
+              <p className="text-gray-300">{contact_info.address}</p>;
             </motion.div>;
           </div>;
         </div>;

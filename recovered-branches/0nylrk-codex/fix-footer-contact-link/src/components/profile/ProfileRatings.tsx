@@ -1,86 +1,23 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {useState, useEffect} from "react";
-import {Star} from "lucide-react";
-import {ReviewStats} from "@/components/reviews/ReviewStats";
-import {ReviewsList} from "@/components/reviews/ReviewsList";
-import {useReviews} from "@/hooks/useReviews";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  averageRating?: number;
-  ratingCount?: number;
-}
-
-export function ProfileRatings({
-  userId,
-  averageRating = 0,
-  ratingCount = 0,
-}: ProfileRatingsProps) {
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<
-    Record<number, number>
-  >({});
-
-
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-      };
-
-
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
-        }
-      });
-
-      setRatingDistribution(distribution);
-    }
-  }, [reviews]);
-<<<<<<< HEAD
-
-  // Fetch reviews when component mounts
-  useEffect(() => {
-    fetchUserReviews(userId);
-  }, [userId]);
-
-  return (
-    <div className="space-y-6">;
-      <div className="flex flex-col md:flex-row gap-6">;
-        <div className="md:w-1/3">;
-<<<<<<< HEAD
-=======
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-1/3">
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          <ReviewStats
-
-            averageRating={averageRating}
-            totalReviews={ratingCount}
-            ratingDistribution={ratingDistribution}
-          />
-        </div>
-
+          <Tabs defaultValue="all">
+            <TabsList className="mb-4">
+              <TabsTrigger value="all">
+                All Reviews ({reviews.length})
+              </TabsTrigger>
+              <TabsTrigger value="positive">Positive</TabsTrigger>
+              <TabsTrigger value="critical">Critical</TabsTrigger>
+            </TabsList>
 
             <TabsContent value="all">
               <ReviewsList
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+              <ReviewsList
+                reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
+                isLoading={isLoading}
+                onReportReview={reportReview}
               />
             </TabsContent>
-
 
             <TabsContent value="critical">
               <ReviewsList
@@ -106,14 +43,56 @@ export function ProfileRatings({
 
   );
 }
+;
+  // Fetch reviews when component mounts;
+  useEffect (() => {
+    fetchUserReviews (user_id);
+  }, [user_id]);
+;
+  return (
+    <div className="space-y-6">;
+      <div className="flex flex - col md:flex - row gap-6">;
+        <div className="md:w-1/3">;
+          <ReviewStats;
+            average_rating={average_rating}
+            total_reviews={rating_count}
+            rating_distribution={rating_distribution}
+          />;
+        </div>;
+        <div className="md:w-2/3">;
+          <Tabs default_value="all">;
+            <TabsList className="mb-4">;
+              <TabsTrigger value="all">;
+                All Reviews ({reviews.length});
+              </TabsTrigger>;
+              <TabsTrigger value="positive">Positive</TabsTrigger>;
+              <TabsTrigger value="critical">Critical</TabsTrigger>;
+            </TabsList>;
+            <TabsContent value="all">;
+              <ReviewsList;
+                reviews={reviews}
+                is_loading={is_loading}
+                onReportReview={report_review}
+              />;
+            </TabsContent>;
+            <TabsContent value="positive">;
+              <ReviewsList;
+                reviews={reviews.filter ((r) => r.rating >= 4)}
+                is_loading={is_loading}
+                onReportReview={report_review}
+              />;
+            </TabsContent>;
+            <TabsContent value="critical">;
+              <ReviewsList;
+                reviews={reviews.filter ((r) => r.rating < 4)}
+                is_loading={is_loading}
+                onReportReview={report_review}
 
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </div>;
+              />;
+            </TabsContent>;
+          </Tabs>;
+        </div>;
+      </div>;    </div>;
   ),; interface ProfileRatingsProps {
   userId: string;
 averageRating?: number;
@@ -175,4 +154,3 @@ reviews.forEach ( (review) => {
 ;
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba

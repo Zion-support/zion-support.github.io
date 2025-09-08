@@ -1,9 +1,11 @@
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {TransactionHistory} from "@/components/transactions/TransactionHistory";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 export default function Payments() {
   return (
     <>
@@ -98,38 +100,16 @@ export default function Payments() {
     </>
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 // Import UI components for Payment Settings tab;
 
-                        <label
-                          htmlFor=notify-email"
-                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white>;
-                          Email notifications;
-                        </label>;
-                      </div>;
-                      <div className=flex items-center space-x-2">;
-                        <Checkbox id="notify-push defaultChecked />;
-                        <label
-                          htmlFor=notify-push"
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white>;
-import {Button} from "@/components/ui/button";
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 
-<<<<<<< HEAD
-
-
-=======
-
+=======                        <label
                           htmlFor="notify-email"
                           className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">;
-
                           Email notifications;
                         </label>;
                       </div>;"
@@ -154,17 +134,6 @@ import {Checkbox} from "@/components/ui/checkbox";
     </>;
   );
 }
-import React from ./react';
-import { Header } from '@/components / Header;
-import { Footer } from @/components / Footer';
-import { TransactionHistory } from '@/components / transactions / TransactionHistory;
-import { GradientHeading } from @/components / GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs;
-export default /**
- * Payments - Function description
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -236,7 +205,6 @@ function Payments() {
                     <div className="flex items - center space-x-2">;
                       <Switch id="escrow - default" />;
                       <Label html_for="escrow - default" className="text-white">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                         Use escrow by default;
                       </Label>;
                     </div>;
@@ -266,7 +234,6 @@ function Payments() {
                         <label;
                           html_for="notify - push";
                           className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text-white";
->>>>>>> origin/cursor/delete-old-data-records-6bba
                         >;
                           Push notifications;
                         </label>;
@@ -289,14 +256,4 @@ function Payments() {
 
 
 import { Checkbox } from '@/components / ui / checkbox';
-
 ;
-
-;
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

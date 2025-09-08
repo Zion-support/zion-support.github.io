@@ -1,6 +1,3 @@
-
-<<<<<<< HEAD
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
@@ -22,10 +19,35 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+import React from 'react';  {
+    ssr: false
+  }
+);
+export default function NotificationsPage() {
+const NotificationCenter = dynamic(;
+  () => import('../components/notifications/NotificationCenter'),;
+  {;
+    ssr: false,;
+  }
+);
+export default function NotificationsPage() {;
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;
+  ssr: false}),;
+export default function NotificationsPage() {;
+  return <NotificationCenter />;
+}
+;
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+  ssr: false}),
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;
+}
 
-import React from 'react';
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

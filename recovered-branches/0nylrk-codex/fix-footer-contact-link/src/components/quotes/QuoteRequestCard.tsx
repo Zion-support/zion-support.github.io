@@ -81,7 +81,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
   onViewDetails,
   onMarkAsResponded,
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
   onToggleArchive
 }) => {
   // Format date for display
@@ -178,7 +178,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 =======
               className = $2;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",;
 import { format } from "date-fns",;
@@ -299,8 +298,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
-
-
+            </Button>;
+          </div>;
+        </div>;
+      </CardContent>
 };
 
       </CardContent>

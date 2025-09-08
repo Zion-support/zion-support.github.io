@@ -1,25 +1,22 @@
+import React from 'react';
 <<<<<<< HEAD
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
-import Link from "next/link", // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
-function resolveUrl(envVar: string | undefined, fallback: string) {
-  if (!envVar || envVar.trim() === "" || envVar;
-                behavior: 'smooth' 
-              })
-            }}
-            className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
-            aria-label="Back to top"><ChevronUp className="h-4 w-4" aria-hidden="true" />
-            <span>Back to Top</span>
-          </button>
-        </div>
+import { Link } from 'react-router-dom';
 
-interface FooterLink {
-  name: string;
-  path: string;
-  icon: unknown;
-  external?: boolean;
-}
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-slate-900 text-gray-300">
+=======
+import { FooterNewsletter } from '@/components/FooterNewsletter';
+import { 
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  ChevronUp,
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface FooterSection {
   title: string;
@@ -298,46 +295,21 @@ export function Footer() {
 
 export function Footer() {
   return (
-    <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
-      {/* Enhanced Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      
-      {/* Floating Particles */}
-      <div className="absolute inset-0">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-            animate={{
-              x: [0, 50, 0],
-              y: [0, -50, 0],
-              opacity: [0.1, 0.5, 0.1],
-            }}
-            transition={{
-              duration: 4 + i * 0.3,
-              repeat: Infinity,
-              delay: i * 0.2,
-              ease: "easeInOut"
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 mb-12">
-          {/* Comp Section - Takes 2 columns on larger screens */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+    <motion.footer
+      className="bg-slate-900 text-gray-300"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+>>>>>>> origin/main
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -441,13 +413,38 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+<<<<<<< HEAD
+        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Zion Tech. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
-  )
-}
-export default Footer
+=======
+        <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+          <button
+            type='button'
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+            }}
+            className='flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer'
+            aria-label='Back to top'
+          >
+            <ChevronUp className='h-4 w-4' aria-hidden='true' />
+            <span>Back to Top</span>
+          </button>
+        </div>
+      </div>
+    </motion.footer>
+>>>>>>> origin/main
+  );
+};
+
+export default Footer;

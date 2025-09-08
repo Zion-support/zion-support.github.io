@@ -234,10 +234,11 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
               className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>
 
               {v}
-            </button>          ))}        <div className=\"text-lg font-semibold\"    />Zion OS API</div>;"
-        <div className=\"text - xs text - high-contrast-muted\"    />Version</div>;"
-        <div className=\"flex gap - 2 mt-2 flex-wrap\"    />;
-          {spec.versions.map ((v) => (<button key={v} on_click={() =    /> onChangeVersion (v)} className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>{v}</button>;
+            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
+        <div className="text - xs text - high-contrast-muted">Version</div>;
+        <div className="flex gap - 2 mt-2 flex-wrap">;
+          {spec.versions.map ((v) => (
+            <button key={v} on_click={() => onChangeVersion (v)} className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>{v}</button>;
         </div>;
       </div>;
       <div    />;
@@ -321,43 +322,6 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
                       </span>;
                       <span className='font - mono'>{e.path}</span>                    </button>                      <span className="mr - 2 inline - block w - 10 text-center text-[10px] opacity-80">{e.method}</span>;
                       <span className="font-mono">{e.path}</span>;
-          on_change={e = /> onChangeVisibility (e.target.value as any)}
-        >;
-          <option value='all' />All</option>;
-          <option value='public' />Public</option>;
-          <option value='partner' />Partner - only</option>;
-          <option value='internal' />Internal</option>;
-        </select>;
-      </div>;
-      <nav className='space - y-3' />;
-        {spec.sections.map (section => (<div key={section.id} />;
-            <div className='text - sm font - medium mb - 1' />{section.title}</div>;
-            <ul className='space - y-1' />;
-              {section.endpoints;
-                .filter (e => e.versions.includes (selected_version)).filter (e =>;
-                  visibility_filter === 'all';}
-                    ? true;}
-                    : e.visibility === visibility_filter).map (e => (                  <li key={e.id} />        </select>;
-      </div>;"
-      <nav className=\"space-y-3\" />;
-        {spec.sections.map ((section) => (<div key={section.id} />;"
-            <div className=\"text - sm font-medium mb-1\" />{section.title}</div>;"
-            <ul className=\"space-y-1\" />;
-              {section.endpoints;}
-                .filter ((e) => e.versions.includes (selected_version)).filter ((e) => visibility_filter === 'all' ? true : e.visibility === visibility_filter).map ((e) => (<li key={e.id} />;
-                    <button;
-                      className={`w - full text - left px - 2 py - 1 rounded text - xs border ${activeEndpointId === e.id ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - transparent'}`}
-                      on_click={() = /> onSelectEndpoint (e.id)}
-                    >;
-                      <span className='mr - 2 inline - block w - 10 text - center text-[10px] opacity - 80' />;
-                        {e.method}
-                      </span>;"
-                      <span className='font - mono' />{e.path}</span>                    </button>                      <span className=\"mr - 2 inline - block w - 10 text-center text-[10px] opacity-80\" />{e.method}</span>;"
-                      <span className=\"font-mono\" />{e.path}</span>;
-                      </span>;"
-                      <span className='font - mono'    />{e.path}</span>                    </button>                      <span className=\"mr - 2 inline - block w - 10 text-center text-[10px] opacity-80\"    />{e.method}</span>;"
-                      <span className=\"font-mono\"    />{e.path}</span>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                     </button>;
                   </li>))}
             </ul>;

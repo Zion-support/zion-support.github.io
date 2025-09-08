@@ -1,8 +1,3 @@
-export { ConversationItem } from "./ConversationItem";
-export { MessageBubble } from "./MessageBubble";
-export { DateDivider } from "./DateDivider";
-export { ConversationDetailView } from "./ConversationDetailView";
-export { ConversationsList } from "./ConversationsList";
 
 
 <<<<<<< HEAD
@@ -16,9 +11,4 @@ export { DateDivider } from './DateDivider',;
 export { ConversationDetailView } from './ConversationDetailView',;
 
 export { ConversationsList } from './ConversationsList';
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,21 +1,4 @@
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  RocketLaunchIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  UserGroupIcon,
-  CogIcon
-} from '@heroicons/react/24/outline'
-
-const flagshipSolutions = $2;
-    description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
-    icon: LightBulbIcon,
-    features: [
-      'Natural Language ProcessingMulti-modal LearningReal-time CollaborationAdvanced Analytics'
-    ],
-    href: '/solutions/ai-autonomous-research'},
+import {
   {
     name: 'Quantum Neural Networks',
     description: 'Breakthrough quantum computing technology for next-generation AI applications.',
@@ -151,10 +134,11 @@ export default function SolutionsPage() {
             </a>
             <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Services <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
+            </Link>
+          </div>        </div>
       </div>
     </div>
   )
-}
+};
+
+export default Page;

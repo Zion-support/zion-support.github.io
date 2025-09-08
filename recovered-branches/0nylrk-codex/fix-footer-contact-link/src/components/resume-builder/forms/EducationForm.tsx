@@ -1,12 +1,16 @@
-import { EducationForm, as, EducationFormComponent } from "./education";
-import { EducationFormProps } from "./education/types";
-export function EducationForm(props: EducationFormProps) {
+import { EducationForm, as, EducationFormComponent  } from './education';
+import { EducationFormProps  } from './education / types';
+export /**
+ * EducationForm - Function description
+ */
+function EducationForm() {
+
   return <EducationFormComponent {...props} />;
 }
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+import {EducationForm, as, EducationFormComponent} from './education';
+import {EducationFormProps} from './education/types';
+export function EducationForm(): any (props: EducationFormProps) {;
+  return <EducationFormComponent {...props} />;
 }
 
 import {EducationForm, as, EducationFormComponent} from './education';
@@ -16,17 +20,8 @@ export function EducationForm(props: EducationFormProps) {
 import { EducationForm as EducationFormComponent } from './education',;
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {;
-
-
   return <EducationFormComponent {...props} />;}
 ;
 }
 ;
-import { EducationForm, as, EducationFormComponent } from './education';'
-import { EducationFormProps } from './education/types';'
-export function EducationForm() {
-  }
-  return <EducationFormComponent {...props} />;
-}
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

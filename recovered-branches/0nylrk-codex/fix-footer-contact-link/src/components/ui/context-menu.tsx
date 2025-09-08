@@ -1,24 +1,10 @@
 
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check, ChevronRight, Circle } from &quot;lucide-react&quot;
-import { cn } from &quot;@/lib/utils&quot;
 
-
-=======
-import * as React from "react"
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -28,80 +14,7 @@ const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup
 const ContextMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
-
-<<<<<<< HEAD
-    inset?: boolean
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import * as React from &quot;react & quot;
-import * as ContextMenuPrimitive from &quot;@radix - ui / react - context - menu & quot;
-import { Check, ChevronRight, Circle } from &quot;lucide-react & quot;
-;
-import { cn } from &quot;@/lib / utils & quot;
-;
     inset?: boolean  }
->(({ class_name, inset, children, ...props }, ref) => (
-import * as React from "react"""
-import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"""
-import { Check, ChevronRight, Circle } from "lucide-react"""
-import { cn } from "@/lib/utils""
-const ContextMenu = ContextMenuPrimitive.Root;
-const ContextMenuTrigger = ContextMenuPrimitive.Trigger;
-const ContextMenuGroup = ContextMenuPrimitive.Group;
-const ContextMenuPortal = ContextMenuPrimitive.Portal;
-const ContextMenuSub = ContextMenuPrimitive.Sub;
-const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup;
-const ContextMenuSubTrigger = React.forwardRef<
-  React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
-</typeof>
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
-const ContextMenuSubTrigger = React.forward_ref<;
-  React.ElementRef < typeof ContextMenuPrimitive.SubTrigger>,
-
-<<<<<<< HEAD
-  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubTrigger> & {
-    inset?: boolean;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import * as React from "react";
-import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
-import { Check, ChevronRight, Circle } from "lucide-react";
-;
-import { cn } from "@/lib/utils";
-;
-const ContextMenu = ContextMenuPrimitive.Root;
-;
-const ContextMenuTrigger = ContextMenuPrimitive.Trigger;
-;
-const ContextMenuGroup = ContextMenuPrimitive.Group;
-;
-const ContextMenuPortal = ContextMenuPrimitive.Portal;
-;
-const ContextMenuSub = ContextMenuPrimitive.Sub;
-;
-const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup;
-
-<<<<<<< HEAD
-=======
-    inset?: boolean;"
-import * as React from "react";""
-import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";""
-import { Check, ChevronRight, Circle } from "lucide-react";"
-;"
-import { cn } from "@/lib/utils";"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-;
-const ContextMenuSubTrigger = React.forwardRef<;
-  React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>,;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {;
-    inset?:boolean;
-
-
-  }
-
 >(({ class_name, inset, children, ...props }, ref) => (
 pr-12325
   <ContextMenuPrimitive.SubTrigger;
@@ -109,18 +22,6 @@ pr-12325
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
       inset && &quot;pl-8&quot;,
 
-<<<<<<< HEAD
-
-
-    className={cn(
-
-
-      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
-      inset && "pl-8",
-
-
-
-=======
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",    className={cn(
@@ -128,44 +29,15 @@ pr-12325
       inset && "pl-8",
 
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
-const ContextMenu = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
-    inset?: boolean
-  }
->(({ className, inset, children, ...props }, ref) => (
-  <ContextMenuPrimitive.SubTrigger
-    ref = $2;
       inset && "pl-8",
-      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
-      inset && "pl-8",
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       className
     )}
     {...props}
   >;
     {children}
 
-<<<<<<< HEAD
+    <ChevronRight className="ml-auto h-4 w-4" />
 
-=======
-    <ChevronRight className = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>
->(({ className, ...props }, ref) => (
-  <ContextMenuPrimitive.SubContent
-    ref = $2;
-      className
-    )}
-    <ChevronRight className="ml-auto h-4 w-4 />
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   </ContextMenuPrimitive.SubTrigger>
 ))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
@@ -175,17 +47,13 @@ const ContextMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ContextMenuPrimitive.SubContent
     ref={ref}
-<<<<<<< HEAD
-
-    className={cn(
-
-
-      className
-
-
-
-
-        className
+    className={cn(      className
+    )}
+    {...props}
+  />;
+));
+ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
+const ContextMenuContent = React.forwardRef<;        className
       )}
       {...props}
     />;
@@ -193,19 +61,6 @@ const ContextMenuSubContent = React.forwardRef<
 ));
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
-
-
-
-className={cn (
-=======
-
-
-      className
-
-
-        className
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -245,14 +100,6 @@ const ContextMenuItem = React.forward_ref<;
   React.ElementRef < typeof ContextMenuPrimitive.Item>,
 <<<<<<< HEAD
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {}
-    inset?: boolean;
-
-
-  React.ElementRef<typeof ContextMenuPrimitive.Item>,;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
-=======
-  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {
->>>>>>> origin/cursor/delete-old-data-records-6bba
     inset?: boolean;
 
     className={cn(;
@@ -338,9 +185,6 @@ const ContextMenuItem = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?:boolean;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 >(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Item;
@@ -348,26 +192,14 @@ const ContextMenuItem = React.forwardRef<;
       &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
       inset && &quot;pl-8&quot;,
 
-
-<<<<<<< HEAD
-
-    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50,
-      inset && pl-8",    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50,
-      inset && pl-8",
-
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50,
-      inset && pl-8",
-=======
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",    className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
       className
     )}
     {...props}
@@ -376,35 +208,6 @@ const ContextMenuItem = React.forwardRef<;
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
 const ContextMenuCheckboxItem = React.forwardRef<;
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
->(({ className, children, checked, ...props }, ref) => (;
-  <ContextMenuPrimitive.CheckboxItem;
-    ref={ref}
-<<<<<<< HEAD
-
-
-
-
-    className={cn(
-      relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
-    className={cn(
-      "px-2 py-1.5 text-sm font-semibold text-foreground,
-      inset && pl-8",    className={cn(
-      "px-2 py-1.5 text-sm font-semibold text-foreground,
-      inset && pl-8",
-
-      "px-2 py-1.5 text-sm font-semibold text-foreground,
-      inset && pl-8",
-=======
-
-className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
 
     className={cn(
@@ -412,38 +215,11 @@ className={cn(
 
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
     className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50,
-
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-
-className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50,
-
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-    className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
       className
     )}
-
-      className
-    )}
-
-    className={cn(
-
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-    className={cn("
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
-      className;
-    )}
-
-
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -470,140 +246,12 @@ className={cn (
         <Check className=&quot;h - 4 w - 4&quot; />;
       </ContextMenuPrimitive.ItemIndicator>;
     </span>;
-
-
-    )}
-    checked={checked}
-    {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
-    {children}
-  </ContextMenuPrimitive.CheckboxItem>;
-));
-ContextMenuCheckboxItem.displayName =;
-  ContextMenuPrimitive.CheckboxItem.displayName;
-const ContextMenuRadioItem = React.forwardRef<;
-
-  React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
-
-  React.ElementRef<typeof ContextMenuPrimitive.RadioItem>;
-  React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
-
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
->(({ className, children, ...props }, ref) => (;
-  <ContextMenuPrimitive.RadioItem;
-    ref={ref}
-
-
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-    className={cn("
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-
-      className
-    )}
-
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-    className={cn("
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
-      className;
-    )}
-
-
-    {...props}
-  >;
-    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
-      <ContextMenuPrimitive.ItemIndicator>;
-        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
-      </ContextMenuPrimitive.ItemIndicator>;
-    </span>;
-    {children}
-
-  </ContextMenuPrimitive.RadioItem>));
-ContextMenuRadioItem.display_name = ContextMenuPrimitive.RadioItem.display_name;
-const ContextMenuLabel = React.forward_ref<;
-  React.ElementRef < typeof ContextMenuPrimitive.Label>,
-
-
-  React.ElementRef<typeof ContextMenuPrimitive.Label>,;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
-    inset?: boolean;
-
-
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",;
-      inset && "pl-8",;
-      className;
-    )}
-    {...props}
-  />;
-));
-ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
-;
-const ContextMenuCheckboxItem = React.forwardRef<;
-  React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
->(({ className, children, checked, ...props }, ref) => (;
-  <ContextMenuPrimitive.CheckboxItem;
-    ref={ref}
-    className={cn(;
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",;
-      className;
-    )}
-    checked={checked}
-    {...props}
-  >;
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">;
-      <ContextMenuPrimitive.ItemIndicator>;
-        <Check className="h-4 w-4" />;
-      </ContextMenuPrimitive.ItemIndicator>;
-    </span>;
-    {children}
-  </ContextMenuPrimitive.CheckboxItem>;
-));
-ContextMenuCheckboxItem.displayName =;
-  ContextMenuPrimitive.CheckboxItem.displayName;
-;
-const ContextMenuRadioItem = React.forwardRef<;
-  React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
->(({ className, children, ...props }, ref) => (;
-  <ContextMenuPrimitive.RadioItem;
-    ref={ref}
-    className={cn(;
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",;
-      className;
-    )}
-    {...props}
-  >;
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">;
-      <ContextMenuPrimitive.ItemIndicator>;
-        <Circle className="h-2 w-2 fill-current" />;
-      </ContextMenuPrimitive.ItemIndicator>;
-    </span>;
-    {children}
-  </ContextMenuPrimitive.RadioItem>;
-));
-ContextMenuRadioItem.displayName = ContextMenuPrimitive.RadioItem.displayName;
-;
-const ContextMenuLabel = React.forwardRef<;
-  React.ElementRef<typeof ContextMenuPrimitive.Label>,;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
-    inset?:boolean;
-  }
-
+    {children}  }
 >(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
       &quot;px-2 py-1.5 text-sm font-semibold text-foreground&quot;,
       inset && &quot;pl-8&quot;,
-
 
     className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
@@ -611,8 +259,8 @@ const ContextMenuLabel = React.forwardRef<;
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+      "px-2 py-1.5 text-sm font-semibold text-foreground",
+      inset && "pl-8",
       className
     )}
     {...props}
@@ -620,19 +268,9 @@ const ContextMenuLabel = React.forwardRef<;
 ));
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
-<<<<<<< HEAD
-
-=======
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
-
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
+=======className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold text - foreground & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -653,167 +291,8 @@ const ContextMenuSeparator = React.forward_ref<;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - border & quot;, class_name)}
     {...props}
+ContextMenuShortcut.displayName = "ContextMenuShortcut"
 
-
-<<<<<<< HEAD
-
-=======
-        "ml-auto text-xs tracking-widest text-muted-foreground",
-
-  React.ElementRef<typeof ContextMenuPrimitive.Separator>;
-  React.ElementRef<typeof ContextMenuPrimitive.Separator>,;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
-  <ContextMenuPrimitive.Separator;
-    ref={ref}
-    className={cn("-mx-1 my-1 h-px bg-border", className)}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    {...props}
-/>
-))
-ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
-const ContextMenuShortcut = ({
-  className
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      className={cn(
-        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
-        "ml-auto text-xs tracking-widest text-muted-foreground",
-        className
-      )}
-<<<<<<< HEAD
-      {...props}
-    />;
-  );
-}
-
-
-
-
-        "ml-auto text-xs tracking-widest text-muted-foreground",
-
-        className
-      )}
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-/>));
-ContextMenuSeparator.display_name = ContextMenuPrimitive.Separator.display_name;
-const ContextMenuShortcut = ({
-  class_name,
-  ...props;
-}: React.HTMLAttributes < HTMLSpanElement>) =>: any {
-  return (
-    <span;
-      className={cn (
-        &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
-        class_name)}
-<<<<<<< HEAD
-
-
-
-      {...props}
-
-    />);
-}
-
-=======
-      {...props}
-
-  ContextMenu,
-    <ChevronRight className = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>
->(({ className, ...props }, ref) => (
-  <ContextMenuPrimitive.SubContent
-    ref = $2;
-      className
-    )}
-    {...props}
-  />
-))
-ContextMenuSubContent.displayName = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>
->(({ className, ...props }, ref) => (
-  <ContextMenuPrimitive.Portal>
-    <ContextMenuPrimitive.Content
-      ref = $2;
-        className
-      )}
-      {...props}
-    />
-  </ContextMenuPrimitive.Portal>
-))
-ContextMenuContent.displayName = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {
-    inset?: boolean
-  }
->(({ className, inset, ...props }, ref) => (
-  <ContextMenuPrimitive.Item
-    ref = $2;
-      inset && "pl-8",
-      className
-    )}
-    {...props}
-  />
-))
-ContextMenuItem.displayName = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>
->(({ className, children, checked, ...props }, ref) => (
-  <ContextMenuPrimitive.CheckboxItem
-    ref = $2;
-      className
-    )}
-    checked = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>
->(({ className, children, ...props }, ref) => (
-  <ContextMenuPrimitive.RadioItem
-    ref = $2;
-      className
-    )}
-    {...props}
-  >
-    <span className = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {
-    inset?: boolean
-  }
->(({ className, inset, ...props }, ref) => (
-  <ContextMenuPrimitive.Label
-    ref = $2;
-      inset && "pl-8",
-      className
-    )}
-    {...props}
-  />
-))
-ContextMenuLabel.displayName = $2;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>
->(({ className, ...props }, ref) => (
-  <ContextMenuPrimitive.Separator
-
-ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
-export {
-  ContextMenu
-  ContextMenuTrigger
-  ContextMenuContent
-  ContextMenuItem
-  ContextMenuCheckboxItem
-  ContextMenuRadioItem
-  ContextMenuLabel
-  ContextMenuSeparator
-  ContextMenuShortcut
-  ContextMenuGroup
-  ContextMenuPortal
-  ContextMenuSub
-  ContextMenuSubContent
-  ContextMenuSubTrigger
-  ContextMenuRadioGroup}
-ContextMenuShortcut.displayName = "ContextMenuShortcut;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-export {
   ContextMenu,
   ContextMenuTrigger,
   ContextMenuContent,
@@ -828,8 +307,6 @@ export {
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
-<<<<<<< HEAD
-=======
   ContextMenuRadioGroup}
 ContextMenuShortcut.displayName = "ContextMenuShortcut";
 ;
@@ -923,18 +400,3 @@ ContextMenuShortcut.displayName = "ContextMenuShortcut"
 ;
 ;
   ContextMenuRadioGroup}
-  ContextMenuRadioGroup}
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-
-<<<<<<< HEAD
-=======
-  ContextMenuRadioGroup};
-  ContextMenuRadioGroup}
-;
-;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

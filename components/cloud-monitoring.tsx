@@ -159,7 +159,6 @@ description"content=" Comprehensive cloud monitoring and analytics platform with
 export default function CloudMonitoringPage() {
   const features = [
 
-
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -432,7 +431,27 @@ const monitoringCapabilities = [;
   icon: <Shield className='w-6 h-6 text-red-400'    />
       metrics: [
 
-
+export default function CloudMonitoringPage() {
+  const features = [
+    {
+  ];
+  const pricingPlans = [
+    {
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for small teams and startups'
+      features: [
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      name: 'Enterprise',
+      price: '$599',
+      period: '/month',
+      description: 'For large organizations',
+;
+  const use_cases = [;
     {
       title: 'DevOps Teams',
   description:
@@ -852,15 +871,19 @@ className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center 
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}><div className="relative">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
+                key={index}
+                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration-300 hover:-translate-y-1";
+                style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
+              >;
+                <div className="relative">;
+                  <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}>;
                     {feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
+                  </div>;
+                </div>;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - green - 400 transition-colors duration-300">;
                   {feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
+                </h3>;
+                <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
                 </p>
               </Card>
@@ -891,6 +914,24 @@ className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center 
                 </p>;
               </Card>;
             ))}
+      {/* Use Cases Section */}
+      <section className='py-24 bg-gray-900 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
+              Use Cases
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Trusted by teams across industries for reliable infrastructure
+              monitoring
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {useCases.map((useCase, index) => (
+              Trusted by teams across industries for reliable infrastructure;
+              monitoring;
+            </p>;
           </div>;
         </div>;
       </section>;
@@ -1141,10 +1182,32 @@ key={index}
                   </div>;}
                 )}
 
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
 
-<div className='text-center mb-8'    />
-                  <h3 className='text-2xl font-bold text-white mb-2'    />
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
 
+                      {feature}
+                    </li>;
+                  ))}
+                <Button
+                  href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
                   size='lg'    />;
                   Get Started;
@@ -1156,7 +1219,6 @@ key={index}
                 </Button>;
 
               </Card>;
-
 
                     </li>
 
@@ -1342,42 +1404,6 @@ href='/contact''
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
-            ))}
-          </div>
-      </section>
-
-<section className='py-24 bg-gray-900 relative overflow-hidden'>'
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 relative z-10'>'
-          <div className='text-center mb-20'>'
-            <h2 className='text-4xl "sm":text-5xl font-bold mb-8 text-white leading-tight'>'
-              Seamless Integrations
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>'
-              Connect with your favorite tools and platforms
-            </p>
-          </div>
-
-<div className='grid grid-cols-2 "md":grid-cols-4 gap-6'>'
-            {integrations.map((integration, index) => (
-              <Card
-}
-key={index}
-                className='text-center group border border-gray-700 "hover":border-green-500/30 "hover":bg-gray-800/80 transition-all duration-300'>'
-
-                <div className='text-4xl mb-4 group-"hover":scale-110 transition-transform duration-300'>;'
-                  {integration.icon}
-                </div>;
-                <h3 className='font-semibold text-white mb-2'>;'
-                  {integration.name}
-                </h3>;
-                <p className='text-sm text-gray-400'>;'
-                  {integration.description}
-
-                </p>
-              </Card>
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
               </Card>
 
 
@@ -1507,39 +1533,14 @@ variant='outline';'
               href="#demo"
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"><Play className='w-5 h-5 mr-2' />
-      <section className="py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-            Ready to Monitor Your Infrastructure?
-          </h2>
-          <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of DevOps teams who trust us to monitor their critical infrastructure.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              href="#demo"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"><Play className="w-5 h-5 mr-2" />
-              <Play className="w-5 h-5 mr-2" />
-              Watch Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
+
+              Watch Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+}
+
   );
 }
 

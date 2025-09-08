@@ -65,7 +65,12 @@ const FILE = null;
 
 <<<<<<< HEAD
 
+  const method = (req.method || 'GET').toUpperCase(),;
 
+  const method = (req.method |'GET').toUpperCase()
+  const auth = authenticateRequest(req, method === 'GET');
+  if (!auth.ok) return res.status(401).json({ error: auth.error });
+  const tenantId = auth.tenantId!;
   if (method === 'GET') {
     const entry = data.byTenant[tenantId] |{
       funnel: []

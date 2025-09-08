@@ -1,34 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-<<<<<<< HEAD
-=======
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-
-  const item = agendaItems.find(i => i.id === id);
-  if (!item) return res.status(404).send('Not found');
-  const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
-  res.setHeader('Content-Typetext/plain')
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  const item = agendaItems.find(i => i.id === id);
-  if (!item) return res.status(404).send('Not found');
-  const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
-
-  res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id?: string }
-  res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { id } = req.query as { id?: string };
-pr-12243
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-pr-12243
-
-
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -49,11 +19,6 @@ export default async function handler(;
   res.setHeader('Content-Typetext/plain')
   res.status(200).send(transcript)
 
-<<<<<<< HEAD
-
-
-=======
-  try {
   const { id } = req && req.query as { id?: string };
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
   if (!item) return res && res.status(404).send('Not found');
@@ -83,13 +48,7 @@ export default async function handler(;
 
   res && res.setHeader('Content-Typetext/plain'),
   res && res.status(200).send(transcript)
-}
-
-
-
-
-
-import { agenda_items } from '../../../../data / expo / agenda';
+}import { agenda_items } from '../../../../data / expo / agenda';
 ;
 
 
@@ -155,36 +114,9 @@ const transcript = `Transcript for ${item.title} ("Track": ${item.trac,`}, "Time
 }}res.status(200).send(transcript)res.status(200).send(transcript)}
   res.set_header ('Content - Typetext / plain'),'
   res.status (200).send (transcript);
-
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-
-
-}
-
-
-
-
-}
-
-
-
-
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-pr-12243
-}
 }
 
 }
 
 }
 
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -334,16 +334,12 @@ const networkLatency = navigation.responseEnd - navigation.requestStart;
 >>>>>>> origin/resolved-merge-conflicts
         const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance)
-      )}';'
-    </div>';';'
-  )';';';'
-}';';';';'
-}';';';';';'
-  );';';';'
-}';';';''
-};';';';';';'
-<<<<<<< HEAD
-    // 'Measure': performance after page load',';';';';'
+      )}';
+    </div>';';
+  );';';';
+}';';';'
+};';';';';';
+    // Measure: performance after page load',';';';';
         setIsOptimized(isGoodPerformance);
       )'}'
 =======
@@ -373,16 +369,12 @@ const networkLatency = navigation.responseEnd - navigation.requestStart;
         setIsOptimized(isGoodPerformance)
       )}
     </div>
-    );';'
-}';''
-};';';';'
-<<<<<<< HEAD
-    // 'Measure': 'performance after page load'',';';'
-=======
-    // "Measure": "performance after page load'",';';'
->>>>>>> origin/resolved-merge-conflicts
-    ';';';'
-    if (document.readyState === 'complete') {',',';';'
+    );';
+}';'
+};';';';
+    // "Measure": "performance after page load'",';';
+    ';';';
+    if (document.readyState === 'complete') {',',';';
     ;
       }
 <<<<<<< HEAD

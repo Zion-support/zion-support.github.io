@@ -1,36 +1,22 @@
-<<<<<<< HEAD
 
-
-
-=======
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
-export function addSkillsSection(
-
 export function addSkillsSection(  doc: jsPDF;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {jsPDF} from 'jspdf';
-import {Skill} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
-export function addSkillsSection(;
-
-<<<<<<< HEAD
-
-
-  doc: jsPDF;
-
-
-=======
-  doc: jsPDF;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   skills: Skill[];
   colors: PdfThemeColors;
 
 
-<<<<<<< HEAD
-
+  yPos += 8;
+  // Group skills by category  yPos += 8;
+  // Group skills by category
+    if (!acc[category]) {
+      acc[category] = []
+    }
+    acc[category].push(skill);
+    return acc
+  }, {} as Record<string, typeof skills>);  }
+  return yPos + 5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
 
@@ -125,72 +111,4 @@ pr-12325
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
-
-<<<<<<< HEAD
-
-
-=======
-}
-}
 }}
-    const skills_text = category_skills.map (skill => skill.name).join (', ');
-    const skill_lines = doc.splitTextToSize (skills_text, 160);
-    doc.text (skill_lines, 30, y_pos + 5);
-    y_pos += (skill_lines.length * 5) + 10;
-  return y_pos + 5;
-
-
-import { jsPDF } from 'jspdf',;
-import { Skill } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-
-  doc:jsPDF,;
-  skills:Skill[],;
-  colors:PdfThemeColors,;
-  startY:number;)
-):number {;
-  if (skills.length === 0) return startY,;
-  let yPos = startY,;
-
-  doc.setFontSize(16),;
-  doc.setTextColor(colors.heading),;
-  doc.text('Skills', 20, yPos),;
-  yPos += 8,;
-
-  doc.setDrawColor(colors.accent),;
-  doc.line(20, yPos, 60, yPos),;
-  // Group skills by category;
-  const skillsByCategory = skills.reduce((acc, skill) => {;
-    const category = skill.category || 'Other',;
-    if (!acc[category]) {;
-      acc[category] = [],;
-
-    acc[category].push(skill),;
-    return acc,;
-  }, {} as Record<string typeof skills>),;
-  ;
-  doc.setFontSize(11),;
-  doc.setTextColor(colors.text),;
-  ;
-  for (const [category, categorySkills] of Object.entries(skillsByCategory)) {;
-    doc.setFont('helveticabold'),;
-    doc.text(category, 20, yPos),;
-    doc.setFont('helveticanormal'),;
-    ;
-    const skillsText = categorySkills.map(skill => skill.name).join(', '),;
-    const skillLines = doc.splitTextToSize(skillsText, 160),;
-    doc.text(skillLines, 30, yPos + 5),;
-    ;
-    yPos += (skillLines.length * 5) + 10,;
-  }
-  ;
-  return yPos + 5,;}
- doc.setFontSize (11);
-doc.setTextColor (colors.text);
-return yPos + 5 
-}
-  }
-  return yPos + 5
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -88,7 +88,7 @@ const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',;
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 const features = [;
@@ -138,12 +138,128 @@ const integrations = [;
   'Corporate wellness platforms',;
   'Social media networks',;
   'Fitness trackers',;
-  'Meditation apps',];};
-const features = [;
+  'Meditation apps',]
+};
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
 ];
 
+const integrations = [;
+  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
+  'Fitness trackersMeditation apps';
+];
+    content:
+      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
+    rating: 5,
+    avatar: '👩‍🔬',
+  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',
+    rating: 5,
+    avatar: '👩‍🔬'
+  }
+
+const integrations = [;
+  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
+  'Fitness trackersMeditation apps';
+];
+
+  Brain,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Shield,
+  CheckCircle,
+  Clock,
+  Award,
+  Target,
+  Globe,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Eye,
+  Heart,
+  Lightbulb,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe as GlobeIcon,} from 'lucide-react';import {
+  Brain, Star, Users, TrendingUp, Zap, Shield,
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon;
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+}
+;
+const features = [;
+  'Emotional intelligence training modules',
+  'Consciousness expansion exercises',
+  'Self - awareness development tools',
+  'Empathy and compassion training',
+  'Mindfulness and meditation guidance',
+  'Cognitive enhancement techniques',
+  'Social intelligence development',
+  'Creative consciousness exploration',
+  'Spiritual growth pathways',
+  'Personal transformation tracking',
+];
+  {
+    rating: 5,
+    avatar: '👩‍🔬';
+  }
+export default function AIConsciousnessEvolution2025() {
+
+export default function AIConsciousnessEvolution2025() {
+const testimonials = [;
+  {;
+    name: 'Dr. Sarah Chen',;
+    role: 'Clinical Psychologist',;
+    company: 'Mindful Wellness Center',;
+    content:;
+      'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',;
+    rating: 5,;
+    avatar: '👩‍⚕️',;
+  },  {;
+    name: 'Michael Rodriguez',;
+    role: 'CEO',;
+    company: 'InnovateTech Solutions',    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',;
+    rating: 5,;
+    avatar: '👩‍⚕️'
+};
+    name: 'Michael Rodriguez',;
+    role: 'CEO',;
+    company: 'InnovateTech Solutions',;
+    content:;
+      'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',;
+    rating: 5,;
+    avatar: '👨‍💼',;
+  },  {;
+    name: 'Dr. Emily Watson',;
+    role: 'Research Director',;
+    company: 'Consciousness Research Institute',    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',;
+    rating: 5,;
+    avatar: '👨‍💼'
+};
+    name: 'Dr. Emily Watson',;
+    role: 'Research Director',;
+    company: 'Consciousness Research Institute',;
+    content:;
+      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",;
+    rating: 5,;
+    avatar: '👩‍🔬',;
+  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',;
+    rating: 5,;
+    avatar: '👩‍🔬';
+  }
+
+export default function AIConsciousnessEvolution2025() {;
+  return (
     <Layout>;
       <Head>;
         <title>;
@@ -185,14 +301,7 @@ initial={{ opacity: 0, y: 30 ,}
             {/* Badge */}
 
 
-
           <motion.div
-
-
-
-
-
-
 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -577,6 +686,20 @@ className='text-center''
 
 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'    />
 
+            {/* CTA Buttons */}
+
+              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+              ))}
+            {/* CTA Buttons */}
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion&& motion.button
+                initial={{ opacity: 0, scale: 0 && 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+              <motion&& motion.button
+                initial={{ opacity: 0, scale: 0 && 0.9 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
                 className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
@@ -885,7 +1008,7 @@ className='text-center mb-16''
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-                className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'              >                className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200";
+                className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'              >                className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition-all duration-200";
               >;
 <<<<<<< HEAD
 
@@ -898,11 +1021,9 @@ className='text-center mb-16''
         </div>;
       </div>;
       {/* Features Section */}
-
-
-<<<<<<< HEAD
-<section className='py-20 bg-black'    />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
+      <section className='py - 20 bg - black'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py-20 bg-black">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
 initial={{ opacity: 0, y: 30 ,}
 
@@ -942,24 +1063,56 @@ Consciousness Evolution;
               ancient wisdom to create the most advanced consciousness;
               development experience ever created.;
             </p>;
-          </motion && motion.div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />            {features && features.map((feature, index) => (          >;
-            <h2 className=\"text-4xl font-bold text-white mb-6\"    />;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {features.map ((feature, index) => (          >;
+            <h2 className="text - 4xl font - bold text-white mb-6">;
               Revolutionary Features for;
-              <span className=\"bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent\"    /> Consciousness Evolution</span>;
+              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip-text text-transparent"> Consciousness Evolution</span>;
             </h2>;
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"    />;
-
-              Our AI-powered platform combines cutting-edge technology with ancient wisdom to create ;
+            <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
+              Our AI - powered platform combines cutting - edge technology with ancient wisdom to create;
               the most advanced consciousness development experience ever created.;
-            </p>;}
-          </motion && motion.div>;}
+            </p>;
+          </motion.div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
+            {features.map ((feature, index) => (
+              <motion.div;
                 key={feature}
 
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                description:
+                  'Our AI analyzes your current consciousness level and creates a personalized development plan.'
+                icon: <Brain className='w-12 h-12' />
+              }
+              {
+                step: '02'
+                title: 'Personalized Training'
+                description:
+                  'AI-generated exercises and experiences tailored to your specific needs and goals.'
+                icon: <Target className='w-12 h-12' />
+              }
+              {
+                step: '03'
+                title: 'Continuous Evolution'
+                description:
+                  'Real-time feedback and adaptation ensure continuous growth and development.'
+                icon: <TrendingUp className='w-12 h-12' />
+              },            ].map((step, index) => (              {
+              {
+                step: '03'
+                title: 'Continuous Evolution'
+                description: 'Real-time feedback and adaptation ensure continuous growth and development.'
+                icon: <TrendingUp className="w-12 h-12" />
+              }
+
+            ].map((step, index) => (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className='group bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border border - purple - 500 / 20 rounded - 2xl p - 6 hover:border - purple - 400 / 40 hover:shadow - 2xl hover:shadow - purple - 500 / 20 transition - all duration - 300';
               >;
@@ -972,13 +1125,13 @@ Consciousness Evolution;
                 <p className='text - gray - 400'>;
                   Advanced AI algorithms guide you through personalized;
                   consciousness development exercises.                </p>              >;
-                <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - xl flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300">;
-                  <Brain className="w - 8 h - 8 text - purple - 400" />;
+                <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - xl flex items - center justify - center mb - 4 group - hover:scale - 110 transition-transform duration-300">;
+                  <Brain className="w - 8 h - 8 text-purple-400" />;
                 </div>;
-                <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 300 transition - colors duration - 200">;
+                <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 300 transition-colors duration-200">;
                   {feature}
                 </h3>;
-                <p className="text - gray - 400">;
+                <p className="text-gray-400">;
                   Advanced AI algorithms guide you through personalized consciousness development exercises.;
                 </p>;
               </motion.div>))}
@@ -987,8 +1140,8 @@ Consciousness Evolution;
       </section>;
       {/* How It Works Section */}
       <section className='py - 20 bg - gradient - to - b from - black to - purple - 900 / 20'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - black to - purple - 900 / 20">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - black to-purple-900 / 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1013,18 +1166,30 @@ Consciousness Evolution;
               {
                 step: '01',
                 title: 'AI Assessment',          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
+            <h2 className="text - 4xl font - bold text-white mb-6">;
               How AI Consciousness Evolution;
-              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent"> Works</span>;
+              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip-text text-transparent"> Works</span>;
             </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+            <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
               Our revolutionary platform uses advanced AI to create personalized consciousness development;
               experiences that adapt to your unique journey.;
             </p>;
           </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+          <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
             {[;
               {
+            ].map((step, index) => (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className='text-center'
+
+                key={step.step}
+
+                className='text-center'
 
               >
                 <div className='relative mb-8'>
@@ -1666,43 +1831,6 @@ className='text-center group''
                 key={step && step.step}
 <<<<<<< HEAD
 
-                initial={{ opacity: 0, y: 30 ,}
-}
-                whileInView={{ opacity: 1, y: 0 ,}
-}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
-                viewport={{ once: true ,}
-}
-                className='text-center'    />;
-                <div className='relative mb-8'    />;
-                  <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'    />;
-                    <div className='text-white font-bold text-2xl'    />;
-                      {step && step.step}
-                    </div>;
-                  </div>;
-                  <div className='absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30'    /></div>;
-                </div>;
-                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400'    />;
-                  {step && step.icon}
-                </div>;
-                <h3 className='text-2xl font-bold text-white mb-4'    />;
-                  {step && step.title}
-                </h3>;
-                <p className='text-gray-300 leading-relaxed'    />;
-                  {step && step.description}
-                </p>              </motion && motion.div>              >;
-                <div className=\"relative mb-8\"    />;
-                  <div className=\"w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4\"    />;
-                    <div className=\"text-white font-bold text-2xl\"    />{step && step.step}</div>;
-                  </div>;
-                  <div className=\"absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30\"    /></div>;
-                </div>;
-                <div className=\"w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400\"    />;
-                  {step && step.icon}
-                </div>;
-                <h3 className=\"text-2xl font-bold text-white mb-4\"    />{step && step.title}</h3>;
-                <p className=\"text-gray-300 leading-relaxed\"    />{step && step.description}</p>;
-              </motion && motion.div>;
             ))}
 
 
@@ -2321,116 +2449,12 @@ className='text-center mb-16''
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-
-<<<<<<< HEAD
-
-
-                Evolution Path;
-              </span>;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Flexible pricing options designed to make consciousness evolution;
-              accessible to everyone.;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[          >;
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Choose Your;
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Evolution Path</span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Flexible pricing options designed to make consciousness evolution accessible to everyone.;
-            </p>;
-          </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {[;
-              {;
-                name: 'Starter',;
-                price: '$99',;
-                period: '/month',;
-                description:;
-                  'Perfect for individuals beginning their consciousness journey',;
-                features: [;
-                  'Basic AI assessment',;
-                  '10 consciousness exercises',;
-                  'Progress tracking',;
-                  'Email support',;
-                  'Mobile app access',;
-                ],;
-                popular: false,;
-              },              {;
+                popular: false
+};
                 name: 'Professional',;
                 price: '$299',;
-                period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access';
-                ];
-                name: 'Starter'
-                price: '$99'
-                period: '/month'
-                description:
-                  'Perfect for individuals beginning their consciousness journey'
-                features: [
-                  'Basic AI assessment'
-                  '10 consciousness exercises'
-                  'Progress tracking'
-                  'Email support'
-                  'Mobile app access'
-                ]
-                popular: false
-              },              {
-                name: 'Professional'
-                price: '$299'
-                period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access'
-                ];
-                popular: false
-              }
-                name: 'Professional'
-                price: '$299'
-                period: '/month'
-              };
-                name: 'Professional',
-                price: '$299',
-                period: '/month',
-                description:
-                  'Advanced features for serious consciousness development'
-                features: [
-                  'Advanced AI assessment'
-                  'Unlimited exercises'
-                  'Personalized coaching'
-                  'Priority support'
-                  'Advanced analytics'
-                  'Integration with wearables'
-                  'Group sessions'
-                ]
-                popular: true
-              },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
-                ];
-                popular: true
-              }
-                name: 'Enterprise'
-                price: '$799'
-                period: '/month'
-                description: 'Complete solution for organizations and teams'
-                features: [
-                  'Everything in Professional'
-                  'Team management'
-                  'Custom integrations'
-                  'Dedicated support'
-                  'White-label options'
-                  'Advanced reporting'
-                  'API access'
-                ]
-                popular: false
-              },            ].map((plan, index) => (                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access'
-                ];
-                popular: false
-              }
-              <motion.div
-                popular: false;
-              };
-                name: 'Professional',;
-                price: '$299',;
-                period: '/month',;
-                description:;
+                period: '/month',,
+  description:;
                   'Advanced features for serious consciousness development',;
                 features: [;
                   'Advanced AI assessment',;
@@ -2444,12 +2468,12 @@ className='text-center mb-16''
                 popular: true,;
               },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions';
                 ];
-                popular: true;
-              };
+                popular: true
+};
                 name: 'Enterprise',;
                 price: '$799',;
-                period: '/month',;
-                description: 'Complete solution for organizations and teams',;
+                period: '/month',,
+  description: 'Complete solution for organizations and teams',;
                 features: [;
                   'Everything in Professional',;
                   'Team management',;
@@ -2485,7 +2509,6 @@ className='text-center mb-16''
                 ];
                 popular: false;
               }
-
 
                 }`}
 
@@ -2656,7 +2679,6 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
       {/* CTA Section */}
 
 
-
             initial={{ opacity: 0, y: 30 }}
 
             whileInView={{ opacity: 1, y: 0 }}
@@ -2669,13 +2691,6 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 {' '}
 
-=======
-      {/* CTA Section *
-}
-      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>;'
-        <div className='max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">;"
-        <div className="max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center">;"
-          <motion&& motion.div;
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>;'
         <div className='max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>;'
@@ -3001,11 +3016,12 @@ className='text-center''
                       className='flex items - center text - gray - 300';
                     >;
                       <CheckCircle className='w - 5 h - 5 text - purple - 400 mr - 3 flex - shrink - 0' />                      {feature}                  </div>;
-                  <p className="text - gray - 300">{plan.description}</p>;
+                  <p className="text-gray-300">{plan.description}</p>;
                 </div>;
-                <ul className="space - y-3 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (<li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - purple - 400 mr - 3 flex - shrink - 0" />;
+                <ul className="space-y-3 mb-8">;
+                  {plan.features.map ((feature, feature_index) => (
+                    <li key={feature_index} className="flex items - center text-gray-300">;
+                      <CheckCircle className="w - 5 h - 5 text - purple - 400 mr - 3 flex-shrink-0" />;
                       {feature}
                     </li>))}
                 </ul>;
@@ -3025,8 +3041,8 @@ className='text-center''
       </section>;
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 border - t border - purple - 500 / 20'>;
-        <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 border - t border - purple - 500 / 20">;
-        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+        <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 border - t border-purple-500 / 20">;
+        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -3050,26 +3066,42 @@ className='text-center''
                 Start Free Trial;
               </button>;
               <button className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'>                Schedule Demo              Ready to Evolve Your;
-              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent"> Consciousness?</span>;
+              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip-text text-transparent"> Consciousness?</span>;
             </h2>;
-            <p className="text - xl text - purple - 200 mb - 8">;
+            <p className="text - xl text - purple-200 mb-8">;
               Join thousands of users who have already transformed their lives with our revolutionary AI platform.;
               Start your consciousness evolution journey today.;
             </p>;
-            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
-              <button className="bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105">;
+            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6">;
+              <button className="bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple-500 / 25 hover:scale-105">;
                 Start Free Trial;
               </button>;
-              <button className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200">;
+              <button className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition-all duration-200">;
                 Schedule Demo;
               </button>;
             </div>;
             {/* Contact Info */}
             <div className='mt - 12 grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
               {[;
-                {icon: <Phone className='w - 6 h - 6' />,label: 'Call Us',value: contact_info.mobile,},{icon: <Mail className='w - 6 h - 6' />,label: 'Email Us',value: contact_info.email,},{icon: <MapPin className='w - 6 h - 6' />,label: 'Visit Us',value: contact_info.address,},              ].map ((contact, index) => (            <div className="mt - 12 grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+                {
+                  icon: <Phone className='w - 6 h - 6' />,
+                  label: 'Call Us',
+                  value: contact_info.mobile,
+                },
+                {
+                  icon: <Mail className='w - 6 h - 6' />,
+                  label: 'Email Us',
+                  value: contact_info.email,
+                },
+                {
+                  icon: <MapPin className='w - 6 h - 6' />,
+                  label: 'Visit Us',
+                  value: contact_info.address,
+                },              ].map ((contact, index) => (            <div className="mt - 12 grid grid - cols - 1 md:grid - cols-3 gap-6">;
               {[;
-                { icon: <Phone className="w - 6 h - 6" />, label: 'Call Us', value: contact_info.mobile },{ icon: <Mail className="w - 6 h - 6" />, label: 'Email Us', value: contact_info.email },{ icon: <MapPin className="w - 6 h - 6" />, label: 'Visit Us', value: contact_info.address }
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contact_info.mobile },
+                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contact_info.email },
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contact_info.address }
                 <motion.div;
                   key={contact.label}
                   initial={{ opacity: 0, coordinate_y: 20 }}
@@ -3085,11 +3117,11 @@ className='text-center''
                     {contact.label}
                   </div>;
                   <div className='text - white font - medium'>{contact.value}</div>                </motion.div>                >;
-                  <div className="inline - flex items - center justify - center w - 12 h - 12 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full mb - 3 text - purple - 400">;
+                  <div className="inline - flex items - center justify - center w - 12 h - 12 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full mb - 3 text-purple-400">;
                     {contact.icon}
                   </div>;
-                  <div className="text - sm text - purple - 300 mb - 1">{contact.label}</div>;
-                  <div className="text - white font - medium">{contact.value}</div>;
+                  <div className="text - sm text - purple-300 mb-1">{contact.label}</div>;
+                  <div className="text-white font-medium">{contact.value}</div>;
                 </motion.div>))}
             </div>;
           </motion.div>;

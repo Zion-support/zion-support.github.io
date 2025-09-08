@@ -32,6 +32,5 @@ const AccessibilityManager = dynamic(() => import('./AccessibilityManager'),{'; 
 const AccessibilityManager = dynamic(() => import(\"./AccessibilityManager\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AccessibilityManager\' ,
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{"; loading: () => <p>Loading.</p,>}) export: "default AccessibilityManager" ,"""
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityManager' ,'
-</p>'
-</p>'
+</p>'</p>'
 </p>'

@@ -343,94 +343,6 @@ initParticles()}window.addEventListener('resize', handleResize)initParticles()up
         />;
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
-          animate={{transition={{duration: 7;
-            repeat: Infinity;
-            ease: 'easeInOut',          }}          }}<motion&& motion.div;
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20";
-        />;
-        <motion.div;
-          className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
-          animate={{rotate: [360, 0],scale: [1, 0.9, 1],opacity: [0.1, 0.3, 0.1],          }}
-          transition={{duration: 7,repeat: Infinity,ease: 'easeInOut',          }}          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
-          animate={{duration: 7;
-            repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut";
-ctx.stroke()}
-          }
-        })
-      }),
-
-      // Draw quantum matrix overlay
-      ctx.globalAlpha = $2;
-      ctx.strokeStyle = $2;
-      ctx.lineWidth = $2;
-      // Vertical lines
-      for (let x = 0, x < canvas.width, x += 50) {
-        ctx.beginPath($2);
-        ctx.moveTo($2);
-        ctx.lineTo($2);
-        ctx.stroke()
-      }
-      
-      // Horizontal lines
-      for (let y = 0, y < canvas.height, y += 50) {
-        ctx.beginPath($2);
-        ctx.moveTo($2);
-        ctx.lineTo($2);
-        ctx.stroke()
-      }
-
-      // Draw holographic circles
-      ctx.globalAlpha = $2;
-      for (let i = 0, i < 5, i++) {
-        const centerX = $2;
-        const centerY = $2;
-        const radius = $2;
-        ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`,
-        ctx.lineWidth = $2;
-        ctx.beginPath($2);
-        ctx.arc($2);
-        ctx.stroke()
-      }
-
-      animationFrameId = $2;
-    // Handle resize
-    const handleResize = $2;
-      canvas.height = $2;
-      initParticles()
-    },
-
-    window.addEventListener($2);
-    initParticles($2);
-    updateParticles($2);
-    return () => {
-      window.removeEventListener($2);
-      if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId)
-      }
-  }, []),
-
-            ease: 'easeInOut',          }}          }}
-
-        <motion&& motion.div"
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
-        />;
-        <motion.div;'
-          className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
-          animate={{}
-            rotate: [360, 0],
-            scale: [1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{}
-            duration: 7,
-            repeat: Infinity,'
-            ease: 'easeInOut',          }}          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
           animate={{
             duration: 7
             repeat: Infinity
@@ -877,8 +789,13 @@ ease: "easeInOut"
           transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
         />;
         <motion.div;
-
-
+          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
+          animate={{
+            duration: 7
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+          transition={{
             duration: 7,
             repeat: Infinity,
 
@@ -945,9 +862,6 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               delay: Math.random() * 2,
               ease: "easeInOut"
 
-
-
-            }}
           />
 =======
             transition={{
@@ -1097,6 +1011,11 @@ key={i}
                 delay: Math.random() * 2,
                 ease: "easeInOut"
               }}
+
+                ease: 'easeInOut',              }}
+
+              }}
+
             />
 
 
@@ -1175,11 +1094,6 @@ key={i}
         </svg>;
       </div>;
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       {/* Content */}
 
 };
@@ -1231,23 +1145,6 @@ export default UltraAdvancedFuturisticBackgroundV2;    </div>);
 }
 ;
 export default UltraAdvancedFuturisticBackgroundV2
-};
-
-    </div>)}export default UltraAdvancedFuturisticBackgroundV2;    </div>)}export default UltraAdvancedFuturisticBackgroundV2;
-}}export default UltraAdvancedFuturisticBackgroundV2;
-      <div className = $2;
-export default UltraAdvancedFuturisticBackgroundV2,
-      {/* Content */}'
-      <div className='relative z - 40'>{children}</div>;
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackgroundV2;    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackgroundV2
-};
-
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;

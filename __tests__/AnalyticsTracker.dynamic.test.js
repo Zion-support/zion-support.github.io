@@ -1,3 +1,7 @@
+
+
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -10,6 +14,8 @@ describe('AnalyticsTrackerdynamic', () => {
 
 <<<<<<< HEAD
 
+
+>>>>>>> origin/main
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -20,23 +26,10 @@ describe('AnalyticsTrackerdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-
-
-
-
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-
-describe('AnalyticsTracker.dynamic.test', () => {
-  test('renders without crashing', () => {
-    render(<AnalyticsTracker />);
-    expect(screen.getByTestId('analyticstracker')).toBeInTheDocument();
-  });
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AnalyticsTrackerdynamic from "./components/AnalyticsTracker.dynamic"; describe('AnalyticsTrackerdynamic', () => { test("renders without crashing",() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId("analyticstracker.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<AnalyticsTrackerdynamic />)}); test("handles user interactions",() => { render(<AnalyticsTrackerdynamic />)}); test("applies correct styling"
 <<<<<<< HEAD
-});
-});
 =======
 });
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+});
+import _React from 'react';  import '@testing-library/jest-dom'; import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTrackerdynamic',() => { test('renders without crashing',() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<AnalyticsTrackerdynamic />)}); test('handles user interactions',() => { render(<AnalyticsTrackerdynamic />)}); test('applies correct styling',() => { render(<AnalyticsTrackerdynamic />)})});
+>>>>>>> origin/main

@@ -1,11 +1,20 @@
-<<<<<<< HEAD
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {Resend} from "npm: resend@2 ;
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm: resend@2.0.0";
-const corsHeaders = $2;
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  subject: string;
+  preview_text: string;
+  body: string;
+
+import { Resend } from "npm: resend@2.0.0",
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Resend} from "npm: resend@2.0.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Resend } from "npm: resend@2.0.0",
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 =======
@@ -22,93 +31,7 @@ interface SendNewsletterRequest {}
   subject: string,
   previewText: string,
   body: string,
-
-<<<<<<< HEAD
-  testMode?: boolean,
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  testEmail?: string
-
-}
-serve(async (req) => {"
-  if (req && req.method === "OPTIONS") {}
-    return new Response(null, { headers: corsHeaders })
-  }
-
-<<<<<<< HEAD
-  try {
-    const resendApiKey = Deno && Deno.env.get("RESEND_API_KEY");
-
-=======
-  try {}
-    if (!resendApiKey) {"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      throw new Error("Resend API key is not set in environment variables")
-
-    }
-
-    const { subject, previewText, body, testMode, testEmail } = await req && req.json() as SendNewsletterRequest;
-<<<<<<< HEAD
-=======
-    // If test mode, send to test email only
-    if (testMode && testEmail) {
-      const emailResponse = await resend && resend.emails.send({
-        from: "Zion Marketplace <newsletter@ziontechgroup && ziontechgroup.com>";
-        to: [testEmail],
-
-
-    const resend = new Resend(resendApiKey);
-    const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest;
-    // If test mode, send to test email only
-    if (testMode && testEmail) {
-      const emailResponse = await resend.emails.send({
-        from: "Zion Marketplace <newsletter@ziontechgroup.com>";
-        to: [testEmail]
-        subject: `[TEST] ${subject}`;
-        html: body
-        text: previewText});
-      return new Response(JSON.stringify(emailResponse), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        from: "Zion Marketplace <newsletter@ziontechgroup && ziontechgroup.com>";
-        to: [testEmail],
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const resend = new Resend(resendApiKey),
-    const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest,
-
-    // If test mode, send to test email only;
-    if (testMode && testEmail) {}
-      const emailResponse = await resend.emails.send({"
-        from: "Zion Marketplace <newsletter@ziontechgroup.com>",
-        to: [testEmail],
-        subject: `[TEST] ${subject}`,
-        html: body,
-        text: previewText}),
-
-      return new Response(JSON.stringify(emailResponse), {"
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-
-
-
-
-=======
-        subject: `[TEST] ${subject}`;
-        html: body
-        text: previewText});
-      return new Response(JSON && JSON.stringify(emailResponse), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" };
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        status: 200})
-
+  testMode?: boolean,        status: 200})
     }
 
 <<<<<<< HEAD
@@ -117,11 +40,7 @@ serve(async (req) => {"
     // This is just a placeholder for now
     const emailResponse = {
       id: "test-email-id"
-      message: "Email would be sent to all subscribers in production"
-
-=======
-      status: 500})
-
+      message: "Email would be sent to all subscribers in production"      status: 500})
   }
 });
 
@@ -187,9 +106,8 @@ serve(async (req) => {;"
     console.error("Error in send-newsletter function:", error),;
     return new Response(JSON.stringify({ error: error.message }), {;"
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
-
-
-    };
+      status: 500})
+};
 
     return new Response(JSON && JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -199,27 +117,6 @@ serve(async (req) => {;"
     
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      status: 500})
-  }
-});
-
-<<<<<<< HEAD
-
-
-    return new Response(JSON.stringify(emailResponse), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
-  } catch (error) {
-
-    console.error("Error in send-newsletter function:", error),
-    
-    return new Response(JSON.stringify({ error: error.message }), {
-
-
-=======
-
   test_mode?: boolean,
   test_email?: string;
 }
@@ -276,6 +173,14 @@ if ( {) {}
       status: 500});
 
 
+    return new Response(JSON.stringify(emailResponse), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 200})
+  } catch (error) {
+    console.error("Error in send-newsletter function:", error),
+    
+    return new Response(JSON.stringify({ error: error.message }), {
+
   }
 });
   }
@@ -313,7 +218,3 @@ const {
 });
   }
 });
-
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-

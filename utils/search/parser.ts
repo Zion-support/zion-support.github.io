@@ -1,46 +1,9 @@
-export type SearchType = $2;
-export type ParsedFilters = $2;
-  skills: string[],
-  location?: string,
-  minBudgetUsd?: number,
-  maxBudgetUsd?: number,
-  availability?: 'full-time' | 'part-time' | 'contract',
-  keywords: string[]
-},
+  };
 
-function extractBudget(text: string): { minBudgetUsd?: number, maxBudgetUsd?: number } {
-  const lower = text.toLowerCase($2);
-  // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
-  const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec($2);
-  if (perHour) {
-    const max = parseInt($2);
-    return { maxBudgetUsd: max}
-  }
-  const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec($2);
-  if (under) {
-    const max = parseInt($2);
-    return { maxBudgetUsd: max}
-  }
-  const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec($2);
-  if (between) {
-    const min = parseInt($2);
-    const max = parseInt($2);
-    return { minBudgetUsd: min, maxBudgetUsd: max}
-  }
-  const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec($2);
-  if (range) {
-    const min = parseInt($2);
-    const max = parseInt($2);
-    return { minBudgetUsd: min, maxBudgetUsd: max}
-  }
-  return {}
-}
-
-export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
-
+=======
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -132,5 +95,28 @@ export async function parseQueryToFilters(
     filters.skills = skills;
   }
 
-  return filters;
+  return filters,
+  keywords: [],
+    skills: [],
+    location: null,
+    type: null;
+  return {
+    all: [],
+    talent: [],
+    jobs: [],
+    projects: []
+};
+};
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null
+};
+
+}
+  }}
+;
+export const suggestDidYouMean = (query: string) =>: any {
+  // Add did you mean functionality here;
+  return null;
 }

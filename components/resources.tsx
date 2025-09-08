@@ -1,12 +1,5 @@
 <<<<<<< HEAD
 
-
-=======
-import React from 'react';'
-import SEO from '../components/SEO';'
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
-import Link from 'next/link';'
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);

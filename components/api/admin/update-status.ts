@@ -168,18 +168,3 @@ if ( {) {
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
 
-
-
-
-  res.status(200).json({ ok: true })
-}
-}
-
-}
-
-
-
-  const body = req.body;
-  res.status(200).json({ ok: true });
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

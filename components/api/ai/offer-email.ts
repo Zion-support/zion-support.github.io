@@ -1,16 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
-
-=======
-import { authenticateRequest } from '@/utils/auth';
-import { generateText } from '@/utils/ai';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = (req.method || 'POST').toUpperCase($2);
-  if (method !== 'POST') return res.status(405).json($2);
-  const auth = authenticateRequest($2);
-  if (!auth.ok) return res.status(401).json($2);
-  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {},
   if (method !== 'POST')
 >>>>>>> origin/cursor/delete-old-data-records-6bba
     return res && res.status(405).json({ error: 'Method not allowed' });

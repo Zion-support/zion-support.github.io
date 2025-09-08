@@ -1,5 +1,14 @@
-
-<<<<<<< HEAD
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Report {
+  generatedAt: string;
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
+}
+ 
 
 }
 type Props = { report: Report | null }
@@ -26,11 +35,13 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
-
+export default function RepoHealth(): any ({ report }: Props) {
 };
-export default function RepoHealth(): any ({ report }: Props) {;
 
-
+export default function RepoHealth({ report }: Props) {
+export default function RepoHealth({ report }: Props) {;
+  if (!report) return <div>No report yet. Check back soon.</div>;
+  return (
 
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -90,7 +101,8 @@ export default function RepoHealth() { return null; }
 
 
 }
-  return (<div className="space-y-6">;
+  return (
+    <div className="space-y-6">;
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
         <p className="text - gray - 600 dark:text-gray-300">Automated activity and maintenance snapshot.</p>;
@@ -104,13 +116,15 @@ export default function RepoHealth() { return null; }
       <section>;
         <h2 className="font-semibold mb-2">Largest Files</h2>;
         <ul className="text-sm space-y-1">;
-          {report.largest_files.map ((f, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{f.file}</span><span className="text-gray-500">{(f.bytes / 1024).to_fixed (1)} KB</span></li>))}
+          {report.largest_files.map ((f, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{f.file}</span><span className="text-gray-500">{(f.bytes / 1024).to_fixed (1)} KB</span></li>))}
         </ul>;
       </section>;
       <section>;
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>;
         <ul className="text-sm space-y-1">;
-          {report.stale_pages.map ((p, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date (p.lastCommitAt).toLocaleDateString ()}</span></li>))}
+          {report.stale_pages.map ((p, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date (p.lastCommitAt).toLocaleDateString ()}</span></li>))}
         </ul>;
       </section>;
     </div>);

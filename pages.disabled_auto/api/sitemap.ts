@@ -1,14 +1,10 @@
-export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
-  const baseUrl ,=
-  https: //ziontechgroup.com'';;
-  const staticPages = [',';
+import React from 'react';
 
-<<<<<<< HEAD
+import React from 'react';
 
-
-
-  res.status(200).send(sitemap)}
-
+interface SitemapProps {
+  // Add props here as needed
+}  res.status(200).send(sitemap)}
   res.status(200).send(sitemap)}
 import * as React from 'react';
 
@@ -26,5 +22,5 @@ export default function Sitemap({ }: SitemapProps) {
     </div>
   );
 }
-}
+
 }

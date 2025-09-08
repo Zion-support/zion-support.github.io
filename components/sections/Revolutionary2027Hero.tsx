@@ -54,7 +54,18 @@ const Revolutionary2027Hero = () => {
         ease: 'easeOut' as const
       }
     }
-  }
+  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 30 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.8,;
+        ease: 'easeOut' as const,;
+      },;
+    },
+};
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>
       {/* Enhanced Background Effects */}
@@ -62,8 +73,12 @@ const Revolutionary2027Hero = () => {
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]'></div>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]'></div>
       {/* Animated Grid Pattern */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }
+      <div className="absolute inset-0 opacity-20">;
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
+      </div>;
+
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
       {/* Enhanced Background Effects */}
@@ -102,6 +117,13 @@ const Revolutionary2027Hero = () => {
           }}
         >
           <item.icon className='w-8 h-8' />            ease: "easeInOut"
+
+          }}          transition={{
+            rotate: [0, 5, -5, 0]}}
+          transition={{
+            duration: 4,
+            delay: item && item.delay,
+            repeat: Infinity,
           }}
         >
           <item.icon className="w-8 h-8" />
@@ -311,11 +333,16 @@ const Revolutionary2027Hero = () => {
               duration: 2
               repeat: Infinity
               ease: 'easeInOut',            }}
-          />
-        </div>
-      </motion.div>
+
+          />;
+        </div>;
+      </motion && motion.div>;
+
+      {/* Particle Effects */}
+
       {/* Particle Effects */}
       <div className='absolute inset-0 pointer-events-none'>
+
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}

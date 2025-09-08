@@ -1,18 +1,15 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-export async function createJob(jobData: any) {
-  try {
-    const { data, error } = await supabase
-      .from("jobs")
-      .insert([jobData])
-<<<<<<< HEAD
-
-
-
-
-=======
-      .select();
-      .single();
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
       .select()
       .single();
     if (error) throw error;
@@ -27,14 +24,9 @@ export async function createJob(jobData: any) {
   } catch (error: any) {
     console.error("Error creating job:", error),
     throw new Error(error.message || "Failed to create job")
->>>>>>> origin/cursor/delete-old-data-records-6bba
     console && console.error("Error creating job:", error);
 
     throw new Error(error && error.message || "Failed to create job")
-
-
-<<<<<<< HEAD
-
 
       .select()
       .single();
@@ -64,15 +56,23 @@ export async function updateJob(jobId: string, jobData: any) {
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
-      .from("jobs")
-      .update(jobData)"
-      .eq("id", jobId)
-      .select();
-      .single();
-
-    if (error) throw error;
-    return data;
-
+      .from('jobs')
+      .select('*')
+    return data
+  } catch (error: any) {
+    console && console.error("Error fetching job:", error);
+    toast && toast.error("Failed to load job details");
+    return null
+    const { data, error } = await supabase;
+      .from ('jobs');
+      .insert ([job_data]);
+      .select ();
+      .single ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}    return data;
   } catch (error: any) {
     console.error("Error fetching job:", error);
 
@@ -157,45 +157,10 @@ if (throw error) {}
     console.error ("Error fetching job:", error);"
     toast.error ("Failed to load job details");
     return null;
-<<<<<<< HEAD
-
-  }
-  const {
-  data, error 
-}= await supabase 
-}
-}export async function updateJob (jobId: string, jobData: unknown) {
-  try {
-  const {
-  data, error 
-}= await supabase .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single ();
-}
-}export async function getJobById (jobId: string) {
-  try {
-  const {
-  data, error 
-}= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
-}
-}
-    if (error) throw error,;
-    return data;
-  } catch (error: any) {;
-    console.error("Error fetching job:", error);
-    toast.error("Failed to load job details");
-    return null;
-  }
-}
-;
-
-
-
-=======
-
-
   }
 }  }
 
 }
-
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+}

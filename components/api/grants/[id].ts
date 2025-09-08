@@ -55,20 +55,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-
-function readGrant("id": string): GrantApplication | null {
-  }
-  // Check condition;
-if ( {) {$2;
-}
-    const g = read_grant (id)// Check condition;
-if ( {) {$2;
-}
-      res.status (404).json ({ error: 'Not found' })return;res.status(404).json({ error: 'Not found' })return;
-
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
-import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });

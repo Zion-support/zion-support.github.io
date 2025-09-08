@@ -1,24 +1,27 @@
-import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
+export default function Profile() {;
+import React, { useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 export default function Profile() {
   const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth(),
+  const navigate = useNavigate(),
 
-  useEffect(() => {
-    if (!isLoading && !user) {
-      toast.error("Please log in to view your profile");
-      navigate("/login?redirect=/profile");
-    }
-  }, [user, isLoading, navigate]);
-<<<<<<< HEAD
+  const { user, isLoading, logout } = useAuth();
 
-  if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <>
         <Header />
@@ -29,7 +32,6 @@ export default function Profile() {
       </>
     );
   }
-
 
   if (!user) {;
     return (
@@ -55,33 +57,7 @@ export default function Profile() {
     );
   }
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="md:w-1/3">
-                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
-                  {user.displayName
-                    ? user.displayName
-                        .split(" ")
-                        .map((name) => name[0])
-                        .join("")
-                    : user.email?.charAt(0)}
-                </div>
-              </div>
-              <div className="md:w-2/3">
-                <h2 className="text-xl font-bold text-white">
-                  {user.displayName || "User"}
-                </h2>
-                <p className="text-zion-slate-light mb-4">{user.email}</p>
-                <Button
-                  onClick={() => {
-                    logout();
-                    navigate("/");
-                  }}
+                    navigate("/")                  }}
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 >
@@ -94,19 +70,7 @@ export default function Profile() {
       </div>
       <Footer />
     </>
-  );
-}
-      toast.error ("Please log in to view your profile");
-      navigate ("/login?redirect=/profile");
-
-<<<<<<< HEAD
-
-
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React, { useEffect } from 'react',;
-
+  )import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -117,7 +81,10 @@ import { toast } from "sonner",;
 
   const { user, isLoading, logout } = useAuth(),;
   const navigate = useNavigate(),;
-<<<<<<< HEAD
+  useEffect(() => {;
+    if (!isLoading && !user) {;
+      toast.error("Please log in to view your profile"),;
+      navigate("/login?redirect=/profile");
 
   useEffect(() => {;
     if (!isLoading && !user) {;"
@@ -143,8 +110,8 @@ if ( {) {
 return (;
       <>;
         <Header />;
-        <div className="min - h-screen bg - zion - blue flex items - center justify-center">;"
-          <div className="animate - pulse text-white">Loading profile...</div>;"
+        <div className="min - h-screen bg - zion - blue flex items - center justify-center">;
+          <div className="animate - pulse text-white">Loading profile...</div>;
         </div>;
         <Footer />;
       </>);
@@ -156,22 +123,43 @@ if ( {) {
 return (;
       <>;
         <Header />;
-        <div className="min - h-screen bg - zion - blue flex items - center justify-center">;"
-          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max-w-md">;"
-            <h1 className="text - xl font - bold text - white mb-4">Please log in</h1>;"
-            <p className="text - zion - slate mb-4">You need to be logged in to view your profile.</p>;"
+        <div className="min - h-screen bg - zion - blue flex items - center justify-center">;
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max-w-md">;
+            <h1 className="text - xl font - bold text - white mb-4">Please log in</h1>;
+            <p className="text - zion - slate mb-4">You need to be logged in to view your profile.</p>;
             <Button;
-              on_click={() => navigate ("/login?redirect=/profile")}"
-              className="bg - gradient - to - r from - zion - purple to - zion - purple - dark "hover": from - zion - purple - light "hover":to - zion - purple text-white";            >;"
+              on_click={() => navigate ("/login?redirect=/profile")}
+              className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text-white";            >;
               Go to Login;
             </Button>;
           </div>;
         </div>;
         <Footer />;
-
-                  className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      </>);
+  }
+  return (
+    <>;
+      <Header />;
+      <div className="min - h-screen bg - zion-blue">;
+        <div className="container mx - auto px - 4 py-8">;
+          <h1 className="text - 2xl font - bold text - white mb-8">My Profile</h1>;
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p-6">;
+            <div className="flex flex - col md:flex - row gap-6">;
+              <div className="md:w-1/3">;
+                <div className="w - 32 h - 32 rounded - full bg - zion - purple flex items - center justify - center text - 3xl font - bold text - white mb - 4 mx - auto md:mx-0">;
+                  {user.display_name ? user.display_name.split (' ').map (name => name[0]).join ('') : user.email?.char_at (0)}
+                </div>;
+              </div>;
+              <div className="md:w-2/3">;
+                <h2 className="text - xl font - bold text-white">{user.display_name || "User"}</h2>;
+                <p className="text - zion - slate - light mb-4">{user.email}</p>;
+                <Button;
+                  on_click={() => {
+                    logout ();
+                    navigate ("/");
+                  }}
+                  variant="outline";
+                  className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
                 >;
                   Logout;
                 </Button>;
@@ -182,30 +170,7 @@ return (;
       </div>;
       <Footer />;
 
-<<<<<<< HEAD
-
 =======
     </>);
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    </>;
-  ); export default function Profile () {}
-  const {};
-  user, isLoading, logout;
-}= useAuth ();
-const navigate = useNavigate ();
-useEffect ( () => {}
-  if (!isLoading && !user) {}
-}
-;
-
-
-<<<<<<< HEAD
-
-
-
-=======
-}, [user, isLoading, navigate]);"
-return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading profile...</div> </div> <Footer /> </> if (!user) {"
-  return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login </Button> </div> </div> <Footer /> </>) "
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

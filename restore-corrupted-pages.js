@@ -54,14 +54,17 @@ const path = require($2);
     if (!backupPath) {
       return { restored: false, reason: 'No valid backup found' }
     }
-    // Read backup content,
-  let backupContent = fs.readFileSync($2);
-    // Handle merge conflicts by taking the content after the conflict markers,
-  if (backupContent.includes('')) {
-      const parts = backupContent.split($2);
-      if (parts.length > 1) {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;
+    // Read backup content;
+    let backupContent = fs.readFileSync(backupPath, 'utf8'),;
+    // Handle merge conflicts by taking the content after the conflict markers;
+    if (backupContent.includes('')) {;
+      const parts = backupContent.split('');
+      if (parts.length > 1) {;
+<<<<<<< HEAD
+        // Take the content after the conflict resolution;      }
+=======
+        // Take the content after the conflict resolution;
 
 
 '),
@@ -76,6 +79,10 @@ const path = require($2);
 =======
       if (parts.length > 1) {
         // Take the content after the conflict resolution
+      }
+>>>>>>> origin/main
+    }
+    // Clean up the content
 
 
 
@@ -96,8 +103,8 @@ const path = require($2);
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
-
-        // Take the content after the conflict resolution;
+<<<<<<< HEAD
+=======
 
 
 
@@ -129,6 +136,7 @@ const path = require($2);
 
       corruptedBackup: corruptedBackupPath
 '),
+>>>>>>> origin/main
       // Check condition
 if ( {) {
   $2
@@ -152,20 +160,14 @@ if ( {) {
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
 
-
-    }
-
+;
+    // Create a backup of the current corrupted file;
+    const timestamp = Date.now();
+    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
+    fs.writeFileSync(corruptedBackupPath, currentContent),;
+    // Restore the page;
+<<<<<<< HEAD
 =======
-    // Create a backup of the current corrupted file,
-  const timestamp = Date.now($2);
-    const corruptedBackupPath = $2;
-    fs.writeFileSync($2);
-    // Restore the page,
-  fs.writeFileSync($2);
-    return { 
-      restored: true, 
-      backupUsed: backupPath,
-      corruptedBackup: corruptedBackupPath}
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
@@ -173,6 +175,9 @@ if ( {) {
       corruptedBackup: corruptedBackupPath;
 
 
+
+
+>>>>>>> origin/main
     }
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   } catch (error) {
@@ -181,6 +186,8 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+=======;
+=======
 
 
 
@@ -240,7 +247,7 @@ function restoreAllCorruptedPages() {
         console.log(`\n🔍 Checking: ${fullPath}`),
 
 ;
-
+>>>>>>> origin/main
 // Function to scan and restore all corrupted pages;
 
   },;
@@ -276,10 +283,15 @@ function restoreAllCorruptedPages() {;
 
 
         const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
 <<<<<<< HEAD
 
         const result = restorePage(fullPath),
 
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+=======
 
 
 
@@ -290,11 +302,7 @@ function restoreAllCorruptedPages() {;
         console.log($2);
         const result = restorePage($2);
         const result = restorePage(fullPath),
-        const result = restorePage(fullPath),
-
-        console.log($2);
-        const result = restorePage($2);
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main
         if (result.restored) {
           results.restored++`;
           console.log(`✅ Restored: ${fullPath}`)`;
@@ -303,6 +311,9 @@ function restoreAllCorruptedPages() {;
         } else {
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
           console.log(`   Reason: ${result.reason}`)
           results.failed++,
           results.failed++,
@@ -324,10 +335,12 @@ function restoreAllCorruptedPages() {;
           // // // console.log(`❌ Failed: ${fullPath}`),;
           // // // console.log(`   Reason: ${result.reason}`);
 
+<<<<<<< HEAD
+          results.failed++,          results.failed++,
 
-  // TODO: Implement
-}`;
-          console.log(`   Reason: ${result.reason}`)
+  
+  console.log('🚀 Starting page restoration process...'),}
+=======
           results.failed++,
 
           // // // console.log(`❌ Failed: ${fullPath}`),
@@ -447,12 +460,14 @@ function restoreAllCorruptedPages() {;
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 }
-
+>>>>>>> origin/main
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
 }
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -526,13 +541,7 @@ if ( {) {$2;
 }
 
 
-module.exports = {
-
-  restorePage
-  restoreAllCorruptedPages
-  findBestBackup
-}
-
+>>>>>>> origin/main
 ;
 module.exports = {;
   restorePage,;
@@ -573,6 +582,13 @@ main
   if (require.main = $2;
   restoreAllCorruptedPages,
   findBestBackup
+};
+<<<<<<< HEAD
+module.exports = {
+  restore_page,
+  restoreAllCorruptedPages,
+  findBestBackup;
+=======
 
 
 
@@ -588,10 +604,4 @@ module.exports = {
 main
 
 
-}
-// Run the restoration if this script is executed directly,
-  if (require.main = $2;
-  restoreAllCorruptedPages,
-  findBestBackup
-},
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

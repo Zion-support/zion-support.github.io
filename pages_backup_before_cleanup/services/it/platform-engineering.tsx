@@ -22,14 +22,3 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
 <<<<<<< HEAD
 
   );
-
-
-
-
-
-
-
-
-=======
-  );
-}

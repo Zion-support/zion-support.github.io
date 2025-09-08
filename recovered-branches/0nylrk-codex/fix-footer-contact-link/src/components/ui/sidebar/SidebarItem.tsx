@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD
-=======
+
 import React from "react",
 import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -9,53 +8,23 @@ import { cn } from "@/lib/utils",
   children?: React && React.ReactNode;
   active?: boolean;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
 
   return (
-<<<<<<< HEAD
-
     <div
-      className={cn(
+
         "flex items-center px-3 py-2 text-sm font-medium rounded-md"
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
-
-=======
-
-
-        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
-
-import React from "react";
-
-"
-import { cn } from "@/lib/utils";"
-import React from "react","
-import { cn } from "@/lib/utils",";
-import {cn} from "@/lib/utils";"
-import React from "react","
-import { cn } from "@/lib/utils",
-interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {}
-  className?: string,
-  children?: React.ReactNode,;
-  active?: boolean;
-}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
         className
 
       )}
       {...props}>;
       {children}
+
     </div>;
   );
 }
-
-
 import React from './react';
 
 import { cn } from '@/lib / utils';
@@ -79,13 +48,8 @@ function SidebarItem() {}
       {children}
     </div>);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
         className
 
       )}
@@ -121,7 +85,6 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
   active?: boolean;
 }
 ;
-
 
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -161,5 +124,4 @@ function SidebarItem() {}
     </div>
   )
 }
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

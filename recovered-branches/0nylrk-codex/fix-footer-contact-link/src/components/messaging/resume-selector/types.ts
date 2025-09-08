@@ -1,26 +1,13 @@
 
-<<<<<<< HEAD
+import { Resume  } from '@/types / resume';
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export interface ResumeOption {
   id: string;
   title: string;'
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
-
-}
-<<<<<<< HEAD
-
-export interface ResumeSelectorProps {
-
-
-
-=======
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Resume } from "@/types/resume",
-
+  file?: File
+}import { Resume } from "@/types/resume",
 export interface ResumeOption {
 
   id: string,
@@ -38,26 +25,13 @@ export interface ResumeOption {;
 }
 
 ;
-
-<<<<<<< HEAD
-
-
-
-
-}
-
-=======
-
   onResumeSelected: (resumeOption: ResumeOption) => void;
-
   onResumeSelected: (resume_option: ResumeOption) => void;  onResumeSelected: (resumeOption: ResumeOption) => void;
-
   onResumeSelected: (resume_option: ResumeOption) => void;
-pr-12325
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+  onResumeSelected: (resume_option: ResumeOption) => void;
 export interface ResumeSelectorProps {;
-
-
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+  onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
 }
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

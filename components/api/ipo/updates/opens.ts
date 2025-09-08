@@ -1,24 +1,27 @@
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJsonFile } from "../../../../utils/api/storage";
+import { requireSuperadminApi } from "../../../../utils/api/auth";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
 
   if (!requireSuperadminApi(req, res)) return;
 
-  const id = String(req && req.query.id || "");
-
-<<<<<<< HEAD
-  const updates = readJsonFile("updates && updates.json", [] as any[]);
-  const u = updates && updates.find((x: any) => x && x.id === id);
-  if (!u) return res && res.status(404).json({ error: "Not found" });
-  res && res.status(200).json({ opens: u && u.opens || 0 });
-  res && res.status(200).json({ opens: u && u.opens || 0 });
-
+  const id = String(req.query.id |"");
+  const updates = readJsonFile("updates.json", [] as any[]);
+  const u = updates.find((x: any) => x.id === id);
+  if (!u) return res.status(404).json({ error: "Not found" });
+  res.status(200).json({ opens: u.opens |0 });
+  res.status(200).json({ opens: u.opens |0 });}
 
 
 =======
+  if (!u) return res.status(404).json({ error: 'Not found' });
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+}
   if (!u) return res.status(404).json({ error: 'Not found' });
 
 }
@@ -28,55 +31,6 @@
   if (!u) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ opens: u.opens || 0 })
 }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
-  if (!u) return res.status(404).json({ error: 'Not found' });
-
-}
-  const id = String(req.query.id || '');
-  const updates = readJsonFile('updates.json', [] as any[]);
-  const u = updates.find((x: any) => x.id === id),
-  if (!u) return res.status(404).json({ error: 'Not found' });
-  res.status(200).json({ opens: u.opens || 0 })
-}
-
-<<<<<<< HEAD
-
-const id = String(req.query.id || '')const updates = readJsonFile('updates.json', [] as any[];
-  const u = updates.find((x: any) => x.id === id),if (!u);
-  return res.status(404).json({ error: 'Not found'}
-};
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
-export default /**;
- * handler - Function description;
- */;
-}
-
-<<<<<<< HEAD
-"
-const id = String (req.query.id || \"\")const updates = readJsonFile (\"updates.json\", [] as any[];
-  const u = updates.find ((coordinate_x: any) => x.id === id)if ;"
-  return res.status (404).json ({ error: \"Not found\"}
-})) {$2;}
-}
-  res.status (200).json ({ opens: u.opens || 0 })res.status (200).json ({ opens: u.opens || 0 })}
-  if (!u) return res.status(404).json({ error: 'Not found'}
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-})const id = null;
-  res.status(200).json({ opens: u.opens || 0 }
-}
-
-<<<<<<< HEAD
-
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -96,7 +50,9 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
 }
-
+  if (!u) return res.status(404).json({ error: 'Not found' });import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -157,4 +113,14 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 
   res.status(200).json({ opens: u.opens || 0 });
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  const id = String (req.query.id || "");
+  const updates = readJsonFile ("updates.json", [] as any[]);
+  const u = updates.find ((coordinate_x: any) => x.id === id);
+  if (return res.status (404).json ({ error: "Not found" })) {
+  $2
+}
+  res.status (200).json ({ opens: u.opens || 0 });
+  res.status (200).json ({ opens: u.opens || 0 });
+}
+  if (!u) return res.status(404).json({ error: 'Not found' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,11 +1,23 @@
+
 export default function ResearchPage() {;
   return (;
 
+    <div className="min-h-screen bg-white">;    <div className="min-h-screen bg-white">;
+      {/* Hero Section */}
+      <section className="bg - gradient - to - r from - emerald - 600 to - teal - 600 text - white py-20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text-center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb-6">;
+            Research & Innovation;
+          </h1>;
+          <p className="text - xl md:text - 2xl text - emerald - 100 max - w-3xl mx-auto">;
             Pushing the boundaries of AI, quantum computing, and autonomous systems to solve humanity's greatest challenges.;
           </p>;
         </div>;
       </section>;
-
+      {/* Research Overview */}
+      <section className="py-20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
             <div>;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-6">;
                 Advancing the Frontiers of Technology;
@@ -51,7 +63,23 @@ export default function ResearchPage() {;
                     </svg>;
                   </div>;
                   <div>;
-
+                    <h3 className="font - semibold text - gray-900">25+ Partners</h3>;
+                    <p className="text - gray-600">Academic and industry collaborations</p>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Research Areas */}
+      <section className="py - 20 bg - gray-50">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
+              Core Research Areas;
+            </h2>;
+            <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
               Our research spans multiple cutting - edge domains, each pushing the boundaries of technological possibility;
             </p>;
           </div>;
@@ -66,69 +94,92 @@ export default function ResearchPage() {;
               <p className="text - gray - 600 mb-6">;
                 Advanced machine learning, natural language processing, computer vision, and autonomous decision - making systems.;
               </p>;
-
+              <ul className="space - y-2 text - sm text - gray-600">;
                 <li>• Large Language Models</li>;
                 <li>• Reinforcement Learning</li>;
                 <li>• Neural Architecture Search</li>;
                 <li>• AI Safety & Alignment</li>;
               </ul>;
-
+            </div>;
             <div className="bg - white p - 8 rounded - xl shadow-sm">;
               <div className="w - 16 h - 16 bg - purple - 100 rounded - lg flex items - center justify - center mb-6">;
                 <svg className="w - 8 h - 8 text - purple-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00 - 1.022-.547l - 2.387-.477a6 6 0 00 - 3.86.517l-.318.158a6 6 0 01 - 3.86.517L6.05 15.21a2 2 0 00 - 1.806.547M8 4h8l - 1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414 - 1.415 3.414H4.828c - 1.782 0 - 2.674 - 2.154 - 1.414 - 3.414l5 - 5A2 2 0 009 10.172V5L8 4z" />;
-
                 </svg>;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb-4">Quantum Computing</h3>;
               <p className="text - gray - 600 mb-6">;
                 Quantum algorithms, quantum machine learning, quantum cryptography, and quantum error correction.;
               </p>;
-
               <ul className="space - y-2 text - sm text - gray-600">;
-
                 <li>• Quantum Neural Networks</li>;
                 <li>• Quantum Optimization</li>;
                 <li>• Quantum Machine Learning</li>;
                 <li>• Quantum - Safe Cryptography</li>;
               </ul>;
-
+            </div>;
+            <div className="bg - white p - 8 rounded - xl shadow-sm">;
+              <div className="w - 16 h - 16 bg - blue - 100 rounded - lg flex items - center justify - center mb-6">;
+                <svg className="w - 8 h - 8 text - blue-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
+                </svg>;
+              </div>;
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Autonomous Systems</h3>;
+              <p className="text - gray - 600 mb-6">;
+                Self - driving vehicles, robotic systems, autonomous drones, and intelligent automation platforms.;
+              </p>;
+              <ul className="space - y-2 text - sm text - gray-600">;
                 <li>• Autonomous Vehicles</li>;
                 <li>• Robotic Process Automation</li>;
                 <li>• Swarm Robotics</li>;
                 <li>• Human - Robot Interaction</li>;
               </ul>;
-
+            </div>;
+            <div className="bg - white p - 8 rounded - xl shadow-sm">;
+              <div className="w - 16 h - 16 bg - green - 100 rounded - lg flex items - center justify - center mb-6">;
+                <svg className="w - 8 h - 8 text - green-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
+                </svg>;
+              </div>;
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Cybersecurity</h3>;
+              <p className="text - gray - 600 mb-6">;
+                AI - powered threat detection, zero - trust architectures, blockchain security, and privacy - preserving technologies.;
+              </p>;
+              <ul className="space - y-2 text - sm text - gray-600">;
                 <li>• AI Threat Detection</li>;
                 <li>• Zero - Trust Security</li>;
                 <li>• Blockchain Security</li>;
                 <li>• Privacy - Preserving ML</li>;
               </ul>;
-
+            </div>;
+            <div className="bg - white p - 8 rounded - xl shadow-sm">;
+              <div className="w - 16 h - 16 bg - orange - 100 rounded - lg flex items - center justify - center mb-6">;
+                <svg className="w - 8 h - 8 text - orange-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012 - 2h1.064M15 20.488V18a2 2 0 012 - 2h3.064M21 12a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
+                </svg>;
+              </div>;
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Sustainable Technology</h3>;
+              <p className="text - gray - 600 mb-6">;
+                Green computing, renewable energy optimization, carbon capture, and sustainable AI development.;
+              </p>;
+              <ul className="space - y-2 text - sm text - gray-600">;
                 <li>• Green AI</li>;
                 <li>• Energy Optimization</li>;
                 <li>• Carbon Footprint Reduction</li>;
                 <li>• Sustainable Computing</li>;
               </ul>;
-
+            </div>;
             <div className="bg - white p - 8 rounded - xl shadow-sm">;
               <div className="w - 16 h - 16 bg - indigo - 100 rounded - lg flex items - center justify - center mb-6">;
                 <svg className="w - 8 h - 8 text - indigo-600" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682 - 7.682a4.5 4.5 0 00 - 6.364 - 6.364L12 7.636l - 1.318 - 1.318a4.5 4.5 0 00 - 6.364 0z" />;
-
-              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Human - AI Collaboration</h3>;
-              <p className="text - gray - 600 mb-6">;
-                Augmented intelligence, human - AI interfaces, collaborative robotics, and AI - assisted decision making.;
-              </p>;
-              <ul className="space - y-2 text - sm text - gray-600">;
-
                 </svg>;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb-4">Human - AI Collaboration</h3>;
               <p className="text - gray - 600 mb-6">;
                 Augmented intelligence, human - AI interfaces, collaborative robotics, and AI - assisted decision making.;
               </p>;
-
+              <ul className="space - y-2 text - sm text - gray-600">;
                 <li>• Augmented Intelligence</li>;
                 <li>• Human - AI Interfaces</li>;
                 <li>• Collaborative AI</li>;
@@ -139,12 +190,11 @@ export default function ResearchPage() {;
           </div>;
         </div>;
       </section>;
-
+      {/* Featured Research Projects */}
       <section className="py - 20 bg-white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
             <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
-
               Featured Research Projects;
             </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
@@ -194,19 +244,18 @@ export default function ResearchPage() {;
                   <span className="text - sm text - gray-600">Hybrid classical - quantum computing approaches</span>;
                 </div>;
               </div>;
-
+              <a href="/quantum - neural - network - platform" className="text - emerald - 600 hover:text - emerald - 700 font-medium">;
                 Learn More →;
               </a>;
             </div>;
           </div>;
         </div>;
       </section>;
-
+      {/* Research Partnerships */}
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
             <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
-
               Research Partnerships;
             </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
@@ -253,7 +302,18 @@ export default function ResearchPage() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012 - 2h1.064M15 20.488V18a2 2 0 012 - 2h3.064M21 12a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
                 </svg>;
               </div>;
-
+              <h3 className="text - lg font - semibold text - gray - 900 mb-2">Government Agencies</h3>;
+              <p className="text - gray - 600 text-sm">;
+                DARPA, NSF, DOE, and other government research funding agencies;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py - 20 bg - emerald - 600 text-white">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text-center">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
             Join Our Research Mission;
           </h2>;
           <p className="text - xl text - emerald - 100 mb - 8 max - w-2xl mx-auto">;
@@ -263,7 +323,7 @@ export default function ResearchPage() {;
             <a href="/contact" className="bg - white text - emerald - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition-colors">;
               Collaborate With Us;
             </a>;
-
+            <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - emerald - 600 transition-colors">;
               Research Careers;
             </a>;
           </div>;

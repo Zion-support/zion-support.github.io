@@ -793,8 +793,7 @@ const shapes = [;
         </div>
         {/* Floating Geometric Elements */}
         <motion.div;
-
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg";
+          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan-400 / 20 rounded-lg";
           animate={{
 
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
@@ -811,8 +810,7 @@ const shapes = [;
             ease: 'linear',          }}
         />;
         <motion.div;
-
-          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
+          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
           animate={{
 
           transition={{
@@ -1140,8 +1138,90 @@ className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
             duration: 15,
             repeat: Infinity,
 
-      <style jsx>{``        @keyframes gridMove {
-          }
+          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
+        />;
+        <motion.div;
+          className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
+            opacity: [0.15, 0.3, 0.15],          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: 'linear',          }}
+        />;
+        <motion.div;
+          className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green-400 / 20 rounded-full";
+          animate={{
+          }}
+        {/* Particle Effects */}
+        <motion&& motion.div
+          className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
+          animate={{
+          transition={{
+            duration: 3
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        {/* Particle Effects */}
+        <motion&& motion.div
+          className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
+          animate={{
+
+          }}
+          transition={{
+
+            duration: 3
+            repeat: Infinity
+            ease: 'easeInOut'
+
+          }}
+
+        />;
+
+        <motion&& motion.div
+          className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
+          animate={{
+            y: [0, -15, 0],
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
+
+          transition={{
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 1,          }}
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
+          animate={{
+          }}
+          transition={{
+            duration: 5
+            repeat: Infinity,          }}
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+
+            delay: 2
+          }}
+          }}
+        />
+      </div>
+          }}
+        />
+      </div>
+            duration: 5,
+            repeat: Infinity,
+      <style jsx>{`
+        @keyframes gridMove {
           0% {
 }
 "transform": translate(0, 0);

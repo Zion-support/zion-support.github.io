@@ -1,6 +1,8 @@
-// Jest setup file
-import '@testing-library/jest-dom';
+<<<<<<< HEAD
+require('@testing-library/jest-dom');// Mock Next.js router
+=======
 // Mock Next.js router
+>>>>>>> origin/main
 jest.mock("next/router", () => ({
   useRouter() {
     return {
@@ -21,15 +23,10 @@ jest.mock("next/router", () => ({
       }
       isFallback: false
     };
-  }
+  },
+<<<<<<< HEAD
 }));
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
-  __esModule: true
-  default: (props) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />;
-  }
+=======
 }));
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
@@ -87,4 +84,9 @@ import '@testing-library/jest-dom'; global.IntersectionObserver = class Intersec
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 =======
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
+// Global test setup
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+>>>>>>> origin/main

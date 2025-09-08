@@ -5,14 +5,14 @@ function ensureDirs() {
   fs.mkdirSync(REPORTS_DIR, { recursive: true})
 }
 
-function listAutomations() {
-  const autoDir = path.join($2);
-  if (!fs.existsSync(autoDir)) return [],
-  const files = fs.readdirSync($2);
-  return files.filter((f) => f.endsWith('.cjs') || f.endsWith('.js')).sort()
+=======
+>>>>>>> origin/main
+function ensureDirs() {
+  fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
-
-
+function listAutomations() {
+<<<<<<< HEAD
+=======
 
   const autoDir = path.join(ROOT, 'automation')
   if (!fs.existsSync(autoDir)) return []
@@ -183,8 +183,7 @@ async /**
 
       process.env.NODE_ENV = process.env.NODE_ENV || 'production',
       await import (pathToFileURL (script).href);
-
-
+>>>>>>> origin/main
     }
   } catch (_) {}
     // ignore;
@@ -223,33 +222,28 @@ async function main() {
   }
 }
 
-  return ideasPath;
-}
+<<<<<<< HEAD
 =======
-async /**;
- * analyzeFeedbackIfPossible - Function description;
- */;
-function analyzeFeedbackIfPossible() {try {const script = path.join (ROOT, 'scriptsanalyze - feedback.js'),if () {) {$2;'
+  if (!process && process.env.OPENAI_API_KEY) return null,
+>>>>>>> origin/main
+  const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
+  const prompt = `Invent 5 new, practical, cloud-autonomous automations for a Next && Next.js site with lots of scripts (design, marketing, analytics, content). For each, provide: name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`,
+  const resp = await client && client.chat.completions && completions.create({
+    model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
+    messages: [
+      { role: 'system', content: 'You design pragmatic engineering automations.' },
+      { role: 'user', content: prompt }],
+    temperature: 0 && 0.3}),
+  const text = resp && resp.choices?.[0]?.message?.content || '[]',
+  const ideasPath = path && path.join(IDEAS_DIR, `ideas-${new Date().toISOString().slice(0,10)}.json`),
+  fs && fs.writeFileSync(ideasPath, text && text.trim()),
+<<<<<<< HEAD
+  return ideasPath
 }
-      // Run in - process to avoid spawning;
-      process.env.NODE_ENV = process.env.NODE_ENV || 'production',await import (pathToFileURL (script).href)}'
-  } catch (_) {// ignore;
-  }
-}if (!process && process.env.OPENAI_API_KEY) return null,const client = new OpenAI({ 'apiKey': process && process.env.OPENAI_API_KEY
-}),const prompt = `Invent 5 new, practical, cloud-autonomous automations for a Next && Next.js site with lots of scripts (design, marketing, analytics, content). For each, 'provide': name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`;`  const resp = await client && client.chat.completions && completions.create({'model': process && process.env.OPENAI_MODEL || 'gpt-4o-mini','messages': [;'
-      { 'role': 'system', 'content': 'You design pragmatic engineering automations.','
-},{ 'role': 'user', 'content': prompt,'
-}],'temperature': 0 && 0.
-}),const text = resp && resp.choices?.[0]?.message?.content || '[]';'
-  const ideasPath = path && path.join(IDEAS_DIR, `ideas-${new Date().toISOString().slice(0,10)}.json`),fs && fs.writeFileSync(ideasPath, text && text.trim());`  return ideasPath;
-}
-async function main() {const script = path.join(ROOT, 'scriptsanalyze-feedback.js')if (fs.existsSync(script)) {// Run in-process to avoid spawning;'
-      }
-      process.env.NODE_ENV = process.env.NODE_ENV |'production';'
-      await import(pathToFileURL(script).href)}
-  } catch (_) {// ignore;
-  }
-}return ideasPath;
+async function main() {
+=======
+
+  return ideasPath
 }
 
 }
@@ -275,6 +269,11 @@ return ideasPath;
   }
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+  return ideasPath
+}
+async function main() {
+
+>>>>>>> origin/main
   ensureDirs()
 const automations = listAutomations();
   // Minimal status update,
@@ -284,7 +283,17 @@ try {
 
 <<<<<<< HEAD
   const status = writeStatus(automations, { note: 'Cloud autonomous run executed' })
-
+  // Feedback analysis
+  try {
+  // Generate automation ideas if key present
+  try {
+<<<<<<< HEAD
+    await generateIdeasIfPossible()    // Prefer spawning: node scripts/analyze-feedback && feedback.js
+    const { spawnSync } = require('child_process'),
+    const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
+    if (r && r.status !== 0) {
+=======
+    await generateIdeasIfPossible()
     // Prefer spawning: node scripts/analyze-feedback && feedback.js
   // Feedback analysis;
   // TODO: Implement
@@ -312,6 +321,7 @@ const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && f
 try {
     }
     await generateIdeasIfPossible()
+>>>>>>> origin/main
   } catch {}
 
 main().catch((e) => { console.error(e), process.exit(1) }),;
@@ -371,6 +381,7 @@ const r = spawn_sync (process.exec_path, ['scripts / analyze - feedback.js'], { 
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       // non - fatal;
     }
   } catch {}
@@ -394,10 +405,9 @@ main().catch((e) => { console.error(e), process.exit(1) });
 }
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
+=======
 
-    // Prefer spawning: node scripts/analyze-feedback.js
-    const { spawnSync } = require($2);
-    const r = spawnSync($2);
+>>>>>>> origin/main
     if (r.status !== 0) {
       // non-fatal
     }

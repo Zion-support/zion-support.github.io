@@ -1,32 +1,19 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
 /**
  * Creates a system notification for a user;
  */
-
-export async function createSystemNotification({
-
-<<<<<<< HEAD
-
-  userId;
-  title;
-
+export async function createSystemNotification({  title;
+  message;
 
   actionUrl = null;
   actionText = null;
   sendEmail = false
 }: SystemNotificationParams) {
-
-=======
-  userId;
-  title;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  try {  return createNotification({
     userId;
     title;
     message;'
@@ -37,18 +24,10 @@ export async function createSystemNotification({
 
   })
 
-<<<<<<< HEAD
-
-
-=======
-import {create_notification} from './create_notification';'
-import { createNotification } from './createNotification';'
-import { SystemNotificationParams } from './types';'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
-
+import {create_notification} from './create_notification';
+import {SystemNotificationParams} from './types';
 
 <<<<<<< HEAD
 import { createNotification } from './createNotification',;
@@ -107,15 +86,8 @@ function createSystemNotification() {}
     action_text;
   });
 
-<<<<<<< HEAD
-
-
-
 }
 ;
-
-=======
-
 }
 ;
 
@@ -209,12 +181,4 @@ pr-12325
     actionText;
   });
 }
-
 ;
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

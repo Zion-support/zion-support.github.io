@@ -224,223 +224,15 @@ const serviceCategories = [
       { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' }
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/month' }
     ]
-  }
-    title: '⛓️ Blockchain & Web3'
-    icon: Layers
-    color: 'from-orange-600 to-red-600'
-    description: 'Decentralized solutions'
-    services: [
-      {
-        name: 'Blockchain Supply Chain Transparency'
-        href: '/blockchain-supply-chain-transparency'
-        description: 'End-to-end supply chain visibility'
-        price: '$2,499/month'
-      }
-      {
-        name: 'Smart Contract Automation Platform'
-        href: '/smart-contract-automation'
-        description: 'Automated blockchain contracts'
-        price: '$1,999/month'
-      }
-      {
-        name: 'DeFi Yield Optimization'
-        href: '/defi-yield-optimization'
-        description: 'Maximize DeFi returns'
-        price: '$3,999/month'
-      }
-      {
-        name: 'NFT Marketplace Platform'
-        href: '/nft-marketplace-platform'
-        description: 'Complete NFT ecosystem'
-        price: '$2,999/month'
-      }
-    ]
-  },  {      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/month' }
-      { name: 'Smart Contract Automation Platform', href: '/smart-contract-automation', description: 'Automated blockchain contracts', price: '$1,999/month' }
-      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/month' }
-      { name: 'NFT Marketplace Platform', href: '/nft-marketplace-platform', description: 'Complete NFT ecosystem', price: '$2,999/month' }
-    ]
-  }
-    title: '🚗 Autonomous & Mobility'
-    icon: Car
-    color: 'from-red-600 to-pink-600'
-    description: 'Self-driving and mobility solutions'
-    services: [
-      {
-        name: 'Autonomous Vehicle Fleet Management'
-        href: '/autonomous-vehicle-fleet-management'
-        description: 'Intelligent fleet management'
-        price: '$3,999/month'
-      }
-      {
-        name: 'Smart Traffic Management System'
-        href: '/smart-traffic-management'
-        description: 'AI traffic optimization'
-        price: '$4,999/month'
-      }
-      {
-        name: 'Electric Vehicle Charging Network'
-        href: '/ev-charging-network'
-        description: 'Smart EV infrastructure'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Mobility as a Service Platform'
-        href: '/mobility-as-a-service'
-        description: 'Integrated mobility solutions'
-        price: '$1,999/month'
-      }
-    ]
-  },  {      { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/month' }
-      { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' }
-      { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' }
+};
+      { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' };
+      { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' };
       { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
     ]
-  }
-    title: '🏥 Healthcare & Biotech'
-    icon: Heart
-    color: 'from-pink-600 to-rose-600'
-    description: 'Advanced healthcare solutions'
-    services: [
-      {
-        name: 'AI Drug Discovery Platform'
-        href: '/ai-drug-discovery-platform'
-        description: 'Accelerate drug development'
-        price: '$9,999/month'
-      }
-      {
-        name: 'Personalized Medicine AI'
-        href: '/personalized-medicine-ai'
-        description: 'Tailored treatment plans'
-        price: '$4,999/month'
-      }
-      {
-        name: 'Telemedicine AI Platform'
-        href: '/telemedicine-ai-platform'
-        description: 'Intelligent remote healthcare'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Medical Imaging AI'
-        href: '/medical-imaging-ai'
-        description: 'Advanced diagnostic imaging'
-        price: '$3,999/month'
-      }
+};
+
     ]
-  },  {      { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/month' }
-      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Tailored treatment plans', price: '$4,999/month' }
-      { name: 'Telemedicine AI Platform', href: '/telemedicine-ai-platform', description: 'Intelligent remote healthcare', price: '$2,999/month' }
-      { name: 'Medical Imaging AI', href: '/medical-imaging-ai', description: 'Advanced diagnostic imaging', price: '$3,999/month' }
-    ]
-  }
-    title: '🎓 Education & Training'
-    icon: GraduationCap
-    color: 'from-green-600 to-emerald-600'
-    description: 'Next-generation learning'
-    services: [
-      {
-        name: 'Virtual Reality Learning Platform'
-        href: '/vr-learning-platform'
-        description: 'Immersive educational experiences'
-        price: '$1,999/month'
-      }
-      {
-        name: 'AI Tutoring System'
-        href: '/ai-tutoring-system'
-        description: 'Personalized AI tutoring'
-        price: '$899/month'
-      }
-      {
-        name: 'Corporate Training AI'
-        href: '/corporate-training-ai'
-        description: 'Intelligent employee training'
-        price: '$2,499/month'
-      }
-      {
-        name: 'Language Learning AI'
-        href: '/language-learning-ai'
-        description: 'AI-powered language acquisition'
-        price: '$1,299/month'
-      }
-    ]
-  },  {      { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/month' }
-      { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized AI tutoring', price: '$899/month' }
-      { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' }
-      { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
-    ]
-  }
-    title: '⚖️ Legal & Compliance'
-    icon: Scale
-    color: 'from-slate-600 to-gray-600'
-    description: 'Legal technology solutions'
-    services: [
-      {
-        name: 'Contract Analysis AI'
-        href: '/contract-analysis-ai'
-        description: 'Intelligent contract review'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Compliance Monitoring Platform'
-        href: '/compliance-monitoring-platform'
-        description: 'Automated compliance tracking'
-        price: '$3,999/month'
-      }
-      {
-        name: 'Legal Document Automation'
-        href: '/legal-document-automation'
-        description: 'Automated legal documents'
-        price: '$1,999/month'
-      }
-      {
-        name: 'Regulatory Change Tracker'
-        href: '/regulatory-change-tracker'
-        description: 'Monitor regulatory updates'
-        price: '$1,499/month'
-      }
-    ]
-  },  {      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' }
-      { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/month' }
-      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/month' }
-      { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/month' }
-    ]
-  }
-    title: '🌍 Sustainability & Green Tech'
-    icon: Leaf
-    color: 'from-emerald-600 to-green-600'
-    description: 'Environmental solutions'
-    services: [
-      {
-        name: 'Carbon Footprint Tracking'
-        href: '/carbon-footprint-tracking'
-        description: 'Monitor environmental impact'
-        price: '$1,499/month'
-      }
-      {
-        name: 'Renewable Energy Management'
-        href: '/renewable-energy-management'
-        description: 'Optimize green energy'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Waste Management AI'
-        href: '/waste-management-ai'
-        description: 'Intelligent waste optimization'
-        price: '$1,999/month'
-      }
-      {
-        name: 'Sustainable Supply Chain'
-        href: '/sustainable-supply-chain'
-        description: 'Green supply chain solutions'
-        price: '$3,999/month'
-      }
-    ]
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' }
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' }
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' }
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
+};
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -450,30 +242,46 @@ const companyLinks = [
     icon: Star
   }
   {
-    name: '💰 2028 Pricing'
-    href: '/revolutionary-2028-pricing'
-    icon: DollarSign
-  },  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase }
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen }
-  { name: '🎯 About Us', href: '/about', icon: Users }
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck },];  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star }
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign }
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase }
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen }
-  { name: '🎯 About Us', href: '/about', icon: Users }
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-];
-const resourceLinks = [
-  { name: '📖 Documentation', href: '/docs', icon: BookOpen }
-  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video }
-  { name: '💡 API Reference', href: '/api', icon: Code }
-  { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench }
-  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone }
-  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud }
-  { name: '🔐 Security Center', href: '/security', icon: Shield }
-  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 },];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
+    services: [;
+      {;
+        name: 'Carbon Footprint Tracking',;
+        href: '/carbon-footprint-tracking',,
+  description: 'Monitor environmental impact',;
+        price: '$1,499/month',;
+      },;
+      {;
+        name: 'Renewable Energy Management',;
+        href: '/renewable-energy-management',,
+  description: 'Optimize green energy',;
+        price: '$2,999/month',;
+      },;
+      {;
+        name: 'Waste Management AI',;
+        href: '/waste-management-ai',,
+  description: 'Intelligent waste optimization',;
+        price: '$1,999/month',;
+      },;
+      {;
+        name: 'Sustainable Supply Chain',;
+        href: '/sustainable-supply-chain',,
+  description: 'Green supply chain solutions',;
+        price: '$3,999/month',;
+      },;
+    ],;
+  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' };
+    title: '🌍 Sustainability & Green Tech',
+    icon: Leaf,
+    color: 'from - emerald - 600 to - green - 600',
+    description: 'Environmental solutions',
+      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' };
+      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' };
+      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
+    ];
+  }
+  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
+  { name: '🎯 About Us', href: '/about', icon: Users },
+  { name: '📞 Contact', href: '/contact', icon: MessageCircle },
+  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 ];
 export default function UltraFuturisticNavigation2028() {
   const [isOpen, setIsOpen] = useState(false);
@@ -481,17 +289,13 @@ export default function UltraFuturisticNavigation2028() {
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-  const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle);
-  }
-  const handleCategoryLeave = () => {
-    setActiveCategory(null);
-  }
-  const filteredServices = serviceCategories.flatMap(category =>
-    category.services.filter(
-      service =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.description.toLowerCase().includes(searchQuery.toLowerCase())    )
+    setActiveCategory(null)
+};
+  const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
+    category && category.services.filter(;
+      service =>;
+        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
   );
   return (
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
@@ -824,21 +628,9 @@ export default function UltraFuturisticNavigation2028() {
                           key={service.name}
                           href={service.href}
                           onClick={closeMenu}
-                          className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
-                        >
-                          <h4 className='text-sm font-medium text-white'>
-                            {service.name}
-                          </h4>
-                          <p className='text-xs text-purple-300'>
-                            {service.description}
-                          </p>
-                          <span className='text-xs text-purple-400 font-medium'>
-                            {service.price}
-                          </span>                        </Link>                          className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
-                        >
-                          <h4 className="text-sm font-medium text-white">{service.name}</h4>
-                          <p className="text-xs text-purple-300">{service.description}</p>
-                          <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+
+                        </Link>
+
                       ))}
                     </div>
                   </div>
@@ -876,21 +668,19 @@ export default function UltraFuturisticNavigation2028() {
               </div>
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
+
+                  ))}
+              {/* Mobile CTA */}
+              <div className='pt-4 border-t border-purple-500/30'>;
                 <Link
                   href='/contact'
                   onClick={closeMenu}
                   className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'                >                <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
+      </AnimatePresence>;
+
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -923,12 +713,56 @@ export default function UltraFuturisticNavigation2028() {
                     </div>
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
+                    </span>                  </div>
+
                 </Link>
               ))}
             </div>
           </div>
         </div>
       )}
-    </nav>
-);
+}
+  );
+}
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Search Results Dropdown */}
+      {search_query && filtered_services.length > 0 && (
+        <div className='absolute top - full left - 0 right - 0 bg - black / 95 backdrop - blur - xl border border - purple - 500 / 30 rounded - 2xl shadow - 2xl z - 50'>;
+          <div className='p - 4'>;
+            <div className='space - y-2'>;
+              {filtered_services.slice (0, 8).map (service => (
+                <Link;
+                  key={service.name}
+                  href={service.href}
+                  className='block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors';
+                >;
+                  <div className='flex items - center justify - between'>;
+                    <div>;
+                      <h4 className='text - sm font - medium text - white'>;
+                        {service.name}
+                      </h4>;
+                      <p className='text - xs text - purple - 300'>;
+                        {service.description}
+                      </p>;
+                    </div>;
+                    <span className='text - xs text - purple - 400 font - medium'>;
+                      {service.price}
+                    </span>                  </div>                <Link;
+                  key={service.name}
+                  href={service.href}
+                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple-900 / 40 transition-colors";
+                >;
+                  <div className="flex items-center justify-between">;
+                    <div>;
+                      <h4 className="text - sm font-medium text-white">{service.name}</h4>;
+                      <p className="text - xs text-purple-300">{service.description}</p>;
+                    </div>;
+                    <span className="text - xs text - purple-400 font-medium">{service.price}</span>;
+                  </div>;
+                </Link>))}
+            </div>;
+          </div>;
+        </div>)}
+    </nav>);
 }

@@ -1,9 +1,17 @@
-const nextJest = require(,
-  next/jest');
-;const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './
-});
+}}}
+<<<<<<< HEAD
+}
+=======
+}}};
+}}}
+;
+}}}
+;
+import React from 'react';
+
+interface Jest.configProps {
+  // Add props here as needed
+}
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
@@ -37,3 +45,14 @@ export default function Jest.config({ }: Jest.configProps) {
 }
 }
 }
+>>>>>>> origin/main
+}}}
+}}};
+}}}
+;
+}}}
+;
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/main

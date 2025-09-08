@@ -156,7 +156,13 @@ const matchesSearch =;
         {/* Header */}
 
         <motion.div
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  const formatPrice = (price: string) => {;
+    return price && price.replace('$', '').replace(, '')
+};
+
+  return (
+        {/* Header */}
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -270,16 +276,6 @@ const formatPrice = (return price && price.replace('$', '').replace(, '');) => {
             </div>;
           </div>;
         </motion && motion.div>;
-
-=======
-              <div    />;
-                <div className=\"text-3xl font-bold text-orange-400\"    />500%+</div>;
-                <div className=\"text-white/60\"    />Average ROI</div>;
-                <div className='text-white/60'    />Average ROI</div>;
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 
         {/* Search and Filters */}
         <motion&& motion.div
@@ -396,141 +392,6 @@ const formatPrice = (return price && price.replace('$', '').replace(, '');) => {
           </div>;
         </motion && motion.div>;
 
-
-
-=======
-            <div className='flex items-center gap-2'>;'
-              <Globe className='w-5 h-5' />;'
-              <span>Global deployment</span>;
-            </div>;
-          </div>;
-          <div className='bg-white/5 rounded-2xl p-6 border border-white/10'>;'
-            <div className='grid grid-cols-1 'md':grid-cols-4 gap-6 text-center'>;'
-              <div>;
-                <div className='text-3xl font-bold text-blue-400'>;'
-                  {allServices && allServices.length}+;
-                </div>;
-                <div className='text-white/60'>Services Available</div>;'
-              </div>;
-              <div>;
-                <div className='text-3xl font-bold text-green-400'>99 && 99.9%</div>;'
-                <div className='text-white/60'>Uptime Guarantee</div>;'
-              </div>;
-              <div>;
-                <div className='text-3xl font-bold text-purple-400'>24/7</div>;'
-                <div className='text-white/60'>Support Available</div>;'
-              </div>;
-              <div>;
-                <div className='text-3xl font-bold text-orange-400'>500%+</div>;'
-                <div className='text-white/60'>Average ROI</div>              </div>        >;'
-          <h2 className='text-4xl 'md':text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;'
-            Revolutionary Micro SAAS Services 2025;
-          </h2>;
-          <p className='text-xl text-white/70 max-w-3xl mx-auto mb-8'>;'
-            Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology;
-          </p>;
-          <div className='flex items-center justify-center gap-6 text-white/60 mb-8'>;'
-            <div className='flex items-center gap-2'>;'
-              <Shield className='w-5 h-5' />;'
-              <span>Enterprise-grade security</span>;
-            </div>;
-            <div className='flex items-center gap-2'>;'
-              <Zap className='w-5 h-5' />;'
-              <span>AI-powered optimization</span>;
-            </div>;
-            <div className='flex items-center gap-2'>;'
-              <Globe className='w-5 h-5' />;'
-              <span>Global deployment</span>;
-            </div>;
-          </div>;
-          <div className='bg-white/5 rounded-2xl p-6 border border-white/10'>;'
-            <div className='grid grid-cols-1 'md':grid-cols-4 gap-6 text-center'>;'
-              <div>;
-                <div className='text-3xl font-bold text-blue-400'>{allServices && allServices.length}+</div>;'
-                <div className='text-white/60'>Services Available</div>;'
-              </div>;
-              <div>;
-                <div className='text-3xl font-bold text-green-400'>99 && 99.9%</div>;'
-                <div className='text-white/60'>Uptime Guarantee</div>;'
-              </div>;
-              <div>;
-                <div className='text-3xl font-bold text-purple-400'>24/7</div>;'
-                <div className='text-white/60'>Support Available</div>;'
-              </div>;
-              <div>;
-                <div className='text-3xl font-bold text-orange-400'>500%+</div>;'
-                <div className='text-white/60'>Average ROI</div>;'
-            <div className='flex items-center gap-2'    />;
-              <Globe className='w-5 h-5'    />;
-              <span    />Global deployment</span>;
-            </div>;
-          </div>;
-          <div className='bg-white/5 rounded-2xl p-6 border border-white/10'    />;
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-6 text-center'    />;
-              <div    />;
-                <div className='text-3xl font-bold text-blue-400'    />;
-                  {allServices && allServices.length}+;
-                </div>;
-                <div className='text-white/60'    />Services Available</div>;
-              </div>;
-              <div    />;
-                <div className='text-3xl font-bold text-green-400'    />99 && 99.9%</div>;
-                <div className='text-white/60'    />Uptime Guarantee</div>;
-              </div>;
-              <div    />;
-                <div className='text-3xl font-bold text-purple-400'    />24/7</div>;
-                <div className='text-white/60'    />Support Available</div>;
-              </div>;
-              <div    />;
-                <div className='text-3xl font-bold text-orange-400'    />500%+</div>;
-                <div className='text-white/60'    />Average ROI</div>              </div>        >;
-          <h2 className=\"text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent\"    />;
-            Revolutionary Micro SAAS Services 2025;
-          </h2>;
-          <p className=\"text-xl text-white/70 max-w-3xl mx-auto mb-8\"    />;
-            Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology;
-          </p>;
-          <div className=\"flex items-center justify-center gap-6 text-white/60 mb-8\"    />;
-            <div className=\"flex items-center gap-2\"    />;
-              <Shield className=\"w-5 h-5\"    />;
-              <span    />Enterprise-grade security</span>;
-            </div>;
-            <div className=\"flex items-center gap-2\"    />;
-              <Zap className=\"w-5 h-5\"    />;
-              <span    />AI-powered optimization</span>;
-            </div>;
-            <div className=\"flex items-center gap-2\"    />;
-              <Globe className=\"w-5 h-5\"    />;
-              <span    />Global deployment</span>;
-            </div>;
-          </div>;
-          <div className=\"bg-white/5 rounded-2xl p-6 border border-white/10\"    />;
-            <div className=\"grid grid-cols-1 md:grid-cols-4 gap-6 text-center\"    />;
-              <div    />;
-                <div className=\"text-3xl font-bold text-blue-400\"    />{allServices && allServices.length}+</div>;
-                <div className=\"text-white/60\"    />Services Available</div>;
-              </div>;
-              <div    />;
-                <div className=\"text-3xl font-bold text-green-400\"    />99 && 99.9%</div>;
-                <div className=\"text-white/60\"    />Uptime Guarantee</div>;
-              </div>;
-              <div    />;
-                <div className=\"text-3xl font-bold text-purple-400\"    />24/7</div>;
-                <div className=\"text-white/60\"    />Support Available</div>;
-              </div>;
-              <div    />;
-                <div className=\"text-3xl font-bold text-orange-400\"    />500%+</div>;
-                <div className=\"text-white/60\"    />Average ROI</div>;
-              </div>;
-            </div>;
-          </div>;
-        </motion && motion.div>;{/* Search and Filters */}
-        <motion&& motion.div;
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
         {/* Category Filter */}
         <motion&& motion.div
 <<<<<<< HEAD
@@ -619,7 +480,7 @@ const formatPrice = (return price && price.replace('$', '').replace(, '');) => {
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   {category.count}
-                </span>              </button>                <span className=\"text - xs bg - white / 20 px - 2 py-1 rounded-full\"    />{category.count}</span>;
+                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py-1 rounded-full">{category.count}</span>;
               </button>))}
           </div>;
         </motion.div>;
@@ -627,7 +488,7 @@ const formatPrice = (return price && price.replace('$', '').replace(, '');) => {
 
 <<<<<<< HEAD
         {view_mode === 'grid' ? (
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             <AnimatePresence>;
               {filtered_services.map ((service, index) => (
                 <motion.div;
@@ -778,8 +639,9 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                       </div>;
                     </div>;
 
-<<<<<<< HEAD
-=======
+                    <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
+                    <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
+
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'    />;
                       <div    />;
@@ -851,7 +713,6 @@ target='_blank';'
                       )}className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl 'hover':border-cyan-400/30 transition-all duration-300 p-6'>'
 
 <<<<<<< HEAD
-
 
 
                     {/* CTA */}
@@ -1194,6 +1055,13 @@ className='text-center py-20'>
 
         )}
 
+            </p>          </motion.div>
+
+          </motion.div>
+
+        )}
+
+        )}
         {/* Contact CTA */}
         <motion.div
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -1255,14 +1123,7 @@ className='text-center py-20'>
                   />;
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'>
 
-
-<<<<<<< HEAD
-
-=======
-        </motion.div>;
-      </div>;
-    </section>;
-}Call +1 302 464 0950;
+                Call +1 302 464 0950;
               </a>;
             </div>;
           </div>;

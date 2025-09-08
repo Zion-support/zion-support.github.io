@@ -28,9 +28,3 @@ export default function Consulting(): any ({ }: ConsultingProps) {;
     </div>;
   );
 
-
-=======
-}
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

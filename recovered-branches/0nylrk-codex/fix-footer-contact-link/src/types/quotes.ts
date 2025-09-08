@@ -2,17 +2,6 @@ export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;"
 export type TimelineType = "fixed" | "flexible";"
 export type BudgetType = "fixed" | "hourly" | "range";
-<<<<<<< HEAD
-
-
-
-export interface ListingItem {
-
-
-
-
-=======
-
 export interface ListingItem {
   id: string;
   title: string;
@@ -21,81 +10,39 @@ export interface ListingItem {
 }
 export interface ContactInfo {
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export interface ListingItem {;
-
   id: string;
   title: string;
-  category: string;
-  image?: string;
-<<<<<<< HEAD
-
-}
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+  category: string,
+  image?: string
 }
 
 export interface ContactInfo {;
-
   name: string;
   email: string;
-  phone: string;
-  company: string;
+  phone: string
+  company: string
 }
 
-  phone: string,
-  company: string;
-}
-export interface Budget {
+;
+export interface ListingItem {
   amount: number;
   maxAmount?: number;
   type: BudgetType;
 }
 
-<<<<<<< HEAD
-
-
 export interface QuoteFormData {;
 
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
   projectName: string;
   projectDescription: string;
   startDate?: Date;
-
-<<<<<<< HEAD
-  endDate?: Date;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  timeline: TimelineType;
-  budget: Budget;
-  contactInfo: ContactInfo;
-}
-
-export type QuoteStatus =
-  | "new"
-  | "in_review"
-  | "accepted"
-  | "responded"
-  | "closed"
-
-  | "archived";
-
+  endDate?: Date;  timeline: TimelineType;
 export interface QuoteRequest {
 
-
-
-  id: string;
-
+export interface QuoteRequest {;
   talent_id: string;
   talent_name?: string;
   requester_id?: string;
@@ -113,6 +60,3 @@ export interface QuoteRequest {
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
-  created_at: string;
-  updated_at: string;
-}

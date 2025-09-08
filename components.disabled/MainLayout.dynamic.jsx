@@ -3,6 +3,16 @@
 const MainLayout = dynamic(() => import(\"./MainLayout\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default MainLayout\' ,
 const MainLayout = dynamic(() => import("./MainLayout"),{"; loading: () => <p>Loading.</p,>}) export: "default MainLayout" ,"""
 const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainLayout' ,'
+<<<<<<< HEAD
+</p>'</p>'
+</p>'
+=======
 </p>'
 </p>'
 </p>'
+
+
+</p>'
+</p>'
+</p>'
+>>>>>>> origin/main

@@ -1,97 +1,41 @@
 
-<<<<<<< HEAD
-=======
-export const useJobApplications = (jobId?: string) => {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {toast} from "sonner";
 
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-
   const fetchApplications = async () => {
     if (!user) {
 
       setIsLoading(false);
       return;
     }
+    try {
 
-<<<<<<< HEAD
-
-
-
-=======
-
+      let query = supabase
         .from("job_applications")
         .select(`
           *;
           job: jobs(*)
-
-
-        `)
-
-      // Filter by job if jobId is provided
-      if (jobId) {
-
-        query = query && query.eq("job_id", jobId)
-      }
-
-      // For talent users, only fetch their own applications;
-"
-        query = query && query.eq("talent_id", user && user.id)
-      } 
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        if (!jobId) {
-
+          talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
+        `)        if (!jobId) {
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
-
-<<<<<<< HEAD
-
-
-            .eq("client_id", user && user.id);
-
-          
-
-
-=======
-            .eq("client_id", user && user.id);
-            .eq("client_id", user && user.id);
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-"
-            .eq("client_id", user.id),
-
-
-<<<<<<< HEAD
-            .eq("client_id", user && user.id);
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          if (jobIds && jobIds.length > 0) {
-
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
 
             query = query && query.in("job_id", jobIdArray)
           }
         }
       }
-
-<<<<<<< HEAD
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
-      // Transform the data to match our application types
-      const transformedData = data && data.map((app: any) => ({
-import { useState, useEffect } from './react';
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+        ...app;import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
 import { JobApplication, ApplicationStatus } from '@/types / jobs';
@@ -178,7 +122,7 @@ if (throw fetch_error) {}
   $2;
 }
       // Transform the data to match our application types;
-<<<<<<< HEAD
+      const transformed_data = data.map ((app: any) => ({
 
       const transformed_data = data.map ((app: any) => ({
         ...app;
@@ -186,20 +130,7 @@ if (throw fetch_error) {}
           ...app && app.talent_profile;
           full_name: app && app.talent_profile.display_name;
           profile_picture_url: app && app.talent_profile.avatar_url,
-=======
-
-
-          if (jobIds && jobIds.length > 0) {
-            const jobIdArray = jobIds.map(job => job.id),
-            query = query.in("job_id", jobIdArray)
-          }
-        }
-      }
-
         ...app;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
           skills: []
         } : undefined;
       }));
@@ -208,14 +139,10 @@ if (throw fetch_error) {}
 
 <<<<<<< HEAD
     } catch (err: any) {
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
       console && console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err && err.message),
       toast && toast.error("Failed to fetch applications")
-
-
           profile_picture_url: app.talent_profile.avatar_url,
           skills: [];
         } : undefined;
@@ -227,125 +154,22 @@ if (throw fetch_error) {}
       console.error ("Error fetching applications:", err);"
       set_error ("Failed to fetch applications: " + err.message),"
       toast.error ("Failed to fetch applications");
-
-
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      
+      const { data, error: fetchError } = await query,
+      
+      if (fetchError) throw fetchError,
+      
 
       // Transform the data to match our application types
       const transformedData = data.map((app: any) => ({
         ...app,
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          ...app.talent_profile,
-          full_name: app.talent_profile.display_name,
-          profile_picture_url: app.talent_profile.avatar_url,
-          skills: []
-        } : undefined;
-      })),
-      
-      setApplications(transformedData as JobApplication[]),
-      setError(null)
-    } catch (err: any) {"
-      console.error("Error fetching applications:", err),"
-      setError("Failed to fetch applications: " + err.message),
-
-<<<<<<< HEAD
-
-
-=======
-"
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      toast.error("Failed to fetch applications")
-    } finally {}
-      setIsLoading (false);
-    }
-
-<<<<<<< HEAD
-
-
-  },
-
-      toast && toast.error("You must be logged in to apply for jobs");
-
-
-=======
-  },
-
-      toast && toast.error("You must be logged in to apply for jobs");
-  },
-
-      toast && toast.error("You must be logged in to apply for jobs");
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          job_id: jobId,
-          talent_id: user.id,
-          resume_id: resumeId,
-          cover_letter: coverLetter,"
-          status: "new"
-        })
-        .select()
-        .single(),
-
-<<<<<<< HEAD
-      
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      if (error) {
-        if (error.code === '23505') { // Unique violation
-          toast.error("You have already applied to this job")
-        } else {
-          throw error
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { useAuth } from "@/hooks/useAuth",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
-
-import { toast } from "sonner",;
-export const useJobApplications = (jobId?: string) => {;
-  const { user } = useAuth(),;
-  const [applications, setApplications] = useState<JobApplication[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-  const fetchApplications = async () => {;
-    if (!user) {;
-      setIsLoading(false),;
-      return;
-    }
-;
-    try {;
-      setIsLoading(true),;
-      let query = supabase;"
-        .from("job_applications");`
-        .select(`;
-          *,;
-          job:jobs(*),;
-          talent_profile:profiles!talent_id(id, display_name, avatar_url, bio);`
-        `);"
-        .order("created_at", { ascending: false }),;
-      // Filter by job if jobId is provided;
-      if (jobId) {;"
-        query = query.eq("job_id", jobId);
-<<<<<<< HEAD
-
+        talent_profile: app.talent_profile ? {        }
+        return false
       }
 ;
       // For talent users, only fetch their own applications;
@@ -386,18 +210,6 @@ export const useJobApplications = (jobId?: string) => {;
     }
   }
 
-        }
-        return false;
-      }
-
-      // Add the new application to the local state
-      const newApplication = data as JobApplication,
-      setApplications(prev => [newApplication, ...prev]),
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-
   const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
     // Check condition
 if ( {) {
@@ -429,147 +241,21 @@ if ( { // Unique violation) {}
   $2;
 }"
           toast.error ("You have already applied to this job");
-<<<<<<< HEAD
-
-
-          throw error;
+        } else {        } else {
         }
         return false;
       }
 
-
-
-
-
-      
-
-
-
-=======
-
-
-          profile_picture_url: app.talent_profile.avatar_url,
-          skills: [];
-        } : undefined;
-      }));
-;
-      set_applications (transformed_data as JobApplication[]);
-      set_error (null);
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      // Add the new application to the local state
-
-      const newApplication = data as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-
-      "
-      toast && toast.success("Application submitted successfully");
-
-      toast && toast.error("Failed to submit application: " + err && err.message),
-<<<<<<< HEAD
-
-
-      return false;
-    }
-
-  const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
-    try {
-
-=======
-      return false
-
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { useAuth } from "@/hooks/useAuth",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
-import { toast } from "sonner",;
-;
-export const useJobApplications = (jobId?:string) => {;
-  const { user } = useAuth(),;
-  const [applications, setApplications] = useState<JobApplication[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-;
-  const fetchApplications = async () => {;
-    if (!user) {;
-      setIsLoading(false),;
-      return,;
-    }
-  }
-      
-      // Add the new application to the local state
-      const newApplication = data as JobApplication,
-      setApplications(prev => [newApplication, ...prev]),
-      
-      toast.success("Application submitted successfully"),
-      return true
-    } catch (err: any) {
-      console.error("Error applying to job:", err),
-      toast.error("Failed to submit application: " + err.message),
-      return false
-    }
-  },
-  
-  },
-
-  const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
-    try {
+          try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
-        .eq($2);
-      if (error) throw error,
-      
-      // Update the local state
-      setApplications(prev =>
-        prev.map(app => app.id === applicationId ? { ...app, status } : app)
-      ),
-      
-      toast.success($2);
-      return true
-    } catch (err: any) {
-      console.error ("Error fetching applications:", err);
-      set_error ("Failed to fetch applications: " + err.message),
-      toast.error ("Failed to fetch applications");
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-        } else {
-
-      // Add the new application to the local state
-
-      const newApplication = data as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-
-      "
-      toast && toast.success("Application submitted successfully");
-
-      toast && toast.error("Failed to submit application: " + err && err.message),
-
-      return false;
-    }
-  },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      const { error } = await supabase
-        .from("job_applications")
-        .update({ status })
-
-<<<<<<< HEAD
 
         .eq("id", applicationId),
       
       if (error) throw error,
 
       
-
-=======
-        .eq("id", applicationId),
-      
-      if (error) throw error,
-
 
       // Update the local state
 
@@ -585,11 +271,8 @@ export const useJobApplications = (jobId?:string) => {;
 
       return false
     }
-  }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      ),
-
+  }      ),
+      
       toast.success(`Application status updated to ${status}`),
       return true;
     } catch (err: any) {"
@@ -598,10 +281,7 @@ export const useJobApplications = (jobId?:string) => {;
       return false;
     }
   },
-
-<<<<<<< HEAD
   
-
 
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
@@ -623,35 +303,13 @@ export const useJobApplications = (jobId?:string) => {;
           "status": "status","
     "viewed_at": new Date().toISOString()
         })
-        .eq("id", applicationId)"
-        .is("viewed_at", null), // Only update if not already viewed        )"
-
-      
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      if (error) throw error,
-
-      // Update the local state;
-      setApplications(prev => 
-        prev && prev.map(app => app && app.id === applicationId ? 
-
-<<<<<<< HEAD
-
-  const updateApplicationStatus = async (application_id: string, status: ApplicationStatus) => {}
-    try {}
-      const { error } = await supabase;"
-        .from ("job_applications");
-        .update ({ status });"
-        .eq ("id", application_id);
-
-=======
-
-      // Update the local state;
-"
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;
-        )
-
+        .eq("id", applicationId)
+        .is("viewed_at", null), // Only update if not already viewed        )
       );
+      return true
+    } catch (err) {
+      console && console.error("Error marking application as viewed:", err);
+      return false
 
       // Add the new application to the local state;
       const new_application = data as JobApplication;
@@ -662,7 +320,7 @@ export const useJobApplications = (jobId?:string) => {;
     } catch (err: any) {
       console.error ("Error applying to job:", err);
       toast.error ("Failed to submit application: " + err.message),
-
+      return false;    }
   }
 ;
   const updateApplicationStatus = async ("application_id": string, "status": ApplicationStatus) => {
@@ -742,182 +400,13 @@ if ( {) {}
     }
   }, [user, job_id]);
 ;
-  return {}
-<<<<<<< HEAD
-
-=======
-
-      if (error) throw error;
-      // Update the local state
-      setApplications(prev => 
-        prev && prev.map(app => app && app.id === applicationId ? 
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
-        )
-
-
-
-      ),
-      
-
-
-      return true
-    } catch (err) {
-      console && console.error("Error marking application as viewed:", err);
-      return false
-      if (error) throw error;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      
-      if (error) throw error,
-      
-      // Update the local state
-      setApplications(prev =>
-        prev.map(app => app.id === applicationId ?
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
-        )
-      );
-      ),
-      
-      return true
-    } catch (err) {
-      console.error("Error marking application as viewed:", err),
-      return false
-    }
-  }
-  // Fetch applications when component mounts or dependencies change
-  useEffect(() => {
-    if (user) {
-      fetchApplications()
-    }
-  }, [user, jobId]);
   return {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
     applications;
     is_loading;
     error;
     refetch: fetch_applications;
     applyToJob;
+
     updateApplicationStatus,
     markApplicationAsViewed;
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-      // Add the new application to the local state;
-      const newApplication = data as JobApplication,;
-      setApplications(prev => [newApplication, ...prev]),;"
-      toast.success("Application submitted successfully"),;
-      return true;
-    } catch (err: any) {;"
-      console.error("Error applying to job:", err),;"
-
-      toast.error("Failed to submit application: " + err.message),;
-      return false;
-    }
-  },;
-  const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {;
-    try {;
-
-        .eq("id", applicationId),;
-      if (error) throw error,;
-      // Update the local state;
-      setApplications(prev =>;
-        prev.map(app => app.id === applicationId ? { ...app, status } : app);
-
-      toast.error("Failed to update application status: " + err.message),;
-      return false;
-    }
-  },;
-  const markApplicationAsViewed = async (applicationId: string) => {;
-    try {;
-
-        .is("viewed_at", null), // Only update if not already viewed;
-      if (error) throw error,;
-      // Update the local state;
-      setApplications(prev =>;
-
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;
-        );
-      ),;
-      return true;
-
-      console.error("Error marking application as viewed:", err),;
-      return false;
-    }
-  },;
-  // Fetch applications when component mounts or dependencies change;
-  useEffect(() => {;
-    if (user) {;
-      fetchApplications();
-    }
-  }, [user, jobId]),;
-  return {;
-    applications,;
-    isLoading,;
-    error,;
-    refetch: fetchApplications,;
-    applyToJob,;
-    updateApplicationStatus;
-    markApplicationAsViewed;
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-};
-
-const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
-  try {
-  const {
-  error 
-}= await supabase .from ("job applications") .update ({
-  status 
-}) //Update the local state setApplications (prev => 
-}
-
-<<<<<<< HEAD
-;
-
-
-=======
-};
-const markApplicationAsViewed = async (applicationId: string) => {
-  try {
-  const {
-  error 
-}= await supabase .from ("job applications") .update ({
-  status: "viewed";
-viewed at: new Date () .toISOString () 
-}) .eq ("id", applicationId) .is ("viewed at", null), //Only update if not already viewed //Update the local state setApplications (prev => prev.map (app => app.id === applicationId ?) );
-}
-};
-// Fetch applications when component mounts or dependencies change useEffect ( () => {
-  if (user) {
-  fetchApplications () 
-}
-}, [user, jobId]);
-return {
-  applications;
-isLoading;
-error;
-refetch: fetchApplications;
-applyToJob;
-updateApplicationStatus;
-markApplicationAsViewed 
-}
-};
-  }
-};
-  }
-
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba

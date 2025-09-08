@@ -20,8 +20,8 @@ export default function HolographicAICommunicationPage() {
 
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+};
 
 
   const features = [
@@ -40,8 +40,8 @@ export default function HolographicAICommunicationPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+};
 
   const features = [;
     'AI-powered 3D holographic projection',;
@@ -49,8 +49,8 @@ export default function HolographicAICommunicationPage() {;
     'Multi-user holographic meetings',;
     'Gesture and voice control',;
     'Cross-platform WebXR support',;
-    'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709';
-  };
+    'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709'
+};
 
   const features = [;
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';

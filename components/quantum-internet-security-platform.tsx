@@ -463,11 +463,11 @@ variant='quantum';'
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{service.contact_info.address}</span>;
-                </div>              </div>              <Button href='/contact' variant='quantum' size='lg' className='w - full'>Request a Security Demo < ArrowRight className='w - 5 h - 5 ml - 2' /></Button>;
-              <div className='mt - 6 space - y-3 text - sm text - slate - 300'>;
-                <div className='flex items - center space - x-2'><Phone className='w - 4 h - 4 text - cyan - 400' /><span>{service.contact_info.mobile}</span></div>;
-                <div className='flex items - center space - x-2'><Mail className='w - 4 h - 4 text - purple - 400' /><span>{service.contact_info.email}</span></div>;
-                <div className='flex items - center space - x-2'><MapPin className='w - 4 h - 4 text - green - 400' /><span className='text - xs'>{service.contact_info.address}</span></div>;
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Security Demo < ArrowRight className="w - 5 h-5 ml-2" /></Button>;
+              <div className="mt - 6 space - y-3 text - sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
             </div>;
           </div>;
         </div>;
@@ -479,32 +479,3 @@ variant='quantum';'
   );
 }
 
-
-
-  );
-<<<<<<< HEAD
-
-=======
-}
-}
-;
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  );
-}
-
-
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-    </UltraAdvancedFuturisticBackground>)}
-  )
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

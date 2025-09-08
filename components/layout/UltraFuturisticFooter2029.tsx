@@ -291,11 +291,7 @@ const UltraFuturisticFooter2029 = () => {
             </div>
           </div>
           {/* Service Categories */}
-          <div className='lg:col-span-1'>
-            <h4 className='text-lg font-semibold text-white mb-6'>
-              Our Services
-            </h4>
-            <div className='space-y-4'>
+
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -337,8 +333,9 @@ const UltraFuturisticFooter2029 = () => {
                   </ul>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
+
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -346,6 +343,7 @@ const UltraFuturisticFooter2029 = () => {
             </h4>
             <div className='grid grid-cols-2 gap-2'>
               {quickLinks.map(link => (
+
                 <Link
                   key={link.name}
                   href={link.href}
@@ -367,8 +365,33 @@ const UltraFuturisticFooter2029 = () => {
                   <span>{link.name}</span>
                 </Link>
               ))}
-            </div>
-          </div>
+          {/* Footer Sections */}
+          <div className='lg:col-span-1'>;
+            <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>;
+            <div className='space-y-4'>;
+              {footerSections && footerSections.map(section => (;
+                <div key={section && section.title}>;
+                  <h5 className='text-sm font-medium text-gray-300 mb-3'>;
+                    {section && section.title}
+                  </h5>;
+                  <ul className='space-y-2'>;
+                    {section && section.links.map(link => (;
+                      <li key={link && link.name}>;
+                        <Link
+                          href={link && link.href}
+                          className='text-sm text-gray-400 hover:text-white transition-colors duration-200'>                <div key={section && section.title}>;
+                  <h5 className="text-sm font-medium text-gray-300 mb-3">{section && section.title}</h5>;
+                  <ul className="space-y-2">;
+                    {section && section.links.map((link) => (;
+                      <li key={link && link.name}>;
+                        <Link
+                          href={link && link.href}
+                          className="text-sm text-gray-400 hover:text-white transition-colors duration-200">;
+                          {link && link.name}
+                        </Link>;
+                      </li>;
+
+          {/* Footer Sections */}
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -389,9 +412,165 @@ const UltraFuturisticFooter2029 = () => {
                     {section.links.map((link) => (
                       <li key={link.name}>
                         <Link
+;
+const UltraFuturisticFooter2029 = () =>: any {
+  return (
+    <footer className='bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 border - t border - slate - 700 / 50'>;
+      {/* Main Footer Content */}
+      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 16'>;
+        <div className='grid grid - cols - 1 lg:grid - cols - 4 gap - 12'>;
+          {/* Company Info */}
+          <div className='lg:col - span - 1'>;
+            <div className='flex items - center space - x-3 mb - 6'>;
+              <div className='w - 10 h - 10 bg - gradient - to - r from - purple - 500 to - blue - 500 rounded - xl flex items - center justify - center'>;
+                <Rocket className='w - 6 h - 6 text - white' />;
+              </div>;
+              <div>;
+                <h3 className='text - xl font - bold text - white'>;
+                  Zion Tech Group;
+                </h3>;
+                <p className='text - sm text - gray - 400'>Innovating the Future</p>;
+              </div>;
+            </div>;
+            <p className='text - gray - 400 mb - 6 leading - relaxed'>;
+              Leading the revolution in AI, quantum computing, and autonomous;
+              technology solutions. Transforming businesses with cutting - edge;
+              innovation.;
+            </p>;
+            {/* Contact Information */}
+            <div className='space - y-3 mb - 6'>;
+              <div className='flex items - center space - x-3 text - gray - 400 hover:text - white transition - colors'>;
+                <Phone className='w - 4 h - 4' />;
+                <a href={`tel:${contact_info.mobile}`} className='text - sm'>;
+                  {contact_info.mobile}
+                </a>;
+              </div>;
+              <div className='flex items - center space - x-3 text - gray - 400 hover:text - white transition - colors'>;
+                <Mail className='w - 4 h - 4' />;
+                <a href={`mailto:${contact_info.email}`} className='text - sm'>;
+                  {contact_info.email}
+                </a>;
+              </div>;
+              <div className='flex items - center space - x-3 text - gray - 400'>;
+                <MapPin className='w - 4 h - 4' />;
+                <span className='text - sm'>{contact_info.address}</span>              </div>            </div>;
+            {/* Social Links */}
+            <div className='flex space - x-4'>;
+              {social_links.map (social => (            {/* Contact Information */}
+            <div className="space-y-3 mb-6">;
+              <div className="flex items - center space - x-3 text - gray - 400 hover:text-white transition-colors">;
+                <Phone className="w-4 h-4" />;
+                <a href={`tel:${contact_info.mobile}`} className="text-sm">;
+                  {contact_info.mobile}
+                </a>;
+              </div>;
+              <div className="flex items - center space - x-3 text - gray - 400 hover:text-white transition-colors">;
+                <Mail className="w-4 h-4" />;
+                <a href={`mailto:${contact_info.email}`} className="text-sm">;
+                  {contact_info.email}
+                </a>;
+              </div>;
+              <div className="flex items - center space - x-3 text-gray-400">;
+                <MapPin className="w-4 h-4" />;
+                <span className="text-sm">{contact_info.address}</span>;
+              </div>;
+            </div>;
+            {/* Social Links */}
+            <div className='flex space - x-4'>;
+              {social_links.map (social => (
+                <a;
+                  key={social.name}
+                  href={social.href}
+                  target='_blank';
+                  rel='noopener noreferrer';
+                  className={`p - 2 bg - slate - 800 / 50 rounded - lg text - gray - 400 ${social.color} transition - all duration - 200 hover:bg - slate - 700 / 50`}
+                >;
+                  <social.icon className='w - 5 h - 5' />                </a>                <a;
+                  key={social.name}
+                  href={social.href}
+                  target="_blank";
+                  rel="noopener noreferrer";
+                  className={`p - 2 bg - slate - 800 / 50 rounded - lg text - gray - 400 ${social.color} transition - all duration - 200 hover:bg - slate - 700 / 50`}
+                >;
+                  <social.icon className="w-5 h-5" />;
+                </a>))}
+            </div>;
+          </div>;
+          {/* Service Categories */}
+          <div className='lg:col - span - 1'>;
+            <h4 className='text - lg font - semibold text - white mb - 6'>;
+              Our Services;
+            </h4>;
+            <div className='space - y-4'>;
+              {service_categories.map ((category, index) => (
+                <div key={index}>;
+                  <h5 className='text - sm font - medium text - gray - 300 mb - 3'>;
+                    {category.title}
+                  </h5>;
+                  <ul className='space - y-2'>;
+                    {category.services.map (service => (
+                      <li key={service.name}>;
+                        <Link;
+                          href={service.href}
+                          className='text - sm text - gray - 400 hover:text - white transition - colors duration - 200 flex items - center space - x-2 group';
+                        >;
+                          <ArrowRight className='w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200' />                          <span>{service.name}</span>              {service_categories.map ((category, index) => (
+                <div key={index}>;
+                  <h5 className="text - sm font - medium text - gray-300 mb-3">{category.title}</h5>;
+                  <ul className="space-y-2">;
+                    {category.services.map ((service) => (
+                      <li key={service.name}>;
+                        <Link;
+                          href={service.href}
+                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200 flex items-center space-x-2 group";
+                        >;
+                          <ArrowRight className="w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition-opacity duration-200" />;
+                          <span>{service.name}</span>;
+                        </Link>;
+                      </li>))}
+                  </ul>;
+                </div>))}
+            </div>;
+          </div>;
+          {/* Quick Links */}
+          <div className='lg:col - span - 1'>;
+            <h4 className='text - lg font - semibold text - white mb - 6'>;
+              Quick Links;
+            </h4>;
+            <div className='grid grid - cols - 2 gap - 2'>;
+              {quick_links.map (link => (
+                <Link;
+                  key={link.name}
+                  href={link.href}
+                  className='flex items - center space - x-2 text - sm text - gray - 400 hover:text - white transition - colors duration - 200 p - 2 rounded - lg hover:bg - slate - 800 / 50';
+                >;
+                  <link.icon className='w - 4 h - 4' />                  <span>{link.name}</span>                <Link;
+                  key={link.name}
+                  href={link.href}
+                  className="flex items - center space - x-2 text - sm text - gray - 400 hover:text - white transition - colors duration - 200 p - 2 rounded - lg hover:bg-slate-800 / 50";
+                >;
+                  <link.icon className="w-4 h-4" />;
+                  <span>{link.name}</span>;
+                </Link>))}
+            </div>;
+          </div>;
+          {/* Footer Sections */}
+          <div className='lg:col - span - 1'>;
+            <h4 className='text - lg font - semibold text - white mb - 6'>Company</h4>;
+            <div className='space - y-4'>;
+              {footer_sections.map (section => (
+                <div key={section.title}>;
+                  <h5 className='text - sm font - medium text - gray - 300 mb - 3'>;
+                    {section.title}
+                  </h5>;
+                  <ul className='space - y-2'>;
+                    {section.links.map (link => (
+                      <li key={link.name}>;
+                        <Link;
                           href={link.href}
-                          className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
-                        >
+                          href={link.href}
+                          className="text - sm text - gray - 400 hover:text - white transition-colors duration-200";
+                        >;
                           {link.name}
                         </Link>
                       </li>
@@ -483,5 +662,8 @@ const UltraFuturisticFooter2029 = () => {
   );
 }
 export default UltraFuturisticFooter2029;  )
+}
+export default UltraFuturisticFooter2029;
+
 }
 export default UltraFuturisticFooter2029;

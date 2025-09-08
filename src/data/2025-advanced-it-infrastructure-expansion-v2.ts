@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
 
-
-
-
-export const advancedITInfrastructureExpansion2025V2 = [
+=======export const advancedITInfrastructureExpansion2025V2 = [
   {
-
-
 
     name: 'Autonomous DevOps Platform',
     description: 'Self - managing DevOps automation platform',
@@ -626,453 +620,13 @@ export const advancedITInfrastructureExpansion2025V2 = $2;
     ],
   },
   {
-
-    name: 'Quantum Identity Verification',
-    description: 'Quantum - powered identity verification',
-    category: 'Quantum Computing',
-    pricing: '$599 / month',
-    features: [;
-      'Quantum algorithms',
-      'Identity verification',
-      'Security protocols',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum Internet Security',
-    description: 'Quantum - powered internet security',
-    category: 'Quantum Computing',
-    pricing: '$749 / month',
-    features: [;
-      'Quantum algorithms',
-      'Security protocols',
-      'Threat detection',
-      'Performance optimization',
-    ],
-
-=======
-    pricing: '$1299/month',
     features: [
-      'Quantum hardwareCooling systemsSecurity protocolsPerformance monitoring'
+      'Identity verification'
+      'Access control'
+      'Threat detection'
+      'Performance monitoring'
     ]
-  },
-  {
-    name: 'Quantum Encryption Gateway',
-    description: 'Quantum-powered encryption gateway',
-    category: 'Quantum Computing',
-    pricing: '$799/month',
-    features: [
-      'Quantum encryptionSecurity protocolsPerformance optimizationMonitoring tools'
-    ]
-  },
-  {
-    name: 'Quantum Energy Optimization',
-    description: 'Quantum-powered energy optimization',
-    category: 'Energy',
-    pricing: '$699/month',
-    features: [
-      'Quantum algorithmsEnergy modelingOptimization toolsPerformance analytics'
-    ]
-  },
-  {
-    name: 'Quantum Financial Intelligence',
-    description: 'Quantum-powered financial intelligence',
-    category: 'Quantum Computing',
-    pricing: '$849/month',
-    features: [
-      'Quantum algorithmsFinancial modelingRisk assessmentPerformance optimization'
-    ]
-  },
-  {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    name: 'Quantum Identity Verification',
-    description: 'Quantum-powered identity verification',
-    category: 'Quantum Computing',
-    pricing: '$599/month',
-    features: [
-      'Quantum algorithmsIdentity verificationSecurity protocolsPerformance monitoring'
-    ]
-  },
-  {
-    name: 'Quantum Internet Security',
-    description: 'Quantum-powered internet security',
-    category: 'Quantum Computing',
-    pricing: '$749/month',
-    features: [
-      'Quantum algorithmsSecurity protocolsThreat detectionPerformance optimization'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Quantum Internet Security Gateway',
-    description: 'Advanced quantum internet security gateway',
-    category: 'Quantum Computing',
-<<<<<<< HEAD
-
-    pricing: '$899 / month',
-    features: [;
-      'Quantum algorithms',
-      'Gateway security',
-      'Performance optimization',
-      'Monitoring tools',
-    ],
-  },
-  {
-    name: 'Quantum Learning Accelerator',
-    description: 'Quantum - powered learning acceleration',
-    category: 'Quantum Computing',
-    pricing: '$649 / month',
-    features: [;
-      'Quantum algorithms',
-      'Learning optimization',
-      'Performance tracking',
-      'Analytics tools',
-    ],
-  },
-  {
-    name: 'Quantum Materials Discovery',
-    description: 'Quantum - powered materials discovery',
-    category: 'Quantum Computing',
-    pricing: '$999 / month',
-    features: [;
-      'Quantum algorithms',
-      'Materials modeling',
-      'Discovery tools',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Network Security',
-    description: 'Quantum - powered network security',
-    category: 'Quantum Computing',
-    pricing: '$799 / month',
-    features: [;
-      'Quantum algorithms',
-      'Network security',
-      'Threat detection',
-      'Performance monitoring',
-    ],
-
-=======
-    pricing: '$899/month',
-    features: [
-      'Quantum algorithmsGateway securityPerformance optimizationMonitoring tools'
-    ]
-  },
-  {
-    name: 'Quantum Learning Accelerator',
-    description: 'Quantum-powered learning acceleration',
-    category: 'Quantum Computing',
-    pricing: '$649/month',
-    features: [
-      'Quantum algorithmsLearning optimizationPerformance trackingAnalytics tools'
-    ]
-  },
-  {
-    name: 'Quantum Materials Discovery',
-    description: 'Quantum-powered materials discovery',
-    category: 'Quantum Computing',
-    pricing: '$999/month',
-    features: [
-      'Quantum algorithmsMaterials modelingDiscovery toolsPerformance optimization'
-    ]
-  },
-  {
-    name: 'Quantum Network Security',
-    description: 'Quantum-powered network security',
-    category: 'Quantum Computing',
-    pricing: '$799/month',
-    features: [
-      'Quantum algorithmsNetwork securityThreat detectionPerformance monitoring'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Quantum Networking',
-    description: 'Quantum networking infrastructure',
-    category: 'Quantum Computing',
-<<<<<<< HEAD
-
-    pricing: '$949 / month',
-    features: [;
-      'Quantum protocols',
-      'Network management',
-      'Performance optimization',
-      'Security protocols',
-    ],
-
-=======
-    pricing: '$949/month',
-    features: [
-      'Quantum protocolsNetwork managementPerformance optimizationSecurity protocols'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Quantum Neural Ecosystem',
-    description: 'Quantum neural network ecosystem',
-    category: 'Quantum Computing',
-<<<<<<< HEAD
-
-    pricing: '$1099 / month',
-    features: [;
-      'Quantum algorithms',
-      'Neural networks',
-      'Ecosystem management',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Risk Financial Manager',
-    description: 'Quantum - powered financial risk management',
-    category: 'Quantum Computing',
-    pricing: '$899 / month',
-    features: [;
-      'Quantum algorithms',
-      'Risk assessment',
-      'Financial modeling',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Storage Solutions',
-    description: 'Quantum - powered storage solutions',
-    category: 'Quantum Computing',
-    pricing: '$799 / month',
-    features: [;
-      'Quantum storage',
-      'Data management',
-      'Performance optimization',
-      'Security protocols',
-    ],
-  },
-  {
-    name: 'Quantum Supply Chain Optimizer',
-    description: 'Quantum - powered supply chain optimization',
-    category: 'Supply Chain',
-    pricing: '$699 / month',
-    features: [;
-      'Quantum algorithms',
-      'Supply chain modeling',
-      'Optimization tools',
-      'Performance analytics',
-    ],
-  },
-  {
-    name: 'Quantum Threat Detection',
-    description: 'Quantum - powered threat detection',
-    category: 'Quantum Computing',
-    pricing: '$849 / month',
-    features: [;
-      'Quantum algorithms',
-      'Threat detection',
-      'Security protocols',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum Workload Orchestration',
-    description: 'Quantum - powered workload orchestration',
-    category: 'Quantum Computing',
-    pricing: '$749 / month',
-    features: [;
-      'Quantum algorithms',
-      'Workload management',
-      'Performance optimization',
-      'Resource allocation',
-    ],
-
-=======
-    pricing: '$1099/month',
-    features: [
-      'Quantum algorithmsNeural networksEcosystem managementPerformance optimization'
-    ]
-  },
-  {
-    name: 'Quantum Risk Financial Manager',
-    description: 'Quantum-powered financial risk management',
-    category: 'Quantum Computing',
-    pricing: '$899/month',
-    features: [
-      'Quantum algorithmsRisk assessmentFinancial modelingPerformance optimization'
-    ]
-  },
-  {
-    name: 'Quantum Storage Solutions',
-    description: 'Quantum-powered storage solutions',
-    category: 'Quantum Computing',
-    pricing: '$799/month',
-    features: [
-      'Quantum storageData managementPerformance optimizationSecurity protocols'
-    ]
-  },
-  {
-    name: 'Quantum Supply Chain Optimizer',
-    description: 'Quantum-powered supply chain optimization',
-    category: 'Supply Chain',
-    pricing: '$699/month',
-    features: [
-      'Quantum algorithmsSupply chain modelingOptimization toolsPerformance analytics'
-    ]
-  },
-  {
-    name: 'Quantum Threat Detection',
-    description: 'Quantum-powered threat detection',
-    category: 'Quantum Computing',
-    pricing: '$849/month',
-    features: [
-      'Quantum algorithmsThreat detectionSecurity protocolsPerformance monitoring'
-    ]
-  },
-  {
-    name: 'Quantum Workload Orchestration',
-    description: 'Quantum-powered workload orchestration',
-    category: 'Quantum Computing',
-    pricing: '$749/month',
-    features: [
-      'Quantum algorithmsWorkload managementPerformance optimizationResource allocation'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Satellite Technology',
-    description: 'Advanced satellite technology platform',
-    category: 'Space Technology',
-<<<<<<< HEAD
-
-    pricing: '$999 / month',
-    features: [;
-      'Satellite design',
-      'Communication systems',
-      'Performance monitoring',
-      'Security protocols',
-    ],
-
-=======
-    pricing: '$999/month',
-    features: [
-      'Satellite designCommunication systemsPerformance monitoringSecurity protocols'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Space Colonization Services',
-    description: 'Space colonization planning and infrastructure',
-    category: 'Space Technology',
-<<<<<<< HEAD
-
-    pricing: '$1499 / month',
-    features: [;
-      'Colonization planning',
-      'Infrastructure design',
-      'Resource management',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Space Cybersecurity',
-    description: 'Space - specific cybersecurity solutions',
-    category: 'Space Technology',
-    pricing: '$799 / month',
-    features: [;
-      'Space security protocols',
-      'Threat detection',
-      'Incident response',
-      'Performance monitoring',
-    ],
-
-=======
-    pricing: '$1499/month',
-    features: [
-      'Colonization planningInfrastructure designResource managementPerformance monitoring'
-    ]
-  },
-  {
-    name: 'Space Cybersecurity',
-    description: 'Space-specific cybersecurity solutions',
-    category: 'Space Technology',
-    pricing: '$799/month',
-    features: [
-      'Space security protocolsThreat detectionIncident responsePerformance monitoring'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Space Data Analytics',
-    description: 'Advanced space data analytics platform',
-    category: 'Space Technology',
-<<<<<<< HEAD
-
-    pricing: '$649 / month',
-    features: [;
-      'Data processing',
-      'Analytics tools',
-      'Visualization',
-      'Performance optimization',
-    ],
-
-=======
-    pricing: '$649/month',
-    features: [
-      'Data processingAnalytics toolsVisualizationPerformance optimization'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Space Mining Automation Platform',
-    description: 'Automated space mining platform',
-    category: 'Space Technology',
-<<<<<<< HEAD
-
-    pricing: '$1199 / month',
-    features: [;
-      'Mining automation',
-      'Resource extraction',
-      'Safety systems',
-      'Performance monitoring',
-    ],
-
-=======
-    pricing: '$1199/month',
-    features: [
-      'Mining automationResource extractionSafety systemsPerformance monitoring'
-    ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },
-  {
-    name: 'Space Mining Platform',
-    description: 'Comprehensive space mining platform',
-    category: 'Space Technology',
-<<<<<<< HEAD
-
-    pricing: '$999 / month',
-    features: [;
-      'Mining operations',
-      'Resource management',
-      'Safety protocols',
-      'Performance analytics',
-    ],
-  },
-  {
-    name: 'Space Resource Intelligence',
-    description: 'AI - powered space resource intelligence',
-    category: 'Space Technology',
-    pricing: '$749 / month',
-    features: [;
-      'Resource mapping',
-      'Intelligence analysis',
-      'Planning tools',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Zero - Trust Security',
-    description: 'Comprehensive zero - trust security platform',
-    category: 'Cybersecurity',
-    pricing: '$599 / month',
-    features: [;
-
-      'Identity verification',
+  }      'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
@@ -1084,488 +638,19 @@ export const advancedITInfrastructureExpansion2025V2 = $2;
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-];      'Identity verification_access control_threat detection_performance monitoring';
-    ];
-
-  },;
-  {;
-    name: 'Autonomous IT Operations',;
-    description: 'AI-powered IT operations automation',;
-    category: 'Cloud & FinOps',;
-    pricing: '$499/month',;
-    features: [;
-      'Incident automationPredictive maintenanceResource optimizationPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Autonomous Vehicle AI',;
-    description: 'AI-powered autonomous vehicle systems',;
-    category: 'Transportation',;
-    pricing: '$899/month',;
-    features: [;
-      'Vehicle control systemsSafety monitoringRoute optimizationPerformance analytics';
-    ];
-  },;
-  {;
-    name: 'Blockchain Enterprise Platform',;
-    description: 'Enterprise-grade blockchain infrastructure',;
-    category: 'Financial Services',;
-    pricing: '$649/month',;
-    features: [;
-      'Smart contract managementConsensus mechanismsSecurity protocolsScalability solutions';
-    ];
-  },;
-  {;
-    name: 'Blockchain Infrastructure',;
-    description: 'Scalable blockchain infrastructure services',;
-    category: 'Financial Services',;
-    pricing: '$449/month',;
-    features: [;
-      'Node managementNetwork securityPerformance optimizationMonitoring tools';
-    ];
-  },;
-  {;
-    name: 'Brain-Computer Interface',;
-    description: 'Advanced brain-computer interface technology',;
-    category: 'Healthcare',;
-    pricing: '$1299/month',;
-    features: [;
-      'Neural signal processingInterface protocolsSafety systemsPerformance metrics';
-    ];
-  },;
-  {;
-    name: 'Compliance Automation',;
-    description: 'Automated compliance management platform',;
-    category: 'Cybersecurity',;
-    pricing: '$379/month',;
-    features: [;
-      'Regulatory trackingAutomated reportingAudit managementCompliance monitoring';
-    ];
-  },;
-  {;
-    name: 'Customer Intelligence Platform',;
-    description: 'Comprehensive customer intelligence solution',;
-    category: 'AI & Data',;
-    pricing: '$299/month',;
-    features: [;
-      'Customer analyticsBehavior trackingSegmentation toolsInsight generation';
-    ];
-  },;
-  {;
-    name: 'Data Analytics',;
-    description: 'Advanced data analytics platform',;
-    category: 'AI & Data',;
-    pricing: '$249/month',;
-    features: [;
-      'Data processingVisualization toolsStatistical analysisReporting automation';
-    ];
-  },;
-  {;
-    name: 'DevOps Automation',;
-    description: 'Comprehensive DevOps automation platform',;
-    category: 'Cloud & FinOps',;
-    pricing: '$329/month',;
-    features: [;
-      'CI/CD pipelinesInfrastructure as codeAutomated testingDeployment management';
-    ];
-  },;
-  {;
-    name: 'Edge Computing',;
-    description: 'Edge computing infrastructure platform',;
-    category: 'Cloud & FinOps',;
-    pricing: '$279/month',;
-    features: [;
-      'Edge node managementLatency optimizationResource distributionPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Industrial Automation AI',;
-    description: 'AI-powered industrial automation',;
-    category: 'Manufacturing',;
-    pricing: '$599/month',;
-    features: [;
-      'Process automationQuality controlPredictive maintenancePerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Interplanetary Communication',;
-    description: 'Advanced interplanetary communication systems',;
-    category: 'Space Technology',;
-    pricing: '$1499/month',;
-    features: [;
-      'Deep space communicationSignal processingNetwork managementReliability monitoring';
-    ];
-  },;
-  {;
-    name: 'IT Asset Management',;
-    description: 'Comprehensive IT asset management platform',;
-    category: 'Cloud & FinOps',;
-    pricing: '$199/month',;
-    features: [;
-      'Asset trackingLifecycle managementCost optimizationCompliance reporting';
-    ];
-  },;
-  {;
-    name: 'Marketing AI Platform',;
-    description: 'AI-powered marketing automation platform',;
-    category: 'AI & Data',;
-    pricing: '$349/month',;
-    features: [;
-      'Campaign automationPersonalizationPerformance trackingROI optimization';
-    ];
-  },;
-  {;
-    name: 'Metaverse Development Studio Pro',;
-    description: 'Professional metaverse development platform',;
-    category: 'Metaverse',;
-    pricing: '$799/month',;
-    features: [;
-      '3D modeling toolsVirtual world creationUser interaction systemsPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Metaverse Digital Reality Platform',;
-    description: 'Advanced metaverse platform infrastructure',;
-    category: 'Metaverse',;
-    pricing: '$649/month',;
-    features: [;
-      'Virtual environment hostingUser managementContent creation toolsAnalytics platform';
-    ];
-  },;
-  {;
-    name: 'Mobile Web Solutions',;
-    description: 'Mobile-first web development platform',;
-    category: 'Developer Tools',;
-    pricing: '$179/month',;
-    features: [;
-      'Responsive designPerformance optimizationMobile analyticsUser experience tools';
-    ];
-  },;
-  {;
-    name: 'Multi-Cloud Management',;
-    description: 'Unified multi-cloud management platform',;
-    category: 'Cloud & FinOps',;
-    pricing: '$429/month',;
-    features: [;
-      'Cloud orchestrationCost optimizationSecurity managementPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Network Automation',;
-    description: 'Intelligent network automation platform',;
-    category: 'Cloud & FinOps',;
-    pricing: '$299/month',;
-    features: [;
-      'Network provisioningConfiguration managementPerformance optimizationSecurity automation';
-    ];
-  },;
-  {;
-    name: 'Neural Finance AI',;
-    description: 'AI-powered financial neural networks',;
-    category: 'Financial Services',;
-    pricing: '$549/month',;
-    features: [;
-      'Neural network trainingFinancial modelingRisk assessmentPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Orbital Computing',;
-    description: 'Space-based computing infrastructure',;
-    category: 'Space Technology',;
-    pricing: '$1199/month',;
-    features: [;
-      'Satellite computingOrbital data processingCommunication systemsPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Quantum AI Fusion',;
-    description: 'Quantum-AI hybrid computing platform',;
-    category: 'Quantum Computing',;
-    pricing: '$899/month',;
-    features: [;
-      'Quantum algorithmsAI integrationHybrid optimizationPerformance analytics';
-    ];
-  },;
-  {;
-    name: 'Quantum Bio-Computing',;
-    description: 'Quantum biological computing systems',;
-    category: 'Quantum Computing',;
-    pricing: '$1099/month',;
-    features: [;
-      'Biological algorithmsQuantum processingBio-computing integrationPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Quantum Compliance Automation',;
-    description: 'Quantum-powered compliance automation',;
-    category: 'Quantum Computing',;
-    pricing: '$649/month',;
-    features: [;
-      'Quantum algorithmsCompliance automationRisk assessmentPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Quantum Creativity Studio',;
-    description: 'Quantum-powered creative platform',;
-    category: 'Quantum Computing',;
-    pricing: '$749/month',;
-    features: [;
-      'Quantum algorithmsCreative toolsPerformance optimizationAnalytics platform';
-    ];
-  },;
-  {;
-    name: 'Quantum CRM Suite',;
-    description: 'Quantum-powered customer relationship management',;
-    category: 'Quantum Computing',;
-    pricing: '$599/month',;
-    features: [;
-      'Quantum algorithmsCRM functionalityPerformance optimizationAnalytics tools';
-    ];
-  },;
-  {;
-    name: 'Quantum Data Center',;
-    description: 'Quantum computing data center infrastructure',;
-    category: 'Quantum Computing',;
-    pricing: '$1299/month',;
-    features: [;
-      'Quantum hardwareCooling systemsSecurity protocolsPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Quantum Encryption Gateway',;
-    description: 'Quantum-powered encryption gateway',;
-    category: 'Quantum Computing',;
-    pricing: '$799/month',;
-    features: [;
-      'Quantum encryptionSecurity protocolsPerformance optimizationMonitoring tools';
-    ];
-  },;
-  {;
-    name: 'Quantum Energy Optimization',;
-    description: 'Quantum-powered energy optimization',;
-    category: 'Energy',;
-    pricing: '$699/month',;
-    features: [;
-      'Quantum algorithmsEnergy modelingOptimization toolsPerformance analytics';
-    ];
-  },;
-  {;
-    name: 'Quantum Financial Intelligence',;
-    description: 'Quantum-powered financial intelligence',;
-    category: 'Quantum Computing',;
-    pricing: '$849/month',;
-    features: [;
-      'Quantum algorithmsFinancial modelingRisk assessmentPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Quantum Identity Verification',;
-    description: 'Quantum-powered identity verification',;
-    category: 'Quantum Computing',;
-    pricing: '$599/month',;
-    features: [;
-      'Quantum algorithmsIdentity verificationSecurity protocolsPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Quantum Internet Security',;
-    description: 'Quantum-powered internet security',;
-    category: 'Quantum Computing',;
-    pricing: '$749/month',;
-    features: [;
-      'Quantum algorithmsSecurity protocolsThreat detectionPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Quantum Internet Security Gateway',;
-    description: 'Advanced quantum internet security gateway',;
-    category: 'Quantum Computing',;
-    pricing: '$899/month',;
-    features: [;
-      'Quantum algorithmsGateway securityPerformance optimizationMonitoring tools';
-    ];
-  },;
-  {;
-    name: 'Quantum Learning Accelerator',;
-    description: 'Quantum-powered learning acceleration',;
-    category: 'Quantum Computing',;
-    pricing: '$649/month',;
-    features: [;
-      'Quantum algorithmsLearning optimizationPerformance trackingAnalytics tools';
-    ];
-  },;
-  {;
-    name: 'Quantum Materials Discovery',;
-    description: 'Quantum-powered materials discovery',;
-    category: 'Quantum Computing',;
-    pricing: '$999/month',;
-    features: [;
-      'Quantum algorithmsMaterials modelingDiscovery toolsPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Quantum Network Security',;
-    description: 'Quantum-powered network security',;
-    category: 'Quantum Computing',;
-    pricing: '$799/month',;
-    features: [;
-      'Quantum algorithmsNetwork securityThreat detectionPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Quantum Networking',;
-    description: 'Quantum networking infrastructure',;
-    category: 'Quantum Computing',;
-    pricing: '$949/month',;
-    features: [;
-      'Quantum protocolsNetwork managementPerformance optimizationSecurity protocols';
-    ];
-  },;
-  {;
-    name: 'Quantum Neural Ecosystem',;
-    description: 'Quantum neural network ecosystem',;
-    category: 'Quantum Computing',;
-    pricing: '$1099/month',;
-    features: [;
-      'Quantum algorithmsNeural networksEcosystem managementPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Quantum Risk Financial Manager',;
-    description: 'Quantum-powered financial risk management',;
-    category: 'Quantum Computing',;
-    pricing: '$899/month',;
-    features: [;
-      'Quantum algorithmsRisk assessmentFinancial modelingPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Quantum Storage Solutions',;
-    description: 'Quantum-powered storage solutions',;
-    category: 'Quantum Computing',;
-    pricing: '$799/month',;
-    features: [;
-      'Quantum storageData managementPerformance optimizationSecurity protocols';
-    ];
-  },;
-  {;
-    name: 'Quantum Supply Chain Optimizer',;
-    description: 'Quantum-powered supply chain optimization',;
-    category: 'Supply Chain',;
-    pricing: '$699/month',;
-    features: [;
-      'Quantum algorithmsSupply chain modelingOptimization toolsPerformance analytics';
-    ];
-  },;
-  {;
-    name: 'Quantum Threat Detection',;
-    description: 'Quantum-powered threat detection',;
-    category: 'Quantum Computing',;
-    pricing: '$849/month',;
-    features: [;
-      'Quantum algorithmsThreat detectionSecurity protocolsPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Quantum Workload Orchestration',;
-    description: 'Quantum-powered workload orchestration',;
-    category: 'Quantum Computing',;
-    pricing: '$749/month',;
-    features: [;
-      'Quantum algorithmsWorkload managementPerformance optimizationResource allocation';
-    ];
-  },;
-  {;
-    name: 'Satellite Technology',;
-    description: 'Advanced satellite technology platform',;
-    category: 'Space Technology',;
-    pricing: '$999/month',;
-    features: [;
-      'Satellite designCommunication systemsPerformance monitoringSecurity protocols';
-    ];
-  },;
-  {;
-    name: 'Space Colonization Services',;
-    description: 'Space colonization planning and infrastructure',;
-    category: 'Space Technology',;
-    pricing: '$1499/month',;
-    features: [;
-      'Colonization planningInfrastructure designResource managementPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Space Cybersecurity',;
-    description: 'Space-specific cybersecurity solutions',;
-    category: 'Space Technology',;
-    pricing: '$799/month',;
-    features: [;
-      'Space security protocolsThreat detectionIncident responsePerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Space Data Analytics',;
-    description: 'Advanced space data analytics platform',;
-    category: 'Space Technology',;
-    pricing: '$649/month',;
-    features: [;
-      'Data processingAnalytics toolsVisualizationPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Space Mining Automation Platform',;
-    description: 'Automated space mining platform',;
-    category: 'Space Technology',;
-    pricing: '$1199/month',;
-    features: [;
-      'Mining automationResource extractionSafety systemsPerformance monitoring';
-    ];
-  },;
-  {;
-    name: 'Space Mining Platform',;
-    description: 'Comprehensive space mining platform',;
-    category: 'Space Technology',;
-    pricing: '$999/month',;
-    features: [;
-      'Mining operationsResource managementSafety protocolsPerformance analytics';
-    ];
-  },;
-  {;
-    name: 'Space Resource Intelligence',;
-    description: 'AI-powered space resource intelligence',;
-    category: 'Space Technology',;
-    pricing: '$749/month',;
-    features: [;
-      'Resource mappingIntelligence analysisPlanning toolsPerformance optimization';
-    ];
-  },;
-  {;
-    name: 'Zero-Trust Security',;
-    description: 'Comprehensive zero-trust security platform',;
-    category: 'Cybersecurity',;
-    pricing: '$599/month',;
-    features: [;
-      'Identity verificationAccess controlThreat detectionPerformance monitoring';
-    ];
-
-
-
-  }
-];
-;
-
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
-    name: 'Autonomous DevOps Platform',;
-    description: 'Self-managing DevOps automation platform',;
+    name: 'Autonomous DevOps Platform',,
+  description: 'Self-managing DevOps automation platform',;
     category: 'Cloud & FinOps',;
     pricing: '$399/month',;
     features: [;
-      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
-    ];
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';    ];
+
   },;
   {;
-    name: 'Autonomous IT Operations',;
-    description: 'AI-powered IT operations automation',;
+    name: 'Autonomous IT Operations',,
+  description: 'AI-powered IT operations automation',;
     category: 'Cloud & FinOps',;
     pricing: '$499/month',;
     features: [;
@@ -1573,8 +658,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Autonomous Vehicle AI',;
-    description: 'AI-powered autonomous vehicle systems',;
+    name: 'Autonomous Vehicle AI',,
+  description: 'AI-powered autonomous vehicle systems',;
     category: 'Transportation',;
     pricing: '$899/month',;
     features: [;
@@ -1582,8 +667,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Blockchain Enterprise Platform',;
-    description: 'Enterprise-grade blockchain infrastructure',;
+    name: 'Blockchain Enterprise Platform',,
+  description: 'Enterprise-grade blockchain infrastructure',;
     category: 'Financial Services',;
     pricing: '$649/month',;
     features: [;
@@ -1591,8 +676,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Blockchain Infrastructure',;
-    description: 'Scalable blockchain infrastructure services',;
+    name: 'Blockchain Infrastructure',,
+  description: 'Scalable blockchain infrastructure services',;
     category: 'Financial Services',;
     pricing: '$449/month',;
     features: [;
@@ -1600,8 +685,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Brain-Computer Interface',;
-    description: 'Advanced brain-computer interface technology',;
+    name: 'Brain-Computer Interface',,
+  description: 'Advanced brain-computer interface technology',;
     category: 'Healthcare',;
     pricing: '$1299/month',;
     features: [;
@@ -1609,8 +694,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Compliance Automation',;
-    description: 'Automated compliance management platform',;
+    name: 'Compliance Automation',,
+  description: 'Automated compliance management platform',;
     category: 'Cybersecurity',;
     pricing: '$379/month',;
     features: [;
@@ -1618,8 +703,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Customer Intelligence Platform',;
-    description: 'Comprehensive customer intelligence solution',;
+    name: 'Customer Intelligence Platform',,
+  description: 'Comprehensive customer intelligence solution',;
     category: 'AI & Data',;
     pricing: '$299/month',;
     features: [;
@@ -1627,8 +712,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Data Analytics',;
-    description: 'Advanced data analytics platform',;
+    name: 'Data Analytics',,
+  description: 'Advanced data analytics platform',;
     category: 'AI & Data',;
     pricing: '$249/month',;
     features: [;
@@ -1636,8 +721,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'DevOps Automation',;
-    description: 'Comprehensive DevOps automation platform',;
+    name: 'DevOps Automation',,
+  description: 'Comprehensive DevOps automation platform',;
     category: 'Cloud & FinOps',;
     pricing: '$329/month',;
     features: [;
@@ -1645,8 +730,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Edge Computing',;
-    description: 'Edge computing infrastructure platform',;
+    name: 'Edge Computing',,
+  description: 'Edge computing infrastructure platform',;
     category: 'Cloud & FinOps',;
     pricing: '$279/month',;
     features: [;
@@ -1654,8 +739,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Industrial Automation AI',;
-    description: 'AI-powered industrial automation',;
+    name: 'Industrial Automation AI',,
+  description: 'AI-powered industrial automation',;
     category: 'Manufacturing',;
     pricing: '$599/month',;
     features: [;
@@ -1663,8 +748,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Interplanetary Communication',;
-    description: 'Advanced interplanetary communication systems',;
+    name: 'Interplanetary Communication',,
+  description: 'Advanced interplanetary communication systems',;
     category: 'Space Technology',;
     pricing: '$1499/month',;
     features: [;
@@ -1672,8 +757,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'IT Asset Management',;
-    description: 'Comprehensive IT asset management platform',;
+    name: 'IT Asset Management',,
+  description: 'Comprehensive IT asset management platform',;
     category: 'Cloud & FinOps',;
     pricing: '$199/month',;
     features: [;
@@ -1681,8 +766,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Marketing AI Platform',;
-    description: 'AI-powered marketing automation platform',;
+    name: 'Marketing AI Platform',,
+  description: 'AI-powered marketing automation platform',;
     category: 'AI & Data',;
     pricing: '$349/month',;
     features: [;
@@ -1690,8 +775,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Metaverse Development Studio Pro',;
-    description: 'Professional metaverse development platform',;
+    name: 'Metaverse Development Studio Pro',,
+  description: 'Professional metaverse development platform',;
     category: 'Metaverse',;
     pricing: '$799/month',;
     features: [;
@@ -1699,8 +784,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Metaverse Digital Reality Platform',;
-    description: 'Advanced metaverse platform infrastructure',;
+    name: 'Metaverse Digital Reality Platform',,
+  description: 'Advanced metaverse platform infrastructure',;
     category: 'Metaverse',;
     pricing: '$649/month',;
     features: [;
@@ -1708,8 +793,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Mobile Web Solutions',;
-    description: 'Mobile-first web development platform',;
+    name: 'Mobile Web Solutions',,
+  description: 'Mobile-first web development platform',;
     category: 'Developer Tools',;
     pricing: '$179/month',;
     features: [;
@@ -1717,8 +802,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Multi-Cloud Management',;
-    description: 'Unified multi-cloud management platform',;
+    name: 'Multi-Cloud Management',,
+  description: 'Unified multi-cloud management platform',;
     category: 'Cloud & FinOps',;
     pricing: '$429/month',;
     features: [;
@@ -1726,8 +811,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Network Automation',;
-    description: 'Intelligent network automation platform',;
+    name: 'Network Automation',,
+  description: 'Intelligent network automation platform',;
     category: 'Cloud & FinOps',;
     pricing: '$299/month',;
     features: [;
@@ -1735,8 +820,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Neural Finance AI',;
-    description: 'AI-powered financial neural networks',;
+    name: 'Neural Finance AI',,
+  description: 'AI-powered financial neural networks',;
     category: 'Financial Services',;
     pricing: '$549/month',;
     features: [;
@@ -1744,8 +829,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Orbital Computing',;
-    description: 'Space-based computing infrastructure',;
+    name: 'Orbital Computing',,
+  description: 'Space-based computing infrastructure',;
     category: 'Space Technology',;
     pricing: '$1199/month',;
     features: [;
@@ -1753,8 +838,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum AI Fusion',;
-    description: 'Quantum-AI hybrid computing platform',;
+    name: 'Quantum AI Fusion',,
+  description: 'Quantum-AI hybrid computing platform',;
     category: 'Quantum Computing',;
     pricing: '$899/month',;
     features: [;
@@ -1762,8 +847,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Bio-Computing',;
-    description: 'Quantum biological computing systems',;
+    name: 'Quantum Bio-Computing',,
+  description: 'Quantum biological computing systems',;
     category: 'Quantum Computing',;
     pricing: '$1099/month',;
     features: [;
@@ -1771,8 +856,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Compliance Automation',;
-    description: 'Quantum-powered compliance automation',;
+    name: 'Quantum Compliance Automation',,
+  description: 'Quantum-powered compliance automation',;
     category: 'Quantum Computing',;
     pricing: '$649/month',;
     features: [;
@@ -1780,8 +865,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Creativity Studio',;
-    description: 'Quantum-powered creative platform',;
+    name: 'Quantum Creativity Studio',,
+  description: 'Quantum-powered creative platform',;
     category: 'Quantum Computing',;
     pricing: '$749/month',;
     features: [;
@@ -1789,8 +874,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum CRM Suite',;
-    description: 'Quantum-powered customer relationship management',;
+    name: 'Quantum CRM Suite',,
+  description: 'Quantum-powered customer relationship management',;
     category: 'Quantum Computing',;
     pricing: '$599/month',;
     features: [;
@@ -1798,8 +883,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Data Center',;
-    description: 'Quantum computing data center infrastructure',;
+    name: 'Quantum Data Center',,
+  description: 'Quantum computing data center infrastructure',;
     category: 'Quantum Computing',;
     pricing: '$1299/month',;
     features: [;
@@ -1807,8 +892,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Encryption Gateway',;
-    description: 'Quantum-powered encryption gateway',;
+    name: 'Quantum Encryption Gateway',,
+  description: 'Quantum-powered encryption gateway',;
     category: 'Quantum Computing',;
     pricing: '$799/month',;
     features: [;
@@ -1816,8 +901,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Energy Optimization',;
-    description: 'Quantum-powered energy optimization',;
+    name: 'Quantum Energy Optimization',,
+  description: 'Quantum-powered energy optimization',;
     category: 'Energy',;
     pricing: '$699/month',;
     features: [;
@@ -1825,8 +910,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Financial Intelligence',;
-    description: 'Quantum-powered financial intelligence',;
+    name: 'Quantum Financial Intelligence',,
+  description: 'Quantum-powered financial intelligence',;
     category: 'Quantum Computing',;
     pricing: '$849/month',;
     features: [;
@@ -1834,8 +919,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Identity Verification',;
-    description: 'Quantum-powered identity verification',;
+    name: 'Quantum Identity Verification',,
+  description: 'Quantum-powered identity verification',;
     category: 'Quantum Computing',;
     pricing: '$599/month',;
     features: [;
@@ -1843,8 +928,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Internet Security',;
-    description: 'Quantum-powered internet security',;
+    name: 'Quantum Internet Security',,
+  description: 'Quantum-powered internet security',;
     category: 'Quantum Computing',;
     pricing: '$749/month',;
     features: [;
@@ -1852,8 +937,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Internet Security Gateway',;
-    description: 'Advanced quantum internet security gateway',;
+    name: 'Quantum Internet Security Gateway',,
+  description: 'Advanced quantum internet security gateway',;
     category: 'Quantum Computing',;
     pricing: '$899/month',;
     features: [;
@@ -1861,8 +946,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Learning Accelerator',;
-    description: 'Quantum-powered learning acceleration',;
+    name: 'Quantum Learning Accelerator',,
+  description: 'Quantum-powered learning acceleration',;
     category: 'Quantum Computing',;
     pricing: '$649/month',;
     features: [;
@@ -1870,8 +955,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Materials Discovery',;
-    description: 'Quantum-powered materials discovery',;
+    name: 'Quantum Materials Discovery',,
+  description: 'Quantum-powered materials discovery',;
     category: 'Quantum Computing',;
     pricing: '$999/month',;
     features: [;
@@ -1879,8 +964,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Network Security',;
-    description: 'Quantum-powered network security',;
+    name: 'Quantum Network Security',,
+  description: 'Quantum-powered network security',;
     category: 'Quantum Computing',;
     pricing: '$799/month',;
     features: [;
@@ -1888,8 +973,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Networking',;
-    description: 'Quantum networking infrastructure',;
+    name: 'Quantum Networking',,
+  description: 'Quantum networking infrastructure',;
     category: 'Quantum Computing',;
     pricing: '$949/month',;
     features: [;
@@ -1897,8 +982,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Neural Ecosystem',;
-    description: 'Quantum neural network ecosystem',;
+    name: 'Quantum Neural Ecosystem',,
+  description: 'Quantum neural network ecosystem',;
     category: 'Quantum Computing',;
     pricing: '$1099/month',;
     features: [;
@@ -1906,8 +991,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Risk Financial Manager',;
-    description: 'Quantum-powered financial risk management',;
+    name: 'Quantum Risk Financial Manager',,
+  description: 'Quantum-powered financial risk management',;
     category: 'Quantum Computing',;
     pricing: '$899/month',;
     features: [;
@@ -1915,8 +1000,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Storage Solutions',;
-    description: 'Quantum-powered storage solutions',;
+    name: 'Quantum Storage Solutions',,
+  description: 'Quantum-powered storage solutions',;
     category: 'Quantum Computing',;
     pricing: '$799/month',;
     features: [;
@@ -1924,8 +1009,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Supply Chain Optimizer',;
-    description: 'Quantum-powered supply chain optimization',;
+    name: 'Quantum Supply Chain Optimizer',,
+  description: 'Quantum-powered supply chain optimization',;
     category: 'Supply Chain',;
     pricing: '$699/month',;
     features: [;
@@ -1933,8 +1018,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Threat Detection',;
-    description: 'Quantum-powered threat detection',;
+    name: 'Quantum Threat Detection',,
+  description: 'Quantum-powered threat detection',;
     category: 'Quantum Computing',;
     pricing: '$849/month',;
     features: [;
@@ -1942,8 +1027,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Quantum Workload Orchestration',;
-    description: 'Quantum-powered workload orchestration',;
+    name: 'Quantum Workload Orchestration',,
+  description: 'Quantum-powered workload orchestration',;
     category: 'Quantum Computing',;
     pricing: '$749/month',;
     features: [;
@@ -1951,8 +1036,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Satellite Technology',;
-    description: 'Advanced satellite technology platform',;
+    name: 'Satellite Technology',,
+  description: 'Advanced satellite technology platform',;
     category: 'Space Technology',;
     pricing: '$999/month',;
     features: [;
@@ -1960,8 +1045,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Space Colonization Services',;
-    description: 'Space colonization planning and infrastructure',;
+    name: 'Space Colonization Services',,
+  description: 'Space colonization planning and infrastructure',;
     category: 'Space Technology',;
     pricing: '$1499/month',;
     features: [;
@@ -1969,8 +1054,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Space Cybersecurity',;
-    description: 'Space-specific cybersecurity solutions',;
+    name: 'Space Cybersecurity',,
+  description: 'Space-specific cybersecurity solutions',;
     category: 'Space Technology',;
     pricing: '$799/month',;
     features: [;
@@ -1978,8 +1063,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Space Data Analytics',;
-    description: 'Advanced space data analytics platform',;
+    name: 'Space Data Analytics',,
+  description: 'Advanced space data analytics platform',;
     category: 'Space Technology',;
     pricing: '$649/month',;
     features: [;
@@ -1987,8 +1072,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Space Mining Automation Platform',;
-    description: 'Automated space mining platform',;
+    name: 'Space Mining Automation Platform',,
+  description: 'Automated space mining platform',;
     category: 'Space Technology',;
     pricing: '$1199/month',;
     features: [;
@@ -1996,8 +1081,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Space Mining Platform',;
-    description: 'Comprehensive space mining platform',;
+    name: 'Space Mining Platform',,
+  description: 'Comprehensive space mining platform',;
     category: 'Space Technology',;
     pricing: '$999/month',;
     features: [;
@@ -2005,8 +1090,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Space Resource Intelligence',;
-    description: 'AI-powered space resource intelligence',;
+    name: 'Space Resource Intelligence',,
+  description: 'AI-powered space resource intelligence',;
     category: 'Space Technology',;
     pricing: '$749/month',;
     features: [;
@@ -2014,40 +1099,15 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   },;
   {;
-    name: 'Zero-Trust Security',;
-    description: 'Comprehensive zero-trust security platform',;
+    name: 'Zero-Trust Security',,
+  description: 'Comprehensive zero-trust security platform',;
     category: 'Cybersecurity',;
     pricing: '$599/month',;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
+
   }
 ];
-
-=======
-    pricing: '$999/month',
-    features: [
-      'Mining operationsResource managementSafety protocolsPerformance analytics'
-    ]
-  },
-  {
-    name: 'Space Resource Intelligence',
-    description: 'AI-powered space resource intelligence',
-    category: 'Space Technology',
-    pricing: '$749/month',
-    features: [
-      'Resource mappingIntelligence analysisPlanning toolsPerformance optimization'
-    ]
-  },
-  {
-    name: 'Zero-Trust Security',
-    description: 'Comprehensive zero-trust security platform',
-    category: 'Cybersecurity',
-    pricing: '$599/month',
-    features: [
-      'Identity verificationAccess controlThreat detectionPerformance monitoring'
-    ]
-
-  }
-],
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;  }
+];

@@ -1,23 +1,22 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/Footer";
-import { JobPostingForm } from "@/components/jobs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import {Header} from "@/components/header";
+import {Footer} from "@/components/Footer";
+import {JobPostingForm} from "@/components/jobs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {useIsMobile} from "@/hooks/use-mobile";
+export default function PostJob() {;
+import { Header } from "@/components/header",
+import { Footer } from "@/components/Footer",
+import { JobPostingForm } from "@/components/jobs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-  if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
@@ -74,25 +73,6 @@ export default function PostJob() {
     );
   }
 
-<<<<<<< HEAD
-
-  if (isLoading) {
-  if (isLoading) {;
-
-=======
-
-  if (isLoading) {;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    return (
-      <div className="flex items-center justify-center min-h-screen">;
-        <div className="animate-pulse">Loading...</div>;
-      </div>;
-    );
-  }
-
-<<<<<<< HEAD
-
 
   return (
     <>
@@ -126,19 +106,11 @@ export default function PostJob() {
   );
 }
     return (
-      <div className="flex items - center justify - center min - h-screen">;
-        <div className="animate - pulse">Loading...</div>;
+      <div className="flex items - center justify - center min-h-screen">;
+        <div className="animate-pulse">Loading...</div>;
       </div>);
   }
   return (
-=======
-    <>;
-      <SEO;
-        title="Post a Job | Zion AI Marketplace";
-        description="Post a job to find the perfect AI talent for your project.";
-      />;
-      <Header />;
-
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -160,57 +132,7 @@ export default function PostJob() {;
     ),;
   }
   ;
-}
-    return (
-      <div className="flex items - center justify - center min-h-screen">;
-        <div className="animate-pulse">Loading...</div>;
-      </div>);
-  }
-  return (
-    <>;
-      <SEO;
-        title="Post a Job | Zion AI Marketplace";
-        description="Post a job to find the perfect AI talent for your project.";
-      />;
-      <Header />;
-      <main className={`container mx - auto px-${is_mobile ? '2' : '4'} py-${is_mobile ? '6' : '12'} max - w-4xl`}>;
-        <Card className="border shadow - md">;
-          <CardHeader>;
-            <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <CardDescription>;
-
-            ;
-          <CardContent>;
-
-            <JobPostingForm />;
-
-      </main>;
-      <Footer />;
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-;"
-      {is_mobile && <div className="h - 16"></div>}
+  return (;;
+      {is_mobile && <div className="h-16"></div>}
     </>);
 }
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-    </>);
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

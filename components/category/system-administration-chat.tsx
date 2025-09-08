@@ -22,17 +22,6 @@ const SystemAdministrationChat: NextPage = () => {;
     </div>
       </Head>;
 
-      <main>;
-        <h1>SystemAdministrationChat</h1>;
-        <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>;
-  );
-}
-export default SystemAdministrationChat;
-
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -53,12 +42,6 @@ const SystemAdministrationChat: NextPage = () => {
 
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
 
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { NextPage } from './next';
 import Head from './next / head';
 
@@ -83,12 +66,3 @@ const SystemAdministrationChat: NextPage = () => {}
 ;
 export default SystemAdministrationChat;
 ;
-
-<<<<<<< HEAD
-
-
-
-=======
-        <title>SystemAdministrationChat - Zion Tech Solutions</title>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-

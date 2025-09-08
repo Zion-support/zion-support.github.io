@@ -72,8 +72,10 @@ import {
   Target
   Crown;} from 'lucide-react';
 export default function UltraFuturisticHero2028() {
-  const features = [import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+
+  const features = [import {;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
 export default function UltraFuturisticHero2028() {
@@ -106,6 +108,33 @@ export default function UltraFuturisticHero2028() {
     { value: '25+', label: 'AI Solutions', icon: Brain }
     { value: '15+', label: 'Quantum Technologies', icon: Atom }
     { value: '1000+', label: 'Happy Clients', icon: Users }
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
   ];
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20'>
@@ -265,6 +294,37 @@ export default function UltraFuturisticHero2028() {
             <span>Watch Demo</span>
           </motion.button>
         </motion.div>
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>;
+          <motion&& motion.button
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}
+            className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">;
+          <motion&& motion.button
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}
+            className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'>;
+            <span>Explore 2028 Services</span>;
+            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />;
+          </motion && motion.button>;
+
+          <motion&& motion.button
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}
+            className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm'>;
+            <Play className='w-5 h-5' />            <span>Watch Demo</span>          >;
+            <span>Explore 2028 Services</span>;
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />;
+          </motion && motion.button>;
+          <motion&& motion.button
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}
+            className="group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm">;
+            <Play className="w-5 h-5" />;
+            <span>Watch Demo</span>;
+          </motion && motion.button>;
+        </motion && motion.div>;
+
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -296,6 +356,10 @@ export default function UltraFuturisticHero2028() {
                   </div>
                   <h3 className="text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors">
                     {feature.text}
+                  <h3 className='text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors'>                    {feature.text}
+
+                    {feature.text}
+
                   </h3>
                 </div>
               </motion.div>
@@ -398,6 +462,14 @@ export default function UltraFuturisticHero2028() {
           </div>
         </motion.div>
       </div>
+
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300">;
+              Get Started;
+            </Link>;
+          </div>;
+        </motion && motion.div>;
+      </div>;
+
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -421,9 +493,103 @@ export default function UltraFuturisticHero2028() {
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
-    </section>
-);
+  );
+
+}
+
+  );
+
+  );
+}
+                </div>;
+              </motion.div>))}
+          </div>;
+        </motion.div>;
+        {/* Trust Indicators */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className='mb - 16';
+          <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 30 rounded - 2xl p - 8 backdrop - blur - sm'>;
+            <h3 className='text - 2xl font - bold text - white mb - 6'>;
+              Trusted by Industry Leaders;
+            </h3>;
+            <div className='flex flex - wrap justify - center items - center gap - 8 opacity - 70'>;
+              <div className='text - cyan - 400 font - semibold'>;
+                Fortune 500 Companies;
+              </div>;
+              <div className='text - blue - 400 font - semibold'>;
+                Government Agencies;
+              </div>;
+              <div className='text - purple - 400 font - semibold'>;
+                Research Institutions;
+              </div>;
+              <div className='text - emerald - 400 font - semibold'>Startups</div>            </div>            <div className="flex flex - wrap justify - center items - center gap-8 opacity-70">;
+              <div className="text - cyan-400 font-semibold">Fortune 500 Companies</div>;
+              <div className="text - blue-400 font-semibold">Government Agencies</div>;
+              <div className="text - purple-400 font-semibold">Research Institutions</div>;
+              <div className="text - emerald-400 font-semibold">Startups</div>;
+          </div>;
+        </motion.div>;
+        {/* Bottom CTA */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 1.6 }}
+          className='text - center';
+        >;
+          <div className='inline - flex items - center space - x-4 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl px - 8 py - 4 backdrop - blur - sm'>;
+            <div className='flex items - center space - x-2'>;
+              <Star className='w - 5 h - 5 text - yellow - 400' />;
+              <span className='text - white font - semibold'>;
+                Ready to transform your business?;
+              </span>;
+            </div>;
+            <Link;
+              href='/contact';
+              className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border - purple - 300'            >        >;
+          <div className="inline - flex items - center space - x-4 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl px - 8 py - 4 backdrop-blur-sm">;
+            <div className="flex items-center space-x-2">;
+              <Star className="w - 5 h - 5 text-yellow-400" />;
+              <span className="text-white font-semibold">Ready to transform your business?</span>;
+            </div>;
+            <Link;
+              href="/contact";
+              className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - xl font - semibold hover:shadow - lg hover:shadow - purple - 500 / 50 transition - all duration - 300 border border - purple - 400 / 50 hover:border-purple-300";
+            >;
+              Get Started;
+            </Link>;
+          </div>;
+        </motion.div>;
+      </div>;
+      {/* Scroll Indicator */}
+      <motion.div;
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 2 }}
+        className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2';
+      >;
+        <motion.div;
+          animate={{ coordinate_y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          className='w - 6 h - 10 border - 2 border - cyan - 400 / 50 rounded - full flex justify - center';
+        >;
+          <motion.div;
+            animate={{ coordinate_y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'          />      >;
+        <motion.div;
+          animate={{ coordinate_y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="w - 6 h - 10 border - 2 border - cyan - 400 / 50 rounded-full flex justify-center";
+        >;
+          <motion.div;
+            animate={{ coordinate_y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="w - 1 h - 3 bg - cyan - 400 rounded-full mt-2";
+          />;
+        </motion.div>;
+      </motion.div>;
+    </section>);
 }

@@ -535,8 +535,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 }
-
-
+        )}
+  );
+}
+    <div className="min - h-screen bg - gray - 50 text-gray-900">;
       <Head>;
         <title > Zion Partners</title>;
       </Head>;
@@ -631,125 +633,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-sm">Your API Key:</p>;
             <pre className="bg - gray - 100 p - 3 rounded text-xs overflow-auto">{result.api_key}</pre>;
             <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px-4 py-2 rounded">Go to Dashboard</a>)}
-      </div>;
-    </div>)}
-  )}<div className='mt-8 bg-white p-6 rounded-lg shadow'>;
-            <h3 className='text-lg font-medium mb-2'>;
-              Registration Successful;
-            </h3>;
-            <p className='text-sm'>Your API Key:</p>;
-            <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto'>;
-              {result.apiKey}
-            </pre>;
-            <a;
-              href={result.dashboard_url}'
-              className='inline - block mt - 4 bg - black text - white px - 4 py - 2 rounded';
-            >;
-              Go to Dashboard;
-            </a>          </div>          <div className="mt - 8 bg - white p-6 rounded-lg shadow">;
-            <h3 className="text - lg font-medium mb-2">Registration Successful</h3>;
-            <p className="text-sm">Your API Key:</p>;
-            <pre className="bg - gray - 100 p - 3 rounded text-xs overflow-auto">{result.api_key}</pre>;
-            <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px-4 py-2 rounded">Go to Dashboard</a>)}
-      </div>;
-    </div>);
-}
-
-
-
-=======
-
-          <div className="mt-8 bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-lg font-medium mb-2">Registration Successful</h3>;
-            <p className="text-sm">Your API Key:</p>;
-            <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>;
-            <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
-})}</div>;
-    </div>;
-  )}
-        )}
-  )}
-            <a;
-              href={result && result.dashboardUrl}'
-              className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
-              Go to Dashboard;"
-            </a>          </div>          <div className="mt-8 bg-white p-6 rounded-lg shadow">;"
-            <h3 className="text-lg font-medium mb-2">Registration Successful</h3>;"
-            <p className="text-sm">Your API Key:</p>;"
-            <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;"
-            <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;"
-          <div className="mt-8 bg-white p-6 rounded-lg shadow">"
-            <h3 className="text-lg font-medium mb-2">Registration Successful</h3>"
-            <p className="text-sm">Your API Key:</p>"
-            <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>"
-<div className='mt-8 bg-white p-6 rounded-lg shadow'>'
-            <h3 className='text-lg font-medium mb-2'>'
-              }
-              Registration Successful
-            </h3>
-            <p className='text-sm'>Your API "Key":</p>'
-            <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto'>'
-
-              {result.apiKe
-}
-            </pre>;
-            <a;
-              href={result.dashboardUrl}
-              className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>'
-
-              Go to Dashboard;
-            </a>;
-          </div>;
-        )}
-      </div>;
-  )}
-    </div>);
-}
-  );
-
-}
-
-  )}
-
-        {result && (
-          <div className="mt-8 bg-white p-6 rounded-lg shadow">
-            <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
-            <p className="text-sm">Your API Key:</p>
-            <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
-            <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
-}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  );
-
-}
-
-<<<<<<< HEAD
-
-        {result && (
-
-<div className='mt-8 bg-white p-6 rounded-lg shadow'    />
-            <h3 className='text-lg font-medium mb-2'    />
-              Registration Successful;
-
-=======
-<div className='mt-8 bg-white p-6 rounded-lg shadow'>
-            <h3 className='text-lg font-medium mb-2'>
-              Registration Successful
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            </h3>
-            <p className='text-sm'    />Your API Key:</p>
-            <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto'    />
-}
-              {result.apiKe}
-}
-            </pre>;
-            <a;
-              href={result.dashboard_url}'
-              className=inline - block mt - 4 bg - black text - white px - 4 py - 2 rounded;
-            >;
-
       </div>;
     </div>);
 }

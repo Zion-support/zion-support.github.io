@@ -4,17 +4,20 @@ export const apiErrorHandler = {};
     error?.message || fallbackMessage || 'An unexpected error occurred';  toast({};
     "description": message});
   // Log error for debugging;
+<<<<<<< HEAD
+export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({},
+  description: 'message'});
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({},
+  description: message});
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({},
+  description: message});
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
 <<<<<<< HEAD
 
 
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
-export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-=======
-
-export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

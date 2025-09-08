@@ -1,25 +1,11 @@
-import { format } from "date-fns";
-/**
-
-
-=======
-
 import {format} from "date-fns";
-
-import { format } from "date-fns",
-/**
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import { format } from "date-fns",/**
  * Formats a date string into a readable format
  * @param dateString ISO date string to format
  * @returns Formatted date string
  */
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export const formatDate = (dateString: string): string => {
 import { format } from './date - fns';
 /**;
 * Formats a date string into a readable format;
@@ -42,14 +28,20 @@ export const format_date = (date_string: string): string => {}
   try {";
     return format(new Date(dateString), "PP");
   } catch (e) {
+
+    return dateString
+
+  };
+
+import { format } from "date-fns",;
+/**;
+ * Formats a date string into a readable format;
+ * @param dateString ISO date string to format;
+ * @returns Formatted date string;
+ */;
+export const formatDate = (dateString: string): string => {;
+  try {;
+    return format(new Date(dateString), 'PP');
+  } catch (e) {;
     return dateString;
-
-  }
-<<<<<<< HEAD
-};
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  }>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

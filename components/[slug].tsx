@@ -394,110 +394,99 @@ return (;
 href='/contact'
                 variant='quantum'
                 size='lg'
+                className='w-full'>;
+                Start Free Trial;
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </Button>;
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2'>;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <span>{service && service.contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <Mail className='w-4 h-4 text-purple-400' />;
+                  <span>{service && service.contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <MapPin className='w-4 h-4 text-green-400' />;
+                  <span className='text-xs'>{service && service.contactInfo.address}</span>;
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12'>;
+            <div className='lg:col - span - 2 bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6'>;
+              <h2 className='text - 2xl font - semibold mb - 4'>What you get</h2>;
+              <p className='text - slate - 300 mb - 6'>{service.description}</p>;
+              <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
+                {service.features.slice (0, 16).map ((feat, i) => (
+                  <li;
+                    key={i}
+                    className='flex items - start space - x-3 text - slate - 200';
+                  >;
+                    <Check className='w - 5 h - 5 text - cyan - 400 mt - 0.5' />;
+                    <span>{feat}</span>;
+                  </li>))}
+              </ul>;
+            </div>;
+            <div className='bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6 h - fit'>;
+              <div className='flex items - end justify - between mb - 3'>;
+                <div>;
+                  <div className='text - 3xl font - bold text - white'>;
+                    {service.price}
+                    <span className='text - slate - 400 text - base'>;
+                      {service.period}
+                    </span>;
+                  </div>;
+                  <div className='text - slate - 400'>;
+                    {service.trial_days}-day free trial • Setup:{' '}
+                    {service.setup_time}
+                  </div>;
+                </div>;
+                <div className='flex items - center text - yellow - 400'>;
+                  <Star className='w - 4 h - 4 mr - 1' />;
+                  {service.rating?.to_fixed;
+                    ? service.rating.to_fixed (1);
+                    : service.rating}
+                </div>;
+              </div>;
+              <Button;
+                href='/contact';
+                variant='quantum';
+                size='lg';
+                className='w - full';
+              >;
+                Start Free Trial;
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+              </Button>;
+              <div className='mt - 6 space - y-3 text - sm text - slate - 300'>;
+                <div className='flex items - center space - x-2'>;
+                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                  <span>{service.contact_info.mobile}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <span>{service.contact_info.email}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <MapPin className='w - 4 h - 4 text - green - 400' />;
+                  <span className='text - xs'>{service.contact_info.address}</span>;
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial < ArrowRight className="w - 5 h-5 ml-2" /></Button>;
+              <div className="mt - 6 space - y-3 text - sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
 
                 className='w-full'
                   />
                 Start Free Trial;
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-
-=======
-                <div className='flex items-center text-yellow-400'>;'
-                  <Star className='w-4 h-4 mr-1' />;'
-                  {service && service.rating?.toFixed;
-                    ? service && service.rating.toFixed(1): service && service.rating}
-                </div>;
-
-                className='w-full''
-              >
-                Start Free Trial
-                <ArrowRight className='w-5 h-5 ml-2' />'
-              </Button>
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>'
-                <div className='flex items-center space-x-2'>'
-                  <Phone className='w-4 h-4 text-cyan-400' />'
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className='flex items-center space-x-2'>'
-                  <Mail className='w-4 h-4 text-purple-400' />'
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className='flex items-center space-x-2'>'
-                  <MapPin className='w-4 h-4 text-green-400' />'
-                  <span className='text-xs'>{service.contactInfo.address}</span>'
-                </div>
-    </UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  );
-// Static export 'support': generate root-level pages for service slugs,
-type Svc = (typeof enhancedRealMicroSaasServices)[number];
-<<<<<<< HEAD
-=======
-function collectAllServices(): Svc[] {
-}
-return enhancedRealMicroSaasServices.concat(;
-    extraServices as Svc[]
-    additionalEnhancedServices as Svc[]
-    innovativeAIServices as Svc[]
-    quantumSpaceServices as Svc[]
-    enterpriseITServices as Svc[]
-    newRealServices as Svc[]
-    marketReadyServices as Svc[]
-    nextGenerationAIServices as Svc[]
-    emergingTechnologyServices as Svc[]
-    comprehensiveITSolutions as Svc[]
-    marketValidatedServices as Svc[]
-    newRealInnovations as Svc[]
-    realMarketServices as Svc[]
-    realVerifiedServices as unknown as Svc[]
-  );
-function normalizeSlug('value': string): string {
-}
-return value;
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')'
-
-    .replace(/(^-|-$)/g, '');'
-
-export const 'getStaticPaths': GetStaticPaths = async () => {
-}
-export;
-  const 'getStaticPaths': GetStaticPaths = async () => {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
-export const getStaticPaths: GetStaticPaths = async () => {
-export;
-  const getStaticPaths: GetStaticPaths = async () => {;
-
-}
-
-export const 'getStaticPaths': GetStaticPaths = async () => {
-}
-
-  );
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-function normalizeSlug(): any (value: string): string {;
-  return value;
-    .toLowerCase();
-    .replace(/[^a-z0-9]+/g, '-');
-    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
-<<<<<<< HEAD
-
-
-
-
-
-=======
-  );
 
 // Static export support: generate root-level pages for service slugs;
 
@@ -525,7 +514,49 @@ function normalizeSlug(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  if (!link) return null;
+  try {
+    const url = new URL(link);
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
+    if (path && !path.includes('/')) return path;
+    return null
+  } catch {
+    return null
+  }
+}
+  };
+}
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+}
+
+function collectAllServices(): any (): Svc[] {;
+  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
+    extraServices as Svc[],;
+    additionalEnhancedServices as Svc[],;
+    innovativeAIServices as Svc[],;
+    quantumSpaceServices as Svc[],;
+    enterpriseITServices as Svc[],;
+    newRealServices as Svc[],;
+    marketReadyServices as Svc[],;
+    nextGenerationAIServices as Svc[],;
+    emergingTechnologyServices as Svc[],;
+    comprehensiveITSolutions as Svc[],;
+    marketValidatedServices as Svc[],;
+    newRealInnovations as Svc[],;
+    realMarketServices as Svc[],;
+    realVerifiedServices as unknown as Svc[];
+  );
+
+function normalizeSlug(): any (value: string): string {;
+  return value;
+    .toLowerCase();
+    .replace(/[^a-z0-9]+/g, '-');
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
   if (!link) return null;
   try {;
     const url = new URL(link);
@@ -649,11 +680,22 @@ const entries = fs.readdirSync(pagesDir, { withFileTypes: true,}
           static_slugs.add (base.toLowerCase ());
         }
 
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
+    slug => !staticSlugs.has(slug)
+  );
+  return {
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   }
 };
 
-
+export const getStaticProps: GetStaticProps = async ({ params }) => {;
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} }
+};
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
 
 
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
@@ -671,30 +713,20 @@ const entries = fs.readdirSync(pagesDir, { withFileTypes: true,}
   );
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
-    fallback: true,;
-  };
+    fallback: true,
+}
 };
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} };};
+  return { props: {} }
+};
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
 
-=======
-  // Gather existing root-level page slugs to avoid conflicts
-  const pagesDir = path.join(process.cwd(), pages');
-  try {
-
-      }
-    }
-  } catch {}
-
-export const getStaticProps: GetStaticProps = async ({ params   ,}
-}) => {
-
-
-
-
+  return {;
+    paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
+    fallback: true;
+  }
 };
 
 };
@@ -742,56 +774,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
-;
-
-
-
-=======
-
-}export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} }}
-    if (path && !path.includes('/')) return path,
-    return null
-  } catch {
-    return null
-  }
-
-
-const staticSlugs = new Set<string>();
-
-  // Gather existing root-level page slugs to avoid conflicts
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const staticSlugs = new Set<string>();
-  try {
-
+  return { props: {} }
 }
-const entries = fs.readdirSync(pagesDir, { "withFileTypes": true,;
-});
-      }
-  } catch {}
-
-// Exclude any slug that conflicts with an existing root page file,
-const uniqueNonConflicting = Array.from(candidateSlugs).filter(;
-    slug => { return !staticSlugs.has(slug)
-  ); }
-  return {
-    }
-
-    "paths": uniqueNonConflicting.map(slug => ({ "params": { slug }
-})),
-    "fallback": true
-  }
-};
-
-export const "getStaticProps": GetStaticProps = async ({ params   
-}) => {
-
-
-
-  // No dynamic fetching needed; the component resolves the service client-side.
-}
-
-return { "props": {} },;
 };
 },
 >>>>>>> origin/cursor/delete-old-data-records-6bba

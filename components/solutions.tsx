@@ -1176,3 +1176,33 @@ export default Solutions;
 export default Solutions,
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+export default Solutions;
+  opacity: 0, coordinate_y: 30;
+}whileInView= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.8;
+}viewport= {
+  {
+  once: true;
+}> <h2 className="text - 4xl font - bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text - xl text - gray-300 mb-8" > Let's discuss how our industry - specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:shadow - 2xl hover:shadow - green - 500 / 25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline - block ml - 2 w-5 h-5" /> </a> <Link href="/services" className="border border - white / 30 hover:border - white / 50 text - white px - 8 py - 4 rounded - full text - lg font - semibold transition - all duration - 300 backdrop - blur-md hover:bg-white / 10" > View All Services </a> </div> </motion.div> </div> </section> </Layout>);
+}
+export default Solutions;}
+;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+;
+;

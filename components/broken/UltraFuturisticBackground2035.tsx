@@ -884,21 +884,11 @@ ctx.stroke();
           }
 
         }
-
-
-
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
-
-      }
-      initParticles()
-
-    };
-
-      }
-
-    };
-
-    window && window.addEventListener('resize', handleResize);
+      })
+};            ctx && ctx.stroke();
+          }
+        }
+    window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
     return () => {;
@@ -1358,7 +1348,8 @@ ease: 'easeInOut',}
           }}
             ease: 'easeInOut'
           }}
-        />
+
+        />;
 
         {/* Quantum energy waves */}
         <div className="absolute inset-0 overflow-hidden">
@@ -1382,12 +1373,6 @@ ease: 'easeInOut',}
               duration: 4,
               repeat: Infinity,
 
-
-
-          }}
-        />
-
-        {/* Quantum energy waves */}
 
             }}
             transition={{

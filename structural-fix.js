@@ -1,35 +1,26 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename)
-// Function to fix structural issues
-function fixStructuralIssues(content) {
-  // Fix malformed function declarations
-  content = content.replace(/export default function (\w+)()\s*{\s*return\s*(\s*<div>Content<\/div>\s*),\s*}\s*return\s*(/g
-    'export default function $1() {\n  return (')
-  // Fix duplicate return statements
-  content = content.replace(/return\s*(\s*<div>Content<\/div>\s*),\s*}\s*return\s*(/g, 'return (')
-  // Fix malformed JSX
-  content = content.replace(/<motion\.div,/g, '<motion.div')
-  content = content.replace(/<div,/g, '<div')
-  content = content.replace(/<section,/g, '<section')
-  // Fix array syntax issues
-  content = content.replace(/]\s*$/g, ']')
-  content = content.replace(/]\s*\n\s*{/g, ',\n  {')
-  // Fix malformed map functions
-  content = content.replace(/{([^}]+)\.map(([^)]+)) => {}/g, '{$1.map(($2) => (')
-  content = content.replace(/{([^}]+)\.map(([^)]+)) => (/g, '{$1.map(($2) => (')
-  // Fix missing closing parentheses
-  content = content.replace(/)\s*}\s*$/g, '))}')
-  // Fix malformed JSX attributes
-  content = content.replace(/className="[^"]*">"/g, 'className="min-h-screen bg-gray-50">')
-  content = content.replace(/<p className="[^"]*">"/g, '<p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">')
-  // Fix missing closing tags
-  content = content.replace(/<\/div>\s*)\s*}\s*$/g, '</div>\n  ),\n}')
-  // Fix semicolons in JSX
-  content = content.replace(/,\s*$/g, '')
-  return content
+}});
+
+;
+<<<<<<< HEAD
+=======
+
+;
+console.log(`Fixed ${fixedCount} files`),));
+;
+  }
+}),
+,
+console.log(`Fixed ${fixedCount} files`),)),
+}),;
+,;
+console.log(`Fixed ${fixedCount} files`),)),;
+console.log (`Fixed ${fixed_count} files`)));
+}
+});
+;
+
+console.log(`Fixed ${fixedCount} files`)));
+
 };
 // Function to process a file
 function processFile(filePath) {
@@ -58,4 +49,29 @@ errorFiles.forEach(file => {
     fixedCount++
   };
 });
+
 console.log(`Fixed ${fixedCount} files`)));
+>>>>>>> origin/main
+;
+console.log(`Fixed ${fixedCount} files`),));
+;
+  }
+}),
+,
+console.log(`Fixed ${fixedCount} files`),)),
+}),;
+,;
+console.log(`Fixed ${fixedCount} files`),)),;;
+console.log(`Fixed ${fixedCount} files`),));
+;
+  }
+}),
+,
+console.log(`Fixed ${fixedCount} files`),)),
+}),;
+,;
+console.log(`Fixed ${fixedCount} files`),)),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main

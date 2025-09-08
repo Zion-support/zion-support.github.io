@@ -17,6 +17,11 @@ return true;
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
+      content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
+>>>>>>> origin/main
+    }
 
 };
 // Fix api && api.tsx

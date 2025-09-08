@@ -1,10 +1,5 @@
 export interface Wallet {
   user_id: string;
-  balance: number;
-  updated_at: string;
-}
-
-<<<<<<< HEAD
 
 export interface TokenTransaction {
 
@@ -58,38 +53,18 @@ export interface Wallet {;
   updated_at: string
 }
 export type TransactionType = 'earn' | 'burn';
-  balance: number,
-
-  user_id: string;
-
-  balance: number
-  updated_at: string
-}
-export type TransactionType = 'earn' | 'burn';
   balance: number,  updated_at: string;
-
 }
 
 
+export interface TokenTransaction {
   id: string;
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
-  reason: string | null
-
-
   user_id: string,;
   balance: number,;
   updated_at: string;
-}
-;
-export type TransactionType = 'earn' | 'burn',;
-export interface TokenTransaction {;
-  id: string,;
-  user_id: string,;
-  amount: number,;
-
-
 }
 ;
 export type TransactionType = 'earn' | 'burn',;
@@ -101,13 +76,3 @@ export interface TokenTransaction {;
 }
 ;
 }
-
-  // TODO: Implement
-}
-  user_id: string;,
-  balance: number;
-  updated_at: string;
-
-
-export interface Wallet {;
->>>>>>> origin/cursor/delete-old-data-records-6bba

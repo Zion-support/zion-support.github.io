@@ -261,10 +261,7 @@ return res.status(200).json({ entries: entries.slice(-200), byModule, byType, to
 });
 }
 
-
-<<<<<<< HEAD
-
-
+  const byModule: Record<string, number> = {};
 
 
 =======

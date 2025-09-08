@@ -1,9 +1,122 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;
-=======
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+
 import {
   Menu
   ChevronDown
@@ -63,6 +176,156 @@ import {
   Github
   Youtube
   MapPin;
+} from 'lucide-react';
+interface NavigationItem {
+  name: string;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
@@ -146,15 +409,17 @@ const navigationItems: NavigationItem[] = [
     ]
   }
   {
-    name: 'AI & Technology Services'
-    href: '/services'
-    icon: <Brain className='w-5 h-5' />,    description: 'Advanced AI and technology solutions',        name: 'Home'
-        href: '/'
-        description: 'Main homepage'
-        icon: <Home className="w-4 h-4" />
-        color: 'from-emerald-500 to-cyan-500'
-        featured: true
-      }
+    name: 'Home & Core',
+    href: '/',
+    icon: <Home className='w - 5 h - 5' />,    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from - emerald - 500 to - cyan - 500',
+    children: [;
+      {    icon: <Home className="w-5 h-5" />,
+    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from - emerald - 500 to - cyan - 500',
+    children: [;
       {
         name: 'About Us'
         href: '/about'
@@ -453,55 +718,43 @@ const navigationItems: NavigationItem[] = [
         description: 'Privacy and data protection'
         icon: <Shield className='w-4 h-4' />
         color: 'from-red-500 to-pink-500'
+    name: 'AI & Technology Services',
+    href: '/services',
+    icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
+        href: '/',
+        description: 'Main homepage',
+        icon: <Home className="w-4 h-4" />,
+        color: 'from - emerald - 500 to - cyan - 500',
+        featured: true;
       }
-    ]
-  },];        icon: <Shield className="w-4 h-4" />
-        color: 'from-red-500 to-pink-500'
+      {
+        name: 'About Us',
+        href: '/about',
+        description: 'Company information and mission',
+        icon: <Info className="w-4 h-4" />,
+        color: 'from - blue - 500 to - cyan - 500';
       }
-    ]
-  }
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-const socialLinks = [
-  {
-    name: 'LinkedIn'
-    href: 'https://linkedin.com/company/ziontechgroup'
-    icon: Linkedin
-    color: 'hover:text-blue-400'
-  }
-  {
-    name: 'Twitter'
-    href: 'https://twitter.com/ziontechgroup'
-    icon: Twitter
-    color: 'hover:text-sky-400'
-  }
-  {
-    name: 'GitHub'
-    href: 'https://github.com/Zion-Holdings'
-    icon: Github
-    color: 'hover:text-gray-400'
-  }
-  {
-    name: 'YouTube'
-    href: 'https://youtube.com/@ziontechgroup'
-    icon: Youtube
-    color: 'hover:text-red-500'
-  },];  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' }
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-const UltraFuturisticNavigation2047 = () => {
+      {
+        name: 'Contact',
+        href: '/contact',
+        description: 'Get in touch with our team',
+        icon: <Mail className="w-4 h-4" />,
+        color: 'from - purple - 500 to - pink - 500';
+      }
+      {
+        name: 'Team',
+        href: '/team',
+        description: 'Meet our leadership team',
+        icon: <Users className="w-4 h-4" />,
+        color: 'from - orange - 500 to - red - 500';
+      }
+    ];
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-  const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
-  }
+  const closeMenu = () => setIsOpen(false)
+};
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {

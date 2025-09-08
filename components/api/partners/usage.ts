@@ -38,15 +38,6 @@ import {
   calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'GET') {;
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {"
   if (req && req.method !== \"GET\") {}"
@@ -107,7 +98,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res.status(200).json({ summary })
 }
-
 
   authenticate_request,
   calculateUsageSummary,

@@ -10,11 +10,7 @@ const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 // Create utility
 export const Create = () => {
   // Implementation here
-  return null;
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  return null
 };
 {'
   role: 'user', content: prompt;
@@ -333,40 +329,12 @@ export default async function handler(;
 =======
 }
 
-
-
-'
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}'
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
-
-
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  const { name, email, budget, timeline, description, talentSlug } =
-    req.body || {};
-  if (!name || !email || !description)
-    return res.status(400).json({ error: 'Missing required fields'}
-});
-
-<<<<<<< HEAD
-
-
-=======
-  if (req && req.method !== POST')return res && res.status(405).json({ error: 'Method not allowed })const { name, email, budget, timeline, description, talentSlug } =;
-    req && req.body || {}if (!name || !email || !description)return res && res.status(400).json({ error: Missing required fields' })const content = response && response.choices[0]?.message?.content || ';
-    const typeMatch = content && content.match(/type\s*:\s*(.+)$/im)return { summary: content && content.trim(), type: typeMatch ? typeMatch[1].trim() : unknown' }
-  } catch (err) {return { summary: description && description.slice(0, 280), type: 'unknown }
-  }}if (req.method !== POST') return res.status(405).json({ error: 'Method not allowed })const { name, email, budget, timeline, description, talentSlug } = req.body |{}
-  if (!name |!email |!description) return res.status(400).json({ error: Missing required fields' })if (req && req.method !== 'POST) return res && res.status(405).json({ error: Method not allowed' })if (req.method !== 'POST)return res.status(405).json({ error: Method not allowed' })const { name, email, budget, timeline, description, talentSlug } =;
-    req.body || {}if (!name || !email || !description)return res.status(400).json({ error: 'Missing required fields })const normalizedBudget = String(budget ?? ').replace(/[^0-9.\-]/g, ')const ai = await summarizeWithOpenAI(String(description))const requests = await loadRequests()const now = new Date().toISOString()const id = `req_${Date && Date.now()}`;
-    const content = response.choices[0]?.message?.content || ';
-    const type_match = content.match (/type\s*:\s*(.+)$/im)return {summary: content.trim (),type: type_match ? type_match[1].trim () : 'unknown}
-  } catch (err) {return { summary: description.slice (0, 280), type: unknown' }
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
   const ai = await summarizeWithOpenAI(String(description));
   const requests = await loadRequests();
@@ -544,8 +512,8 @@ return res.status (200).json ({ id, status: 'ok' })id,name,email,budget: normali
     name;
     email;
     budget: normalizedBudget;
-    timeline: String(timeline |'');
-    description: String(description);
+    timeline: String(timeline |''),
+  description: String(description);
   requests.push(record);
   await saveRequests(requests);
 
@@ -597,8 +565,8 @@ return res.status (200).json ({ id, status: 'ok' })id,name,email,budget: normali
     name;
     email;
     budget: normalized_budget;
-    timeline: String (timeline || '');
-    description: String (description);
+    timeline: String (timeline || ''),
+  description: String (description);
     talent_slug: talent_slug || null;
     ai_summary: ai.summary;
     ai_type: ai.type;

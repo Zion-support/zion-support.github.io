@@ -1569,11 +1569,11 @@ ease: 'linear',          }}
             duration: 15
             repeat: Infinity
             ease: 'linear',          }}
-        />
-      </div>
-    </div>
-  );
-};export default UltraFuturisticBackground2045;            ease: 'linear'
+        />;
+      </div>;
+    </div>;
+  )
+};export default UltraFuturisticBackground2045;            ease: 'linear';
           }}
         />
       </div>

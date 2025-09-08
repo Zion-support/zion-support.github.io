@@ -1,113 +1,74 @@
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  AcademicCapIcon, 
-  GlobeAltIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  RocketLaunchIcon,
-  ShieldCheckIcon
-} from '@heroicons/react/24/outline'
-
-const researchAreas = $2;
-    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
-    icon: LightBulbIcon,
-    topics: [
-      'Deep Learning & Neural NetworksNatural Language ProcessingComputer Vision & Image RecognitionReinforcement LearningFederated LearningExplainable AI'
-    ]},
+import {
   {
-    name: 'Quantum Computing & AI',
-    description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
-    icon: CpuChipIcon,
-    topics: [
-      'Quantum Neural NetworksQuantum Machine LearningQuantum-Classical Hybrid SystemsQuantum Error CorrectionQuantum Algorithms for AIQuantum Supremacy Applications'
-    ]},
+    metric: 'Patents Filed'
+    value: '25+'
+    description: 'Intellectual property protecting our innovations'}
   {
-    name: 'Autonomous Systems & Robotics',
-    description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
-    icon: RocketLaunchIcon,
-    topics: [
-      'Autonomous Decision MakingMulti-Agent SystemsRobotic Learning & AdaptationHuman-Robot InteractionAutonomous NavigationSwarm Intelligence'
-    ]},
   {
-    name: 'AI Ethics & Governance',
-    description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
-    icon: ShieldCheckIcon,
-    topics: [
-      'AI Bias & FairnessPrivacy-Preserving AIAI Safety & AlignmentEthical AI GuidelinesAI Regulation & PolicyHuman-AI Collaboration'
-    ]}]
-
-const recentPublications = $2;
-    authors: 'Dr. Marcus Rodriguez, Dr. Elena Petrov, et al.',
-    journal: 'Nature Machine Intelligence',
-    year: '2024',
-    doi: '10.1038/s42256-024-00001-x',
-    abstract: 'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.',
-    impact: 'High Impact'},
+    name: 'Stanford University'
+    location: 'Stanford, CA'
+    focus: 'AI & Machine Learning'
+    collaboration: 'Joint research programs and student exchanges'}
   {
-    title: 'Autonomous Business Operations: AI-Driven Process Optimization',
-    authors: 'Dr. Sarah Chen, James Kim, et al.',
-    journal: 'Harvard Business Review',
-    year: '2024',
-    doi: '10.1000/hbr.2024.001',
-    abstract: 'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
-    impact: 'Industry Leading'},
+    name: 'MIT'
+    location: 'Cambridge, MA'
+    focus: 'Quantum Computing & AI'
+    collaboration: 'Shared research facilities and joint publications'}
   {
-    title: 'Multi-Modal AI Research Assistant: Accelerating Scientific Discovery',
-    authors: 'Dr. Elena Petrov, Dr. Marcus Rodriguez, et al.',
-    journal: 'Science',
-    year: '2023',
-    doi: '10.1126/science.abc1234',
-    abstract: 'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.',
-    impact: 'Breakthrough'},
+    name: 'University of Oxford'
+    location: 'Oxford, UK'
+    focus: 'AI Ethics & Governance'
+    collaboration: 'Policy research and ethical AI development'}
   {
-    title: 'Ethical AI Development: A Framework for Responsible Innovation',
-    authors: 'Dr. Sarah Chen, Dr. Elena Petrov, et al.',
-    journal: 'AI Ethics Journal',
-    year: '2023',
-    doi: '10.1000/aie.2023.001',
-    abstract: 'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',
-    impact: 'Foundational'}]
-
-const researchImpact = $2;
-    value: '150+',
-    description: 'Peer-reviewed publications in top-tier journals and conferences'},
-  {
-    metric: 'Citations',
-    value: '10,000+',
-    description: 'Academic citations demonstrating research influence'},
-  {
-    metric: 'Patents Filed',
-    value: '25+',
-    description: 'Intellectual property protecting our innovations'},
-  {
-    metric: 'Research Collaborations',
-    value: '50+',
-    description: 'Partnerships with leading academic institutions'}]
-
-const academicPartners = $2;
-    location: 'Stanford, CA',
-    focus: 'AI & Machine Learning',
-    collaboration: 'Joint research programs and student exchanges'},
-  {
-    name: 'MIT',
-    location: 'Cambridge, MA',
-    focus: 'Quantum Computing & AI',
-    collaboration: 'Shared research facilities and joint publications'},
-  {
-    name: 'University of Oxford',
-    location: 'Oxford, UK',
-    focus: 'AI Ethics & Governance',
-    collaboration: 'Policy research and ethical AI development'},
-  {
-    name: 'University of Tokyo',
-    location: 'Tokyo, Japan',
-    focus: 'Robotics & Autonomous Systems',
-    collaboration: 'Robotic learning and human-robot interaction'}]
-
-export default function ResearchPage() {
+      {/* Hero section */}
+      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
+          <div className=&quot;text - center & quot;>;
+            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
+              Research &{' '}
+              innovative discoveries, and academic collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Research Focus Areas */}
+      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Research</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            Focus Areas
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our research spans the cutting edge of AI and technology, driving innovation
+            and advancing the state of the art.          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {researchAreas.map((area, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h3>
+              <p className="text-gray-600 mb-6">{area.description}</p>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Research Focus:</h4>
+                <ul className="space-y-2">
+                  {area.focus.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center">
+                      <span className="text-blue-600 mr-3">•</span>
+                      {item}
+                    </li>
+                  ))}
   return (
-    <div className = $2;
+    <div className="bg-black">
+      {/* Hero section */}
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Research &{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Innovation
+              </span>
+            </h1>
               innovative discoveries, and academic collaboration.
             </p>
           </div>
@@ -181,10 +142,11 @@ export default function ResearchPage() {
             </a>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Research Careers <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
+            </Link>
+          </div>        </div>
       </div>
     </div>
   )
-}
+};
+
+export default Page;

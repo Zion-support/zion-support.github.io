@@ -1,105 +1,15 @@
 <<<<<<< HEAD
 
-
-
-
-
-
-
-
-
-=======
-
-
-
-import React from 'react';,
-import Head from 'next/head';,
-import Card from '../components/ui/Card';,
-import Button from '../components/ui/Button';
-import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-
-
-import React from 'react';,
-import Head from 'next/head';,
-import Card from '../components/ui/Card';,
-import Button from '../components/ui/Button';
-import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-
-
-export default function BusinessToolsPage() {
-  const businessTools = null;
-            communicate effectively, market their products, and grow their operations. Real pricing and features.
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function BusinessToolsPage() {
   const businessTools = [
     {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      category: 'Project Management',
-  tools: [
-        {
-          name: 'Notion',
-  description:
-            'All-in-one workspace for notes, docs, projects, and team collaboration.',
-          features: [
-            'Templates',
-            'Database views',
-            'Real-time editing',
-            'Integrations',
-            'Team spaces',
-          ],
-          pricing: 'Free - $8/month',
-  website: 'https://notion.so',
-          icon: <FileText className='w-6 h-6'    />,
-          color: 'bg-gradient-to-br from-gray-800 to-black',}
-  popular: true,}
-        },
-        {
-          name: 'Asana',
-  description:
-            'Work management platform for teams to organize, track, and manage their work.',
-          features: [
-            'Task management',
-            'Project timelines',
-            'Team collaboration',
-            'Workflow automation',
-            'Reporting',
-          ],
-          pricing: 'Free - $10.99/month',
-  website: 'https://asana.com',
-          icon: <CheckCircle className='w-6 h-6'    />,}
-          color: 'bg-gradient-to-br from-pink-500 to-red-600',}
-        },
-        {
-          name: 'Monday.com',
-  description:
-            'Visual project management platform with customizable workflows and automation.',
-          features: [
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            'Visual boards',
-            'Automation',
-            'Time tracking',
-            'Integrations',
-            'Analytics',
-          ],
-          pricing: '$8/month - $16/month',
-  website: 'https://monday.com',
-          icon: <Calendar className='w-6 h-6'    />,}
-          color: 'bg-gradient-to-br from-red-500 to-pink-600',}
-        },
-      ],
-    },
-    {
+      ]
+};
       category: 'Communication & Collaboration',
   tools: [
 
+      tools: [
         {
           name: 'Slack',
   description:
@@ -299,20 +209,99 @@ export default function BusinessToolsPage() {
   description:
             'Complete creative software suite for design, photography, and video.',
           features: [
-            'Photoshop',
-            'Illustrator',
-            'InDesign',
-            'Premiere Pro',
-            'After Effects',
-          ],
-          pricing: '$52.99/month',
-  website: 'https://adobe.com/creativecloud',
-          icon: <Palette className='w-6 h-6'    />,}
-          color: 'bg-gradient-to-br from-orange-500 to-red-600',}
-        },
-      ],
-    },
-    {
+            'Photoshop'
+            'Illustrator'
+            'InDesign'
+            'Premiere Pro'
+            'After Effects'
+          ]
+          pricing: '$52.99/month'
+          website: 'https://adobe.com/creativecloud'
+          icon: <Palette className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-orange-500 to-red-600'
+        }
+      ]
+    },    {          icon: <Palette className="w-6 h-6" />
+          color: 'bg-gradient-to-br from-orange-500 to-red-600'
+        }
+      ]
+    }
+      category: 'Analytics & Business Intelligence'
+      tools: [
+        {
+          name: 'Google Analytics'
+          description:
+            'Free web analytics service that tracks and reports website traffic.'
+          features: [
+            'Real-time data'
+            'Audience insights'
+            'Conversion tracking'
+            'E-commerce'
+            'Goals'
+          ]
+          website: 'https://analytics.google.com'
+          icon: <BarChart3 className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-green-600'
+          popular: true
+        }
+        {
+          name: 'Tableau'
+          description:
+            'Data visualization and business intelligence platform for analytics.'
+          features: [
+            'Interactive dashboards'
+            'Data blending'
+            'Real-time analytics'
+            'Mobile support'
+            'Collaboration'
+          ]
+          pricing: '$70/month - $35/month'
+          website: 'https://tableau.com'
+          icon: <ChartBar className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+        }
+        {
+          name: 'Mixpanel'
+          description:
+            'Product analytics platform for understanding user behavior and product usage.'
+          features: [
+            'Event tracking'
+            'Funnel analysis'
+            'Cohort analysis'
+            'A/B testing'
+            'Real-time data'
+          ]
+          pricing: 'Free - $25/month'
+          website: 'https://mixpanel.com'
+          icon: <TrendingUp className='w-6 h-6' />
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+        }
+      ]
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
       category: 'Analytics & Business Intelligence',
   tools: [
         {
@@ -485,29 +474,29 @@ const businessInsights = [
 
   const productivityTips = [;
     {;
-      title: 'Start with Free Tiers',;
-      description:;
+      title: 'Start with Free Tiers',,
+  description:;
         'Most tools offer free versions to test before committing to paid plans.',;
       icon: <CheckCircle className='w-6 h-6 text-green-400' />,;
     },;
-      title: 'Focus on Integration',;
-      description:;
+      title: 'Focus on Integration',,
+  description:;
         'Choose tools that work well together to avoid data silos and manual work.',;
       icon: <Cog className='w-6 h-6 text-blue-400' />,;
     },;
     {;
-      title: 'Measure ROI',;
-      description:;
+      title: 'Measure ROI',,
+  description:;
         "Track how each tool improves your team's productivity and business outcomes.",;
       icon: <ChartBar className='w-6 h-6 text-purple-400' />,;
     },;
     {;
-      title: 'Train Your Team',;
-      description:;
+      title: 'Train Your Team',,
+  description:;
         'Invest in proper training to maximize the value of your chosen tools.',;
       icon: <Users className='w-6 h-6 text-orange-400' />,;
-    },  ];              title: 'Train Your Team',;
-        description: 'Invest in proper training to maximize the value of your chosen tools.',;
+    },  ];              title: 'Train Your Team',,
+  description: 'Invest in proper training to maximize the value of your chosen tools.',;
         icon: <Users className="w-6 h-6 text-orange-400" />;
     }
 
@@ -1072,9 +1061,6 @@ key={index}
         </div>
       </section>
 
-
-
-
       {/* Business Tools */}
 <<<<<<< HEAD
 
@@ -1250,6 +1236,26 @@ style={{animationDelay: `${categoryIndex * 0.2 + toolIndex * 0.,}
                       Visit Website
                       <ExternalLink className="w-4 h-4 ml-2" />
                   </Card>
+                      </ul>;
+                    </div>;
+
+                    <Button
+
+                    <Button
+                      href={tool && tool.website}
+                      variant='primary'
+                      size='sm'
+                      className='w-full group-hover:scale-105 transition-transform duration-300'
+                      external>;
+                      Visit Website;
+                      <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant="primary";
+                      size="sm";
+                      className="w-full group-hover:scale-105 transition-transform duration-300";
+                      external;
+                    >;
+                      Visit Website;
+                      <ExternalLink className="w-4 h-4 ml-2" />;
+                  </Card>;
                 ))}
               </div>;
             </div>;
@@ -1271,11 +1277,25 @@ style={{animationDelay: `${categoryIndex * 0.2 + toolIndex * 0.,}
                           {tool.pricing}
                         </span>;
                       </div>;
-                      <ul className='space-y-2'    />;
-                        {tool.features.map((feature, featureIndex) => (<li;}
-                            key={featureIndex}
-
-
+                      <ul className='space - y-2'>;
+                        {tool.features.map ((feature, feature_index) => (
+                          <li;
+                            key={feature_index}
+                            className='flex items - center text - gray - 300 text - sm';
+                          >;
+                            <Check className='w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0' />                            {feature}                        {tool.icon}
+                      </div>;
+                      <h4 className="text - xl font - bold text-white mb-2">{tool.name}</h4>;
+                      <p className="text - gray - 400 text-sm leading-relaxed">{tool.description}</p>;
+                    </div>;
+                    <div className="mb-6">;
+                      <div className="text-center mb-4">;
+                        <span className="text - 2xl font - bold text-cursor-blue">{tool.pricing}</span>;
+                      </div>;
+                      <ul className="space-y-2">;
+                        {tool.features.map ((feature, feature_index) => (
+                          <li key={feature_index} className="flex items - center text - gray-300 text-sm">;
+                            <Check className="w - 4 h - 4 text - cursor - blue mr - 3 flex-shrink-0" />;
                             {feature}
                           </li>;
                         ))}
@@ -1295,104 +1315,13 @@ style={{animationDelay: `${categoryIndex * 0.2 + toolIndex * 0.,}
                       className='w-full group-hover:scale-105 transition-transform duration-300';
                       external    />;
                       Visit Website;
-                      <ExternalLink className='w-4 h-4 ml-2'    />                    </Button>                      variant=\'primary\';
-                      size=\'sm\';
-                      className=\'w-full group-hover:scale-105 transition-transform duration-300\';
-                      external>
-
-<<<<<<< HEAD
-
-
-                    <Button
-
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                ))}
-              </div>;
-            </div>;
-          ))}
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
-        </div>
-      </section>
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      {/* Productivity Tips */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-16'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              Productivity Tips & Best Practices
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Maximize the value of your business tools with these proven strategies and best practices.
-            </p>
-          </div>
-
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'    />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              Maximize the value of your business tools with these proven;
-              strategies and best practices.;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'    />;
-            {productivityTips.map((tip, index) => (</div>;}
-      </section>;{/* Productivity Tips */}
-      <section className='section-padding bg-gradient-cursor-accent'    />;
-        <div className='container-cursor'    />;
-          <div className='text-center mb-16'    />;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'    />;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'    />;
-<<<<<<< HEAD
-=======
-                      </p>;
-                    </div>;
-                    <div className='mb - 6'    />;
-                      <div className='text - center mb - 4'    />;
-                        <span className='text - 2xl font - bold text - cursor - blue'    />;
-                          {tool.pricing}
-                        </span>;
-                      </div>;
-                      <ul className='space - y-2'    />;
-                        {tool.features.map ((feature, feature_index) => (<li;}
-                            key={feature_index}
-                            className='flex items - center text - gray - 300 text - sm'    />
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
+                      <ExternalLink className='w - 4 h - 4 ml - 2' />                    </Button>                      variant="primary";
+                      size="sm";
+                      className="w - full group - hover:scale - 105 transition-transform duration-300";
+                      external;
+                    >;
                       Visit Website;
-                      <ExternalLink className='w - 4 h - 4 ml - 2'    />                    </Button>                      variant=\'primary\';
-                      size=\'sm\';
-                      className=\'w - full group - hover:scale - 105 transition - transform duration - 300\';
-                      external>
-
-                      Visit Website;
-                      <ExternalLink className=\"w - 4 h - 4 ml - 2\"    />;
+                      <ExternalLink className="w - 4 h-4 ml-2" />;
                   </Card>))}
               </div>;
             </div>))}
@@ -1432,79 +1361,44 @@ key={index}
 
                 className='card-hover border-gradient-blue text-center'
 
+              </Card>
 
-                style={{ animationDelay: `${index * 0.1}s` ,
-}
-                  />;
-                <div className='flex justify-center mb-4'    />{tip.icon}</div>;
-                <h3 className='text-xl font-bold text-white mb-3'    />;
+            ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='container-cursor text-center relative z-10'>;
+          <h2 className='text-responsive-lg font-bold text-white mb-8'>;
+          </h2>;
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
+            {productivity_tips.map ((tip, index) => (
+              <Card;
+                key={index}
+                className='card - hover border - gradient - blue text - center';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='flex justify - center mb - 4'>{tip.icon}</div>;
+                <h3 className='text - xl font - bold text - white mb - 3'>;
                   {tip.title}
                 </h3>;
                 <p className='text-gray-400 text-sm leading-relaxed'    />;
                   {tip.description}
-
-                </p>
-              </Card>
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            ))}
-          </div>;
-        </div>;
-      </section>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-            ))}
-      {/* CTA Section */}
-<<<<<<< HEAD
-
-      <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'    />;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />;
-        <div className='container-cursor text-center relative z-10'    />;
-          <h2 className='text-responsive-lg font-bold text-white mb-8'    />;
-          </h2>;
-          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'    />;
-            {productivity_tips.map ((tip, index) => (<Card;}
-                key={index}
-                className='card - hover border - gradient - blue text - center';
-                style={{ animation_delay: `${index * 0.1}s` ,
-=======
-      <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>;'
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-['size':20px_20px] opacity-10' />;'
-        <div className='container-cursor text-center relative z-10'>;'
-          <h2 className='text-responsive-lg font-bold text-white mb-8'>;'
-          </h2>;
-          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;'
-          <div className='grid grid - cols - 1 'md':grid - cols - 2 'lg':grid - cols - 4 gap - 6'>;'
-            {productivity_tips.map ((tip, index) => (<Card;
-                }
-                key={index}
-                className='card - hover border - gradient - blue text - center';'
-                style={ 'animation_delay': `${index * 0.1}s` ,`
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-              >;
-                <div className='flex justify - center mb - 4'>{tip.icon}</div>;'
-                <h3 className='text - xl font - bold text - white mb - 3'>;'
-                  {tip.title}
-                </h3>;
-                <p className='text - gray - 400 text - sm leading - relaxed'>;'
-                  {tip.description}
-                </p>              </Card>                <div className='flex justify - center mb - 4'>;'
+                </p>              </Card>                <div className="flex justify-center mb-4">;
                   {tip.icon}
                 </div>;
-<<<<<<< HEAD
-                <h3 className=\"text - xl font - bold text - white mb - 3\"    />{tip.title}</h3>;
-                <p className=\"text - gray - 400 text - sm leading - relaxed\"    />{tip.description}</p>))}
-
-=======
-                <h3 className='text - xl font - bold text - white mb - 3'>{tip.title}</h3>;'
-                <p className='text - gray - 400 text - sm leading - relaxed'>{tip.description}</p>))}'
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                <h3 className="text - xl font - bold text-white mb-3">{tip.title}</h3>;
+                <p className="text - gray - 400 text-sm leading-relaxed">{tip.description}</p>))}
           </div>;
         </div>;
       </section>;

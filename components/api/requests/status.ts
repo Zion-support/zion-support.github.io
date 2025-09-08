@@ -48,24 +48,9 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
   writeAll(items);
 }
 
-function writeAll(items: any[]) {
-  fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true}),
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
-
-
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });
-  const { id, status } = req && req.body || {};
-  if (!id || !status)
-    return res && res.status(400).json({ error: 'Missing id or status' });
-
-=======
+;
+const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
+;
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
   try {}
     return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'));}

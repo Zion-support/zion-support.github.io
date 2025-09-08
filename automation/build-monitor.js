@@ -6,6 +6,9 @@ const { execSync } = require('child_process');
  * Build Monitor - Continuously monitors build health and reports issues
  */
 class BuildMonitor {
+<<<<<<< HEAD
+  constructor() {    this.isRunning = false;
+=======
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
@@ -134,6 +137,7 @@ class BuildMonitor {
         this.log('Could not read previous report', 'WARN');
       }
     this.isRunning = false;
+>>>>>>> origin/main
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.lastBuildTime = null;
@@ -152,74 +156,11 @@ class BuildMonitor {
     }
   }
 <<<<<<< HEAD
-
-
 =======
-    const report = {
-      ...results
-      trends: {
-        consecutiveFailures: this.consecutiveFailures
-        improvementSinceLastRun: previousReport ?
-          (results.build.status === 'success' && previousReport.build.status === 'failed') : false
-        degradationSinceLastRun: previousReport ?
-          (results.build.status === 'failed' && previousReport.build.status === 'success') : false
-      }
-      healthScore: this.calculateHealthScore(results)
-      recommendations: this.generateRecommendations(results)
-    }
-module.exports = BuildMonitor;
-ursor/automate-test-improve-and-merge-code-646c;
-const fs = require('fs)const path = require('path'),const { execSync } = require(child_process')class BuildMonitor {constructor() {this.logFile = path.join(__dirname, 'logsbuild-monitor.log)this.reportFile = path.join(__dirname, 'reportsbuild-status.json')this.alertThreshold = 3; // Alert after 3 consecutive failures;
-
-const fs = require('fs);
-const path = require('path'),
-  const { execSync } = require(child_process');
->>>>>>> origin/cursor/delete-old-data-records-6bba
-class BuildMonitor {
-  constructor() {
-    this.logFile = path.join(__dirname, 'logsbuild-monitor.log);
-    this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
-    this.alertThreshold = 3; // Alert after 3 consecutive failures
-    this.consecutiveFailures = 0;
-<<<<<<< HEAD
 
 
 
-      dependencies: { status: 'unknown, outdated: [] }
-    };
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Build health report updated: ${this.reportFile}`);
-    return report}
-  calculateHealthScore(results) {
-    let score = 100;
-    if (results.build.status === 'failed') score -= 40;
-    if (results.lint.status === 'failed') score -= 20;
-    if (results.typeCheck.status === 'failed') score -= 20;
-    if (results.dependencies.status === 'warning') score -= 10;
-    // Penalty for slow builds
-    if (results.build.duration > 120000) score -= 10; // 2 minutes
-    return Math.max(0, score)}
-  generateRecommendations(results) {
-    const recommendations = [];
-    if (results.build.status === 'failed') {
-      recommendations.push('Fix build errors immediately');
-      recommendations.push('Run intelligent error fixer')}
-    if (results.lint.status === 'failed') {
-      recommendations.push('Address linting issues');
-      recommendations.push('Consider running auto-formatter')}
-    if (results.typeCheck.status === 'failed') {
-      recommendations.push('Fix TypeScript errors');
-      recommendations.push('Review type definitions')}
-    if (results.build.duration > 180000) { // 3 minutes
-      recommendations.push('Optimize build performance');
-      recommendations.push('Consider build caching')}
-    if (results.dependencies.outdated.length > 10) {
-      recommendations.push('Update outdated dependencies');
-      recommendations.push('Schedule dependency maintenance')}
-    return recommendations}
-  async run() {
-    this.log('Starting build health check...');
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+>>>>>>> origin/main
   async checkBuildStatus() {
     try {
 
@@ -241,6 +182,9 @@ class BuildMonitor {
         await this.triggerBuild();
       }
 <<<<<<< HEAD
+            
+=======
+      
       
       
 =======
@@ -426,6 +370,7 @@ if (require.main === module) {
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
   const command = process.argv[2];
+>>>>>>> origin/main
   switch (command) {
     case 'start':
       monitor.start().catch(console.error)
@@ -451,7 +396,11 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+<<<<<<< HEAD
 module.exports = BuildMonitor;
+module.exports = BuildMonitor;
+=======
+
 
 const fs = require('fs);
 const path = require('path'),
@@ -665,6 +614,9 @@ class BuildMonitor {
 }
 // Main execution
 if (require.main === module) {
-  const monitor = new BuildMonitor();
-  monitor.run().catch(console.error)}
+  const monitor = new BuildMonitor(),
+
+
 module.exports = BuildMonitor;
+module.exports = BuildMonitor;
+>>>>>>> origin/main

@@ -29,7 +29,10 @@ return (
       />
     );
   }
-);
-Button.displayName = 'Button';
-
-export { Button, buttonVariants };
+  
+  return (
+    <button onClick={onClick} className={classes}>
+      {children}
+    </button>
+  );
+}

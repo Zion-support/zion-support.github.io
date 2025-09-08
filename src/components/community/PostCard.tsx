@@ -1,3 +1,33 @@
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ForumPost } from "@/types/community";
+import { logInfo } from '@/utils/productionLogger';
+interface PostCardProps {
+  post: ForumPost,
+  compact?: boolean
+}
+
+import React from 'react',
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link",
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { ForumPost } from "@/types/community",
+import { logInfo } from '@/utils/productionLogger',
+
+interface PostCardProps {
+  post: ForumPost
+  compact?: boolean
+}
+
+      "transition-shadow hover: shadow-md",
 import React from 'react';
 
 interface PostCardProps extends React.PropsWithChildren<{}> {
@@ -20,22 +50,5 @@ author: {
 
 export default function PostCard(...args: []):  {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">
-      <div className="flex items-start space-x-4">
-        <img src={post.author.avatar} alt={post.author.name} className="w-10 h-10 rounded-full"/>
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold text-zion-cyan mb-2">{post.title}</h3>
-          <p className="text-zion-slate-light mb-3 line-clamp-3">{post.content}</p>
-          <div className="flex items-center justify-between text-sm text-zion-slate-light">
-            <span>By {post.author.name}</span>
-            <span>{new Date(post.createdAt).toLocaleDateString()}</span>
-          </div>
-          <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light">
-            <span>{post.replies.length} replies</span>
-            <span>{post.likes} likes</span>
-            <span>{post.views} views</span>
-          </div>
-        </div>
-      </div>
-    </div>);
-}
+
+export default PostCard;

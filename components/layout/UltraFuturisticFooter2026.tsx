@@ -243,6 +243,211 @@ const serviceCategories = [
       { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ]
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Brain,
+  DollarSign,
+  Dna,
+  Rocket,
+  Users,
+  Award,
+  Zap,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,
+  Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+}
+{
+  name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics';
+}
+{
+  name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success';
+}
+{
+  name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator';
+}
+{
+  name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence';
+}];
+}
+{
+  title: 'Cybersecurity & Quantum', services: [ {
+  name: 'Quantum Encryption Platform', href: '/quantum - encryption - platform';
+}
+{
+  name: 'AI Autonomous Threat Hunter', href: '/ai - autonomous - threat - hunter';
+}
+{
+  name: 'Quantum Zero Trust Security', href: '/quantum - zero - trust - security';
+}
+{
+  name: 'AI Autonomous Vulnerability Scanner', href: '/ai - autonomous - vulnerability - scanner';
+}
+{
+  name: 'Quantum Secure Communication', href: '/quantum - secure - communication';
+}];
+}
+{
+  title: 'Fintech & Blockchain', services: [ {
+  name: 'Quantum Financial Trading Platform', href: '/quantum - financial - trading - platform';
+}
+{
+  name: 'AI Autonomous Wealth Management', href: '/ai - autonomous - wealth - management';
+}
+{
+  name: 'Quantum Blockchain Finance', href: '/quantum - blockchain - finance';
+}
+{
+  name: 'AI Autonomous Insurance Platform', href: '/ai - autonomous - insurance - platform';
+}
+{
+  name: 'Quantum Payment Processing', href: '/quantum - payment - processing';
+}];
+}
+{
+  title: 'Healthcare & Biotech', services: [ {
+  name: 'AI Autonomous Medical Diagnostics', href: '/ai - autonomous - medical - diagnostics';
+}
+{
+  name: 'Quantum Drug Discovery Platform', href: '/quantum - drug - discovery - platform';
+}
+{
+  name: 'AI Autonomous Patient Care', href: '/ai - autonomous - patient - care';
+}
+{
+  name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis';
+}
+{
+  name: 'AI Autonomous Clinical Trials', href: '/ai - autonomous - clinical - trials';
+}];
+}];
+{
+  /* Background Effects */;
+}<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {
+  {
+    title: 'AI & Automation',
+    services: [;
+      {
+        name: 'AI Autonomous Business Processor',
+        href: '/ai - autonomous - business - processor',
+      },
+      {
+        name: 'AI Predictive Enterprise Analytics',
+        href: '/ai - predictive - enterprise - analytics',
+      },
+      {
+        name: 'AI Autonomous Customer Success',
+        href: '/ai - autonomous - customer - success',
+      },
+      {
+        name: 'AI Autonomous Marketing Orchestrator',
+        href: '/ai - autonomous - marketing - orchestrator',
+      },
+      {
+        name: 'AI Autonomous Sales Intelligence',
+        href: '/ai - autonomous - sales - intelligence',
+      },
+    ],
+  },
+  {
+    title: 'Cybersecurity & Quantum',
+    services: [;
+      {
+        name: 'Quantum Encryption Platform',
+        href: '/quantum - encryption - platform',
+      },
+      {
+        name: 'AI Autonomous Threat Hunter',
+        href: '/ai - autonomous - threat - hunter',
+      },
+      {
+        name: 'Quantum Zero Trust Security',
+        href: '/quantum - zero - trust - security',
+      },
+      {
+        name: 'AI Autonomous Vulnerability Scanner',
+        href: '/ai - autonomous - vulnerability - scanner',
+      },
+      {
+        name: 'Quantum Secure Communication',
+        href: '/quantum - secure - communication',
+      },
+    ],
+  },
+  {
+    title: 'Fintech & Blockchain',
+    services: [;
+      {
+        name: 'Quantum Financial Trading Platform',
+        href: '/quantum - financial - trading - platform',
+      },
+      {
+        name: 'AI Autonomous Wealth Management',
+        href: '/ai - autonomous - wealth - management',
+      },
+      {
+        name: 'Quantum Blockchain Finance',
+        href: '/quantum - blockchain - finance',
+      },
+      {
+        name: 'AI Autonomous Insurance Platform',
+        href: '/ai - autonomous - insurance - platform',
+      },
+      {
+        name: 'Quantum Payment Processing',
+        href: '/quantum - payment - processing',
+      },
+    ],
+  },
+  {
+    title: 'Healthcare & Biotech',
+    services: [;
+      {
+        name: 'AI Autonomous Medical Diagnostics',
+        href: '/ai - autonomous - medical - diagnostics',
+      },
+      {
+        name: 'Quantum Drug Discovery Platform',
+        href: '/quantum - drug - discovery - platform',
+      },
+      {
+        name: 'AI Autonomous Patient Care',
+        href: '/ai - autonomous - patient - care',
+      },
+      { name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis' },
+      {
+        name: 'AI Autonomous Clinical Trials',
+        href: '/ai - autonomous - clinical - trials',
+      },
+    ],
+  }, ];}
+;
+const service_categories = [;
+  {
+    title: 'AI & Automation',
+    services: [;
+      { name: 'AI Autonomous Business Processor', href: '/ai - autonomous - business - processor' },
+      { name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics' },
+      { name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success' },
+      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator' },
+      { name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence' }
+    ];
   }
 ];
 const companyLinks = [
@@ -338,6 +543,36 @@ export default function UltraFuturisticFooter2026() {
               </div>
             </motion.div>
           </div>
+
+              </p>
+              {/* Contact Info */}
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
+                  <span>{contactInfo.website}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+              <div className='space-y-3'>;
+                <div className='flex items-center text-gray-300'>;
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300'>;
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span>{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300'>;
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span>{contactInfo && contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300'>;
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300">;
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;
+                  <span>{contactInfo && contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <motion.div
@@ -366,30 +601,9 @@ export default function UltraFuturisticFooter2026() {
                   <li key={serviceIndex}>
                     <Link
                       href={service.href}
-                      className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
-                    >
-                      <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />                      {service.name}                {category.title}
-              </h4>
-              <ul className="space-y-2">
-                {category.services.map((service, serviceIndex) => (
-                  <li key={serviceIndex}>
-                    <Link
-                      href={service.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"><ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
-                {category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
-                {category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
-                {category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
-                {category.title}
-              </h4>
-              <ul className="space-y-2">
-                {category.services.map((service, serviceIndex) => (
-                  <li key={serviceIndex}>
-                    <Link 
-                      href={service.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"><ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text-sm flex items-center group";
+                    >;
+                      <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition-transform duration-300" />;
                       {service.name}
                     </Link>
                   </li>
@@ -399,7 +613,7 @@ export default function UltraFuturisticFooter2026() {
           ))}
         </div>
         {/* Additional Links */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
           {/* Company Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -422,8 +636,15 @@ export default function UltraFuturisticFooter2026() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
+                    className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm'                  >              Company;
+            </h4>;
+            <ul className="space-y-2">;
+              {company_links.map ((link, index) => (
+                <li key={index}>;
+                  <Link;
+                    href={link.href}
+                    className="text - gray - 400 hover:text - cyan - 400 transition - colors duration-300 text-sm";
+                  >;
                     {link.name}
                   </Link>
                 </li>
@@ -445,15 +666,8 @@ export default function UltraFuturisticFooter2026() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm'                  >              Resources
-            </h4>
-            <ul className="space-y-2">
-              {resourceLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
+                    className="text - gray - 400 hover:text - cyan - 400 transition - colors duration-300 text-sm";
+                  >;
                     {link.name}
                   </Link>
                 </li>
@@ -494,6 +708,12 @@ export default function UltraFuturisticFooter2026() {
             </div>
           </motion.div>
         </div>
+
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+              ))}
         {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -592,6 +812,62 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
+    </footer>;
+  );
+}
+
+          className='border - t border - gray - 800 pt - 8';
+        >;
+          <div className='flex flex - col md:flex - row justify - between items - center'>;
+            <div className='text - gray - 400 text - sm mb - 4 md:mb - 0'>;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link;
+                href='/privacy';
+                className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2';
+              >;
+                Privacy Policy;
+              </Link>;
+              <span className='mx - 2'>|</span>;
+              <Link;
+                href='/terms';
+                className='hover:text - cyan - 400 transition - colors duration - 300';
+              >;
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className='flex items - center space - x-2'>;
+              <div className='flex items - center text - gray - 400 text - sm'>;
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;
+              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;
+          <div className="flex flex - col md: flex - row justify-between items-center">;
+            <div className="text - gray - 400 text - sm mb-4 md:mb-0">;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration-300 ml-2">;
+                Privacy Policy;
+              </Link>;
+              <span className="mx-2">|</span>;
+              <Link href="/terms" className="hover:text - cyan - 400 transition-colors duration-300">;
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <div className="flex items - center text - gray-400 text-sm">;
+                <Star className="w - 4 h - 4 text - yellow-400 mr-1" />;
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded-full animate-pulse"></div>;
+              <div className="text - cyan - 400 text-sm font-semibold">;
+                99.9% Uptime;
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+  );
+
     </footer>
 );
 }

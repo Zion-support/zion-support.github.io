@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
@@ -51,8 +53,8 @@ async function handler(req, res) {
 }
 
 export default withErrorLogging(handler);
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-=======
+>>>>>>> origin/main
+
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
@@ -61,5 +63,22 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+<<<<<<< HEAD
+=======      url: session.url
+=======
+      url: session.url
+>>>>>>> origin/main
+    })
+  } catch (err) {,
+    // console.error('Checkout session API error:, err),
+    res.statusCode = 500,
+    res.json({ error: err.message || 'Checkout session creation failed' })
+  }
+};
+export default withErrorLogging(handler),
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/main
+
+export default withErrorLogging(handler);

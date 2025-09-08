@@ -42,9 +42,20 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
       } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Translation failed')
       } finally {
-
-
-
+        if (set_loading (false)) {
+  $2
+}      }      } catch (e: any) {
+        if (set_error (e?.message || 'Translation failed')) {
+  $2
+}
+      } finally {
+        if (set_loading (false)) {
+  $2
+}
+      }
+    }
+  }, [key, debounce_ms]);
+;
   return { translations, loading, error }
 
     }

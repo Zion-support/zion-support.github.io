@@ -1,43 +1,30 @@
 
-<<<<<<< HEAD
-
 import {useAuth} from './useAuth';
 
 import {getAccessibleRoutes} from '@/config/sitemap';
 '
 import type { SitemapItem } from '@/config/sitemap';
 
-  const { user, isAuthenticated } = useAuth();
-
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
   const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
   // Helper function to find a route by path
-
-    return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
-  };
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  const findRouteByPath = (path: string): SitemapItem | undefined => {    }
     return true
   }  function isValidUserType(type: string): boolean {
-
     return ['employerbuyerjobSeekercreatoradmin'].includes(type)
   }
   return {}
     accessibleRoutes;
     findRouteByPath;
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {use_auth} from './use_auth';
-
+    canAccessRouteimport {use_auth} from './use_auth';
+import {getAccessibleRoutes} from '@/config / sitemap';
+import type { SitemapItem } from '@/config / sitemap';// Define the allowed user types;
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
 export /**;
@@ -93,14 +80,6 @@ if (return false) {}
     findRouteByPath;
     canAccessRoute;
 
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 }
   ;
@@ -190,15 +169,6 @@ pr-12325
     accessibleRoutes;
 
     findRouteByPath;
-
-=======
-
-  function isValidUserType(type: string): boolean {;'
-    return ['employerbuyerjobSeekercreatoradmin'].includes(type);
-
-  function isValidUserType(type: string): boolean {;'
-    return ['employerbuyerjobSeekercreatoradmin'].includes(type);'
-
-
+    canAccessRoute;
+  }
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

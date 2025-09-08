@@ -49,74 +49,7 @@ import React, { useState } from 'react';
 
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-
-import React, { useState } from 'react',
-import Head from 'next/head';,
-import Card from '../components/ui/Card';,
-import Button from '../components/ui/Button';
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
-export default function URLShortenerPage() {
-  Link,
-  Copy,
-  BarChart3,
-  ArrowRight,
-  RefreshCw,
-  CheckCircle,
-  ExternalLink,
-  QrCode,
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);}
-    this.state = { hasError: false,}
-};
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true,}
-};
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
-  }
-  
-  render() {
-    if (this.state.hasError) {}
-      return <div    />Something went wrong.</div>;}
-    }
-    
-    return this.props.children;
-  }
-}
-return (<> <Head> </p> </div> </section> /> </div> {
-  /* Custom Alias */ 
-}<div> <label className="block text-sm font-medium text-gray-300 mb-2" > Custom Alias (Optional) </label> <div className="flex space-x-2" > <span className="inline-flex items-center px-3 py-3 bg-gray-600 border border-gray-500 rounded-l-lg text-gray-300 text-sm" > zion.tech/ </span> <input /> </div> <p className="text-xs text-gray-400 mt-1" > Leave empty for auto-generated alias </p> </div> <Button > {
-  isShortening ? (<> </>) 
-}</Button> <div className="text-sm text-gray-400" > <p>• Professional, branded short URLs</p> <p>• Click tracking and analytics</p> <p>• QR code generation</p> <p>• Custom aliases available</p> </div> </div> </Card> </div> <div className="text-sm text-gray-400" >Total URLs</div> </div> </div> <div className="text-sm text-gray-400" >Total Clicks</div> </div> </div> </div> </div> </div> </div>) ) 
-}</div>) 
-}</div> </Card> </div> </div> </section> Your Shortened URLs </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Manage and track all your shortened URLs in one place. </p> </div> <div className="space-y-4" > {
-  shortenedUrls.map ( (url) => (</h3> <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full" > Active </span> </div> </div> </div> </div> </div> </div> <div className="text-xs text-gray-400" >Total Clicks</div> </div> <div className="flex space-x-2" > <Button > <Copy className="w-4 h-4 mr-2" /> Copy </Button> <Button > <ExternalLink className="w-4 h-4 mr-2" /> Visit </Button> </div> <div className="flex space-x-2" > <Button > <QrCode className="w-4 h-4 mr-2" /> QR Code </Button> <Button > <Trash2 className="w-4 h-4" /> </Button> </div> </div> </div> <img src= {
-  url.qrCode 
-}alt="QR Code" className="mx-auto mb-3 w-32 h-32" /> </p> </div>) 
-}</Card>) ) 
-}</div> </div> </section>) 
-}</h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Everything you need to create, manage, and track your shortened URLs effectively. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" > <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >🔗</div> <h3 className="text-xl font-bold text-white mb-4" >Custom Aliases</h3> <p className="text-gray-400" > Create memorable, branded short URLs with custom aliases that reflect your brand. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📊</div> <h3 className="text-xl font-bold text-white mb-4" >Click Analytics</h3> <p className="text-gray-400" > Track clicks, engagement, and performance metrics for all your shortened URLs. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📱</div> <h3 className="text-xl font-bold text-white mb-4" >QR Code Generation</h3> <p className="text-gray-400" > Generate QR codes for easy sharing and mobile access to your shortened URLs. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >🛡️</div> <h3 className="text-xl font-bold text-white mb-4" >Secure & Reliable</h3> <p className="text-gray-400" > Enterprise-grade infrastructure ensures your URLs are always accessible and secure. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >⚡</div> <h3 className="text-xl font-bold text-white mb-4" >Fast Performance</h3> <p className="text-gray-400" > Lightning-fast redirects with global CDN for optimal user experience worldwide. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >🔧</div> <h3 className="text-xl font-bold text-white mb-4" >Easy Management</h3> <p className="text-gray-400" > Simple dashboard to manage, edit, and delete your shortened URLs as needed. </p> </Card> </div> </div> </section> </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8" > <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📢</div> <h3 className="text-2xl font-bold text-white mb-4" >Marketing Campaigns</h3> <p className="text-gray-400 mb-6" > Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement. </p> <ul className="space-y-2 text-gray-300" > <li>• Track campaign performance</li> <li>• Measure click-through rates</li> <li>• Optimize marketing strategies</li> </ul> </Card> <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📱</div> <h3 className="text-2xl font-bold text-white mb-4" >Social Media</h3> <p className="text-gray-400 mb-6" > Share concise, professional links on social platforms with built-in analytics to understand audience engagement. </p> <ul className="space-y-2 text-gray-300" > <li>• Professional appearance</li> <li>• Engagement tracking</li> <li>• Brand consistency</li> </ul> </Card> <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📧</div> <h3 className="text-2xl font-bold text-white mb-4" >Email Marketing</h3> <p className="text-gray-400 mb-6" > Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement. </p> <ul className="space-y-2 text-gray-300" > <li>• Clean email design</li> <li>• Subscriber analytics</li> <li>• A/B testing support</li> </ul> </Card> <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >🏢</div> <h3 className="text-2xl font-bold text-white mb-4" >Business Presentations</h3> <p className="text-gray-400 mb-6" > Use short URLs in presentations, business cards, and printed materials for easy access and tracking. </p> <ul className="space-y-2 text-gray-300" > <li>• Professional branding</li> <li>• Easy sharing</li> <li>• Access tracking</li> </ul> </Card> </div> </div> </section> <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600"> <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"> flex flex-col sm:flex-row gap-4 justify-center"> <Button href=" /contact"size=" lg"className=" bg-white text-orange-600 hover:bg-gray-100"> Get Started Today <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /pricing"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-orange-600" > View Pricing </Button> </div> </div> </section> </>) 
-}
-  Link
-  Copy
-  BarChart3
-  ArrowRight
-  RefreshCw
-  CheckCircle
-  ExternalLink
-  QrCode
-  Settings
-  Trash2;
-} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
-export default function URLShortenerPage() {;}
+export default function URLShortenerPage() {;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 export default function URLShortenerPage() {;
@@ -169,7 +102,8 @@ export default function URLShortenerPage() {;
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
   }
   const getTotalUrls = () => {
-    return shortenedUrls.length;  };    setIsShortening(true);
+    return shortenedUrls.length
+};    setIsShortening(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     const alias = customAlias.trim() |generateRandomAlias();
@@ -715,29 +649,6 @@ short URL to get started.
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
-
-
-<section className='py-20 bg-gray-800'    />
-          <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'    />
-            <div className='text-center mb-16'    />
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'    />
-                Your Shortened URLs;
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'    />
-                Manage and track all your shortened URLs in one place.
-              </p>
-            </div>
-
-<div className='space-y-4'    />
-              {shortenedUrls.map(url => (
-                <Card;}
-key={url && url.i,}
-}
-                  className='p-6 bg-gray-700 border border-gray-600'    />;
-                  <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'    />;
-            <div className=\"space-y-4\"    />;
-              {shortenedUrls.map((url) => (<Card key={url.id} className=\"p-6 bg-gray-700 border border-gray-600\"    />;
-                  <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\"    />;
         <section className="py-20 bg-gray-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">

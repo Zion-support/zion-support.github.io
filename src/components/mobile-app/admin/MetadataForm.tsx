@@ -1,14 +1,5 @@
-
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { AppMetadataValues } from "./MetadataManager",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Badge } from "@/components/ui/badge";
-import { X } from 'lucide-react'
-
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -28,8 +19,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         setValue("keywords", [...keywords, value])
         e.currentTarget.value = ""
       }
-    }
-  }
+};
+  };
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000
 };  const removeKeyword = (keyword: string,) => {
     setValue(
@@ -38,8 +29,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     )
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000
-  const longDescription = watch("longDescription")
-  return (
+  const longDescription = watch("longDescription")  return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle>App Metadata</CardTitle>
@@ -53,10 +43,61 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
               render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>App Title</FormLabel>
-                  <FormControl>
-                    <Input
+                  <FormControl>                    <Input
                       placeholder="Enter app title"
                       maxLength = {platform === "ios" ? 30 : 50,}
+import { Badge } from '@/components / ui / badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
+interface MetadataFormProps {
+  form: UseFormReturn < AppMetadataValues>;
+}
+export const MetadataForm: React.FC < MetadataFormProps> = ({ form }) => {
+  const { control, register, watch, set_value } = form;
+  const keywords = watch ("keywords");
+  const platform = watch ("platform");
+  const add_keyword = (e: React.KeyboardEvent < HTMLInputElement>, ) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default ();
+      const value = e.current_target.value.trim ();
+      if () {) {
+  $2
+}
+        set_value ("keywords", [...keywords, value]);
+        e.current_target.value = "";
+      }
+    }
+  }
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
+}  const remove_keyword = (keyword: string, ) =>: any {
+    set_value (
+      "keywords",
+      keywords.filter ((k, ) => k !== keyword));
+  },
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
+  const long_description = watch ("long_description"),
+  return (
+    <Card className="bg - zion - blue border - zion-purple / 30">;
+      <CardHeader>;
+        <CardTitle > App Metadata</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <div className="space-y-4">;
+            <FormField;
+              control = {control, }
+              name="app_title";
+              render={({ field }: { field: any }, ) => (
+                <FormItem>;
+                  <FormLabel > App Title</FormLabel>;
+                  <FormControl>;
+                    <Input;
+                      placeholder="Enter app title";
+                      max_length = {platform === "ios" ? 30 : 50, }
                       {...field}
                     />
                   </FormControl>
@@ -87,36 +128,38 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
             />
             <FormField
               control = {control,}
-              name="longDescription"
-              render={({ field }: { field: any },) => (
-                <FormItem>
-                  <FormLabel>Long Description</FormLabel>
-                  <FormControl>
-                    <Textarea
+              name="longDescription"                    <Textarea
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength = {maxDescriptionLength,}
+                </FormItem>)}
+            />;
+            <FormField;
+              control = {control, }
+              name="long_description";
+              render={({ field }: { field: any }, ) => (
+                <FormItem>;
+                  <FormLabel > Long Description</FormLabel>;
+                  <FormControl>;
+                    <Textarea;
+                      placeholder="Detailed description of your app";
+                      className="min-h-32";
+                      max_length = {maxDescriptionLength, }
                       {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    {longDescription.length}/{maxDescriptionLength} characters
-                  </FormDescription>
-                </FormItem>
-              )}
-            />
-            <div>
-              <FormLabel htmlFor="keywords">Keywords</FormLabel>
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
+
+            />;
+
+            <div>;
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>;
+
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown = {addKeyword,}
                 className="mb-2"
-              />
-              <div className="flex flex-wrap gap-2 mt-2">
-                {keywords.map((keyword, index,) => (
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
-                    {keyword}
                     <button
                       type="button"
                       onClick = {(,) => removeKeyword(keyword),}
@@ -125,11 +168,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     </button>
                   </Badge>
                 ))}
-              </div>
-              <FormDescription className="mt-2">
-                Add keywords to improve discoverability (max 100 characters total)
-              </FormDescription>
-            </div>
+
+              </div>;
+              <FormDescription className="mt-2">;
+                Add keywords to improve discoverability (max 100 characters total);
+              </FormDescription>;
+            </div>;
+
             <FormField
               control = {control,}
               name="version"
@@ -138,7 +183,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="e.g., 1.0.0"
+                      placeholder="e && e.g., 1 && 1.0.0"
+
                       {...field}
                     />
                   </FormControl>
@@ -150,5 +196,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   )
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from 'lucide-react'

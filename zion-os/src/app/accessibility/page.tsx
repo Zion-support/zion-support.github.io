@@ -1,11 +1,23 @@
+
 export default function AccessibilityPage() {;
   return (;
 
+    <div className="min-h-screen bg-white">;    <div className="min-h-screen bg-white">;
+      {/* Hero Section */}
+      <section className="bg - gradient - to - r from - green - 600 to - teal - 600 text - white py-20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text-center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb-6">;
+            Accessibility;
+          </h1>;
+          <p className="text - xl md:text - 2xl text - green - 100 max - w-3xl mx-auto">;
             We are committed to making our website and services accessible to everyone, including people with disabilities.;
           </p>;
         </div>;
       </section>;
-
+      {/* Accessibility Commitment */}
+      <section className="py-20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
             <div>;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-6">;
                 Our Accessibility Commitment;
@@ -51,7 +63,20 @@ export default function AccessibilityPage() {;
                     </svg>;
                   </div>;
                   <div>;
-
+                    <h3 className="font - semibold text - gray-900">Screen Reader Compatible</h3>;
+                    <p className="text - gray-600">Full compatibility with assistive technologies</p>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Accessibility Features */}
+      <section className="py - 20 bg - gray-50">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
               Accessibility Features;
             </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
@@ -109,10 +134,8 @@ export default function AccessibilityPage() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
                 </svg>;
               </div>;
-
               <h3 className="text - xl font - semibold text - gray - 900 mb-4">Responsive Design</h3>;
               <p className="text - gray-600">;
-
                 Mobile - responsive design that adapts to different screen sizes and orientations, ensuring accessibility across all devices and platforms.;
               </p>;
             </div>;
@@ -122,7 +145,19 @@ export default function AccessibilityPage() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0 - 13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0 - 13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c - 1.746 0 - 3.332.477 - 4.5 1.253" />;
                 </svg>;
               </div>;
-
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Text Resizing</h3>;
+              <p className="text - gray-600">;
+                Text can be resized up to 200% without loss of functionality or layout issues, accommodating users who need larger text for better readability.;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* WCAG Compliance */}
+      <section className="py - 20 bg-white">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
+          <div className="text - center mb-16">;
+            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
               WCAG 2.1 Compliance;
             </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
@@ -135,64 +170,66 @@ export default function AccessibilityPage() {;
               <p className="text - gray - 600 mb-6">;
                 Our website meets WCAG 2.1 Level AA standards, which includes:;
               </p>;
-
               <ul className="space - y-3 text - gray-600">;
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
                   Perceivable: Content is presented in ways users can perceive;
-
+                </li>;
+                <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
                   Operable: Interface components are operable by all users;
-
+                </li>;
+                <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
                   Understandable: Information and operation are understandable;
-
+                </li>;
+                <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - green - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
                   Robust: Content can be interpreted reliably by assistive technologies;
                 </li>;
               </ul>;
-
+            </div>;
+            <div className="bg - gray - 50 p - 8 rounded-xl">;
+              <h3 className="text - 2xl font - bold text - gray - 900 mb-4">Ongoing Improvements</h3>;
+              <p className="text - gray - 600 mb-6">;
+                We are continuously working to improve accessibility and working towards Level AAA compliance:;
+              </p>;
               <ul className="space - y-3 text - gray-600">;
                 <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - blue - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
                   Regular accessibility audits and testing;
-
+                </li>;
+                <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - blue - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
                   User feedback integration;
-
+                </li>;
+                <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - blue - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
                   Technology updates and improvements;
-
+                </li>;
+                <li className="flex items-center">;
                   <svg className="w - 5 h - 5 text - blue - 500 mr-3" fill="current_color" viewBox="0 0 20 20">;
-
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
 
                   </svg>;
@@ -203,12 +240,11 @@ export default function AccessibilityPage() {;
           </div>;
         </div>;
       </section>;
-
+      {/* Contact Information */}
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
             <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
-
               Report Accessibility Issues;
             </h2>;
             <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
@@ -225,13 +261,33 @@ export default function AccessibilityPage() {;
               </div>;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
                 <div>;
-
+                  <h4 className="font - medium text - gray - 900 mb-2">Email</h4>;
+                  <a href="mailto:accessibility@ziontechgroup.com" className="text - blue - 600 hover:text - blue-700">;
+                    accessibility@ziontechgroup.com;
+                  </a>;
+                </div>;
+                <div>;
+                  <h4 className="font - medium text - gray - 900 mb-2">Phone</h4>;
+                  <a href="tel:+13024640950" className="text - blue - 600 hover:text - blue-700">;
                     +1 (302) 464 - 0950;
 
                   </a>;
                 </div>;
               </div>;
-
+              <div>;
+                <h4 className="font - medium text - gray - 900 mb-2">Response Time</h4>;
+                <p className="text - gray-600">;
+                  We aim to respond to accessibility feedback within 2 business days and will work to resolve issues promptly.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py - 20 bg - green - 600 text-white">;
+        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
             Help Us Improve Accessibility;
           </h2>;
           <p className="text - xl text - green - 100 mb - 8 max - w-2xl mx-auto">;
@@ -241,7 +297,7 @@ export default function AccessibilityPage() {;
             <a href="/contact" className="bg - white text - green - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition-colors">;
               Contact Us;
             </a>;
-
+            <a href="/privacy" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - green - 600 transition-colors">;
               Privacy Policy;
             </a>;
           </div>;

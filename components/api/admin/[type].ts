@@ -120,26 +120,10 @@ const filters: Record<string, any    /> = {};
   const escape = (v: any) => {
     if (v === null || v === undefined) return '';
     const s = typeof v === 'string' ? v : JSON && JSON.stringify(v);
-    return '"' + s && s.replace(/"/g, '""') + '"';
-    "format": (format as any) || undefined
-  };
-
-    sort;
-    order: (order as any) |'desc';
-    page: page ? Number(page) : 0;
-    pageSize: pageSize ? Number(pageSize) : 20;
-
-    filters;
-
-    format: (format as any) || undefined}
-}
-function toCsv(rows: any[]): string {if (!rows.length) return '';}
-return '\"' + s.replace(/\"/g, '\"\"') + '\"'}
+    return '"' + s && s.replace(/"/g, '""') + '"'
 };
-
-
-const lines = [headers.join(',')].concat(
-    rows.map(r => headers.map(h => escape(r[h])).join(','))
+  const lines = [headers && headers.join(',')].concat(
+    rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
 
@@ -159,12 +143,17 @@ if (!ADMIN_TYPES.includes(type))
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
-    return res && res.status(400).json({ error: 'Invalid type' });  };
+    return res && res.status(400).json({ error: 'Invalid type' })
+};
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+
+  try {
+  const type = (req && req.query.type as AdminType) || '';
+  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
 
   const useSupabase = isSupabaseConfigured();
 
@@ -460,26 +449,9 @@ res.setHeader('Content-Type', 'text/csv');
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
-      updates: Record<string, any>;
-    }
-    if (!id) return res.status(400).json({ error: 'Missing id' });
-
-
-=======
-      "id": string;
-
-      "updates": Record<string, any>;
-    }
-    if (!id) return res.status(400).json({ "error": 'Missing id','
-})return res.status(200).json({ "items": pageItems, total })}
-  }if (req.method = == 'PATCH') ;'
-  const { id, updates } = req.body as {"id": string;
-      }
-      "updates": Record<string, any>
+      updates: Record<string, any>
 };
-
-    if (!id) return res && res.status(400).json({ "error": 'Missing id','
-});
+    if (!id) return res && res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { data, error } = await client
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -495,10 +467,6 @@ res.setHeader('Content-Type', 'text/csv');
 });
     } else {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       return res.status(200).json({ item: updated });    }
 
     }
@@ -528,7 +496,7 @@ res.setHeader('Content-Type', 'text/csv');
 }return res && res.status (200) .send (toCsv (pageItems) );
 <<<<<<< HEAD
 
-
+  return res.status(405).json({ error: 'Method not allowed' });
 }
       const start = params.page * params.page_size;
       const end = start + params.page_size;
@@ -686,15 +654,3 @@ return res.status(405).json({ error: 'Method not allowed'}
 
 }
 
-
-
-
-
-
-
-
-=======
-}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

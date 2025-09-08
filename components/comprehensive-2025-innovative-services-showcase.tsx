@@ -48,6 +48,14 @@ import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas
 const Comprehensive2025InnovativeServicesShowcase: React.FC;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+  const getCategoryColor = (category: string) => {;
+    const cat = categories && categories.find(c => c && c.name === category);
+    return cat ? cat && cat.color : 'from-gray-500 to-gray-600';    return cat ? cat && cat.color : 'from-gray-500 to-gray-600'
+};
+
+  return (
+    <Layout>
+      <SEO
         title='2025 Innovative Services Showcase | Zion Tech Group'
         description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'
         keywords={[
@@ -589,21 +597,17 @@ const getCategoryColor = (category: string) =>: any ;
             initial={{ opacity: 0, coordinate_y: 20 ,}
 }
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 ,}
-}
-            className='space - y-6'              />;
-        <div className=\"text - center max - w-6xl mx-auto relative z-10\"    />;
+            transition={{ duration: 0.8 }}
+            className='space - y-6'          >;
+        <div className="text - center max - w-6xl mx-auto relative z-10">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 ,}
 }
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-            className='space - y-6'            className=\"space-y-6\"    />
-
-            {/* Enhanced Company Badge *,}
-}
-<<<<<<< HEAD
-
+            className='space - y-6'            className="space-y-6";
+          >;
+            {/* Enhanced Company Badge */}
             <motion.div;
 
               initial={{ opacity: 0, scale: 0.8 }}
@@ -669,11 +673,6 @@ quantum computing solutions, and autonomous AI platforms;
             </p>
             
 
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
             {/* Enhanced Stats */}
             <motion&& motion.div;
               initial = { 'opacity': 0, 'y': 20 
@@ -809,7 +808,49 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto''
 =======
             className="text-center mb-16"
           >
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+              Service Categories
+            </h2>
+            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
+              Explore our comprehensive range of innovative services across
+              cutting-edge technology domains
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {categories.map((category, index) => {
+              const IconComponent = category.icon;
+
+              
+
+              
+
+                >
+            className='text-center mb-16'>;
+            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
+              Service Categories;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;
+              Explore our comprehensive range of innovative services across;
+              cutting-edge technology domains;
+            </p>;
+          </motion && motion.div>;
+
+                  <div
+                    className={`p-8 rounded-2xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>;
+                    <div className='text-center'>;
+                      <div
+                        className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category && category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>;
+                        <IconComponent className='w-8 h-8 text-white' />;
+                      </div>;
+                      <h3 className='text-2xl font-bold text-white mb-4'>;
+                        {category && category.name}
+                      </h3>;
+                      <div className='text-gray-300 text-sm'>;
+                        {;
+                          innovative2025MicroSaasBatch && innovative2025MicroSaasBatch.filter(;
+                            service => service && service.category === category && category.name;
+                          ).length;
+                        }{' '}
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Service Categories
             </h2>
@@ -867,21 +908,21 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto''
                 <div className='text - gray - 300 text - sm'>;
                   Future Possibilities;
                 </div>              </div>            >;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - cyan - 400 / 20">;
-                <div className="text - 3xl font - bold text - cyan - 400 mb - 2 group - hover:text - cyan - 300 transition - colors">50+</div>;
-                <div className="text - gray - 300 text - sm">Innovative Services</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-cyan-400 / 20">;
+                <div className="text - 3xl font - bold text - cyan - 400 mb - 2 group - hover:text - cyan-300 transition-colors">50+</div>;
+                <div className="text - gray-300 text-sm">Innovative Services</div>;
               </div>;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - blue - 400 / 20">;
-                <div className="text - 3xl font - bold text - blue - 400 mb - 2 group - hover:text - blue - 300 transition - colors">100+</div>;
-                <div className="text - gray - 300 text - sm">Quantum Solutions</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-blue-400 / 20">;
+                <div className="text - 3xl font - bold text - blue - 400 mb - 2 group - hover:text - blue-300 transition-colors">100+</div>;
+                <div className="text - gray-300 text-sm">Quantum Solutions</div>;
               </div>;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - purple - 400 / 20">;
-                <div className="text - 3xl font - bold text - purple - 400 mb - 2 group - hover:text - purple - 300 transition - colors">24 / 7</div>;
-                <div className="text - gray - 300 text - sm">Autonomous Operations</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-purple-400 / 20">;
+                <div className="text - 3xl font - bold text - purple - 400 mb - 2 group - hover:text - purple-300 transition-colors">24 / 7</div>;
+                <div className="text - gray-300 text-sm">Autonomous Operations</div>;
               </div>;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - green - 400 / 20">;
-                <div className="text - 3xl font - bold text - green - 400 mb - 2 group - hover:text - green - 300 transition - colors">∞</div>;
-                <div className="text - gray - 300 text - sm">Future Possibilities</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-green-400 / 20">;
+                <div className="text - 3xl font - bold text - green - 400 mb - 2 group - hover:text - green-300 transition-colors">∞</div>;
+                <div className="text - gray-300 text-sm">Future Possibilities</div>;
               </div>;
             </motion.div>;
           </motion.div>;
@@ -890,9 +931,9 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto''
       {/* Services Categories */}
       <section className='py - 20 px - 4 bg - black / 30 relative'>;
         <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5'></div>;
-        <div className='max - w-7xl mx - auto relative z - 10'>          <motion.div      <section className="py - 20 px - 4 bg - black / 30 relative">;
-        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5"></div>;
-        <div className="max - w-7xl mx - auto relative z - 10">;
+        <div className='max - w-7xl mx - auto relative z - 10'>          <motion.div      <section className="py - 20 px-4 bg-black / 30 relative">;
+        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to-purple-500 / 5"></div>;
+        <div className="max - w-7xl mx-auto relative z-10">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1007,7 +1048,6 @@ industries
           </div>;
         </div>;
       </section>;
-
 
       {/* Featured Services */}
       <section className='py-20 px-4'>;
@@ -1172,27 +1212,8 @@ industries;
                         </div>;
                       )}
 
+              
 
-
-                <motion.div;
-
-=======
-              .filter(service = > service && service.popular).map((service, index) => ;
-  }
-  const IconComponent = getCategoryIcon(service && service.category){/* Popular Badge */}
-                      {service && service.popular && (<div className='absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full'>;'
-                          }
-                <motion.div;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-<<<<<<< HEAD
-
-=======
-                  className="group relative"
                 >
                   <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>
                     <div className="text-center">
@@ -1405,20 +1426,6 @@ cutting-edge technology domains;
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }}
-
-=======
-
-          <motion.div
-
-          <motion.div
-
 
           <motion.div
 
@@ -1714,8 +1721,6 @@ className='space-y-8''
 export default Comprehensive2025InnovativeServicesShowcase;
 export default Comprehensive2025InnovativeServicesShowcase;
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
 export default Comprehensive2025InnovativeServicesShowcase;

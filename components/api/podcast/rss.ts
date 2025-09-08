@@ -24,38 +24,6 @@ const EPISODES_PATH = null;
 return res.status(200).json({ "ok": true, "path": '/podcast.xml' }),;'
 }
 
-
-function ensureStorage() {}
-'
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-const EPISODES_PATH = null;
-  return res.status(200).json({ ok: true, path: '/podcast.xml' })
-}
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-
-const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
-
 function ensureStorage() {
 
 <<<<<<< HEAD
@@ -191,7 +159,6 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 </rss>`;
   fs && fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' });
-
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
 return res.status(200).json({ ok: true, path: '/podcast.xml'}

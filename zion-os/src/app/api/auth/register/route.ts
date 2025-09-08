@@ -1,68 +1,10 @@
-import { NextRequest, NextResponse  } from './next / server';,
-import bcrypt from './bcryptjs';,
-import { prisma  } from '@/lib / prisma';,
-import { z  } from './zod';,
-const register_schema = z.object ({
-  name: z.string ().min (2, "Name must be at least 2 characters"),
-  email: z.string ().email ("Invalid email address"),
-  password: z.string ().min (8, "Password must be at least 8 characters")}),
-export async /**
- * POST - Function description
- */
-function POST() {
-  try {
-    const body = await request.json (),
-    const { name, email, password } = register_schema.parse (body),
-
-import { NextRequest, NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
-import { prisma } from "@/lib/prisma";
-import { z } from "zod";
-
-    // Check if user already exists;
-    const existing_user = await prisma.user.find_unique ({}
-      where: { email }}),
-
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
-
     // Check condition
 if ( {) {
   $2
 }
       return NextResponse.json (
-
-    const hashed_password = await bcrypt.hash (password, 12),
-    // Create user;
-    const user = await prisma.user.create ({
-      data: {
-        name,
-        email,
-        password: hashed_password,
-        role: "user",
-        onboarding_completed: false}}),
-    // Remove password from response;
-    const { password: _, ...userWithoutPassword } = user,
-    return NextResponse.json (
-      {
-        message: "User created successfully",
-        user: userWithoutPassword;
-      },
-      { status: 201 });
-  } catch (error) {
-    // Check condition
-if ( {) {
-  $2
-}
-      return NextResponse.json (
-        { error: "Validation failed", details: error.errors },
-        { status: 400 });
-    }
-    console.error ("Registration error:", error);
-    return NextResponse.json (
-
-      { error: "Internal server error" }
-
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -101,16 +43,16 @@ pr-12325
       { status: 201 });
   } catch (error) {;
     if (error instanceof z.ZodError) {;
-
+      return NextResponse.json(;
         { error: "Validation failed", details: error.errors },;
-
-        { status: 400 });
+        { status: 400 }
+      );
     }
-;"
+;
     console.error("Registration error:", error);
-    return NextResponse.json(;"
+    return NextResponse.json(;
       { error: "Internal server error" };
-
-      { status: 500 });
+      { status: 500 }
+    );
   }
 }

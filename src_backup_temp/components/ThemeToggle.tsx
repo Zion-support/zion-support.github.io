@@ -117,47 +117,78 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
               </button>) ) }
           </motion.div>) }
       </AnimatePresence>;
-    </div>)}';'
-    const root = document.documentElement;';';'
-    const systemTheme = window.matchMedia(' (prefers - color - "scheme": dar k) ') .matches ? 'dark' : 'light';';';'
-    const effectiveTheme = theme === 'system' ? systemTheme : theme;';'
-';';'
-    root.classList.remove('light', 'dark')root.classList.add(effectiveTheme)// Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme)';'
-    ';';'
-    // Update CSS custom properties for smooth transitions'';';'
-    if(effectiveTheme === 'dark') {';'
-';';'
-      }
-      root.style.setProperty('--zion-bg-primary',#0f172a')';';'
-      root.style.setProperty('--zion-bg-secondary',#1e293b')';';'
-      root.style.setProperty('--zion-text-primary',#f8fafc')';';'
-      root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {';'
-';';'
-      }
-      root.style.setProperty('--zion-bg-primary',#ffffff')';';'
-      root.style.setProperty('--zion-bg-secondary',#f1f5f9')';';'
-      root.style.setProperty('--zion-text-primary',#0f172a')';';'
-      root.style.setProperty('--zion-text-secondary',#475569')}';'
-';';'
-    localStorage.setItem('zion-theme', theme)}, [theme, mounted])}';';'
-  const "themes": { "value": Them e; "label": string; "icon": Reac t.ComponentType<any> }[] = ['';';'
-    { "value": 'light', "label": 'Light theme', "icon": Su n },';';'
-    { "value": 'dark', "label": 'Dark theme', "icon": Moo n },';';'
-      </AnimatePresence>;
-    </div>;
-    )}const root = document.documentElement;
-    const systemTheme = window.matchMedia(' (prefers - color - "scheme": "dar k) ') .matches ? 'dark' : 'light';'
-    const effectiveTheme  = theme === 'system' ? systemTheme : theme;root.classList.remove('light'", 'dark')root.classList.remove('light', 'dark')root.classList.add(effectiveTheme)// Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme)// Update CSS custom properties for smooth transitions';'
-    if(effectiveTheme === 'dark') {root.style.setProperty('--zion-bg-primary',#0f172a')root.style.setProperty('--zion-bg-secondary',#1e293b')root.style.setProperty('--zion-text-primary',#f8fafc')root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {root.style.setProperty('--zion-bg-primary',#ffffff')root.style.setProperty('--zion-bg-secondary',#f1f5f9')root.style.setProperty('--zion-text-primary',#0f172a')root.style.setProperty('--zion-text-secondary',#475569')}'
-    localStorage.setItem('zion-theme', theme)}, [theme, mounted])}const "themes": { "value": Them e; "label": string; "icon": React.ComponentType<any> }[] = [';'
-    { "value": 'light', "label": 'Light theme', "icon": Su n },{ "value": 'dark', "label": 'Dark theme', "icon": Moo n },{ "value": 'system', "label": 'System theme', "icon": Monito r }'
-  const "themes": "{ "value": Them e; "label": string; "icon": React.ComponentType<any> "}[] = [';'
-    { "value": 'light', "label": 'Light theme', "icon": "Su n "},{ "value": 'dark', "label": 'Dark theme', "icon": "Moo n "},{ "value": 'system', "label": 'System theme', "icon": "Monito r "}"
-  ];if(!mounted) {return ()`;`      <div className={`w-12 h-12 bg-gray-200 "dark": "b g-gray-700 rounded-lg animate-pulse ${className"}`} />;`    )}return ()`;`    <div className={`relative ${className}`}>;`      <motion.div";"
-        className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1";"
-        initial={ "opacity": "0", "scale": "0.9 "}"
-        animate={ "opacity": "1", "scale": "1 "}"
-        transition={ "duration": "0.3 "}"
+    </div>) 
+};';
+    const root = document.documentElement;';';
+    const systemTheme = window.matchMedia(' (prefers - color - scheme: dar k) ') .matches ? 'dark' : 'light';';';
+    const effectiveTheme = theme === 'system' ? systemTheme : theme;';
+';';
+    root.classList.remove('light', 'dark') ;
+    root.classList.add(effectiveTheme) ;
+    // Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme);';
+    ';';
+    // Update CSS custom properties for smooth transitions'';';
+    if(effectiveTheme === 'dark') {';
+';';
+      root.style.setProperty('--zion-bg-primary',#0f172a');';';
+      root.style.setProperty('--zion-bg-secondary',#1e293b');';';
+      root.style.setProperty('--zion-text-primary',#f8fafc');';';
+      root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {';
+';';
+      root.style.setProperty('--zion-bg-primary',#ffffff');';';
+      root.style.setProperty('--zion-bg-secondary',#f1f5f9');';';
+      root.style.setProperty('--zion-text-primary',#0f172a');';';
+      root.style.setProperty('--zion-text-secondary',#475569')}';
+';';
+    localStorage.setItem('zion-theme', theme)}, [theme, mounted])};';';
+  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['';';
+    { value: 'light', label: 'Light theme', icon: Su n },';';
+    { value: 'dark', label: 'Dark theme', icon: Moo n },';';
+      </AnimatePresence>
+    </div>
+    )
+};
+    const root = document.documentElement;
+    const systemTheme = window.matchMedia(' (prefers - color - "scheme": "dar k) ') .matches ? 'dark' : 'light';
+    const effectiveTheme = theme === 'system' ? systemTheme : theme;
+;
+    root.classList.remove('light'", 'dark') ;
+    root.classList.remove('light', 'dark') ;
+    root.classList.add(effectiveTheme) ;
+    // Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme);
+    // Update CSS custom properties for smooth transitions'
+    if(effectiveTheme === 'dark') {
+      root.style.setProperty('--zion-bg-primary',#0f172a');
+      root.style.setProperty('--zion-bg-secondary',#1e293b');
+      root.style.setProperty('--zion-text-primary',#f8fafc');
+      root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {
+      root.style.setProperty('--zion-bg-primary',#ffffff');
+      root.style.setProperty('--zion-bg-secondary',#f1f5f9');
+      root.style.setProperty('--zion-text-primary',#0f172a');
+      root.style.setProperty('--zion-text-secondary',#475569')}
+    localStorage.setItem('zion-theme', theme)}, [theme, mounted])};
+  const themes: { value: Them e; label: string; icon: React.ComponentType<any> }[] = [';
+    { value: 'light', label: 'Light theme', icon: Su n },;
+    { value: 'dark', label: 'Dark theme', icon: Moo n },;
+    { value: 'system', label: 'System theme', icon: Monito r }
+  const "themes": "{ "value": Them e; "label": string; "icon": React.ComponentType<any> "}[] = [';
+    { "value": 'light', "label": 'Light theme', "icon": "Su n "},;
+    { "value": 'dark', "label": 'Dark theme', "icon": "Moo n "},;
+    { "value": 'system', "label": 'System theme', "icon": "Monito r "}
+  ];
+;
+  if(!mounted) {;
+    return ()`;
+      <div className={`w-12 h-12 bg-gray-200 "dark": "b g-gray-700 rounded-lg animate-pulse ${className"}`}  />;
+    )}
+;
+  return ()`;
+    <div className={`relative ${className}`}>;
+      <motion.div";
+        className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1";
+        initial={{ "opacity": "0", "scale": "0.9 "}}
+        animate={{ "opacity": "1", "scale": "1 "}}
+        transition={{ "duration": "0.3 "}}
       >;
         {themes.map((themeOption) => {const "themes": { "value": Them e; "label": string; "icon": React.ComponentType<any> }[] = [';'
     { "value": 'light', "label": 'Light theme', "icon": Su n },{ "value": 'dark', "label": 'Dark theme', "icon": Moo n },{ "value": 'system', "label": 'System theme', "icon": Monito r }'

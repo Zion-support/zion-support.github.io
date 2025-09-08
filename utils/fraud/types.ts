@@ -8,19 +8,7 @@ export type AdminActionType =
   | "dismiss"
   | "escalate";
 
-export interface AdminAction {
-=======
-
-
-export interface AdminAction {;
-export interface AdminAction {
-
-
-
-export interface AdminAction {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  id: string;
+export interface AdminAction {  id: string;
   case_id: string;
   type: AdminActionType;
   adminId: string;
@@ -31,63 +19,40 @@ export interface AdminAction {;
   status: "pending" | "executed" | "failed";
 }
 
-export type FraudReviewStatus = $2;
-export interface StoredFraudRecord extends FraudEvent {
-  heuristic: HeuristicEvaluation,
-  gpt?: GptClassification,
-  autoHidden: boolean,
-  status: FraudReviewStatus}
-
 export interface FraudDetectionResult {;
-<<<<<<< HEAD
   isFraud: boolean;
   confidence: number;
+  reasons: string[];  confidence: number;
   reasons: string[];
-=======
 
-  isFraud: boolean;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  confidence: number;
-  reasons: string[];
-  suggestedActions: AdminActionType[];
-  metadata: Record<string, any>;
+  suggested_actions: AdminActionType[],
+  metadata: Record < string, any>;
+
 }
+export interface FraudDetectionConfig {}
 
-
-export interface FraudDetectionConfig {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  enabled: boolean;
-  rules: {
-    suspiciousActivity: {
-      enabled: boolean;
-
-<<<<<<< HEAD
-
-=======
-      threshold: number,
-    }
-    fake_profile: {
-      enabled: boolean;
-      threshold: number;
-    };
+export interface FraudDetectionConfig {
+};
     fakeProfile: {
       enabled: boolean;
-      threshold: number;
-    };
+      threshold: number
+};
     paymentFraud: {
       enabled: boolean;
-      threshold: number;
-    };
+      threshold: number
+};
     spam: {
       enabled: boolean;
-      threshold: number;
-    };
+      threshold: number
+};
   };
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidenceThreshold: number;
+    confidenceThreshold: number
+};
+    confidenceThreshold: number,
   };
+
+}}
 }

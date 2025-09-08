@@ -1,6 +1,8 @@
 import React from \'react\'; import Head from \'next/head\'; export default function AIAutomationTrends2025() {}; return null} }
-<<<<<<< HEAD
 import _React from 'react'; import Head from 'next/head'; export default function AIAutomationTrends2025() {}; return null} }
-=======
+import React from \'react\'; import Head from \'next/head\'; export default function AIAutomationTrends2025() {}; return null} }
+import _React from 'react'; import Head from 'next/head'; export default function AIAutomationTrends2025() {}; return null} }import _React from 'react'; import Head from 'next/head'; export default function AIAutomationTrends2025() {}; return null} }import React from \'react\'; import Head from \'next/head\'; export default function AIAutomationTrends2025() {}; return null} }
 import _React from 'react'; import Head from 'next/head'; export default function AIAutomationTrends2025() {}; return null} }
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+import React from \'react\'; import Head from \'next/head\'; export default function AIAutomationTrends2025() {}; return null} }
+import _React from 'react'; import Head from 'next/head'; export default function AIAutomationTrends2025() {}; return null} }
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

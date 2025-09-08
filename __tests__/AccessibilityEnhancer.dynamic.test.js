@@ -1,5 +1,7 @@
 
+
 <<<<<<< HEAD
+=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -37,6 +39,8 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic';
 
+
+>>>>>>> origin/main
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -47,21 +51,10 @@ describe('AccessibilityEnhancerdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-
-  test('displays correct content', () => {
-    render(<AccessibilityEnhancerdynamic />);
-  });
-
-  test('handles user interactions', () => {
-    render(<AccessibilityEnhancerdynamic />);
-  });
-
-  test('applies correct styling', () => {
-    render(<AccessibilityEnhancerdynamic />);
-  });
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancerdynamic from "./components/AccessibilityEnhancer.dynamic"; describe('AccessibilityEnhancerdynamic', () => { test("renders without crashing",() => { render(<AccessibilityEnhancerdynamic />); expect( screen.getByTestId("accessibilityenhancer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancerdynamic />)}); test("handles user interactions",() => { render(<AccessibilityEnhancerdynamic />)}); test("applies correct styling"
 <<<<<<< HEAD
-});
-});
 =======
 });
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+});
+import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic'; describe('AccessibilityEnhancerdynamic',() => { test('renders without crashing',() => { render(<AccessibilityEnhancerdynamic />); expect( screen.getByTestId('accessibilityenhancer.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancerdynamic />)}); test('handles user interactions',() => { render(<AccessibilityEnhancerdynamic />)}); test('applies correct styling',() => { render(<AccessibilityEnhancerdynamic />)})});
+>>>>>>> origin/main

@@ -1,114 +1,21 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-;
-import Fastify from 'fastify';
-import cors from '@fastify/cors';
-import rateLimit from '@fastify/rate-limit';
-import { createOpenAIClient, generateJobPost } from './openai';
-import { withUser } from './pg';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const app = Fastify({ logger: true });
-
-await app.register(cors, {
-  origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
-    const allowed = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim());
-    if (!origin || allowed.includes('*') || allowed.includes(origin)) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-import Fastify from 'fastify',import cors from '@fastify/cors',const app = null;
-    cb: (err: Error | null, allow?: boolean) => void;
-  ) => {const allowed = (process.env.CORS_ORIGINS |'').split(',').map(s => s.trim())if (!origin || allowed.includes('*') || allowed.includes(origin)) {cb(null, true)return;
-    }
-    cb(new Error('Not allowed'), false)})const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt })return { text: completion.output_text })const completion  = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt })return { text: completion.output_text },methods: ['GET', 'POST', 'OPTIONS'];
-})await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' })const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'')function getUserId(req: any): string | null {return ((req.headers['x-user-id'] as string) ||;
-    (req.query as any)['user_id'] ||;
-    null;
-  )app.post('/ai/ask', async (req: any, reply: any) => {const body = (req.body as any) |{}
-  const prompt = body.prompt as string;
-  if (!prompt) return reply.code(400).send({ error: 'prompt required' })const completion = await openai.responses.create({model: 'gpt-4o-mini',input: prompt;
-  })return { text: completion.output_text })app && app.post('/jobs/generate', async (req: any, reply: any) => {const body = (req && req.body as any) || {}const role  = (body && body.role as string) || 'Engineer';const userId = getUserId(req)const description  = await generateJobPost(openai, role, body)`INSERT INTO job_post (user_id, title, description, location, tags, status)VALUES ($1, $2, $3, $4, $5, 'draft')`;[userId, role, description, body && body.location || null, body && body.tags || null];
-    )app.post ('/jobs / generate', async (req: any, reply: any) => {const body = (req.body as any) || {}
-
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
-
-
-  });
-
-function getUserId(req: any): string | null {
-  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
-}
-
-app.post('/ai/ask', async (req: any, reply: any) => {
-  const body = (req.body as any) || {};
-  const prompt = body.prompt as string;
-  if (!prompt) return reply.code(400).send({ error: 'prompt required' });
-  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
-  return { text: completion.output_text });  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
-
-  return { text: completion.output_text }
-origin/cursor/integrate-build-improve-and-re-verify-2156
-
-
-
-},
-  methods: ['GET', 'POST', 'OPTIONS'],
-});
-await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
-const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
-      cb($2);
-      return
-    }
-    cb(new Error('Not allowed'), false)
-  },
-  methods: ['GETPOSTOPTIONS']
-}),
-
-<<<<<<< HEAD
-
-
-
-      cb(null, true);
-
-      return;
-    }
-    cb(new Error('Not allowed'), false);
-
-
-
-
 });
 
-app.post('/jobs/generate', async (req: any, reply: any) => {
-  const body = (req.body as any) || {};
-  const role = (body.role as string) || 'Engineer';
+app && app.post('/jobs/generate', async (req: any, reply: any) => {
+  const body = (req && req.body as any) || {};
+  const role = (body && body.role as string) || 'Engineer';
+
   const userId = getUserId(req);
   const description = await generateJobPost(openai, role, body);
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`;
 
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
     )
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
@@ -161,46 +68,10 @@ app.get ('/talent / search', async (req: any, reply: any) => {const q = (req.que
 <<<<<<< HEAD
 
 });
-
+  const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {}
     const res = await client && client.query(
-
-=======
-  if (!userId) return { description };
-await withUser(userId, async client => {
-    await client.query(
-      `INSERT INTO job_post (user_id, title, description, location, tags, status)
-       VALUES ($1, $2, $3, $4, $5, 'draft')`
-      [userId, role, description, body.location |null, body.tags |null]
-    );
-  });
-  return { saved: Boolean(userId), description };
-origin/cursor/automate-test-improve-and-merge-code-2533
-});
-
-app.get('/talent/search', async (req: any, reply: any) => {
-  const q = (req.query as any).q as string;
-  const country = (req.query as any).country as string | undefined;
-  const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-const rows = await withUser(userId, async client => {
-origin/cursor/automate-test-improve-and-merge-code-2533
-    const res = await client.query(
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-    const res = await client.query(
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
@@ -209,17 +80,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
        ORDER BY created_at DESC
-
-=======
-       ORDER BY created_at DESC
-
-
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
     );
     return res && res.rows
   });
@@ -230,10 +90,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 });
 });
-
-
-});
-
+  const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(`
       `SELECT id, channel, title, body, data, read, created_at FROM notification;`
@@ -302,25 +159,8 @@ app.get('/talent/search', async (req: any, reply: any) => {
   return { results: rows}
 }),
 
-<<<<<<< HEAD
+});});
 
-
-=======
-});
-
-
-
-const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-  app.log.error(err);
-  (process as any).exit(1)
-});
-
-});
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 app.get ('/talent / search', async (req: any, reply: any) => {
   const q = (req.query as any).q as string;
@@ -412,40 +252,3 @@ app.log.error (err);
 
 =======
 ;
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-const project = await withUser(userId, async client => {
-    const res = await client.query(
-      `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`
-      [name]
-    );
-    return res.rows[0];
-  });
-  if (!project) return reply.code(404).send({ error: 'not found' });
-  return { project };
-});
-
-app.get('/notifications', async (req: any, reply: any) => {
-  const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-const items = await withUser(userId, async client => {
-    const res = await client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
-       WHERE read = false ORDER BY created_at DESC LIMIT 20`
-    );
-return res.rows;
-  });
-  return { items };
-});
-
-const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: Error) => {
-  app.log.error(err);
-  console.error('Failed to start server:', err);
-});

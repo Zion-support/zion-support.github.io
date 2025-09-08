@@ -1,116 +1,47 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {Button} from "@/components/ui/button";"
-import {Loader2} from "lucide-react";"
-import {NavigationButtonsProps} from "./types";
-
-<<<<<<< HEAD
-
-=======
-
-"
-import {Button} from "@/components/ui/button";"
-import {Loader2} from "lucide-react";"
-import {NavigationButtonsProps} from "./types";
 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";export const NavigationButtons = ({;
-
   onBack;
   onNext;
   isNextDisabled = false;"
   backLabel = "Back";"
   nextLabel = "Next";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { Button } from "@/components/ui/button",
-
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
-
 
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
-
-
-<<<<<<< HEAD
-
-
-export const NavigationButtons = ({
-
-
-
-=======
-export const NavigationButtons = ({
-
-import { Button } from "@/components/ui/button","
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
   onBack,
   onNext,
   isNextDisabled = false,"
   backLabel = "Back","
   nextLabel = "Next",
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
-
-<<<<<<< HEAD
-        <Button variant="outline" onClick={onBack}>
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { Button } from "@/components/ui/button",;
-import { Loader2 } from "lucide-react",;
-
-import { Button } from "@/components/ui/button",;
-import { Loader2 } from "lucide-react",;
-
-import { NavigationButtonsProps } from "./types",;
-<<<<<<< HEAD
-
-export const NavigationButtons = ({;
-  onBack,;
-  onNext,;
-  isNextDisabled = false,;
-  backLabel = "Back",;
-  nextLabel = "Next";
-
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant="outline" onClick={onBack}>;          {backLabel}
-        </Button>;
-      )}
-      {onNext && (;
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
-      {onNext && (
-
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
-
-
-=======
-
-
+        <Button variant="outline" onClick={onBack}>  isLoading = false}: NavigationButtonsProps) => {;
   return (
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
 
+          {backLabel}
+        </Button>;
+      )}
+
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+  isLoading = false}: NavigationButtonsProps) => {;
+  return (;
+    <div className="flex justify-between">;
+      {onBack && (;
         <Button variant="outline" onClick={onBack}>;
 
 
@@ -148,48 +79,42 @@ export const NavigationButtons = ({;
         </Button>
       )}
 
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+      {onNext && (
+
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
 
           {nextLabel}
         </Button>;
       )}
-<<<<<<< HEAD
-
-    </div>;
-=======
-
 
     </div>;
   );
     </div>;
-  );
+  )
 };
-  );
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
+import { Button } from '@/components / ui / button';
+import { Loader2 } from './lucide-react';
+import { NavigationButtonsProps } from './types';
+export const NavigationButtons = ({
+  on_back;
+  on_next;
+  isNextDisabled = false;
+  back_label = "Back";
+  next_label = "Next";
+  is_loading = false}: NavigationButtonsProps) =>: any {
+  return (
+    <div className="flex justify-between">;
+      {on_back && (
+        <Button variant="outline" on_click={on_back}>;
+          {back_label}
+        </Button>)}
+      {on_next && (
+        <Button on_click={on_next} disabled={isNextDisabled || is_loading}>;
+          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
           {next_label}
         </Button>)}
     </div>);
 }
-
 ;
-
-export const NavigationButtons = ({;
-
-import {Button} from "@/components/ui/button";
-import {Loader2} from "lucide-react";
-import {NavigationButtonsProps} from "./types";
-import {Button} from "@/components/ui/button";
-import {Loader2} from "lucide-react";
-import {NavigationButtonsProps} from "./types";
-
-import {Button} from "@/components/ui/button";
-import {Loader2} from "lucide-react";
-import {NavigationButtonsProps} from "./types";
-
-export const NavigationButtons = ({;
->>>>>>> origin/cursor/delete-old-data-records-6bba

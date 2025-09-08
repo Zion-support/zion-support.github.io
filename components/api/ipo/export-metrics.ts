@@ -1,38 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-=======
-export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
-    ['MetricValueTrend%'];import { requireSuperadminApi  } from '../../../utils/api/auth';
-export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
-    ['MetricValueTrend%'];
-export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-
-<<<<<<< HEAD
-
-
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
-  const rows = [
-    ['MetricValueTrend%'];
-
-
-<<<<<<< HEAD
-
-
-
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
@@ -40,10 +8,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+  const rows = [
+    ['MetricValueTrend%'];
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -53,13 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename='ipo-metrics.csv'');
 
   res.status(200).send(csv)
-
-<<<<<<< HEAD
-
-
-
-=======
-
 
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
@@ -93,66 +55,9 @@ function handler() {if () return) {$2;
     ['CAC/LTV ratio1: 5 && 5.60.4']], const csv = rows && rows.map(r => r && r.map(v => String(v)).join()).join('\n'),  res && res.setHeader('Content-Typetext/csv');
   res && res.setHeader('Content-Dispositionattachment, filename='ipo-metrics && metrics.csv'');
   res && res.status(200).send(csv)
-
 }
-}
-
-
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { requireSuperadminApi } from '../../../utils / api / auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-<<<<<<< HEAD
-
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-=======
-}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
-
-ursor/fix-website-loading-errors-and-merge-6662
-
-}
-
 
 }
 }
 }
-  res.status(200).send(csv);
-  res.status(200).send(csv)
-}
-
-
-
-  res.status(200).send(csv);
-  res.status(200).send(csv)
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-
-
-
-=======
-}
-
-
-
-
-
-  res.status(200).send(csv);
-  res.status(200).send(csv)
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

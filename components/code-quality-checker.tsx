@@ -55,33 +55,7 @@ import Button from '../components/ui/Button';
 
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-
-
-
-  const features = [
-    {
-
-
-
-
-
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-const features = [ {
-  setIsAnalyzing (true)
-//Simulate code analysis setTimeout ( () => {
-  setAnalysisResults ({
-  language: 'JavaScript', qualityScore: 85, issues: [ {
-  type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' 
-}
-{
-  type: 'info', message: 'Function is quite long (25 lines) . Consider breaking it into smaller functions', line: 12, severity: 'low' 
-
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-
-export default function CodeQualityCheckerPage() {
+export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
 
@@ -386,13 +360,8 @@ setTimeout(() => {
         ]
       });
       setIsAnalyzing(false);
-          securityScore: '92%'
-        };
-        recommendations: [
-          'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functionsAdd proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
-        ]
-      });
-      setIsAnalyzing(false)
+    }, 3000)
+};      setIsAnalyzing(false)
     }, 3000)
 
         language: 'JavaScript',
@@ -436,69 +405,16 @@ severity: 'low'}
         ],
       });
       setIsAnalyzing(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+    }, 3000)
+};      setIsAnalyzing(false);
     }, 3000)
 };
-
-
-  return (
-
-<<<<<<< HEAD
-      <Head><title>
-=======
-    <>
-      <Head>
-<title>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          Code Quality Checker - Zion Tech Group | Professional Code Analysis &
-          Improvement Tool
-        </title>
-        <meta,
-name='description''
-          content='Analyze and improve your code quality with our comprehensive checker. Support for multiple languages, security scanning, and detailed improvement recommendations.'' />
-        <meta,
-property=''og': title''
-          content='Code Quality Checker - Zion Tech Group'' />
-        <meta,
-property=''og':description''
-          content='Professional code quality analysis tool with multi-language support and security scanning.'' />
-        <meta name=''twitter':card' content='summary_large_image' />'
-      </Head>
-      {/* Hero Section *
-}
-<<<<<<< HEAD
-      <section className='relative section-padding bg-gradient-cursor overflow-hidden'    />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.08),transparent_50%)]'    />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.06),transparent_50%)]'    />
-        <div className='absolute inset-0 bg-grid opacity-10'    />
-        <div className='relative z-10 container-cursor text-center'    />
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6'    />
-            <Code className='w-4 h-4 mr-2'    />
-
-=======
-      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>'
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.08),transparent_50%)]' />'
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.06),transparent_50%)]' />'
-        <div className='absolute inset-0 bg-grid opacity-10' />'
-        <div className='relative z-10 container-cursor text-center'>'
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6'>'
-            <Code className='w-4 h-4 mr-2' />'
-            Professional Code Analysis
-          </div>
-          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>'
-            Code Quality Checker
-          </h1>
-          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>'
-            Analyze and improve your code quality with our comprehensive,
-checker. Support for multiple programming languages, security,
-scanning, and detailed improvement recommendations. Write better,
-safer, and more maintainable code.
-          </p>
-          
+    <>;
+      <Head>;
+        <title>;
+          Code Quality Checker - Zion Tech Group | Professional Code Analysis &;
+          Improvement Tool;
+        </title>;
           {/* Code Input Form */}
           <div className='max-w-4xl mx-auto mb-8'>;'
             <textarea;
@@ -778,15 +694,8 @@ improvement suggestions for better code.
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
 
       {/* Supported Languages Section */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Multi-Language Support
             </h2>
@@ -797,6 +706,36 @@ improvement suggestions for better code.
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Supported Languages Section */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Multi-Language Support;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              We support a wide range of programming languages with;
+              language-specific analysis rules and best practices.;
+            </p>;
+          </div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {supportedLanguages && supportedLanguages.map((language, index) => (;
+                      {feature.icon}
+                    </div>;
+                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
+                  </div>;
+                  <div className="flex-1">;
+                    <h3 className="text - 2xl font - bold mb-4 text-white">;
+                      {feature.title}
+                    </h3>;
+                    <p className="text - gray-400 leading-relaxed">;
+                      {feature.description}
+            ))}
               <Card
                 key={index}
                 className='card-hover border-gradient-teal'
@@ -864,7 +803,126 @@ improvement suggestions for better code.
       {analysisResults && (
 
 
-<<<<<<< HEAD
+      {/* Demo Analysis Results */}
+      {analysisResults && (;
+        <section className='section-padding bg-gradient-cursor-accent'>;
+          <div className='container-cursor'>;
+            <div className='text-center mb-12'>;
+              <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+                Code Quality Analysis Results;
+              </h2>;
+              <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                    </p>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Supported Languages Section */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Multi - Language Support;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              We support a wide range of programming languages with;
+              language - specific analysis rules and best practices.;
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {supported_languages.map ((language, index) => (
+              <Card;
+                key={index}
+                className='card - hover border - gradient - teal';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='text - center mb - 4'>;
+                  <div className='text - 4xl mb - 3'>{language.icon}</div>;
+                  <h3 className='text - xl font - bold text - white mb - 3'>;
+                    {language.name}
+                  </h3>;
+                </div>;
+                <ul className='space - y-2'>;
+                  {language.features.map ((feature, feature_index) => (
+                    <li;
+                      key={feature_index}
+                      className='flex items - center text - gray - 300 text - sm';
+                    >;
+                      <CheckCircle className='w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0' />                      {feature}              Multi - Language Support;
+            </h2>;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+              We support a wide range of programming languages with language - specific analysis rules and best practices.;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6">;
+            {supported_languages.map ((language, index) => (
+              <Card;
+                key={index}
+                className="card - hover border-gradient-teal";
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className="text-center mb-4">;
+                  <div className="text-4xl mb-3">{language.icon}</div>;
+                  <h3 className="text - xl font - bold text-white mb-3">{language.name}</h3>;
+                </div>;
+                <ul className="space-y-2">;
+                  {language.features.map ((feature, feature_index) => (
+                    <li key={feature_index} className="flex items - center text - gray-300 text-sm">;
+                      <CheckCircle className="w - 4 h - 4 text - teal - 400 mr - 3 flex-shrink-0" />;
+                      {feature}
+                    </li>))}
+                </ul>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Demo Analysis Results */}
+      {analysis_results && (
+        <section className='section - padding bg - gradient - cursor - accent'>;
+          <div className='container - cursor'>;
+            <div className='text - center mb - 12'>;
+              <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+                Code Quality Analysis Results;
+              </h2>;
+              <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+
+                Here's a sample code quality analysis. Get comprehensive;
+                insights for your own code.;
+              </p>;
+            </div>;
+              {/* Issues Found */}
+              <Card className='border-gradient-teal'>;
+                <h3 className='text-2xl font-bold mb-6 text-white'>;
+                  Issues Found;
+                </h3>;
+                <div className='space-y-3'>;
+                  {analysisResults && analysisResults.issues.map((issue, index) => (;
+                    <div key={index} className='flex items-start space-x-3'>;
+                      {issue && issue.type === 'error' ? (;
+                        <AlertTriangle className='w-5 h-5 text-red-400 mt-1 flex-shrink-0' />;
+                      ) : issue && issue.type === 'warning' ? (;
+                        <AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />;
+                      ) : (;
+                        <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
+                      )}
+              </h2>
+              <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+                Here's a sample code quality analysis. Get comprehensive insights for your own code.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                      <div>;
+                        <span className='text-gray-300 text-sm'>;
+                          {issue && issue.message}
+                        </span>;
+                        <div className='text-xs text-gray-500 mt-1'>                          Line {issue && issue.line} • Severity: {issue && issue.severity}                Code Quality Analysis Results;
+              </h2>;
+              <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+                Here's a sample code quality analysis. Get comprehensive insights for your own code.;
+              </p>;
+            </div>;
               {/* Quality Score */}
               <Card className="border-gradient-teal text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall Quality Score</h3>;
@@ -936,139 +994,6 @@ insights for your own code.
                       ) : (;}
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0'    />;}
                       )}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      <div    />
-                        <span className='text-gray-300 text-sm'    />
-
-                          {issue.message}
-                        </span>;
-                        <div className='text-xs text-gray-500 mt-1'    />;
-                          Line {issue.line} • Severity: {issue.severit,}
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                        </div>;
-                      </div>;
-                    </div>;
-                  ))}
-
-<<<<<<< HEAD
-
-=======
-                </div>;
-              </Card>;
-                  {analysisResults && analysisResults.issues.map((issue, index) => (;
-                    <div key={index} className=flex items-start space-x-3">;
-                      {issue && issue.type === 'error ? (;
-                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0 />;
-                      ) : issue && issue.type === warning' ? (;
-                        <AlertTriangle className=w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
-                      ) : (;
-                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 />;
-                      )}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                </div>
-              </Card>
-
-              {/* Quality Metrics */}
-<<<<<<< HEAD
-
-=======
-
-
-                      {analysisResults.metrics.testCoverage}
-                    </span>                  </div>                  </div>
-            
-            <div className=grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-              {/* Quality Score */}
-              <Card className="border-gradient-teal text-center>
-                <h3 className=text-2xl font-bold mb-6 text-white">Overall Quality Score</h3>
-                <div className="text-6xl font-bold text-teal-400 mb-4>{analysisResults.qualityScore}/100</div>
-                <div className=w-32 h-32 mx-auto mb-6">
-                  <svg className="w-full h-full transform -rotate-90 viewBox=0 0 36 36">
-                    <path
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831
-                      fill=none"
-                      stroke="currentColor
-                      strokeWidth=2"
-                      strokeDasharray={`${(analysisResults.qualityScore / 100) * 100}, 100`}
-                      className="text-teal-500
-                    />
-                  </svg>
-                </div>
-                <p className=text-gray-400">Good code quality with room for improvement</p>
-              </Card>
-
-              {/* Issues Found */}
-              <Card className="border-gradient-teal>
-                <h3 className=text-2xl font-bold mb-6 text-white">Issues Found</h3>
-                <div className="space-y-3>
-                  {analysisResults.issues.map((issue, index) => (
-                    <div key={index} className=flex items-start space-x-3">
-                      {issue.type === 'error ? (
-                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0 />
-                      ) : issue.type === warning' ? (
-                        <AlertTriangle className=w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                      ) : (
-                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 />
-                      )}
-                      <div>
-                        <span className=text-gray-300 text-sm">{issue.message}</span>
-                        <div className="text-xs text-gray-500 mt-1>
-                          Line {issue.line} • Severity: {issue.severity}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-
-              {/* Quality Metrics */}
-              <Card className='border-gradient-teal'>
-                <h3 className='text-2xl font-bold mb-6 text-white'>Quality Metrics</h3>
-                <div className='space-y-4'>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-gray-400'>Complexity</span>
-                    <span className='text-orange-400 font-bold'>{analysisResults.metrics.complexity}</span>
-                  </div>
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-<Card className='border-gradient-teal'    />;
-                <h3 className='text-2xl font-bold mb-6 text-white'    />;
-                  Quality Metrics;
-                </h3>;
-                <div className='space-y-4'    />;
-                  <div className='flex justify-between items-center'    />;
-                    <span className='text-gray-400'    />Complexity</span>;
-                    <span className='text-orange-400 font-bold'    />;
-                      {analysisResults.metrics.complexity}
-                    </span>;
-                  </div>;
-                  <div className='flex justify-between items-center'    />;
-                    <span className='text-gray-400'    />Maintainability</span>;
-                    <span className='text-green-400 font-bold'    />;
-                      {analysisResults.metrics.maintainability}
-                    </span>;
-                  </div>;
-                  <div className='flex justify-between items-center'    />;
-                    <span className='text-gray-400'    />Test Coverage</span>;
-                    <span className='text-blue-400 font-bold'    />;
-                      {analysisResults.metrics.testCoverage}
-
-                    </span>
-
-<<<<<<< HEAD
-=======
-
-
-
 
               {/* Quality Metrics */}
 
@@ -1165,7 +1090,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
 
-
               Simple Pricing
 
 
@@ -1252,13 +1176,13 @@ key={index}
                 <div className='w - 32 h - 32 mx - auto mb - 6'>;
                   <svg;
                     className='w - full h - full transform -rotate - 90';
-                    view_box='0 0 36 36';
+                    viewBox='0 0 36 36';
                   >;
                     <path;
                       d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831';
                       fill='none';
                       stroke='current_color';
-                      stroke_width='2';
+                      strokeWidth='2';
                       stroke_dasharray={`${(analysis_results.quality_score / 100) * 100}, 100`}
                       className='text - teal - 500';
                     />;
@@ -1286,42 +1210,42 @@ key={index}
                         </span>;
                         <div className='text - xs text - gray - 500 mt - 1'>                          Line {issue.line} • Severity: {issue.severity}                Code Quality Analysis Results;
               </h2>;
-              <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.;
               </p>;
             </div>;
-            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8">;
+            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-8 mb-8">;
               {/* Quality Score */}
-              <Card className="border - gradient - teal text - center">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Overall Quality Score</h3>;
-                <div className="text - 6xl font - bold text - teal - 400 mb - 4">{analysis_results.quality_score}/100</div>;
-                <div className="w - 32 h - 32 mx - auto mb - 6">;
-                  <svg className="w - full h - full transform -rotate - 90" view_box="0 0 36 36">;
+              <Card className="border - gradient-teal text-center">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Overall Quality Score</h3>;
+                <div className="text - 6xl font - bold text - teal-400 mb-4">{analysis_results.quality_score}/100</div>;
+                <div className="w - 32 h - 32 mx-auto mb-6">;
+                  <svg className="w - full h-full transform -rotate-90" viewBox="0 0 36 36">;
                     <path;
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831";
                       fill="none";
                       stroke="current_color";
-                      stroke_width="2";
+                      strokeWidth="2";
                       stroke_dasharray={`${(analysis_results.quality_score / 100) * 100}, 100`}
-                      className="text - teal - 500";
+                      className="text-teal-500";
                     />;
                   </svg>;
                 </div>;
-                <p className="text - gray - 400">Good code quality with room for improvement</p>;
+                <p className="text-gray-400">Good code quality with room for improvement</p>;
               </Card>;
               {/* Issues Found */}
-              <Card className="border - gradient - teal">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Issues Found</h3>;
-                <div className="space - y-3">;
+              <Card className="border-gradient-teal">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Issues Found</h3>;
+                <div className="space-y-3">;
                   {analysis_results.issues.map ((issue, index) => (
-                    <div key={index} className="flex items - start space - x-3">;
+                    <div key={index} className="flex items-start space-x-3">;
                       {issue.type === 'error' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0" />) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0" />) : (
-                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />)}
+                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex-shrink-0" />) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex-shrink-0" />) : (
+                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex-shrink-0" />)}
                       <div>;
-                        <span className="text - gray - 300 text - sm">{issue.message}</span>;
-                        <div className="text - xs text - gray - 500 mt - 1">;
+                        <span className="text - gray-300 text-sm">{issue.message}</span>;
+                        <div className="text - xs text - gray-500 mt-1">;
                           Line {issue.line} • Severity: {issue.severity}
                         </div>;
                       </div>;
@@ -1357,17 +1281,17 @@ key={index}
                     <span className='text - green - 400 font - bold'>;
                       {analysis_results.metrics.security_score}
                     </span>                  </div>                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Maintainability</span>;
-                    <span className="text - green - 400 font - bold">{analysis_results.metrics.maintainability}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Maintainability</span>;
+                    <span className="text - green-400 font-bold">{analysis_results.metrics.maintainability}</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Test Coverage</span>;
-                    <span className="text - blue - 400 font - bold">{analysis_results.metrics.test_coverage}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Test Coverage</span>;
+                    <span className="text - blue-400 font-bold">{analysis_results.metrics.test_coverage}</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Security Score</span>;
-                    <span className="text - green - 400 font - bold">{analysis_results.metrics.security_score}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Security Score</span>;
+                    <span className="text - green-400 font-bold">{analysis_results.metrics.security_score}</span>;
                   </div>;
                 </div>;
               </Card>;
@@ -1381,13 +1305,13 @@ key={index}
                 {analysis_results.recommendations.map ((rec, index) => (
                   <div key={index} className='flex items - start space - x-3'>;
                     <CheckCircle className='w - 5 h - 5 text - teal - 400 mt - 1 flex - shrink - 0' />;
-                    <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border - gradient - teal">;
-              <h3 className="text - 2xl font - bold mb - 6 text - white">Improvement Recommendations</h3>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+                    <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">;
+              <h3 className="text - 2xl font - bold mb-6 text-white">Improvement Recommendations</h3>;
+              <div className="grid grid - cols - 1 md:grid - cols-2 gap-4">;
                 {analysis_results.recommendations.map ((rec, index) => (
-                  <div key={index} className="flex items - start space - x-3">;
-                    <CheckCircle className="w - 5 h - 5 text - teal - 400 mt - 1 flex - shrink - 0" />;
-                    <span className="text - gray - 300">{rec}</span>))}
+                  <div key={index} className="flex items-start space-x-3">;
+                    <CheckCircle className="w - 5 h - 5 text - teal - 400 mt - 1 flex-shrink-0" />;
+                    <span className="text-gray-300">{rec}</span>))}
               </div>;
             </Card>;
           </div>;
@@ -1609,38 +1533,6 @@ href='/contact'
                 <Button
 <<<<<<< HEAD
 
-
-=======
-
-                  href='/contact'
-                  size='lg'
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
-                  size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
-
-                </Button>
-
-
-
-                  href=/contact"
-                  size="lg
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : bg-gray-700 hover:bg-gray-600} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className=w-5 h-5 ml-2" />
-                </Button>
->>>>>>> origin/cursor/delete-old-data-records-6bba
               </Card>
             ))}
       {/* CTA Section */}

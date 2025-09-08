@@ -1,3 +1,7 @@
+
+
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -10,6 +14,8 @@ describe('EnhancedSEOdynamic', () => {
 
 <<<<<<< HEAD
 
+
+>>>>>>> origin/main
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -20,23 +26,10 @@ describe('EnhancedSEOdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-
-
-
-
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-
-describe('EnhancedSEO.dynamic.test', () => {
-  test('renders without crashing', () => {
-    render(<EnhancedSEO />);
-    expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();
-  });
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedSEOdynamic from "./components/EnhancedSEO.dynamic"; describe('EnhancedSEOdynamic', () => { test("renders without crashing",() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId("enhancedseo.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedSEOdynamic />)}); test("handles user interactions",() => { render(<EnhancedSEOdynamic />)}); test("applies correct styling"
 <<<<<<< HEAD
-});
-});
 =======
 });
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+});
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic'; describe('EnhancedSEOdynamic',() => { test('renders without crashing',() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedSEOdynamic />)}); test('handles user interactions',() => { render(<EnhancedSEOdynamic />)}); test('applies correct styling',() => { render(<EnhancedSEOdynamic />)})});
+>>>>>>> origin/main

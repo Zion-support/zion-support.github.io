@@ -36,14 +36,3 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
 <<<<<<< HEAD
 
   );
-
-
-
-
-
-
-
-
-=======
-  );
-}

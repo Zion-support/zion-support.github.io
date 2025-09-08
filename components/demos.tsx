@@ -120,13 +120,84 @@ import {
   Play;
   const [activeDemo, setActiveDemo] = useState<string>('email-validator'),
 
+export default function DemosPage() {
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
+  const demos = [
+    {
+      id: 'email-validator'
+      title: 'Email Validator Pro'
+      description:
+        'Advanced email validation with domain checking and deliverability scoring'
+      icon: <Mail className='w-6 h-6' />
+      color: 'from-blue-500 to-cyan-600'
+      component: <EmailValidatorDemo />,      color: 'from-blue-500 to-cyan-600'
+      component: <EmailValidatorDemo />
+    }
+    {
+      id: 'password-strength'
+      title: 'Password Strength Analyzer'
+      description: 'Comprehensive password security analysis with entropy calculation'
+      icon: <Lock className="w-6 h-6" />
+      color: 'from-green-500 to-emerald-600'
+      component: <PasswordStrengthDemo />
+    }
+    {
+      id: 'url-shortener'
+      title: 'Smart URL Shortener'
+      description: 'Professional URL shortening with analytics and custom codes'
+      icon: <Link className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      component: <UrlShortenerDemo />
+    }
+    {
+      id: 'text-analyzer'
+      title: 'Text Analysis Suite'
+      description: 'Advanced text analysis with readability and sentiment analysis'
+      icon: <FileText className="w-6 h-6" />
+      color: 'from-orange-500 to-red-600'
+      component: <TextAnalyzerDemo />
+    }
+    {
+      id: 'password-strength'
+      title: 'Password Strength Analyzer'
+      description:
+        'Comprehensive password security analysis with entropy calculation'
+      icon: <Lock className='w-6 h-6' />
+      color: 'from-green-500 to-emerald-600'
+      component: <PasswordStrengthDemo />
+    }
+    {
+      id: 'url-shortener'
+      title: 'Smart URL Shortener'
+      description:
+        'Professional URL shortening with analytics and custom codes'
+      icon: <Link className='w-6 h-6' />
+      color: 'from-purple-500 to-pink-600'
+      component: <UrlShortenerDemo />
+    }
+    {
+      id: 'text-analyzer'
+      title: 'Text Analysis Suite'
+      description:
+        'Advanced text analysis with readability and sentiment analysis'
+      icon: <FileText className='w-6 h-6' />
+      color: 'from-orange-500 to-red-600'
+      component: <TextAnalyzerDemo />
+    },  ];      component: <TextAnalyzerDemo />
+    }
+  ];
+  const activeDemoData = demos.find(demo => demo.id === activeDemo);
 
-with interactive demos. Test, explore, and see the power of our;
-APIs in action.
-            </p>
-            <div className='flex flex-col sm: flex-row gap-6 justify-center items-center mb-20'    />
-              <Button;
-href='#demos'
+export default function DemosPage() {;
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
+
+    <>;
+      <Head>;
+        <title>;
+          Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services;
+        </title>;
+              <Button
+                href='#demos'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
               <Button;
@@ -765,11 +836,96 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-cent
                 }`}
 <<<<<<< HEAD
 
+      {/* Active Demo */}
+      <section className='py-16 bg-black relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
+          <div className='text-center mb-12'>;
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>;
+              <Play className='w-4 h-4 mr-2' />;
+              Live Demo;
+            </div>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
+      {/* Active Demo */}
+      <section className='py-16 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-12'>
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
+              <Play className='w-4 h-4 mr-2' />
+              Live Demo
+            </div>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
+              {activeDemoData?.title}
+            </h2>;
+            <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 
-              >;
-                <div;
-                  className={`w - 12 h - 12 rounded - lg bg - gradient - to - br ${demo.color} flex items - center justify - center mb - 3 group - hover:scale - 110 transition - transform duration - 300`}
-                >;
+            </p>;
+          </div>;
+          <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>;
+      </section>;
+      {/* Features */}              Live Demo;
+            </div>;
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">;
+
+              {activeDemoData?.title}
+            </h2>;
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
+              {activeDemoData?.description}
+              {activeDemoData?.title}
+            </h2>;
+            <p className="text - lg text - gray - 400 max-w-2xl mx-auto">;
+              {activeDemoData?.description}
+        </div>
+      </section>
+      {/* Features */}
+      <section className='py-24 bg-gray-900 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+            </h2>
+            <p className='text-lg text-gray-400 max-w-3xl mx-auto'>
+              Experience the quality and reliability of our services before
+              integrating them into your applications
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <Zap className='w-8 h-8 text-blue-400' />
+              </div>
+              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
+                Real Performance
+              </h3>
+              <p className='text-gray-400 leading-relaxed'>
+                Test actual API endpoints with real data processing and response
+                times
+              </p>
+            </Card>
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <CheckCircle className='w-8 h-8 text-green-400' />
+              </div>
+              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300'>
+                Full Functionality
+              </h3>
+              <p className='text-gray-400 leading-relaxed'>
+                Experience complete service capabilities, not just mock
+                responses
+              </p>
+            </Card>
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <Code className='w-8 h-8 text-purple-400' />
+              </div>
+              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'>
+                API Examples
+              </h3>
+              <p className='text-gray-400 leading-relaxed'>                See exact request/response formats for easy integration
+              </p>
+            </Card>
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 
                 See exact request/response formats for easy integration
               </p>
@@ -1391,7 +1547,7 @@ href='/contact'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
             </p>;
           </div>;
-          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className='animate - fade - in'>;
+          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
           </div>;
         </div>;

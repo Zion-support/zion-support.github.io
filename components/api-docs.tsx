@@ -1,10 +1,19 @@
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next'
+};      permanent: true}}
 
-<<<<<<< HEAD
+export default function ApiDocsRedirect() {;
+  return null;
+}
+      destination: '/developers / docs',
+      permanent: true,
+    },
+  }      permanent: true}}
+}
+;
+export default /**
+ * ApiDocsRedirect - Function description
+ */
+function ApiDocsRedirect() {
 
-
-
-=======
-  return null
 }
 >>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -201,6 +201,17 @@ const quickReplies = useMemo(;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
       setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
     } catch {}
   }
 
@@ -460,7 +471,6 @@ meta: data.meta}
 
   return (
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
     }
   return (
     <div className='fixed bottom-4 right-4 z-50'>;
@@ -641,7 +651,6 @@ className={
                 </div>
             ))}
 
-
             )}
 
             <div ref={messagesEndRef} />;
@@ -711,15 +720,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {q}
                   </button>
                 ))}
-              </div>
-          
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+              </div>;
+            </div>;
+          )}
 
-
-<div className='border-t border-gray-200 "dark":border-gray-800 p-2'>'
-
-<<<<<<< HEAD
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>

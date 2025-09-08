@@ -1,9 +1,12 @@
-import React from
-  'react';
-import { Helmet } from
-  'react-helmet-async';interface SEOProps {
-  title: string;
-  description: string;
+import React from 'react';
+import Head from 'next/head';
+
+import Head from './next / head';
+;
+interface SEOProps {
+interface SEOProps {;
+  title?: string;
+  description?: string;
   keywords?: string;
   image?: string;
   url?: string;

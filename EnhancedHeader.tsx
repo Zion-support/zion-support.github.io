@@ -78,8 +78,8 @@ const EnhancedHeader: React.FC = () => {
     <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
       is_scrolled ? 'bg - white / 95 backdrop - blur - md shadow - lg' : 'bg - transparent';
     }`}>;
-      <div className="container mx - auto px - 4">;
-        <div className="flex items - center justify - between h - 16">;
+      <div className="container mx-auto px-4">;
+        <div className="flex items - center justify-between h-16">;
           {/* Logo */}
 
 
@@ -94,18 +94,18 @@ const EnhancedHeader: React.FC = () => {
 
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items - center space - x-8">;
+          <nav className="hidden lg:flex items-center space-x-8">;
             {navigation_items.map ((item) => (
               <div key={item.name} className="relative">;
                 {item.dropdown ? (
                   <button;
                     on_click={() => toggle_dropdown (item.name)}
-                    className="flex items - center space - x-1 text - gray - 700 hover:text - blue - 600 transition - colors";
+                    className="flex items - center space - x-1 text - gray - 700 hover:text - blue-600 transition-colors";
                   >;
                     <span>{item.name}</span>;
-                    <ChevronDown className="w - 4 h - 4" />;
+                    <ChevronDown className="w-4 h-4" />;
                   </button>) : (
-                  <Link href={item.href} className="text - gray - 700 hover:text - blue - 600 transition - colors">;
+                  <Link href={item.href} className="text - gray - 700 hover:text - blue-600 transition-colors">;
                     {item.name}
 
 
@@ -176,9 +176,9 @@ const EnhancedHeader: React.FC = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg - white border - t border - gray - 200";
+              className="lg:hidden bg - white border - t border-gray-200";
             >;
-              <div className="px - 4 py - 4 space - y-4">;
+              <div className="px - 4 py-4 space-y-4">;
                 {/* Mobile Search */}
 
 
@@ -208,19 +208,19 @@ const EnhancedHeader: React.FC = () => {
                       <div>;
                         <button;
                           on_click={() => toggle_dropdown (item.name)}
-                          className="flex items - center justify - between w - full text - left text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
+                          className="flex items - center justify - between w - full text - left text - gray - 700 hover:text - blue - 600 transition-colors py-2";
                         >;
                           <span>{item.name}</span>;
-                          <ChevronDown className="w - 4 h - 4" />;
+                          <ChevronDown className="w-4 h-4" />;
                         </button>;
                         {active_dropdown === item.name && (
-                          <div className="ml - 4 space - y-2">;
+                          <div className="ml-4 space-y-2">;
                             {item.dropdown.map ((dropdown_item) => (
                               <Link;
                                 key={dropdown_item.name}
                                 href={dropdown_item.href}
                                 on_click={closeMobileMenu}
-                                className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
+                                className="block text - gray - 600 hover:text - blue - 600 transition-colors py-1";
                               >;
                                 {dropdown_item.name}
                               </Link>))}
@@ -229,7 +229,7 @@ const EnhancedHeader: React.FC = () => {
                       <Link;
                         href={item.href}
                         on_click={closeMobileMenu}
-                        className="block text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
+                        className="block text - gray - 700 hover:text - blue - 600 transition-colors py-2";
                       >;
                         {item.name}
 <<<<<<< HEAD
@@ -251,23 +251,20 @@ import _React,{ useState,useEffect } from 'react'; import { Link,useLocation } f
                 ))}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                 {/* Contact Info */}
-                <div className="pt-4 border-t border-gray-200">
-                  <div className="space-y-2">
-                    {contact_info.map((info, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm text-gray-600">
+                <div className="pt - 4 border - t border-gray-200">;
+                  <div className="space-y-2">;
+                    {contact_info.map ((info, index) => (
+                      <div key={index} className="flex items - center space - x-2 text - sm text-gray-600">;
                         {info.icon === 'Phone' && <Phone className="w-4 h-4" />}
                         {info.icon === 'Mail' && <Mail className="w-4 h-4" />}
                         {info.icon === 'MapPin' && <MapPin className="w-4 h-4" />}
-                        <span>{info.text}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </header>
-  );
+                        <span>{info.text}</span>;
+                      </div>))}
+                  </div>;
+                </div>;
+              </div>;
+            </motion.div>)}
+        </AnimatePresence>;
+      </div>;
+    </header>);
 }

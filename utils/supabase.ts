@@ -2,13 +2,11 @@
 export const supabase = {
   // Add supabase functionality here
   auth: {
-<<<<<<< HEAD
-=======
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
-    signOut: () => Promise<any>;
-  };
+    signOut: () => Promise<any>
+};
 }
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
@@ -55,3 +53,26 @@ const supabaseConfig: SupabaseConfig = {
   anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-anon-key",
 };
 export const supabase = createSupabaseClient(supabaseConfig);
+    sign_in: (email: string, password: string) => null,
+    sign_out: () => null,
+    get_user: () => null;
+  },
+  from: (table: string) => ({
+    select: (columns: string) => ({
+      eq: (column: string, value: any) => ({
+        single: () => null;
+      });
+    }),
+    insert: (data: any) => ({
+      select: (columns: string) => ({
+        single: () => null;
+      });
+    });
+  });
+}
+  })
+};
+}
+  })
+};
+

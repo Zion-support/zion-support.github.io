@@ -5,18 +5,71 @@ const EnhancedServiceShowcase: React.FC = () => {
   return <div className="sr-only">EnhancedServiceShowcase temporarily disabled</div>;
 };
 
-const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-  title;
-  subtitle;
-  showFilters;
-=======
-  maxServices?: number;
-const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-  title
-  subtitle
-  showFilters = false
-  services = []
-  maxServices = 12,}) => {  title;
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Shield,
+  Rocket,
+  Brain,
+  Globe,
+  Lock,
+  Code,
+  Database,;
+  Cloud,;
+import {;
+  Star,;
+  Users,;
+  TrendingUp,;
+  DollarSign,;
+  Clock,;
+  CheckCircle,;
+  ArrowRight,;
+  Zap,;
+  Shield,;
+  Rocket,;
+  Brain,;
+  Globe,;
+  Lock,;
+  Code,;
+  Database,;
+  Cloud,;
+import Button from '../ui/Button';
+interface Service {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string,
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: string;
+  title: string;
+  subtitle: string;
+  show_filters?: boolean;
+  services?: Service[];
   subtitle;
   showFilters = false;
   services = []
@@ -205,6 +258,26 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           >
             {subtitle}
           </motion.p>
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
+
+          >
+
+            {subtitle}
+          </motion.p>
+
+            {subtitle}
+          {/* Stats */}
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+
+          >
+            {stats.map((stat, index) => (
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -269,6 +342,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     ))}
                   </select>
                 </div>
+
+                  </select>;
+                </div>;
+
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -290,11 +367,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{priceRanges.map((range) => (
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
+
                         {range.name}
                       </option>
                     ))}
                   </select>
                 </div>
+
+                  </select>;
+                </div>;
+
                 {/* Sort Options */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -316,15 +399,49 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map((option) => (
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
+
                         {option.name}
                       </option>
                     ))}
-                  </select>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
+                {/* Price Range Filter */}
+                <div>;
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
+                    Price Range;
+                  </label>;
+                  <select
+                    value={selectedPriceRange}
+                    onChange={e => setSelectedPriceRange(e && e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
+                  >;
+                    {priceRanges && priceRanges.map(range => (                      <option key={range && range.id} value={range && range.id}>                  <select
+                    value={selectedPriceRange}
+                    onChange={(e) => setSelectedPriceRange(e && e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                  >;
+                    {priceRanges && priceRanges.map((range) => (;
+                      <option key={range && range.id} value={range && range.id}>;
+                        {range && range.name}
+                      </option>;
+                    value={selectedPriceRange}
+                    on_change={(e) => setSelectedPriceRange (e.target.value)}
+                    className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan-500 focus:border-transparent";
+                  >;
+                    {price_ranges.map ((range) => (
+                      <option key={range.id} value={range.id}>;
+                        {range.name}
+                    ))}
+                {/* Sort Options */}
+                <div>;
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
+                    Sort By;
+                  </label>;
+                  <select
+                    value={sortBy}
+                  </select>;
+                </div>;
+              </div>;
+            </div>;
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -335,6 +452,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
+          </motion.div>)}
+        {/* Services Grid */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'        >          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8";
+        >;
+          <AnimatePresence>;
+            {filtered_services.map ((service, index) => (
+              <motion.div;
                 key={service.id}
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -363,7 +491,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         </div>
                         <div className='text-sm text-gray-400'>
                           {service.period}
-                        </div>
+                    </h3>;
+                    <p className='text - gray - 300 text - sm leading - relaxed'>                      {service.tagline}                      </div>;
+                    </div>;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan-400 transition-colors">;
+                      {service.name}
+                    </h3>;
+                    <p className="text - gray - 300 text-sm leading-relaxed">;
+                      {service.tagline}
+
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
@@ -435,13 +571,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                   </div>
                   {/* ROI Highlight */}
-                  <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
-                    <div className='text-sm text-green-400 font-semibold mb-1'>
-                      🚀 ROI Promise
-                    </div>
-                    <div className='text-xs text-gray-300 leading-relaxed'>                      {service.roi}                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
-                    <div className="text-xs text-gray-300 leading-relaxed">
+
                       {service.roi}
                     </div>
                   </div>
@@ -456,8 +586,77 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.marketPosition}
                     </div>
                   </div>
-                  {/* CTA */}
-                  <div className='mt-auto'>
+                  {/* Stats */}
+                  <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
+                    <div>;
+                      <div className='text-lg font-bold text-white'>;
+                        {service && service.rating}
+                      </div>;
+                      <div className='text-xs text-gray-400'>Rating</div>;
+                    </div>;
+                    <div>;
+                      <div className='text-lg font-bold text-white'>;
+                        {service && service.customers?.toLocaleString() || '0'}
+                      </div>;
+                      <div className='text-xs text-gray-400'>Customers</div>;
+                    </div>;
+                    <div>;
+                      <div className='text-lg font-bold text-white'>;
+                        {service && service.trialDays}
+                      </div>;
+                      <div className='text-xs text-gray-400'>Trial Days</div>                    </div>;
+                  </div>;
+                  {/* ROI Highlight */}                    <div>;
+                      <div className="text-lg font-bold text-white">{service && service.rating}</div>;
+                      <div className="text-xs text-gray-400">Rating</div>;
+                    </div>;
+                    <div>;
+                      <div className="text-lg font-bold text-white">{service && service.customers?.toLocaleString() || '0'}</div>;
+                      <div className="text-xs text-gray-400">Customers</div>;
+                    </div>;
+                    <div>;
+                      <div className="text-lg font-bold text-white">{service && service.trialDays}</div>;
+                      <div className="text-xs text-gray-400">Trial Days</div>;
+                    </div>;
+                  </div>;
+                  {/* ROI Highlight */}
+                  <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>;
+                    <div className='text-sm text-green-400 font-semibold mb-1'>;
+                      🚀 ROI Promise;
+                    </div>;
+                    <div className='text-xs text-gray-300 leading-relaxed'>                      {service && service.roi}                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">;
+                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>;
+                    <div className="text-xs text-gray-300 leading-relaxed">;
+                      {service && service.roi}
+                    </div>;
+                  </div>;
+                  {/* Market Position */}
+                  <div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>;
+                    <div className='text-sm text-cyan-400 font-semibold mb-2'>;
+                      📊 Market Position;
+                    </div>;
+                    <div className='text-xs text-gray-300 leading-relaxed'>                      {service && service.marketPosition}                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">;
+                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>;
+                    <div className="text-xs text-gray-300 leading-relaxed">;
+                      {service && service.marketPosition}
+                    </div>;
+                  </div>;
+
+                    <Button
+                      href={service && service.link}
+                      variant='primary'
+
+                      className='w-full group-hover:bg-cyan-500 transition-colors'>;
+                      Get Started;
+                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>;
+                  </div>;
+
+                  {/* Contact Info */}                    <Button
+                      href={service && service.link}
+                  <div className="mt-auto">
+                  {/* Contact Info */}                    <Button
+                      href={service && service.link}
+                  <div className="mt-auto">
                     <Button
                       href={service.link}
                       variant='primary'
@@ -485,20 +684,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                     <div className='text-xs text-gray-500'>
                       Email:{' '}
-                      <span className='text-cyan-400'>
-                        {service.contactInfo.email}
-                      </span>                    </div>                  <div className="mt-4 text-center">
-                    <div className="text-xs text-gray-500">
-                      Contact: <span className="text-cyan-400">{service.contactInfo.mobile}</span>
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                      <span className='text-cyan-400'>;
+                        {service && service.contactInfo.email}
+                      </span>                    </div>                  <div className="mt-4 text-center">;
+                    <div className="text-xs text-gray-500">;
+                      Contact: <span className="text-cyan-400">{service && service.contactInfo.mobile}</span>;
+                    </div>;
+                    <div className="text-xs text-gray-500">;
+                      Email: <span className="text-cyan-400">{service && service.contactInfo.email}</span>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+          </AnimatePresence>;
+        </motion && motion.div>;
+
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -543,17 +742,199 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               </p>
               <p>
                 🌐 Visit:{' '}
-                <span className='text-cyan-400'>https://ziontechgroup.com</span>
-              </p>            </div>            <div className="mt-6 text-sm text-gray-400">
-              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
-              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
+                <span className='text-cyan-400'>https://ziontechgroup && ziontechgroup.com</span>;
+              </p>            </div>            <div className="mt-6 text-sm text-gray-400">;
+              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
+              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</span></p>;
+              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup && ziontechgroup.com</span></p>;
+          </div>;
+        </motion && motion.div>;
+      </div>;
+    </section>;
+  )
+};
+
+export default EnhancedServiceShowcase;  )
+};
+export default EnhancedServiceShowcase;
+                    </p>;
+                  </div>;
+                  {/* Features */}
+                  <div className='mb - 6'>;
+                    <h4 className='text - sm font - semibold text - gray - 300 mb - 3 flex items - center'>;
+                      <CheckCircle className='w - 4 h - 4 mr - 2 text - green - 400' />;
+                      Key Features;
+                    </h4>;
+                    <ul className='space - y-2'>;
+                      {service.features.slice (0, 4).map ((feature, idx) => (
+                        <li;
+                          key={idx}
+                          className='text - sm text - gray - 400 flex items - start';
+                        >;
+                          <span className='text - cyan - 400 mr - 2'>•</span>                          {feature}                      Key Features;
+                    </h4>;
+                    <ul className="space-y-2">;
+                      {service.features.slice (0, 4).map ((feature, idx) => (
+                        <li key={idx} className="text - sm text - gray-400 flex items-start">;
+                          <span className="text - cyan-400 mr-2">•</span>;
+                          {feature}
+                        </li>))}
+                    </ul>;
+                  </div>;
+                  {/* Stats */}
+                  <div className='grid grid - cols - 3 gap - 4 mb - 6 text - center'>;
+                    <div>;
+                      <div className='text - lg font - bold text - white'>;
+                        {service.rating}
+                      </div>;
+                      <div className='text - xs text - gray - 400'>Rating</div>;
+                    </div>;
+                    <div>;
+                      <div className='text - lg font - bold text - white'>;
+                        {service.customers?.toLocaleString () || '0'}
+                      </div>;
+                      <div className='text - xs text - gray - 400'>Customers</div>;
+                    </div>;
+                    <div>;
+                      <div className='text - lg font - bold text - white'>;
+                        {service.trial_days}
+                      </div>;
+                      <div className='text - xs text - gray - 400'>Trial Days</div>                    </div>;
+                  </div>;
+                  {/* ROI Highlight */}                    <div>;
+                      <div className="text - lg font-bold text-white">{service.rating}</div>;
+                      <div className="text - xs text-gray-400">Rating</div>;
+                    </div>;
+                    <div>;
+                      <div className="text - lg font-bold text-white">{service.customers?.toLocaleString () || '0'}</div>;
+                      <div className="text - xs text-gray-400">Customers</div>;
+                    </div>;
+                    <div>;
+                      <div className="text - lg font-bold text-white">{service.trial_days}</div>;
+                      <div className="text - xs text-gray-400">Trial Days</div>;
+                    </div>;
+                  </div>;
+                  {/* ROI Highlight */}
+                  <div className='mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border - green - 500 / 20'>;
+                    <div className='text - sm text - green - 400 font - semibold mb - 1'>;
+                      🚀 ROI Promise;
+                    </div>;
+                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.roi}                  <div className="mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border-green-500 / 20">;
+                    <div className="text - sm text - green - 400 font-semibold mb-1">🚀 ROI Promise</div>;
+                    <div className="text - xs text - gray-300 leading-relaxed">;
+                      {service.roi}
+                    </div>;
+                  </div>;
+                  {/* Market Position */}
+                  <div className='mb - 6 p - 4 bg - gray - 800 / 30 rounded - lg'>;
+                    <div className='text - sm text - cyan - 400 font - semibold mb - 2'>;
+                      📊 Market Position;
+                    </div>;
+                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.market_position}                  <div className="mb - 6 p - 4 bg - gray-800 / 30 rounded-lg">;
+                    <div className="text - sm text - cyan - 400 font-semibold mb-2">📊 Market Position</div>;
+                    <div className="text - xs text - gray-300 leading-relaxed">;
+                      {service.market_position}
+                    </div>;
+                  </div>;
+                  {/* CTA */}
+                  <div className='mt - auto'>;
+                    <Button;
+                      href={service.link}
+                      variant='primary';
+                      className='w - full group - hover:bg - cyan - 500 transition - colors';
+                    >;
+                      Get Started;
+                      <ArrowRight className='ml - 2 w - 4 h - 4 group - hover:translate - x-1 transition - transform' />                    </Button>;
+                  </div>;
+                  {/* Contact Info */}                    <Button;
+                      href={service.link}
+                      variant="primary";
+                      className="w - full group - hover:bg - cyan-500 transition-colors";
+                    >;
+                      Get Started;
+                      <ArrowRight className="ml - 2 w - 4 h - 4 group - hover:translate-x-1 transition-transform" />;
+                    </Button>;
+                  </div>;
+                  {/* Contact Info */}
+                  <div className='mt - 4 text - center'>;
+                    <div className='text - xs text - gray - 500'>;
+                      Contact:{' '}
+                      <span className='text - cyan - 400'>;
+                        {service.contact_info.mobile}
+                      </span>;
+                    </div>;
+                    <div className='text - xs text - gray - 500'>;
+                      Email:{' '}
+                      <span className='text - cyan - 400'>;
+                        {service.contact_info.email}
+                      </span>                    </div>                  <div className="mt-4 text-center">;
+                    <div className="text - xs text-gray-500">;
+                      Contact: <span className="text-cyan-400">{service.contact_info.mobile}</span>;
+                    </div>;
+                    <div className="text - xs text-gray-500">;
+                      Email: <span className="text-cyan-400">{service.contact_info.email}</span>;
+                  </div>;
+                </div>;
+              </motion.div>))}
+          </AnimatePresence>;
+        </motion.div>;
+        {/* Call to Action */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className='text - center mt - 16';
+          <div className='bg - gradient - to - r from - cyan - 900 / 20 to - purple - 900 / 20 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 20'>;
+            <h3 className='text - 2xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text - gray - 300 mb - 6 max - w-2xl mx - auto'>;
+              Join thousands of companies already achieving breakthrough results;
+              with our cutting - edge AI, quantum, and blockchain solutions. Get;
+              started today and see the future of business technology.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Button;
+                href='/contact';
+                variant='primary';
+                className='text - lg px - 8 py - 4';
+              >;
+                Schedule a Consultation;
+                <ArrowRight className='ml - 2 w - 5 h - 5' />;
+              </Button>;
+              <Button;
+                href='/pricing';
+                variant='secondary';
+                className='text - lg px - 8 py - 4';
+              >;
+                View Pricing Plans;
+                <DollarSign className='ml - 2 w - 5 h - 5' />;
+              </Button>;
+            </div>;
+            <div className='mt - 6 text - sm text - gray - 400'>;
+              <p>;
+                📞 Call us:{' '}
+                <span className='text - cyan - 400'>+1 302 464 0950</span>;
+              </p>;
+              <p>;
+                📧 Email:{' '}
+                <span className='text - cyan - 400'>kleber@ziontechgroup.com</span>;
+              </p>;
+              <p>;
+                🌐 Visit:{' '}
+                <span className='text - cyan - 400'>https://ziontechgroup.com</span>;
+              </p>            </div>            <div className="mt - 6 text - sm text-gray-400">;
+              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
+              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>;
+              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>);
 }
 export default EnhancedServiceShowcase;  )
 }
 export default EnhancedServiceShowcase;
+  )
+};
+

@@ -10,16 +10,6 @@ type Props = { vendor: Vendor | null };
 import { FormEvent, useEffect, useState } from 'react';'
 import type { Vendor } from '../utils/vendor-types';'
 
-
-export default function AgencyDashboardPage() {
-  }
-.map (s => s.trim () ) .filter (Boolean) 
-}as Vendor
-//For MVP, update via direct API not implemented, keep local preview only setActiveVendor (updated) 
-}</div> md:col-span-2"> <button className=" px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button> </div> </form> </section> </div> </div> </section> </section> <div className=" text-center text-xs text-gray-500" >Powered by Zion</div> </div>) 
-}</select> </div>) ) 
-}</div>) 
-}
 export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
@@ -46,7 +36,30 @@ export default function AgencyDashboardPage() {
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
 <<<<<<< HEAD
 
+  function addPackage() {;
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = [;
+      ...(activeVendor && activeVendor.packages || []),;
+      {;
+        id: `pkg_${Date && Date.now()}`,;
+        title: pkgTitle,,
+  description: pkgDesc,;
+        priceUsd: Number(pkgPrice),;
+      },;
 
+    ];
+    setActiveVendor({ ...activeVendor, packages });
+    setPkgTitle('');
+    setPkgDesc('');
+    setPkgPrice('');
+  }
+        .filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only
+    setActiveVendor(updated)
+  }
+  function addPackage() {
+
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
   return (
     <div className='space-y-8'>;
@@ -536,8 +549,6 @@ name='servicesOffered''
         </div>;
 <<<<<<< HEAD
 
-
-
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {;
@@ -603,10 +614,17 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
 }
 
-const res = await fetch(;
-      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}``
+  useEffect(() => {
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
+              Add;
+            </button>          </div>;
+        </div>;
+      </section>;
+  const [items, setItems] = useState<any[]>([]);
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  async function fetchItems() {;
+    const res = await fetch(;
+      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
     );
 
 const data = await res.json();
@@ -710,54 +728,10 @@ function Pipeline({ vendorId }: { vendorId: string,}
   async function fetchItems() {
 
 }
-const res = await fetch(}
-      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
-
-    );
-
-    setItems(data.items || []);
-  }
-
-
-  async function changeStatus(itemId: string, status: string) {
-    await fetch('/api/vendors/update-pipeline', {
-
-      method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
-},
-body: JSON.stringify({ itemId, status }),
-    });
-    fetchItems();
-  useEffect(() => {
-;}
-}
-  }
-
-    fetchItems();
-  }, []);
-  return (
-    <div className='space-y-2'    />;
-      {items && items.length === 0 && (;
-        <div className='text-sm text-gray-500'    />No leads yet.</div>;}
-}
-
-=======
-            <div className='font-medium'>{item && item.title}</div>;'
-            <div className='text-xs text-gray-500'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      )}
-      {items.map(item => (
-        <div
-          key={item.id}
-          className='border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between'
-        >
-          <div>
-            <div className='font-medium'>{item.title}</div>
-            <div className='text-xs text-gray-500'>
-              {new Date(item.createdAt).toLocaleString()} • {item.status}
-            </div>
-          </div>
-          <select
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] || null; // tie to auth later;
+  return { props: { vendor } }
+};  );
             defaultValue={item.status}
             onChange={e => changeStatus(item.id, e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm'><option value='lead'>Lead</option>

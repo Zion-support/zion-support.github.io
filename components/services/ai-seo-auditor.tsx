@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-
-
-
 import Link from 'next/link';
-export default function Placeholder() {;
+export default /**
+ * Placeholder - Function description
+ */
+function Placeholder() {
   return (
-
     <main className="min-h-screen p-8">;
-
       <Head>;
         <title>Services • Ai-seo-auditor - Placeholder</title>;
         <meta name="robots" content="noindex" />;

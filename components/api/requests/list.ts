@@ -17,16 +17,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const raw = null;
 
-}
-    res.status(200).json({ items })
-
-const REQUESTS_PATH = path && path.join(process && process.cwd(), "data", "requests && requests.json");
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-    const raw = null;
     res.status(200).json({ items })
   } catch {
     res.status(200).json({ items: [] });

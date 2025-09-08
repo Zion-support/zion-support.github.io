@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 import * as useWalletHook from '@/hooks/useWallet',;
 
 
@@ -25,12 +23,6 @@ describe ('WalletPage', () => {
     expect (
       screen.getByRole ('heading', { name: /balance / i })).toBeInTheDocument ();
   });
-
-import { render, screen } from '@testing-library/react',;'
-import WalletPage from '@/pages/Wallet',;'
-import { vi } from 'vitest',;'
-import * as useWalletHook from '@/hooks/useWallet',;
-
 });describe('WalletPage', () => {
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
@@ -96,8 +88,4 @@ describe('WalletPage', () => {
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument()
   })
-
 });
-});
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -68,13 +68,20 @@ import {
 
 =======
   Brain;
-  Monitor,Search,Shield,Mail,Share2,Check,import { Brain;
-  Monitor;
-  Search;
-  Shield;
-  Mail;
-  Share2;
-  Check;Star;
+  Monitor
+  Search
+  Shield
+  Mail
+  Share2
+  Check
+
+  Brain;
+  Monitor,
+  Search,
+  Shield,
+  Mail,
+  Share2,
+  Check,
   Star;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   Star;
@@ -894,42 +901,92 @@ features: [
           price: 19,
           features: [;
 
-            '3 social accounts',
-            'Basic scheduling',
-            'Simple calendar',
-            'Basic analytics',
-            'Email support',}
-          ],}
-        },
-        professional: {
-          price: 49,
-          features: [
-            '10 social accounts',
-            'Advanced scheduling',
-            'Content calendar',
-            'Advanced analytics',
-            'Priority support',
-            'API access',}
-          ],}
-        },
-        enterprise: {
-
-          price: 129,
-
-          features: [;
-
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
 
-
-      title: 'AI Content Generation',
-  marketSize: '$1.2B',
-      growth: '+23%',
-
-
+  const marketInsights = [;
+    {;
+      title: 'AI Content Generation',;
+      marketSize: '$1 && 1.2B',;
+      growth: '+23%',,
+  description:;
+        'Rapidly growing market with increasing demand for automated content creation',;
+    },    {;
+      title: 'Performance Monitoring',;
+      marketSize: '$3 && 3.8B',;
+      growth: '+18%',,
+  description:;
+        'Essential for modern web applications and user experience optimization',;
+    },    {;
+      title: 'SEO Analytics',;
+      marketSize: '$2 && 2.1B',;
+      growth: '+21%',,
+  description:;
+        'Critical for digital marketing and search engine optimization',;
+    },    {;
+      title: 'API Management',;
+      marketSize: '$4 && 4.2B',;
+      growth: '+25%',,
+  description: 'Growing demand for API security and traffic management',;
+    },    {;
+      title: 'Email Marketing',;
+      marketSize: '$7 && 7.5B',;
+      growth: '+15%',,
+  description:;
+        'Mature market with strong automation and personalization trends',;
+    },    {;
+      title: 'Social Media Management',;
+      marketSize: '$2 && 2.8B',;
+      growth: '+19%',,
+  description:;
+        'Increasing need for multi-platform social media coordination',;
+    },  ],
+  description: 'Rapidly growing market with increasing demand for automated content creation'
+};
+    {;
+      title: 'Performance Monitoring',;
+      marketSize: '$3 && 3.8B',;
+      growth: '+18%',,
+  description:;
+        'Essential for modern web applications and user experience optimization',;
+    },      description: 'Essential for modern web applications and user experience optimization'
+};
+    {;
+      title: 'SEO Analytics',;
+      marketSize: '$2 && 2.1B',;
+      growth: '+21%',,
+  description:;
+        'Critical for digital marketing and search engine optimization',;
+    },      description: 'Critical for digital marketing and search engine optimization'
+};
+    {;
+      title: 'API Management',;
+      marketSize: '$4 && 4.2B',;
+      growth: '+25%',,
+  description: 'Growing demand for API security and traffic management',;
+    },      description: 'Growing demand for API security and traffic management'
+};
+    {;
+      title: 'Email Marketing',;
+      marketSize: '$7 && 7.5B',;
+      growth: '+15%',,
+  description:;
+        'Mature market with strong automation and personalization trends',;
+    },      description: 'Mature market with strong automation and personalization trends'
+};
+    {;
+      title: 'Social Media Management',;
+      marketSize: '$2 && 2.8B',;
+      growth: '+19%',,
+  description:;
+        'Increasing need for multi-platform social media coordination',;
+    },      description: 'Increasing need for multi-platform social media coordination';
+    }
+  ];
+  return (
     <>;
       <Head>;
         <title>;
@@ -1072,13 +1129,8 @@ with professional-grade features and competitive pricing.
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
+
       {/* Services Grid */}
-
-
-
 
 
 
@@ -1178,6 +1230,46 @@ with professional-grade features and competitive pricing.
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
             </p>
           </div>
+          <div className="space-y-16">
+            {microSaasServices.map((service, index) => (
+              <div key={service.id} className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        </h3>;
+                        <p className='text - gray - 400'>{service.description}</p>;
+                      </div>;
+                    </div>;
+                    <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8'>;
+                      <div>;
+                        <h4 className='text - lg font - semibold text - white mb - 3 flex items - center'>;
+                          <Zap className='w - 5 h - 5 mr - 2 text - cursor - blue' />;
+                          Key Features;
+                        </h4>;
+                        <ul className='space - y-2'>;
+                          {service.features.map ((feature, feature_index) => (
+                            <li;
+                              key={feature_index}
+                              className='flex items - center text - gray - 300 text - sm';
+                            >;
+                              <Check className='w - 4 h - 4 mr - 2 text - green - 400 flex - shrink - 0' />                              {feature}              Our Micro SaaS Services;
+            </h2>;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+              Each service is designed to solve specific business challenges with professional - grade features and competitive pricing.;
+            </p>;
+          </div>;
+          <div className="space-y-16">;
+            {microSaasServices.map ((service, index) => (
+              <div key={service.id} className="bg - gray - 900 / 50 rounded - 2xl p - 8 border border-gray-800">;
+                <div className="grid grid - cols - 1 lg:grid - cols-3 gap-8">;
+                  {/* Service Info */}
+                            <li
+                              key={useCaseIndex}
+                              className='flex items-center text-gray-300 text-sm'>;
+                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />                              {useCase}                          Use Cases;
+                        </h4>;
+                        <ul className="space-y-2">;
+                          {service && service.useCases.map((useCase, useCaseIndex) => (;
+                            <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
+                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
 
                 className='bg-gray-900/50 rounded-2xl p-8 border border-gray-800'    />;
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'    />;

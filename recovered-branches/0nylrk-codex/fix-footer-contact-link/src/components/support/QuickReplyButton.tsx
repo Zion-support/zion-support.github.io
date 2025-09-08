@@ -1,3 +1,7 @@
+interface QuickReplyButtonProps {
+  text: string;
+  onClick: () => void
+}
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -5,16 +9,12 @@ interface QuickReplyButtonProps {
   text: string;
   onClick: () => void;
 }
-
-export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
     <Button
 
       variant="outline"
       size="sm"
       className={cn(
-
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
         "transition-colors duration-200",
@@ -28,10 +28,6 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
   return (
 
 
-<<<<<<< HEAD
-    </Button>;
-  );
-}
 import React from './react';
 import { Button  } from '@/components / ui / button';
 
@@ -42,18 +38,14 @@ interface QuickReplyButtonProps {}
   text: string;
   on_click: () => void;
 }
-
-  text: string;
-  onClick: () => void;
-
-}
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {}
-  return (;
+export /**
+ * QuickReplyButton - Function description
+ */
+function QuickReplyButton() {
+  return (
     <Button;
-<<<<<<< HEAD
-=======
-      variant="outline";"
-      size="sm";"
+      variant="outline";
+      size="sm";
       className={cn (
         "border - zion - purple / 30 "hover": bg - zion - purple "hover":text - white","
         "transition - colors duration - 200","
@@ -63,16 +55,23 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {}
       {text}
     </Button>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    </Button>
-  );
-}
-;
+interface QuickReplyButtonProps {
+  text: string;
+  onClick: () => void
 
-"
-      variant="outline""
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+interface QuickReplyButtonProps {
+  text: string;
+  onClick: () => void;
+
+}
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
+  return (
+    <Button
+
+      variant="outline"
       size="sm"
       className={cn("
 "border-zion-purple/30 hover: bg-zion-purple hover:text-white""
@@ -85,11 +84,5 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {}
     </Button>
   )
 }
-
-<<<<<<< HEAD
-
-
-
-=======
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+

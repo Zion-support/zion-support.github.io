@@ -17,21 +17,54 @@ import {;
   Mail,;
   MapPin,;
 
-
-import React from 'react';'
-import { motion   } from 'framer-motion';'
-import Link from 'next/link';'
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin   } from 'lucide-react';'
-import { aiAutonomousServices2026   } from '../../data/2026-ai-autonomous-services';'
-import { quantumSpaceTechServices2026   } from '../../data/2026-quantum-space-tech-services';'
-import { metaverseDigitalRealityServices2026  } from '../../data/2026-metaverse-digital-reality-services';'
-
-export default function UltraAdvancedHero2026() {const totalServices = null;
-}
-import { ArrowRight;
-  }
   const containerVariants = {
     hidden: { opacity: 0 }
+import {motion} from 'framer-motion';
+import Link from 'next/link';
+import {
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Sparkles,
+  CheckCircle,
+  Phone,
+} from 'lucide-react';
+import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
+import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
+import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
+export default /**
+ * UltraAdvancedHero2026 - Function description
+ */
+function UltraAdvancedHero2026() {
+  const total_services =;
+    aiAutonomousServices2026.length +;
+    quantumSpaceTechServices2026.length +;
+    metaverseDigitalRealityServices2026.length;
+;
+  const contact_info = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',  }import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
+import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
+import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
+export default /**
+ * UltraAdvancedHero2026 - Function description
+ */
+function UltraAdvancedHero2026() {
+  const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
+;
+  const contact_info = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+  }
+;
+  const container_variants = {
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1
       transition: {
@@ -92,6 +125,15 @@ import { ArrowRight;
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
+
+            className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'>;
+            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
+              The Future;
+            </span>;
+            <br />;
+            <span className='text-white'>is Now</span>;
+          </motion && motion.h1>;
+
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
@@ -467,11 +509,59 @@ import { ArrowRight;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             ease: "easeInOut"
           }}
-          className="absolute bottom-1/3 right-10 text-5xl opacity-20"
-        >
-          🌐
-        </motion.div>
-      </div>
-    </section>
-);  )
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut";
+          }}
+          className="absolute top - 20 right - 20 text-6xl opacity-20";
+        >;
+          🚀;
+        </motion.div>;
+        <motion.div;
+          animate={{
+            coordinate_y: [0, 20, 0];
+            rotate: [0, -5, 0];
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut";
+          }}
+          className="absolute bottom - 20 left - 20 text-6xl opacity-20";
+        >;
+          ⚛️;
+        </motion.div>;
+        <motion.div;
+          animate={{
+            coordinate_y: [0, -15, 0];
+            rotate: [0, 3, 0];
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut";
+          }}
+          className="absolute top - 1/3 left - 10 text-5xl opacity-20";
+        >;
+          🧠;
+        </motion.div>;
+        <motion.div;
+          animate={{
+            coordinate_y: [0, 15, 0];
+            rotate: [0, -3, 0];
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut";
+          }}
+          className="absolute bottom - 1/3 right - 10 text-5xl opacity-20";
+        >;
+          🌐;
+        </motion.div>;
+      </div>;
+    </section>));
 }
+
+  );

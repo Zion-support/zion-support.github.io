@@ -8,15 +8,10 @@ import React from 'react';
 interface PricingGuidePageProps {
   // Add props here as needed
 
-
-<<<<<<< HEAD
-
-
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
 
   return (
@@ -26,9 +21,11 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
     </div>
   );
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+:src.pages.disabled/PricingGuidePage.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PricingGuidePage.jsx

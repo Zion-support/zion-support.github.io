@@ -540,44 +540,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border-cyan-400 / 30";
           style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-          animate={{
-          animate={{
-            rotate: 360
-            scale: [1, 1.1, 1];
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          animate={{
-            rotate: 360
-            scale: [1, 1.1, 1]
-            opacity: [0.3, 0.6, 0.3]}}
-            duration: 25
-            repeat: Infinity
-            duration: 25,
-            repeat: Infinity,
-            ease: linear}}          }}
-
-            duration: 20,
-            repeat: Infinity,
-            ease: linear"
-          }}
-            rotate: 360,
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.6, 0.3],
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return ("
-    <div className=relative min - h-screen bg - black overflow - hidden>;
-      {/* Animated Canvas Background */}
-      <canvas;
-        ref={canvas_ref}"
-        className="fixed inset - 0 w - full h - full pointer - events - none z - 0;'
-        style={{ background: 'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%) }}
-      />;
-      {/* Floating Geometric Shapes */}
-      <div className="fixed inset - 0 pointer - events - none z - 10">;
-        {/* Hexagon Grid */}
-        <motion.div;
-          className=absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
-          style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
 <<<<<<< HEAD
 
           animate={{
@@ -1172,15 +1134,6 @@ className=absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-40
             y: [0, 20, 0],
             opacity: [0.4, 0.8, 0.4]}}
           transition={{
-            duration: 10,
-            repeat: Infinity,
-ease: 'easeInOut,
-origin/cursor/automate-test-improve-and-merge-code-2533
-          }}
-        />
-            duration: 10,
-            repeat: Infinity}}
-
 
         />
       </div>
@@ -1225,8 +1178,10 @@ ease: 'easeInOut',
 className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
           animate={{
             height: [24, 48, 24],
-            opacity: [0.3, 0.8, 0.3],
-          }}
+            opacity: [0.3, 0.8, 0.3],          className="absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple-400 to-transparent";
+          animate={{
+            height: [24, 48, 24];
+            opacity: [0.3, 0.8, 0.3];
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -1409,13 +1364,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               top: `${Math.random () * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0]
-              opacity: [0, 1, 0]
-      <div className="fixed inset-0 pointer-events-none z-15">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key = $2;
-              top: `${Math.random() * 100}%`
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],            }}        {/* Top gradient */}
+        <div className="absolute top - 0 left - 0 right - 0 h - 32 bg - gradient - to - b from - purple - 900 / 20 via-transparent to-transparent" />;
+        {/* Bottom gradient */}
+        <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 900 / 20 via-transparent to-transparent" />;
+        {/* Left gradient */}
+        <div className="absolute top - 0 bottom - 0 left - 0 w - 32 bg - gradient - to - r from - indigo - 900 / 20 via-transparent to-transparent" />;
+        {/* Right gradient */}
+        <div className="absolute top - 0 bottom - 0 right - 0 w - 32 bg - gradient - to - l from - pink - 900 / 20 via-transparent to-transparent" />;
+      </div>;
+      {/* Content */}
+      <div className="relative z-30">;
+        {children}
+      </div>;
+      {/* Floating Particles */}
+      <div className="fixed inset - 0 pointer - events-none z-15">;
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            key={i}
+            className="absolute w - 1 h - 1 bg - cyan-400 rounded-full";
+            style={{
             }}
             animate={{
               y: [0, -100, 0],
@@ -1583,62 +1553,26 @@ export default UltraFuturisticBackground2030;
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
-ease: 'easeInOut'}
-}
-            }}
-            transition={{duration: Math.random() * 10 + 10;
-              repeat: Infinity;}
-              delay: Math.random() * 10;}"
-              duration: Math && Math.random() * 10 + 10,repeat: Infinity,delay: Math && Math.random() * 10,transition={{ease: 'easeInOut'            }}              ease: \'easeInOut\';
-              y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
-            transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'}}
-             />;
+              ease: 'easeInOut',            }}
+
+          />
         ))}
+      </div>
+
       {/* Neon Glow Effects */}
-      <div className='fixed inset-0 pointer-events-none z-25'    />;
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl'    />;
-        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl'    />;
-        <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl'    />;
-      </div>;
-    </div>;
-  )export default UltraFuturisticBackground2030;
-              left: `${Math.random () * 10}
-}%`,top: `${Math.random () * 10}
-}%`;
-            }}
-            animate={{coordinate_y: [0, -100, 0];
-              opacity: [0, 1, 0];}
-              scale: [0, 1, 0];}
-            }}"
-            transition={{duration: Math.random () * 10 + 10,repeat: Infinity,delay: Math.random () * 10,ease: 'easeInOut'            }}              ease: \'easeInOut\';
-            }}
-          />))}
-      </div>;
-      {/* Neon Glow Effects */}
-      <div className='fixed inset - 0 pointer - events - none z - 25'    />;
-        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl'    />;
-        <div className='absolute top - 1/3 right - 1/4 w - 80 h - 80 bg - purple - 500 / 5 rounded - full blur - 3xl'    />;
-        <div className='absolute bottom - 1/4 left - 1/3 w - 72 h - 72 bg - pink - 500 / 5 rounded - full blur - 3xl'    />;
-      <div className='fixed inset - 0 pointer - events - none z - 25'>;'
-        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl' />;'
-        <div className='absolute top - 1/3 right - 1/4 w - 80 h - 80 bg - purple - 500 / 5 rounded - full blur - 3xl' />;'
-        <div className='absolute bottom - 1/4 left - 1/3 w - 72 h - 72 bg - pink - 500 / 5 rounded - full blur - 3xl' />;'
+      <div className='fixed inset-0 pointer-events-none z-25'>
+        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
+        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
+        <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
+
       </div>
     </div>
-  );
-}
+  )
+};
 
 export default UltraFuturisticBackground2030;      </div>
     </div>

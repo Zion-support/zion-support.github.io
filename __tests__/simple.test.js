@@ -13,13 +13,8 @@ describe('Simple Test', () => {
     expect(1 + 1).toBe(2);
   });
 });
-
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-
-describe('Basic Test', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
+<<<<<<< HEAD
+=======
   });
 });
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

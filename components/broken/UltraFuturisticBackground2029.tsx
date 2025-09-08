@@ -364,13 +364,12 @@ className='absolute inset-0 opacity-30'
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
-  return ('
-    <div className='fixed inset - 0 pointer - events - none overflow - hidden z - 0'>;
+  return (
+    <div className="fixed inset - 0 pointer - events - none overflow-hidden z-0">;
       {/* Canvas for particle effects */}
       <canvas;
         ref={canvas_ref}
-<<<<<<< HEAD
-        className="absolute inset - 0 w - full h - full";
+        className="absolute inset - 0 w-full h-full";
         style={{ background: 'transparent' }}
 
 
@@ -402,9 +401,9 @@ className='absolute inset-0 opacity-30''
             ]
       />;
       {/* Animated gradient background */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black">;
+      <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan-900 / 20 to-black">;
         <motion.div;
-          className="absolute inset - 0 opacity - 30";
+          className="absolute inset-0 opacity-30";
           animate={{
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
@@ -597,16 +596,11 @@ ease: 'easeInOut'}
             "duration": 20,
             "repeat": Infinity
 
+            duration: 20,
+            repeat: Infinity,
 
-            "duration": 20,
-            "repeat": Infinity,
-
-
-<<<<<<< HEAD
-=======
-            "duration": 20,
-            "repeat": Infinity
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            duration: 20,
+            repeat: Infinity,
 
 
 
@@ -789,7 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             `
             backgroundSize: '50px 50px'
             ease: 'linear',          }}        <motion.div;
-          className="absolute inset - 0";
+          className="absolute inset-0";
           style={{
 
 =======
@@ -896,74 +890,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         />;
       </div>;
-      {/* Floating geometric shapes */}
-      <motion.div;
-        className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
-        animate={{transition={{animate={{rotate: [0, 360];
-          scale: [1, 1 && 1.1, 1];
-          opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
-        transition={{duration: 15;
-          repeat: Infinity;
-          ease: linear;
-        }}
-          duration: 12;
-          repeat: Infinity;
-          duration: 12,repeat: Infinity,transition={{duration: 12;
-          repeat: Infinity;
-          ease: 'linear'}}
-      {/* Animated grid lines */}
-      <div className=absolute inset-0 opacity-20>          y: [0, -20, 0];
-          opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2];
-        }}
-          duration: 12,repeat: Infinity,ease: 'linear'}}
-        transition={{duration: 8,repeat: Infinity,ease: easeInOut,          ease: "easeInOut;
-        }}
-      />;<motion.div;
-className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg';
-        animate={{rotate: [0, 360],scale: [1, 1.1, 1],opacity: [0.3, 0.6, 0.3]}}
-        transition={{duration: 15,repeat: Infinity,ease: linear}}
-      />;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <motion.div;
-        className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full';
-        animate={{y: [0, -20, 0],opacity: [0.2, 0.5, 0.2]}}
-        transition={{duration: 8,repeat: Infinity,ease: easeInOut}}
-      />;
-      <motion.div;
-className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45';
-        animate={{rotate: [45, 405],scale: [1, 1.2, 1]}}
-        transition={{ease: linear,          ease: linear";
-          duration: 12,repeat: Infinity,ease: 'linear'}}{/* Animated grid lines */}<div className=absolute inset-0 opacity-20>;
-        <motion&& motion.div;
-<div className='absolute inset-0 opacity-20'>;
-        <motion.div;
-          className=absolute inset-0;
-          style={{backgroundImage: `;
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)`;
-            backgroundSize: '50px 50px';
-          }}
-          animate={{background_position: [0px 0px, '50px 50px']}}
-          transition={{className="absolute inset-0;
-          style={{backgroundImage: `;
-              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)`;
-            backgroundSize: 50px 50px;
-            ease: 'linear'}}        <motion.div;
-          className=absolute inset - 0";
-          style={{background_image: `;
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px)linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`;
-            background_size: 50px 50px;
-          }}
-          animate={{background_position: ['0px 0px50px 50px'];
-          }}
-          transition={{}}
-      />;
-      {/* Animated grid lines */}}}
-          transition={{duration: 30,repeat: Infinity,backgroundPosition: [0px 0px, '50px 50px']}}
-          transition={{duration: 30,repeat: Infinity,ease: linear}}
-        />;
-      </div>;
-<<<<<<< HEAD
+
+      {/* Quantum energy waves */}
 
           }}
            />
@@ -994,12 +922,8 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 trans
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
           transition={{
 
-
-          style={{
-            background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
-
-          }}
-          animate={{
+        />
+      </div>
 
       {/* Holographic elements */}
       <motion.div
@@ -1088,7 +1012,6 @@ className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 round
       {/* Neural network connections */}
 <div className='absolute inset-0'>;
         {Array.from({ length: 8 }).map((_, i) => (<motion.div;
-
 
         animate={{
 
@@ -1347,7 +1270,7 @@ ease: 'linear'}
               opacity: [0, 1, 0],            }}        {Array.from ({ length: 8 }).map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full";
+            className="absolute w - 1 h - 1 bg - cyan-400 / 40 rounded-full";
             style={{
 
               left: `${20 + (i * 10)}%`,
@@ -1496,13 +1419,6 @@ key={i}
               repeat: Infinity,
               delay: i * 0.3,
 
-
-
-      <div className='absolute inset-0 overflow-hidden'>
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        {Array.from({ length: 5 }).map((_, i) => (
-          <motion.div
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
 
@@ -1539,7 +1455,7 @@ key={i}
 
           <motion.div;
             key={i}
-            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan - 400 / 60 to - transparent";
+            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan-400 / 60 to-transparent";
             style={{
 =======
           <motion.div;
@@ -1572,37 +1488,19 @@ key={i}
               ease: 'linear',            }}              ease: "linear"
             }}
 
-
-
-
-<<<<<<< HEAD
-=======
-
-<div className='absolute inset-0 overflow-hidden'    />
-        {Array.from({ length: 5}
-}).map((_, i) => (
-          <motion.div;
-key={i}
-            className='absolute w-0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent';
-            style={{left: `${15 + i * 1}
-}%`;
-              top: '-20px';
-            }}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-            animate={{}
-              y: [0, window.innerHeight + 20]}
-            }}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
             transition={{
 
               duration: 4,
               repeat: Infinity,
+              delay: i * 0.8,
+              ease: 'linear',            }}
+
+          />
+        ))}
+      </div>;
+    </div>;
+  )
+};
 
 <<<<<<< HEAD
 export default UltraFuturisticBackground2029;  );
@@ -1667,7 +1565,8 @@ ease: 'linear'}
 )
 };
 
-
+export default UltraFuturisticBackground2029;  )
+};
 export default UltraFuturisticBackground2029;
 
 "
@@ -1682,32 +1581,6 @@ export default UltraFuturisticBackground2029;
 export default UltraFuturisticBackground2029);
 }
 ;
-export default UltraFuturisticBackground2029;
-;
-
+export default UltraFuturisticBackground2029
 };
 
-
-              duration: 4
-              repeat: Infinity
-              delay: i * 0.8
-              ease: 'linear',            }}              ease: "linear"
-            }}
-
-
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              delay: i * 0.8,
-              ease: 'linear',            }}              ease: "linear"
-            }}
-              ease: 'linear',            }}
-
-            }}
-
-          />
-        ))}
-      </div>
-    </div>
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

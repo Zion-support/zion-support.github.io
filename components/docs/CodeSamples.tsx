@@ -23,31 +23,8 @@ interface Props {
 import React, { useState } from 'react';
 
 
-
-
 export default function CodeSamples({ samples }: Props) {;
 
-
-interface Props {
-samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-const tabs: Array<{
-  key: Props['samples'][number]['language'];
-  label: string;
-}> = [
-  { key: 'curl', label: 'cURL' }
-  { key: 'javascript', label: 'JavaScript' }
-  { key: 'python', label: 'Python' }
-];
-
-<<<<<<< HEAD
-
-
-=======
-export default function CodeSamples({ samples }: Props) {
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
@@ -58,7 +35,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
-
 
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
@@ -90,9 +66,10 @@ const tabs: Array<{;'
   { key: 'python', label: 'Python' },;
 }
 
-export default function CodeSamples() {interface Props  {samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];const tabs: Array<{key: Props['samples'][number]['language'];
-  label: string;
-}> = [;
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }
@@ -236,12 +213,21 @@ function CodeSamples() {const [active, set_active] = useState<(typeof tabs)[numb
       <div className='flex gap - 2 mb - 2'>;
         {tabs.map (t => (          <button;
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [;
-  { key: 'curl', label: 'cURL' },{ key: 'javascript', label: 'JavaScript' },{ key: 'python', label: 'Python' }],export default /**;
- * CodeSamples - Function description;
- */;
-function CodeSamples() {const [active, set_active] = useState < typeof tabs[number]['key']>('curl')const sample_map  = Object.from_entries (samples.map ((s) => [s.language, s.code]))return (<div className='w - full'>;
-      <div className='flex gap - 2 mb - 2'>;
-        {tabs.map ((t) => (<button;
+  { key: 'curl', label: 'cURL' },
+  { key: 'javascript', label: 'JavaScript' },
+  { key: 'python', label: 'Python' }],
+export default /**
+ * CodeSamples - Function description
+ */
+function CodeSamples() {
+  const [active, set_active] = useState < typeof tabs[number]['key']>('curl');
+  const sample_map = Object.from_entries (samples.map ((s) => [s.language, s.code]));
+;
+  return (
+    <div className="w-full">;
+      <div className="flex gap-2 mb-2">;
+        {tabs.map ((t) => (
+          <button;
             key={t.key}
             className={`px - 3 py - 1 rounded border ${active === t.key ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - secondary border - high - contrast - secondary'}`}
             on_click={() => set_active (t.key)}
@@ -251,7 +237,8 @@ function CodeSamples() {const [active, set_active] = useState < typeof tabs[numb
       </div>;
       <pre className='p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm'>        <code>{sample_map[active] || ''}</code>;
       </pre>;
-    </div>)}      <pre className='p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm'>;
+    </div>);
+}      <pre className="p - 3 rounded bg - high - contrast - tertiary overflow-auto text-sm">;
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);

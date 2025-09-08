@@ -1,46 +1,13 @@
-
-<<<<<<< HEAD
-=======
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
-import { Badge } from "@/types/community";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Badge } from "@/types/community",
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
-
+interface UserBadgesProps {;
   badges: Badge[];
-}
-const icon_map = {}
-  Trophy;
-  Award;
-  BadgeCheck;
-  Star;
-
-  MessageSquare;
-};
-
-export const UserBadges = ({ badges }: UserBadgesProps) => {;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
-import {Badge} from "@/types/community";
-
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-
-
-<<<<<<< HEAD
-  return (
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
+const iconMap = {;interface UserBadgesProps {
   badges: Badge[];
 }
 const icon_map = {}
@@ -53,12 +20,15 @@ const icon_map = {}
 };
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
+  if (!badges?.length) return null;
 
-<<<<<<< HEAD
+},
 
+  return (
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+        
+
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -83,9 +53,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
           </TooltipProvider>
         )
 
-
-<<<<<<< HEAD
-
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
@@ -106,14 +73,6 @@ const iconMap = {;
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
-
-<<<<<<< HEAD
-
-
-=======
-export default UserBadges;
-
-export default UserBadges;
     <div className="flex flex-wrap gap-2">;
       {badges && badges.map((badge) => {;
         // Get the correct icon component based on the badge's icon name;
@@ -127,68 +86,23 @@ export default UserBadges;
                   className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer">;
                   <IconComponent
                     style={{ color: badge && badge.color }} 
-                    className="w-4 h-4" 
-
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
-import { Badge } from "@/types/community",;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
-;
-interface UserBadgesProps {;
-  badges:Badge[];
-}
-;
-const iconMap = {;
-  Trophy,;
-  Award,;
-  BadgeCheck,;
-  Star,;
-  MessageSquare;
-},;
-;
-export const UserBadges = ({ badges } UserBadgesProps) => {;
-  if (!badges?.length) return null,;
-;
-  return (;
-    <div className="flex flex-wrap gap-2">;
-      {badges.map((badge) => {;
-        // Get the correct icon component based on the badge's icon name;
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,;
-        return (;
-          <TooltipProvider key={badge.id}>;
-            <Tooltip>;
-              <TooltipTrigger asChild>;
-                <div;
-                  style={{ backgroundColor: badge.color + '20' }}
-                  className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer";
-                >;
-                  <IconComponent;
-                    style={{ color: badge.color }} ;
-                    className="w-4 h-4";
-                  />;
+                    className="w-4 h-4"                   />;
                 </div>;
               </TooltipTrigger>;
               <TooltipContent>;
                 <div className="text-center">;
-                  <div className="font-medium">{badge.name}</div>;
-                  <div className="text-xs text-gray-500">{badge.description}</div>;
-                  <div className="font-medium">{badge.name}</div>;
-                  <div className="text-xs text-gray-500">{badge.description}</div>;
-                </div>;
+                  <div className="font-medium">{badge && badge.name}</div>;
+                  <div className="text-xs text-gray-500">{badge && badge.description}</div>;                </div>;
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
         );
       })}
     </div>;
-  );
+  )
 };
-export default UserBadges;
-export default UserBadges;
 
 export default UserBadges;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  MessageSquare;
-
 }
 ;
 export const UserBadges = ({ badges }: UserBadgesProps) =>: any {};
@@ -196,7 +110,9 @@ export const UserBadges = ({ badges }: UserBadgesProps) =>: any {};
 if (return null) {}
   $2;
 }
-
+  return (
+    <div className="flex flex - wrap gap-2">;
+      {badges.map ((badge) => {
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
 ;
@@ -204,7 +120,20 @@ if (return null) {}
           <TooltipProvider key={badge.id}>;
             <Tooltip>;
               <TooltipTrigger as_child>;
-
+                <div;
+                  style={{ background_color: badge.color + '20' }}
+                  className="w - 8 h - 8 rounded - full flex items - center justify - center cursor-pointer";
+                >;
+                  <IconComponent;
+                    style={{ color: badge.color }}
+                    className="w - 4 h-4";
+                  />;
+                </div>;
+              </TooltipTrigger>;
+              <TooltipContent>;
+                <div className="text-center">;
+                  <div className="font-medium">{badge.name}</div>;
+                  <div className="text - xs text - gray-500">{badge.description}</div>;
                 </div>;
               </TooltipContent>;
             </Tooltip>;
@@ -215,44 +144,5 @@ if (return null) {}
 ;
 export default UserBadges;
 ;
-<<<<<<< HEAD
-
-
-
-
-=======
-
-),;
-      })}
-    </div>;
-  ),;
-},;
-;
-export default UserBadges,; interface UserBadgesProps {
-  badges: Badge[] 
-}const iconMap = {
-  Trophy;
-Award;
-BadgeCheck;
-Star;
-MessageSquare 
-};
-export const UserBadges = ({
-  badges 
-}: UserBadgesProps) => {
-  if (!badges?.length) return null;
-return (<div className="flex flex-wrap gap-2" > {
-  badges.map ( (badge) => {
-  //Get the correct icon component based on the badge's icon name const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
-badge.id 
-}> <Tooltip> <TooltipTrigger asChild> <div /> </div> </TooltipTrigger> <TooltipContent> </div> </TooltipContent> </Tooltip> </TooltipProvider>) 
-}) 
-}</div>) 
-};
-export default UserBadges;
-export default UserBadges;
-export default UserBadges;
-
 
 export default UserBadges;
->>>>>>> origin/cursor/delete-old-data-records-6bba

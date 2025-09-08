@@ -7,9 +7,27 @@ import EnhancedButton from "./EnhancedButton";
 export type EmptyStateProps = {;
   title: string;
   description?: string;
-  icon?: React.ReactNode;
+  primaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string }
+};
+import React from 'react';
 
+export default function EmptyState(): any ({;
+  title,;
+  description,;
+  icon,;
+  primaryAction,;
+  secondaryAction,;
+}: EmptyStateProps) {;
 
+  primaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string }
+};
+
+import React from 'react';
+
+interface EmptyStateProps {
+  className?: string;
 }
 export default function EmptyState({
   title
@@ -83,7 +101,6 @@ export type EmptyStateProps = {
   description?: string;}
   primaryAction?: { label: string; href: string}
 }secondaryAction?: { label: string; href: string }
-
 
   title: string,;
 >>>>>>> origin/cursor/delete-old-data-records-6bba

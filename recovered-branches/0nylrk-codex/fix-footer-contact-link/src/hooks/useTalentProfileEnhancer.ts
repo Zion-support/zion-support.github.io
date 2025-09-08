@@ -1,79 +1,11 @@
 
-<<<<<<< HEAD
+export interface TalentProfileData {export interface TalentProfileData {
 
 export interface TalentProfileData {;
-
-
-
-
-  name: string;
-  title: string;
-  bio: string;
-
-
-  skills: string[],
-  location?: string;
-
-}
-
-export interface CategorizedSkills {
-
-export interface CategorizedSkills {;
-
-  name: string;
-  title: string;
-  bio: string;
-  skills: string[],
-  location?: string;
-}
-export interface CategorizedSkills {
-
-}
-
-export interface CategorizedSkills {;
-
-
-
-  programming: string[];
   devops: string[];
   platforms: string[];
 import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-
-=======
-export interface TalentProfileData {}
-';
-import {useState} from 'react';'
-import {supabase} from '@/integrations / supabase / client';'
-export interface TalentProfileData {export interface TalentProfileData {
-}
-import {supabase} from '@/integrations/supabase/client';'
-import {supabase} from '@/integrations/supabase/client';
-export interface TalentProfileData {;
-
-
-  name: string;
-  title: string;
-  bio: string;
-
-  skills: string[]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-export interface CategorizedSkills {;
-  programming: string[];
-  devops: string[];
-  platforms: string[];
-import { useState  } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-
-
-export interface TalentProfileData {
-export interface TalentProfileData {
-export interface TalentProfileData {export interface TalentProfileData {
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface EnhancedProfile {
   summary: string,
@@ -84,37 +16,7 @@ export interface EnhancedProfile {
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {}
     setIsGenerating(true);
-
-export interface EnhancedProfile {}
-  summary: string,;
-  categorizedSkills: CategorizedSkills;
-}
-
-export function useTalentProfileEnhancer() { return null; }
-  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {}
-    setIsGenerating(true);
-    setError(null),
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    try {
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
-        body: { talentData: profileData }
-      });
-
-
-      if (error) {
-
-    try {
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
-        body: { talentData: profileData }
-      });
-      if (error) {
-
+    setError(null)      if (error) {
         throw new Error(error.message)
 import { useState } from 'react',;
 
@@ -159,48 +61,11 @@ export function useTalentProfileEnhancer() { return null; }
 '
       setError(err && err.message || 'Failed to enhance profile'),
 
-<<<<<<< HEAD
-
-
-  };
-
-
-
-=======
-
 export interface CategorizedSkills {
 
   programming: string[];
   devops: string[];
-
-
-  };
-
-  return {
-    enhanceProfile;
-    isGenerating;
-    error
-  }
-  };
-  
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return {
-    enhanceProfile;
-    isGenerating;
-
-    error
-
-<<<<<<< HEAD
-
-=======
-  },;
-  return {;
-    enhanceProfile;
-    isGenerating;
-    error;
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  platforms: string[];  soft_skills: string[],
   other: string[];
 
 }
@@ -283,99 +148,10 @@ export function useTalentProfileEnhancer() {
   },
   
   return {
-    enhanceProfile;
-    isGenerating;
+    enhance_profile;
+    is_generating;
+    error;
 
     error
   }
 }
-
-<<<<<<< HEAD
-=======
-  }
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-}
-
-pr-12325
-}
-    enhance_profile;
-
-  }
-<<<<<<< HEAD
-=======
-
-}
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-;
-export interface TalentProfileData {;
-  name:string,;
-  title:string,;
-  bio:string,;
-  skills:string[],;
-  location?:string;}
-;
-export interface CategorizedSkills {;
-  programming:string[],;
-  devops:string[],;
-  platforms:string[],;
-  softSkills:string[],;
-  other:string[];
-}
-;
-export interface EnhancedProfile {;
-  summary:string,;
-  categorizedSkills:CategorizedSkills;
-}
-;
-export function useTalentProfileEnhancer() {;
-  const [isGenerating, setIsGenerating] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  ;
-  const enhanceProfile = async (profileData:TalentProfileData):Promise<EnhancedProfile | null> => {;
-    setIsGenerating(true),;
-    setError(null),;
-    ;
-    try {;
-      // Call the Supabase Edge Function;
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
-        body:{ talentData:profileData }
-      }),;
-;
-      if (error) {;
-        throw new Error(error.message),;
-      }
-      ;
-      return data as EnhancedProfile,;
-    } catch (err:any) {;
-      setError(err.message || 'Failed to enhance profile'),;
-      return null;
-    } finally {;
-      setIsGenerating(false),;
-    }
-  },;
-  ;
-  return {;
-    enhanceProfile,;
-    isGenerating,;
-    error;
-  },;
-} 
-}
-  }
-}
-
-<<<<<<< HEAD
-
-=======
-  }
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

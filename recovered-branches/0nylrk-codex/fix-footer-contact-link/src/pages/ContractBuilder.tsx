@@ -1,13 +1,19 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
-function ContractBuilderPage() {
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import { SEO  } from '@/components/SEO';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ContractBuilderContent} from '@/components/contracts/page/ContractBuilderContent';
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',function ContractBuilderPage() {
   return (
     <ProtectedRoute>
       <>
@@ -24,60 +30,51 @@ function ContractBuilderPage() {
         <Footer />
       </>
     </ProtectedRoute>
-  );
+  )}
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 ;
 
+}
+export default ContractBuilderPage;
+
+;
 
 export default ContractBuilderPage;
-import React from 'react';
-import {SEO} from '@/components / SEO';
-import {AppHeader} from '@/layout / AppHeader';
-import {Footer} from '@/components / Footer';
-import {ProtectedRoute} from '@/components / ProtectedRoute';
-import {ContractBuilderContent} from '@/components / contracts / page / ContractBuilderContent';
-/**
- * ContractBuilderPage - Function description
- */
-function ContractBuilderPage() {
-  return (
+
+import React from 'react',;
+import { SEO } from '@/components/SEO',;
+import { AppHeader } from '@/layout/AppHeader',;
+import { Footer } from '@/components/Footer',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',;
+;
+function ContractBuilderPage() {;
+  return (;
     <ProtectedRoute>;
       <>;
-        <SEO;
-          title="Smart Contract Builder | Zion AI Marketplace";
-          description="Create and deploy blockchain - backed smart contracts for your projects";
+        <SEO ;
+          title="Smart Contract Builder | Zion AI Marketplace" ;
+          description="Create and deploy blockchain-backed smart contracts for your projects";
         />;
         <AppHeader />;
-        <main className="container mx - auto py - 10 px - 4">;
+        ;
+        <main className="container mx-auto py-10 px-4">;
           <ContractBuilderContent />;
         </main>;
+        ;
         <Footer />;
       </>;
-    </ProtectedRoute>);
-=======
+    </ProtectedRoute>;
+  ),;
 }
-
+;
+export default ContractBuilderPage,; <ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects" /> <AppHeader /> <main className="container mx-auto py-10 px-4" > <ContractBuilderContent /> </main> <Footer /> </> </ProtectedRoute> export default ContractBuilderPage;
+}
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
 export default ContractBuilderPage;
 
 ;
-
-<<<<<<< HEAD
-
-
-
-=======
 export default ContractBuilderPage;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

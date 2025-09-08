@@ -1,27 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
-
-
-import js from "@eslint/js",
-import globals from "globals",
-import reactHooks from "eslint-plugin-react-hooks",
-import reactRefresh from "eslint-plugin-react-refresh",
-import tseslint from "typescript-eslint",
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -29,51 +5,6 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"]
     languageOptions: {
       ecmaVersion: 2020
-
-<<<<<<< HEAD
-      globals: globals.browser}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-export default tseslint && tseslint.config(
-
-  { ignores: ["dist"] },
-  {}
-    extends: [js && js.configs.recommended, ...tseslint && tseslint.configs.recommended],"
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {}
-      ecmaVersion: 2020,
-      globals: globals && globals.browser},
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    plugins: {
-
-      "react-hooks": reactHooks
-      "react-refresh": reactRefresh}
-    rules: {
-<<<<<<< HEAD
-
-
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-
-
-=======
-
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-
-...reactHooks && reactHooks.configs.recommended && recommended.rules,
-...reactHooks && reactHooks.configs.recommended && recommended.rules,
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      "react-refresh/only-export-components": [
-        "warn"
-        { allowConstantExport: true }]
-      "@typescript-eslint/no-unused-vars": "off"}}
-      ...reactHooks.configs.recommended.rules
-      "react-refresh/only-export-components": [
       globals: globals.browser}    plugins: {
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
@@ -82,13 +13,6 @@ export default tseslint && tseslint.config(
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
-
-<<<<<<< HEAD
-),
-;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import js from "@eslint/js",;
 import globals from "globals",;
 import reactHooks from "eslint-plugin-react-hooks",;
@@ -126,18 +50,6 @@ export default tseslint.config(;"
         { allowConstantExport: true }];
       "@typescript-eslint/no-unused-vars": "off"}}
 );
-=======
-    plugins: {;"
-      "react-hooks": reactHooks,;"
-      "react-refresh": reactRefresh},;
-    rules: {;
-      ...reactHooks.configs.recommended.rules,;"
-      "react-refresh/only-export-components": [;"
-        "warn",;
-        { allowConstantExport: true }];"
-      "@typescript-eslint/no-unused-vars": "off"}});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 
 )
 import js from "@eslint / js";
@@ -226,13 +138,7 @@ export default tseslint.config (
       "@typescript - eslint / no - unused - vars": "off"}}
 ),
 
-<<<<<<< HEAD
-
 ),
-
-
-
-=======
 
 import js from "@eslint/js",;
 import globals from "globals",;
@@ -257,9 +163,6 @@ export default tseslint.config(;
       ...reactHooks.configs.recommended.rules,;"
       "react-refresh/only-export-components":[;"
         "warn",;
-
-),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
-};
-
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        { allowConstantExport: true }];
+      "@typescript-eslint/no-unused-vars": "off"}}
+);

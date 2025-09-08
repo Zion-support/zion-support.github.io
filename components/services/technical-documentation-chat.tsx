@@ -19,6 +19,10 @@ const TechnicalDocumentationChat: NextPage = () => {;
       <main>
         <h1>TechnicalDocumentationChat</h1>
         <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+      </Head>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -42,12 +46,6 @@ const TechnicalDocumentationChat: NextPage = () => {
 
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
 
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { NextPage } from './next';
 import Head from './next / head';
 
@@ -72,12 +70,3 @@ const TechnicalDocumentationChat: NextPage = () => {}
 ;
 export default TechnicalDocumentationChat;
 ;
-
-<<<<<<< HEAD
-
-
-
-=======
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-

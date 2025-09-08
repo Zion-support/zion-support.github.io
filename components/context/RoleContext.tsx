@@ -15,7 +15,6 @@ const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
   children,;
 
-
 export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
   children,;
 }) => {  const [role, setRole] = useState<UserRole>('client');
@@ -85,7 +84,6 @@ const RoleContext = create_context < RoleContextValue | undefined>(undefined);
 ;
 
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
-
 
   children,
 }) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
@@ -196,45 +194,11 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
 
         window.localStorage.setItem('zion_user_role', role);      }
 
-
-=======
-    try {
-      if (typeof window !== 'undefined') {
-      }
-      if (typeof window !== 'undefined') {;'
-        }
-        window && window.localStorage.setItem('zion_user_role', role);      }        window && window.localStorage.setItem('zion_user_role', role);'
-  useEffect(() => {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
-}
-
-window.localStorage.setItem('zion_user_role', role);
-origin/cursor/automate-test-improve-and-merge-code-2533
-window.localStorage.setItem('zion_user_role', role);'
->>>>>>> origin/cursor/delete-old-data-records-6bba
       }
     } catch {}
   }, [role]);
-  const value = useMemo(() => ({ role, setRole }), [role]);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        window.localStorage.setItem('zion_user_role', role)
-      }
-    } catch {}
-  }, [role]),
-
-  const value = useMemo(() => ({ role, setRole }), [role]),
-
-
-<<<<<<< HEAD
-
+  const value = useMemo(() => ({ role, setRole }), [role])
+};
 
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx

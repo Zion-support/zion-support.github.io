@@ -145,10 +145,54 @@ import Button from '../components/ui/Button';
 import Button from '../components/ui/Button';
 
 
-
-import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default function AISeosuitePage() {
+  const features = [
+} from 'lucide-react';
+export default function AISeosuitePage() {;
+  const features = [;
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: 'Ranking Analytics'
+      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'}
+    {
+      icon: <Target className="w-8 h-8 text-white" />
+      title: 'Content Optimization'
+      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'}
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white" />
+      title: 'Technical SEO'
+      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'}
+    {
+      icon: <Globe className="w-8 h-8 text-white" />
+      title: 'Local SEO'
+      description: 'Optimize for local search with location-based keyword research and citation management.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'}
+    {
+      icon: <Zap className="w-8 h-8 text-white" />
+      title: 'Automated Reports'
+      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
+      gradient: 'from-pink-400 to-rose-500'}]
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className="w-6 h-6 text-blue-400" />
+      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className="w-6 h-6 text-green-400" />
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+    }
 
 export default function AISeosuitePage() {
   const features = null;
@@ -652,13 +696,13 @@ const useCases = [
     {;
       category: 'On-Page SEO',;
       icon: <Target className="w-6 h-6 text-green-400" />,;
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization'];
-    };
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+};
     {;
       category: 'Technical SEO',;
       icon: <Settings className="w-6 h-6 text-purple-400" />,;
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator'];
-    };
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
+};
     {;
       category: 'Analytics & Reporting',;
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,;
@@ -1032,8 +1076,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <section className="py-24 bg-black relative overflow-hidden">
 
-
-
+                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
+                <div className="relative">;
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
+                    {feature && feature.icon}
+                  </div>;
+                </div>;
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">;
+                  {feature && feature.title}
+                </h3>;
+                <p className="text-gray-400 leading-relaxed">;
+                  {feature && feature.description}
+                </p>;
+              </Card>;
+                    {feature.icon}
+                  </div>;
+                </div>;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition-colors duration-300">;
+                  {feature.title}
+                </h3>;
+                <p className="text - gray-400 leading-relaxed">;
+                  {feature.description}
+            ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1435,16 +1499,6 @@ key={benefitIndex}
 
             ))}
 
-
-
-
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1660,66 +1714,14 @@ key={index}
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
                 key={index}
-                </p>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* SEO Tools Section */}
-      <section className='py - 24 bg - black relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              Comprehensive SEO Tools;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              Professional - grade tools used by top SEO agencies and marketers;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>      <section className="py - 24 bg - black relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
-          <div className="text - center mb - 20">;
-            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
-              Comprehensive SEO Tools;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-            {seo_tools.map ((tool, index) => (
-              <Card;
-                key={index}
-                className='group border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300';
-              >;
-                <div className='flex items - start space - x-4'>;
-                  <div className='flex - shrink - 0'>{tool.icon}</div>;
-                  <div className='flex - 1'>;
-                    <h3 className='text - xl font - bold mb - 3 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
-                      {tool.category}
-                    </h3>;
-                    <div className='grid grid - cols - 1 gap - 2'>;
-                      {tool.tools.map ((tool_name, tool_index) => (
-                        <div;
-                          key={tool_index}
-                          className='flex items - center text - sm text - gray - 300';
-                        >;
-                          <CheckCircle className='w - 4 h - 4 text - blue - 400 mr - 2 flex - shrink - 0' />                          {tool_name}            {seo_tools.map ((tool, index) => (
-              <Card;
-                key={index}
-                className="group border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300";
-              >;
-                <div className="flex items - start space - x-4">;
-                  <div className="flex - shrink - 0">{tool.icon}</div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - xl font - bold mb - 3 text - white group - hover:text - blue - 400 transition - colors duration - 300">;
-                      {tool.category}
-                    </h3>;
-                    <div className="grid grid - cols - 1 gap - 2">;
-                      {tool.tools.map ((tool_name, tool_index) => (
-                        <div key={tool_index} className="flex items - center text - sm text - gray - 300">;
-                          <CheckCircle className="w - 4 h - 4 text - blue - 400 mr - 2 flex - shrink - 0" />;
-                          {tool_name}
-                        </div>))}
-                    </div>;
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
                   </div>;
                 </div>;
               </Card>))}
@@ -1913,7 +1915,6 @@ key={index}
 
 <<<<<<< HEAD
               </Card>;
-
 
                     </li>
 
@@ -2281,10 +2282,6 @@ href='/contact'
 
 <<<<<<< HEAD
 
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
               Watch Demo;
             </Button>;
           </div>;

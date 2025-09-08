@@ -27,7 +27,8 @@ import { motion } from 'framer-motion';
         }
       }
       { threshold }
-    );
+    )
+};
 
           setIsInView(true);
           observer.disconnect()
@@ -247,6 +248,8 @@ alt=''
         }`}
         style={{ width, height }}
       />
+
+      />
       
       {/* Actual Image */}
       {isInView && (
@@ -318,7 +321,10 @@ export default LazyImage;
           className='w - full h - full object - cover';
           loading='lazy'          style={{ width, height }}
         />)}
-    </div>)}export default LazyImage;          className="w - full h - full object - cover";
+    </div>);
+}
+;
+export default LazyImage;          className="w - full h-full object-cover";
           loading="lazy";
           style={{ width, height }}
         />)}

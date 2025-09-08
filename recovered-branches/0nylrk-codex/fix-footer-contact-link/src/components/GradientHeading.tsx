@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 
 interface GradientHeadingProps {;
   children: React && React.ReactNode,;
-=======
-interface GradientHeadingProps {;
-  children: React && React.ReactNode,;
 
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
 
   const Tag = level;
   return (
     <Tag;
       className={cn("
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -22,6 +18,11 @@ interface GradientHeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+        className
+      )}>;
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -35,6 +36,7 @@ export function GradientHeading() { return null; }
 export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {};
   const Tag = level;
   const Tag = level,
+  
 
   return (
     <Tag;
@@ -59,10 +61,9 @@ export function GradientHeading() {;"
       className={cn(;
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
         className;
-
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent","
-        classNameimport { cn } from '@/lib / utils';'
-import React from './react';'
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        classNameimport { cn } from '@/lib / utils';
+import React from './react';
 interface GradientHeadingProps {
   }
   "children": React.ReactNode,
@@ -119,55 +120,4 @@ function GradientHeading() {
     >;
       {children}
     </Tag>);
-
-import { cn } from "@/lib/utils",;
-import React from "react",;
-;
-interface GradientHeadingProps {;
-  children:React.ReactNode,;
-  className?:string,;
-  level?:"h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
-
-<<<<<<< HEAD
-
-=======
-;
-export function GradientHeading({ children, className, level = "h2" } GradientHeadingProps) {;
-  const Tag = level,;
-  ;
-  return (;
-    <Tag ;
-      className={cn(;
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",;
-        className;
-      )}
-    >;
-      {children}
-    </Tag>;
-  ),;}
- interface GradientHeadingProps {
-  children: React.ReactNode;
-className?: string;
-return (<Tag className= {
-  cn () 
-}> {
-  children 
-}</Tag>) 
-}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      )}
-    >
-      {children}
-    </Tag>
-  )
-
-<<<<<<< HEAD
-
-
-
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

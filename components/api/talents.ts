@@ -143,7 +143,6 @@ const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
   return res.status(201).json({ id: record.id })
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });

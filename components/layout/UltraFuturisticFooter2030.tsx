@@ -1,8 +1,439 @@
 import React from 'react';
 
-const UltraFuturisticFooter2030: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraFuturisticFooter2030 temporarily disabled</div>;
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
-export default UltraFuturisticFooter2030;
+const serviceCategories = [;
+  {;
+    title: '🚀 AI & Consciousness',;
+    services: [;
+      {;
+        name: 'AI Consciousness Evolution',;
+        href: '/ai-consciousness-evolution-platform',;
+      },;
+      {;
+        name: 'AI Emotional Intelligence',;
+        href: '/ai-emotion-intelligence-platform',;
+      },;
+      {;
+        name: 'AI Creativity Orchestrator',;
+        href: '/ai-creativity-orchestrator',;
+      },;
+      {;
+        name: 'AI Autonomous Business Manager',;
+        href: '/ai-autonomous-business-manager',;
+      },;
+    ],;
+  },;
+    title: '⚛️ Quantum & Emerging Tech',;
+    services: [;
+      {;
+        name: 'Quantum Internet Security',;
+        href: '/quantum-internet-security-gateway',;
+      },;
+      {;
+        name: 'Quantum Learning Accelerator',;
+        href: '/quantum-learning-accelerator',;
+      },;
+      {;
+        name: 'Quantum Financial Trading',;
+        href: '/quantum-financial-trading-platform',;
+      },;
+      {;
+        name: 'Quantum Cloud Infrastructure',;
+        href: '/quantum-cloud-infrastructure',;
+      },;
+    ],;
+  },;
+  {;
+    title: '🧬 Biotech & DNA Computing',;
+    services: [;
+      {;
+        name: 'DNA Computing Platform',;
+        href: '/biotech-dna-computing-platform',;
+      },;
+      {;
+        name: 'Personalized Nutrition',;
+        href: '/biotech-personalized-nutrition',;
+      },;
+      {;
+        name: 'Predictive Health Analytics',;
+        href: '/ai-predictive-health-analytics',;
+      },;
+      { name: 'Research Automation', href: '/advanced-research-automation' },;
+    ],;
+  },  {;
+    title: '🏙️ Enterprise IT Solutions',;
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' },;
+      { name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' },;
+      { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },;
+      { name: 'Research Automation', href: '/advanced-research-automation' }
+    ]
+};
+    title: '🏙️ Enterprise IT Solutions',;
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },;
+      {;
+        name: 'Autonomous IT Operations',;
+        href: '/autonomous-it-operations-center',;
+      },;
+      {;
+        name: 'AI Enterprise Security',;
+        href: '/ai-powered-enterprise-security',;
+      },;
+      {;
+        name: 'Intelligent Data Governance',;
+        href: '/intelligent-data-governance',;
+      },;
+    ],;
+  },;
+    title: '🌌 Space & Metaverse Tech',;
+    services: [;
+      {;
+        name: 'Space Mining Automation',;
+        href: '/space-mining-automation-platform',;
+      },;
+      {;
+        name: 'Metaverse Digital Reality',;
+        href: '/metaverse-digital-reality-platform',;
+      },;
+      { name: 'Quantum Research Platform', href: '/quantum-research-platform' },;
+      { name: 'AI Research Assistant', href: '/ai-research-assistant' },;
+    ],;
+  },;
+  {;
+    title: '🎯 2030 Innovative Micro SAAS',;
+    services: [;
+      {;
+        name: 'AI Business Intelligence Suite 2030',;
+        href: '/ai-business-intelligence-suite-2030',;
+      },;
+      {;
+        name: 'AI Customer Experience Platform 2030',;
+        href: '/ai-customer-experience-platform-2030',;
+      },;
+      {;
+        name: 'AI Marketing Automation Suite 2030',;
+        href: '/ai-marketing-automation-2030',;
+      },;
+      {;
+        name: 'AI HR Management Suite 2030',;
+        href: '/ai-hr-management-suite-2030',;
+      },;
+    ],;
+  },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },;
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },;
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },;
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Case Studies', href: '/case - studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press', href: '/press' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+  { name: 'Status', href: '/status' }
+];
+
+const quickLinks = [;
+  { name: 'Home', href: '/' },;
+  { name: 'Services', href: '/services' },;
+  { name: 'Solutions', href: '/solutions' },;
+  { name: 'Pricing', href: '/pricing' },;
+  { name: 'Resources', href: '/resources' },;
+  { name: 'Case Studies', href: '/case-studies' },;
+  { name: 'Blog', href: '/blog' },;
+const companyInfo = [;
+  { name: 'About Us', href: '/about' },;
+  { name: 'Careers', href: '/careers' },;
+  { name: 'Press', href: '/press' },;
+  { name: 'Partners', href: '/partners' },;
+  { name: 'Support', href: '/support' },;
+  { name: 'Status', href: '/status' },;
+];
+const socialLinks = [;
+  {;
+    name: 'LinkedIn',;
+    href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
+    icon: Linkedin,;
+  },;
+  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
+  {;
+    name: 'Facebook',;
+    href: 'https://facebook && facebook.com/ziontechgroup',;
+    icon: Facebook,;
+  },;
+  {;
+    name: 'Instagram',;
+    href: 'https://instagram && instagram.com/ziontechgroup',;
+    icon: Instagram,;
+  },;
+  { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
+  { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
+];
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
+          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+      <div className="relative z-10">
+                    href={contactInfo && contactInfo.website}
+                    className='hover:text-purple-400 transition-colors'>                    {contactInfo && contactInfo.website.replace('https://', '')}      {/* Animated Background */}
+      <div className="absolute inset-0">;
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>;
+        <div className="absolute top-0 left-0 w-full h-full">;
+          <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>;
+          <div className="absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>;
+          <div className="absolute bottom-20 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-purple-300 rounded-full animate-bounce"></div>;
+          <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>;
+        </div>;
+      </div>;
+      <div className="relative z-10">;
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {/* Company Info */}
+
+                    {contactInfo.website.replace('https://', '')}
+
+                  </a>
+                </div>
+              </div>
+            </div>
+                  </a>;
+                </div>;
+              </div>;
+            </div>;
+                <span>Our Services</span>
+              </h4>
+              <div className='grid grid-cols-1 gap-4'>
+                {serviceCategories.slice(0, 3).map((category, index) => (
+                  <div key={index} className='space-y-2'>
+                    <h5 className='text-sm font-medium text-purple-300'>
+                      {category.title}
+                    </h5>
+                    <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
+                        <Link
+                          key={serviceIndex}
+                          href={service && service.href}
+                          className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'>                <span>Our Services</span>;
+              </h4>;
+              <div className="grid grid-cols-1 gap-4">;
+                {serviceCategories && serviceCategories.slice(0, 3).map((category, index) => (;
+                  <div key={index} className="space-y-2">;
+                    <h5 className="text-sm font-medium text-purple-300">{category && category.title}</h5>;
+                    <div className="space-y-1">;
+                      {category && category.services.map((service, serviceIndex) => (;
+                        <Link
+                          key={serviceIndex}
+                          href={service && service.href}
+                          className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'                          className="block text-xs text-gray-400 hover:text-purple-300 transition-colors">;
+                          {service && service.name}
+                        </Link>;
+                      ))}
+                    </div>;
+                  </div>;
+                ))}
+            {/* Quick Links */}
+
+                ))}
+                  <Link
+                    key={index}
+                    href={link && link.href}
+                    className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'>              <div className="space-y-2">;
+                <h5 className="text-sm font-medium text-cyan-300">Company</h5>;
+                {companyInfo && companyInfo.map((link, index) => (;
+                  <Link
+                    key={index}
+                    href={link && link.href}
+                    className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                ))}
+                <span>Connect & Trust</span>
+              </h4>
+              </div>;
+            </div>;
+
+            {/* Social & Certifications */}
+            <div className='space-y-6'>;
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
+                <Users className='w-5 h-5 text-green-400' />;
+                <span>Connect & Trust</span>;
+              </h4>;
+              </div>
+            </div>
+            {/* Social & Certifications */}
+            <div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Users className='w-5 h-5 text-green-400' />
+                <span>Connect & Trust</span>
+              </h4>
+              {/* Social Links */}
+              <div className='space-y-3'>;
+                <h5 className='text-sm font-medium text-green-300'>;
+                  Follow Us;
+                </h5>;
+                <div className='flex flex-wrap gap-2'>                  {socialLinks && socialLinks.map((social, index) => (;
+                    <a
+                      key={index}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'>;
+                      <social && social.icon className='w-5 h-5' />                    </a>                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40";
+                    >;
+                      <social && social.icon className="w-5 h-5" />;
+              {/* Social Links */}
+              <div className="space-y-3">;
+                <h5 className="text - sm font - medium text-green-300">Follow Us</h5>;
+                <div className="flex flex-wrap gap-2">;
+                  {social_links.map ((social, index) => (
+                    <a;
+                      key={index}
+                      href={social.href}
+              {/* Certifications */}
+              <div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+                  <Award className='w-4 h-4' />
+
+                  <span>Certifications</span>
+                </h5>
+                <div className='grid grid-cols-1 gap-2'>
+                  {certifications.map((cert, index) => (
+              {/* Certifications */}
+              <div className='space-y-3'>;
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
+                  <Award className='w-4 h-4' />;
+                  <span>Certifications</span>;
+                </h5>;
+                <div className='grid grid-cols-1 gap-2'>;
+                  {certifications && certifications.map((cert, index) => (;
+                    <div
+                      key={index}
+                      className='flex items-center space-x-2 text-xs text-gray-400'>;
+                      <CheckCircle className='w-3 h-3 text-green-400' />                      <span>{cert}</span>                  <span>Certifications</span>;
+                </h5>;
+                <div className="grid grid-cols-1 gap-2">;
+                  {certifications && certifications.map((cert, index) => (;
+                    <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">;
+                      <CheckCircle className="w-3 h-3 text-green-400" />;
+                      <span>{cert}</span>;
+                    </div>;
+              <div className="space-y-3">
+                <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
+                  <Award className="w-4 h-4" />
+                  <span>Certifications</span>
+                </h5>
+                <div className="grid grid-cols-1 gap-2">
+                  {certifications.map((cert, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      <span>{cert}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
+                    >;
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow-cyan-400 / 40";
+                    >;
+                      <social.icon className="w-5 h-5" />))}
+                </div>;
+              </div>;
+              {/* Certifications */}
+              <div className='space - y-3'>;
+                <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;
+                  <Award className='w - 4 h - 4' />;
+                  <span > Certifications</span>;
+                </h5>;
+                <div className='grid grid - cols - 1 gap - 2'>;
+                  {certifications.map ((cert, index) => (
+                    <div;
+                      key={index}
+                      className='flex items - center space - x-2 text - xs text - gray - 400';
+                    >;
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span>{cert}</span>                  <span > Certifications</span>;
+                </h5>;
+                <div className="grid grid - cols-1 gap-2">;
+                  {certifications.map ((cert, index) => (
+                    <div key={index} className="flex items - center space - x-2 text - xs text-gray-400">;
+                      <CheckCircle className="w - 3 h - 3 text-green-400" />;
+                      <span>{cert}</span>;
+                    </div>))}
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+        {/* Bottom Bar */}
+        <div className='border-t border-purple-500/20'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
+                <Link
+                  href='/privacy'
+                  className='hover:text-purple-400 transition-colors'>;
+                  Privacy Policy;
+                </Link>;
+                <Link
+                  href='/terms'
+              <div className="flex items-center space-x-4 text-sm text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Heart className="w-4 h-4 text-red-400" />
+                  <span>Made with passion for innovation</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Heart className='w-4 h-4 text-red-400' />
+                  <span>Made with passion for innovation</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Star className='w-4 h-4 text-yellow-400' />                  <span>5.0/5.0 Rating</span>                <div className="flex items-center space-x-2">
+                  <Star className="w-4 h-4 text-yellow-400" />
+                  <span>5.0/5.0 Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+  );
+}
+;
+}
+}
+}
+  );
+}
+    </footer>);
+}

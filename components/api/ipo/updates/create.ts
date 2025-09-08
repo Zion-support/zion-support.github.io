@@ -14,12 +14,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res && res.status(200).json(update)
 }
 
-
-
-
-
-
-
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

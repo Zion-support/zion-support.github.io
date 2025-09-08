@@ -8,15 +8,10 @@ import React from 'react';
 interface FiveGEnterpriseSolutionsProps {
   // Add props here as needed
 
-
-<<<<<<< HEAD
-
-
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsProps) {
   return (
     <div>
@@ -24,15 +19,12 @@ export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsPr
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}
 
-<<<<<<< HEAD
 }
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+:src.pages.disabled/FiveGEnterpriseSolutions.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/FiveGEnterpriseSolutions.jsx

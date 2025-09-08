@@ -64,17 +64,3 @@ export default function BlogPage() {
 
 }
 
-
-
-
-
-<<<<<<< HEAD
-
-
-
-=======
-}
-    </UltraFuturisticBackground>
-  )
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

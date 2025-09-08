@@ -32,9 +32,10 @@ const get_icon = () =>: any {
   switch (toast.type) {
   case 'success':;
 interface ToastProps {
-  toast: Toast;
-  on_remove: (id: string) => void;
-export type ToastType = 'success' | 'error' | 'info' | 'warning';
+  toast: Toast
+  onRemove: (id: string) => void
+}
+
 import React from 'react';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
@@ -52,10 +53,10 @@ interface ToastProps {;
 <<<<<<< HEAD
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
+  id: string,
+  type: ToastType,
+  title: string,;
 
-=======
-) => {
-  return $3;}
 export interface Toast {;
   id: string,;
   type: ToastType,;
@@ -181,8 +182,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {}
       case 'info':'
         return <Info className='w-5 h-5 text-blue-400' />;
 
-        return <Info className='w-5 h-5 text-blue-400' />;    }'
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
 
@@ -328,31 +328,29 @@ default:
             <p className='mt-1 text-sm text-white/70'>{toast.message}</p>
           )}
 
-
-            setIsVisible(false);
-
   return (
           }}
-        </div>;
-        <button;
-          onClick={() => {setIsVisible(false)return (setTimeout(() => onRemove(toast.id), 300)}}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        return <AlertCircle className = $2;
-      case 'warning':
-        return <AlertCircle className = $2;
-      case 'info':
-        return <Info className = $2;
-      default: return <Info className = $2;
-  const getBorderColor = $2;
-      case 'error':
-        return 'border-red-500/20',
-      case 'warning':
-        return 'border-yellow-500/20',
-      case 'info':
-        return 'border-blue-500/20',
-      default: return 'border-blue-500/20'
-    }
-  },
+      {/* Progress bar */}
+      <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>;
+        <motion&& motion.div
+          className={`h-full ${
+            toast && toast.type === 'success'
+              ? 'bg-green-400'
+              : toast && toast.type === 'error'
+                ? 'bg-red-400'
+                : toast && toast.type === 'warning'
+                  ? 'bg-yellow-400'
+                  : 'bg-blue-400'
+          }`}
+          initial={{ width: '100%' }}
+          animate={{ width: '0%' }}
+}) => {
+          transition={{ duration: toast && toast.duration || 5000, ease: 'linear' }}
+        />;
+      </div>;
+    </motion && motion.div>;
+  )
+};
 
   const getBackgroundColor = $2;
       case 'error':
@@ -550,125 +548,16 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
           className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition-colors duration-200";
         >;
           <X className="w - 4 h - 4 text-white / 60 hover:text-white" />;
-
-=======
-
-          transition={{ duration: toast.duration || 5000, ease: "linear" }}
-        />
-      </div>
-    </motion.div>
-  )
-},
-
-interface ToastContainerProps {
-  toasts: Toast[],
-  onRemove: (id: string) => void
-
-
-// Hook for managing toasts,
-export const useToast = () => {
- ;
-  }
-  const [toasts, setToasts] = useState<Toast[]>([]);
-
-const addToast = ("toast": Omit<Toast, 'id'>) => {'
-   ;
-  }
-  const id = Math.random().toString(36).substr(2, 9);
-) => {
-  return $3;}
-}
-const newToast = { ...toast, id };
-setToasts(prev => { return [...prev, newToast])
-}; }
-
-
-const removeToast = ("id": string) => {
-    }
-    setToasts(prev => { return prev.filter(toast => toast.id !== id)); }
-  }
-
-const showSuccess = ("title": string, message?: string) => {
-    }
-    addToast({ "type": 'success', title, message });'
-  }
-
-const showError = ("title": string, message?: string) => {
-    }
-    addToast({ "type": 'error', title, message });'
-  }
-
-const showInfo = ("title": string, message?: string) => {
-    }
-    addToast({ "type": 'info', title, message });'
-  }
-
-const showWarning = ("title": string, message?: string) => {
-    }
-    addToast({ "type": 'warning', title, message });'
-  }
-  return {
-    }
-    toasts,
-    showSuccess,
-    showError,
-    showInfo,
-    showWarning,
-    removeToast
-}
-
-export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
-  return (
-    <div className = $2;
-// Hook for managing toasts
-export const useToast = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]);
-  const addToast = (toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id }
-    setToasts(prev => [...prev, newToast]);
-  const removeToast = (id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }
-  const showSuccess = (title: string, message?: string) => {
-    addToast({ type: 'success', title, message });
-  }
-  const showError = (title: string, message?: string) => {
-    addToast({ type: 'error', title, message });
-  }
-  const showInfo = (title: string, message?: string) => {
-    addToast({ type: 'info', title, message });
-  }
-  const showWarning = (title: string, message?: string) => {
-    addToast({ type: 'warning', title, message });
-  }
-  return {
-    toasts
-    showSuccess
-    showError
-    showInfo
-    showWarning
-    removeToast
-  }
-};
-
-return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
-"
-          <X className=\"w-4 h-4 text-white/60 hover:text-white\"    />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
         </button>;
-      </div>;"
-          className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
-"
-          <X className=\"w-4 h-4 text-white/60 hover:text-white\"    />;}
-        </button>;}
-      </div>;{/* Progress bar */}"
-      <div className=\"absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden\"    />;
-        <motion&& motion.div;
-          className={`h-full ${toast && toast.type === 'success' ? 'bg-green-400' :;
-            toast && toast.type === 'error' ? 'bg-red-400' :;
-            toast && toast.type === 'warning' ? 'bg-yellow-400' :;}
-            'bg-blue-400';}
+      </div>;
+      {/* Progress bar */}
+      <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded-b-xl overflow-hidden">;
+        <motion.div;
+          className={`h - full ${
+            toast.type === 'success' ? 'bg - green - 400' :;
+            toast.type === 'error' ? 'bg - red - 400' :;
+            toast.type === 'warning' ? 'bg - yellow - 400' :;
+            'bg - blue - 400';
           }`}
           initial={{ width: '100%' }}
 

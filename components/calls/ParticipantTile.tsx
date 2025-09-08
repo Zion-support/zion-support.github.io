@@ -40,12 +40,9 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
   const audioRef = $2;
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind = $2;
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind = $2;
-    participant.tracks.forEach(pub = $2;
-      if (track) handleTrackSubscribed(pub, track)
-    }),
+      if (track.kind === 'video' && videoRef.current) {
+        track.attach(videoRef.current)
+};
 
 }
 class ErrorBoundary extends React.Component {
@@ -196,10 +193,7 @@ type Props = {;
 
 
   isLocal?: boolean;
-}
-export default function ParticipantTile() {}}
-export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElement | null>(null)const audioRef = useRef<HTMLAudioElement | null>(null)useEffect(() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.attach(videoRef.current)}export default function ParticipantTile(): any ({participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,isLocal?: boolean;
-  displayName?: string;
+  displayName?: string
 };
 
   useEffect(() => {;
@@ -532,15 +526,10 @@ if ( {) {$2;}
     </div>);  }, [participant]);
 ;
   return (
-    <div className="bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative">;"
-      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className="w - full h - 48 object - cover bg - black" />;"
-      <audio ref={audio_ref} auto_play className="hidden" />;"
-      <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white">;'
-      </div>;
-    </div>)}, [participant])return (<div className="bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative">;
-      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className="w - full h - 48 object - cover bg - black" />;
+    <div className="bg - black / 60 rounded - lg overflow - hidden border border-gray-700 relative">;
+      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className="w - full h - 48 object-cover bg-black" />;
       <audio ref={audio_ref} auto_play className="hidden" />;
-      <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white">;
+      <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg-black / 60 text-white">;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
         {display_name || (participant as any).name || (is_local ? 'You : Participant')}
 

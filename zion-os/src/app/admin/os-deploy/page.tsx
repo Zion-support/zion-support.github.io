@@ -1,6 +1,66 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState } from "react";export default function OSDeployPage() {
+
+export default function OSDeployPage() {;
+const [loading, setLoading] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    // Simulate deployment
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
+  // Mock feature keys and functions
+  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
+  const labelFor = (key: string) => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+'use client';
+=======    const labels: { [key: string]: string } = {
+      ai: 'AI Integration'
+      blockchain: 'Blockchain Technology'
+      governance: 'Governance System'
+      treasury: 'Treasury Management';
+    }
+    return labels[key] |key;
+  }
+  const getFeatureDescription = (key: string) => {
+    const descriptions: { [key: string]: string } = {
+ai: 'Advanced AI capabilities and automation'
+      blockchain: 'Secure blockchain infrastructure'
+      governance: 'Decentralized governance mechanisms'
+      treasury: 'Automated treasury management'
+    }
+    return descriptions[key] |'Feature description';
+  }
+'use client';
+
+export default function OSDeployPage() {;
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -9,8 +69,34 @@ import React, { useState } from "react";
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
+    }, 3000)
+};
+
+  const loading = false;
+  const message = "";
+  const messageType = "success";
+
+  // Mock feature keys and functions
+  const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];
+
+  const labelFor = (key: string) => {
+    const labels: { [key: string]: string } = {
+      ai: 'AI Integration',
+      blockchain: 'Blockchain Technology',
+      governance: 'Governance System',
+      treasury: 'Treasury Management';
     }
-  };
+    return labels[key] || key;
+        {/* Header */}
+  const getFeatureDescription = (key: string) => {
+    const descriptions: { [key: string]: string } = {
+ai: 'Advanced AI capabilities and automation',
+      blockchain: 'Secure blockchain infrastructure',
+      governance: 'Decentralized governance mechanisms',
+      treasury: 'Automated treasury management'
+    };
+    return descriptions[key] || "Feature description"
+};
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
@@ -22,38 +108,13 @@ import React, { useState } from "react";
             Configure and deploy your sovereign AI-powered digital economy with our unified deployment protocol.
           </p>
         </div>
-
-        {/* Form */}
-        <form onSubmit={onSubmit} className="space-y-8">
-          {/* Basic Configuration */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>
-              Basic Configuration
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">
-                  Instance Name *
-                </label>
-                <input
-                  name="instanceName"
-                  required
-                  value={formData.instanceName}
-                  onChange={handleInputChange}
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="My Digital Economy"
-<<<<<<< HEAD
 =======
-
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">
-                  Vertical
-                </label>
-                <select
-                  name="vertical"
-
-              <div className="space-y-2">
+        <div className="text-center mb-12">;
+          <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>;
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">;
+            Deploy your custom Zion OS instance with advanced features and configurations;
+          </p>;
+        </div>;              <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Domain
                 </label>
@@ -69,50 +130,30 @@ import React, { useState } from "react";
                 <label className="block text-sm font-medium text-white/90">
                   Subdomain
                 </label>
+                  <option value="GENERAL">General</option>;
+                  <option value="HEALTH">Healthcare</option>;
+                  <option value="EDUCATION">Education</option>;
+                  <option value="LAW">Legal</option>;
+                  <option value="GOV">Government</option>;
+                  <option value="FINANCE">Finance</option>;
+                  <option value="TECH">Technology</option>;
+                </select>;
+              </div>;
                 <input
                   name="subdomain"
                   value={formData.subdomain}
                   onChange={handleInputChange}
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
-<<<<<<< HEAD
-=======
-
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Default Language
                 </label>
-                <input
+=======                <input
+                  id="defaultLanguage"
                   name="defaultLanguage"
-                  value={formData.defaultLanguage}
-                  onChange={handleInputChange}
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-<<<<<<< HEAD
-=======
-
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">
-                  Region
-                </label>
-                <input
-                  name="region"
-                  value={formData.region}
-                  onChange={handleInputChange}
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="North America"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Economy Settings */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
-              Economy Settings
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  type="text"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Token System
@@ -187,29 +228,98 @@ import React, { useState } from "react";
               Core Features
             </h2>
 
+                  id="tokenSystem"
+                  name="tokenSystem"
+
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
+              <div className="space-y-2">;
+                <label html_for="domain" className="block text - sm font - medium text-white / 90">Domain</label>;
+                <input;
+                  id="domain";
+                  name="domain";
+                  type="text";
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
+                  placeholder="zion.example.com";
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label html_for="subdomain" className="block text - sm font - medium text-white / 90">Subdomain</label>;
+                <input;
+                  id="subdomain";
+                  name="subdomain";
+                  type="text";
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
+                  placeholder="latam";
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label html_for="default_language" className="block text - sm font - medium text-white / 90">Default Language</label>;
+                <input;
+                  id="default_language";
+                  name="default_language";
+                  type="text";
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label html_for="region" className="block text - sm font - medium text-white / 90">Region</label>;
+                <input;
+                  id="region";
+                  name="region";
+                  type="text";
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
+                  placeholder="North America";
+                />;
+              </div>;
+            </div>;
+          </div>;
+          {/* Economic Configuration */}
+          <div className="glass - effect rounded - 2xl p-8">;
+            <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap-3">;
+              <span className="w - 8 h - 8 bg - green - 600 rounded - lg flex items - center justify - center text - white text-sm">💰</span>;
+              Economic Configuration;
+            </h2>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+              <div className="space-y-2">;
+                <label html_for="token_system" className="block text - sm font - medium text-white / 90">Token System</label>;
+                <select;
+                  id="token_system";
+                  name="token_system";
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
+                >;
+
+                  <option value="SHARED">ZION$ Shared</option>;
+                  <option value="LOCAL">Local Token</option>;
+                  <option value="HYBRID">Hybrid System</option>;
+                </select>;
+              </div>;
+                  <option value="DAO FULL">Full DAO</option>;
+                  <option value="HYBRID">Hybrid Governance</option>;
+                </select>;
+              </div>;
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label
                   key={k}
-                  className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group"
-                >
+                  className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+
                   <input
-              <div className="space - y-2">;
-                <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
+              <div className="space-y-2">;
+                <label html_for="country" className="block text - sm font - medium text-white / 90">Country</label>;
                 <input;
                   id="country";
                   name="country";
                   type="text";
-                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
                   placeholder="United States";
                 />;
               </div>;
-              <div className="space - y-2">;
-                <label html_for="payment_gateway" className="block text - sm font - medium text - white / 90">Payment Gateway</label>;
+              <div className="space-y-2">;
+                <label html_for="payment_gateway" className="block text - sm font - medium text-white / 90">Payment Gateway</label>;
                 <select;
                   id="payment_gateway";
                   name="payment_gateway";
-                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition-all";
                 >;
                   <option value="">None</option>;
                   <option value="stripe">Stripe</option>;
@@ -221,24 +331,23 @@ import React, { useState } from "react";
             </div>;
           </div>;
           {/* Feature Selection */}
-          <div className="glass - effect rounded - 2xl p - 8">;
-            <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap - 3">;
-              <span className="w - 8 h - 8 bg - purple - 600 rounded - lg flex items - center justify - center text - white text - sm">🔧</span>;
+          <div className="glass - effect rounded - 2xl p-8">;
+            <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap-3">;
+              <span className="w - 8 h - 8 bg - purple - 600 rounded - lg flex items - center justify - center text - white text-sm">🔧</span>;
               Feature Selection;
             </h2>;
-            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
+            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap-4">;
               {FeatureKeys.map ((k) => (
                 <label;
                   key={k}
                   html_for={`feature-${k}`}
-                  className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group";
+                  className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor-pointer group";
                 >;
                   <input;
                     id={`feature-${k}`}
                     type="checkbox";
                     name="features";
                     value={k}
-                    className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
                     <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -260,14 +369,13 @@ import React, { useState } from "react";
               Premium Add-ons
             </h2>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                <input
+=======                <input
+                  id="treasury"
                   type="checkbox"
                   name="sovereignTreasury"
                   checked={formData.sovereignTreasury}
                   onChange={handleInputChange}
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     Sovereign DAO Treasury
@@ -277,7 +385,7 @@ import React, { useState } from "react";
                   </div>
                 </div>
               </label>
-
+=======
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -288,14 +396,12 @@ import React, { useState } from "react";
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <input
                   type="checkbox"
                   name="dualGovernance"
                   checked={formData.dualGovernance}
                   onChange={handleInputChange}
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     Dual Governance
@@ -305,7 +411,7 @@ import React, { useState } from "react";
                   </div>
                 </div>
               </label>
-
+=======
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -316,14 +422,12 @@ import React, { useState } from "react";
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <input
                   type="checkbox"
                   name="aiModeration"
                   checked={formData.aiModeration}
                   onChange={handleInputChange}
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     AI Moderation System
@@ -333,7 +437,7 @@ import React, { useState } from "react";
                   </div>
                 </div>
               </label>
-
+=======
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -344,14 +448,12 @@ import React, { useState } from "react";
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <input
                   type="checkbox"
                   name="affiliatePanel"
                   checked={formData.affiliatePanel}
                   onChange={handleInputChange}
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     Government Affiliate Panel
@@ -379,9 +481,17 @@ import React, { useState } from "react";
                   messageType === "success"
                     ? "bg-green-900/20 border border-green-500/20 text-green-400"
                     : "bg-red-900/20 border border-red-500/20 text-red-400"
+=======                </div>;
+              </label>;
+            </div>;
+          </div>;
+              <div
+                className={`mt-6 p-4 rounded-lg ${
+                  messageType === 'success'
+                    ? 'bg-green-900/20 border border-green-500/20 text-green-400'
+                    : 'bg-red-900/20 border border-red-500/20 text-red-400'
                 }`}
               >
-=======
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -762,51 +872,69 @@ export default function AdminDeployPage() {;
               ) : (;
                 "🚀 Deploy Instance";
               )}
-            </button>
+            </button>;
+            {message && (;
+              <div className={`mt-6 p-4 rounded-lg ${;
+                messageType === 'success';
+                  ? 'bg-green-900/20 border border-green-500/20 text-green-400';
+                  : 'bg-red-900/20 border border-red-500/20 text-red-400';
+              }`}>;
+                {message}
+              </div>;
+            )}
           </div>
         </form>
       </div>
     </div>
   );
 }
-                }`}>;
-                {message}
               </div>;
             )}
+
           </div>;
         </form>;
       </div>;
-    </div>;
-  );
-          {/* Submit Button */}
-          <div className="text - center">;
-            <button;
-              disabled={loading}
-              className="btn - primary text - lg px - 12 py - 4 disabled:opacity - 50 disabled:cursor - not - allowed hover - lift";
-            >;
-              {loading ? 'Deploying...' : 'Deploy Digital Economy'}
-            </button>;
-            {message && (
-              <div;
-                className={`mt - 6 p - 4 rounded - lg ${
-                  message_type === 'success';
-                    ? 'bg - green - 900 / 20 border border - green - 500 / 20 text - green - 400';
-                    : 'bg - red - 900 / 20 border border - red - 500 / 20 text - red - 400';
-                }`}
-              >;
-                {message}
-              </div>)}
-=======
+    </div>);
+}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                {message}
-              </div>;
-            )}
-          </div>
-        </form>
-      </div>
-    </div>
-  );
+;
+function labelFor(key: string) {;
+  switch (key) {;
+    case "marketplace": return "Marketplace",;
+    case "zion_gpt": return "ZionGPT Core",;
+    case "resume_ai": return "Resume AI",;
+    case "token_rewards": return "Token System",;
+    case "onchain_contracts": return "Smart Contracts",;
+    case "kyc_aml": return "KYC/AML",;
+    case "dao_voting": return "DAO Voting",;
+    case "incubator_grants": return "Incubator",;
+    case "academy": return "Zion Academy",;
+    case "partner_api": return "Partner API",;
+    case "regional_dashboards": return "Regional Dashboards",;
+    case "vendor_plugin": return "Vendor Plugin",;
+    case "web3_login": return "Web3 Login",;
+    case "multi_currency": return "Multi-Currency",;
+    default: return key;
+  }
+}
+;
+function getFeatureDescription(key: string) {;
+  switch (key) {;
+    case "marketplace": return "Jobs, talent, and project marketplace",;
+    case "zion_gpt": return "Core AI intelligence system",;
+    case "resume_ai": return "AI-powered resume and proposal builder",;
+    case "token_rewards": return "Token system with rewards",;
+    case "onchain_contracts": return "Smart contract builder",;
+    case "kyc_aml": return "Identity verification and compliance",;
+    case "dao_voting": return "Proposal and voting system",;
+    case "incubator_grants": return "Startup incubation and funding",;
+    case "academy": return "Educational platform",;
+    case "partner_api": return "API access for partners",;
+    case "regional_dashboards": return "Regional and institutional views",;
+    case "vendor_plugin": return "White-label vendor solutions",;
+    case "web3_login": return "Web3 authentication and DID";
+    case "multi_currency": return "Multi-currency support";
+    default: return "Core platform feature";
+  }
+}
 }

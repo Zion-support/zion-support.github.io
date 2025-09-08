@@ -2,14 +2,12 @@
 
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-const HOST = process.env.SELF_HOST || ''http': //'localhost':3000';'
-  const 'prompts': Array<{ 'prompt': string, region?: string, service?: string }>  = [;
-
 <<<<<<< HEAD
-
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;/* eslint - disable no - console */;
+=======
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+/* eslint - disable no - console */;
+>>>>>>> origin/main
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
@@ -50,8 +48,7 @@ import https from 'https';'
 
 
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
-
-
+<<<<<<< HEAD
 
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
@@ -141,9 +138,8 @@ method: 'POST',
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
-
-
-
+=======
+>>>>>>> origin/main
       })
     });'
     req && req.on('error', reject);
@@ -193,7 +189,9 @@ async function post_json (url: string, body: any): Promise < any> {
       let buf = '',
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
-
+<<<<<<< HEAD
+        try { resolve (JSON.parse (buf)) } catch { resolve ({}) }    });
+=======
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
 
 
@@ -246,7 +244,7 @@ async function postJson(url: string, body: any): Promise<any> {;
 
       });
     });
-
+>>>>>>> origin/main
     req.on ('error', reject);
     req.write (data);
     req.end ();
@@ -289,11 +287,15 @@ main ().catch ((e) => {
   process.exit (1);
 });
 
+<<<<<<< HEAD
+;
+=======
 
 
 
 
 
+>>>>>>> origin/main
 
 ;
 /* eslint-disable no-console */;
@@ -401,7 +403,20 @@ const res = await postJson(`${HOST}/api/seo/generate`, p),;`    if (!res || !res
       console.warn('Generate failed for', p.prompt),;'
       continue;
     }
-
-const file = path.join(outDir, `${res.slug}.json`),fs.writeFileSync(file, JSON.stringify(res.payload, null, 2)),// // // console.log('Wrote', file;'  const file = path.join(outDir, `${res.slug}.json`),fs.writeFileSync(file, JSON.stringify(res.payload, null, 2)),// // // console.log('Wrote', file)}'
-}main().catch((e) => {console.error(e),process.exit(1)});
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    const file = path.join(outDir, `${res.slug}.json`),
+    fs.writeFileSync(file, JSON.stringify(res.payload, null, 2)),
+    // // // console.log('Wrote', file)
+    const file = path.join(outDir, `${res.slug}.json`),;
+    fs.writeFileSync(file, JSON.stringify(res.payload, null, 2)),;
+    // // // console.log('Wrote', file);
+  }
+}
+;
+main().catch((e) => {;
+  console.error(e),;
+  process.exit(1);
+});
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/main

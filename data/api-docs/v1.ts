@@ -1,16 +1,16 @@
 import { ApiDocsSpec } from './types';
-const baseUrl = 'https://api.zion.os';
+  ]
+}
+export default v1;
 
-const v1: ApiDocsSpec = {
-  product: 'Zion OS',
-  versions: ['v1'],
-  defaultVersion: 'v1',
-  lastUpdatedIso: new Date().toISOString(),
-  sections: [
-    {
-      id: 'auth',
-      title: 'Auth (JWT, OAuth, Wallet)',
-      description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.',
+  ];
+
+      ]
+    },
+
+      id: 'talent'
+      title: 'Talent Profiles'
+
       endpoints: [
         {
           id: 'auth-login-jwt',
@@ -194,8 +194,29 @@ const v1: ApiDocsSpec = {
           versions: ['v1']
         }
       ]
-    }
-  ]
-};
+    },
 
-export default v1;
+      id: 'jobs'
+      title: 'Job Listings'
+
+      endpoints: [
+        {
+          id: 'jobs-list'
+          title: 'List Jobs'
+          description: 'List job postings with optional filters.'
+          path: '/v1/jobs'
+          method: 'GET'
+          visibility: 'public'
+          auth: ['jwt']
+          query: { q: 'Search text', status: 'open|closed' }
+          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
+          samples: [
+
+        }
+      ];
+    }
+
+            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests ;
+

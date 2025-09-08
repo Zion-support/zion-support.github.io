@@ -152,10 +152,6 @@ import type { TalentProfile } from '@/utils / types / talent';const has_supabase
   };
 }
 
-}
-
-}
-}
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';

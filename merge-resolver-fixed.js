@@ -26,6 +26,9 @@ function fixMergeConflicts() {
 
     content = content.replace(/
 const fs = require('fs'),;
+<<<<<<< HEAD
+const path = require('path'),;    const items = fs.readdirSync(dir);
+=======
 const path = require('path'),;
 const fs = require('fs');
 const path = require('path');
@@ -153,7 +156,7 @@ function getAllFiles(dir, extensions) {;
   try {;
 
     const items = fs.readdirSync(dir);
-
+>>>>>>> origin/main
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
@@ -336,12 +339,33 @@ main().catch($2);
     }
   }
 }
-;
-
-
-
-
-
+<<<<<<< HEAD
+;  let fixedCount = 0;
 =======
-main().catch($2);
->>>>>>> origin/cursor/delete-old-data-records-6bba
+;
+  let fixedCount = 0;
+>>>>>>> origin/main
+  for (const file of files) {;
+    try {;
+      const content = fs.readFileSync(file, 'utf8'),;
+        if (fixMergeConflicts(file)) {;
+      if (content.includes('        if (fixMergeConflicts(file)) {
+          fixedCount++;
+        }
+      }
+    } catch (error) {
+      // Skip files that can't be read
+    }
+  }
+  
+  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
+  console.log('🎉 Merge conflict resolution completed!');
+}
+;
+main().catch(console.error),;
+<<<<<<< HEAD
+main().catch(console.error),;main().catch(console.error);
+=======
+main().catch(console.error),;
+main().catch(console.error);
+>>>>>>> origin/main

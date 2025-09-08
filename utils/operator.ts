@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export interface OperatorSession {
   id: string;
@@ -17,6 +16,14 @@ export interface SupportEvent {
   timestamp: Date;
 }
 
+  getEvents: () => []
+  getEventById: (id: string) => null
+}
+
+  logEvent: (event: any) => null,
+  getEvents: () => [],
+  getEventById: (id: string) => null
+};
 
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database

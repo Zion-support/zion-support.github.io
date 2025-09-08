@@ -162,6 +162,7 @@ function mergePR() {
   }
 
 }
-
+<<<<<<< HEAD
+main ().catch (console.error);
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+});''
+});''
+=======
 
 <<<<<<< HEAD
 
@@ -29,4 +33,13 @@ import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',
 });''
 =======
 });''
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+});''
+ursor/add-new-services-and-deploy-updates-0462
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { describe, it, expect } from 'vitest'
+describe('Team Builder Invite API'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
+});''
+});''
+>>>>>>> origin/main

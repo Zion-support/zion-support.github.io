@@ -32,7 +32,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
 import {readOrgData, writeOrgData} from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
@@ -74,7 +75,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 <<<<<<< HEAD
-
 
 
 

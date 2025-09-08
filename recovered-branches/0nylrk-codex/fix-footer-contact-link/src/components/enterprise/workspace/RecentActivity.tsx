@@ -1,158 +1,17 @@
-<<<<<<< HEAD
-=======
-import React from "react","
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Badge } from "@/components/ui/badge";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
-import { Badge } from "@/components/ui/badge",      "id": "act-1","
-      "user": "Michael Chen","
-      "action": "posted a new job","
-      "target": "Senior React Developer","
-      "timestamp": "1h ago",      "type": "job""
-    }
-    },
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export function RecentActivity() {
-  // Mock activity data
-
-  const activities = [
-    {
-
-<<<<<<< HEAD
-
-
-      id: "act-1",
-
-=======
-
-      id: "act-1"
-      user: "Michael Chen"
-      action: "posted a new job"
-      target: "Senior React Developer"
-      timestamp: "1h ago"
-
-
-      id: "act-1",
+import { Badge } from "@/components/ui/badge",      id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
-      timestamp: "1h ago",
-
-      type: "job";
-    };
-      type: "job"
+      timestamp: "1h ago",      type: "job"
     }
     },
 
-      type: "job"
-    }
-    },
-
-    }
-    {
-      }
-      "id": "id","
-    "user": "Emily Davis""
-      "action": "added comments to""
-      "target": "Frontend Developer application""
-      "timestamp": "2d ago""
-      "type": "comment""
-    }
-}
-  const getBadgeForType = ("type": string) => {
-    }
-      type: "job";
-    };
-      type: "job"
-    }
-    {
-      id: "act-2"
-      user: "Sarah Wilson"
-      action: "shortlisted"
-      target: "5 candidates for UI/UX Designer"
-      timestamp: "3h ago"
-      type: "candidate"
-
-    },
-
-
-    }
-    },
-    },
-
-      type: "job"
-    }
-    },
-
-    {
-      id: "act-3"
-      user: "David Johnson"
-      action: "scheduled an interview with"
-      target: "Alex Morgan"
-      timestamp: "Yesterday"
-      type: "interview"
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      user: "Michael Chen",
-      action: "posted a new job",
-      target: "Senior React Developer",
-      timestamp: "1h ago",
-
-
-    {
-      id: "act-2"
-      user: "Sarah Wilson"
-      action: "shortlisted"
-      target: "5 candidates for UI/UX Designer"
-      timestamp: "3h ago"
-      type: "candidate"
-<<<<<<< HEAD
-
-
-
-
-    },
-
-      type: "job"
-    }
-    },
-
-=======
-
-
-    },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    {
-      id: "act-3"
-      user: "David Johnson"
-      action: "scheduled an interview with"
-      target: "Alex Morgan"
-      timestamp: "Yesterday"
-      type: "interview"
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
     {
       id: "act-4"
       user: "Emily Davis"
@@ -163,16 +22,7 @@ export function RecentActivity() {
 <<<<<<< HEAD
 
     }
-
-=======
-    }
-
-  ];
-  ],
-
-  ];
-  ],
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
 
   const getBadgeForType = (type: string) => {
     switch (type) {
@@ -191,14 +41,9 @@ return <Badge variant="outline">Activity</Badge>;"
 
   },
 
-
-
-
-=======
   }
   }
   },
-return (;
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
@@ -267,60 +112,16 @@ return (;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
-
-<<<<<<< HEAD
-
-
-export function RecentActivity() {;
-  // Mock activity data;
-  const activities = [;
-
-=======
-export function RecentActivity() {;
-  // Mock activity data;
-  const activities = [;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    {;
-      id: "act-1",;
-      user: "Michael Chen",;
-      action: "posted a new job",;
-      target: "Senior React Developer",;
-      timestamp: "1h ago",;
-      type: "job";
-<<<<<<< HEAD
-
-    };
-
-=======
-    };
-},;
-},;
->>>>>>> origin/cursor/delete-old-data-records-6bba
     {;
       id: "act-2",;
       user: "Sarah Wilson",;
       action: "shortlisted",;
       target: "5 candidates for UI/UX Designer",;
       timestamp: "3h ago",;
-      type: "candidate";
-<<<<<<< HEAD
-
-    };
-
-=======
-    };
-},;
-},;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    {;
       type: "candidate"
 };    {;
       id: "act-3",;
@@ -328,15 +129,7 @@ export function RecentActivity() {;
       action: "scheduled an interview with",;
       target: "Alex Morgan",;
       timestamp: "Yesterday",;
-
-<<<<<<< HEAD
-      type: "interview";
-
-=======
-
-      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
-      case "candidate":;
-
+      type: "interview";      case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
 
@@ -344,113 +137,18 @@ export function RecentActivity() {;
     }
   }
 
-
+  return (          {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   </div>;
                 </div>;
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
 
 
-
-            View All Activity;
-
-
-
-
-
-
-}
-</Card>);
-}
-}
-;
-    </Card>);
-
-    </Card>);
-    </Card>;
-  ); export function RecentActivity () {}
-  //Mock activity data const activities = [ {";
-  id: "act-1";"
-user: "Michael Chen";"
-action: "posted a new job";"
-target: "Senior React Developer";"
-timestamp: "1h ago";"
-type: "job" 
-};
-{"
-  id: "act-2";"
-user: "Sarah Wilson";"
-action: "shortlisted";"
-target: "5 candidates for UI/UX Designer";"
-timestamp: "3h ago";"
-type: "candidate" 
-};
-{"
-  id: "act-3";"
-user: "David Johnson";"
-action: "scheduled an interview with";"
-target: "Alex Morgan";"
-timestamp: "Yesterday";"
-type: "interview" 
-};
-{"
-  id: "act-4";"
-user: "Emily Davis";"
-action: "added comments to";"
-target: "Frontend Developer application";"
-timestamp: "2d ago";"
-type: "comment" 
-}];
-
-const getBadgeForType = (type: string) => {}
-  switch (type) {"
-
-  case "candidate": return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;"
-case "interview": return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;"
-case "comment": return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;
-default: 
-}
-
-
-
-
-
-=======
-  case "candidate": return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;"
-case "interview": return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;"
-        </div>;
-        ;
         <div className="p-3 text-center border-t border-border">;
-          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">;
-              </div>
-              <div className="flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm">
-                    <span className="font-medium">{activity.user}</span>{" "}
-                    {activity.action}{" "}
-                    <span className="font-medium">{activity.target}</span>
-                  </p>
-                  <div className="flex items-center gap-2 mt-1 sm:mt-0">
-                    {getBadgeForType(activity.type)}
-                    <span className="text-xs text-muted-foreground">{activity.timestamp}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>;
-        <div className="p-3 text-center border-t border-border">;
-          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-
-        </div>;
-        <div className="p-3 text-center border-t border-border">;"
-          <button className="text-sm text-blue-500 font-medium "hover": text-blue-700">;            View All Activity;"
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
           </button>;
         </div>;
       </CardContent>;
@@ -458,7 +156,7 @@ case "interview": return <Badge variant="outline" className="bg-purple-100 text-
 }
 ;
     </Card>);
-}
+}}
     </Card>);
     </Card>;
   ); export function RecentActivity() {
@@ -509,10 +207,3 @@ default:
   );
 }
 ;
-
-}
-;
-    </Card>);
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

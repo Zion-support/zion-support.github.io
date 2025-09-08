@@ -659,20 +659,6 @@ const SEO: React.FC<SEOProps> = ({'
 
       {/* Open Graph Meta Tags */}
 
-
-
-=======
-  noindex = false;
-  nofollow = false}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
-
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -1088,8 +1074,6 @@ type = 'website'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
-
-
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -1159,10 +1143,7 @@ type = 'website'
         />;
       )}
     </Head>;
-<<<<<<< HEAD
-
-  );
-
+  )
 };
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
 
@@ -1256,36 +1237,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       )}
   );
-<<<<<<< HEAD
-
-
-=======
 export default SEO;  )
-      {structuredData && (<script;
-          type='application/ld+json';
-          dangerouslySetInnerHTML={__html: JSON && JSON.stringify(structuredData),          }
-        />;
-
-};
-export default SEO;  );
 };
 
     </Head>
-
-export default SEO;
-
-    </Head>
-    </Head>
-
-};
-export default SEO;  );
-};
-
-
-export default SEO;
-
-
-
     </Head>
 
           __html: JSON.stringify ({

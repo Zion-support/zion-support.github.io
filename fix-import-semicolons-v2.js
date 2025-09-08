@@ -44,9 +44,12 @@ files.for_each ((file) => {}
       (match) => {"
         return match.replace (",", ";");
 
+<<<<<<< HEAD
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+=======
 
-
-
+>>>>>>> origin/main
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 

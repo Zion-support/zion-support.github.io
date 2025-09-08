@@ -190,8 +190,6 @@ const features = [ {
 export default function SEOAnalyzerToolPage() {;
 } from 'lucide-react';
 
-export default function SEOAnalyzerToolPage() {
-
 export default function SEOAnalyzerToolPage() {;
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';'
 
@@ -269,10 +267,125 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Local SEO'
       factors: [
-        'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
-const [analysisResults, setAnalysisResults] = useState(null);
-
-
+        'Google My Business'
+        'Local citations'
+        'Review management'
+        'Local keyword targeting'
+        'Location-based content'
+        'Local link building'
+      ]
+  ];
+  const features = [;
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,,
+  description:;
+        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',;
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
+      gradient: 'from-green-400 to-emerald-500',;
+    },;
+    {;
+      icon: <Target className='w-8 h-8 text-white' />,;
+      title: 'Keyword Research',,
+  description:;
+        'Discover high-value keywords and analyze search intent to optimize your content strategy.',;
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;
+      gradient: 'from-blue-400 to-cyan-500',;
+    },;
+    {;
+      icon: <BarChart3 className='w-8 h-8 text-white' />,;
+      title: 'Competitive Analysis',,
+  description:;
+        "Analyze your competitors' SEO strategies and identify opportunities to outperform them.",;
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
+      gradient: 'from-purple-400 to-indigo-500',;
+    },;
+    {;
+      icon: <Zap className='w-8 h-8 text-white' />,;
+      title: 'AI-Powered Insights',,
+  description:;
+        'Get intelligent recommendations and actionable insights to improve your search rankings.',;
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
+      gradient: 'from-orange-400 to-red-500',;
+    },;
+  ];      gradient: 'from-orange-400 to-red-500'}],;
+  const seoFactors = [;
+    {;
+      category: 'On-Page SEO',;
+      factors: [;
+        'Title tags optimization',;
+        'Meta descriptions',;
+        'Header structure (H1, H2, H3)',;
+        'Content quality and length',;
+        'Internal linking structure',;
+        'Image optimization (alt tags)',;
+      ],;
+      icon: '📝',;
+      color: 'text-green-400',      icon: '📝',;
+      color: 'text-green-400'
+};
+    {;
+      category: 'Technical SEO',;
+      factors: [;
+        'Page load speedMobile responsivenessXML sitemapRobots && sitemapRobots.txt configurationSSL certificateCore Web Vitals';
+      ];
+      icon: '⚙️',;
+      color: 'text-blue-400'
+};
+    {;
+      category: 'Content SEO',;
+      factors: [;
+        'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup';
+      ],;
+      icon: '📊',;
+      color: 'text-purple-400'
+};
+    {;
+      category: 'Local SEO',;
+      factors: [;
+        'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building';
+      ],;
+      icon: '📍',;
+      color: 'text-orange-400',;
+    },;
+    {;
+      category: 'Technical SEO',;
+      factors: [;
+        'Page load speed',;
+        'Mobile responsiveness',;
+        'XML sitemap',;
+        'Robots && Robots.txt configuration',;
+        'SSL certificate',;
+        'Core Web Vitals',;
+      ],;
+      icon: '⚙️',;
+      color: 'text-blue-400',;
+    },;
+    {;
+      category: 'Content SEO',;
+      factors: [;
+        'Keyword density',;
+        'Content relevance',;
+        'Readability scores',;
+        'Content freshness',;
+        'Multimedia optimization',;
+        'Schema markup',;
+      ],;
+      icon: '📊',;
+      color: 'text-purple-400',;
+    },;
+    {;
+      category: 'Local SEO',;
+      factors: [;
+        'Google My Business',;
+        'Local citations',;
+        'Review management',;
+        'Local keyword targeting',;
+        'Location-based content',;
+        'Local link building',;
+      ],;
+      icon: '📍',;
+      color: 'text-orange-400',;
+    },  ];      color: 'text-orange-400';
     }
 
 const features = [
@@ -536,8 +649,8 @@ const features = [
           'Improve page load speed by optimizing images',;
           'Add more relevant internal links to improve site structure',;
           'Implement schema markup for rich snippets',;
-        ],;
-        keywords: [;
+        ],,
+  keywords: [;
           {;
             keyword: 'website optimization',;
             volume: '12K',;}
@@ -553,20 +666,23 @@ const features = [
           },;
         ],;
       });
-
+      setIsAnalyzing(false);
+    }, 4000)
+};        recommendations: [
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
+        ],
+  keywords: [
+          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
+        ];
+          { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
+        ]
+      });
       setIsAnalyzing(false);
 
-    }, 4000);  };
-
-  };
-<<<<<<< HEAD
-
-
-
-
-  return (
-
-=======
+    }, 4000)
+}
+};
 
   return (
   return (
@@ -1236,25 +1352,11 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
               </Card>
             ))}
 
-
-
-
-      {/* SEO Factors Section *
-}
-<section className='section-padding bg-gradient-cursor'>'
-        <div className='container-cursor'>'
-          <div className='text-center mb-20'>'
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-
-
-<<<<<<< HEAD
-
-
-
+      {/* SEO Factors Section */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Comprehensive SEO Analysis
             </h2>
@@ -1308,7 +1410,49 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
 
                   </svg>;
                 </div>;
-                <p className='text-gray-400'    />;
+                <ul className='space - y-3'>;
+                  {category.factors.map ((factor, factor_index) => (
+                    <li;
+                      key={factor_index}
+                      className='flex items - center text - gray - 300';
+                    >;
+                      <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 3 flex - shrink - 0' />                      {factor}              Comprehensive SEO Analysis;
+            </h2>;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+              We analyze every aspect of your website's SEO to provide actionable insights and recommendations.;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols-2 gap-8">;
+            {seo_factors.map ((category, index) => (
+              <Card;
+                key={index}
+                className="card - hover border-gradient-green";
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className="flex items-center mb-6">;
+                  <div className="text-3xl mr-4">{category.icon}</div>;
+                  <h3 className={`text - xl font - bold ${category.color}`}>{category.category}</h3>;
+                </div>;
+                <ul className="space-y-3">;
+                  {category.factors.map ((factor, factor_index) => (
+                    <li key={factor_index} className="flex items - center text-gray-300">;
+                      <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 3 flex-shrink-0" />;
+                      {factor}
+                    </li>))}
+                </ul>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Demo Analysis Results */}
+      {analysis_results && (
+        <section className='section - padding bg - gradient - cursor - accent'>;
+          <div className='container - cursor'>;
+            <div className='text - center mb - 12'>;
+              <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+                SEO Analysis Results;
+              </h2>;
+              <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 
 =======
 <section className='section-padding bg-gradient-cursor-accent'>'
@@ -1594,11 +1738,161 @@ className={`px-2 py-1 rounded text-xs ${
                       <span className="text-gray-300">{rec}</span>
                     </div>
                   ))}
-
+            <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+              {/* Overall Score */}
+              <Card className='border - gradient - green text - center'>;
+                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
+                  Overall SEO Score;
+                </h3>;
+                <div className='text - 6xl font - bold text - green - 400 mb - 4'>;
+                  {analysis_results.overall_score}/100;
+                </div>;
+                <div className='w - 32 h - 32 mx - auto mb - 6'>;
+                  <svg;
+                    className='w - full h - full transform -rotate - 90';
+                    viewBox='0 0 36 36';
+                  >;
+                    <path;
+                      d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831';
+                      fill='none';
+                      stroke='current_color';
+                      strokeWidth='2';
+                      stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
+                      className='text - green - 500';
+                    />;
+                  </svg>;
+                </div>;
+                <p className='text - gray - 400'>;
+                  Good SEO foundation with room for improvement;
+                </p>;
+              </Card>;
+              {/* Detailed Scores */}
+              <Card className='border - gradient - green'>;
+                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
+                  Detailed Scores;
+                </h3>;
+                <div className='space - y-4'>;
+                  <div className='flex justify - between items - center'>;
+                    <span className='text - gray - 400'>On - Page SEO</span>;
+                    <span className='font - bold text - green - 400'>;
+                      {analysis_results.onPageScore}/100;
+                    </span>;
+                  </div>;
+                  <div className='flex justify - between items - center'>;
+                    <span className='text - gray - 400'>Technical SEO</span>;
+                    <span className='font - bold text - orange - 400'>;
+                      {analysis_results.technical_score}/100;
+                    </span>;
+                  </div>;
+                  <div className='flex justify - between items - center'>;
+                    <span className='text - gray - 400'>Content SEO</span>;
+                    <span className='font - bold text - blue - 400'>;
+                      {analysis_results.content_score}/100;
+                    </span>;
+                  </div>;
+                  <div className='flex justify - between items - center'>;
+                    <span className='text - gray - 400'>Mobile SEO</span>;
+                    <span className='font - bold text - green - 400'>;
+                      {analysis_results.mobile_score}/100;
+                    </span>                  </div>                SEO Analysis Results;
+              </h2>;
+              <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+                Here's a sample analysis of a website. Get comprehensive insights for your own website.;
+              </p>;
+            </div>;
+            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-8 mb-8">;
+              {/* Overall Score */}
+              <Card className="border - gradient-green text-center">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Overall SEO Score</h3>;
+                <div className="text - 6xl font - bold text - green-400 mb-4">{analysis_results.overall_score}/100</div>;
+                <div className="w - 32 h - 32 mx-auto mb-6">;
+                  <svg className="w - full h-full transform -rotate-90" viewBox="0 0 36 36">;
+                    <path;
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831";
+                      fill="none";
+                      stroke="current_color";
+                      strokeWidth="2";
+                      stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
+                      className="text-green-500";
+                    />;
+                  </svg>;
+                </div>;
+                <p className="text-gray-400">Good SEO foundation with room for improvement</p>;
+              </Card>;
+              {/* Detailed Scores */}
+              <Card className="border-gradient-green">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Detailed Scores</h3>;
+                <div className="space-y-4">;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">On - Page SEO</span>;
+                    <span className="font - bold text-green-400">{analysis_results.onPageScore}/100</span>;
+                  </div>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Technical SEO</span>;
+                    <span className="font - bold text-orange-400">{analysis_results.technical_score}/100</span>;
+                  </div>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Content SEO</span>;
+                    <span className="font - bold text-blue-400">{analysis_results.content_score}/100</span>;
+                  </div>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Mobile SEO</span>;
+                    <span className="font - bold text-green-400">{analysis_results.mobile_score}/100</span>;
+                  </div>;
                 </div>;
               </Card>;
-              <Card className='border-gradient-green'>;
-                <h3 className='text-2xl font-bold mb-6 text-white'>;
+              {/* Issues */}
+              <Card className='border - gradient - green'>;
+                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
+                  Issues Found;
+                </h3>;
+                <div className='space - y-3'>;
+                  {analysis_results.issues.map ((issue, index) => (
+                    <div key={index} className='flex items - start space - x-3'>;
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className='w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0' />) : issue.type === 'warning' ? (
+                        <AlertTriangle className='w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0' />) : (
+                        <CheckCircle className='w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0' />)}
+                      <div>;
+                        <span className='text - gray - 300'>{issue.message}</span>;
+                        <div className='text - xs text - gray - 500 mt - 1'>;
+                          Priority: {issue.priority}
+                        </div>                      </div>                  {analysis_results.issues.map ((issue, index) => (
+                    <div key={index} className="flex items-start space-x-3">;
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex-shrink-0" />) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex-shrink-0" />) : (
+                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex-shrink-0" />)}
+                      <div>;
+                        <span className="text-gray-300">{issue.message}</span>;
+                        <div className="text - xs text - gray-500 mt-1">Priority: {issue.priority}</div>;
+                      </div>;
+                    </div>))}
+                </div>;
+              </Card>;
+            </div>;
+            {/* Recommendations and Keywords */}
+            <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
+              <Card className='border - gradient - green'>;
+                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
+                  Optimization Recommendations;
+                </h3>;
+                <div className='space - y-3'>;
+                  {analysis_results.recommendations.map ((rec, index) => (
+                    <div key={index} className='flex items - start space - x-3'>;
+                      <CheckCircle className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
+                      <span className='text - gray - 300'>{rec}</span>                    </div>            <div className="grid grid - cols - 1 lg:grid - cols-2 gap-8">;
+              <Card className="border-gradient-green">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Optimization Recommendations</h3>;
+                <div className="space-y-3">;
+                  {analysis_results.recommendations.map ((rec, index) => (
+                    <div key={index} className="flex items-start space-x-3">;
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex-shrink-0" />;
+                      <span className="text-gray-300">{rec}</span>))}
+                </div>;
+              </Card>;
+              <Card className='border - gradient - green'>;
+                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
                   Keyword Opportunities;
                 </h3>;
                 <div className='space-y-4'>;
@@ -1622,16 +1916,19 @@ className={`px-2 py-1 rounded text-xs ${`                            }
             </div>
         </section>
                         <span;
-                          className={`px-2 py-1 rounded text-xs ${keyword && keyword.difficulty === 'low';
-                              ? 'bg-green-500/20 text-green-400';
-                              : keyword && keyword.difficulty === 'medium';
-                                ? 'bg-yellow-500/20 text-yellow-400';
-                                : 'bg-red-500/20 text-red-400';
-                          }`}>                          {keyword && keyword.difficulty}                      <div className="flex justify-between items-center">;
-                        <span className="text-sm text-gray-400">Difficulty: {keyword && keyword.difficulty}</span>;
-                        <spanclassName={`px-2 py-1 rounded text-xs ${keyword && keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :;
-                          keyword && keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :;
-                          'bg-red-500/20 text-red-400';
+                          className={`px - 2 py - 1 rounded text - xs ${
+                            keyword.difficulty === 'low';
+                              ? 'bg - green - 500 / 20 text - green - 400';
+                              : keyword.difficulty === 'medium';
+                                ? 'bg - yellow - 500 / 20 text - yellow - 400';
+                                : 'bg - red - 500 / 20 text - red - 400';
+                          }`}
+                        >                          {keyword.difficulty}                      <div className="flex justify-between items-center">;
+                        <span className="text - sm text-gray-400">Difficulty: {keyword.difficulty}</span>;
+                        <span className={`px - 2 py - 1 rounded text - xs ${
+                          keyword.difficulty === 'low' ? 'bg - green - 500 / 20 text - green - 400' :;
+                          keyword.difficulty === 'medium' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
+                          'bg - red - 500 / 20 text - red - 400';
                         }`}>;
                         </span>;
                       </div>;
@@ -1915,37 +2212,6 @@ href='/contact'
                 <Button
 <<<<<<< HEAD
 
-
-=======
-                  href="/contact"
-                  size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                  href='/contact'
-                  size='lg'
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
-                  size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
-
-                </Button>
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
               </Card>
             ))}
       {/* CTA Section */}

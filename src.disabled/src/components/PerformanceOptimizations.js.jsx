@@ -1,7 +1,13 @@
+;,\"});\"})\"; \"
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
-=======
+>>>>>>> origin/main
+;,\"});\"})\"; \"
+;,\"});\"})\"; \"
+:src.disabled/src/components/PerformanceOptimizations.js.jsx
 ;,\"});\"})\"; \"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;,\"});\"})\"; \"

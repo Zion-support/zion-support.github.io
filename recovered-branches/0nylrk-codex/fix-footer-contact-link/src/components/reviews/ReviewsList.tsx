@@ -5,7 +5,6 @@ interface ReviewsListProps {
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
-<<<<<<< HEAD
 
 export function ReviewsList({
   reviews,
@@ -14,13 +13,12 @@ export function ReviewsList({
 }: ReviewsListProps) {
   if (isLoading) {
     return (
-      <div className="space-y-4">
-        {Array(3)
-          .fill(0)
-          .map((_, i) => (
-            <div
-              key={i}
-              className="border rounded-lg p-4 bg-card animate-pulse"
+      <div className="space-y-4">;
+        {Array (3);
+          .fill (0);
+          .map ((_, i) => (
+            <div;
+              key={i}              className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -52,39 +50,6 @@ export function ReviewsList({
       </div>
     );
   }
-
-
-<<<<<<< HEAD
-
-
-=======
-        <p className="text - muted - foreground">;
-          Once reviews are submitted and approved, they will appear here.;
-        </p>;
-      </div>);
-  }
-
-    <div className="space - y-4">;
-      {reviews.map ((review) => (
-        <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
-    </div>);
-}
-
-
-      {reviews.map((review) => (
-        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
-      ))}
-    </div>
-  );
-}
-;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

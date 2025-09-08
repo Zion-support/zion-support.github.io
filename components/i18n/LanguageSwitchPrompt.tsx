@@ -115,8 +115,6 @@ const normalized = detected.split("-")[0];"
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -145,7 +143,7 @@ const localeLabelKey: Record<string, string> = {;
   en: "lang && lang.english",;
   pt: "lang && lang.portuguese",;
   es: "lang && lang.spanish",;
-  ar: "lang && lang.arabic",;
+  ar: "lang && lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
@@ -481,7 +479,8 @@ if (return null) {}
           >;
             {t ("lang.switch_accept")}
           </button>;
-
+          <button;
+            className="px - 3 py - 1 rounded border border - amber - 300 dark:border-amber-700";
             on_click={decline}
           >;
             on_click={accept}

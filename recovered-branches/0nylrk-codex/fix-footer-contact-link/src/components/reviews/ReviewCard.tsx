@@ -1,12 +1,29 @@
-import { useState } from "react";
-import { formatDistanceToNow } from "date-fns";
-import { Star, Flag, User } from "lucide-react";
-import { Review } from "@/types/reviews";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+interface ReviewCardProps {
+  review: Review;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>
+}
+
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from "lucide-react",
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  Dialog,
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+import {  Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -63,28 +80,24 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         ))}
 
       </div>
-
+    )
+};
   const renderStars = (rating?: number) => {
 
     if (!rating) return null;
 
-    return ("
+    return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-
-  const getInitials = (name: string) => {}
-    return name"
-      .split(" ")
-      .map((n) => n[0])"
-      .join("")
-      .toUpperCase()
-      .substring(0, 2);
-  };
-
-  return (
-    <div className="border rounded-lg p-4 bg-card">
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />
+        ))}
+      </div>
+    )
+  },
+      <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
@@ -106,10 +119,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
                 />
               ) : (
                 <AvatarFallback>
-                  {review.reviewer_profile?.display_name
-                    ? getInitials(review.reviewer_profile.display_name)
-                    : "??"}
-                </AvatarFallback>
               )}
             </Avatar>;
           )}
@@ -118,17 +127,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
             <div className="font-medium">
               {review.is_anonymous
                 ? "Anonymous"
-                : review.reviewer_profile?.display_name || "User"}
-            </div>
-            <div className="text-sm text-muted-foreground">
-              {formatDistanceToNow(new Date(review.created_at), {
-                addSuffix: true,
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className="flex">{renderStars(review.rating)}</div>
+          {renderStars(review.rating)}
+        </div>        <div className="flex">{renderStars(review.rating)}</div>
+      </div>
 
 <<<<<<< HEAD
 
@@ -138,8 +139,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-
-<<<<<<< HEAD
 
       {(review.communication_rating ||
         review.quality_rating ||
@@ -156,48 +155,8 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 
-            {review.quality_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Quality
-                <span className="ml-1 text-yellow-500">
-                  {review.quality_rating}/5
-                </span>
-              </Badge>
-            )}
-
-            {review.timeliness_rating && (
-              <Badge variant="outline" className="flex gap - 1 items - center">;
-                Timeliness;
-                <span className="ml - 1 text - yellow - 500">;
-                  {review.timeliness_rating}/5;
-                </span>;
-              </Badge>)}
-
-=======
-
-
-                </span>
-              </Badge>
-            )}
-
-                </span>
-              </Badge>
-            )}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            {review.would_work_again !== undefined && (
-
-                {review.would_work_again
-                  ? "Would work again"
-                  : "Would not work again"}
-              </Badge>
-            )}
-
-<<<<<<< HEAD
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
-
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">
@@ -284,14 +243,75 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
                 {review.would_work_again;"
                   ? "Would work again";"
                   : "Would not work again"}
+      )}
+          </div>;
+      )}
+      
+      <div className="mt-3 flex justify-end">
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="sm" className="text-muted-foreground">
+              <Flag className="h-3 w-3 mr-1" />
+              Report
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Report Review</DialogTitle>
+              <DialogDescription>
+                If you believe this review violates our community guidelines
+                please provide details below.
+              </DialogDescription>
+            </DialogHeader>
+            <Textarea
+              placeholder="Why are you reporting this review?"
+              value={reportReason}
+              onChange={(e) => setReportReason(e.target.value)}
+              className="min-h-[100px]"
+            />
+            <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() => setIsReportDialogOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={handleReport}
+                disabled={!reportReason.trim() |isReporting}
+              >
+                {isReporting ? "Submitting..." : "Submit Report"}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+    </div>
+            {review && review.quality_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Quality;
+                <span className="ml-1 text-yellow-500">{review && review.quality_rating}/5</span>;
+              </Badge>;
+            )}
 
-<<<<<<< HEAD
+            {review && review.timeliness_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Timeliness;
+                <span className="ml-1 text-yellow-500">{review && review.timeliness_rating}/5</span>;
+              </Badge>;
+            )}
 
+            {review && review.would_work_again !== undefined && (;
+              <Badge
+                variant={review && review.would_work_again ? "default" : "secondary"}
+                className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;
+                {review && review.would_work_again ? "Would work again" : "Would not work again"}
+              </Badge>;
 
-=======
+            )}
+
           </div>;
         </div>;
-
         </div>;
 
       )}
@@ -616,12 +636,5 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }
 }
 ;
-
-  );
-}
-  )
-}
-
-
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

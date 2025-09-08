@@ -113,21 +113,28 @@ interface ToastProps extends React.PropsWithChildren<{}> {"toast": "Toas t;"
         ))}
       </AnimatePresence>;
     </div>;
-  )}// Utility function to show toasts;
-export const showToast = ("props": any) => {';'
-';';'
-  }
-  if (typeof window !== 'undefined' && (window as ).showToast) {';'
-    (window as ).showToast({ type, title, message, duration })}';';'
-}'"`;`</ToastItem>;
-</any>;
-</motion>;
-</any>;
-</ToastProps>;
-</typeof>';'
-</ToastProps>';';// Utility function to show toasts;'
-export const showToast = ("props": "any) => {if (typeof window !== 'undefined' && (window as ).showToast) {(window as ).showToast({ type", title, message, duration })}"
-}'"`;`</ToastItem>;
+  )};
+// Utility function to show toasts
+export const showToast = (props: any) => {';
+';';
+  if (typeof window !== 'undefined' && (window as ).showToast) {
+';
+    (window as ).showToast({ type, title, message, duration })}';'
+};'"`
+</ToastItem>
+</any>
+</motion>
+</any>
+</ToastProps>
+</typeof>';
+</ToastProps>';';
+;
+// Utility function to show toasts;
+export const showToast = ("props": "any) => {;
+  if (typeof window !== 'undefined' && (window as ).showToast) {;
+    (window as ).showToast({ type", title, message, duration })}
+};'"`;
+</ToastItem>;
 </any>;
 </motion>;
 </any>;

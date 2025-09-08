@@ -2,23 +2,11 @@
 
 export interface PartnerProfile {
 
-
-=======
-
-export interface PartnerProfile {
-
 export interface PartnerProfile {;
-
-export interface PartnerProfile {;
-
-export interface PartnerProfile {
 export interface PartnerProfile {export interface PartnerProfile {
 
 export interface PartnerProfile {;
 export interface PartnerProfile {
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   // TODO: Implement
 }
@@ -40,43 +28,22 @@ pr-12325
     instagram?: string;
     youtube?: string;
     linkedin?: string;
-    [key: string]: string | undefined;
-  };
+    [key: string]: string | undefined
+};
   niche: string;
   audience_size: string;
   payout_method: string;
   bio: string;
   status: "pending" | "approved" | "rejected";
   created_at: string;
-  updated_at: string;
-  commission_rate?: number;
-}
-
-
-export interface PartnerSettings {;
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string;
   commission_rate: number;
   fraud_threshold: number;
   is_payouts_enabled: boolean;
 }
 
-
 export interface PartnerReferralLink {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  updated_at: string
-
-  commission_rate?: number
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface PartnerSettings {
 
 export interface PartnerSettings {;
@@ -90,8 +57,6 @@ export interface PartnerReferralLink {
   // TODO: Implement
 }
 export interface PartnerReferralLink {;
-export interface PartnerReferralLink {
-
   id: string;
   // TODO: Implement
 }
@@ -102,24 +67,21 @@ export interface PartnerReferralLink {
   campaign?: string;
   source?: string;
   clicks: number;
-  conversions: number;
-  created_at: string;
-}
-
-}
+export interface PartnerPayout {
 
 export interface PartnerPayout {;
+export interface PartnerPayout {  conversions: number
 
-<<<<<<< HEAD
-
-
-
-=======
+  created_at: string
+}
+export interface PartnerPayout {
 
 export interface PartnerPayout {};
 export interface PartnerPayout {;
+export interface PartnerPayout {
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export interface PartnerPayout {;
+export interface PartnerPayout {
   id: string;
   partner_id: string;
   amount: number;"

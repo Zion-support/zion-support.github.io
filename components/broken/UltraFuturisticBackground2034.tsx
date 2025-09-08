@@ -89,9 +89,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
-    };
+      canvas.width = window.innerWidth
+};
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -1337,10 +1336,10 @@ setMousePosition({ x: e.clientX, y: e.clientY });
   // Mouse move handler for interactive effects;
   useEffect(() => {;
     const handleMouseMove = (e: MouseEvent) => {;
-      setMousePosition({ x: e && e.clientX, y: e && e.clientY });
-    };
-'
-    window && window.addEventListener('mousemove', handleMouseMove);'
+      setMousePosition({ x: e && e.clientX, y: e && e.clientY })
+};
+
+    window && window.addEventListener('mousemove', handleMouseMove);
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
 
 
@@ -1432,14 +1431,31 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
             ease: 'linear',            ease: "linear"
             duration: 8,
             repeat: -1,
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-<<<<<<< HEAD
-=======
+            ease: 'linear',    }
+      {/* Framer Motion Geometric Shapes */}
+      <div className="absolute inset-0">;
+        {/* Floating geometric shapes */}
+        <motion&& motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+;
+    window.addEventListener ('mousemove', handleMouseMove);
+    return () => window.removeEventListener ('mousemove', handleMouseMove);
+  }, []);
+;
+  return (
+    <div className="fixed inset - 0 pointer - events - none z-0 overflow-hidden">;
+      {/* HTML Canvas Background */}
+      <canvas;
+        ref={canvas_ref}
+        className="absolute inset - 0 w-full h-full";
+        style={{ filter: `blur (${0.5 * intensity}px)` }}
+      />;
+      {/* Framer Motion Geometric Shapes */}
+      <div className="absolute inset-0">;
+        {/* Floating geometric shapes */}
+        <motion.div;
+          className="absolute top - 20 left - 20 w - 32 h - 32 border border-cyan-400 / 30";
+          animate={{
           }}
           transition={{
             rotate: [0, 180, 360];
@@ -1450,16 +1466,12 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
             duration: 12,
             repeat: -1,
 
-
-          }
+          }}
 
         />;
       </div>;
 
-
       {/* Energy waves */}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
             duration: 6,
             repeat: -1}
@@ -1505,8 +1517,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{
 
-
-
           animate={{
             coordinate_x: ['-100%', '100%'],          }}
           transition={{
@@ -1516,7 +1526,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
             ease: 'linear',        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 10 to - transparent";
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan-500 / 10 to-transparent";
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -1560,7 +1570,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
         />;
         <motion.div;
-          className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent";
+          className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple-500 / 10 to-transparent";
           animate={{
             coordinate_y: ['-100%100%'];
           }}
@@ -1657,9 +1667,16 @@ ease: 'linear'}
             className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent"
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
-              opacity: [0, 1, 0];
-              scaleY: [0, 1, 0]
-            }}
+            key={i}
+            className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan-400 / 20 to-transparent";
+            style={{ left: `${(i * 5) % 100}%` }}
+            animate={{
+
+            transition={{
+              duration: 3
+              delay: i * 0.1
+              repeat: -1
+
             transition={{
               duration: 3,
               delay: i * 0.1,
@@ -1766,7 +1783,6 @@ ease: 'linear'}
 "ease": 'easeInOut','
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
             transition={{
 
               duration: 3,
@@ -1796,13 +1812,7 @@ ease: 'linear'}
         ))}
       </div>;
       {/* Cyberpunk grid */}
-      <div className='absolute inset - 0'>;
-        <motion.div;
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]";
-        <motion&& motion.div
-          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+      <div className='absolute inset-0'>
 
             transition={{
               duration: 3,
@@ -1961,17 +1971,9 @@ className=\"absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transpa
 }
 ;
 export default UltraFuturisticBackground2034;        <motion.div;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      {/* Cyberpunk grid */}
-      <div className='absolute inset - 0'    />;
-        <motion.div;
-          className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
-
-          style={{}
-            background_size: '50px 50px'}
-<<<<<<< HEAD
-
+          className="absolute inset - 0 bg-[linear-gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear-gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
+          style={{
+            background_size: '50px 50px';
           }}
           animate={{
 
@@ -2037,17 +2039,9 @@ ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
       </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2034);
-}
-;
-export default UltraFuturisticBackground2034;
-
+    </div>;
+  )
 };
-
-export default UltraFuturisticBackground2034;
 
           }}
           transition={{
@@ -2084,12 +2078,7 @@ export default UltraFuturisticBackground2034;
   )
 };
 
-  )}}}
-          transition={{duration: 4,repeat: -1,}}
-        />;
-      </div>;
-    </div>;
-}export default UltraFuturisticBackground2034;  )}export default UltraFuturisticBackground2034;
+export default UltraFuturisticBackground2034;  )
 };
 export default UltraFuturisticBackground2034;
             ease: 'easeInOut',            ease: "easeInOut";

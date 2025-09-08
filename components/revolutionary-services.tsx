@@ -301,71 +301,107 @@ const containerVariants = {
         return a.category.localeCompare(b.category);
       case 'roi':
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        return bRoi - aRoi;
-
-default:
-        return a.name.localeCompare(b.name);}
-}
-    }
-
-<<<<<<< HEAD
-  });
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    {
-      name: 'Autonomous Vehicles & Smart Transportation',
-  description:
-        'AI platforms for autonomous vehicles and smart transportation'
-      icon: <CarIcon className='w-6 h-6'    />
-      count: revolutionaryMicroSaasServices.filter(
-        s => s.category === 'Autonomous Vehicles & Smart Transportation'
-      ).length;
-color: 'from-emerald-500 to-green-600'}
-   ,}
-}
-    {
-      name: 'Smart Energy & Renewable Energy',
-<<<<<<< HEAD
-
-      description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
-      color: 'from-yellow-500 to-orange-600'
-    }
-  ];
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  ];
-
-const containerVariants = {}
-    hidden: { opacity: 0,}
-}
-
-
-<<<<<<< HEAD
-
-
   const containerVariants = {
     hidden: { opacity: 0 }
 
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
-
-
-const popular_services  = getPopularRevolutionaryServices ()// Enhanced service categories with better descriptions;
-
-=======
-    website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
-  }
-
-const popular_services  = getPopularRevolutionaryServices ()// Enhanced service categories with better descriptions;
-
+;
+  const popular_services = getPopularRevolutionaryServices ();
+;
+  // Enhanced service categories with better descriptions;
+  const enhanced_categories = [;
+    {
+      name: 'Quantum AI & Cognitive Computing',
+      description:;
+        'Revolutionary quantum AI solutions with human - level reasoning capabilities',
+      icon: <Brain className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Quantum AI & Cognitive Computing').length,
+      color: 'from - purple - 500 to - indigo - 600',
+    },
+      name: 'Autonomous Manufacturing & Industry 4.0',
+      description:;
+        'Next - generation autonomous manufacturing with zero human intervention',
+      icon: <Factory className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+      color: 'from - orange - 500 to - red - 600',
+    },
+    {
+      name: 'Quantum Blockchain & DeFi',
+      description:;
+        'Quantum - secured blockchain platforms with infinite scalability',
+      icon: <Globe className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Quantum Blockchain & DeFi').length,
+      color: 'from - green - 500 to - emerald - 600',
+    },
+    {
+      name: 'AI Biomedical Research & Drug Discovery',
+      description:;
+        'AI - powered platforms for accelerated drug discovery and medical research',
+      icon: <FlaskIcon className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'AI Biomedical Research & Drug Discovery').length,
+      color: 'from - blue - 500 to - indigo - 600',
+    },
+    {
+      name: 'Quantum Cybersecurity & Threat Detection',
+      description:;
+        'Quantum - resistant cybersecurity with AI - powered threat detection',
+      icon: <ShieldCheck className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+      color: 'from - red - 500 to - pink - 600',
+    },
+    {
+      name: 'Space Technology & Satellite Optimization',
+      description:;
+        'Revolutionary platforms for space exploration and satellite optimization',
+      icon: <Rocket className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Space Technology & Satellite Optimization').length,
+      color: 'from - indigo - 500 to - purple - 600',
+    },
+    {
+      name: 'AI Content Creation & Marketing',
+      description: 'Quantum - powered content creation at infinite scale',
+      icon: <FileText className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'AI Content Creation & Marketing').length,
+      color: 'from - teal - 500 to - cyan - 600',
+    },
+    {
+      name: 'Quantum Computing as a Service',
+      description: 'Enterprise quantum computing with real quantum processors',
+      icon: <Cpu className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Quantum Computing as a Service').length,
+      color: 'from - violet - 500 to - purple - 600',
+    },
+    {
+      name: 'Autonomous Vehicles & Smart Transportation',
+      description:;
+        'AI platforms for autonomous vehicles and smart transportation',
+      icon: <CarIcon className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+      color: 'from - emerald - 500 to - green - 600',
+    },
+    {
+      name: 'Smart Energy & Renewable Energy',
+      description:;
+        'AI platforms for smart energy grids and renewable energy optimization',
+      icon: <LeafIcon className='w - 6 h - 6' />,
+      count: revolutionaryMicroSaasServices.filter (
+        string => s.category === 'Smart Energy & Renewable Energy').length,
+      color: 'from - yellow - 500 to - orange - 600',
+    },  ],
+  description: 'AI platforms for smart energy grids and renewable energy optimization',
+      icon: <LeafIcon className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,
+      color: 'from - yellow - 500 to - orange - 600';
     }
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
@@ -423,27 +459,6 @@ staggerChildren: 0.1,}
 
         duration: 0.5,
 >>>>>>> origin/cursor/delete-old-data-records-6bba
-      },
-    }}
-
-
-<<<<<<< HEAD
-const itemVariants = {}
-    hidden: { y: 20, opacity: 0,}
-
-=======
-
-const itemVariants = {
-    }
-    "hidden": { "y": 20, "opacity": 0
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-    visible: {
-      y: 0;
-opacity: 1;
-transition: {
-}
-duration: 0.5,}
       },
     }}
 
@@ -1611,17 +1626,8 @@ className='text-center py-16'}
         <AnimatePresence    />
           {selectedService && (
             <motion.div
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-
-            <motion.div;}
-className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() =    /> setSelectedService(null,}
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -2363,20 +2369,20 @@ variant='futuristic'
                           Contact Sales;
                           <Mail className=ml - 2 w - 4 h - 4' />;
                         </Button>                      </div>;
-                      <div className=flex gap - 4">;
+                      <div className="flex gap-4">;
                                                 <Button;
                           variant="primary;
                           on_click={() => window.open (selected_service.link, '_blank)}
                           >;
                           Visit Service;
-                          <ExternalLink className=ml - 2 w - 4 h - 4" />;
+                          <ExternalLink className="ml - 2 w-4 h-4" />;
                         </Button>;
                         <Button;
                           variant="futuristic;
                           on_click={() => window.open (https://ziontechgroup.com / contact_blank')}
                           >;
                           Contact Sales;
-                          <Mail className=ml - 2 w - 4 h - 4" />;
+                          <Mail className="ml - 2 w-4 h-4" />;
                         </Button>;
                     </div>;
                   </div>;
@@ -2388,10 +2394,10 @@ variant='futuristic'
         <section className='py - 20>;
           <div className=container mx - auto px - 4 text - center'>;
             <motion.div;
-              className='max - w-4xl mx - auto              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20>;
-          <div className=container mx - auto px - 4 text - center">;
+              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py-20">;
+          <div className="container mx - auto px-4 text-center">;
             <motion.div;
-              className="max - w-4xl mx - auto;
+              className="max-w-4xl mx-auto";
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -2445,17 +2451,17 @@ variant='futuristic'
                   </div>;
                   <div className=text - gray - 400 text - sm'>Visit our office</div>                </div>                Ready to Experience the Future?;
               </h2>;
-              <p className=text - xl text - gray - 300 mb - 8">;
+              <p className="text - xl text - gray-300 mb-8">;
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center items-center mb-8">;
                                 <Button;
                   variant=primary";
                   size="lg;
                   on_click={() => window.open ('https://ziontechgroup.com / contact_blank)}
                   >;
                   Start Free Trial;
-                  <Rocket className=ml - 2 w - 5 h - 5" />;
+                  <Rocket className="ml - 2 w-5 h-5" />;
                 </Button>;
                 <Button;
                   variant="futuristic;
@@ -2463,24 +2469,24 @@ variant='futuristic'
                   on_click={() => window.open (https://ziontechgroup.com / contact_blank')}
                   >;
                   Schedule Demo;
-                  <Calendar className="ml - 2 w - 5 h - 5 />;
+                  <Calendar className="ml - 2 w-5 h-5" />;
                 </Button>;
               </div>;
-              <div className=grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-center">;
                 <div>;
-                  <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2 />;
-                  <div className=text - white font - semibold">{contact_info.mobile}</div>;
-                  <div className="text - gray - 400 text - sm>Call us anytime</div>;
+                  <Phone className="w - 8 h - 8 text - cyan - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.mobile}</div>;
+                  <div className="text - gray-400 text-sm">Call us anytime</div>;
                 </div>;
                 <div>;
-                  <Mail className=w - 8 h - 8 text - purple - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold>{contact_info.email}</div>;
-                  <div className=text - gray - 400 text - sm">Email us 24 / 7</div>;
+                  <Mail className="w - 8 h - 8 text - purple - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.email}</div>;
+                  <div className="text - gray-400 text-sm">Email us 24 / 7</div>;
                 </div>;
                 <div>;
-                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 2 />;
-                  <div className=text - white font - semibold">{contact_info.address}</div>;
-                  <div className="text - gray - 400 text - sm">Visit our office</div>;
+                  <MapPin className="w - 8 h - 8 text - green - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.address}</div>;
+                  <div className="text - gray-400 text-sm">Visit our office</div>;
                 </div>;
               </div>;
             </motion.div>;

@@ -151,14 +151,6 @@ export default /**;
   );
 }
 
-
-    outdated = json.outdated || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { outdated, generatedAt } }
-}
-
-export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
 export default /**
  * DepRadarPage - Function description
  */
@@ -168,10 +160,6 @@ function DepRadarPage() {
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       {outdated.length === 0 ? (
         <div className="text-sm text-gray-600>All dependencies up to date.</div>
       ) : (

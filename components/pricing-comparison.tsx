@@ -142,23 +142,67 @@ starter: '$19/month',
         },
         {
           name: 'Writesonic',
-  pricing: '$19/month',
-          rating: '4.4/5',
-  pros: ['Affordable', 'Good for beginners', 'Basic features'],
-          cons: ['Limited features', 'Basic AI models', 'No team features'],}
-          savings: 'Same price, better features',}
-        },
-      ],
-      features: [
-        'AI-powered content generation',
-        'Multiple content formats',
-        'SEO optimization',
-        'Team collaboration',
-        'API access',
-        'Custom templates',
-      ],
-      color: 'from-purple-500 to-indigo-600',
-  icon: '🤖',
+          pricing: '$19/month',
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion'
+};
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
+          savings: 'Save $17/month with Zion'
+        },        {
+          name: 'Writesonic'
+          pricing: '$19/month'
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations']
+          cons: ['Higher pricingLimited customizationNo unlimited plan']
+          savings: 'Save $20/month with Zion'
+        }
+          name: 'Copy.ai'
+          pricing: '$36/month'
+          rating: '4.6/5'
+          pros: ['Unlimited words', 'Good value', 'Simple interface']
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+          savings: 'Save $17/month with Zion'
+        },          pros: ['Unlimited wordsGood valueSimple interface']
+          cons: ['Basic featuresLimited templatesNo advanced SEO']
+          savings: 'Save $17/month with Zion'
+        }
+          name: 'Writesonic'
+          pricing: '$19/month'
+          rating: '4.4/5'
+          pros: ['Affordable', 'Good for beginners', 'Basic features']
+          cons: ['Limited features', 'Basic AI models', 'No team features']
+          savings: 'Same price, better features'
+        }
+      ]
+        'AI-powered content generation'
+        'Multiple content formats'
+        'SEO optimization'
+        'Team collaboration'
+        'API access'
+        'Custom templates'
+      ]
+      color: 'from-purple-500 to-indigo-600'
+      icon: '🤖'
+    };
+    {;
+      insight: 'Professional features at startup-friendly prices',;
+      icon: <Zap className="w-6 h-6" />,;
+      color: 'text-purple-400'
+};
+    {;
+      insight: 'Enterprise-grade reliability without enterprise pricing',;
+      icon: <Star className="w-6 h-6" />,;
+      color: 'text-yellow-400';
+      insight: 'Zion services are 30 - 60% more affordable than market leaders',
+      icon: <DollarSign className='w - 6 h - 6' />,
+      color: 'text - green - 400',
     },
     {
       service: 'Cloud Monitoring',
@@ -259,57 +303,23 @@ starter: '$19/month',
       'icon': '☁️','
     },
     {
-      }
-      'service': 'DevOps Automation','
-      'zionPricing': {
-        }
-        'starter': '$39/month','
-        'professional': '$129/month','
-        'enterprise': '$399/month','
-      },
-      'competitors': [
-        {
-          }
-          'name': 'GitHub Actions','
-          'pricing': 'Free + $0.008/min','
-          'rating': '4.6/5','
-'pros': ['GitHub native', 'Good free tier', 'Wide adoption'],'
-          'cons': ['Expensive for teams', 'Limited features', 'Complex pricing'],'
-          'savings': 'Save $200+/month for active teams','
-        },
-        {
-          }
-          'name': 'GitLab CI/CD','
-          'pricing': '$19/user/month','
-          'rating': '4.4/5','
-'pros': ['Integrated platform', 'Good CI/CD', 'Unlimited repos'],'
-          'cons': [
-            'User-based pricing','
-            'Limited integrations','
-            'Higher cost for teams','
-          ],
-          'savings': 'Save $56/month for 5 users','
-        },
-        {
-          }
-          'name': 'Jenkins','
-          'pricing': 'Free','
-          'rating': '4.2/5','
-'pros': ['Completely free', 'Highly customizable', 'Open source'],'
-          'cons': ['Requires maintenance', 'No managed service', 'Complex setup'],'
-          'savings': 'Professional service for $39/month','
-        }
-      ],
-      'features': [
-        'CI/CD pipelines','
-        'Infrastructure as Code','
-        'Security automation','
-        'Multi-cloud deployment','
-        'Team collaboration','
-        'Custom integrations','
-      ],
-      'color': 'from-blue-500 to-cyan-600','
-      'icon': '🚀','
+      insight: 'Enterprise - grade reliability without enterprise pricing',
+      icon: <Star className='w - 6 h - 6' />,
+      color: 'text - yellow - 400',
+    },  ];    {
+      insight: 'All plans include free trials and no hidden fees',
+      icon: <Check className="w-6 h-6" />,
+      color: 'text - blue - 400';
+    }
+    {
+      insight: 'Professional features at startup - friendly prices',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'text - purple - 400';
+    }
+    {
+      insight: 'Enterprise - grade reliability without enterprise pricing',
+      icon: <Star className="w-6 h-6" />,
+      color: 'text - yellow - 400';
     }
   ];
 
@@ -502,16 +512,17 @@ href="/pricing"
             </div>;
           </div>;
         </section>;
-
-        {/* Market Insights */}
-        <section className="py-24 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-                Why Choose Zion?
-              </h2>
-                View Our Pricing
-              </Button>
+                  key={index}
+                  className="text - center group hover:scale - 105 transition-transform duration-300";
+                >;
+                  <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
+                    {insight.icon}
+                  </div>
+                  <p className={`text-lg font-semibold ${insight.color}`}>
+                    {insight.insight}
+                  </p>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -755,22 +766,13 @@ className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} 
                 See exactly how each service compares in features, pricing, and;
                 value.              </p>;
             </div>;
-            {service_comparisons.map ((service, service_index) => (        <section id='comparison' className='py - 24 bg-gray-800'>;'
-          <div className='max - w-7xl mx - auto px - 4 'sm':px-6 'lg':px-8'>;'
-            <div className='text-center mb-20'>;'
-              <h2 className='text - 3xl 'sm':text - 4xl font - bold text-white mb-8'>;'
-                }
+            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg-gray-800">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-20">;
+              <h2 className="text - 3xl sm:text - 4xl font - bold text-white mb-8">;
                 Detailed Service Comparison;
               </h2>;
-<<<<<<< HEAD
-              <p className=\"text - xl text - gray - 400 max-w-3xl mx-auto\"    />;
-                See exactly how each service compares in features, pricing, and value.;}
-            </div>;}
-            {service_comparisons.map ((service, service_index) => (<div key={service_index} className='mb - 24'    />;
-                <div className='text - center mb - 16'    />;
-
-=======
-              <p className='text - xl text - gray - 400 max-w-3xl mx-auto'>;'
+              <p className="text - xl text - gray - 400 max-w-3xl mx-auto">;
                 See exactly how each service compares in features, pricing, and value.;
             </div>;
             {service_comparisons.map ((service, service_index) => (<div key={service_index} className='mb - 24'>;'

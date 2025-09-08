@@ -7,8 +7,13 @@
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
 =======
 /// <reference types="next/navigation-types/compat/navigation" />
+<<<<<<< HEAD
 /// <reference path="./.next/types/routes.d.ts" />
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+=======
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
+>>>>>>> origin/main

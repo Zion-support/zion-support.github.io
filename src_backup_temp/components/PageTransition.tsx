@@ -7,12 +7,11 @@ interface PageTransitionProps  {"children": React.ReactNode;
 const "PageTransition": React.FC<PageTransitionProps> = ({ children }) => {return (<div className="min-h-screen">;"
       {children}
     </div>;
-    )interface PageTransitionProps  {"children": React.ReactNode;"
-}
-      {children}</div>;
-  )}"export default PageTransition;';'
-</PageTransitionProps>;';';'
-"export default PageTransition;"
+  )
+};
+"export default PageTransition;';
+</PageTransitionProps>;';;';
+"export default PageTransition;
 </PageTransitionProps>;
 "export default PageTransition;';'
 </PageTransitionProps>;';';'

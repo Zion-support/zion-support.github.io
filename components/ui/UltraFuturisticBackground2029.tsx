@@ -5,7 +5,10 @@ interface UltraFuturisticBackground2029Props {
   children: React.ReactNode;
 }
 
-export default function UltraFuturisticBackground2029({ children }: UltraFuturisticBackground2029Props) {
+export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -275,8 +278,79 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
             repeat: Infinity,
             ease: "linear"
           }}
+          transition={{
+            duration: 12
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
+        />;
+        <motion.div;
+          className='absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45';
+          animate={{
+            rotate: [45, 405],
+            scale: [1, 1.1, 1],          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+        />;
+        <motion.div;
+          className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity-20 transform rotate-45";
+          animate={{
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}          }}
+
+          }}
+
+          }}
+
+            duration: 10,
+            repeat: Infinity,
+
         />
       </div>
+      {/* Gradient overlays for depth */}
+
+        />;
+      </div>;
+
+      {/* Gradient overlays for depth */}
+      <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
+      <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
+
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
+      
+      {/* Content */}
+      <div className='relative z-10'>{children}</div>;
+    </div>;
+  );      {/* Content */}
+      <div className="relative z-10">;
+        {children}
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+      </div>;
+      {/* Gradient overlays for depth */}
+      <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - transparent to - black / 20 pointer - events - none' />;
+      <div className='absolute inset - 0 bg - gradient - to - tl from - transparent via - transparent to - blue - 900 / 10 pointer - events - none' />;
+      {/* Content */}
+      <div className='relative z - 10'>{children}</div>;
+    </div>);      {/* Content */}
+      <div className="relative z-10">;
+        {children}
+      </div>;
+    </div>);
+}
+      <div className='relative z-10'>{children}</div>
     </div>
   );
 }

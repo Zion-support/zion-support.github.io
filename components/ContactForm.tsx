@@ -1,8 +1,9 @@
-React, { useState } from
-  'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from
-  'lucide-react';''
-  'interface FormData {name: string;'email: string;
+import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+
+interface FormData {
+  name: string;
+  email: string;
   company: string;
   phone: string;
   service: string;
@@ -91,8 +92,8 @@ name:, ', email: ', '        company:,'
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -190,7 +191,7 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
         </button>
       </form>
     </div>
-  );
+  )
 };
 
 export default ContactForm;

@@ -41,10 +41,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
-
-
-
-
-  return res.status(200).json({ matches: text });
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,167 +1,66 @@
 
-<<<<<<< HEAD
 
-interface ChatMessageProps {
+import React from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",
+import { format } from "date-fns";
+import { useTheme } from "@/hooks/useTheme";
+import { format } from "date-fns",
+import { useTheme } from "@/hooks/useTheme",
 
+  return (
 
-  message: string
-  isUser: boolean
-
-  timestamp: Date
-
-}
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;
-      <Avatar className="h-8 w-8">;
-        {isUser ? (;
-          <>;
-<<<<<<< HEAD
-
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User" />;
-
-=======
-
-
-            <AvatarImage src="https://i && i.pravatar.cc/40?img=1" alt="User" />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <AvatarFallback>U</AvatarFallback>;
-          </>;
-        ) :(;
-          <>;
-<<<<<<< HEAD
-
-            <AvatarImage;
-              src="https://placehold.co/40x40?text=AI";
-              alt="Zion Support";
-
-=======
-
-
+    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
+      <Avatar className="h-8 w-8">
+        {isUser ? (
+          <>
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User" />
+            <AvatarFallback>U</AvatarFallback>
+          </>
+        ) : (
+          <>            <AvatarImage
+              src="https://placehold && placehold.co/40x40?text=AI"
+              alt="Zion Support"            <AvatarImage
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"
->>>>>>> origin/cursor/delete-old-data-records-6bba
             />;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
-        )}
-
-<<<<<<< HEAD
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
-        isUser
-          ? "bg-zion-purple text-white"
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          : theme === "dark"
+        )}          : theme === "dark"
             ? "bg-zion-blue-light text-white"
 
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-<<<<<<< HEAD
 
 
 
 =======
       </Avatar>;
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      <divclassName={cn(
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm"
+        isUser 
+          ? "bg-zion-purple text-white" 
+          : theme === "dark"
+            ? "bg-zion-blue-light text-white"
+            : "bg-gray-100 text-gray-800"
+      )}>;
+        <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />;
+        <divclassName={cn(
+          "text-xs mt-1"
+          isUser 
+            ? "text-white/70" 
+
           "text-xs mt-1",
           isUser "
             ? "text-white/70" 
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
             : theme === "dark"
               ? "text-gray-300"
-              : "text-gray-500"
-      ;
-      <div className={cn(;
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",;
-        isUser ;
-          ? "bg-zion-purple text-white" ;
-          :theme === "dark";
-            ? "bg-zion-blue-light text-white";
-            :"bg-gray-100 text-gray-800";
-      )}>;
-        <div dangerouslySetInnerHTML={{ __html:formatMessageWithLinks(message) }} />;
-        <div className={cn(;
-          "text-xs mt-1",;
-          isUser ;
-            ? "text-white/70" ;
-            :theme === "dark";
-              ? "text-gray-300";
-              :"text-gray-500";
-
-          "text-xs mt-1";
-          isUser"
-            ? "text-white/70""
-          "text-xs mt-1",
-
-              : "text-gray-500"
-        )}>"
-
-          {format(timestamp, "h:mm a")}
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-
-  ),
-
-<<<<<<< HEAD
-
-
-=======
-  );
-  ),
-  
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  // Replace help center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g;
-  formattedMessage = formattedMessage.replace(
-    helpCenterRegex'"
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  )
-
-<<<<<<< HEAD
-
-  return formattedMessage
-
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from "react",;
-
+              : "text-gray-500"        )}>;
+          {format(timestamp, "h:mm a")}import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
 import { format } from "date-fns",;
@@ -218,18 +117,6 @@ export function ChatMessage() { return null; }
 
 }
 ;
-<<<<<<< HEAD
-
-
-}
-
-
-=======
-        </div>;
-      </div>;
-    </div>;
-
-
 
 }
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -250,23 +137,41 @@ export /**;
 function ChatMessage() {}
   const { theme } = use_theme ();
 ;
-
-  ),;
-
-import React from "react";""
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";""
-import {cn} from "@/lib/utils";""
-import {format} from "date-fns";""
-import {useTheme} from "@/hooks/useTheme";""
-import React from "react",""
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",""
-import { cn } from "@/lib/utils",""
-import { format } from "date-fns";""
-import { useTheme } from "@/hooks/useTheme";""
-import { format } from "date-fns",""
-import { useTheme } from "@/hooks/useTheme","
-interface ChatMessageProps {
-  // TODO: Implement
+  return (
+    <div className={cn ("flex items - start gap - 3", is_user && "flex - row - reverse")}>;
+      <Avatar className="h - 8 w-8">;
+        {is_user ? (
+          <>;
+            <AvatarImage src="https://i.pravatar.cc / 40?img = 1" alt="User" />;
+            <AvatarFallback > U</AvatarFallback>;
+          </>) : (
+          <>;
+            <AvatarImage;
+              src="https://placehold.co / 40x40?text = AI";
+              alt="Zion Support";
+            />;
+            <AvatarFallback className="bg - zion - purple text-white">Z</AvatarFallback>;
+          </>)}
+      </Avatar>;
+      <div className={cn (
+        "max - w-[80%] rounded - lg px - 4 py - 2 text - sm";
+        is_user;
+          ? "bg - zion - purple text - white";
+          : theme === "dark";
+            ? "bg - zion - blue - light text - white";
+            : "bg - gray - 100 text - gray - 800")}>;
+        <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks (message) }} />;
+        <div className={cn (
+          "text - xs mt - 1";
+          is_user;
+            ? "text - white / 70";
+            : theme === "dark";
+              ? "text - gray - 300";
+              : "text - gray - 500")}>;
+          {format (timestamp, "h:mm a")}
+        </div>;
+      </div>;
+    </div>);
 }
   message: string;,
   isUser: boolean;
@@ -388,9 +293,3 @@ function formatMessageWithLinks (message: string): string {
     '<a href="/help/$1" class="text - zion - cyan underline hover: text - zion - cyan / 80">$1</a>'),
   return formatted_message;
 }
-
-
-
-=======
-;
->>>>>>> origin/cursor/delete-old-data-records-6bba

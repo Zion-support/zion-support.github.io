@@ -1,4 +1,7 @@
 export interface ModerationFlag {
+export interface ModerationFlag {;
+
+export interface ModerationFlag {
   id: string;
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   reason: string;
@@ -7,24 +10,22 @@ export interface ModerationFlag {
   contentId: string;
   createdAt: string;
   updatedAt: string;
+  adminNotes?: string;
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
 }
-
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find((flag) => flag.id === id) || null;
-}
-
-export async function readAllFlags(): Promise<ModerationFlag[]> {;
-  return [...flags];
-}
-
-export async function createFlag(
-  data: Partial<ModerationFlag>,
-): Promise<ModerationFlag> {
-  const flag: ModerationFlag = {
-    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    contentId: data.contentId || "",
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+;
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+  return flags.find (flag => flag.id === id) || null;    contentId: data.contentId || "",
     contentType: data.contentType || "post",
     reason: data.reason || "",
     userEmail: data.userEmail || "",
@@ -34,6 +35,16 @@ export async function createFlag(
   };
 
   flags.push(flag);
+    content_id: data.content_id || '',
+    content_type: data.content_type || 'post',
+    reason: data.reason || '',
+    user_email: data.user_email || '',
+    status: 'pending',
+    created_at: new Date ().toISOString (),
+    ...data;
+  }
+;
+  flags.push (flag);
   return flag;
 }
 

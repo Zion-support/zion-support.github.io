@@ -1,11 +1,11 @@
-import React from 'react';
-import { ServiceVariant } from '../types/service-variants';
-export type AIEmergingTechService = {
+import { ServiceVariant } from "../types/service-variants";
+
+export interface AIEmergingTechService {
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -28,18 +28,19 @@ export type AIEmergingTechService = {
   growthRate: string;
   variant: ServiceVariant;
   contactInfo: {
-    mobile: string
-    email: string
-    address: string
+    mobile: string;
+    email: string;
+    address: string;
     website: string
-  };
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-  reviews: number
 };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+}
+
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   {
     id: "ai-video-generation-platform"

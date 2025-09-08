@@ -65,11 +65,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse;
 
-
-  req: NextApiRequest
-  res: NextApiResponse
-  req: NextApiRequest,
-  res: NextApiResponse;
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { action } = req.query;
@@ -80,8 +75,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { action } = req && req.query;
   const body = typeof req && req.body === 'string' ? JSON && JSON.parse(req && req.body) : req && req.body;
 
-
-
+  req: NextApiRequest
+  res: NextApiResponse
   try {
     if (req && req.method === 'POST' && action === 'json') {
       const { cid, provider } = await addJSON(body);

@@ -3,39 +3,10 @@ import React from "react";
 
 export const useTheme = () => {
   return {
-    theme: "dark",
-    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
-  };
-};
-
-
-
-=======
-import React from 'react',
+  }
+}
 
     theme: "dark",
-    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),;
-
-
-  };
-};
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from 'react',;
-;
-// This is a simplified version of the theme hook for offline development;
-export const useTheme = () => {;
-
-<<<<<<< HEAD
-  return {;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
   };`
     setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
@@ -53,6 +24,3 @@ export const use_theme = () =>: any {}
     theme: "dark",
 
 };
-"
-    theme: "dark",
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -493,6 +493,104 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
   };
   return (&quot;
   return (
+    <Head>"
+      <title>{title}</title>""
+      <meta name="description" content={description} /" >""
+      <meta name="keywords" content={keywords} /" >""
+      <meta name="viewport" content="width=device-width, initial-scale=1" /" >
+      {/* Open Graph */}"';
+      <meta property=""og": "titl e" content={title"}   />"';';
+      <meta property=""og": "descriptio n" content={description"}   />"';';';
+      <meta property=""og": "typ e" content={ogType"}   />"',';';
+    ';';';
+      <meta property=""og": "ur l" content={canonical || 'http",;
+    "s": "//ziontechgroup.com'"}   />;
+      <meta property=""og": "imag e" content={ogImage"}   />";
+      <meta property=""og": "site_nam e" content="Zion Tech Group"   />;
+      ";
+      {/* Twitter */"}"";
+      <meta name=""twitter": "car d" content={twitterCard"} /" >"";
+      <meta name=""twitter": "titl e" content={title"} /" >"";
+      <meta name=""twitter": "descriptio n" content={description"} /" >"";
+      <meta name=""twitter": "imag e" content={ogImage"} /" >;
+      ";
+      {/* Canonical URL */}"";
+      {canonical && <link rel="canonical" href={canonical} /" >}
+      {/* Structured Data */}";
+      <script "";
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{;
+          "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}}";
+      /" >;
+      {/* Performance hints */}";
+      <link rel="preconnect" href=""https": "//fonts.googleapis.com"   />";
+      <link rel="preconnect" href="http",;
+    "s": "//fonts.gstatic.com" crossOrigin="anonymous"   />";
+      <link rel="dns-prefetch" href="http",;
+    "s": "//ziontechgroup.com"   />;
+      ";
+      {/* Security headers */"}"";
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /" >"";
+      <meta httpEquiv="X-Frame-Options" content="DENY" /" >"";
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >;
+    </Head>;
+      <meta property="og: ur l" content={canonical || 'http,';';';';
+    s://ziontechgroup.com'}   />
+      <meta property="og: imag e" content={ogImage}   />"
+      <meta property="og: site_nam e" content="Zion Tech Group"   />
+      "
+      {/* Twitter */}""
+      <meta name="twitter: car d" content={twitterCard} /" >""
+      <meta name="twitter: titl e" content={title} /" >""
+      <meta name="twitter: descriptio n" content={description} /" >""
+      <meta name="twitter: imag e" content={ogImage} /" >
+      "
+      {/* Canonical URL */}""
+  return (;
+    <Head>";
+      <title>{title}</title>"";
+      <meta name="description" content={description} /" >"";
+      <meta name="keywords" content={keywords} /" >"";
+      <meta name="viewport" content="width=device-width, initial-scale=1" /" >;
+      {/* Open Graph */}"';
+      <meta property="og: titl e" content={title}   />"';';
+      <meta property="og: descriptio n" content={description}   />"';';';
+      <meta property="og: typ e" content={ogType}   />"',';';
+    ';';';
+      <meta property="og: ur l" content={canonical || 'http,';';';';
+    s://ziontechgroup.com'}   />;
+      <meta property="og: imag e" content={ogImage}   />";
+      <meta property="og: site_nam e" content="Zion Tech Group"   />;
+      ";
+      {/* Twitter */}"";
+      <meta name="twitter: car d" content={twitterCard} /" >"";
+      <meta name="twitter: titl e" content={title} /" >"";
+      <meta name="twitter: descriptio n" content={description} /" >"";
+      <meta name="twitter: imag e" content={ogImage} /" >;
+      ";
+      {/* Canonical URL */}"";
+      {canonical && <link rel="canonical" href={canonical} /" >}
+      {/* Structured Data */}"
+      <script ""
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSO N.stringify(structuredData || defaultStructuredData)}}"
+      /" >
+      {/* Performance hints */}"
+      <link rel="preconnect" href="https: //fonts.googleapis.com"   />"
+      <link rel="preconnect" href="http,
+    s://fonts.gstatic.com" crossOrigin="anonymous"   />"
+      <link rel="dns-prefetch" href="http,
+    s://ziontechgroup.com"   />
+      "
+      {/* Security headers */}""
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /" >""
+      <meta httpEquiv="X-Frame-Options" content="DENY" /" >""
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >
+    </Head>
+  )
+};
+export default SEOEnhancer;"
     <Head>""
       <title>{title}</title>"""
       <meta name="description" content={description} /" >"""
@@ -921,17 +1019,15 @@ export default SEOEnhancer;"""
       <link rel="preconnect" href=""https"://fonts.gstatic.com" crossOrigin="anonymous" />"
       <link rel="dns-prefetch" href=""https"://ziontechgroup.com" />"
       {/* Security headers */}&quot;
-      <meta httpEquiv=&quot;X-Content-Type-Options&quot; content=&quot;nosniff&quot; />&quot;
-      <meta httpEquiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot; />&quot;
-      <meta httpEquiv=&quot;X-XSS-Protection&quot; content=&quot;1; mode=block&quot; />&quot;
-    </Head>';'
-  )';';'
-}';';';'
-  );';''
-};';';';'
-export default SEOEnhancer';';';';'
-export default SEOEnhancer;';';';';';'
-"';';';';'
+      <meta httpEquiv=&quot;X-Content-Type-Options&quot; content=&quot;nosniff&quot;   />&quot;
+      <meta httpEquiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot;   />&quot;
+      <meta httpEquiv=&quot;X-XSS-Protection&quot; content=&quot;1; mode=block&quot;   />&quot;
+    </Head>';
+  );';'
+};';';';
+export default SEOEnhancer';';';';
+export default SEOEnhancer;';';';';';
+"';';';';
 </script>
 </SEOEnhancerProps>
 </SEOEnhancerProps>';'
@@ -945,10 +1041,10 @@ export default SEOEnhancer;';';';';';'
   )}';'
     </Head>
   )
-};';'
-export default SEOEnhancer';';'
-export default SEOEnhancer;';';';'
-";"
+};';
+export default SEOEnhancer';';
+export default SEOEnhancer;';';';
+";
 </script>;
 </script>;
 </script>;

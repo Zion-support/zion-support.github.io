@@ -73,7 +73,6 @@ import Button from ../components / ui / Button';
   Code
   Database
 
-
   Zap;
   Shield,
   BarChart3,
@@ -283,210 +282,6 @@ export default function SaaSMarketplacePage() {
 
     }
 
-
-
-=======
-    }
-    {
-      name: 'Notion'
-      description:
-        'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.'
-      category: 'Productivity'
-      pricing: 'Free - $8/month'
-      rating: 4.7
-      users: '20M+'
-      icon: <Code className='w-8 h-8 text-gray-400' />
-      color: 'bg-gradient-to-br from-gray-500 to-gray-700'
-      features: [
-        'Note-taking & docs'
-        'Project management'
-        'Team collaboration'
-        'Database & tables'
-        'Templates library'
-        'API integration'
-      ]
-      website: 'https://notion.so'
-      useCase:
-        'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.'
-      pros: [
-        'Highly flexible'
-        'Beautiful interface'
-        'Great templates'
-        'Free tier'
-      ]
-      cons: ['Learning curve', 'Limited offline access']
-    }
-    {
-      name: 'Stripe'
-      description:
-        'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.'
-      category: 'Payments'
-      pricing: '2.9% + 30¢ per transaction'
-      rating: 4.9
-      users: '1M+'
-      icon: <Shield className='w-8 h-8 text-blue-400' />
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
-      features: [
-        'Global payment methods'
-        'Subscription billing'
-        'Fraud protection'
-        'Compliance tools'
-        'Developer-friendly API'
-        'Analytics dashboard'
-      ]
-      website: 'https://stripe.com'
-      useCase:
-        'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.'
-      pros: [
-        'Developer-friendly'
-        'Global reach'
-        'Excellent docs'
-        'Reliable'
-      ]
-      cons: ['Higher fees than some alternatives', 'Complex for beginners']
-    }
-    {
-      name: 'Intercom'
-      description:
-        'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.'
-      category: 'Customer Support'
-      pricing: '$39 - $999/month'
-      rating: 4.6
-      users: '25K+'
-      icon: <Users className='w-8 h-8 text-green-400' />
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      features: [
-        'Live chat'
-        'Customer messaging'
-        'Help desk'
-        'User onboarding'
-        'Analytics & reporting'
-        'Integration ecosystem'
-      ]
-      website: 'https://intercom.com'
-      useCase:
-        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.'
-      pros: [
-        'Great UX'
-        'Powerful features'
-        'Good integrations'
-        'Mobile apps'
-      ]
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
-    }
-    {
-      name: 'Mixpanel'
-      description:
-        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics'
-      pricing: 'Free - $25/month'
-      rating: 4.5
-      users: '26K+'
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.'
-      category: 'Analytics'
-      pricing: 'Free - $25/month'
-      rating: 4.5
-      users: '26K+'
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />
-      features: [
-        'User behavior tracking'
-        'Funnel analysis'
-        'A/B testing'
-        'Real-time data'
-        'Custom events'
-        'Mobile analytics'
-      ]
-      website: 'https://mixpanel.com'
-      useCase:
-        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
-      pros: [
-        'Powerful analytics'
-        'Real-time data'
-        'Good documentation'
-        'Flexible'
-      ]
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
-    }
-    {
-      name: 'MongoDB Atlas'
-      description:
-        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',      category: 'Database'
-      pricing: 'Free - $57/month'
-      rating: 4.7
-      users: '35K+'
-      icon: <Database className='w-8 h-8 text-green-400' />,      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.'
-      category: 'Database'
-      pricing: 'Free - $57/month'
-      rating: 4.7
-      users: '35K+'
-      icon: <Database className='w-8 h-8 text-green-400' />
-      features: [
-        'Fully managed MongoDB'
-        'Global clusters'
-        'Auto-scaling'
-        'Backup & recovery'
-        'Security & compliance'
-        'Monitoring & alerting'
-      ]
-      website: 'https://mongodb.com/atlas'
-      useCase:
-        'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
-      pros: [
-        'Fully managed'
-        'Global distribution'
-        'Auto-scaling'
-        'Good free tier'
-      ]
-      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
-    }
-    {
-      name: 'Vercel'
-      description:
-        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.'
-      category: 'Hosting'
-      pricing: 'Free - $20/month'
-      rating: 4.8
-      users: '100K+'
-      icon: <Cloud className='w-8 h-8 text-black' />
-      color: 'bg-gradient-to-br from-gray-800 to-black'
-      features: [
-        'Zero-config deployment'
-        'Global CDN'
-        'Automatic scaling'
-        'Git integration'
-        'Preview deployments'
-        'Edge functions'
-      ]
-      website: 'https://vercel.com'
-      useCase:
-        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.'
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier']
-      cons: ['Limited backend features', 'Can be expensive for high traffic']
-    }
-    {
-      name: 'Linear'
-      description:
-        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',      category: 'Project Management'
-      pricing: 'Free - $8/month'
-      rating: 4.9
-      users: '10K+'
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.'
-      category: 'Project Management'
-      pricing: 'Free - $8/month'
-      rating: 4.9
-      users: '10K+'
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />
-      features: [
-        'Issue tracking'
-        'Roadmap planning'
-        'Team collaboration'
-        'Git integration'
-        'Automated workflows'
-        'Mobile apps'
-      ]
-      website: 'https://linear.app'
-      useCase:
-        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
-      pros: [
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -861,7 +656,14 @@ key={category}
                       <span className='px-2 py-1 bg-gray-800 rounded-full'    />;
                         {service.category}
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>
+                        Key Features:
+                      </h4>
+                      <div className='grid grid-cols-2 gap-2'>
+                        {service.features
+                          .slice(0, 4)
+                          .map((feature, featureIndex) => (
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {service && service.icon}
                     </div>;
@@ -1047,12 +849,9 @@ key={category}
                         <div className='text - sm text - gray - 300 max - w-xs'    />;
                           {service.use_case}
                         </div>                      </div>;
-                      <div className=\"text-right\"    />;
-                        <div className=\"text - xs text - gray-500 mb-1\"    />Use Case:</div>;
-                        <div className=\"text - sm text - gray-300 max-w-xs\"    />{service.use_case}</div>;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                      <div className="text-right">;
+                        <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
+                        <div className="text - sm text - gray-300 max-w-xs">{service.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;
@@ -1097,18 +896,11 @@ key={category}
             implementation support.;
           </p>;
 
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-<section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'    />
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />
             Our team of experts can help you select the perfect SaaS tools for;

@@ -16,15 +16,40 @@ import {NEW_MICRO_SAAS_SERVICES_2025,NEW_IT_SERVICES_2025,NEW_INNOVATIVE_SERVICE
         return NEW_INNOVATIVE_SERVICES_2025;
       "default":;"
         return [];
-    "}"
-  }const formatPrice = ("price": "number", "model": "string) => {if (model === 'monthly') {return `$${price.toLocaleString()"}/month`;`    } else if (model === 'hourly') {return `$${price}/hour`;`    } else if (model === 'project') {return `$${price.toLocaleString()}`;`    }
-    return `$${price.toLocaleString()}`;`}const getInnovationBadge = ("level": "string) => {const colors = {'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200'",'Advanced': 'bg-blue-100 text-blue-800 border-blue-200','Professional': 'bg-green-100 text-green-800 border-green-200';'
-}return (<span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>;`        {level}
+    "}
+  };
+;
+  const formatPrice = ("price": "number", "model": "string) => {;
+    if (model === 'monthly') {;
+      return `$${price.toLocaleString()"}/month`;
+    } else if (model === 'hourly') {;
+      return `$${price}/hour`;
+    } else if (model === 'project') {;
+      return `$${price.toLocaleString()}`;
+    }
+    return `$${price.toLocaleString()}`
+};
+;
+  const getInnovationBadge = ("level": "string) => {;
+    const colors = {;
+      'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200'",;
+      'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',;
+      'Professional': 'bg-green-100 text-green-800 border-green-200'
+};
+    ;
+    return (;
+      <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>;
+        {level}
       </span>;
-    )}return (<div className={`bg-gray-50 py-16 ${className}`}>;`      <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">;"
-        {/* Header */"}"
-        <div className="text-center mb-12">;"
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">;"
+    )
+};
+;
+  return (;
+    <div className={`bg-gray-50 py-16 ${className}`}>;
+      <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">;
+        {/* Header */"}
+        <div className="text-center mb-12">;
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">;
             Revolutionary Services 2025;
           </h2>;
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
@@ -288,11 +313,32 @@ export function ComprehensiveNewServicesShowcase2025() {const [activeTab, setAct
       "default":;
         return [];
     }
-  }const formatPrice = ("price": number, "model": string) => {if (model === 'monthly') {return `$${price.toLocaleString()}/month`;`    } else if (model === 'hourly') {return `$${price}/hour`;`    } else if (model === 'project') {return `$${price.toLocaleString()}`;`    }
-    return `$${price.toLocaleString()}`;`}const getInnovationBadge = ("level": string) => {const colors = {'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200','Advanced': 'bg-blue-100 text-blue-800 border-blue-200','Professional': 'bg-green-100 text-green-800 border-green-200';'
-    }return (<span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>;`        {level}
-      </span>;
-    )}return (<div className={`bg-gray-50 py-16 ${className}`}>;`      <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">;"
+  };
+  const formatPrice = (price: number, model: string) => {
+    if (model === 'monthly') {
+      return `$${price.toLocaleString()}/month`;
+    } else if (model === 'hourly') {
+      return `$${price}/hour`;
+    } else if (model === 'project') {
+      return `$${price.toLocaleString()}`;
+    }
+    return `$${price.toLocaleString()}`
+};
+  const getInnovationBadge = (level: string) => {
+    const colors = {
+      'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200',
+      'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',
+      'Professional': 'bg-green-100 text-green-800 border-green-200'
+    };
+    return (
+      <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>
+        {level}
+      </span>
+    )
+};
+  return (
+    <div className={`bg-gray-50 py-16 ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">;"
           <h2 className="text-4xl font-bold text-gray-900 mb-4">;"

@@ -116,21 +116,6 @@ return `${d.getMonth() + 1}/${d.getDate()}`;
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    {
-      key: 'jobs_24h',
-  label: 'Jobs posted (24h)'
-      value: rand(15, 60)}
-      trend: generateSeries(14, 40)}
-    }
-    {
-      key: 'jobs_7d',
-  label: 'Jobs posted (7d)'
-      value: rand(120, 360)}
-      trend: generateSeries(14, 260)}
-    }
-    {
-<<<<<<< HEAD
 
   const marketplace = [
     {
@@ -425,25 +410,6 @@ value: Math.round(m.value * factor)}
   res.status(200).json(response);
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
-
-
-
-      }
-    };
-  }
-        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
-
-  }
-  res && res.status(200).json(response)
-}
-
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   res.status(200).json(response)
 }

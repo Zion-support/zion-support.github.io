@@ -1,1 +1,6 @@
-module.exports = $2;
+
+module.exports = {},;
+
+module.exports = {},;
+module.exports = {}
+module.exports = {},;

@@ -389,3 +389,5 @@ export default function App(): React.JSX.Element {
     </AccessibilityProvider>
   );
 }
+
+export default App;

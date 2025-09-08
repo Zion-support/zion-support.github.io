@@ -127,15 +127,18 @@ if ( {) {$2;}
         ref={img_ref}
         className={`flex items - center justify - center bg - gray - 200 text - gray - 500 ${class_name}`}
         style={style}
-       />;
-        <div className="text-center" />;
-          <div className="text-4xl mb-2" />📷</div>;
-          <div className="text-sm" />Image failed to load</div>;
+      >;
+        <div className="text-center">;
+          <div className="text-4xl mb-2">📷</div>;
+          <div className="text-sm">Image failed to load</div>;
         </div>;
-      </div>)}
-  return (<div ref={img_ref} className={`relative ${class_name}`} style={style} />;
-      {!isInView && !priority && (<div className="absolute inset - 0 flex items - center justify - center bg-gray-100" />;}
-          <LoadingSpinner size="sm" color="gray" />;}
+      </div>);
+  }
+  return (
+    <div ref={img_ref} className={`relative ${class_name}`} style={style}>;
+      {!isInView && !priority && (
+        <div className="absolute inset - 0 flex items - center justify - center bg-gray-100">;
+          <LoadingSpinner size="sm" color="gray" />;
         </div>)}
 <<<<<<< HEAD
 

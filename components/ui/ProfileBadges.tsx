@@ -100,5 +100,3 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {}
 
 }
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

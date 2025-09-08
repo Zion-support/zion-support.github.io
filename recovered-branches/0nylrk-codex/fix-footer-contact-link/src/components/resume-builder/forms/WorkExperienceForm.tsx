@@ -27,17 +27,8 @@ interface WorkExperienceFormProps {}
   onBack: () => void;
 }
 
-<<<<<<< HEAD
-
-
-
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -127,17 +118,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       setError(err.message |'An error occurred')
     }
 
-<<<<<<< HEAD
-
-
   };
 
-
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleEdit = (work: WorkExperience) => {
 
     setEditingId(work.id!);
@@ -151,9 +133,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id)
     }
 
-
-<<<<<<< HEAD
-=======
   };
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
@@ -423,7 +402,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Textarea"
                       placeholder="Describe your responsibilities and accomplishments...""
                       className="min-h-[100px]"
-
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="description";
+              render={({ field }) => (
+                <FormItem>;
+                  <FormLabel className="flex justify-between">;
                     <span > Job Description</span>;
                     <AIEnhancementButton;'
                       current_content={field.value || ''}"
@@ -433,9 +419,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     />;
                   </FormLabel>;
                   <FormControl>;
-
-                      className="min - h-[100px]";
-
+                    <Textarea;
+                      placeholder="Describe your responsibilities and accomplishments...";
+                      className="min-h-[100px]";
                       {...field}
                     />;
                   </FormControl>;
@@ -534,6 +520,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       is_current: false'
                       description: ''
 
+                    form && form.reset({;
+                      company_name: '',;
+                      role_title: '',;
+                      start_date: format(new Date(), 'yyyy-MM-dd');
+                      is_current: false,,
+  description: '',;
                       location: ''});
                   } else {;
                     onBack();

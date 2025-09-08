@@ -72,18 +72,8 @@ budgetRange: values.budgetRange;
   method: 'POST', headers: {
 <<<<<<< HEAD
 
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  'Content-Type': 'application/json' ;
+  'Content-Type': 'application/json' 
 };
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
@@ -412,7 +402,6 @@ if ( {) {$2;
               <div className="text-sm text-white / 70">{filtered.length} results</div>;
             </div>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-5">;
-<<<<<<< HEAD
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
 
@@ -423,21 +412,9 @@ if ( {) {$2;
               {filtered.map ((service) => (<EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}</div>;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
-      </div>;<QuoteRequestModal;
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selected}
-        onSubmit={handleSubmit}
-export default ServicesPage;export default ServicesPage;<QuoteRequestModal;
-const mapLocalToServiceItem = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function ServicesIndexPage () {
+        </div>;
+      </div>;
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}

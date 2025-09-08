@@ -1,10 +1,16 @@
 import { test, expect } from '@playwright/test';'
 
-test('basic page load', async ({ page }) => {'
-  }
-  await page.goto('/');'
-  await expect(page).toHaveTitle(/Zion Tech Group/);
-});
+interface Basic.specProps {
+  // Add props here as needed
+<<<<<<< HEAD
+}import React from 'react';
+interface Basic.specProps {
+  // Add props here as needed
+export default function Basic.spec({ }: Basic.specProps) {
+=======export default function Help({ }: HelpProps) {
+=export default function Basic.spec({ }: Basic.specProps) {
+=======
+}
 
 test('navigation works', async ({ page }) => {'
   }
@@ -21,18 +27,57 @@ await page.click('text=Services');'
   await expect(page).toHaveURL(/.*contact/);
 });
 
-test('contact form submission', async ({ page }) => {'
-  }
-  await page.goto('/contact');'
-  
-  // Fill out the contact form,
-await page.fill('input[name='name']', 'Test User');'
-  await page.fill('input[name='email']', 'test@example.com');'
-  await page.fill('textarea[name='message']', 'This is a test message');'
-  
-  // Submit the form,
-await page.click('button[type='submit']');'
-  
-  // Check for success message or redirect,
-await expect(page.locator('text=Thank you')).toBeVisible();'
-});
+<
+
+export default function Help({ }: HelpProps) {
+=
+export default function Basic.spec({ }: Basic.specProps) {
+>>>>>>> origin/main
+>  return (
+    <div>
+      <h1>Basic.spec</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+
+}=
+
+>}
+=======
+}
+=
+
+
+
+>:src.pages.disabled/Help.jsx
+>>>>>>> origin/main
+}
+}
+}
+}
+<<<<<<< HEAD
+:temp_exclude/src.pages.disabled/Help.jsx
+
+:src.pages.disabled/Help.jsx
+=>}
+=======
+}
+:temp_exclude/src.pages.disabled/Help.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/Help.jsx
+>>>>>>> origin/main
+}
+}
+}
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/main

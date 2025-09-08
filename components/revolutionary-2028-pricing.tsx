@@ -219,7 +219,6 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
 
-
   CheckCircle,
   ArrowRight,
   Star,
@@ -276,25 +275,39 @@ const pricingTiers = [
   Crown, Award, Target, Users, Clock, Globe2
 
   }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
-  Building, Factory, Camera, Video, Music, Gamepad2;
-  Crown, Award, Target, Users, Clock, Globe2}
-}
- } from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';,
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
-const contactInfo = null;
-
-const pricingTiers = [
-  {
-    name: 'Starter',
-  price: '$299'
+    name: 'Enterprise'
+    price: 'Custom'
+    period: ''
+    description: 'Tailored solutions for large organizations'
+    features: [
+      'Custom AI development'
+      'Dedicated support team'
+      'White-label solutions'
+      '24/7 phone support'
+      'Custom analytics'
+      'Full API access'
+      'Custom integrations'
+      'Dedicated account manager'
+      'SLA guarantees'
+      'On-premise deployment'
+    ]
+    popular: false
+    color: 'from-indigo-600 to-purple-600'
+    cta: 'Contact Sales'
+    href: '/contact'
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',  website: 'https://ziontechgroup && ziontechgroup.com'
+};
+      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
+    ];
+    popular: false,
+    color: 'from - blue - 600 to - cyan - 600',
+    cta: 'Get Started',
+    name: 'Professional',
+    price: '$999',
     period: '/month',
   description: 'Perfect for small businesses and startups'
     features: [
@@ -1248,27 +1261,6 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 <<<<<<< HEAD
                           <Link
 
-
-
-
-=======
-                              {service.rating}
-                            </span>;
-                            <span className='text-purple-300 text-sm'    />;
-                              ({service.reviews} reviews)</span>;
-                          </div>;
-                          <div className='text-sm text-purple-300'    />;
-                            <span className='font-medium'    />Setup: </span>{' '}
-                            {service.setupTim,}
-}
-                          </div>;
-                        </div>;
-                        <div className='flex items-center justify-between'    />;
-                          <Link;
-                            href={service.link}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
                           </div>
                         </div>
                       </div>
@@ -1320,6 +1312,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                 Our Pricing
               </span>
 
+      {/* Value Proposition */}
 
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'    />
@@ -1373,44 +1366,41 @@ unmatched features.
                     whileInView={{ opacity: 1, coordinate_x: 0 ,}
 }
                     transition={{ duration: 0.6, delay: service_index * 0.1 }}
-                    viewport={{ once: true ,}
-}
-                    className=\"group relative\"    />
-
-                    <div className=\"relative p - 6 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105\"    />;
-                      <div className=\"absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - blue - 500 / 5 rounded - xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300\"    /></div>;
-                      <div className=\"relative z - 10\"    />;
-                        <div className=\"flex items - start justify - between mb - 4\"    />;
-                          <div className=\"text - 3xl\"    />{service.icon}</div>;
-                          <div className=\"text - right\"    />;
-                            <div className=\"text - xl font - bold text - purple - 400\"    />{service.price}</div>;
-                            <div className=\"text - sm text - purple - 300\"    />{service.period}</div>;
+                    viewport={{ once: true }}
+                    className="group relative";
+                  >;
+                    <div className="relative p - 6 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - xl hover:border - purple - 500 / 60 transition - all duration-300 hover:transform hover:scale-105">;
+                      <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - blue - 500 / 5 rounded - xl opacity - 0 group - hover:opacity - 100 transition-opacity duration-300"></div>;
+                      <div className="relative z-10">;
+                        <div className="flex items - start justify-between mb-4">;
+                          <div className="text-3xl">{service.icon}</div>;
+                          <div className="text-right">;
+                            <div className="text - xl font - bold text-purple-400">{service.price}</div>;
+                            <div className="text - sm text-purple-300">{service.period}</div>;
                           </div>;
                         </div>;
-                        <h4 className=\"text - xl font - bold text - white mb - 2\"    />{service.name}</h4>;
-                        <p className=\"text - purple - 300 mb - 4 text - sm\"    />{service.description}</p>;
-                        <div className=\"mb - 4\"    />;
-                          <div className=\"flex items - center space - x-2 mb - 2\"    />;
-                            <Star className=\"w - 4 h - 4 text - yellow - 400\"    />;
-                            <span className=\"text - white font - medium\"    />{service.rating}</span>;
-                            <span className=\"text - purple - 300 text - sm\"    />({service.reviews} reviews)</span>;
+                        <h4 className="text - xl font - bold text-white mb-2">{service.name}</h4>;
+                        <p className="text - purple - 300 mb-4 text-sm">{service.description}</p>;
+                        <div className="mb-4">;
+                          <div className="flex items - center space-x-2 mb-2">;
+                            <Star className="w - 4 h - 4 text-yellow-400" />;
+                            <span className="text-white font-medium">{service.rating}</span>;
+                            <span className="text - purple-300 text-sm">({service.reviews} reviews)</span>;
                           </div>;
-                          <div className=\"text - sm text - purple - 300\"    />;
-                            <span className=\"font - medium\"    />Setup: </span> {service.setup_tim,}
-}
+                          <div className="text - sm text-purple-300">;
+                            <span className="font-medium">Setup:</span> {service.setup_time}
                           </div>;
                         </div>;
-                        <div className=\"flex items - center justify - between\"    />;
+                        <div className="flex items-center justify-between">;
                           <Link;
                             href={service.link}
-                            className=\"px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 text - sm\"    />
-
+                            className="px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale-105 text-sm";
+                          >;
                             Learn More;
                           </Link>;
-                          <div className=\"text - right\"    />;
-                            <div className=\"text - xs text - purple - 300\"    />Trial</div>;
-                            <div className=\"text - white font - medium\"    />{service.trial_days} days</div>;
-
+                          <div className="text-right">;
+                            <div className="text - xs text-purple-300">Trial</div>;
+                            <div className="text-white font-medium">{service.trial_days} days</div>;
                           </div>;
                         </div>;
                       </div>;
@@ -1439,8 +1429,9 @@ unmatched features.
               We offer the best value in the market with transparent pricing and;
               unmatched features.;
             </p>;
-          </div>;initial={{ opacity: 0, y: 30 ,}
-}
+          </div>;
+
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
 
@@ -1726,14 +1717,11 @@ href='/contact'
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
-            <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            <p className="text - xl text - purple - 200 max-w-3xl mx-auto">;
               We offer the best value in the market with transparent pricing and unmatched features.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8>;
+          <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1749,16 +1737,16 @@ href='/contact'
                 Our prices are 30% lower than market average while providing;
                 superior technology and features.;
               </p>;
-              <div className=text - 3xl font - bold text - green - 400'>30%</div>;
-              <div className='text - purple - 300>Lower than Market</div>            </motion.div>            >;
-              <Target className=w - 16 h - 16 text - green - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4>Competitive Pricing</h3>;
-              <p className=text - purple - 300 mb - 6">;
+              <div className='text - 3xl font - bold text - green - 400'>30%</div>;
+              <div className='text - purple - 300'>Lower than Market</div>            </motion.div>            >;
+              <Target className="w - 16 h - 16 text - green - 400 mx-auto mb-6" />;
+              <h3 className="text - 2xl font - bold text-white mb-4">Competitive Pricing</h3>;
+              <p className="text - purple-300 mb-6">;
                 Our prices are 30% lower than market average while providing;
                 superior technology and features.;
               </p>;
-              <div className="text - 3xl font - bold text - green - 400>30%</div>;
-              <div className=text - purple - 300">Lower than Market</div>;
+              <div className="text - 3xl font - bold text-green-400">30%</div>;
+              <div className="text-purple-300">Lower than Market</div>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1775,15 +1763,16 @@ href='/contact'
                 Transparent pricing with no surprise fees. What you see is what;
                 you pay, with clear value for every dollar.;
               </p>;
-              <div className=text - 3xl font - bold text - blue - 400'>100%</div>;
-              <div className='text - blue - 300>Transparent Pricing</div>            </motion.div>            >;
-              <Shield className="w - 16 h - 16 text - blue - 400 mx - auto mb - 6 />;
-              <h3 className=text - 2xl font - bold text - white mb - 4">No Hidden Costs</h3>;
-              <p className="text - blue - 300 mb - 6>;
-                Transparent pricing with no surprise fees. What you see is what you pay,with clear value for every dollar.;
+              <div className='text - 3xl font - bold text - blue - 400'>100%</div>;
+              <div className='text - blue - 300'>Transparent Pricing</div>            </motion.div>            >;
+              <Shield className="w - 16 h - 16 text - blue - 400 mx-auto mb-6" />;
+              <h3 className="text - 2xl font - bold text-white mb-4">No Hidden Costs</h3>;
+              <p className="text - blue-300 mb-6">;
+                Transparent pricing with no surprise fees. What you see is what you pay,
+                with clear value for every dollar.;
               </p>;
-              <div className=text - 3xl font - bold text - blue - 400">100%</div>;
-              <div className="text - blue - 300>Transparent Pricing</div>;
+              <div className="text - 3xl font - bold text-blue-400">100%</div>;
+              <div className="text-blue-300">Transparent Pricing</div>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1800,24 +1789,24 @@ href='/contact'
                 Enterprise - grade technology with premium support and features;
                 that justify every penny of investment.;
               </p>;
-              <div className=text - 3xl font - bold text - pink - 400'>5x</div>;
-              <div className='text - pink - 300>ROI Guarantee</div>            </motion.div>            >;
-              <Award className=w - 16 h - 16 text - pink - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4>Premium Quality</h3>;
-              <p className=text - pink - 300 mb - 6">;
+              <div className='text - 3xl font - bold text - pink - 400'>5x</div>;
+              <div className='text - pink - 300'>ROI Guarantee</div>            </motion.div>            >;
+              <Award className="w - 16 h - 16 text - pink - 400 mx-auto mb-6" />;
+              <h3 className="text - 2xl font - bold text-white mb-4">Premium Quality</h3>;
+              <p className="text - pink-300 mb-6">;
                 Enterprise - grade technology with premium support and features;
                 that justify every penny of investment.;
               </p>;
-              <div className="text - 3xl font - bold text - pink - 400>5x</div>;
-              <div className=text - pink - 300">ROI Guarantee</div>;
+              <div className="text - 3xl font - bold text-pink-400">5x</div>;
+              <div className="text-pink-300">ROI Guarantee</div>;
             </motion.div>;
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
-      <section className=py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30>;
-        <div className=max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+      <section className='py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to-blue-900 / 30">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1869,9 +1858,9 @@ href='/contact'
                 <CheckCircle className=w - 5 h - 5 text - green - 400' />;
                 <span > No Credit Card Required</span>;
               </div>;
-              <div className='flex items - center space - x-2>;
-                <CheckCircle className=w - 5 h - 5 text - green - 400' />                <span > Cancel Anytime</span>              <div className="flex items - center space - x-2>;
-                <CheckCircle className=w - 5 h - 5 text - green - 400" />;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > Cancel Anytime</span>              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w - 5 h - 5 text-green-400" />;
                 <span > Cancel Anytime</span>;
               </div>;
             </div>;
@@ -1886,7 +1875,8 @@ href='/contact'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   );
 
-
+    </>
+  );
 
 <<<<<<< HEAD
 

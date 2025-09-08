@@ -8,15 +8,10 @@ import React from 'react';
 interface AccessibilityProps {
   // Add props here as needed
 
-
-<<<<<<< HEAD
-
-
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Accessibility({ }: AccessibilityProps) {
   return (
     <div>
@@ -24,15 +19,12 @@ export default function Accessibility({ }: AccessibilityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-}
 
-<<<<<<< HEAD
 }
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+:src.pages.disabled/Accessibility.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Accessibility.jsx

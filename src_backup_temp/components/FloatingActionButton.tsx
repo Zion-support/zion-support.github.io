@@ -192,8 +192,8 @@ return () => {
   };
 }, []);, [])
 };
-    window.addEventListener('scroll', handleScroll);'
-    return () => window.removeEventListener('scroll', handleScroll)}, []);'
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 ;
   // Default actions;
   const "defaultActions": "FloatingActio n[] = [// Contact actions;"
@@ -431,23 +431,20 @@ navigator.clipboard.writeText(url).then(() => {
         "color": 'bg-teal-500 "hover": b g-teal-600',';';'
         "priority": 'low' as const;'
       },
-      {';'
-';';'
-        }
-        "id": 'print',';'
-        "icon": Printe r,';';'
-        "label": 'Print Page','
-        "action": () => {';'
-          }
-          window.print()},';';'
-        "color": 'bg-gray-500 "hover": b g-gray-600',';';'
-        "priority": 'low' as const;'
-}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;'
-        "priority": 'low' as const;'
+      {';
+';';
+        id: 'print',';
+        icon: Printe r,';';
+        label: 'Print Page',
+        action: () => {';
+          window.print()},';';
+        color: 'bg-gray-500 hover: b g-gray-600',';';
+        priority: 'low' as const
+
 };
 ;
-    window.addEventListener('scroll', handleScroll);'
-    return () => window.removeEventListener('scroll', handleScroll)}, []);'
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 ;
   // Default actions;
   const "defaultActions": FloatingActio n[] = [// Contact actions;
@@ -865,7 +862,6 @@ animate-bounce``          `}""
           "animation": bounce 2s infinite}``      `}</style>`
     </>) ;
 type FloatingActionButtonProps = {
-  }
   enabled?: boolean
 };
 const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {

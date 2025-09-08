@@ -44,10 +44,3 @@ export default /**
   res.status (200).json ({ items });
   res.status (200).json ({ items });
 
-
-}
-
-
-
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba

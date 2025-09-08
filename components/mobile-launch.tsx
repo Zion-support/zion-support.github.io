@@ -61,23 +61,68 @@ function AppleBadge(): any ({ href }: { href: string }) {;
     /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;
   return (
-    <div className='fixed inset-x-0 top-0 z-50'>
-      <div className='mx-auto max-w-5xl'>
-        <div className='m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3'>
-          <div className='h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500' />
-          <div className='flex-1'>
-            <div className='text-sm font-semibold'>Zion App</div>
-            <div className='text-xs opacity-70'>
-              Hire from anywhere. AI-match instantly.
-            </div>
-          </div>
-          <div className='flex items-center gap-2'>
-            <a
-              href={deepLink}
-              className='text-xs px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500'
-            >
-              Open
-            </a>
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group inline - flex items - center gap - 3 rounded - lg bg - black text - white px - 4 py-2 shadow hover: opacity-90">;
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="current_color" aria - hidden>;
+        <path d="M16.365 1.43c0 1.14-.42 2.18 - 1.26 3.11-.91 1.02 - 2.01 1.61 - 3.2 1.52-.12 - 1.02.37 - 2.12 1.21 - 3.06.86-.97 2.24 - 1.67 3.25 - 1.57-.01 0 .01 0 0 0zM20.51 17.14c-.45 1.05 - 1 2.03 - 1.66 2.93-.88 1.2 - 1.59 2.04 - 2.57 2.05-.97.02 - 1.28-.66 - 2.66-.66 - 1.38 0 - 1.72.64 - 2.69.68 - 1.09.04 - 1.93 - 1.02 - 2.82 - 2.22 - 1.54 - 2.1 - 2.73 - 5.93 - 1.14 - 8.52.79 - 1.27 2.2 - 2.08 3.73 - 2.1 1.16-.02 2.25.78 2.66.78.4 0 1.51-.96 2.85-.82.49.02 1.88.2 2.77 1.6-.07.05 - 1.65.97 - 1.63 2.88.02 2.3 2.06 3.07 2.09 3.08-.02.06-.39 1.36 - 1.93 1.62z" />;
+      </svg>;
+      <div className="leading-tight">;
+        <div className="text-[10px] uppercase opacity-80">Download on the</div>;
+        <div className="text-sm font-semibold">App Store</div>;
+      </div>;
+    </a>);
+}
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group inline - flex items - center gap - 3 rounded - lg bg-[#121212] text - white px - 4 py-2 shadow hover: opacity-90">;
+      <svg width="24" height="24" viewBox="0 0 24 24" aria - hidden>;
+        <defs>;
+          <linear_gradient id="g1" x1="100%" y1="0%">;
+            <stop offset="0%" stop_color="#00A0FF" />;
+            <stop offset="100%" stop_color="#00E3FF" />;
+          </linear_gradient>;
+          <linear_gradient id="g2" x1="100%" y1="0%">;
+            <stop offset="0%" stop_color="#FFE000" />;
+            <stop offset="100%" stop_color="#FFA000" />;
+          </linear_gradient>;
+          <linear_gradient id="g3" x1="100%" y1="0%">;
+            <stop offset="0%" stop_color="#FF3A44" />;
+            <stop offset="100%" stop_color="#C31162" />;
+          </linear_gradient>;
+          <linear_gradient id="g4" x1="100%" y1="0%">;
+            <stop offset="0%" stop_color="#32A071" />;
+            <stop offset="100%" stop_color="#00F076" />;
+          </linear_gradient>;
+        </defs>;
+        <path d="M3.6 2.4c-.28.27-.44.66-.44 1.11v16.98c0 .45.16.83.44 1.1l.07.06 9.36 - 9.36v-.6L3.67 2.33 3.6 2.4z" fill="url (#g1)" />;
+        <path d="M16.2 15.99l - 3.17 - 3.17v-.6l3.17 - 3.17.09.05 3.76 2.14c1.08.62 1.08 1.64 0 2.26l - 3.76 2.14-.09.05z" fill="url (#g2)" />;
+        <path d="M16.29 15.94L13.03 12.68 3.6 22.11c.36.35.95.38 1.63 0l11.06 - 6.17z" fill="url (#g3)" />;
+        <path d="M16.29 9.06L5.23 2.89C4.55 2.5 3.96 2.54 3.6 2.89l9.43 9.43 3.26 - 3.26z" fill="url (#g4)" />;
+      </svg>;
+      <div className="leading-tight">;
+        <div className="text-[10px] uppercase opacity-80">Get it on</div>;
+        <div className="text-sm font-semibold">Google Play</div>;
+      </div>;
+    </a>);
+}
+/**
+ * SmartBanner - Function description
+ */
+function SmartBanner() {
+  const [visible, set_visible] = useState (false);
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+}
+    const dismissed = local_storage.get_item ('smartBannerDismissed') === '1';
+    // Check condition
+if (return) {
+  $2
+}
+    const ua = navigator.user_agent || '';
+    const is_mobile = /i_phone | i_pad | i_pod | Android / i.test (ua);
+    if (set_visible (true)) {
+  $2
+}
             <a
               href={storeUrl}
               target='_blank'
@@ -489,7 +534,6 @@ return (;
     }
   }
 
-
     }
   }
 
@@ -868,6 +912,8 @@ type='submit''
           <button
             type="submit"
             disabled={status === 'loading'}
+
+          >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>;
         </form>;
@@ -904,81 +950,16 @@ type='submit''
         </div>
       </section>
     </EnhancedLayout>
-<<<<<<< HEAD
-
-
-
-        {status === 'error' && (;
-          <div className='mt-2 text-sm text-rose-600'>;
-            {error || 'Please try again later.'}
-
-=======
-        {status === 'error' && (;
-          <div className='mt-2 text-sm text-rose-600'>;
-            {error || 'Please try again later.'}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          </div>;
-        )}
-      </section>;
-      {/* Helper links */}
-<<<<<<< HEAD
-
-
-=======
-      <section className='mt-10 text-sm opacity-80'>;
-        <div className='flex flex-wrap items-center gap-4'>;
-          <Link href='/open-app'>;
-            <a className='underline'>Deep link: /open-app</a>;
-          </Link>;
-          <span>•</span>;
-          <Link href='/download'>;
-            <a className='underline'>Shareable link: /download</a>;
-          </Link>;
-        </div>;
-      </section>;
-    </EnhancedLayout>;
-
-  )}return (<EnhancedLayout> <Head> <title>Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {IOS APP URL;
-}androidUrl= {ANDROID APP URL;
-}deepLink= {DEEP LINK URL;
-}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >AI-match instantly</div> <p className="mt-2 text-sm opacity-80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40" /> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >Track milestones</div> <p className="mt-2 text-sm opacity-80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" /> </div> </section> <StarIcon key= {i;
-}/>) )}<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) )}</div> </div> </section> <input type="email" required > {status === 'loading' ? 'Submitting…' : 'Notify me';
-            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
-          >
-            {status === 'loading' ? 'Submitting…' : 'Notify me'}
-          </button>
-        </form>
-        {status === 'success' && <div className='mt-2 text-sm text-emerald-600'>Thanks! You’re on the list.</div>}
-        {status === 'error' && <div className='mt-2 text-sm text-rose-600'>{error || 'Please try again later.'}</div>}
-      </section>
-
-
-        {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
-        {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
-      </section>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  );
-}return (<EnhancedLayout    /> <Head><title>Zion Mobile App — iOS & Android</title> <meta name=\"description\" content=\"Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.\"    /> <link rel=\"canonical\" href=\"/download\"    /> <meta property=\"og: title\" content=\"Zion Mobile App\"    /> <meta property=\"og:description\" content=\"Hire from anywhere. AI-match instantly. Track milestones on the go.\"    /> </Head> <SmartBanner iosUrl= {}
-  IOS APP URL}
-}androidUrl= {}
-  ANDROID APP URL}
-}deepLink= {}
-  DEEP LINK URL,}
-}   /> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className=\"opacity-80\"     />Or tap a store badge above</div> </div> </div> </section> </div> <div className=\"rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950\"     /> <div className=\"text-lg font-semibold\"     />AI-match instantly</div> <p className=\"mt-2 text-sm opacity-80\"     />Smart matching surfaces top candidates in seconds.</p> <div className=\"mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40\"    /> </div> <div className=\"rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950\"     /> <div className=\"text-lg font-semibold\"     />Track milestones</div> <p className=\"mt-2 text-sm opacity-80\"     />Manage deliverables, approvals, and progress on the go.</p> <div className=\"mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark: from-indigo-900/40 dark:to-blue-900/40\"    /> </div> </section> <StarIcon key= {}
-  i}
-}   />) )
-}<span className=\"text-sm opacity-80\"     />4.9 average rating</span> </div> </div> </div>) )
-}</div> </div> </section> <input type=\"email\" required     /> {}
-  status === 'loading' ? 'Submitting…' : 'Notify me' ,}
-}</button> </form> <span    />•</span> <Link href=\"/download\"     /><a className=\"underline\"     />Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
-
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    </EnhancedLayout>);
+;
+}return (<EnhancedLayout> <Head> <title > Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI - match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI - match instantly. Track milestones on the go." /> </Head> <SmartBanner ios_url= {
+  IOS APP URL;
+}android_url= {
+  ANDROID APP URL;
+}deep_link= {
+  DEEP LINK URL;
+}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg-gray-950" > <div className="text-lg font-semibold" >AI - match instantly</div> <p className="mt - 2 text-sm opacity-80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - purple - 100 to - pink - 100 dark:from - purple - 900 / 40 dark:to-pink-900 / 40" /> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg-gray-950" > <div className="text-lg font-semibold" >Track milestones</div> <p className="mt - 2 text-sm opacity-80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - indigo - 100 to - blue - 100 dark:from - indigo - 900 / 40 dark:to-blue-900 / 40" /> </div> </section> <StarIcon key= {
+  i;
+}/>) );
+}<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) );
+}</div> </div> </section> <input type="email" required > {

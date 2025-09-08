@@ -19,6 +19,10 @@ const QualityAssuranceTestingChat: NextPage = () => {;
       <main>
         <h1>QualityAssuranceTestingChat</h1>
         <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+      </Head>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -42,12 +46,6 @@ const QualityAssuranceTestingChat: NextPage = () => {
 
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { NextPage } from './next';
 import Head from './next / head';
 
@@ -72,12 +70,3 @@ const QualityAssuranceTestingChat: NextPage = () => {}
 ;
 export default QualityAssuranceTestingChat;
 ;
-
-<<<<<<< HEAD
-
-
-
-=======
-        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-

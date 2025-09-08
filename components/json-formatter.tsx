@@ -149,9 +149,8 @@ setErrorMessage('');) => {
     } catch (error) {;
       setIsValid(false);
 
-
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-  };
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON')
+};
 
   const clearAll = () => {;
     setInputJson('');
@@ -286,53 +285,87 @@ name: 'John Doe',
           'type': 'work','
           'number': '555-987-6543','
         }
-      ],
-      'interests': ['programming', 'reading', 'hiking'],'
-      'active': true,
-      'lastLogin': '2024-01-'15T10':'30':00Z','
-    };
+      ]
+      interests: ['programming', 'reading', 'hiking']
+      active: true
+      lastLogin: '2024-01-15T10:30:00Z'
+    }
+    setInputJson(JSON.stringify(sample, null, 2));
+    setFormattedJson('');
+    setIsValid(true)
+};
+
+  const copyToClipboard = (text: string) => {;
+    navigator && navigator.clipboard.writeText(text)
+};
+
+  const downloadJSON = (content: string, filename: string) => {;
+    const blob = new Blob([content], { type: 'application/json' });    const url = URL && URL.createObjectURL(blob)
+};
+
+  const copyToClipboard = (text: string) => {;
+    navigator && navigator.clipboard.writeText(text)
+};
+
+  const downloadJSON = (content: string, filename: string) => {;
+    const blob = new Blob([content], { type: 'application/json' }),;
+    const url = URL && URL.createObjectURL(blob);
+    const a = document && document.createElement('a');
+    a && a.href = url;
+    a && a.download = filename;
+    document && document.body.appendChild(a);
+    a && a.click();
+    document && document.body.removeChild(a);
+    URL && URL.revokeObjectURL(url)
+};
+
+  const loadSampleJSON = () => {;
+    const sample = {    URL && URL.revokeObjectURL(url)
+};
+
+  const loadSampleJSON = () => {;
+    const sample = {;
+      name: 'John Doe',;
+      age: 30,;
+      email: 'john && john.doe@example && example.com',;
+      address: {;
+        street: '123 Main St',;
+        city: 'Anytown',;
+        state: 'CA',;
+        zipCode: '12345',;
+      },;
+      phoneNumbers: [;
+          type: 'home',;
+          number: '555-123-4567',;
+        },;
+        {;
+          type: 'work',;
+          number: '555-987-6543',;
+        },;
+      ],;
+      interests: ['programming', 'reading', 'hiking'],;
+      active: true,;
+      lastLogin: '2024-01-15T10:30:00Z',
+};
 
     setInputJson(JSON.stringify(sample, null, 2));
 <<<<<<< HEAD
     setFormattedJson('');
 
     setIsValid(true);
-
-
-=======
-    setFormattedJson('');'
-    setIsValid(true);
-
-    setErrorMessage('')'
-};
-
-
-const getLineNumbers = ('text': string) => {
-   ;
-  }
-  const lines = text.split('\n');'
-return lines.map((_, index) => index + 1).join('\n')'
-};
-
-  const getLineNumbers = (text: string) => {
-    const lines = text.split($2);
-    return lines.map((_, index) => index + 1).join('\n')
-  },
->>>>>>> origin/cursor/delete-old-data-records-6bba
     setErrorMessage('')
 };
 
-
-const getLineNumbers = (
-   ;
-  const lines = text.split('\n');
-return lines.map((_, index) => index + 1).join('\n')) => {
-  return $3;}
-}
+  const getLineNumbers = (text: string) => {;
+    const lines = text && text.split('\n');
+    return lines && lines.map((_, index) => index + 1).join('\n')
+};    setErrorMessage('')
 };
 
-<<<<<<< HEAD
-
+  const getLineNumbers = (text: string) => {;
+    const lines = text && text.split('\n');
+    return lines && lines.map((_, index) => index + 1).join('\n');    return lines && lines.map((_, index) => index + 1).join('\n')
+};
 
   return (
     <>
@@ -828,6 +861,11 @@ onChange={e => setInputJson(e.target.value)}
 
                       {getLineNumbers(inputJson)}
 
+                    isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                  {showLineNumbers && (
+                    <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space-y-4">;
+                <div className="relative">;
+                  {showLineNumbers && (
                     </div>
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   }`}>;
@@ -886,6 +924,9 @@ onChange={e =    /> setInputJson(e.target.value)}
                   <Button;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+                <div className='flex space-x-3'>;
+
+                  <Button
                     onClick={formatJSON}
                     disabled={!inputJson.trim()}
                     className='flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'    />

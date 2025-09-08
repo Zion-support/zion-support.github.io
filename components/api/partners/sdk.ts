@@ -21,12 +21,6 @@ export default async function handler(;
   try {'
   const type = (req && req.query.type as string) || 'rest';
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ) {;
   const type = (req.query.type as string) || 'rest';
   const type = (req.query.type as string) || rest';
@@ -74,9 +68,6 @@ if ( {) {$2;
 }
     res.set_header ("Content - Type", "text / markdown")return res.status (200).send (`# Zion Partner SDK (GraphQL)\n\n_schemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`)}
 
-import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   try {
@@ -87,13 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
-<<<<<<< HEAD
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const type = (req.query.type as string) |"rest";
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const type = (req.query.type as string) || "rest";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const type = (req.query.type as string) || "rest";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

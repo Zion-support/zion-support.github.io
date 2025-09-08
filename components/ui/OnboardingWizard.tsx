@@ -25,29 +25,10 @@
       }
     } catch {}
 
-
-
-    setOpen(false);  }
-
-  }
-
-
-
-
-
   if (!open) return null;
 
   return (
 
-        <div className='p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end'>
-          <button
-            onClick={completeOnboarding}
-            className='px-3 py-1.5 rounded-md border'
-          >
-            Done
-          </button>        </div>
-      </div>
-    </div>
   );
           <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
         </div>
@@ -59,21 +40,32 @@
 );
 }
   );
-
-
-
-
-=======
-import Link from 'next/link';'
-
-import { useRole } from '../context/RoleContext';'
-
+}
 import Link from 'next/link';
-
-import { useRole } from '../context/RoleContext';
-
-const has = null;
-
+import { use_role } from '../context / RoleContext';
+export default /**
+ * OnboardingWizard - Function description
+ */
+function OnboardingWizard() {
+  const { role, set_role } = use_role ();
+  const [open, set_open] = useState (false);
+;
+  useEffect (() => {
+    try {
+      const has =;
+        typeof window !== 'undefined';
+          ? window.local_storage.get_item ('zion_has_onboarded');
+          : 'true';
+      // Check condition
+if ( {) {
+  $2
+}
+        set_open (true);      const has = typeof window !== 'undefined' ? window.local_storage.get_item ('zion_has_onboarded') : 'true';
+      // Check condition
+if ( {) {
+  $2
+}
+        set_open (true);
       }
     } catch {}
 

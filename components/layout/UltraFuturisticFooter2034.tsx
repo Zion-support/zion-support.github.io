@@ -58,7 +58,63 @@ import {
   GlobeIcon
   CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Zap,
+  Sparkles,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  CheckCircle,
+  Award,
+  Star,
+  Crown,
+  Gem,
+  Infinity,
+  Heart,
+  ShieldCheck,
+  Users,
+  Briefcase,
+  BookOpen,
+  Target,
+  Microscope,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Home,
+  Building,
+  DollarSign,
+  FileText,
+  MessageSquare,
+  MessageCircle,
+  Newspaper,
+  Handshake,
+  LifeBuoy,
+  Activity,
+  ShoppingCart,
+  UserCheck,
+  BarChart,
+  Palette,
+  Video,
+  LockIcon,
+
+  GlobeIcon,;
+  CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
+
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -260,15 +316,32 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
 ];
-const certifications = [
-  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
-];
-const stats = [
-  { label: 'Happy Customers', value: '50K+', icon: Users }
-  { label: 'Services Delivered', value: '200+', icon: Rocket }
-  { label: 'Countries Served', value: '45+', icon: Globe }
-  { label: 'Success Rate', value: '99.9%', icon: CheckCircle },];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+const stats = [;
+  { label: 'Happy Customers', value: '50K+', icon: Users },;
+  { label: 'Services Delivered', value: '200+', icon: Rocket },;
+  { label: 'Countries Served', value: '45+', icon: Globe },;
+  { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
+
+export default function UltraFuturisticFooter2034() {;
+
+  return (
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>;
+      {/* Animated Background Elements */}
+        {/* Main Footer Content */}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
+          <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
+            {/* Company Info */}
+            <div className='lg:col-span-1'>              <motion && motion.div      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">;
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>;
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>;
+      </div>;
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
+            {/* Company Info */}
+
 export default function UltraFuturisticFooter2034() {
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
@@ -300,6 +373,7 @@ export default function UltraFuturisticFooter2034() {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <motion.div
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -397,6 +471,7 @@ export default function UltraFuturisticFooter2034() {
             {/* Services */}
             <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
               <motion.div
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -451,6 +526,49 @@ export default function UltraFuturisticFooter2034() {
                               {service.price}
                             </span>
                           </Link>
+                      className='space-y-4'>;
+                      <div className='flex items-center space-x-2'>;
+                        <category && category.icon className='w-5 h-5 text-cyan-400' />;
+                        <h4 className='font-semibold text-white'>;
+                          {category && category.title}
+                        </h4>;
+                      </div>;
+                      <div className='space-y-2'>;
+                        {category && category.services.map(service => (;
+                          <Link
+                            key={service && service.name}
+                            href={service && service.href}
+                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200'>;
+                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>;
+                              {service && service.name}
+                            </span>;
+                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service && service.price}                    >;
+                      <div className="flex items-center space-x-2">;
+                        <category && category.icon className="w-5 h-5 text-cyan-400" />;
+                        <h4 className="font-semibold text-white">{category && category.title}</h4>;
+                      </div>;
+                      <div className="space-y-2">;
+                        {category && category.services.map((service) => (;
+                          <Link
+                            key={service && service.name}
+                            href={service && service.href}
+                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200">;
+                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">;
+                              {service && service.name}
+                            </span>;
+                            <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">;
+                              {service && service.price}
+                            </span>;
+                          </Link>;
+                            key={service.name}
+                            href={service.href}
+                            className="flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition-all duration-200";
+                          >;
+                            <span className="text - gray - 300 group - hover:text - cyan - 400 transition-colors text-sm">;
+                              {service.name}
+                            </span>;
+                            <span className="text - xs text - gray - 500 group - hover:text - cyan-400 transition-colors">;
+                              {service.price}
                         ))}
                       </div>
                     </motion.div>
@@ -522,17 +640,7 @@ export default function UltraFuturisticFooter2034() {
                   </div>
                 </div>
                 {/* Social Links */}
-                <div>
-                  <h4 className='text-lg font-semibold text-white mb-4'>
-                    Follow Us
-                  </h4>
-                  <div className='flex space-x-4'>
-                    {socialLinks.map(social => (
-                      <Link
-                        key={social.name}
-                        href={social.href}
-                        target='_blank'
-                        rel='noopener noreferrer'
+
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
                         <social.icon className='w-5 h-5' />                      </Link>                      <Link
@@ -592,6 +700,15 @@ export default function UltraFuturisticFooter2034() {
             </div>
           </motion.div>
         </div>
+
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+              ))}
+        {/* Bottom Bar */}
+
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -622,10 +739,22 @@ export default function UltraFuturisticFooter2034() {
         </div>
       </div>
     </footer>
-);
-}
-import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
-export default function UltraFuturisticFooter2034() {return (";
+
+              <div className='flex items-center space-x-2 text-gray-400'>;
+                <Heart className='w-4 h-4 text-red-400' />;
+                <span className='text-sm'>Made with ❤️ for the future</span>              </div>              ;
+              <div className="flex items-center space-x-2 text-gray-400">;
+                <Heart className="w-4 h-4 text-red-400" />;
+                <span className="text-sm">Made with ❤️ for the future</span>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+;
+export default function UltraFuturisticFooter2034() {;
+  return (";
+
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;

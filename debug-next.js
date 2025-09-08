@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
 
+=======
+>>>>>>> origin/main
+console.log('🔍 Debugging Next.js project structure...');
 
 
 
@@ -98,6 +103,8 @@ if (fs.existsSync('pages')) {;
 console.log('🔍 Checking for problematic files...'),;
 
 <<<<<<< HEAD
+      problematicFiles.push(file);
+=======
 
 
 
@@ -107,11 +114,12 @@ const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;'
     const content = fs.readFileSync(file, 'utf8'),;
-
-<<<<<<< HEAD
-
-
-
+    if (content.includes('') || content.includes('
+}
+}
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+    if (content.includes('      problematicFiles.push(file);
+>>>>>>> origin/main
     }
   } catch (error) {;
     // Skip files that can't be read;
@@ -144,17 +152,10 @@ if (problematicFiles.length > 0) {
   }
   return files
 }
-
+;
 <<<<<<< HEAD
-
-
-
-
-
-
+console.log('✅ Debug completed'),;console.log('✅ Debug completed');
 =======
+console.log('✅ Debug completed'),;
 console.log('✅ Debug completed');
-
-console.log('✅ Debug completed');
-console.log($2);
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/main

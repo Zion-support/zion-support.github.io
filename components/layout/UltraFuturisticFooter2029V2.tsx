@@ -553,6 +553,81 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
+              viewport={{ once: true }}>;
+              <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
+                <div className='relative'>;
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
+                    <Rocket className='w-7 h-7 text-white' />;
+                  </div>;
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />;
+                </div>;
+                <div>;
+                  <h3 className='text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                    Zion Tech Group;
+                  </h3>;
+                  <p className='text-sm text-gray-400'>;
+                    Future Technology Solutions;
+                  </p>;
+                </div>;
+              </Link>;
+
+              <p className='text-gray-300 mb-6 leading-relaxed'>;
+                Leading the future with cutting-edge AI, quantum computing,;
+                space technology, and innovative micro SAAS solutions.;
+                Transforming businesses through next-generation technology.;
+              </p>;
+              {/* Contact Info */}
+              <div className='space-y-3'>;
+                <div className='flex items-center space-x-3 text-gray-300'>;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm'>{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-3 text-gray-300'>;
+                  <Mail className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm'>{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-3 text-gray-300'>;
+                  <MapPin className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm'>{contactInfo && contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center space-x-3 text-gray-300'>;
+                  <Globe className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm'>{contactInfo && contactInfo.website}</span>                </div>                  </div>;
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
+                </div>;
+                <div>;
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+                    Zion Tech Group;
+                  </h3>;
+                  <p className="text-sm text-gray-400">Future Technology Solutions</p>;
+                </div>;
+              </Link>;
+              <p className="text-gray-300 mb-6 leading-relaxed">;
+                Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. ;
+                Transforming businesses through next-generation technology.;
+              </p>;
+              {/* Contact Info */}
+              <div className="space-y-3">;
+                <div className="flex items-center space-x-3 text-gray-300">;
+                  <Phone className="w-4 h-4 text-cyan-400" />;
+                  <span className="text-sm">{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className="flex items-center space-x-3 text-gray-300">;
+                  <Mail className="w-4 h-4 text-cyan-400" />;
+                  <span className="text-sm">{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className="flex items-center space-x-3 text-gray-300">;
+                  <MapPin className="w-4 h-4 text-cyan-400" />;
+                  <span className="text-sm">{contactInfo && contactInfo.address}</span>;
+                </div>;
+                <div className="flex items-center space-x-3 text-gray-300">;
+                  <Globe className="w-4 h-4 text-cyan-400" />;
+                  <span className="text-sm">{contactInfo && contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+
           {/* Service Categories */}
           {footerSections.map((section, index) => (
             <motion.div
@@ -643,24 +718,13 @@ export default function UltraFuturisticFooter2029V2() {
                       <li key={service.name}>
                         <Link
                           href={service.href}
-                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
-                <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                      <category.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-white text-sm">{category.title}</h4>
-                  </div>
-                  <ul className="space-y-2">
-                    {category.services.slice(0, 3).map((service) => (
-                      <li key={service.name}>
-                        <Link
-                          href={service.href}
-                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block"
-                        >
+                          className="text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 text-xs block";
+                        >;
                           {service.name}
-                        </Link>
-                      </li>
+          </div>;
+        </motion && motion.div>;
+      </div>;
+
                     ))}
                   </ul>
                 </div>
@@ -700,6 +764,10 @@ export default function UltraFuturisticFooter2029V2() {
               © 2025 Zion Tech Group. All rights reserved.
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
+              </Link>            </motion.div>
+
+            </motion.div>
+
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -731,6 +799,13 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </div>
+
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </div>;
+
+              ))}
       {/* Newsletter Signup */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

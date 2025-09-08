@@ -389,7 +389,8 @@ const completion = await client.chat.completions.create ({
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
+  analysis: string
+};import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -402,7 +403,18 @@ export type AnalyzeResponse = {
 };
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+export type AnalyzeResponse = {;
+  analysis: string
+};import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export type AnalyzeRequestBody = {
+  operatorPrompt: string,
+  context?: Record<string, unknown>
+};
 
+export type AnalyzeResponse = {
+  analysis: string
+};
 
 <<<<<<< HEAD
 =======

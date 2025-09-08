@@ -125,36 +125,6 @@ const { error } = await supabase;
       .eq('user_id', userId)
       .eq('read_status', false);
 
-=======
-      .eq('user_id', userId)'
-      .eq('read_status', false);
-    if (error) return res.status(200).json({ ok: true });
-    return res.status(200).json({ ok: true });
- 
-} catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' });
-  }    return res.status(200).json({ ok: true })
-
-  } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
-  }
-    return res.status(500).json({ error: 'Unexpected error' })
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-    if (error) return res.status(200).json({ ok: true });
-
-<<<<<<< HEAD
-
-
-=======
-    if (error) return res.status(200).json({ ok: true });
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    return res.status(200).json({ ok: true })
-  } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
     if (error) return res && res.status(200).json({ ok: true });
     return res && res.status(200).json({ ok: true });
 <<<<<<< HEAD

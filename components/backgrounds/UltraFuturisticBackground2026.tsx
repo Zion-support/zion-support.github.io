@@ -344,13 +344,12 @@ ctx.save();
       canvas.height = window.innerHeight
     };
 
-
-      canvas.height = window.innerHeight
-    };
-      animationRef && animationRef.current = requestAnimationFrame(animate);    };
+      animationRef && animationRef.current = requestAnimationFrame(animate)
+};
     const handleResize = () => {;
       canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight;    };        ctx && ctx.beginPath();
+      canvas && canvas.height = window && window.innerHeight
+};        ctx && ctx.beginPath();
         ctx && ctx.moveTo(x, 0);
         ctx && ctx.lineTo(x, canvas && canvas.height);
         ctx && ctx.stroke();
@@ -649,9 +648,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       </div>;
 
-
       {/* Energy Field Effects */}
-
 
         />
       </div>
@@ -745,8 +742,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
             ease: 'linear',        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent";
->>>>>>> origin/cursor/delete-old-data-records-6bba
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan-500 / 5 to-transparent";
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -847,76 +843,9 @@ ease: 'linear',            ease: "linear";
     </div>);
 }
 ;
-export default UltraFuturisticBackground2026;
-      <div className="relative z-30">
-        {children}
-      </div>
-
-
-      {/* Holographic Overlay */}
-
-      {/* Holographic Overlay */}
-      <div className='fixed inset-0 pointer-events-none z-40'>'
-        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />'
-        <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />'
-
-      <div className="relative z-30">
-        {children}
-      </div>
-      {/* Holographic Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-40">;
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />;
-        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />;
-      </div>;
-    </div>;
-  );
-};
-            duration: 20
-            repeat: Infinity
-            ease: 'linear',            ease: "linear"
-          }}
-            duration: 20,
-            repeat: Infinity,
-
-          }
-
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',            ease: "linear"
-          }}
-
-          }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        />
-      </div>
-      {/* Content */}
-
-<<<<<<< HEAD
-      <div className='relative z-30'>{children}</div>
-      {/* Holographic Overlay */}
-      <div className='fixed inset-0 pointer-events-none z-40'>
-        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />
-=======
-      {/* Holographic Overlay */}'
-      <div className='fixed inset-0 pointer-events-none z-40'>;'
-        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />
-      </div>
-    </div>
-  );
-}
-};
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default UltraFuturisticBackground2026;
-      <div className="fixed inset - 0 pointer - events - none z - 40">;
-        <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 400 / 2 to - transparent" />;
-        <div className="absolute inset - 0 bg - gradient - to - tl from - transparent via - purple - 400 / 2 to - transparent" />;
+      <div className="fixed inset - 0 pointer - events-none z-40">;
+        <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan-400 / 2 to-transparent" />;
+        <div className="absolute inset - 0 bg - gradient - to - tl from - transparent via - purple-400 / 2 to-transparent" />;
       </div>;
     </div>);
 }
@@ -961,32 +890,7 @@ export default UltraFuturisticBackground2026;
 }
 export default UltraFuturisticBackground2026;
 
-<<<<<<< HEAD
-
-=======
-"
-<div className='relative z-30'>{children}</div>'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      {/* Content */}
-          }}
-      <div className='relative z-30'>{children}</div>;
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Holographic Overlay */}
-      <div className='fixed inset-0 pointer-events-none z-40'>'
-        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />'
-        <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />'
-      </div>
-  );
 export default UltraFuturisticBackground2026;
+export default UltraFuturisticBackground2026
+};
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba

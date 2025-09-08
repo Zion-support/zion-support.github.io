@@ -66,21 +66,7 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
-<<<<<<< HEAD
-
-=======
-  onLeave?: (durationSec: number) => void;
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  onLeave?: (durationSec: number) => void}
-
-
-<<<<<<< HEAD
-
-
-=======
+  onLeave?: (durationSec: number) => void
 };
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function CallRoom(): any ({;
@@ -146,17 +132,13 @@ import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks
 import ParticipantTile from './ParticipantTile';
 
 import Controls from './Controls';
-export type StartMode = 'video' | 'audio';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
+export type StartMode = 'video' | 'audio'
+};
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
 
-const [participants, setParticipants] = useState<;
-    Array<RemoteParticipant | LocalParticipant>
-  >([]);
-origin/cursor/automate-test-improve-and-merge-code-2533
+  const [room, setRoom] = useState<Room | null>(null);
+  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
     const r = new Room();
@@ -320,8 +302,9 @@ const handleLeave = (;
 const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
-<<<<<<< HEAD
-=======
+    onLeave?.(durationSec)
+};      room && room.disconnect();
+    }
 
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;

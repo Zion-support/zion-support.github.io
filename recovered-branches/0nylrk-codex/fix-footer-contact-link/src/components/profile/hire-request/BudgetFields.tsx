@@ -1,15 +1,15 @@
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { TalentProfile  } from '@/types / talent';
-import { FormValues  } from './useHireRequestForm';
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { TalentProfile } from "@/types/talent";
+import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
   form: UseFormReturn < FormValues>;
 <<<<<<< HEAD
@@ -21,7 +21,6 @@ interface BudgetFieldsProps {
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-
   return (
 <<<<<<< HEAD
 
@@ -166,21 +165,12 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
   );
 }
 
-<<<<<<< HEAD
-                />;
-              </div>;
-            </FormControl>;
-            <FormMessage className="text - red - 400" />;
-          </FormItem>)}
-      />;
-    </>);
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-
   return (
     <>;
       <FormField;
@@ -253,4 +243,4 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 }
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

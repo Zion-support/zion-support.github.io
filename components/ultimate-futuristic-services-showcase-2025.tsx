@@ -293,7 +293,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
 export default function UltimateFuturisticServicesShowcase2025() {;
 
 <<<<<<< HEAD
@@ -565,202 +564,13 @@ const itemVariants = {}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {}
-duration: 0.5,}
-      },
-    }}
-
-<<<<<<< HEAD
-=======
-  return (
-    <Layout    />
-      <Head><title>
-          Ultimate Futuristic Services Showcase 2025 | Zion Tech Group;
-        </title>
-        <meta;
-name='description'
-          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology.'
-           />
-        <meta;
-name='keywords'
-          content='futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group'
-           />
-        <meta;
-property='og:title'
-          content='Ultimate Futuristic Services Showcase 2025 | Zion Tech Group'
-           />
-        <meta;
-property='og:description'
-          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations.'
-           />
-        <meta;
-property='og: url'
-          content='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
-           />
-        <meta property='og:type' content='website'    />
-        <link;
-rel='canonical'
-          href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
-           />
-      </Head>
-      {/* Hero Section *,}
-}
-      <section className='relative py-20 lg:py-32 overflow-hidden'    />
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'    /></div>
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
-          <motion.div;
-initial={{ opacity: 0, y: 30 ,}
-}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
-}
-              />
-<h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'    />
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
-                Ultimate Futuristic;
-              </span>
-              <br    />
-              <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent'    />
-                Services 2025;
-              </span>
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'    />
-              Experience the future of technology with our revolutionary;
-services that combine AI consciousness, quantum computing, space;
-technology, and breakthrough innovations to transform your;
-business.
-            </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'    />
-              {stats.map((stat, index) => (}
-                <motion.div;}
-key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}
-}
-                  animate={{ opacity: 1, scale: 1 ,}
-}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-
-className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20'
-                    />
-                  <stat.icon className={`w-6 h-6 ${stat.color}`}    />
-                  <div className='text-left'    />
-                    <div className='text-2xl font-bold text-white'    />
-
-                      {stat.numbe,}
-}
-                    </div>;
-                    <div className='text-sm text-gray-300'    />{stat.label}</div>;
-                  </div>;
-                </motion.div>;
-              ))}
-
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-  return (
-    <Layout    />
-      <Head><title>
-          Ultimate Futuristic Services Showcase 2025 | Zion Tech Group;
-        </title>
-        <meta;
-name='description'
-          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology.'
-           />
-        <meta;
-name='keywords'
-          content='futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group'
-           />
-        <meta;
-property='og:title'
-          content='Ultimate Futuristic Services Showcase 2025 | Zion Tech Group'
-           />
-        <meta;
-property='og:description'
-          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations.'
-           />
-        <meta;
-property='og: url'
-          content='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
-           />
-        <meta property='og:type' content='website'    />
-        <link;
-rel='canonical'
-          href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
-           />
-      </Head>
-      {/* Hero Section *,}
-}
-      <section className='relative py-20 lg:py-32 overflow-hidden'    />
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'    /></div>
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
-          <motion.div;
-initial={{ opacity: 0, y: 30 ,}
-}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
-}
-              />
-<h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'    />
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
-                Ultimate Futuristic;
-              </span>
-              <br    />
-              <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent'    />
-                Services 2025;
-              </span>
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'    />
-              Experience the future of technology with our revolutionary;
-services that combine AI consciousness, quantum computing, space;
-technology, and breakthrough innovations to transform your;
-business.
-            </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'    />
-              {stats.map((stat, index) => (}
-                <motion.div;}
-key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}
-}
-                  animate={{ opacity: 1, scale: 1 ,}
-}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-
-className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20'
-                    />
-                  <stat.icon className={`w-6 h-6 ${stat.color}`}    />
-                  <div className='text-left'    />
-                    <div className='text-2xl font-bold text-white'    />
-
-                      {stat.numbe,}
-}
-                    </div>;
-                    <div className='text-sm text-gray-300'    />{stat.label}</div>;
-                  </div>;
-                </motion.div>;
-              ))}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Search and Filter Section */}
 
-<<<<<<< HEAD
-=======
-
       {/* Search and Filter Section */}
+      <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-<section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'    />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'    />;
               ))}
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'    />;
@@ -1078,9 +888,49 @@ onChange={e =    /> setSortBy(e.target.value)}
                 className={`group relative ${
 
                   viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid'
-                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'
-                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'
-                }`}>{/* Popular Badge */}
+          >
+
+          >
+
+            {sortedServices.map((service, index) => (
+              <motion.div
+      {/* Services Grid */}
+      <section className='py - 16'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <motion.div;
+            variants={container_variants}
+            initial='hidden';
+            animate='visible';
+            className={
+              view_mode === 'grid';
+                ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
+                : 'space - y-6';
+            }          >      <section className="py-16">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+          <motion.div;
+            variants={container_variants}
+            initial="hidden";
+            animate="visible";
+            className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
+            {sorted_services.map ((service, index) => (
+              <motion.div;
+
+                key={service.id}
+                variants={item_variants}
+                className={`group relative ${
+
+                  view_mode === 'grid'                    ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105'                  view_mode === 'grid';
+                    ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105';
+                    : 'bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 8 hover:border - purple - 500 / 50 transition - all duration - 300';
+                }`}
+              >;
+                      {service.icon}
+                    </div>
+                  </div>
+                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
+                    Popular;
+                  </div>;
                 {service.popular && (
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full>
                     Popular
@@ -1148,23 +998,52 @@ onChange={e =    /> setSortBy(e.target.value)}
                       </div>;
                     ))}
 
-
-=======
-                        {service.price}</div>;
-                  </div>;
-
-                  <div className={`${viewMode === list' ? 'flex-1 : '}`}>;
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      {service.name}
-                    </h3>;
-                    <p className=text-gray-300 text-sm mb-3">{service.tagline}</p>;
-                    {/* Price */}
-                    <div className="flex items-center justify-center space-x-2 mb-4>;
-                      <span className=text-3xl font-bold text-white">{service.price}</span>;
-                      <span className="text-gray-400>{service.period}</span>;
-                      </span>;
-                      <span className='text-gray-400>{service.period}</span>;
+                  </div>
+                  <div className='text-gray-400'>
+                    <span className='block'>Trial</span>
+                    <span className='text-white font-medium'>
+                      {service.trialDays} days
+                    </span>
+                  </div>
+                  <div className='text-gray-400'>
+                    <span className='block'>Rating</span>
+                    <div className='flex items-center'>
+                      <span className='text-white font-medium mr-1'>
+                        {service.rating}
+                      </span>
+                      <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                    </div>
+                  </div>
+                  <div className='text-gray-400'>
+                    <span className='block'>Customers</span>
+                    <span className='text-white font-medium'>
+                      {service.customers}+
+                    </span>                  </div>
+                </div>
+                {/* ROI and Market Info */}                  </div>
+                    )}
+                  <div className="text-gray-400">
+                    <span className="block">Trial</span>
+                    <span className="text-white font-medium">{service.trialDays} days</span>
+                  </div>
+                  <div className="text-gray-400">
+                    <span className="block">Rating</span>
+                    <div className="flex items-center">
+                      <span className="text-white font-medium mr-1">{service.rating}</span>
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    </div>
+                  </div>
+                  <div className="text-gray-400">
+                    <span className="block">Customers</span>
+                    <span className="text-white font-medium">{service.customers}+</span>
+                  </div>
+                </div>
+                {/* ROI and Market Info */}
+                <div className='mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20'>;
+                  <div className='text-sm'>;
+                    <div className='text-gray-300 mb-2'>;
+                      <span className='font-semibold text-white'>ROI:</span>{' '}
+                      {service && service.roi}
                     </div>;
                   </div>;
                 </div>;
@@ -1394,7 +1273,36 @@ href={`mailto: ${contactInfo.email}`}
 
 
 
-
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
+              Ready to Experience the Future?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8'>;
+              Transform your business with our revolutionary futuristic;
+              services. Get in touch with our experts to discuss your specific;
+              needs and implementation strategy.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Link
+                href='/contact'
+                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>;
+                Contact Our Experts;
+              </Link>;
+              <Link
+                href='/pricing'
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our revolutionary futuristic services.
@@ -1513,10 +1421,12 @@ href={`mailto: ${contactInfo.email}`}
 <<<<<<< HEAD
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-
-
-=======
-
+  );
+}
+}
+  );
+}
+                      <div className='text - sm text - purple - 400 mt - 2'>                      <div className="text - sm text - purple-400 mt-2">;
                         +{service.features.length - 4} more features;
                       </div>)}
                   </div>;
@@ -1551,20 +1461,20 @@ href={`mailto: ${contactInfo.email}`}
                     </span>                  </div>;
                 </div>;
                 {/* ROI and Market Info */}                  </div>;
-                  <div className=text - gray - 400">;
-                    <span className="block>Trial</span>;
-                    <span className=text - white font - medium">{service.trial_days} days</span>;
+                  <div className="text-gray-400">;
+                    <span className="block">Trial</span>;
+                    <span className="text-white font-medium">{service.trial_days} days</span>;
                   </div>;
-                  <div className="text - gray - 400>;
-                    <span className=block">Rating</span>;
-                    <div className="flex items - center>;
-                      <span className=text - white font - medium mr - 1">{service.rating}</span>;
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current />;
+                  <div className="text-gray-400">;
+                    <span className="block">Rating</span>;
+                    <div className="flex items-center">;
+                      <span className="text - white font-medium mr-1">{service.rating}</span>;
+                      <Star className="w - 4 h - 4 text - yellow-400 fill-current" />;
                     </div>;
                   </div>;
-                  <div className=text - gray - 400">;
-                    <span className="block>Customers</span>;
-                    <span className=text - white font - medium">{service.customers}+</span>;
+                  <div className="text-gray-400">;
+                    <span className="block">Customers</span>;
+                    <span className="text-white font-medium">{service.customers}+</span>;
                   </div>;
                 </div>;
                 {/* ROI and Market Info */}
@@ -1577,14 +1487,14 @@ href={`mailto: ${contactInfo.email}`}
                     <div className='text - gray - 300>;
                       <span className=font - semibold text - white'>;
                         Market Size:;
-                      </span>{' }
-                      {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20>;
-                  <div className=text - sm">;
-                    <div className="text - gray - 300 mb - 2>;
-                      <span className=font - semibold text - white">ROI: </span> {service.roi}
+                      </span>{' '}
+                      {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border-purple-500 / 20">;
+                  <div className="text-sm">;
+                    <div className="text - gray-300 mb-2">;
+                      <span className="font-semibold text-white">ROI: </span> {service.roi}
                     </div>;
-                    <div className="text - gray - 300>;
-                      <span className=font - semibold text - white">Market Size: </span> {service.market_size}
+                    <div className="text-gray-300">;
+                      <span className="font-semibold text-white">Market Size: </span> {service.market_size}
                   </div>;
                 </div>;
                 {/* Action Buttons */}
@@ -1602,12 +1512,12 @@ href={`mailto: ${contactInfo.email}`}
                 <div className=mt - 6 pt - 6 border - t border - white / 10'>;
                   <div className='text - center text - sm text - gray - 400>                  <Link;
                     href={service.link}
-                    className="flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105;
+                    className="flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration-300 transform hover:scale-105";
                   >;
                     Get Started;
                   </Link>;
-                  <button className=px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple - 500 / 50 transition - colors">;
-                    <Eye className="w - 5 h - 5 />;
+                  <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple-500 / 50 transition-colors">;
+                    <Eye className="w-5 h-5" />;
                   </button>;
                 </div>;
                 {/* Contact Info */}
@@ -1626,14 +1536,14 @@ href={`mailto: ${contactInfo.email}`}
                         href={`mailto:${contact_info.email}`}
                         className='flex items - center text - purple - 400 hover:text - purple - 300;
                       >;
-                        <Mail className=w - 4 h - 4 mr - 1' />                        {contact_info.email}                    <p > Contact us for custom pricing and implementation</p>;
-                    <div className=flex items - center justify - center space - x-4 mt - 2">;
-                      <a href={`tel:${contact_info.mobile}`} className="flex items - center text - purple - 400 hover:text - purple - 300>;
-                        <Phone className=w - 4 h - 4 mr - 1" />;
+                        <Mail className='w - 4 h - 4 mr - 1' />                        {contact_info.email}                    <p > Contact us for custom pricing and implementation</p>;
+                    <div className="flex items - center justify - center space-x-4 mt-2">;
+                      <a href={`tel:${contact_info.mobile}`} className="flex items - center text - purple - 400 hover:text-purple-300">;
+                        <Phone className="w - 4 h-4 mr-1" />;
                         {contact_info.mobile}
                       </a>;
-                      <a href={`mailto:${contact_info.email}`} className="flex items - center text - purple - 400 hover:text - purple - 300>;
-                        <Mail className=w - 4 h - 4 mr - 1" />;
+                      <a href={`mailto:${contact_info.email}`} className="flex items - center text - purple - 400 hover:text-purple-300">;
+                        <Mail className="w - 4 h-4 mr-1" />;
                         {contact_info.email}
                       </a>;
                     </div>;
@@ -1651,10 +1561,16 @@ href={`mailto: ${contactInfo.email}`}
                 Try adjusting your search criteria or category filter;
               </p>;
               <button;
-                on_click={() => {setSearchTerm (')setSelectedCategory (all')}}
-                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300              >              <button;
-                on_click={() => {setSearchTerm (')setSelectedCategory ('all)}}
-                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300;
+                on_click={() => {
+                  setSearchTerm ('');
+                  setSelectedCategory ('all');
+                }}
+                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300'              >              <button;
+                on_click={() => {
+                  setSearchTerm ('');
+                  setSelectedCategory ('all');
+                }}
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition-all duration-300";
               >;
                 Clear Filters;
               </button>;
@@ -1662,9 +1578,9 @@ href={`mailto: ${contactInfo.email}`}
         </div>;
       </section>;
       {/* CTA Section */}
-      <section className=py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20'>;
-        <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8>          <motion.div      <section className=py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20">;
-        <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8>;
+      <section className='py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20'>;
+        <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to-pink-900 / 20">;
+        <div className="max - w-4xl mx - auto text - center px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1689,21 +1605,21 @@ href={`mailto: ${contactInfo.email}`}
                 href='/pricing;
                 className=border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'              >              Ready to Experience the Future?;
             </h2>;
-            <p className=text - xl text - gray - 300 mb - 8">;
+            <p className="text - xl text - gray-300 mb-8">;
               Transform your business with our revolutionary futuristic services.;
               Get in touch with our experts to discuss your specific needs and implementation strategy.;
             </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center>;
+            <div className="flex flex - col sm:flex - row gap-4 justify-center">;
               <Link;
-                href=/contact";
-                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105;
+                href="/contact";
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration-300 transform hover:scale-105";
               >;
                 Contact Our Experts;
               </Link>;
               <Link;
-                href='/pricing;
-                className=border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'                href=/pricing";
-                className="border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors";
+                href='/pricing';
+                className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'                href="/pricing";
+                className="border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple-500 / 50 transition-colors";
               >;
                 View Pricing;
               </Link>;

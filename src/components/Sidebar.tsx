@@ -253,14 +253,43 @@ export const Sidebar: React.FC = () => {
   };
 
   return (
-  {/* Empty JSX fragment */}
-      {/* Mobile menu button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors"
-      >
-        <Menu className="w-6 h-6" />
-      </button>
+    <div className="fixed inset-0 z-50 lg:hidden">
+            className="p-2 hover:bg-gray-100 rounded-lg"
+      {/* Backdrop */}
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50"
+        onClick={onClose}
+        onKeyDown={(e) => e.key === 'Escape' && onClose()}
+        role="button"
+        tabIndex={0}
+        aria-label="Close sidebar"
+      />
+      
+      {/* Sidebar */}
+      <div className="fixed top-0 right-0 h-full w-64 bg-gray-900 shadow-xl">
+        <div className="flex items-center justify-between p-4 border-b border-gray-700">
+          <h2 className="text-white font-semibold">Menu</h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white"
+          >
+            <X className="h-6 w-6" />
+          </button>
+        </div>
+        
+        <nav className="p-4">
+          <div className="space-y-2">
+            <a href="/" className="block text-gray-300 hover:text-white py-2">Home</a>
+            <a href="/about" className="block text-gray-300 hover:text-white py-2">About</a>
+            <a href="/services" className="block text-gray-300 hover:text-white py-2">Services</a>
+            <a href="/pricing" className="block text-gray-300 hover:text-white py-2">Pricing</a>
+            <a href="/contact" className="block text-gray-300 hover:text-white py-2">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  )
+};
 
       {/* Mobile Sidebar */}
       <AnimatePresence>

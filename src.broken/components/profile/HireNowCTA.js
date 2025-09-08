@@ -86,24 +86,7 @@ export function HireNowCTA("props": "any) {;
       </CardContent>;
     </Card>)}
 ;
-export default HireNowCTA;
-import React, { useState } from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
-
-=======
-    const [isFormOpen, setIsFormOpen] = useState(false);
-    const [formData, setFormData] = useState({'
-        projectDescription: '','
-        budget: '','
-        startDate: '','
-        message: ''
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
+export default HireNowCTA;import React, { useState } from 'react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -116,9 +99,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     );
     const handleSubmit = (props: any) => {
     });
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
+    const handleSubmit = (e) => {        e.preventDefault();
         if (onHire) {
 
             onHire(formData);
@@ -134,23 +115,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         setIsFormOpen(false)};
             message: ''
         });
-        setIsFormOpen(false);
-    };
-    const handleChange = (e) => {
-
-    );
-        setIsFormOpen(false)};
-            message: ''
-        });
         setIsFormOpen(false)
 };    const handleChange = (e) => {
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-
+        }))
+};
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
         <CardTitle className="text-white flex items-center gap-2">"

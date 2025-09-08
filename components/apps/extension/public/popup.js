@@ -86,8 +86,6 @@ document.querySelectorAll(.example').forEach((btn) => {
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-
-
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
     document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
@@ -120,8 +118,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const data = await res.json(),
   document.getElementById('result').textContent = data.description || 'Draft saved.'
 
-document && document.getElementById('askBtn).addEventListener(click', async () => {
-  const prompt = document && document.getElementById('prompt).value && value.trim(),
+document.getElementById('resumeSearch').addEventListener('click', async () => {
+  const userId = await new Promise((r) => getUserId(r)),
+  if (!userId) return (document.getElementById('result').textContent = 'Sign in first.'),
+  const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
+    headers: { ...(userId ? { 'x-user-id': userId } : {}) }
+  }),
+  const data = await res.json(),
+  document.getElementById('result').textContent = JSON.stringify(data.results || [], null, 2)
+}),
+
+document.getElementById('viewNotifications').addEventListener('click', async () => {
+  const userId = await new Promise((r) => getUserId(r)),
+  if (!userId) return (document.getElementById('result').textContent = 'Sign in first.'),
+  const res = await fetch(`${API_BASE}/notifications`, {
+    headers: { 'x-user-id': userId }
+  }),
+  const data = await res.json(),
+  document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
+}),
+
+document && document.getElementById('askBtn').addEventListener('click', async () => {
+  const prompt = document && document.getElementById('prompt').value && value.trim(),
   if (!prompt) return,
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 

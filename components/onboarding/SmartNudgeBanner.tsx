@@ -193,28 +193,8 @@ function SmartNudgeBanner() {}
   user_id?: string | null;
   message: string;
 
-      <button;
-        on_click={dismiss}'
-        aria - label='Dismiss';'
-        className='absolute top - 2 right - 2 p - 1 rounded hover:bg - black / 5 dark:hover:bg - white / 10';
-      >;
-        <X size={16} />;
-      </button>;'
-      <div className='text - sm'>{message}</div>;
-    </div>);        <X size={16} />;
-      </button>;
-      <div className="text-sm">;
-        {message}
-      </div>;
-    </div>);
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
-
 
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -329,11 +309,15 @@ if (typeof window !== 'undefined')
   }, [storageKey]);
   if (hidden) return null;
   return (
+        {message}
+}
+  );
+  );
 
-<<<<<<< HEAD
+  );
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+
 }
 ;
 export default /**
@@ -391,7 +375,7 @@ if (return null) {
       <div className='text - sm'>{message}</div>;
     </div>);        <X size={16} />;
       </button>;
-      <div className='text-sm'>;
+      <div className="text-sm">;
         {message}
       </div>;
     </div>)}try {if (typeof window !== 'undefined')localStorage.setItem(storageKey, 'dismissed')} catch {}

@@ -16,20 +16,35 @@ export type SearchResult = $2;
   description?: string,
   relevance: number},
 
-function computeRelevanceScore(text: string, keywords: string[], weight = $2;
-  const lower = text.toLowerCase($2);
-  let score = $2;
-  for (const k of keywords) {
-    if (lower.includes(k.toLowerCase())) score += 1 * weight
-  }
-  return score
+export interface SearchResult {
+  id: string;
+  title: string,
+  description: string;
+  type: string;
+  rating?: number;
+  price?: number;
+  location?: string;
+  skills?: string[];
+  keywords?: string[];
+}
+  all: SearchResult[];
+  talent: SearchResult[];
+  jobs: SearchResult[];
+  projects: SearchResult[];
 }
 
-function computeSkillOverlap(skills: string[], wanted: string[]): number {
-  const set = $2;
-  let score = $2;
-  for (const w of wanted) if (set.has(w.toLowerCase())) score += 2,
-  return score
+export interface SearchFilters {
+  keywords?: string[];
+  skills?: string[];
+  location?: string;
+  type?: string;
+  status?: string;
+  minRating?: number;
+  maxRating?: number;
+  priceRange?: {
+    min?: number;
+    max?: number
+};
 }
 
 function budgetScore(candidate?: number, min?: number, max?: number): number {
@@ -55,6 +70,10 @@ export function suggestDidYouMean(query: string): string[] {
   if (query.includes("frontend")) {
     suggestions.push("ui", "ux", "design");
   }
-
-  return suggestions.slice(0, 3); // Return max 3 suggestions
+  
+  return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
+;
+export const sort_results = (results: any[], sort_by: string) =>: any {
+  // Add search sorting functionality here;
+  return results;
 }

@@ -37,10 +37,9 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 
   const config = statusConfig[status];
 
-<<<<<<< HEAD
-  status: QuoteStatus;
-}
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
+  const config = statusConfig[status];
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
   }
 
@@ -68,13 +67,5 @@ interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
 
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
 };
 >>>>>>> origin/cursor/delete-old-data-records-6bba

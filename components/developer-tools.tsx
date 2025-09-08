@@ -80,8 +80,12 @@ import {
 'description': 'Global developer tools market size','
     },
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  Code;
+  GitBranch,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
   Star;
   ExternalLink;
   CheckCircle;
@@ -275,20 +279,47 @@ category: 'Security',}
 
   ];
     {
-
-=======
-      ],
-      pricing: '$12/month',
-  marketPrice: '$12-99/month',
-      website: 'https://www.postman.com/pricing',
-  color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-  gradient: 'from-orange-400 to-red-500',
-      popular: false,}
-category: 'API Development',}
-    },
-
+      description: 'Average productivity improvement'
+    },  ],
+  description: 'Global developer tools market size'
+    }
+    {
+      title: 'AI Code Tools'
+      value: '$2.1B'
+      growth: '+45% YoY'
+      description: 'AI-powered development tools market'
+    },      description: 'AI-powered development tools market'
+    }
+    {
+      title: 'Cloud Dev Tools'
+      value: '$4.8B'
+      growth: '+32% YoY'
+      description: 'Cloud-based development platforms'
+    },      description: 'Cloud-based development platforms'
+    }
+    {
+      title: 'Dev Productivity'
+      value: '35%'
+      growth: '+18% YoY'
+      description: 'Average productivity improvement'
+    },      description: 'Average productivity improvement'
+    }
   ];
+  const devCategories = [
+      description: 'AI - powered development tools market',
+    },    {
+      title: 'Cloud Dev Tools',
+      value: '$4.8B',
+      growth: '+32% YoY',
+      description: 'Cloud - based development platforms',
+    },    {
+      title: 'Dev Productivity',
+      value: '35%',
+      growth: '+18% YoY',
+      description: 'Average productivity improvement',
+    },  ],
+  description: 'Global developer tools market size';
+    }
     {
 
       category: 'API Development',
@@ -480,17 +511,8 @@ informed decisions about your development stack.
             </p>
           </div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {devMarketStats.map((stat, index) => (
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6">
-      {/* Developer Market Statistics */}
-      <section className='section-padding bg-gradient-cursor-accent'>
+      {/* Developer Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
@@ -1019,9 +1041,6 @@ that work together seamlessly.
       {/* Developer Workflow */}
 
 
-
-
-
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1335,9 +1354,10 @@ key={index}
           </div>;
         </div>;
       </section>;
-          </div>;
-        </div>;
-      </section>;{/* CTA Section */}Start with one tool or build a complete development stack. Each tool;
+
+      {/* CTA Section */}
+
+            Start with one tool or build a complete development stack. Each tool;
             is designed to work independently and integrate seamlessly with your;
             existing workflow.;
           </p>;

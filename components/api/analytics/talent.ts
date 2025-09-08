@@ -1,28 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-
-=======
-      supabase
-
-  try {
-    const supabase = createServerClient();
-    const talentId = (req.query.talentId as string) |null
-    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
-
-        .eq(talent_id', talentId)
-
-export default async /**;
- * handler - Function description;
- */;
-function handler() {  try {export default async /**;
- * handler - Function description;
- */;
-function handler() {try {const supabase = createServerClient ()const talent_id = (req.query.talent_id as string) || null,const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
-
-      supabase;
-import { createServerClient } from '../../../utils/supabase/server';
-
       supabase
 >>>>>>> origin/cursor/delete-old-data-records-6bba
         .from('profile_views')
@@ -101,44 +78,12 @@ topTags: Object && Object.entries(tagCounts)
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
 
   }
 
 }
 
-
-
-=======
-  }
-
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  }
-
-}
-
-<<<<<<< HEAD
-}
-
-}
-
-}
-
-
-}
-
-
-
-}
-
-
-import { createServerClient } from '../../../utils / supabase / server';
+}import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**;
  * handler - Function description;
@@ -213,12 +158,5 @@ pr-12243
 
 }
 }
-<<<<<<< HEAD
-
-
-
-
-
-=======
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

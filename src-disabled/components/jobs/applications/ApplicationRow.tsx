@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 =======
@@ -48,18 +47,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
-
-
-interface ApplicationRowProps {
-  application: JobApplication;
-  processing_id: string | null;
-  onViewApplication: (application_id: string) => Promise < void>;
-
-  onStatusChange: (
-
-
-
-
+export function ApplicationRow({
 
 
 export function ApplicationRow({
@@ -70,8 +58,6 @@ export function ApplicationRow({
   onViewScore
 }:,  ApplicationRowProps) {,
   const [avatarError, setAvatarError] = useState(false)
-
-
 
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
@@ -131,24 +117,6 @@ import { StatusBadge } from "./StatusBadge",
 import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
 
-interface ApplicationRowProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
-  onViewScore: (application: JobApplication) => void
-}
-
-export function ApplicationRow({
-  application,
-  processingId,
-  onViewApplication,
-  onStatusChange,
-  onViewScore
-}: ApplicationRowProps) {
-  const [avatarError, setAvatarError] = useState(false),
-  const talentName = application.talent_profile?.full_name || "Unknown",
-
   const talentName = application.talent_profile?.full_name || 'Unknown'
 
     applicationId: string
@@ -177,136 +145,23 @@ export function ApplicationRow({
 
   const talentName = application.talent_profile?.full_name |'Unknown'
 
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-    <TableRow key={application.id}>
-
+  const talentName = application.talent_profile?.full_name || 'Unknown'    <TableRow key={application.id}>
       <TableCell>
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
-
-
-              <Image
-<<<<<<< HEAD
-=======
-                src={application.talent_profile.profile_picture_url}
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9
-                className='rounded-full object-cover' // Ensure rounded and object-cover
-                onError={() => setAvatarError(true)}
-                priority={false}              />
-ursor/fix-website-loading-errors-and-merge-6662
-  const talentName = application.talent_profile?.full_name |'Unknown'
-  const talentName = application.talent_profile?.full_name |'Unknown'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-
-
-  return (
-    <TableRow key={application.id}>
-      <TableCell>
-        <div className="flex items-center gap-3">
-          <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
-            {application.talent_profile?.profile_picture_url && !avatarError ? (
-              <Image
-
-
-
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9
-                className="rounded-full object-cover" // Ensure rounded and object-cover
-                onError={() => setAvatarError(true)}
-
-                priority={false}
-              />
-
-
-            ) : (
-              <User className="h-5 w-5 text-gray-400" />
-            )}
-
-
-            <div className="font-medium">
-              {talentName}
-            </div>
-            <div className="text-xs text-muted-foreground">
-              {application.talent_profile?.professional_title || "Talent"}
-
-
-
-            </div>
-          </div>
-        </div>
-      </TableCell>
-      <TableCell>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <div className='flex items-center gap-1'>
-          <Calendar className='h-4 w-4 text-muted-foreground' />
-          <span>
-            {formatDistanceToNow(new Date(application.created_at), {
-              addSuffix: true
-            })}
-          </span>
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-        <div className="flex items-center gap-1">
-          <Calendar className="h-4 w-4 text-muted-foreground" />
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
-
-        </div>
-
+              <Image        </div>
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <div className="flex items-center gap-1">
-          <Calendar className="h-4 w-4 text-muted-foreground" />
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
-        </div>
-      </TableCell>
-      <TableCell>
-        <StatusBadge status={application.status} />
-      </TableCell>
-      <TableCell>
-        <Button
-          variant='ghost'
-          size='sm'
-          onClick={() => onViewScore(application)}
-          className='flex items-center gap-1'        >
-          <BarChart className='h-4 w-4 mr-1' />
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-        <Button 
-
           variant="ghost" 
           size="sm" 
           onClick={() => onViewScore(application)}
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
-
-
 
           <ScoreBadge application={application} />
         </Button>
@@ -475,7 +330,6 @@ interface ApplicationRowProps {
       </TableCell>;
       <TableCell>;
 
-
         <div className='flex items - center gap - 1'>;
           <Calendar className='h - 4 w - 4 text - muted - foreground' />;
           <span>;
@@ -493,22 +347,21 @@ interface ApplicationRowProps {
       <TableCell>;
         <Button;
 
-
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
-
-
-
-            </a>;
-
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
-
+      <TableCell className='text-right'>;
+        <ApplicationActions
+          application = {application,}
+          processingId = {processingId,}
+          onViewApplication = {onViewApplication,}
+          onStatusChange = {onStatusChange,}
 
         />;
       </TableCell>;
@@ -551,9 +404,3 @@ interface ApplicationRowProps {
 =======
 <<<<<<< HEAD
 ;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/applications/ApplicationRow.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba

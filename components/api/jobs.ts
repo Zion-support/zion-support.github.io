@@ -77,7 +77,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   try {
 
-<<<<<<< HEAD
+}
+  };
+}
+
+};
+}
+
+}
 
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -88,11 +95,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 
-<<<<<<< HEAD
-
-
-
-=======
+}
 ;
 const JOBS_FILE = path.join (process.cwd (), 'data', 'jobs', 'jobs.json');
 ;

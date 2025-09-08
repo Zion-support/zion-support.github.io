@@ -1,15 +1,42 @@
-import { promises as fs } from "fs";
 import path from "path";
 
 const DATA_DIR = path.join(process.cwd(), "data");
+=======  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
 
-export function readJson<T>(relativePath: string, fallback: T): T {
-  const full = path.join($2);
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
+
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
+import path from 'path';
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+
   try {
-    const raw = fs.readFileSync($2);
-    return JSON.parse(raw) as T
-  } catch (_) {
-    return fallback
+    const fullPath = path && path.join(DATA_DIR, filePath);
+    const data = fs && fs.readFileSync(fullPath, 'utf8');
+    return JSON && JSON.parse(data);
+
+  try {
+    const fullPath = path.join(DATA_DIR, filePath);
+    const data = fs.readFileSync(fullPath, "utf8");
+    return JSON.parse(data);
+  } catch (error) {
+    return defaultValue;
   }
 }
 
@@ -50,3 +77,15 @@ export async function writeJsonAsync<T>(
     console.error("Error writing JSON file:", error);
   }
 }
+
+// File system database utilities;
+export const fs_db = {
+  // Add file system database functionality here;
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+}
+
+}
+

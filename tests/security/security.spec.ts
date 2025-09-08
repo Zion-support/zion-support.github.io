@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+interface Security.specProps {
+  // Add props here as needed
+}
+=======
 
 interface Security.specProps {
   // Add props here as needed
@@ -13,7 +18,4 @@ export default function Security.spec({ }: Security.specProps) {
   );
 
 }
-
-}
-
-}
+>>>>>>> origin/main

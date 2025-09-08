@@ -244,10 +244,8 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
-
-
-  };
+import { innovative2030Services } from '../data/2030-innovative-services'
+};
 
 <<<<<<< HEAD
 
@@ -258,23 +256,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 =======
   return (
 
-
-
-import {
-  ArrowRight
-  Star
-  Zap
-  TrendingUp
-  Users
-  Award
-  Phone
-  Mail
-  MapPin;
-  return (
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   ArrowRight,
   Star,
   Zap,
@@ -300,29 +281,8 @@ import { innovative2030Services } from '../data/2030-innovative-services';import
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
-export default function Revolutionary2030ServicesPage() {
-  const contactInfo = {
-
-
-<<<<<<< HEAD
-
-
-=======
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
-
-
-  };
+import { innovative2030Services } from '../data/2030-innovative-services'
+};
 
 
 
@@ -690,18 +650,18 @@ className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>'
         <div className='max-w-7xl mx-auto'>;'
           <motion.div;
       {/* Services Showcase */}
-      <section className='py-24 px-4 "sm":px-6 "lg":px-8 relative overflow-hidden'>;'
-        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 "sm":px-6 "lg":px-8 relative overflow-hidden">;"
-        <div className="max-w-7xl mx-auto">;"
-          <motion.div;
-            initial={ "opacity": 0, "y": 30 }
-            whileInView={ "opacity": 1, "y": 0 }
-            transition={ "duration": 0 && 0.8 }
-            viewport={ "once": true }className='text-center mb-20';'
-          >;
-            initial={ "opacity": 0, "y": 30 
-}
-<<<<<<< HEAD
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+      {/* Services Showcase */}
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true ,}
@@ -866,7 +826,6 @@ className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>'
               </motion && motion.div>;
             ))}
 
-
           {/* Call to Action */}
           <motion&& motion.div
 
@@ -885,122 +844,6 @@ className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>'
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
 
-=======
-<div className='grid grid-cols-1 "lg":grid-cols-2 gap-8 mb-20'>;'
-            {innovative2030Services.map((service, index) => (<motion.div;
-                }
-                key={service.id}initial={ "opacity": 0, "y": 30 }
-                whileInView={ "opacity": 1, "y": 0 }
-                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
-                viewport={ "once": true }
-                whileHover={ "y": -5 }className='group cursor-pointer';'
-              >;
-                key={service.id}initial={ "opacity": 0, "y": 30 
-}
-                whileInView={ "opacity": 1, "y": 0 
-}
-                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
-                viewport={ "once": true }
-                whileHover={ "y": -5 
-}className='group cursor-pointer'>'
-
-
-                key={service.id}initial={{ "opacity": 0, "y": 30 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-                viewport={{ "once": true }}
-                whileHover={{ "y": -5 }}className='group cursor-pointer';'
-              >;
-                key={service.id}initial={{ "opacity": 0, "y": 30 
-}
-                whileInView={{ "opacity": 1, "y": 0 
-}
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-                viewport={{ "once": true }}
-                whileHover={{ "y": -5 
-}className='group cursor-pointer'>'
-
-                <div className='p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 "hover":border-cyan-400/40 transition-all duration-300 backdrop-blur-sm'>;'
-                  {/* Service Header */}
-                  <div className='flex items-start justify-between mb-6'>;'
-                    <div className='flex items-center space-x-4'>;'
-                      <div;
-                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300`}`                      >;
-                        <span className='text-2xl'>{service.icon}</span>;'
-                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center group-"hover": scale-110 transition-transform duration-300`}>`
-
-                        <span className='text-2xl'>{service.ico,'
-}</span>;
-                      </div>;
-                      <div>;
-                        <h3 className='text-2xl font-bold text-white mb-2'>;'
-                          {service.name}
-                        </h3>;
-                        <p className='text-gray-300'>{service.tagline}</p>;'
-                      </div>;
-                    </div>;
-                    {service.popular && (<div className='px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black'>;'
-                        }
-                        Popular;
-                      </div>;
-                    )}
-                  </div>
-
-
-              <div className=\"flex items-center justify-center space-x-2\"    />;
-                <Mail className=\"w-5 h-5 text-purple-400\"    />;
-                <span    />{contactInfo.email}</span>;
-              </div>;
-              <div className=\"flex items-center justify-center space-x-2\"    />;
-                <MapPin className=\"w-5 h-5 text-pink-400\"    />;
-                <span className=\"text-sm\"    />{contactInfo.address}</span>;
-className='text-center';
-          >;
-className='text-center'>
-
-            <div className='p-12 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 backdrop-blur-sm'    />;
-              <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'    />;
-                Ready to Experience the Future?;
-              </h3>;
-              <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'    />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Join the revolution and transform your business with our;
-                cutting-edge 2030 technology services. The future is waiting for;
-                you.;
-              </p>;
-<<<<<<< HEAD
-
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'    />;
-                <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'    />;
-                  Schedule Consultation;
-                </button>;
-                <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'    />;
-
-=======
-              <div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>;'
-                <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200'>;'
-                  Schedule Consultation;
-                </button>;
-                <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg "hover":bg-cyan-400 "hover":text-black transition-all duration-200'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  Contact Us;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-      {/* Contact Section */}
-
-      <section className='py-24 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-
-
-
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1009,17 +852,6 @@ className='text-center'>
               Ready to Transform Your Business with;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 {' '}
-
-
-      {/* Contact Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-      {/* Contact Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1145,7 +977,13 @@ className='text-center'>
         </div>;
       </section>;
       {/* Contact Section */}
-
+      <section className='py - 24 px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div      <section className="py - 24 px - 4 sm:px-6 lg:px-8">;
+        <div className="max - w-4xl mx-auto text-center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             initial={{ opacity: 0, y: 30 ,}
 }
@@ -1281,174 +1119,22 @@ className='text-center'>'
               </div>;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
             </div>;
-<div className='grid grid-cols-1 "sm":grid-cols-3 gap-6 text-gray-300'>;'
-              <div className='flex items-center justify-center space-x-2'>;'
-                <Phone className='w-5 h-5 text-cyan-400' />;'
-                <span>{contactInfo.mobile}</span>;
-              </div>;
-              <div className='flex items-center justify-center space-x-2'>;'
-                <Mail className='w-5 h-5 text-purple-400' />;'
-                <span>{contactInfo.email}</span>;
-              </div>;
-<<<<<<< HEAD
-              <div className='flex items-center justify-center space-x-2'    />;
-                <MapPin className='w-5 h-5 text-pink-400'    />;
-                <span className='text-sm'    />{contactInfo.address}</span>;
-
-=======
-              <div className='flex items-center justify-center space-x-2'>;'
-                <MapPin className='w-5 h-5 text-pink-400' />;'
-                <span className='text-sm'>{contactInfo.address}</span>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-                2030 Technology?;
+            <div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 6 text - gray - 300'>;
+              <div className='flex items - center justify - center space - x-2'>;
+                <Phone className='w - 5 h - 5 text - cyan - 400' />              Ready to Transform Your Business with;
+              <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
+                {' '}2030 Technology?;
               </span>;
             </h2>;
-<<<<<<< HEAD
-
-            <p className='text-xl text-gray-300 mb-8'    />;
-=======
-            <p className='text-xl text-gray-300 mb-8'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              Contact our team of technology experts to discuss how our;
-              revolutionary 2030 services can transform your business and propel;
-              you into the future.;
-            </p>;<div className='flex flex-col "sm":flex-row gap-4 justify-center items-center mb-8'>;'
-              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200'>;'
-                Schedule Consultation;
-              </button>;
-              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg "hover":bg-cyan-400 "hover":text-black transition-all duration-200'>                View Pricing;'
-              </button>;
-            </div>;<div className='grid grid-cols-1 "sm":grid-cols-3 gap-6 text-gray-300'>;'
-              <div className='flex items-center justify-center space-x-2'>;'
-                <Phone className='w-5 h-5 text-cyan-400' />              Ready to Transform Your Business with;'
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;"
-                {' '}2030 Technology?;'
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8">;"
-              Contact our team of technology experts to discuss how our revolutionary 2030 services ;
-              can transform your business and propel you into the future.;
-            </p>;<div className="flex flex-col "sm":flex-row gap-4 justify-center items-center mb-8">;"
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200">;"
-                Schedule Consultation;
-              </button>;
-              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg "hover":bg-cyan-400 "hover":text-black transition-all duration-200">;"
-                View Pricing;
-              </button>;
-            </div>;<div className='grid grid-cols-1 "sm":grid-cols-3 gap-6 text-gray-300'>;'
-              <div className='flex items-center justify-center space-x-2'>;'
-                <Phone className='w-5 h-5 text-cyan-400' />;'
-                <span>{contactInfo && contactInfo.mobile}</span>;
-              </div>;
-              <div className='flex items-center justify-center space-x-2'>;'
-                <Mail className='w-5 h-5 text-purple-400' />;'
-                <span>{contactInfo && contactInfo.email}</span>;
-              </div>;
-              <div className='flex items-center justify-center space-x-2'>;'
-                <MapPin className='w-5 h-5 text-pink-400' />;'
-                <span className='text-sm'>{contactInfo && contactInfo.address}</span>              </div>                <span>{contactInfo && contactInfo.mobile}</span>;'
-              </div>;
-              <div className="flex items-center justify-center space-x-2">;"
-                <Mail className="w-5 h-5 text-purple-400" />;"
-                <span>{contactInfo && contactInfo.email}</span>;
-              </div>;
-<<<<<<< HEAD
-              <div className=\"flex items-center justify-center space-x-2\"    />;
-                <MapPin className=\"w-5 h-5 text-pink-400\"    />;
-                <span className=\"text-sm\"    />{contactInfo && contactInfo.address}</span>;
-
-=======
-              <div className="flex items-center justify-center space-x-2">;"
-                <MapPin className="w-5 h-5 text-pink-400" />;"
-                <span className="text-sm">{contactInfo && contactInfo.address}</span>;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </div>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;{/* Footer */}<UltraFuturisticFooter2030 />;
-    </UltraFuturisticBackground2030>;
-  ))</motion.div>;
-        </div>;
-      </section>;
-      {/* Contact Section */}
-<<<<<<< HEAD
-
-      <section className='py - 24 px - 4 sm:px - 6 lg:px - 8'    />;
-        <div className='max - w-4xl mx - auto text - center'    />          <motion.div      <section className=\"py - 24 px - 4 sm:px - 6 lg:px - 8\"    />;
-        <div className=\"max - w-4xl mx - auto text - center\"    />;
-
-=======
-      <section className='py - 24 px - 4 "sm":px - 6 "lg":px - 8'>;'
-        <div className='max - w-4xl mx - auto text - center'>          <motion.div      <section className="py - 24 px - 4 "sm":px - 6 "lg":px - 8">;"
-        <div className="max - w-4xl mx - auto text - center">;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          <motion.div;
-            initial={ "opacity": 0, "coordinate_y": 30 
-}
-            whileInView={ "opacity": 1, "coordinate_y": 0 }
-            viewport={ "once": true }
-            transition={ "duration": 0.8 
-}
-<<<<<<< HEAD
-
-              />;
-            <h2 className='text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6'    />;
-=======
-          >;
-            <h2 className='text - 3xl "sm":text - 4xl "lg":text - 5xl font - bold text - white mb - 6'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              Ready to Transform Your Business with;
-              <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;'
-                {' '}'
-                2030 Technology?;
-              </span>;
-            </h2>;
-<<<<<<< HEAD
-            <p className='text - xl text - gray - 300 mb - 8'    />;
-
-=======
-            <p className='text - xl text - gray - 300 mb - 8'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              Contact our team of technology experts to discuss how our;
-              revolutionary 2030 services can transform your business and propel;
-              you into the future.;
-            </p>;
-<<<<<<< HEAD
-
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8'    />;
-              <button className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200'    />;
-=======
-            <div className='flex flex - col "sm":flex - row gap - 4 justify - center items - center mb - 8'>;'
-              <button className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg "hover":from - cyan - 600 "hover":to - blue - 600 transition - all duration - 200'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Schedule Consultation;
-              </button>;
-              <button className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold text - lg "hover":bg - cyan - 400 "hover":text - black transition - all duration - 200'>                View Pricing;'
-              </button>;
-              </div>;
-            </div>;
-            <div className='grid grid - cols - 1 "sm":grid - cols - 3 gap - 6 text - gray - 300'>;'
-              <div className='flex items - center justify - center space - x-2'>;'
-                <Phone className='w - 5 h - 5 text - cyan - 400' />              Ready to Transform Your Business with;'
-              <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;"
-                {' '}2030 Technology?;'
-              </span>;
-            </h2>;
-            <p className="text - xl text - gray - 300 mb - 8">;"
+            <p className="text - xl text - gray-300 mb-8">;
               Contact our team of technology experts to discuss how our revolutionary 2030 services;
               can transform your business and propel you into the future.;
             </p>;
-            <div className="flex flex - col "sm":flex - row gap - 4 justify - center items - center mb - 8">;"
-              <button className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg "hover":from - cyan - 600 "hover":to - blue - 600 transition - all duration - 200">;"
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items-center mb-8">;
+              <button className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition-all duration-200">;
                 Schedule Consultation;
               </button>;
-              <button className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold text - lg "hover":bg - cyan - 400 "hover":text - black transition - all duration - 200">;"
+              <button className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold text - lg hover:bg - cyan - 400 hover:text - black transition-all duration-200">;
                 View Pricing;
               </button>;
             </div>;
@@ -1465,20 +1151,13 @@ className='text-center'>'
                 <MapPin className='w - 5 h - 5 text - pink - 400' />;'
                 <span className='text - sm'>{contact_info.address}</span>              </div>                <span>{contact_info.mobile}</span>;'
               </div>;
-              <div className="flex items - center justify - center space - x-2">;"
-                <Mail className="w - 5 h - 5 text - purple - 400" />;"
+              <div className="flex items - center justify-center space-x-2">;
+                <Mail className="w - 5 h - 5 text-purple-400" />;
                 <span>{contact_info.email}</span>;
               </div>;
-<<<<<<< HEAD
-              <div className=\"flex items - center justify - center space - x-2\"    />;
-                <MapPin className=\"w - 5 h - 5 text - pink - 400\"    />;
-                <span className=\"text - sm\"    />{contact_info.address}</span>;
-
-=======
-              <div className="flex items - center justify - center space - x-2">;"
-                <MapPin className="w - 5 h - 5 text - pink - 400" />;"
-                <span className="text - sm">{contact_info.address}</span>;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
+              <div className="flex items - center justify-center space-x-2">;
+                <MapPin className="w - 5 h - 5 text-pink-400" />;
+                <span className="text-sm">{contact_info.address}</span>;
               </div>;
             </div>;
           </motion.div>;

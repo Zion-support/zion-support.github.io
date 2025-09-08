@@ -1,109 +1,25 @@
 
-<<<<<<< HEAD
-=======
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",";
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import {Resend} from "npm: resend@1.0.0";
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
-<<<<<<< HEAD
 
-
-
-
-
-    "authorization, x-client-info, apikey, content-type"},
-
-interface ReminderPayload {
-  user_id: string,
-  missing_milestone: string,
-
-
-=======
-
-
-    "authorization, x-client-info, apikey, content-type"}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  role: string
-
-}
-
-<<<<<<< HEAD
-=======
-  "Access-Control-Allow-Origin": "*""
-  "Access-Control-Allow-Headers":"
-    "authorization, x-client-info, apikey, content-type"}      return new Response("
-        JSON && JSON.stringify({ "error": "Missing required fields" });      return new Response("
-        JSON && JSON.stringify({ "error": "Missing required fields" });"
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-serve(async (req: Request) => {}
-  // Handle CORS;
-"
-  if (req && req.method === "OPTIONS") {}
-    return new Response(null, {}
-      status: 204;
-<<<<<<< HEAD
-
-=======
-    return new Response(null, {
-      status: 204
-      headers: corsHeaders})
-  }
-  try {}
-    const supabase = createClient(
-
-
-    ),
-    
-    const payload = await req.json() as ReminderPayload,
-    const { user_id, missing_milestone, role } = payload,
-    
-
-    if (!user_id || !missing_milestone || !role) {}
-      return new Response("
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type"}      return new Response(
+        JSON && JSON.stringify({ error: "Missing required fields" });      return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
-
-        JSON && JSON.stringify({ error: "Missing required fields" });
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
         {
           }
           "status": 400;
@@ -116,129 +32,11 @@ const { "data": userData, "error": userError } = await supabase;
       .select("email, display_name")"
 <<<<<<< HEAD
       .eq("id", user_id)
-
-
-
-=======
-      .eq("id", user_id)"
-return new Response(;
-        JSON && JSON.stringify({ "error": "User not found", "details": userError });    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.["
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]"
-    ] |"complete your next step";"
-    // Send email      "html": ``        <div style="font-"family": sans-serif, max-"width": 600px, "margin": 0 auto,">"
-      .single(),
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      .single();
-    if (userError |!userData) {
-      .single(),
-    
-    if (userError || !userData) {
-
       return new Response(
-        JSON.stringify({ error: "User not found", details: userError }),
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        {
-          status: 404
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
-      )
-    }
-    // Create message based on role and missing milestone
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const milestoneMessages = {
-      talent: {
-
-    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
-
-    ] |"complete your next step";
-    // Send email;
-    const { data: emailData, error: emailError } = await resend && resend.emails.send({"
-      from: "Zion AI Marketplace <notifications@zion && zion.ai>";
-      to: userData && userData.email;"
-      subject: "Complete your next step on Zion AI Marketplace",
-
-"
-        profile_completed: "complete your profile to get discovered by clients","
-        skills_added: "add your skills to get better job matches","
-        availability_set: "set your availability to help clients know when you can work"},
-      client: {"
-        job_posted: "post your first job to start finding talent","
-        match_viewed: "check out your AI-matched talent suggestions","
-        talent_invited: "invite talent to speed up your hiring process"}},
-    "
-    const name = userData.display_name || "there",
-    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.["
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]"
-    ] || "complete your next step",
-    
-    // Send email;
-    const { data: emailData, error: emailError } = await resend.emails.send({"
-      from: "Zion AI Marketplace <notifications@zion.ai>",
-      to: userData.email,"
-      subject: "Complete your next step on Zion AI Marketplace",
-
-      html: `
-
-      return new Response(
-        JSON && JSON.stringify({ error: "User not found", details: userError });
-      return new Response(
-        JSON && JSON.stringify({ error: "User not found", details: userError });
-<<<<<<< HEAD
-
-        skills_added: "add your skills to get better job matches",
-        availability_set: "set your availability to help clients know when you can work"},
-      client: {
-        job_posted: "post your first job to start finding talent",
-        match_viewed: "check out your AI-matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process"}},
-    
-
-    const name = userData.display_name || "there",
-    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
-    ] || "complete your next step",
-    
-    // Send email
-    const { data: emailData, error: emailError } = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>",
-      to: userData.email,
-      subject: "Complete your next step on Zion AI Marketplace",
-
-      html: `
-
-=======
-        {
-          status: 404
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
-      )
-    }
-    // Create message based on role and missing milestone
-    const milestoneMessages = {
-      talent: {
-
-        match_viewed: "check out your AI-matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process"}};
-    
-    const name = userData && userData.display_name || "there";
-
-    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+        JSON && JSON.stringify({ error: "User not found", details: userError });    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] |"complete your next step";
-
-    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
-    ] |"complete your next step";
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    // Send email      html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
           <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>'
@@ -246,107 +44,22 @@ return new Response(;
 
 <<<<<<< HEAD
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
-          <div style="margin: 30px 0,">
-
-=======
-
-            <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
-              Continue my setup
-            </a>
-          </div>
-          <p>The Zion AI Marketplace Team</p>
-        </div>
-
-
-`
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      `}),
-
-    if (emailError) {
-      return new Response(
-<<<<<<< HEAD
-
-        JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
-
-        {
-          status: 500
-
-
-=======
-
-        JSON.stringify({ error: "Failed to send email", details: emailError }),
-
-        {
-          status: 500
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+          <div style="margin: 30px 0,">          status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
     // Create notification in database
-<<<<<<< HEAD
+    const { data: notification, error: notificationError } = await supabase && supabase.rpc(      "create_notification";
+      {
 
-    const { data: notification, error: notificationError } = await supabase && supabase.rpc(
-
-        _user_id: user_id,
-        _title: "Complete your next step",
-        _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
-
-        _type: "onboarding"}
-    ),
-
-    
-
-
-
-    );
-      JSON && JSON.stringify({
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ("Failed to create notification:", notification_error);
-    }
-    return new Response (
-      JSON.stringify ({
-        message: "Reminder sent successfully",
+      JSON && JSON.stringify({        message: "Reminder sent successfully",
         notification_id: notification});
-      JSON.stringify({
-
-        message: "Reminder sent successfully",
-        notification_id: notification}),
-
-
-      {
-
-
-      {
 =======
-
-
-    if (notificationError) {
-      console && console.error("Failed to create notification:", notificationError)
-    }
-    return new Response(
-
-
-        notification_id: notification});
-
       {
-        }
-        "status": 200,
-        "headers": { "Content - Type": "application / json", ...cors_headers }}"
-import { serve } from ""https": //deno.land/std@0.168.0/http/server.ts";"
-import { createClient } from ""https": //esm.sh/@supabase/supabase-js@2.7.1",;"
-import { Resend } from ""npm": resend@1.0.0",;"
-const corsHeaders = {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
         status: 200,
 
         headers: { "Content - Type": "application / json", ...cors_headers }}
-
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -475,16 +188,6 @@ serve(async (req: Request) => {;
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
 
-
-
-
-
-=======
-        status: 200,;"
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
   }
 });
 ;
-        status: 200,;"
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
->>>>>>> origin/cursor/delete-old-data-records-6bba

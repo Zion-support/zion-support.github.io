@@ -134,20 +134,11 @@ const score = questions.reduce(
 
 
             <div className='mt - 2 text - sm'>;
-              {answers[q.id] === q.answer_index ? (<span className='text - green - 600'>Correct</span>) : (<span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className="text - green - 600">Correct</span>) : (<span className="text - red - 600">Incorrect</span>)}
-    <div className="space-y-4">;
-      {questions && questions.map((q, idx) => (;"
-        <div key={q && q.id} className="border rounded p-3">;"
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          <div className="font-medium">{idx + 1}. {q && q.question}</div>;"
-          <div className="mt-2 grid gap-2">;"
-            {q && q.options.map((opt, i) => (<label key={i} className="flex items-center gap-2">;"
-                <input;
-                  type="radio";"
-            <div className='mt - 2 text - sm'>;'
-              {answers[q.id] === q.answer_index ? (<span className='text - green - 600'>Correct</span>) : (<span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className="text - green - 600">Correct</span>) : (<span className="text - red - 600">Incorrect</span>)}"
+              {answers[q.id] === q.answer_index ? (
+                <span className='text - green - 600'>Correct</span>) : (
+                <span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (
+                <span className="text-green-600">Correct</span>) : (
+                <span className="text-red-600">Incorrect</span>)}
             </div>)}
         </div>))}
       <button;
@@ -158,9 +149,9 @@ const score = questions.reduce(
       </button>;
       {submitted && (
           Score: {score} / {questions.length}
-        </div>)}"
-    </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;"
-      {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
+        </div>)}
+    </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue-600 text-white rounded">Submit Quiz</button>;
+      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>);
 <<<<<<< HEAD
 
@@ -338,12 +329,3 @@ onClick={submit}
   );
 }
 
-
-
-  )
-        </div>
-      ))}
-      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

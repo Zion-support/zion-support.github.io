@@ -520,4 +520,8 @@ export interface IntrinsicElements  {["elemName": string]: any;
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

@@ -59,7 +59,13 @@ import {
   Brain;
 <<<<<<< HEAD
 
-
+  Brain;
+  MessageSquare,
+  Image,
+  Video,
+  FileText,
+  BarChart3,
+  Users,
   Zap;
 
 
@@ -669,7 +675,14 @@ href='/contact'
                     </div>;
                     <p className='text-gray-400 leading-relaxed mb-4'>;'
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>
+                        Key Features:
+                      </h4>
+                      <div className='grid grid-cols-2 gap-2'>
+                        {tool.features
+                          .slice(0, 4)
+                          .map((feature, featureIndex) => (
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {tool && tool.icon}
                     </div>;
@@ -726,18 +739,28 @@ href='/contact'
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'    />;
                         Key Features:;
                       </h4>;
-                      <div className='grid grid-cols-2 gap-2'    />;
-                        {tool && tool.features;}
-                          .slice(0, 4).map((feature, featureIndex) => (<div;}
+                      <div className='grid grid-cols-2 gap-2'>;
+                        {tool && tool.features;
+                          .slice(0, 4);
+                          .map((feature, featureIndex) => (;
+                            <div
+                              key={featureIndex}
+                              className='flex items-center text-sm text-gray-400'>;
+                              <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
+                              {feature}
+                            </div>;
+                          ))}
+                      <Button
+                        href={tool.website}
+                        variant='outline'
+                        size='sm'
 
-            </h2>
+      {/* AI Benefits Section */}
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
-
-=======
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Why Choose AI Tools?
             </h2>
 
@@ -1046,9 +1069,9 @@ variant='outline';'
                         <div className='text - sm text - gray - 300 max - w-xs'>;
                           {tool.use_case}
                         </div>                      </div>;
-                      <div className='text-right'>;
-                        <div className='text - xs text - gray-500 mb-1'>Use Case:</div>;
-                        <div className='text - sm text - gray-300 max-w-xs'>{tool.use_case}</div>;
+                      <div className="text-right">;
+                        <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
+                        <div className="text - sm text - gray-300 max-w-xs">{tool.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;

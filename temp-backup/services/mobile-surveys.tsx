@@ -61,8 +61,3 @@ export default function Mobilesurveys({ }: MobilesurveysProps) {
 =======
   );
 
-}
-
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

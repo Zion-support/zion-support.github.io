@@ -66,12 +66,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!requireSuperadminApi(req, res)) return;
 
-  const section = String(req.query.section |"General");
-  const file = String(req.query.file |"");
-  if (!file) return res.status(400).json({ error: "Missing file" });
-  const fullPath = path.join(
-    resolveDataPath(path.join("dataroom", section))
-    file
+  const section = String(req && req.query.section || "General");
+  const file = String(req && req.query.file || "");
+  if (!file) return res && res.status(400).json({ error: "Missing file" });
+  const fullPath = path && path.join(
+    resolveDataPath(path && path.join("dataroom", section)),
+    file,
   );
   if (!fs.existsSync(fullPath))
     return res.status(404).json({ error: "Not found" });

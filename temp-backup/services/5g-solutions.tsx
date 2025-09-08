@@ -28,9 +28,3 @@ export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
     </div>;
   );
 
-
-=======
-}
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

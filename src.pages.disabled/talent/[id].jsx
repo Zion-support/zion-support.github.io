@@ -1,11 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 interface Cache.testProps {
   // Add props here as needed
-
-
-interface [id].jsProps {
-  // Add props here as needed
-
+}
+}
+=======
 
 interface Cache.testProps {
   // Add props here as needed
@@ -28,12 +27,22 @@ export default function [id].js({ }: [id].jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<
+}
+}
+}
+}
+>>>>>>> origin/main
+=
+
+>
+
+<<<<<<< HEAD
+=======
+
+>
 
 
-
-
-
+>>>>>>> origin/main
 }
 
     </div>)

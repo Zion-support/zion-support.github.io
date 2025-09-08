@@ -186,86 +186,78 @@ import { Link   } from 'react-router-dom';{"title": 'Revolutionary 2030 Services
         </div>;
       <div  className="relative">;"
         {/* Main Footer Content */}
-        <div  className="container - responsive py-16">;"
+        <div  className="container-responsive py-16">
           {/* Stats Section */}
-          <motion.div;
-            className="grid grid - cols - 2 "md":grid - cols - 4 gap-8 mb-16"            initial={ "opacity": 0, "y": 20 }"
-        <div  className="container-responsive py-16">;"
-          {/* Stats Section */}
-          <motion.div;
-            className="grid grid - cols - 2 "md":grid - cols-4 gap-8 mb-16"            initial={ "opacity": 0, "y": 20 }"
-            whileInView={ "opacity": 1, "y": 0 }
-            viewport={ "once": true }
-            transition={ "duration": 0.6, "staggerChildren": 0.1 }
-          >;
-            {stats.map((stat, index) => (<motion.div;
-                }
-                key={stat.label}";"
-                className="text-center";"
-                initial={ "opacity": 0, "y": 20 }
-                whileInView={ "opacity": 1, "y": 0 }
-                viewport={ "once": true }
-                transition={ "duration": 0.6, "delay": index * 0.1 }
-              >";"
-                <div className="flex justify-center mb-3">";"
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-cyan-400/30">";"
-                    <stat.icon className="w-6 h-6 text-cyan-400" />;"
-                  </div>;
-                </div>";"
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>";"
-                <div className="text-slate-400 text-sm">{stat.label}</div>;"
-              </motion.div>;
+          <motion.div
+            className="grid grid - cols - 2 md:grid - cols-4 gap-8 mb-16"            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}"
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >"
+                <div className="flex justify-center mb-3">"
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-cyan-400/30">"
+                    <stat.icon className="w-6 h-6 text-cyan-400" />
+                  </div>
+                </div>"
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"
+                <div className="text-slate-400 text-sm">{stat.label}</div>
+              </motion.div>
             ))}
           </motion.div>;
           {/* Main Footer Grid */}
-          <div  className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 "xl":grid - cols - 6 gap-8 mb-12">;"
+          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols-6 gap-8 mb-12">
             {/* Company Info */}
-            <div  className=""lg":col - span -2">;"
-          <div  className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 "xl":grid - cols-6 gap-8 mb-12">;"
-            {/* Company Info */}
-            <div  className=""lg":col-span -2">;"
-              <motion.div                initial={ "opacity": 0, "y": 20 }
-                whileInView={ "opacity": 1, "y": 0 }
-                transition={ "duration": 0.6 }";"
-                className="flex items-center space-x-3 mb-6";"
-              >";"
-                <div className="relative">";"
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">";"
-                    <Zap className="w-6 h-6 text-white" />;"
-                  </div>"                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>;"
-                </div>;
-                <div>";"
-                  <h3 className="text-xl font-bold text-white">Zion Tech Group";"
-                  <p className="text-slate-400 text-sm">Future Technology Solutions</p>;"
-                </div>;
-              </div>;
-              <p className="text-slate - 300 mb-6 leading -relaxed">;"
-              <p className="text-slate-300 mb-6 leading -relaxed">;"
-                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.              </div>";"
-              <p className="text-slate-300 mb-6 leading-relaxed">;"
-                Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.                We help businesses innovate and thrive in the digital age.</p>";"
-              <div className="space-y-3">";"
-                <div className="flex items-center space-x-3 text-slate-300">";"
-                  <Phone className="w-4 h-4 text-cyan-400" />";"
-                  <a href=""tel":+13024640950" className=""hover":text-cyan-400 transition-colors">;"
-                    +1 302 464 0950;
-                  </a>;
-                </div>";"
-                <div className="flex items-center space-x-3 text-slate-300">";"
-                  <Mail className="w-4 h-4 text-cyan-400" />";"
-                  <a href=""mailto":kleber@ziontechgroup.com" className=""hover":text-cyan-400 transition-colors">;"
-                    kleber@ziontechgroup.com;
-                  </a>;
-                </div>";"
-                <div className="flex items-center space-x-3 text-slate-300">";"
-                  <MapPin className="w-4 h-4 text-cyan-400" />                  <span>364 E Main St STE 1008, Middletown DE 19709</span>;"
-                </div>;
-              </div>;
-            </div>;
-              {/* Social Links */}";"
-              <div className="flex space-x-4">;"
-                {socialLinks.map((social) => (<a;
-                    }
+            <div  className="lg:col-span -2">
+              <motion.div                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}"
+                className="flex items-center space-x-3 mb-6"
+              >"
+                <div className="relative">"
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">"
+                    <Zap className="w-6 h-6 text-white"  />
+                  </div>"                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>
+                </div>
+                <div>"
+                  <h3 className="text-xl font-bold text-white">Zion Tech Group"
+                  <p className="text-slate-400 text-sm">Future Technology Solutions</p>
+                </div>
+              </div>
+              <p className="text-slate-300 mb-6 leading -relaxed">
+                Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.              </div>"
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.                We help businesses innovate and thrive in the digital age.</p>"
+              <div className="space-y-3">"
+                <div className="flex items-center space-x-3 text-slate-300">"
+                  <Phone className="w-4 h-4 text-cyan-400"  />"
+                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>"
+                <div className="flex items-center space-x-3 text-slate-300">"
+                  <Mail className="w-4 h-4 text-cyan-400"  />"
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>"
+                <div className="flex items-center space-x-3 text-slate-300">"
+                  <MapPin className="w-4 h-4 text-cyan-400"  />                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+            </div>
+              {/* Social Links */}"
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
                     key={social.name}
                     href={social.href}";"
                     target="_blank";"
@@ -275,11 +267,10 @@ import { Link   } from 'react-router-dom';{"title": 'Revolutionary 2030 Services
                     <social.icon className="w-5 h-5" />;"
                   </a>;
                 ))}
-              </div>;
-            </div>;
-            <p className="text-gray - 300 mb-6 max - w-md">;"
-            <p className="text-gray - 300 mb-6 max-w-md">;"
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>;
+              </div>
+            </div>
+            <p className="text-gray - 300 mb-6 max-w-md">
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>
             {/* Footer Sections */}
             {footerSections.map((section, index) => (<div key={section.title}>";"
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center">";"

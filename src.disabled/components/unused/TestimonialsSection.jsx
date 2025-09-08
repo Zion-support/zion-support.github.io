@@ -1,12 +1,36 @@
-
 <<<<<<< HEAD
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface TestimonialsSectionProps {
+  // Add props here as needed
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
 interface TestimonialsSectionProps {
   // Add props here as needed
 
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 
@@ -23,10 +47,12 @@ export default function TestimonialsSection({ }: TestimonialsSectionProps) {
       <h1>TestimonialsSection</h1>
       <p>This component is currently under development.</p>
     </div>
-  );
-
 <<<<<<< HEAD
-
-
+  );}
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  );
+}
+:src.disabled/components/unused/TestimonialsSection.jsx
+}
+}
+>>>>>>> origin/main

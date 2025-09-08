@@ -23,19 +23,9 @@ import fs from 'fs';
 import path from 'path';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
-
 
   try {
     if (fs.existsSync(dir)) {
@@ -110,15 +100,3 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
     }
   } catch (e) {
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-  res.status(200).json({ ok: true, data });
-
-
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

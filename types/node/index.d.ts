@@ -33,14 +33,9 @@ interface Buffer {  } catch (error) {
 declare const "__dirname": string;
 declare const "__filename": string;
 // eslint - disable - next - line @typescript - eslint / no - empty - object - type;
-
-export {};
-
-export {};
-export {};
-export {};
-
-declare module 'node:*' {
-  const value: any;
-  export = value;
-}
+interface Buffer {}
+<<<<<<< HEAD
+export {}
+=======
+export {}
+>>>>>>> origin/main

@@ -125,5 +125,6 @@ export default function OrgChartGovernancePage() {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default function OrgChartGovernancePage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+

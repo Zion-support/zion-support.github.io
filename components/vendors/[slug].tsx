@@ -15,7 +15,6 @@ type Props = any;
 
 const formData = new FormData(form);
 
-
 export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -589,12 +588,17 @@ src={sp.imageUrl}
       )}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-      <div>
-        <h2 className="text-lg font-medium mb-2">Request a Quote</h2>
-        <form onSubmit={submitLead} className="space-y-3">
-          <input name="title" required placeholder="What do you need?" className="w-full border rounded px-3 py-2 bg-transparent" />
-          <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">
-            {loading ? 'Submitting...' : 'Send'}
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const slug = String(ctx.params?.slug |'');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } }
+};            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
 
@@ -649,19 +653,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 
   const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
+  return { props: { vendor } }
 };
-};
-export const "getServerSideProps": GetServerSideProps<Props> = async ctx = > {
- ;
-  }
-  const slug = String(ctx.params?.slug |'');'
-
-const { getVendorBySlug } = await import('../../utils/vendor-store');'
-
-const vendor = slug ? getVendorBySlug(slug) || null : null;
-return { "props": { vendor } },;
+}
 };
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

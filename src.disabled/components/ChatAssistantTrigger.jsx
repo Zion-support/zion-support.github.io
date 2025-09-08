@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}=======' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+=======
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 
 <<<<<<< HEAD
 
@@ -19,6 +23,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
 :src.disabled/components/ChatAssistantTrigger.js.jsx
+>>>>>>> origin/main
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 >>>>>>> origin/cursor/delete-old-data-records-6bba

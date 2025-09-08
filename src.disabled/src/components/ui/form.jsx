@@ -1,8 +1,6 @@
-
-import React from \'react\'; import React from \"react\"; export const Form = ({ children,...props }) => {} \"; export const FormControl = ({ children,className = }) => {}\"; \"; export const FormLabel = ({ children,className = }) => {}\"; \"; export const FormMessage = ({ className = }) => {}return <div className=\"{className}\"> <div>Broken JSX</div>;"
-const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {}"; "; export const FormLabel = ({ children,className = }) => {}"; "; export const FormMessage = ({ className = }) => {}return <div className="{className}"> <div>Broken JSX</div>'"'";"
-import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {}"; "; export const FormLabel = ({ children,className = }) => {}"; "; export const FormMessage = ({ className = }) => {}return <div className="{className}"> <div>Broken JSX</div>;"
-const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {}"; "; export const FormLabel = ({ children,className = }) => {}"; "; export const FormMessage = ({ className = }) => {}return <div className="{className}"> <div>Broken JSX</div>'"'";"
-import React from \'react\';'
-const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {}"; "; export const FormLabel = ({ children,className = }) => {}"; "; export const FormMessage = ({ className = }) => {}return <div className="{className}"> <div>Broken JSX;"
-ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
+import React from \'react\'
+const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX
+=======
+import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+>>>>>>> origin/main

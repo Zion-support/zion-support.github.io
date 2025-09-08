@@ -55,19 +55,17 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 import {
-  }
-  Activity,
-Zap
-  TrendingUp,
-AlertTriangle
-  CheckCircle,
-ArrowRight
-  Monitor,
-
-<<<<<<< HEAD
-  Gauge,
-  BarChart3,;
-  Clock,;
+  Activity
+  Zap
+  TrendingUp
+  AlertTriangle
+  CheckCircle
+  ArrowRight
+  Monitor
+  Gauge
+  BarChart3
+  Clock;
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -227,20 +225,104 @@ import Button from '../components/ui/Button';
 
 export default function WebsitePerformanceMonitorPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-
-
-
-      ];
-      popular: false;
+  const [analysisResults, setAnalysisResults] = useState(null)
+};
+    {;
+      name: 'Page Load Time',,
+  description: 'Comprehensive analysis of page load performance across different devices and locations.',;
+      icon: '🚀',;
+      color: 'text-green-400'
+};
+    {;
+      name: 'Uptime Monitoring',,
+  description: '99 && 99.9% uptime monitoring with instant alerts for any downtime or performance issues.',;
+      icon: '🔄',;
+      color: 'text-purple-400'
+};
+    {;
+      name: 'Mobile Performance',,
+  description: 'Mobile-first performance testing and optimization recommendations.',;
+      icon: '📱',;
+      color: 'text-orange-400'
+};
+    {;
+      name: 'SEO Impact',,
+  description: 'Performance metrics that directly affect your search engine rankings and visibility.',;
+      icon: '🔍',;
+      color: 'text-cyan-400'
+};
+    {;
+      name: 'User Experience',,
+  description: 'Real user experience metrics and conversion impact analysis.',;
+      icon: '👥',;
+      color: 'text-pink-400';
     }
+  ];
 
+  const pricing = [;
+    {;
+      name: 'Starter',;
+      price: '$29',;
+      period: '/month',,
+  description: 'Perfect for small websites and blogs',;
+      features: [;
+        '5 websites monitored',;
+        'Basic performance metrics',;
+        'Daily monitoring',;
+        'Email alerts',;
+        'Basic reporting',;
+        'Core Web Vitals tracking',;
+      ],;
+      popular: false,;
+    },    {        '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking';
+    {
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small websites and blogs',
       ];
       popular: false
-    }
-
-
-    };
+};
+      name: 'Professional',;
+      price: '$79',;
+      period: '/month',,
+  description: 'Ideal for growing businesses and e-commerce sites',;
+      features: [;
+        '25 websites monitored',;
+        'Advanced performance metrics',;
+        'Real-time monitoring',;
+        'SMS & email alerts',;
+        'Advanced reporting',;
+        'Performance optimization tips',;
+        'API access',;
+        'Team collaboration',;
+      ],;
+      popular: true,;
+    },    {;
+      name: 'Enterprise',;
+      price: '$199',;
+      period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration';
+      ];
+      popular: true
+};
+      name: 'Enterprise',;
+      price: '$199',;
+      period: '/month',,
+  description:;
+        'For large organizations with critical performance requirements',;
+      features: [;
+        'Unlimited websites',;
+        'Enterprise-grade monitoring',;
+        'Custom alerting rules',;
+        '24/7 support',;
+        'Custom integrations',;
+        'White-label reporting',;
+        'SLA guarantees',;
+        'On-premise options',;
+      ],;
+      popular: false,;
+    },  ];        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options';
+    {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
@@ -555,7 +637,8 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
         ],;
       });
       setIsAnalyzing(false);
-    }, 4000);  };          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance';
+    }, 4000)
+};          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance';
         ];
       });
 
@@ -943,25 +1026,19 @@ href='#pricing';'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {metrics.map((metric, index) => (
               <Card
-                key={index}
-                className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className='text-4xl mb-4'>{metric.icon}</div>
-                <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>
-<<<<<<< HEAD
-
-                  {metric.name}
-                </h3>;
-
-
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Comprehensive Performance Metrics
-
-=======
+                    </p>;
+                  </div>;
+                </div>;
+              </Card>;
+                      {feature.icon}
+                    </div>;
+                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
+                  </div>;
+                  <div className="flex-1">;
+                    <h3 className="text - 2xl font - bold mb-4 text-white">;
+                      {feature.title}
+                    </h3>;
+                    <p className="text - gray-400 leading-relaxed">;
                       {feature.description}
             ))}
                 key={index}
@@ -1044,14 +1121,18 @@ href='#pricing';'
           </div>
       </section>
 
+            ))}
 
-<<<<<<< HEAD
+      {/* Demo Analysis Section */}
+      {analysisResults && (
 
+          </div>;
+        </div>;
+      </section>;
 
-
-
-
-=======
+      {/* Demo Analysis Section */}
+      {analysisResults && (;
+        <section className='section-padding bg-gradient-cursor-accent'>;
           <div className='container-cursor'>;
             <div className='text-center mb-12'>;
               <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
@@ -1341,13 +1422,6 @@ className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-4
                   </div>
 
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-
-<<<<<<< HEAD
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1374,20 +1448,20 @@ className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-4
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
                 </p>              </Card>              Comprehensive Performance Metrics;
             </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
               Track all the metrics that matter for your website's performance and user experience.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6">;
             {metrics.map ((metric, index) => (
               <Card;
                 key={index}
-                className="card - hover border - gradient - blue text - center";
+                className="card - hover border - gradient-blue text-center";
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;
-                <div className="text - 4xl mb - 4">{metric.icon}</div>;
+                <div className="text-4xl mb-4">{metric.icon}</div>;
                 <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>{metric.name}</h3>;
-                <p className="text - gray - 400 text - sm leading - relaxed">{metric.description}</p>;
+                <p className="text - gray - 400 text-sm leading-relaxed">{metric.description}</p>;
               </Card>))}
           </div>;
         </div>;
@@ -1468,14 +1542,23 @@ className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-4
               {/* Score Card *
 }
                   <svg;
-                    className='w-full h-full transform -rotate-90';'
-                    viewBox='0 0 36 36'>;'
+                    className='w - full h - full transform -rotate - 90';
+                    viewBox='0 0 36 36';
+                  >;
                     <path;
-                      d='M18 2 && 2.0845 a 15 && 15.9155 15 && 15.9155 0 0 1 0 31 && 31.831 a 15 && 15.9155 15 && 15.9155 0 0 1 0 -31 && 31.831';'
-                      fill='none';'
-                      stroke='currentColor';'
-                      strokeWidth='2';'
-                      strokeDasharray={`${(analysisResults && analysisResults.overallScore / 100) * 100}, 100`}`                      className='text-blue-500';'
+                      d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831';
+                      fill='none';
+                      stroke='current_color';
+                      strokeWidth='2';
+                      stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
+                      className='text - blue - 500';
+                    />;
+                  </svg>;
+                </div>;
+                <p className='text - gray - 400'>;
+                  Good performance with room for improvement;
+                </p>;
+              </Card>;
               {/* Metrics Card */}
               <Card className='border-gradient-blue'>;'
                 <h3 className='text-2xl font-bold mb-6 text-white'>;'
@@ -1551,6 +1634,84 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {analysisResults.loadTime}
                     </span>;
                   </div>;
+                  <div className='flex justify - between items - center'>;
+                    <span className='text - gray - 400'>;
+                      FID (First Input Delay);
+                    </span>;
+                    <span;
+                      className={`font - bold ${parse_float (analysis_results.fid) < 100 ? 'text - green - 400' : 'text - orange - 400'}`}
+                    >;
+                      {analysis_results.fid}
+                    </span>;
+                  </div>;
+                  <div className='flex justify - between items - center'>;
+                    <span className='text - gray - 400'>;
+                      CLS (Cumulative Layout Shift);
+                    </span>;
+                    <span;
+                      className={`font - bold ${parse_float (analysis_results.cls) < 0.1 ? 'text - green - 400' : 'text - orange - 400'}`}
+                    >;
+                      {analysis_results.cls}
+                    </span>;
+                  </div>;
+                  <div className='flex justify - between items - center'>;
+                    <span className='text - gray - 400'>Page Load Time</span>;
+                    <span;
+                      className={`font - bold ${parse_float (analysis_results.load_time) < 2 ? 'text - green - 400' : 'text - orange - 400'}`}
+                    >                      {analysis_results.load_time}                Performance Analysis Results;
+              </h2>;
+              <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+                Here's a sample analysis of a website. Get real - time insights for your own website.;
+              </p>;
+            </div>;
+            <div className="grid grid - cols - 1 lg:grid - cols-2 gap-8">;
+              {/* Score Card */}
+              <Card className="border - gradient-blue text-center">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Overall Performance Score</h3>;
+                <div className="text - 6xl font - bold text - blue-400 mb-4">{analysis_results.overall_score}/100</div>;
+                <div className="w - 32 h - 32 mx-auto mb-6">;
+                  <svg className="w - full h-full transform -rotate-90" viewBox="0 0 36 36">;
+                    <path;
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831";
+                      fill="none";
+                      stroke="current_color";
+                      strokeWidth="2";
+                      stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
+                      className="text-blue-500";
+                    />;
+                  </svg>;
+                </div>;
+                <p className="text-gray-400">Good performance with room for improvement</p>;
+              </Card>;
+              {/* Metrics Card */}
+              <Card className="border-gradient-blue">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Core Web Vitals</h3>;
+                <div className="space-y-4">;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">LCP (Largest Contentful Paint)</span>;
+                    <span className={`font - bold ${parse_float (analysis_results.lcp) < 2.5 ? 'text - green - 400' : 'text - orange - 400'}`}>;
+                      {analysis_results.lcp}
+                    </span>;
+                  </div>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">FID (First Input Delay)</span>;
+                    <span className={`font - bold ${parse_float (analysis_results.fid) < 100 ? 'text - green - 400' : 'text - orange - 400'}`}>;
+                      {analysis_results.fid}
+                    </span>;
+                  </div>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">CLS (Cumulative Layout Shift)</span>;
+                    <span className={`font - bold ${parse_float (analysis_results.cls) < 0.1 ? 'text - green - 400' : 'text - orange - 400'}`}>;
+                      {analysis_results.cls}
+                    </span>;
+                  </div>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Page Load Time</span>;
+                    <span className={`font - bold ${parse_float (analysis_results.load_time) < 2 ? 'text - green - 400' : 'text - orange - 400'}`}>;
+                      {analysis_results.load_time}
+                    </span>;
+                  </div>;
+                </div>;
               </Card>;
             </div>;
             {/* Recommendations */}
@@ -1558,45 +1719,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Optimization Recommendations;
               </h3>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                {analysisResults.recommendations.map((rec, index) => (<div key={index} className='flex items-start space-x-3'>;
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />;
-                    <span className='text-gray-300'>{rec}</span>                  </div>;
-                  </div>;
-            <Card className='border-gradient-blue mt-8'>;
-              <h3 className='text-2xl font-bold mb-6 text-white'>;
-                Optimization Recommendations;
-              </h3>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (<div key={index} className='flex items-start space-x-3'>;
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />;
-                    <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-blue mt-8">;
-              <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (<div key={index} className="flex items-start space-x-3">;
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">{rec}</span>;
-                    <span className="text-gray-300">{rec}</span>;<span className='text-gray-300'>{rec}</span>;
-                  </div>;
-            {/* Recommendations */}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-<Card className='border-gradient-blue mt-8'    />
-              <h3 className='text-2xl font-bold mb-6 text-white'    />
-                Optimization Recommendations;
-              </h3>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'    />
-                {analysisResults.recommendations.map((rec, index) => (}
-                  <div key={index} className='flex items-start space-x-3'    />
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0'    />
-
-                    <span className='text-gray-300'    />{rec}</span>
-                  </div>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                ))}
+              <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+                {analysis_results.recommendations.map ((rec, index) => (
+                  <div key={index} className='flex items - start space - x-3'>;
+                    <CheckCircle className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
+                    <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border - gradient-blue mt-8">;
+              <h3 className="text - 2xl font - bold mb-6 text-white">Optimization Recommendations</h3>;
+              <div className="grid grid - cols - 1 md:grid - cols-2 gap-4">;
+                {analysis_results.recommendations.map ((rec, index) => (
+                  <div key={index} className="flex items-start space-x-3">;
+                    <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex-shrink-0" />;
+                    <span className="text-gray-300">{rec}</span>))}
               </div>;
             </Card>;
           </div>;
@@ -1783,37 +1916,6 @@ href='/contact'
                 <Button
 <<<<<<< HEAD
 
-
-=======
-                  href="/contact"
-                  size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                  href='/contact'
-                  size='lg'
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
-                  size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
-
-                </Button>
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
               </Card>
             ))}
       {/* CTA Section */}

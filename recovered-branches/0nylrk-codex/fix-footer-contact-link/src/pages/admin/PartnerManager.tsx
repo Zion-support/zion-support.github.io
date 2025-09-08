@@ -639,19 +639,12 @@ if ( {) {}
 
       filtered = filtered.filter(p => p.status === status)
 
-
-<<<<<<< HEAD
-
-
-
-=======
     } catch (error) {;
       console.error("Error fetching partners:", error),;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
       toast({;
         title: "Error",,
   description: "Failed to load partner data",;
-
         variant: "destructive"});
     } finally {;
       setIsLoading(false);
@@ -681,10 +674,7 @@ if ( {) {}
       );
     }
 
-<<<<<<< HEAD
-
-=======
-
+    
     setFilteredPartners(filtered)
   },
 
@@ -1115,15 +1105,7 @@ if ( {) {}
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
-
-=======
-
-              <Input"
-                placeholder="Search partners...""
-                className="pl-8"
-                value={searchQuery}
-                onChange={handleSearch}
-
+            <TabsContent value="pending" className="space-y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -1150,12 +1132,37 @@ if ( {) {}
 
                 isLoading={isLoading}
               />;
-
-
-
-
-=======
-
+            </TabsContent>;
+            <TabsContent value="approved" className="space-y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus}
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
+                getFraudFlagBadge={getFraudFlagBadge}
+                isLoading={isLoading}
+              />;
+            </TabsContent>;
+            <TabsContent value="rejected" className="space-y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus}
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
+                getFraudFlagBadge={getFraudFlagBadge}
+            <TabsContent value="all" className="space-y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus}
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
+                getFraudFlagBadge={getFraudFlagBadge}
               <div className="grid grid-cols-2 gap-2">
                 <div>"
                   <p className="text-xs text-zion-slate-light">Payout Method</p>"
@@ -1325,8 +1332,44 @@ if ( {) {}
                   <AlertTitle className="flex items-center gap-2">;"
                     <Flag className="h-4 w-4" />;
                     Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
-
-
+          {selected_partner && (
+            <div className="space-y-4">;
+              <div className="grid grid - cols - 2 gap-2">;
+                <div>;
+                  <p className="text - xs text - zion - slate-light">Name</p>;
+                  <p className="font - medium text-white">{selected_partner.name}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate-light">Status</p>;
+                  <div>{getStatusBadge (selected_partner.status)}</div>;
+                </div>;
+              </div>;
+              <div>;
+                <p className="text - xs text - zion - slate-light">Bio</p>;
+                <p className="text-white">{selected_partner.bio || "No bio provided"}</p>;
+              </div>;
+              <div className="grid grid - cols - 2 gap-2">;
+                <div>;
+                  <p className="text - xs text - zion - slate-light">Niche</p>;
+                  <p className="text-white">{selected_partner.niche}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate-light">Audience Size</p>;
+                  <p className="text-white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
+                </div>;
+              </div>;
+              {selected_partner.website && (
+                <div>;
+                  <p className="text - xs text - zion - slate-light">Website</p>;
+                  <p className="text - zion-cyan">{selected_partner.website}</p>;
+                </div>)}
+              {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
+                <div>;
+                  <p className="text - xs text - zion - slate-light">Social Media</p>;
+                  <div className="grid grid - cols - 2 gap-2">;
+                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
+                      <p key={platform} className="text-white">;
+                        <span className="font-medium">{platform}: </span>;
               />;
             </TabsContent>;
           </Tabs>;
@@ -1420,14 +1463,6 @@ function PartnerTable({
       </div>;
     );
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
   }
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -1444,12 +1479,22 @@ function PartnerTable({
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
-
+    <Table>;
+      <TableHeader>;
+        <TableRow className="hover:bg-transparent">;
           <TableHead > Name</TableHead>;
           <TableHead > Niche</TableHead>;
           <TableHead > Audience</TableHead>;
           <TableHead > Status</TableHead>;
-
+          <TableHead > Date</TableHead>;
+          <TableHead className="text-right">Actions</TableHead>;
+        </TableRow>;
+      </TableHeader>;
+      <TableBody>;
+        {partners.map ((partner) => (
+          <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue-light / 10">;
+            <TableCell className="font - medium text-white">;
+              <div className="flex items - center gap-2">;
                 {partner.name}
 <<<<<<< HEAD
                 {getFraudFlagBadge (partner.fraud_flags)}
@@ -1478,27 +1523,32 @@ function PartnerTable({
 
                   <>;
                     <Button;
-                      variant=\"ghost\";
-                      size=\"sm\";
-                      on_click={() = /> onUpdateStatus (partner.id, 'rejected')}
-                      className=\"text - red - 500 hover:text - red - 600 hover:bg - red-900 / 20\";
+                      variant="ghost";
+                      size="sm";
+                      on_click={() => onUpdateStatus (partner.id, 'rejected')}
+                      className="text - red - 500 hover:text - red - 600 hover:bg - red-900 / 20";
                     >;
-                      <X className=\"h - 4 w-4\" />;
-                      <span className=\"sr-only\" />Reject</span>;
+                      <X className="h - 4 w-4" />;
+                      <span className="sr-only">Reject</span>;
                     </Button>;
                     <Button;
-                      variant=\"ghost\";
-                      size=\"sm\";
-                      on_click={() = /> onUpdateStatus (partner.id, 'approved')}
-                      className=\"text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20\";
+                      variant="ghost";
+                      size="sm";
+                      on_click={() => onUpdateStatus (partner.id, 'approved')}
+                      className="text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20";
                     >;
-
+                      <Check className="h - 4 w-4" />;
+                      <span className="sr-only">Approve</span>;
                     </Button>;
                   </>)}
                 <Button;"
                   variant="ghost";"
                   size="sm";
-
+                  on_click={() => onOpenSettings (partner)}
+                  className="text - zion - slate - light hover:text-white";
+                >;
+                  <Settings className="h - 4 w-4" />;
+                  <span className="sr-only">Settings</span>;
                 </Button>;
                 <Button;"
                   variant="outline";"

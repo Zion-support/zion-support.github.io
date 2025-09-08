@@ -47,34 +47,25 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
               article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
           );
       );
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map((category) => (
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-          onClick={() => onCategorySelect(category.id)}
-        >
-          <CardHeader className="pb-2">
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">
-              {category.icon}
-            </div>
-            <CardTitle>{category.name}</CardTitle>
-            <CardDescription>{category.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-zion-slate-light">
-              {category.articles.length} articles
-            </p>
-          </CardContent>
-        </Card>
-<<<<<<< HEAD
-=======
+    : categories;
+  if (filteredCategories && filteredCategories.length === 0) {;
+    return (
+      <div className="text-center py-8">
+        <h3 className="text-lg font-medium mb-2">No results found</h3>
+        <p className="text-zion-slate-light">
+          Try adjusting your search query or browse all categories.
+        </p>
+      </div>
+    );
+  }
+interface HelpCategoryListProps {;
+  categories: HelpCategory[],;
+  onCategorySelect: (categoryId: string) => void,;
+  searchQuery: string;
+}
 
       )
     : categories,
-
-
 
 export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
   // Filter categories based on search query;
@@ -89,10 +80,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
               article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
           );
       );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    : categories;
 
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
@@ -100,8 +87,33 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
         <Card
-<<<<<<< HEAD
-          key={category.id}
+    );
+  }
+  return (
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      {filteredCategories && filteredCategories.map(category => (;
+
+    : categories;
+
+        <Card
+          key={category && category.id}
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+          onClick={() => onCategorySelect(category && category.id)}
+        >;
+          <CardHeader className="pb-2">;
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
+              {category && category.icon}
+            </div>;
+            <CardTitle>{category && category.name}</CardTitle>;
+            <CardDescription>{category && category.description}</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-zion-slate-light">;
+              {category && category.articles.length} articles;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {filteredCategories.map(category => (
+        <Card          key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
@@ -118,230 +130,12 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>
           </CardContent>
         </Card>
-=======
-;
-export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
     </div>
   );
 }
 
-  // Filter categories based on search query;
-  const filteredCategories = searchQuery;
-    ? categories.filter(;
-        category =>;
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-          category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-          category.articles.some(;
-            article =>;
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-              article.content.toLowerCase().includes(searchQuery.toLowerCase());
-          );
-      );
-
-      <div className="text-center py-8">;
-        <h3 className="text-lg font-medium mb-2">No results found</h3>;
-        <p className="text-zion-slate-light">;
-          Try adjusting your search query or browse all categories.;
-        </p>;
-      </div>;
-
-    );
-  }
-  return (
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-      {filteredCategories && filteredCategories.map(category => (;
-
-        <Card
-          key={category && category.id}
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-          onClick={() => onCategorySelect(category && category.id)}
-        >;
-          <CardHeader className="pb-2">;
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
-              {category && category.icon}
-            </div>;
-            <CardTitle>{category && category.name}</CardTitle>;
-            <CardDescription>{category && category.description}</CardDescription>;
-          </CardHeader>;
-          <CardContent>;
-            <p className="text-sm text-zion-slate-light">;
-              {category && category.articles.length} articles;
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map(category => (
-        <Card
-          key={category.id}
-
-    : categories;
-
-  if (filteredCategories && filteredCategories.length === 0) {;
-    return (
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map((category) => (
-        <Card
-          key={category.id}
-
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-          onClick={() => onCategorySelect(category.id)}
-        >
-          <CardHeader className="pb-2">
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">
-              {category.icon}
-    return ("
-      <div className="text-center py-8">"
-</div>"
-        <h3 className="text-lg font-medium mb-2">No results found</h3>""
-        <p className="text-zion-slate-light">"
-</p>
-        </p>
-      </div>"
-      <div className="text-center py-8">"
-</div>"
-        <h3 className="text-lg font-medium mb-2">No results found</h3>""
-        <p className="text-zion-slate-light">"
-</p>
-        </p>
-      </div>"
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
-</div>
-        <Card;
-          key={category.id}"
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"")
-          onClick={() => onCategorySelect(category.id)}
-</Card>"
-          <CardHeader className="pb-2">"
-</CardHeader>"
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">"
-</div>
-            </div>
-            <CardTitle>{category.name}</CardTitle>
-            <CardDescription>{category.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-zion-slate-light">
-              {category.articles.length} articles
-            </p>
-          </CardContent>
-        </Card>
-
       ))}
-
-interface HelpCategoryListProps {;
-  categories: HelpCategory[],;
-  onCategorySelect: (categoryId: string) => void,;
-  searchQuery: string;
-}
-
-  // Filter categories based on search query;
-  const filteredCategories = searchQuery;
-    ? categories.filter(;
-        category =>;
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-          category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-          category.articles.some(;
-            article =>;
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-              article.content.toLowerCase().includes(searchQuery.toLowerCase());
-          );
-      );
-
-      <div className="text-center py-8">;
-        <h3 className="text-lg font-medium mb-2">No results found</h3>;
-        <p className="text-zion-slate-light">;
-          Try adjusting your search query or browse all categories.;
-        </p>;
-      </div>;
-
-    );
-  }
-  return (
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-      {filteredCategories && filteredCategories.map(category => (;
-
-        <Card
-          key={category && category.id}
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-          onClick={() => onCategorySelect(category && category.id)}
-        >;
-          <CardHeader className="pb-2">;
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
-              {category && category.icon}
-            </div>;
-            <CardTitle>{category && category.name}</CardTitle>;
-            <CardDescription>{category && category.description}</CardDescription>;
-          </CardHeader>;
-          <CardContent>;
-            <p className="text-sm text-zion-slate-light">;
-              {category && category.articles.length} articles;
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map(category => (
-        <Card
-          key={category.id}
-
-    : categories;
-
-  if (filteredCategories && filteredCategories.length === 0) {;
-    return (
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map((category) => (
-        <Card
-          key={category.id}
-
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-          onClick={() => onCategorySelect(category.id)}
-        >
-          <CardHeader className="pb-2">
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">
-              {category.icon}
-    return ("
-      <div className="text-center py-8">"
-</div>"
-        <h3 className="text-lg font-medium mb-2">No results found</h3>""
-        <p className="text-zion-slate-light">"
-</p>
-        </p>
-      </div>"
-      <div className="text-center py-8">"
-</div>"
-        <h3 className="text-lg font-medium mb-2">No results found</h3>""
-        <p className="text-zion-slate-light">"
-</p>
-        </p>
-      </div>"
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
-</div>
-        <Card;
-          key={category.id}"
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"")
-          onClick={() => onCategorySelect(category.id)}
-</Card>"
-          <CardHeader className="pb-2">"
-</CardHeader>"
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">"
-</div>
-            </div>
-            <CardTitle>{category.name}</CardTitle>
-            <CardDescription>{category.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-zion-slate-light">
-              {category.articles.length} articles
-            </p>
-          </CardContent>
-        </Card>
-
-      ))}
-
 import React from './react';
   Card,
   CardContent,
@@ -379,12 +173,24 @@ function HelpCategoryList() {}
 if ( {) {}
   $2;
 }
-
+    return (
+      <div className="text - center py-8">;
+        <h3 className="text - lg font - medium mb-2">No results found</h3>;
+        <p className="text - zion - slate-light">;
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>);
   }
-
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+      {filtered_categories.map ((category) => (
+        <Card;
+          key={category.id}
+          className="cursor - pointer hover:border - zion - purple / 50 transition-colors";
+          on_click={() => onCategorySelect (category.id)}
+        >;
+          <CardHeader className="pb-2">;
+            <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb-3">;
               {category.icon}
 </CardContent>"
             <p className="text-sm text-zion-slate-light">"
@@ -437,7 +243,8 @@ if ( {) {}
             <CardTitle>{category.name}</CardTitle>;
             <CardDescription>{category.description}</CardDescription>;
           </CardHeader>;
-
+          <CardContent>;
+            <p className="text - sm text - zion - slate-light">;
               {category.articles.length} articles;
             </p>;
           </CardContent>;

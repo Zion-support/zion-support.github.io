@@ -403,10 +403,10 @@ try {
       setMetrics(prev => ({ ...prev", "fid": "firstInputDelay "}));"
       if (logToConsole) ;
       // Remove listeners after first input;
-      document.removeEventListener('pointerdown', firstInputHandler);'
-      document.removeEventListener('keydown', firstInputHandler);'
-      document.removeEventListener('mousedown', firstInputHandler);'
-      document.removeEventListener('touchstart', firstInputHandler)'
+      document.removeEventListener('pointerdown', firstInputHandler);
+      document.removeEventListener('keydown', firstInputHandler);
+      document.removeEventListener('mousedown', firstInputHandler);
+      document.removeEventListener('touchstart', firstInputHandler)
 };
 ;
     document.addEventListener('pointerdown', firstInputHandler);'
@@ -651,7 +651,6 @@ const stopMonitoring = useCallback(() => {
       startMonitoring();
     }
     return () => {;
-      }
       stopMonitoring()
 };
   }, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);
@@ -895,12 +894,6 @@ export function useAPIPerformance() {
     apiMetrics;
     trackAPICall;
     getAPIAverage;
-    getSlowAPIs;
-<<<<<<< HEAD
-}
-=======
-}}
->>>>>>> origin/resolved-merge-conflicts
     getSlowAPIs
 };
 }

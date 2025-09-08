@@ -45,8 +45,6 @@
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
-
-
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -873,7 +871,6 @@ className='max-w-4xl mx-auto'>
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   }`}
 
-
               ))}
 <<<<<<< HEAD
 
@@ -1206,8 +1203,6 @@ href='/pricing';'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
       {/* Services Grid */}
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -1349,10 +1344,14 @@ href='/pricing';'
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+                        >
+{cat}
+                        </span>;
+                      ))}
 
-<<<<<<< HEAD
-=======
-                          {cat}
+                      {service.category.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
+                          +{service.category.length - 3}
                         </span>
                       ))}
                       {service.category.length > 3 && (
@@ -1396,6 +1395,44 @@ href='/pricing';'
                     </ul>
                   </div>
 
+                    </div>;
+                  </div>;
+
+                          {cat}
+                        </span>;
+                      ))}
+                      {service && service.category.length > 3 && (;
+                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service && service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">;
+                          +{service && service.category.length - 3}
+                        </span>;
+                      )}
+                  {/* Features Preview */}
+                  <div className='mb-6'>;
+                    <h4 className='text-sm font-semibold text-white mb-2'>;
+                      Key Features:;
+                    </h4>;
+                    <ul className='space-y-1'>;
+                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        <li
+                          key={idx}
+                          className='flex items-center space-x-2 text-sm text-gray-300'>;
+                          <CheckCircle className='h-3 w-3 text-cyan-400 flex-shrink-0' />                          <span>{feature}</span>;
+                        </li>;
+                      ))}
+                      {service && service.features.length > 3 && (;
+                        <li className='text-xs text-gray-500'>                          +{service && service.features.length - 3} more features                  <div className="mb-6">;
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>;
+                    <ul className="space-y-1">;
+                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">;
+                          <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />;
+                        </li>;
+                      ))}
+                      {service && service.features.length > 3 && (;
+                        <li className='text-xs text-gray-500'>                        <li className="text-xs text-gray-500">;
+                          +{service && service.features.length - 3} more features;
+                        </li>;
+                      )}
                   {/* Market Info */}
                   <div className='mb-6 space-y-2'>
                     <div className='flex items-center justify-between text-sm'>
@@ -1515,24 +1552,6 @@ href='/pricing';'
           </motion && motion.div>;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-
-
-
-<<<<<<< HEAD
-=======
-                  {/* Action Button */}
-
-                    </Link>
-                  </div>
-
-                  {/* Hover Effect */}
-
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
@@ -2106,13 +2125,28 @@ className='group relative'>'
                   <Phone className='h-5 w-5 text-cyan-400'    />;
                   <span    />{contactInfo.mobile}</span>;
                 </div>;
-                <div className='flex items-center space-x-2'    />;
-                  <Mail className='h-5 w-5 text-cyan-400'    />;
-                  <span    />{contactInfo.email}</span>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                <div className='flex items - center space - x-2'>;
+                  <Mail className='h - 5 w - 5 text - cyan - 400' />                  <span>{contact_info.email}</span>              Ready to Transform Your Business?;
+            </h2>;
+            <p className="text - xl text - gray - 300 mb - 8 max-w-2xl mx-auto">;
+              Join the future of technology with our revolutionary services.;
+              Contact us today to discuss how we can help you achieve your goals.;
+            </p>;
+            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6">;
+              <Link;
+                href="/contact";
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - 2xl hover:shadow - cyan-500 / 25 text-lg";
+              >;
+                Get Started Today;
+              </Link>;
+              <div className="flex items - center space - x-4 text-gray-300">;
+                <div className="flex items-center space-x-2">;
+                  <Phone className="h - 5 w - 5 text-cyan-400" />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex items-center space-x-2">;
+                  <Mail className="h - 5 w - 5 text-cyan-400" />;
+                  <span>{contact_info.email}</span>;
                 </div>;
               </div>;
             </div>;

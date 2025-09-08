@@ -26,73 +26,275 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {url?: string;
   }
   autoAnalyze?: boolean;
   showDetails?: boolean;
-  onAnalysisComplete?: ("analysis": SEOAnalysi s) => void}
-export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": tru e,showDetails = false,onAnalysisComplete}) => {const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null)const [isAnalyzing, setIsAnalyzing] = useState<any>(false)const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href)const [showAdvanced, setShowAdvanced] = useState<any>(false)const [selectedCategory, setSelectedCategory] = useState<any>('all')// Mock SEO analysis data(in real app, this would come from actual analysis)const "mockAnalysis": SEOAnalysi s = useMemo(() => ({"score": 8 7,issues[ {';'
-';';'
-        }
-        "id": '1',';';'
-        "type": 'warning',';';'
-        "title": 'Missing Meta Description',';',"description": 'The page is missing a meta description tag, which is important for search engine snippets.',';';'
-        "impact": 'medium',';'
-        "fixable": tru e,';';'
-        "category": 'content';'
-      },{';'
-';';'
-        }
-        "id": '2',';';'
-        "type": 'error',';';'
-        "title": 'Slow Page Load Time',';',"description": 'Page load time is above the recommended 3-second threshold.',';';'
-        "impact": 'high',';'
-        "fixable": tru e,';';'
-        "category": 'performance';'
-      },{';'
-';';'
-        }
-        "id": '3',';';'
-        "type": 'info',';';'
-        "title": 'Missing Alt Text',';',"description": 'Some images are missing alt text, which affects accessibility.',';';'
-        "impact": 'low',';'
-        "fixable": tru e,';';'
-        "category": 'accessibility';'
-    ],suggestions[ {';'
-';';'
-        }
-        "id": '1',';';'
-        "title": 'Optimize Images',';',"description": 'Compress and optimize images to improve page load speed.',';';'
-        "priority": 'high',';';'
-        "effort": 'medium',"estimatedImpact": 1 5;'
-      },{';'
-';';'
-        }
-        "id": '2',';';'
-        "title": 'Add Schema Markup',';',"description": 'Implement structured data to improve search engine understanding.',';';'
-        "priority": 'medium',';';'
-        "effort": 'low',"estimatedImpact": 8;'
-      },{';'
-';';'
-        }
-        "id": '3',';';'
-        "title": 'Improve Internal Linking',';',"description": 'Add more internal links to improve page authority distribution.',';';'
-        "priority": 'low',';';'
-        "effort": 'low',"estimatedImpact": 5;// Mock SEO analysis data(in real app, this would come from actual analysis)const "mockAnalysis": "SEOAnalysi s = useMemo(() => ({"score": 8 7",issues[ {"id": '1',"type": 'warning',"title": 'Missing Meta Description',"description": 'The page is missing a meta description tag, which is important for search engine snippets.',"impact": 'medium',"fixable": "tru e","category": 'content';'
-      },{"id": '2',"type": 'error',"title": 'Slow Page Load Time',"description": 'Page load time is above the recommended 3-second threshold.',"impact": 'high',"fixable": "tru e","category": 'performance';'
-      },{"id": '3',"type": 'info',"title": 'Missing Alt Text',"description": 'Some images are missing alt text, which affects accessibility.',"impact": 'low',"fixable": "tru e","category": 'accessibility';'
-    ],suggestions[ {"id": '1',"title": 'Optimize Images',"description": 'Compress and optimize images to improve page load speed.',"priority": 'high',"effort": 'medium',"estimatedImpact": "1 5;"
-      "},{"id": '2',"title": 'Add Schema Markup',"description": 'Implement structured data to improve search engine understanding.',"priority": 'medium',"effort": 'low',"estimatedImpact": "8;"
-      "},{"id": '3',"title": 'Improve Internal Linking',,"description": 'Add more internal links to improve page authority distribution.',"priority": 'low',"effort": 'low',"estimatedImpact": 5;'
-    ],"metrics": {"pageSpeed": 7 8,"mobileFriendliness": 9 2,"accessibility": 8 5,"bestPractices": 8 8,"seoScore": 8 7,"coreWebVitals": {"lcp": 2.8,"fid": 4 5,"cls": 0.08},"lastUpdated": new Date () }) , [])"id": '3',"title": 'Improve Internal Linking',"description": 'Add more internal links to improve page authority distribution.',"priority": 'low',"effort": 'low',"estimatedImpact": "5;"
-    ]","metrics": "{"pageSpeed": 7 8","mobileFriendliness": "9 2","accessibility": "8 5","bestPractices": "8 8","seoScore": "8 7","coreWebVitals": "{"lcp": 2.8","fid": "4 5","cls": "0.08"},"lastUpdated": "new Date () "}) , [])// Analyze SEO;"
-    setIsAnalyzing(true)return analysis?.issues.filter(issue => { return issue.category === selectedCategory) || []}, [analysis, selectedCategory])// Filter suggestions by priority; }
-  const filteredSuggestions = useMemo(() => {return analysis?.suggestions.sort((a, b) => {const priorityOrder = {"high": "3", "medium": "2",// Mock SEO analysis data(in real app, this would come from actual analysis)const "mockAnalysis": SEOAnalysi s = useMemo(() => ({"score": 8 7,issues[ {"id": '1',"type": 'warning',"title": 'Missing Meta Description',"description": 'The page is missing a meta description tag, which is important for search engine snippets.',"impact": 'medium',"fixable": tru e,"category": 'content';'
-      },{"id": '2',"type": 'error',"title": 'Slow Page Load Time',"description": 'Page load time is above the recommended 3-second threshold.',"impact": 'high',"fixable": tru e,"category": 'performance';'
-      },{"id": '3',"type": 'info',"title": 'Missing Alt Text',"description": 'Some images are missing alt text, which affects accessibility.',"impact": 'low',"fixable": tru e,"category": 'accessibility';'
-    ],suggestions[ {"id": '1',"title": 'Optimize Images',"description": 'Compress and optimize images to improve page load speed.',"priority": 'high',"effort": 'medium',"estimatedImpact": 1 5;'
-      },{"id": '2',"title": 'Add Schema Markup',"description": 'Implement structured data to improve search engine understanding.',"priority": 'medium',"effort": 'low',"estimatedImpact": 8;'
-      },{"id": '3',"title": 'Improve Internal Linking',"description": 'Add more internal links to improve page authority distribution.',"priority": 'low',"effort": 'low',"estimatedImpact": 5;'
-    ],"metrics": {"pageSpeed": 7 8,"mobileFriendliness": 9 2,"accessibility": 8 5,"bestPractices": 8 8,"seoScore": 8 7,"coreWebVitals": {"lcp": 2.8,"fid": 4 5,"cls": 0.08},"lastUpdated": new Date () }) , [])// Analyze SEO;
-    setIsAnalyzing(true)return analysis?.issues.filter(issue => { return issue.category === selectedCategory) || []}, [analysis, selectedCategory])// Filter suggestions by priority; }
-  const filteredSuggestions = useMemo(() => {return analysis?.suggestions.sort((a, b) => {const priorityOrder = {"high": 3, "medium": 2,;"low": "1 "}return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis])if(!analysis && !isAnalyzing) {return ()<div className="text-center py-8">";"
-        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />"        <p className="text-zion-slate/60">No SEO analysis available</p>;"
+  onAnalysisComplete?: ("analysis": SEOAnalysi s) => void"}
+;
+export const "SEOOptimizer": "React.FC<SEOOptimizerProps> = ({;
+  url",;
+"autoAnalyze": "tru e",;
+export default function Page(props: any) {
+interface SEOMetrics {
+  pageSpeed: number;
+  mobileFriendliness: number;
+  accessibility: number;
+  bestPractices: number;
+  seoScore: number;
+coreWebVitals: {
+    lcp: number;
+    fid: number;
+    cls: number
+}}
+interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
+  url?: string;
+  autoAnalyze?: boolean;
+  showDetails?: boolean;
+  onAnalysisComplete?: (analysis: SEOAnalysi s) => void}
+export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  url,
+autoAnalyze: tru e,;
+  showDetails = false,;
+  onAnalysisComplete}) => {;
+  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+  const [isAnalyzing, setIsAnalyzing] = useState<any>(false);
+  const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href);
+  const [showAdvanced, setShowAdvanced] = useState<any>(false);
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  // Mock SEO analysis data(in real app, this would come from actual analysis)
+  const mockAnalysis: SEOAnalysi s = useMemo(() => ({
+    score: 8 7,
+    issues[ {';
+';';
+        id: '1',';';
+        type: 'warning',';';
+        title: 'Missing Meta Description',';',
+  description: 'The page is missing a meta description tag, which is important for search engine snippets.',';';
+        impact: 'medium',';
+        fixable: tru e,';';
+        category: 'content'
+      },
+      {';
+';';
+        id: '2',';';
+        type: 'error',';';
+        title: 'Slow Page Load Time',';',
+  description: 'Page load time is above the recommended 3-second threshold.',';';
+        impact: 'high',';
+        fixable: tru e,';';
+        category: 'performance'
+      },
+      {';
+';';
+        id: '3',';';
+        type: 'info',';';
+        title: 'Missing Alt Text',';',
+  description: 'Some images are missing alt text, which affects accessibility.',';';
+        impact: 'low',';
+        fixable: tru e,';';
+        category: 'accessibility'
+    ],;
+    suggestions[ {';
+';';
+        id: '1',';';
+        title: 'Optimize Images',';',
+  description: 'Compress and optimize images to improve page load speed.',';';
+        priority: 'high',';';
+        effort: 'medium',
+        estimatedImpact: 1 5
+      },
+      {';
+';';
+        id: '2',';';
+        title: 'Add Schema Markup',';',
+  description: 'Implement structured data to improve search engine understanding.',';';
+        priority: 'medium',';';
+        effort: 'low',
+        estimatedImpact: 8
+      },
+      {';
+';';
+        id: '3',';';
+        title: 'Improve Internal Linking',';',
+  description: 'Add more internal links to improve page authority distribution.',';';
+        priority: 'low',';';
+        effort: 'low',
+        estimatedImpact: 5
+;
+  // Mock SEO analysis data(in real app, this would come from actual analysis);
+  const "mockAnalysis": "SEOAnalysi s = useMemo(() => ({;
+    "score": 8 7",;
+    issues[ {;
+        "id": '1',;
+        "type": 'warning',;
+        "title": 'Missing Meta Description',;
+        "description": 'The page is missing a meta description tag, which is important for search engine snippets.',;
+        "impact": 'medium',;
+        "fixable": "tru e",;
+        "category": 'content';
+      },;
+      {;
+        "id": '2',;
+        "type": 'error',;
+        "title": 'Slow Page Load Time',;
+        "description": 'Page load time is above the recommended 3-second threshold.',;
+        "impact": 'high',;
+        "fixable": "tru e",;
+        "category": 'performance';
+      },;
+      {;
+        "id": '3',;
+        "type": 'info',;
+        "title": 'Missing Alt Text',;
+        "description": 'Some images are missing alt text, which affects accessibility.',;
+        "impact": 'low',;
+        "fixable": "tru e",;
+        "category": 'accessibility';
+    ],;
+    suggestions[ {;
+        "id": '1',;
+        "title": 'Optimize Images',;
+        "description": 'Compress and optimize images to improve page load speed.',;
+        "priority": 'high',;
+        "effort": 'medium',;
+        "estimatedImpact": "1 5;
+      "},;
+      {;
+        "id": '2',;
+        "title": 'Add Schema Markup',;
+        "description": 'Implement structured data to improve search engine understanding.',;
+        "priority": 'medium',;
+        "effort": 'low',;
+        "estimatedImpact": "8;
+      "},;
+      {;
+        id: '3',;
+        title: 'Improve Internal Linking',,
+  description: 'Add more internal links to improve page authority distribution.',;
+        priority: 'low',;
+        effort: 'low',;
+        estimatedImpact: 5;
+    ],;
+    metrics: {;
+      pageSpeed: 7 8,;
+      mobileFriendliness: 9 2,;
+      accessibility: 8 5,;
+      bestPractices: 8 8,;
+      seoScore: 8 7,;
+      coreWebVitals: {;
+        lcp: 2.8,;
+        fid: 4 5,;
+        cls: 0.08}},;
+    lastUpdated: new Date () }) , []) ;
+        "id": '3',;
+        "title": 'Improve Internal Linking',;
+        "description": 'Add more internal links to improve page authority distribution.',;
+        "priority": 'low',;
+        "effort": 'low',;
+        "estimatedImpact": "5;
+    ]",;
+    "metrics": "{;
+      "pageSpeed": 7 8",;
+      "mobileFriendliness": "9 2",;
+      "accessibility": "8 5",;
+      "bestPractices": "8 8",;
+      "seoScore": "8 7",;
+      "coreWebVitals": "{;
+        "lcp": 2.8",;
+        "fid": "4 5",;
+        "cls": "0.08"}},;
+    "lastUpdated": "new Date () "}) , []) ;
+;
+  // Analyze SEO;
+    setIsAnalyzing(true) ;
+return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
+;
+  // Filter suggestions by priority;
+  const filteredSuggestions = useMemo(() => {;
+    return analysis?.suggestions.sort((a, b) => {;
+      const priorityOrder = {;
+  "high": "3", "medium": "2",;  ;
+  // Mock SEO analysis data(in real app, this would come from actual analysis)
+  const mockAnalysis: SEOAnalysi s = useMemo(() => ({
+    score: 8 7,
+    issues[ {
+        id: '1',
+        type: 'warning',
+        title: 'Missing Meta Description',
+        description: 'The page is missing a meta description tag, which is important for search engine snippets.',
+        impact: 'medium',
+        fixable: tru e,
+        category: 'content'
+      },
+      {
+        id: '2',
+        type: 'error',
+        title: 'Slow Page Load Time',
+        description: 'Page load time is above the recommended 3-second threshold.',
+        impact: 'high',
+        fixable: tru e,
+        category: 'performance'
+      },
+      {
+        id: '3',
+        type: 'info',
+        title: 'Missing Alt Text',
+        description: 'Some images are missing alt text, which affects accessibility.',
+        impact: 'low',
+        fixable: tru e,
+        category: 'accessibility'
+    ],;
+    suggestions[ {
+        id: '1',
+        title: 'Optimize Images',
+        description: 'Compress and optimize images to improve page load speed.',
+        priority: 'high',
+        effort: 'medium',
+        estimatedImpact: 1 5
+      },
+      {
+        id: '2',
+        title: 'Add Schema Markup',
+        description: 'Implement structured data to improve search engine understanding.',
+        priority: 'medium',
+        effort: 'low',
+        estimatedImpact: 8
+      },
+      {
+        id: '3',
+        title: 'Improve Internal Linking',
+        description: 'Add more internal links to improve page authority distribution.',
+        priority: 'low',
+        effort: 'low',
+        estimatedImpact: 5
+    ],;
+    metrics: {
+      pageSpeed: 7 8,
+      mobileFriendliness: 9 2,
+      accessibility: 8 5,
+      bestPractices: 8 8,
+      seoScore: 8 7,
+      coreWebVitals: {
+        lcp: 2.8,;
+        fid: 4 5,;
+        cls: 0.08}},;
+    lastUpdated: new Date () }) , []) ;
+  // Analyze SEO
+    setIsAnalyzing(true) ;
+return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
+  // Filter suggestions by priority
+  const filteredSuggestions = useMemo(() => {
+    return analysis?.suggestions.sort((a, b) => {
+      const priorityOrder = {
+  high: 3, medium: 2,;  ;
+  ;
+  ;
+  ;
+  ;
+  "low": "1 "};
+      return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
+;
+  if(!analysis && !isAnalyzing) {;
+    return ();
+      <div className="text-center py-8">";
+        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"   />"        <p className="text-zion-slate/60">No SEO analysis available</p>;
         <button;
           }
           onClick={analyzeSEO}";"

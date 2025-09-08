@@ -1,13 +1,24 @@
 <<<<<<< HEAD
+=======
 
-
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  page_extensions: ['tsxtsjsxjs'],
+>>>>>>> origin/main
 /** @type {import('next').NextConfig} */;
 
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
 
 
-
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
@@ -53,13 +64,5 @@ const nextConfig = $2;
   // Dist directory
   distDir: '.next'
 },
-
-<<<<<<< HEAD
-
-  // Generate ETags;
-
-
-
-=======
-module.exports = $2;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+module.exports = next_config,
+>>>>>>> origin/main

@@ -1,6 +1,21 @@
-<<<<<<< HEAD
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+  const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
     const section = String(fields.section |'General');
@@ -200,31 +215,7 @@ const targetPath = path && path.join(
       file && file.originalFilename || path && path.basename(file && file.filepath)
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
-    appendAuditLog({
-
-
-
-
-
-      type: 'file_upload'
-      section
-      name: path.basename(targetPath)
-    });
-    res.status(200).json({ ok: true });
-  });
-
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
-
-
-    res.status(200).json({ ok: true })
-      type: 'file_upload',
-      section,
-      name: path && path.basename(targetPath),
-    });
-    res && res.status(200).json({ ok: true });
-  });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+    appendAuditLog({  })
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 
@@ -270,26 +261,12 @@ export default /**;
     appendAuditLog ({
       type: 'file_upload',
       section,
-
-
-
-
-
-=======
-export const config = { "api": { "body_parser": false }
-}
-;
-import {appendAuditLog, resolveDataPath} from ../../../../utils / api / storage';
-export const config = { api: { body_parser: false }}
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-
-
+      name: path.basename (target_path),
+    });
+    res.status (200).json ({ ok: true });
+  });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
+    res.status (200).json ({ ok: true });
+  });
 }
 }
-
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

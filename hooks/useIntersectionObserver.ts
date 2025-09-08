@@ -22,12 +22,37 @@ export function useIntersectionObserver({
   const frozen = $2;
   const updateEntry = $2;
   useEffect(() => {
-    const hasIOSupport = $2;
-    if (!hasIOSupport || frozen || !node) return,
-    const observerParams = { threshold, root, rootMargin },
-    const currentObserver = new IntersectionObserver($2);
-    observer.current = $2;
-    currentObserver.observe($2);
+    if (prevNode && prevNode.current) {
+      observer && observer.current?.unobserve(prevNode && prevNode.current)
+    }
+    if (node) {
+      observer && observer.current?.observe(node)
+    }
+    prevNode && prevNode.current = node
+  }, [node]);
+
+  return [setNode, entry] as const
+export /**
+ * useIntersectionObserver - Function description
+ */
+function useIntersectionObserver() {
+  const [entry, set_entry] = useState < IntersectionObserverEntry>();
+  const [node, set_node] = useState < Element | null>(null);
+  const observer = useRef < IntersectionObserver | null>(null);
+  const frozen = entry?.is_intersecting && freezeOnceVisible;
+  const update_entry = ([entry]: IntersectionObserverEntry[]): void => {
+    set_entry (entry);
+  }
+  useEffect (() => {
+    const hasIOSupport = !!window.IntersectionObserver;
+    // Check condition
+if (return) {
+  $2
+}
+    const observer_params = { threshold, root, root_margin }
+    const current_observer = new IntersectionObserver (update_entry, observer_params);
+    observer.current = current_observer;
+    current_observer.observe (node);
     return () => {
       currentObserver.disconnect()
     }
@@ -45,4 +70,15 @@ export function useIntersectionObserver({
   }, [node]),
   return [setNode, entry] as const
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      observer.current?.unobserve (prev_node.current);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      observer.current?.observe (node);
+    }
+    prev_node.current = node;
+  }, [node]);
+  return [set_node, entry] as const;
+}

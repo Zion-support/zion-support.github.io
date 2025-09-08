@@ -388,19 +388,174 @@ const mainNavItems = [
   { name: 'Support', href: '/support', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
-export default function UltraFuturisticNavigation2029() {
+
+const mainNavItems = [
+    services: [;
+      {;
+        name: 'AI Personalized Medicine Platform',;
+        href: '/ai-personalized-medicine-platform',,
+  description: 'AI-powered personalized treatment',;
+        price: '$8,999/month',;
+      },;
+      {;
+        name: 'AI Healthcare Diagnosis Platform',;
+        href: '/ai-healthcare-diagnosis-platform',,
+  description: 'Revolutionary medical diagnosis',;
+        price: '$3,999/month',;
+      },;
+      {;
+        name: 'Biotech Research Automation',;
+        href: '/biotech-research-automation',,
+  description: 'Automated biotechnology research',;
+        price: '$4,999/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Personalized Medicine Platform', href: '/ai-personalized-medicine-platform', description: 'AI-powered personalized treatment', price: '$8,999/month' };
+    title: '🏥 Healthcare & Biotech Innovation',
+    icon: Heart,
+    color: 'from - pink - 600 to - rose - 600',
+    description: 'Advanced healthcare solutions',
+      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' };
+      { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/month' }
+    ]
+};
+    title: '🏙️ Smart City & Infrastructure',;
+    icon: Building,;
+    color: 'from-slate-600 to-gray-600',,
+  description: 'Intelligent urban management',;
+    services: [;
+      {;
+        name: 'AI Smart City Orchestrator',;
+        href: '/ai-smart-city-orchestrator',,
+  description: 'Comprehensive city infrastructure AI',;
+        price: '$12,999/month',;
+      },;
+      {;
+        name: 'Smart Traffic Management',;
+        href: '/smart-traffic-management',,
+  description: 'AI-powered traffic optimization',;
+        price: '$3,999/month',;
+      },;
+      {;
+        name: 'Energy Grid Optimization',;
+        href: '/energy-grid-optimization',,
+  description: 'Smart energy management',;
+        price: '$5,999/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Smart City Orchestrator', href: '/ai-smart-city-orchestrator', description: 'Comprehensive city infrastructure AI', price: '$12,999/month' };
+    title: '🏙️ Smart City & Infrastructure',
+    icon: Building,
+    color: 'from - slate - 600 to - gray - 600',
+    description: 'Intelligent urban management',
+      { name: 'Smart Traffic Management', href: '/smart-traffic-management', description: 'AI-powered traffic optimization', price: '$3,999/month' };
+      { name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/month' }
+    ]
+};
+    title: '🔬 Research & Development',;
+    icon: Microscope,;
+    color: 'from-blue-600 to-indigo-600',,
+  description: 'Advanced research tools and platforms',;
+    services: [;
+      {;
+        name: 'AI Research Assistant',;
+        href: '/ai-research-assistant',,
+  description: 'AI-powered research acceleration',;
+        price: '$1,999/month',;
+      },;
+      {;
+        name: 'Data Analysis Platform',;
+        href: '/data-analysis-platform',,
+  description: 'Advanced data analytics',;
+        price: '$2,499/month',;
+      },;
+      {;
+        name: 'Research Collaboration Hub',;
+        href: '/research-collaboration-hub',,
+  description: 'Global research collaboration',;
+        price: '$1,799/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'AI-powered research acceleration', price: '$1,999/month' };
+    title: '🔬 Research & Development',
+    icon: Microscope,
+    color: 'from - blue - 600 to - indigo - 600',
+    description: 'Advanced research tools and platforms',
+      { name: 'Data Analysis Platform', href: '/data-analysis-platform', description: 'Advanced data analytics', price: '$2,499/month' };
+      { name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/month' }
+    ]
+};
+    title: '💼 Enterprise & Business Solutions',;
+    icon: Briefcase,;
+    color: 'from-emerald-600 to-blue-600',,
+  description: 'Corporate and business automation',;
+    services: [;
+      {;
+        name: 'Enterprise AI Operations Center',;
+        href: '/enterprise-ai-operations-center',,
+  description: 'Centralized AI operations',;
+        price: '$15,999/month',;
+      },;
+      {;
+        name: 'Business Process Automation',;
+        href: '/business-process-automation',,
+  description: 'End-to-end process automation',;
+        price: '$4,999/month',;
+      },;
+      {;
+        name: 'Corporate Intelligence Platform',;
+        href: '/corporate-intelligence-platform',,
+  description: 'AI-powered business intelligence',;
+        price: '$7,999/month',;
+      },;
+    ],;
+  },];      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/month' };
+    title: '💼 Enterprise & Business Solutions',
+    icon: Briefcase,
+    color: 'from - emerald - 600 to - blue - 600',
+    description: 'Corporate and business automation',
+      { name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/month' };
+      { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
+    ];
+  }
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Support', href: '/support', icon: MessageCircle },
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+
+const mainNavItems = [;
+  { name: 'Home', href: '/', icon: Home },;
+  { name: 'Services', href: '/services', icon: Briefcase },;
+  { name: 'Solutions', href: '/solutions', icon: Target },;
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },;
+  { name: 'Resources', href: '/resources', icon: BookOpen },;
+  { name: 'News', href: '/news', icon: TrendingUp },;
+  { name: 'Support', href: '/support', icon: MessageCircle },;
+  { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
+];
+];
+
+export default function UltraFuturisticNavigation2029() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setScrolled(window && window.scrollY > 50)
+};
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50)
+};
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
@@ -537,9 +692,12 @@ export default function UltraFuturisticNavigation2029() {
                   />
                 </button>
                 {/* Mega Menu */}
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
+
+              </div>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -635,6 +793,14 @@ export default function UltraFuturisticNavigation2029() {
           </div>
         </div>
       </nav>
+
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </nav>;
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -744,6 +910,7 @@ export default function UltraFuturisticNavigation2029() {
                               <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-300">{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
+
                             </Link>
                           ))}
                         </div>
@@ -775,4 +942,141 @@ export default function UltraFuturisticNavigation2029() {
 );      <div className="h-20" />
     </>
   );
+      {/* Mobile Menu */}
+      <AnimatePresence>;
+        {is_open && (
+          <motion.div;
+            initial={{ opacity: 0, coordinate_x: '100%' }}
+            animate={{ opacity: 1, coordinate_x: 0 }}
+            exit={{ opacity: 0, coordinate_x: '100%' }}
+            className='fixed inset - 0 z - 50 lg:hidden';
+          >;
+            <div;
+              className='absolute inset - 0 bg - black / 80 backdrop - blur - sm';
+              on_click={close_menu}
+            />;
+            <div className='absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan - 500 / 30 overflow - y-auto'>;
+              <div className='p - 6'>;
+                <div className='flex items - center justify - between mb - 8'>;
+                  <div className='flex items - center space - x-3'>;
+                    <div className='w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items - center justify - center'>;
+                      <Rocket className='w - 5 h - 5 text - white' />;
+                    </div>;
+                    <span className='text - lg font - bold text - white'>;
+                      Zion Tech;
+                    </span>;
+                  </div>;
+                  <button;
+                    on_click={close_menu}
+                    className='text - gray - 400 hover:text - white';
+                  >                    <X size={24} />          >;
+            <div className="absolute inset - 0 bg - black / 80 backdrop-blur-sm" on_click={close_menu} />;
+            <div className="absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan-500 / 30 overflow-y-auto">;
+              <div className="p-6">;
+                <div className="flex items - center justify-between mb-8">;
+                  <div className="flex items-center space-x-3">;
+                    <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items-center justify-center">;
+                      <Rocket className="w - 5 h-5 text-white" />;
+                    </div>;
+                    <span className="text - lg font-bold text-white">Zion Tech</span>;
+                  </div>;
+                  <button on_click={close_menu} className="text - gray-400 hover:text-white">;
+                    <X size={24} />;
+                  </button>;
+                </div>;
+                {/* Mobile Navigation Items */}
+                <div className='space - y-4'>;
+                  {mainNavItems.map (item => (                    <Link;
+                      key={item.name}
+                      href={item.href}
+                      on_click={close_menu}
+                      className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
+                    >;
+                      <item.icon size={20} className='text - cyan - 400' />                      <span>{item.name}</span>                <div className="space-y-4">;
+                  {mainNavItems.map ((item) => (
+                    <Link;
+                      key={item.name}
+                      href={item.href}
+                      on_click={close_menu}
+                      className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
+                    >;
+                      <item.icon size={20} className='text - cyan - 400' />                      className="flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition-all duration-200";
+                    >;
+                      <item.icon size={20} className="text-cyan-400" />;
+                      <span>{item.name}</span>;
+                    </Link>))}
+                </div>;
+                {/* Mobile Services */}
+                <div className='mt - 8'>;
+                  <h3 className='text - lg font - semibold text - white mb - 4'>;
+                    Our Services;
+                  </h3>;
+                  <div className='space - y-3'>;
+                    {service_categories.slice (0, 6).map (category => (
+                      <div;
+                        key={category.title}
+                        className='p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border - cyan - 500 / 20';
+                      >;
+                        <h4 className='font - medium text - white mb - 2'>;
+                          {category.title}
+                        </h4>;
+                        <p className='text - sm text - gray - 400 mb - 3'>;
+                          {category.description}
+                        </p>;
+                        <div className='space - y-2'>;
+                          {category.services.slice (0, 2).map (service => (                            <Link;
+                              key={service.name}
+                              href={service.href}
+                              on_click={close_menu}                <div className="mt-8">;
+                  <h3 className="text - lg font - semibold text-white mb-4">Our Services</h3>;
+                  <div className="space-y-3">;
+                    {service_categories.slice (0, 6).map ((category) => (
+                      <div key={category.title} className="p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border-cyan-500 / 20">;
+                        <h4 className="font - medium text-white mb-2">{category.title}</h4>;
+                        <p className="text - sm text - gray-400 mb-3">{category.description}</p>;
+                        <div className="space-y-2">;
+                          {category.services.slice (0, 2).map ((service) => (
+                              key={service.name}
+                              href={service.href}
+                              on_click={close_menu}
+                              className='block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition - all duration - 200';
+                            >;
+                              <div className='flex items - center justify - between'>;
+                                <span className='text - sm text - gray - 300'>;
+                                  {service.name}
+                                </span>;
+                                <span className='text - xs text - cyan - 400 font - mono'>;
+                                  {service.price}
+                                </span>                              </div>                              className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition-all duration-200";
+                            >;
+                              <div className="flex items-center justify-between">;
+                                <span className="text - sm text-gray-300">{service.name}</span>;
+                                <span className="text - xs text - cyan-400 font-mono">{service.price}</span>;
+                            </Link>))}
+                        </div>;
+                      </div>))}
+                  </div>;
+                </div>;
+                {/* Mobile CTA */}
+                <div className='mt - 8'>;
+                  <motion.button;
+                    while_hover={{ scale: 1.02 }}
+                    while_tap={{ scale: 0.98 }}
+                    className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  >                <div className="mt-8">;
+                  <motion.button;
+                    while_hover={{ scale: 1.02 }}
+                    while_tap={{ scale: 0.98 }}
+                    className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
+                    Get Started;
+                  </motion.button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Spacer for fixed navigation */}
+      <div className='h - 20' />;
+    </>);      <div className="h-20" />;
+    </>);
 }
+

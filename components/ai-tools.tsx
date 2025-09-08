@@ -41,8 +41,13 @@ import {
   CheckCircle,
 <<<<<<< HEAD
 
-
-
+  Brain;
+  MessageSquare,
+  Image,
+  Video,
+  Code,
+  FileText,
+  Zap,
   Star;
   ExternalLink;
   CheckCircle;
@@ -230,6 +235,7 @@ export default function AiToolsPage() {
         'Code generation & debugging'
         'Professional writing assistance'
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
@@ -561,7 +567,7 @@ const aiMarketStats = [;
 'description': 'Global AI market value in 2024','
     },
       ],      pricing: '$20 / month',    {
-      icon: <MessageSquare className='w - 8 h - 8 text - white' />,
+      icon: <MessageSquare className="w - 8 h-8 text-white" />,
       title: 'Claude Pro',
       description: 'Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
       ];],pricing: '$20/month',marketPrice: '$20/month',website: 'https://chat.openai.com',color: 'bg-gradient-to-br from-green-500 to-emerald-600',textColor: 'text-green-400',gradient: 'from-green-400 to-emerald-500',popular: true,category: 'Conversational AI',},{icon: <Image className='w-8 h-8 text-white' />,title: 'Midjourney',description:;
@@ -583,164 +589,111 @@ const aiMarketStats = [;
     {;
       title: 'AI Market Size',;
       value: '$136 && 136.6B',;
-      growth: '+37% YoY',;
-      description: 'Global AI market value in 2024',;
+      growth: '+37% YoY',,
+  description: 'Global AI market value in 2024',;
     },    {;
       title: 'AI Adoption Rate',;
       value: '35%',;
-      growth: '+12% YoY',;
-      description: 'Businesses actively using AI tools',;
+      growth: '+12% YoY',,
+  description: 'Businesses actively using AI tools',;
     },    {;
       title: 'AI Investment',;
       value: '$93 && 93.5B',;
-      growth: '+28% YoY',;
-      description: 'Global AI investment in 2024',;
+      growth: '+28% YoY',,
+  description: 'Global AI investment in 2024',;
     },    {;
       title: 'AI Productivity Gain',;
       value: '40%',;
-      growth: '+15% YoY',;
-      description: 'Average productivity improvement',;
-    },  ];      description: 'Global AI market value in 2024';
-    };
+      growth: '+15% YoY',,
+  description: 'Average productivity improvement',;
+    },  ],
+  description: 'Global AI market value in 2024'
+};
     {;
       title: 'AI Adoption Rate',;
       value: '35%',;
-      growth: '+12% YoY',;
-      description: 'Businesses actively using AI tools',;
-    },      description: 'Businesses actively using AI tools';
-    };
+      growth: '+12% YoY',,
+  description: 'Businesses actively using AI tools',;
+    },      description: 'Businesses actively using AI tools'
+};
     {;
       title: 'AI Investment',;
       value: '$93 && 93.5B',;
-      growth: '+28% YoY',;
-      description: 'Global AI investment in 2024',;
-    },      description: 'Global AI investment in 2024';
-    };
+      growth: '+28% YoY',,
+  description: 'Global AI investment in 2024',;
+    },      description: 'Global AI investment in 2024'
+};
     {;
       title: 'AI Productivity Gain',;
       value: '40%',;
-      growth: '+15% YoY',;
-      description: 'Average productivity improvement',;
+      growth: '+15% YoY',,
+  description: 'Average productivity improvement',;
     },      description: 'Average productivity improvement';
     }
   ];
 
   const aiCategories = [;
-    {
-
-    }
-  ];
-
-const aiCategories = [;
-    {
-      }
-      'name': 'Conversational AI','
-      'description': 'Chatbots, virtual assistants, and language models','
-'tools': 3,
-      'avgPrice': '$20/month','
-    },
-    {
-      }
-      'name': 'Image Generation','
-      'description': 'AI-powered art, design, and visual content creation','
-      'tools': 1,
-      'avgPrice': '$20/month','
-    },
-    {
-      }
-      'name': 'Code Generation','
-      'description': 'AI-assisted programming and development tools','
-      'tools': 1,
-'avgPrice': '$10/month','
-    },
-    {
-      }
-      'name': 'Video Generation','
-      'description': 'AI video creation and editing tools','
-      'tools': 1,
-'avgPrice': '$44/month','
-    },
-    {
-      }
-      'name': 'Content Creation','
-      'description': 'AI-powered writing and content generation','
-      'tools': 1,
-'avgPrice': '$82/month','
-    }
-  ];
-return (;
-    <>
-      <Head>
-
-<title>
-          AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing
-        </title>
-        <meta,
-name='description''
-          content='Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links.'' />
-        <meta,
-property=''og': title''
-          content='AI Tools & Services | Zion Tech Group'' />
-        <meta,
-property=''og':description''
-          content='Real AI tools with pricing and direct links to help boost your productivity and creativity.'' />
-        <meta name=''twitter':card' content='summary_large_image' />'
-      </Head>
-
-      {/* Hero Section *
-}
-      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;'
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />;'
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />;'
-        <div className='absolute inset-0 bg-grid opacity-10' />;'
-        <div className='relative z-10 container-cursor text-center'>;'
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>;'
-            <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />;'
-            AI Tools & Services;
-          </div>;
-          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>;'
-            Real AI Tools for Real Results;
-          </h1>;
-          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed'>;'
-
-        <meta name='"twitter":card' content='summary_large_image' />'
-      </Head>
-      ],      pricing: '$39-125/month',
-
-      pricing: '$39-125/month',
-
-      marketPrice: '$40-150/month',
-      website: 'https://jasper.ai',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
-      popular: false,
-      category: 'Content Creation',
-    },  ];
-
-  ];
-  const aiMarketStats = [
-    {
-      title: 'AI Market Size'
-      value: '$136.6B'
-      growth: '+37% YoY'
-      description: 'Global AI market value in 2024'
-    },    {
-      title: 'AI Adoption Rate'
-      value: '35%'
-      growth: '+12% YoY'
-      description: 'Businesses actively using AI tools'
-    },    {
-      title: 'AI Investment'
-      value: '$93.5B'
-      growth: '+28% YoY'
-      description: 'Global AI investment in 2024'
-    },    {
-      title: 'AI Productivity Gain'
-      value: '40%'
-      growth: '+15% YoY'
-      description: 'Average productivity improvement'
-    },  ];      description: 'Global AI market value in 2024'
+    {;
+      name: 'Conversational AI',,
+  description: 'Chatbots, virtual assistants, and language models',;
+      tools: 3,      tools: 3,;
+      avgPrice: '$20/month'
+};
+    {;
+      name: 'Image Generation',,
+  description: 'AI-powered art, design, and visual content creation';
+      tools: 1,;
+      avgPrice: '$20/month',;
+    },;
+    {;
+      name: 'Image Generation',,
+  description: 'AI-powered art, design, and visual content creation',;
+      tools: 1,;
+      avgPrice: '$20/month',;
+    },    {;
+      name: 'Code Generation',,
+  description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month',;
+    },    {;
+      name: 'Video Generation',,
+  description: 'AI video creation and editing tools',;
+      tools: 1,;
+      avgPrice: '$44/month',;
+    },    {;
+      name: 'Content Creation',,
+  description: 'AI-powered writing and content generation',;
+      tools: 1,;
+      avgPrice: '$82/month',;
+    },  ];    {;
+      name: 'Code Generation',,
+  description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month',;
+    },      avgPrice: '$20/month'
+};
+    {;
+      name: 'Code Generation',,
+  description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month'
+};
+    {;
+      name: 'Video Generation',,
+  description: 'AI video creation and editing tools',;
+      tools: 1,;
+      avgPrice: '$44/month',;
+    },      avgPrice: '$44/month'
+};
+    {;
+      name: 'Content Creation',,
+  description: 'AI-powered writing and content generation',;
+      tools: 1,;
+      avgPrice: '$82/month',;
+    },      avgPrice: '$82/month',
+  description: 'Average productivity improvement',
+    },  ],
+  description: 'Global AI market value in 2024';
     }
     {
       title: 'AI Adoption Rate'
@@ -1045,8 +998,6 @@ property=''og':description''
 
 
             ))}
-
-
 
 
 
@@ -1440,10 +1391,81 @@ key={index}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
 
-<<<<<<< HEAD
-
-
-
+      {/* AI Categories Overview */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                      </span>;
+                    </div>;
+                    <p className="text - gray - 400 leading-relaxed mb-6">;
+                      {tool.description}
+                    </p>;
+                    <div className="mb-6">;
+                      <div className="flex items - center justify-between mb-3">;
+                        <span className="text - sm text-gray-500">Service Price:</span>;
+                        <span className="text - lg font - semibold text-cursor-blue">{tool.pricing}</span>;
+                      </div>;
+                      <div className="flex items - center justify-between mb-3">;
+                        <span className="text - sm text-gray-500">Market Average:</span>;
+                        <span className="text - sm text-gray-400">{tool.market_price}</span>;
+                      </div>;
+                    </div>;
+                    <ul className="space-y-2 mb-6">;
+                      {tool.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="flex items - center text-gray-300">;
+                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 3 flex-shrink-0" />;
+                          {feature}
+                        </li>))}
+                    </ul>;
+                    <div className='flex items - center justify - between'>;
+                      <Button;
+                        href={tool.website}
+                        variant='primary';
+                        size='sm';
+                        className='bg - cursor - blue hover:bg - cursor - blue - dark';
+                      >;
+                        Try Tool;
+                        <ExternalLink className='w - 4 h - 4 ml - 2' />;
+                      </Button>;
+                      <div className='text - right'>;
+                        <div className='text - xs text - gray - 500'>Direct Link</div>;
+                        <div className='text - xs text - cursor - blue font - mono'>;
+                          {tool.website}
+                        </div>                      </div>                      <Button;
+                        href={tool.website}
+                        variant="primary";
+                        size="sm";
+                        className="bg - cursor - blue hover:bg - cursor-blue-dark";
+                      >;
+                        Try Tool;
+                        <ExternalLink className="w - 4 h-4 ml-2" />;
+                      </Button>;
+                      <div className="text-right">;
+                        <div className="text - xs text-gray-500">Direct Link</div>;
+                        <div className="text - xs text - cursor-blue font-mono">{tool.website}</div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* AI Categories Overview */}
+      <section className='section - padding bg - gradient - cursor - accent'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+            ))}
+              Understanding the different types of AI tools helps you build a;
+              comprehensive toolkit for your needs.;
+            </p>;
+          </div>;
 
       {/* AI Implementation Guide */}
 

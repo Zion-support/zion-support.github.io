@@ -85,14 +85,21 @@ import { Search, Filter, Star, Users, TrendingUp;
 ...emergingTechServices2025;
 ...additionalRealServices2025;
 ...newInnovativeAIServices ];
+}transition= {
+  {
+  duration: 0.8, delay: 0.8
+}> ⭐ Popular </span>)
+}</div> </div> </div> </motion.div>) )
+}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>)
+}</div> </section> </li>) )
+}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) )
+}</div> Popular </span>)
+}</div> </span>) )
+}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) )
+}</div>)
+  opacity: 1, y: 0 
+  opacity: 1, y: 0 
 
-//Get unique services by ID const uniqueServices = allServices.filter ( (service, index, self) => index === self.findIndex (s => s.id === service.id) )//Get all categories const categories = ['All', ...Array.from (new Set (uniqueServices.map (s => Array.isArray (s.category) ? s.category[0] : s.category) ) ) ];
-//Filter and sort services const filteredServices = uniqueServices .filter (service => {const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |case 'name': return a.name.localeCompare (b.name)case 'price': case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)case 'rating': return (<UltraFuturisticBackground2029> <Head> <title > Revolutionary 2029 Technology Services | Zion Tech Group</title> <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." /> <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" /> <meta name="viewport" content="width = device - width, initial - scale = 1" /> <link rel="canonical" href="https://ziontechgroup.com / services" /> </Head> <Layout> </div> </motion.div> <h1 className="text - 5xl md:text - 7xl font-bold mb-6" > <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent" > Our Services </span> </h1> <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading-relaxed mb-8" > Discover our comprehensive suite of cutting - edge AI, quantum computing, emerging technology;
-and micro SAAS services designed to transform your business and drive innovation. </p> <motion.div > <div className="flex items-center" > <div className="w - 2 h - 2 bg - green - 400 rounded-full mr-2" ></div> AI & Consciousness </div> <div className="flex items-center" > <div className="w - 2 h - 2 bg - purple - 400 rounded-full mr-2" ></div> Quantum Computing </div> <div className="flex items-center" > <div className="w - 2 h - 2 bg - blue - 400 rounded-full mr-2" ></div> Enterprise IT </div> <div className="flex items-center" > <div className="w - 2 h - 2 bg - pink - 400 rounded-full mr-2" ></div> Micro SAAS </div> </motion.div> </motion.div> {/* Enhanced Search and Filters */;
-}<motion.div /> </div> </div> </option>) )}</select> <div className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - cyan - 400 pointer-events-none" > <ChevronDown className="w-5 h-5" /> </div> </div> > {sort_options.map ( (option) => (<option key= {option.value;
-}value= {option.value;
-}> {option.label;
-}</option>) )}</select> <div className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - cyan - 400 pointer-events-none" > <ChevronDown className="w-5 h-5" /> </div> </div> <button on_click= {() => setViewMode ('grid')}className= {`p - 3 rounded - xl transition - all duration - 300 $ {view_mode === 'grid' ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white shadow - lg shadow - cyan - 500 / 25' : 'text - gray - 400 hover:text - white hover:bg - gray - 700 / 50';
 }> ⭐ Popular </span>) 
 }</div> </div> </div> </motion.div>) ) 
 
@@ -435,11 +442,11 @@ export default function ServicesPage() {
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 case 'price': case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-case 'rating': return (<UltraFuturisticBackground2029> <Head> <title > Revolutionary 2029 Technology Services | Zion Tech Group</title> <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." /> <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" /> <meta name="viewport" content="width = device - width, initial - scale = 1" /> <link rel="canonical" href="https://ziontechgroup.com / services" /> </Head> <Layout> </div> </motion.div> <h1 className="text - 5xl md:text - 7xl font - bold mb - 6" > <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Our Services </span> </h1> <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed mb - 8" > Discover our comprehensive suite of cutting - edge AI, quantum computing, emerging technology;
-and micro SAAS services designed to transform your business and drive innovation. </p> <motion.div > <div className="flex items - center" > <div className="w - 2 h - 2 bg - green - 400 rounded - full mr - 2" ></div> AI & Consciousness </div> <div className="flex items - center" > <div className="w - 2 h - 2 bg - purple - 400 rounded - full mr - 2" ></div> Quantum Computing </div> <div className="flex items - center" > <div className="w - 2 h - 2 bg - blue - 400 rounded - full mr - 2" ></div> Enterprise IT </div> <div className="flex items - center" > <div className="w - 2 h - 2 bg - pink - 400 rounded - full mr - 2" ></div> Micro SAAS </div> </motion.div> </motion.div> {
+case 'rating': return (<UltraFuturisticBackground2029> <Head> <title > Revolutionary 2029 Technology Services | Zion Tech Group</title> <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." /> <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" /> <meta name="viewport" content="width = device - width, initial - scale = 1" /> <link rel="canonical" href="https://ziontechgroup.com / services" /> </Head> <Layout> </div> </motion.div> <h1 className="text - 5xl md:text - 7xl font-bold mb-6" > <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent" > Our Services </span> </h1> <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading-relaxed mb-8" > Discover our comprehensive suite of cutting - edge AI, quantum computing, emerging technology;
+and micro SAAS services designed to transform your business and drive innovation. </p> <motion.div > <div className="flex items-center" > <div className="w - 2 h - 2 bg - green - 400 rounded-full mr-2" ></div> AI & Consciousness </div> <div className="flex items-center" > <div className="w - 2 h - 2 bg - purple - 400 rounded-full mr-2" ></div> Quantum Computing </div> <div className="flex items-center" > <div className="w - 2 h - 2 bg - blue - 400 rounded-full mr-2" ></div> Enterprise IT </div> <div className="flex items-center" > <div className="w - 2 h - 2 bg - pink - 400 rounded-full mr-2" ></div> Micro SAAS </div> </motion.div> </motion.div> {
   /* Enhanced Search and Filters */;
 }<motion.div /> </div> </div> </option>) );
-}</select> <div className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - cyan - 400 pointer - events - none" > <ChevronDown className="w - 5 h - 5" /> </div> </div> > {
+}</select> <div className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - cyan - 400 pointer-events-none" > <ChevronDown className="w-5 h-5" /> </div> </div> > {
   sort_options.map ( (option) => (<option key= {
   option.value;
 }value= {
@@ -447,19 +454,19 @@ and micro SAAS services designed to transform your business and drive innovation
 }> {
   option.label;
 }</option>) );
-}</select> <div className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - cyan - 400 pointer - events - none" > <ChevronDown className="w - 5 h - 5" /> </div> </div> <button on_click= {
+}</select> <div className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - cyan - 400 pointer-events-none" > <ChevronDown className="w-5 h-5" /> </div> </div> <button on_click= {
   () => setViewMode ('grid');
 }className= {
   `p - 3 rounded - xl transition - all duration - 300 $ {
   view_mode === 'grid' ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white shadow - lg shadow - cyan - 500 / 25' : 'text - gray - 400 hover:text - white hover:bg - gray - 700 / 50';
 }`;
-}> <Grid className="w - 5 h - 5" /> </button> <button on_click= {
+}> <Grid className="w-5 h-5" /> </button> <button on_click= {
   () => setViewMode ('list');
 }className= {
   `p - 3 rounded - xl transition - all duration - 300 $ {
   view_mode === 'list' ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white shadow - lg shadow - cyan - 500 / 25' : 'text - gray - 400 hover:text - white hover:bg - gray - 700 / 50';
 }`;
-}> <List className="w - 5 h - 5" /> </button> </div> </div> </div> </span> </div> </div> </div> <select > {
+}> <List className="w-5 h-5" /> </button> </div> </div> </div> </span> </div> </div> </div> <select > {
   categories.map (category => (<option key= {
   category;
 }value= {
@@ -469,13 +476,13 @@ and micro SAAS services designed to transform your business and drive innovation
 }</option>) );
 }</select> <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="popularity" >Sort by Popularity</option> <option value="rating" >Sort by Rating</option> </select> </div> {
   /* Enhanced Category Overview */;
-}<motion.div > <div className="text - center mb - 16" > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6" > <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Service Categories </span> </h2> <p className="text - lg text - gray - 300 max - w-3xl mx - auto" > Explore our comprehensive range of cutting - edge services across multiple domains </p> </div> > <div className= {
+}<motion.div > <div className="text-center mb-16" > <h2 className="text - 4xl md:text - 5xl font-bold mb-6" > <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent" > Service Categories </span> </h2> <p className="text - lg text - gray - 300 max-w-3xl mx-auto" > Explore our comprehensive range of cutting - edge services across multiple domains </p> </div> > <div className= {
   `w - 20 h - 20 bg - gradient - to - r $ {
   category.color;
 }rounded - 3xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300 shadow - lg`;
 }> {
   category.icon;
-}</div> </div> </div> <div className="mt - 6 pt - 6 border - t border - gray - 700 / 50" > <div className="text - cyan - 400 text - sm font - medium group - hover:text - cyan - 300 transition - colors duration - 300" > Click to explore → </div> </div> {
+}</div> </div> </div> <div className="mt - 6 pt - 6 border - t border-gray-700 / 50" > <div className="text - cyan - 400 text - sm font - medium group - hover:text - cyan - 300 transition-colors duration-300" > Click to explore → </div> </div> {
   /* Services Grid / List */;
 }<motion.div initial= {
   {
@@ -531,8 +538,93 @@ and micro SAAS services designed to transform your business and drive innovation
   const categories = ['All', ...Array && Array.from(new Set(uniqueServices && uniqueServices.map(s => ;
     Array && Array.isArray(s && s.category) ? s && s.category[0] : s && s.category;
   )))];
-
-
+          {/* Main Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+            {/* Enhanced Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-20">;
+              <motion&& motion.div
+                initial={{ opacity: 0, scale: 0 && 0.9 }}
+;
+  // Get unique services by ID;
+  const unique_services = all_services.filter ((service, index, self) =>;
+    index === self.find_index (string => s.id === service.id));
+;
+  // Get all categories;
+  const categories = ['All', ...Array.from (new Set (unique_services.map (string =>;
+    Array.is_array (s.category) ? s.category[0] : s.category)))];
+;
+  // Filter and sort services;
+  const filtered_services = unique_services;
+    .filter (service => {
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.tagline.toLowerCase ().includes (search_term.toLowerCase ());
+      const matches_category = selected_category === 'All' ||;
+                            (Array.is_array (service.category) ?;
+                              service.category.includes (selected_category) :;
+                              service.category === selected_category);
+      return matches_search && matches_category;
+    });
+    .sort ((a, b) => {
+      switch (sort_by) {
+        case 'name':;
+          return a.name.locale_compare (b.name);
+        case 'price':;
+          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''));
+        case 'popularity':;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        case 'rating':;
+          return (b.rating || 0) - (a.rating || 0);
+        default: return 0;
+      }
+    });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
+  }
+;
+  return (
+    <UltraFuturisticBackground2029>;
+      <Head>;
+        <title > Revolutionary 2029 Technology Services | Zion Tech Group</title>;
+        <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />;
+        <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" />;
+        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
+        <link rel="canonical" href="https://ziontechgroup.com / services" />;
+      </Head>;
+      <Layout>;
+        <div className="min - h-screen bg - black text-white relative overflow-hidden">;
+          {/* Enhanced Futuristic Background Effects */}
+          <div className="absolute inset - 0 bg - gradient - to - br from - gray - 900 via - black to-gray-900"></div>;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_30%_20%, rgba (56, 189, 248, 0.15), transparent_50%)]"></div>;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_70%_80%, rgba (168, 85, 247, 0.15), transparent_50%)]"></div>;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_50%_50%, rgba (16, 185, 129, 0.1), transparent_50%)]"></div>;
+          {/* Animated Quantum Particles */}
+          <div className="absolute inset-0 overflow-hidden">;
+            <div className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full animate-pulse opacity-60"></div>;
+            <div className="absolute top - 3/4 right - 1/4 w - 1 h - 1 bg - purple - 400 rounded - full animate-ping opacity-40"></div>;
+            <div className="absolute top - 1/2 left - 3/4 w - 1.5 h - 1.5 bg - green - 400 rounded - full animate-bounce opacity-50"></div>;
+            <div className="absolute top - 1/3 right - 1/3 w - 1 h - 1 bg - pink - 400 rounded - full animate-pulse opacity-30"></div>;
+          </div>;
+          {/* Main Content */}
+          <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt-32 pb-20">;
+            {/* Enhanced Header */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-20"
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
 
             {/* Enhanced Search and Filters */}
             <motion&& motion.div
@@ -724,10 +816,6 @@ and micro SAAS services designed to transform your business and drive innovation
                           Click to explore →;
                         </div>;
                       </div>;
-
-
-
-
 
             {/* Services Grid/List */}
             <motion&& motion.div
@@ -1991,6 +2079,29 @@ href="/contact""
                               <div className="text-gray-400">Customers</div>
                             </div>
                           </div>
+
+                          </div>;
+                        </div>;
+
+                        {/* Pricing & Stats */}
+                        <div className="lg:w-48 space-y-4">;
+                          <div className="text-center">;
+                            <div className="text-3xl font-bold text-white">${service && service.price.monthly}</div>;
+                            <div className="text-sm text-gray-400">/month</div>;
+                            <div className="text-xs text-green-400">{service && service.price.trialDays}-day trial</div>;
+                          </div>;
+
+                          <div className="grid grid-cols-2 gap-2 text-center text-xs">;
+                            <div className="bg-gray-800/30 rounded-lg p-2">;
+                              <div className="text-cyan-400 font-semibold">{service && service.rating}/5</div>;
+                              <div className="text-gray-400">Rating</div>;
+                            </div>;
+                            <div className="bg-gray-800/30 rounded-lg p-2">;
+                              <div className="text-purple-400 font-semibold">{service && service.customers}+</div>;
+                              <div className="text-gray-400">Customers</div>;
+                            </div>;
+                          </div>;
+
                           <a
                             href={service.link}
                             className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg text-center text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
@@ -2010,13 +2121,242 @@ href="/contact""
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="text-center mt-24"><div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">
+              transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }}
+              className="text-center mt-24">;
+              <div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">;
                 {/* Animated Background Elements */}
-                <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
-                <div className="relative z-10">
-                  <motion.div
+            {/* Enhanced Category Overview */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mb-20";
+            >;
+              <div className="text-center mb-16">;
+                <h2 className="text - 4xl md:text - 5xl font-bold mb-6">;
+                  <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
+                    Service Categories;
+                  </span>;
+                </h2>;
+                <p className="text - lg text - gray - 300 max-w-3xl mx-auto">;
+                  Explore our comprehensive range of cutting - edge services across multiple domains;
+                </p>;
+              </div>;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6">;
+                {categories.map ((category, index) => {
+                  const stats = getCategoryStats (category.id);
+                  return (
+                    <motion.div;
+                      key={category.id}
+                      initial={{ opacity: 0, coordinate_y: 20 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                      className="bg - gray - 900 / 60 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 hover:border - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration-500 cursor-pointer group";
+                      on_click={() => setSelectedCategory (category.id)}
+                    >;
+                      <div className={`w - 20 h - 20 bg - gradient - to - r ${category.color} rounded - 3xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300 shadow - lg`}>;
+                        {category.icon}
+                      </div>;
+                      <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - cyan - 300 transition-colors duration-300">{category.name}</h3>;
+                      <p className="text - gray - 300 text - base mb-6 leading-relaxed">{category.description}</p>;
+                      <div className="grid grid - cols - 3 gap-6 text-center">;
+                        <div className="group - hover:scale - 105 transition-transform duration-300">;
+                          <div className="text - 3xl font - bold text-cyan-400">{stats.count}</div>;
+                          <div className="text - sm text-gray-400">Services</div>;
+                        </div>;
+                        <div className="group - hover:scale - 105 transition-transform duration-300">;
+                          <div className="text - 3xl font - bold text-purple-400">${stats.avg_price}</div>;
+                          <div className="text - sm text-gray-400">Avg Price</div>;
+                        </div>;
+                        <div className="group - hover:scale - 105 transition-transform duration-300">;
+                          <div className="text - 3xl font - bold text-green-400">{stats.avg_rating}</div>;
+                          <div className="text - sm text-gray-400">Rating</div>;
+                        </div>;
+                      </div>;
+                      <div className="mt - 6 pt - 6 border - t border-gray-700 / 50">;
+                        <div className="text - cyan - 400 text - sm font - medium group - hover:text - cyan - 300 transition-colors duration-300">;
+                          Click to explore →;
+                        </div>;
+                      </div>;
+            {/* Services Grid / List */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >;
+              <h2 className="text - 3xl font - bold text-center mb-12">;
+                <span className="bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip-text text-transparent">;
+                  {selected_category === 'all' ? 'All Services' : categories.find (c => c.id === selected_category)?.name}
+                </span>;
+              </h2>;
+              {view_mode === 'grid' ? (
+                <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
+                  {sorted_services.map ((service, index) => (
+                    <motion.div;
+                      key={service.id}
+                      initial={{ opacity: 0, coordinate_y: 20 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      className="bg - gray - 900 / 60 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 hover:border - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 500 hover:transform hover:scale-105 group relative overflow-hidden";
+                    >;
+                      {/* Animated Background */}
+                      <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 5 to - purple - 500 / 5 opacity - 0 group - hover:opacity - 100 transition-opacity duration-500"></div>;
+                      <div className="absolute top - 0 right - 0 w - 32 h - 32 bg - gradient - to - br from - cyan - 500 / 10 to - transparent rounded - full blur - 3xl group - hover:scale - 150 transition-transform duration-700"></div>;
+                      {/* Enhanced Service Header */}
+                      <div className="relative z-10">;
+                        <div className="flex items - start justify-between mb-6">;
+                          <div className="flex-1">;
+                            <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - cyan - 400 transition-colors duration-300">;
+                              {service.name}
+                            </h3>;
+                            <p className="text - base text - gray-300 leading-relaxed">{service.tagline}</p>;
+                          </div>;
+                          {service.popular && (
+                            <span className="px - 3 py - 1.5 text - sm bg - gradient - to - r from - pink - 500 to - rose - 500 text - white rounded - full shadow - lg shadow-pink-500 / 25">;
+                              ⭐ Popular;
+                            </span>)}
+                        </div>;
+                        {/* Service Icon */}
+                        <div className="text-4xl mb-4">{service.icon}</div>;
+                      </div>;
+                    </div>;
+                  </motion.div>))}
+              </div>) : (
+              <motion.div;
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-20";
+              >;
+                <Search className="w - 16 h - 16 text - gray - 400 mx-auto mb-4" />;
+                <h3 className="text - xl font - semibold text-white mb-2">No services found</h3>;
+                <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>;
+                <button;
+                  on_click={() => {
+                    setSearchTerm ('');
+                    setSelectedCategory ('All');
+                  }}
+                  className="mt - 4 px - 6 py - 2 bg - cyan - 500 text - white rounded - lg hover:bg - cyan-600 transition-colors";
+                >;
+                  Clear Filters;
+                </button>;
+              </motion.div>)}
+          </div>;
+        </section>;
+                      {/* Enhanced Price */}
+                      <div className="mb-6 relative z-10">;
+                        <div className="bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 rounded-2xl p-4">;
+                          <div className="text - 3xl font - bold text-white mb-1">${service.price.monthly}</div>;
+                          <div className="text - sm text-gray-300">/month</div>;
+                          <div className="text - xs text - cyan - 400 font-medium mt-1">{service.price.trial_days}-day free trial</div>;
+                        </div>;
+                      </div>;
+                      {/* Enhanced Features */}
+                      <div className="mb-6 relative z-10">;
+                        <div className="text - sm text - cyan - 400 font-medium mb-3">✨ Key Features</div>;
+                        <ul className="space-y-2">;
+                          {service.features.slice (0, 3).map ((feature, idx) => (
+                            <li key={idx} className="text - sm text - gray - 300 flex items - center group - hover:text - white transition-colors duration-300">;
+                              <Check className="w - 4 h - 4 text - green - 400 mr - 3 flex-shrink-0" />;
+                              {feature}
+                            </li>))}
+                        </ul>;
+                      </div>;
+                      {/* Enhanced Stats */}
+                      <div className="grid grid - cols - 3 gap - 3 mb - 6 text-center relative z-10">;
+                        <div className="bg - gray - 800 / 50 rounded - xl p - 3 border border - gray - 700 / 50 group - hover:border - cyan - 500 / 30 transition-colors duration-300">;
+                          <div className="text - cyan - 400 font-bold text-lg">{service.rating}/5</div>;
+                          <div className="text - gray-300 text-xs">Rating</div>;
+                        </div>;
+                        <div className="bg - gray - 800 / 50 rounded - xl p - 3 border border - gray - 700 / 50 group - hover:border - purple - 500 / 30 transition-colors duration-300">;
+                          <div className="text - purple - 400 font-bold text-lg">{service.customers}+</div>;
+                          <div className="text - gray-300 text-xs">Customers</div>;
+                        </div>;
+                        <div className="bg - gray - 800 / 50 rounded - xl p - 3 border border - gray - 700 / 50 group - hover:border - green - 500 / 30 transition-colors duration-300">;
+                          <div className="text - green - 400 font-bold text-lg">{service.price.setup_time}</div>;
+                          <div className="text - gray-300 text-xs">Setup</div>;
+                        </div>;
+                      </div>;
+                      {/* Enhanced CTA */}
+                      <div className="relative z-10">;
+                        <a;
+                          href={service.link}
+                          className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white py - 4 px - 6 rounded - 2xl text - center font - semibold text - base hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - cyan - 500 / 25 group - hover:shadow - xl group - hover:shadow-cyan-500 / 40";
+                        >;
+                          Explore Service;
+                          <ArrowRight className="w - 5 h - 5 inline ml - 2 group - hover:translate - x-1 transition-transform duration-300" />;
+                        </a>;
+                      </div>;
+                    </motion.div>))}
+                </div>) : (
+                <div className="space-y-4">;
+                  {sorted_services.map ((service, index) => (
+                    <motion.div;
+                      key={service.id}
+                      initial={{ opacity: 0, coordinate_x: -20 }}
+                      animate={{ opacity: 1, coordinate_x: 0 }}
+                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 6 hover:border - gray - 600 / 50 transition-all duration-300";
+                    >;
+                      <div className="flex flex - col lg:flex-row gap-6">;
+                        {/* Service Info */}
+                        <div className="flex-1">;
+                          <div className="flex items - start justify-between mb-3">;
+                            <h3 className="text - xl font-bold text-white">{service.name}</h3>;
+                            {service.popular && (
+                              <span className="px - 3 py - 1 text - sm bg - gradient - to - r from - pink - 500 to - rose - 500 text-white rounded-full">;
+                                Popular;
+                              </span>)}
+                          </div>;
+                          <p className="text - gray-300 mb-3">{service.description}</p>;
+                          <div className="flex flex - wrap gap-2 mb-4">;
+                            {service.features.slice (0, 4).map ((feature, idx) => (
+                              <span key={idx} className="px - 2 py - 1 bg - gray - 800 / 50 text - xs text - gray-300 rounded-lg">;
+                                {feature}
+                              </span>))}
+                          </div>;
+                        </div>;
+                        {/* Pricing & Stats */}
+                        <div className="lg:w-48 space-y-4">;
+                          <div className="text-center">;
+                            <div className="text - 3xl font-bold text-white">${service.price.monthly}</div>;
+                            <div className="text - sm text-gray-400">/month</div>;
+                            <div className="text - xs text-green-400">{service.price.trial_days}-day trial</div>;
+                          </div>;
+                          <div className="grid grid - cols - 2 gap - 2 text-center text-xs">;
+                            <div className="bg - gray - 800 / 30 rounded-lg p-2">;
+                              <div className="text - cyan-400 font-semibold">{service.rating}/5</div>;
+                              <div className="text-gray-400">Rating</div>;
+                            </div>;
+                            <div className="bg - gray - 800 / 30 rounded-lg p-2">;
+                              <div className="text - purple-400 font-semibold">{service.customers}+</div>;
+                              <div className="text-gray-400">Customers</div>;
+                            </div>;
+                          </div>;
+                          <a;
+                            href={service.link}
+                            className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white py - 2 px - 4 rounded - lg text - center text - sm font - medium hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-200";
+                          >;
+                            Learn More;
+                            <ArrowRight className="w - 4 h-4 inline ml-2" />;
+                          </a>;
+                        </div>;
+                      </div>;
+                    </motion.div>))}
+                </div>)}
+            </motion.div>;
+            {/* Enhanced CTA Section */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="text-center mt-24";
+            >;
+              <div className="relative overflow - hidden bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 border border - cyan - 500 / 20 rounded - 3xl p - 16 shadow - 2xl shadow-cyan-500 / 10">;
+                {/* Animated Background Elements */}
+                <div className="absolute top - 0 left - 0 w - 64 h - 64 bg - gradient - to - br from - cyan - 500 / 20 to - transparent rounded-full blur-3xl"></div>;
+                <div className="absolute bottom - 0 right - 0 w - 64 h - 64 bg - gradient - to - br from - purple - 500 / 20 to - transparent rounded-full blur-3xl"></div>;
+                <div className="relative z-10">;
+                  <motion.div;
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}

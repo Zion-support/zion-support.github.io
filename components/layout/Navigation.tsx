@@ -16,9 +16,14 @@ import {
   Globe
   ChevronDown;
 } from 'lucide-react';
-import Link from 'next/link';import {
-  Menu, X, Home, Brain, Cpu, Rocket
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import Link from 'next/link';import { ;
+  Menu, X, Home, Brain, Cpu, Rocket, ;
+  Phone, Mail, MapPin, Globe, ChevronDown;
+} from 'lucide-react';
+import Link from 'next/link';
+
+import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown
  } from 'lucide-react';
 import Link from 'next/link';
@@ -49,31 +54,22 @@ const Navigation: React.FC;
       href: '/services'
       icon: Rocket
       dropdown: [
-        {
-          name: 'AI Services'
-          href: '/ai-services'
-          icon: Brain
-          description: 'Revolutionary AI solutions'
-        }
-        {
-          name: 'IT Services'
-          href: '/it-services'
-          icon: Cpu
-          description: 'Enterprise IT solutions'
-        }
-        {
-          name: 'Micro SaaS'
-          href: '/micro-saas'
-          icon: Rocket
-          description: 'Specialized software solutions'
-        }
-        {
-          name: 'Innovative Showcase'
-          href: '/innovative-services-showcase'
-          icon: Globe
-          description: 'Cutting-edge technology'
-        }
-      ]
+  Menu,
+  X,
+  Home,
+  Brain,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ChevronDown,
+} from 'lucide-react';
+import Link from 'next/link';import {
+  Menu, X, Home, Brain, Cpu, Rocket,
+  Phone, Mail, MapPin, Globe, ChevronDown;
+} from 'lucide-react';
     }
     {
       name: 'Solutions'
@@ -212,21 +208,37 @@ const Navigation: React.FC;
                                 const Icon = dropdownItem.icon;
                                 return (
                                   <Link
-                                    key={dropdownItem.name}
-                                    href={dropdownItem.href}
-                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item"><div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">
-                                      <Icon className="w-5 h-5 text-cyan-400" />
-                                    </div>
-                                    <div>
-                                      <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">
-                                        {dropdownItem.name}
-                                      </div>
-                                      <div className="text-gray-400 text-sm">
-                                        {dropdownItem.description}
-                                      </div>
-                                    </div>
-                                  </Link>
-                                );                                )
+
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item && item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'>;
+                      <item && item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />;
+                      <span className='font-medium'>{item && item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group";
+                    >;
+                      <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
+                      <span className="font-medium">{item && item.name}</span>;
+                                    key={dropdownItem && dropdownItem.name}
+                                    href={dropdownItem && dropdownItem.href}
+                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item">;
+                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">;
+                                      <Icon className="w-5 h-5 text-cyan-400" />;
+                                    </div>;
+                                    <div>;
+                                      <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">;
+                                        {dropdownItem && dropdownItem.name}
+                                      </div>;
+                                      <div className="text-gray-400 text-sm">;
+                                        {dropdownItem && dropdownItem.description}
+                                      </div>;
+                                    </div>;
+                                  </Link>;
+                                );                                );
                               })}
                             </div>
                           </motion.div>
@@ -290,8 +302,7 @@ const Navigation: React.FC;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
-            className='fixed inset-0 z-40 lg:hidden'
+
           >
             {/* Backdrop */}
             <div
@@ -303,6 +314,8 @@ const Navigation: React.FC;
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
+            
+
             {/* Mobile Menu */}
             <motion.div
               initial={{ x: '100%' }}
@@ -387,6 +400,7 @@ const Navigation: React.FC;
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
+
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
@@ -400,6 +414,10 @@ const Navigation: React.FC;
                     </div>
                   ))}
                 </div>
+                      )}
+                    </div>;
+                  ))}
+
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -428,27 +446,142 @@ const Navigation: React.FC;
                     </div>
                   </div>
                 </div>
-                {/* Mobile CTA */}
-                <div className='mt-6'>
-                  <motion.a
-                    href='/contact'
-                    whileTap={{ scale: 0.95 }}
+                {/* Contact Information */}
+                <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>;
+                  <h3 className='text-cyan-400 font-semibold mb-3'>;
+                    Contact Information;
+                  </h3>;
+                  <div className='space-y-2 text-sm'>;
+                    <div className='flex items-center space-x-2 text-gray-300'>;
+                      <Phone className='w-4 h-4 text-cyan-400' />;
+                      <span>{contactInfo && contactInfo.mobile}</span>;
+                    </div>;
+                    <div className='flex items-center space-x-2 text-gray-300'>;
+                      <Mail className='w-4 h-4 text-purple-400' />;
+                      <span>{contactInfo && contactInfo.email}</span>;
+                    </div>;
+                    <div className='flex items-center space-x-2 text-gray-300'>;
+                      <MapPin className='w-4 h-4 text-pink-400' />;
+                      <span className='text-xs'>{contactInfo && contactInfo.address}</span>                    </div>                      <span>{contactInfo && contactInfo.mobile}</span>;
+                    </div>;
+                    <div className="flex items-center space-x-2 text-gray-300">;
+                      <Mail className="w-4 h-4 text-purple-400" />;
+                      <span>{contactInfo && contactInfo.email}</span>;
+                    </div>;
+                    <div className="flex items-center space-x-2 text-gray-300">;
+                      <MapPin className="w-4 h-4 text-pink-400" />;
+                      <span className="text-xs">{contactInfo && contactInfo.address}</span>;
+                    </div>;
+                  </div>;
+                </div>;
                     onClick={() => setIsOpen(false)}
-                    className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'                  >                  <motion.a
-                    href="/contact"
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsOpen(false)}
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25"
-                  >
-                    Get Started Today
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25";
+                  >;
+                    Get Started Today;
+                  </motion && motion.a>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </motion && motion.div>;
         )}
-      </AnimatePresence>
-    </>
+      </AnimatePresence>;
+    </>;
+  )
+};
+
+export default Navigation;  )
+};
+
+export default Navigation;
+                          </div>;
+                          <div className="pl-4 space-y-2">;
+                            {item.dropdown.map ((dropdown_item) => {
+                              const Icon = dropdown_item.icon;
+                              return (
+                                <Link;
+                                  key={dropdown_item.name}
+                                  href={dropdown_item.href}
+                                  on_click={() => setIsOpen (false)}
+                                  className="flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition-all duration-300";
+                                >;
+                                  <Icon className="w - 5 h - 5 text-cyan-400" />;
+                                  <div>;
+                                    <div className="text-white font-medium">{dropdown_item.name}</div>;
+                                    <div className="text - gray-400 text-sm">{dropdown_item.description}</div>;
+                                  </div>;
+                                </Link>);
+                            })}
+                          </div>;
+                        </div>) : (
+                        <Link;
+                          href={item.href}
+                          on_click={() => setIsOpen (false)}
+                          className='flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300';
+                        >;
+                          <item.icon className='w - 5 h - 5 text - cyan - 400' />;
+                          <span className='text - white font - medium'>;
+                            {item.name}
+                          </span>                        </Link>                          className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition-all duration-300";
+                        >;
+                          <item.icon className="w - 5 h - 5 text-cyan-400" />;
+                          <span className="text-white font-medium">{item.name}</span>)}
+                    </div>))}
+                </div>;
+                {/* Contact Information */}
+                <div className='mt - 8 p - 4 bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 rounded - xl border border - cyan - 500 / 20'>;
+                  <h3 className='text - cyan - 400 font - semibold mb - 3'>;
+                    Contact Information;
+                  </h3>;
+                  <div className='space - y-2 text - sm'>;
+                    <div className='flex items - center space - x-2 text - gray - 300'>;
+                      <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                      <span>{contact_info.mobile}</span>;
+                    </div>;
+                    <div className='flex items - center space - x-2 text - gray - 300'>;
+                      <Mail className='w - 4 h - 4 text - purple - 400' />;
+                      <span>{contact_info.email}</span>;
+                    </div>;
+                    <div className='flex items - center space - x-2 text - gray - 300'>;
+                      <MapPin className='w - 4 h - 4 text - pink - 400' />;
+                      <span className='text - xs'>{contact_info.address}</span>                    </div>                      <span>{contact_info.mobile}</span>;
+                    </div>;
+                    <div className="flex items - center space - x-2 text-gray-300">;
+                      <Mail className="w - 4 h - 4 text-purple-400" />;
+                      <span>{contact_info.email}</span>;
+                    </div>;
+                    <div className="flex items - center space - x-2 text-gray-300">;
+                      <MapPin className="w - 4 h - 4 text-pink-400" />;
+                      <span className="text-xs">{contact_info.address}</span>;
+                    </div>;
+                  </div>;
+                </div>;
+                {/* Mobile CTA */}
+                <div className='mt - 6'>;
+                  <motion.a;
+                    href='/contact';
+                    while_tap={{ scale: 0.95 }}
+                    on_click={() => setIsOpen (false)}
+                    className='block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25'                  >                  <motion.a;
+                    href="/contact";
+                    while_tap={{ scale: 0.95 }}
+                    on_click={() => setIsOpen (false)}
+                    className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow-cyan-500 / 25";
+                  >;
+                    Get Started Today;
+                  </motion.a>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </>);
+}
+;
+export default Navigation);
+}
+;
+export default Navigation;
+;
   );
 }
 export default Navigation;  )

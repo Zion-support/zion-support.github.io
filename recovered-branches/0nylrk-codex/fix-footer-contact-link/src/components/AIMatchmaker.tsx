@@ -51,9 +51,10 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
 
-  onMatchSelect?: ("match": any) => void,
-import { Textarea } from "@/components/ui/textarea","
-import { Sparkles, Search } from "lucide-react","
+  onMatchSelect?: (match: any) => void
+import { Textarea } from "@/components/ui/textarea",
+import { Sparkles, Search } from "lucide-react",
+
 interface AIMatchmakerProps {
   }
   serviceType?: string,
@@ -69,10 +70,6 @@ const [isMatchmaking, setIsMatchmaking] = useState(false),;
 const [matches, setMatches] = useState([] as MatchResult[]),;
 const [hasSearched, setHasSearched] = useState(false),;
 
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -94,7 +91,8 @@ const [hasSearched, setHasSearched] = useState(false),;
 
     }
 
-
+    try {;
+      console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
 
   const handleSearch = async () => {;
     if (!query && query.trim()) {;
@@ -147,10 +145,11 @@ const [hasSearched, setHasSearched] = useState(false),;
         variant: "destructive"})
       // Set empty matches to show no results found UI;
       setMatches([])
-
-  const matchItems = matches.map(match => match.item);
-
-  };
+    } finally {
+  }
+  // Extract just the items from each MatchResult
+  const matchItems = matches.map(match => match.item)
+};
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
@@ -169,9 +168,17 @@ interface AIMatchmakerProps {;
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
-<<<<<<< HEAD
-
-
+;
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+  const [query, setQuery] = useState(""),;
+  const [isMatchmaking, setIsMatchmaking] = useState(false),;
+  const [matches, setMatches] = useState([] as MatchResult[]),;
+  const [hasSearched, setHasSearched] = useState(false),;
+  const handleSearch = async () => {;
+    if (!query.trim()) {;
+      toast({;
+        title: "Please enter a description",,
+  description: "Tell us what you're looking for so we can find matches.",;
         variant: "destructive"}),;
 
 =======
@@ -245,14 +252,25 @@ export function AIMatchmaker() {;"
         </div />;
       </CardContent>;
     </Card>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-}
-
-
-=======
+  );
+        <div className="space-y-4">;
+          <div className="space-y-2">;
+            <Textarea;
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
+              value={query}
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}
+              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+            />;
+            <Button;
+              on_click={handle_search}
+              disabled={is_matchmaking}
+              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white";
+            >;
+              {is_matchmaking ? (
+                <>Analyzing your needs...</>) : (
+                <>;
+                  <Search className="h - 4 w - 4 mr-2" />;
+                  Find Matches;
                 </>)}
             </Button>;
           </div>;

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 
+import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 
+export default function ServicesPage() {
   return (
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Services</h1>;
@@ -137,10 +139,10 @@ export default function ServicesPage() {return (<EnhancedLayout    />;
 <<<<<<< HEAD
 
     </EnhancedLayout>);
-}        <section id="ai" className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;
-          <BadgeCheck className="h - 6 w - 6 text - indigo - 500" />;
-          <div className="mt - 3 text - lg font - semibold">AI Integrations</div>;
-          <p className="mt - 1 text - sm opacity - 80">Copilots, agents, vector search, and automation tailored to your product.</p>;
+}        <section id="ai" className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg-gray-950">;
+          <BadgeCheck className="h - 6 w - 6 text-indigo-500" />;
+          <div className="mt - 3 text-lg font-semibold">AI Integrations</div>;
+          <p className="mt - 1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>;
       </div>;
     </EnhancedLayout>);
 }

@@ -33,20 +33,6 @@ import {
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 
-=======
-
-import {Button} from "@/components/ui/button";
-import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
-import {PricingSuggestionBox} from "./PricingSuggestionBox";
-import {useAuth} from "@/hooks/useAuth";
-import {Sparkles} from "lucide-react";
-interface ClientBudgetRecommenderProps {;
-  jobTitle: string,;
-  category: string,;
-
-interface ClientBudgetRecommenderProps {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
@@ -219,9 +205,6 @@ const result = await getClientBudgetSuggestion(params),;
   },
 <<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
       setSuggestion(result);
     } catch (error) {;"
       console && console.error("Error generating budget suggestion:", error);
@@ -350,16 +333,18 @@ if ( {) {
     }
   }
 ;
-return (;
-    <div className="space-y-4">;"
-
+  return (
+    <div className="space-y-4">;
       <div>;
         {!suggestion && !is_loading ? (
           <Button;"
             type="button";"
             variant="outline";
             on_click={generate_suggestion}
-
+            disabled={!job_title || !category}
+            className="w-full";
+          >;
+            <Sparkles className="h - 4 w - 4 mr-2" /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
 
@@ -367,23 +352,10 @@ return (;
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
-<<<<<<< HEAD
-
-
 
       </div>;
     </div>;
-
-
-
-
-
-
-
-=======
-      </div>;
-    </div>;
-
+  )
 };
       </div>;
     </div>;
