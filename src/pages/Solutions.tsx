@@ -1,255 +1,223 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  Building2, 
-  Building, 
-  Rocket, 
-  Shield, 
   Heart, 
   TrendingUp, 
+  Scale, 
+  Atom, 
   Factory, 
   ShoppingCart, 
-  GraduationCap, 
-  Truck,
+  Shield, 
+  Leaf, 
+  Rocket, 
+  GraduationCap,
+  Building,
+  Car,
+  City,
+  CheckCircle,
   ArrowRight,
   Star,
-  Zap,
-  Brain,
-  Cloud,
-  Lock,
+  Sparkles,
+  Users,
   Globe,
   Cpu,
-  Atom,
-  Rocket as RocketIcon
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Target,
+  Zap,
+  Brain,
+  Eye,
+  Network,
+  Clock,
+  FileText,
+  Settings,
+  Key,
+  ShieldCheck,
+  Building2,
+  Home,
+  Play,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 export default function Solutions() {
-  const solutions = [
+  const industrySolutions = [
     {
-      category: 'Enterprise Solutions',
-      icon: Building2,
-      description: 'Large-scale business transformations and enterprise-grade solutions',
-      color: 'from-blue-600 to-cyan-600',
-      featured: true,
-      solutions: [
-        'Digital Transformation',
-        'Enterprise AI Integration',
-        'Cloud Migration',
-        'Legacy System Modernization',
-        'Enterprise Security',
-        'Data Governance'
-      ],
-      href: '/solutions/enterprise'
-    },
-    {
-      category: 'SMB Solutions',
-      icon: Building,
-      description: 'Small to medium business growth and optimization',
-      color: 'from-green-600 to-emerald-600',
-      featured: false,
-      solutions: [
-        'Business Process Automation',
-        'AI-Powered Analytics',
-        'Cloud Infrastructure',
-        'Cybersecurity Protection',
-        'Digital Marketing Tools',
-        'Customer Relationship Management'
-      ],
-      href: '/solutions/smb'
-    },
-    {
-      category: 'Startup Solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth with cutting-edge technology',
-      color: 'from-purple-600 to-pink-600',
-      featured: true,
-      solutions: [
-        'MVP Development',
-        'AI-Powered Products',
-        'Cloud-Native Architecture',
-        'Scalable Infrastructure',
-        'Growth Analytics',
-        'Investor-Ready Platforms'
-      ],
-      href: '/solutions/startup'
-    },
-    {
-      category: 'Government Solutions',
-      icon: Shield,
-      description: 'Public sector innovation and digital government services',
-      color: 'from-indigo-600 to-blue-600',
-      featured: false,
-      solutions: [
-        'Digital Government Platforms',
-        'Citizen Services',
-        'Data Security & Compliance',
-        'Process Automation',
-        'Smart City Solutions',
-        'Emergency Response Systems'
-      ],
-      href: '/solutions/government'
-    },
-    {
-      category: 'Healthcare Solutions',
+      id: 'healthcare',
+      title: 'Healthcare Solutions',
       icon: Heart,
       description: 'Digital health transformation and medical AI solutions',
-      color: 'from-red-600 to-pink-600',
-      featured: true,
-      solutions: [
-        'AI Diagnostics',
-        'Patient Management Systems',
-        'Telemedicine Platforms',
-        'Medical Data Analytics',
-        'Healthcare Security',
-        'Clinical Decision Support'
-      ],
-      href: '/solutions/healthcare'
+      features: ['AI Diagnostics', 'Patient Management', 'Telemedicine', 'Medical Imaging'],
+      color: 'from-red-500 to-pink-500',
+      benefits: ['Improved Patient Outcomes', 'Reduced Costs', 'Enhanced Efficiency', 'Better Care Coordination']
     },
     {
-      category: 'Financial Solutions',
+      id: 'financial',
+      title: 'Financial Services',
       icon: TrendingUp,
-      description: 'Fintech innovation and financial compliance solutions',
-      color: 'from-yellow-600 to-orange-600',
-      featured: true,
-      solutions: [
-        'AI Trading Platforms',
-        'Risk Management',
-        'Compliance Automation',
-        'Digital Banking',
-        'Fraud Detection',
-        'Financial Analytics'
-      ],
-      href: '/solutions/financial'
+      description: 'Fintech innovation and compliance solutions',
+      features: ['AI Trading', 'Risk Management', 'Fraud Detection', 'Compliance Automation'],
+      color: 'from-green-500 to-blue-500',
+      benefits: ['Increased Revenue', 'Risk Mitigation', 'Regulatory Compliance', 'Operational Efficiency']
     },
     {
-      category: 'Manufacturing Solutions',
+      id: 'legal',
+      title: 'Legal Services',
+      icon: Scale,
+      description: 'Legal tech and document automation',
+      features: ['Document Review', 'Contract Analysis', 'Legal Research', 'Compliance Monitoring'],
+      color: 'from-blue-500 to-indigo-500',
+      benefits: ['Faster Processing', 'Cost Reduction', 'Accuracy Improvement', 'Time Savings']
+    },
+    {
+      id: 'research',
+      title: 'Research & Academia',
+      icon: Atom,
+      description: 'Research automation and discovery platforms',
+      features: ['Literature Review', 'Data Mining', 'Hypothesis Generation', 'Research Automation'],
+      color: 'from-purple-500 to-pink-500',
+      benefits: ['Accelerated Discovery', 'Cost Efficiency', 'Collaboration Enhancement', 'Innovation Boost']
+    },
+    {
+      id: 'manufacturing',
+      title: 'Manufacturing',
       icon: Factory,
-      description: 'Industry 4.0 and smart manufacturing solutions',
-      color: 'from-gray-600 to-slate-600',
-      featured: false,
-      solutions: [
-        'IoT Integration',
-        'Predictive Maintenance',
-        'Supply Chain Optimization',
-        'Quality Control AI',
-        'Digital Twin Solutions',
-        'Smart Factory Systems'
-      ],
-      href: '/solutions/manufacturing'
+      description: 'Smart manufacturing and Industry 4.0',
+      features: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Process Automation'],
+      color: 'from-orange-500 to-red-500',
+      benefits: ['Increased Productivity', 'Quality Improvement', 'Cost Reduction', 'Operational Excellence']
     },
     {
-      category: 'Retail Solutions',
+      id: 'retail',
+      title: 'Retail & E-commerce',
       icon: ShoppingCart,
-      description: 'Digital retail transformation and e-commerce solutions',
-      color: 'from-blue-600 to-indigo-600',
-      featured: false,
-      solutions: [
-        'E-commerce Platforms',
-        'AI-Powered Personalization',
-        'Inventory Management',
-        'Customer Analytics',
-        'Omnichannel Solutions',
-        'Retail Automation'
-      ],
-      href: '/solutions/retail'
+      description: 'Digital retail transformation',
+      features: ['Customer Analytics', 'Inventory Management', 'Personalization', 'Omnichannel Integration'],
+      color: 'from-purple-500 to-indigo-500',
+      benefits: ['Enhanced Customer Experience', 'Increased Sales', 'Operational Efficiency', 'Market Competitiveness']
     },
     {
-      category: 'Education Solutions',
+      id: 'government',
+      title: 'Government & Public Sector',
+      icon: Shield,
+      description: 'Public sector innovation and digital transformation',
+      features: ['Citizen Services', 'Data Analytics', 'Process Automation', 'Security Enhancement'],
+      color: 'from-blue-500 to-cyan-500',
+      benefits: ['Improved Service Delivery', 'Cost Savings', 'Transparency', 'Efficiency Gains']
+    },
+    {
+      id: 'energy',
+      title: 'Energy & Sustainability',
+      icon: Leaf,
+      description: 'Sustainable energy and green technology',
+      features: ['Energy Optimization', 'Carbon Footprint Analysis', 'Renewable Integration', 'Smart Grid Management'],
+      color: 'from-green-500 to-emerald-500',
+      benefits: ['Environmental Impact', 'Cost Reduction', 'Regulatory Compliance', 'Sustainability Goals']
+    },
+    {
+      id: 'space',
+      title: 'Space & Aerospace',
+      icon: Rocket,
+      description: 'Space technology and aerospace innovation',
+      features: ['Satellite Operations', 'Space Debris Tracking', 'Mission Planning', 'Data Analysis'],
+      color: 'from-indigo-500 to-purple-500',
+      benefits: ['Mission Success', 'Cost Efficiency', 'Safety Enhancement', 'Innovation Leadership']
+    },
+    {
+      id: 'education',
+      title: 'Education & Training',
       icon: GraduationCap,
-      description: 'Educational technology and learning management solutions',
-      color: 'from-purple-600 to-violet-600',
-      featured: false,
-      solutions: [
-        'Learning Management Systems',
-        'AI Tutoring',
-        'Student Analytics',
-        'Virtual Classrooms',
-        'Assessment Tools',
-        'Educational Content Creation'
-      ],
-      href: '/solutions/education'
-    },
-    {
-      category: 'Transportation Solutions',
-      icon: Truck,
-      description: 'Smart transportation and logistics solutions',
-      color: 'from-green-600 to-teal-600',
-      featured: false,
-      solutions: [
-        'Fleet Management',
-        'Route Optimization',
-        'Supply Chain Tracking',
-        'Autonomous Systems',
-        'Traffic Management',
-        'Logistics Analytics'
-      ],
-      href: '/solutions/transportation'
+      description: 'Educational technology and learning platforms',
+      features: ['Personalized Learning', 'Content Creation', 'Assessment Tools', 'Collaboration Platforms'],
+      color: 'from-blue-500 to-indigo-500',
+      benefits: ['Improved Learning Outcomes', 'Accessibility', 'Cost Efficiency', 'Engagement Enhancement']
     }
   ];
 
-  const technologies = [
-    { name: 'Artificial Intelligence', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum Computing', icon: Atom, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Cloud & DevOps', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Cybersecurity', icon: Lock, color: 'from-red-500 to-orange-500' },
-    { name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-emerald-500' },
-    { name: 'Blockchain', icon: Globe, color: 'from-yellow-500 to-orange-500' }
+  const businessSolutions = [
+    {
+      id: 'enterprise',
+      title: 'Enterprise Solutions',
+      icon: Building2,
+      description: 'Large-scale business transformations',
+      features: ['Digital Transformation', 'Process Optimization', 'Data Integration', 'Change Management'],
+      color: 'from-slate-500 to-blue-500',
+      benefits: ['Scalability', 'Efficiency', 'Innovation', 'Competitive Advantage']
+    },
+    {
+      id: 'smb',
+      title: 'SMB Solutions',
+      icon: Building,
+      description: 'Small to medium business growth',
+      features: ['Growth Strategy', 'Process Automation', 'Market Expansion', 'Technology Adoption'],
+      color: 'from-green-500 to-blue-500',
+      benefits: ['Growth Acceleration', 'Cost Efficiency', 'Market Reach', 'Operational Excellence']
+    },
+    {
+      id: 'startup',
+      title: 'Startup Solutions',
+      icon: Zap,
+      description: 'Accelerate your startup growth',
+      features: ['MVP Development', 'Market Validation', 'Growth Hacking', 'Investor Readiness'],
+      color: 'from-yellow-500 to-orange-500',
+      benefits: ['Faster Growth', 'Market Validation', 'Investor Attraction', 'Competitive Edge']
+    }
   ];
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Solutions - Zion Tech Group"
-        description="Comprehensive technology solutions for enterprises, SMBs, startups, and government organizations. AI, quantum computing, cybersecurity, and more."
-      />
-      
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="container-responsive relative z-10">
+      <section className="relative py-20 overflow-hidden">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Solutions for Every
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}Business Need
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              Industry Solutions
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              From startups to enterprises, we deliver cutting-edge technology solutions that drive innovation, 
-              efficiency, and growth across all industries.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Transform your industry with cutting-edge AI solutions. From healthcare to manufacturing, 
+              we deliver tailored solutions that drive innovation and growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Your Solution
-                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
+                to="/demo"
+                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
               >
-                Schedule Consultation
+                Schedule Demo
               </Link>
             </div>
           </motion.div>
         </div>
         
         {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
       </section>
 
-      {/* Solutions Grid */}
+      {/* Industry Solutions */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -259,74 +227,82 @@ export default function Solutions() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Comprehensive Solution Categories
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Specific Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions are designed to address the unique challenges and opportunities 
-              across different business types and industries.
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Tailored AI solutions designed for your specific industry challenges and opportunities
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {industrySolutions.map((solution, index) => (
               <motion.div
-                key={solution.category}
+                key={solution.id}
+                id={solution.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className="group bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
               >
-                <Link to={solution.href}>
-                  <div className={`p-8 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${
-                    solution.featured
-                      ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-slate-700/50 ring-2 ring-cyan-400/20'
-                      : 'border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50'
-                  }`}>
-                    <div className="flex items-center justify-between mb-6">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${solution.color}`}>
-                        <solution.icon className="w-6 h-6 text-white" />
-                      </div>
-                      {solution.featured && (
-                        <span className="inline-flex items-center gap-1 text-xs text-cyan-400">
-                          <Star className="w-3 h-3" />
-                          Featured
-                        </span>
-                      )}
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {solution.category}
+                <div className="flex items-start gap-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <solution.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                      {solution.title}
                     </h3>
-                    
-                    <p className="text-gray-400 mb-6 leading-relaxed">
+                    <p className="text-gray-300 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
                     
-                    <ul className="space-y-2 mb-6">
-                      {solution.solutions.slice(0, 4).map((item, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features</h4>
+                        <ul className="space-y-2">
+                          {solution.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-lg font-semibold text-green-400 mb-3">Benefits</h4>
+                        <ul className="space-y-2">
+                          {solution.benefits.map((benefit, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                              <Star className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              {benefit}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                     
-                    <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                      <span className="text-sm font-medium">Learn More</span>
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <div className="mt-6 pt-6 border-t border-slate-700/50">
+                      <Link
+                        to="/request-quote"
+                        className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                      >
+                        Get Custom Solution
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
                     </div>
                   </div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-20 bg-slate-800/30">
+      {/* Business Solutions */}
+      <section className="py-20">
         <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -335,38 +311,62 @@ export default function Solutions() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Powered by Cutting-Edge Technology
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Business Size Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions leverage the latest advancements in AI, quantum computing, 
-              and emerging technologies to deliver exceptional results.
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Scalable solutions designed for businesses of all sizes
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {businessSolutions.map((solution, index) => (
               <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                key={solution.id}
+                id={solution.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center group"
+                className="group bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70 text-center"
               >
-                <div className={`p-6 rounded-xl bg-gradient-to-br ${tech.color} mb-4 mx-auto w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <tech.icon className="w-8 h-8 text-white" />
+                <div className={`w-20 h-20 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <solution.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
-                  {tech.name}
+                
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  {solution.title}
                 </h3>
+                
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {solution.description}
+                </p>
+                
+                <ul className="space-y-3 mb-6 text-left">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="pt-6 border-t border-slate-700/50">
+                  <Link
+                    to="/request-quote"
+                    className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contact Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -374,29 +374,71 @@ export default function Solutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Let our experts analyze your needs and design a custom solution that drives 
-              measurable results and competitive advantage.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Start Your Transformation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
-              >
-                Talk to Our Experts
-              </Link>
+            <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Industry?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our AI solutions can address your specific industry challenges 
+                and drive innovation in your business.
+              </p>
+              
+              {/* Contact Information */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    {contactInfo.phone}
+                  </a>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                  <p className="text-slate-300 text-sm">
+                    {contactInfo.address}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  to="/request-quote"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  Get Your Quote
+                </Link>
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
+                >
+                  Contact Our Team
+                </Link>
+                <Link
+                  to="/demo"
+                  className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
+                >
+                  <Play className="w-5 h-5 inline mr-2" />
+                  Schedule Demo
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>

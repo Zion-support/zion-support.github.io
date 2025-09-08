@@ -1,25 +1,8 @@
-import React, { Suspense, lazy, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HelmetProvider } from 'react-helmet-async';
-
-// Enhanced Layout Components
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppHeader } from './layout/AppHeader';
 import { Sidebar } from './components/Sidebar';
-
-// Enhanced Components
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { Footer } from './components/Footer';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { SEO } from './components/SEO';
-import FloatingActionButton from './components/FloatingActionButton';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { EnhancedSEO } from './components/EnhancedSEO';
@@ -111,20 +94,11 @@ function App() {
   return (
     <EnhancedErrorBoundary FallbackComponent={ErrorFallback}>
       <Router>
-        <div className="App">
-          {/* Performance and Analytics Components */}
-          <PerformanceOptimizer />
-          <AdvancedAnalytics />
-          <AdvancedAnalyticsDashboard />
-          <AIContentOptimizer />
-          <SecurityMonitoringSystem />
-          <UserExperienceOptimizer />
+        <div className="min-h-screen bg-futuristic">
+          <AppHeader />
+          <Sidebar />
           
-          {/* Header */}
-          <EnhancedHeader />
-          
-          {/* Main Content */}
-          <main id="main-content">
+          <main className="flex-1 lg:ml-80">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
