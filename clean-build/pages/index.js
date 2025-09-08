@@ -2,7 +2,10 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 
 const Home = () => {
-  
+  return (
+    <Layout
+      title="Zion Tech Group - Leading Technology Solutions Provider"
+      description="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence."
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <main className="container mx-auto px-4 py-16">
