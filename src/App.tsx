@@ -51,12 +51,30 @@ const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
-const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Legal = React.lazy(() => import('./pages/Legal'));
 
-// Additional pages for navigation
-const EnhancedServices = lazy(() => import('./pages/EnhancedServices'));
-const ITOnsiteServices = lazy(() => import('./pages/ITOnsiteServices'));
-const Pricing = lazy(() => import('./pages/Pricing'));
+// Enhanced components
+const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Developers = React.lazy(() => import('./pages/Developers'));
+const Demo = React.lazy(() => import('./pages/Demo'));
+
+// New pages
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+
+// Enhanced services pages - only import existing ones
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding'));
+const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
+const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
+
+// Additional pages
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }) => (
@@ -133,7 +151,8 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-                
+                <Route path="/support" element={<Support />} />
+
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
