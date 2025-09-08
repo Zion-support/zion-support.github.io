@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 type Note = {
-  id: string,
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
 };
 
 const notesStore: Note[] = [];

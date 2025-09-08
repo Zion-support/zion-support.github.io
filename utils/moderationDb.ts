@@ -1,54 +1,61 @@
 export interface ModerationFlag {
   id: string;
-  contentId: string;
-  contentType: string;
-  reason: string;
+  type: 'content' | 'user' | 'spam';
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  createdAt: string;
-  updatedAt: string;
+  content: string;
+  reportedBy: string;
+  reportedAt: string;
   adminNotes?: string;
+  resolvedAt?: string;
+  resolvedBy?: string;
 }
 
-// Mock database - in production, this would connect to a real database
-const flags: ModerationFlag[] = [];
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find(flag => flag.id === id) || null;
+// In-memory storage for demo purposes
+const flags: Record<string, ModerationFlag> = {};
+
+export function getFlagById(id: string): ModerationFlag | null {
+  return flags[id] || null;
 }
 
-export async function updateFlagStatus(
+export function getAllFlags(): ModerationFlag[] {
+  return Object.values(flags);
+}
+
+export function createFlag(flag: Omit<ModerationFlag, 'id' | 'reportedAt'>): ModerationFlag {
+  const id = Math.random().toString(36).substr(2, 9);
+  const newFlag: ModerationFlag = {
+    ...flag,
+    id,
+    reportedAt: new Date().toISOString()
+  };
+  flags[id] = newFlag;
+  return newFlag;
+}
+
+export function updateFlagStatus(
   id: string, 
-  status: ModerationFlag['status'], 
+  status: ModerationStatus, 
   adminNotes?: string
-): Promise<ModerationFlag | null> {
-  const flag = flags.find(f => f.id === id);
-  if (!flag) return null;
-  
-  flag.status = status;
-  flag.updatedAt = new Date().toISOString();
-  if (adminNotes) {
-    flag.adminNotes = adminNotes;
+): ModerationFlag | null {
+  const flag = flags[id];
+  if (!flag) {
+    return null;
   }
   
-  return flag;
-}
-
-export async function readAllFlags(): Promise<ModerationFlag[]> {
-  return [...flags];
-}
-
-export async function createFlag(init: Partial<ModerationFlag>): Promise<ModerationFlag> {
-  const flag: ModerationFlag = {
-    id: init.id || Math.random().toString(36).substr(2, 9),
-    contentId: init.contentId || '',
-    contentType: init.contentType || '',
-    reason: init.reason || '',
-    status: init.status || 'pending',
-    createdAt: init.createdAt || new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    adminNotes: init.adminNotes
-  };
+  flag.status = status;
+  flag.adminNotes = adminNotes;
+  flag.resolvedAt = new Date().toISOString();
+  flag.resolvedBy = 'admin'; // In production, this would be the actual admin user ID
   
-  flags.push(flag);
   return flag;
+}
+
+export function deleteFlag(id: string): boolean {
+  if (flags[id]) {
+    delete flags[id];
+    return true;
+  }
+  return false;
 }

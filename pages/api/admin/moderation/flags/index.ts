@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
-import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
+import { createFlag, getAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
@@ -8,20 +8,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
-    const flags = await readAllFlags();
+    const flags = getAllFlags();
     const filtered = flags.filter(f =>
       (!status || f.status === status) &&
       (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
     );
-    return res.status(200).json({ flags: filtered });
+    return res.status(200).json({ flags: filtered })
   }
 
   if (req.method === 'POST') {
     const init = req.body || {};
     try {
-      const flag = await createFlag(init);
+      const flag = createFlag(init);
       return res.status(201).json({ flag });
     } catch (e: any) {
       return res.status(400).json({ error: e.message || 'Invalid payload' });

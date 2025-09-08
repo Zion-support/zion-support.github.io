@@ -1,91 +1,19 @@
-import fs from 'fs';
-import path from 'path';
-import { TokenConfig, TokenTransaction, Wallet } from './types';
-import { DEFAULT_TOKEN_CONFIG } from './rules';
+import { TokenConfig } from './service';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const STORE_FILE = path.join(DATA_DIR, 'token-store.json');
-
-export interface TokenStoreData {
-	wallets: Record<string, Wallet>;
-	transactions: TokenTransaction[];
-	config: TokenConfig;
-}
-
-function ensureDataDir(): void {
-	try {
-		if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-	} catch {}
-}
-
-function readFromDisk(): TokenStoreData | null {
-	try {
-		ensureDataDir();
-		if (!fs.existsSync(STORE_FILE)) return null;
-		const raw = fs.readFileSync(STORE_FILE, 'utf8');
-		const parsed = JSON.parse(raw || '{}');
-		return parsed as TokenStoreData;
-	} catch {
-		return null;
-	}
-}
-
-function writeToDisk(data: TokenStoreData): void {
-	try {
-		ensureDataDir();
-		fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), 'utf8');
-	} catch {}
-}
-
-class InMemoryTokenStore {
-	private data: TokenStoreData;
-
-	constructor() {
-		const fromDisk = readFromDisk();
-		this.data =
-			fromDisk || ({ wallets: {}, transactions: [], config: DEFAULT_TOKEN_CONFIG } as TokenStoreData);
-	}
-
-	getData(): TokenStoreData {
-		return this.data;
-	}
-
-	save(): void {
-		writeToDisk(this.data);
-	}
-}
-
-const store = new InMemoryTokenStore();
+// In-memory storage for demo purposes
+let config: TokenConfig = {
+  creditRate: 1.0,
+  debitRate: 1.0,
+  maxBalance: 10000,
+  minBalance: 0
+};
 
 export const tokenStore = {
-	setConfig(config: TokenConfig): void {
-		store.getData().config = config;
-		store.save();
-	},
-	getConfig(userId?: string): TokenConfig & { earnRules?: Record<string, number>; burnRules?: Record<string, number>; usdPerToken?: number } {
-		return store.getData().config as any;
-	},
-	getWallet(userId: string): Wallet {
-		const wallets = store.getData().wallets;
-		if (!wallets[userId]) {
-			wallets[userId] = { userId, balance: 0 } as Wallet;
-			store.save();
-		}
-		return wallets[userId];
-	},
-	setWalletBalance(userId: string, balance: number): Wallet {
-		const wallets = store.getData().wallets;
-		wallets[userId] = { userId, balance } as Wallet;
-		store.save();
-		return wallets[userId];
-	},
-	addTransaction(userId: string, tx: TokenTransaction): void {
-		store.getData().transactions.unshift(tx);
-		store.save();
-	},
-	getTransactions(userId?: string): TokenTransaction[] {
-		const txs = store.getData().transactions;
-		if (!userId) return txs;
-		return txs.filter((t) => t.userId === userId);
-	},
+  getConfig(): TokenConfig {
+    return { ...config };
+  },
+  
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    config = { ...config, ...newConfig };
+  }
 };

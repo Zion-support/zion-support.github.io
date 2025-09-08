@@ -1,104 +1,74 @@
-import { randomUUID } from 'crypto';
-import { tokenStore } from './storage';
-import { TokenTransaction, WalletSummary } from './types';
-
-export function getWalletSummary(userId: string): WalletSummary {
-	const wallet = tokenStore.getWallet(userId);
-	const transactions = tokenStore.getTransactions(userId);
-	const config = tokenStore.getConfig(userId);
-	return { wallet, transactions, config } as WalletSummary;
+export interface TokenTransaction {
+  id: string;
+  userId: string;
+  amount: number;
+  reason: string;
+  timestamp: number;
+  type: 'credit' | 'debit';
 }
 
-export function earnTokens(
-	userId: string,
-	amount: number,
-	reason: string,
-	metadata?: Record<string, any>
-): TokenTransaction {
-	if (amount <= 0) throw new Error('Amount must be positive');
-	const wallet = tokenStore.getWallet(userId);
-	const newBalance = (wallet?.balance || 0) + amount;
-	tokenStore.setWalletBalance(userId, newBalance);
-	const tx: TokenTransaction = {
-		id: randomUUID(),
-		userId,
-		type: 'earn',
-		amount,
-		reason,
-		metadata,
-		createdAt: new Date().toISOString(),
-	};
-	tokenStore.addTransaction(userId, tx);
-	return tx;
+export interface TokenConfig {
+  creditRate: number;
+  debitRate: number;
+  maxBalance: number;
+  minBalance: number;
 }
 
-export function burnTokens(
-	userId: string,
-	amount: number,
-	reason: string,
-	metadata?: Record<string, any>
-): TokenTransaction {
-	if (amount <= 0) throw new Error('Amount must be positive');
-	const wallet = tokenStore.getWallet(userId);
-	if ((wallet?.balance || 0) < amount) throw new Error('Insufficient balance');
-	const newBalance = (wallet?.balance || 0) - amount;
-	tokenStore.setWalletBalance(userId, newBalance);
-	const tx: TokenTransaction = {
-		id: randomUUID(),
-		userId,
-		type: 'burn',
-		amount,
-		reason,
-		metadata,
-		createdAt: new Date().toISOString(),
-	};
-	tokenStore.addTransaction(userId, tx);
-	return tx;
-}
+// In-memory storage for demo purposes
+const transactions: TokenTransaction[] = [];
+let config: TokenConfig = {
+  creditRate: 1.0,
+  debitRate: 1.0,
+  maxBalance: 10000,
+  minBalance: 0
+};
 
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-	const tx = earnTokens(userId, amount, reason);
-	tx.type = 'earn';
-	return tx;
+  const transaction: TokenTransaction = {
+    id: Math.random().toString(36).substr(2, 9),
+    userId,
+    amount,
+    reason,
+    timestamp: Date.now(),
+    type: 'credit'
+  };
+  
+  transactions.push(transaction);
+  return transaction;
 }
 
-export function revokeTokens(userId: string, amount: number, reason: string): TokenTransaction {
-	const tx = burnTokens(userId, amount, reason);
-	tx.type = 'burn';
-	return tx;
+export function deductTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: Math.random().toString(36).substr(2, 9),
+    userId,
+    amount: -amount,
+    reason,
+    timestamp: Date.now(),
+    type: 'debit'
+  };
+  
+  transactions.push(transaction);
+  return transaction;
 }
 
-export function handleAction(userId: string, action: string, metadata?: Record<string, any>): TokenTransaction {
-	const { earnRules } = tokenStore.getConfig(userId);
-	const amount = earnRules?.[action] || 0;
-	if (!amount) throw new Error('No rule for action');
-	return earnTokens(userId, amount, action, metadata);
+export function getAllTransactions(): TokenTransaction[] {
+  return [...transactions].sort((a, b) => b.timestamp - a.timestamp);
 }
 
-export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
-	const { burnRules } = tokenStore.getConfig(userId);
-	const amount = burnRules?.[feature] || 0;
-	if (!amount) throw new Error('No rule for feature');
-	return burnTokens(userId, amount, feature, metadata);
+export function getTransactionsByUser(userId: string): TokenTransaction[] {
+  return transactions.filter(t => t.userId === userId);
 }
 
-export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction; usd: number } {
-	const { usdPerToken } = tokenStore.getConfig(userId);
-	const tx = burnTokens(userId, amount, 'redeem');
-	tx.type = 'burn';
-	const usd = amount * (usdPerToken || 0);
-	return { tx, usd };
+export function getUserBalance(userId: string): number {
+  return transactions
+    .filter(t => t.userId === userId)
+    .reduce((sum, t) => sum + t.amount, 0);
 }
 
-export function getAllTransactions(userId?: string) {
-	return tokenStore.getTransactions(userId as any);
+export function getConfig(): TokenConfig {
+  return { ...config };
 }
 
-export function getConfig(userId?: string) {
-	return tokenStore.getConfig(userId as any);
-}
-
-export function setConfig(partial: Partial<ReturnType<typeof getConfig>>, userId?: string): void {
-	const current = tokenStore.getConfig(userId as any);
-	tokenStore.setConfig({ ...current, ...partial }, userId as any);
+export function setConfig(newConfig: Partial<TokenConfig>): void {
+  config = { ...config, ...newConfig };
 }

@@ -12,8 +12,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { operatorPrompt, inputs, metrics } = req.body || {};
 
   const seed = [
-    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & MetricsBusiness ModelGo-To-MarketTeamRoadmap',
-    'Token StrategyAsk & Call to Action'];
+    'Problem & Opportunity', 'Solution & Product', 'Market Size (TAM/SAM/SOM)', 'Traction & Metrics', 'Business Model', 'Go-To-Market', 'Team', 'Roadmap',
+    'Token Strategy', 'Ask & Call to Action'
+  ];
 
   try {
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
@@ -33,8 +34,10 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
-          { role: 'user', content: prompt }];
-        temperature: 0.5});
+          { role: 'user', content: prompt }
+        ],
+        temperature: 0.5
+      });
       content = chat.choices?.[0]?.message?.content || '';
     } catch (err) {
       content = '';

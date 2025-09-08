@@ -1,15 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
-const LOG_FILE = path.join($2);
+const LOG_DIR = path.join(process.cwd(), 'dataanalytics');
+const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl');
+
 function ensureLogFile() {
-  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync($2);
-  if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
+  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
+  if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '');
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+
   const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {},
   if (!name || typeof name !== 'string') return res.status(400).json($2);
   const nowIso = new Date().toISOString($2);

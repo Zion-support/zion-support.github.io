@@ -3,11 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 type EventRow = {
-  name: string,
-  page?: string,
-  userType?: string,
-  properties?: Record<string, any>,
-  at: string
+  name: string;
+  page?: string;
+  userType?: string;
+  properties?: Record<string, any>;
+  at: string;
 };
 
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');
@@ -32,7 +32,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     }
     return rows;
   } catch {
-    return []
+    return [];
   }
 }
 
@@ -49,7 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
 
-  const { start, end, userType } = req.query as { start?: string, end?: string, userType?: string };
+  const { start, end, userType } = req.query as { start?: string; end?: string; userType?: string };
 
   const rows = parseLines(start, end).filter((r) => !userType || userType === 'all' || (r.userType || 'guest') === userType);
 
@@ -76,7 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
 
-  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'];
+  const funnelStages = ['Visit', 'AI Prompt Used', 'Post Created', 'Message Sent'];
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }));
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
