@@ -1,5 +1,6 @@
 import React, { memo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNotification } from '../context/NotificationContext';
 
 // Contact info card component
 const ContactInfoCard = memo<{ 
@@ -69,6 +70,7 @@ const FormInput = memo<{
 FormInput.displayName = 'FormInput';
 
 const Contact: React.FC = memo(() => {
+  const { addNotification } = useNotification();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -81,7 +83,6 @@ const Contact: React.FC = memo(() => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,7 +91,14 @@ const Contact: React.FC = memo(() => {
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      
+      addNotification({
+        type: 'success',
+        title: 'Message Sent!',
+        message: 'Thank you for your inquiry. We\'ll get back to you within 24 hours.',
+        duration: 5000
+      });
+      
       setFormData({
         name: '',
         email: '',
@@ -102,7 +110,12 @@ const Contact: React.FC = memo(() => {
         message: ''
       });
     } catch (error) {
-      setSubmitStatus('error');
+      addNotification({
+        type: 'error',
+        title: 'Error',
+        message: 'Failed to send message. Please try again.',
+        duration: 5000
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -195,21 +208,6 @@ const Contact: React.FC = memo(() => {
             </p>
           </div>
 
-          {submitStatus === 'success' && (
-            <div className="mb-6 p-4 bg-green-500/20 border border-green-400/30 rounded-lg">
-              <p className="text-green-300 font-semibold">
-                ✅ Thank you! Your message has been sent successfully. We'll get back to you soon.
-              </p>
-            </div>
-          )}
-
-          {submitStatus === 'error' && (
-            <div className="mb-6 p-4 bg-red-500/20 border border-red-400/30 rounded-lg">
-              <p className="text-red-300 font-semibold">
-                ❌ Sorry, there was an error sending your message. Please try again.
-              </p>
-            </div>
-          )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
