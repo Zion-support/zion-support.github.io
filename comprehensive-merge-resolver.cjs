@@ -269,7 +269,13 @@ console.log(\n🎉 Merge conflict resolution completed!');
 // Check for open PRs
 console.log('\n🔍 Checking for open pull requests...);
 try {
-  const prCheck = execSync(curl -s -H Authorization: token ghs_JcabJLzIK1ZiHq7k2fTFD0Bx8ssBMX1wVO0h" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open', { encoding: 'utf8 });
+  const githubToken = process.env.GITHUB_TOKEN;
+  if (!githubToken) {
+    console.error('❌ Error: GITHUB_TOKEN environment variable is required');
+    return;
+  }
+  
+  const prCheck = execSync(`curl -s -H "Authorization: token ${githubToken}" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open`, { encoding: 'utf8' });
   const prs = JSON.parse(prCheck);
   
   if (prs.length === 0) {

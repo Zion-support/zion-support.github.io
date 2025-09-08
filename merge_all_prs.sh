@@ -10,8 +10,14 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Set GitHub token
-export GH_TOKEN=ghs_v5EHCNRCCjgCQX6fSeu6jdZDz16uJb3AGWKD
+# Set GitHub token from environment variable
+export GH_TOKEN="${GITHUB_TOKEN:-}"
+
+# Validate that GitHub token is provided
+if [ -z "$GH_TOKEN" ]; then
+    echo "❌ Error: GITHUB_TOKEN environment variable is required"
+    exit 1
+fi
 
 # Function to print colored output
 print_status() {
