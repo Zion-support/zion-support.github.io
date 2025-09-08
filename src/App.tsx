@@ -1,124 +1,157 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './components/ThemeProvider';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import PerformanceWrapper from './components/PerformanceWrapper';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import EnhancedSEO from './components/EnhancedSEO';
-import AccessibilityEnhancements from './components/AccessibilityEnhancements';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Services from './pages/ServicesPage';
-import NotFound from './pages/NotFound';
 import './App.css';
-import './components/AccessibilityEnhancements.css';
 
-// Create a client
+// Components
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { AppLayout } from './layout/AppLayout';
+import LazyLoad from './components/LazyLoad';
+import LoadingSpinner from './components/LoadingSpinner';
+
+// Lazy loaded pages and components for better performance
+import { 
+  LazyHome, 
+  LazyAbout, 
+  LazyContact, 
+  LazyNotFound,
+  LazyAnalytics,
+  LazyPerformanceMonitor 
+} from './utils/lazyLoad';
+
+// Context Providers
+import { LanguageProvider } from './context/LanguageContext';
+import { WhitelabelProvider } from './context/WhitelabelContext';
+import { AuthProvider } from './context/auth/AuthProvider';
+import { NotificationProvider } from './context/notifications/NotificationProvider';
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+
+// Security and PWA providers
+import { SecurityProvider } from './utils/security';
+import { PWAProvider, OfflineIndicator, UpdateAvailable } from './utils/pwa';
+
+// SEO and Performance utilities
+import { SEO } from './utils/seo';
+import { PerformanceMonitor } from './utils/performance';
+
+// Create QueryClient instance with enhanced configuration
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: 5 * 60 * 1000, // 5 minutes
+      cacheTime: 10 * 60 * 1000, // 10 minutes
+      retry: (failureCount, error) => {
+        // Don't retry on 4xx errors
+        if (error instanceof Error && error.message.includes('4')) {
+          return false;
+        }
+        return failureCount < 3;
+      },
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: true,
+    },
+    mutations: {
       retry: 1,
     },
   },
 });
 
-function App() {
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+// App configuration
+const appConfig = {
+  name: 'Zion Tech Group',
+  version: '1.0.0',
+  theme: 'light',
+};
 
-  // Register service worker
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
-        })
-        .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
-  }, []);
+// SEO configuration
+const seoData = {
+  title: 'Zion Tech Group - Advanced Technology Solutions',
+  description: 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.',
+  keywords: ['technology', 'AI', 'digital transformation', 'consulting', 'software development'],
+  image: '/images/og-image.jpg',
+  url: window.location.href,
+  type: 'website' as const,
+  canonical: window.location.href,
+};
 
-  // Add keyboard shortcut for performance monitor
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setShowPerformanceMonitor(!showPerformanceMonitor);
-      }
+// Loading fallback component with accessibility improvements
+const AppLoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-screen" role="status" aria-label="Loading application">
+    <LoadingSpinner size="large" />
+    <span className="sr-only">Loading application, please wait...</span>
+  </div>
+);
+
+// Performance monitoring component
+const PerformanceWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const performanceMonitor = React.useMemo(() => new PerformanceMonitor(), []);
+
+  React.useEffect(() => {
+    // Start performance monitoring
+    performanceMonitor.startMonitoring();
+    
+    return () => {
+      performanceMonitor.stopMonitoring();
     };
+  }, [performanceMonitor]);
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showPerformanceMonitor]);
+  return <>{children}</>;
+};
 
+// Main App component
+const App: React.FC = () => {
   return (
-    <EnhancedErrorBoundary>
-      <QueryClientProvider client={queryClient}>
-        <HelmetProvider>
-          <ThemeProvider>
-            <PerformanceWrapper>
-              <AccessibilityEnhancements>
-                <EnhancedSEO 
-                  title="Zion Tech Group - AI & IT Solutions"
-                  description="Leading provider of AI-powered solutions, quantum computing, and micro SAAS services for modern businesses."
-                  keywords="AI solutions, quantum computing, micro SAAS, IT services, technology consulting, digital transformation, cloud infrastructure, cybersecurity"
-                  image="/og-image.png"
-                  type="website"
-                  author="Zion Tech Group"
-                  structuredData={{
-                    "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "name": "Zion Tech Group",
-                    "description": "Leading provider of AI-powered solutions, quantum computing, and micro SAAS services for modern businesses.",
-                    "url": "https://zion.app",
-                    "logo": "https://zion.app/logo.png",
-                    "sameAs": [
-                      "https://twitter.com/ZionTechGroup",
-                      "https://linkedin.com/company/zion-tech-group"
-                    ],
-                    "contactPoint": {
-                      "@type": "ContactPoint",
-                      "telephone": "+1-555-ZION-TECH",
-                      "contactType": "customer service",
-                      "availableLanguage": "English"
-                    }
-                  }}
-                />
-                <Router>
-                  <div className="App">
-                    <Header />
-                    <main className="main-content">
-                      <Suspense fallback={<div className="loading">Loading...</div>}>
-                        <Routes>
-                          <Route path="/" element={<Home />} />
-                          <Route path="/about" element={<About />} />
-                          <Route path="/contact" element={<Contact />} />
-                          <Route path="/services" element={<Services />} />
-                          <Route path="*" element={<NotFound />} />
-                        </Routes>
-                      </Suspense>
-                    </main>
-                    <Footer />
-                    
-                    {/* Performance Monitor */}
-                    <AdvancedPerformanceMonitor 
-                      isVisible={showPerformanceMonitor}
-                      onToggle={() => setShowPerformanceMonitor(!showPerformanceMonitor)}
-                    />
-                  </div>
-                </Router>
-              </AccessibilityEnhancements>
-            </PerformanceWrapper>
-          </ThemeProvider>
-        </HelmetProvider>
-      </QueryClientProvider>
-    </EnhancedErrorBoundary>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <SecurityProvider>
+            <PWAProvider>
+              <Router>
+                <LanguageProvider>
+                  <WhitelabelProvider>
+                    <AuthProvider>
+                      <NotificationProvider>
+                        <AnalyticsProvider>
+                          <ViewModeProvider>
+                            <PerformanceWrapper>
+                              <SEO data={seoData} />
+                              <Suspense fallback={<AppLoadingFallback />}>
+                                <AppLayout config={appConfig}>
+                                  <LazyLoad>
+                                    <Routes>
+                                      <Route path="/" element={<LazyHome />} />
+                                      <Route path="/about" element={<LazyAbout />} />
+                                      <Route path="/contact" element={<LazyContact />} />
+                                      <Route path="*" element={<LazyNotFound />} />
+                                    </Routes>
+                                  </LazyLoad>
+                                </AppLayout>
+                              </Suspense>
+                              <LazyPerformanceMonitor />
+                              <LazyAnalytics 
+                                trackingId={import.meta.env.VITE_GA_TRACKING_ID}
+                                enablePerformanceTracking={true}
+                                enableErrorTracking={true}
+                                enablePageViewTracking={true}
+                              />
+                              <OfflineIndicator />
+                              <UpdateAvailable />
+                              {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+                            </PerformanceWrapper>
+                          </ViewModeProvider>
+                        </AnalyticsProvider>
+                      </NotificationProvider>
+                    </AuthProvider>
+                  </WhitelabelProvider>
+                </LanguageProvider>
+              </Router>
+            </PWAProvider>
+          </SecurityProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 
