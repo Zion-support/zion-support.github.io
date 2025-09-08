@@ -515,106 +515,24 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
         {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-          {filteredServices && filteredServices.map((service, index) => (;
-            <div
-              key={service && service.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
-
-              {/* Popular Badge */}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
-
-              {/* Popular Badge *,}
-}
-              {service.popular && (<div className='absolute top-4 right-4 z-20'    />;
-                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'    />;
-                    <Star className='w-3 h-3'    />;
-                    Popular;
-                  </div>;}
-                </div>;}
-              )}{/* Service Content */}<div className='p-8'    />;
-        </div>;
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />;
-          {filteredServices && filteredServices.map((service, index) => (<div;}
-              key={service && service.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'    />;
-              {/* Popular Badge */}
-              {service && service.popular && (<div className='absolute top-4 right-4 z-20'    />;
-                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'    />;}
-                    <Star className='w-3 h-3'    />                    Popular          {filteredServices && filteredServices.map((service, index) => (<div;}
-              key={service && service.id}
-              className=\"group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl\"    />;
-              {/* Popular Badge */}
-              {service && service.popular && (<div className=\"absolute top-4 right-4 z-20\"    />;
-                  <div className=\"bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1\"    />;
-                    <Star className=\"w-3 h-3\"    />;
-
-                    Popular;
-                  </div>;}
-                </div>;}
-              )}
-
-              {/* Service Content */}<div className='p-8'    />;
-
-
-
-
-
-              {/* Service Content */}
-              <div className='p-8'>
-
-        </div>
-
-        {/* Services Grid */}
-            </select>
-            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
-          </div>
-          {/* Search */}
-          <div className='relative'>
-            <input
-              type='text'
-              placeholder='Search services...'
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64'
-            />
-            <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />          </div>
-        </div>
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>
-          {/* Search */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
-            />
-            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
-          </div>
-        </div>
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className='absolute top-4 right-4 z-20'>
-                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
-                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">{/* Popular Badge */}
-              {service.popular && (
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                    <Star className="w-3 h-3" />
-                    Popular
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AnimatePresence>
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              >
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className="absolute top-4 right-4 z-20">
+                    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                      <Star className="w-3 h-3" />
+                      Popular
+                    </div>
                   </div>
                 </div>
               )}

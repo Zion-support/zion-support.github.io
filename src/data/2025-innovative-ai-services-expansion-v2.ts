@@ -1,4 +1,39 @@
-import React from 'react';
+export interface InnovativeAIService2025 {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+  };
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  marketPosition: string;
+  competitors: string[];
+  techStack: string[];
+  realImplementation: boolean;
+  implementationDetails: string;
+  roi: string;
+  useCases: string[];
+  integrations: string[];
+  support: string;
+  compliance: string[];
+  link: string;
+  icon: string;
+  color: string;
+  popular: boolean;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+}
+
 export const innovativeAIServices2025ExpansionV2 = [
   // AI Consciousness Evolution Platform
   {
@@ -304,7 +339,10 @@ export const innovativeAIServices2025ExpansionV2 = [
     customers: 178,
     rating: 4.8,
     reviews: 145
-  },
+  }
+];
+
+export const innovativeAIServices2025: InnovativeAIService2025[] = [
   {
     id: 'ai-powered-predictive-maintenance-platform',
     name: 'AI-Powered Predictive Maintenance Platform',
@@ -816,5 +854,6 @@ export const innovativeAIServices2025ExpansionV2 = [
     customers: 480,
         rating: 4.8,
     reviews: 67
+
   }
 ];

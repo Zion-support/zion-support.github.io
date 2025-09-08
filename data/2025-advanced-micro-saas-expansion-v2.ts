@@ -236,6 +236,7 @@ export const advancedMicroSaasExpansion2025V2 = [
   },;
 ];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
+
   }
 ];
     name: 'AI Threat Detection',

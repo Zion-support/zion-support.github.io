@@ -2,142 +2,116 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Server, Target, Star, Sparkles, Zap, Users, Award, 
-  Clock, CheckCircle, Globe, Code, ChevronRight, ExternalLink, 
-  TrendingUp, BarChart3, Lock, Eye, FileText, Settings, Monitor, Smartphone,
-  Activity, Target as TargetIcon, Zap as ZapIcon, DollarSign, Rocket,
-  Cpu, Network, Database, Play, HardDrive, Shield, BarChart
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
+  Lock, Eye, BarChart, FileText, Settings, Monitor, Smartphone,
+  PieChart, LineChart, Activity, Target as TargetIcon, Zap as ZapIcon,
+  Play, DollarSign
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function AIPoweredITAssetManagementPage() {
+export default function AIBusinessIntelligencePage() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Intelligent asset tracking and predictive maintenance using advanced AI algorithms',
+      icon: BarChart3,
+      title: 'Advanced Analytics',
+      description: 'Real-time data processing with AI-powered insights and predictive modeling',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Server,
-      title: 'Comprehensive Asset Tracking',
-      description: 'Real-time monitoring and management of all IT infrastructure components',
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Machine learning algorithms that discover hidden patterns and trends in your data',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: BarChart,
-      title: 'Predictive Insights',
-      description: 'AI-driven predictions for asset lifecycle, performance, and maintenance needs',
+      icon: TrendingUp,
+      title: 'Predictive Analytics',
+      description: 'Forecast future trends and make data-driven decisions with confidence',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Advanced security monitoring and compliance management for all assets',
+      icon: Target,
+      title: 'Actionable Intelligence',
+      description: 'Transform complex data into clear, actionable business recommendations',
       color: 'from-orange-500 to-red-500'
     }
   ];
 
   const capabilities = [
     {
-      category: 'Asset Discovery & Inventory',
+      category: 'Data Integration',
       items: [
-        'Automated asset discovery',
-        'Real-time inventory tracking',
-        'Asset classification & tagging',
-        'Location mapping & tracking'
+        'Multi-source data connectors',
+        'Real-time data streaming',
+        'Data quality management',
+        'Automated data pipelines'
       ]
     },
     {
-      category: 'AI Analytics & Insights',
+      category: 'AI Analytics',
       items: [
-        'Predictive maintenance',
-        'Performance optimization',
-        'Cost analysis & optimization',
-        'Risk assessment & mitigation'
+        'Natural language queries',
+        'Automated insights generation',
+        'Anomaly detection',
+        'Pattern recognition'
       ]
     },
     {
-      category: 'Lifecycle Management',
+      category: 'Visualization',
       items: [
-        'Asset lifecycle tracking',
-        'Maintenance scheduling',
-        'Replacement planning',
-        'Depreciation tracking'
+        'Interactive dashboards',
+        'Custom report builder',
+        'Mobile-responsive design',
+        'Real-time updates'
       ]
     },
     {
-      category: 'Security & Compliance',
+      category: 'Collaboration',
       items: [
-        'Security monitoring',
-        'Compliance reporting',
-        'Access control',
-        'Audit trails'
+        'Team workspaces',
+        'Comment and annotation',
+        'Share and export options',
+        'Role-based access control'
       ]
-    }
-  ];
-
-  const assetTypes = [
-    {
-      type: 'Hardware Assets',
-      description: 'Servers, workstations, networking equipment, and peripherals',
-      icon: Server,
-      count: '10,000+'
-    },
-    {
-      type: 'Software Assets',
-      description: 'Licenses, applications, and digital tools',
-      icon: Code,
-      count: '500+'
-    },
-    {
-      type: 'Cloud Resources',
-      description: 'Cloud instances, storage, and services',
-      icon: Cloud,
-      count: '2,000+'
-    },
-    {
-      type: 'Network Assets',
-      description: 'Switches, routers, and network infrastructure',
-      icon: Network,
-      count: '1,500+'
     }
   ];
 
   const pricing = {
     starter: {
-      price: '$599/month',
+      price: '$299/month',
       features: [
-        'Up to 1,000 assets',
-        'Basic AI analytics',
-        'Standard reporting',
+        'Up to 5 data sources',
+        'Basic AI insights',
+        'Standard dashboards',
         'Email support',
-        'Cloud deployment'
+        '5 user licenses'
       ]
     },
     professional: {
-      price: '$1,499/month',
+      price: '$799/month',
       features: [
-        'Up to 10,000 assets',
+        'Up to 25 data sources',
         'Advanced AI analytics',
         'Custom dashboards',
         'Priority support',
+        '25 user licenses',
         'API access',
-        'Advanced reporting',
-        'Predictive maintenance'
+        'Advanced security'
       ]
     },
     enterprise: {
-      price: '$2,999/month',
+      price: '$1,999/month',
       features: [
-        'Unlimited assets',
+        'Unlimited data sources',
         'Custom AI models',
-        'Dedicated support',
-        'On-premise deployment',
+        'White-label solutions',
+        '24/7 dedicated support',
+        'Unlimited users',
         'Custom integrations',
-        'SLA guarantees',
-        'White-label options'
+        'SLA guarantees'
       ]
     }
   };
@@ -145,10 +119,10 @@ export default function AIPoweredITAssetManagementPage() {
   return (
     <>
       <Head>
-        <title>AI-Powered IT Asset Management - Zion Tech Group | Intelligent Asset Tracking</title>
-        <meta name="description" content="Revolutionary AI-powered IT asset management platform. Intelligent tracking, predictive maintenance, and comprehensive lifecycle management for all your IT infrastructure." />
-        <meta name="keywords" content="IT asset management, AI asset tracking, predictive maintenance, IT infrastructure management, asset lifecycle" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-it-asset-management" />
+        <title>AI Business Intelligence - Zion Tech Group | Advanced Analytics & Insights</title>
+        <meta name="description" content="Transform your data into actionable insights with AI-powered business intelligence. Real-time analytics, predictive modeling, and intelligent dashboards." />
+        <meta name="keywords" content="AI business intelligence, business analytics, predictive analytics, data insights, AI dashboards" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence" />
       </Head>
 
       <EnhancedNavigation />
@@ -163,7 +137,7 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
-              AI-Powered IT Asset Management
+              AI Business Intelligence
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -171,7 +145,7 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mt-6 text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              Transform your IT infrastructure management with AI-powered asset tracking, predictive maintenance, and intelligent insights. Gain complete visibility and control over all your technology assets.
+              Transform your data into actionable insights with AI-powered analytics, predictive modeling, and intelligent dashboards that drive business growth.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -183,7 +157,7 @@ export default function AIPoweredITAssetManagementPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
-                Start Implementation
+                Start Free Trial
                 <Rocket className="w-5 h-5 ml-2" />
               </a>
               <a
@@ -206,9 +180,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Intelligent Asset Management Features</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Powerful AI-Powered Features</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Our AI-powered platform provides comprehensive IT asset management with intelligent insights and automation.
+                Discover how our AI Business Intelligence platform can revolutionize your data analysis and decision-making processes.
               </p>
             </motion.div>
 
@@ -232,42 +206,6 @@ export default function AIPoweredITAssetManagementPage() {
           </div>
         </section>
 
-        {/* Asset Types Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Asset Coverage</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Manage all types of IT assets from a single, intelligent platform.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {assetTypes.map((asset, index) => (
-                <motion.div
-                  key={asset.type}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 mb-4">
-                    <asset.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{asset.type}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{asset.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400">{asset.count}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Capabilities Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -277,9 +215,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Advanced Management Capabilities</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Capabilities</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                From discovery to retirement, our platform handles every aspect of IT asset management.
+                From data integration to advanced AI analytics, our platform provides everything you need for intelligent business decision-making.
               </p>
             </motion.div>
 
@@ -310,73 +248,6 @@ export default function AIPoweredITAssetManagementPage() {
           </div>
         </section>
 
-        {/* AI Analytics Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <h2 className="text-3xl font-bold text-white mb-6">AI-Powered Analytics & Insights</h2>
-                <p className="text-gray-300 text-lg mb-6">
-                  Our AI algorithms analyze asset data to provide predictive insights, optimize performance, and reduce costs across your entire IT infrastructure.
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Predictive maintenance scheduling and alerts</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Performance optimization recommendations</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Cost analysis and budget optimization</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Risk assessment and mitigation strategies</span>
-                  </li>
-                </ul>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20"
-              >
-                <div className="text-center">
-                  <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 mb-4">
-                    <BarChart className="w-12 h-12 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">AI Analytics Performance</h3>
-                  <p className="text-gray-300 mb-6">
-                    Real-time insights and predictions for optimal asset management.
-                  </p>
-                  <div className="space-y-3 text-left">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Maintenance Cost Reduction</span>
-                      <span className="text-green-400 font-semibold">-35%</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Asset Utilization</span>
-                      <span className="text-cyan-400 font-semibold">+28%</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Predictive Accuracy</span>
-                      <span className="text-blue-400 font-semibold">94.2%</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -386,9 +257,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Choose Your Asset Management Plan</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Flexible pricing options designed to scale with your asset management needs and infrastructure size.
+                Flexible pricing options designed to scale with your business needs and data requirements.
               </p>
             </motion.div>
 
@@ -452,24 +323,24 @@ export default function AIPoweredITAssetManagementPage() {
               className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-12 border border-cyan-500/20"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready for Intelligent Asset Management?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Transform your IT infrastructure management with AI-powered insights and automation.
+                Join thousands of businesses already using AI-powered business intelligence to make smarter decisions and drive growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  Start Implementation
+                  Start Free Trial
                   <Rocket className="w-5 h-5 ml-2" />
                 </a>
                 <a
                   href="/pricing"
                   className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
                 >
-                  View Pricing
+                  View Full Pricing
                   <DollarSign className="w-5 h-5 ml-2" />
                 </a>
               </div>

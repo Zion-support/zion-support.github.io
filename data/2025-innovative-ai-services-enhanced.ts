@@ -23,10 +23,10 @@
   use_cases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: {
+  marketSize: string;
+  growthRate: string;
+  variant?: string;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;

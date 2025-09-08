@@ -2,139 +2,112 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Server, Target, Star, Sparkles, Zap, Users, Award, 
-  Clock, CheckCircle, Globe, Code, ChevronRight, ExternalLink, 
-  TrendingUp, BarChart3, Lock, Eye, FileText, Settings, Monitor, Smartphone,
-  Activity, Target as TargetIcon, Zap as ZapIcon, DollarSign, Rocket,
-  Cpu, Network, Database, Play, HardDrive, Shield, BarChart
+  Network, Server, Cloud, Zap, Brain, Target, Star, 
+  Sparkles, Users, Award, Clock, CheckCircle, Globe, Code,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Lock, Eye,
+  FileText, Settings, Monitor, Smartphone, Activity, Target as TargetIcon,
+  Zap as ZapIcon, DollarSign, Rocket, Cpu, Play
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function AIPoweredITAssetManagementPage() {
+export default function EdgeComputingOrchestrationPage() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Intelligent asset tracking and predictive maintenance using advanced AI algorithms',
+      icon: Network,
+      title: 'Edge Deployment',
+      description: 'Deploy applications to edge locations worldwide with intelligent routing and load balancing',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Server,
-      title: 'Comprehensive Asset Tracking',
-      description: 'Real-time monitoring and management of all IT infrastructure components',
+      icon: Cpu,
+      title: 'Performance Optimization',
+      description: 'AI-powered optimization that automatically adjusts resources for maximum performance',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: BarChart,
-      title: 'Predictive Insights',
-      description: 'AI-driven predictions for asset lifecycle, performance, and maintenance needs',
+      icon: Zap,
+      title: 'Real-time Processing',
+      description: 'Ultra-low latency processing at the edge for time-sensitive applications',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Advanced security monitoring and compliance management for all assets',
+      icon: Brain,
+      title: 'Intelligent Orchestration',
+      description: 'Machine learning algorithms that optimize resource allocation and traffic routing',
       color: 'from-orange-500 to-red-500'
     }
   ];
 
   const capabilities = [
     {
-      category: 'Asset Discovery & Inventory',
+      category: 'Edge Infrastructure',
       items: [
-        'Automated asset discovery',
-        'Real-time inventory tracking',
-        'Asset classification & tagging',
-        'Location mapping & tracking'
+        'Global edge network deployment',
+        'Multi-cloud orchestration',
+        'Container and serverless support',
+        'Edge data centers worldwide'
       ]
     },
     {
-      category: 'AI Analytics & Insights',
+      category: 'Performance Management',
       items: [
-        'Predictive maintenance',
-        'Performance optimization',
-        'Cost analysis & optimization',
-        'Risk assessment & mitigation'
-      ]
-    },
-    {
-      category: 'Lifecycle Management',
-      items: [
-        'Asset lifecycle tracking',
-        'Maintenance scheduling',
-        'Replacement planning',
-        'Depreciation tracking'
+        'Real-time performance monitoring',
+        'Automatic scaling and optimization',
+        'Traffic routing optimization',
+        'Load balancing algorithms'
       ]
     },
     {
       category: 'Security & Compliance',
       items: [
-        'Security monitoring',
-        'Compliance reporting',
-        'Access control',
-        'Audit trails'
+        'Edge security protocols',
+        'Data encryption in transit',
+        'Compliance monitoring',
+        'Threat detection at edge'
       ]
-    }
-  ];
-
-  const assetTypes = [
-    {
-      type: 'Hardware Assets',
-      description: 'Servers, workstations, networking equipment, and peripherals',
-      icon: Server,
-      count: '10,000+'
     },
     {
-      type: 'Software Assets',
-      description: 'Licenses, applications, and digital tools',
-      icon: Code,
-      count: '500+'
-    },
-    {
-      type: 'Cloud Resources',
-      description: 'Cloud instances, storage, and services',
-      icon: Cloud,
-      count: '2,000+'
-    },
-    {
-      type: 'Network Assets',
-      description: 'Switches, routers, and network infrastructure',
-      icon: Network,
-      count: '1,500+'
+      category: 'Developer Experience',
+      items: [
+        'Simple deployment workflows',
+        'API-first architecture',
+        'Comprehensive monitoring',
+        'Automated testing and validation'
+      ]
     }
   ];
 
   const pricing = {
     starter: {
-      price: '$599/month',
+      price: '$199/month',
       features: [
-        'Up to 1,000 assets',
-        'Basic AI analytics',
-        'Standard reporting',
+        'Up to 5 edge locations',
+        'Basic load balancing',
+        'Standard monitoring',
         'Email support',
-        'Cloud deployment'
+        '100GB bandwidth'
       ]
     },
     professional: {
-      price: '$1,499/month',
+      price: '$499/month',
       features: [
-        'Up to 10,000 assets',
-        'Advanced AI analytics',
-        'Custom dashboards',
+        'Up to 25 edge locations',
+        'Advanced orchestration',
+        'Real-time analytics',
         'Priority support',
-        'API access',
-        'Advanced reporting',
-        'Predictive maintenance'
+        '1TB bandwidth',
+        'Custom routing rules',
+        'Performance optimization'
       ]
     },
     enterprise: {
-      price: '$2,999/month',
+      price: '$1,299/month',
       features: [
-        'Unlimited assets',
-        'Custom AI models',
-        'Dedicated support',
-        'On-premise deployment',
+        'Unlimited edge locations',
+        'Custom AI algorithms',
+        'Dedicated support team',
+        'Unlimited bandwidth',
         'Custom integrations',
         'SLA guarantees',
         'White-label options'
@@ -145,10 +118,10 @@ export default function AIPoweredITAssetManagementPage() {
   return (
     <>
       <Head>
-        <title>AI-Powered IT Asset Management - Zion Tech Group | Intelligent Asset Tracking</title>
-        <meta name="description" content="Revolutionary AI-powered IT asset management platform. Intelligent tracking, predictive maintenance, and comprehensive lifecycle management for all your IT infrastructure." />
-        <meta name="keywords" content="IT asset management, AI asset tracking, predictive maintenance, IT infrastructure management, asset lifecycle" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-it-asset-management" />
+        <title>Edge Computing Orchestration - Zion Tech Group | Global Edge Infrastructure</title>
+        <meta name="description" content="Deploy and manage applications at the edge with intelligent orchestration. Global edge network, AI-powered optimization, and ultra-low latency processing." />
+        <meta name="keywords" content="edge computing, edge orchestration, global edge network, low latency, performance optimization" />
+        <link rel="canonical" href="https://ziontechgroup.com/edge-computing-orchestration" />
       </Head>
 
       <EnhancedNavigation />
@@ -163,7 +136,7 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
-              AI-Powered IT Asset Management
+              Edge Computing Orchestration
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -171,7 +144,7 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mt-6 text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              Transform your IT infrastructure management with AI-powered asset tracking, predictive maintenance, and intelligent insights. Gain complete visibility and control over all your technology assets.
+              Deploy and manage applications at the edge with intelligent orchestration. Our global edge network delivers ultra-low latency, AI-powered optimization, and seamless scalability.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -183,7 +156,7 @@ export default function AIPoweredITAssetManagementPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
-                Start Implementation
+                Start Free Trial
                 <Rocket className="w-5 h-5 ml-2" />
               </a>
               <a
@@ -206,9 +179,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Intelligent Asset Management Features</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Powerful Edge Computing Features</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Our AI-powered platform provides comprehensive IT asset management with intelligent insights and automation.
+                Discover how our edge computing orchestration platform can revolutionize your application deployment and performance.
               </p>
             </motion.div>
 
@@ -232,42 +205,6 @@ export default function AIPoweredITAssetManagementPage() {
           </div>
         </section>
 
-        {/* Asset Types Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Asset Coverage</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Manage all types of IT assets from a single, intelligent platform.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {assetTypes.map((asset, index) => (
-                <motion.div
-                  key={asset.type}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 text-center hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 mb-4">
-                    <asset.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{asset.type}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{asset.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400">{asset.count}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Capabilities Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -277,9 +214,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Advanced Management Capabilities</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Edge Capabilities</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                From discovery to retirement, our platform handles every aspect of IT asset management.
+                From global edge infrastructure to intelligent orchestration, our platform provides everything you need for edge computing success.
               </p>
             </motion.div>
 
@@ -310,7 +247,7 @@ export default function AIPoweredITAssetManagementPage() {
           </div>
         </section>
 
-        {/* AI Analytics Section */}
+        {/* Global Network Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -319,26 +256,26 @@ export default function AIPoweredITAssetManagementPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h2 className="text-3xl font-bold text-white mb-6">AI-Powered Analytics & Insights</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">Global Edge Network</h2>
                 <p className="text-gray-300 text-lg mb-6">
-                  Our AI algorithms analyze asset data to provide predictive insights, optimize performance, and reduce costs across your entire IT infrastructure.
+                  Our worldwide edge network spans 6 continents with over 200 edge locations, ensuring your applications are always close to your users.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Predictive maintenance scheduling and alerts</span>
+                    <span className="text-gray-300">200+ edge locations worldwide</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Performance optimization recommendations</span>
+                    <span className="text-gray-300">Sub-10ms latency to 95% of users</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Cost analysis and budget optimization</span>
+                    <span className="text-gray-300">99.99% uptime SLA guarantee</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Risk assessment and mitigation strategies</span>
+                    <span className="text-gray-300">Automatic failover and redundancy</span>
                   </li>
                 </ul>
               </motion.div>
@@ -351,24 +288,24 @@ export default function AIPoweredITAssetManagementPage() {
               >
                 <div className="text-center">
                   <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 mb-4">
-                    <BarChart className="w-12 h-12 text-white" />
+                    <Globe className="w-12 h-12 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">AI Analytics Performance</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">Network Performance</h3>
                   <p className="text-gray-300 mb-6">
-                    Real-time insights and predictions for optimal asset management.
+                    Real-time monitoring of your edge network performance and user experience.
                   </p>
                   <div className="space-y-3 text-left">
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Maintenance Cost Reduction</span>
-                      <span className="text-green-400 font-semibold">-35%</span>
+                      <span className="text-gray-300">Global Coverage</span>
+                      <span className="text-green-400 font-semibold">6 Continents</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Asset Utilization</span>
-                      <span className="text-cyan-400 font-semibold">+28%</span>
+                      <span className="text-gray-300">Edge Locations</span>
+                      <span className="text-cyan-400 font-semibold">200+</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Predictive Accuracy</span>
-                      <span className="text-blue-400 font-semibold">94.2%</span>
+                      <span className="text-gray-300">Average Latency</span>
+                      <span className="text-blue-400 font-semibold">8ms</span>
                     </div>
                   </div>
                 </div>
@@ -386,9 +323,9 @@ export default function AIPoweredITAssetManagementPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Choose Your Asset Management Plan</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Choose Your Edge Plan</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Flexible pricing options designed to scale with your asset management needs and infrastructure size.
+                Flexible pricing options designed to scale with your edge computing needs and global reach requirements.
               </p>
             </motion.div>
 
@@ -452,17 +389,17 @@ export default function AIPoweredITAssetManagementPage() {
               className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-12 border border-cyan-500/20"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready for Intelligent Asset Management?
+                Ready to Go Global?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Transform your IT infrastructure management with AI-powered insights and automation.
+                Deploy your applications to the edge and deliver lightning-fast performance to users worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  Start Implementation
+                  Start Free Trial
                   <Rocket className="w-5 h-5 ml-2" />
                 </a>
                 <a

@@ -669,7 +669,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     competitors: ['Materials Project, Citrine Informatics, Schrödinger'],
     marketSize: '$5B materials informatics',
     growthRate: '38% YoY',
-    variant: 'quantum-materials-enterprise',
+    variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Quantum simulation algorithms for materials discovery and property prediction.',
