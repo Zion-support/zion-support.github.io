@@ -18,8 +18,33 @@ export MISE_PYTHON_COMPILE="false"
 
 if [ -f requirements.txt ]; then
   echo "[build.sh] Installing Python dependencies"
-  python3 -m pip install --upgrade pip
-  python3 -m pip install -r requirements.txt
+  # Prefer virtual environment to avoid PEP 668 issues
+  VENV_CREATED=false
+  if [ ! -d .venv ]; then
+    if python3 -m venv .venv >/dev/null 2>&1; then
+      VENV_CREATED=true
+    fi
+  else
+    VENV_CREATED=true
+  fi
+
+  if [ "$VENV_CREATED" = true ]; then
+    # shellcheck disable=SC1091
+    source .venv/bin/activate || true
+    python -m pip install --upgrade pip || true
+    if ! python -m pip install -r requirements.txt; then
+      echo "[build.sh] venv install failed, falling back to system pip with safeguards"
+      deactivate 2>/dev/null || true
+      if ! python3 -m pip install --user -r requirements.txt; then
+        python3 -m pip install --break-system-packages -r requirements.txt
+      fi
+    fi
+  else
+    echo "[build.sh] venv unavailable, using system pip with safeguards"
+    if ! python3 -m pip install --user -r requirements.txt; then
+      python3 -m pip install --break-system-packages -r requirements.txt
+    fi
+  fi
 else
   echo "[build.sh] No requirements.txt found, skipping Python deps"
 fi
@@ -31,26 +56,3 @@ echo "[build.sh] Running build"
 npm run build
 
 echo "[build.sh] Build complete"
-
-#!/bin/bash
-set -e
-
-echo "Starting build process..."
-
-# Check Python version
-echo "Checking Python version..."
-python3 --version || python --version
-
-# Install Python dependencies
-echo "Installing Python dependencies..."
-pip3 install -r requirements.txt || pip install -r requirements.txt
-
-# Install Node.js dependencies
-echo "Installing Node.js dependencies..."
-npm ci
-
-# Build the project
-echo "Building the project..."
-npm run build
-
-echo "Build completed successfully!"
