@@ -1,10 +1,16 @@
 [build]
+<<<<<<< HEAD
+  # Install Python dependencies first (if present), then Node.js dependencies and build
+  # Use system Python to avoid shims. Fall back gracefully if requirements file is absent.
+  command = "if [ -f requirements.build.txt ]; then /usr/bin/python3 -m pip install -r requirements.build.txt; fi && npm install --no-audit --no-fund && npm run build"
+=======
   command = "/usr/bin/python3 -m pip install --no-input --break-system-packages -r requirements.txt || true && npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
 =======
   # Use prebuilt static site in 'out' to avoid broken build step
   command = "echo Using prebuilt out directory"
   publish = "out"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0e36
   command_timeout = "30m"
 
 [build.environment]
