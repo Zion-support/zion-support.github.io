@@ -1,5 +1,157 @@
 import React from 'react';
 import Head from 'next/head';
+import FuturisticLayout from '../components/FuturisticLayout';
+
+interface AutomationHealth {
+  version: string;
+  lastUpdated: string;
+  functions: Record<string, FunctionHealth>;
+  workflows: Record<string, WorkflowHealth>;
+  summary: HealthSummary;
+}
+
+interface FunctionHealth {
+  name: string;
+  lastRunAt: string | null;
+  lastSuccessAt: string | null;
+  lastFailureAt: string | null;
+  totalRuns: number;
+  successfulRuns: number;
+  failedRuns: number;
+  skippedRuns: number;
+  totalDurationMs: number;
+  averageDurationMs: number;
+  totalCommits: number;
+  lastError: string | null;
+  consecutiveFailures: number;
+  consecutiveSuccesses: number;
+  status: 'healthy' | 'failed' | 'skipped' | 'unknown';
+}
+
+interface WorkflowHealth {
+  name: string;
+  lastRunAt: string | null;
+  lastSuccessAt: string | null;
+  lastFailureAt: string | null;
+  totalRuns: number;
+  successfulRuns: number;
+  failedRuns: number;
+  skippedRuns: number;
+  cancelledRuns: number;
+  totalDurationMs: number;
+  averageDurationMs: number;
+  totalCommits: number;
+  lastError: string | null;
+  consecutiveFailures: number;
+  consecutiveSuccesses: number;
+  status: 'healthy' | 'failed' | 'skipped' | 'cancelled' | 'unknown';
+}
+
+interface HealthSummary {
+  totalFunctions: number;
+  totalWorkflows: number;
+  healthyFunctions: number;
+  healthyWorkflows: number;
+  failedFunctions: number;
+  failedWorkflows: number;
+  totalCommits: number;
+  totalErrors: number;
+  averageFunctionDuration: number;
+  averageWorkflowDuration: number;
+}
+
+interface ControlPlane {
+  globalPause: boolean;
+  version: string;
+  lastUpdated: string;
+  functions: Record<string, boolean>;
+  workflows: Record<string, boolean>;
+  throttles: {
+    maxConcurrentFunctions: number;
+    maxConcurrentWorkflows: number;
+    functionTimeoutMs: number;
+    workflowTimeoutMs: number;
+  };
+  budgets: {
+    openai: {
+      dailyUsd: number;
+      monthlyUsd: number;
+      enabled: boolean;
+    };
+    github: {
+      dailyActions: number;
+      monthlyActions: number;
+      enabled: boolean;
+    };
+  };
+}
+
+interface WorkflowSchedule {
+  id: string;
+  name: string;
+  schedule: string;
+  lastRun: string;
+  nextRun: string;
+  status: string;
+}
+
+interface ScheduleHints {
+  version: string;
+  lastUpdated: string;
+  workflows: Record<string, WorkflowSchedule>;
+  recommendations: {
+    totalWorkflows: number;
+    workflowsNeedingSpeedUp: number;
+    workflowsNeedingSlowDown: number;
+    overallHealth: string;
+    nextReview: string;
+  };
+  performance: {
+    averageSuccessRate: number;
+    totalFailures: number;
+    efficiency: string;
+  };
+}
+
+interface Props {
+  health: AutomationHealth;
+  controlPlane: ControlPlane;
+  scheduleHints: ScheduleHints;
+}
+
+export default function AutomationHealthPage({ health, controlPlane, scheduleHints }: Props) {
+  const [activeTab, setActiveTab] = useState('overview');
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'healthy': return 'text-green-500';
+      case 'failed': return 'text-red-500';
+      case 'skipped': return 'text-yellow-500';
+      case 'cancelled': return 'text-gray-500';
+      default: return 'text-gray-400';
+    }
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'healthy': return '✅';
+      case 'failed': return '❌';
+      case 'skipped': return '⏭️';
+      case 'cancelled': return '⏹️';
+      default: return '❓';
+    }
+  };
+
+  const formatDuration = (ms: number) => {
+    if (ms < 1000) return `${ms}ms`;
+    if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
+    return `${(ms / 60000).toFixed(1)}m`;
+  };
+
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return 'Never';
+    return new Date(dateString).toLocaleString();
+  };
 
 export default function AutomationHealthPage() {
   return (
@@ -228,3 +380,97 @@ export default function AutomationHealthPage() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    // Fetch automation health data
+    const healthResponse = await fetch('http://localhost:3000/reports/automation/health.json');
+    const health = healthResponse.ok ? await healthResponse.json() : {
+      version: '1.0.0',
+      lastUpdated: new Date().toISOString(),
+      functions: {},
+      workflows: {},
+      summary: {
+        totalFunctions: 0,
+        totalWorkflows: 0,
+        healthyFunctions: 0,
+        healthyWorkflows: 0,
+        failedFunctions: 0,
+        failedWorkflows: 0,
+        totalCommits: 0,
+        totalErrors: 0,
+        averageFunctionDuration: 0,
+        averageWorkflowDuration: 0
+      }
+    };
+
+    // Fetch control plane data
+    const controlResponse = await fetch('http://localhost:3000/automation/control.json');
+    const controlPlane = controlResponse.ok ? await controlResponse.json() : {
+      globalPause: false,
+      version: '1.0.0',
+      lastUpdated: new Date().toISOString(),
+      functions: {},
+      workflows: {},
+      throttles: { maxConcurrentFunctions: 6, maxConcurrentWorkflows: 3, functionTimeoutMs: 180000, workflowTimeoutMs: 3600000 },
+      budgets: { openai: { dailyUsd: 2.50, monthlyUsd: 50.00, enabled: true }, github: { dailyActions: 2000, monthlyActions: 50000, enabled: true } }
+    };
+
+    // Fetch schedule hints
+    const hintsResponse = await fetch('http://localhost:3000/automation/schedule-hints.json');
+    const scheduleHints = hintsResponse.ok ? await hintsResponse.json() : {
+      version: '1.0.0',
+      lastUpdated: new Date().toISOString(),
+      workflows: {},
+      recommendations: { totalWorkflows: 0, workflowsNeedingSpeedUp: 0, workflowsNeedingSlowDown: 0, overallHealth: 'unknown', nextReview: new Date().toISOString() },
+      performance: { averageSuccessRate: 0, totalFailures: 0, efficiency: 'unknown' }
+    };
+
+    return {
+      props: {
+        health,
+        controlPlane,
+        scheduleHints,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        health: {
+          version: '1.0.0',
+          lastUpdated: new Date().toISOString(),
+          functions: {},
+          workflows: {},
+          summary: {
+            totalFunctions: 0,
+            totalWorkflows: 0,
+            healthyFunctions: 0,
+            healthyWorkflows: 0,
+            failedFunctions: 0,
+            failedWorkflows: 0,
+            totalCommits: 0,
+            totalErrors: 0,
+            averageFunctionDuration: 0,
+            averageWorkflowDuration: 0
+          }
+        },
+        controlPlane: {
+          globalPause: false,
+          version: '1.0.0',
+          lastUpdated: new Date().toISOString(),
+          functions: {},
+          workflows: {},
+          throttles: { maxConcurrentFunctions: 6, maxConcurrentWorkflows: 3, functionTimeoutMs: 180000, workflowTimeoutMs: 3600000 },
+          budgets: { openai: { dailyUsd: 2.50, monthlyUsd: 50.00, enabled: true }, github: { dailyActions: 2000, monthlyActions: 50000, enabled: true } }
+        },
+        scheduleHints: {
+          version: '1.0.0',
+          lastUpdated: new Date().toISOString(),
+          workflows: {},
+          recommendations: { totalWorkflows: 0, workflowsNeedingSpeedUp: 0, workflowsNeedingSlowDown: 0, overallHealth: 'unknown', nextReview: new Date().toISOString() },
+          performance: { averageSuccessRate: 0, totalFailures: 0, efficiency: 'unknown' }
+        },
+      },
+    };
+  }
+};

@@ -162,4 +162,57 @@ const Index: NextPage = () => {
     </MainLayout>
   )};
 
-export default BlogIndex;
+        {/* Popular Topics */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-white mb-6 text-center">Popular Topics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6 text-center">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-lg font-semibold text-white mb-2">AI Automation</h3>
+              <p className="text-white/60 text-sm">Latest trends and implementation strategies</p>
+            </div>
+            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6 text-center">
+              <div className="text-3xl mb-3">☁️</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Cloud Computing</h3>
+              <p className="text-white/60 text-sm">Optimization and migration insights</p>
+            </div>
+            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6 text-center">
+              <div className="text-3xl mb-3">🚀</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Performance</h3>
+              <p className="text-white/60 text-sm">Monitoring and optimization techniques</p>
+            </div>
+            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6 text-center">
+              <div className="text-3xl mb-3">🔒</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Security</h3>
+              <p className="text-white/60 text-sm">Automation and threat prevention</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="text-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-400/30 rounded-lg p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Have a Topic in Mind?</h2>
+            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+              We&apos;re always looking for new topics to cover. Let us know what you&apos;d like to learn more about.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Suggest a Topic
+              </Link>
+              <Link 
+                href="/reports"
+                className="bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                View Our Reports
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}

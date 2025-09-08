@@ -1,44 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Users, Target, Award, Globe } from 'lucide-react';
-
-
-export default function About() {
-  const values = [
-    {
-      icon: Target,
-      title: 'Innovation First',
-      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
-    }, {
-      icon: Users,
-      title: 'Client-Centric',
-      description: 'Your success is our success. We build lasting partnerships through exceptional service and results.'
-    }, {
-      icon: Shield,
-      title: 'Security & Trust',
-      description: 'We prioritize security and data protection in everything we build, ensuring your business is safe.'
-    }, {
-      icon: Zap,
-      title: 'Agile Delivery',
-      description: 'We deliver fast, iterative solutions that adapt to your changing business needs.'
-    }
-
-  ];
-
-  const stats = ['
-    { number: '500+', label: 'Projects Completed' }, { number: '50+', label: 'Happy Clients' }, { number: '99.9%', label: 'Uptime Guarantee' } ];
-
-  const team = [
-    {
-
-  ];
-
-
-
-
   return (
 
           </p>
@@ -294,12 +256,12 @@ export default function About() {
               >
                 Get Started
               </Link>
-              <a 
+              <Link 
                 href="/services" 
                 className="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </section>

@@ -3,6 +3,15 @@
 const: Terms: NextPage: = () =>  {
   return (
 
+        <div className="prose prose-invert max-w-none">
+          <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6 mb-8">
+            <p className="text-white/80 text-lg">
+              <strong>Last updated:</strong> August 15, 2025
+            </p>
+            <p className="text-white/70 mt-2">
+              These Terms of Service (&quot;Terms&quot;) govern your use of Zion Tech Group&apos;s services, including our website, applications, and any related services (collectively, the &quot;Services&quot;).
+            </p>
+          </div>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
