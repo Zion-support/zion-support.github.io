@@ -62,37 +62,34 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
 
-// Marketplace pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
-const Talent = React.lazy(() => import('./pages/Talent.jsx'));
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage.jsx'));
-const Categories = React.lazy(() => import('./pages/Categories.jsx'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT.jsx'));
-const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServicesPage.jsx'));
-
-// Company pages
-const Blog = React.lazy(() => import('./pages/Blog.jsx'));
+// Additional pages
+const Leadership = React.lazy(() => import('./pages/Leadership.jsx'));
 const Partners = React.lazy(() => import('./pages/Partners.jsx'));
 const Careers = React.lazy(() => import('./pages/Careers.jsx'));
-const FAQ = React.lazy(() => import('./pages/FAQ.jsx'));
+const News = React.lazy(() => import('./pages/News.jsx'));
+const Events = React.lazy(() => import('./pages/Events.jsx'));
+const Blog = React.lazy(() => import('./pages/Blog.jsx'));
+const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.jsx'));
-
-// Resources pages
+const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
+const Talent = React.lazy(() => import('./pages/Talent.jsx'));
+const Equipment = React.lazy(() => import('./pages/EquipmentPage.jsx'));
+const Categories = React.lazy(() => import('./pages/Categories.jsx'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter.jsx'));
 const Documentation = React.lazy(() => import('./pages/Documentation.jsx'));
-const WhitePapers = React.lazy(() => import('./pages/WhitePapers.jsx'));
-const Webinars = React.lazy(() => import('./pages/Webinars.jsx'));
-const Training = React.lazy(() => import('./pages/Training.jsx'));
-const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment.jsx'));
-
-// Support pages
-const Support = React.lazy(() => import('./pages/Support.jsx'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
+const ManufacturingSolutions = React.lazy(() => import('./pages/ManufacturingSolutions.jsx'));
+const MobileApps = React.lazy(() => import('./pages/Mobile.jsx'));
+const MicroSAAS = React.lazy(() => import('./pages/MicroSAAS.jsx'));
+const BlockchainServices = React.lazy(() => import('./pages/BlockchainServicesPage.jsx'));
+const DigitalMarketing = React.lazy(() => import('./pages/DigitalMarketingServicesPage.jsx'));
+const IoTServices = React.lazy(() => import('./pages/IoTServicesPage.jsx'));
+const ITServices = React.lazy(() => import('./pages/ITServicesPage.tsx'));
+const AIServicesOverview = React.lazy(() => import('./pages/AIServicesOverview.jsx'));
+const Resources = React.lazy(() => import('./pages/Resources.jsx'));
+const Community = React.lazy(() => import('./pages/Community.jsx'));
 const Terms = React.lazy(() => import('./pages/Terms.jsx'));
 const Privacy = React.lazy(() => import('./pages/Privacy.jsx'));
-const Security = React.lazy(() => import('./pages/Security.jsx'));
-const Status = React.lazy(() => import('./pages/Status.jsx'));
-const Accessibility = React.lazy(() => import('./pages/Accessibility.jsx'));
-const Cookies = React.lazy(() => import('./pages/Cookies.jsx'));
 
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
@@ -127,66 +124,66 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 
 function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-futuristic">
-          <AppHeader />
-          
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/cookies" element={<Cookies />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/ai-services" element={<AIServices />} />
-                <Route path="/it-services" element={<ITServices />} />
-                <Route path="/micro-saas" element={<MicroSaaS />} />
-                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-                <Route path="/request-quote" element={<RequestQuote />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/research-development" element={<ResearchDevelopment />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route path="/help" element={<Help />} />
-                <Route path="/security" element={<Security />} />
-                <Route path="/status" element={<Status />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/green-it" element={<GreenIT />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                
-                {/* Service Routes - only for existing pages */}
-                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
-                <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
-                <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
-                
-                {/* Catch all route */}
-                <Route path="*" element={<Home />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <ChatAssistant />
-          <PerformanceOptimizer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <Router>
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+        <AppHeader />
+        <main className="flex-1" role="main">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              {/* Main Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ai-services" element={<AIServicesOverview />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/manufacturing-solutions" element={<ManufacturingSolutions />} />
+              <Route path="/mobile-apps" element={<MobileApps />} />
+              <Route path="/micro-saas" element={<MicroSAAS />} />
+              <Route path="/blockchain-services" element={<BlockchainServices />} />
+              <Route path="/digital-marketing" element={<DigitalMarketing />} />
+              <Route path="/iot-services" element={<IoTServices />} />
+              
+              {/* Company Routes */}
+              <Route path="/leadership" element={<Leadership />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/events" element={<Events />} />
+              
+              {/* Marketplace Routes */}
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<Equipment />} />
+              <Route path="/categories" element={<Categories />} />
+              
+              {/* Resource Routes */}
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/help" element={<HelpCenter />} />
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/community" element={<Community />} />
+              
+              {/* Legal Routes */}
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <ChatAssistant />
+        <PerformanceMonitor />
+      </div>
+    </Router>
   );
 }
 

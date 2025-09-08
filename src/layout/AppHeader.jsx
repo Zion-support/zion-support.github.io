@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Globe, Briefcase, BookOpen, Shield } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, ChevronRight } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,6 +27,10 @@ export function AppHeader() {
     // In a real app, this would toggle the theme
   };
 
+  const toggleDropdown = (dropdown) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { 
@@ -34,16 +38,18 @@ export function AppHeader() {
       href: '/services', 
       current: false,
       dropdown: [
-        { name: 'Overview', href: '/services/overview', icon: BookOpen },
-        { name: 'Pricing Guide', href: '/services/pricing', icon: Briefcase },
-        { name: 'Showcase', href: '/services/showcase', icon: Globe },
-        { name: 'AI Services', href: '/services/ai-services', icon: Globe },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Globe },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Globe },
-        { name: 'Green IT', href: '/green-it', icon: Globe },
-        { name: '5G Solutions', href: '/services/five-g-solutions', icon: Globe },
-        { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Globe }
+        { name: 'Overview', href: '/services/overview' },
+        { name: 'Pricing Guide', href: '/services/pricing' },
+        { name: 'Showcase', href: '/services/showcase' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'Green IT', href: '/green-it' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Mobile Apps', href: '/mobile-apps' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Blockchain', href: '/blockchain-services' },
+        { name: 'Digital Marketing', href: '/digital-marketing' },
+        { name: 'IoT Services', href: '/iot-services' }
       ]
     },
     { 
@@ -51,10 +57,11 @@ export function AppHeader() {
       href: '/marketplace', 
       current: false,
       dropdown: [
-        { name: 'Products', href: '/marketplace', icon: Briefcase },
-        { name: 'Talent', href: '/talent', icon: User },
-        { name: 'Equipment', href: '/equipment', icon: Briefcase },
-        { name: 'Categories', href: '/categories', icon: BookOpen }
+        { name: 'Products', href: '/marketplace' },
+        { name: 'Services', href: '/services' },
+        { name: 'Talent', href: '/talent' },
+        { name: 'Equipment', href: '/equipment' },
+        { name: 'Categories', href: '/categories' }
       ]
     },
     { 
@@ -62,24 +69,27 @@ export function AppHeader() {
       href: '/about', 
       current: false,
       dropdown: [
-        { name: 'About Us', href: '/about', icon: User },
-        { name: 'Leadership', href: '/leadership', icon: User },
-        { name: 'Partners', href: '/partners', icon: Briefcase },
-        { name: 'Careers', href: '/careers', icon: Briefcase },
-        { name: 'Blog', href: '/blog', icon: BookOpen }
+        { name: 'About Us', href: '/about' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News', href: '/news' },
+        { name: 'Events', href: '/events' }
       ]
     },
     { 
       name: 'Resources', 
-      href: '/help', 
+      href: '/resources', 
       current: false,
       dropdown: [
-        { name: 'Help Center', href: '/help', icon: BookOpen },
-        { name: 'Documentation', href: '/docs', icon: BookOpen },
-        { name: 'White Papers', href: '/white-papers', icon: BookOpen },
-        { name: 'Webinars', href: '/webinars', icon: Globe },
-        { name: 'Training', href: '/training', icon: BookOpen },
-        { name: 'Research', href: '/research', icon: BookOpen }
+        { name: 'Blog', href: '/blog' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Sitemap', href: '/sitemap' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' }
       ]
     },
     { name: 'Contact', href: '/contact', current: false },
@@ -116,12 +126,12 @@ export function AppHeader() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-1">
-            {navigation.map((item, index) => (
-              <div key={item.name} className="relative">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
                 {item.dropdown ? (
-                  <div className="relative">
+                  <div>
                     <button
-                      onClick={() => handleDropdownToggle(index)}
+                      onClick={() => toggleDropdown(item.name)}
                       className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 ${
                         item.current
                           ? 'text-cyan-400 bg-slate-800'
@@ -132,19 +142,21 @@ export function AppHeader() {
                       <ChevronDown className="w-4 h-4" />
                     </button>
                     
-                    {activeDropdown === index && (
-                      <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2 z-50">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
-                            className="flex items-center gap-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            <dropdownItem.icon className="w-4 h-4" />
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
+                    {/* Dropdown Menu */}
+                    {activeDropdown === item.name && (
+                      <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-lg shadow-xl border border-slate-700 z-50">
+                        <div className="py-2">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -216,22 +228,26 @@ export function AppHeader() {
                   {item.dropdown ? (
                     <div>
                       <button
-                        onClick={() => handleDropdownToggle(navigation.indexOf(item))}
+                        onClick={() => toggleDropdown(item.name)}
                         className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 transition-colors flex items-center justify-between"
                       >
                         {item.name}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === navigation.indexOf(item) ? 'rotate-180' : ''}`} />
+                        <ChevronRight className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-90' : ''}`} />
                       </button>
-                      {activeDropdown === navigation.indexOf(item) && (
+                      
+                      {activeDropdown === item.name && (
                         <div className="ml-4 mt-2 space-y-1">
-                          {item.dropdown.map((dropdownItem) => (
+                          {item.dropdown.map((subItem) => (
                             <Link
-                              key={dropdownItem.name}
-                              to={dropdownItem.href}
+                              key={subItem.name}
+                              to={subItem.href}
                               className="block px-3 py-2 rounded-md text-sm text-gray-400 hover:text-white hover:bg-slate-700 transition-colors"
-                              onClick={() => setMobileMenuOpen(false)}
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setActiveDropdown(null);
+                              }}
                             >
-                              {dropdownItem.name}
+                              {subItem.name}
                             </Link>
                           ))}
                         </div>
