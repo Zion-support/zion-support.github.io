@@ -11,7 +11,11 @@ import ToastProvider from './components/ToastProvider';
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
-// import { AppLayout } from '@/layout/AppLayout';
+import { AppLayout } from '@/layout/AppLayout';
+import { Provider as ReduxProvider } from 'react-redux';
+import { store } from '@/store';
+// import { AuthProvider } from './context/auth/AuthProvider';
+import { NotificationProvider } from './components/ui/notification';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
@@ -63,8 +67,24 @@ function renderApp() {
 const root = createRoot(rootElement);
 root.render(
 	<React.StrictMode>
-		<Router>
-			<App />
-		</Router>
+		<HelmetProvider>
+			<QueryClientProvider client={queryClient}>
+				<ReduxProvider store={store}>
+					<WhitelabelProvider>
+						<Router>
+							{/* <AuthProvider> */}
+								<NotificationProvider>
+									<LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+										<AppLayout>
+											<App />
+										</AppLayout>
+									</LanguageProvider>
+								</NotificationProvider>
+							{/* </AuthProvider> */}
+						</Router>
+					</WhitelabelProvider>
+				</ReduxProvider>
+			</QueryClientProvider>
+		</HelmetProvider>
 	</React.StrictMode>
 );
