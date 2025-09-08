@@ -98,10 +98,6 @@ export default defineConfig(({ mode }) => ({
     exclude: ['@vite/client', '@vite/env'],
   },
   // Performance optimizations
-  esbuild: {
-    target: 'esnext',
-    format: 'esm',
-  },
   // CSS optimizations
   css: {
     devSourcemap: true,

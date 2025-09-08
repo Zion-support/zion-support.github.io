@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { FraudFlag } from "@/types/fraud",
@@ -18,7 +18,7 @@ import { EmptyFraudState } from "./EmptyFraudState",}) => {
       <div className="flex justify-center items-center h-64">"
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
-    )import React from "react",;
+    )import React from "react";;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { FraudFlag } from "@/types/fraud",;

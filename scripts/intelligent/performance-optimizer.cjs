@@ -1,7 +1,12 @@
+
+
+=======
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+
+=======
 const os = require('os')
 // console.log('⚡ Performance Optimizer starting...')
       console.log(' Performance Optimizer started successfully')
@@ -112,4 +117,6 @@ const os = require('os')
       console.error('Error saving "baseline")
       console.error('Error saving "analysis")
       console.error('Error saving deep "analysis")
+      console.error('Error loading optimization "history")
+=======
       console.error('Error loading optimization "history")

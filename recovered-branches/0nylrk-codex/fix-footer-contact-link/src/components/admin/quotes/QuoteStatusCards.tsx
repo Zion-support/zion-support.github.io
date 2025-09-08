@@ -1,9 +1,9 @@
-import React from "react",
+import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";interface QuoteStatusCardsProps {
   status_counts: {
 
-import React from "react",;
+import React from "react";;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 ;
@@ -91,10 +91,10 @@ closed: number
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
   return (
-    <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8&quot;>
-      <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
-        <CardHeader className=&quot;pb-2&quot;>
-          <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+      <Card className="bg-zion-blue-dark border border-zion-blue-light">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
 import React from "react";
 
 interface QuoteStatusCardsProps {_statusCounts: {

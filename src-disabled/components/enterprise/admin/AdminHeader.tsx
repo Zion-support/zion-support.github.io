@@ -11,7 +11,7 @@ import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
 :src_backup/components/enterprise/admin/AdminHeader.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-import React from "react",
+import React from "react";
 
 
 
@@ -183,7 +183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
           <p className="text-muted-foreground mt-1">;
             Manage your company's account, team members, and subscription;
-import React from "react",""
+import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { Download, Settings } from 'lucide-react
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";"
@@ -195,7 +195,7 @@ import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Download, Settings  } from 'lucide-react';
 import { useCompanyWorkspace  } from '@/hooks/useCompanyWorkspace';
-import React from "react",export function AdminHeader() {// const { user } = useAuth(), // Unused but available;
+import React from "react";export function AdminHeader() {// const { user } = useAuth(), // Unused but available;
   const { company }  = useCompanyWorkspace()return (export function AdminHeader() { // const { user  } = useAuth(), // Unused but available;
   const { company  } = useCompanyWorkspace(),return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -204,7 +204,7 @@ import React from "react",export function AdminHeader() {// const { user } = use
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
           <p className="text-muted-foreground mt-1">;
             Manage your company's account, team members, and subscription;
-import React from "react",""
+import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { Download, Settings } from 'lucide-react
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";"

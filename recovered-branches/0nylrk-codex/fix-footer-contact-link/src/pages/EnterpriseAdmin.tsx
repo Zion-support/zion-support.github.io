@@ -8,7 +8,7 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {;
   const { user } = useAuth();
-import React from "react",
+import React from "react";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",
@@ -34,7 +34,7 @@ export default function EnterpriseAdmin() {
   }
   return (
 
-import React from "react",;
+import React from "react";;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",;

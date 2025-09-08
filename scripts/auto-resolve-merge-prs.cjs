@@ -1,61 +1,42 @@
+
+
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require(fs');
 function sh(cmd, opts = {}) {}
-<<<<<<< HEAD
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
+
   return execSync(cmd, { "stdio: 'pipe, encoding": utf8', ...opts }).trim()}
 
 
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
-=======
 
 
 
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin);
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error(Unable to parse owner/repo from origin');
   return { "owner: m[1], repo": m[2] }}"
 function getToken() {}
-<<<<<<< HEAD
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
     },
     "body": body ? JSON.stringify(body) : undefined;"
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
-=======
+    },
+    "body": body ? JSON.stringify(body) : undefined;"
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
-<<<<<<< HEAD
   const remoteUrl = sh('git remote get-url origin');
   const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
   if (!tokenMatch) throw new Error('No GitHub token available');
@@ -70,19 +51,13 @@ const res = await fetch(`${base}${path}`, {`});
       "Accept": 'application/vnd.github.v3+json',
       'User-Agent': 'auto-resolve-merge-prs',
       'Content-Type': 'application/json'
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
 
->>>>>>> origin/chore/fix-lint-and-merge
     },
     "body": body ? JSON.stringify(body) : undefined;"
-<<<<<<< HEAD
-=======
 
     },
     body": body ? JSON.stringify(body) : undefined;"
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   }
 });
   const text = await res.text();
@@ -92,16 +67,11 @@ async function listOpenPRs(owner, repo) {}`;
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   return prs}
 function resolveConflictsFiles() {}
-<<<<<<< HEAD
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-=======
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
     },
     "body": body ? JSON.stringify(body) : undefined;"
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 })
   const text = await res.text();"
   return data}
@@ -110,12 +80,9 @@ async function listOpenPRs(owner, repo) {}`
   return prs}
 function resolveConflictsFiles() {}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
 >>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true);
   const files = output.split(\n').filter(Boolean);
@@ -153,7 +120,6 @@ async function main() {}
     const base = pr.base.ref;
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
-<<<<<<< HEAD
       // Checkout PR branch;
       try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)}
       sh('git fetch origin);

@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -40,7 +40,7 @@ interface ProjectViewProps {
     title: string;
     client: {
   const navigate = useNavigate();
-import React from "react",;
+import React from "react";;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;

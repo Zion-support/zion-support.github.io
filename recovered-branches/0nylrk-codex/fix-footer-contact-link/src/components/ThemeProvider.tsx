@@ -7,12 +7,12 @@ type ThemeProviderProps = {
   )
   useEffect(() => {
     const root = window.document.documentElement
-    root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
-    if (theme === &quot;system&quot;) {
-      const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
+    root.classList.remove("light", "dark")
+    if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
-        ? &quot;dark&quot;
-        : &quot;light&quot;      root.classList.add(systemTheme)
+        ? "dark"
+        : "light"      root.classList.add(systemTheme)
   const value = {
     theme
     setTheme: (theme: Theme) => {  return context
