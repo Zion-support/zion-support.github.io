@@ -224,89 +224,64 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 3 * * 0', // Restart weekly on Sunday at 3 AM
-      error_file: 'logs/security-audit-automation-error.log',
-      out_file: 'logs/security-audit-automation-out.log',
-      log_file: 'logs/security-audit-automation-combined.log',
-      time: true
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     },
 
-    // Performance Monitoring Automation
+    // 🚨 NEW: Comprehensive Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
-      name: 'performance-monitor-automation',
-      script: 'scripts/performance-monitor-automation.js',
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
-      error_file: 'logs/performance-monitor-automation-error.log',
-      out_file: 'logs/performance-monitor-automation-out.log',
-      log_file: 'logs/performance-monitor-automation-combined.log',
-      time: true
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
     },
 
-    // Build Health Automation
+    // 🔧 NEW: TypeScript Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
     {
-      name: 'build-health-automation',
-      script: 'scripts/build-health-automation.js',
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      error_file: 'logs/build-health-automation-error.log',
-      out_file: 'logs/build-health-automation-out.log',
-      log_file: 'logs/build-health-automation-combined.log',
-      time: true
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
     },
 
-    // File Cleanup Automation
+    // 🎨 NEW: Lucide React Icon Fixer - runs every 20 minutes
     {
-      name: 'file-cleanup-automation',
-      script: 'scripts/file-cleanup-automation.js',
+      name: 'lucide-react-icon-fixer',
+      script: './scripts/automation/lucide-react-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1200000' // 20 minutes
+      }
+    },
+
+    // 📊 NEW: Error Monitoring Dashboard - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'error-monitoring-dashboard',
+      script: './scripts/automation/error-monitoring-dashboard.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 4 * * *', // Restart daily at 4 AM
-      error_file: 'logs/file-cleanup-automation-error.log',
-      out_file: 'logs/file-cleanup-automation-out.log',
-      log_file: 'logs/file-cleanup-automation-combined.log',
-      time: true
-    },
-
-    // Continuous Integration Automation
-    {
-      name: 'ci-automation',
-      script: 'scripts/ci-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 */1 * * *', // Restart every hour
-      error_file: 'logs/ci-automation-error.log',
-      out_file: 'logs/ci-automation-out.log',
-      log_file: 'logs/ci-automation-combined.log',
-      time: true
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
     }
   ],
 

@@ -1,150 +1,340 @@
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    this.logFile = path.join(this.projectRoot, "logs", "lucide-react-fixer.log")
-    this.fixesLog = path.join(this.projectRoot, "logs", "lucide-fixes.json")
-  fs.mkdirSync(logsDir, { "recursive"})
-  log(message, level = "INFO")
-    return ["User"", "UserCheck", "UserX", "UserPlus", "UserMinus", "UserEdit", "UserSearch", "Users"", "Users2", "UserStar", "UserHeart", "UserCog", "UserShield", "Eye"", "EyeOff", "MousePointer", "Clock", "MapPin", "Smartphone", "Tablet", "Laptop", "Server"", "Database", "HardDrive", "Cpu", "Network", "Wifi", "Bluetooth", "Radio", "Signal"", "Antenna", "Satellite", "Orbit", "Star", "Navigation", "Moon", "Sun", "Binary"", "Lock", "Key", "Fingerprint", "Brain", "Rocket", "DollarSign", "Search", "Sparkles"", "Zap", "Settings", "Settings2", "Cog", "Cog2", "Device", "Desktop", "Monitor"", "Smartphone", "Tablet", "Laptop", "Server", "Database", "HardDrive", "Cpu"", "Network", "Wifi", "Bluetooth", "Radio", "Signal", "Antenna", "Satellite", "Orbit"", "Star", "Navigation", "Moon", "Sun", "Binary", "Lock", "Key", "Fingerprint", "Brain"", "Rocket", "DollarSign", "Search", "Sparkles", "Zap"]
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  this.log("� Starting Lucide React icon fix automation...")
-  "file"
-            "error"
-    return ["User", "UserCheck", "UserX", "UserPlus", "UserMinus", "UserEdit", "UserSearch", "Users", "Users2", "UserStar", "UserHeart", "UserCog", "UserShield", "Eye", "EyeOff", "MousePointer", "Clock", "MapPin", "Smartphone", "Tablet", "Laptop", "Server", "Database", "HardDrive", "Cpu", "Network", "Wifi", "Bluetooth", "Radio", "Signal", "Antenna", "Satellite", "Orbit", "Star", "Navigation", "Moon", "Sun", "Binary", "Lock", "Key", "Fingerprint", "Brain", "Rocket", "DollarSign", "Search", "Sparkles", "Zap", "Settings", "Settings2", "Cog", "Cog2", "Device", "Desktop", "Monitor", "Smartphone", "Tablet", "Laptop", "Server", "Database", "HardDrive", "Cpu", "Network", "Wifi", "Bluetooth", "Radio", "Signal", "Antenna", "Satellite", "Orbit", "Star", "Navigation", "Moon", "Sun", "Binary", "Lock", "Key", "Fingerprint", "Brain", "Rocket", "DollarSign", "Search", "Sparkles", "Zap"]
-  this.log("� Starting Lucide React icon fix automation...")
-  "file"
-            "error"
-  this.log("Icon fix automation "failed": ${error.message  }", "ERROR")
-        await this.commitFixes(fixes);")}"
-<<<<<<< HEAD
-")} catch (error) {"}
-      this.log("Icon fix automation "failed": ${error.message}", "ERROR")
-const srcPath = path.join(this.projectRoot, "src");
-  if (file.endsWith(".tsx") || file.endsWith(".ts")
-const content = fs.readFileSync(file, "utf8");
-            if (content.includes("from \"lucide-react\"") || content.includes("from "lucide-react")
-  "path"
-                "content"
-          } catch (error) {  this.log("Error reading file ${file  }: ${error.message}", "WARN")
-    } catch (error) {  this.log("Error scanning for icon "files": ${error.message  }", "WARN")
-  const { "path"}
-  fs.writeFileSync(filePath, newContent);this.log(" Fixed icon imports in ${path.basename(filePath)}"
-        return { "type": "icon_imports", "file": filePath, "fix": "fixed_icon_imports"}
-} catch (error) {  this.log("Error fixing icon imports in ${filePath  }: ${error.message}", "WARN")} catch (error) {this.log("Error fixing icon imports in ${filePath}: ${error.message}", "WARN")
-} catch (error) {  this.log("Error fixing icon imports in ${filePath  }: ${error.message}", "WARN")
-const lines = content.split("\n");
-      if (line.trim().startsWith("import ") && line.includes("lucide-react")
-const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react["];
-const icons = match[1].split(",");
-      } else if (inImportBlock && line.trim() === ""
-const uniqueIcons = Array.from(importMap.keys()).sort();newLines.push("import { ${uniqueIcons.join(", ")} } from "lucide-react";";
-        newLines.push("")} else if (inImportBlock && line.trim() === "
-const uniqueIcons = Array.from(importMap.keys()).sort();newLines.push("import { ${uniqueIcons.join(", ")} } from "lucide-react";";
-        newLines.push(")
-return newLines.join("\n");
-    const iconMappings = {UserHeart": "Heart",UserEdit2": "UserEdit",UserSearch2": "Search",UserList2": "Users2",UserSettings2": "Settings2",UserShield2": "Shield",UserStar2": "Star",Device": "Monitor",Desktop": "Monitor"}
-    for (const ["invalid", "valid"] of Object.entries(iconMappings)) {const regex = new RegExp("\\b${invalid}\\b", "g")
-  newContent = newContent.replace(regex, valid);this.log("� Replaced invalid icon `${invalid}` with `${valid}```)
-const lines = content.split("\n");
-    // First "pass"
-  if (line.trim().startsWith("import ") && line.includes("lucide-react")
-const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react["];
-const icons = match[1].split(",");
-    // Second "pass"
-      if (line.trim().startsWith("import ") && line.includes("lucide-react")
-const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react[""];
-const icons = match[1].split(",");
-          if (usedIcons.length > 0) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
-      } else if (inImportBlock && line.trim() === ""
-        newLines.push("")
-return newLines.join("\n");
-const patterns = [new RegExp("<${iconName}[\\s/>]", "g"),new RegExp("</${iconName}>", "g"),new RegExp("\\b${iconName}\\b", "g");
-return newLines.join("\n");
-const patterns = [new RegExp("<${iconName}[\\s/>]", "g"),new RegExp("</${iconName}>", "g"),new RegExp("\\b${iconName}\\b", "g");
-      .replace(/import\s*\{\s*([^}]+)\s*\}\s*from\s*[""]lucide-react["]
-  const cleanIcons = icons.split(",").map(icon => icon.trim()).filter(Boolean);return "import { ${cleanIcons.join(", ")} } from "lucide-react""
-      .replace(/,\s*,/g, ",")
-      .replace(/,\s*}/g, "}")
-      .replace(/{\s*,/g, "{"})
-      .replace(/{\s*}/g, "{}")
-const fullPath = path.join(dirPath, ");
-  arrayOfFiles = await this.getAllFiles(fullPath")
+#!/usr/bin/env node
 
-const fullPath = path.join(dirPath, ");
-=======
-<<<<<<< HEAD
+/**
+ * Lucide React Icon Fixer Automation
+ * Specialized automation for fixing Lucide React icon import issues
+ * Runs every 20 minutes as part of PM2 automation system
+ */
 
-  arrayOfFiles = await this.getAllFiles(fullPath")
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const glob = require('glob');
 
+class LucideReactFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'reports');
+    this.fixesApplied = 0;
+    this.errorsFixed = 0;
+    this.startTime = Date.now();
+    
+    // Ensure reports directory exists
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
 
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] [${level}] ${message}`);
+  }
 
-=======
-  const fullPath = path.join(dirPath, ")
+  async run() {
+    this.log('🚀 Starting Lucide React Icon Fixer Automation');
+    
+    try {
+      // Step 1: Fix invalid Lucide React icon imports
+      await this.fixInvalidLucideImports();
+      
+      // Step 2: Remove unused icon imports
+      await this.removeUnusedIconImports();
+      
+      // Step 3: Fix duplicate icon imports
+      await this.fixDuplicateIconImports();
+      
+      // Step 4: Fix missing icon imports
+      await this.fixMissingIconImports();
+      
+      // Step 5: Generate report
+      await this.generateReport();
+      
+      this.log(`✅ Lucide React Icon Fixer completed successfully!`);
+      this.log(`📊 Summary: ${this.fixesApplied} fixes applied, ${this.errorsFixed} errors resolved`);
+      
+    } catch (error) {
+      this.log(`❌ Error in Lucide React Icon Fixer: ${error.message}`, 'ERROR');
+      await this.generateErrorReport(error);
+    }
+  }
 
-=======
-")} catch (error) {"}
-      this.log("Icon fix automation "failed": ${error.message}", "ERROR")
-      this.log("Icon fix automation "failed": ${error.message}", "ERROR")
-    const srcPath = path.join(this.projectRoot, "src")
-    const srcPath = path.join(this.projectRoot, "src")
-  if (file.endsWith(".tsx") || file.endsWith(".ts")
-  const content = fs.readFileSync(file, "utf8")
-            if (content.includes("from \"lucide-react\"") || content.includes("from "lucide-react")
-  "path"
-                "content"
-          } catch (error) {  this.log("Error reading file ${file  }: ${error.message}", "WARN")
-    } catch (error) {  this.log("Error scanning for icon "files": ${error.message  }", "WARN")
-  const { "path"}
-  fs.writeFileSync(filePath, newContent);this.log(" Fixed icon imports in ${path.basename(filePath)}"
-        return { "type": "icon_imports", "file": filePath, "fix": "fixed_icon_imports"}
-} catch (error) {  this.log("Error fixing icon imports in ${filePath  }: ${error.message}", "WARN")} catch (error) {this.log("Error fixing icon imports in ${filePath}: ${error.message}", "WARN")
-} catch (error) {  this.log("Error fixing icon imports in ${filePath  }: ${error.message}", "WARN")
-  const lines = content.split("\n")
-  const lines = content.split("\n")
-      if (line.trim().startsWith("import ") && line.includes("lucide-react")
-        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react["]
-  const icons = match[1].split(",")
-      } else if (inImportBlock && line.trim() === ""
-  const uniqueIcons = Array.from(importMap.keys()).sort();newLines.push("import { ${uniqueIcons.join(", ")} } from "lucide-react";"
-        newLines.push("")} else if (inImportBlock && line.trim() === "
-  const uniqueIcons = Array.from(importMap.keys()).sort();newLines.push("import { ${uniqueIcons.join(", ")} } from "lucide-react";"
-        newLines.push(")
-    return newLines.join("\n")
-    const iconMappings = {UserHeart": "Heart",UserEdit2": "UserEdit",UserSearch2": "Search",UserList2": "Users2",UserSettings2": "Settings2",UserShield2": "Shield",UserStar2": "Star",Device": "Monitor",Desktop": "Monitor"}
-    for (const ["invalid", "valid"] of Object.entries(iconMappings)) {const regex = new RegExp("\\b${invalid}\\b", "g")
-  newContent = newContent.replace(regex, valid);this.log("� Replaced invalid icon `${invalid}` with `${valid}```)
-  const lines = content.split("\n")
-  const lines = content.split("\n")
-    // First "pass"
-  if (line.trim().startsWith("import ") && line.includes("lucide-react")
-  const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react["]
-  const icons = match[1].split(",")
-    // Second "pass"
-      if (line.trim().startsWith("import ") && line.includes("lucide-react")
-        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react[""]
-  const icons = match[1].split(",")
-<<<<<<< HEAD
-  if($2) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
-=======
-          if (usedIcons.length > 0) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
->>>>>>> merged-prs-20250907-203621
-      } else if (inImportBlock && line.trim() === ""
-        newLines.push("")
-    return newLines.join("\n")
-    const patterns = [new RegExp("<${iconName}[\\s/>]", "g"),new RegExp("</${iconName}>", "g"),new RegExp("\\b${iconName}\\b", "g")
-    return newLines.join("\n")
-    const patterns = [new RegExp("<${iconName}[\\s/>]", "g"),new RegExp("</${iconName}>", "g"),new RegExp("\\b${iconName}\\b", "g")
-      .replace(/import\s*\{\s*([^}]+)\s*\}\s*from\s*[""]lucide-react["]
-  const cleanIcons = icons.split(",").map(icon => icon.trim()).filter(Boolean);return "import { ${cleanIcons.join(", ")} } from "lucide-react""
-      .replace(/,\s*,/g, ",")
-      .replace(/,\s*}/g, "}")
-      .replace(/{\s*,/g, "{"})
-      .replace(/{\s*}/g, "{}")
-  const fullPath = path.join(dirPath, ")
-  arrayOfFiles = await this.getAllFiles(fullPath")
-  const fullPath = path.join(dirPath, ")
+  async fixInvalidLucideImports() {
+    this.log('🔧 Fixing invalid Lucide React icon imports...');
+    
+    try {
+      const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { cwd: this.projectRoot });
+      
+      for (const file of files) {
+        const filePath = path.join(this.projectRoot, file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        
+        // Fix specific invalid icon names
+        const iconFixes = {
+          'UserHeart': 'Heart',
+          'UserEdit2': 'UserEdit',
+          'UserSearch2': 'Search',
+          'UserList2': 'Users2',
+          'UserSettings2': 'Settings2',
+          'UserStar2': 'Star',
+          'Device': 'Smartphone',
+          'Desktop': 'Monitor'
+        };
+        
+        for (const [invalidIcon, validIcon] of Object.entries(iconFixes)) {
+          if (content.includes(invalidIcon)) {
+            content = content.replace(new RegExp(invalidIcon, 'g'), validIcon);
+            modified = true;
+            this.fixesApplied++;
+            this.log(`🔄 Fixed invalid icon: ${invalidIcon} → ${validIcon} in ${file}`);
+          }
+        }
+        
+        if (modified) {
+          fs.writeFileSync(filePath, content);
+          this.errorsFixed++;
+        }
+      }
+    } catch (error) {
+      this.log(`⚠️  Warning: Could not fix all invalid icon imports: ${error.message}`, 'WARN');
+    }
+  }
+
+  async removeUnusedIconImports() {
+    this.log('🧹 Removing unused icon imports...');
+    
+    try {
+      const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { cwd: this.projectRoot });
+      
+      for (const file of files) {
+        const filePath = path.join(this.projectRoot, file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        
+        // Find Lucide React import statements
+        const importRegex = /import\s+{([^}]+)}\s+from\s+['"]lucide-react['"];?/g;
+        let match;
+        
+        while ((match = importRegex.exec(content)) !== null) {
+          const imports = match[1].split(',').map(imp => imp.trim());
+          const usedImports = [];
+          
+          for (const imp of imports) {
+            const iconName = imp.replace(/\s+as\s+\w+/, '').trim();
+            
+            // Check if icon is actually used in the file
+            const usageRegex = new RegExp(`\\b${iconName}\\b`, 'g');
+            const matches = content.match(usageRegex);
+            
+            // Count actual usage (excluding import statement)
+            let actualUsage = 0;
+            if (matches) {
+              actualUsage = matches.length - 1; // Subtract 1 for the import
+            }
+            
+            if (actualUsage > 0) {
+              usedImports.push(imp);
+            } else {
+              this.log(`🗑️  Removing unused icon: ${iconName} from ${file}`);
+            }
+          }
+          
+          if (usedImports.length !== imports.length) {
+            if (usedImports.length === 0) {
+              // Remove entire import if no icons are used
+              content = content.replace(match[0], '');
+            } else {
+              // Update import with only used icons
+              const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
+              content = content.replace(match[0], newImport);
+            }
+            modified = true;
+            this.fixesApplied++;
+          }
+        }
+        
+        if (modified) {
+          fs.writeFileSync(filePath, content);
+          this.errorsFixed++;
+        }
+      }
+    } catch (error) {
+      this.log(`⚠️  Warning: Could not remove all unused icon imports: ${error.message}`, 'WARN');
+    }
+  }
+
+  async fixDuplicateIconImports() {
+    this.log('🔧 Fixing duplicate icon imports...');
+    
+    try {
+      const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { cwd: this.projectRoot });
+      
+      for (const file of files) {
+        const filePath = path.join(this.projectRoot, file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        
+        // Find all Lucide React import statements
+        const importLines = content.match(/import\s+{([^}]+)}\s+from\s+['"]lucide-react['"];?/g) || [];
+        
+        if (importLines.length > 1) {
+          // Consolidate all imports into one
+          const allImports = [];
+          
+          importLines.forEach(line => {
+            const importMatch = line.match(/import\s+{([^}]+)}/);
+            if (importMatch) {
+              allImports.push(...importMatch[1].split(',').map(imp => imp.trim()));
+            }
+          });
+          
+          // Remove duplicates and sort
+          const uniqueImports = [...new Set(allImports)].sort();
+          const consolidatedImport = `import { ${uniqueImports.join(', ')} } from 'lucide-react';`;
+          
+          // Remove all old import lines
+          importLines.forEach(line => {
+            content = content.replace(line, '');
+          });
+          
+          // Add consolidated import at the top
+          const firstImportIndex = content.indexOf('import');
+          if (firstImportIndex !== -1) {
+            content = content.slice(0, firstImportIndex) + consolidatedImport + '\n' + content.slice(firstImportIndex);
+          }
+          
+          modified = true;
+          this.fixesApplied++;
+          this.log(`🔄 Consolidated ${importLines.length} icon imports in ${file}`);
+        }
+        
+        if (modified) {
+          fs.writeFileSync(filePath, content);
+          this.errorsFixed++;
+        }
+      }
+    } catch (error) {
+      this.log(`⚠️  Warning: Could not fix all duplicate icon imports: ${error.message}`, 'WARN');
+    }
+  }
+
+  async fixMissingIconImports() {
+    this.log('📥 Fixing missing icon imports...');
+    
+    try {
+      const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { cwd: this.projectRoot });
+      
+      for (const file of files) {
+        const filePath = path.join(this.projectRoot, file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        
+        // Check if file uses Lucide icons but doesn't import them
+        if (content.includes('lucide-react') || content.includes('from \'lucide-react\'')) {
+          // Already has imports
+          continue;
+        }
+        
+        // Find potential icon usage patterns
+        const iconUsagePatterns = [
+          /<(\w+Icon)\b/g,
+          /<(\w+)\s+className=/g,
+          /(\w+)\s*\(/g
+        ];
+        
+        const potentialIcons = new Set();
+        
+        iconUsagePatterns.forEach(pattern => {
+          let match;
+          while ((match = pattern.exec(content)) !== null) {
+            const iconName = match[1];
+            // Check if it looks like a Lucide icon name
+            if (this.isLikelyLucideIcon(iconName)) {
+              potentialIcons.add(iconName);
+            }
+          }
+        });
+        
+        if (potentialIcons.size > 0) {
+          // Add import statement
+          const importStatement = `import { ${Array.from(potentialIcons).join(', ')} } from 'lucide-react';`;
+          
+          // Find the best place to insert the import
+          const firstImportIndex = content.indexOf('import');
+          if (firstImportIndex !== -1) {
+            content = content.slice(0, firstImportIndex) + importStatement + '\n' + content.slice(firstImportIndex);
+          } else {
+            // No imports found, add at the top
+            content = importStatement + '\n\n' + content;
+          }
+          
+          modified = true;
+          this.fixesApplied++;
+          this.log(`📥 Added missing icon imports for: ${Array.from(potentialIcons).join(', ')} in ${file}`);
+        }
+        
+        if (modified) {
+          fs.writeFileSync(filePath, content);
+          this.errorsFixed++;
+        }
+      }
+    } catch (error) {
+      this.log(`⚠️  Warning: Could not fix all missing icon imports: ${error.message}`, 'WARN');
+    }
+  }
+
+  isLikelyLucideIcon(name) {
+    // Common Lucide icon naming patterns
+    const iconPatterns = [
+      /^[A-Z][a-z]+$/, // PascalCase
+      /^[A-Z][a-z]+[A-Z][a-z]+$/, // PascalCase with multiple words
+      /^[A-Z][a-z]+[0-9]+$/, // PascalCase with numbers
+      /^[A-Z][a-z]+[A-Z][a-z]+[0-9]+$/ // PascalCase with multiple words and numbers
+    ];
+    
+    return iconPatterns.some(pattern => pattern.test(name)) && 
+           name.length > 2 && 
+           name.length < 30;
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      automation: 'Lucide React Icon Fixer',
+      duration: Date.now() - this.startTime,
+      fixesApplied: this.fixesApplied,
+      errorsFixed: this.errorsFixed,
+      status: 'completed',
+      summary: `Fixed ${this.errorsFixed} Lucide React icon errors with ${this.fixesApplied} automated fixes`
+    };
+    
+    const reportPath = path.join(this.reportsDir, 'lucide-react-fixer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Report generated: ${reportPath}`);
+  }
+
+  async generateErrorReport(error) {
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      automation: 'Lucide React Icon Fixer',
+      status: 'error',
+      error: error.message,
+      stack: error.stack,
+      duration: Date.now() - this.startTime
+    };
+    
+    const reportPath = path.join(this.reportsDir, 'lucide-react-fixer-error.json');
+    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+    
+    this.log(`❌ Error report generated: ${reportPath}`);
+  }
+}
+
+// Main execution
+if (require.main === module) {
+  const fixer = new LucideReactFixer();
+  fixer.run().catch(console.error);
+}
+
+module.exports = LucideReactFixer;
