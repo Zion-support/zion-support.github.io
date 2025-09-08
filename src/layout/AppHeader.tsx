@@ -142,56 +142,78 @@ export function AppHeader() {
 
   const companyCategories = [
     {
-      name: 'About Us',
-      icon: Building,
+      name: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare AI solutions' }
+      ]
+    },
+    {
+      name: 'Cloud & DevOps',
+      icon: Cloud,
       color: 'from-blue-600 to-cyan-600',
-      items: [
-        { name: 'About Us', href: '/about', description: 'Our story and mission' },
-        { name: 'Team', href: '/team', description: 'Meet our experts' },
-        { name: 'Careers', href: '/careers', description: 'Join our team' },
-        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
-        { name: 'News', href: '/news', description: 'Company updates' }
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' }
       ]
     },
     {
       name: 'Resources',
       icon: BookOpen,
       color: 'from-green-600 to-emerald-600',
-      items: [
-        { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
-        { name: 'Press', href: '/press', description: 'Media resources' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
-        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+      services: [
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business transformation' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'IT Consulting', href: '/services/it-consulting', description: 'Strategic IT guidance' }
+      ]
+    },
+    {
+      name: 'Cybersecurity',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      services: [
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' }
+      ]
+    },
+    {
+      name: 'Emerging Tech',
+      icon: Star,
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech solutions' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum AI integration' }
+      ]
+    },
+    {
+      name: 'Business Tools',
+      icon: ShoppingCart,
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Productized SaaS for niches' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Faster replies, CRM logging' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'NPS/CSAT with AI insights' }
       ]
     }
   ];
 
-  const supportCategories = [
-    {
-      name: 'Help & Support',
-      icon: HelpCircle,
-      color: 'from-blue-600 to-cyan-600',
-      items: [
-        { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
-        { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
-        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-        { name: 'Contact Support', href: '/contact', description: 'Get in touch' },
-        { name: 'Status Page', href: '/status', description: 'System status' }
-      ]
-    },
-    {
-      name: 'Resources',
-      icon: BookOpen,
-      color: 'from-green-600 to-emerald-600',
-      items: [
-        { name: 'Documentation', href: '/docs', description: 'Technical guides' },
-        { name: 'Training', href: '/training', description: 'Learning resources' },
-        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
-        { name: 'Community', href: '/community', description: 'User community' },
-        { name: 'Sitemap', href: '/sitemap', description: 'Site navigation' }
-      ]
-    }
+  const quickLinks = [
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
+    { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
+    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Explore our solutions' },
+    { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' }
   ];
 
   const supportLinks = [
@@ -199,8 +221,8 @@ export function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Support', href: '/support', icon: MessageCircle },
     { name: 'Documentation', href: '/docs', icon: BookOpen },
-    { name: 'Training', href: '/training', icon: GraduationCap },
-    { name: 'Support', href: '/support', icon: LifeBuoy },
+    { name: 'Training', href: '/training', icon: Award },
+    { name: 'Help Center', href: '/help', icon: HelpCircle }
   ];
   const contactInfo = {
     phone: '+1 302 464 0950',
@@ -549,97 +571,29 @@ export function AppHeader() {
             </div>
           </div>
         </div>
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-slate-800/95 backdrop-blur-xl border-t border-slate-700/50">
-            <div className="container-responsive py-6">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="mb-6">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search services, solutions..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-              </form>
-              {/* Mobile Navigation */}
-              <nav className="space-y-4">
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    {item.hasDropdown ? (
-                      <div>
-                        <button
-                          onClick={() => {
-                            if (item.name === 'Services') setServicesDropdownOpen(!servicesDropdownOpen);
-                            else if (item.name === 'Solutions') setSolutionsDropdownOpen(!solutionsDropdownOpen);
-                            else if (item.name === 'Resources') setResourcesDropdownOpen(!resourcesDropdownOpen);
-                          }}
-                          className="flex items-center justify-between w-full text-left text-slate-300 hover:text-cyan-400 py-2 text-lg font-medium transition-colors"
-                        >
-                          {item.name}
-                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
-                            (item.name === 'Services' && servicesDropdownOpen) ||
-                            (item.name === 'Solutions' && solutionsDropdownOpen) ||
-                            (item.name === 'Resources' && resourcesDropdownOpen)
-                              ? 'rotate-180' : ''
-                          }`} />
-                        </button>
-                        {/* Mobile Services Dropdown */}
-                        {item.name === 'Services' && servicesDropdownOpen && (
-                          <div className="ml-4 mt-2 space-y-2">
-                            {services.slice(0, 6).map((service) => (
-                              <Link
-                                key={service.name}
-                                to={service.href}
-                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {service.name}
-                              </Link>
-                            ))}
-                            <Link
-                              to="/services"
-                              className="block text-cyan-400 hover:text-cyan-300 py-1 font-medium"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              View All Services →
-                            </Link>
-                          </div>
-                        )}
-                        {/* Mobile Solutions Dropdown */}
-                        {item.name === 'Solutions' && solutionsDropdownOpen && (
-                          <div className="ml-4 mt-2 space-y-2">
-                            {solutions.map((solution) => (
-                              <Link
-                                key={solution.name}
-                                to={solution.href}
-                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {solution.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                        {/* Mobile Resources Dropdown */}
-                        {item.name === 'Resources' && resourcesDropdownOpen && (
-                          <div className="ml-4 mt-2 space-y-2">
-                            {resources.map((resource) => (
-                              <Link
-                                key={resource.name}
-                                to={resource.href}
-                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {resource.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+
+        {/* Services Dropdown */}
+        <AnimatePresence>
+          {servicesDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
+                  {servicesCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">Innovative solutions</p>
+                        </div>
                       </div>
                       <div className="space-y-2">
                         {category.links.map((link) => (
@@ -660,16 +614,195 @@ export function AppHeader() {
                     </div>
                   ))}
                 </div>
+
+                {/* Quick Links Section */}
+                <div className="mt-8 pt-8 border-t border-slate-700">
+                  <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
+                          <link.icon className="w-4 h-4 text-cyan-400" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                            {link.name}
+                          </div>
+                          <div className="text-sm text-slate-400">
+                            {link.description}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Support Links Section */}
+                <div className="mt-6 pt-6 border-t border-slate-700">
+                  <h3 className="text-lg font-semibold text-white mb-4">Support & Resources</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                    {supportLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
+                          <link.icon className="w-4 h-4 text-cyan-400" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                            {link.name}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
-              {/* Mobile CTA */}
-              <div className="mt-6">
-                <Link
-                  to="/request-quote"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get Your Quote
-                </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 lg:hidden"
+          >
+            <div className="absolute inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)} />
+            <div className="absolute right-0 top-0 h-full w-80 bg-slate-900 border-l border-slate-700 overflow-y-auto">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-8">
+                  <h2 className="text-xl font-semibold text-white">Menu</h2>
+                  <button
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="mb-6">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                    <input
+                      type="text"
+                      placeholder="Search services..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
+                    />
+                  </div>
+                </form>
+
+                {/* Mobile Navigation */}
+                <nav className="space-y-4">
+                  {mainNavigation.map((item) => (
+                    <div key={item.name}>
+                      {item.hasDropdown ? (
+                        <div className="space-y-2">
+                          <div className="font-medium text-white py-2">{item.name}</div>
+                          <div className="pl-4 space-y-2">
+                            {servicesCategories.map((category) => (
+                              <div key={category.name} className="space-y-2">
+                                <div className="text-sm font-medium text-cyan-400">{category.name}</div>
+                                <div className="pl-4 space-y-1">
+                                  {category.services.slice(0, 3).map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className="block text-sm text-slate-300 hover:text-white transition-colors py-1"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          to={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block font-medium text-white hover:text-cyan-400 transition-colors py-2"
+                        >
+                          {item.name}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </nav>
+
+                {/* Mobile Quick Links */}
+                <div className="mt-8 pt-8 border-t border-slate-700">
+                  <h3 className="font-medium text-white mb-4">Quick Access</h3>
+                  <div className="space-y-2">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-800 transition-colors"
+                      >
+                        <link.icon className="w-5 h-5 text-cyan-400" />
+                        <span className="text-slate-300">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Support Links */}
+                <div className="mt-6 pt-6 border-t border-slate-700">
+                  <h3 className="font-medium text-white mb-4">Support & Resources</h3>
+                  <div className="space-y-2">
+                    {supportLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-800 transition-colors"
+                      >
+                        <link.icon className="w-5 h-5 text-cyan-400" />
+                        <span className="text-slate-300">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Contact Info */}
+                <div className="mt-8 pt-8 border-t border-slate-700">
+                  <h3 className="font-medium text-white mb-4">Contact Us</h3>
+                  <div className="space-y-3 text-sm text-slate-300">
+                    <a href="tel:+13024640950" className="flex items-center space-x-3 hover:text-cyan-400 transition-colors">
+                      <Phone className="w-4 h-4" />
+                      <span>+1 302 464 0950</span>
+                    </a>
+                    <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 hover:text-cyan-400 transition-colors">
+                      <Mail className="w-4 h-4" />
+                      <span>kleber@ziontechgroup.com</span>
+                    </a>
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="w-4 h-4 mt-0.5" />
+                      <span>
+                        364 E Main St STE 1008<br />
+                        Middletown DE 19709
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
