@@ -175,167 +175,56 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '*/30 * * * *', // Every 30 minutes
-      log_file: './logs/ai-code-review.log',
-      error_file: './logs/ai-code-review-error.log',
-      out_file: './logs/ai-code-review-out.log'
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log'
     },
-
-    // NEW: Intelligent Performance Optimization
     {
-      name: 'intelligent-performance-optimizer',
-      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      name: 'error-prevention-system',
+      script: 'node',
+      args: 'automation/error-prevention-system.js',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1.5G',
+      cron_restart: '*/10 * * * *', // Run every 10 minutes
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './logs/intelligent-performance.log',
-      error_file: './logs/intelligent-performance-error.log',
-      out_file: './logs/intelligent-performance-out.log'
+      log_file: './automation/logs/error-prevention.log',
+      out_file: './automation/logs/error-prevention-out.log',
+      error_file: './automation/logs/error-prevention-error.log'
     },
-
-    // NEW: Smart Dependency Intelligence
     {
-      name: 'smart-dependency-intelligence',
-      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      name: 'pm2-error-monitor',
+      script: 'node',
+      args: 'automation/pm2-error-monitor.js 30000',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      log_file: './logs/smart-dependency.log',
-      error_file: './logs/smart-dependency-error.log',
-      out_file: './logs/smart-dependency-out.log'
+      log_file: './automation/logs/pm2-error-monitor.log',
+      out_file: './automation/logs/pm2-error-monitor-out.log',
+      error_file: './automation/logs/pm2-error-monitor-error.log'
     },
-
-    // Project Health Management Automations
     {
-      name: 'project-health-monitor',
-      script: './scripts/automation/project-health-monitor.cjs',
+      name: 'automated-git-workflow',
+      script: 'node',
+      args: 'automation/automated-git-workflow.js',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS_NAME: 'project-health-monitor'
-      },
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      log_file: './logs/project-health-monitor.log',
-      error_file: './logs/project-health-monitor-error.log',
-      out_file: './logs/project-health-monitor-out.log'
-    },
-
-    // Enhanced TypeScript Syntax Fixer
-    {
-      name: 'typescript-syntax-fixer',
-      script: './scripts/automation/typescript-syntax-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS_NAME: 'typescript-syntax-fixer'
-      },
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      log_file: './logs/typescript-syntax-fixer.log',
-      error_file: './logs/typescript-syntax-fixer-error.log',
-      out_file: './logs/typescript-syntax-fixer-out.log'
-    },
-
-    // Enhanced Dependency Manager
-    {
-      name: 'dependency-manager',
-      script: './scripts/automation/dependency-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS_NAME: 'dependency-manager'
-      },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: './logs/dependency-manager.log',
-      error_file: './logs/dependency-manager-error.log',
-      out_file: './logs/dependency-manager-out.log'
-    },
-
-    // Enhanced Project Health Dashboard
-    {
-      name: 'project-health-dashboard',
-      script: './scripts/automation/project-health-dashboard.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS_NAME: 'project-health-dashboard'
-      },
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      log_file: './logs/project-health-dashboard.log',
-      error_file: './logs/project-health-dashboard-error.log',
-      out_file: './logs/project-health-dashboard-out.log'
-    },
-
-    // NEW: Enhanced Security Automation
-    {
-      name: 'enhanced-security-automation',
-      script: './scripts/automation/enhanced-security-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */4 * * *', // Run every 4 hours
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 */8 * * *', // Every 8 hours
-      log_file: './logs/enhanced-security.log',
-      error_file: './logs/enhanced-security-error.log',
-      out_file: './logs/enhanced-security-out.log'
-    },
-
-    // NEW: Enhanced Testing Automation
-    {
-      name: 'enhanced-testing-automation',
-      script: './scripts/automation/enhanced-testing-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */3 * * *', // Every 3 hours
-      log_file: './logs/enhanced-testing.log',
-      error_file: './logs/enhanced-testing-error.log',
-      out_file: './logs/enhanced-testing-out.log'
-    },
-
-    // NEW: Enhanced CI/CD Automation
-    {
-      name: 'enhanced-ci-cd-automation',
-      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/20 * * * *', // Every 20 minutes
-      log_file: './logs/enhanced-ci-cd.log',
-      error_file: './logs/enhanced-ci-cd-error.log',
-      out_file: './logs/enhanced-ci-cd-out.log'
+      log_file: './automation/logs/git-workflow.log',
+      out_file: './automation/logs/git-workflow-out.log',
+      error_file: './automation/logs/git-workflow-error.log'
     }
   ],
 

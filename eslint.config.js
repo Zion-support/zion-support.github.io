@@ -28,11 +28,27 @@ export default [
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
       },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        process: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        MouseEvent: 'readonly',
+        Node: 'readonly',
+        PerformanceObserver: 'readonly',
+        React: 'readonly',
+        navigator: 'readonly',
+      },
     },
     plugins: {
       react,
