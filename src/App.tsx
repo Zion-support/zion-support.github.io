@@ -2,11 +2,11 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
-import ErrorBoundary from './components/ErrorBoundary';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Pages - Lazy loaded for better performance
