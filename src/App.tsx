@@ -13,6 +13,7 @@ import { AppLayout } from './layout/AppLayout';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/LoadingSpinner';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { LazyLoad } from './components/LazyLoad';
 import { LoadingPage } from './components/LoadingPage';
 import { ErrorPage } from './components/ErrorPage';
 import Analytics from './components/Analytics';
@@ -78,12 +79,14 @@ const App: React.FC = () => {
                       <ViewModeProvider>
                         <Suspense fallback={<AppLoadingFallback />}>
                           <AppLayout config={appConfig}>
-                            <Routes>
-                              <Route path="/" element={<Home />} />
-                              <Route path="/about" element={<About />} />
-                              <Route path="/contact" element={<Contact />} />
-                              <Route path="*" element={<NotFound />} />
-                            </Routes>
+                            <LazyLoad>
+                              <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/about" element={<About />} />
+                                <Route path="/contact" element={<Contact />} />
+                                <Route path="*" element={<NotFound />} />
+                              </Routes>
+                            </LazyLoad>
                           </AppLayout>
                         </Suspense>
                         <PerformanceMonitor />
