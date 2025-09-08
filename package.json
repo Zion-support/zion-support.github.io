@@ -88,6 +88,7 @@
     "@tanstack/react-query": "^5.17.19",
     "@tanstack/react-query-devtools": "^5.87.3",
     "@types/lodash.debounce": "^4.0.9",
+    "@vitejs/plugin-react": "^5.0.2",
     "axios-retry": "^4.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -138,6 +139,7 @@
     "swr": "^2.2.0",
     "tailwind-merge": "^2.2.1",
     "vaul": "^1.1.2",
+    "vite": "^6.3.6",
     "yup": "^1.2.0",
     "zod": "^3.22.4"
   },
@@ -155,7 +157,6 @@
     "@types/react-dom": "17.0.11",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
-    "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.16",
     "cssnano": "^7.1.1",
     "dotenv": "^17.2.1",
@@ -181,7 +182,6 @@
     "ts-jest": "^29.3.4",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.33.0",
-    "vite": "^6.3.6",
     "vitest": "^3.2.1"
   },
   "lint-staged": {
