@@ -9415,3 +9415,288 @@ fatal: couldn't find remote ref cursor/automate-test-improve-and-merge-code-f97a
 [2025-09-08T20:52:50.411Z] ✅ Success: Get git status
 [2025-09-08T20:52:50.411Z] 📄 Found 0 conflicted files
 [2025-09-08T20:52:50.411Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:52:50.497Z] ✅ Success: Add resolved files
+[2025-09-08T20:52:50.497Z] 🚀 Commit merge for cursor/automate-test-improve-and-merge-code-f97a: git commit -m "Resolve conflicts and merge cursor/automate-test-improve-and-merge-code-f97a"
+[2025-09-08T20:52:50.554Z] ✅ Success: Commit merge for cursor/automate-test-improve-and-merge-code-f97a
+[2025-09-08T20:52:50.554Z] ✅ Successfully resolved conflicts and merged: cursor/automate-test-improve-and-merge-code-f97a
+[2025-09-08T20:52:50.554Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-fbc9
+[2025-09-08T20:52:50.554Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-fbc9: git fetch origin cursor/automate-test-improve-and-merge-code-fbc9
+[2025-09-08T20:52:50.894Z] ✅ Success: Fetch origin/cursor/automate-test-improve-and-merge-code-fbc9
+[2025-09-08T20:52:50.894Z] 🚀 Merge cursor/automate-test-improve-and-merge-code-fbc9: git merge origin/cursor/automate-test-improve-and-merge-code-fbc9 --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-fbc9 into main"
+[2025-09-08T20:52:51.318Z] ✅ Success: Merge cursor/automate-test-improve-and-merge-code-fbc9
+[2025-09-08T20:52:51.318Z] ✅ Successfully merged: cursor/automate-test-improve-and-merge-code-fbc9
+[2025-09-08T20:52:51.318Z] 🔄 Attempting to merge branch: cursor/automate-user-retention-emails-with-zion-ai-bea1
+[2025-09-08T20:52:51.318Z] 🚀 Fetch origin/cursor/automate-user-retention-emails-with-zion-ai-bea1: git fetch origin cursor/automate-user-retention-emails-with-zion-ai-bea1
+[2025-09-08T20:52:51.645Z] ✅ Success: Fetch origin/cursor/automate-user-retention-emails-with-zion-ai-bea1
+[2025-09-08T20:52:51.645Z] 🚀 Merge cursor/automate-user-retention-emails-with-zion-ai-bea1: git merge origin/cursor/automate-user-retention-emails-with-zion-ai-bea1 --no-ff -m "Merge branch cursor/automate-user-retention-emails-with-zion-ai-bea1 into main"
+[2025-09-08T20:52:52.072Z] ✅ Success: Merge cursor/automate-user-retention-emails-with-zion-ai-bea1
+[2025-09-08T20:52:52.072Z] ✅ Successfully merged: cursor/automate-user-retention-emails-with-zion-ai-bea1
+[2025-09-08T20:52:52.072Z] 🔄 Attempting to merge branch: cursor/automate-website-analysis-and-improvement-fe83
+[2025-09-08T20:52:52.072Z] 🚀 Fetch origin/cursor/automate-website-analysis-and-improvement-fe83: git fetch origin cursor/automate-website-analysis-and-improvement-fe83
+[2025-09-08T20:52:52.388Z] ✅ Success: Fetch origin/cursor/automate-website-analysis-and-improvement-fe83
+[2025-09-08T20:52:52.388Z] 🚀 Merge cursor/automate-website-analysis-and-improvement-fe83: git merge origin/cursor/automate-website-analysis-and-improvement-fe83 --no-ff -m "Merge branch cursor/automate-website-analysis-and-improvement-fe83 into main"
+[2025-09-08T20:52:52.807Z] ✅ Success: Merge cursor/automate-website-analysis-and-improvement-fe83
+[2025-09-08T20:52:52.808Z] ✅ Successfully merged: cursor/automate-website-analysis-and-improvement-fe83
+[2025-09-08T20:52:52.808Z] 🔄 Attempting to merge branch: cursor/automate-zion-s-content-creation-with-gpt-4-5aba
+[2025-09-08T20:52:52.808Z] 🚀 Fetch origin/cursor/automate-zion-s-content-creation-with-gpt-4-5aba: git fetch origin cursor/automate-zion-s-content-creation-with-gpt-4-5aba
+[2025-09-08T20:52:53.145Z] ✅ Success: Fetch origin/cursor/automate-zion-s-content-creation-with-gpt-4-5aba
+[2025-09-08T20:52:53.145Z] 🚀 Merge cursor/automate-zion-s-content-creation-with-gpt-4-5aba: git merge origin/cursor/automate-zion-s-content-creation-with-gpt-4-5aba --no-ff -m "Merge branch cursor/automate-zion-s-content-creation-with-gpt-4-5aba into main"
+[2025-09-08T20:52:53.574Z] ✅ Success: Merge cursor/automate-zion-s-content-creation-with-gpt-4-5aba
+[2025-09-08T20:52:53.574Z] ✅ Successfully merged: cursor/automate-zion-s-content-creation-with-gpt-4-5aba
+[2025-09-08T20:52:53.574Z] 🔄 Attempting to merge branch: cursor/automated-agent-creation-and-market-research-9320
+[2025-09-08T20:52:53.574Z] 🚀 Fetch origin/cursor/automated-agent-creation-and-market-research-9320: git fetch origin cursor/automated-agent-creation-and-market-research-9320
+[2025-09-08T20:52:53.889Z] ✅ Success: Fetch origin/cursor/automated-agent-creation-and-market-research-9320
+[2025-09-08T20:52:53.889Z] 🚀 Merge cursor/automated-agent-creation-and-market-research-9320: git merge origin/cursor/automated-agent-creation-and-market-research-9320 --no-ff -m "Merge branch cursor/automated-agent-creation-and-market-research-9320 into main"
+[2025-09-08T20:52:54.309Z] ✅ Success: Merge cursor/automated-agent-creation-and-market-research-9320
+[2025-09-08T20:52:54.310Z] ✅ Successfully merged: cursor/automated-agent-creation-and-market-research-9320
+[2025-09-08T20:52:54.310Z] 🔄 Attempting to merge branch: cursor/automated-content-crawling-and-agent-factory-creation-1e64
+[2025-09-08T20:52:54.310Z] 🚀 Fetch origin/cursor/automated-content-crawling-and-agent-factory-creation-1e64: git fetch origin cursor/automated-content-crawling-and-agent-factory-creation-1e64
+[2025-09-08T20:52:54.640Z] ✅ Success: Fetch origin/cursor/automated-content-crawling-and-agent-factory-creation-1e64
+[2025-09-08T20:52:54.641Z] 🚀 Merge cursor/automated-content-crawling-and-agent-factory-creation-1e64: git merge origin/cursor/automated-content-crawling-and-agent-factory-creation-1e64 --no-ff -m "Merge branch cursor/automated-content-crawling-and-agent-factory-creation-1e64 into main"
+[2025-09-08T20:52:55.085Z] ✅ Success: Merge cursor/automated-content-crawling-and-agent-factory-creation-1e64
+[2025-09-08T20:52:55.085Z] ✅ Successfully merged: cursor/automated-content-crawling-and-agent-factory-creation-1e64
+[2025-09-08T20:52:56.085Z] 📦 Processing batch 110/509
+[2025-09-08T20:52:56.086Z] 🔄 Attempting to merge branch: cursor/automated-error-fixing-agent-creation-51d4
+[2025-09-08T20:52:56.086Z] 🚀 Fetch origin/cursor/automated-error-fixing-agent-creation-51d4: git fetch origin cursor/automated-error-fixing-agent-creation-51d4
+[2025-09-08T20:52:56.437Z] ✅ Success: Fetch origin/cursor/automated-error-fixing-agent-creation-51d4
+[2025-09-08T20:52:56.437Z] 🚀 Merge cursor/automated-error-fixing-agent-creation-51d4: git merge origin/cursor/automated-error-fixing-agent-creation-51d4 --no-ff -m "Merge branch cursor/automated-error-fixing-agent-creation-51d4 into main"
+[2025-09-08T20:52:56.874Z] ✅ Success: Merge cursor/automated-error-fixing-agent-creation-51d4
+[2025-09-08T20:52:56.874Z] ✅ Successfully merged: cursor/automated-error-fixing-agent-creation-51d4
+[2025-09-08T20:52:56.874Z] 🔄 Attempting to merge branch: cursor/automated-project-automation-health-monitor-40af
+[2025-09-08T20:52:56.875Z] 🚀 Fetch origin/cursor/automated-project-automation-health-monitor-40af: git fetch origin cursor/automated-project-automation-health-monitor-40af
+[2025-09-08T20:52:57.234Z] ✅ Success: Fetch origin/cursor/automated-project-automation-health-monitor-40af
+[2025-09-08T20:52:57.235Z] 🚀 Merge cursor/automated-project-automation-health-monitor-40af: git merge origin/cursor/automated-project-automation-health-monitor-40af --no-ff -m "Merge branch cursor/automated-project-automation-health-monitor-40af into main"
+[2025-09-08T20:52:57.681Z] ✅ Success: Merge cursor/automated-project-automation-health-monitor-40af
+[2025-09-08T20:52:57.681Z] ✅ Successfully merged: cursor/automated-project-automation-health-monitor-40af
+[2025-09-08T20:52:57.681Z] 🔄 Attempting to merge branch: cursor/automated-project-verification-and-merge-af4c
+[2025-09-08T20:52:57.681Z] 🚀 Fetch origin/cursor/automated-project-verification-and-merge-af4c: git fetch origin cursor/automated-project-verification-and-merge-af4c
+[2025-09-08T20:52:58.008Z] ✅ Success: Fetch origin/cursor/automated-project-verification-and-merge-af4c
+[2025-09-08T20:52:58.008Z] 🚀 Merge cursor/automated-project-verification-and-merge-af4c: git merge origin/cursor/automated-project-verification-and-merge-af4c --no-ff -m "Merge branch cursor/automated-project-verification-and-merge-af4c into main"
+[2025-09-08T20:52:58.431Z] ✅ Success: Merge cursor/automated-project-verification-and-merge-af4c
+[2025-09-08T20:52:58.432Z] ✅ Successfully merged: cursor/automated-project-verification-and-merge-af4c
+[2025-09-08T20:52:58.432Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-automation-and-sync-1971
+[2025-09-08T20:52:58.432Z] 🚀 Fetch origin/cursor/autonomous-cloud-automation-and-sync-1971: git fetch origin cursor/autonomous-cloud-automation-and-sync-1971
+[2025-09-08T20:52:58.763Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-automation-and-sync-1971
+[2025-09-08T20:52:58.764Z] 🚀 Merge cursor/autonomous-cloud-automation-and-sync-1971: git merge origin/cursor/autonomous-cloud-automation-and-sync-1971 --no-ff -m "Merge branch cursor/autonomous-cloud-automation-and-sync-1971 into main"
+[2025-09-08T20:52:59.190Z] ✅ Success: Merge cursor/autonomous-cloud-automation-and-sync-1971
+[2025-09-08T20:52:59.190Z] ✅ Successfully merged: cursor/autonomous-cloud-automation-and-sync-1971
+[2025-09-08T20:52:59.190Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-automation-and-sync-387c
+[2025-09-08T20:52:59.190Z] 🚀 Fetch origin/cursor/autonomous-cloud-automation-and-sync-387c: git fetch origin cursor/autonomous-cloud-automation-and-sync-387c
+[2025-09-08T20:52:59.502Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-automation-and-sync-387c
+[2025-09-08T20:52:59.502Z] 🚀 Merge cursor/autonomous-cloud-automation-and-sync-387c: git merge origin/cursor/autonomous-cloud-automation-and-sync-387c --no-ff -m "Merge branch cursor/autonomous-cloud-automation-and-sync-387c into main"
+[2025-09-08T20:52:59.935Z] ✅ Success: Merge cursor/autonomous-cloud-automation-and-sync-387c
+[2025-09-08T20:52:59.935Z] ✅ Successfully merged: cursor/autonomous-cloud-automation-and-sync-387c
+[2025-09-08T20:52:59.935Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-automation-and-sync-7157
+[2025-09-08T20:52:59.935Z] 🚀 Fetch origin/cursor/autonomous-cloud-automation-and-sync-7157: git fetch origin cursor/autonomous-cloud-automation-and-sync-7157
+[2025-09-08T20:53:00.274Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-automation-and-sync-7157
+[2025-09-08T20:53:00.274Z] 🚀 Merge cursor/autonomous-cloud-automation-and-sync-7157: git merge origin/cursor/autonomous-cloud-automation-and-sync-7157 --no-ff -m "Merge branch cursor/autonomous-cloud-automation-and-sync-7157 into main"
+[2025-09-08T20:53:00.709Z] ✅ Success: Merge cursor/autonomous-cloud-automation-and-sync-7157
+[2025-09-08T20:53:00.709Z] ✅ Successfully merged: cursor/autonomous-cloud-automation-and-sync-7157
+[2025-09-08T20:53:00.709Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-automations
+[2025-09-08T20:53:00.709Z] 🚀 Fetch origin/cursor/autonomous-cloud-automations: git fetch origin cursor/autonomous-cloud-automations
+[2025-09-08T20:53:01.046Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-automations
+[2025-09-08T20:53:01.046Z] 🚀 Merge cursor/autonomous-cloud-automations: git merge origin/cursor/autonomous-cloud-automations --no-ff -m "Merge branch cursor/autonomous-cloud-automations into main"
+[2025-09-08T20:53:01.469Z] ✅ Success: Merge cursor/autonomous-cloud-automations
+[2025-09-08T20:53:01.469Z] ✅ Successfully merged: cursor/autonomous-cloud-automations
+[2025-09-08T20:53:01.469Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d
+[2025-09-08T20:53:01.469Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d
+[2025-09-08T20:53:01.814Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d
+[2025-09-08T20:53:01.814Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d into main"
+[2025-09-08T20:53:02.247Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d
+[2025-09-08T20:53:02.247Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d
+[2025-09-08T20:53:02.247Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-493e
+[2025-09-08T20:53:02.247Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-493e: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-493e
+[2025-09-08T20:53:02.596Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-493e
+[2025-09-08T20:53:02.596Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-493e: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-493e --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-493e into main"
+[2025-09-08T20:53:03.018Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-493e
+[2025-09-08T20:53:03.018Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-493e
+[2025-09-08T20:53:03.018Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01
+[2025-09-08T20:53:03.018Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01
+[2025-09-08T20:53:03.335Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01
+[2025-09-08T20:53:03.335Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01 --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01 into main"
+[2025-09-08T20:53:03.759Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01
+[2025-09-08T20:53:03.759Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-5e01
+[2025-09-08T20:53:04.760Z] 📦 Processing batch 111/509
+[2025-09-08T20:53:04.760Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1
+[2025-09-08T20:53:04.760Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1
+[2025-09-08T20:53:05.091Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1
+[2025-09-08T20:53:05.091Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1 --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1 into main"
+[2025-09-08T20:53:05.510Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1
+[2025-09-08T20:53:05.510Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-5eb1
+[2025-09-08T20:53:05.510Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27
+[2025-09-08T20:53:05.510Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27
+[2025-09-08T20:53:05.846Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27
+[2025-09-08T20:53:05.846Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27 --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27 into main"
+[2025-09-08T20:53:06.280Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27
+[2025-09-08T20:53:06.280Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-5f27
+[2025-09-08T20:53:06.280Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86
+[2025-09-08T20:53:06.280Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86
+[2025-09-08T20:53:06.650Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86
+[2025-09-08T20:53:06.650Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86 --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86 into main"
+[2025-09-08T20:53:07.112Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86
+[2025-09-08T20:53:07.112Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86
+[2025-09-08T20:53:07.112Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6
+[2025-09-08T20:53:07.112Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6
+[2025-09-08T20:53:07.509Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6
+[2025-09-08T20:53:07.509Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6 --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6 into main"
+[2025-09-08T20:53:08.006Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6
+[2025-09-08T20:53:08.007Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-c4d6
+[2025-09-08T20:53:08.007Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-d666
+[2025-09-08T20:53:08.007Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-d666: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-d666
+[2025-09-08T20:53:08.390Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-d666
+[2025-09-08T20:53:08.390Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-d666: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-d666 --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-d666 into main"
+[2025-09-08T20:53:08.844Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-d666
+[2025-09-08T20:53:08.844Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-d666
+[2025-09-08T20:53:08.844Z] 🔄 Attempting to merge branch: cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a
+[2025-09-08T20:53:08.844Z] 🚀 Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a: git fetch origin cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a
+[2025-09-08T20:53:09.205Z] ✅ Success: Fetch origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a
+[2025-09-08T20:53:09.205Z] 🚀 Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a: git merge origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a --no-ff -m "Merge branch cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a into main"
+[2025-09-08T20:53:09.661Z] ✅ Success: Merge cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a
+[2025-09-08T20:53:09.662Z] ✅ Successfully merged: cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a
+[2025-09-08T20:53:09.662Z] 🔄 Attempting to merge branch: cursor/autonomous-error-detection-and-self-healing-agent-creation-e237
+[2025-09-08T20:53:09.662Z] 🚀 Fetch origin/cursor/autonomous-error-detection-and-self-healing-agent-creation-e237: git fetch origin cursor/autonomous-error-detection-and-self-healing-agent-creation-e237
+[2025-09-08T20:53:10.047Z] ✅ Success: Fetch origin/cursor/autonomous-error-detection-and-self-healing-agent-creation-e237
+[2025-09-08T20:53:10.047Z] 🚀 Merge cursor/autonomous-error-detection-and-self-healing-agent-creation-e237: git merge origin/cursor/autonomous-error-detection-and-self-healing-agent-creation-e237 --no-ff -m "Merge branch cursor/autonomous-error-detection-and-self-healing-agent-creation-e237 into main"
+[2025-09-08T20:53:10.500Z] ✅ Success: Merge cursor/autonomous-error-detection-and-self-healing-agent-creation-e237
+[2025-09-08T20:53:10.500Z] ✅ Successfully merged: cursor/autonomous-error-detection-and-self-healing-agent-creation-e237
+[2025-09-08T20:53:10.500Z] 🔄 Attempting to merge branch: cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d
+[2025-09-08T20:53:10.500Z] 🚀 Fetch origin/cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d: git fetch origin cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d
+[2025-09-08T20:53:10.861Z] ✅ Success: Fetch origin/cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d
+[2025-09-08T20:53:10.861Z] 🚀 Merge cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d: git merge origin/cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d --no-ff -m "Merge branch cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d into main"
+[2025-09-08T20:53:11.317Z] ✅ Success: Merge cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d
+[2025-09-08T20:53:11.317Z] ✅ Successfully merged: cursor/bc-0eb9b268-3d59-444a-ae5e-1a800d74b240-750d
+[2025-09-08T20:53:11.317Z] 🔄 Attempting to merge branch: cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f
+[2025-09-08T20:53:11.317Z] 🚀 Fetch origin/cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f: git fetch origin cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f
+[2025-09-08T20:53:11.704Z] ✅ Success: Fetch origin/cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f
+[2025-09-08T20:53:11.705Z] 🚀 Merge cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f: git merge origin/cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f --no-ff -m "Merge branch cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f into main"
+[2025-09-08T20:53:12.180Z] ✅ Success: Merge cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f
+[2025-09-08T20:53:12.180Z] ✅ Successfully merged: cursor/bc-1772f1c0-da62-42ef-9572-bdbe32120470-042f
+[2025-09-08T20:53:12.180Z] 🔄 Attempting to merge branch: cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330
+[2025-09-08T20:53:12.180Z] 🚀 Fetch origin/cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330: git fetch origin cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330
+[2025-09-08T20:53:12.541Z] ✅ Success: Fetch origin/cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330
+[2025-09-08T20:53:12.541Z] 🚀 Merge cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330: git merge origin/cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330 --no-ff -m "Merge branch cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330 into main"
+[2025-09-08T20:53:12.990Z] ✅ Success: Merge cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330
+[2025-09-08T20:53:12.990Z] ✅ Successfully merged: cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330
+[2025-09-08T20:53:13.991Z] 📦 Processing batch 112/509
+[2025-09-08T20:53:13.991Z] 🔄 Attempting to merge branch: cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
+[2025-09-08T20:53:13.991Z] 🚀 Fetch origin/cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633: git fetch origin cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
+[2025-09-08T20:53:14.349Z] ✅ Success: Fetch origin/cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
+[2025-09-08T20:53:14.349Z] 🚀 Merge cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633: git merge origin/cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633 --no-ff -m "Merge branch cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633 into main"
+[2025-09-08T20:53:14.812Z] ✅ Success: Merge cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
+[2025-09-08T20:53:14.813Z] ✅ Successfully merged: cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
+[2025-09-08T20:53:14.813Z] 🔄 Attempting to merge branch: cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade
+[2025-09-08T20:53:14.813Z] 🚀 Fetch origin/cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade: git fetch origin cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade
+[2025-09-08T20:53:15.146Z] ✅ Success: Fetch origin/cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade
+[2025-09-08T20:53:15.146Z] 🚀 Merge cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade: git merge origin/cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade --no-ff -m "Merge branch cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade into main"
+[2025-09-08T20:53:15.574Z] ✅ Success: Merge cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade
+[2025-09-08T20:53:15.574Z] ✅ Successfully merged: cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade
+[2025-09-08T20:53:15.574Z] 🔄 Attempting to merge branch: cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c
+[2025-09-08T20:53:15.574Z] 🚀 Fetch origin/cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c: git fetch origin cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c
+[2025-09-08T20:53:15.895Z] ✅ Success: Fetch origin/cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c
+[2025-09-08T20:53:15.895Z] 🚀 Merge cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c: git merge origin/cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c --no-ff -m "Merge branch cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c into main"
+[2025-09-08T20:53:16.319Z] ✅ Success: Merge cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c
+[2025-09-08T20:53:16.319Z] ✅ Successfully merged: cursor/bc-48461f9b-0a4a-4201-97e1-9dcf030b601c-eb8c
+[2025-09-08T20:53:16.319Z] 🔄 Attempting to merge branch: cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c
+[2025-09-08T20:53:16.319Z] 🚀 Fetch origin/cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c: git fetch origin cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c
+[2025-09-08T20:53:16.634Z] ✅ Success: Fetch origin/cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c
+[2025-09-08T20:53:16.635Z] 🚀 Merge cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c: git merge origin/cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c --no-ff -m "Merge branch cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c into main"
+[2025-09-08T20:53:17.053Z] ✅ Success: Merge cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c
+[2025-09-08T20:53:17.053Z] ✅ Successfully merged: cursor/bc-4c9bcb37-354d-44c8-a4c3-43cbf1ad6b2d-c76c
+[2025-09-08T20:53:17.053Z] 🔄 Attempting to merge branch: cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109
+[2025-09-08T20:53:17.053Z] 🚀 Fetch origin/cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109: git fetch origin cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109
+[2025-09-08T20:53:17.371Z] ✅ Success: Fetch origin/cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109
+[2025-09-08T20:53:17.371Z] 🚀 Merge cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109: git merge origin/cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109 --no-ff -m "Merge branch cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109 into main"
+[2025-09-08T20:53:17.791Z] ✅ Success: Merge cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109
+[2025-09-08T20:53:17.791Z] ✅ Successfully merged: cursor/bc-4fc567b1-4586-4af3-be0c-14d02f7830f9-6109
+[2025-09-08T20:53:17.791Z] 🔄 Attempting to merge branch: cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6
+[2025-09-08T20:53:17.791Z] 🚀 Fetch origin/cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6: git fetch origin cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6
+[2025-09-08T20:53:18.116Z] ✅ Success: Fetch origin/cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6
+[2025-09-08T20:53:18.116Z] 🚀 Merge cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6: git merge origin/cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6 --no-ff -m "Merge branch cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6 into main"
+[2025-09-08T20:53:18.536Z] ✅ Success: Merge cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6
+[2025-09-08T20:53:18.536Z] ✅ Successfully merged: cursor/bc-51f07a8d-4b14-47f7-af65-e76188b38c99-87a6
+[2025-09-08T20:53:18.536Z] 🔄 Attempting to merge branch: cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c
+[2025-09-08T20:53:18.536Z] 🚀 Fetch origin/cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c: git fetch origin cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c
+[2025-09-08T20:53:18.883Z] ✅ Success: Fetch origin/cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c
+[2025-09-08T20:53:18.883Z] 🚀 Merge cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c: git merge origin/cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c --no-ff -m "Merge branch cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c into main"
+[2025-09-08T20:53:19.306Z] ✅ Success: Merge cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c
+[2025-09-08T20:53:19.306Z] ✅ Successfully merged: cursor/bc-61ed10c3-d6b9-406a-971b-955feec9361a-849c
+[2025-09-08T20:53:19.306Z] 🔄 Attempting to merge branch: cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e
+[2025-09-08T20:53:19.306Z] 🚀 Fetch origin/cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e: git fetch origin cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e
+[2025-09-08T20:53:19.643Z] ✅ Success: Fetch origin/cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e
+[2025-09-08T20:53:19.643Z] 🚀 Merge cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e: git merge origin/cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e --no-ff -m "Merge branch cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e into main"
+[2025-09-08T20:53:20.077Z] ✅ Success: Merge cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e
+[2025-09-08T20:53:20.077Z] ✅ Successfully merged: cursor/bc-72e5cd32-ab56-4d88-a1cc-84565311636f-3e8e
+[2025-09-08T20:53:20.077Z] 🔄 Attempting to merge branch: cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b
+[2025-09-08T20:53:20.077Z] 🚀 Fetch origin/cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b: git fetch origin cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b
+[2025-09-08T20:53:20.397Z] ✅ Success: Fetch origin/cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b
+[2025-09-08T20:53:20.398Z] 🚀 Merge cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b: git merge origin/cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b --no-ff -m "Merge branch cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b into main"
+[2025-09-08T20:53:20.811Z] ✅ Success: Merge cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b
+[2025-09-08T20:53:20.811Z] ✅ Successfully merged: cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b
+[2025-09-08T20:53:20.811Z] 🔄 Attempting to merge branch: cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3
+[2025-09-08T20:53:20.811Z] 🚀 Fetch origin/cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3: git fetch origin cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3
+[2025-09-08T20:53:21.128Z] ✅ Success: Fetch origin/cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3
+[2025-09-08T20:53:21.128Z] 🚀 Merge cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3: git merge origin/cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3 --no-ff -m "Merge branch cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3 into main"
+[2025-09-08T20:53:21.547Z] ✅ Success: Merge cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3
+[2025-09-08T20:53:21.547Z] ✅ Successfully merged: cursor/bc-861d90f7-28fa-4a5a-912d-2374573c9dc0-8db3
+[2025-09-08T20:53:22.548Z] 📦 Processing batch 113/509
+[2025-09-08T20:53:22.548Z] 🔄 Attempting to merge branch: cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a
+[2025-09-08T20:53:22.548Z] 🚀 Fetch origin/cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a: git fetch origin cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a
+[2025-09-08T20:53:22.872Z] ✅ Success: Fetch origin/cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a
+[2025-09-08T20:53:22.873Z] 🚀 Merge cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a: git merge origin/cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a --no-ff -m "Merge branch cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a into main"
+[2025-09-08T20:53:23.305Z] ✅ Success: Merge cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a
+[2025-09-08T20:53:23.305Z] ✅ Successfully merged: cursor/bc-cf4c0753-abb2-4c91-841e-3f72d6127304-879a
+[2025-09-08T20:53:23.305Z] 🔄 Attempting to merge branch: cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a
+[2025-09-08T20:53:23.305Z] 🚀 Fetch origin/cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a: git fetch origin cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a
+[2025-09-08T20:53:23.641Z] ✅ Success: Fetch origin/cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a
+[2025-09-08T20:53:23.641Z] 🚀 Merge cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a: git merge origin/cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a --no-ff -m "Merge branch cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a into main"
+[2025-09-08T20:53:24.086Z] ✅ Success: Merge cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a
+[2025-09-08T20:53:24.086Z] ✅ Successfully merged: cursor/bc-ea46a2eb-982d-4fb0-930c-ef6544ba8a75-a20a
+[2025-09-08T20:53:24.086Z] 🔄 Attempting to merge branch: cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
+[2025-09-08T20:53:24.086Z] 🚀 Fetch origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6: git fetch origin cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
+[2025-09-08T20:53:24.406Z] ✅ Success: Fetch origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
+[2025-09-08T20:53:24.406Z] 🚀 Merge cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6: git merge origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6 --no-ff -m "Merge branch cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6 into main"
+[2025-09-08T20:53:24.828Z] ✅ Success: Merge cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
+[2025-09-08T20:53:24.828Z] ✅ Successfully merged: cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
+[2025-09-08T20:53:24.828Z] 🔄 Attempting to merge branch: cursor/build-ai-powered-project-teams-dcf8
+[2025-09-08T20:53:24.828Z] 🚀 Fetch origin/cursor/build-ai-powered-project-teams-dcf8: git fetch origin cursor/build-ai-powered-project-teams-dcf8
+[2025-09-08T20:53:25.144Z] ✅ Success: Fetch origin/cursor/build-ai-powered-project-teams-dcf8
+[2025-09-08T20:53:25.145Z] 🚀 Merge cursor/build-ai-powered-project-teams-dcf8: git merge origin/cursor/build-ai-powered-project-teams-dcf8 --no-ff -m "Merge branch cursor/build-ai-powered-project-teams-dcf8 into main"
+[2025-09-08T20:53:25.563Z] ✅ Success: Merge cursor/build-ai-powered-project-teams-dcf8
+[2025-09-08T20:53:25.564Z] ✅ Successfully merged: cursor/build-ai-powered-project-teams-dcf8
+[2025-09-08T20:53:25.564Z] 🔄 Attempting to merge branch: cursor/build-ai-powered-smart-contract-generator-b22e
+[2025-09-08T20:53:25.564Z] 🚀 Fetch origin/cursor/build-ai-powered-smart-contract-generator-b22e: git fetch origin cursor/build-ai-powered-smart-contract-generator-b22e
+[2025-09-08T20:53:25.888Z] ✅ Success: Fetch origin/cursor/build-ai-powered-smart-contract-generator-b22e
+[2025-09-08T20:53:25.888Z] 🚀 Merge cursor/build-ai-powered-smart-contract-generator-b22e: git merge origin/cursor/build-ai-powered-smart-contract-generator-b22e --no-ff -m "Merge branch cursor/build-ai-powered-smart-contract-generator-b22e into main"
+[2025-09-08T20:53:26.313Z] ✅ Success: Merge cursor/build-ai-powered-smart-contract-generator-b22e
+[2025-09-08T20:53:26.313Z] ✅ Successfully merged: cursor/build-ai-powered-smart-contract-generator-b22e
+[2025-09-08T20:53:26.313Z] 🔄 Attempting to merge branch: cursor/build-ai-pricing-suggestion-engine-ea4e
+[2025-09-08T20:53:26.313Z] 🚀 Fetch origin/cursor/build-ai-pricing-suggestion-engine-ea4e: git fetch origin cursor/build-ai-pricing-suggestion-engine-ea4e
+[2025-09-08T20:53:26.627Z] ✅ Success: Fetch origin/cursor/build-ai-pricing-suggestion-engine-ea4e
+[2025-09-08T20:53:26.628Z] 🚀 Merge cursor/build-ai-pricing-suggestion-engine-ea4e: git merge origin/cursor/build-ai-pricing-suggestion-engine-ea4e --no-ff -m "Merge branch cursor/build-ai-pricing-suggestion-engine-ea4e into main"
+[2025-09-08T20:53:27.048Z] ✅ Success: Merge cursor/build-ai-pricing-suggestion-engine-ea4e
+[2025-09-08T20:53:27.048Z] ✅ Successfully merged: cursor/build-ai-pricing-suggestion-engine-ea4e
+[2025-09-08T20:53:27.048Z] 🔄 Attempting to merge branch: cursor/build-ai-resume-and-portfolio-builder-workflow-2029
+[2025-09-08T20:53:27.048Z] 🚀 Fetch origin/cursor/build-ai-resume-and-portfolio-builder-workflow-2029: git fetch origin cursor/build-ai-resume-and-portfolio-builder-workflow-2029
+[2025-09-08T20:53:27.373Z] ✅ Success: Fetch origin/cursor/build-ai-resume-and-portfolio-builder-workflow-2029
+[2025-09-08T20:53:27.373Z] 🚀 Merge cursor/build-ai-resume-and-portfolio-builder-workflow-2029: git merge origin/cursor/build-ai-resume-and-portfolio-builder-workflow-2029 --no-ff -m "Merge branch cursor/build-ai-resume-and-portfolio-builder-workflow-2029 into main"
+[2025-09-08T20:53:27.790Z] ✅ Success: Merge cursor/build-ai-resume-and-portfolio-builder-workflow-2029
+[2025-09-08T20:53:27.790Z] ✅ Successfully merged: cursor/build-ai-resume-and-portfolio-builder-workflow-2029
+[2025-09-08T20:53:27.790Z] 🔄 Attempting to merge branch: cursor/build-ai-resume-and-portfolio-tool-4f12
+[2025-09-08T20:53:27.790Z] 🚀 Fetch origin/cursor/build-ai-resume-and-portfolio-tool-4f12: git fetch origin cursor/build-ai-resume-and-portfolio-tool-4f12
+[2025-09-08T20:53:28.113Z] ✅ Success: Fetch origin/cursor/build-ai-resume-and-portfolio-tool-4f12
+[2025-09-08T20:53:28.113Z] 🚀 Merge cursor/build-ai-resume-and-portfolio-tool-4f12: git merge origin/cursor/build-ai-resume-and-portfolio-tool-4f12 --no-ff -m "Merge branch cursor/build-ai-resume-and-portfolio-tool-4f12 into main"
+[2025-09-08T20:53:28.534Z] ✅ Success: Merge cursor/build-ai-resume-and-portfolio-tool-4f12
+[2025-09-08T20:53:28.534Z] ✅ Successfully merged: cursor/build-ai-resume-and-portfolio-tool-4f12
+[2025-09-08T20:53:28.534Z] 🔄 Attempting to merge branch: cursor/build-and-deploy-application-2664
+[2025-09-08T20:53:28.534Z] 🚀 Fetch origin/cursor/build-and-deploy-application-2664: git fetch origin cursor/build-and-deploy-application-2664
+[2025-09-08T20:53:28.639Z] ❌ Error in Fetch origin/cursor/build-and-deploy-application-2664: Command failed: git fetch origin cursor/build-and-deploy-application-2664
+fatal: couldn't find remote ref cursor/build-and-deploy-application-2664
+
+[2025-09-08T20:53:28.639Z] ❌ Failed to merge cursor/build-and-deploy-application-2664: Command failed: git fetch origin cursor/build-and-deploy-application-2664
+fatal: couldn't find remote ref cursor/build-and-deploy-application-2664
+
+[2025-09-08T20:53:28.639Z] 🔧 Attempting to resolve conflicts for: cursor/build-and-deploy-application-2664
+[2025-09-08T20:53:28.639Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:53:28.694Z] ✅ Success: Get git status
+[2025-09-08T20:53:28.695Z] 📄 Found 0 conflicted files
+[2025-09-08T20:53:28.695Z] 🚀 Add resolved files: git add .
