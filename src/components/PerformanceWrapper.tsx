@@ -93,7 +93,7 @@ export const useMemoizedCallback = <T extends (...args: any[]) => any>(
 /**
  * Hook for creating memoized values
  */
-export const useMemoizedValue = <T>(
+export const useMemoizedValue = <T,>(
   factory: () => T,
   deps: React.DependencyList
 ): T => {

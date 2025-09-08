@@ -144,19 +144,7 @@ export function ChatBotPanel() {
                 ))}
               </div>
             </div>
-            <div className="space-y-2">
-              <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type your message..."
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
-              />
-              <button className="bg-blue-600 text-white px-4 py-2 rounded text-sm">
-                Send
-              </button>
-            </div>
-          </div>
+          )}
         </div>
       </ScrollArea>
 
