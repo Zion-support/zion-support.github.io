@@ -14,3 +14,4 @@ core
 tsconfig.tsbuildinfo
 dist/
 build/
+dist/
