@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 
 const About: NextPage = () => {
   return (
@@ -213,6 +214,7 @@ const About: NextPage = () => {
             </div>
           </section>
         </main>
+        <Footer />
       </div>
     </>
   );
