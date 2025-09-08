@@ -1,480 +1,372 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Atom, 
-  Brain, 
-  Target, 
-  Shield, 
-  BarChart3, 
-  Cpu, 
-  Database, 
-  Network,
+import {
+  Atom,
+  Zap,
+  Target,
+  Users,
+  BarChart3,
+  Shield,
+  Rocket,
+  Globe,
   CheckCircle,
   ArrowRight,
+  ChevronRight,
   Star,
-  Clock,
   TrendingUp,
-  Award,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Headphones,
-  HelpCircle,
-  Bot,
-  Globe,
-  Zap,
-  Cpu,
-  Network,
-  Database,
-  Gauge,
   Activity,
-  Rocket,
-  Infinity
+  Code,
+  Database,
+  Server,
+  Network,
+  Eye,
+  Heart,
+  Building,
+  Briefcase,
+  TestTube,
+  GraduationCap,
+  HelpCircle,
+  Brain,
+  Lock,
+  Cpu,
+  Cloud
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
 
-export default function QuantumComputing() {
-  const features = [
+export function QuantumComputingPage() {
+  const quantumServices = [
     {
-      icon: Atom,
-      title: 'Quantum Processing',
-      description: 'Advanced quantum processing units with qubit manipulation and quantum state control'
-    },
-    {
+      title: 'Quantum AI Hybrid Platform',
+      description: 'Revolutionary platform combining quantum computing with artificial intelligence',
       icon: Brain,
-      title: 'Quantum Algorithms',
-      description: 'Specialized quantum algorithms for optimization, cryptography, and machine learning'
+      href: '/services/ai-quantum-hybrid-platform',
+      features: ['Quantum ML Algorithms', 'Hybrid Computing', 'Quantum Optimization', 'AI Acceleration'],
+      color: 'from-purple-500 to-pink-600'
     },
     {
-      icon: Target,
-      title: 'Quantum Optimization',
-      description: 'Quantum-enhanced optimization for complex problems and large-scale computations'
-    },
-    {
-      icon: Zap,
-      title: 'Quantum Speedup',
-      description: 'Exponential performance improvements for specific computational problems'
-    },
-    {
-      icon: Gauge,
-      title: 'Quantum Simulation',
-      description: 'High-fidelity quantum simulation for scientific research and discovery'
-    },
-    {
+      title: 'Quantum Security Solutions',
+      description: 'Next-generation cryptography and security powered by quantum mechanics',
       icon: Shield,
-      title: 'Quantum Security',
-      description: 'Quantum-resistant cryptography and quantum key distribution protocols'
+      href: '/services/quantum-security',
+      features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Random Numbers', 'Secure Communications'],
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      title: 'Quantum Financial Trading',
+      description: 'Advanced trading algorithms leveraging quantum computing for market analysis',
+      icon: TrendingUp,
+      href: '/services/quantum-ai-trading-platform',
+      features: ['Portfolio Optimization', 'Risk Assessment', 'Market Prediction', 'Algorithmic Trading'],
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      title: 'Quantum Machine Learning',
+      description: 'Machine learning algorithms enhanced by quantum computing capabilities',
+      icon: Brain,
+      href: '/services/quantum-machine-learning',
+      features: ['Quantum Neural Networks', 'Quantum Feature Selection', 'Quantum Clustering', 'Quantum Classification'],
+      color: 'from-indigo-500 to-purple-600'
+    },
+    {
+      title: 'Quantum Optimization',
+      description: 'Solving complex optimization problems with quantum algorithms',
+      icon: Target,
+      href: '/services/quantum-optimization',
+      features: ['Supply Chain Optimization', 'Route Planning', 'Resource Allocation', 'Scheduling Problems'],
+      color: 'from-orange-500 to-red-600'
+    },
+    {
+      title: 'Quantum Simulation',
+      description: 'Advanced simulations for scientific research and material discovery',
+      icon: TestTube,
+      href: '/services/quantum-simulation',
+      features: ['Molecular Modeling', 'Chemical Reactions', 'Material Properties', 'Drug Discovery'],
+      color: 'from-cyan-500 to-blue-600'
     }
   ];
 
-  const benefits = [
-    'Exponential speedup for specific problems',
-    'Unprecedented computational power',
-    'Breakthrough scientific discoveries',
-    'Future-proof technology investment',
-    'Competitive advantage in research',
-    'Quantum advantage in optimization'
-  ];
-
-  const useCases = [
+  const quantumCapabilities = [
     {
-      title: 'Scientific Research & Discovery',
-      description: 'Quantum computing for drug discovery, materials science, and complex scientific simulations with unprecedented computational power'
+      title: 'Quantum Algorithms',
+      description: 'Specialized algorithms designed for quantum computing architectures',
+      icon: Code,
+      features: ['Grover\'s Algorithm', 'Shor\'s Algorithm', 'Quantum Fourier Transform', 'Quantum Walks']
     },
     {
-      title: 'Financial Modeling & Risk Analysis',
-      description: 'Quantum-enhanced financial modeling for portfolio optimization, risk assessment, and market prediction with quantum speed'
+      title: 'Quantum Error Correction',
+      description: 'Advanced error correction techniques for reliable quantum computations',
+      icon: Shield,
+      features: ['Surface Codes', 'Stabilizer Codes', 'Fault Tolerance', 'Error Mitigation']
     },
     {
-      title: 'Cryptography & Cybersecurity',
-      description: 'Quantum-resistant security protocols and post-quantum cryptography for next-generation cybersecurity systems'
+      title: 'Quantum Entanglement',
+      description: 'Harnessing quantum entanglement for secure communications and computing',
+      icon: Network,
+      features: ['Bell States', 'Entanglement Swapping', 'Quantum Teleportation', 'Entanglement Distillation']
     },
     {
-      title: 'Machine Learning & AI',
-      description: 'Quantum-accelerated machine learning algorithms for pattern recognition and complex data analysis'
+      title: 'Quantum Supremacy',
+      description: 'Achieving computational advantages over classical computing',
+      icon: Rocket,
+      features: ['Speedup Demonstrations', 'Complex Problem Solving', 'Novel Applications', 'Performance Benchmarks']
     }
   ];
 
-  const pricing = [
-    {
-      name: 'Explorer',
-      price: '$799',
-      period: '/month',
-      description: 'Basic quantum computing access for research institutions',
-      features: [
-        'Basic quantum access',
-        'Standard algorithms',
-        'Basic optimization',
-        'Standard support'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$1,999',
-      period: '/month',
-      description: 'Advanced quantum computing platform for growing organizations',
-      features: [
-        'Advanced quantum algorithms',
-        'Custom optimization',
-        'Priority access',
-        'Advanced support',
-        'Custom integrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$4,999',
-      period: '/month',
-      description: 'Full-scale quantum computing platform for large organizations',
-      features: [
-        'Custom quantum models',
-        'Dedicated quantum access',
-        '24/7 dedicated support',
-        'White-label solutions',
-        'Custom development'
-      ]
-    }
+  const applications = [
+    { name: 'Cryptography', icon: Lock, description: 'Quantum-resistant encryption and secure communications' },
+    { name: 'Drug Discovery', icon: TestTube, description: 'Molecular modeling and pharmaceutical research' },
+    { name: 'Financial Modeling', icon: Building, description: 'Portfolio optimization and risk assessment' },
+    { name: 'Climate Science', icon: Globe, description: 'Climate modeling and environmental simulations' },
+    { name: 'Artificial Intelligence', icon: Brain, description: 'Enhanced machine learning and neural networks' },
+    { name: 'Materials Science', icon: Atom, description: 'New material discovery and property analysis' }
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      <SEO 
-        title="Quantum Computing Platform - Zion Tech Group"
-        description="Revolutionary quantum computing platform for exponential performance, breakthrough discoveries, and next-generation computational capabilities."
-        keywords="quantum computing, quantum platform, quantum algorithms, quantum optimization, quantum simulation, quantum security"
-        ogType="website"
-      />
-
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 py-20">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6">
-              <Atom className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-500/20 rounded-full mb-6">
+              <Atom className="w-5 h-5 text-purple-400" />
+              <span className="text-purple-400 font-medium">Quantum Computing</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
               Quantum Computing
             </h1>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
-              Revolutionizing computing with cutting-edge quantum technology. 
-              From exponential speedup to breakthrough discoveries, our platform defines the future.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Harness the power of quantum mechanics for unprecedented computational capabilities. 
+              Our quantum computing solutions solve complex problems that are impossible for 
+              classical computers to tackle efficiently.
             </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <button className="btn-futuristic text-lg px-8 py-4">
-              <Play className="w-5 h-5 mr-2" />
-              Watch Demo
-            </button>
-            <button className="btn-futuristic-outline text-lg px-8 py-4">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Contact Sales
-            </button>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg border border-white/20 hover:border-white/40"
+              >
+                <span>View All Services</span>
+                <ChevronRight className="w-5 h-5" />
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gray-900">
+      {/* Quantum Capabilities */}
+      <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Quantum Computing Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform delivers cutting-edge quantum computing capabilities 
-              for unprecedented computational power and breakthrough discoveries.
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Quantum Computing Capabilities</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Our quantum computing platform leverages the fundamental principles of quantum 
+              mechanics to deliver computational power beyond classical computing limits.
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {quantumCapabilities.map((capability, index) => (
               <motion.div
-                key={index}
+                key={capability.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-900 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <capability.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-indigo-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Quantum Computing?
-            </h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              Experience the future of computing with our quantum platform that delivers 
-              unprecedented performance, scalability, and breakthrough capabilities.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                <p className="text-lg text-white">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our quantum computing platform is transforming industries and enabling new possibilities 
-              in scientific discovery, financial modeling, and computational breakthroughs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-indigo-900 to-blue-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Quantum Computing Plan
-            </h2>
-            <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your computational needs and research requirements.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-white rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-600 mt-2">{plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                <p className="text-gray-400 mb-4">{capability.description}</p>
+                <ul className="space-y-2">
+                  {capability.features.map((feature) => (
+                    <li key={feature} className="flex items-center space-x-2 text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-purple-400" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                <button className="w-full btn-futuristic">
-                  Get Started
-                </button>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quantum Services Grid */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Quantum Computing Services</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Discover our comprehensive range of quantum computing services designed to 
+              solve the most complex computational challenges across industries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {quantumServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500/50 transition-all duration-300 group hover:shadow-2xl hover:shadow-purple-500/20"
+              >
+                <div className={`h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                  <service.icon className="w-16 h-16 text-white" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-400 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center space-x-2 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to={service.href}
+                    className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group-hover:translate-x-1"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Applications */}
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Quantum Computing Applications</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Quantum computing is revolutionizing industries by solving previously 
+              intractable problems and enabling new possibilities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {applications.map((application, index) => (
+              <motion.div
+                key={application.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-900 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 group text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <application.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{application.name}</h3>
+                <p className="text-gray-400">{application.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quantum Advantage Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            The Quantum Advantage
+          </h2>
+          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+            Quantum computing offers exponential speedup for specific problems, 
+            enabling breakthroughs in cryptography, optimization, and scientific simulation.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Rocket className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Exponential Speedup</h3>
+              <p className="text-purple-100">Solve complex problems in seconds instead of years</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Unbreakable Security</h3>
+              <p className="text-purple-100">Quantum-resistant cryptography for future-proof security</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">AI Enhancement</h3>
+              <p className="text-purple-100">Supercharge machine learning with quantum algorithms</p>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <span>Explore Quantum Solutions</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/request-quote"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
+            >
+              <span>Request a Quote</span>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for the Quantum Future?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-               Join the future of computing with our quantum platform. 
-               Contact us today to learn how we can accelerate your breakthroughs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-blue-600 hover:bg-blue-50">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Sales
-              </button>
-              <button className="btn-futuristic text-lg px-8 py-4">
-                <Play className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
       <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Experience Quantum Computing?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            Join the quantum revolution and solve problems that were once impossible. 
+            Our quantum computing experts are ready to help you harness this transformative technology.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-gray-300 mb-8">
-                Ready to explore the future of quantum computing? Our team of experts 
-                is here to help you build quantum systems that define the next generation of computing.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-blue-400" />
-                  <span className="text-white">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-white">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-400" />
-                  <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gray-800 p-8 rounded-xl"
+              <span>Get Started Today</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/training"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">
-                Request Information
-              </h3>
-              <form className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Tell us about your quantum computing needs"
-                    rows={4}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  ></textarea>
-                </div>
-                <button type="submit" className="w-full btn-futuristic">
-                  Send Message
-                </button>
-              </form>
-            </motion.div>
+              <span>Learn More</span>
+            </Link>
           </div>
         </div>
       </section>
     </div>
   );
 }
+
+export default QuantumComputingPage;

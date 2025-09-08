@@ -32,36 +32,23 @@ const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
-// New pages
-const Solutions = React.lazy(() => import('./pages/Solutions'));
-const Resources = React.lazy(() => import('./pages/Resources'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+// Service pages
+const AISolutionsPage = lazy(() => import('./pages/services/ai-solutions').then(module => ({ default: module.AISolutionsPage })));
+const QuantumComputingPage = lazy(() => import('./pages/services/quantum-computing').then(module => ({ default: module.QuantumComputingPage })));
+const CybersecurityPage = lazy(() => import('./pages/services/cybersecurity').then(module => ({ default: module.CybersecurityPage })));
+const DigitalTransformationPage = lazy(() => import('./pages/services/digital-transformation').then(module => ({ default: module.DigitalTransformationPage })));
+const DataAnalyticsPage = lazy(() => import('./pages/services/data-analytics').then(module => ({ default: module.DataAnalyticsPage })));
+const IoTEdegComputingPage = lazy(() => import('./pages/services/iot-edge-computing').then(module => ({ default: module.IoTEdegComputingPage })));
+const CloudDevOpsPage = lazy(() => import('./pages/services/cloud-devops').then(module => ({ default: module.CloudDevOpsPage })));
+const SpaceTechnologyPage = lazy(() => import('./pages/services/space-technology').then(module => ({ default: module.SpaceTechnologyPage })));
+const AIBusinessIntelligencePage = lazy(() => import('./pages/services/ai-business-intelligence').then(module => ({ default: module.AIBusinessIntelligencePage })));
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
-const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
-
-// Service pages - only import existing ones
-const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
-const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
-
-// Simple placeholder pages for missing ones
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+      <p className="text-gray-400">Loading...</p>
     </div>
   </div>
 );
@@ -89,55 +76,37 @@ function App() {
           <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<EnhancedContact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/docs" element={<Documentation />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/cookies" element={<Cookies />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/case-studies" element={<CaseStudies />} />
-                <Route path="/white-papers" element={<WhitePapers />} />
-                <Route path="/webinars" element={<Webinars />} />
-                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
-                <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
-                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-                <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
-                <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
-                <Route path="/services/overview" element={<InnovativeServicesOverview />} />
-                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
-                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
-                <Route path="/request-quote" element={<RequestQuote />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                
-                {/* New Routes */}
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/case-studies" element={<CaseStudies />} />
-                
-                {/* Service Routes - only for existing pages */}
-                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                {/* Support & Resource Routes */}
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/help" element={<Help />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputingPage />} />
+                <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/services/digital-transformation" element={<DigitalTransformationPage />} />
+                <Route path="/services/data-analytics" element={<DataAnalyticsPage />} />
+                                       <Route path="/services/iot-edge-computing" element={<IoTEdegComputingPage />} />
+                       <Route path="/services/cloud-devops" element={<CloudDevOpsPage />} />
+                       <Route path="/services/space-technology" element={<SpaceTechnologyPage />} />
+                       <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                       <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/solutions/*" element={<SolutionsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/about/*" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/*" element={<BlogPage />} />
+                <Route path="/careers" element={<AboutPage />} />
+                <Route path="/partners" element={<AboutPage />} />
+                <Route path="/press" element={<AboutPage />} />
+                <Route path="/case-studies" element={<BlogPage />} />
+                <Route path="/research-development" element={<BlogPage />} />
+                <Route path="/docs" element={<BlogPage />} />
+                <Route path="/api" element={<BlogPage />} />
+                <Route path="/developer" element={<BlogPage />} />
+                <Route path="/help" element={<Helpdesk />} />
                 <Route path="/training" element={<Training />} />
                 <Route path="/support" element={<Support />} />
                 {/* Catch all route */}
