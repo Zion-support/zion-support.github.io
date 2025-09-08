@@ -5,7 +5,7 @@ interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
   enableLazyLoading?: boolean;
-  lazyImport?: () => Promise<{ default: ComponentType<any> }>;
+  lazyImport?: () => Promise<{ default: ComponentTypeg<div> }>;
   memoize?: boolean;
   className?: string;
 }
