@@ -47,15 +47,9 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
       setFormData({
         firstName: '',
         lastName: '',
@@ -268,8 +262,8 @@ export default function Contact() {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                        placeholder="Enter your full name"
                       />
                     </div>
                     <div>
@@ -299,8 +293,8 @@ export default function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                        placeholder="Enter your email"
                       />
                     </div>
                     <div>
@@ -422,9 +416,22 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Schedule a free consultation with our experts to discuss your technology needs.
                 </p>
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
-                  Schedule Consultation
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="tel:+13024640950"
+                    className="inline-flex items-center justify-center px-4 py-2 bg-cyan-400 text-white font-medium rounded-lg hover:bg-cyan-500 transition-colors duration-200"
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-white transition-colors duration-200"
+                  >
+                    <Mail className="w-4 h-4 mr-2" />
+                    Email Us
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>

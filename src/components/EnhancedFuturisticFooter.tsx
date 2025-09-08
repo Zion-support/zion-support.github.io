@@ -530,32 +530,170 @@ export function EnhancedFuturisticFooter() {
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
               >
-                <Globe className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
+                  <p className="text-slate-400 text-sm">Future Technology Solutions</p>
+                </div>
+              </motion.div>
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
+                We help businesses innovate and thrive in the digital age.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+            </div>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-slate-800/50 border border-slate-700/50 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-200 hover:border-cyan-400/50 hover:bg-cyan-400/10 ${social.color}`}
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
+            
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
+              and digital transformation services. Transforming businesses with cutting-edge technology.
+            </p>
+
+            {/* Footer Sections */}
+            {footerSections.map((section) => (
+              <div key={section.title}>
+                <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                  <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-3"></div>
+                  {section.title}
+                </h4>
+                <ul className="space-y-3">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        to={link.href}
+                        className="flex items-center text-slate-400 hover:text-cyan-400 transition-colors duration-200 group"
+                      >
+                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover:bg-cyan-400 transition-colors duration-200"></div>
+                        {link.name}
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Links Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {/* Company */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+              <ul className="space-y-3">
+                {companyInfo.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
+              <ul className="space-y-3">
+                {supportResources.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
+              <ul className="space-y-3">
+                {legalLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Social & Newsletter */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
+              <div className="flex space-x-4 mb-6">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-slate-800/50 border border-slate-600/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} hover:border-cyan-400/50 transition-all duration-200`}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+              <div className="space-y-3">
+                <p className="text-sm text-slate-400">Subscribe to our newsletter</p>
+                <div className="flex">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-3 py-2 bg-slate-800/50 border border-slate-600/50 rounded-l-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  />
+                  <button className="px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-r-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200">
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -577,18 +715,32 @@ export function EnhancedFuturisticFooter() {
         </div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-10 left-10 opacity-20">
-        <Brain className="w-8 h-8 text-cyan-400 animate-bounce" />
-      </div>
-      <div className="absolute top-20 right-20 opacity-20">
-        <Rocket className="w-8 h-8 text-purple-400 animate-pulse" />
-      </div>
-      <div className="absolute bottom-20 left-20 opacity-20">
-        <Brain className="w-8 h-8 text-cyan-400 animate-spin" />
-      </div>
-      <div className="absolute bottom-10 right-10 opacity-20">
-        <Shield className="w-8 h-8 text-purple-400 animate-bounce delay-1000" />
+        {/* Bottom Footer */}
+        <div className="border-t border-slate-800/50">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-slate-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+                Revolutionizing technology, one innovation at a time.
+              </div>
+
+              <div className="flex items-center space-x-6 text-sm text-slate-400">
+                <Link to="/privacy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+                <Link to="/cookies" className="hover:text-white transition-colors">
+                  Cookie Policy
+                </Link>
+                <Link to="/sitemap" className="hover:text-white transition-colors">
+                  Sitemap
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -15,12 +15,12 @@ import {
   Heart
 } from 'lucide-react';
 
-export default function About() {
-  const companyStats = [
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
-    { number: '50+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime SLA', icon: Shield },
-    { number: '24/7', label: 'Support Available', icon: Heart }
+function About() {
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '50+', label: 'Team Members', icon: Users },
+    { number: '25+', label: 'Countries Served', icon: Globe },
+    { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
 
   const coreValues = [

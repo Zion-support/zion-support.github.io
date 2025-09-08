@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import compress from 'vite-plugin-compression'
 
 export default defineConfig({
   plugins: [react()],
@@ -238,11 +239,9 @@ export default defineConfig({
             return 'common-vendor';
           }
         },
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
-      }
-    }
+      },
+    },
+    brotliSize: true,
   },
   esbuild: {
     legalComments: 'none',
