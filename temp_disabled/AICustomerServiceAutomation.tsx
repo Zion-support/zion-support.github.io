@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageCircle, 
-  Headphones, 
-  Brain, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  Clock, 
+    MessageCircle,
+  Headphones,
+  Brain,
+  Shield,
+  Users,
+  BarChart3,
+  Clock,
   DollarSign,
   ArrowRight,
   Smartphone,
@@ -30,7 +30,6 @@ import {
   TrendingUp,
   Phone,
   Mail,
-  MessageSquare,
   Bot
 } from 'lucide-react';
 
@@ -158,7 +157,7 @@ export default function AICustomerServiceAutomation() {
 
   const channels = [
     {
-      icon: MessageSquare,
+      icon: MessageCircle,
       title: "Live Chat",
       description: "Real-time chat support with instant AI responses and seamless human handoff"
     },
