@@ -1,152 +1,51 @@
-interface MobileBottomNavProps {
-  unread_count?: number;
-export /**
- * MobileBottomNav - Function description
- */
-function MobileBottomNav() {
-  const router = use_router ();
-  const { user } = use_auth ();
-  const is_authenticated = !!user;
-  const { items: wishlist_items } = use_wishlist (); // Renamed to avoid conflict;
-  const favorites_count = wishlist_items.length;
-  const cartContextValue = use_cart (); // Call hook at top level;
-  let cart_count = 0;
-  // Check condition
-if ( {) {
-  $2
-}
-
-  const nav_items = [;
-
-    {
-      name: 'Home'
-      href: '/'
-      icon: Home
-      matches: (path: string) => path === '/',    }
-    {
 
 import React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useWishlist } from '@/hooks/useWishlist';
-import { useCart } from '@/context/CartContext';
-import { logWarn } from '@/utils/productionLogger';
-import {;
-  Home,;
-  Search,;
-  MessageCircle,;
-  Heart,;
-  MessageSquare,;
-  ShoppingCart,;
-  User,;
-} from 'lucide-react';
-import { useCart } from '@/context/CartContext';
-import { logWarn } from '@/utils/productionLogger';
+import { Link, useLocation } from 'react-router-dom';
+import { Home, Search, User, Menu } from 'lucide-react';
 
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const router = useRouter(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length,
+export function MobileBottomNav() {
+  const location = useLocation();
 
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0,
-  if (cartContextValue && cartContextValue.items) {
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
-  } else {
+  const navigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Search', href: '/search', icon: Search },
+    { name: 'Menu', href: '#', icon: Menu, action: 'menu' },
+    { name: 'Profile', href: '/profile', icon: User },
+  ];
 
-    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
-  }
-  const navItems = [
-    {
-
-      name: "Home",
-      href: "/",
-      icon: Home,
-
-    {
-      name: "Browse",
-      href: "/talent",
-      icon: Search,
-
-    {
-      name: "Community",
-      href: "/community",
-      icon: MessageCircle,
-
-    {
-      name: "Wishlist",
-      href: "/wishlist",
-      icon: Heart,
-
-    },
-    {
-      name: "Messages",
-      href: "/messages",
-      icon: MessageSquare,
-
-    },
-    {
-      name: "Cart",
-      href: "/cart",
-      icon: ShoppingCart,
-
-    {
-      name: "Dashboard",
-      href: "/dashboard",
-      icon: User,
+  const handleMenuClick = (e: React.MouseEvent, item: any) => {
+    if (item.action === 'menu') {
+      e.preventDefault();
+      // Trigger mobile menu open
+      const menuButton = document.querySelector('[aria-label="Toggle mobile menu"]') as HTMLButtonElement;
+      if (menuButton) {
+        menuButton.click();
+      }
+    }
+  };
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
-      <div className="flex justify-around items-center h-16">
-        {visibleItems.map(item => (<Link key={item.name} to={item.href} className={cn("flex flex-col items-center justify-center w-full h-full px-1 py-1", item.matches(location.pathname)
-                ? "text-zion-cyan"
-                : "text-white/70 hover:text-white")}>
-            <div className="relative">
-              <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
-import React from "react",;
-import { useRouter } from "next/router",;
-import Link from "next/link",;
-import { cn } from "@/lib/utils",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useWishlist } from "@/hooks/useWishlist",;
-import { useCart } from '@/context/CartContext',;
-import { logWarn } from '@/utils/productionLogger',;
-import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
-interface MobileBottomNavProps {;
-  unreadCount?: number;
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
-      <div className="flex justify-around items-center h-16">;
-        {visibleItems.map(item => (;
-          <Link;
+    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark border-t border-zion-purple/20">
+      <div className="flex justify-around items-center h-16 px-4">
+        {navigation.map((item) => (
+          <button
             key={item.name}
-            href={item.href}
-            aria-label={item.name}
-            className={cn(;
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
-              item.matches(router.pathname);
-                ? "text-primary";
-                : "text-foreground/70 hover:text-foreground";
+            onClick={(e) => handleMenuClick(e, item)}
+            className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
+              location.pathname === item.href
+                ? 'text-zion-cyan'
+                : 'text-zion-slate-light hover:text-white'
+            }`}
+          >
+            {item.action === 'menu' ? (
+              <item.icon className="h-6 w-6" />
+            ) : (
+              <Link to={item.href} className="flex flex-col items-center justify-center h-full">
+                <item.icon className="h-6 w-6" />
+              </Link>
             )}
-          >;
-            <div className="relative">;
-              <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-              )}
-            </div>;
-            <span className='hidden sm:block text-xs font-medium'>;
-              {item && item.name}
-            </span>;
-          </Link>;
+            <span className="text-xs mt-1">{item.name}</span>
+          </button>
         ))}
 
 ;

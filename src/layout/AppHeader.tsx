@@ -1,152 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { MainNavigation } from "./MainNavigation";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Search, User, Bell, MessageSquare } from "lucide-react";
-import { useTranslation } from "react-i18next";
-
-interface AppHeaderProps {
-  isAdmin?: boolean;
-  unreadCount?: number;
-}
-
-export function AppHeader({ isAdmin = false, unreadCount = 0 }: AppHeaderProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const { user, signOut } = useAuth();
-  const isAuthenticated = !!user;
-  const location = useLocation();
-  const { t } = useTranslation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  // Close menu when route changes
-  useEffect(() => {
-    closeMenu();
-  }, [location.pathname]);
-
-  return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-zion-blue-dark/95 backdrop-blur-md shadow-lg border-b border-zion-blue-light/20"
-          : "bg-zion-blue-dark"
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="absolute -inset-1 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-                ZION
-              </span>
-              <div className="text-xs text-zion-slate-light -mt-1">Tech Group</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <MainNavigation isAdmin={isAdmin} unreadCount={unreadCount} />
-          </div>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-=======
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, PanelLeft, ChevronDown } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { Logo } from '@/components/header/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
-import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-<<<<<<< HEAD
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingBag
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const { user, logout } = useAuth();
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+  const location = useLocation();
+  
+  // Try to access the messaging context, but provide a fallback value if it's not available
+  let unreadCount = 0;
+  try {
+    const { unreadCount: count } = useMessaging();
+    unreadCount = count;
+  } catch (error) {
+    console.warn('Messaging context not available');
+  }
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -155,119 +34,26 @@ export function AppHeader() {
     }
   };
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const navigationItems = [
-    {
-      name: 'Services',
-      href: '/services',
-      icon: Zap,
-      dropdown: [
-        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-        { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
-        { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
-      ]
-    },
-    {
-      name: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: Code,
-      dropdown: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-        { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
-        { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
-        { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
-        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
-        { name: 'Content Creation', href: '/micro-saas/content-creation' },
-        { name: 'HR Platform', href: '/micro-saas/hr-platform' }
-      ]
-    },
-    {
-      name: 'IT Services',
-      href: '/it-services',
-      icon: Network,
-      dropdown: [
-        { name: 'Infrastructure', href: '/it-services/infrastructure' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
-        { name: 'Consulting', href: '/it-services/consulting' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support' },
-        { name: 'Green IT', href: '/it-services/green-it' },
-        { name: '5G Solutions', href: '/it-services/5g-solutions' }
-      ]
-    },
-    {
-      name: 'Marketplace',
-      href: '/marketplace',
-      icon: ShoppingBag,
-      dropdown: [
-        { name: 'Products', href: '/marketplace/products' },
-        { name: 'Talent', href: '/marketplace/talent' },
-        { name: 'Equipment', href: '/marketplace/equipment' },
-        { name: 'Services', href: '/marketplace/services' }
-      ]
-    },
-    {
-      name: 'Company',
-      href: '/about',
-      icon: Users,
-      dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Contact', href: '/contact' }
-      ]
-    }
+  const navigation = [
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
+    { name: 'About', href: '/about', current: location.pathname.startsWith('/about') },
+    { name: 'Team', href: '/team', current: location.pathname.startsWith('/team') },
+    { name: 'Pricing', href: '/pricing', current: location.pathname.startsWith('/pricing') },
+    { name: 'Contact', href: '/contact', current: location.pathname.startsWith('/contact') },
+    { name: 'Blog', href: '/blog', current: location.pathname.startsWith('/blog') },
   ];
 
-  return (
-    <>
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
-=======
+  const serviceDropdown = [
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Cloud Services', href: '/services/cloud' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Infrastructure', href: '/services/infrastructure' },
+    { name: 'Digital Transformation', href: '/services/transformation' },
+    { name: 'Consulting', href: '/services/consulting' },
+    { name: 'Quantum AI', href: '/services/quantum-ai' },
+  ];
 
-  const menuVariants = {
-    closed: {
-      opacity: 0,
-      x: "100%",
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut"
-      }
-    },
-    open: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const backdropVariants = {
-    closed: {
-      opacity: 0,
-      transition: {
-        duration: 0.2
-      }
-    },
-    open: {
-      opacity: 1,
-      transition: {
-        duration: 0.2
-      }
-    }
-  };
-  
   return (
     <>
       <motion.header 
@@ -279,296 +65,159 @@ export function AppHeader() {
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         <div className="container flex h-16 items-center px-4 sm:px-6">
           <Logo />
-          <div className="ml-6 flex-1 hidden md:block">
-            <MainNavigation unreadCount={unreadCount} />
-          </div>
           
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">
-<<<<<<< HEAD
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
-              aria-expanded={mobileMenuOpen}
-              aria-label="Toggle mobile menu"
-            >
-              <span className="sr-only">Open main menu</span>
-              {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+          {/* Search Bar - Hidden on mobile */}
+          <div className="hidden md:flex ml-6 flex-1 max-w-md">
+            <form onSubmit={handleSearch} className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search services, talent, equipment..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+              >
+                <Search className="h-4 w-4" />
+              </button>
+            </form>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8 ml-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  item.current
+                    ? 'bg-zion-purple/20 text-zion-cyan'
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors">
+                Services
+                <ChevronDown className="ml-1 h-4 w-4 inline" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {serviceDropdown.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          {/* Right side actions */}
+          <div className="ml-auto flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <ModeToggle />
+            
+            {/* Notifications */}
+            <button className="p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors relative">
+              <Bell className="h-5 w-5" />
+              {unreadCount > 0 && (
+                <span className="absolute -top-1 -right-1 h-5 w-5 bg-zion-cyan text-zion-blue-dark text-xs rounded-full flex items-center justify-center font-bold">
+                  {unreadCount > 9 ? '9+' : unreadCount}
+                </span>
               )}
             </button>
-=======
-            <motion.button
+
+            {/* User Menu */}
+            {user ? (
+              <div className="relative group">
+                <button className="flex items-center space-x-2 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors">
+                  <User className="h-5 w-5" />
+                  <span className="hidden sm:block text-sm">{user.name || user.email}</span>
+                </button>
+                <div className="absolute top-full right-0 mt-2 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    <Link
+                      to="/profile"
+                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                    >
+                      Profile
+                    </Link>
+                    <Link
+                      to="/dashboard"
+                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                    >
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={logout}
+                      className="block w-full text-left px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                    >
+                      Sign out
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Link
+                  to="/login"
+                  className="px-4 py-2 text-sm font-medium text-zion-cyan hover:text-white transition-colors"
+                >
+                  Sign in
+                </Link>
+                <Link
+                  to="/signup"
+                  className="px-4 py-2 text-sm font-medium bg-zion-cyan text-zion-blue-dark rounded-lg hover:bg-zion-cyan-light transition-colors"
+                >
+                  Get Started
+                </Link>
+              </div>
+            )}
+
+            {/* Mobile menu button */}
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none focus:ring-2 focus:ring-zion-purple/50 transition-all duration-200"
-              aria-expanded={mobileMenuOpen}
+              className="lg:hidden p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
               aria-label="Toggle mobile menu"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              <span className="sr-only">Open main menu</span>
-              <AnimatePresence mode="wait">
-                {mobileMenuOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <X className="block h-6 w-6" aria-hidden="true" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Menu className="block h-6 w-6" aria-hidden="true" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
           
           <ModeToggle />
         </div>
-<<<<<<< HEAD
-      </header>
-      
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 pt-16">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <MobileMenu
+            navigation={navigation}
+            serviceDropdown={serviceDropdown}
+            onClose={() => setMobileMenuOpen(false)}
+            user={user}
+            onLogout={logout}
           />
-          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)} 
-            />
-          </div>
-        </div>
-      )}
+        )}
+      </header>
 
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav />}
     </>
   );
 }
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation';
 
-
-
-export function AppHeader({ isAdmin = false, unreadCount = 0 }: AppHeaderProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const { user, signOut } = useAuth();
-  const isAuthenticated = !!user;
-  const location = useLocation();
-  const { t } = useTranslation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  // Close menu when route changes
-  useEffect(() => {
-    closeMenu();
-  }, [location.pathname]);
-
-  return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-zion-blue-dark/95 backdrop-blur-md shadow-lg border-b border-zion-blue-light/20"
-          : "bg-zion-blue-dark"
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="absolute -inset-1 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-                ZION
-              </span>
-              <div className="text-xs text-zion-slate-light -mt-1">Tech Group</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <MainNavigation isAdmin={isAdmin} unreadCount={unreadCount} />
-          </div>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-            {/* Search Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hidden sm:flex text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20"
-            >
-              <Search className="h-4 w-4" />
-            </Button>
-
-            {/* Notifications */}
-            {isAuthenticated && (
-              <Button
-                variant="ghost"
-                size="sm"
-                className="relative text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20"
-              >
-                <Bell className="h-4 w-4" />
-                {unreadCount > 0 && (
-                  <span className="absolute -top-1 -right-1 h-4 w-4 bg-zion-cyan rounded-full text-xs text-white flex items-center justify-center font-medium">
-                    {unreadCount > 9 ? "9+" : unreadCount}
-                  </span>
-                )}
-              </Button>
-            )}
-
-            {/* Messages */}
-            {isAuthenticated && (
-              <Button
-                variant="ghost"
-                size="sm"
-                className="relative text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20"
-              >
-                <MessageSquare className="h-4 w-4" />
-              </Button>
-            )}
-
-            {/* User Menu / Auth Buttons */}
-            {isAuthenticated ? (
-              <div className="relative group">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="flex items-center space-x-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20"
-                >
-                  <div className="w-8 h-8 bg-zion-purple rounded-full flex items-center justify-center">
-                    <User className="h-4 w-4 text-white" />
-                  </div>
-                  <span className="hidden sm:block">{user?.email}</span>
-                </Button>
-                
-                {/* Dropdown Menu */}
-                <div className="absolute right-0 top-full mt-2 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="py-2">
-                    <Link
-                      to="/profile"
-                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 transition-colors"
-                    >
-                      Profile
-                    </Link>
-                    <Link
-                      to="/dashboard"
-                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 transition-colors"
-                    >
-                      Dashboard
-                    </Link>
-                    <Link
-                      to="/settings"
-                      className="block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 transition-colors"
-                    >
-                      Settings
-                    </Link>
-                    <hr className="border-zion-blue-light my-2" />
-                    <button
-                      onClick={signOut}
-                      className="block w-full text-left px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 transition-colors"
-                    >
-                      Sign Out
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="flex items-center space-x-3">
-                <Link to="/login">
-                  <Button variant="ghost" size="sm" className="text-zion-slate-light hover:text-white">
-                    Sign In
-                  </Button>
-                </Link>
-                <Link to="/get-started">
-                  <Button size="sm" className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white">
-                    Get Started
-                  </Button>
-                </Link>
-              </div>
-            )}
-
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleMenu}
-              className="lg:hidden text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20"
-            >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden">
-            <div className="py-4 border-t border-zion-blue-light/20">
-              <MainNavigation isAdmin={isAdmin} unreadCount={unreadCount} className="flex-col space-y-4" />
-              
-              {/* Mobile Auth Buttons */}
-              {!isAuthenticated && (
-                <div className="flex flex-col space-y-3 pt-4 border-t border-zion-blue-light/20">
-                  <Link to="/login">
-                    <Button variant="ghost" className="w-full text-zion-slate-light hover:text-white">
-                      Sign In
-                    </Button>
-                  </Link>
-                  <Link to="/get-started">
-                    <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white">
-                      Get Started
-                    </Button>
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-      </div>
-    </header>
->>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
-  );
+// Fallback for missing hooks
+function useMessaging() {
+  return { unreadCount: 0 };
 }
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
