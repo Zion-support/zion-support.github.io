@@ -1,19 +1,16 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import Blog from '@/pages/Blog';
-import BlogPost from '@/pages/BlogPost';
+import { Routes, Route } from 'react-router-dom';
+import SearchPage from '@/pages/SearchPage';
+import Sitemap from '@/pages/Sitemap';
+import SitemapPage from '@/pages/SitemapPage';
 
-
-
-
-
-
-      {/* Global Search Route */}
+export default function ContentRoutes() {
+  return (
+    <Routes>
       <Route path="/search" element={<SearchPage />} />
-      
-      {/* Sitemap Pages */}
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   );
 }
+

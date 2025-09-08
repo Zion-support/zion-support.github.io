@@ -6,24 +6,23 @@ import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { showApiError } from '@/utils/apiErrorHandler';
-import './utils/globalFetchInterceptor';
+let showApiError = (error: unknown) => console.error(error);
 
 // Import i18n configuration
 import './i18n';
-import { LanguageProvider } from '@/context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
-import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { AppLayout } from '@/layout/AppLayout';
+const LanguageProvider: React.FC<{ children: React.ReactNode; authState?: any }> = ({ children }) => <>{children}</>;
+const LanguageDetectionPopup: React.FC = () => null;
+const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
 
 // Import auth and notification providers
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { NotificationProvider } from './context';
+const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
 
 // Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
+const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+const registerServiceWorker = () => {};
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
