@@ -3,7 +3,7 @@ import { REVOLUTIONARY_SERVICES_2030 } from "./revolutionaryServices2030";
 import { ADVANCED_AI_SERVICES_2030 } from "./advancedAIServices2030";
 import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030 } from "./cuttingEdgeITInfrastructure2030";
 import { EMERGING_TECHNOLOGY_SERVICES_2030 } from "./emergingTechnologyServices2030";
-import { INNOVATIVE_SERVICES_2026 } from "./innovativeServices2026";
+import { COMPREHENSIVE_IT_SERVICES_2030 } from "./comprehensiveITServices2030";
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
@@ -13,7 +13,7 @@ export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
   ...ADVANCED_AI_SERVICES_2030,
   ...CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
   ...EMERGING_TECHNOLOGY_SERVICES_2030,
-  ...INNOVATIVE_SERVICES_2026
+  ...COMPREHENSIVE_IT_SERVICES_2030
 ];
 
 // Service Categories for easy filtering
@@ -51,6 +51,12 @@ export const SERVICE_CATEGORIES_2030 = [
   "Space Technology",
   "Sustainable Technology",
   "IT Infrastructure",
+  "IT Consulting",
+  "Data Analytics",
+  "Performance Monitoring",
+  "Disaster Recovery",
+  "API Management",
+  "Network Management",
   "Emerging Technology"
 ];
 
@@ -104,9 +110,5 @@ export {
   ADVANCED_AI_SERVICES_2030,
   CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
   EMERGING_TECHNOLOGY_SERVICES_2030,
-  SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
-  SPECIALIZED_HEALTHCARE_AI_SERVICES_2028,
-  innovativeMicroSaasServices2030,
-  comprehensiveITServices2030,
-  comprehensiveAIServices2030
+  COMPREHENSIVE_IT_SERVICES_2030
 };

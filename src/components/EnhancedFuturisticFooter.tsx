@@ -76,17 +76,34 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Technology Services',
       featured: true,
       links: [
+        { name: 'All Services', href: '/services', featured: true },
+        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
-        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
         { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
-        { name: 'Services Showcase 2025', href: '/services/showcase-2025', featured: true },
-        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
-        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
-        { name: 'AI Metaverse Development', href: '/services#ai-metaverse', featured: true },
-        { name: 'AI Content Creation', href: '/services#ai-content', featured: true },
-        { name: 'AI Customer Support', href: '/services#ai-customer-support', featured: true },
-        { name: 'AI HR & Recruitment', href: '/services#ai-hr', featured: true },
-        { name: 'AI Sales Intelligence', href: '/services#ai-sales-intelligence', featured: true }
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform', featured: true },
+        { name: 'AI HR Talent Analytics', href: '/services/ai-hr-talent-analytics', featured: true },
+        { name: 'AI Marketing Attribution', href: '/services/ai-marketing-attribution-platform', featured: true }
+      ]
+    },
+    {
+      title: 'IT Infrastructure & Cloud',
+      featured: true,
+      links: [
+        { name: 'Cloud Infrastructure Optimization', href: '/services/cloud-infrastructure-optimization', featured: true },
+        { name: 'Advanced Cybersecurity Suite', href: '/services/advanced-cybersecurity-suite', featured: true },
+        { name: 'Enterprise Data Platform', href: '/services/enterprise-data-platform', featured: true },
+        { name: 'Software-Defined Network Platform', href: '/services/software-defined-network-platform', featured: true },
+        { name: 'IoT & Edge Computing Platform', href: '/services/iot-edge-computing-platform', featured: true },
+        { name: 'Blockchain & Web3 Platform', href: '/services/blockchain-web3-platform', featured: true },
+        { name: 'API Management Platform', href: '/services/api-management-platform', featured: true },
+        { name: 'Disaster Recovery Platform', href: '/services/disaster-recovery-platform', featured: true },
+        { name: 'ITSM Platform', href: '/services/itsm-platform', featured: true },
+        { name: 'Performance Monitoring Platform', href: '/services/performance-monitoring-platform', featured: true },
+        { name: 'Identity & Access Management', href: '/services/identity-access-management-platform', featured: true }
       ]
     },
     {

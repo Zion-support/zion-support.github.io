@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, BarChart3 } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, Database, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, PenTool, Target, TrendingUp, Atom, ShieldCheck, DollarSign, Image, FileText, Smartphone, Eye, Cube, Gauge, Database, AlertTriangle, Key, Server, BarChart3 } from 'lucide-react';
@@ -138,50 +138,34 @@ export function AppHeader() {
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'AI & Metaverse', 
-      href: '/services', 
-      icon: Globe, 
-      description: 'Virtual Reality & Gaming',
+      name: 'Cloud Infrastructure', 
+      href: '/services/cloud-infrastructure-optimization', 
+      icon: Cloud, 
+      description: 'Cloud Optimization & DevOps',
       featured: true,
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-blue-500 to-cyan-500'
     },
     { 
-      name: 'AI & Blockchain', 
-      href: '/services', 
-      icon: Lock, 
-      description: 'DeFi & Smart Contracts',
+      name: 'Advanced Cybersecurity', 
+      href: '/services/advanced-cybersecurity-suite', 
+      icon: Shield, 
+      description: 'Threat Detection & Response',
       featured: true,
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-red-500 to-orange-500'
     },
     { 
-      name: 'AI & Operations', 
-      href: '/services', 
-      icon: Settings, 
-      description: 'Supply Chain & Manufacturing',
+      name: 'Enterprise Data Platform', 
+      href: '/services/enterprise-data-platform', 
+      icon: Database, 
+      description: 'Data Integration & Analytics',
       featured: true,
-      color: 'from-gray-500 to-slate-500'
+      color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'AI & Development', 
-      href: '/services', 
-      icon: Code, 
-      description: 'Code Generation & Testing',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    { 
-      name: 'AI & Education', 
-      href: '/services', 
-      icon: BookOpen, 
-      description: 'Personalized Learning',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'AI & Entertainment', 
-      href: '/services', 
-      icon: Star, 
-      description: 'Content & Gaming',
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
@@ -194,18 +178,26 @@ export function AppHeader() {
       color: 'from-red-500 to-orange-500'
     },
     { 
-      name: 'Cloud & DevOps', 
-      href: '/services', 
-      icon: Cloud, 
-      description: 'Infrastructure & Automation',
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
       featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Hybrid Solutions',
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     },
