@@ -41,7 +41,34 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const CartPage = React.lazy(() => import('./pages/cart'));
+const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/register', element: <Signup /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/wishlist', element: <WishlistPage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+];
 
 const App = () => {
   return (

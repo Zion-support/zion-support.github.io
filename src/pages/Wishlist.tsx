@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { loadWishlistFromDB, removeFromWishlist, getApiUrl } from '@/store/wishlistSlice';
+import { addToWishlist, loadWishlistFromDB, removeFromWishlist, getApiUrl } from '@/store/wishlistSlice';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
@@ -17,14 +17,13 @@ export default function Wishlist() {
       navigate(`/login?next=${encodeURIComponent(location.pathname)}`);
       return;
     }
-    dispatch(loadWishlistFromDB(user.id!));
+    void dispatch(loadWishlistFromDB(user.id!));
   }, [user, dispatch, navigate, location]);
 
   const handleRemove = (id: string) => {
     dispatch(removeFromWishlist({ id }));
     fetch(`${getApiUrl()}/wishlist/${id}`, {
       method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
     }).catch(() => {});
   };
 
