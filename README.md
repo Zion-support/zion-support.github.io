@@ -161,4 +161,68 @@ If you see a warning about `rimraf@3.0.2` being deprecated, run:
 npm install rimraf@latest --save-dev
 ```
 
-This updates the dependency to a supported version.
+This updates the dependency to a supported v5 release.
+
+To prevent memory leaks from the deprecated `inflight` package, the project pins
+`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
+`npm install` to ensure this version is installed.
+
+To suppress npm warnings about `@humanwhocodes/config-array`, the `resolutions`
+block maps it to `@eslint/config-array`. Run `npm install` to apply this
+override.
+
+### Whitelabel Tenant Errors
+
+If the app logs **"Error loading tenant"** during startup, the request to the
+Supabase edge function that provides whitelabel settings failed. Confirm that
+`VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` (or the Next.js style
+`NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`) are set in your
+environment and that you have network connectivity. The tenant hook will retry
+a few times before giving up.
+
+### Translation Service
+
+Automatic translations rely on OpenAI. Set `VITE_OPENAI_API_KEY` (or
+`NEXT_PUBLIC_OPENAI_API_KEY`) to allow the client to contact the API directly
+when the Supabase function is unavailable.
+
+## Testing
+
+Run unit tests with:
+
+```sh
+npm run test
+```
+
+To watch tests during development:
+
+```sh
+npm run test:watch
+```
+
+### End-to-End Tests
+
+Open Cypress for interactive debugging:
+
+```sh
+npm run cypress:open
+```
+
+Run the Cypress suite headlessly:
+
+```sh
+npm run cypress:run
+```
+
+### Coverage Report
+
+After running `npm run test`, open `coverage/lcov-report/index.html` in your
+browser to view detailed coverage information.
+
+## Observability
+
+For instructions on structured logging, Prometheus metrics, and Sentry error reporting, see [docs/observability.md](docs/observability.md).
+
+When tests run on GitHub Actions, the workflow uploads the `coverage` directory
+using `actions/upload-artifact@v4`. Visit a workflow run and download the
+`coverage-report` artifact to retrieve the generated HTML coverage report.
