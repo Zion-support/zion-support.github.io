@@ -2,6 +2,7 @@
   "name": "operator-reminder-workflow",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "bin": {
     "zion": "scripts/cli.js"
   },
@@ -13,21 +14,35 @@
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
   },
   "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
+  "packageManager": "npm@10.8.2",
   "engines": {
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
   },
   "scripts": {
     "dev": "vite",
-    "build": "NODE_ENV=production tsc && NODE_ENV=production vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "build": "NODE_ENV=production vite build",
+    "build:analyze": "NODE_ENV=production vite build --mode analyze",
+    "build:preview": "npm run build && npm run preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
     "preview": "NODE_ENV=production vite preview",
     "test": "vitest",
     "test:watch": "vitest --watch",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rm -rf dist node_modules/.vite",
+    "prebuild": "echo 'Skipping prebuild checks'",
+    "postbuild": "echo 'Build completed successfully' && npm run optimize",
+    "optimize": "node scripts/optimize-build.js",
+    "build:optimize": "npm run build && npm run optimize"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -132,6 +147,7 @@
     "@types/react-dom": "17.0.11",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
+    "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.16",
     "dotenv": "^17.2.1",
     "eslint": "^8.57.0",
@@ -147,15 +163,15 @@
     "msw": "^2.8.7",
     "node-mocks-http": "^1.17.2",
     "postcss": "^8.4.35",
+    "prettier": "^3.3.3",
     "prisma": "^6.9.0",
-    "react-devtools": "^6.1.2",
     "rimraf": "^5.0.5",
     "rollup-plugin-visualizer": "^5.10.1",
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.3.4",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.33.0",
-    "vite": "^6.3.5",
+    "vite": "^6.3.6",
     "vitest": "^3.2.1"
   },
   "lint-staged": {

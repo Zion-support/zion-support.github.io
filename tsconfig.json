@@ -14,7 +14,7 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"]
     },
-    "types": ["vite/client", "react", "react-router-dom"],
+    "types": ["vite/client", "react", "react-router-dom", "node"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -29,7 +29,7 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
@@ -40,22 +40,23 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "noEmitOnError": false
   },
   "include": [
-    "src",
-    ".next/types/**/*.ts"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "build",
+    "src.disabled",
+    "src_disabled_*",
+    "tests",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }

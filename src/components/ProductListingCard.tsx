@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 import { FavoriteButton } from "@/components/FavoriteButton";
