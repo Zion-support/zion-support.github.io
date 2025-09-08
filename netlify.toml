@@ -39,3 +39,7 @@
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=300"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  enabled = false
