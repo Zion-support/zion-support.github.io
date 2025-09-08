@@ -1,7 +1,5 @@
 {
-  "timestamp": "2025-08-29T16:16:59.303Z",
-  "totalVulnerabilities": 0,
-  "vulnerabilities": {},
-  "summary": "Security audit found 0 vulnerabilities",
-  "status": "vulnerabilities_found"
+  "timestamp": "2025-08-29T18:32:08.068Z",
+  "summary": "Security audit completed",
+  "status": "completed"
 }

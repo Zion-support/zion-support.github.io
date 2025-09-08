@@ -2,443 +2,466 @@
 
 /**
  * Workflow Status Monitor Automation
- * Replaces GitHub Actions: status.yml, status-badge.yml
- * Runs every 30 minutes to monitor PM2 processes and generate status reports
+ * Replaces GitHub Actions status and status-badge workflows
+ * Runs every 2 hours to monitor PM2 processes and generate status reports
  */
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class WorkflowMonitorAutomation {
   constructor() {
-    this.logFile = path.join(__dirname, '../../reports/workflow-status-report.json');
-    this.interval = process.env.AUTOMATION_INTERVAL || 1800000; // 30 minutes default
-    this.reportsDir = path.join(__dirname, '../../reports');
-    this.badgesDir = path.join(__dirname, '../../public/badges');
+    this.interval = process.env.AUTOMATION_INTERVAL || 7200000; // 2 hours default
+    this.reportsDir = path.join(process.cwd(), 'ci-cd-reports');
+    this.ensureReportsDirectory();
   }
 
-  async start() {
-    console.log('🚀 Starting Workflow Status Monitor Automation...');
-    
-    // Ensure directories exist
+  ensureReportsDirectory() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
-    if (!fs.existsSync(this.badgesDir)) {
-      fs.mkdirSync(this.badgesDir, { recursive: true });
-    }
-
-    // Run initial monitoring
-    await this.runWorkflowMonitoring();
-
-    // Set up interval for continuous monitoring
-    setInterval(async () => {
-      await this.runWorkflowMonitoring();
-    }, this.interval);
-
-    console.log(`⏰ Workflow Status Monitor running every ${this.interval / 60000} minutes`);
   }
 
   async runWorkflowMonitoring() {
     try {
-      console.log('📊 Running workflow status monitoring...');
+      console.log('📊 Starting workflow status monitoring...');
       
-      const timestamp = new Date().toISOString();
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const reportFile = path.join(this.reportsDir, `workflow-status-${timestamp}.json`);
+      
       const report = {
-        timestamp,
-        status: 'running',
-        pm2Processes: {},
+        timestamp: new Date().toISOString(),
+        type: 'workflow-status-monitoring',
+        pm2Status: {},
         systemHealth: {},
         automationStatus: {},
-        recommendations: []
+        summary: {
+          totalProcesses: 0,
+          onlineProcesses: 0,
+          offlineProcesses: 0,
+          errorProcesses: 0,
+          overallHealth: 'unknown'
+        }
       };
 
       // Monitor PM2 processes
       await this.monitorPM2Processes(report);
-
+      
       // Check system health
       await this.checkSystemHealth(report);
-
-      // Monitor automation status
-      await this.monitorAutomationStatus(report);
-
+      
+      // Monitor automation scripts
+      await this.monitorAutomationScripts(report);
+      
       // Generate status badges
       await this.generateStatusBadges(report);
-
-      // Generate recommendations
-      this.generateRecommendations(report);
-
-      // Finalize report
-      report.status = 'completed';
-      report.summary = {
-        totalProcesses: Object.keys(report.pm2Processes).length,
-        healthyProcesses: Object.values(report.pm2Processes).filter(p => p.status === 'online').length,
-        systemIssues: Object.keys(report.systemHealth).filter(k => report.systemHealth[k].status === 'warning').length
-      };
-
+      
       // Save report
-      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+      console.log(`📄 Workflow status report saved: ${reportFile}`);
       
-      console.log(`✅ Workflow monitoring completed: ${report.summary.healthyProcesses}/${report.summary.totalProcesses} processes healthy`);
+      // Log summary
+      this.logSummary(report);
       
-      // Log recommendations
-      if (report.recommendations.length > 0) {
-        console.log('📋 Recommendations:');
-        report.recommendations.forEach(rec => console.log(`  - ${rec}`));
-      }
-
+      console.log('✅ Workflow status monitoring completed');
     } catch (error) {
-      console.error('❌ Error in workflow monitoring:', error.message);
-      
-      // Save error report
-      const errorReport = {
-        timestamp: new Date().toISOString(),
-        status: 'error',
-        error: error.message,
-        stack: error.stack
-      };
-      
-      fs.writeFileSync(this.logFile, JSON.stringify(errorReport, null, 2));
+      console.error('❌ Workflow status monitoring failed:', error.message);
     }
   }
 
   async monitorPM2Processes(report) {
     try {
       console.log('🔍 Monitoring PM2 processes...');
-
-      // Get PM2 process list and parse it manually since --json is not available
-      const pm2ListOutput = execSync('pm2 list', { encoding: 'utf8' });
       
-      // Parse the PM2 list output manually
-      const lines = pm2ListOutput.split('\n');
-      let processes = [];
-      
-      for (const line of lines) {
-        // Skip header lines and empty lines
-        if (line.includes('id') || line.includes('─') || line.trim() === '') continue;
+      try {
+        const pm2StatusOutput = execSync('pm2 jlist', { encoding: 'utf8' });
+        const pm2Processes = JSON.parse(pm2StatusOutput);
         
-        // Parse process line
-        const parts = line.split(/\s+/).filter(part => part.trim() !== '');
-        if (parts.length >= 6) {
-          const process = {
-            id: parts[0],
-            name: parts[1],
-            status: parts[6],
-            cpu: parts[7] || '0%',
-            memory: parts[8] || '0b',
-            restarts: parts[4] || '0'
-          };
-          
-          if (process.name && process.name !== 'name') {
-            processes.push(process);
+        report.pm2Status = {
+          timestamp: new Date().toISOString(),
+          processes: pm2Processes,
+          summary: {
+            total: pm2Processes.length,
+            online: 0,
+            offline: 0,
+            error: 0,
+            stopped: 0
           }
-        }
-      }
-
-      for (const process of processes) {
-        report.pm2Processes[process.name] = {
-          id: process.id,
-          status: process.status,
-          cpu: process.cpu,
-          memory: process.memory,
-          restarts: process.restarts,
-          lastError: process.status !== 'online' ? `Status: ${process.status}` : null
         };
-
-        // Check for issues
-        if (process.status !== 'online') {
-          report.recommendations.push(`Process ${process.name} is not online (status: ${process.status})`);
-        }
-
-        if (parseInt(process.restarts) > 5) {
-          report.recommendations.push(`Process ${process.name} has many restarts (${process.restarts})`);
-        }
-
-        // Parse memory usage for monitoring
-        const memoryStr = process.memory;
-        if (memoryStr.includes('mb') || memoryStr.includes('MB')) {
-          const memoryMB = parseFloat(memoryStr.replace(/[^\d.]/g, ''));
-          if (memoryMB > 500) {
-            report.recommendations.push(`Process ${process.name} using high memory (${memoryMB}MB)`);
+        
+        // Analyze process status
+        pm2Processes.forEach(process => {
+          switch (process.pm2_env.status) {
+            case 'online':
+              report.pm2Status.summary.online++;
+              break;
+            case 'stopped':
+              report.pm2Status.summary.stopped++;
+              break;
+            case 'error':
+              report.pm2Status.summary.error++;
+              break;
+            default:
+              report.pm2Status.summary.offline++;
+              break;
           }
+        });
+        
+        report.summary.totalProcesses = pm2Processes.length;
+        report.summary.onlineProcesses = report.pm2Status.summary.online;
+        report.summary.offlineProcesses = report.pm2Status.summary.offline;
+        report.summary.errorProcesses = report.pm2Status.summary.error;
+        
+        // Determine overall health
+        if (report.pm2Status.summary.error > 0) {
+          report.summary.overallHealth = 'error';
+        } else if (report.pm2Status.summary.offline > 0) {
+          report.summary.overallHealth = 'warning';
+        } else if (report.pm2Status.summary.online === report.pm2Status.summary.total) {
+          report.summary.overallHealth = 'healthy';
+        } else {
+          report.summary.overallHealth = 'degraded';
         }
+        
+        console.log(`📊 PM2 Status Summary:`);
+        console.log(`   Total: ${report.pm2Status.summary.total}`);
+        console.log(`   Online: ${report.pm2Status.summary.online}`);
+        console.log(`   Offline: ${report.pm2Status.summary.offline}`);
+        console.log(`   Error: ${report.pm2Status.summary.error}`);
+        console.log(`   Stopped: ${report.pm2Status.summary.stopped}`);
+        console.log(`   Overall Health: ${report.summary.overallHealth}`);
+        
+      } catch (error) {
+        console.error('❌ Failed to get PM2 status:', error.message);
+        report.pm2Status = {
+          error: error.message,
+          timestamp: new Date().toISOString()
+        };
       }
-
+      
     } catch (error) {
-      console.error('Error monitoring PM2 processes:', error.message);
-      report.pm2Processes = { error: error.message };
+      console.error('❌ PM2 monitoring failed:', error.message);
     }
   }
 
   async checkSystemHealth(report) {
     try {
       console.log('💻 Checking system health...');
-
-      // Check disk space
-      try {
-        const diskOutput = execSync('df -h / | tail -1', { encoding: 'utf8' });
-        const diskUsage = diskOutput.split(/\s+/)[4].replace('%', '');
-        const diskUsageNum = parseInt(diskUsage);
-        
-        report.systemHealth.diskSpace = {
-          usage: diskUsageNum,
-          status: diskUsageNum > 90 ? 'critical' : diskUsageNum > 80 ? 'warning' : 'healthy',
-          message: `${diskUsage}% disk usage`
-        };
-
-        if (diskUsageNum > 90) {
-          report.recommendations.push('Critical disk space usage - consider cleanup');
-        } else if (diskUsageNum > 80) {
-          report.recommendations.push('High disk space usage - monitor closely');
-        }
-      } catch (error) {
-        report.systemHealth.diskSpace = { status: 'unknown', error: error.message };
-      }
-
+      
+      const systemHealth = {
+        timestamp: new Date().toISOString(),
+        memory: {},
+        cpu: {},
+        disk: {},
+        uptime: 0
+      };
+      
       // Check memory usage
       try {
-        const memoryOutput = execSync('free -m | grep Mem', { encoding: 'utf8' });
-        const memoryParts = memoryOutput.split(/\s+/);
-        const total = parseInt(memoryParts[1]);
-        const used = parseInt(memoryParts[2]);
-        const usagePercent = Math.round((used / total) * 100);
-        
-        report.systemHealth.memory = {
-          total: total,
-          used: used,
-          usage: usagePercent,
-          status: usagePercent > 90 ? 'critical' : usagePercent > 80 ? 'warning' : 'healthy',
-          message: `${usagePercent}% memory usage (${used}MB/${total}MB)`
-        };
-
-        if (usagePercent > 90) {
-          report.recommendations.push('Critical memory usage - consider restarting processes');
-        } else if (usagePercent > 80) {
-          report.recommendations.push('High memory usage - monitor closely');
-        }
-      } catch (error) {
-        report.systemHealth.memory = { status: 'unknown', error: error.message };
-      }
-
-      // Check CPU load
-      try {
-        const loadOutput = execSync('uptime', { encoding: 'utf8' });
-        const loadMatch = loadOutput.match(/load average: ([\d.]+), ([\d.]+), ([\d.]+)/);
-        
-        if (loadMatch) {
-          const load1 = parseFloat(loadMatch[1]);
-          const load5 = parseFloat(loadMatch[2]);
-          const load15 = parseFloat(loadMatch[3]);
-          
-          report.systemHealth.cpuLoad = {
-            load1,
-            load5,
-            load15,
-            status: load1 > 5 ? 'critical' : load1 > 2 ? 'warning' : 'healthy',
-            message: `Load averages: 1m=${load1}, 5m=${load5}, 15m=${load15}`
+        const memoryInfo = execSync('free -m', { encoding: 'utf8' });
+        const memoryLines = memoryInfo.split('\n');
+        if (memoryLines.length > 1) {
+          const memLine = memoryLines[1].split(/\s+/);
+          systemHealth.memory = {
+            total: parseInt(memLine[1]),
+            used: parseInt(memLine[2]),
+            free: parseInt(memLine[3]),
+            available: parseInt(memLine[6]),
+            usagePercent: Math.round((parseInt(memLine[2]) / parseInt(memLine[1])) * 100)
           };
-
-          if (load1 > 5) {
-            report.recommendations.push('High CPU load detected - check for runaway processes');
-          } else if (load1 > 2) {
-            report.recommendations.push('Elevated CPU load - monitor performance');
-          }
         }
       } catch (error) {
-        report.systemHealth.cpuLoad = { status: 'unknown', error: error.message };
+        systemHealth.memory.error = error.message;
       }
-
+      
+      // Check CPU usage
+      try {
+        const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
+        const cpuMatch = cpuInfo.match(/(\d+\.\d+)%us/);
+        if (cpuMatch) {
+          systemHealth.cpu.usagePercent = parseFloat(cpuMatch[1]);
+        }
+      } catch (error) {
+        systemHealth.cpu.error = error.message;
+      }
+      
+      // Check disk usage
+      try {
+        const diskInfo = execSync('df -h /', { encoding: 'utf8' });
+        const diskLines = diskInfo.split('\n');
+        if (diskLines.length > 1) {
+          const diskLine = diskLines[1].split(/\s+/);
+          systemHealth.disk = {
+            filesystem: diskLine[0],
+            size: diskLine[1],
+            used: diskLine[2],
+            available: diskLine[3],
+            usagePercent: parseInt(diskLine[4].replace('%', ''))
+          };
+        }
+      } catch (error) {
+        systemHealth.disk.error = error.message;
+      }
+      
+      // Check system uptime
+      try {
+        const uptime = execSync('uptime -p', { encoding: 'utf8' });
+        systemHealth.uptime = uptime.trim();
+      } catch (error) {
+        systemHealth.uptime = 'unknown';
+      }
+      
+      report.systemHealth = systemHealth;
+      
+      console.log('💻 System Health Summary:');
+      if (systemHealth.memory.usagePercent) {
+        console.log(`   Memory Usage: ${systemHealth.memory.usagePercent}%`);
+      }
+      if (systemHealth.cpu.usagePercent) {
+        console.log(`   CPU Usage: ${systemHealth.cpu.usagePercent}%`);
+      }
+      if (systemHealth.disk.usagePercent) {
+        console.log(`   Disk Usage: ${systemHealth.disk.usagePercent}%`);
+      }
+      console.log(`   Uptime: ${systemHealth.uptime}`);
+      
     } catch (error) {
-      console.error('Error checking system health:', error.message);
-      report.systemHealth = { error: error.message };
+      console.error('❌ System health check failed:', error.message);
     }
   }
 
-  async monitorAutomationStatus(report) {
+  async monitorAutomationScripts(report) {
     try {
-      console.log('🤖 Monitoring automation status...');
-
-      // Check automation report files
-      const automationReports = [
-        'console-error-fixer-report.json',
-        'continuous-improvement-report.json',
-        'daily-build-test-report.json',
-        'security-audit-report.json',
-        'dependency-updates-report.json',
-        'performance-monitor-report.json',
-        'quality-checks-report.json',
-        'link-integrity-report.json',
-        'front-maximizer-report.json',
-        'sitemap-runner-report.json'
-      ];
-
-      for (const reportFile of automationReports) {
-        const reportPath = path.join(this.reportsDir, reportFile);
-        
-        if (fs.existsSync(reportPath)) {
-          try {
-            const reportContent = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-            const automationName = reportFile.replace('-report.json', '');
-            
-            report.automationStatus[automationName] = {
-              lastRun: reportContent.timestamp,
-              status: reportContent.status || 'unknown',
-              hasErrors: reportContent.error ? true : false
-            };
-
-            // Check for stale reports (older than 24 hours)
-            const lastRunTime = new Date(reportContent.timestamp);
-            const hoursSinceLastRun = (Date.now() - lastRunTime.getTime()) / (1000 * 60 * 60);
-            
-            if (hoursSinceLastRun > 24) {
-              report.recommendations.push(`Automation ${automationName} hasn't run in ${Math.round(hoursSinceLastRun)} hours`);
-            }
-
-            if (reportContent.error) {
-              report.recommendations.push(`Automation ${automationName} encountered an error: ${reportContent.error}`);
-            }
-
-          } catch (error) {
-            report.automationStatus[reportFile] = { error: 'Failed to parse report' };
-          }
-        } else {
-          report.automationStatus[reportFile.replace('-report.json', '')] = { status: 'no-report' };
+      console.log('🤖 Monitoring automation scripts...');
+      
+      const automationDir = path.join(process.cwd(), 'scripts', 'automation');
+      const automationStatus = {
+        timestamp: new Date().toISOString(),
+        scripts: [],
+        summary: {
+          total: 0,
+          accessible: 0,
+          executable: 0,
+          lastModified: null
         }
+      };
+      
+      if (fs.existsSync(automationDir)) {
+        const files = fs.readdirSync(automationDir);
+        const scriptFiles = files.filter(f => f.endsWith('.cjs') || f.endsWith('.js'));
+        
+        automationStatus.summary.total = scriptFiles.length;
+        
+        for (const file of scriptFiles) {
+          const filePath = path.join(automationDir, file);
+          const stats = fs.statSync(filePath);
+          
+          const scriptInfo = {
+            name: file,
+            path: filePath,
+            size: stats.size,
+            lastModified: stats.mtime.toISOString(),
+            accessible: true,
+            executable: (stats.mode & 0o111) !== 0
+          };
+          
+          if (scriptInfo.executable) {
+            automationStatus.summary.executable++;
+          }
+          
+          automationStatus.scripts.push(scriptInfo);
+          
+          if (!automationStatus.summary.lastModified || 
+              stats.mtime > new Date(automationStatus.summary.lastModified)) {
+            automationStatus.summary.lastModified = stats.mtime.toISOString();
+          }
+        }
+        
+        automationStatus.summary.accessible = scriptFiles.length;
       }
-
+      
+      report.automationStatus = automationStatus;
+      
+      console.log(`🤖 Automation Scripts Summary:`);
+      console.log(`   Total: ${automationStatus.summary.total}`);
+      console.log(`   Accessible: ${automationStatus.summary.accessible}`);
+      console.log(`   Executable: ${automationStatus.summary.executable}`);
+      console.log(`   Last Modified: ${automationStatus.summary.lastModified}`);
+      
     } catch (error) {
-      console.error('Error monitoring automation status:', error.message);
-      report.automationStatus = { error: error.message };
+      console.error('❌ Automation script monitoring failed:', error.message);
     }
   }
 
   async generateStatusBadges(report) {
     try {
       console.log('🏷️ Generating status badges...');
-
-      // Overall system health badge
+      
+      const badgesDir = path.join(process.cwd(), 'public', 'badges');
+      if (!fs.existsSync(badgesDir)) {
+        fs.mkdirSync(badgesDir, { recursive: true });
+      }
+      
+      // Generate PM2 status badge
+      const pm2Status = report.summary.overallHealth;
+      const pm2Badge = this.generateBadge('PM2 Status', pm2Status, this.getBadgeColor(pm2Status));
+      fs.writeFileSync(path.join(badgesDir, 'pm2-status.svg'), pm2Badge);
+      
+      // Generate system health badge
+      const systemHealth = this.calculateSystemHealthScore(report.systemHealth);
+      const systemBadge = this.generateBadge('System Health', systemHealth, this.getBadgeColor(systemHealth));
+      fs.writeFileSync(path.join(badgesDir, 'system-health.svg'), systemBadge);
+      
+      // Generate automation status badge
+      const automationHealth = this.calculateAutomationHealthScore(report.automationStatus);
+      const automationBadge = this.generateBadge('Automation', automationHealth, this.getBadgeColor(automationHealth));
+      fs.writeFileSync(path.join(badgesDir, 'automation-status.svg'), automationBadge);
+      
+      // Generate overall status badge
       const overallHealth = this.calculateOverallHealth(report);
-      const healthBadge = this.generateBadge('System Health', overallHealth.status, overallHealth.color);
-      fs.writeFileSync(path.join(this.badgesDir, 'system-health.svg'), healthBadge);
-
-      // PM2 processes badge
-      const pm2Health = this.calculatePM2Health(report);
-      const pm2Badge = this.generateBadge('PM2 Processes', pm2Health.status, pm2Health.color);
-      fs.writeFileSync(path.join(this.badgesDir, 'pm2-processes.svg'), pm2Badge);
-
-      // Automation status badge
-      const automationHealth = this.calculateAutomationHealth(report);
-      const automationBadge = this.generateBadge('Automation', automationHealth.status, automationHealth.color);
-      fs.writeFileSync(path.join(this.badgesDir, 'automation-status.svg'), automationBadge);
-
-      console.log('✅ Status badges generated successfully');
-
+      const overallBadge = this.generateBadge('Overall Status', overallHealth, this.getBadgeColor(overallHealth));
+      fs.writeFileSync(path.join(badgesDir, 'overall-status.svg'), overallBadge);
+      
+      console.log('🏷️ Status badges generated successfully');
+      
     } catch (error) {
-      console.error('Error generating status badges:', error.message);
+      console.error('❌ Status badge generation failed:', error.message);
     }
+  }
+
+  generateBadge(label, status, color) {
+    const width = Math.max(label.length * 6 + 20, status.length * 6 + 20);
+    const labelWidth = label.length * 6 + 10;
+    const statusWidth = status.length * 6 + 10;
+    
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20">
+  <linearGradient id="b" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="a">
+    <rect width="${width}" height="20" rx="3" fill="#fff"/>
+  </mask>
+  <g mask="url(#a)">
+    <path fill="#555" d="M0 0h${labelWidth}v20H0z"/>
+    <path fill="${color}" d="M${labelWidth} 0h${statusWidth}v20H${labelWidth}z"/>
+    <path fill="url(#b)" d="M0 0h${width}v20H0z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text x="${labelWidth/2}" y="15" fill="#010101" fill-opacity=".3">${label}</text>
+    <text x="${labelWidth/2}" y="14">${label}</text>
+    <text x="${labelWidth + statusWidth/2}" y="15" fill="#010101" fill-opacity=".3">${status}</text>
+    <text x="${labelWidth + statusWidth/2}" y="14">${status}</text>
+  </g>
+</svg>`;
+  }
+
+  getBadgeColor(status) {
+    switch (status.toLowerCase()) {
+      case 'healthy':
+      case 'pass':
+        return '#4c1';
+      case 'warning':
+      case 'degraded':
+        return '#dfb317';
+      case 'error':
+      case 'offline':
+        return '#e05d44';
+      default:
+        return '#9f9f9f';
+    }
+  }
+
+  calculateSystemHealthScore(systemHealth) {
+    let score = 100;
+    
+    if (systemHealth.memory.usagePercent > 90) score -= 30;
+    else if (systemHealth.memory.usagePercent > 80) score -= 20;
+    else if (systemHealth.memory.usagePercent > 70) score -= 10;
+    
+    if (systemHealth.cpu.usagePercent > 90) score -= 30;
+    else if (systemHealth.cpu.usagePercent > 80) score -= 20;
+    else if (systemHealth.cpu.usagePercent > 70) score -= 10;
+    
+    if (systemHealth.disk.usagePercent > 90) score -= 30;
+    else if (systemHealth.disk.usagePercent > 80) score -= 20;
+    else if (systemHealth.disk.usagePercent > 70) score -= 10;
+    
+    if (score >= 80) return 'Healthy';
+    if (score >= 60) return 'Good';
+    if (score >= 40) return 'Warning';
+    return 'Critical';
+  }
+
+  calculateAutomationHealthScore(automationStatus) {
+    if (automationStatus.summary.total === 0) return 'No Scripts';
+    
+    const healthPercent = (automationStatus.summary.executable / automationStatus.summary.total) * 100;
+    
+    if (healthPercent >= 90) return 'Excellent';
+    if (healthPercent >= 80) return 'Good';
+    if (healthPercent >= 60) return 'Fair';
+    return 'Poor';
   }
 
   calculateOverallHealth(report) {
-    const criticalCount = Object.values(report.systemHealth).filter(h => h.status === 'critical').length;
-    const warningCount = Object.values(report.systemHealth).filter(h => h.status === 'warning').length;
+    const pm2Score = report.summary.overallHealth === 'healthy' ? 100 : 
+                    report.summary.overallHealth === 'warning' ? 70 :
+                    report.summary.overallHealth === 'degraded' ? 40 : 20;
     
-    if (criticalCount > 0) return { status: 'Critical', color: 'red' };
-    if (warningCount > 0) return { status: 'Warning', color: 'orange' };
-    return { status: 'Healthy', color: 'green' };
+    const systemScore = report.systemHealth.memory?.usagePercent ? 
+                       (100 - Math.min(report.systemHealth.memory.usagePercent, 100)) : 50;
+    
+    const automationScore = report.automationStatus.summary.total > 0 ?
+                           (report.automationStatus.summary.executable / report.automationStatus.summary.total) * 100 : 50;
+    
+    const overallScore = (pm2Score + systemScore + automationScore) / 3;
+    
+    if (overallScore >= 80) return 'Excellent';
+    if (overallScore >= 60) return 'Good';
+    if (overallScore >= 40) return 'Fair';
+    return 'Poor';
   }
 
-  calculatePM2Health(report) {
-    const totalProcesses = Object.keys(report.pm2Processes).length;
-    const onlineProcesses = Object.values(report.pm2Processes).filter(p => p.status === 'online').length;
-    const healthPercent = Math.round((onlineProcesses / totalProcesses) * 100);
+  logSummary(report) {
+    console.log('\n📊 Workflow Status Summary:');
+    console.log(`   Overall Health: ${report.summary.overallHealth}`);
+    console.log(`   PM2 Processes: ${report.summary.onlineProcesses}/${report.summary.totalProcesses} online`);
+    console.log(`   System Health: ${this.calculateSystemHealthScore(report.systemHealth)}`);
+    console.log(`   Automation: ${this.calculateAutomationHealthScore(report.automationStatus)}`);
     
-    if (healthPercent === 100) return { status: 'All Online', color: 'green' };
-    if (healthPercent >= 80) return { status: 'Most Online', color: 'orange' };
-    return { status: 'Issues', color: 'red' };
-  }
-
-  calculateAutomationHealth(report) {
-    const totalAutomations = Object.keys(report.automationStatus).length;
-    const healthyAutomations = Object.values(report.automationStatus).filter(a => a.status === 'completed' && !a.hasErrors).length;
-    const healthPercent = Math.round((healthyAutomations / totalAutomations) * 100);
-    
-    if (healthPercent === 100) return { status: 'All Healthy', color: 'green' };
-    if (healthPercent >= 80) return { status: 'Most Healthy', color: 'orange' };
-    return { status: 'Issues', color: 'red' };
-  }
-
-  generateBadge(label, message, color) {
-    const colors = {
-      green: '#4c1',
-      orange: '#f93',
-      red: '#e05d44'
-    };
-    
-    const width = Math.max(label.length, message.length) * 8 + 20;
-    
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20">
-      <linearGradient id="b" x2="0" y2="100%">
-        <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-        <stop offset="1" stop-opacity=".1"/>
-      </linearGradient>
-      <mask id="a">
-        <rect width="${width}" height="20" rx="3" fill="#fff"/>
-      </mask>
-      <g mask="url(#a)">
-        <path fill="#555" d="M0 0h${label.length * 8 + 10}v20H0z"/>
-        <path fill="${colors[color]}" d="M${label.length * 8 + 10} 0h${message.length * 8 + 10}v20H${label.length * 8 + 10}z"/>
-        <path fill="url(#b)" d="M0 0h${width}v20H0z"/>
-      </g>
-      <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="${(label.length * 8 + 10) / 2}" y="15" fill="#010101" fill-opacity=".3">${label}</text>
-        <text x="${(label.length * 8 + 10) / 2}" y="14">${label}</text>
-        <text x="${label.length * 8 + 10 + (message.length * 8 + 10) / 2}" y="15" fill="#010101" fill-opacity=".3">${message}</text>
-        <text x="${label.length * 8 + 10 + (message.length * 8 + 10) / 2}" y="14">${message}</text>
-      </g>
-    </svg>`;
-  }
-
-  generateRecommendations(report) {
-    // Add system-specific recommendations
-    if (report.systemHealth.diskSpace && report.systemHealth.diskSpace.status === 'critical') {
-      report.recommendations.push('Immediate disk space cleanup required');
+    if (report.pm2Status.summary?.error > 0) {
+      console.log(`   ⚠️  ${report.pm2Status.summary.error} PM2 processes in error state`);
     }
-
-    if (report.systemHealth.memory && report.systemHealth.memory.status === 'critical') {
-      report.recommendations.push('Memory usage critical - restart high-memory processes');
+    
+    if (report.systemHealth.memory?.usagePercent > 80) {
+      console.log(`   ⚠️  High memory usage: ${report.systemHealth.memory.usagePercent}%`);
     }
-
-    // Add PM2-specific recommendations
-    const offlineProcesses = Object.entries(report.pm2Processes).filter(([name, proc]) => proc.status !== 'online');
-    if (offlineProcesses.length > 0) {
-      report.recommendations.push(`Restart offline processes: ${offlineProcesses.map(([name]) => name).join(', ')}`);
-    }
-
-    // Add automation-specific recommendations
-    const failedAutomations = Object.entries(report.automationStatus).filter(([name, status]) => status.hasErrors);
-    if (failedAutomations.length > 0) {
-      report.recommendations.push(`Investigate failed automations: ${failedAutomations.map(([name]) => name).join(', ')}`);
+    
+    if (report.systemHealth.disk?.usagePercent > 80) {
+      console.log(`   ⚠️  High disk usage: ${report.systemHealth.disk.usagePercent}%`);
     }
   }
 
-  async stop() {
-    console.log('🛑 Stopping Workflow Status Monitor...');
-    process.exit(0);
+  async start() {
+    console.log('🚀 Starting Workflow Status Monitor Automation...');
+    console.log(`⏰ Running every ${this.interval / 1000 / 60} minutes`);
+    
+    // Run immediately
+    await this.runWorkflowMonitoring();
+    
+    // Schedule recurring runs
+    setInterval(async () => {
+      await this.runWorkflowMonitoring();
+    }, this.interval);
   }
 }
 
-// Handle process signals
-process.on('SIGINT', () => {
-  console.log('Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+// Start the automation if run directly
+if (require.main === module) {
+  const automation = new WorkflowMonitorAutomation();
+  automation.start().catch(console.error);
+}
 
-process.on('SIGTERM', () => {
-  console.log('Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the automation
-const automation = new WorkflowMonitorAutomation();
-automation.start().catch(console.error);
+module.exports = WorkflowMonitorAutomation;
