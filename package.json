@@ -7,9 +7,9 @@
     "zion": "scripts/cli.js"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "NODE_ENV=production vite build --mode production",
-    "build:analyze": "NODE_ENV=production vite build --mode analyze",
+    "dev": "npx vite",
+    "build": "NODE_ENV=production npx vite build --mode production",
+    "build:analyze": "NODE_ENV=production npx vite build --mode analyze",
     "analyze": "node scripts/bundle-analyzer.js",
     "build:preview": "npm run build && npm run preview",
     "build:optimized": "npm run clean && npm run build && npm run optimize && npm run perf:check",
@@ -18,7 +18,7 @@
     "lint:src": "eslint src/main.tsx src/App.tsx",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
-    "preview": "NODE_ENV=production vite preview",
+    "preview": "NODE_ENV=production npx vite preview",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest run --coverage",
