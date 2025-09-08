@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';
 
-export function MainNavigation({ className }: { className?: string }) {
+export function MainNavigation({ className }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
@@ -14,11 +14,14 @@ export function MainNavigation({ className }: { className?: string }) {
     <nav className={cn("hidden md:flex items-center space-x-6", className)}>
       <NavLink 
         to="/" 
-        className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}
+        className={({ isActive }) => cn(
+          "text-sm font-medium transition-colors hover:text-primary", 
+          isActive ? "text-zion-cyan" : "text-muted-foreground"
+        )}
       >
         Home
       </NavLink>
-      
+
       {/* Services Dropdown */}
       <div className="relative group">
         <button 
@@ -44,11 +47,11 @@ export function MainNavigation({ className }: { className?: string }) {
                     AI Services
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
+                    <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services Overview</Link></li>
+                    <li><Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Business Intelligence</Link></li>
+                    <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
+                    <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
                     <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
-                    <li><Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
-                    <li><Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Hybrid</Link></li>
-                    <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All AI Services</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -57,11 +60,11 @@ export function MainNavigation({ className }: { className?: string }) {
                     IT Services
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Solutions</Link></li>
+                    <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services Overview</Link></li>
                     <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
                     <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-                    <li><Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
-                    <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
+                    <li><Link to="/services/it-consulting" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Consulting</Link></li>
+                    <li><Link to="/services/it-infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Infrastructure</Link></li>
                   </ul>
                 </div>
               </div>
@@ -75,7 +78,7 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
+
       {/* Solutions Dropdown */}
       <div className="relative group">
         <button 
@@ -101,22 +104,22 @@ export function MainNavigation({ className }: { className?: string }) {
                     Industry Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Industry Solutions</Link></li>
-                    <li><Link to="/services/healthcare-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare</Link></li>
-                    <li><Link to="/services/financial-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial</Link></li>
-                    <li><Link to="/services/education-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
+                    <li><Link to="/solutions/healthcare" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare</Link></li>
+                    <li><Link to="/solutions/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Services</Link></li>
+                    <li><Link to="/solutions/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
+                    <li><Link to="/solutions/retail" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail</Link></li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <HardDrive className="w-4 h-4 mr-2"/>
-                    Technology
+                    Technology Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-                    <li><Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain</Link></li>
-                    <li><Link to="/services/space-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Space Tech</Link></li>
-                    <li><Link to="/services/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+                    <li><Link to="/solutions/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
+                    <li><Link to="/solutions/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain</Link></li>
+                    <li><Link to="/solutions/iot-edge" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IoT & Edge</Link></li>
+                    <li><Link to="/solutions/space-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Space Technology</Link></li>
                   </ul>
                 </div>
               </div>
@@ -130,7 +133,7 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
+
       {/* Company Dropdown */}
       <div className="relative group">
         <button
@@ -160,7 +163,7 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
+
       {/* Resources Dropdown */}
       <div className="relative group">
         <button
@@ -191,24 +194,24 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
+
       {/* Support */}
       <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <HelpCircle className="w-4 h-4 mr-1" />
         Support
       </Link>
-      
+
       {/* Pricing */}
       <Link to="/pricing" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <BarChart3 className="w-4 h-4 mr-1" />
         Pricing
       </Link>
-      
+
       {/* Get Started Button */}
       <NavLink 
         to="/signup" 
         className={({ isActive }) => cn(
-          "text-sm font-medium transition-colors hover:text-primary",
+          "text-sm font-medium transition-colors hover:text-primary", 
           isActive ? "text-zion-cyan" : "text-muted-foreground",
           "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1"
         )}

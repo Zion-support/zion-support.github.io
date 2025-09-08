@@ -166,6 +166,27 @@ const milestones = [
     'Certified B Corporation'
   ];
 
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
+      image: '/team/kleber-santos.jpg'
+    },
+    {
+      name: 'AI Research Team',
+      role: 'AI & ML Specialists',
+      bio: 'Experts in machine learning, neural networks, and autonomous systems development.',
+      image: '/team/ai-team.jpg'
+    },
+    {
+      name: 'DevOps Engineers',
+      role: 'Infrastructure & Cloud',
+      bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',
+      image: '/team/devops-team.jpg'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -213,74 +234,102 @@ const milestones = [
       {/* Mission & Vision */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                To democratize artificial intelligence and cutting-edge technology, making it accessible 
-                to businesses of all sizes. We believe that every organization deserves the opportunity 
-                to leverage AI to drive growth, efficiency, and innovation.
+              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                To democratize access to cutting-edge AI and quantum technologies, enabling businesses 
+                of all sizes to leverage the power of next-generation computing for unprecedented growth 
+                and innovation.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Through our expertise, dedication, and commitment to excellence, we help our clients 
-                navigate the complex landscape of modern technology and emerge stronger, more competitive, 
-                and future-ready.
+              <p className="text-gray-300 leading-relaxed">
+                We believe that technology should be accessible, secure, and transformative, driving 
+                positive change across industries and communities worldwide.
               </p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-slate-700/30 rounded-2xl border border-slate-600/30 p-8"
+              viewport={{ once: true }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                To be the global leader in AI-powered business transformation, pioneering the future 
+                of work through intelligent automation, quantum computing, and sustainable technology solutions.
+              </p>
               <p className="text-gray-300 leading-relaxed">
-                To be the leading force in AI-driven business transformation, creating a future where 
-                technology serves humanity, enhances productivity, and unlocks unprecedented possibilities 
-                for organizations worldwide.
+                We envision a world where every organization can harness the full potential of AI 
+                to solve complex challenges and create lasting value for humanity.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Company Values */}
-      <section className="py-16 bg-slate-800/50">
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              These principles guide everything we do, from how we work with clients to how we build our team.
+            <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide our work and relationships with clients, partners, and communities.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
-                key={value.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30"
               >
-                <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
-                  <value.icon className="w-10 h-10 text-white" />
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
+                <p className="text-gray-300">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -342,36 +391,31 @@ const milestones = [
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Meet Our Leadership Team</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experienced professionals passionate about technology and committed to your success.
+            <h2 className="text-4xl font-bold text-white mb-6">Our Leadership Team</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Meet the visionary leaders and experts driving innovation at Zion Tech Group.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
-                key={member.name}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-700/30 rounded-lg border border-slate-600/30 p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Users className="w-12 h-12 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">{member.bio}</p>
-                <div className="space-y-2">
-                  {member.expertise.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="text-xs text-gray-400 bg-slate-600/50 rounded px-2 py-1">
-                      {skill}
-                    </div>
-                  ))}
-                </div>
+                <p className="text-cyan-400 mb-3">{member.role}</p>
+                <p className="text-gray-300">{member.bio}</p>
               </motion.div>
             ))}
           </div>
@@ -385,11 +429,12 @@ const milestones = [
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">By The Numbers</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our impact in numbers - measurable results that speak for themselves.
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Join hundreds of organizations already leveraging our AI and quantum computing solutions 
+              to drive innovation and growth.
             </p>
           </motion.div>
 
@@ -521,19 +566,12 @@ const milestones = [
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="/careers"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-              >
-                Join Our Team
-              </a>
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1">
+                Get Started Today
+              </button>
+              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                Schedule a Demo
+              </button>
             </div>
           </motion.div>
         </div>
