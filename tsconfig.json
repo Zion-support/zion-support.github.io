@@ -41,7 +41,6 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-    "skipLibCheck": true,
     "plugins": [
       {
         "name": "next"
