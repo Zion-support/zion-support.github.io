@@ -1,13 +1,13 @@
 module.exports = {
   apps: [
     {
-      name: 'bolt-app',
+      name: 'bolt-zion-app',
       script: 'npm',
       args: 'run dev',
       cwd: '/workspace',
-      watch: false,
       instances: 1,
       autorestart: true,
+      watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -15,235 +15,68 @@ module.exports = {
       },
       env_production: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      },
-      env_production: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        PORT: 3000
       }
     },
-    
-    // Backend server
     {
-      name: 'zion-backend',
-      script: 'npm',
-      args: 'start',
-      cwd: './server',
+      name: 'link-checker',
+      script: 'scripts/link-checker.js',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 2 * * *', // Daily at 2 AM
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
-    {
-      name: 'console-error-fixer',
-      script: './scripts/automation/console-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // Continuous link integrity checker - runs every 2 hours
-    {
-      name: 'link-integrity',
-      script: './scripts/automation/link-integrity.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Continuous improvement - runs every 2 hours
     {
       name: 'continuous-improvement',
-      script: './scripts/automation/continuous-improvement.cjs',
+      script: 'scripts/continuous-improvement.js',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '512M',
+      cron_restart: '0 2 * * 1', // Weekly on Monday at 2 AM
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
+        NODE_ENV: 'production'
       }
     },
-
-    // Continuous build and test - runs every hour
     {
-      name: 'daily-build-test',
-      script: './scripts/automation/daily-build-test.cjs',
+      name: 'build-monitor',
+      script: 'scripts/build-monitor.js',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '512M',
+      cron_restart: '0 */6 * * *', // Every 6 hours
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
+        NODE_ENV: 'production'
       }
     },
-
-    // Continuous security audit - runs every 4 hours
     {
       name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
+      script: 'scripts/security-audit.js',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '512M',
+      cron_restart: '0 3 * * 0', // Weekly on Sunday at 3 AM
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
+        NODE_ENV: 'production'
       }
     },
-
-    // Continuous dependency updates - runs every 6 hours
-    {
-      name: 'dependency-updates',
-      script: './scripts/automation/dependency-updates.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // Continuous performance monitoring - runs every 2 hours
     {
       name: 'performance-monitor',
-      script: './scripts/automation/performance-monitor.cjs',
+      script: 'scripts/performance-monitor.js',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '512M',
+      cron_restart: '0 4 * * *', // Daily at 4 AM
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Continuous quality checks - runs every 3 hours
-    {
-      name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '10800000' // 3 hours
-      }
-    },
-
-    // Continuous link integrity checker - runs every 2 hours
-    {
-      name: 'link-integrity',
-      script: './scripts/automation/link-integrity.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Continuous front maximizer - runs every 4 hours
-    {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      }
-    },
-
-    // Continuous sitemap runner - runs every 6 hours
-    {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // CodeQL Security Analysis - runs every 6 hours (replaces GitHub Actions CodeQL)
-    {
-      name: 'codeql-security',
-      script: './scripts/automation/codeql-security.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // Dependency Management - runs every 8 hours (replaces GitHub Actions dependencies)
-    {
-      name: 'dependency-management',
-      script: './scripts/automation/dependency-management.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '28800000' // 8 hours
-      }
-    },
-
-    // Workflow Status Monitor - runs every 2 hours (replaces GitHub Actions status workflows)
-    {
-      name: 'workflow-monitor',
-      script: './scripts/automation/workflow-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
+        NODE_ENV: 'production'
       }
     }
-  ],
-
-  deploy: {
-    production: {
-      user: 'root',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
-      path: '/workspace/production',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': 'mkdir -p /workspace/production'
-    }
-  }
+  ]
 };
