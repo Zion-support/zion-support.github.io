@@ -112,6 +112,8 @@ const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
   log(message, type = 'INFO')
+<<<<<<< HEAD
+=======
       const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"
@@ -126,3 +128,4 @@ const glob = require('glob')
 
   log(message, type = 'INFO')`;
 
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e

@@ -17,20 +17,6 @@ class SecurityScanner {}
         this.projectRoot = process.cwd();
 
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString() {}
-    ) {}"
-        const timestamp = new Date().toISOString(})
-});
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
-        fs.appendFileSync(this.logFile, logMessage);
-
-        console.log(message)};
-    scanForVulnerabilities() {}
-        this.log('Scanning for security vulnerabilities...');
-        try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot,
                 "encoding": 'utf8',
@@ -113,16 +99,6 @@ class SecurityScanner {}
         scanDirectory(this.projectRoot);
         return files};
     checkFilePermissions() {}
-        this.log('Checking file permissions...');
-        const criticalFiles = ['package.json',]
-            'package-lock.json',
-            '.env',
-            '.env.local',
-            '.env.production',
-            '.env.development'
-        ];
-        const permissionIssues = [];
-=======
 
         const permissionIssues = [];
         for (const file of criticalFiles) {}
@@ -158,63 +134,15 @@ class SecurityScanner {}
         this.log(`Found ${permissionIssues.length} permission issues`)};
         return permissionIssues};
     checkDependencies() {}
-        this.log('Checking dependencies for security issues...');
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            const dependencies = {}
-                ...packageJson.dependencies || {},
-                ...packageJson.devDependencies || {};
-           };
-            const totalDeps = Object.keys(dependencies).lengt;h;
-            this.log(`Analyzing ${totalDeps} dependencies`);
-            // Check for known vulnerable packages;
-            const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-            this.log(`Analyzing ${totalDeps} dependencies`);
-            // Check for known vulnerable packages;
-            const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-            
-            return {;}
-                "status": 'success',
-                "totalDependencies": totalDeps,
-                "vulnerablePackages": vulnerablePackages,
-                "dependencies": Object.keys(dependencies);
-            }} catch (error) {}
-            this.log(`Dependency check "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    checkForVulnerablePackages(dependencies) {}
-        // This is a simplified check - in practice, you'd use a vulnerability database;
-        const knownVulnerable = ['lodash@4.17.0',]
-            'jquery@1.12.0',
-            'moment@2.24.0'
-        ];
-        const vulnerable = [];
-        for (const [name, version] of Object.entries(dependencies)) {}
-            const packageVersion = \`\${name}@\${version}\;`;`
-            if ([0]))) {}
-                vulnerable.push({})
-                    "name": name,
-                    "version": version,
-                    "severity": 'high'
-                })};
-        };
-        return vulnerable) {}
-    [0]))) {}
-                vulnerable.push({})
-                    "name": name,
-                    "version": version,
-                    "severity": 'high'
-                })};
-        };
-        return vulnerable}};
-    generateSecurityHeaders() {}
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
         this.log('Generating security headers configuration...');
         const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
 =======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
         const vulnerable = [];
         for (const [name, version] of Object.entries(dependencies)) {}`;
@@ -315,8 +243,11 @@ class SecurityScanner {}
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
         this.log("Security scan report saved to ${this.reportFile}");"
+<<<<<<< HEAD
+=======
         return report};
     generateSecurityRecommendations() {}
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
         return [;]"
 
             throw error};

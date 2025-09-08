@@ -48,4 +48,7 @@ if [ "$remaining_conflicts" -eq 0 ]; then
 else
     echo "Some conflicts remain, manual review may be needed"
 fi
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

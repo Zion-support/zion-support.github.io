@@ -25,11 +25,14 @@ console.log(🧪 Running Automated Tests...')
   execSync('npm run type-check, { "stdio})
     execSync(npm audit --audit-level=moderate', { stdio"})
 
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
 console.log('🧪 Test "Summary)
 
 console.log('🧪 Test Summary")
 
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 console.log('🧪 Running Automated Tests...')
       "status"
       "status"

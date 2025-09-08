@@ -238,6 +238,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return false;
   }
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> merged-prs-20250907-203621
+=======
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -259,3 +263,4 @@ console.log('Starting comprehensive syntax fixes...');
 const apiDir = '/workspace/pages/api';
 const fixedCount = processDirectory(apiDir);
 console.log(`Fixed ${fixedCount} files`);
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e

@@ -160,6 +160,17 @@ if (require.main === module) {
 
 module.exports = GitAutomation;
 
+=======
+=======
+
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+module.exports = GitAutomation;
+>>>>>>> merged-prs-20250907-203621
+=======
 
   switch (command) {
     case "status":"
@@ -218,6 +229,7 @@ module.exports = GitAutomation;
 
 module.exports = GitAutomation;
 module.exports = GitAutomation;
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 #!/usr/bin/env node;
       console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]")
       process.exit(1)

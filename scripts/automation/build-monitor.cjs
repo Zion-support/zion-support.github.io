@@ -9,6 +9,8 @@ const fs = require('fs');
 const path = require('path');
 const { exec, execSync } = require('child_process');
 
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const fs = require('fs');
 const path = require('path');
 const { exec, execSync } = require('child_process');
