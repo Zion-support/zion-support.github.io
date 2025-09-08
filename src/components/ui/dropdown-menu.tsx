@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Dropdown-menu = React.forwardRef<
+const DropdownMenu = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -11,6 +11,6 @@ const Dropdown-menu = React.forwardRef<
     {...props}
   />
 ))
-Dropdown-menu.displayName = "Dropdown-menu"
+DropdownMenu.displayName = "DropdownMenu"
 
-export { Dropdown-menu }
+export { DropdownMenu }

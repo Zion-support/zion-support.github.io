@@ -5,7 +5,12 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"]
+    },
+    "types": ["vite/client", "react", "react-router-dom", "node"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -19,16 +24,9 @@
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Path mapping */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
-
     "src/**/*",
     "src/**/*.tsx",
     "src/**/*.ts",
@@ -61,18 +59,6 @@
     "zion/**",
     "apps/**",
     "utils/**",
-    "types/**",
-    "src/pages/**/*",
-    "src/routes/**/*",
-    "src/components/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*",
-    "src/services/**/*",
-    "src/data/**/*",
-    "src/types/**/*",
-    "src/utils/**/*",
-    "src/layout/**/*",
-    "src/lib/**/*"
-
+    "types/**"
   ]
 }
