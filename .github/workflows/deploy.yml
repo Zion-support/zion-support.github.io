@@ -1,19 +1,11 @@
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy to'
-        required: true
-        default: 'production'
-        type: choice
-        options:
-        - production
+name: deploy.yml (DISABLED - Migrated to PM2)
 
-env:
-  NODE_VERSION: '20.18.1'
+on:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling automation tasks
+  # Now handled by PM2 processes as configured in ecosystem.config.cjs
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 jobs:
   deploy:
@@ -25,42 +17,11 @@ jobs:
       url: https://ziontechgroup.com
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Build application
-      run: npm run build
-      env:
-        NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
-        
-    - name: Deploy to GitHub Pages
-      id: deploy
-      uses: peaceiris/actions-gh-pages@v1.7.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
-        cname: ziontechgroup.com
-        
-    - name: Notify deployment
-      run: |
-        echo "🚀 Deployment completed successfully!"
-        echo "Environment: ${{ github.event.inputs.environment || 'production' }}"
-        echo "URL: https://ziontechgroup.com"
-        
-    - name: Health check
-      run: |
-        echo "🏥 Running health checks..."
-        echo "Health checks completed"
-        
-    - name: Notify team
-      run: |
-        echo "📢 Deployment notification sent to team"
+      - name: Workflow Disabled
+        run: |
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Automation tasks are now handled by PM2 processes running continuously."
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          echo "To check PM2 status: pm2 status"
+          echo "To view logs: pm2 logs <process-name>"
+          exit 0
