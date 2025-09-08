@@ -205,18 +205,8 @@ this.log(`📄 Report generated: ${reportFile}`);
       const autoFixed = await this.autoFixESLintErrors()
       const manuallyFixed = await this.fixRemainingErrors(initialErrors)
       await this.generateReport(initialErrors, autoFixed, manuallyFixed)}
-<<<<<<< HEAD
-    // Set up file watcher
-      "ignoreInitial": true;")
-=======
     // Set up file watcher;
 
-<<<<<<< HEAD
-      "ignoreInitial": true;")
-=======
-      "ignoreInitial: true;)
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.watcher;"
 
     this.isRunning = true;"

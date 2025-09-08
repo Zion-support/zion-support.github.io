@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true },
-  typescript: {
-    ignoreBuildErrors: true },
-  poweredByHeader: false,
-  compress: true,
-  images: {
-    domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'] },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'] },
-  webpack: (config { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all' } }}
-    return config},
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY' }, {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff' }, {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin' } ] } ]},
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true } ]} };
-
-module.exports = nextConfig;
-=======
 /** @type {import('next).NextConfig} */
 const nextConfig = {
 
@@ -53,7 +7,6 @@ const nextConfig = {
     unoptimized: true},
 =======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

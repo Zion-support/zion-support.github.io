@@ -213,36 +213,6 @@ export default [
       'no-console': 'off'
     }
   }
-<<<<<<< HEAD:eslint.config.js.disabled
-];
-=======
-<<<<<<< HEAD:_conflicted_disabled/eslint.config.js.disabled
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js.disabled
-];
-=======
-];
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:eslint.config.js
-=======
-=======
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
-<<<<<<< HEAD:eslint.config.js
-];
-=======
-];
->>>>>>> cursor/integrate-build-improve-and-re-verify-3ee7:eslint.config.js.disabled
-<<<<<<< HEAD
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-=======
-<<<<<<< HEAD:eslint.config.js.disabled
-];
-=======
-];
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:eslint.config.js
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 =======
 ];
 >>>>>>> merged-prs-20250907-203621:eslint.config.js.disabled

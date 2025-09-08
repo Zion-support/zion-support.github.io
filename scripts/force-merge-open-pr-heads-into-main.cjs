@@ -30,29 +30,7 @@ async function gh(path, method = 'GET) {}
     method,
     "headers: {}
       Authorization: `token ${token}`,`
-<<<<<<< HEAD
-      "Accept": 'application/vnd.github.v3+json',
-<<<<<<< HEAD
-  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'User-Agent': 'force-merge-script'
-=======
-      Accept": 'application/vnd.github.v3+json,
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
-=======
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw: text }}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
@@ -72,9 +50,6 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
-<<<<<<< HEAD
-=======
-=======
       'User-Agent': 'force-merge-script'
 =======
 
@@ -83,7 +58,6 @@ async function main() {}
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     };
   }
 });

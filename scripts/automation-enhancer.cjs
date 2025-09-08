@@ -110,12 +110,8 @@ echo " Deployment completed successfully!"
     fs.chmodSync(deployScriptPath, "755")
     const monitorScript = "
 const pm2 = require("$1")
-<<<<<<< HEAD
-
-=======
 const fs = require("$1")
 const path = require("path")
->>>>>>> merged-prs-20250907-203621
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")
     console.log(" Starting advanced monitoring...")
     const logEntry = \"[\${timestamp}] System health check completed\\n\"

@@ -15,9 +15,6 @@ const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
 =======
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -26,7 +23,6 @@ const result = execSync('top -bn1 | grep "Cpu(s)";
 
 =======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const pm2 = require('pm2)
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -58,15 +54,7 @@ const os = require('os)
 
       const result = execSync('top -bn1 | grep Cpu(s)"
 =======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-const pm2 = require('pm2')
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

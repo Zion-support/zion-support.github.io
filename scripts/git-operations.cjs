@@ -1,18 +1,6 @@
 #!/usr/bin/env node;
 
 =======
-<<<<<<< HEAD
-
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 =======
 

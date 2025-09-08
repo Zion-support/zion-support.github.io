@@ -1,36 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs').promises;
 =======
-<<<<<<< HEAD
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-#!/usr/bin/env node;
-const fs = require('fs').promises;
-const path = require('path');
-
-class ComprehensiveSyntaxErrorFixer {}
-  constructor() {}
-    this.projectRoot = path.join(__dirname, '..');
-
-#!/usr/bin/env node;
-
-const fs = require('fs').promises;
-const path = require('path');
-
-class ComprehensiveSyntaxErrorFixer {}
-  constructor() {}
-    this.projectRoot = path.join(__dirname, '..');
-    this.fixedFiles = []};
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    this.projectRoot = path.join(__dirname, '..');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> merged-prs-20250907-203621
     this.fixedFiles = []};
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -59,10 +29,6 @@ let fixedContent = content
         if (fixedContent.includes(fix.from)) {}
 
 <<<<<<< HEAD
-      return false};
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 <<<<<<< HEAD

@@ -47,21 +47,9 @@ const result = execSync("npx tsc --noEmit --pretty", {});
     return results};
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
-<<<<<<< HEAD
-  checker.run().catch(console.error)};
-=======
   checker.run().catch(console.error)}
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logMessage = `[${timestamp}] [${level}] ${message}`;`
 =======
     const logMessage = `[${timestamp}] [${level}] ${message};`
@@ -71,11 +59,7 @@ if (require.main === module) {}
     try {}"
       fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {}
       console.error("Failed to write to log "file": ", error.message)};"
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> merged-prs-20250907-203621
   async checkTypeScriptErrors() {}"
     this.log("Checking TypeScript errors...");"
 

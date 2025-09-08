@@ -9,20 +9,6 @@ class BuildMonitor {}
     this.projectRoot = '/workspace';
     this.logDir = path.join(this.projectRoot, 'logs');
 =======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { exec, execSync } = require('child_process');
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
 class BuildMonitor {}
   constructor() {}

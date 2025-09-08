@@ -11,16 +11,6 @@ const path = require('path')
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   results.checks.push({ "name": 'prettier-config', "status"})
 =======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD

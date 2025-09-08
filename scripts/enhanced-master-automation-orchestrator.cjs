@@ -9,15 +9,11 @@ main
 
 main();#!/usr/bin/env node;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')

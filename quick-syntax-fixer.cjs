@@ -40,13 +40,7 @@ class QuickSyntaxFixer {;
       const content = fs.readFileSync(filePath, 'utf8');
       let fixedContent = content;
 
-<<<<<<< HEAD
-        .replace(/^>>>>>>>.*$/gm, ')
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/^>>>>>>>.*$/gm, ')
-
-=======
         .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> merged-prs-20250907-203621
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

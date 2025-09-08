@@ -38,18 +38,11 @@ function fixExportDefaultConst(filePath, content) {}
 	const fixed = content.replace(/export\s+default\s+const\s+([A-Za-z_$][\w$]*)/g, (m, name) => {}
 		changed = true;
 
-<<<<<<< HEAD
-				out = ensureDefaultExport(out, name)};
-		};
-		return out};
-	return fixed};
-=======
 >>>>>>> merged-prs-20250907-203621
 				out = ensureDefaultExport(out, name)}
 		}
 		return out}
 	return fixed}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function processFile(fullPath) {}
 
 	let content = original;

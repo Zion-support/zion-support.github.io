@@ -2,19 +2,6 @@
 const fs = require('fs')
 const { execSync } = require('child_process')
 =======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-    console.log('\n "Recommendations")
-
-    console.log('\n "Recommendations")
-#!/usr/bin/env node;
-const fs = require('fs')
-#!/usr/bin/env node;
-<<<<<<< HEAD
-///usr/bin/env node
-const fs = require('fs')
-=======
 
 const { execSync } = require(child_process')
 // console.log('� Starting dependency update check...)
@@ -33,7 +20,6 @@ const { execSync } = require(child_process')
 // console.log('\n� Outdated Packages")
     console.log(\n� Security "Vulnerabilities)
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
     console.log(\n Recommendations")
@@ -44,16 +30,6 @@ const { execSync } = require(child_process')
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log('\n Recommendations")
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 =======
@@ -61,7 +37,6 @@ const fs = require('fs')
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 

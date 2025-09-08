@@ -102,65 +102,6 @@ class AutoFixer {}
 >>>>>>> merged-prs-20250907-203621
         content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?        content = content.replace(/[\s\S]*?                if (content !== originalContent) {}
 
-<<<<<<< HEAD
-    this.log("info", `Fixed merge conflicts in ${fixedFiles} files`);"
-    return fixedFiles};
-  async fixSyntaxErrors() {}
-    this.log("info", "Fixing syntax errors...");
-    let fixedFiles = 0;
-const syntaxFixes = [// Fix missing semicolons;];
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing semicolons" };
-      // Fix missing commas;
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing commas" };
-      // Fix missing quotes;
-      { "pattern": /([^""])\s*$/gm replacement: "$1, "description": "Add missing quotes" };
-      { "pattern": /([^"])\s*$/gm, "replacement": "$1", "description": "Add missing quotes" };
-      // Fix missing brackets;
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1}", "description": "Add missing brackets" };
-      // Fix missing parentheses;
-      { "pattern": /([^)])\s*$/gm, "replacement": "$1)", "description": "Add missing parentheses" }];
-    const files = this.getAllSourceFiles();
-    for (const file of files) {}
-      try {}
-        let content = fs.readFileSync(file, "utf8");
-        const originalContent = content;
-=======
-<<<<<<< HEAD
-
-=======
-    this.log("info", `Fixed merge conflicts in ${fixedFiles} files`);"
-<<<<<<< HEAD
-    return fixedFiles}
-=======
-    return fixedFiles};
->>>>>>> merged-prs-20250907-203621
-  async fixSyntaxErrors() {}"
-    this.log("info", "Fixing syntax errors...");"
-    const syntaxFixes = [// Fix missing semicolons;]"
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing semicolons" };"
-      // Fix missing commas;"
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing commas" };"
-      // Fix missing quotes;"
-<<<<<<< HEAD
-      { "pattern": /([^])\s*$/gm replacement: "$1, "description": "Add missing quotes" }
-=======
-      { "pattern": /([^])\s*$/gm replacement: "$1, "description": "Add missing quotes" };
->>>>>>> merged-prs-20250907-203621
-      { "pattern": /([^"])\s*$/gm, "replacement": "$1", "description": "Add missing quotes" };"
-      // Fix missing brackets;"
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1}", "description": "Add missing brackets" };"
-      // Fix missing parentheses;"
-      { "pattern": /([^)])\s*$/gm, "replacement": "$1)", "description": "Add missing parentheses" }];"
-<<<<<<< HEAD
-        let fileFixes = 0
-  for($2) {}
-          if (fix.pattern.test(content)) {}
-            content = content.replace(fix.pattern, fix.replacement)
-            fileFixes++}
-  if($2) {}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         let fileFixes = 0;
         for (const fix of syntaxFixes) {}
           if (fix.pattern.test(content)) {}
@@ -265,22 +206,12 @@ const syntaxFixes = [// Fix missing semicolons;];
       this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`);"
   async runAllFixes() {}"
 <<<<<<< HEAD
-    this.log("info", "Starting comprehensive auto-fix process...");
-      duration: 0};
-    const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}"
-      importErrors: await this.fixImportErrors();,
-  typescriptErrors: await this.fixTypeScriptErrors();
-      totalFixes: 0;,
-  duration: 0};
-=======
-<<<<<<< HEAD
     this.log("info, Starting comprehensive auto-fix process...");
 =======
     this.log("info", "Starting comprehensive auto-fix process...");
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
     const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}
       importErrors: await this.fixImportErrors();
       typescriptErrors: await this.fixTypeScriptErrors();

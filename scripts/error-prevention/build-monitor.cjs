@@ -1,14 +1,8 @@
 #!/usr/bin/env node;
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 =======
 
@@ -85,53 +79,12 @@ class BuildMonitor {}
      {}
           console.log('Build check passed ✓')};
           this.lastBuildTime = new Date()} else {}
-<<<<<<< HEAD
-          console.log('Build check failed ✗');
-          
-=======
-<<<<<<< HEAD
-          console.log(Build check failed ✗');
+
+
+
+
 
 =======
-          console.log('Build check failed ✗');
-<<<<<<< HEAD
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
-          
-          // Attempt to fix common build issues;
-          this.attemptBuildFix()};
-      })} catch (error) {}
-      console.error('Error running build "check": ', error.message)};
-  };
-  async attemptBuildFix() {}
-    try {}
-<<<<<<< HEAD
-      console.log('Attempting to fix build issues...');
-      
-      // Clean build directory;
-<<<<<<< HEAD
-const cleanChild = spawn('npm', ['run', 'clean'], {});
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-
-
-
-
-<<<<<<< HEAD
-      cleanChild.on('close', (code) => {}
-          console.log('Clean completed, retrying build...')) {}
-          console.log('Clean completed, retrying build...')};
-=======
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -155,57 +108,14 @@ const cleanChild = spawn('npm', ['run', 'clean'], {});
           console.log('Clean failed')};
       console.error('Error running build "fix": ', error.message)};
   stop() {}
-<<<<<<< HEAD
-    console.log('Stopping Build Monitor...');
-    this.isRunning = false;
-    
-    if ( {})
-      clearInterval(this.intervalId)};
-    console.log('Build Monitor stopped')) {}
-    console.log('Build Monitor stopped')}};
-=======
-<<<<<<< HEAD
-    console.log(Stopping Build Monitor...');
-
-    if ( {})
-      clearInterval(this.intervalId)}
-    console.log('Build Monitor stopped)) {}
-    console.log(Build Monitor stopped')}}
-=======
-    console.log('Stopping Build Monitor...');
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-    this.isRunning = false;
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
     if ( {})
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')) {}
 <<<<<<< HEAD
-    console.log('Build Monitor stopped')}}
-// Start the monitor if run directly
-  const monitor = new BuildMonitor) {}
-  const monitor = new BuildMonitor}(;);
-  
-  // Handle graceful shutdown;
-  process.on('SIGINT', () => {}
-    monitor.stop();
-    process.exit(0)}
-});
-  
-  process.on('SIGTERM', () => {}
-=======
-<<<<<<< HEAD
 
   process.on(SIGTERM', () => {}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     monitor.stop();
     process.exit(0)}
 });

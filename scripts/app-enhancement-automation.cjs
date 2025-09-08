@@ -35,18 +35,6 @@ let "status";
       this.log(`App Enhancement Automation "failed"`)
 
 =======
-<<<<<<< HEAD
-const fs = require('fs')
-const path = require('path')
-=======
-<<<<<<< HEAD
-
-=======
-const fs = require('fs')
-const path = require(path')
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
     console.error('App enhancement automation "failed)
 

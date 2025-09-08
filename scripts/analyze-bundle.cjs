@@ -9,12 +9,6 @@ async function analyzeBundle() {}
   try {}
     // Install bundle analyzer if not present;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
     try {}
       execSync('npm list @next/bundle-analyzer', { "stdio": 'pipe' })} catch {}
       execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })};

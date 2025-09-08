@@ -47,11 +47,6 @@ const http = require('http');
   cpu: 0,"
 <<<<<<< HEAD
         "memory": 0,
-        "disk": 0}};"
-;"
-=======
-<<<<<<< HEAD
-        "memory": 0,
         "disk": 0}};
 ;
       "healthCheckPort": 3001,
@@ -226,7 +221,6 @@ const http = require('http');
 
       }}
   }
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async checkBuildStatus() {}
   try {}
   const issues = [];

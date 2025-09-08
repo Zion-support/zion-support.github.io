@@ -60,14 +60,8 @@ class CIAutomation {;
     });
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         "failed": results.filter(r => !r.success).length}};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> merged-prs-20250907-203621
     return report};
 "failed": results.filter(r => !r.success).length}}

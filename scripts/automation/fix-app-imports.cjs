@@ -1,42 +1,9 @@
 #!/usr/bin/env node;
 const fs = require('fs');
 =======
-<<<<<<< HEAD
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-
-class AppImportsFixer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-
-#!/usr/bin/env node;
-
-const fs = require('fs');
-const path = require('path');
-
-class AppImportsFixer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-    this.appPath = path.join(this.projectRoot, 'src/App.tsx')};
-  log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    this.appPath = path.join(this.projectRoot, 'src/App.tsx')};
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
   log(message) {}
-<<<<<<< HEAD
-    console.log(`[${new Date().toISOString()}] ${message})};
-=======
     console.log(`[${new Date().toISOString()}] ${message})}
->>>>>>> merged-prs-20250907-203621
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   checkFileExports(filePath) {}
     try {}
@@ -56,67 +23,10 @@ class AppImportsFixer {}
         exportMatches.forEach(match => {})
           const nameMatch = match.match(/export\s+(?:function|const|class)\s+(\w+)/);
           if (nameMatch) {}
-<<<<<<< HEAD
-            namedExports.push(nameMatch[1])};
-        })};
-    
-    let content = fs.readFileSync(this.appPath, 'utf8');
-    
-    
-    let content = fs.readFileSync(this.appPath, 'utf8');
-    
-    // Define the pages to check;
-const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },];
-=======
-<<<<<<< HEAD
-            namedExports.push(nameMatch[1])}
-        })}
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    
-    let content = fs.readFileSync(this.appPath, utf8');
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
             namedExports.push(nameMatch[1])};
         })};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      return { "exists": true, hasDefault, "hasNamed": namedExports }} catch (error) {}
-      return { "exists": false, "hasDefault": false, "hasNamed": [] }};
-  };
-  fixAppImports() {}
-    this.log('Fixing App.tsx imports...');
-    
-    let content = fs.readFileSync(this.appPath, 'utf8');
-    
     // Define the pages to check;
-      return { "exists": false, "hasDefault": false, "hasNamed": [] }}
-  }
-  fixAppImports($2) {}
-    this.log('Fixing App.tsx imports...')
-    let content = fs.readFileSync(this.appPath, 'utf8')
-    let content = fs.readFileSync(this.appPath, 'utf8')
-    // Define the pages to check
-=======
-<<<<<<< HEAD
-    let content = fs.readFileSync(this.appPath, 'utf8');
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-    
-    let content = fs.readFileSync(this.appPath, 'utf8');
-    
-<<<<<<< HEAD
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    // Define the pages to check;
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    // Define the pages to check;
->>>>>>> merged-prs-20250907-203621
     const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },]
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       { "name": 'ServicesPage', "path": './pages/ServicesPage' },
@@ -138,11 +48,7 @@ const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },];
       { "name": 'AISolutions', "path": './pages/services/AISolutions' },
       { "name": 'QuantumComputing', "path": './pages/services/QuantumComputing' },
       { "name": 'Cybersecurity', "path": './pages/services/Cybersecurity' };
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
@@ -158,11 +64,7 @@ const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },];
           importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default })));`} else if (exports.hasNamed.includes(page.name)) {`}
           importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.${page.name} })));`} else if (exports.hasNamed.length > 0) {`}
           // Use the first named export;
-<<<<<<< HEAD
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.${exports.hasNamed[0]} })));`} else {`}
-=======
           importStatement = `const ${page.name} = lazy(() => import(${page.path}').then(module => ({ "default: module.${exports.hasNamed[0]} })));`} else {`}
->>>>>>> merged-prs-20250907-203621
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           // Fallback to default;
           importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default || module.${page.name} })));`};
@@ -178,16 +80,7 @@ const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },];
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default : named'} export`)} else {`}
         this.log(`"Warning: ${page.path}.tsx does not exist`)}
 =======
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-        this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
-        this.log(`"Warning": ${page.path}.tsx does not exist`)};
-=======
 >>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (exports.exists) {}
         let importStatement;
 
