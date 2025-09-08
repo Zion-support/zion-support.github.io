@@ -24678,3 +24678,45 @@ fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-12a8
 [2025-09-08T21:33:44.680Z] 🔧 Resolving conflicts in: package-lock.json
 [2025-09-08T21:33:44.688Z] ✅ Resolved conflicts in: package-lock.json
 [2025-09-08T21:33:44.688Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:33:44.792Z] ✅ Success: Add resolved files
+[2025-09-08T21:33:44.792Z] 🚀 Commit merge for cursor/fix-netlify-build-and-merge-to-main-1b15: git commit -m "Resolve conflicts and merge cursor/fix-netlify-build-and-merge-to-main-1b15"
+[2025-09-08T21:33:44.842Z] ✅ Success: Commit merge for cursor/fix-netlify-build-and-merge-to-main-1b15
+[2025-09-08T21:33:44.842Z] ✅ Successfully resolved conflicts and merged: cursor/fix-netlify-build-and-merge-to-main-1b15
+[2025-09-08T21:33:44.842Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-1cfc
+[2025-09-08T21:33:44.842Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-1cfc: git fetch origin cursor/fix-netlify-build-and-merge-to-main-1cfc
+[2025-09-08T21:33:45.237Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-1cfc
+[2025-09-08T21:33:45.237Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-1cfc: git merge origin/cursor/fix-netlify-build-and-merge-to-main-1cfc --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-1cfc into main"
+[2025-09-08T21:33:45.728Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-1cfc
+[2025-09-08T21:33:45.728Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-1cfc
+[2025-09-08T21:33:45.728Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-1ef0
+[2025-09-08T21:33:45.728Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-1ef0: git fetch origin cursor/fix-netlify-build-and-merge-to-main-1ef0
+[2025-09-08T21:33:46.101Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-1ef0
+[2025-09-08T21:33:46.101Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-1ef0: git merge origin/cursor/fix-netlify-build-and-merge-to-main-1ef0 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-1ef0 into main"
+[2025-09-08T21:33:46.562Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-1ef0
+[2025-09-08T21:33:46.562Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-1ef0
+[2025-09-08T21:33:46.562Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-1f63
+[2025-09-08T21:33:46.562Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-1f63: git fetch origin cursor/fix-netlify-build-and-merge-to-main-1f63
+[2025-09-08T21:33:46.897Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-1f63
+[2025-09-08T21:33:46.898Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-1f63: git merge origin/cursor/fix-netlify-build-and-merge-to-main-1f63 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-1f63 into main"
+[2025-09-08T21:33:47.325Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-1f63
+[2025-09-08T21:33:47.325Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-1f63
+[2025-09-08T21:33:47.325Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-2209
+[2025-09-08T21:33:47.325Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-2209: git fetch origin cursor/fix-netlify-build-and-merge-to-main-2209
+[2025-09-08T21:33:47.665Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-2209
+[2025-09-08T21:33:47.665Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-2209: git merge origin/cursor/fix-netlify-build-and-merge-to-main-2209 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-2209 into main"
+[2025-09-08T21:33:48.111Z] ✅ Success: Merge cursor/fix-netlify-build-and-merge-to-main-2209
+[2025-09-08T21:33:48.111Z] ✅ Successfully merged: cursor/fix-netlify-build-and-merge-to-main-2209
+[2025-09-08T21:33:49.113Z] 📦 Processing batch 304/509
+[2025-09-08T21:33:49.113Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-22dc
+[2025-09-08T21:33:49.113Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-22dc: git fetch origin cursor/fix-netlify-build-and-merge-to-main-22dc
+[2025-09-08T21:33:49.222Z] ❌ Error in Fetch origin/cursor/fix-netlify-build-and-merge-to-main-22dc: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-22dc
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-22dc
+
+[2025-09-08T21:33:49.222Z] ❌ Failed to merge cursor/fix-netlify-build-and-merge-to-main-22dc: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-22dc
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-22dc
+
+[2025-09-08T21:33:49.222Z] 🔧 Attempting to resolve conflicts for: cursor/fix-netlify-build-and-merge-to-main-22dc
+[2025-09-08T21:33:49.222Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:33:49.282Z] ✅ Success: Get git status
+[2025-09-08T21:33:49.282Z] 📄 Found 0 conflicted files
+[2025-09-08T21:33:49.282Z] 🚀 Add resolved files: git add .
