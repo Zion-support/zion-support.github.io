@@ -2,16 +2,39 @@ import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { SERVICES } from "@/data/servicesData";
 import { TrustedBySection } from "@/components/TrustedBySection";
+<<<<<<< HEAD
 // import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
 // import { Button } from "@/components/ui/button";
+=======
+<<<<<<< HEAD
+import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
+import { Button } from "@/components/ui/button";
+=======
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
+// import { Button } from "@/components/ui/button";
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 
 import useSWR from 'swr';
+<<<<<<< HEAD
 // import { captureException } from "@/utils/sentry";
 // import { captureException } from "@/utils/monitoring/sentry.client";
 import { SkeletonCard } from '@/components/ui';
 // import { useDelayedError } from '@/hooks/useDelayedError';
+=======
+<<<<<<< HEAD
+import { captureException } from "@/utils/sentry";
+import { SkeletonCard } from '@/components/ui';
+import { useDelayedError } from '@/hooks/useDelayedError';
+=======
+// import { captureException } from "@/utils/sentry";
+// import { captureException } from "@/utils/monitoring/sentry.client";
+import { SkeletonCard } from '@/components/ui';
+// import { useDelayedError } from '@/hooks/useDelayedError';
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 
 // Filter options specific to services
 const SERVICE_FILTERS = [
@@ -31,8 +54,17 @@ async function fetchServices(): Promise<ProductListing[]> {
     }
     return (await res.json()) as ProductListing[];
   } catch (err) {
+<<<<<<< HEAD
     // captureException(err);
     console.error('Error fetching services:', err);
+=======
+<<<<<<< HEAD
+    captureException(err);
+=======
+    // captureException(err);
+    console.error('Error fetching services:', err);
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     throw err;
   }
 }
@@ -46,8 +78,17 @@ export default function ServicesPage() {
       revalidateOnFocus: false,
     }
   );
+<<<<<<< HEAD
   // const delayedError = useDelayedError(error);
   const delayedError = error; // Temporary fallback
+=======
+<<<<<<< HEAD
+  const delayedError = useDelayedError(error);
+=======
+  // const delayedError = useDelayedError(error);
+  const delayedError = error; // Temporary fallback
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 
   const listings = data || SERVICES;
 
@@ -69,23 +110,65 @@ export default function ServicesPage() {
     return (
       <div data-testid="error-state" className="py-12 text-center space-y-4">
         <p className="text-red-400">Failed to load services. {delayedError?.message}</p>
+<<<<<<< HEAD
         {/* <Button data-testid="retry-button" onClick={() => mutate()}>
           Retry
+=======
+<<<<<<< HEAD
+        <Button data-testid="retry-button" onClick={() => mutate()}>
+          Retry
+        </Button>
+=======
+        {/* <Button data-testid="retry-button" onClick={() => mutate()}>
+          Retry
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         </Button> */}
         <button data-testid="retry-button" onClick={() => mutate()} className="bg-blue-600 text-white py-2 px-4 rounded">
           Retry
         </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       </div>
     );
   }
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <ErrorBoundary>
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     <>
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
             <Link to="/it-onsite-services">
+<<<<<<< HEAD
+              {/* <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+=======
+<<<<<<< HEAD
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </Button> */}
+              <button className="border border-zion-purple text-zion-cyan hover:bg-zion-purple/10 py-2 px-4 rounded flex items-center">
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </button>
+            </Link>
+            <Link to="/request-quote">
+              {/* <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                Request a Quote
+<<<<<<< HEAD
+=======
+              </Button>
+=======
               {/* <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
@@ -98,10 +181,15 @@ export default function ServicesPage() {
             <Link to="/request-quote">
               {/* <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
               </Button> */}
               <button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-2 px-4 rounded">
                 Request a Quote
               </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
             </Link>
           </div>
         </div>
@@ -123,5 +211,12 @@ export default function ServicesPage() {
       </div>
       <TrustedBySection />
     </>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </ErrorBoundary>
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   );
 }

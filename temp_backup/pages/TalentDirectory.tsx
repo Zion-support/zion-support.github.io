@@ -1,6 +1,32 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
+import { FilterSidebar } from "@/components/search/FilterSidebar";
+=======
+<<<<<<< HEAD
+import { FilterSidebar } from "@/components/talent/FilterSidebar";
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+import { TalentResults } from "@/components/talent/TalentResults";
+// import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
+// import { ErrorBanner } from "@/components/talent/ErrorBanner";
+// import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+import { useTalentDirectory } from "@/hooks/useTalentDirectory";
+import { SORT_OPTIONS } from "@/data/sortOptions";
+import { X } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+import { TalentProfile } from "@/types/talent";
+<<<<<<< HEAD
+=======
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationButton,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+=======
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { TalentResults } from "@/components/talent/TalentResults";
 // import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
@@ -11,6 +37,7 @@ import { SORT_OPTIONS } from "@/data/sortOptions";
 import { X } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 // import {
 //   Pagination,
 //   PaginationContent,
@@ -19,6 +46,10 @@ import { TalentProfile } from "@/types/talent";
 //   PaginationNext,
 //   PaginationPrevious,
 // } from "@/components/ui/pagination";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 
 export default function TalentDirectory() {
   const navigate = useNavigate();
@@ -80,10 +111,20 @@ export default function TalentDirectory() {
   if (isLoading) {
     return (
       <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <TalentSkeleton />
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         {/* <TalentSkeleton /> */}
         <div className="text-center py-8">
           <p className="text-muted-foreground">Loading talent profiles...</p>
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       </div>
     );
   }
@@ -91,10 +132,20 @@ export default function TalentDirectory() {
   if (error) {
     return (
       <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <ErrorBanner msg="Unable to load talent profiles." />
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         {/* <ErrorBanner msg="Unable to load talent profiles." /> */}
         <div className="text-center py-8">
           <p className="text-red-500">Unable to load talent profiles.</p>
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       </div>
     );
   }
@@ -136,12 +187,26 @@ export default function TalentDirectory() {
             
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
+<<<<<<< HEAD
               {/* <Button
+=======
+<<<<<<< HEAD
+              <Button
+=======
+              {/* <Button
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                 onClick={() => setIsMobileFilterOpen(true)}
                 variant="outline"
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
               >
                 Filter & Sort
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              </Button>
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
               </Button> */}
               <button
                 onClick={() => setIsMobileFilterOpen(true)}
@@ -149,11 +214,23 @@ export default function TalentDirectory() {
               >
                 Filter & Sort
               </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
             </div>
             
             {/* Results and Pagination Wrapper for ErrorBoundary */}
             <div className="flex-1"> {/* Added a wrapper div to contain Results and Pagination */}
+<<<<<<< HEAD
               {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}> */}
+=======
+<<<<<<< HEAD
+              <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}>
+=======
+              {/* <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load talent content. Please try again later.</p>}> */}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                 <TalentResults
                   talents={paginatedTalents}
                   totalCount={filteredTalents.length}
@@ -178,7 +255,15 @@ export default function TalentDirectory() {
 
                 {totalPages > 1 && (
                   <div className="mt-6">
+<<<<<<< HEAD
                     {/* <Pagination className="justify-center">
+=======
+<<<<<<< HEAD
+                    <Pagination className="justify-center">
+=======
+                    {/* <Pagination className="justify-center">
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                       <PaginationContent>
                         <PaginationItem>
                           <PaginationPrevious
@@ -211,6 +296,7 @@ export default function TalentDirectory() {
                           />
                         </PaginationItem>
                       </PaginationContent>
+<<<<<<< HEAD
                     </Pagination> */}
                     
                     <div className="flex justify-center space-x-2">
@@ -241,6 +327,45 @@ export default function TalentDirectory() {
                   </div>
                 )}
               {/* </ErrorBoundary> */}
+=======
+<<<<<<< HEAD
+                    </Pagination>
+                  </div>
+                )}
+              </ErrorBoundary>
+=======
+                    </Pagination> */}
+                    
+                    <div className="flex justify-center space-x-2">
+                      <button
+                        onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 border rounded disabled:opacity-50"
+                      >
+                        Previous
+                      </button>
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <button
+                          key={page}
+                          onClick={() => setCurrentPage(page)}
+                          className={`px-3 py-1 border rounded ${page === currentPage ? 'bg-blue-600 text-white' : ''}`}
+                        >
+                          {page}
+                        </button>
+                      ))}
+                      <button
+                        onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 border rounded disabled:opacity-50"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                )}
+              {/* </ErrorBoundary> */}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
             </div>
             
             {/* Mobile filter sidebar */}
@@ -249,7 +374,15 @@ export default function TalentDirectory() {
                 <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-bold text-white">Filter & Sort</h3>
+<<<<<<< HEAD
                     {/* <Button
+=======
+<<<<<<< HEAD
+                    <Button
+=======
+                    {/* <Button
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                       variant="ghost"
                       size="sm"
                       onClick={() => setIsMobileFilterOpen(false)}
@@ -257,6 +390,12 @@ export default function TalentDirectory() {
                     >
                       <X className="h-4 w-4" />
                       <span className="sr-only">Close</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </Button>
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                     </Button> */}
                     <button
                       onClick={() => setIsMobileFilterOpen(false)}
@@ -265,6 +404,10 @@ export default function TalentDirectory() {
                       <X className="h-4 w-4" />
                       <span className="sr-only">Close</span>
                     </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                   </div>
                   <FilterSidebar
                     searchTerm={searchTerm}

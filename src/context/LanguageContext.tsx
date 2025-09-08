@@ -37,10 +37,17 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
+<<<<<<< HEAD
   authState = { isAuthenticated: false, _user: null } 
 }) => {
   const { _i18n } = useTranslation();
   const { _isAuthenticated, _user } = authState;
+=======
+  authState = { isAuthenticated: false, user: null } 
+}) => {
+  const { i18n } = useTranslation();
+  const { isAuthenticated, user } = authState;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
   );
@@ -69,7 +76,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     }
   }, [currentLanguage, i18n]);
 
+<<<<<<< HEAD
   const changeLanguage = async (_lang: SupportedLanguage) => {
+=======
+  const changeLanguage = async (lang: SupportedLanguage) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     try {
       await i18n.changeLanguage(lang);
       setCurrentLanguage(lang);

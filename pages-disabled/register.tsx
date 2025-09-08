@@ -2,10 +2,24 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
+<<<<<<< HEAD
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
+=======
+<<<<<<< HEAD
+export default function RegisterPage() {}
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [formData, setFormData] = useState({})
+=======
+export default function RegisterPage() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [formData, setFormData] = useState({
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     firstName: '',
     lastName: '',
     email: '',
@@ -13,14 +27,60 @@ export default function RegisterPage() {
     confirmPassword: '',
     company: '',
     agreeToTerms: false,
+<<<<<<< HEAD
     subscribeNewsletter: false
   });
 
   const [passwordRequirements, setPasswordRequirements] = useState({
+=======
+<<<<<<< HEAD
+    subscribeNewsletter: false;
+  }
+});
+
+  const [passwordRequirements, setPasswordRequirements] = useState({})
+=======
+    subscribeNewsletter: false
+  });
+
+  const [passwordRequirements, setPasswordRequirements] = useState({
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     length: false,
     uppercase: false,
     lowercase: false,
     number: false,
+<<<<<<< HEAD
+    special: false
+  });
+=======
+<<<<<<< HEAD
+    special: false;
+  }
+});
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle registration logic here
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+
+<<<<<<< HEAD
+    // Check password requirements
+    if (name === 'password') {
+      setPasswordRequirements({
+=======
+    // Check password requirements;
+    if (name === 'password') {}
+      setPasswordRequirements({})
+=======
     special: false
   });
 
@@ -39,13 +99,28 @@ export default function RegisterPage() {
     // Check password requirements
     if (name === 'password') {
       setPasswordRequirements({
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         length: value.length >= 8,
         uppercase: /[A-Z]/.test(value),
         lowercase: /[a-z]/.test(value),
         number: /\d/.test(value),
+<<<<<<< HEAD
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
       });
     }
+=======
+<<<<<<< HEAD
+        special: /[!@#$%^&*(),.?":{}|<>]/.test(value);
+      }
+});
+    };
+=======
+        special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
+      });
+    }
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   };
 
   const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
@@ -54,24 +129,66 @@ export default function RegisterPage() {
                      formData.password === formData.confirmPassword && 
                      isPasswordValid && formData.agreeToTerms;
 
+<<<<<<< HEAD
   return (
     <Layout
+=======
+<<<<<<< HEAD
+  return ()
+    <Layout;
+=======
+  return (
+    <Layout
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       title="Register - Zion Tech Group"
       description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources."
       keywords="register, sign up, create account, Zion Tech Group, new user"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }};
+            animate={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.6 }};
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
             className="text-center"
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <h2 className="mt-6 text-3xl font-bold text-white">
+<<<<<<< HEAD
+              Create your account
+=======
+<<<<<<< HEAD
+              Create your account;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+            </h2>
+            <p className="mt-2 text-sm text-gray-300">
+              Join Zion Tech Group and start your digital transformation journey
+            </p>
+          </motion.div>
+
+<<<<<<< HEAD
+=======
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }};
+            animate={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.6, delay: 0.2 }};
+=======
               Create your account
             </h2>
             <p className="mt-2 text-sm text-gray-300">
@@ -79,22 +196,36 @@ export default function RegisterPage() {
             </p>
           </motion.div>
 
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
                     First name
+=======
+<<<<<<< HEAD
+                    First name;
+=======
+                    First name
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <User className="h-5 w-5 text-gray-400" />
                     </div>
+<<<<<<< HEAD
                     <input
                       id="firstName"
                       name="firstName"
@@ -102,6 +233,25 @@ export default function RegisterPage() {
                       required
                       value={formData.firstName}
                       onChange={handleChange}
+=======
+<<<<<<< HEAD
+                    <input;
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required;
+                      value={formData.firstName};
+                      onChange={handleChange};
+=======
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
                     />
@@ -110,6 +260,26 @@ export default function RegisterPage() {
 
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
+                    Last name
+=======
+<<<<<<< HEAD
+                    Last name;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                  </label>
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+<<<<<<< HEAD
+                    required
+                    value={formData.lastName}
+                    onChange={handleChange}
+=======
+                    required;
+                    value={formData.lastName};
+                    onChange={handleChange};
+=======
                     Last name
                   </label>
                   <input
@@ -119,6 +289,8 @@ export default function RegisterPage() {
                     required
                     value={formData.lastName}
                     onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
                   />
@@ -127,20 +299,48 @@ export default function RegisterPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
                   Email address
+=======
+<<<<<<< HEAD
+                  Email address;
+=======
+                  Email address
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
+<<<<<<< HEAD
                   <input
+=======
+<<<<<<< HEAD
+                  <input;
+=======
+                  <input
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                     id="email"
                     name="email"
                     type="email"
                     autoComplete="email"
+<<<<<<< HEAD
                     required
                     value={formData.email}
                     onChange={handleChange}
+=======
+<<<<<<< HEAD
+                    required;
+                    value={formData.email};
+                    onChange={handleChange};
+=======
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
@@ -149,6 +349,24 @@ export default function RegisterPage() {
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
+                  Company (optional)
+=======
+<<<<<<< HEAD
+                  Company (optional);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+<<<<<<< HEAD
+                  value={formData.company}
+                  onChange={handleChange}
+=======
+                  value={formData.company};
+                  onChange={handleChange};
+=======
                   Company (optional)
                 </label>
                 <input
@@ -157,6 +375,8 @@ export default function RegisterPage() {
                   type="text"
                   value={formData.company}
                   onChange={handleChange}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 />
@@ -164,12 +384,67 @@ export default function RegisterPage() {
 
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
                   Password
+=======
+<<<<<<< HEAD
+                  Password;
+=======
+                  Password
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
+<<<<<<< HEAD
+                  <input
+=======
+<<<<<<< HEAD
+                  <input;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                    id="password"
+                    name="password"
+                    type={showPassword ? 'text' : 'password'}
+                    autoComplete="new-password"
+                    required
+                    value={formData.password}
+                    onChange={handleChange}
+                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Create a password"
+                  />
+                  <button
+                    type="button"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? (
+                      <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />
+                    ) : (
+                      <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />
+                    )}
+                  </button>
+                </div>
+
+                {/* Password Requirements */}
+                <div className="mt-2 space-y-1">
+                  {Object.entries(passwordRequirements).map(([key, isValid]) => (
+                    <div key={key} className="flex items-center text-xs">
+                      <Check className={`h-3 w-3 mr-2 ${isValid ? 'text-green-400' : 'text-gray-500'}`} />
+                      <span className={isValid ? 'text-green-400' : 'text-gray-400'}>
+                        {key === 'length' && 'At least 8 characters'}
+                        {key === 'uppercase' && 'One uppercase letter'}
+                        {key === 'lowercase' && 'One lowercase letter'}
+                        {key === 'number' && 'One number'}
+                        {key === 'special' && 'One special character'}
+                      </span>
+                    </div>
+<<<<<<< HEAD
+                  ))}
+=======
+                  ))};
+=======
                   <input
                     id="password"
                     name="password"
@@ -208,17 +483,62 @@ export default function RegisterPage() {
                       </span>
                     </div>
                   ))}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                 </div>
               </div>
 
               <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
                   Confirm password
+=======
+<<<<<<< HEAD
+                  Confirm password;
+=======
+                  Confirm password
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
+<<<<<<< HEAD
+                  <input
+=======
+<<<<<<< HEAD
+                  <input;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    type={showConfirmPassword ? 'text' : 'password'}
+                    autoComplete="new-password"
+                    required
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Confirm your password"
+                  />
+                  <button
+                    type="button"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  >
+                    {showConfirmPassword ? (
+                      <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />
+                    ) : (
+                      <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />
+                    )}
+                  </button>
+                </div>
+                {formData.confirmPassword && formData.password !== formData.confirmPassword && (
+                  <p className="mt-1 text-xs text-red-400">Passwords do not match</p>
+<<<<<<< HEAD
+                )}
+=======
+                )};
+=======
                   <input
                     id="confirmPassword"
                     name="confirmPassword"
@@ -245,10 +565,38 @@ export default function RegisterPage() {
                 {formData.confirmPassword && formData.password !== formData.confirmPassword && (
                   <p className="mt-1 text-xs text-red-400">Passwords do not match</p>
                 )}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-center">
+<<<<<<< HEAD
+                  <input
+=======
+<<<<<<< HEAD
+                  <input;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                    id="agreeToTerms"
+                    name="agreeToTerms"
+                    type="checkbox"
+                    required
+                    checked={formData.agreeToTerms}
+                    onChange={handleChange}
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 rounded bg-white/10"
+                  />
+                  <label htmlFor="agreeToTerms" className="ml-2 block text-sm text-gray-300">
+                    I agree to the{' '}
+                    <Link href="/terms" className="text-blue-400 hover:text-blue-300">
+                      Terms of Service
+                    </Link>{' '}
+                    and{' '}
+                    <Link href="/privacy" className="text-blue-400 hover:text-blue-300">
+<<<<<<< HEAD
+                      Privacy Policy
+=======
+                      Privacy Policy;
+=======
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -266,11 +614,32 @@ export default function RegisterPage() {
                     and{' '}
                     <Link href="/privacy" className="text-blue-400 hover:text-blue-300">
                       Privacy Policy
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                     </Link>
                   </label>
                 </div>
 
                 <div className="flex items-center">
+<<<<<<< HEAD
+                  <input
+=======
+<<<<<<< HEAD
+                  <input;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                    id="subscribeNewsletter"
+                    name="subscribeNewsletter"
+                    type="checkbox"
+                    checked={formData.subscribeNewsletter}
+                    onChange={handleChange}
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 rounded bg-white/10"
+                  />
+                  <label htmlFor="subscribeNewsletter" className="ml-2 block text-sm text-gray-300">
+<<<<<<< HEAD
+                    Subscribe to our newsletter for updates and insights
+=======
+                    Subscribe to our newsletter for updates and insights;
+=======
                   <input
                     id="subscribeNewsletter"
                     name="subscribeNewsletter"
@@ -281,31 +650,71 @@ export default function RegisterPage() {
                   />
                   <label htmlFor="subscribeNewsletter" className="ml-2 block text-sm text-gray-300">
                     Subscribe to our newsletter for updates and insights
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                   </label>
                 </div>
               </div>
 
               <div>
+<<<<<<< HEAD
                 <button
                   type="submit"
                   disabled={!isFormValid}
+=======
+<<<<<<< HEAD
+                <button;
+                  type="submit"
+                  disabled={!isFormValid};
+=======
+                <button
+                  type="submit"
+                  disabled={!isFormValid}
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                   className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
+<<<<<<< HEAD
                   Create account
+=======
+<<<<<<< HEAD
+                  Create account;
+=======
+                  Create account
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                 </button>
               </div>
 
               <div className="text-center">
                 <p className="text-sm text-gray-300">
+<<<<<<< HEAD
                   Already have an account?{' '}
                   <Link
                     href="/login"
                     className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     Sign in here
+=======
+<<<<<<< HEAD
+                  Already have an account?{' '};
+                  <Link;
+                    href="/login"
+                    className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    Sign in here;
+=======
+                  Already have an account?{' '}
+                  <Link
+                    href="/login"
+                    className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    Sign in here
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
                   </Link>
                 </p>
               </div>

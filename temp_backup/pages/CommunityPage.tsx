@@ -3,7 +3,15 @@ import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
 // import ForumCategories from "@/components/community/ForumCategories";
+=======
+<<<<<<< HEAD
+import ForumCategories from "@/components/community/ForumCategories";
+=======
+// import ForumCategories from "@/components/community/ForumCategories";
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
@@ -119,7 +127,15 @@ export default function CommunityPage() {
           <CreatePostButton />
         </div>
         
+<<<<<<< HEAD
         {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+=======
+<<<<<<< HEAD
+        <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+=======
+        {/* <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
@@ -127,9 +143,19 @@ export default function CommunityPage() {
           </TabsList>
           
           <TabsContent value="categories">
+<<<<<<< HEAD
             <div className="text-center py-8">
               <p className="text-muted-foreground">Forum categories coming soon...</p>
             </div>
+=======
+<<<<<<< HEAD
+            <ForumCategories />
+=======
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">Forum categories coming soon...</p>
+            </div>
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
           </TabsContent>
           
           <TabsContent value="featured">
@@ -147,6 +173,12 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </Tabs>
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         </Tabs> */}
         
         <div className="mb-8">
@@ -193,6 +225,10 @@ export default function CommunityPage() {
             </div>
           )}
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       </div>
     </>
   );

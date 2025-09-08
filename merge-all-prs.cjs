@@ -144,10 +144,17 @@ function fixSyntaxAndConflicts() {
       let originalContent = content;
       
       // Remove merge conflict markers
+<<<<<<< HEAD
       content = content.replace(/[\s\S]*?
       content = content.replace(/
       content = content.replace(/[\s\S]*?
       content = content.replace(/
+=======
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       
       // Fix import statements
       content = content.replace(/import React from "react",/g, 'import React from "react";');

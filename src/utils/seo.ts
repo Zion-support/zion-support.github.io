@@ -24,7 +24,11 @@ export interface SEOData {
 export interface StructuredData {
   '@context': string;
   '@type': string;
+<<<<<<< HEAD
   [key: string]: unknown;
+=======
+  [key: string]: any;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 }
 
 // Generate meta tags for SEO
@@ -378,7 +382,11 @@ export const trackSEOMetrics = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
+<<<<<<< HEAD
           // console.log('FCP:', entry.startTime);
+=======
+          console.log('FCP:', entry.startTime);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         }
       });
     }).observe({ entryTypes: ['paint'] });
@@ -387,19 +395,31 @@ export const trackSEOMetrics = () => {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
+<<<<<<< HEAD
       // console.log('LCP:', lastEntry.startTime);
+=======
+      console.log('LCP:', lastEntry.startTime);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
+<<<<<<< HEAD
       entries.forEach((entry: unknown) => {
+=======
+      entries.forEach((entry: any) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
+<<<<<<< HEAD
       // console.log('CLS:', clsValue);
+=======
+      console.log('CLS:', clsValue);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }).observe({ entryTypes: ['layout-shift'] });
   };
 

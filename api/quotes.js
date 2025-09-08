@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -38,6 +45,12 @@ async function handler() { return null; }
   try {
     const { name, email, phone, details, country, service } = req.body || {};
     if (!name || !email || !phone || !details) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       res.statusCode = 400;
       res.json({ error: 'Missing required fields' });
       return;
@@ -50,6 +63,10 @@ async function handler() { return null; }
   } catch (err) {
     console.error('Quote submission error:', err);
     res.statusCode = 500;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     res.json({ error: err.message || 'Quote submission failed' });
   }
 }

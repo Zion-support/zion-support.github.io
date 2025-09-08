@@ -26,9 +26,15 @@ export const sanitizeHTML = (html: string): string => {
 
 export const sanitizeInput = (input: string): string => {
   return input
+<<<<<<< HEAD
     .replace(/[<>]/g, '')
     .replace(/javascript:/gi, '')
     .replace(/on\w+=/gi, '')
+=======
+    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/on\w+=/gi, '') // Remove event handlers
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     .trim();
 };
 
@@ -150,7 +156,11 @@ class RateLimiter {
 }
 
 // Security Headers
+<<<<<<< HEAD
 export const setSecurityHeaders = (_config: SecurityConfig) => {
+=======
+export const setSecurityHeaders = (config: SecurityConfig) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   if (typeof window === 'undefined') return;
 
   // Set meta tags for security
@@ -184,17 +194,26 @@ export const validateFormData = (data: Record<string, any>, schema: Record<strin
     const rules = schema[field];
 
     if (rules.required && (!value || value.toString().trim() === '')) {
+<<<<<<< HEAD
       errors[field] = `${_field} is required`;
+=======
+      errors[field] = `${field} is required`;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       return;
     }
 
     if (value && rules.type) {
       if (!validateInput(value.toString(), rules.type)) {
+<<<<<<< HEAD
         errors[field] = `${_field} must be a valid ${rules.type}`;
+=======
+        errors[field] = `${field} must be a valid ${rules.type}`;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       }
     }
 
     if (value && rules.minLength && value.toString().length < rules.minLength) {
+<<<<<<< HEAD
       errors[field] = `${_field} must be at least ${rules.minLength} characters`;
     }
 
@@ -204,6 +223,17 @@ export const validateFormData = (data: Record<string, any>, schema: Record<strin
 
     if (value && rules.pattern && !rules.pattern.test(value.toString())) {
       errors[field] = `${_field} format is invalid`;
+=======
+      errors[field] = `${field} must be at least ${rules.minLength} characters`;
+    }
+
+    if (value && rules.maxLength && value.toString().length > rules.maxLength) {
+      errors[field] = `${field} must be no more than ${rules.maxLength} characters`;
+    }
+
+    if (value && rules.pattern && !rules.pattern.test(value.toString())) {
+      errors[field] = `${field} format is invalid`;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }
   });
 
@@ -220,7 +250,11 @@ export const secureStorage = {
       const encrypted = btoa(encodeURIComponent(value));
       localStorage.setItem(key, encrypted);
     } catch (error) {
+<<<<<<< HEAD
       // console.error('Failed to store item securely:', error);
+=======
+      console.error('Failed to store item securely:', error);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }
   },
 
@@ -230,7 +264,11 @@ export const secureStorage = {
       if (!encrypted) return null;
       return decodeURIComponent(atob(encrypted));
     } catch (error) {
+<<<<<<< HEAD
       // console.error('Failed to retrieve item securely:', error);
+=======
+      console.error('Failed to retrieve item securely:', error);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       return null;
     }
   },
@@ -327,7 +365,11 @@ export const validateFileUpload = (file: File, options: {
 
   const extension = file.name.split('.').pop()?.toLowerCase();
   if (!extension || !options.allowedExtensions.includes(extension)) {
+<<<<<<< HEAD
     return { isValid: false, _error: 'File extension not allowed' };
+=======
+    return { isValid: false, error: 'File extension not allowed' };
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   }
 
   return { isValid: true };
@@ -366,6 +408,7 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
       rateLimitWindow: 60000,
       rateLimitMaxRequests: 100,
       ...config,
+<<<<<<< HEAD
     } as SecurityConfig);
   }, [config]);
 
@@ -374,6 +417,16 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
   }, [rateLimiter]);
 
   const getRemainingRequests = React.useCallback((_identifier: string) => {
+=======
+    });
+  }, [config]);
+
+  const checkRateLimit = React.useCallback((identifier: string) => {
+    return rateLimiter.isAllowed(identifier);
+  }, [rateLimiter]);
+
+  const getRemainingRequests = React.useCallback((identifier: string) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     return rateLimiter.getRemainingRequests(identifier);
   }, [rateLimiter]);
 
@@ -390,18 +443,30 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
 
 // Security Context
 export const SecurityContext = React.createContext<{
+<<<<<<< HEAD
   _checkRateLimit: (identifier: string) => boolean;
   _getRemainingRequests: (identifier: string) => number;
   validateInput: (input: string, _type: 'email' | 'url' | 'text' | 'number') => boolean;
   _sanitizeInput: (input: string) => string;
   _validatePassword: (password: string) => { _isValid: boolean; score: number; feedback: string[] };
+=======
+  checkRateLimit: (identifier: string) => boolean;
+  getRemainingRequests: (identifier: string) => number;
+  validateInput: (input: string, type: 'email' | 'url' | 'text' | 'number') => boolean;
+  sanitizeInput: (input: string) => string;
+  validatePassword: (password: string) => { isValid: boolean; score: number; feedback: string[] };
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   generateCSRFToken: () => string;
   secureStorage: typeof secureStorage;
 } | null>(null);
 
 export const SecurityProvider: React.FC<{ children: React.ReactNode; config?: Partial<SecurityConfig> }> = ({ 
   children, 
+<<<<<<< HEAD
   _config 
+=======
+  config 
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 }) => {
   const security = useSecurity(config);
   

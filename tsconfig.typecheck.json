@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": true,
+<<<<<<< HEAD
     "skipLibCheck": true,
     "incremental": false,
     "composite": false,
@@ -10,6 +11,25 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx"
+=======
+<<<<<<< HEAD
+    "skipLibCheck": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx"
+=======
+    "skipLibCheck": true,
+    "incremental": false,
+    "composite": false,
+    "tsBuildInfoFile": ".tsbuildinfo.typecheck"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   ],
   "exclude": [
     "node_modules",
@@ -40,8 +60,17 @@
     "data/**",
     "pages/**",
     "app/**",
+<<<<<<< HEAD
     "vite.config-backup.ts",
     "zion-os/**"
+=======
+<<<<<<< HEAD
+    "vite.config-backup.ts"
+=======
+    "vite.config-backup.ts",
+    "zion-os/**"
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   ]
 }
 

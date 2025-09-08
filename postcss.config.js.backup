@@ -1,6 +1,14 @@
 module.exports = {
   plugins: {
+<<<<<<< HEAD
     '@tailwindcss/postcss': {},
+=======
+<<<<<<< HEAD
+    tailwindcss: {},
+=======
+    '@tailwindcss/postcss': {},
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     autoprefixer: {},
   },
 }

@@ -75,7 +75,15 @@ Important Constraints: ${optimizationInstructions}
   try {
     // The model gpt-3.5-turbo-1106 with response_format: { type: 'json_object' } should return a valid JSON string.
     return JSON.parse(content);
+<<<<<<< HEAD
   } catch {
+=======
+<<<<<<< HEAD
+  } catch (e) {
+=======
+  } catch {
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     console.error('Failed to parse GPT JSON response:', content);
     throw new Error('Failed to parse team structure from AI response. The response was not valid JSON.');
   }

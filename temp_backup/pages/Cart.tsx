@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
+<<<<<<< HEAD
 // import { Button } from '@/components/ui/button';
+=======
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button';
+=======
+// import { Button } from '@/components/ui/button';
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 import { useNavigate } from 'react-router-dom';
 
 interface CartItem {
@@ -69,12 +77,26 @@ export default function CartPage() {
                 onChange={e => updateQuantity(item.id, parseInt(e.target.value || '1', 10))}
                 className="w-16 bg-transparent border border-input rounded p-1 text-center"
               />
+<<<<<<< HEAD
               {/* <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove
+=======
+<<<<<<< HEAD
+              <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
+                Remove
+              </Button>
+=======
+              {/* <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
+                Remove
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
               </Button> */}
               <button className="border border-gray-300 px-3 py-1 rounded text-sm" onClick={() => removeItem(item.id)}>
                 Remove
               </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
             </div>
           </li>
         ))}
@@ -83,12 +105,26 @@ export default function CartPage() {
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
+<<<<<<< HEAD
       {/* <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
         Checkout
+=======
+<<<<<<< HEAD
+      <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
+        Checkout
+      </Button>
+=======
+      {/* <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
+        Checkout
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       </Button> */}
       <button className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded" onClick={() => navigate('/checkout')}>
         Checkout
       </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     </div>
   );
 }

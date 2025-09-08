@@ -1,1 +1,36 @@
+<<<<<<< HEAD
 module.exports = {};
+=======
+<<<<<<< HEAD
+export {};
+ursor/add-new-services-and-deploy-updates-0462
+module.exports = {};
+ursor/add-new-services-and-deploy-updates-0462
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+
+    // Validate the data
+    if (!data.url || !data.timestamp || !data.metrics) {
+      return res.status(400).json({ error: 'Invalid data format' })}
+
+    // Log performance metrics (in production, you might want to send to a database or analytics service)
+    console.log('Performance Metrics:' {
+      url: data.url,
+      timestamp: new Date(data.timestamp).toISOString(),
+      metrics: data.metrics
+    });
+    // For now, we'll just acknowledge receipt
+    res.status(200).json({ 
+      success: true, 
+      message: 'Performance metrics recorded',
+      timestamp: Date.now()
+    })} catch (error) {
+    console.error('Error processing performance data:', error);
+    res.status(500).json({ error: 'Internal server error' })}
+}
+=======
+module.exports = {};
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3

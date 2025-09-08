@@ -31,7 +31,11 @@ export const LazyAnalytics = lazy(() => import('../components/Analytics'));
 export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceMonitor'));
 
 // Utility function to preload components
+<<<<<<< HEAD
 export const preloadComponent = (importFn: () => Promise<unknown>) => {
+=======
+export const preloadComponent = (importFn: () => Promise<any>) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   const link = document.createElement('link');
   link.rel = 'preload';
   link.as = 'script';

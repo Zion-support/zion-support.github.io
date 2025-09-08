@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 /**
  * Performance monitoring utilities
  * Tracks Core Web Vitals and provides performance insights
@@ -48,7 +51,11 @@ class PerformanceMonitor {
       fcpObserver.observe({ entryTypes: ['paint'] });
       this.observers.push(fcpObserver);
     } catch (e) {
+<<<<<<< HEAD
       // console.warn('FCP observer not supported:', e);
+=======
+      console.warn('FCP observer not supported:', e);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }
 
     // LCP Observer
@@ -61,21 +68,33 @@ class PerformanceMonitor {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(lcpObserver);
     } catch (e) {
+<<<<<<< HEAD
       // console.warn('LCP observer not supported:', e);
+=======
+      console.warn('LCP observer not supported:', e);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }
 
     // FID Observer
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
+=======
+        entries.forEach((entry: any) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       this.observers.push(fidObserver);
     } catch (e) {
+<<<<<<< HEAD
       // console.warn('FID observer not supported:', e);
+=======
+      console.warn('FID observer not supported:', e);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }
 
     // CLS Observer
@@ -83,7 +102,11 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
+=======
+        entries.forEach((entry: any) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -93,7 +116,11 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (e) {
+<<<<<<< HEAD
       // console.warn('CLS observer not supported:', e);
+=======
+      console.warn('CLS observer not supported:', e);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }
 
     // TTFB Observer
@@ -108,7 +135,11 @@ class PerformanceMonitor {
       ttfbObserver.observe({ entryTypes: ['navigation'] });
       this.observers.push(ttfbObserver);
     } catch (e) {
+<<<<<<< HEAD
       // console.warn('TTFB observer not supported:', e);
+=======
+      console.warn('TTFB observer not supported:', e);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     }
 
     // Memory Observer
@@ -224,10 +255,17 @@ class PerformanceMonitor {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚀 Performance Report');
+<<<<<<< HEAD
       // console.log('Score:', report.score);
       // console.log('Metrics:', report.metrics);
       if (report.recommendations.length > 0) {
         // console.log('Recommendations:', report.recommendations);
+=======
+      console.log('Score:', report.score);
+      console.log('Metrics:', report.metrics);
+      if (report.recommendations.length > 0) {
+        console.log('Recommendations:', report.recommendations);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       }
       console.groupEnd();
     }
@@ -282,23 +320,39 @@ export const measurePerformance = async <T>(
   const result = await fn();
   const end = performance.now();
   
+<<<<<<< HEAD
   // console.log(`⏱️ ${name}: ${(end - start).toFixed(2)}ms`);
+=======
+  console.log(`⏱️ ${name}: ${(end - start).toFixed(2)}ms`);
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   
   return result;
 };
 
+<<<<<<< HEAD
 export const debounce = <T extends (...args: unknown[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
+=======
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
+<<<<<<< HEAD
 export const throttle = <T extends (...args: unknown[]) => any>(
+=======
+export const throttle = <T extends (...args: any[]) => any>(
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {

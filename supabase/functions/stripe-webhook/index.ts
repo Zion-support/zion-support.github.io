@@ -8,15 +8,34 @@ const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
 
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 
+<<<<<<< HEAD
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL') || '',
   Deno.env.get('SUPABASE_ANON_KEY') || ''
 );
+=======
+// const supabase = createClient(
+//   Deno.env.get('SUPABASE_URL') || '',
+//   Deno.env.get('SUPABASE_ANON_KEY') || ''
+// );
+>>>>>>> origin/main
 
 serve(async (req) => {
   if (req.method === 'POST') {
     const body = await req.text();
+<<<<<<< HEAD
     const signature = req.headers.get('stripe-signature') || '';
+=======
+<<<<<<< HEAD
+    const signature = req.headers.get('stripe-signature');
+    
+    if (!signature) {
+      return new Response('No signature provided', { status: 400 });
+    }
+=======
+    const signature = req.headers.get('stripe-signature') || '';
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 
     let event;
     try {

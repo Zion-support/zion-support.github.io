@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 const fs = require("fs");
 const path = require("path");
 
@@ -45,6 +52,13 @@ class AdvancedSourceFixer {
 
       ) {
         await this && this.fixFile(fullPath);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       }
       if (fixed && fixed.includes("export default")) {
         fixes && fixes.push("Added default export");
@@ -263,7 +277,17 @@ class AdvancedSourceFixer {}
       /Property or signature expected/,
       /Unexpected token/,'
       /'from' expected/,
+<<<<<<< HEAD
       /', ' expected/,      /';' expected/,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      /', ' expected/,      /';' expected/,
+<<<<<<< HEAD
+=======
+      /', ' expected/,      /';' expected/,
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 // Check condition
 if ( {) {
   $2

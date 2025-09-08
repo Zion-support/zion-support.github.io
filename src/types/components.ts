@@ -16,8 +16,18 @@ export interface LoadingSpinnerProps extends BaseComponentProps {
 }
 
 // Feature card props
+<<<<<<< HEAD
 export interface FeatureCardProps extends BaseComponentProps {
   id: string | number;
+=======
+<<<<<<< HEAD
+export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
+  id: number;
+=======
+export interface FeatureCardProps extends BaseComponentProps {
+  id: string | number;
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
   title: string;
   description: string;
   icon: ReactNode;

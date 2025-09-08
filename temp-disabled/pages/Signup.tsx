@@ -65,7 +65,15 @@ export default function Signup() {
       confirmPassword: "",
       termsAccepted: false,
     },
+<<<<<<< HEAD
   });
+=======
+<<<<<<< HEAD
+  }) as UseFormReturn<SignupFormValues>;
+=======
+  });
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 
   const passwordValue = form.watch("password");
 

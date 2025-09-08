@@ -1,9 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
+<<<<<<< HEAD
 // import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+import { getStripe } from '@/utils/getStripe';
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components/ui/form';
+=======
+// import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 // import { getStripe } from '@/utils/getStripe';
 // import {
 //   Form,
@@ -13,6 +33,10 @@ import { useNavigate } from 'react-router-dom';
 //   FormControl,
 //   FormMessage,
 // } from '@/components/ui/form';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 
 interface CartItem {
   id: string;
@@ -56,6 +80,23 @@ export default function CheckoutPage() {
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const stripe = await getStripe();
+      if (stripe && result.clientSecret) {
+        const payment = await stripe.confirmCardPayment(result.clientSecret, {
+          payment_method: {
+            card: { token: 'tok_visa' },
+            billing_details: { name: data.name, email: data.email },
+          },
+        });
+        if (payment.error) throw payment.error;
+        safeStorage.removeItem('cart');
+        navigate(`/orders/${result.id}`);
+      }
+=======
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       // const stripe = await getStripe();
       // const stripe = null; // Temporary fallback
       // if (stripe && result.clientSecret) {
@@ -72,6 +113,10 @@ export default function CheckoutPage() {
       // Temporary fallback - just clear cart and show success
       safeStorage.removeItem('cart');
       navigate('/orders/success');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     } catch (err) {
       console.error('Payment failed', err);
     }
@@ -81,7 +126,15 @@ export default function CheckoutPage() {
     <div className="container max-w-2xl py-10">
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <div className="grid gap-6">
+<<<<<<< HEAD
         {/* <Form {...form}>
+=======
+<<<<<<< HEAD
+        <Form {...form}>
+=======
+        {/* <Form {...form}>
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
@@ -133,11 +186,26 @@ export default function CheckoutPage() {
                 <span>Subtotal</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
+<<<<<<< HEAD
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
+=======
+<<<<<<< HEAD
+              <Button className="w-full" type="submit">
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+                Pay with Stripe (test)
+              </button>
+            </div>
+          </form>
+<<<<<<< HEAD
+=======
+        </Form>
+=======
               <button className="w-full bg-blue-600 text-white py-2 px-4 rounded" type="submit">
                 Pay with Stripe (test)
               </button>
             </div>
           </form>
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
         </Form> */}
         
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -171,6 +239,10 @@ export default function CheckoutPage() {
             </button>
           </div>
         </form>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
       </div>
     </div>
   );

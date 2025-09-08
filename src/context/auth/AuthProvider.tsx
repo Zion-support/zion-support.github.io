@@ -13,6 +13,16 @@ export interface AuthState {
   user: User | null;
   isLoading: boolean;
   error: string | null;
+<<<<<<< HEAD
+=======
+}
+
+export interface AuthContextType extends AuthState {
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+  register: (email: string, password: string, name?: string) => Promise<void>;
+  clearError: () => void;
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 }
 
 export interface AuthContextType extends AuthState {
@@ -72,7 +82,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     checkAuth();
   }, []);
 
+<<<<<<< HEAD
   const login = async (email: string, _password: string) => {
+=======
+  const login = async (email: string, password: string) => {
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
     
     try {
