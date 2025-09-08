@@ -6,16 +6,7 @@ import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { CheckoutShippingOptions, ShippingRate } from '@/components/CheckoutShippingOptions';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components/ui/form';
-
+import { apiClient } from '@/utils/apiClient';
 
 
 export default function Checkout() {
@@ -64,7 +55,7 @@ export default function Checkout() {
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const response = await fetch('/api/stripe/create-session', {
+      const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: total }),
