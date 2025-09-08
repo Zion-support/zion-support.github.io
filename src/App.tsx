@@ -6,6 +6,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Pages - Lazy loaded for better performance
@@ -39,6 +40,7 @@ function App() {
             <Router>
               <ScrollToTop />
               <PerformanceMonitor />
+              <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
               {/* SEO Meta Tags */}
               <Helmet>
                 <title>Zion Tech Group - AI, IT & Micro SaaS Solutions</title>
