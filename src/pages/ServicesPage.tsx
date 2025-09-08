@@ -1,44 +1,132 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Cpu, 
-  Cloud, 
-  Network, 
-  Code, 
-  Users, 
-  Target,
-  BarChart3,
-  Lock,
-  Database,
-  Globe,
-  Rocket,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Clock,
-  Award,
-  TrendingUp,
-  Heart,
-  Building,
-  ShoppingCart,
-  DollarSign,
-  Factory,
-  Car,
-  Plane,
-  Ship
-} from 'lucide-react';
-import SEOHead from "@/components/SEOHead";
-import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { SERVICES } from "@/data/servicesData";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Globe } from "lucide-react";
+import { useEffect, useState } from "react";
+import apiClient from "@/services/apiClient";
+import { toast } from "@/hooks/use-toast";
+
+
+function getRandomItem<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateRandomService(idNum: number): ProductListing {
+  const templates = [
+    {
+      title: "AI Automation Consulting",
+      category: "Consulting",
+      min: 4000,
+      max: 12000,
+      tags: ["Automation", "AI Strategy", "Optimization"],
+    },
+    {
+      title: "Cloud Migration & Support",
+      category: "Management",
+      min: 3000,
+      max: 9000,
+      tags: ["Cloud", "Migration", "DevOps"],
+    },
+    {
+      title: "Advanced Cybersecurity Suite",
+      category: "Security",
+      min: 5000,
+      max: 15000,
+      tags: ["Cybersecurity", "PenTesting", "Compliance"],
+    },
+    {
+      title: "Big Data Engineering",
+      category: "Analytics",
+      min: 3500,
+      max: 11000,
+      tags: ["Data Engineering", "Analytics", "ETL"],
+    },
+    {
+      title: "AI Model Training Service",
+      category: "Development",
+      min: 4500,
+      max: 13000,
+      tags: ["Machine Learning", "Model Training", "AI"],
+    },
+    {
+      title: "Digital Transformation Strategy",
+      category: "Strategy",
+      min: 6000,
+      max: 14000,
+      tags: ["Transformation", "Strategy", "Business"],
+    },
+  ];
+
+  const authors = [
+    "Global AI Experts",
+    "InnovateTech",
+    "SecureFuture",
+    "CloudOps Partners",
+    "DataVisor",
+    "NexGen Solutions",
+  ];
+
+  const images = [
+    "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
+  ];
+
+  const template = getRandomItem(templates);
+  const author = getRandomItem(authors);
+  const price = Math.round(
+    Math.random() * (template.max - template.min) + template.min
+  );
+
+  return {
+    id: `auto-service-${idNum}`,
+    title: template.title,
+    description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
+    category: template.category,
+    price,
+    currency: "$",
+    tags: template.tags,
+    author: { name: author, id: author.toLowerCase().replace(/\s+/g, "-") },
+    images: [getRandomItem(images)],
+    createdAt: new Date().toISOString(),
+    aiScore: Math.floor(90 + Math.random() * 10),
+    rating: parseFloat((4 + Math.random()).toFixed(1)),
+    reviewCount: Math.floor(50 + Math.random() * 150),
+  };
+}
+
+// Filter options specific to services
+const SERVICE_FILTERS = [
+  { label: 'Development', value: 'development' },
+  { label: 'Management', value: 'management' },
+  { label: 'Security', value: 'security' },
+  { label: 'Analytics', value: 'analytics' },
+  { label: 'Consulting', value: 'consulting' },
+  { label: 'Strategy', value: 'strategy' },
+];
 
 export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [listings, setListings] = useState<ProductListing[]>(SERVICES);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        // /api/services returns the list of service offerings
+        const res = await apiClient.get('/api/services');
+        setListings(res.data as ProductListing[]);
+      } catch (err) {
+        console.error('Failed to fetch services', err);
+        toast.error('Failed to load services. Showing sample data.');
+        setListings(SERVICES);
+      }
+    }
+    load();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
