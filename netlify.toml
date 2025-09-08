@@ -269,12 +269,12 @@
 
 [[scheduled.functions]]
   name = "a11y-audit-runner"
-  schedule = "13 */6 * * *" # every 6 hours
+  schedule = "23 */6 * * *" # every 6 hours
 
 [[scheduled.functions]]
-  name = "og-tags-validator"
-  schedule = "11 */2 * * *" # every 2 hours
+  name = "internal-link-sentinel-runner"
+  schedule = "7 */6 * * *" # every 6 hours
 
 [[scheduled.functions]]
-  name = "internal-redirect-optimizer"
-  schedule = "13 */2 * * *" # every 2 hours
+  name = "content-freshness-runner"
+  schedule = "5 */12 * * *" # every 12 hours
