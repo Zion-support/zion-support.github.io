@@ -230,21 +230,9 @@
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "deps-auto-upgrade-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "semantic-code-map-runner"
+  schedule = "*/10 * * * *" # every 10 minutes
 
 [[scheduled.functions]]
-  name = "cloud-autonomous-orchestrator-runner"
+  name = "perf-budget-guardian"
   schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
-
-[[scheduled.functions]]
-  name = "internal-link-graph-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "unused-images-runner"
-  schedule = "*/20 * * * *" # every 20 minutes
