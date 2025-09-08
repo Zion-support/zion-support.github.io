@@ -86,8 +86,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps & { asChil
       >
         {loading && (
           <LoadingSpinner 
-            size="small" 
-            color={variant === 'outline' || variant === 'ghost' ? 'primary' : 'white'} 
+            size="sm" 
             className="mr-2" 
           />
         )}

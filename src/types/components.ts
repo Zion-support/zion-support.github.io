@@ -16,7 +16,7 @@ export interface LoadingSpinnerProps extends BaseComponentProps {
 }
 
 // Feature card props
-export interface FeatureCardProps extends BaseComponentProps {
+export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
   id: string | number;
   title: string;
   description: string;
