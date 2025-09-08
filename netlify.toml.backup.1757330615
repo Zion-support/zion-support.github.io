@@ -7,8 +7,11 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11.9"
+<<<<<<< HEAD
+=======
   # Ensure mise uses prebuilt Python; avoid source compilation on Netlify
   MISE_PYTHON_COMPILE = "false"
+>>>>>>> origin/cursor/build-image-with-dependency-installation-failure-04ff
 
 [[plugins]]
   package = "netlify-plugin-compress"
