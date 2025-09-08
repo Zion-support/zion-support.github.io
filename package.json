@@ -24,8 +24,6 @@
     "build": "NODE_ENV=production vite build",
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
     "build:preview": "npm run build && npm run preview",
-    "build:prod": "NODE_ENV=production vite build --mode production",
-    "build:staging": "NODE_ENV=production vite build --mode staging",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
@@ -41,10 +39,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
-    "prebuild": "echo 'Preparing build...' && npm run clean:dist",
-    "clean:dist": "rm -rf dist",
-    "postbuild": "echo 'Build completed successfully' && npm run build:size",
-    "build:size": "echo 'Bundle size analysis:' && du -sh dist/ && echo 'Gzipped size:' && gzip -c dist/assets/*.js | wc -c | awk '{print $1/1024 \" KB\"}' || echo 'Gzip not available'"
+    "prebuild": "echo 'Skipping prebuild checks'",
+    "postbuild": "echo 'Build completed successfully'"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -82,7 +78,6 @@
     "@stripe/stripe-js": "^2.3.0",
     "@supabase/supabase-js": "^2.39.3",
     "@tanstack/react-query": "^5.17.19",
-    "@tanstack/react-query-devtools": "^5.87.3",
     "@types/lodash.debounce": "^4.0.9",
     "axios-retry": "^4.5.0",
     "class-variance-authority": "^0.7.0",
