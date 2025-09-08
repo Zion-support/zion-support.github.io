@@ -1,353 +1,288 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ShoppingCart, 
-  Users, 
-  MessageCircle, 
-  BarChart3, 
-  HelpCircle, 
-  TrendingUp,
-  MessageCircle,
-  FileText,
-  Mail,
-  Truck,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Target,
-  Rocket,
-  DollarSign
-} from 'lucide-react';
+import { Rocket, Zap, Users, Globe, Award, BarChart3, CheckCircle, Target, Database, Shield, Cpu, TrendingUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-const MicroSaaSPage: React.FC = () => {
-  const microSaaSServices = [
+export default function MicroSaaS() {
+  const services = [
     {
-      name: 'Micro CRM',
-      href: '/services/micro-crm',
-      icon: <Users className="w-8 h-8" />,
-      description: 'Lightweight customer relationship management for small businesses',
-      features: ['Contact Management', 'Lead Tracking', 'Sales Pipeline', 'Email Integration'],
-      pricing: 'Starting at $29/month',
-      category: 'Customer Management'
+      icon: Rocket,
+      title: "SaaS Development",
+      description: "Build scalable, cloud-native SaaS applications with modern architecture and best practices"
     },
     {
-      name: 'Helpdesk Platform',
-      href: '/services/helpdesk-platform',
-      icon: <MessageCircle className="w-8 h-8" />,
-      description: 'Streamlined customer support and ticket management system',
-      features: ['Ticket Management', 'Knowledge Base', 'Live Chat', 'Reporting'],
-      pricing: 'Starting at $39/month',
-      category: 'Customer Support'
+      icon: Zap,
+      title: "Rapid Prototyping",
+      description: "Quickly prototype and validate your SaaS idea with rapid development cycles"
     },
     {
-      name: 'Website Analytics',
-      href: '/services/website-analytics',
-      icon: <BarChart3 className="w-8 h-8" />,
-      description: 'Comprehensive website performance and user behavior analytics',
-      features: ['Real-time Analytics', 'User Behavior', 'Conversion Tracking', 'SEO Insights'],
-      pricing: 'Starting at $19/month',
-      category: 'Analytics'
+      icon: Users,
+      title: "User Experience Design",
+      description: "Create intuitive, engaging user interfaces that drive adoption and retention"
     },
     {
-      name: 'IT Helpdesk',
-      href: '/services/it-helpdesk',
-      icon: <HelpCircle className="w-8 h-8" />,
-      description: 'Internal IT support and asset management for organizations',
-      features: ['Asset Management', 'Ticket System', 'Knowledge Base', 'Reporting'],
-      pricing: 'Starting at $49/month',
-      category: 'IT Support'
+      icon: Database,
+      title: "Data Architecture",
+      description: "Design scalable data models and efficient database solutions for your SaaS platform"
     },
     {
-      name: 'Affiliate Tracking',
-      href: '/services/affiliate-tracking',
-      icon: <TrendingUp className="w-8 h-8" />,
-      description: 'Complete affiliate marketing and commission tracking platform',
-      features: ['Affiliate Management', 'Commission Tracking', 'Performance Analytics', 'Payout System'],
-      pricing: 'Starting at $59/month',
-      category: 'Marketing'
+      icon: Shield,
+      title: "Security & Compliance",
+      description: "Implement enterprise-grade security and ensure compliance with industry standards"
     },
     {
-      name: 'Mobile Survey',
-      href: '/services/mobile-survey',
-      icon: <MessageCircle className="w-8 h-8" />,
-      description: 'Mobile-first survey and feedback collection platform',
-      features: ['Survey Builder', 'Mobile Optimization', 'Response Analytics', 'Export Options'],
-      pricing: 'Starting at $25/month',
-      category: 'Feedback'
-    },
-    {
-      name: 'Podcast Transcription',
-      href: '/services/podcast-transcription',
-      icon: <FileText className="w-8 h-8" />,
-      description: 'AI-powered podcast transcription and content optimization',
-      features: ['AI Transcription', 'Editing Tools', 'Export Formats', 'SEO Optimization'],
-      pricing: 'Starting at $0.10/minute',
-      category: 'Content'
-    },
-    {
-      name: 'Email Sequencer',
-      href: '/services/email-sequencer',
-      icon: <Mail className="w-8 h-8" />,
-      description: 'Automated email marketing sequences and drip campaigns',
-      features: ['Sequence Builder', 'Automation', 'A/B Testing', 'Analytics'],
-      pricing: 'Starting at $35/month',
-      category: 'Email Marketing'
-    },
-    {
-      name: 'Returns Management',
-      href: '/services/returns-management',
-      icon: <Truck className="w-8 h-8" />,
-      description: 'Streamlined returns and refund processing system',
-      features: ['Return Processing', 'Refund Management', 'Inventory Updates', 'Customer Communication'],
-      pricing: 'Starting at $45/month',
-      category: 'E-commerce'
-    },
-    {
-      name: 'LLM Content Studio',
-      href: '/services/llm-content-studio',
-      icon: <Brain className="w-8 h-8" />,
-      description: 'AI-powered content creation and optimization platform',
-      features: ['Content Generation', 'SEO Optimization', 'Plagiarism Check', 'Multi-format Export'],
-      pricing: 'Starting at $79/month',
-      category: 'Content Creation'
+      icon: TrendingUp,
+      title: "Growth & Scaling",
+      description: "Strategies and tools to scale your SaaS business and acquire customers"
     }
   ];
 
-  const categories = [
-    { name: 'Customer Management', icon: <Users className="w-5 h-5" />, count: 2 },
-    { name: 'Customer Support', icon: <MessageCircle className="w-5 h-5" />, count: 2 },
-    { name: 'Analytics', icon: <BarChart3 className="w-5 h-5" />, count: 1 },
-    { name: 'IT Support', icon: <HelpCircle className="w-5 h-5" />, count: 1 },
-    { name: 'Marketing', icon: <TrendingUp className="w-5 h-5" />, count: 2 },
-    { name: 'Feedback', icon: <MessageCircle className="w-5 h-5" />, count: 1 },
-    { name: 'Content', icon: <FileText className="w-5 h-5" />, count: 2 },
-    { name: 'Email Marketing', icon: <Mail className="w-5 h-5" />, count: 1 },
-    { name: 'E-commerce', icon: <Truck className="w-5 h-5" />, count: 1 }
+  const benefits = [
+    "Launch your SaaS product in weeks, not months",
+    "Reduce development costs by 40-60%",
+    "Scale from MVP to enterprise solution seamlessly",
+    "Focus on core business logic, not infrastructure",
+    "Access to proven SaaS patterns and best practices",
+    "Built-in analytics and user insights"
+  ];
+
+  const saasTypes = [
+    {
+      title: "B2B SaaS",
+      description: "Enterprise software solutions for businesses, including CRM, ERP, and productivity tools"
+    },
+    {
+      title: "B2C SaaS",
+      description: "Consumer-facing applications like productivity tools, creative software, and lifestyle apps"
+    },
+    {
+      title: "Vertical SaaS",
+      description: "Industry-specific solutions tailored to particular sectors like healthcare, finance, or manufacturing"
+    },
+    {
+      title: "Horizontal SaaS",
+      description: "Cross-industry solutions that serve multiple business functions and departments"
+    }
+  ];
+
+  const capabilities = [
+    "Full-stack SaaS application development",
+    "Cloud-native architecture and deployment",
+    "User authentication and authorization systems",
+    "Subscription and billing management",
+    "API development and integration",
+    "Real-time features and notifications",
+    "Analytics and reporting dashboards",
+    "Mobile-responsive web applications"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <SEO 
+        title="MicroSaaS Services - Zion Tech Group"
+        description="Build and scale your SaaS business with our expert development services, from rapid prototyping to enterprise solutions."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <ShoppingCart className="w-8 h-8 text-white" />
-              </div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-600 to-red-600 text-white text-sm font-medium mb-6">
+              <Rocket className="w-4 h-4 mr-2" />
+              Rapid SaaS Development
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SaaS Solutions
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              MicroSaaS
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Powerful, focused software solutions designed for specific business needs. 
-              Get enterprise-grade functionality without enterprise complexity.
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Turn your SaaS idea into reality with our rapid development services. 
+              Build, launch, and scale your software business faster than ever before.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-slate-300 mt-8">
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-cyan-400" />
-                <span>10+ Solutions</span>
-              </div>
-              <div className="flex items-center">
-                <Star className="w-5 h-5 mr-2 text-cyan-400" />
-                <span>4.9+ Rating</span>
-              </div>
-              <div className="flex items-center">
-                <Zap className="w-5 h-5 mr-2 text-cyan-400" />
-                <span>Instant Setup</span>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                Start Building
+              </button>
+              <button className="px-8 py-4 border border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-slate-900 transition-all duration-300">
+                Free Consultation
+              </button>
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Categories */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">Browse by Category</h2>
-          <p className="text-slate-400">Find the perfect solution for your specific needs</p>
-        </motion.div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700/50 text-center hover:bg-slate-700/50 transition-colors duration-200"
-            >
-              <div className="text-cyan-400 mb-2 flex justify-center">
-                {category.icon}
-              </div>
-              <h3 className="text-white font-medium text-sm mb-1">{category.name}</h3>
-              <p className="text-slate-400 text-xs">{category.count} solutions</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Complete SaaS Development Services
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              From concept to launch, we provide end-to-end SaaS development services 
+              that accelerate your time to market.
+            </p>
+          </motion.div>
 
-      {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">All Micro SaaS Solutions</h2>
-          <p className="text-slate-400">Comprehensive suite of specialized business tools</p>
-        </motion.div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {microSaaSServices.map((service, index) => (
-            <motion.div
-              key={service.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="group"
-            >
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 h-full">
-                {/* Service Header */}
-                <div className="p-6 border-b border-slate-700/50">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
-                      {service.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-200">
-                        {service.name}
-                      </h3>
-                      <span className="text-slate-400 text-sm">{service.category}</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-slate-300 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="text-cyan-400 font-semibold text-sm">
-                    {service.pricing}
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-orange-400 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-                
-                {/* Features */}
-                <div className="p-6">
-                  <h4 className="text-white font-semibold mb-3">Key Features</h4>
-                  <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span className="text-slate-300 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    to={service.href}
-                    className="mt-6 w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-lg transition-all duration-200 group"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-slate-300">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Benefits Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-500/30"
-        >
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Micro SaaS?</h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">
-              Our micro SaaS solutions are designed to solve specific problems without overwhelming complexity
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Our SaaS Development?
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our proven approach delivers faster development, lower costs, and 
+              better outcomes for your SaaS business.
             </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-orange-400 flex-shrink-0" />
+                <span className="text-slate-300">{benefit}</span>
+              </motion.div>
+            ))}
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Rapid Deployment</h3>
-              <p className="text-slate-300">Get up and running in minutes, not months</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Focused Functionality</h3>
-              <p className="text-slate-300">Do one thing exceptionally well</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Cost Effective</h3>
-              <p className="text-slate-300">Pay only for what you need</p>
-            </div>
+        </div>
+      </section>
+
+      {/* SaaS Types Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              SaaS Business Models
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We specialize in all types of SaaS applications, from B2B enterprise 
+              solutions to consumer-focused applications.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {saasTypes.map((type, index) => (
+              <motion.div
+                key={type.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
+                <p className="text-slate-300">{type.description}</p>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced SaaS Capabilities
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Built with modern technologies and proven SaaS patterns for successful outcomes.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {capabilities.map((capability, index) => (
+              <motion.div
+                key={capability}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center space-x-3"
+              >
+                <div className="w-2 h-2 bg-orange-400 rounded-full flex-shrink-0"></div>
+                <span className="text-slate-300">{capability}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Choose the perfect micro SaaS solution for your business needs and start seeing results today.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-lg transition-all duration-200 flex items-center space-x-2"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/pricing"
-              className="px-8 py-4 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all duration-200"
-            >
-              View Pricing
-            </Link>
-          </div>
-        </motion.div>
-      </div>
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Build Your SaaS?
+            </h2>
+            <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+              Join successful entrepreneurs who have launched their SaaS businesses 
+              with our rapid development services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
+                Start Building
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default MicroSaaSPage;
+}

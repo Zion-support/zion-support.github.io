@@ -1,86 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, AlertTriangle, Users, Zap, Globe, Award, BarChart3, CheckCircle, Target, Database } from 'lucide-react';
+import { Cpu, Eye, Database, Zap, Shield, Users, Globe, Award, BarChart3, CheckCircle, Target, Network } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function Cybersecurity() {
+export default function IoTDigitalTwin() {
   const services = [
     {
-      icon: Shield,
-      title: "Security Assessment",
-      description: "Comprehensive security audits and vulnerability assessments to identify and mitigate risks"
-    },
-    {
-      icon: Lock,
-      title: "Penetration Testing",
-      description: "Ethical hacking services to test your security defenses and identify weaknesses"
+      icon: Cpu,
+      title: "IoT Device Management",
+      description: "Comprehensive IoT device provisioning, monitoring, and lifecycle management"
     },
     {
       icon: Eye,
-      title: "Security Monitoring",
-      description: "24/7 threat detection and response to protect against cyber attacks"
+      title: "Digital Twin Creation",
+      description: "Build virtual replicas of physical assets for real-time monitoring and simulation"
     },
     {
-      icon: AlertTriangle,
-      title: "Incident Response",
-      description: "Rapid response and recovery services when security incidents occur"
-    },
-    {
-      icon: Users,
-      title: "Security Training",
-      description: "Employee cybersecurity awareness and training programs"
+      icon: Database,
+      title: "Data Integration",
+      description: "Connect and integrate data from multiple IoT sources and enterprise systems"
     },
     {
       icon: Zap,
-      title: "Security Automation",
-      description: "AI-powered security tools and automated threat response systems"
+      title: "Real-time Analytics",
+      description: "Process and analyze IoT data streams for instant insights and decision-making"
+    },
+    {
+      icon: Shield,
+      title: "IoT Security",
+      description: "Implement robust security measures to protect IoT devices and data"
+    },
+    {
+      icon: Users,
+      title: "Predictive Maintenance",
+      description: "Use IoT data and digital twins to predict and prevent equipment failures"
     }
   ];
 
   const benefits = [
-    "Protect sensitive data and customer information",
-    "Maintain compliance with industry regulations",
-    "Reduce risk of costly data breaches",
-    "Build customer trust and brand reputation",
-    "Minimize business disruption from attacks",
-    "Stay ahead of evolving cyber threats"
+    "Reduce operational costs by 25-40%",
+    "Improve asset utilization by 30-50%",
+    "Prevent unplanned downtime by 60-80%",
+    "Enhance decision-making with real-time data",
+    "Optimize resource allocation and efficiency",
+    "Enable predictive and proactive operations"
   ];
 
-  const securityAreas = [
+  const useCases = [
     {
-      title: "Network Security",
-      description: "Protect your network infrastructure with advanced firewalls, intrusion detection, and monitoring"
+      title: "Manufacturing",
+      description: "Monitor production lines, predict maintenance, and optimize operations with digital twins"
     },
     {
-      title: "Application Security",
-      description: "Secure your applications with code analysis, testing, and security best practices"
+      title: "Smart Cities",
+      description: "Manage urban infrastructure, traffic, and utilities through IoT sensors and digital twins"
     },
     {
-      title: "Cloud Security",
-      description: "Ensure security across cloud platforms with identity management and data protection"
+      title: "Healthcare",
+      description: "Track medical devices, monitor patients, and optimize hospital operations"
     },
     {
-      title: "Data Protection",
-      description: "Implement encryption, access controls, and data loss prevention strategies"
+      title: "Energy & Utilities",
+      description: "Monitor grid performance, predict failures, and optimize energy distribution"
     }
   ];
 
   const capabilities = [
-    "Vulnerability assessment and management",
-    "Penetration testing and red teaming",
-    "Security architecture design",
-    "Incident response and forensics",
-    "Compliance and risk management",
-    "Security awareness training",
-    "Threat intelligence and monitoring",
-    "Security automation and orchestration"
+    "IoT device connectivity and management",
+    "Digital twin modeling and simulation",
+    "Real-time data processing and analytics",
+    "Predictive maintenance algorithms",
+    "IoT security and compliance",
+    "Data integration and visualization",
+    "Edge computing and cloud connectivity",
+    "Custom IoT application development"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity services to protect your business from evolving cyber threats and ensure compliance."
+        title="IoT & Digital Twin Services - Zion Tech Group"
+        description="Transform your operations with IoT connectivity and digital twin technology for real-time monitoring, predictive maintenance, and operational optimization."
       />
       
       {/* Hero Section */}
@@ -92,24 +92,23 @@ export default function Cybersecurity() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              Advanced Threat Protection
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-sm font-medium mb-6">
+              <Cpu className="w-4 h-4 mr-2" />
+              Connected Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity Services
+              IoT & Digital Twin
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Protect your business from evolving cyber threats with our comprehensive 
-              cybersecurity services. From assessment to response, we keep your 
-              digital assets secure and compliant.
+              Connect your physical world to the digital realm with IoT sensors and 
+              digital twin technology. Monitor, analyze, and optimize operations in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
-                Security Assessment
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105">
+                Start IoT Project
               </button>
-              <button className="px-8 py-4 border border-red-400 text-red-400 font-semibold rounded-lg hover:bg-red-400 hover:text-slate-900 transition-all duration-300">
-                Free Consultation
+              <button className="px-8 py-4 border border-emerald-400 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300">
+                Free Assessment
               </button>
             </div>
           </motion.div>
@@ -126,11 +125,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Solutions
+              Comprehensive IoT & Digital Twin Services
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our cybersecurity services cover all aspects of digital protection, 
-              from prevention to response and recovery.
+              From device connectivity to advanced digital twin modeling, we provide 
+              end-to-end solutions that transform your operations.
             </p>
           </motion.div>
 
@@ -141,9 +140,9 @@ export default function Cybersecurity() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-red-400 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-emerald-400 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -164,11 +163,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Cybersecurity Matters
+              Transform Your Operations
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              In today's digital landscape, robust cybersecurity is not optional—it's essential 
-              for business survival and growth.
+              IoT and digital twin technology deliver measurable improvements across 
+              all aspects of your business operations.
             </p>
           </motion.div>
 
@@ -181,7 +180,7 @@ export default function Cybersecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-red-400 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-emerald-400 flex-shrink-0" />
                 <span className="text-slate-300">{benefit}</span>
               </motion.div>
             ))}
@@ -189,7 +188,7 @@ export default function Cybersecurity() {
         </div>
       </section>
 
-      {/* Security Areas Section */}
+      {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -199,24 +198,25 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Security Focus Areas
+              Industry Applications
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive protection across all critical areas of your digital infrastructure.
+              IoT and digital twin technology are transforming industries across 
+              the globe with innovative solutions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityAreas.map((area, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
-                key={area.title}
+                key={useCase.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                <p className="text-slate-300">{area.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-slate-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -233,10 +233,10 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Capabilities
+              Advanced IoT & Digital Twin Capabilities
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Built with cutting-edge technology and industry expertise for maximum protection.
+              Built with cutting-edge technology and industry expertise for successful implementation.
             </p>
           </motion.div>
 
@@ -249,7 +249,7 @@ export default function Cybersecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center space-x-3"
               >
-                <div className="w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-emerald-400 rounded-full flex-shrink-0"></div>
                 <span className="text-slate-300">{capability}</span>
               </motion.div>
             ))}
@@ -258,7 +258,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -266,17 +266,17 @@ export default function Cybersecurity() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Secure Your Digital Future
+              Ready to Connect Your World?
             </h2>
-            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-              Don't wait for a breach to happen. Proactively protect your business 
-              with enterprise-grade cybersecurity solutions.
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+              Join forward-thinking organizations already achieving breakthrough results 
+              with IoT and digital twin technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
-                Get Security Assessment
+              <button className="px-8 py-4 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
+                Start IoT Project
               </button>
-              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300">
                 Schedule Consultation
               </button>
             </div>
