@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 image-optimizer-runner function triggered');
+    console.log('image-optimizer-runner function triggered');
     
-    // Simulate image optimization running logic
-    const timestamp = new Date().toISOString();
+    // Image optimization simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Image optimizer runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'image-optimizer-runner',
-        status: 'completed',
-        optimization: [
-          'compression_analysis',
-          'format_conversion',
-          'quality_optimization'
-        ]
+        source: event.source || 'unknown',
+        optimization: {
+          status: 'active',
+          imagesOptimized: 0,
+          lastOptimization: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ image-optimizer-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ image-optimizer-runner failed:', error);
+    console.error('Error in image-optimizer-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Image optimizer runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'image-optimizer-runner'
       })
     };
   }

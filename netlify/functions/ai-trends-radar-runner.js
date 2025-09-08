@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 ai-trends-radar-runner function triggered');
+    console.log('ai-trends-radar-runner function triggered');
     
-    // Simulate AI trends radar running logic
-    const timestamp = new Date().toISOString();
+    // AI trends radar simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'AI trends radar runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'ai-trends-radar-runner',
-        status: 'completed',
-        radar: [
-          'trend_detection',
-          'ai_analysis',
-          'future_predictions'
-        ]
+        source: event.source || 'unknown',
+        trends: {
+          status: 'scanning',
+          patterns: 0,
+          lastScan: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ ai-trends-radar-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ ai-trends-radar-runner failed:', error);
+    console.error('Error in ai-trends-radar-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'AI trends radar runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'ai-trends-radar-runner'
       })
     };
   }

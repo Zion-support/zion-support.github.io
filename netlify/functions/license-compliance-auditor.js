@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 license-compliance-auditor function triggered');
+    console.log('license-compliance-auditor function triggered');
     
-    // Simulate license compliance auditing logic
-    const timestamp = new Date().toISOString();
+    // License compliance auditing simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'License compliance auditor executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'license-compliance-auditor',
-        status: 'completed',
-        auditing: [
-          'license_scanning',
-          'compliance_validation',
-          'risk_assessment'
-        ]
+        source: event.source || 'unknown',
+        audit: {
+          status: 'active',
+          licenses: 0,
+          compliance: 100,
+          lastAudit: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ license-compliance-auditor completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ license-compliance-auditor failed:', error);
+    console.error('Error in license-compliance-auditor:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'License compliance auditor failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'license-compliance-auditor'
       })
     };
   }

@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 orphan-pages-detector function triggered');
+    console.log('orphan-pages-detector function triggered');
     
-    // Simulate orphan pages detection logic
-    const timestamp = new Date().toISOString();
+    // Orphan pages detection simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Orphan pages detector executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'orphan-pages-detector',
-        status: 'completed',
-        detection: [
-          'page_analysis',
-          'link_validation',
-          'isolation_identification'
-        ]
+        source: event.source || 'unknown',
+        detection: {
+          status: 'active',
+          pagesScanned: 0,
+          orphansFound: 0,
+          lastScan: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ orphan-pages-detector completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ orphan-pages-detector failed:', error);
+    console.error('Error in orphan-pages-detector:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Orphan pages detector failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'orphan-pages-detector'
       })
     };
   }

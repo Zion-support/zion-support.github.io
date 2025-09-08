@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 newsroom-runner function triggered');
+    console.log('newsroom-runner function triggered');
     
-    // Simulate newsroom running logic
-    const timestamp = new Date().toISOString();
+    // Newsroom simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Newsroom runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'newsroom-runner',
-        status: 'completed',
-        newsroom: [
-          'content_curation',
-          'news_aggregation',
-          'media_management'
-        ]
+        source: event.source || 'unknown',
+        newsroom: {
+          status: 'active',
+          articles: 0,
+          lastUpdate: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ newsroom-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ newsroom-runner failed:', error);
+    console.error('Error in newsroom-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Newsroom runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'newsroom-runner'
       })
     };
   }

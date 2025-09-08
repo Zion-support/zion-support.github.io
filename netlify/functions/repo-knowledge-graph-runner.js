@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 repo-knowledge-graph-runner function triggered');
+    console.log('repo-knowledge-graph-runner function triggered');
     
-    // Simulate repository knowledge graph running logic
-    const timestamp = new Date().toISOString();
+    // Repository knowledge graph simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Repo knowledge graph runner executed successfully',
-        timestamp,
+        message: 'Repository knowledge graph runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'repo-knowledge-graph-runner',
-        status: 'completed',
-        knowledge_graph: [
-          'code_analysis',
-          'dependency_mapping',
-          'relationship_visualization'
-        ]
+        source: event.source || 'unknown',
+        graph: {
+          status: 'generating',
+          repositories: 0,
+          knowledgeNodes: 0,
+          lastGenerated: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ repo-knowledge-graph-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ repo-knowledge-graph-runner failed:', error);
+    console.error('Error in repo-knowledge-graph-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Repo knowledge graph runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'repo-knowledge-graph-runner'
       })
     };
   }

@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 continuous-front-runner function triggered');
+    console.log('continuous-front-runner function triggered');
     
-    // Simulate continuous front running logic
-    const timestamp = new Date().toISOString();
+    // Continuous front running simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Continuous front runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'continuous-front-runner',
-        status: 'completed',
-        running: [
-          'continuous_monitoring',
-          'performance_tracking',
-          'optimization_execution'
-        ]
+        source: event.source || 'unknown',
+        running: {
+          status: 'continuous',
+          cycles: 0,
+          lastCycle: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ continuous-front-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ continuous-front-runner failed:', error);
+    console.error('Error in continuous-front-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Continuous front runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'continuous-front-runner'
       })
     };
   }

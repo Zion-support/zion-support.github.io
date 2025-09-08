@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 unused-media-scanner function triggered');
+    console.log('unused-media-scanner function triggered');
     
-    // Simulate unused media scanning logic
-    const timestamp = new Date().toISOString();
+    // Unused media scanning simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Unused media scanner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'unused-media-scanner',
-        status: 'completed',
-        scanning: [
-          'media_analysis',
-          'usage_tracking',
-          'cleanup_recommendations'
-        ]
+        source: event.source || 'unknown',
+        scanning: {
+          status: 'active',
+          mediaScanned: 0,
+          unusedFound: 0,
+          lastScan: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ unused-media-scanner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ unused-media-scanner failed:', error);
+    console.error('Error in unused-media-scanner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Unused media scanner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'unused-media-scanner'
       })
     };
   }

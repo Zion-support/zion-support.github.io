@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 topic-cluster-builder-runner function triggered');
+    console.log('topic-cluster-builder-runner function triggered');
     
-    // Simulate topic cluster building running logic
-    const timestamp = new Date().toISOString();
+    // Topic cluster building simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Topic cluster builder runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'topic-cluster-builder-runner',
-        status: 'completed',
-        building: [
-          'topic_identification',
-          'cluster_formation',
-          'content_organization'
-        ]
+        source: event.source || 'unknown',
+        building: {
+          status: 'active',
+          clusters: 0,
+          lastBuilt: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ topic-cluster-builder-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ topic-cluster-builder-runner failed:', error);
+    console.error('Error in topic-cluster-builder-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Topic cluster builder runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'topic-cluster-builder-runner'
       })
     };
   }

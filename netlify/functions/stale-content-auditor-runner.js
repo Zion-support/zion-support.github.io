@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 stale-content-auditor-runner function triggered');
+    console.log('stale-content-auditor-runner function triggered');
     
-    // Simulate stale content auditor running logic
-    const timestamp = new Date().toISOString();
+    // Stale content auditing simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Stale content auditor runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'stale-content-auditor-runner',
-        status: 'completed',
-        auditing: [
-          'content_freshness',
-          'update_recommendations',
-          'quality_assessment'
-        ]
+        source: event.source || 'unknown',
+        audit: {
+          status: 'active',
+          contentAudited: 0,
+          staleFound: 0,
+          lastAudit: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ stale-content-auditor-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ stale-content-auditor-runner failed:', error);
+    console.error('Error in stale-content-auditor-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Stale content auditor runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'stale-content-auditor-runner'
       })
     };
   }

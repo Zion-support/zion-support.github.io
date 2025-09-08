@@ -1,34 +1,35 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 a11y-alt-text-runner function triggered');
+    console.log('a11y-alt-text-runner function triggered');
     
-    // Simulate accessibility alt text running logic
-    const timestamp = new Date().toISOString();
+    // Simple accessibility check simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'A11y alt text runner executed successfully',
-        timestamp,
+        message: 'Accessibility alt-text runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'a11y-alt-text-runner',
-        status: 'completed',
-        accessibility: [
-          'alt_text_validation',
-          'accessibility_improvements',
-          'compliance_checking'
-        ]
+        source: event.source || 'unknown'
       })
     };
     
-    console.log('✅ a11y-alt-text-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ a11y-alt-text-runner failed:', error);
+    console.error('Error in a11y-alt-text-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'A11y alt text runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'a11y-alt-text-runner'
       })
     };
   }

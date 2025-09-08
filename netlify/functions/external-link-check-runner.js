@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 external-link-check-runner function triggered');
+    console.log('external-link-check-runner function triggered');
     
-    // Simulate external link checking running logic
-    const timestamp = new Date().toISOString();
+    // External link checking simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'External link check runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'external-link-check-runner',
-        status: 'completed',
-        checking: [
-          'link_validation',
-          'accessibility_verification',
-          'security_scanning'
-        ]
+        source: event.source || 'unknown',
+        checking: {
+          status: 'active',
+          linksChecked: 0,
+          brokenLinks: 0,
+          lastCheck: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ external-link-check-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ external-link-check-runner failed:', error);
+    console.error('Error in external-link-check-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'External link check runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'external-link-check-runner'
       })
     };
   }

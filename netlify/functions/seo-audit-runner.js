@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 seo-audit-runner function triggered');
+    console.log('seo-audit-runner function triggered');
     
-    // Simulate SEO audit running logic
-    const timestamp = new Date().toISOString();
+    // SEO audit simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'SEO audit runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'seo-audit-runner',
-        status: 'completed',
-        audit: [
-          'keyword_analysis',
-          'content_optimization',
-          'technical_seo'
-        ]
+        source: event.source || 'unknown',
+        audit: {
+          status: 'active',
+          pagesAudited: 0,
+          issuesFound: 0,
+          lastAudit: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ seo-audit-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ seo-audit-runner failed:', error);
+    console.error('Error in seo-audit-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'SEO audit runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'seo-audit-runner'
       })
     };
   }

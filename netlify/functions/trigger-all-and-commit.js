@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 trigger-all-and-commit function triggered');
+    console.log('trigger-all-and-commit function triggered');
     
-    // Simulate trigger all and commit logic
-    const timestamp = new Date().toISOString();
+    // Trigger all and commit simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Trigger all and commit executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'trigger-all-and-commit',
-        status: 'completed',
-        actions: [
-          'workflow_triggers',
-          'automation_execution',
-          'git_commit'
-        ]
+        source: event.source || 'unknown',
+        trigger: {
+          status: 'active',
+          functionsTriggered: 0,
+          lastTrigger: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ trigger-all-and-commit completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ trigger-all-and-commit failed:', error);
+    console.error('Error in trigger-all-and-commit:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Trigger all and commit failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'trigger-all-and-commit'
       })
     };
   }

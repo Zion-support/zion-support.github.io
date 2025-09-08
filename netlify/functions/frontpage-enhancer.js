@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 frontpage-enhancer function triggered');
+    console.log('frontpage-enhancer function triggered');
     
-    // Simulate frontpage enhancement logic
-    const timestamp = new Date().toISOString();
+    // Frontpage enhancement simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Frontpage enhancer executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'frontpage-enhancer',
-        status: 'completed',
-        enhancements: [
-          'content_optimization',
-          'layout_improvements',
-          'performance_enhancements'
-        ]
+        source: event.source || 'unknown',
+        enhancement: {
+          status: 'active',
+          enhancements: 0,
+          lastEnhancement: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ frontpage-enhancer completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ frontpage-enhancer failed:', error);
+    console.error('Error in frontpage-enhancer:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Frontpage enhancer failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'frontpage-enhancer'
       })
     };
   }

@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 component-coupling-graph-runner function triggered');
+    console.log('component-coupling-graph-runner function triggered');
     
-    // Simulate component coupling graph running logic
-    const timestamp = new Date().toISOString();
+    // Component coupling graph simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Component coupling graph runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'component-coupling-graph-runner',
-        status: 'completed',
-        graph: [
-          'dependency_analysis',
-          'coupling_visualization',
-          'architecture_optimization'
-        ]
+        source: event.source || 'unknown',
+        graph: {
+          status: 'generating',
+          components: 0,
+          relationships: 0,
+          lastGenerated: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ component-coupling-graph-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ component-coupling-graph-runner failed:', error);
+    console.error('Error in component-coupling-graph-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Component coupling graph runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'component-coupling-graph-runner'
       })
     };
   }

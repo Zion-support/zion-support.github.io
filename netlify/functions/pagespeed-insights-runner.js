@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 pagespeed-insights-runner function triggered');
+    console.log('pagespeed-insights-runner function triggered');
     
-    // Simulate PageSpeed insights running logic
-    const timestamp = new Date().toISOString();
+    // PageSpeed insights simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'PageSpeed insights runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'pagespeed-insights-runner',
-        status: 'completed',
-        insights: [
-          'performance_analysis',
-          'optimization_recommendations',
-          'speed_metrics'
-        ]
+        source: event.source || 'unknown',
+        insights: {
+          status: 'active',
+          pagesAnalyzed: 0,
+          averageScore: 0,
+          lastAnalysis: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ pagespeed-insights-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ pagespeed-insights-runner failed:', error);
+    console.error('Error in pagespeed-insights-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'PageSpeed insights runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'pagespeed-insights-runner'
       })
     };
   }

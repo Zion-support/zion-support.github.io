@@ -1,34 +1,41 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 deps-auto-upgrade-runner function triggered');
+    console.log('deps-auto-upgrade-runner function triggered');
     
-    // Simulate dependencies auto upgrade running logic
-    const timestamp = new Date().toISOString();
+    // Dependency auto-upgrade simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Deps auto upgrade runner executed successfully',
-        timestamp,
+        message: 'Dependency auto-upgrade runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'deps-auto-upgrade-runner',
-        status: 'completed',
-        upgrade: [
-          'dependency_scanning',
-          'version_analysis',
-          'automatic_updates'
-        ]
+        source: event.source || 'unknown',
+        upgrade: {
+          status: 'checking',
+          dependencies: 0,
+          updatesAvailable: 0,
+          lastCheck: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ deps-auto-upgrade-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ deps-auto-upgrade-runner failed:', error);
+    console.error('Error in deps-auto-upgrade-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Deps auto upgrade runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'deps-auto-upgrade-runner'
       })
     };
   }

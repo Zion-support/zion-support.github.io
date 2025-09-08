@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 fast-orchestrator function triggered');
+    console.log('fast-orchestrator function triggered');
     
-    // Simulate fast orchestration logic
-    const timestamp = new Date().toISOString();
+    // Fast orchestration simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Fast orchestrator executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'fast-orchestrator',
-        status: 'completed',
-        orchestration: [
-          'task_coordination',
-          'resource_allocation',
-          'performance_optimization'
-        ]
+        source: event.source || 'unknown',
+        orchestration: {
+          status: 'fast',
+          services: 0,
+          lastOrchestration: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ fast-orchestrator completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ fast-orchestrator failed:', error);
+    console.error('Error in fast-orchestrator:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Fast orchestrator failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'fast-orchestrator'
       })
     };
   }

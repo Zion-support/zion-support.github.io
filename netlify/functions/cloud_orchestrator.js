@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 cloud_orchestrator function triggered');
+    console.log('cloud_orchestrator function triggered');
     
-    // Simulate cloud orchestration logic
-    const timestamp = new Date().toISOString();
+    // Cloud orchestration simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Cloud orchestrator executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'cloud_orchestrator',
-        status: 'completed',
-        orchestrations: [
-          'resource_management',
-          'scaling_operations',
-          'performance_monitoring'
-        ]
+        source: event.source || 'unknown',
+        orchestration: {
+          status: 'active',
+          cloudServices: 0,
+          lastOrchestration: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ cloud_orchestrator completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ cloud_orchestrator failed:', error);
+    console.error('Error in cloud_orchestrator:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Cloud orchestrator failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'cloud_orchestrator'
       })
     };
   }

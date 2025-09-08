@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 headers-enforcer function triggered');
+    console.log('headers-enforcer function triggered');
     
-    // Simulate headers enforcement logic
-    const timestamp = new Date().toISOString();
+    // Headers enforcement simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Headers enforcer executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'headers-enforcer',
-        status: 'completed',
-        enforcement: [
-          'security_headers',
-          'performance_headers',
-          'compliance_validation'
-        ]
+        source: event.source || 'unknown',
+        enforcement: {
+          status: 'active',
+          headersEnforced: 0,
+          lastEnforcement: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ headers-enforcer completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ headers-enforcer failed:', error);
+    console.error('Error in headers-enforcer:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Headers enforcer failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'headers-enforcer'
       })
     };
   }

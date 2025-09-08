@@ -1,34 +1,40 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 site-404-map-runner function triggered');
+    console.log('site-404-map-runner function triggered');
     
-    // Simulate site 404 mapping running logic
-    const timestamp = new Date().toISOString();
+    // Site 404 mapping simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Site 404 map runner executed successfully',
-        timestamp,
+        timestamp: new Date().toISOString(),
         function: 'site-404-map-runner',
-        status: 'completed',
-        mapping: [
-          'error_page_detection',
-          'redirect_mapping',
-          'user_experience_optimization'
-        ]
+        source: event.source || 'unknown',
+        mapping: {
+          status: 'active',
+          pagesMapped: 0,
+          lastMap: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ site-404-map-runner completed successfully');
     return result;
   } catch (error) {
-    console.error('❌ site-404-map-runner failed:', error);
+    console.error('Error in site-404-map-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        error: 'Site 404 map runner failed',
+        error: 'Internal server error',
         message: error.message,
-        timestamp: new Date().toISOString()
+        function: 'site-404-map-runner'
       })
     };
   }
