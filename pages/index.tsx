@@ -32,46 +32,47 @@ const Index: NextPage = () => {
               <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
                 Our Services
               </a>
-              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+              <a href="/automation" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+                Automation
+              </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
                 Case Studies
               </a>
-              <a href="/resources" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
-                Resources
+              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Blog
               </a>
-              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
                 Contact
               </a>
             </div>
           </section>
 
-          {/* Featured Content Section */}
+          {/* Automation Showcase */}
           <section className="mx-auto max-w-7xl px-6 pb-14 mb-16">
-            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-8">Featured Content & Services</h2>
+            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-8">Autonomous Automation at Work</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <a href="/automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-semibold mb-2">Autonomous Automation</h3>
-                <p className="text-sm text-white/75 mb-4">Experience our cutting-edge self-running systems</p>
-                <div className="text-xs text-cyan-300/90">Explore →</div>
-              </a>
-              
-              <a href="/blog" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">📚</div>
-                <h3 className="text-xl font-semibold mb-2">AI & Tech Blog</h3>
-                <p className="text-sm text-white/75 mb-4">Latest insights on autonomous technology</p>
-                <div className="text-xs text-fuchsia-300/90">Read More →</div>
-              </a>
-              
-              <a href="/resources" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-green-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🛠️</div>
-                <h3 className="text-xl font-semibold mb-2">Free Resources</h3>
-                <p className="text-sm text-white/75 mb-4">Tools, templates, and development guides</p>
-                <div className="text-xs text-green-300/90">Access →</div>
-              </a>
+              <div className="bg-gradient-to-br from-cyan-400/20 to-cyan-400/5 rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300">
+                <div className="text-3xl mb-4">🤖</div>
+                <h3 className="text-xl font-bold mb-3 text-cyan-400">227 Active Automations</h3>
+                <p className="text-white/70 mb-4">Our autonomous systems work 24/7 to ensure your infrastructure runs smoothly.</p>
+                <a href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">Learn More →</a>
+              </div>
+              <div className="bg-gradient-to-br from-fuchsia-400/20 to-fuchsia-400/5 rounded-2xl p-6 border border-fuchsia-400/30 hover:border-fuchsia-400/50 transition-all duration-300">
+                <div className="text-3xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold mb-3 text-fuchsia-400">99.9% Uptime</h3>
+                <p className="text-white/70 mb-4">Self-healing systems that automatically detect and resolve issues.</p>
+                <a href="/case-studies" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-medium">View Results →</a>
+              </div>
+              <div className="bg-gradient-to-br from-green-400/20 to-green-400/5 rounded-2xl p-6 border border-green-400/30 hover:border-green-400/50 transition-all duration-300">
+                <div className="text-3xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold mb-3 text-green-400">95% Issue Prevention</h3>
+                <p className="text-white/70 mb-4">Predictive analytics that stop problems before they start.</p>
+                <a href="/services" className="text-green-400 hover:text-green-300 text-sm font-medium">Explore Services →</a>
+              </div>
             </div>
           </section>
 
-          {/* Latest Updates Section */}
+          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-6">Latest Autonomous Updates</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
