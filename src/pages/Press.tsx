@@ -1,238 +1,234 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Download, Mail, Phone, Globe, FileText, Image, 
-  Video, Calendar, User, Building, Award, Star,
-  ArrowRight, ExternalLink, Share2, Copy
+  Calendar, 
+  User, 
+  ArrowRight,
+  ExternalLink,
+  Download,
+  FileText,
+  Building2,
+  Users,
+  Code,
+  Award,
+  Globe,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Newspaper,
+  TrendingUp,
+  Lightbulb,
+  Shield,
+  Cloud,
+  Brain,
+  Zap,
+  Image,
+  Video,
+  FileImage
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
-export default function Press() {
+const Press: React.FC = () => {
   const pressReleases = [
     {
-      id: 1,
-      title: 'Zion Tech Group Named to Forbes AI 50 List for 2024',
-      date: '2024-01-15',
-      summary: 'Company recognized for innovative work in democratizing AI technology for businesses worldwide.',
-      category: 'Awards & Recognition',
-      pdfUrl: '/press/forbes-ai-50-press-release.pdf',
-      featured: true
+      id: 'pr1',
+      title: 'Zion Tech Group Announces Q4 2024 Financial Results',
+      date: '2025-01-25',
+      summary: 'Strong performance driven by AI solutions growth and expanding customer base.',
+      link: '#',
+      category: 'Financial'
     },
     {
-      id: 2,
-      title: 'Launch of Revolutionary Quantum-AI Hybrid Platform',
-      date: '2024-01-10',
-      summary: 'Breakthrough platform combines quantum computing with artificial intelligence to solve complex business problems.',
-      category: 'Product Launch',
-      pdfUrl: '/press/quantum-ai-platform-press-release.pdf',
-      featured: true
+      id: 'pr2',
+      title: 'New Executive Appointments Strengthen Leadership Team',
+      date: '2025-01-22',
+      summary: 'Strategic hires to accelerate product development and market expansion.',
+      link: '#',
+      category: 'Leadership'
     },
     {
-      id: 3,
-      title: 'Strategic Partnership with Microsoft Azure Announced',
-      date: '2024-01-08',
-      summary: 'Partnership to deliver enterprise-grade AI solutions on Microsoft\'s trusted cloud platform.',
-      category: 'Partnerships',
-      pdfUrl: '/press/microsoft-partnership-press-release.pdf',
-      featured: false
+      id: 'pr3',
+      title: 'Zion Tech Group Secures $50M in Series C Funding',
+      date: '2025-01-20',
+      summary: 'Investment to fuel innovation and accelerate global market presence.',
+      link: '#',
+      category: 'Funding'
     },
     {
-      id: 4,
-      title: 'Expansion to European Markets',
-      date: '2024-01-03',
-      summary: 'Company announces expansion into key European markets with new offices in London, Berlin, and Paris.',
-      category: 'Company News',
-      pdfUrl: '/press/europe-expansion-press-release.pdf',
-      featured: false
+      id: 'pr4',
+      title: 'Major Partnership with Global Tech Leader Announced',
+      date: '2025-01-18',
+      summary: 'Strategic collaboration to deliver enhanced cloud and AI solutions.',
+      link: '#',
+      category: 'Partnership'
     },
     {
-      id: 5,
-      title: 'AI-Powered Cybersecurity Breakthrough',
-      date: '2023-12-28',
-      summary: 'New threat detection system prevents 99.9% of cyber attacks in real-time.',
-      category: 'Technology',
-      pdfUrl: '/press/ai-security-press-release.pdf',
-      featured: false
+      id: 'pr5',
+      title: 'AI-Powered Cybersecurity Suite Launch',
+      date: '2025-01-15',
+      summary: 'Revolutionary platform combining AI and machine learning for threat detection.',
+      link: '#',
+      category: 'Product'
+    },
+    {
+      id: 'pr6',
+      title: 'Global Expansion: New Offices in Europe and Asia',
+      date: '2025-01-12',
+      summary: 'Company opens new offices to better serve international customers.',
+      link: '#',
+      category: 'Expansion'
     }
   ];
 
-  const mediaKit = {
-    companyOverview: '/press/zion-tech-group-company-overview.pdf',
-    executiveBios: '/press/executive-bios.pdf',
-    factSheet: '/press/fact-sheet.pdf',
-    logoPack: '/press/zion-tech-group-logos.zip',
-    brandGuidelines: '/press/brand-guidelines.pdf',
-    highResImages: '/press/high-resolution-images.zip'
-  };
-
-  const executivePhotos = [
+  const mediaResources = [
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Executive Officer',
-      photoUrl: '/press/executives/sarah-chen.jpg',
-      bio: 'Dr. Chen leads Zion Tech Group with a vision to democratize AI technology and drive sustainable innovation across industries.',
-      email: 'sarah.chen@ziontechgroup.com',
-      phone: '+1 (555) 123-4567'
+      title: 'Company Logo & Brand Assets',
+      description: 'High-resolution logos, brand guidelines, and visual assets in multiple formats.',
+      icon: Image,
+      link: '#',
+      fileType: 'ZIP (25MB)'
     },
     {
-      name: 'Marcus Rodriguez',
-      role: 'Chief Technology Officer',
-      photoUrl: '/press/executives/marcus-rodriguez.jpg',
-      bio: 'Marcus spearheads our cutting-edge technology initiatives, focusing on quantum-AI hybrid solutions and next-generation computing platforms.',
-      email: 'marcus.rodriguez@ziontechgroup.com',
-      phone: '+1 (555) 123-4568'
+      title: 'Executive Biographies & Photos',
+      description: 'Professional photos and detailed biographies of key leadership team.',
+      icon: Users,
+      link: '#',
+      fileType: 'PDF (2MB)'
     },
     {
-      name: 'Dr. Emily Watson',
-      role: 'Chief AI Officer',
-      photoUrl: '/press/executives/emily-watson.jpg',
-      bio: 'Dr. Watson leads our AI research initiatives, developing breakthrough algorithms that power our autonomous business solutions.',
-      email: 'emily.watson@ziontechgroup.com',
-      phone: '+1 (555) 123-4569'
+      title: 'Product Screenshots & Demos',
+      description: 'High-quality images and demo videos of our products and solutions.',
+      icon: Code,
+      link: '#',
+      fileType: 'ZIP (150MB)'
+    },
+    {
+      title: 'Company Fact Sheet',
+      description: 'Key facts, figures, and statistics about Zion Tech Group.',
+      icon: FileText,
+      link: '#',
+      fileType: 'PDF (1MB)'
+    },
+    {
+      title: 'Press Kit (Complete)',
+      description: 'Comprehensive press kit with all media resources and company information.',
+      icon: Download,
+      link: '#',
+      fileType: 'ZIP (500MB)'
+    },
+    {
+      title: 'Brand Guidelines',
+      description: 'Complete brand guidelines including colors, typography, and usage rules.',
+      icon: FileImage,
+      link: '#',
+      fileType: 'PDF (8MB)'
     }
   ];
 
-  const recentCoverage = [
-    {
-      id: 1,
-      title: 'Zion Tech Group: Democratizing AI for Small Businesses',
-      publication: 'TechCrunch',
-      date: '2024-01-12',
-      url: 'https://techcrunch.com/zion-tech-group-ai-democratization',
-      excerpt: 'How Zion Tech Group is making advanced AI technology accessible to businesses of all sizes.',
-      logo: '/press/logos/techcrunch.png'
-    },
-    {
-      id: 2,
-      title: 'The Future of Quantum-AI Computing',
-      publication: 'MIT Technology Review',
-      date: '2024-01-08',
-      url: 'https://technologyreview.com/quantum-ai-computing-future',
-      excerpt: 'Exploring the revolutionary potential of combining quantum computing with artificial intelligence.',
-      logo: '/press/logos/mit-tech-review.png'
-    },
-    {
-      id: 3,
-      title: 'AI Ethics in Business: A Case Study',
-      publication: 'Harvard Business Review',
-      date: '2024-01-05',
-      url: 'https://hbr.org/ai-ethics-business-case-study',
-      excerpt: 'How Zion Tech Group is leading the way in responsible AI development and deployment.',
-      logo: '/press/logos/harvard-business-review.png'
-    },
-    {
-      id: 4,
-      title: 'Cybersecurity Gets Smarter with AI',
-      publication: 'Wired',
-      date: '2023-12-30',
-      url: 'https://wired.com/ai-cybersecurity-breakthrough',
-      excerpt: 'The latest developments in AI-powered cybersecurity and threat detection.',
-      logo: '/press/logos/wired.png'
-    }
+  const companyStats = [
+    { metric: '500+', label: 'Enterprise Customers', icon: Building2 },
+    { metric: '50+', label: 'Countries Served', icon: Globe },
+    { metric: '98%', label: 'Customer Satisfaction', icon: Award },
+    { metric: '24/7', label: 'Global Support', icon: Shield }
   ];
 
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: 'AI Innovation Summit 2024',
-      date: '2024-03-15',
-      location: 'San Francisco, CA',
-      description: 'Join us for our annual AI innovation summit where we\'ll showcase our latest breakthroughs and discuss the future of AI technology.',
-      registrationUrl: 'https://ziontechgroup.com/events/ai-innovation-summit-2024'
-    },
-    {
-      id: 2,
-      title: 'Quantum Computing Conference',
-      date: '2024-04-20',
-      location: 'New York, NY',
-      description: 'Presenting our latest quantum-AI hybrid platform and discussing the future of quantum computing in business applications.',
-      registrationUrl: 'https://ziontechgroup.com/events/quantum-computing-conference'
-    },
-    {
-      id: 3,
-      title: 'European Tech Tour',
-      date: '2024-05-10',
-      location: 'London, Berlin, Paris',
-      description: 'Meet our team and learn about our expansion into European markets during our multi-city tech tour.',
-      registrationUrl: 'https://ziontechgroup.com/events/european-tech-tour'
-    }
+  const contactInfo = [
+    { icon: Mail, text: 'press@ziontechgroup.com', href: 'mailto:press@ziontechgroup.com' },
+    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+    { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: '#' }
+  ];
+
+  const socialMedia = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
-  };
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    // You could add a toast notification here
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Press & Media - Zion Tech Group"
-        description="Media resources, press releases, and executive information for journalists and media professionals covering Zion Tech Group."
-        keywords="press, media, press releases, executive bios, media kit, Zion Tech Group"
-        canonicalUrl="https://ziontechgroup.com/press"
-      />
-
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Press & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Media</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Welcome to Zion Tech Group's press room. Find press releases, media resources, executive information, and company updates for journalists and media professionals.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-6 text-gray-400">
-              <div className="flex items-center">
-                <FileText className="w-5 h-5 mr-2" />
-                <span>Press Releases</span>
-              </div>
-              <div className="flex items-center">
-                <Image className="w-5 h-5 mr-2" />
-                <span>Media Resources</span>
-              </div>
-              <div className="flex items-center">
-                <User className="w-5 h-5 mr-2" />
-                <span>Executive Bios</span>
-              </div>
+            <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
+              <Newspaper className="w-5 h-5 text-cyan-400" />
+              <span className="text-cyan-400 font-medium">Press & Media</span>
             </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Press &
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Media Resources
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Welcome to Zion Tech Group's press center. Find the latest news, 
+              company information, and media resources for journalists and media professionals.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Press Releases */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Company Stats */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {companyStats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Press Releases Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Press Releases
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Latest Press Releases
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Latest announcements and company news from Zion Tech Group.
+            <p className="text-xl text-gray-300 max-w-3xl">
+              Stay updated with our latest company announcements, product launches, 
+              and strategic initiatives.
             </p>
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pressReleases.map((release, index) => (
               <motion.div
                 key={release.id}
@@ -240,245 +236,31 @@ export default function Press() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 ${
-                  release.featured ? 'ring-2 ring-blue-500/50' : ''
-                }`}
+                className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300"
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-3">
-                      {release.featured && (
-                        <span className="px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">
-                          Featured
-                        </span>
-                      )}
-                      <span className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
-                        {release.category}
-                      </span>
-                      <span className="text-gray-400 text-sm">{formatDate(release.date)}</span>
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      {release.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      {release.summary}
-                    </p>
-                  </div>
-                  
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <a
-                      href={release.pdfUrl}
-                      download
-                      className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center"
-                    >
-                      <Download className="w-4 h-4 mr-2" />
-                      Download PDF
-                    </a>
-                    <button
-                      onClick={() => copyToClipboard(`${release.title} - ${release.summary} - Zion Tech Group`)}
-                      className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
-                    >
-                      <Copy className="w-4 h-4 mr-2" />
-                      Copy Summary
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Media Kit */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Media Kit
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Download essential resources for journalists and media professionals.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(mediaKit).map(([key, url], index) => {
-              const title = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-              const icon = key.includes('logo') || key.includes('image') ? Image : 
-                          key.includes('video') ? Video : FileText;
-              
-              return (
-                <motion.div
-                  key={key}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                >
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                      <icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-                    <a
-                      href={url}
-                      download
-                      className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center mx-auto"
-                    >
-                      <Download className="w-4 h-4 mr-2" />
-                      Download
-                    </a>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Executive Photos & Bios */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Executive Team
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              High-resolution photos and biographies of our key executives for media use.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {executivePhotos.map((executive, index) => (
-              <motion.div
-                key={executive.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-              >
-                <div className="text-center mb-6">
-                  <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <User className="w-16 h-16 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{executive.name}</h3>
-                  <p className="text-blue-400 font-semibold mb-3">{executive.role}</p>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{executive.bio}</p>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">Email:</span>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-white text-sm">{executive.email}</span>
-                      <button
-                        onClick={() => copyToClipboard(executive.email)}
-                        className="p-1 hover:bg-white/10 rounded transition-colors"
-                      >
-                        <Copy className="w-4 h-4 text-gray-400" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">Phone:</span>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-white text-sm">{executive.phone}</span>
-                      <button
-                        onClick={() => copyToClipboard(executive.phone)}
-                        className="p-1 hover:bg-white/10 rounded transition-colors"
-                      >
-                        <Copy className="w-4 h-4 text-gray-400" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex justify-center">
-                  <a
-                    href={executive.photoUrl}
-                    download
-                    className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Download Photo
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Recent Media Coverage */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Recent Media Coverage
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Recent articles and features about Zion Tech Group in leading publications.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {recentCoverage.map((coverage, index) => (
-              <motion.div
-                key={coverage.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white">{coverage.publication}</h3>
-                    <p className="text-gray-400 text-sm">{formatDate(coverage.date)}</p>
-                  </div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">
+                    {release.category}
+                  </span>
+                  <span className="text-gray-500 text-sm">
+                    {formatDate(release.date)}
+                  </span>
                 </div>
                 
-                <h4 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
-                  {coverage.title}
-                </h4>
+                <h3 className="text-lg font-semibold text-white mb-3">
+                  {release.title}
+                </h3>
                 
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  {coverage.excerpt}
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  {release.summary}
                 </p>
                 
                 <a
-                  href={coverage.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                  href={release.link}
+                  className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  Read Article
-                  <ExternalLink className="w-4 h-4 ml-2" />
+                  <span className="text-sm font-medium">Read Full Release</span>
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </motion.div>
             ))}
@@ -486,59 +268,55 @@ export default function Press() {
         </div>
       </section>
 
-      {/* Upcoming Events */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Media Resources Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Upcoming Events
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Media Resources
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join us at upcoming events and conferences where our team will be speaking and presenting.
+            <p className="text-xl text-gray-300 max-w-3xl">
+              Download high-quality assets, company information, and press materials 
+              to support your coverage of Zion Tech Group.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mediaResources.map((resource, index) => (
               <motion.div
-                key={event.id}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+                className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300"
               >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-white" />
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <resource.icon className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white">{event.title}</h3>
-                    <p className="text-gray-400 text-sm">{formatDate(event.date)}</p>
+                    <h3 className="text-lg font-semibold text-white">{resource.title}</h3>
+                    <p className="text-gray-400 text-sm">{resource.fileType}</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-400 text-sm mb-3">
-                  <Building className="w-4 h-4 inline mr-2" />
-                  {event.location}
-                </p>
-                
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  {event.description}
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  {resource.description}
                 </p>
                 
                 <a
-                  href={event.registrationUrl}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                  href={resource.link}
+                  className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <Download className="w-4 h-4" />
+                  <span className="text-sm font-medium">Download</span>
                 </a>
               </motion.div>
             ))}
@@ -546,73 +324,189 @@ export default function Press() {
         </div>
       </section>
 
-      {/* Contact Media Relations */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Company Information Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Media Relations</span>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Company Information
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Need additional information, interviews, or media resources? Our media relations team is here to help.
+            <p className="text-xl text-gray-300 max-w-3xl">
+              Essential information about Zion Tech Group for media professionals and journalists.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                <p className="text-gray-300 mb-4">press@ziontechgroup.com</p>
-                <button
-                  onClick={() => copyToClipboard('press@ziontechgroup.com')}
-                  className="px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors inline-flex items-center"
-                >
-                  <Copy className="w-4 h-4 mr-2" />
-                  Copy Email
-                </button>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                  <Phone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-                <p className="text-gray-300 mb-4">+1 (555) 123-4567</p>
-                <button
-                  onClick={() => copyToClipboard('+1 (555) 123-4567')}
-                  className="px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors inline-flex items-center"
-                >
-                  <Copy className="w-4 h-4 mr-2" />
-                  Copy Phone
-                </button>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* About Zion Tech Group */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6">About Zion Tech Group</h3>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  Zion Tech Group is a leading technology company specializing in artificial intelligence, 
+                  cloud computing, and digital transformation solutions. Founded in 2020, we help 
+                  enterprises leverage cutting-edge technology to drive innovation and competitive advantage.
+                </p>
+                <p>
+                  Our comprehensive portfolio includes AI-powered business intelligence, cybersecurity 
+                  solutions, cloud infrastructure, and industry-specific applications. We serve over 500 
+                  enterprise customers across 50+ countries, delivering measurable business outcomes 
+                  through innovative technology solutions.
+                </p>
+                <p>
+                  Headquartered in Innovation City, Zion Tech Group employs over 1,000 technology 
+                  professionals and maintains a strong commitment to research and development, 
+                  investing 15% of revenue annually in innovation.
+                </p>
               </div>
             </div>
+
+            {/* Key Facts */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Facts</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Building2 className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Founded: 2020</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Employees: 1,000+</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Globe className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Offices: 12 countries</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Award className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Industry Awards: 25+</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Brain className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">AI Patents: 50+</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Security Certifications: SOC 2, ISO 27001</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact & Social Media Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Contact & Connect
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl">
+              Get in touch with our media relations team and stay connected through our social channels.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6">Media Contact</h3>
+              <div className="space-y-4">
+                {contactInfo.map((contact, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                      <contact.icon className="w-5 h-5 text-cyan-400" />
+                    </div>
+                    <a
+                      href={contact.href}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {contact.text}
+                    </a>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold text-white mb-4">Media Relations Team</h4>
+                <div className="space-y-2 text-gray-300">
+                  <p><strong>Sarah Johnson</strong> - Director of Communications</p>
+                  <p><strong>Michael Chen</strong> - Senior PR Manager</p>
+                  <p><strong>Emily Rodriguez</strong> - Media Relations Specialist</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6">Follow Us</h3>
+              <div className="space-y-4">
+                {socialMedia.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 p-4 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group"
+                  >
+                    <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/30 transition-colors">
+                      <social.icon className="w-5 h-5 text-cyan-400" />
+                    </div>
+                    <div>
+                      <div className="text-white font-medium">{social.name}</div>
+                      <div className="text-gray-400 text-sm">Follow for updates</div>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-gray-400 ml-auto" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Need Additional Information?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our media relations team is here to help with interviews, 
+              additional resources, or any questions you may have.
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Contact Us
-              </a>
-              <a
-                href="/news"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
-              >
-                <FileText className="w-5 h-5 mr-2" />
-                View All News
-              </a>
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Contact Media Team
+              </button>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Request Interview
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Press;
