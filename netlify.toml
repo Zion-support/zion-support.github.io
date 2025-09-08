@@ -13,6 +13,7 @@
   NETLIFY_SKIP_INSTALL = "true"
 
 
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
