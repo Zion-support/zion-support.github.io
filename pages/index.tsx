@@ -68,12 +68,6 @@ const Index: NextPage = () => {
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </span>
               </Link>
-              <Link href="/resources" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Resources & Tools
-              </Link>
-              <Link href="/case-studies" className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Case Studies
-              </Link>
               <Link href="/automation" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Automation Systems
               </Link>
@@ -642,11 +636,19 @@ const Index: NextPage = () => {
                 <div className="mt-3 text-purple-400 text-xs font-semibold group-hover:translate-x-1 transition-transform duration-300">Read Blog →</div>
               </Link>
               
-              <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center hover:scale-105">
+              <Link href="/automation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🤖</span>
+                </div>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Automation</h3>
+                <p className="text-white/70 text-sm">AI & Systems</p>
+              </Link>
+              
+              <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">💬</span>
                 </div>
-                <h3 className="text-lg font-semibold text-red-400 mb-2">Contact</h3>
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Contact</h3>
                 <p className="text-white/70 text-sm">Get in touch</p>
                 <div className="mt-3 text-green-400 text-xs font-semibold group-hover:translate-x-1 transition-transform duration-300">Contact Us →</div>
               </Link>
@@ -669,7 +671,7 @@ const Index: NextPage = () => {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/automation#redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -683,7 +685,7 @@ const Index: NextPage = () => {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/README_ULTIMATE_REDUNDANCY_AUTOMATION.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/automation#ai-automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -697,7 +699,7 @@ const Index: NextPage = () => {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/README_GITHUB_ACTIONS.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/automation#build-deploy" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
