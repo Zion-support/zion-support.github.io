@@ -1,6 +1,5 @@
 import React from 'react';
 
-type NotificationPermission = 'default' | 'granted' | 'denied';
 
 // PWA utilities and hooks
 

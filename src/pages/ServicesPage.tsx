@@ -121,11 +121,12 @@ const ServicesPage: React.FC = memo(() => {
         'Computer Vision',
         'Predictive Analytics',
         'AI Integration'
-      ]
+      ]>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     },
     {
       id: 2,
       title: 'Web Development',
+=======
       description: 'Modern, responsive web applications built with cutting-edge technologies for optimal performance.',
       icon: '🌐',
       price: 'From $3,000',
@@ -137,11 +138,12 @@ const ServicesPage: React.FC = memo(() => {
         'Performance Optimization',
         'SEO Optimization',
         'Progressive Web Apps'
-      ]
+      ]>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     },
     {
       id: 3,
       title: 'Mobile Development',
+=======
       description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
       icon: '📱',
       price: 'From $4,000',
@@ -169,11 +171,12 @@ const ServicesPage: React.FC = memo(() => {
         'Auto-scaling',
         'Monitoring & Logging',
         'Disaster Recovery'
-      ]
+      ]>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     },
     {
       id: 5,
       title: 'Cybersecurity',
+=======
       description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
       icon: '🔒',
       price: 'From $3,500',
@@ -185,11 +188,12 @@ const ServicesPage: React.FC = memo(() => {
         'Incident Response',
         'Security Training',
         'Risk Assessment'
-      ]
+      ]>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     },
     {
       id: 6,
       title: 'Data Analytics',
+=======
       description: 'Transform your data into actionable insights with advanced analytics and visualization.',
       icon: '📊',
       price: 'From $2,500',
@@ -347,6 +351,6 @@ const ServicesPage: React.FC = memo(() => {
   );
 });
 
-ServicesPage.displayName = 'ServicesPage';
+ServicesPage.displayName = 'ServicesPage';>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
 export default ServicesPage;

@@ -11,26 +11,26 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts in this file
     }
     
     console.log(`🔧 Resolving conflicts in: ${filePath}`);
     
-    // Remove all merge conflict markers and keep the incoming changes (after =======)
+    // Remove all merge conflict markers and keep the incoming changes (after )
     let resolvedContent = content;
     
     // Pattern 1: Conflicts with file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD:[^\n]*\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs, '$1\n');
+    resolvedContent = resolvedContent.replace(/
     
     // Pattern 2: Simple conflicts without file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs, '$1\n');
+    resolvedContent = resolvedContent.replace(/
     
     // Pattern 3: Handle any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n=======\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
+    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
     
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n=======\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
+    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
     
     // Write resolved content back to file
     fs.writeFileSync(filePath, resolvedContent);
@@ -63,7 +63,7 @@ function findConflictFiles(dir) {
           // Check if file has merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
               conflictFiles.push(fullPath);
             }
           } catch (error) {

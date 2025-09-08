@@ -32,7 +32,7 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
   };
 
   const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
+    setNotifications(prev => prev.filter(notification => notification.id !== id));
   };
 
   const clearAll = () => {
@@ -40,12 +40,14 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
   };
 
   return (
-    <NotificationContext.Provider value={{ 
-      notifications, 
-      addNotification, 
-      removeNotification, 
-      clearAll 
-    }}>
+    <NotificationContext.Provider
+      value={{
+        notifications,
+        addNotification,
+        removeNotification,
+        clearAll,
+      }}
+    >
       {children}
     </NotificationContext.Provider>
   );

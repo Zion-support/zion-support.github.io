@@ -26,10 +26,9 @@ export const sanitizeHTML = (html: string): string => {
 
 export const sanitizeInput = (input: string): string => {
   return input
-    .replace(/[<>]/g, '')
-    .replace(/javascript:/gi, '')
-    .replace(/on\w+=/gi, '')
-    .trim();
+    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/on\w+=/gi, '') // Remove event handlers    .trim();
 };
 
 export const validateInput = (input: string, type: 'email' | 'url' | 'text' | 'number'): boolean => {
@@ -150,8 +149,7 @@ class RateLimiter {
 }
 
 // Security Headers
-export const setSecurityHeaders = (_config: SecurityConfig) => {
-  if (typeof window === 'undefined') return;
+export const setSecurityHeaders = (config: SecurityConfig) => {  if (typeof window === 'undefined') return;
 
   // Set meta tags for security
   const metaTags = [
@@ -184,27 +182,24 @@ export const validateFormData = (data: Record<string, any>, schema: Record<strin
     const rules = schema[field];
 
     if (rules.required && (!value || value.toString().trim() === '')) {
-      errors[field] = `${_field} is required`;
-      return;
+      errors[field] = `${field} is required`;      return;
     }
 
     if (value && rules.type) {
       if (!validateInput(value.toString(), rules.type)) {
-        errors[field] = `${_field} must be a valid ${rules.type}`;
-      }
+        errors[field] = `${field} must be a valid ${rules.type}`;      }
     }
 
     if (value && rules.minLength && value.toString().length < rules.minLength) {
-      errors[field] = `${_field} must be at least ${rules.minLength} characters`;
+      errors[field] = `${field} must be at least ${rules.minLength} characters`;
     }
 
     if (value && rules.maxLength && value.toString().length > rules.maxLength) {
-      errors[field] = `${_field} must be no more than ${rules.maxLength} characters`;
+      errors[field] = `${field} must be no more than ${rules.maxLength} characters`;
     }
 
     if (value && rules.pattern && !rules.pattern.test(value.toString())) {
-      errors[field] = `${_field} format is invalid`;
-    }
+      errors[field] = `${field} format is invalid`;    }
   });
 
   return {
@@ -220,8 +215,7 @@ export const secureStorage = {
       const encrypted = btoa(encodeURIComponent(value));
       localStorage.setItem(key, encrypted);
     } catch (error) {
-      // console.error('Failed to store item securely:', error);
-    }
+      console.error('Failed to store item securely:', error);    }
   },
 
   getItem: (key: string): string | null => {
@@ -230,8 +224,7 @@ export const secureStorage = {
       if (!encrypted) return null;
       return decodeURIComponent(atob(encrypted));
     } catch (error) {
-      // console.error('Failed to retrieve item securely:', error);
-      return null;
+      console.error('Failed to retrieve item securely:', error);      return null;
     }
   },
 
@@ -327,8 +320,7 @@ export const validateFileUpload = (file: File, options: {
 
   const extension = file.name.split('.').pop()?.toLowerCase();
   if (!extension || !options.allowedExtensions.includes(extension)) {
-    return { isValid: false, _error: 'File extension not allowed' };
-  }
+    return { isValid: false, error: 'File extension not allowed' };  }
 
   return { isValid: true };
 };
@@ -366,15 +358,14 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
       rateLimitWindow: 60000,
       rateLimitMaxRequests: 100,
       ...config,
-    } as SecurityConfig);
+    });
   }, [config]);
 
-  const checkRateLimit = React.useCallback((_identifier: string) => {
+  const checkRateLimit = React.useCallback((identifier: string) => {
     return rateLimiter.isAllowed(identifier);
   }, [rateLimiter]);
 
-  const getRemainingRequests = React.useCallback((_identifier: string) => {
-    return rateLimiter.getRemainingRequests(identifier);
+  const getRemainingRequests = React.useCallback((identifier: string) => {    return rateLimiter.getRemainingRequests(identifier);
   }, [rateLimiter]);
 
   return {
@@ -390,19 +381,17 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
 
 // Security Context
 export const SecurityContext = React.createContext<{
-  _checkRateLimit: (identifier: string) => boolean;
-  _getRemainingRequests: (identifier: string) => number;
-  validateInput: (input: string, _type: 'email' | 'url' | 'text' | 'number') => boolean;
-  _sanitizeInput: (input: string) => string;
-  _validatePassword: (password: string) => { _isValid: boolean; score: number; feedback: string[] };
-  generateCSRFToken: () => string;
+  checkRateLimit: (identifier: string) => boolean;
+  getRemainingRequests: (identifier: string) => number;
+  validateInput: (input: string, type: 'email' | 'url' | 'text' | 'number') => boolean;
+  sanitizeInput: (input: string) => string;
+  validatePassword: (password: string) => { isValid: boolean; score: number; feedback: string[] };  generateCSRFToken: () => string;
   secureStorage: typeof secureStorage;
 } | null>(null);
 
 export const SecurityProvider: React.FC<{ children: React.ReactNode; config?: Partial<SecurityConfig> }> = ({ 
   children, 
-  _config 
-}) => {
+  config }) => {
   const security = useSecurity(config);
   
   return React.createElement(SecurityContext.Provider, { value: security }, children);

@@ -33,7 +33,6 @@ const LazyLoad: React.FC<LazyLoadProps> = memo(({
         rootMargin
       }
     );
-
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }

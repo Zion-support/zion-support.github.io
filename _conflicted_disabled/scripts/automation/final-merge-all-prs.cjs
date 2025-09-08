@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
 
 #!/""usr/bin/env""
 const fs = require("fs");
@@ -211,8 +208,6 @@ this.log( Resolved conflicts "in")
 
 
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 

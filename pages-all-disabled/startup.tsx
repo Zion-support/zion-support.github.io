@@ -1,15 +1,4 @@
-import Layout from '../../components/Layout';
-import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
-import Layout from '../../components/Layout';
-import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: ShoppingCart,
-    title: 'E-commerce Platforms,',
-    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'';
+
   },
   {}
     icon: Users,
@@ -126,13 +115,13 @@ const benefits = [
 export default function RetailSolutions() {  return (
     <>
       <Head>
-        <title>Retail Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
+
+
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
+
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -140,22 +129,12 @@ export default function RetailSolutions() {  return (
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>
-              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Transform your retail business with cutting-edge technology solutions.
+
               </p>
             </motion.div>
           </div>
         </section>
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Retail Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
@@ -307,22 +286,19 @@ export default function RetailSolutions() {  return (
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Retail Business?
-              </h2>
-              <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our retail solutions can boost your sales.
+
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+
                 >
                   Contact Sales
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
                   href="/solutions"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold"
+
                 >
                   View Solutions
                 </Link>
@@ -331,5 +307,5 @@ export default function RetailSolutions() {  return (
           </div>
         </section>
       </div>
-    </Layout>  );
+
 }

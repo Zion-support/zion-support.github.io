@@ -271,29 +271,7 @@ export default function Page() {
                 }
                 key={solution.name}
                 className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm "hover":bg - white / 10 transition - all duration - 300 "hover":scale-105">"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-      {/* CTA section */}
-
-      <div className="mx-auto mt-32 max-w-7xl px-6 "sm":mt-40 "lg":px-8">;"
-        <div className="mx-auto max-w-2xl text-center">;"
-          <h2 className="text-3xl font-bold tracking-tight text-white "sm":text-4xl">;"
-            Ready to transform your business?          </h2>;
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;"
-            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.;
-          </p>;
-          <div className="mt-10 flex items-center justify-center gap-x-6">;"
-            <a;
-              href="/contact";"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm "hover":bg-gray-100 focus-"visible":outline focus-"visible":outline-2 focus-"visible":outline-offset-2 focus-"visible":outline-white transition-all duration-200 "hover":scale-105">"
-
-
-=======
->>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
-=======
->>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

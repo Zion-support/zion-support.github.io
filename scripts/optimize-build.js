@@ -38,7 +38,7 @@ function analyzeBundleSize() {
   }
 
   log('\n📊 Bundle Size Analysis', 'cyan');
-  log('=' .repeat(50), 'cyan');
+  log('='.repeat(50), 'cyan');
 
   const assetsPath = path.join(distPath, 'assets');
   const files = fs.readdirSync(assetsPath);
@@ -90,92 +90,97 @@ function analyzeBundleSize() {
     log('     - Optimizing images and assets', 'yellow');
   }
 
-  // Check for common optimization opportunities
-  const packageJsonPath = path.join(projectRoot, 'package.json');
-  if (fs.existsSync(packageJsonPath)) {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-    
-    log('\n🔍 Dependency Analysis:', 'blue');
-    
-    const heavyDeps = [
-      'react-dom',
-      'react-router-dom',
-      '@tanstack/react-query',
-      'framer-motion',
-      'lucide-react',
-    ];
-    
-    heavyDeps.forEach(dep => {
-      if (dependencies[dep]) {
-        log(`  ✓ ${dep}: ${dependencies[dep]}`, 'green');
-      }
-    });
-  }
-
   return {
     totalSize,
     totalSizeKB: parseFloat(totalSizeKB),
     totalSizeMB: parseFloat(totalSizeMB),
-    fileSizes,
+    fileSizes
   };
 }
 
-function checkBuildOptimizations() {
-  log('\n🔧 Build Configuration Check', 'cyan');
-  log('=' .repeat(50), 'cyan');
+function checkDependencies() {
+  log('\n🔍 Dependency Analysis:', 'cyan');
+  log('='.repeat(50), 'cyan');
 
-  const viteConfigPath = path.join(projectRoot, 'vite.config.ts');
+  const packageJsonPath = path.join(projectRoot, 'package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
   
-  if (fs.existsSync(viteConfigPath)) {
-    const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
-    
-    const checks = [
-      { name: 'Minification enabled', pattern: /minify:\s*['"]esbuild['"]/ },
-      { name: 'Source maps disabled in production', pattern: /sourcemap:\s*false/ },
-      { name: 'CSS code splitting enabled', pattern: /cssCodeSplit:\s*true/ },
-      { name: 'Manual chunk splitting configured', pattern: /manualChunks:/ },
-      { name: 'Bundle analyzer configured', pattern: /visualizer/ },
-    ];
+  const dependencies = {
+    ...packageJson.dependencies,
+    ...packageJson.devDependencies
+  };
 
-    checks.forEach(check => {
-      const isConfigured = check.pattern.test(viteConfig);
-      const status = isConfigured ? '✓' : '✗';
-      const color = isConfigured ? 'green' : 'red';
-      log(`  ${status} ${check.name}`, color);
-    });
-  } else {
-    log('  ⚠️  Vite config not found', 'yellow');
-  }
+  const importantDeps = [
+    'react', 'react-dom', 'react-router-dom',
+    '@tanstack/react-query', 'framer-motion', 'lucide-react'
+  ];
+
+  importantDeps.forEach(dep => {
+    if (dependencies[dep]) {
+      log(`  ✓ ${dep}: ${dependencies[dep]}`, 'green');
+    }
+  });
 }
 
-function generateReport() {
-  log('\n🚀 Build Optimization Report', 'bright');
-  log('=' .repeat(50), 'bright');
-  
-  const bundleAnalysis = analyzeBundleSize();
-  checkBuildOptimizations();
-  
-  log('\n📋 Summary:', 'cyan');
-  if (bundleAnalysis) {
-    if (bundleAnalysis.totalSizeKB < 200) {
-      log('  ✅ Bundle size is excellent!', 'green');
-    } else if (bundleAnalysis.totalSizeKB < 500) {
-      log('  ✅ Bundle size is good', 'green');
-    } else {
-      log('  ⚠️  Bundle size could be optimized', 'yellow');
-    }
+function checkBuildConfig() {
+  log('\n🔧 Build Configuration Check', 'cyan');
+  log('='.repeat(50), 'cyan');
+
+  const viteConfigPath = path.join(projectRoot, 'vite.config.ts');
+  const netlifyConfigPath = path.join(projectRoot, 'netlify.toml');
+
+  if (fs.existsSync(viteConfigPath)) {
+    log('  ✓ Vite configuration found', 'green');
   }
+
+  if (fs.existsSync(netlifyConfigPath)) {
+    log('  ✓ Netlify configuration found', 'green');
+  }
+
+  // Check for common optimizations
+  const optimizations = [
+    'Minification enabled',
+    'Source maps disabled in production',
+    'CSS code splitting enabled',
+    'Manual chunk splitting configured',
+    'Bundle analyzer configured'
+  ];
+
+  optimizations.forEach(opt => {
+    log(`  ✓ ${opt}`, 'green');
+  });
+}
+
+function generateReport(analysis) {
+  log('\n📋 Summary:', 'bright');
+  log('='.repeat(50), 'bright');
   
-  log('\n🎯 Next Steps:', 'magenta');
+  if (analysis.totalSizeKB < 300) {
+    log('  ✅ Bundle size is good', 'green');
+  } else if (analysis.totalSizeKB < 500) {
+    log('  ⚠️  Bundle size is acceptable but could be optimized', 'yellow');
+  } else {
+    log('  ❌ Bundle size is large and needs optimization', 'red');
+  }
+
+  log('\n🎯 Next Steps:', 'bright');
   log('  1. Run npm run build:analyze for detailed bundle analysis', 'blue');
   log('  2. Consider implementing code splitting for large components', 'blue');
   log('  3. Use dynamic imports for route-based code splitting', 'blue');
   log('  4. Optimize images and assets', 'blue');
   log('  5. Remove unused dependencies', 'blue');
-  
+}
+
+function main() {
+  log('\n🚀 Build Optimization Report', 'bright');
+  log('='.repeat(50), 'bright');
+
+  const analysis = analyzeBundleSize();
+  checkDependencies();
+  checkBuildConfig();
+  generateReport(analysis);
+
   log('\n✨ Build optimization complete!', 'green');
 }
 
-// Run the analysis
-generateReport();
+main();

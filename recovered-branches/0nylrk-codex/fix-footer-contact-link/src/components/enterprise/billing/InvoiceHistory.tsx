@@ -3,7 +3,7 @@ import {
   TableBody;
   TableCell;
   TableHead;
-  TableHeader;import React from "react",
+  TableHeader;import React from "react";
 import {
   Table,
   TableBody,

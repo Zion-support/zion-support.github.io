@@ -195,7 +195,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
         
         <CardContent className="space-y-4">
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button onClick={onRetry} variant="default" className="flex items-center gap-2">
+            <Button onClick={onRetry} variant="primary" className="flex items-center gap-2">
               <RefreshCw className="w-4 h-4" />
               Try Again
             </Button>

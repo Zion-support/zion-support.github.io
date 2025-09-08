@@ -16,9 +16,6 @@ function findBrokenFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
         
-<<<<<<< HEAD
-        // Check for common syntax issues
-=======
 ') || 
             content.includes('>>>>>>>') ||
             content.includes('export const metadata = {') && content.includes('export const metadata = {', content.indexOf('export const metadata = {') + 1) ||
@@ -145,5 +142,3 @@ for (const file of brokenFiles) {
 console.log(`Fixed ${fixedCount} out of ${brokenFiles.length} files`);
 
         // Check for common syntax issues
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

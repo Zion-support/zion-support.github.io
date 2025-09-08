@@ -119,7 +119,8 @@ function processAllBranches() {
   return { mergedCount, conflictCount };
 }
 
-// Step 3: Resolve conflicts in a specific file
+
+      content = content.replace(/// Step 3: Resolve conflicts in a specific file
 function resolveConflictsInFile(filePath) {
   console.log(`🔧 Resolving conflicts in ${filePath}...`);
   
@@ -133,12 +134,11 @@ function resolveConflictsInFile(filePath) {
     let originalContent = content;
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+    content = content.replace(/
+    content = content.replace(//g, '');
     
     // Fix import statements
-    content = content.replace(/import React from "react",/g, 'import React from "react";');
+    content = content.replace(/import React from "react";/g, 'import React from "react";');
     content = content.replace(/import React from 'react',/g, "import React from 'react';");
     
     // Fix export statements

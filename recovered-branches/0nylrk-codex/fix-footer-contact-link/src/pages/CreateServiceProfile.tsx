@@ -1,15 +1,15 @@
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
-import React from "react",
+import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-import React from "react",
+import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 
-import React from "react",
+import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-import React from "react",
+import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 export default function CreateServiceProfile() {
   return (

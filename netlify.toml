@@ -1,11 +1,6 @@
 [build]
-<<<<<<< HEAD
-  # Build the Vite project on Netlify
-  command = "npm ci --no-audit --no-fund && npm run build"
-=======
   # Build the project on Netlify
-  command = "npm ci && npm run build"
->>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -13,9 +8,6 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-<<<<<<< HEAD
-  NPM_FLAGS = "--legacy-peer-deps"
-=======
   NPM_FLAGS = "--omit=optional"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NETLIFY_FUNCTIONS_TIMEOUT = "30"
@@ -29,7 +21,6 @@
 [functions]
   node_bundler = "esbuild"
   external_node_modules = ["aws-sdk"]
->>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
 
 [context.production.environment]
   NODE_ENV = "production"

@@ -1,17 +1,22 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface User {
+export interface User {
   id: string;
   email: string;
   name: string;
 }
 
-interface AuthContextType {
+export interface AuthState {
   user: User | null;
-  isAuthenticated: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => void;
   loading: boolean;
+  error: string | null;
+}
+
+export interface AuthContextType extends AuthState {
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+  register: (email: string, password: string, name?: string) => Promise<void>;
+  clearError: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -19,27 +24,57 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const login = async (email: string, password: string) => {
     setLoading(true);
-    // Simulate login
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setUser({ id: '1', email, name: 'User' });
-    setLoading(false);
+    setError(null);
+    try {
+      // Simulate login
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setUser({ id: '1', email, name: 'User' });
+    } catch (err) {
+      setError('Login failed');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const logout = () => {
     setUser(null);
+    setError(null);
+  };
+
+  const register = async (email: string, password: string, name?: string) => {
+    setLoading(true);
+    setError(null);
+    try {
+      // Simulate registration
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setUser({ id: '1', email, name: name || 'User' });
+    } catch (err) {
+      setError('Registration failed');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const clearError = () => {
+    setError(null);
   };
 
   return (
-    <AuthContext.Provider value={{ 
-      user, 
-      isAuthenticated: !!user, 
-      login, 
-      logout, 
-      loading 
-    }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        loading,
+        error,
+        login,
+        logout,
+        register,
+        clearError,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
