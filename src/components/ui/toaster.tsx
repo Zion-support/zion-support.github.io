@@ -8,6 +8,7 @@ export function Toaster() {
   );
 }
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { cn } from '@/lib/utils';
 
 export interface Toast {
@@ -108,3 +109,7 @@ export const Toaster: React.FC<ToasterProps> = ({ toasts, onDismiss }) => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

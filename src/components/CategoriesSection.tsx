@@ -41,6 +41,7 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
+<<<<<<< HEAD
     title: "Services Overview",
     link: "/services-overview"
   },
@@ -51,6 +52,48 @@ const specialServices = [
   {
     title: "Comprehensive Services",
     link: "/comprehensive-services"
+=======
+<<<<<<< HEAD
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"
+=======
+    title: "Services Overview",
+    link: "/services-overview"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
+  },
+  {
+    title: "AI Services",
+    link: "/ai-services"
+  },
+  {
+<<<<<<< HEAD
+    title: "Cybersecurity Services",
+    link: "/cybersecurity-services"
+  },
+  {
+    title: "Micro SAAS",
+    link: "/micro-saas"
+  },
+  {
+    title: "All Services",
+    link: "/comprehensive-services"
+  },
+  {
+    title: "Pricing",
+    link: "/services-pricing"
+  },
+  {
+    title: "Enterprise Solutions",
+    link: "/enterprise-solutions"
+  },
+  {
+    title: "Innovative Services",
+    link: "/innovative-services"
+=======
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   }
 ];
 
@@ -119,6 +162,7 @@ export function CategoriesSection({
               variants={itemVariants}
               whileHover="hover"
               className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
             >
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <div className="text-white">
@@ -159,6 +203,38 @@ export function CategoriesSection({
                     {service.icon}
                   </div>
                 </div>
+<<<<<<< HEAD
+                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
+                <p className="text-zion-slate-light">{category.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        <div className="mt-8">
+          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {specialServices.map((service) => (
+              <Link 
+                key={service.title}
+                to={service.link}
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+              >
+                {service.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12 flex justify-center">
+          <Link 
+            to="/categories" 
+            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+          >
+            View All Categories →
+          </Link>
+        </div>
+=======
                 <h4 className="text-lg font-semibold text-white mb-2">{service.title}</h4>
                 <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
                 <Link 
@@ -201,6 +277,7 @@ export function CategoriesSection({
             ))}
           </div>
         </motion.div>
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       </div>
     </div>
   )}
