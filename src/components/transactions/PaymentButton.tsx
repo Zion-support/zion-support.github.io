@@ -44,8 +44,11 @@ export function PaymentButton({
         description: "Please sign in to make a purchase.",
       });
 
-      const next = encodeURIComponent(`/checkout?sku=${serviceId}`);
-      navigate(`/login?next=${next}`);
+      if (serviceId) {
+        sessionStorage.setItem('intendedProduct', serviceId);
+      }
+
+      navigate('/login?next=/checkout');
       return;
     }
     

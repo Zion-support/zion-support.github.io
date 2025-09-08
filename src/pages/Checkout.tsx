@@ -4,16 +4,14 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-s1yros-codex/fix-unauthenticated-user-redirect-flow
-import { useNavigate, useSearchParams } from 'react-router-dom';
-main
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
 
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
   const [items, setItems] = useState<CartItem[]>([]);
   const { user } = useAuth();
   const [showGuest, setShowGuest] = useState(false);
@@ -21,13 +19,9 @@ export default function Checkout() {
   const [guestAddress, setGuestAddress] = useState('');
 
   useEffect(() => {
-    const sku = searchParams.get('sku');
-    if (sku) {
-      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-      return;
-    }
-
-    const stored = safeStorage.getItem('cart');
+    const params = new URLSearchParams(location.search);
+    const productParam = params.get('product');
+    const stored = localStorage.getItem('cart');
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as CartItem[];
@@ -39,25 +33,29 @@ export default function Checkout() {
         // ignore parsing errors
       }
     }
-    s1yros-codex/fix-unauthenticated-user-redirect-flow
-    // Provide mock data if cart empty
-    setItems([
-      {
-        id: 'prod_mock',
-        name: 'Test Item',
-        price: 25,
-        quantity: 1,
-      },
-    ]);
-  }, [searchParams]);
-  }, [searchParams]);
+    if (productParam) {
+      setItems([
+        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
+      ]);
+    } else {
+      // Provide mock data if cart empty
+      setItems([
+        {
+          id: 'prod_mock',
+          name: 'Test Item',
+          price: 25,
+          quantity: 1,
+        },
+      ]);
+    }
+  }, [location.search]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
   main
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: product.id }),
