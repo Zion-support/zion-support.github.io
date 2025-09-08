@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 
 const NotFoundPage: React.FC = () => {
   return (
@@ -18,9 +18,11 @@ const NotFoundPage: React.FC = () => {
           <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
             The page you're looking for doesn't exist or has been moved.
           </p>
-          <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80">
-            <Link to="/">Go Home</Link>
-          </Button>
+          <Link to="/">
+            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80">
+              Go Home
+            </Button>
+          </Link>
         </div>
       </div>
     </>
