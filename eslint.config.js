@@ -6,9 +6,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
 export default [
-  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}'] },
+  { ...js.configs.recommended, files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'] },
   {
-    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
       ecmaVersion: 'latest',

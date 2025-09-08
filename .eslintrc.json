@@ -10,18 +10,7 @@
     ".eslintrc.cjs",
     "media/**/*",
     "scripts/**/*",
-    "node_modules/**/*",
-    "src/pages/**/*",
-    "src/routes/**/*",
-    "src/components/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*",
-    "src/services/**/*",
-    "src/data/**/*",
-    "src/types/**/*",
-    "src/utils/**/*",
-    "src/layout/**/*",
-    "src/lib/**/*"
+    "node_modules/**/*"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
