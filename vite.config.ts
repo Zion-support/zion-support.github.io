@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
+=======
 // import { fileURLToPath } from 'node:url'
+>>>>>>> main
 import path from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 
