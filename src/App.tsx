@@ -27,7 +27,7 @@ const queryClient = new QueryClient({
       },
       refetchOnWindowFocus: false,
       staleTime: 5 * 60 * 1000, // 5 minutes
-      cacheTime: 10 * 60 * 1000, // 10 minutes
+      gcTime: 10 * 60 * 1000, // 10 minutes
     },
     mutations: {
       retry: 1,
@@ -39,8 +39,8 @@ const queryClient = new QueryClient({
 const appConfig: AppConfig = {
   name: 'Zion Tech Group',
   version: '1.0.0',
-  environment: (process.env.NODE_ENV as any) || 'development',
-  apiUrl: process.env.REACT_APP_API_URL || '/api',
+  environment: (import.meta.env.MODE as any) || 'development',
+  apiUrl: import.meta.env.VITE_API_URL || '/api',
   features: {
     analytics: true,
     notifications: true,
