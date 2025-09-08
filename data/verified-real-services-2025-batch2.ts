@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -34,6 +35,26 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 
 
 
+=======
+export interface VerifiedRealService2025Batch2 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string}
+}
+
+export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
+  {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "ai-quality-assurance",
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",
@@ -52,6 +73,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -67,3 +89,9 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   }
 ];
 
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

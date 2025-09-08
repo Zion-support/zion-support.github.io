@@ -6,8 +6,11 @@ function Skeleton({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { cn } from &quot;@/lib / utils & quot;
 ;
 /**
@@ -23,6 +26,7 @@ function Skeleton() {
     <div;
       className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
 
+<<<<<<< HEAD
 
 import { cn } from "@/lib/utils";
 ;
@@ -40,3 +44,27 @@ function Skeleton({;
 ;
 
 
+=======
+import { cn } from "@/lib/utils";"
+;
+
+      className={cn("animate-pulse rounded-md bg-muted", className)}
+
+      {...props}
+    />);
+}
+;
+
+export { Skeleton } function Skeleton ({
+  className, ...props 
+}: React.HTMLAttributes<HTMLDivElement>) {
+
+  return (<div />) 
+
+    />;
+  );
+}
+export { Skeleton }
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

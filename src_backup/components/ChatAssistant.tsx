@@ -16,12 +16,12 @@ const ChatAssistant: React.FC = () => {}
     <>
       {/* Chat Button */}
 
-              <X className="w-5 h-5" />
+              <X className='w-5 h-5' />
             </button>
           </div>
 
-          {/* Messages */}"
-          <div className="flex-1 p-4 overflow-y-auto space-y-4">
+          {/* Messages */}'
+          <div className='flex-1 p-4 overflow-y-auto space-y-4'>
             {messages.map((msg) => (
               <div;
                 key={msg.id}'
@@ -33,9 +33,9 @@ const ChatAssistant: React.FC = () => {}
                       ? 'bg-gray-100 text-gray-800''
                       : 'bg-blue-600 text-white'`
                   }`}
-                >"
-                  <p className="text-sm">{msg.text}</p>"
-                  <p className="text-xs opacity-70 mt-1">
+                >'
+                  <p className='text-sm'>{msg.text}</p>'
+                  <p className='text-xs opacity-70 mt-1'>
                     {msg.timestamp.toLocaleTimeString([], { '
                       hour: '2-digit', '
                       minute: '2-digit' 
@@ -46,13 +46,13 @@ const ChatAssistant: React.FC = () => {}
             ))}
           </div>
 
-            <div className="flex space-x-2">
-              <input"
-                type="text"
+            <div className='flex space-x-2'>
+              <input'
+                type='text'
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
 
-                <Send className="w-4 h-4" />
+                <Send className='w-4 h-4' />
               </button>
             </div>
           </form>

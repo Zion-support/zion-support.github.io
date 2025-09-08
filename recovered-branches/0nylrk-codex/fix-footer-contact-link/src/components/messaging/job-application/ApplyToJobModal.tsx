@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 Dialog
   DialogContent
   DialogDescription
   DialogHeader
   DialogTitle
 
+<<<<<<< HEAD
 
   Dialog,
   DialogContent,
@@ -27,6 +31,24 @@ Dialog
           </DialogDescription>
         </DialogHeader>
 
+=======
+  Dialog,
+  DialogContent,
+  DialogDescription,
+
+} from "@/components/ui/dialog";
+
+import { ApplyForm } from "./ApplyForm";
+
+  Dialog,
+  DialogContent,
+  DialogDescription,
+
+
+} from "@/components/ui/dialog";
+
+import { ApplyForm } from "./ApplyForm";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import React from 'react',;
@@ -35,6 +57,7 @@ import {;
   DialogContent,;
   DialogDescription,;
   DialogHeader,;
+<<<<<<< HEAD
 
 
 
@@ -45,6 +68,25 @@ import React from './react';
 import {}
 
 
+=======
+
+
+import { ApplyToJobModalProps } from "./types";
+export function ApplyToJobModal(): any ({;
+  job,;
+  isOpen,;
+  onClose,;
+  onApplySuccess,;
+}: ApplyToJobModalProps) {;
+  return (
+
+      <DialogContent className="sm:max-w-[600px]">;
+        <DialogHeader>;
+          <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
+
+
+import React from './react';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   Dialog,
   DialogContent,
   DialogDescription,
@@ -67,6 +109,7 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-[600px]">;
         <DialogHeader>;
+<<<<<<< HEAD
 
           <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
   DialogTitle} from '@/components/ui/dialog',;
@@ -80,13 +123,21 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
         <DialogHeader>;
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
 
+=======
+
+          <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
 
+<<<<<<< HEAD
         ;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <ApplyForm ;
           job={job}
           on_close={on_close}
@@ -98,12 +149,42 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
 
 });
 </Dialog>);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
     </Dialog>;
   );
     </Dialog>);
+<<<<<<< HEAD
+=======
+
+}
+    </Dialog>;
+  ),;}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+          job={job}
+
+          onClose={onClose}
+        />
+
+    );"
+pr-12325
+</ApplyForm>
+      </DialogContent>
+
+</Dialog>
+    </Dialog>;
+    </Dialog>);"
+
+  );
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

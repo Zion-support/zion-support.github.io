@@ -1,21 +1,30 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
   if (!skills || skills.length === 0) return null;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { SkillCategoryProps } from './types',
 import { SkillItem } from './SkillItem',
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null,
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="space - y-2">;
       <h4 className="text - sm font - medium text - muted - foreground">{category}</h4>;
@@ -26,8 +35,23 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
             skill={skill}
             category={category}
 
+<<<<<<< HEAD
 
 
+=======
+
+import { SkillCategoryProps } from "./types";
+
+import { SkillItem } from "./SkillItem";
+export const SkillCategory = ({}
+  category,
+  skills,
+  onDelete,
+}: SkillCategoryProps) => {};
+  if (!skills || skills.length === 0) return null;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="space-y-2">
       <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>
@@ -35,11 +59,14 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
         {skills.map((skill) => (
           <SkillItem
 
+<<<<<<< HEAD
             key={skill && skill.id} 
             skill={skill} 
             category={category} 
             onDelete={onDelete} 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             on_delete={on_delete}
           />))}
       </div>;
@@ -47,7 +74,11 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 }
 ;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba

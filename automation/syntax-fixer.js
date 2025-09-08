@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 }})};
@@ -164,6 +165,10 @@ if ( {) {}
   $2;
 }
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       }
 
@@ -175,6 +180,7 @@ if ( {) {}
     files.forEach($2);
         let modified = $2;
 ,
+<<<<<<< HEAD
 
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -384,6 +390,14 @@ export default SyntaxFixer;
 
         },
 
+=======
+        // Fix import statements,
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
+,
+        if (content !== fs.readFileSync(file, "utf8")) {,
+          modified = $2;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ,
         if (modified) {,
           fs.writeFileSync($2);
@@ -455,6 +469,7 @@ export default SyntaxFixer;
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
+<<<<<<< HEAD
 
 
 },
@@ -528,3 +543,14 @@ export default SyntaxFixer;
 
 
 
+=======
+},
+,
+// Main execution,
+if (import.meta.url = $2;
+  const fixer = new SyntaxFixer($2);
+  fixer.run().catch(console.error)
+},
+,
+export default SyntaxFixer,
+>>>>>>> origin/cursor/delete-old-data-records-6bba

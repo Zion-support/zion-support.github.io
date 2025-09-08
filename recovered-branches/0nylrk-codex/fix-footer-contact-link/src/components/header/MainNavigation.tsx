@@ -1,5 +1,16 @@
 
 
+<<<<<<< HEAD
+=======
+import { Link  } from 'react-router-dom';
+
+import { cn } from "@/lib/utils";
+import { NavLink } from "react-router-dom";
+
+import { NavLink } from './react-router-dom';
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
@@ -22,14 +33,20 @@ interface MainNavigationProps {};
           cn(;
             "text-sm font-medium transition-colors hover: text-primary",;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
+<<<<<<< HEAD
 
           );
 
+=======
+          );
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export /**
  * MainNavigation - Function description
 
  */
+<<<<<<< HEAD
 
 function MainNavigation() {}
   return ("
@@ -42,6 +59,68 @@ function MainNavigation() {}
             is_active ? "text - zion - cyan" : "text - muted - foreground");
 
 
+=======
+function MainNavigation() {
+
+      >;
+        Home;
+      </NavLink>;
+
+        className={({ isActive }) =>;
+          cn(;
+            "text-sm font-medium transition-colors hover: text-primary",;
+            isActive ? "text-zion-cyan" : "text-muted-foreground";
+          );
+
+
+      <Link to="/talent" className="text - zion - slate - light hover:text - white transition - colors">;
+        Find Talent;
+      </Link>;
+      <Link to="/services" className="text - zion - slate - light hover:text - white transition - colors">;
+        Services;
+      </Link>;
+      <Link to="/equipment" className="text - zion - slate - light hover:text - white transition - colors">;
+        Equipment;
+      </Link>;
+      <Link to="/blog" className="text - zion - slate - light hover:text - white transition - colors">;
+        Blog;
+      </Link>;
+
+
+        Categories;
+      </Link>;
+      <NavLink;"
+        to="/partners";
+
+
+          );
+        }
+      >;
+        Register;
+      </NavLink>;
+
+    </nav>;
+
+        to="/signup";
+        className={({ is_active }) =>;
+          cn ("
+            "text - sm font - medium transition - colors hover: text - primary";"
+            is_active ? "text - zion - cyan" : "text - muted - foreground","
+            "bg - zion - purple px - 4 py - 2 rounded - md hover:bg - zion - purple - light");
+        }
+      >;
+        Register;
+      </NavLink>;
+    </nav>);
+}
+
+"
+            "text-sm font-medium transition-colors hover:text-primary",
+
+            isActive ? "text-zion-cyan" : "text-muted-foreground",;
+
+            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           );
         }
       >;
@@ -49,7 +128,12 @@ function MainNavigation() {}
       </NavLink>;
     </nav>;
 
+<<<<<<< HEAD
 
+=======
+  );
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <NavLink;
 
         }
@@ -59,11 +143,15 @@ function MainNavigation() {}
     </nav>);
 }
 
+<<<<<<< HEAD
 
             "text-sm font-medium transition-colors hover:text-primary",
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           )
         }
       >
@@ -76,7 +164,33 @@ function MainNavigation() {}
           )
         }
       >
+<<<<<<< HEAD
 
+=======
+        Partner Program
+      </NavLink>
+      <NavLink
+        to = $2;
+          )
+        }
+      >
+        Partner Program;
+      </NavLink>
+      <NavLink"
+        to="/signup"
+        className={({ isActive }) =>
+          cn(
+            "text-sm font-medium transition-colors hover: text-primary";
+            isActive ? "text-zion-cyan" : "text-muted-foreground"
+
+          cn(;
+            "text-sm font-medium transition-colors hover: text-primary";
+            isActive ? "text-zion-cyan" : "text-muted-foreground",
+            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
+          )
+        }
+      >
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         Home;
       </NavLink>"
       <Link to="/talent" className="text-zion-slate-light hover:text-white transition-colors">
@@ -100,7 +214,10 @@ function MainNavigation() {}
           cn(
 
             isActive ? "text-zion-cyan" : "text-muted-foreground"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           )
         }
       >
@@ -109,6 +226,7 @@ function MainNavigation() {}
       <NavLink"
         to="/signup"
         className={({ isActive }) =>
+<<<<<<< HEAD
 
           cn(
           cn(
@@ -201,6 +319,27 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 " bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light") 
 }> Register </NavLink> </nav>) 
 }
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
+=======
+          cn(;
+
+            "text-sm font-medium transition-colors hover: text-primary";
+            isActive ? "text-zion-cyan" : "text-muted-foreground",
+
+            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
+          )
+        }
+      >
+        Register;
+
+      </NavLink>
+    </nav>
+  )
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

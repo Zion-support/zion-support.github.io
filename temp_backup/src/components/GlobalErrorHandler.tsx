@@ -120,7 +120,7 @@ function getErrorMessage(error: Error): string {
     return 'Your session has expired. Please log in again.'
   }
   if (message.includes('forbidden') |message.includes('403')) {
-    return "You don't have permission to perform this action."
+    return 'You don't have permission to perform this action.'
   }
   if (message.includes('not found') |message.includes('404')) {
     return 'The requested information could not be found.'
@@ -192,6 +192,6 @@ export function useErrorHandler() {
 
     handleAsyncOperation}
 }
-}'"
-}, [reportError, handleApiError]);'"'"
-}'"'"'"
+}''
+}, [reportError, handleApiError]);''''
+}''''''

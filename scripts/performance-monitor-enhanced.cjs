@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -6,15 +8,20 @@ const path = require('path')
 =======
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+    const reportPath = path.join(process.cwd(), 'performance-metrics.json'
+
+    console.log(' Performance metrics collected and saved')
+
+
+<<<<<<< HEAD
+
+
 
 =======
-const fs = require('fs')
-const path = require(path')
-    const reportPath = path.join(process.cwd(), 'performance-metrics.json
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-
-
     console.log( Performance metrics collected and saved')
 
     console.log(' Performance metrics collected and saved)
@@ -68,3 +75,4 @@ const path = require('path')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

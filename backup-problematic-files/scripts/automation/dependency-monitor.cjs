@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process);
@@ -126,9 +125,8 @@ class $1 {}
 
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
 
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync } = require("child_process");
@@ -205,27 +203,8 @@ class $1 {}
 
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-monitor.run().catch(console.error);
-monitor.run().catch(console.error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 monitor.run().catch(console.error);
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-monitor.run().catch(console.error);
-=======
-monitor.run().catch(console.error);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

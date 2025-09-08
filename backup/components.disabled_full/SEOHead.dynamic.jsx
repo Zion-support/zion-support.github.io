@@ -1,4 +1,4 @@
-const SEOHead = dynamic(() => import("./SEOHead"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOHead' ,'
+const SEOHead = dynamic(() => import('./SEOHead'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SEOHead' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const SEOHead = dynamic(() => import("./SEOHead"),{'; "loading": () => <p>Loadin
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const SEOHead = dynamic(() => import(\"./SEOHead\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default SEOHead\' ,const SEOHead = dynamic(() => import(\"./SEOHead\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default SEOHead\" ,\"\"\";
-const SEOHead = dynamic(() => import(\"./SEOHead\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SEOHead' ,';
+const SEOHead = dynamic(() => import(\'./SEOHead\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default SEOHead\' ,const SEOHead = dynamic(() => import(\'./SEOHead\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default SEOHead\' ,\'\'\';
+const SEOHead = dynamic(() => import(\'./SEOHead\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SEOHead' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const SEOHead = dynamic(() => import(\"./SEOHead\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SEOHead' ,'
+const SEOHead = dynamic(() => import(\'./SEOHead\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SEOHead' ,'
 </p>'
 </p>'
 </p>'

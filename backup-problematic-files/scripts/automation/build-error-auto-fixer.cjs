@@ -5,7 +5,6 @@ const { execSync } = require('child_process');
 class BuildErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs);
     this.fixInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 900000; // 15 minutes;
@@ -15,17 +14,9 @@ class BuildErrorAutoFixer {}
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive: true })}
-=======
-
-    // Ensure directories exist;
-    [this.reportsDir, this.logsDir].forEach(dir => {})
-      if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};"
->>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     this.fixesApplied = 0;
-<<<<<<< HEAD
     this.buildHistory = []}
   log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
@@ -44,35 +35,16 @@ class BuildErrorAutoFixer {}
   parseBuildErrors(output) {}
     const errorLines = output.split('\n).filter(line => )
       line.includes(error') || line.includes('Error": ) || line.includes(Failed') || line.includes('Build failed);
-=======
-    this.buildHistory = []};"
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message})};
-  async runBuildCheck() {}
-    try {}
-
-      return { "success": false, errors, "count": errors.length }};"
-  };
-  parseBuildErrors(output) {}"
-    const errorLines = output.split('\n').filter(line => )
-
->>>>>>> origin/chore/fix-lint-and-merge
     );
     const errors = [];
     let currentError = null;
     for (const line of errorLines) {}
-<<<<<<< HEAD
       if (line.includes(error') || line.includes('Error:) || line.includes(Failed')) {}
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)}
           currentError = {}
-<<<<<<< HEAD
             "file: match[1].trim(),
             line": parseInt(match[2]),
             "column: parseInt(match[3]),
@@ -99,24 +71,14 @@ class BuildErrorAutoFixer {}
     if (!this.autoFixEnabled) {}
       this.log(Auto-fix is disabled', 'INFO);
       return 0}
-=======
-
-      return 0};
->>>>>>> origin/chore/fix-lint-and-merge
     let fixesApplied = 0;
     for (const error of errors) {}
         if (await this.fixSingleBuildError(error)) {}
-<<<<<<< HEAD
           fixesApplied++}
       } catch (error) {}
         this.log(`Failed to fix build "error: ${error.message}`, ERROR')}
     }
     return fixesApplied}
-=======
-          fixesApplied++};
-
-    return fixesApplied};
->>>>>>> origin/chore/fix-lint-and-merge
   async fixSingleBuildError(error) {}
     const message = error.message.toLowerCase();
     // Fix common build errors;
@@ -132,7 +94,6 @@ class BuildErrorAutoFixer {}
       return await this.fixDependencyError(error)}
     return false}
   async fixModuleNotFoundError(error) {}
-<<<<<<< HEAD
     this.log('Attempting to fix module not found error..., INFO');
     
     try {}
@@ -164,10 +125,6 @@ class BuildErrorAutoFixer {}
         const content = fs.readFileSync(error.file, 'utf8');
         const lines = content.split(\n);
         
-=======
-
-        const lines = content.split('\n');
->>>>>>> origin/chore/fix-lint-and-merge
         // Basic syntax fixes;
         const fixes = [this.fixMissingSemicolons.bind(this)]
           this.fixUnclosedBrackets.bind(this),
@@ -179,7 +136,6 @@ class BuildErrorAutoFixer {}
         for (const fix of fixes) {}
             const result = fix(lines, error);
             if (result.modified) {}
-<<<<<<< HEAD
               modifiedContent = result.content;
               this.log(`Applied syntax fix to ${error.file}: ${result.description}`, 'INFO')}
           } catch (fixError) {}
@@ -246,14 +202,10 @@ class BuildErrorAutoFixer {}
   fixMissingSemicolons(lines, error) {}
     const lineIndex = error.line - 1;
     if (lineIndex >= 0 && lineIndex < lines.length) {}
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
       const line = lines[lineIndex];
       if (!line.trim().endsWith(;') && !line.trim().endsWith('{) && !line.trim().endsWith(}')) {}
         lines[lineIndex] = line + ';;
         return {}
-<<<<<<< HEAD
           modified: true,
           "content": lines.join(\n'),
           description: 'Added missing semicolon
@@ -262,18 +214,10 @@ class BuildErrorAutoFixer {}
     return { "modified": false, content: lines.join(\n') }}
   fixUnclosedBrackets(lines, error) {}
     if (lineIndex >= 0 && lineIndex < lines.length) {}
-=======
-          "modified": true,""
-          "content": lines.join('\n'),
-          "description": 'Added missing semicolon
-    return { "modified": false, "content": lines.join('\n') }};
-  fixUnclosedBrackets(lines, error) {}
->>>>>>> origin/chore/fix-lint-and-merge
       const openBrackets = (line.match(/[\(\[\{]/g) || []).length;}
       const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
       if (openBrackets > closeBrackets) {}
         const missingBrackets = openBrackets - closeBrackets;
-<<<<<<< HEAD
         const closingBrackets = ')}].slice(0, missingBrackets);
         lines[lineIndex] = line + closingBrackets;
         return {}
@@ -344,25 +288,11 @@ class BuildErrorAutoFixer {}
       }
       
       // Save report;
-=======
-
-      const doubleQuotes = (line.match(/"/g) || []).length;"
-      if (singleQuotes % 2 !== 0) {}"
-        lines[lineIndex] = line + "";"
-        return {}"
-
-        "initialErrors": checkResult.errors.length,"
-        fixesApplied,"
-        "remainingErrors": postCheckResult.errors.length,
-        "success": postCheckResult.success;"
-      // Save report;`;
->>>>>>> origin/chore/fix-lint-and-merge
       const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       // Update build history;
       this.buildHistory.push(report);
       if (this.buildHistory.length > 50) {}
-<<<<<<< HEAD
         this.buildHistory = this.buildHistory.slice(-50)}
       this.log(`Build auto-fix completed. Report saved to ${reportPath}`, INFO')} catch (error) {`}
       this.log(`Build auto-fix "failed": ${error.message}`, 'ERROR)}
@@ -370,14 +300,10 @@ class BuildErrorAutoFixer {}
   async startAutoFixer() {}
     this.log(Starting build error auto-fixer...');
     
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
     // Run initial fix;
     await this.runAutoFix();
     // Set up periodic fixing;
     setInterval(async () => {}
-<<<<<<< HEAD
       try {}
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic fix: ${error.message}`, 'ERROR)}
@@ -412,36 +338,8 @@ if (require.main === module) {}
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, ERROR');
     process.exit(1)})}
 
-=======
 
-      "autoFixEnabled": this.autoFixEnabled;"
-// Main execution;
-if (require.main === module) {}
-  const fixer = new BuildErrorAutoFixer();
-  // Handle graceful shutdown;"
 
-    process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = BuildErrorAutoFixer;
-module.exports = BuildErrorAutoFixer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = BuildErrorAutoFixer;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = BuildErrorAutoFixer;
-=======
-module.exports = BuildErrorAutoFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

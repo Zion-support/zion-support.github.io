@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ;
 import React, { useMemo, useState } from './react';,import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",export interface MilestoneAssistantProps  {scopeOfWork: string,startDateIso: string,endDateIso: string,project_type: ProjectType,on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;import React, { useMemo, useState } from "react",import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",export interface MilestoneAssistantProps  {scopeOfWork: string,startDateIso: string,endDateIso: string,projectType: ProjectType,onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;}
@@ -47,7 +50,10 @@ export interface MilestoneAssistantProps {
   endDateIso: string,
 
 import React, { useMemo, useState } from "react",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 export interface MilestoneAssistantProps {;
   scopeOfWork: string,;
@@ -56,10 +62,15 @@ export interface MilestoneAssistantProps {;
   projectType: ProjectType,;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
 
+<<<<<<< HEAD
 
   projectType: ProjectType,
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void
 
+=======
+  projectType: ProjectType,
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
   const [loading, set_loading] = useState (false),
@@ -91,12 +102,41 @@ export interface MilestoneAssistantProps {;
       <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
         <button onClick={generate} disabled={loading || isDisabled}>;
 
+          {loading ? "Generating..." : "💡 Generate AI Milestones"}
+        </button>;
+        <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
+          <input type="checkbox" checked={auto_add} on_change={(e) => setAutoAdd (e.target.checked)} />;
+          Auto - add to Milestone Tracker;
+        </label>;
+      </div>;{error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>};{loading ? "Generating..." : "💡 Generate AI Milestones"}
+        </button>;
+        <label style={{ display: "flex", gap: 6, alignItems: "center" }}>;
+          <input type="checkbox" checked={autoAdd} onChange={(e) => setAutoAdd(e.target.checked)} />;
+          Auto-add to Milestone Tracker;
+        </label>;
+      </div>;
+      {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}<div style={{ marginTop: 12 }}>;
+        {items.length === 0 && !loading && (<div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
+        )}
+        {items.map((item, idx) => (<div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;{error && <div style={{ color: "#b00", margin_top: 8 }}>{error}</div>}
+      <div style={{ margin_top: 12 }}>;
+        {items.length === 0 && !loading && (<div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>)}
+        {items.map ((item, idx) => (<div key={idx} className="milestone - item" style={{ border: "1px solid #ddd", border_radius: 8, margin_bottom: 8 }}>;<div;
+              className="milestone - summary";
+              style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
+              on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
+            >;</div>;            <div;
+              className="milestone-summary";
+      </div>;
   return (
     <div className="milestone - assistant">;
       <div className="assistant - header" style={{ display: "flex", gap: 12, align_items: "center" }}>;
         <button on_click={generate} disabled={loading || is_disabled}>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <div style={{ marginTop: 12}}>
         {items.length === 0 && !loading && (
       </div>;            <div;
@@ -205,7 +245,10 @@ export interface MilestoneAssistantProps {;
                   <label>Title</label>;
                   <input;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         )}
         {items.map((item, idx) => (;
           <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;
@@ -266,7 +309,10 @@ export interface MilestoneAssistantProps {;
                   <label>Description</label>;
                   <textarea;
                     value={item.description}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
                   AI Suggested;
                 </span>;
@@ -309,7 +355,10 @@ export interface MilestoneAssistantProps {;
                   <input;
                     type="date";
                     onChange={(e) => updateItem(idx, { description: e.target.value })}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     rows={3}
 
                     placeholder="Description";
@@ -347,7 +396,10 @@ export interface MilestoneAssistantProps {;
                     min={1}
                     value={item.estimatedEffortHours}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 
 
@@ -372,7 +424,10 @@ export interface MilestoneAssistantProps {;
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
                   />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 </div>;
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>;
                   <button onClick={() => removeItem(idx)} style={{ color: "#b00" }}>Remove</button>;
@@ -383,7 +438,10 @@ export interface MilestoneAssistantProps {;
           </div>;
         ))}
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     </div>;;export default MilestoneAssistant;
 export default MilestoneAssistant;export default MilestoneAssistant;
 }> <button onClick= {generate;
@@ -401,7 +459,10 @@ export default MilestoneAssistant;
 
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export default MilestoneAssistant;
 ;
@@ -417,7 +478,10 @@ export default MilestoneAssistant;
   {
   display: "flex", gap: 6, alignItems: "center" 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }> <input type="checkbox" checked= {autoAdd;
 }onChange= {(e) => setAutoAdd (e.target.checked)}/> Auto-add to Milestone Tracker </label> </div> {error && <div style= {{color: "#b00", marginTop: 8;
 }
@@ -467,20 +531,29 @@ export default MilestoneAssistant;
 }>Remove</button> <button onClick= {accept;
 }>Accept</button> </div> </div>)}</div>) )}</div> </div>)}export default MilestoneAssistant;
   )}export default MilestoneAssistant;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }>Remove</button> <button onClick= {
   accept 
 }>Accept</button> </div> </div>) 
 }</div>) ) 
 }</div> </div>) 
 }export default MilestoneAssistant;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   );
 }
 ;
 export default MilestoneAssistant;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default MilestoneAssistant;
 export default MilestoneAssistant;
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
@@ -488,4 +561,7 @@ export default MilestoneAssistant;
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8}}>
                   <button onClick = $2;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

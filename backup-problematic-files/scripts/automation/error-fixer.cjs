@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -46,60 +45,6 @@ const { execSync } = require("child_process)
   content = "import React from "react;
         if (content.includes(<Helmet>") && !content.includes("<>)
   content = content.replace(/<Helmet>/g, <>\n        <Helmet>")
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-    this.reportsDir = path.join(this.projectRoot, "reports")
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-    this.reportsDir = path.join(this.projectRoot, "automation-reports")
-  fs.mkdirSync(this.reportsDir, { "recursive"})
-  this.log("Running TypeScript type check...")
-      execSync("npm run type-check", { "stdio": "pipe"})
-      this.log("TypeScript check passed - no errors found")
-      return { "success": true, "errors"}
-  const output = error.stdout?.toString() || error.stderr?.toString() || ""
-      return { "success"}
-      .split("\n")
-      .filter(line => line.includes("error TS") || line.includes(""error": ")
-  if (line.includes("error TS") || line.includes("error:")
-  this.log("Running ESLint check...")
-      execSync("npm run lint", { "stdio": "pipe"})
-      this.log("ESLint check passed - no errors found")
-      return { "success": true, "errors"}
-  const output = error.stdout?.toString() || error.stderr?.toString() || ""
-      return { "success"}
-      .split("\n")
-      .filter(line => line.includes("error") || line.includes(""Error": ")
-      "type": "eslint"
-  this.log("Starting to fix common errors...")
-    // Fix common ""React/JSX""
-    // Fix common ""import/export""
-  this.log("Fixing TypeScript syntax errors...")
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
-      { "pattern": /(\w+)\s*\["/g", ""replacement": "$1: [" }", ""]
-    const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx")]
-  let content = fs.readFileSync(file, "utf8")
-  fs.writeFileSync(file, content, "utf8")
-    content = content.replace(/const\s+(\w+)\s*=\s*\[/g, "const $1 = ["]
-    content = content.replace(/return\s*\(\s*$/gm, "return (")
-    content = content.replace(/<>\s*$/gm, "<>")
-    content = content.replace(/^\s*<\/>/gm, "</>")
-      /catch\s*\(\s*error\s*:\s*\)/g, "catch ("error": any)"
-  this.log("Fixing ""React/JSX"" errors...")
-    const reactFiles = this.findFiles(["**/*.tsx"", "**/*.jsx")]
-  let content = fs.readFileSync(file, "utf8")
-        if (content.includes("React") && !content.includes("import React")
-  content = "import React from "react";
-        if (content.includes("<Helmet>") && !content.includes("<>")
-  content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")
->>>>>>> origin/chore/fix-lint-and-merge
             /<\/Helmet>\s*<\/div>/g,</Helmet>\n      </div>\n    </>"
   fs.writeFileSync(file, content, utf8)
   this.log("Fixing "import/export" errors...")
@@ -152,31 +97,10 @@ const { execSync } = require("child_process")
     const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})
     this.log(` Report generated`)
   this.log(" Starting Error Fixer Automation")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-        if (content.includes("<Helmet>") && !content.includes("<>")"
-"
-  content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
       this.log(")
       this.log(")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      this.log(")
-=======
-      this.log(")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

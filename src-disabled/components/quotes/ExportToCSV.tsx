@@ -3,9 +3,13 @@ import { Download } from 'lucide-react';"
 import type { QuoteRequest } from "@/types/quotes";
 
 
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
 
+=======
+interface ExportToCSVProps {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   quotes: QuoteRequest[]
   filename?: string;
 }"
@@ -181,6 +185,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       URL.revokeObjectURL (url);
     }, 100);
   }
+<<<<<<< HEAD
 
       >
       <Download size={16} />
@@ -192,6 +197,8 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   } }
   return (
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
@@ -280,6 +287,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   const handleExport = () => {;
     // Define CSV Headers;
 
+<<<<<<< HEAD
     const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',;
       'StatusCreated Date';
@@ -329,11 +337,17 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     }, 100);
   };
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
       Export CSV;
     </Button>;
+<<<<<<< HEAD
 
   );
 
+=======
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba

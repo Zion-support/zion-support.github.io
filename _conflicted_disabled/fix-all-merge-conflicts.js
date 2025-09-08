@@ -95,8 +95,6 @@ console.log('Starting comprehensive merge conflict resolution...');
           } catch (error) {
             // Skip files that can't be read
           }
-        }
-      }
     } catch (error) {
 
 
@@ -126,7 +124,21 @@ console.log('Starting comprehensive merge conflict resolution...');
     }
   }
   scanDirectory(dir);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:_conflicted_disabled/fix-all-merge-conflicts.js
+  return files;
+  return conflictedFiles;
+}
+
+// Main execution
+try {
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return conflictedFiles;
   return conflictedFiles;
 }
@@ -155,7 +167,6 @@ console.log('Starting comprehensive merge conflict resolution...');
     } catch (error) {
       console.error('❌ Error adding files to git:', error.message);
     }
-  }
 } catch (error) {
   console.error('❌ Fatal error:', error.message);
   process.exit(1);
@@ -183,8 +194,22 @@ console.log('🎯 Merge conflict resolution completed!');
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
+<<<<<<< HEAD
 
 
 console.log('🎯 Merge conflict resolution completed!');
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:_conflicted_disabled/fix-all-merge-conflicts.js
+}
+=======
+
+console.log('🎯 Merge conflict resolution completed!');
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621:fix-all-merge-conflicts.js
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

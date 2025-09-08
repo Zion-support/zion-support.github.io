@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
-;
+
 console.log('📊 Running Code Quality Monitor...');
 
 const qualityChecks = [
@@ -14,9 +14,9 @@ const report = {
   timestamp: new Date().toISOString(),
   checks: []
 };
-;
-qualityChecks.forEach(check => {;
-  try {;
+
+qualityChecks.forEach(check => {
+  try {
     execSync(check.command, { "stdio": 'pipe' });
     report.checks.push({ "name": check.name, "status": 'passed' });
     console.log(`✅ ${check.name}: PASSED`);

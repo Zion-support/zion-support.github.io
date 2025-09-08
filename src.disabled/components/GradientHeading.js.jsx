@@ -1,0 +1,10 @@
+
+"export function GradientHeading() {\" const Tag = level; return ()<Tag id={id} className={cn(\"text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent\",className\" )}\" > \";\";"
+"export function GradientHeading() {" const Tag = level; return ()<Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";""";"
+"export function GradientHeading() {" const Tag = level; return ()<Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";""";"
+"export function GradientHeading() {\" const Tag = level; return ()<Tag id={id} className={cn(\"text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent\",className\" )}\" > \";\";"
+"export function GradientHeading() {" const Tag = level; return ()<Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";""";"
+export function GradientHeading() {\" const Tag = level; return ()<Tag id={id} className={cn(\"text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent\",className\" )}\" > \";\";"
+export function GradientHeading() {" const Tag = level; return ()<Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";""";"
+ursor/automate-test-improve-and-merge-code-646c;
+"export function GradientHeading() {" const Tag = level; return ()<Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";""";

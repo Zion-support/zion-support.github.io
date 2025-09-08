@@ -2,12 +2,12 @@
 
 
 import React, { useEffect } from 'react';
-const "SecurityEnhancer": React.FC = () => {
+const 'SecurityEnhancer': React.FC = () => {
   useEffect(() => {
-    const csp = " default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; ";
-const "SecurityEnhancer": React.FC = () => {"
-  useEffect(() => {"
-    const csp = " default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; ";""
+    const csp = ' default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; ';
+const 'SecurityEnhancer': React.FC = () => {'
+  useEffect(() => {'
+    const csp = ' default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; ';''
 pr-12325
     const cspMeta = document.createElement('meta');
     cspMeta.httpEquiv = 'Content-Security-Policy';
@@ -35,10 +35,10 @@ pr-12325
           !script.src.includes('googletagmanager.com') &&
           !script.src.includes('google-analytics.com')
         ) {
-          console.warn('Potentially unsafe script "detected": ', script.src);
+          console.warn('Potentially unsafe script 'detected': ', script.src);
 
 ;
-const \"SecurityEnhancer\": React.FC = () => {useEffect(() => {const csp = \" default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; \";
+const \'SecurityEnhancer\': React.FC = () => {useEffect(() => {const csp = \' default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; \';
     const cspMeta = document.createElement('meta')cspMeta.httpEquiv = 'Content-Security-Policy';}
     cspMeta.content = csp;}
     document.head.appendChild(cspMeta)const securityHeaders = {'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin'}Object.entries(securityHeaders).forEach(([name, value]) => {const meta = document.createElement('meta')meta.httpEquiv = name;}
@@ -48,25 +48,25 @@ const \"SecurityEnhancer\": React.FC = () => {useEffect(() => {const csp = \" de
           !script.src.includes('googletagmanager.com') &&;) => {
   return $3;}
 }
-          !script.src.includes('google-analytics.com')) {console.warn('Potentially unsafe script \"detected\": ', script.src)}
-      })}})}detectXSS()const monitorActivity = (document.addEventListener('submit', e => {const form = e.target as HTMLFormElement;
+          !script.src.includes('google-analytics.com')) {console.warn('Potentially unsafe script \'detected\': ', script.src)}
+      })})}detectXSS()const monitorActivity = (document.addEventListener('submit', e => {const form = e.target as HTMLFormElement;
         const inputs = form.querySelectorAll('input,textarea')inputs.forEach(input => {const value = (input as HTMLInputElement).value;) => {
   return $3;}
 }
-          if (value.includes('<script') || value.includes('\"javascript\": ')) {console.warn('Potential XSS attempt detected in form submission')e.preventDefault()}
+          if (value.includes('<script') || value.includes('\'javascript\': ')) {console.warn('Potential XSS attempt detected in form submission')e.preventDefault()}
         })})let lastUrl = window.location.href;
       const observer = new MutationObserver(() = /> {if (window.location.href !== lastUrl) {console.log('URL changed from', lastUrl, 'to', window.location.href)lastUrl = window.location.href;}
         }
-      })observer.observe(document.body, { \"childList\": 'true', \"subtree\": 'true' })}observer.observe(document.body, { \"childList\": 'true', \"subtree\": 'true' })}monitorActivity()return () => {const addedMetas = document.querySelectorAll('meta[http-equiv=\"Content-Security-Policy\"]';}
-      )addedMetas.forEach(meta => meta.remove())}}, [])return null;
+      })observer.observe(document.body, { \'childList\': 'true', \'subtree\': 'true' })}observer.observe(document.body, { \'childList\': 'true', \'subtree\': 'true' })}monitorActivity()return () => {const addedMetas = document.querySelectorAll('meta[http-equiv=\'Content-Security-Policy\']';}
+      )addedMetas.forEach(meta => meta.remove())}, [])return null;
 }export default SecurityEnhancer;
 import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () => { useEffect(() => { const csp = ` default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; `; const cspMeta = document.createElement('meta')cspMeta.httpEquiv = 'Content-Security-Policy'; cspMeta.content = csp; document.head.appendChild(cspMeta)const securityHeaders = { 'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin'}Object.entries(securityHeaders).forEach(([name,value]) => { const meta = document.createElement('meta')meta.httpEquiv = name; meta.content = value; document.head.appendChild(meta)})const detectXSS = ( const scripts = document.querySelectorAll('script')scripts.forEach(script => { if ( script.src && !script.src.startsWith(window.location.origin) && !script.src.includes('googletagmanager.com') && !script.src.includes('google-analytics.com') ) { console.warn('Potentially unsafe script detected: ';,script.src)) => {
   return $3;}
 } })}detectXSS()const monitorActivity = ( document.addEventListener('submit',e => { const form = e.target as HTMLFormElement; const inputs = form.querySelectorAll('input,textarea')inputs.forEach(input => { const value = (input as HTMLInputElement).value; if (value.includes('<script') || value.includes('javascript:')) { console.warn('Potential XSS attempt detected in form submission')e.preventDefault()) = /> {
   return $3;}
 } })})let lastUrl = window.location.href; const observer = new MutationObserver(() = /> { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href)lastUrl = window.location.href} })observer.observe(document.body,{ childList: 'true';,}
-  subtree: 'true' ;})}monitorActivity()return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv=\"Content-Security-Policy\"]' )addedMetas.forEach(meta => meta.remove())}},[])return null}export default SecurityEnhancer;;
-      addedMetas.forEach(meta => meta.remove())}}, [])return null;
+  subtree: 'true' ;})}monitorActivity()return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv=\'Content-Security-Policy\']' )addedMetas.forEach(meta => meta.remove())},[])return null}export default SecurityEnhancer;
+      addedMetas.forEach(meta => meta.remove())}, [])return null;
 }export default SecurityEnhancer;
       });
     };
@@ -84,7 +84,7 @@ import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () =
         inputs.forEach(input => {)
 pr-12325
           const value = (input as HTMLInputElement).value;
-          if (value.includes('<script') || value.includes('\"javascript\": ')) {
+          if (value.includes('<script') || value.includes('\'javascript\': ')) {
             console.warn('Potential XSS attempt detected in form submission');
             e.preventDefault();
             e.preventDefault();) = /> {
@@ -101,12 +101,12 @@ pr-12325
           lastUrl = window.location.href;}
         }
       });
-      observer.observe(document.body, { \"childList\": 'true', \"subtree\": 'true' });
+      observer.observe(document.body, { \'childList\': 'true', \'subtree\': 'true' });
     };
     monitorActivity();
     return () => {
       const addedMetas = document.querySelectorAll(
-        'meta[http-equiv=\"Content-Security-Policy\"]'
+        'meta[http-equiv=\'Content-Security-Policy\']'
       );}
       addedMetas.forEach(meta => meta.remove());}
     };
@@ -115,7 +115,7 @@ pr-12325
 };
 export default SecurityEnhancer;
 
-import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () => { useEffect(() => { const csp = ` default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; `; const cspMeta = document.createElement('meta'); cspMeta.httpEquiv = 'Content-Security-Policy'; cspMeta.content = csp; document.head.appendChild(cspMeta); const securityHeaders = { 'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin',}; Object.entries(securityHeaders).forEach(([name,value]) => { const meta = document.createElement('meta'); meta.httpEquiv = name; meta.content = value; document.head.appendChild(meta)}); const detectXSS = () => { const scripts = document.querySelectorAll('script'); scripts.forEach(script => { if ( script.src && !script.src.startsWith(window.location.origin) && !script.src.includes('googletagmanager.com') && !script.src.includes('google-analytics.com') ) { console.warn('Potentially unsafe script detected:',script.src)} })}; detectXSS(); const monitorActivity = () => { document.addEventListener('submit',e => { const form = e.target as HTMLFormElement; const inputs = form.querySelectorAll('input,textarea'); inputs.forEach(input => { const value = (input as HTMLInputElement).value; if (value.includes('<script') || value.includes('javascript:')) { console.warn('Potential XSS attempt detected in form submission'); e.preventDefault()} })}); let lastUrl = window.location.href; const observer = new MutationObserver(() => { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href); lastUrl = window.location.href} }); observer.observe(document.body,{ childList: 'true',subtree: 'true' })}; monitorActivity(); return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv="Content-Security-Policy"]' ); addedMetas.forEach(meta => meta.remove())}},[]); return null}; export default SecurityEnhancer;
+import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () => { useEffect(() => { const csp = ` default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; `; const cspMeta = document.createElement('meta'); cspMeta.httpEquiv = 'Content-Security-Policy'; cspMeta.content = csp; document.head.appendChild(cspMeta); const securityHeaders = { 'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin',}; Object.entries(securityHeaders).forEach(([name,value]) => { const meta = document.createElement('meta'); meta.httpEquiv = name; meta.content = value; document.head.appendChild(meta)}); const detectXSS = () => { const scripts = document.querySelectorAll('script'); scripts.forEach(script => { if ( script.src && !script.src.startsWith(window.location.origin) && !script.src.includes('googletagmanager.com') && !script.src.includes('google-analytics.com') ) { console.warn('Potentially unsafe script detected:',script.src)} })}; detectXSS(); const monitorActivity = () => { document.addEventListener('submit',e => { const form = e.target as HTMLFormElement; const inputs = form.querySelectorAll('input,textarea'); inputs.forEach(input => { const value = (input as HTMLInputElement).value; if (value.includes('<script') || value.includes('javascript:')) { console.warn('Potential XSS attempt detected in form submission'); e.preventDefault()} })}); let lastUrl = window.location.href; const observer = new MutationObserver(() => { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href); lastUrl = window.location.href} }); observer.observe(document.body,{ childList: 'true',subtree: 'true' })}; monitorActivity(); return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv='Content-Security-Policy']' ); addedMetas.forEach(meta => meta.remove())},[]); return null}; export default SecurityEnhancer;
 
 
 
@@ -131,7 +131,7 @@ import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () =
 
 
 </script>
-import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () => { useEffect(() => { const csp = ` default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; `; const cspMeta = document.createElement('meta'); cspMeta.httpEquiv = 'Content-Security-Policy'; cspMeta.content = csp; document.head.appendChild(cspMeta); const securityHeaders = { 'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin',}; Object.entries(securityHeaders).forEach(([name,value]) => { const meta = document.createElement('meta'); meta.httpEquiv = name; meta.content = value; document.head.appendChild(meta)}); const detectXSS = () => { const scripts = document.querySelectorAll('script'); scripts.forEach(script => { if ( script.src && !script.src.startsWith(window.location.origin) && !script.src.includes('googletagmanager.com') && !script.src.includes('google-analytics.com') ) { console.warn('Potentially unsafe script detected: ';,script.src)} })}; detectXSS(); const monitorActivity = () => { document.addEventListener('submit',e => { const form = e.target as HTMLFormElement; const inputs = form.querySelectorAll('input,textarea'); inputs.forEach(input => { const value = (input as HTMLInputElement).value; if (value.includes('<script') || value.includes('javascript:')) { console.warn('Potential XSS attempt detected in form submission'); e.preventDefault()} })}); let lastUrl = window.location.href; const observer = new MutationObserver(() => { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href); lastUrl = window.location.href} }); observer.observe(document.body,{ childList: 'true';,subtree: 'true' ;})}; monitorActivity(); return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv="Content-Security-Policy"]' ); addedMetas.forEach(meta => meta.remove())}},[]); return null}; export default SecurityEnhancer;
+import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () => { useEffect(() => { const csp = ` default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; `; const cspMeta = document.createElement('meta'); cspMeta.httpEquiv = 'Content-Security-Policy'; cspMeta.content = csp; document.head.appendChild(cspMeta); const securityHeaders = { 'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin',}; Object.entries(securityHeaders).forEach(([name,value]) => { const meta = document.createElement('meta'); meta.httpEquiv = name; meta.content = value; document.head.appendChild(meta)}); const detectXSS = () => { const scripts = document.querySelectorAll('script'); scripts.forEach(script => { if ( script.src && !script.src.startsWith(window.location.origin) && !script.src.includes('googletagmanager.com') && !script.src.includes('google-analytics.com') ) { console.warn('Potentially unsafe script detected: ';,script.src)} })}; detectXSS(); const monitorActivity = () => { document.addEventListener('submit',e => { const form = e.target as HTMLFormElement; const inputs = form.querySelectorAll('input,textarea'); inputs.forEach(input => { const value = (input as HTMLInputElement).value; if (value.includes('<script') || value.includes('javascript:')) { console.warn('Potential XSS attempt detected in form submission'); e.preventDefault()} })}); let lastUrl = window.location.href; const observer = new MutationObserver(() => { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href); lastUrl = window.location.href} }); observer.observe(document.body,{ childList: 'true';,subtree: 'true' ;})}; monitorActivity(); return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv='Content-Security-Policy']' ); addedMetas.forEach(meta => meta.remove())},[]); return null}; export default SecurityEnhancer;
 </script>`;
 pr-12325
 import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () => { useEffect(() => { const csp = ` default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; `; const cspMeta = document.createElement('meta'); cspMeta.httpEquiv = 'Content-Security-Policy'; cspMeta.content = csp; document.head.appendChild(cspMeta); const securityHeaders = { 'X-Content-Type-Options': 'nosniff','X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block','Referrer-Policy': 'strict-origin-when-cross-origin'}; Object.entries(securityHeaders).forEach(([name,value]) => { const meta = document.createElement('meta'); meta.httpEquiv = name; meta.content = value; document.head.appendChild(meta)}); const detectXSS = ( const scripts = document.querySelectorAll('script'); scripts.forEach(script => { if ( script.src && !script.src.startsWith(window.location.origin) && !script.src.includes('googletagmanager.com') && !script.src.includes('google-analytics.com') ) { console.warn('Potentially unsafe script detected: ';,script.src)) => {
@@ -139,4 +139,4 @@ import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () =
 } })}; detectXSS(); const monitorActivity = ( document.addEventListener('submit',e => { const form = e.target as HTMLFormElement; const inputs = form.querySelectorAll('input,textarea'); inputs.forEach(input => { const value = (input as HTMLInputElement).value; if (value.includes('<script') || value.includes('javascript:')) { console.warn('Potential XSS attempt detected in form submission'); e.preventDefault()) = /> {
   return $3;}
 } })}); let lastUrl = window.location.href; const observer = new MutationObserver(() = /> { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href); lastUrl = window.location.href} }); observer.observe(document.body,{ childList: 'true';,}
-  subtree: 'true' ;})}; monitorActivity(); return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv=\"Content-Security-Policy\"]' ); addedMetas.forEach(meta => meta.remove())}},[]); return null}; export default SecurityEnhancer;
+  subtree: 'true' ;})}; monitorActivity(); return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv=\'Content-Security-Policy\']' ); addedMetas.forEach(meta => meta.remove())},[]); return null}; export default SecurityEnhancer;

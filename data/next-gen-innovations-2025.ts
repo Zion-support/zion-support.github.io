@@ -1,5 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+export interface NextGenInnovation2025 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string}
+}
+
+export const nextGenInnovations2025: NextGenInnovation2025[] = [
+  {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "next-gen-ai-suite",
     name: "Next-Gen AI Suite",
     tagline: "Future-ready AI solutions",
@@ -16,7 +37,16 @@
     category: "Next-Gen Innovations 2025",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 
 
 
 
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

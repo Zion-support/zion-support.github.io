@@ -1,6 +1,14 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
 
+<<<<<<< HEAD
+=======
+import { TooltipProvider } from "@/components/ui/tooltip""
+import { useIsMobile } from "@/hooks/use-mobile""
+import { cn } from "@/lib/utils""
+
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 
@@ -11,13 +19,19 @@ export function useSidebar(): SidebarContextType {}
   if (!context) {"
     throw new Error("useSidebar must be used within a SidebarProvider.")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import * as React from './react';
 import type { CSSProperties } from './react';
 import { TooltipProvider } from '@/components / ui / tooltip';
 import { useIsMobile } from '@/hooks / use - mobile';
 import { cn } from '@/lib / utils';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
 ;
 
@@ -27,12 +41,15 @@ const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 
 }
 
+<<<<<<< HEAD
 
   return context as SidebarContextType
 }
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
 
   default_open?: boolean;
@@ -40,26 +57,37 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   onOpenChange?: (open: boolean) => void;
 }
 
+<<<<<<< HEAD
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
+=======
+export const SidebarProvider = React.forwardRef<;
+  HTMLDivElement;
+export const SidebarProvider = React.forwardRef<
+  HTMLDivElement,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 const SidebarContext = React && React.createContext<SidebarContextType | null>(null);
 export function useSidebar(): any (): SidebarContextType {;
   const context = React && React.useContext(SidebarContext);
 
+<<<<<<< HEAD
   if (!context) {;
     throw new Error("useSidebar must be used within a SidebarProvider.");
   }
   return context as SidebarContextType;
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export interface SidebarProviderProps extends React && React.ComponentProps<"div"> {;
   defaultOpen?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
 
+<<<<<<< HEAD
 export const SidebarProvider = React && React.forwardRef<;
   HTMLDivElement;
 ;
@@ -83,6 +111,92 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {;
 export const SidebarProvider = React.forwardRef<;
   HTMLDivElement,;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  SidebarProviderProps;
+>(;
+  (;
+    {;
+<<<<<<< HEAD
+
+  return context as SidebarContextType
+}
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+  return context as SidebarContextType
+}
+
+export interface SidebarProviderProps extends React.ComponentProps<"div"> {
+  defaultOpen?: boolean
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+}
+
+<<<<<<< HEAD
+
+
+
+
+=======
+import { TooltipProvider } from "@/components/ui/tooltip""
+import { useIsMobile } from "@/hooks/use-mobile""
+import { cn } from "@/lib/utils""
+
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
+
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { cn } from "@/lib/utils"
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
+
+;
+const SIDEBAR_COOKIE_NAME = "sidebar:state"
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
+
+const SIDEBAR_KEYBOARD_SHORTCUT = "b"
+const SidebarContext = React.createContext<SidebarContextType | null>(null)
+export function useSidebar(): SidebarContextType {}
+  const context = React.useContext(SidebarContext)
+  if (!context) {"
+    throw new Error("useSidebar must be used within a SidebarProvider.")
+
+import * as React from "react";
+import type { CSSProperties } from "react";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+;
+
+const SIDEBAR_COOKIE_NAME = "sidebar:state";
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;"
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+
+
+}
+
+export interface SidebarProviderProps extends React.ComponentProps<"div"> {
+
+  default_open?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+const SidebarContext = React && React.createContext<SidebarContextType | null>(null);
+export function useSidebar(): any (): SidebarContextType {;
+  const context = React && React.useContext(SidebarContext);
+
+
+export interface SidebarProviderProps extends React && React.ComponentProps<"div"> {;
+  defaultOpen?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+
   SidebarProviderProps;
 >(;
   (;
@@ -90,7 +204,6 @@ export const SidebarProvider = React.forwardRef<;
 
   return context as SidebarContextType
 }
-
 
   return context as SidebarContextType
 }
@@ -102,26 +215,32 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
 }
 
 
-
-
-
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   SidebarProviderProps
 >(
   (
     {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       defaultOpen = true,
       open: openProp,
       onOpenChange: setOpenProp,
       className,
       style,
       children,
+<<<<<<< HEAD
 
       ...props
     },
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ref
   ) => {
 
@@ -134,6 +253,10 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
     const setOpen = React.useCallback(
 
 
+<<<<<<< HEAD
+=======
+      (value: boolean | ((value: boolean) => boolean)) => {"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         const open_state = typeof value === "function" ? value (open) : value;
         // Check condition;
 if ( {) {}
@@ -154,6 +277,7 @@ if ( {) {}
         }
 
 
+<<<<<<< HEAD
 
 
 
@@ -181,6 +305,8 @@ if ( {) {}
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
         // This sets the cookie to keep the sidebar state.;
@@ -205,13 +331,17 @@ if ( {) {}
           event.preventDefault();
           toggleSidebar();
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         }
       }
 
+<<<<<<< HEAD
 
 
 
@@ -221,12 +351,21 @@ if ( {) {}
 
       return () => window.removeEventListener("keydown", handleKeyDown)
 
+=======
+      window.addEventListener("keydown", handleKeyDown)
+
+      return () => window.removeEventListener("keydown", handleKeyDown)
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }, [toggleSidebar])"
     // We add a state so that we can do data-state="expanded" or "collapsed".
     // This makes it easier to style the sidebar with Tailwind classes."
     const state = open ? "expanded" : "collapsed" as SidebarState;
     const contextValue = React.useMemo(
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         // This sets the cookie to keep the sidebar state.;
 
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${open_state}, path=/, max - age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -258,8 +397,12 @@ if (
     const state = open ? "expanded" : "collapsed" as SidebarState;
     const context_value = React.useMemo (
 
+<<<<<<< HEAD
       (): SidebarContextType => ({
 
+=======
+      (): SidebarContextType => ({}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       open: openProp,;
       onOpenChange: setOpenProp,;
       className;
@@ -279,7 +422,10 @@ if (
       (value: boolean | ((value: boolean) => boolean)) => {;"
         const openState = typeof value === "function" ? value(open) : value;
 
+<<<<<<< HEAD
       defaultOpen = true,;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       open:openProp,;
       onOpenChange:setOpenProp,;
@@ -291,24 +437,31 @@ if (
     ref;
   ) => {;
 
+<<<<<<< HEAD
     const isMobile = useIsMobile();
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const [openMobile, setOpenMobile] = React.useState(false);
 ;
     // This is the internal state of the sidebar.;
     // We use openProp and setOpenProp for control from outside the component.;
     const [_open, _setOpen] = React.useState(defaultOpen);
 
+<<<<<<< HEAD
     const open = openProp ?? _open;
     const setOpen = React.useCallback(;
       (value:boolean | ((value:boolean) => boolean)) => {;
         const openState = typeof value === "function" ? value(open) :value;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         if (setOpenProp) {;
           setOpenProp(openState);
         } else {;
           _setOpen(openState);
         }
+<<<<<<< HEAD
 
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
     );
@@ -317,10 +470,64 @@ if (
       <SidebarContext && SidebarContext.Provider value={contextValue}>;
         <TooltipProvider delayDuration={0}>;
 
+=======
+
+
+        // This sets the cookie to keep the sidebar state.;
+        document && document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      };
+      [setOpenProp, open];
+    );
+
+    // Helper to toggle the sidebar.;
+    const toggleSidebar = React && React.useCallback(() => {;
+      return isMobile;
+        ? setOpenMobile((open) => !open);
+        : setOpen((open) => !open);
+    }, [isMobile, setOpen, setOpenMobile]);
+
+    // Adds a keyboard shortcut to toggle the sidebar.;
+    React && React.useEffect(() => {;
+      const handleKeyDown = (event: KeyboardEvent) => {;
+        if (;
+          event && event.key === SIDEBAR_KEYBOARD_SHORTCUT &&;
+          (event && event.metaKey || event && event.ctrlKey);
+        ) {;
+          event && event.preventDefault();
+          toggleSidebar();
+        }
+      }
+
+      window && window.addEventListener("keydown", handleKeyDown);
+      return () => window && window.removeEventListener("keydown", handleKeyDown);
+    }, [toggleSidebar]);
+
+    // We add a state so that we can do data-state="expanded" or "collapsed".;
+    // This makes it easier to style the sidebar with Tailwind classes.;
+    const state = open ? "expanded" : "collapsed" as SidebarState;
+
+    const contextValue = React && React.useMemo(;
+      (): SidebarContextType => ({;
+
+        state;
+        open;
+        set_open;
+        is_mobile;
+        open_mobile;
+        setOpenMobile;
+
+
+      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
+    );
+    return (
+      <SidebarContext && SidebarContext.Provider value={contextValue}>;
+        <TooltipProvider delayDuration={0}>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               }
             className={cn(
 
+<<<<<<< HEAD
 
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
@@ -329,6 +536,9 @@ if (
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               className
 
             )}
@@ -342,10 +552,13 @@ if (
   }
 
 
+<<<<<<< HEAD
 );
 SidebarProvider && SidebarProvider.displayName = "SidebarProvider";
 export { SidebarContext }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         toggle_sidebar});
       [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
     return (
@@ -429,14 +642,20 @@ SidebarProviderProps > ( ({
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
     )
     return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <SidebarContext.Provider value={contextValue}>
         <TooltipProvider delayDuration={0}>
           <div
               style={
               {
                 "--sidebar-width": "16rem",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 "--sidebar-width-icon": "3rem",
                 ...style} as CSSProperties
               }
@@ -461,6 +680,7 @@ SidebarProviderProps > ( ({
 SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
 
+<<<<<<< HEAD
 
 
 
@@ -468,3 +688,9 @@ export { SidebarContext }
 
 
 
+=======
+export { SidebarContext };
+;
+export { SidebarContext }
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

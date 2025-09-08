@@ -134,12 +134,18 @@ class AdvancedAutomationSuite {
       scriptsRun: 0,
       improvements: [],
       errors: [],
-      performance:
-      security:
+      performance: {},
+      security: {},
       seo: {}
   }"
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    
+  }
+// Function to create deployment automation
+=======
 <<<<<<< HEAD
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message};
 // Function to create deployment automation;
@@ -148,6 +154,7 @@ class AdvancedAutomationSuite {
   }
 // Function to create deployment automation
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function createDeploymentAutomation() {
   const deploymentScript = "#!/bin/bash;"
   async runCommand(command, description) {
@@ -176,8 +183,9 @@ function createDeploymentAutomation() {
 =======
 >>>>>>> merged-prs-20250907-203621
     if (!fs.existsSync(path.dirname(reportPath))) {
-      fs.mkdirSync(path.dirname(reportPath), { recursive: true })
-    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2))
+      fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
+
 class AutomatedTestFramework {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,6 +252,10 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   async optimizeImages() {
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     // Image optimization logic would go here
     this.optimizations.push('Images optimized');
@@ -280,6 +292,10 @@ class SecurityEnhancer {
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   async checkDependencies() {
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     // Dependency check logic would go here
     this.securityChecks.push('Dependencies checked');
@@ -308,6 +324,10 @@ class SEOEnhancer {
   this.seoChecks = []
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   async checkMetaTags() {
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     // Meta tag check logic would go here
     this.seoChecks.push('Meta tags checked');
@@ -330,10 +350,17 @@ class SEOEnhancer {
     this.seoChecks.push('Structured data checked');
 # Build the project;"
 echo "📦 Building project...
+<<<<<<< HEAD
+npm run build;
+# Run tests;"
+echo "🧪 Running tests...
+npm run test:smoke || true;
+=======
 npm run build
 # Run tests;"
 echo "🧪 Running tests...
 npm run test:smoke || true
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 # Deploy to production;"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -362,19 +389,19 @@ on: push:,
   jobs:
   test: runs-on: ubuntu-latest;,
   steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3;
     - name: Setup Node.js;,
   uses: actions/setup-node@v3;"
     - name: Install dependencies;,
-  run: npm ci
+  run: npm ci;
     - name: Run linting;,
-  run: npm run lint
+  run: npm run lint;
     - name: Run type checking;,
-  run: npm run type-check
+  run: npm run type-check;
     - name: Run tests;,
-  run: npm run test
+  run: npm run test;
     - name: Build application;,
-  run: npm run build
+  run: npm run build;
     - name: Run security audit;,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -417,9 +444,11 @@ on: push:,
 function checkBuildStatus() {
   // TODO: Implement
     "message": \"Bundle size: \${bundleSize}MB\","
-    bundleSize
+    bundleSize;
   }}
 function checkSecurity() {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // TODO: Implement
     "count": totalDeps;"
@@ -482,6 +511,7 @@ set -e;"
 =======
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // TODO: Implement,
   const stats = fs.statSync('.next';);
     return Math.round(stats.size / (1024 * 1024) * 100) / 100} catch {
@@ -515,7 +545,7 @@ if [-f "database.sqlite" ]; then,
 >>>>>>> merged-prs-20250907-203621
   echo "🗄️ Backing up database..."
   cp database.sqlite "\$BACKUP_DIR/
-fi
+fi;
 # Backup configuration files;"
 echo "⚙️ Backing up configuration..."
 cp package.json "\$BACKUP_DIR/"
@@ -635,4 +665,7 @@ automation.runAllAutomations().catch(console.error);
   const endTime = Date.now(;)
   const duration = endTime - startTi;m;e,
   const report = {"
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

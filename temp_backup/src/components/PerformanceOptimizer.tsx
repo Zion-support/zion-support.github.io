@@ -84,7 +84,7 @@ const registerServiceWorker = useCallback(async () => {if ('serviceWorker' in na
   useEffect(() => {
 preloadCriticalResources()prefetchNextRoutes()optimizeResourceHints()measurePerformance()setupLazyLoading()registerServiceWorker()// Cleanup;}
     return () => {// Cleanup performance observers if needed;}
-    }}, [preloadCriticalResources, prefetchNextRoutes, optimizeResourceHints, measurePerformance, setupLazyLoading, registerServiceWorker])// Route change optimization;
+    }, [preloadCriticalResources, prefetchNextRoutes, optimizeResourceHints, measurePerformance, setupLazyLoading, registerServiceWorker])// Route change optimization;
   useEffect(() => {
 // Prefetch next likely route based on current location;
 
@@ -107,9 +107,9 @@ export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ ch
 
 useEffect ( () => {// Preload critical resources;
 
-const preloadCriticalResources = ("";
-"
-const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {"";
+const preloadCriticalResources = ('';
+'
+const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {'';
 ) => {
   return $3;}
 }
@@ -122,13 +122,13 @@ const optimizeImages = () => ;
     preloadCriticalResources ()optimizeImages ()// Set up intersection observer for lazy loading;
 
 const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {if (entry.isIntersecting) ;
-  const target = entry.target as HTMLElement;}"
-            if (target.dataset.src) {"";}
-target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }"
-          }", ";
-})}, { rootMargin: '50px'}"
-}') ';// Observe lazy load elements;"";
+  const target = entry.target as HTMLElement;}'
+            if (target.dataset.src) {'';}
+target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }'
+          }', ';
+})}, { rootMargin: '50px'}'
+}') ';// Observe lazy load elements;'';
 
 const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {observer.disconnect () }
-  }, [])return <>{children}</>}"
-"`";"
+  }, [])return <>{children}</>}'
+'`';'

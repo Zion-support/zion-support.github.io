@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+export const useJobs = (userId?: string, status?: JobStatus) => {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -6,6 +10,7 @@
   const [error, setError] = useState<string | null>(null);
 
 
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",
@@ -27,12 +32,70 @@ export const useJobs = (userId?: string, status?: JobStatus) => {}
       setIsLoading(true),
       
 
+=======
+        .order("created_at", { ascending: false }),
+      
+      if (status) {"
+        query = query.eq("status", status)
+      }
+      
+      const { data, error: fetchError } = await query,
+      
+      if (fetchError) throw fetchError,
+      
+      setJobs(data as Job[]),
+      setError(null)
+    } catch (err: any) {"
+      console.error("Error fetching jobs:", err),"
+      setError("Failed to fetch jobs. Please try again."),"
+      toast.error("Failed to fetch jobs")
+    } finally {}
+      setIsLoading(false)
+    }
+  },
+
+  }
+  },
+  
+  const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
+    try {
+
+      const { error: updateError } = await supabase
+        .from("jobs")
+        .update({ status: newStatus })
+        .eq("id", jobId)
+        .eq("client_id", clientId), // Ensure user can only update their own jobs
+
+      
+      if (updateError) throw updateError,
+
+      // Update local state
+      setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
+
+      toast && toast.success("Job status updated successfully");
+      return true;
+    } catch (err: any) {"
+      console && console.error("Error updating job status:", err);"
+      toast && toast.error("Failed to update job status");
+
+    }
+
+
+  const deleteJob = async (jobId: string) => {
+    try {
+      const { error: deleteError } = await supabase
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .from("jobs")
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
+<<<<<<< HEAD
 
 
+=======
+
+        
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       if (deleteError) throw deleteError,
 
       // Update local state
@@ -60,9 +123,12 @@ export const useJobs = (userId?: string, status?: JobStatus) => {}
     getJobById;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -106,11 +172,17 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   },;
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {;
     try {;
+<<<<<<< HEAD
 
       const { error: updateError } = await supabase;"
         .from("jobs");
         .update({ status: newStatus });"
 
+=======
+      }
+        .from("jobs");"
+        .update({ "status": newStatus });
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .eq("id", jobId);"
         .eq("client_id", clientId), // Ensure user can only update their own jobs;
       if (updateError) throw updateError,;
@@ -157,6 +229,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     updateJob;
     getJobById;
 
+<<<<<<< HEAD
 
 
   }
@@ -164,3 +237,18 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 ;
 
 
+=======
+
+  }
+};
+
+  }
+};  }
+};
+
+  }
+};
+  }
+
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba

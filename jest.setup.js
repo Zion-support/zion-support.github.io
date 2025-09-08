@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 
 
+=======
+
+import '@testing-library/jest-dom';
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
     return {
+<<<<<<< HEAD
 
       route: "/"
       pathname: "/"
@@ -19,6 +26,9 @@ jest.mock("next/router", () => ({
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
@@ -32,12 +42,17 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn()
+<<<<<<< HEAD
 
+=======
+        emit: jest.fn(),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       },
 
     };
 }));
 
+<<<<<<< HEAD
 
 
 
@@ -89,6 +104,19 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn()
   }))
 
+=======
+
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+
+    dispatchEvent: jest.fn()
+  }))
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 });
 
 // IntersectionObserver mock
@@ -105,6 +133,7 @@ global.IntersectionObserver = class IntersectionObserver {
 global.ResizeObserver = class ResizeObserver {
 
 
+<<<<<<< HEAD
 
     "media": query,
     "onchange": null,
@@ -136,6 +165,36 @@ beforeEach(() => {
 
 
 
+=======
+// Global test setup
+beforeEach(() => {
+	jest.clearAllMocks();
+});
+
+});
+main
+// Mock Next.js Image component
+jest.mock('next/image', () => ({
+  __esModule: true;,
+  default: (props) => {
+    return <img {...props} />;
+  },
+}));
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+
+});
+
+
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 jest.mock('next/link', () => ({
   _esModule: true,
   default: ({ children, href, ...props }) => {
@@ -145,8 +204,30 @@ jest.mock('next/link', () => ({
 // Mock window.matchMedia,Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
+<<<<<<< HEAD
+=======
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+  };
+});
+
+// Mock Next.js Link component
+jest.mock("next/link", () => ({
+  _esModule: true,
+  default: ({ children, href, ...props }) => {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+};
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     matches: false,
     media: query,
     onchange: null,
@@ -154,9 +235,13 @@ jest.mock('next/link', () => ({
 removeListener: jest.fn(), // deprecated,
 addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
+<<<<<<< HEAD
 
     dispatchEvent: jest.fn()
 
+=======
+dispatchEvent: jest.fn()
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }))
 }),
 // Mock IntersectionObserver,
@@ -183,9 +268,13 @@ beforeEach(() => {
 ursor/fix-lint-push-and-merge-to-main-ae4e
 });
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba

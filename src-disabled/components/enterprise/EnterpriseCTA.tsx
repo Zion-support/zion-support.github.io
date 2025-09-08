@@ -1,5 +1,10 @@
 
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Calendar, ArrowRight } from 'lucide-react'
 
 
@@ -63,8 +68,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 
+=======
+import React from "react",;
+import { Calendar, ArrowRight } from 'lucide-react';
+export function EnterpriseCTA() {;
+  return (;
+
+
+
+    </section>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
 import { Button } from '@/components/ui/button';
 export function EnterpriseCTA() {;
@@ -210,8 +226,14 @@ pr-12325
                       <span className="text-primary text-sm font-medium">4</span>;
 export function EnterpriseCTA() {;
   return (
+<<<<<<< HEAD
 
 
+=======
+  )
+export function EnterpriseCTA() {;
+  return (;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <section id="contact" className="py-20 px-4 md: px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">;
@@ -443,3 +465,21 @@ function EnterpriseCTA() {
       </div>;
 
 
+<<<<<<< HEAD
+=======
+                  <Button size="lg" variant="outline" className="gap - 2">;"
+                    <ArrowRight className="h - 5 w - 5" />;"
+
+              <div className="rounded - lg bg - muted p - 6">;"
+                <h3 className="font - bold text - xl mb - 4">What to expect in the demo</h3>;""
+                <ul className="space - y-3">;"
+                      <span className="text - primary text - sm font - medium">1</span>;"
+                      <span className="text - primary text - sm font - medium">2</span>;"
+                      <span className="text - primary text - sm font - medium">3</span>;"
+                      <span className="text - primary text - sm font - medium">4</span>;"
+                    <p > Free consultation on implementation</p>;
+                </ul>;
+      </div>;)
+    </section>);"
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba

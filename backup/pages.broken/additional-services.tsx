@@ -1,4 +1,4 @@
-import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; import {}} from \'lucide-react\'; import PageTransition from \'../src/components/PageTransition\';
+import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; import {} from \'lucide-react\'; import PageTransition from \'../src/components/PageTransition\';
 }
 
 

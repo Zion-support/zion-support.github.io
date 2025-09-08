@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {useAuth} from './useAuth';
 
@@ -19,6 +20,8 @@ import type { SitemapItem } from '@/config/sitemap';
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return true
   }  function isValidUserType(type: string): boolean {
 
@@ -27,9 +30,12 @@ import type { SitemapItem } from '@/config/sitemap';
   return {}
     accessibleRoutes;
     findRouteByPath;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {use_auth} from './use_auth';
 
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
@@ -88,16 +94,20 @@ if (return false) {}
     canAccessRoute;
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 }
   ;
   return {;
     accessibleRoutes,;
 
+<<<<<<< HEAD
     findRouteByPath,;
     canAccessRoute;
   },;
@@ -118,6 +128,8 @@ import type { SitemapItem } from '@/config/sitemap',;
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',;
 export function useSitemap() {;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { user, isAuthenticated } = useAuth(),;
   // Get routes that the current user can access;
   // Cast userType to UserType or pass undefined if not valid;
@@ -125,9 +137,16 @@ export function useSitemap() {;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),;
   // Helper function to find a route by path;
 
+<<<<<<< HEAD
   const findRouteByPath = (path: string): SitemapItem | undefined => {;
     return accessibleRoutes.find(route => route.path === path);
   },;
+=======
+  const findRouteByPath = (path: string): SitemapItem | undefined => {;}
+    return accessibleRoutes.find(route => route.path === path);}
+  },;
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   // Helper function to check if a user can access a specific path;
   const canAccessRoute = (path: string): boolean => {;
@@ -135,6 +154,7 @@ export function useSitemap() {;
     if (!route) return false,;
     // If route requires authentication and user is not authenticated;
 
+<<<<<<< HEAD
     if (route.requiredAuth && !isAuthenticated) return false,;
     // If route requires specific roles and user doesn't have one;
     if (route.requiredRoles && route.requiredRoles.length > 0) {;
@@ -142,11 +162,23 @@ export function useSitemap() {;
       const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined,;
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false;
 
+=======
+    if (route.requiredAuth && !isAuthenticated) return false,;'
+    // If route requires specific roles and user doesn't have one;
+    if (route.requiredAuth && !isAuthenticated) return false,;'
+    // If route requires specific roles and user doesn't have one;'
+    if (route.requiredRoles && route.requiredRoles.length > 0) {;
+
+      if (!user || !user.userType) return false,;
+      const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined,;}
+      return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false;}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
 ;
     return true;
   },;
   // Helper function to check if userType is valid;
+<<<<<<< HEAD
 
   function isValidUserType(type: string): boolean {;
     return ['employerbuyerjobSeekercreatoradmin'].includes(type);
@@ -159,3 +191,14 @@ export function useSitemap() {;
 
     findRouteByPath;
 
+=======
+
+  function isValidUserType(type: string): boolean {;'
+    return ['employerbuyerjobSeekercreatoradmin'].includes(type);
+
+  function isValidUserType(type: string): boolean {;'
+    return ['employerbuyerjobSeekercreatoradmin'].includes(type);'
+
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

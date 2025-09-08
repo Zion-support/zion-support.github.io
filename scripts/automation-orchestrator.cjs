@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -10,10 +12,30 @@ const fs = require('fs')
 =======
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
-const fs = require(fs')
+const fs = require('fs')
 
+<<<<<<< HEAD
+
+
+console.log(' Starting Automation Orchestrator...')
+  console.error('Orchestrator "failed")
+  console.error('Orchestrator "failed")
+
+  console.error('Orchestrator "failed")
+    "name"""
+    "script"""
+      "status"""
+      "output"""
+        "encoding"""
+        "stdio"""
+// console.log('\n Automation Orchestrator "Summary")""');
+    console.log('\n Failed "Tasks")""');
+// console.log('\n "Recommendations")""');
+    console.log('\n "Recommendations")""');
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 <<<<<<< HEAD
@@ -111,6 +133,7 @@ console.log(' Starting Automation Orchestrator...')
   console.error('Orchestrator "failed")
 <<<<<<< HEAD
   console.error('Orchestrator "failed")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   console.error('Orchestrator "failed")
 

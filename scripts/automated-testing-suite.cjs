@@ -16,6 +16,8 @@ console.log('=====');
 
 const { execSync } = require('child_process');
 const fs = require('fs');
+<<<<<<< HEAD
+=======
 
 
 async function runTests() {
@@ -30,7 +32,10 @@ async function runTests() {
   
 
   const results = [];
+<<<<<<< HEAD
+=======
   
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   for (const test of tests) {
     try {
       console.log(`\n🔍 Running ${test.name}...`)
@@ -53,6 +58,8 @@ async function runTests() {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
+<<<<<<< HEAD
+=======
 
 
 
@@ -69,6 +76,9 @@ runTests().catch(console.error);
   
   return report;
 }
+<<<<<<< HEAD
+runTests().catch(console.error);
+=======
 
   return report;
 }

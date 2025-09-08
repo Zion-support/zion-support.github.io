@@ -1,14 +1,53 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+import React from "react";
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+import React from "react";
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+
+import React from "react";
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Create Your Service Provider Profile
           </h1>
@@ -33,13 +72,17 @@ export default function CreateServiceProfile() {
           <p className="text-zion-slate-light max-w-2xl mx-auto">"
 </p>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </p>
         </div>
         <ServiceProviderRegistrationForm />
       </div>
     </div>
 
+<<<<<<< HEAD
 
   )
 
@@ -51,6 +94,23 @@ export default function CreateServiceProfile() {;
   return (
 
 
+=======
+  )
+}
+}
+;
+
+
+import React from "react";"
+
+
+
+import React from "react",;
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+
+export default function CreateServiceProfile() {;
+  return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
 
       <div className="container mx-auto px-4">;
@@ -64,7 +124,24 @@ export default function CreateServiceProfile() {;
 
   );
 
+<<<<<<< HEAD
 
+=======
+import React from './react';
+import { ServiceProviderRegistrationForm } from '@/components / profile / ServiceProviderRegistrationForm';
+export default /**
+ * CreateServiceProfile - Function description
+ */
+function CreateServiceProfile() {
+  return (
+    <div className="bg - zion - blue min - h-screen py - 8 md: py - 12">;
+      <div className="container mx - auto px - 4">;
+        <div className="max - w-4xl mx - auto text - center mb - 8 md:mb - 12">;
+          <h1 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">Create Your Service Provider Profile</h1>;
+          <p className="text - zion - slate - light max - w-2xl mx - auto">;
+
+import React from './react';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             Showcase your services to potential clients. Create a professional profile;
             to get discovered on the Zion Marketplace.;
@@ -73,13 +150,11 @@ export default function CreateServiceProfile() {;
         <ServiceProviderRegistrationForm />;
       </div>;
 
-
-} <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12"> <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Create Your Service Provider Profile</h1> <p className="text-zion-slate-light max-w-2xl mx-auto"> 
-    </div>;
-  );
-}
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 } <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12"> <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Create Your Service Provider Profile</h1> <p className="text-zion-slate-light max-w-2xl mx-auto"> 
     </div>;
@@ -108,5 +183,27 @@ export default function CreateServiceProfile() {
 
         <ServiceProviderRegistrationForm />
 
+<<<<<<< HEAD
+=======
+
+</ServiceProviderRegistrationForm>
+      </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+      </div>;)
+    </div>);"
+pr-12325
+
+}
+;
+
+    <div className="bg - zion - blue min - h-screen py - 8 md: py-12">;
+      <div className="container mx - auto px-4">;
+        <div className="max - w-4xl mx - auto text - center mb - 8 md:mb-12">;
+          <h1 className="text - 3xl md:text - 4xl font - bold text - white mb-4">Create Your Service Provider Profile</h1>;
+
+          <p className="text - zion - slate - light max - w-2xl mx-auto">;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '10mb'}}};
+      sizeLimit: '10mb'}};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await browser.close();
 
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename="zion-os-book.pdf"');
+    res.setHeader('Content-Disposition', 'attachment; filename='zion-os-book.pdf'');
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
     try { await browser.close() } catch {}

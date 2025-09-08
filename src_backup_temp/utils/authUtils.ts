@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth'); sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth 'state':',error)} }; export const isAuthenticated = (): '(boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); return !!auth'} return false} catch (error) { console.error('Error checking authentication 'status':',error); return false} }; export const getAuthToken = (): 'string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null'} } return null} catch (error) { console.error('Error getting auth 'token':',error); return null} }; export const getUserData = (): '(unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null'} } return null} catch (error) { console.error('Error getting user 'data':',error); return null} };'
+export const cleanupAuthState = () => { try { if (typeof window !== &apos;undefined&apos;) { localStorage.removeItem(&apos;auth&apos;);&apos;&apos; sessionStorage.removeItem(&apos;auth&apos;)} } catch (error) { } }; export const isAuthenticated = (): (boolean) => { try { if (typeof window !== &apos;undefined&apos;) { const auth = localStorage.getItem(&apos;auth&apos;) || sessionStorage.getItem(&apos;auth&apos;); return !!auth} return false} catch (error) { return false} }; export const getAuthToken = (): string | (null) => { try { if (typeof window !== &apos;undefined&apos;) { const auth = localStorage.getItem(&apos;auth&apos;) || sessionStorage.getItem(&apos;auth&apos;); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null} } return null} catch (error) { return null} }; export const getUserData = (): (unknown) => { try { if (typeof window !== &apos;undefined&apos;) { const auth = localStorage.getItem(&apos;auth&apos;) || sessionStorage.getItem(&apos;auth&apos;); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null} } return null} catch (error) { return null} };
+=======
 export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth'); sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth "state":',error)} }; export const isAuthenticated = (): "(boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); return !!auth"} return false} catch (error) { console.error('Error checking authentication "status":',error); return false} }; export const getAuthToken = (): "string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null"} } return null} catch (error) { console.error('Error getting auth "token":',error); return null} }; export const getUserData = (): "(unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null"} } return null} catch (error) { console.error('Error getting user "data":',error); return null} };'
 export const cleanupAuthState = () => { try { if (typeof window !== &apos;undefined&apos;) { localStorage.removeItem(&apos;auth&apos;);&apos;;&apos;; sessionStorage.removeItem(&apos;auth&apos;)} } catch (error) { } }; export const isAuthenticated = (): (boolean) => { try { if (typeof window !== &apos;undefined&apos;) { const auth = localStorage.getItem(&apos;auth&apos;) || sessionStorage.getItem(&apos;auth&apos;); return !!auth} return false} catch (error) { return false} }; export const getAuthToken = (): string | (null) => { try { if (typeof window !== &apos;undefined&apos;) { const auth = localStorage.getItem(&apos;auth&apos;) || sessionStorage.getItem(&apos;auth&apos;); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null} } return null} catch (error) { return null} }; export const getUserData = (): (unknown) => { try { if (typeof window !== &apos;undefined&apos;) { const auth = localStorage.getItem(&apos;auth&apos;) || sessionStorage.getItem(&apos;auth&apos;); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null} } return null} catch (error) { return null} };
+>>>>>>> origin/resolved-merge-conflicts
 export const cleanupAuthState = () => {
   // Clean up stored authentication state
 }
@@ -12,7 +17,11 @@ localStorage.removeItem('auth');';';'
       sessionStorage.removeItem('auth')}'
   } catch (error) {
     }
+<<<<<<< HEAD
+    console.error('Error cleaning up auth 'state': ', error)}'
+=======
     console.error('Error cleaning up auth "state": ', error)}'
+>>>>>>> origin/resolved-merge-conflicts
 };
 export const isAuthenticated = (): (boolean) => {
   }
@@ -24,7 +33,11 @@ export const isAuthenticated = (): (boolean) => {
       return !!auth}
     return false} catch (error) {
     }
+<<<<<<< HEAD
+    console.error('Error checking authentication 'status': ', error);'
+=======
     console.error('Error checking authentication "status": ', error);'
+>>>>>>> origin/resolved-merge-conflicts
     return false}
 };
 export const getAuthToken = (): string | (null) => {
@@ -40,7 +53,11 @@ export const getAuthToken = (): string | (null) => {
     }
     return null} catch (error) {
     }
+<<<<<<< HEAD
+    console.error('Error getting auth 'token': ', error);'
+=======
     console.error('Error getting auth "token": ', error);'
+>>>>>>> origin/resolved-merge-conflicts
     return null}
 };
 export const getUserData = (): (unknown) => {
@@ -56,6 +73,22 @@ export const getUserData = (): (unknown) => {
     return null} catch (error) {';'
 ';';'
     }
+<<<<<<< HEAD
+    console.error('Error getting user 'data':', error)return null}';'
+}';';'
+export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth')sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth 'state':',error)} }export const isAuthenticated = (): (boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')return !!auth} return false} catch (error) { console.error('Error checking authentication 'status':',error)return false} }export const getAuthToken = (): string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')if (auth) { const parsed = JSON.parse(auth)return parsed.token || null} } return null} catch (error) { console.error('Error getting auth 'token':',error)return null} }export const getUserData = (): (unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')if (auth) { const parsed = JSON.parse(auth)return parsed.user || null} } return null} catch (error) { console.error('Error getting user 'data':',error)return null} }return null} catch (error) {console.error('Error getting user 'data': ', error)return null}'
+}export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth')';'; sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth 'state':',error)} }export const isAuthenticated = (): (boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')return !!auth} return false} catch (error) { console.error('Error checking authentication 'status':',error)return false} }export const getAuthToken = (): string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')if (auth) { const parsed = JSON.parse(auth)return parsed.token || null} } return null} catch (error) { console.error('Error getting auth 'token':',error)return null} }export const getUserData = (): (unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')if (auth) { const parsed = JSON.parse(auth)return parsed.user || null} } return null} catch (error) { console.error('Error getting user 'data':',error)return null} }'
+    console.error('Error getting user 'data':', error);'
+    return null}''
+};';';'
+export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth'); sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth 'state':',error)} }; export const isAuthenticated = (): (boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); return !!auth} return false} catch (error) { console.error('Error checking authentication 'status':',error); return false} }; export const getAuthToken = (): string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null} } return null} catch (error) { console.error('Error getting auth 'token':',error); return null} }; export const getUserData = (): (unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null} } return null} catch (error) { console.error('Error getting user 'data':',error); return null} };'
+    return null} catch (error) {
+    }
+    console.error('Error getting user 'data': ', error);'
+    return null}
+};
+export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth');';'; sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth 'state':',error)} }; export const isAuthenticated = (): (boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); return !!auth} return false} catch (error) { console.error('Error checking authentication 'status':',error); return false} }; export const getAuthToken = (): string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null} } return null} catch (error) { console.error('Error getting auth 'token':',error); return null} }; export const getUserData = (): (unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null} } return null} catch (error) { console.error('Error getting user 'data':',error); return null} }'
+=======
     console.error('Error getting user "data":', error)return null}';'
 }';';'
 export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth')sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth "state":',error)} }export const isAuthenticated = (): (boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')return !!auth} return false} catch (error) { console.error('Error checking authentication "status":',error)return false} }export const getAuthToken = (): string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')if (auth) { const parsed = JSON.parse(auth)return parsed.token || null} } return null} catch (error) { console.error('Error getting auth "token":',error)return null} }export const getUserData = (): (unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth')if (auth) { const parsed = JSON.parse(auth)return parsed.user || null} } return null} catch (error) { console.error('Error getting user "data":',error)return null} }return null} catch (error) {console.error('Error getting user "data": ', error)return null}'
@@ -70,5 +103,6 @@ export const cleanupAuthState = () => { try { if (typeof window !== 'undefined')
     return null}
 };
 export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth');';'; sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth "state":',error)} }; export const isAuthenticated = (): (boolean) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); return !!auth} return false} catch (error) { console.error('Error checking authentication "status":',error); return false} }; export const getAuthToken = (): string | (null) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null} } return null} catch (error) { console.error('Error getting auth "token":',error); return null} }; export const getUserData = (): (unknown) => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null} } return null} catch (error) { console.error('Error getting user "data":',error); return null} }'
+>>>>>>> origin/resolved-merge-conflicts
 }
 

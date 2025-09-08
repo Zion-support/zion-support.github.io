@@ -9,7 +9,7 @@ export const resources: Record<string, { translation: Record<string, string> }> 
   en: { translation: {} },
   pt: { translation: {} },
   es: { translation: {} },
-  ar: { translation: {} }},
+  ar: { translation: {} },
 
 if (!i18n.isInitialized) {
   i18n
@@ -26,7 +26,7 @@ if (!i18n.isInitialized) {
         caches: ['localStorage']},
       react: { useSuspense: false},
       backend: {
-        loadPath: '/locales/{{lng}}/{{ns}}.json'},
+        loadPath: '/locales/{lng}/{ns}.json'},
       ns: ['common'],
       defaultNS: 'common'} as any)
 }

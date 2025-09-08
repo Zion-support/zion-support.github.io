@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+import { format } from 'date-fns';
+import { Form;
+  FormControl;
+  FormField;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // Define schema for form validation
 
@@ -19,6 +27,7 @@ interface WorkExperienceFormProps {}
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -26,6 +35,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -48,6 +60,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     try {}
       setError(null);
 
+<<<<<<< HEAD
       let success
 
       const experienceData: WorkExperience = {
@@ -76,6 +89,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''})
         setEditingId(null)
 
+=======
+      let success;
+      const experienceData: WorkExperience = {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         company_name: data.company_name, // Required field;
         role_title: data.role_title, // Required field;
         start_date: data.start_date, // Required field;
@@ -99,14 +116,18 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         setEditingId(null)
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       }
     } catch (err: any) {'
       setError(err.message |'An error occurred')
     }
 
+<<<<<<< HEAD
 
 
   };
@@ -114,6 +135,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleEdit = (work: WorkExperience) => {
 
     setEditingId(work.id!);
@@ -128,6 +152,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     }
 
 
+<<<<<<< HEAD
+=======
+  };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   },;
   const handleEdit = (work: WorkExperience) => {;
@@ -142,27 +170,52 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
+<<<<<<< HEAD
 
 
 
-  const handleEnhanceDescription = (enhancedContent: string) => {
+=======
+
+  const handleEnhanceDescription = (enhancedContent: string) => {'
     form.setValue('description', enhancedContent)
   },
 
 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  const handleEnhanceDescription = (enhancedContent: string) => {
+    form.setValue('description', enhancedContent)
+  },
+
+<<<<<<< HEAD
 
 
+
+=======
+  return (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
+  const handleEnhanceDescription = (enhancedContent: string) => {'
+    form.setValue('description', enhancedContent)
+  },
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="space-y-6">
       <div>"
         <h2 className="text-xl font-semibold mb-2">Work Experience</h2>"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <p className="text-muted-foreground">
           Add your work history to showcase your professional experience.
         </p>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       {workExperiences.length > 0 && ("
         <div className="space-y-4">"
           <h3 className="text-md font-medium">Added Experience</h3>
@@ -184,6 +237,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </p>
                     {work.location && ("
                       <p className="text-xs text-muted-foreground">{work.location}</p>
+<<<<<<< HEAD
+=======
+
+                    <Button"
+                      variant="ghost""
+                      size="icon"
+                      onClick={() => handleEdit(work)}"
+      <div className="bg-muted/40 p-6 rounded-lg">"
+        <h3 className="text-md font-medium mb-4">'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
@@ -191,12 +254,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       <Trash2 className="h-4 w-4" />;
                     </Button>;
                   </div>;
                 </div>;
 
+<<<<<<< HEAD
                 {work.description && (;
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>;
                 )}
@@ -227,14 +294,18 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       <Input 
 
                         type="date" 
                         {...field} '
                         value={field.value || ''}
 
+<<<<<<< HEAD
 
 
+=======
                 <FormField
                   control={form && form.control}
 
@@ -245,7 +316,78 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         <Checkbox;
                           checked={field && field.value}
                           onCheckedChange={field && field.onChange}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className="space-y-4">
+              <FormField
+                control={form && form.control}
+                name="start_date"
+                  </FormItem>;                )}
+              />;
+;
+              <FormField;
+                control={form.control}
+                name="role_title";
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Job Title</FormLabel>;
+                    <FormControl>;
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+              />;
+            </div>;
+;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+              <FormField;
+                control={form.control}
+                name="start_date";
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Start Date</FormLabel>;
+                    <FormControl>;
+                      <Input ;
+                        type="date" ;
+                        {...field} ;
+                        value={field.value || ''}
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+              />;
+;
+              <div className="space-y-4">;
+                <FormField;
+                  control={form.control}
+                  name="is_current";
+                  render={({ field }) => (;
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
+                      <FormControl>;
+                        <Checkbox;
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+                <FormField
+                  control={form && form.control}
 
+                  name="is_current"
+                  render={({ field }) => (;"
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
+                      <FormControl>;
+                        <Checkbox;
+                          checked={field && field.value}
+                          onCheckedChange={field && field.onChange}
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                         />;
                       </FormControl>;"
                       <div className="space-y-1 leading-none">;
@@ -254,34 +396,130 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </FormItem>;
                   )}
 
+<<<<<<< HEAD
 
 
 
+=======
+                  <FormControl>;
+
+                    <Input placeholder="San Francisco, CA (Remote)" {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+            <FormField;
+              control={form && form.control}"
+              name="description"
+              render={({ field }) => (;
+                <FormItem>;"
+                  <FormLabel className="flex justify-between">;
+                    <span>Job Description</span>;
+                    <AIEnhancementButton"
+                      enhancementType="work-description"'
+                      context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
+                      onEnhanced={handleEnhanceDescription}
+                    />;
+                  </FormLabel>;
+                  <FormControl>;
+                    <Textarea"
+                      placeholder="Describe your responsibilities and accomplishments...""
+                      className="min-h-[100px]"
+
+                    <span > Job Description</span>;
+                    <AIEnhancementButton;'
+                      current_content={field.value || ''}"
+                      enhancement_type="work - description";'`
+                      context={`Role: ${form.get_values ('role_title')} at ${form.get_values ('company_name')}`}
+                      on_enhanced={handleEnhanceDescription}
+                    />;
+                  </FormLabel>;
+                  <FormControl>;
+
+                      className="min - h-[100px]";
+
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                    render={({ field }) => (;
+                      <FormItem>;
+                        <FormLabel>End Date</FormLabel>;
+                        <FormControl>;
+                    )}
+                          <Input ;
+                            type="date" ;
+                            {...field} ;
+                            value={field.value || ''} ;
+                          />;
+                        </FormControl>;
+                        <FormMessage />;
+                      </FormItem>;                    )}
+                  />;
+                )}
+              </div>;
+            </div>;
+            />;
+            <FormField
+              control={form && form.control}
+              name="description"
+;
+            <FormField;
+              control={form.control}
+              name="location";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Location (Optional)</FormLabel>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   <FormControl>;
 
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
 
+<<<<<<< HEAD
 
+=======
+            <FormField;
+              control={form && form.control}"
+              name="description"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               render={({ field }) => (;
                 <FormItem>;"
                   <FormLabel className="flex justify-between">;
                     <span>Job Description</span>;
 
+<<<<<<< HEAD
 
+=======
+                    <AIEnhancementButton"
+                      enhancementType="work-description"'
+                      context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       onEnhanced={handleEnhanceDescription}
                     />;
                   </FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
+=======
+
+                    <Textarea"
+                      placeholder="Describe your responsibilities and accomplishments...""
+                      className="min-h-[100px]"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
+=======
+                      className="min - h-[100px]";
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
 
+<<<<<<< HEAD
 
                       company_name: '',
                       role_title: '',
@@ -290,6 +528,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       description: '',
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       start_date: format(new Date(), 'yyyy-MM-dd');
                       is_current: false'
                       description: ''
@@ -298,12 +538,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   } else {;
                     onBack();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   }
                 }}
               >;'
                 {editingId ? 'Cancel' : 'Back'}
 
+<<<<<<< HEAD
               </Button>;
               <div className="flex gap-2">;
                 <Button type="submit" disabled={isLoading}>;
@@ -401,3 +645,6 @@ if ( {) {
 
 
 
+=======
+        </Form>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

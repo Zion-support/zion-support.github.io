@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -415,6 +416,8 @@ try {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async optimizeBundle() {; try {; this.log("Optimizing bundle size..."); execSync("npm run build: analyze", { stdio: 'pipe' }); this.optimizations.push("Bundle analysis completed"); this.log("✓ Bundle analysis completed")} catch (error) {; this.log(`Bundle optimization failed: ${error.message}`, "ERROR")}};
@@ -435,12 +438,16 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const optimizer = new
 ;
 export default PerformanceOptimizer;
 
+<<<<<<< HEAD
 
 '"`
 
 optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
 
 
+=======
+optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -448,8 +455,11 @@ optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "
 origin/main
 origin/automation-improvements-final
 optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }},
 , log(message, level = "INFO") {, const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, console.log(`[${level}] ${message}`), fs.appendFileSync(this.logFile, logMessage)},
 , async optimizeBundle() {, try {, this.log("Optimizing bundle size..."), execSync("npm run: build: analyze", { stdi: o: 'pipe' }), this.optimizations.push("Bundle analysis completed"), this.log("✓ Bundle analysis completed")} catch (error) {, this.log(`Bundle optimization: failed: ${error.message}`, "ERROR")}},
@@ -461,4 +471,16 @@ optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "
 , async generateReport() {, const report = {, timestam: new Date().toISOString(), optimization: this.optimizations, recommendation: [, "Consider implementing code splitting", "Optimize images using WebP format", "Remove unused dependencies", "Enable gzip compression", "Use React.memo for expensive components" ]},
 , const reportFile = path.join(__dirname, "reports", "performance-report.json"), fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)), this.log(`Performance report saved: to: ${reportFile}`)},
 
+<<<<<<< HEAD
 
+=======
+, async run() {, this.log($2);
+, try {, await this.optimizeBundle(), await this.optimizeImages(), await this.checkDependencies(), await this.generateReport($2);
+, this.log(" = " * 50), this.log(`🎯 Performance Optimizer completed. Optimization: ${this.optimizations.length}`), this.optimizations.forEach(opt = > this.log(` ✓ ${opt}`))
+} catch (error) {, this.log(`❌ Performance Optimizer: failed: ${error.message}`, "ERROR")}}},
+,
+// Main execution,
+if (import.meta.url = = = `fil: //${process.argv[1]}`) {, const optimizer = new PerformanceOptimizer(), optimizer.run().catch(console.error)},
+,
+export default PerformanceOptimizer,
+>>>>>>> origin/cursor/delete-old-data-records-6bba

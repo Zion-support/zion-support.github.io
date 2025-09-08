@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+import Link from 'next/link';
+import AnimatedBackground from './AnimatedBackground';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">
@@ -19,6 +24,7 @@ export default function FuturisticHero() {
           <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover: bg-indigo-500">Become a Partner</a></Link>
           <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark: hover: bg-gray-900">Explore Services</a></Link>
         </div>
+<<<<<<< HEAD
 
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -63,11 +69,15 @@ function FuturisticHero() {
 
 
 
+=======
+        <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow">
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
           </p>
         </div>
       </div>
+<<<<<<< HEAD
 
   );
 export default function FuturisticHero() {export default function FuturisticHero() {return (<section className='relative py-20 sm:py-28'>;
@@ -144,3 +154,8 @@ function FuturisticHero() {return (<section className='relative py - 20 sm:py - 
 
 
 
+=======
+    </section>
+  )
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

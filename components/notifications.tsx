@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ import React from 'react';
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

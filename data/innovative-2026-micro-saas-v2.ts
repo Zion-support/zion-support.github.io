@@ -1,5 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+export interface Innovative2026MicroSaasV2 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string}
+}
+
+export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
+  {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "2026-micro-saas-v2",
     name: "2026 Micro SAAS Platform V2",
     tagline: "Enhanced micro SAAS solutions",
@@ -18,6 +39,7 @@
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -33,3 +55,9 @@
   }
 ];
 
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

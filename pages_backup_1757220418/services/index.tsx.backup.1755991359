@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:pages_backup_1757220418/services/index.tsx.backup.1755991359
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, ArrowRight, Star, CheckCircle } from 'lucide-react';
@@ -7,6 +10,8 @@ import SEO from '../../components/SEO';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import UltraFuturisticServiceCard2026 from '../../components/ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 =======
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -36,6 +41,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
 >>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/services/index.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { extraServices } from '../../data/extra-services';
@@ -521,12 +527,17 @@ export default function ServicesIndexPage() {
             </h2>
             <div className="space-y-12">
               {categories.map((category) => {
+<<<<<<< HEAD
+                const categoryServices = servicesByCategory[category];
+                if (!categoryServices || categoryServices.length === 0) return null;
+=======
 <<<<<<< HEAD:pages_backup_1757220418/services/index.tsx.backup.1755991359
                 const categoryServices = servicesByCategory[category];
                 if (!categoryServices || categoryServices.length === 0) return null;
 =======
                 if (!categoryServices |categoryServices.length === 0) return null
 >>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/services/index.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 return (
                   <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">

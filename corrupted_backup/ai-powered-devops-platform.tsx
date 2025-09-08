@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -34,10 +36,13 @@ export default function AIPoweredDevOpsPlatformPage() {
 		</>;
 	);
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
+<<<<<<< HEAD
+=======
 export default function AIPoweredDevOpsPlatformPage() {
   return (
     <>
@@ -149,3 +154,4 @@ const AIPoweredDevOpsPlatform: React.FC = () => {
 };
 
 export default AIPoweredDevOpsPlatform;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

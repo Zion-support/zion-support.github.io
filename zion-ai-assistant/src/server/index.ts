@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 });
 
 ;
@@ -12,13 +15,19 @@ if ( {) {$2;
 }),const port = process.env.PORT ? Number(process.env.PORT) :4321,app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http://localhost:${port}`)})}
 })})})})})})})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import "dotenv / config",
 import express from './express';,
 import cors from './cors';,
 import { z  } from './zod';,
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse  } from '../shared / types.js';,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { generate_milestones  } from './milestone_generator.js';,
 const app = express (),
 app.use (cors ()),
@@ -28,7 +37,10 @@ const input_schema = z.object ({
   startDateIso: z.string ().datetime (),
   endDateIso: z.string ().datetime (),
   project_type: z.enum (["Web Dev", "AI / ML", "DevOps", "Mobile", "Data Engineering", "Other"]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
@@ -44,7 +56,10 @@ app.use(express.json({ limit: "1mb" }));
   projectType: z.enum(["Web Dev", "AI/ML", "DevOps", "Mobile", "Data Engineering", "Other"]);
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 app.post("/api/ai/milestones", async (req, res) => {
   try {
     const input = $2;
@@ -54,7 +69,10 @@ app.post("/api/ai/milestones", async (req, res) => {
 
     if (error instanceof z.ZodError) {
       return res.status(400).json({ error: "Invalid input", details: error.issues })
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     console.error(error);
     res.status(500).json({ error: "Failed to generate milestones" });
@@ -62,7 +80,10 @@ app.post("/api/ai/milestones", async (req, res) => {
 });
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }),;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
@@ -79,4 +100,7 @@ const port = $2;
 app.listen(port, () => {
   console.log(`zion-ai-assistant listening on http://localhost:${port}`)
 }),
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

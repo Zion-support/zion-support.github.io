@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
 
+<<<<<<< HEAD
 
   const isMobile = useIsMobile();
 
@@ -29,6 +33,9 @@ import { Briefcase, Inbox } from 'lucide-react'
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
 
@@ -40,7 +47,10 @@ function ApplicationStatusTrackerContent() {
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
 
@@ -50,6 +60,7 @@ function ApplicationStatusTrackerContent() {
           </div>
         </div>
 
+<<<<<<< HEAD
 
 
 
@@ -58,6 +69,9 @@ function ApplicationStatusTrackerContent() {
 
           <Card>
             <CardHeader className="border-b bg-muted/50">
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <Card>
             <CardHeader className='border-b bg-muted/50'>
@@ -80,7 +94,23 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
 
+<<<<<<< HEAD
 
+=======
+  );
+}
+export default function ApplicationStatusTracker() {
+  return (
+    <ProtectedRoute>
+}))
+  )
+
+:src/pages/ApplicationStatusTracker.tsx
+}
+import { SEO } from "@/components/SEO",;
+import { ApplicationsTracker } from "@/components/jobs/applications",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Briefcase, Inbox } from 'lucide-react';
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
@@ -127,6 +157,7 @@ export default function ApplicationStatusTracker() {;
 
 export default function ApplicationStatusTracker() {
   return (
+<<<<<<< HEAD
 
     <>;
       <SEO;
@@ -171,4 +202,6 @@ function ApplicationStatusTracker() {
     </ProtectedRoute>);
 }
 ;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 

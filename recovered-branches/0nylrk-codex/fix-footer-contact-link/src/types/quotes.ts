@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;"
 export type TimelineType = "fixed" | "flexible";"
 export type BudgetType = "fixed" | "hourly" | "range";
+<<<<<<< HEAD
 
 
 
@@ -13,15 +17,29 @@ export interface ListingItem {
 
 
 
+=======
+
+export interface ListingItem {
+  id: string;
+  title: string;
+  category: string
+  image?: string
+}
+export interface ContactInfo {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export interface ListingItem {;
 
   id: string;
   title: string;
   category: string;
   image?: string;
+<<<<<<< HEAD
 
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
@@ -45,6 +63,7 @@ export interface Budget {;
   company: string
 }
 
+<<<<<<< HEAD
 export interface QuoteFormData {
   service_type: ServiceType;
   service_category: ServiceCategory;
@@ -54,23 +73,35 @@ export interface QuoteFormData {
   start_date?: Date;
   end_date?: Date;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface Budget {
 
 export interface Budget {;
 
+<<<<<<< HEAD
 
 
+=======
+export interface Budget {
+
+export interface Budget {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   amount: number;
   maxAmount?: number;
   type: BudgetType;
 }
 
+<<<<<<< HEAD
 
 
 export interface QuoteFormData {;
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -78,8 +109,11 @@ export interface QuoteFormData {;
   projectDescription: string;
   startDate?: Date;
 
+<<<<<<< HEAD
   endDate?: Date;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   timeline: TimelineType;
   budget: Budget;
@@ -118,7 +152,22 @@ export interface QuoteRequest {
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
+<<<<<<< HEAD
 
 
 
 
+=======
+  created_at: string
+
+  updated_at: string
+}
+export type ServiceType = "service" | "talent" | "equipment" | "",
+export type ServiceCategory = string,
+export type TimelineType = "fixed" | "flexible",
+export type BudgetType = "fixed" | "hourly" | "range",
+
+
+  updated_at: string
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

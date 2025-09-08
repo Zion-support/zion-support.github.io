@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -19,6 +20,13 @@ module && module.exports = MCPClientIntegration;
 // Run if called directly
 if (require && require.main === module) {
 
+=======
+#!/usr/bin/env node
+/**
+ * MCP Client Integration
+ * Placeholder for MCP client integration functionality
+ */
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 console.log($2);
 console.log($2);
@@ -38,6 +46,7 @@ class MCPClientIntegration {
     return { status: 'placeholder', message: 'Not implemented yet' }
   }
 // Export for use in other modules
+<<<<<<< HEAD
 
 
 module && module.exports = MCPClientIntegration,
@@ -97,3 +106,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+module.exports = $2;
+// Run if called directly
+if (require.main === module) {
+  const client = new MCPClientIntegration($2);
+  client.connect()
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

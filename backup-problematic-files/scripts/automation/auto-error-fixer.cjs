@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const fs = require("fs)
 const path = require(path")
@@ -39,56 +38,6 @@ const { execSync } = require("child_process)
         if (content.includes(JSX) && !content.includes("import React")
   content = import React from react;\n
           this.errorsFixed.push({ file, "type": import_export})
-=======
-
-<<<<<<< HEAD
-
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-  const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-    this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
-  this.log(" Starting Auto Error Fixer...")
-  this.log("� Stopping Auto Error Fixer...")
-  this.log("� Stopping Auto Error Fixer...")
-  this.log(" Checking for errors...")
-  this.log(` Error during auto-"fix"`)
-  this.log(" Checking TypeScript errors...")
-      const result = execSync("npm run type-check 2>&1", { "encoding": "utf8"})
-      if (result.includes("error TS")
-  this.log("� TypeScript errors detected, attempting to fix...")
-  execSync("npx tsc --noEmit --skipLibCheck", { "stdio": "pipe"})
-  this.log(` Error during auto-"fix"`)
-  this.log(" Checking TypeScript errors...")
-      const result = execSync("npm run type-check 2>&1", { "encoding": "utf8"})
-      if (result.includes("error TS")
-  this.log("� TypeScript errors detected, attempting to fix...")
-  execSync("npx tsc --noEmit --skipLibCheck", { "stdio": "pipe"})
-      this.log("� TypeScript errors detected, attempting to fix...")
-  const files = this.findFiles(".ts,.tsx")
-  let content = fs.readFileSync(file, "utf8")
-          /} catch \("error")
-          "} catch ("error": any)"
-        content = content.replace(/\(([^)]+): \)/g, "($"1": any)"
-          "function $1(): any {"}
-        if (content !== fs.readFileSync(file, "utf8")
-          /} catch \("error")
-          "} catch ("error": any)"
-        content = content.replace(/\(([^)]+): \)/g, "($"1": any)"
-          "function $1(): any {"}
-        if (content !== fs.readFileSync(file, "utf8")
-          this.errorsFixed.push({ file, "type": "missing_types"})
-  const files = this.findFiles(".ts,.tsx")
-  let content = fs.readFileSync(file, "utf8")
-          content.includes("import React")
-          !content.includes("import React from")
-            "import React from "react;"
-        if (content.includes("JSX") && !content.includes("import React")
-  content = "import React from react;\n"
-          this.errorsFixed.push({ file, "type": "import_export"})
->>>>>>> origin/chore/fix-lint-and-merge
   const files = this.findFiles(".tsx,.jsx")
   let content = fs.readFileSync(file, utf8)
           "<React.Fragment>$1</React.Fragment>"
@@ -191,28 +140,9 @@ const { execSync } = require("child_process")
       "logFile"
   process.on(SIGINT)
   process.on("SIGINT")
-<<<<<<< HEAD
 
-=======
-  process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   process.on(")
   process.on(")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  process.on(")
-=======
-  process.on(")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

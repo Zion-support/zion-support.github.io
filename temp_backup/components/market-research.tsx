@@ -1,24 +1,24 @@
 export default function MarketResearchPage () {
   const marketSegments = [ {
-  return (<> <Head> <title>Market Research & Industry Insights | Zion Tech Group</title> <meta name="description" content="Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions." /> <meta property="og:title" content="Market Research & Industry Insights | Zion Tech Group" /> <meta property="og:description" content="Comprehensive market research and competitive analysis for micro SaaS services." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> Market Intelligence </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > Comprehensive Market Research & Industry Insights </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Data-driven market intelligence, competitive analysis, and industry trends to help you make informed decisions about your micro SaaS business strategy and market positioning. </p> </div> </section> Investment & Market Metrics </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Key investment metrics and market indicators for the SaaS industry to help you understand the current market landscape. </p> </div> </div> </div> </Card>) ) 
-}</div> </div> </section> Market Segment Analysis </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities. </p> </div> </div> </div> </div> </div> <div> <h4 className="text-lg font-semibold text-white mb-4 flex items-center" > <TrendingUp className="w-5 h-5 mr-2 text-green-400" /> Key Trends </h4> </li>) ) 
+  return (<> <Head> <title>Market Research & Industry Insights | Zion Tech Group</title> <meta name='description' content='Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions.' /> <meta property='og:title' content='Market Research & Industry Insights | Zion Tech Group' /> <meta property='og:description' content='Comprehensive market research and competitive analysis for micro SaaS services.' /> <meta name='twitter:card' content='summary large image' /> </Head> <div className='relative z-10 container-cursor text-center' > <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6' > <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' /> Market Intelligence </div> <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg' > Comprehensive Market Research & Industry Insights </h1> <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed' > Data-driven market intelligence, competitive analysis, and industry trends to help you make informed decisions about your micro SaaS business strategy and market positioning. </p> </div> </section> Investment & Market Metrics </h2> <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' > Key investment metrics and market indicators for the SaaS industry to help you understand the current market landscape. </p> </div> </div> </div> </Card>) ) 
+}</div> </div> </section> Market Segment Analysis </h2> <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' > Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities. </p> </div> </div> </div> </div> </div> <div> <h4 className='text-lg font-semibold text-white mb-4 flex items-center' > <TrendingUp className='w-5 h-5 mr-2 text-green-400' /> Key Trends </h4> </li>) ) 
 }</ul> </div> {
   /* Top Players */ 
-}<div> <h4 className="text-lg font-semibold text-white mb-4 flex items-center" > <Award className="w-5 h-5 mr-2 text-yellow-400" /> Top Players </h4> </li>) ) 
+}<div> <h4 className='text-lg font-semibold text-white mb-4 flex items-center' > <Award className='w-5 h-5 mr-2 text-yellow-400' /> Top Players </h4> </li>) ) 
 }</ul> </div> </div> </div>) ) 
 }</div> </div> </div> </div> </div> </Card>) ) 
-}</div> </div> </section> Competitive Landscape Analysis </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Understanding the competitive landscape and positioning strategies for different types of SaaS companies. </p> </div> </div> {
+}</div> </div> </section> Competitive Landscape Analysis </h2> <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' > Understanding the competitive landscape and positioning strategies for different types of SaaS companies. </p> </div> </div> {
   /* Market Share & Pricing */ 
-}<div className="grid grid-cols-2 gap-4 mb-6 text-sm" > <div> <span className="text-gray-400" >Market Share:</span> <div className="text-white font-semibold" > {
+}<div className='grid grid-cols-2 gap-4 mb-6 text-sm' > <div> <span className='text-gray-400' >Market Share:</span> <div className='text-white font-semibold' > {
   analysis.marketShare 
-}</div> </div> <div> <span className="text-gray-400" >Pricing:</span> <div className="text-white font-semibold" > {
+}</div> </div> <div> <span className='text-gray-400' >Pricing:</span> <div className='text-white font-semibold' > {
   analysis.pricing 
 }</div> </div> </div> {
   /* Strengths */ 
-}<div className="mb-4" > <h4 className="text-sm font-semibold text-green-400 mb-2" >Strengths:</h4> <ul className="space-y-1 text-xs text-gray-300" > {
+}<div className='mb-4' > <h4 className='text-sm font-semibold text-green-400 mb-2' >Strengths:</h4> <ul className='space-y-1 text-xs text-gray-300' > {
   analysis.strengths.map ( (strength, strengthIndex) => (<li key= {
   strengthIndex 
-}className="flex items-start" > <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" /> {
+}className='flex items-start' > <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' /> {
   strength 
 }
     },
@@ -275,7 +275,7 @@ to help you understand the current market landscape.
               <Card;}
 key={index}
                 className='card-hover border-gradient-blue overflow-hidden';
-                style={{ animationDelay: `${index * 0.1}s` ,
+                style={ animationDelay: `${index * 0.1}s` ,
 }
                />;
                 <div className='p-8' />;
@@ -394,7 +394,7 @@ key={index}
             {competitiveAnalysis.map((analysis, index) => (<Card;}
                 key={index}
                 className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` ,
+                style={ animation_delay: `${index * 0.1}s` ,
 }
                />;
                 <div className='p - 6' />;
@@ -453,10 +453,10 @@ key={index}
                     </h4>;
                     <ul className='space-y-1 text-xs text-gray-300' />;
                       {analysis && analysis.weaknesses.map((weakness, weaknessIndex) => (<li key={weaknessIndex} className='flex items-start' />;
-                          <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {weakness}                    <h4 className="text-sm font-semibold text-red-400 mb-2" />Weaknesses:</h4>;
-                    <ul className="space-y-1 text-xs text-gray-300" />;
-                      {analysis && analysis.weaknesses.map((weakness, weaknessIndex) => (<li key={weaknessIndex} className="flex items-start" />;
-                          <span className="w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
+                          <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {weakness}                    <h4 className='text-sm font-semibold text-red-400 mb-2' />Weaknesses:</h4>;
+                    <ul className='space-y-1 text-xs text-gray-300' />;
+                      {analysis && analysis.weaknesses.map((weakness, weaknessIndex) => (<li key={weaknessIndex} className='flex items-start' />;
+                          <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />;
                         </li>;
                       ))}
                     </ul>;
@@ -487,7 +487,7 @@ opportunities for innovation and growth.
               <Card;}
 key={index}
                 className='card-hover border-gradient-blue';
-                style={{ animationDelay: `${index * 0.1}s` ,
+                style={ animationDelay: `${index * 0.1}s` ,
 }
                />;
                 <div className='p-6' />;
@@ -557,21 +557,21 @@ key={index}
           </div>;
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8' />;
             {pricingStrategies.map((strategy, index) => (<Card;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed" />;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed' />;
               Key trends shaping the micro SaaS landscape and creating new opportunities for innovation and growth.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8" />;}
+          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8' />;}
             {market_trends.map ((trend, index) => (<Card;}
                 key={index}
-                className="card - hover border - gradient - blue";
-                style={{ animation_delay: `${index * 0.1}s` ,
+                className='card - hover border - gradient - blue';
+                style={ animation_delay: `${index * 0.1}s` ,
 }
                />;
-                <div className="p - 6" />;
-                  <div className="flex items - start justify - between mb - 4" />;
-                    <h3 className="text - xl font - bold text - white" />{trend.trend}</h3>;
-                    <div className="flex items - center space - x-2" />;
+                <div className='p - 6' />;
+                  <div className='flex items - start justify - between mb - 4' />;
+                    <h3 className='text - xl font - bold text - white' />{trend.trend}</h3>;
+                    <div className='flex items - center space - x-2' />;
                       <span className={`px - 2 py - 1 rounded text - xs font - medium ${trend.impact === 'High' ? 'bg - red - 500 / 20 text - red - 400' :;
                         trend.impact === 'Medium' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;}
                         'bg - green - 500 / 20 text - green - 400';}
@@ -579,7 +579,7 @@ key={index}
 
                         {trend.impact} Impact;
                       </span>;
-                      <span className="px - 2 py - 1 rounded text - xs font - medium bg - blue - 500 / 20 text - blue - 400" />;
+                      <span className='px - 2 py - 1 rounded text - xs font - medium bg - blue - 500 / 20 text - blue - 400' />;
                         {trend.timeline}
                       </span>;
                     </div>;
@@ -592,12 +592,12 @@ key={index}
                     <ul className='space - y-1 text - xs text - gray - 300' />;
                       {trend.examples.map ((example, example_index) => (<li key={example_index} className='flex items - start' />;
                           <span className='w - 1.5 h - 1.5 bg - cursor - blue rounded - full mr - 2 mt - 1.5 flex - shrink - 0' />                          {example}
-                  <p className="text - gray - 300 mb - 4" />{trend.description}</p>;
-                  <div className="mb - 4" />;
-                    <h4 className="text - sm font - semibold text - gray - 400 mb - 2" />Examples:</h4>;
-                    <ul className="space - y-1 text - xs text - gray - 300" />;
-                      {trend.examples.map ((example, example_index) => (<li key={example_index} className="flex items - start" />;
-                          <span className="w - 1.5 h - 1.5 bg - cursor - blue rounded - full mr - 2 mt - 1.5 flex - shrink - 0" />;
+                  <p className='text - gray - 300 mb - 4' />{trend.description}</p>;
+                  <div className='mb - 4' />;
+                    <h4 className='text - sm font - semibold text - gray - 400 mb - 2' />Examples:</h4>;
+                    <ul className='space - y-1 text - xs text - gray - 300' />;
+                      {trend.examples.map ((example, example_index) => (<li key={example_index} className='flex items - start' />;
+                          <span className='w - 1.5 h - 1.5 bg - cursor - blue rounded - full mr - 2 mt - 1.5 flex - shrink - 0' />;
                         </li>))}
                     </ul>;
                   </div>;
@@ -607,8 +607,8 @@ key={index}
                     </h4>;
                     <p className='text - xs text - gray - 300' />;
                       {trend.opportunities}
-                    </p>                  </div>                    <h4 className="text - sm font - semibold text - green - 400 mb - 2" />Opportunities:</h4>;
-                    <p className="text - xs text - gray - 300" />{trend.opportunities}</p>;
+                    </p>                  </div>                    <h4 className='text - sm font - semibold text - green - 400 mb - 2' />Opportunities:</h4>;
+                    <p className='text - xs text - gray - 300' />{trend.opportunities}</p>;
                   </div>;
                 </div>;
               </Card>))}
@@ -645,7 +645,7 @@ key={index}
             {pricingStrategies.map((strategy, index) => (<Card;}
                 key={index}
                 className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` ,
+                style={ animation_delay: `${index * 0.1}s` ,
 }
                />;
                 <div className='p - 6' />;
@@ -712,7 +712,7 @@ key={index}
             {pricingStrategies && pricingStrategies.map((strategy, index) => (<Card;}
                 key={index}
                 className='card-hover border-gradient-blue';
-                style={{ animationDelay: `${index * 0 && 0.1}s` ,
+                style={ animationDelay: `${index * 0 && 0.1}s` ,
 } />;
                 <div className='p-6' />;
                   <h3 className='text-xl font-bold text-white mb-3' />;
@@ -727,23 +727,23 @@ key={index}
                       {strategy && strategy.pros.map((pro, proIndex) => (<li key={proIndex} className='flex items-start' />;
                           <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {pro}              Pricing Strategy Analysis;
             </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.;
             </p>;
-          </div>;<div className="grid grid-cols-1 lg:grid-cols-3 gap-8" />;
+          </div>;<div className='grid grid-cols-1 lg:grid-cols-3 gap-8' />;
             {pricingStrategies && pricingStrategies.map((strategy, index) => (<Card;}
                 key={index}
-                className="card-hover border-gradient-blue";
-                style={{ animationDelay: `${index * 0 && 0.1}s` ,
+                className='card-hover border-gradient-blue';
+                style={ animationDelay: `${index * 0 && 0.1}s` ,
 } />;
-                <div className="p-6" />;
-                  <h3 className="text-xl font-bold text-white mb-3" />{strategy && strategy.strategy}</h3>;
-                  <p className="text-gray-300 mb-6" />{strategy && strategy.description}</p>;{/* Pros */}
-                  <div className="mb-4" />;
-                    <h4 className="text-sm font-semibold text-green-400 mb-2" />Pros:</h4>;
-                    <ul className="space-y-1 text-xs text-gray-300" />;
-                      {strategy && strategy.pros.map((pro, proIndex) => (<li key={proIndex} className="flex items-start" />;
-                          <span className="w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
+                <div className='p-6' />;
+                  <h3 className='text-xl font-bold text-white mb-3' />{strategy && strategy.strategy}</h3>;
+                  <p className='text-gray-300 mb-6' />{strategy && strategy.description}</p>;{/* Pros */}
+                  <div className='mb-4' />;
+                    <h4 className='text-sm font-semibold text-green-400 mb-2' />Pros:</h4>;
+                    <ul className='space-y-1 text-xs text-gray-300' />;
+                      {strategy && strategy.pros.map((pro, proIndex) => (<li key={proIndex} className='flex items-start' />;
+                          <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />;
                           {pro}
                         </li>;
                       ))}
@@ -754,11 +754,11 @@ key={index}
                     </h4>;
                     <ul className='space-y-1 text-xs text-gray-300' />;
                       {strategy && strategy.cons.map((con, conIndex) => (<li key={conIndex} className='flex items-start' />;
-                          <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {con}                  <div className="mb-4" />;
-                    <h4 className="text-sm font-semibold text-red-400 mb-2" />Cons:</h4>;
-                    <ul className="space-y-1 text-xs text-gray-300" />;
-                      {strategy && strategy.cons.map((con, conIndex) => (<li key={conIndex} className="flex items-start" />;
-                          <span className="w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
+                          <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {con}                  <div className='mb-4' />;
+                    <h4 className='text-sm font-semibold text-red-400 mb-2' />Cons:</h4>;
+                    <ul className='space-y-1 text-xs text-gray-300' />;
+                      {strategy && strategy.cons.map((con, conIndex) => (<li key={conIndex} className='flex items-start' />;
+                          <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />;
                         </li>;
                       ))}
                   {/* Best For */}
@@ -766,8 +766,8 @@ key={index}
                     <h4 className='text-sm font-semibold text-blue-400 mb-2' />;
                       Best For:;
                     </h4>;
-                    <p className='text-xs text-gray-300' />{strategy && strategy.bestFor}</p>                  </div>                    <h4 className="text-sm font-semibold text-blue-400 mb-2" />Best For:</h4>;
-                    <p className="text-xs text-gray-300" />{strategy && strategy.bestFor}</p>;
+                    <p className='text-xs text-gray-300' />{strategy && strategy.bestFor}</p>                  </div>                    <h4 className='text-sm font-semibold text-blue-400 mb-2' />Best For:</h4>;
+                    <p className='text-xs text-gray-300' />{strategy && strategy.bestFor}</p>;
                   </div>;
                 </div>;
               </Card>;

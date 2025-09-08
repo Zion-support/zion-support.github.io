@@ -1,12 +1,18 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface AutocompleteSuggestionsProps {
 
   visible: boolean
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",;
 
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
@@ -33,24 +39,64 @@ interface AutocompleteSuggestionsProps {;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 // Helper function to highlight matching text;
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {}
   if (!searchTerm |searchTerm.length === 0) {}
     return { before: '', match: text, after: '' }
   }
+<<<<<<< HEAD
 
 
 
+=======
+
+
+  
+
+
+  
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
 
+<<<<<<< HEAD
 
+=======
+import React from './react';
+import { SearchSuggestion, SearchHighlight } from '@/types / search';
+interface AutocompleteSuggestionsProps {
+  suggestions: SearchSuggestion[],
+  search_term: string,
+  onSelectSuggestion: (suggestion: string) => void,
+  visible: boolean;
+}
+// Helper function to highlight matching text;
+const highlight_match = (text: string, search_term: string): SearchHighlight => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return { before: '', match: text, after: '' }
+  }
+  const lower_text = text.toLowerCase ();
+  const lowerSearchTerm = search_term.toLowerCase ();
+  const index = lower_text.index_of (lowerSearchTerm);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     return { before: '', match: text, after: '' }
   }
@@ -69,7 +115,11 @@ export function AutocompleteSuggestions({
 }: AutocompleteSuggestionsProps) {
   if (!visible |suggestions.length === 0) return null;
 
+<<<<<<< HEAD
 
+=======
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 };
 
 export function AutocompleteSuggestions({ 
@@ -82,8 +132,38 @@ export function AutocompleteSuggestions({}
   suggestions, ;
   searchTerm, ;
   onSelectSuggestion;
+<<<<<<< HEAD
 
 
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+;
+  const lowerText = text.toLowerCase(),;
+  const lowerSearchTerm = searchTerm.toLowerCase(),;
+  const index = lowerText.indexOf(lowerSearchTerm),;
+
+    return { before: '', match: text, after: '' }
+  }
+;
+  return {;
+    before: text.substring(0, index),;
+    match: text.substring(index, index + searchTerm.length),;
+    after: text.substring(index + searchTerm.length);
+  }
+},
+
+<<<<<<< HEAD
+
+export function AutocompleteSuggestions({ 
+  suggestions, 
+  searchTerm, 
+  onSelectSuggestion,
+
+
+
+=======
+};
 
 ;
   const lowerText = text.toLowerCase(),;
@@ -100,20 +180,26 @@ export function AutocompleteSuggestions({}
   }
 },
 
-
-export function AutocompleteSuggestions({ 
-  suggestions, 
-  searchTerm, 
-  onSelectSuggestion,
-
-
-
+  visible 
+}: AutocompleteSuggestionsProps) {
+  if (!visible || suggestions.length === 0) return null,
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
 
+<<<<<<< HEAD
 
+=======
+          return (
+            <li key={`${suggestion.type}-${index}`}
+
+          return (
+            <li key={`${suggestion.type}-${index}`}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
                 onClick={() => onSelectSuggestion(suggestion.text)}>
               <div className="flex items-center justify-between">
@@ -128,16 +214,39 @@ export function AutocompleteSuggestions({
               </div>
             </li>
           )
+<<<<<<< HEAD
 
 
+=======
+
+
+                className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
+                onClick={() => onSelectSuggestion(suggestion.text)}>"
+              <div className="flex items-center justify-between">
+                <div>
+                  <span>{highlight.before}</span>"
+                  <span className="font-bold text-zion-purple">{highlight.match}</span>
+                  <span>{highlight.after}</span>
+                </div>"
+                <span className="text-xs text-zion-slate-light capitalize">
+                  {suggestion.type}
+                </span>
+              </div>
+            </li>
+          )
+        })}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           const highlight = highlightMatch(suggestion.text, searchTerm),
 
           return (
             <li key={`${suggestion.type}-${index}`}
 
+<<<<<<< HEAD
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[],;
   searchTerm: string,;
@@ -149,12 +258,19 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {;
   if (!searchTerm || searchTerm && searchTerm.length === 0) {;'
     return { before: '', match: text, after: '' }
   }
+
   const lowerText = text && text.toLowerCase();
   const lowerSearchTerm = searchTerm && searchTerm.toLowerCase();
   const index = lowerText && lowerText.indexOf(lowerSearchTerm);
+<<<<<<< HEAD
 
   if (index === -1) {;
 
+=======
+
+
+  if (index === -1) {;'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return { before: '', match: text, after: '' }
   }
   return {;
@@ -170,10 +286,17 @@ export function AutocompleteSuggestions(): any ({ ;
   visible ;
 }: AutocompleteSuggestionsProps) {;
   if (!visible || suggestions && suggestions.length === 0) return null;
+<<<<<<< HEAD
 
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">;
 
+=======
+
+
+  return ("
+    <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">;"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <ul className="py-2 max-h-60 overflow-y-auto">;
         {suggestions && suggestions.map((suggestion, index) => {;
           const highlight = highlightMatch(suggestion && suggestion.text, searchTerm);
@@ -197,6 +320,13 @@ export function AutocompleteSuggestions(): any ({ ;
           );
         })}
 
+<<<<<<< HEAD
+=======
+      </ul>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       </ul>;
@@ -205,7 +335,10 @@ export function AutocompleteSuggestions(): any ({ ;
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
 // Helper function to highlight matching text;
@@ -271,6 +404,7 @@ export function AutocompleteSuggestions({ ;
 },
 
 
+<<<<<<< HEAD
 export function AutocompleteSuggestions({ 
   suggestions,
   searchTerm,
@@ -306,3 +440,15 @@ interface AutocompleteSuggestionsProps {suggestions: SearchSuggestion[];
 
 
 
+=======
+                  {suggestion.type}
+                </span>;
+              </div>;
+            </li>);
+        })}
+
+
+      </ul>;
+    </div>);
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

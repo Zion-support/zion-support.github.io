@@ -1,5 +1,16 @@
 
+<<<<<<< HEAD
 
+=======
+import { useState  } from 'react';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import {useState} from 'react';
@@ -11,8 +22,11 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
@@ -29,11 +43,23 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+<<<<<<< HEAD
 
 
 
   return (
 
+=======
+
+import { ResumeWizard } from "@/components/resume-builder/ResumeWizard";
+import {}
+  PortfolioBuilder,
+  as,
+  PortfolioSection,";
+} from "@/components/resume-builder/portfolio/PortfolioBuilder";
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <>
       <SEO
         title="Portfolio Builder | Zion AI Marketplace"
@@ -75,11 +101,37 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
 
   );
 }
 
 
+=======
+  );
+}
+
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+function PortfolioBuilderContent() {;
+  const [activeTab, setActiveTab] = useState('resume');
+
+  return (
+    <ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>
+  );
+}
+
+function PortfolioBuilderContent() {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {PortfolioBuilder, as, PortfolioSection} from '@/components / resume - builder / portfolio / PortfolioBuilder';
 /**
  * PortfolioBuilderContent - Function description;
@@ -103,11 +155,16 @@ function PortfolioBuilder() {}
 }
 
 
+<<<<<<< HEAD
+=======
+  ),;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 export default function PortfolioBuilder() {
   return (
     <ProtectedRoute>
 
+<<<<<<< HEAD
       <PortfolioBuilderContent />
     </ProtectedRoute>
   )
@@ -117,6 +174,8 @@ export default function PortfolioBuilder() {;
   return (;
     <ProtectedRoute>;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <PortfolioBuilderContent />;
     </ProtectedRoute>;
   );
@@ -124,5 +183,8 @@ export default function PortfolioBuilder() {;
 ;
 
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

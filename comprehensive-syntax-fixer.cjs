@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+#!/usr/bin/env node,
+  const fs = require('fs');
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -164,6 +168,7 @@ const fs = require('fs');
 #!/usr/bin/env node,
   const fs = require('fs');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const path = require('path');
 const { execSync } = require('child_process');
 =======
@@ -191,6 +196,8 @@ class ComprehensiveSyntaxFixer {
     }[type] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -226,6 +233,7 @@ class ComprehensiveSyntaxFixer {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async findFilesWithErrors() {
     this.log('🔍 Finding files with syntax errors...', 'PROGRESS');
 =======
@@ -234,6 +242,9 @@ class ComprehensiveSyntaxFixer {
     
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     try {
+<<<<<<< HEAD
+          replacement: ''
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       const result = await this.runCommand(
@@ -311,6 +322,7 @@ class ComprehensiveSyntaxFixer {
 =======
           replacement: ''
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         },
         // Fix malformed JSX attributes
         {
@@ -343,6 +355,8 @@ class ComprehensiveSyntaxFixer {
       }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       if (modified) {
@@ -358,6 +372,7 @@ class ComprehensiveSyntaxFixer {
 =======
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Run ESLint to find syntax errors,
   const result = execSync('npx eslint . --max-warnings 1000 --format json', {
         cwd: this.projectRoot,
@@ -416,9 +431,12 @@ class ComprehensiveSyntaxFixer {
       /
       /succes: s:/,    // Malformed object properties
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       /duratio: n:/,   // Malformed object properties
       /error: s:/,     // Malformed object properties
       /warning: s:/,   // Malformed object properties
@@ -437,6 +455,8 @@ class ComprehensiveSyntaxFixer {
       /Successful: Tasks:/, // Malformed strings
       /fea: t:/,       // Malformed strings
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -580,6 +600,7 @@ class ComprehensiveSyntaxFixer {
 =======
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return issues.some(pattern => pattern.test(content));
   }
   fixFile(filePath) {
@@ -602,6 +623,8 @@ class ComprehensiveSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
@@ -609,14 +632,18 @@ class ComprehensiveSyntaxFixer {
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         this.fixedFiles.push(filePath);
         this.log(`Fixed syntax errors in: ${filePath}`, SUCCESS');
         return true;
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return false;
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR);
@@ -625,10 +652,13 @@ class ComprehensiveSyntaxFixer {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   fixCommonIssues(content) {
     // Fix common syntax patterns
     const fixes = [
@@ -712,7 +742,10 @@ class ComprehensiveSyntaxFixer {
   async run() {
     this.log('🚀 Starting Comprehensive Syntax Fixer', 'PROGRESS');
     this.log('='.repeat(60));
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     try {
       // Run TypeScript check
@@ -733,7 +766,10 @@ class ComprehensiveSyntaxFixer {
       );
 
       return fixResult.success;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   fixCommonIssues(content) {
     // Fix common syntax patterns,
   const fixes = [
@@ -906,7 +942,10 @@ class ComprehensiveSyntaxFixer {
       }
       // Generate report,
   this.generateReport();
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     } catch (error) {
       this.log(`TypeScript fix failed: ${error.message}`, ERROR');
       return false;
@@ -976,6 +1015,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             
             // Check if file is severely corrupted
 <<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+=======
+<<<<<<< HEAD
             if (content.length < 100 || content.includes('
 =======
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
@@ -1008,6 +1051,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 const fs = require('fs');
 const path = require('path');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 function fixSyntaxErrors(filePath) {
   try {
@@ -1115,8 +1159,11 @@ for (const file of files) {
   generateReport() {
     const duration = Date.now() - this.startTime;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     const report = {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.log('\n📊 SYNTAX FIXING REPORT', 'SUCCESS');
     this.log('='.repeat(60));
     this.log(`Duration: ${Math.round(duration / 1000)}s`);
@@ -1132,7 +1179,10 @@ for (const file of files) {
     }
     // Save report,
   const report = {
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       fixedFiles: this.fixedFiles.length,
@@ -1149,6 +1199,8 @@ for (const file of files) {
       warnings: this.warnings
 <<<<<<< HEAD
     };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1201,12 +1253,16 @@ for (const file of files) {;
 =======
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     fs.writeFileSync(
       'syntax-fix-report.json',
       JSON.stringify(report, null, 2)
     );
     this.log('\n📄 Report saved to syntax-fix-report.json', 'SUCCESS');
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 }
 // Run the syntax fixer,
@@ -1214,6 +1270,9 @@ for (const file of files) {;
   const fixer = new ComprehensiveSyntaxFixer();
   fixer.run().catch(console.error);
 }
+<<<<<<< HEAD
+module.exports = ComprehensiveSyntaxFixer;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1273,3 +1332,4 @@ module.exports = ComprehensiveSyntaxFixer;
 =======
 module.exports = ComprehensiveSyntaxFixer;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

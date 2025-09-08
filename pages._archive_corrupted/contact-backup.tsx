@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 const "Contact": NextPage = () => {
   return (
@@ -12,6 +13,8 @@ export default Contact
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
@@ -23,6 +26,7 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 ;
 
+<<<<<<< HEAD
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
@@ -30,3 +34,7 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 ;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+=======
+}
+export default Contact
+>>>>>>> origin/cursor/delete-old-data-records-6bba

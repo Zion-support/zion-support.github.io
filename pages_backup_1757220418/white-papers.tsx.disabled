@@ -1,23 +1,4 @@
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
 
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<:pages/white-papers.tsx.backup
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
 <:pages/white-papers.tsx.backup
 
 
@@ -27,133 +8,7 @@ import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-import Link from 'next/link';
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<<< HEAD:pages/white-papers.tsx.backup
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
-
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
-import Link from 'next/link';
-<:pages/white-papers.tsx.backup
-
-const whitePapers = [;
-  {}
-    id: 1,
-    title: "The Future of AI in Enterprise: A Comprehensive Guide","
-    description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.","
-    author: "Dr. Sarah Chen","
-    date: "2024-01-15","
-    category: "Artificial Intelligence","
-    readTime: "45 min read","
-    downloadCount: "2,341","
-    featured: true,
-    pdfUrl: "/whitepapers/ai-enterprise-guide.pdf""
-  },
-  {}
-    id: 2,
-    title: "Cloud Security Best Practices for Modern Businesses","
-    description: "A detailed analysis of cloud security challenges and proven strategies to protect your organization's data and infrastructure.","
-    author: "Michael Rodriguez","
-    date: "2024-01-10","
-    category: "Cybersecurity","
-    readTime: "30 min read","
-    downloadCount: "1,876","
-    featured: false,
-    pdfUrl: "/whitepapers/cloud-security-best-practices.pdf""
-  },
-  {}
-    id: 3,
-    title: "Quantum Computing: The Next Frontier in Technology","
-    description: "Understanding quantum computing's potential impact on various industries and how to prepare for the quantum revolution.","
-    author: "Dr. Alex Thompson","
-    date: "2024-01-05","
-    category: "Quantum Computing","
-    readTime: "60 min read","
-    downloadCount: "1,234","
-    featured: false,
-    pdfUrl: "/whitepapers/quantum-computing-frontier.pdf""
-  },
-  {}
-    id: 4,
-    title: "Digital Transformation Strategies for Healthcare","
-    description: "How healthcare organizations can leverage technology to improve patient outcomes and operational efficiency.","
-    author: "Jennifer Lee","
-    date: "2023-12-28","
-    category: "Healthcare Technology","
-    readTime: "40 min read","
-    downloadCount: "987","
-    featured: false,
-    pdfUrl: "/whitepapers/healthcare-digital-transformation.pdf""
-  },
-  {}
-    id: 5,
-    title: "The Economics of Micro SaaS: Building Profitable Solutions","
-    description: "A comprehensive guide to building, launching, and scaling micro SaaS applications for sustainable business growth.","
-    author: "David Kim","
-    date: "2023-12-20","
-    category: "SaaS","
-    readTime: "35 min read","
-    downloadCount: "1,567","
-    featured: false,
-    pdfUrl: "/whitepapers/micro-saas-economics.pdf""
-  },
-  {}
-    id: 6,
-    title: "Data Privacy in the Age of AI: Compliance and Best Practices","
-    description: "Navigating the complex landscape of data privacy regulations while implementing AI solutions effectively.","
-    author: "Emma Wilson","
-    date: "2023-12-15","
-    category: "Data Privacy","
-    readTime: "50 min read","
-    downloadCount: "1,123","
-    featured: false,
-    pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf""
-import { FileText, Download, Calendar, Eye } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-
-import React from 'react';
-
-import React from 'react';
-
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-import { motion } from 'framer-motion';
-
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
-
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD:pages/white-papers.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
+<
 import React from 'react';
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
@@ -164,21 +19,7 @@ import Head from 'next/head';
 >import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-import Link from 'next/link';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
+
 import {
   FileText,
   Download,
@@ -191,34 +32,7 @@ import {
   BookOpen,
   Star,
   Clock,
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<:pages/white-papers.tsx.backup
-  Tag
-} from 'lucide-react';
-
-import Layout from '../components/Layout';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
   Tag
 } from 'lucide-react';
 
@@ -226,24 +40,7 @@ import Layout from '../components/Layout';
   Tag
 } from 'lucide-react';
 import Layout from '../components/Layout';
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-  Tag
-} from 'lucide-react';
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
+
 
 const whitePaperCategories = [
   { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
@@ -355,18 +152,7 @@ const stats = [
   { number: '10K+', label: 'Downloads' },
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> main
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -377,86 +163,21 @@ import {
   User, 
   ArrowRight, 
   Tag, 
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  ExternalLink 
-} from 'lucide-react';
-
-<:pages/white-papers.tsx.backup
-
-  ExternalLink 
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
-  ExternalLink 
-} from 'lucide-react';
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
 =
   Tag,
 >=
   Tag,
 >  ExternalLink 
 } from 'lucide-react';
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
 <:pages/white-papers.tsx.backup
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-<:pages/white-papers.tsx.backup
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
 
 const whitePapers = [
   {
     id: 1,
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
 
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> main
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
     author: "Dr. Sarah Chen",
     date: "2024-01-15",
     category: "Artificial Intelligence",
@@ -473,36 +194,13 @@ const whitePapers = [
     downloadCount: 980
   },
   {
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
+
 title: 'Cybersecurity Best Practices 2024',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-title: 'Cybersecurity Best Practices 2024',
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
 
 
 
     title: 'Cybersecurity Best Practices 2024',
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
+
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
     downloadCount: 1500,
@@ -510,21 +208,9 @@ title: 'Cybersecurity Best Practices 2024',
     downloadLink: '/downloads/cybersecurity-best-practices.pdf'
   }
 ;];
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
 
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
+
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
     author: "Emily Johnson",
@@ -552,34 +238,7 @@ export default function WhitePapersPage() {
     <MainLayout
 
 ];
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
-];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
+
 
 export default function WhitePapersPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -711,75 +370,15 @@ export default function WhitePapersPage() {
 
   return (
 title="White Papers - Zion Tech Group"
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
-
-    id: 3,
-    title: "Cybersecurity in the Digital Age: Protecting Your Assets",
-    author: "Emily Johnson",
-    date: "2024-01-05",
-    category: "Cybersecurity",
-    description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.",
-    downloadCount: 1500
-  },
-  {
-    id: 4,
-    title: "Data Analytics: Turning Information into Insights",
-    author: "David Kim",
-    date: "2023-12-20",
-    category: "Data Analytics",
-    description: "Discover how to leverage data analytics to drive business decisions and growth.",
-    downloadCount: 750
-  }
-
-];
-
-export default function WhitePapersPage() {
-
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
     <Layout
 
     <MainLayout
 
       title="White Papers - Zion Tech Group"
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
-    <Layout
 
-
-    <MainLayout
-
-
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
       title="White Papers - Zion Tech Group"
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
     >
@@ -804,77 +403,20 @@ export default function WhitePapersPage() {
                   Papers
                 </span>
               </h1>
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-                In-depth research and insights on the latest technology trends and industry developments
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
+                In-depth research and insights on the latest technology trends and industry developments
+
+
+  return (
+
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+
+  return (
+
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                In-depth research and insights on the latest technology trends and industry developments
-
-<<<<<<< HEAD
-=======
-  return (
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-
-  return (
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                In-depth research and insights on the latest technology trends and industry developments
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
-
-  return (
-
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
 
@@ -882,13 +424,7 @@ export default function WhitePapersPage() {
 
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-=======
->>>>>>> main
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
+
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -908,57 +444,14 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
 
 
-
-
-
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<:pages/white-papers.tsx.backup
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
-
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 
               </p>
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
               
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-=======
-              
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
               <div className="mb-4">
                 <div className="flex items-center text-sm text-gray-600 mb-2">
                   <User className="h-4 w-4 mr-2" />
@@ -993,26 +486,11 @@ export default function WhitePapersPage() {
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
               </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </motion.div>
 
-                </motion.div>
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
 </motion.div>
         {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -1080,28 +558,7 @@ export default function WhitePapersPage() {
                   </button>
 
                 </motion.div>
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
 </motion.div>
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-=======
-</motion.div>
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
               ))}
             </div>
           </div>
@@ -1109,34 +566,7 @@ export default function WhitePapersPage() {
 
         {/* Categories */}
 <section className="py-16 bg-gray-50">
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<section className="py-16 bg-gray-50">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
 
-        <section className="py-16 bg-gray-50">
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
@@ -1157,21 +587,7 @@ export default function WhitePapersPage() {
                   </div>
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -1197,71 +613,17 @@ export default function WhitePapersPage() {
                   <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                   <span className="text-sm font-medium">{category}</span>
 
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> main
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
+
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-</Link>
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
 </Link>
-
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
               </Link>
 </Link>
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-</Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -1507,33 +869,14 @@ export default function WhitePapersPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    </Layout>
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
 </Layout>
 
     </Layout>
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-=======
->>>>>>> main
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
+
+</Layout>
+
+    </Layout>
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -1564,69 +907,14 @@ export default function WhitePapersPage() {
                 </Link>
               </div>
 
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-</Layout>
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> main
->>>>>>> main
-<<<<<<< HEAD
-=======
 </Layout>
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
-<:pages/white-papers.tsx.backup
-=======
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <:pages/white-papers.tsx.backup
-
-<:pages/white-papers.tsx.backup
-
-    </MainLayout>
-
-    </>
-
-    </MainLayout>
-
-    </>
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-<:pages/white-papers.tsx.backup
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
 
 
 
@@ -1634,7 +922,6 @@ export default function WhitePapersPage() {
 
 
 
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
 
 
     </>
@@ -1647,37 +934,8 @@ export default function WhitePapersPage() {
     </>
 <:pages/white-papers.tsx.backup
 
-<<<<<<< HEAD:pages_backup_1757220418/white-papers.tsx.disabled
     </MainLayout>
-=======
-
-
-
-<<<<<<< HEAD:pages.disabled/white-papers.tsx.disabled
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </MainLayout>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/white-papers.tsx.disabled
->>>>>>> merged-prs-20250907-203621:pages.disabled/white-papers.tsx.disabled
+
   );
 }

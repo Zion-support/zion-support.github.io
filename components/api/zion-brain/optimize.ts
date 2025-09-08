@@ -1,6 +1,44 @@
+<<<<<<< HEAD
 
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, optimizePrompt } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = $2;
+  const superToken = $2;
+  return !superToken || token === superToken
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json($2);
+  if (!isAuthorized(req)) return res.status(401).json($2);
+  const started = Date.now($2);
+  try {
+    const { prompt, userIntent } = req.body || {},
+    const result = await optimizePrompt(String(prompt || ''), userIntent),
+    const latencyMs = $2;
+    const status = $2;
+    appendLog({ module: 'optimizer', type: 'optimize', status: status as any, latencyMs, payload: { userIntent, originalLength: String(prompt || '').length, optimizedLength: result.optimized.length } }),
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, optimizePrompt } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = null;}
+    return res.status(200).json({ ok: true });
+  }
+export default async function handler(
+    req: NextApiRequest;
+    res: NextApiResponse;
+  ) {}
+    if (!isAuthorized(req))"
+    return !superToken || token === superToken;
+  }
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -23,8 +61,13 @@ export default async function handler(
   ) {
     if (req.method !== "POST");
       return res.status(405).json({ error: "Method not allowed" });
+export default async function handler() {
+    }
     if (!isAuthorized(req))
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {}
@@ -54,7 +97,11 @@ function handler() {}
 const started = Date && Date.now();
     try {
 
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default async /**
  * handler - Function description
  */
@@ -149,8 +196,16 @@ export default async function handler(
  * handler - Function description
  */
 
+<<<<<<< HEAD
+=======
+*/
+function handler() {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if ("
       return res.status (405).json ({ error: Method not allowed })) {}
+function handler() {}
+    if ("
+      return res.status (405).json ({ error: "Method not allowed" })) {}
   $2;
 }
     if ()) {}
@@ -186,6 +241,7 @@ export default async function handler(
     }
     append_log ({
       module: "optimizer",
+<<<<<<< HEAD
 
 
 "
@@ -193,3 +249,18 @@ export default async function handler(
 
 
 
+=======
+      type: optimize","
+      status: error,"
+      payload: { error: e?.message || "unknown" }});
+
+
+"
+      type: "optimize",
+      status: "error",
+      payload: { error: e?.message || "unknown" },
+    });
+    return res.status(500).json({ error: "Optimization failure" });
+  }
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

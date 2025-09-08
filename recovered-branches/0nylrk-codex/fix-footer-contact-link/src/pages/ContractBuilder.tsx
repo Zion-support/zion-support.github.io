@@ -1,13 +1,17 @@
 import React from 'react';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
 
+<<<<<<< HEAD
 
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
@@ -34,6 +38,8 @@ import { ContractBuilderContent } from "@/components/contracts/page/ContractBuil
 
 function ContractBuilderPage() {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <ProtectedRoute>
       <>
@@ -51,9 +57,13 @@ function ContractBuilderPage() {
       </>
     </ProtectedRoute>
 
+<<<<<<< HEAD
   )
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
 
 
@@ -85,12 +95,22 @@ function ContractBuilderPage() {
         <Footer />;
       </>;
     </ProtectedRoute>);
+=======
+}
+
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 export default ContractBuilderPage;
 
 ;
 
+<<<<<<< HEAD
 
 
 
+=======
+export default ContractBuilderPage;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

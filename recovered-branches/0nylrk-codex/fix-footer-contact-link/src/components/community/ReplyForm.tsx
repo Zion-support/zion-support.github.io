@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import {;
@@ -6,20 +15,63 @@ import {;
   FormControl,;
   FormField,;
   FormItem,;
+<<<<<<< HEAD
 
 
+=======
+  FormMessage,;
+} from "@/components/ui/form";"
+import { Card, CardContent, CardFooter } from "@/components/ui/card";"
+interface ReplyFormProps {;
+  }
+  "onSubmit": ("content": string) => Promise<void>;
+  parentId?: string
+}
+import { useState  } from './react';'
+import { use_form  } from './react - hook - form';'
+import { Button  } from '@/components / ui / button';'
+import { Textarea  } from '@/components / ui / textarea';'
+import {
+}
+import { useState } from "react";"
+import { useForm } from "react-hook-form";"
+import { Button } from "@/components/ui/button";"
+import { Textarea } from "@/components/ui/textarea";"
+import {
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   Form,
-
   FormControl,
   FormField,
   FormItem,
 FormMessage,;
+<<<<<<< HEAD
 
 
 import { Textarea  } from '@/components / ui / textarea';
 import {";
 import { useState } from "react";"
 
+=======
+} from "@/components/ui/form";"
+
+import { useForm } from "react-hook-form";
+"
+import { Button } from "@/components/ui/button";"
+import { Textarea } from "@/components/ui/textarea";
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+
+  FormMessage,
+
+} from "@/components/ui/form";
+
+
+  return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <Card>;
 
       <CardContent className="pt-6">;
@@ -32,9 +84,14 @@ import { useState } from "react";"
                 <FormItem>;
                   <FormControl>;
 
+<<<<<<< HEAD
                     <Textarea
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
+=======
+                    <Textarea;
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
   const form = use_form < ReplyFormValues>({}
@@ -45,90 +102,101 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 FormMessage,;
 } from "@/components/ui/form";""
 import { Card, CardContent, CardFooter } from "@/components/ui/card";"
-interface ReplyFormProps {
-  // TODO: Implement
-}
-  onSubmit: (content: string) => Promise<void>;
-</void>
+return (;
     <Card>;
-"
       <CardContent className="pt-6">;"
-
         <Form {...form}>;
-
           <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-</form>
-            <FormField;
-              control={form && form.control}"
+            <FormField,
+control={form && form.control}
               name="content""
               render={({ field }) => (;
-
                 <FormItem>;
-
                   <FormControl>;
-
-                    <Textarea;)
+                    <Textarea,
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
-
-  const form = use_form < ReplyFormValues>({
-    default_values: {,"
-  content: "","
-    },)
-pr-12325
-  });
+  }
+  const [is_submitting, setIsSubmitting] = useState (false);
 ;
-  const handle_submit = async (values: ReplyFormValues) => {}
+  const form = use_form < ReplyFormValues>({
+    }
+    "default_values": {
+      }
+      "content": ""});"
+;
+  const handle_submit = async ("values": ReplyFormValues) => {
+    }
     setIsSubmitting (true);
-    try {}
+    try {
       (await on_submit (values.content), form.reset ());
-
+    } finally {
+      }
       setIsSubmitting (false);
     }
   }
 ;
-  return (
-
+return (;
+    <Card>;
+      <CardContent className="pt-6">;"
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
-              control={form.control}"
-              name="content";
+              control={form.control}
+              name="content";"
               render={({ field }) => (
                 <FormItem>;
                   <FormControl>;
                     <Textarea;
-                      placeholder={}
-                        parent_id;"
+                      placeholder={
+                        }
+                        parent_id;
                           ? "Write your reply...";"
+<<<<<<< HEAD
 
                           : "Join the discussion...";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 
+=======
+                          : "Join the discussion...";"
+                      }
+                      className="min - h-[100px] resize-y";"
+  FormMessage;
+} from "@/components/ui/form",;"
+import { Card, CardContent, CardFooter } from "@/components/ui/card";"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 interface ReplyFormProps {;
-  onSubmit:(content:string) => Promise<void>,;
+  }
+  "onSubmit":("content":string) => Promise<void>,;
   parentId?:string;}
 ;
 interface ReplyFormValues {;
-  content:string;
+  }
+  "content":string;
 }
 ;
 export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
+  }
   const [isSubmitting, setIsSubmitting] = useState(false),;
   ;
   const form = useForm<ReplyFormValues>({;
-    defaultValues:{;"
-      content:"";
+    }
+    "defaultValues":{;
+      }
+      "content":"";"
     }
   }),;
 ;
-  const handleSubmit = async (values:ReplyFormValues) => {;
+  const handleSubmit = async ("values":ReplyFormValues) => {;
+    }
     setIsSubmitting(true),;
     try {;
+      }
       await onSubmit(values.content),;
       form.reset();
     } finally {;
+      }
       setIsSubmitting(false),;
     }
   },;
@@ -237,6 +305,7 @@ interface ReplyFormProps {;)
               render={({ field }) => (;
                 <FormItem>;
                   <FormControl>;
+<<<<<<< HEAD
 
                     <Textarea;
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
@@ -357,6 +426,23 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
             <div className="mt-4 flex justify-end">;
               <Button type="submit" disabled={isSubmitting}>;
                 {isSubmitting ? "Submitting..." :"Post Reply"}
+=======
+
+
+                </FormItem>)}
+
+                {is_submitting ? "Submitting..." : "Post Reply"}
+
+</Card>"
+      <CardContent className="pt - 6">;"
+</CardContent>
+        <Form {...form}>;
+</Form>)
+          <form on_submit={form.handle_submit (handle_submit)}>;
+</form>
+            <FormField;
+              control={form.control}"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               </Button>;
             </div>;
@@ -364,6 +450,21 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
         </Form>;
       </CardContent>;
 
+<<<<<<< HEAD
+=======
+    </Card>);
+}
+;
+export default ReplyForm;
+;
+} from "@/components/ui/form";"
+import { Card, CardContent, CardFooter } from "@/components/ui/card";"
+interface ReplyFormProps {
+  }
+  "onSubmit": ("content": string) => Promise<void>;
+  parentId?: string
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 } from "@/components/ui/form";
@@ -375,15 +476,79 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
+<<<<<<< HEAD
 
 }
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ReplyFormValues {}
   content: string;
 }
 
+<<<<<<< HEAD
 
 
+=======
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  }
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<ReplyFormValues>({
+    }
+    "defaultValues": {
+      }
+      "content": """
+    }
+  });
+  const handleSubmit = async ("values": ReplyFormValues) => {
+    }
+    setIsSubmitting(true);
+    try {
+      (await onSubmit(values.content), form.reset());
+    } finally {
+      }
+      setIsSubmitting(false);
+    }
+  }
+  };
+import { useState } from "react","
+import { useForm } from "react-hook-form","
+import { Button } from "@/components/ui/button","
+import { Textarea } from "@/components/ui/textarea","
+
+'
+import { useState  } from './react';'
+import { use_form  } from './react - hook - form';'
+import { Button  } from '@/components / ui / button';'
+import { Textarea  } from '@/components / ui / textarea';
+import {";
+import { useState } from "react";"
+import { useForm } from "react-hook-form";
+"
+import { Button } from "@/components/ui/button";"
+import { Textarea } from "@/components/ui/textarea";
+
+  }
+
+  return (
+    <Card>;"
+      <CardContent className="pt-6">;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
+            <FormField;
+              control={form && form.control}"
+              name="content"
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormControl>;
+                    <Textarea;
+                      placeholder={}
+                        parent_id;"
+                          ? "Write your reply...";"
+                          : "Join the discussion...";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -391,10 +556,10 @@ interface ReplyFormValues {}
                   <FormMessage />
                 </FormItem>
               )}
-            />"
+            />
             <div className="mt-4 flex justify-end">"
               <Button type="submit" disabled={isSubmitting}>"
-                {isSubmitting ? "Submitting..." : "Post Reply"}
+                {isSubmitting ? "Submitting..." : "Post Reply"}"
               </Button>
             </div>
           </form>
@@ -402,6 +567,10 @@ interface ReplyFormValues {}
       </CardContent>
     </Card>
 
+<<<<<<< HEAD
 
 
 
+=======
+      </CardContent>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

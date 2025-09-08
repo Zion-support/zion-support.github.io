@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from './react';
@@ -6,11 +7,25 @@ import React from './react';
 
 
 
+=======
+import React from "react";
+
+interface ModernNavigationProps {
+  className?: string;
+}
+
+
+  className?: string;
+}
+
+export default function ModernNavigation({ className }: ModernNavigationProps) {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
 
+<<<<<<< HEAD
 </div>
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,3 +70,8 @@ function ModernNavigation() {
 
 
 
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

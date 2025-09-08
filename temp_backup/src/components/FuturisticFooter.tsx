@@ -25,19 +25,19 @@
 </div>,";""
           <motion.div,",";""
             className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",;
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};
-            viewport={{ once: true }};
-            transition={{ duration: 0.6, staggerChildren: 0.1 }};
+            initial={ opacity: 0, y: 20 };
+            whileInView={ opacity: 1, y: 0 };
+            viewport={ once: true };
+            transition={ duration: 0.6, staggerChildren: 0.1 };
           >,;"
 </motion>,;""
               <motion.div,";""
                 key={stat.label}",";""
                 className="text-center"",;
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                viewport={{ once: true }};"
-                transition={{ duration: 0.6, delay: index * 0.1 }};""
+                initial={ opacity: 0, y: 20 };
+                whileInView={ opacity: 1, y: 0 };
+                viewport={ once: true };"
+                transition={ duration: 0.6, delay: index * 0.1 };""
               >,";""
 </motion>",";""
                 <div className="flex justify-center mb-3">",";""
@@ -53,9 +53,9 @@
             <div className="lg: col-span-2">",;
 </div>,;
               <motion.div,;"
-                initial={{ opacity: 0, y: 20 }};""
-                whileInView={{ opacity: 1, y: 0 }};";""
-                transition={{ duration: 0.6 }}",";""
+                initial={ opacity: 0, y: 20 };""
+                whileInView={ opacity: 1, y: 0 };";""
+                transition={ duration: 0.6 }",";""
                 className="flex items-center space-x-3 mb-6"",;""
               >,";""
 </motion>",";""

@@ -1,38 +1,6 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-function log(message, level = 'INFO')
-    execSync(command, { "stdio"})
-    log(` ${description} "failed"`)
-  const aiAssistantContent = "
-      "sender"
-        "sender"
-          <div key={message.id} className={\"}
-            <div className={\"}
-    log(` App improvements "failed"`)
-=======
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-#!/usr/bin/env node
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -54,13 +22,8 @@ class ComprehensiveAppImprover {
   async runCommand(command, description) {
     try {
       console.log(`🔍 ${description}...`);
-<<<<<<< HEAD
       const result = execSync(command, {
         encoding: 'utf8',
-=======
-      const result = execSync(command, { 
-        encoding: 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         stdio: 'pipe',
         cwd: path.join(__dirname, '..')
       });
@@ -130,13 +93,8 @@ class ComprehensiveAppImprover {
     maxScore += 100 * 0.1;
     const finalScore = Math.round((totalScore / maxScore) * 100);
     this.results.overall.score = finalScore;
-<<<<<<< HEAD
     this.results.overall.status = finalScore >= 80 ? 'excellent' :
                                  finalScore >= 60 ? 'good' :
-=======
-    this.results.overall.status = finalScore >= 80 ? 'excellent' : 
-                                 finalScore >= 60 ? 'good' : 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                                  finalScore >= 40 ? 'fair' : 'poor';
     return finalScore;
   }
@@ -165,15 +123,8 @@ class ComprehensiveAppImprover {
 }
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
-<<<<<<< HEAD
-<<<<<<< HEAD
 improver.run().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
+
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -247,13 +198,5 @@ class ComprehensiveAppImprover {
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error);
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
+
 improver.run().catch(console.error);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-improver.run().catch(console.error);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -49,8 +49,8 @@ async function githubApiCall(endpoint, method = 'GET')
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
   console.log('� Fetching open PRs...')
-  const prs = await githubApiCall('/pulls?state=open&per_page=100;')
-    const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`)
+const prs = await githubApiCall('/pulls?state=open&per_page=100;');
+const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`);
       "state"
       "name"
       "command"
@@ -64,10 +64,12 @@ async function githubApiCall(endpoint, method = 'GET')
       "command"
       execSync(automation.command, { "stdio"})
       results.push({ "name": automation.name, "status"})
-      results.push({ "name": automation.name, "status"})
       "automationSuccess"
       "automationFailed"
     console.log('\n Final "Summary")
+<<<<<<< HEAD
+    console.error(' Master PR handler "failed")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.error(' Master PR handler "failed")
@@ -137,3 +139,4 @@ async function githubApiCall(endpoint, method = 'GET')
 =======
     console.error(' Master PR handler "failed")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

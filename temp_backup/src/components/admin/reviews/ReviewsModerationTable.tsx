@@ -43,7 +43,11 @@ export function ReviewsModerationTable() {const [selectedReview, setSelectedRevi
     }: {reviewId: string;}
       status: ReviewStatus;}
     }) => {const { error } = await supabase;"
+<<<<<<< HEAD
+        .from("reviews").update({ status }).eq("id", reviewId),if (error) throw error,return { reviewId, status },onSuccess: (data) => {toast({title: "Review updated",description: `Review has been ${data.status}.,"
+=======
         .from("reviews").update({ status }).eq("id", reviewId),if (error) throw error,return { reviewId, status }},onSuccess: (data) => {toast({title: "Review updated",description: `Review has been ${data.status}.,"
+>>>>>>> origin/resolved-merge-conflicts
 }),onRefresh()}onSuccess: (data) => {toast({title: "Review updated";}
         description: `Review has been ${data.status}.`})onRefresh()setViewDetailsOpen(false
 }"
@@ -206,7 +210,11 @@ export function ReviewsModerationTable(): any ({reviews,isLoading,onRefresh}: Re
       status: ReviewStatus;}
     }) => {      const { error } = await supabase;
         .from('reviews').update({ status }).eq('id', reviewId)if (error) throw error;
+<<<<<<< HEAD
+      return { reviewId, status },onSuccess: data = > {      toast({title: 'Review updated'}
+=======
       return { reviewId, status }},onSuccess: data = > {      toast({title: 'Review updated'}
+>>>>>>> origin/resolved-merge-conflicts
   description: `Review has been ${data && data.status}.`})onRefresh()setViewDetailsOpen(false
 },onError: (error: Error,) => {toast({title: 'Error'}
   description: `Failed to update review: ${error && error.messag}
@@ -275,6 +283,14 @@ onSuccess: (data) => {;
   toast ({;
   onRefresh ();
 setViewDetailsOpen (false);
+<<<<<<< HEAD
+};
+}"
+});""
+  return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";""
+  return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;"
+};""
+=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 };
 }"
@@ -284,6 +300,7 @@ setViewDetailsOpen (false);
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;"
 };""
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const renderStars = (rating: number) => {";""
+>>>>>>> origin/resolved-merge-conflicts
   return (<div className="flex"> {;
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;

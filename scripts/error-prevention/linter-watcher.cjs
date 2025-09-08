@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 
 =======
@@ -20,11 +23,13 @@
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
 const { spawn } = require('child_process');
-const fs = require(fs');
+const fs = require('fs');
 const path = require('path');
 class LinterWatcher {}
   constructor() {}
     this.isRunning = false;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -41,11 +46,14 @@ class LinterWatcher {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.interval = 30000; // 30 seconds;
-  }
+  };
   async start() {}
-    console.log(Starting Linter Watcher...');
+    console.log('Starting Linter Watcher...');
     this.isRunning = true;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Initial lint check;
     await this.runLint();
@@ -57,18 +65,24 @@ class LinterWatcher {}
     // Initial lint check;
     await this.runLint();
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     // Initial lint check;
     await this.runLint();
     
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     this.isRunning = true;
     // Initial lint check;
     await this.runLint();
+<<<<<<< HEAD
+=======
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
@@ -82,15 +96,25 @@ class LinterWatcher {}
     // Initial lint check;
     await this.runLint();
     
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
+    
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
     
+<<<<<<< HEAD
+    
+    
+    
+    
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -104,23 +128,32 @@ class LinterWatcher {}
 <<<<<<< HEAD
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
-    console.log('Linter Watcher started successfully)}
+    console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
-      console.log(Running lint check...');
-
+      console.log('Running lint check...');
       
-      const child = spawn('npm, [run', 'lint], {})
-        "stdio: [pipe', 'pipe, pipe'],
-        cwd": process.cwd();"
-      });
+      
+const child = spawn('npm', ['run', 'lint'], {});
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd();"
+      };);
 
+"
+      let output = ;';';
+      let errorOutput = ;';';
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+})
 
+      let output = ;';';
+      let errorOutput = ;';';
+
+<<<<<<< HEAD
+      child.stdout.on('data', (data) => {}
 =======
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-=======
-
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       let output = ;';;
       let errorOutput = ;;';
@@ -214,18 +247,32 @@ class LinterWatcher {}
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         output += data.toString()}
 });
 
-      child.stderr.on(data', (data) => {}
+      child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 
 <<<<<<< HEAD
+      let output = ;';';
+      let errorOutput = ;';';
+      child.stdout.on('data', (data) => {}
+=======
+<<<<<<< HEAD
       child.stdout.on('data, (data) => {}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         output += data.toString()}
 });
 
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
 
+<<<<<<< HEAD
+
+
+      child.on('close', (code) => {}
+=======
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
@@ -244,20 +291,26 @@ class LinterWatcher {}
 >>>>>>> merged-prs-20250907-203621
       child.on('close', (code) => {}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if ( {})
 
-          console.log('Lint check passed ✓)) {}
+          console.log('Lint check passed ✓')) {}
      {}
+<<<<<<< HEAD
+          console.log('Lint check passed ✓')}} else {}
+          console.log('Lint check failed ✗');
+=======
 <<<<<<< HEAD
           console.log(Lint check passed ✓')}} else {}
           console.log('Lint check failed ✗);
 
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+          
+<<<<<<< HEAD
 =======
-          
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 =======
           console.log('Lint check passed ✓')}} else {}
@@ -285,9 +338,17 @@ console.log('Lint check failed ✗')
           
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           // Attempt to auto-fix;
-          this.attemptAutoFix()}
+          this.attemptAutoFix()};
       })} catch (error) {}
+<<<<<<< HEAD
+      console.error('Error running "lint": ', error.message)};
+  };
+  async attemptAutoFix() {}
+    try {}
+      console.log('Attempting to auto-fix linting issues...');
+=======
       console.error(Error running lint: ', error.message)}
 >>>>>>> merged-prs-20250907-203621
   }
@@ -296,14 +357,29 @@ console.log('Lint check failed ✗')
 <<<<<<< HEAD
       console.log('Attempting to auto-fix linting issues...);
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
-
+      
+const child = spawn('npm', ['run', '"lint": fix'], {});
+        "stdio": 'inherit',
         "cwd": process.cwd();
-      });
+      };);
 
 
 
 
+<<<<<<< HEAD
+
+
+
+      child.on('close', (code) => {}
+        if ( {})
+
+          console.log('Auto-fix completed ✓')) {}
+     {}
+          console.log('Auto-fix completed ✓')}} else {}
+          console.log('Auto-fix failed ✗')};
+=======
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
@@ -372,12 +448,17 @@ console.log('Lint check failed ✗')
           console.log(Auto-fix completed ✓')}} else {}
           console.log('Auto-fix failed ✗)}
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       })} catch (error) {}
-      console.error(Error running auto-"fix": , error.message)}
-  }
+      console.error('Error running auto-"fix": , error.message)};
+  };
   stop() {}
     console.log('Stopping Linter Watcher...);
     this.isRunning = false;
+<<<<<<< HEAD
+    
+    
+=======
 <<<<<<< HEAD
     
     
@@ -414,24 +495,28 @@ const watcher = new LinterWatcher}(;)
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if ( {})
-      clearInterval(this.intervalId)}
-    console.log('Linter Watcher stopped)) {}
+      clearInterval(this.intervalId)};
+    console.log('Linter Watcher stopped')) {}
      {}
-      clearInterval(this.intervalId)}
-    console.log(Linter Watcher stopped')}}
-}
+      clearInterval(this.intervalId)};
+    console.log('Linter Watcher stopped')}};
+};
 
 // Start the watcher if run directly;
   const watcher = new LinterWatcher) {}
   const watcher = new LinterWatcher}(;);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+  
+<<<<<<< HEAD
 =======
-  
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
@@ -441,24 +526,26 @@ const watcher = new LinterWatcher}(;)
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle graceful shutdown;
-  process.on('SIGINT, () => {}
+  process.on('SIGINT', () => {}
     watcher.stop();
     process.exit(0)}
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
   
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  process.on(SIGTERM', () => {}
+  process.on('SIGTERM', () => {}
     watcher.stop();
     process.exit(0)}
 });
+<<<<<<< HEAD
+=======
 
 =======
 <<<<<<< HEAD
@@ -486,10 +573,18 @@ const watcher = new LinterWatcher}(;)
 =======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 module.exports = LinterWatcher;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   
+<<<<<<< HEAD
+  watcher.start().catch(console.error)};
+  
+  watcher.start().catch(console.error)};
+
+module.exports = LinterWatcher;
+
+module.exports = LinterWatcher;
+=======
 <<<<<<< HEAD
   watcher.start().catch(console.error)}
 
@@ -516,9 +611,10 @@ module.exports = LinterWatcher;
 =======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle graceful shutdown;
 
-  watcher.start().catch(console.error)}
+  watcher.start().catch(console.error)};
 
 
 <<<<<<< HEAD

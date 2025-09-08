@@ -206,7 +206,11 @@ export function ServiceDetails() {// Get datacenters for regions (simplified - i
           For custom enterprise needs or multi-site services in {country},please contact our enterprise team for tailored pricing.;
         </p>;
       </CardFooter>;
+<<<<<<< HEAD
+    </Card>;)}operate during business hours (8AM-6PM $ {timezone ;
+=======
     </Card>;)}}operate during business hours (8AM-6PM $ {timezone ;
+>>>>>>> origin/resolved-merge-conflicts
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` ;`}";return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {idx ";"
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {dc ;"
 }</div>) ) ";"

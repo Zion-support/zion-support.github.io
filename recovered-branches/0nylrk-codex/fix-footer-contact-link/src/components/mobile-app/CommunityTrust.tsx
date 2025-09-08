@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",
 import { Star } from "lucide-react",
 
 import React from "react";
 import { Star } from "lucide-react";
+<<<<<<< HEAD
 
 import React from "react",
 import { Star } from "lucide-react",
@@ -21,14 +25,20 @@ export const CommunityTrust: React.FC = () => {
     { value: "96%", label: "User Satisfaction" }
 
 
+=======
+import {Star} from "lucide-react";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -36,6 +46,7 @@ export const CommunityTrust: React.FC = () => {
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
 
+<<<<<<< HEAD
 
     { value: "12M+", label: "Matches Made" }
 
@@ -55,6 +66,8 @@ export const CommunityTrust: React.FC = () => {
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     { value: "12M+", label: "Matches Made" },
   ];
 
@@ -73,22 +86,36 @@ export const CommunityTrust: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
 
 
         {/* Stats Grid */}
         <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 16">;
           {stats.map ((stat, index) => (
 
+=======
+        {/* Stats Grid */}"
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
+          {stats.map((stat, index) => (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <div;
               key={index}"
               className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center"
             >"
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
                 {stat.value}
+<<<<<<< HEAD
 
 
 
 
+=======
+              </div>"
+              <div className="text-zion-slate-light">{stat.label}</div>
+            </div>
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -119,11 +146,14 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
 
+<<<<<<< HEAD
 
         {/* Rating display */}"
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">"
           <div className="flex justify-center mb-4">
             {[1, 2, 3, 4, 5].map((star) => (
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <Star;
                 key={star}"
                 className="w-6 h-6 text-zion-cyan""
@@ -138,4 +168,48 @@ export const CommunityTrust: React.FC = () => {;
           <div className="text-center">"
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>"
 
+<<<<<<< HEAD
 
+=======
+            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  );
+};
+
+                className="w - 6 h - 6 text - zion - cyan";
+
+              </div>;
+              <div className="text - zion - slate-light">{stat.label}</div>;
+            </div>))}
+        </div>;
+        {/* Rating display */}
+        <div className="max - w-3xl mx - auto bg - zion - blue - dark border border - zion - purple / 30 rounded - lg p-6">;
+          <div className="flex justify - center mb-4">;
+            {[1, 2, 3, 4, 5].map ((star) => (
+              <Star;
+                key={star}                className="w - 6 h - 6 text - zion-cyan";
+
+                fill="current_color";
+              />))}
+          </div>;
+          <blockquote className="text - center text - lg text - white italic mb - 4">;
+            "The Zion app has completely changed how I find tech talent. The AI;
+            matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+;
+
+  )
+
+
+"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

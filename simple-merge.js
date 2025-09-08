@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const { exec_sync } = require ('child_process'),
@@ -77,6 +78,42 @@ try {;
 
 
 
+=======
+const { execSync } = require($2);
+console.log($2);
+try {
+  // Check git status
+  console.log($2);
+  const status = execSync($2);
+  console.log($2);
+  // Fetch latest changes
+  console.log($2);
+  execSync($2);
+  // Switch to main branch
+  console.log($2);
+  execSync($2);
+  // Pull latest changes
+  console.log($2);
+  try {
+    execSync($2);
+    console.log('✅ Successfully pulled latest changes')
+  } catch (error) {
+    console.log($2);
+    // Find files with merge conflicts
+    const conflictFiles = execSync($2);
+    if (conflictFiles.trim()) {
+      console.log('Found merge conflicts in:', conflictFiles.trim()),
+      
+      // Resolve conflicts by accepting our version
+      const files = conflictFiles.trim().split($2);
+      for (const file of files) {
+        if (file.trim()) {
+          console.log($2);
+          try {
+            execSync(`git checkout --ours "${file}"`)
+          } catch (e) {
+            execSync(`git checkout --theirs "${file}"`)
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           }
           execSync(`git add "${file}"`)
         }
@@ -109,6 +146,7 @@ try {;
       // Continue with other branches
     }
   }
+<<<<<<< HEAD
 
   ;
   // Get all branches;
@@ -218,3 +256,18 @@ try {;
 
 
 
+=======
+  
+  // Push all changes
+  console.log($2);
+  execSync($2);
+  console.log($2);
+  console.log($2);
+  console.log($2);
+  console.log('✅ Repository is now clean and up to date')
+  
+} catch (error) {
+  console.error($2);
+  process.exit(1)
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

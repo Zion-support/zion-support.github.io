@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 
 export interface PartnerProfile {
 
 
+=======
+
+export interface PartnerProfile {
+
+export interface PartnerProfile {;
+
+export interface PartnerProfile {;
+
+export interface PartnerProfile {
+export interface PartnerProfile {export interface PartnerProfile {
+
+export interface PartnerProfile {;
+export interface PartnerProfile {
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   // TODO: Implement
 }
@@ -24,7 +41,12 @@ pr-12325
     youtube?: string;
 
 
+<<<<<<< HEAD
 
+=======
+    linkedin?: string;
+    [key: string]: string | undefined
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   niche: string;
   audience_size: string;
@@ -33,11 +55,18 @@ pr-12325
   status: "pending" | "approved" | "rejected";
   created_at: string;
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+
+}
+
+export interface PartnerReferralLink {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   id: string;
@@ -109,16 +138,26 @@ export interface PartnerReferralLink {
   clicks: number;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 }
 
 export interface PartnerPayout {;
 
+<<<<<<< HEAD
 
 
 
+=======
+
+export interface PartnerPayout {};
+export interface PartnerPayout {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   partner_id: string;
   amount: number;"
@@ -126,5 +165,9 @@ export interface PartnerPayout {;
   method: string;
 
 
+<<<<<<< HEAD
 
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

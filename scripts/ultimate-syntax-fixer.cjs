@@ -25,12 +25,12 @@ const path = require('path')
 >>>>>>> merged-prs-20250907-203621
 // console.log(' Ultimate Syntax Fixer...')
 console.log('======')
-const filesToFix = ['pages/api/health.ts']
+const filesToFix = ['pages/api/health.ts'];
   'components/LoadingSpinner.tsx'
   'pages/docs/api-quick-start.tsx'
   'pages/docs/api-reference.tsx'
   'pages/docs/authentication.tsx'
-    let content = fs.readFileSync(filePath, 'utf8')
+let content = fs.readFileSync(filePath, 'utf8');
     content = content.replace(/\}\s*\}\s*$/gm, '}')
       console.log('    Fixed extra closing braces')
     content = content.replace(/"([^"]*?)\"\s*"\}/g, '"$1"
@@ -41,6 +41,9 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/\{"([^"]*?)\"\s*"\}/g, '{"$1"}
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
+<<<<<<< HEAD
+    content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +76,4 @@ const filesToFix = ['pages/api/health.ts']
 =======
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

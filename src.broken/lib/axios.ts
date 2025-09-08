@@ -33,7 +33,7 @@ export function create(config: { baseURL?: string, withCredentials?: boolean } =
         ...(init as any).headers},
       const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit,
       return request(baseURL + url, 'POST', opts)
-    }},
+    },
 
   // Request interceptor
   instance.interceptors.request.use(

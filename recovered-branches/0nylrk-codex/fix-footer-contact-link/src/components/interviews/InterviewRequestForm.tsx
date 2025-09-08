@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface InterviewRequestFormProps {
 
   talent: TalentProfile
@@ -8,6 +11,7 @@ interface InterviewRequestFormProps {
   userDetails?: UserProfile
 
 
+<<<<<<< HEAD
 
 }
 const formSchema = z.object({
@@ -44,9 +48,63 @@ const formSchema = z.object({
         description: "Please log in to schedule an interview""
         variant: "destructive"})
       return;
+=======
+interface InterviewRequestFormProps {;
+  }
+  "talent": TalentProfile,;
+  "onClose": () => void,;
+  userDetails?: UserProfile;
+}
+const formSchema = z && z.object({;
+  }
+  "date": z && z.date({;
     }
+    "required_error": "Please select a date for the interview."}).refine(date => date > new Date(), {;"
+    }
+    "message": "Interview date must be in the future";"
+  });
+  "time": z && z.string().min(1, "Please select a time for the interview.");"
+  "duration": z && z.string().min(1, "Please select the interview duration.");"
+  "platform": z && z.string().min(1, "Please select a meeting platform.");"
+  "meetingLink": z && z.string().optional(),;
+  "title": z && z.string().min(3, "Please provide a brief title for the interview.");"
+  "notes": z && z.string().optional()}),;
+export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+  }
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<z && z.infer<typeof formSchema>>({;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+    }
+    "resolver": zodResolver(formSchema),;
+    "defaultValues": {;
+      }
+      "title": `Interview with ${talent && talent.full_name}`,;`      "duration": "30",;"
+      "platform": "zoom",;"
+      "notes": "",;"
+      "meetingLink": ""}),;"
+  async function onSubmit(): any ("values": z && z.infer<typeof formSchema>) {;
+    }
+    if (!userDetails?.id) {;
+      }
+      toast({;
+        }
+        "title": "Authentication required",,"
+  "description": "Please log in to schedule an interview",;"
+        "variant": "destructive"}),;"
+      return;
 
+<<<<<<< HEAD
 
+=======
+    }
+    setIsSubmitting(true);
+
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const scheduledDate = new Date(dateTimeString);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     setIsSubmitting(true),
@@ -60,7 +118,10 @@ const formSchema = z.object({
       const durationMinutes = parseInt(values.duration),
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -75,18 +136,27 @@ const formSchema = z.object({
       }),
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toast({
 
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
     } catch (error) {
+<<<<<<< HEAD
 
       console.error("Failed to schedule interview:", error);
 
+=======
+      console.error("Failed to schedule interview:", error);
+      console.error("Failed to schedule interview:", error),
+      console.error("Failed to schedule interview:", error),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toast({
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
@@ -189,6 +259,7 @@ if ( {) {}
         title: "Failed to schedule interview","
         description: "An error occurred while scheduling the interview. Please try again.","
         variant: "destructive"});
+<<<<<<< HEAD
 
     } finally {
       setIsSubmitting (false);
@@ -202,18 +273,31 @@ if ( {) {}
   const timeSlots = [
 
 
+=======
+
+    }
+    setIsSubmitting(true);
+
+  const timeSlots = [
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30"
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+<<<<<<< HEAD
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -233,7 +317,10 @@ if ( {) {}
           </div>
         </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     try {;
       // Combine date and time;'`
@@ -253,9 +340,12 @@ if ( {) {}
         title: values && values.title;
       });
 
+<<<<<<< HEAD
       toast({;
         title: "Interview requested",;
         description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       onClose();
     } catch (error) {;"
@@ -267,10 +357,17 @@ if ( {) {}
     }
   }
 
+<<<<<<< HEAD
   const timeSlots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",;
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",;
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",;
+=======
+  const timeSlots = [;"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",;"
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",;"
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",;"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ],;
@@ -291,18 +388,28 @@ if ( {) {}
           </div>;
         </div>;
 
+<<<<<<< HEAD
         <FormField
           control={form && form.control}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           name="title"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
 
+<<<<<<< HEAD
   const time_slots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",
+=======
+  const time_slots = [;"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30","
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30","
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30","
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ],
@@ -318,6 +425,7 @@ if ( {) {}
               <FormLabel > Interview Title</FormLabel>;
 
 
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -445,11 +553,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
             <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <FormControl>;
 
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
 
+<<<<<<< HEAD
               <FormMessage />;
           <FormField
             control={form && form.control}
@@ -463,22 +574,43 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
             control={form.control}
             name="date";
             render={({ field }) => (;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+                          !field.value && "text-muted-foreground"
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 "
                           "w-full pl-3 text-left font-normal",
 
 "
                           !field.value && "text-muted-foreground"
+<<<<<<< HEAD
 
                           "w-full pl-3 text-left font-normal"
+=======
+
+
+                      <Button"
+                        variant="outline"
+                        className={cn("
+                          !field.value && "text-muted-foreground"
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                           !field && field.value && "text-muted-foreground"
                         )}>;
@@ -487,6 +619,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                         ) : (;
                           <span>Pick a date</span>;
 
+<<<<<<< HEAD
                         )}
                       <Button;
                         variant="outline";
@@ -499,6 +632,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                           format(field.value, "PPP");
                         ) :(;
                           <span>Pick a date</span>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                         )}
 
@@ -508,6 +643,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                   </PopoverTrigger>;"
                   <PopoverContent className="w-auto p-0" align="start">;
 
+<<<<<<< HEAD
         <FormField
           control={form.control}
           name="title"
@@ -548,6 +684,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                         )}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
@@ -565,6 +703,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                 <FormMessage />
               </FormItem>
 
+<<<<<<< HEAD
                       selected={field && field.value}
                       onSelect={field && field.onChange}
 
@@ -680,6 +819,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>;
         <FormField;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           control={form.control}
           name="title"
           render={({ field }) => (
@@ -727,11 +868,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
                       selected={field && field.value}
                       onSelect={field && field.onChange}
+<<<<<<< HEAD
 
 "
 import React, { useState } from "react",;"
 import { Button } from "@/components/ui/button",;"
 
+=======
+import { Button } from "@/components/ui/button";"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;"
 import { Input } from "@/components/ui/input",;"
 import { Textarea } from "@/components/ui/textarea",;"
@@ -810,6 +955,7 @@ export function InterviewRequestForm() { return null; }
     }
   }
 ;
+<<<<<<< HEAD
 
   const timeSlots = [;"
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;"
@@ -817,6 +963,12 @@ export function InterviewRequestForm() { return null; }
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",;"
     "18:00", "18:30", "19:00", "19:30", "20: 00";
 
+=======
+    ""09":00", ""09":30", ""10":00", ""10":30", ""11":00", ""11":30",;"
+    ""12":00", ""12":30", ""13":00", ""13":30", ""14":00", ""14":30",;"
+    ""15":00", ""15":30", ""16":00", ""16":30", ""17":00", ""17":30",;"
+    ""18":00", ""18":30", ""19":00", ""19":30", ""20": 00";"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   ];
   return (;
     <Form {...form}>;"
@@ -879,17 +1031,34 @@ export function InterviewRequestForm() { return null; }
 
                       selected={field.value}
                       onSelect={field.onChange}
+<<<<<<< HEAD
 
 
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
+=======
+                    <Calendar;
+                      mode="single";
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             )}
           />;
@@ -901,26 +1070,36 @@ export function InterviewRequestForm() { return null; }
               <FormItem>;
                 <FormLabel>Time</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-
-              </FormItem>;            )}
-
+              </FormItem>)}
           />;
-;
           <FormField;
             control={form.control}
-            name="time";
-            render={({ field }) => (;
+            name="time";"
+            render={({ field }) => (
               <FormItem>;
+<<<<<<< HEAD
 
 
+=======
+
+                <FormLabel>Time</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   <FormControl>;
-                    <SelectTrigger>;"
-                      <SelectValue placeholder="Select time" />;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select time" />;"
                     </SelectTrigger>;
                   </FormControl>;
 
+<<<<<<< HEAD
 
 
+=======
+          />;
+        </div>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             name="duration"
             render={({ field }) => (;
               <FormItem>;
@@ -931,137 +1110,56 @@ export function InterviewRequestForm() { return null; }
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
                         {time}
-</Calendar>
-                    <Calendar;"
-                      mode="single";"
-
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) = /> date < new Date() || date > addDays(new Date(), 90)}
-                      initialFocus;
-                      className=\"p-3 pointer-events-auto\";                    <Calendar;
-                      mode=\"single\";
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) = /> date < new Date() || date > addDays(new Date(), 90)}
-                      initialFocus;
-                      className=\"p-3 pointer-events-auto\";
-                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-
-</Calendar>
-                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-                      initialFocus;"
-                      className="p-3 pointer-events-auto";"
-                    <Calendar;"
-                      mode="single""
-                    />;
-</Calendar>
-                  </PopoverContent>;
-                </Popover>;
-                <FormMessage />;
-</FormMessage>
-
-              </FormItem>;
-          <FormField;
-            control={form && form.control}"
-            name="time""
-            render={({ field }) => (;
-</FormField>
-              <FormItem>;
-</FormItem>
-                <FormLabel>Time</FormLabel>;
-                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-</Select>)
-
-              </FormItem>)}
-          <FormField;
-
-            control={form.control}"
-            name="time";"
-            render={({ field }) => (
-</FormField>
-              <FormItem>;
-</FormItem>
-                <FormLabel > Time</FormLabel>;
-                <Select onValueChange={field.on_change} default_value={field.value}>;
-</Select>)
-              </FormItem>;            )}
-          <FormField;
-            control={form.control}"
-            name="time";"
-            render={({ field }) => (;
-</FormField>
-              <FormItem>;
-</FormItem>
-                <FormLabel>Time</FormLabel>;
-                <Select onValueChange={field.onChange} defaultValue={field.value}>;
-</Select>
-                  <FormControl>;
-</FormControl>
-                    <SelectTrigger>;
-</SelectTrigger>"
-                      <SelectValue placeholder="Select time" />;"
-</SelectValue>
-                    </SelectTrigger>;
-                  </FormControl>;
-        </div>;"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-</div>
-          <FormField;
-            control={form && form.control}"
-            name="duration"")
-            render={({ field }) => (;
-</FormField>
-              <FormItem>;
-</FormItem>
-                <FormLabel>Duration</FormLabel>;
-                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-</Select>"
-                  <SelectContent className="max - h-[300px]">;"
-</SelectContent>
-                      <SelectItem key={time} value={time}>;
-</SelectItem>)
-
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
               </FormItem>)}
           />;
-
+        </div>;
+        <div className="grid grid - cols - 1 "md":grid - cols - 2 gap-4">;"
           <FormField;
-            control={form.control}"
-            name="duration";
+            control={form.control}
+            name="duration";"
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Duration</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
 
 
+<<<<<<< HEAD
                   <FormControl>;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <SelectTrigger>;
-
-                      <SelectValue placeholder="Select duration" />;
+                      <SelectValue placeholder="Select duration" />;"
                     </SelectTrigger>;
                   </FormControl>;
-                  <SelectContent>;"
+                  <SelectContent>;
                     <SelectItem value="15">15 minutes</SelectItem>;"
                     <SelectItem value="30">30 minutes</SelectItem>;"
                     <SelectItem value="45">45 minutes</SelectItem>;"
-                    <SelectItem value="60">60 minutes</SelectItem>;
+                    <SelectItem value="60">60 minutes</SelectItem>;"
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
 
+<<<<<<< HEAD
 
 
+=======
+          />;
+          <FormField
+            control={form && form.control}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             name="platform"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Platform</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 
+<<<<<<< HEAD
 
                   <FormControl>;
                     <SelectTrigger>;
@@ -1077,36 +1175,123 @@ export function InterviewRequestForm() { return null; }
 
                     <SelectItem value="teams">Microsoft Teams</SelectItem>;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <SelectItem value="other">Other</SelectItem>;
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
 
+<<<<<<< HEAD
 
 
+=======
+            )}
+          />
           <FormField
             control={form.control}
-
+            name="time"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Time</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select time" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="max-h-[300px]">
+                    {timeSlots.map((time) => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="duration"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Duration</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select duration" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="15">15 minutes</SelectItem>
+                    <SelectItem value="30">30 minutes</SelectItem>
+                    <SelectItem value="45">45 minutes</SelectItem>
+                    <SelectItem value="60">60 minutes</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="platform"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Platform</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select platform" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="zoom">Zoom</SelectItem>
+                    <SelectItem value="google-meet">Google Meet</SelectItem>
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        {form.watch('platform') !== 'in-app' && (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+          <FormField
+            control={form.control}
             name="meetingLink"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
-
+                  <Input
                     placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
                   />
@@ -1116,21 +1301,186 @@ export function InterviewRequestForm() { return null; }
             )}
           />
         )}
+<<<<<<< HEAD
 
 
 
 
+=======
+                  <Input;
+                    placeholder={`Add your ${form.watch('platform')} link here`}`              </FormControl>;
+              <FormMessage />;
+
+        />;
+        <div className="flex justify-end gap-4 pt-4">;"
+          <Button variant="outline" onClick={onClose} type="button">;"
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={isSubmitting}>;"
+            {isSubmitting ? "Scheduling..." : "Schedule Interview"}          </Button>;"
+        </div>;
+      </form>;
+    </Form>;
+  );
+}
+            )}
+          />
+        )}
+                  placeholder="Share what you'd like to discuss in this interview""
+                  className="h-20""
+                  {...field}
+            </FormItem>)}
+        />;
+        <div className="flex justify - end gap - 4 pt-4">;"
+          <Button variant="outline" on_click={on_close} type="button">;"
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={is_submitting}>;"
+            {is_submitting ? "Scheduling..." : "Schedule Interview"}"
+          </Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+  ),; interface InterviewRequestFormProps {
+  }
+  "talent": TalentProfile;
+"onClose": () => void;
+userDetails?: UserProfile 
+}const formSchema = z.object ({
+  }
+  "date": z.date ({
+  }
+  required "error": "Please select a date for the interview." "
+}) .refine (date => date > new Date (), {
+  }
+  "message": "Interview date must be in the future" "
+});
+"time": z.string () .min (1, "Please select a time for the interview.");"
+"duration": z.string () .min (1, "Please select the interview duration.");"
+"platform": z.string () .min (1, "Please select a meeting platform.");"
+const form = useForm<z.infer<typeof formSchema>> ({
+  }
+  "resolver": zodResolver (formSchema), "defaultValues": {
+  }
+  "title": `Interview with $ {`  }
+  talent.full name 
+}`;`async function onSubmit() {
+  }
+  if (!userDetails?.id) {
+  }
+  toast ({
+  }
+  return;
+}setIsSubmitting (true);
+}finally {
+  }
+  setIsSubmitting (false) 
+}
+
+}
+;
+}const timeSlots = [ ""09":00", ""09":30", ""10":00", ""10":30", ""11":00", ""11":30";"
+""12":00", ""12":30", ""13":00", ""13":30", ""14":00", ""14":30";"
+""15":00", ""15":30", ""16":00", ""16":30", ""17":00", ""17":30";"
+""18":00", ""18":30", ""19":00", ""19":30", ""20": 00" ];"
+}/> <div className="grid grid-cols-1 "md":grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) "
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
+  }
+  field.onChange 
+}defaultValue= {
+  }
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) "
+}</SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 "md":grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {"
+  }
+  field.onChange 
+}defaultValue= {
+  }
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) "
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
+  }
+  field.onChange 
+}defaultValue= {
+  }
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) "
+}/> </div> {
+  }
+  form.watch ('platform') !== 'in-app' && (<FormField control= {'
+  }
+  form.control 
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
+  `Add your $ {`  }
+  form.watch ('platform') '
+}link here` `
+}{
+  ...field 
+} /> </FormControl> <FormMessage /> </FormItem>) 
+}/>) 
+}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </Button> </div> </form> </Form>) 
+}
+}
+}
+;
+        <FormField
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <FormField
           control={form && form.control}
           name="notes"
 
+<<<<<<< HEAD
 
 
+=======
+
+          control={form.control}
+          name="notes"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Notes (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Share what you'd like to discuss in this interview"
+                  className="h-20"
+
+
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex justify-end gap-4 pt-4">
+          <Button variant="outline" onClick={onClose} type="button">
+            Cancel
+          </Button>
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+          </Button>
+        </div>
+      </form>
+    </Form>
+  )
+}
+
+        <FormField;
+          control={form && form.control}"
+          name="notes"
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
               <FormControl>;
 
+<<<<<<< HEAD
 
                 <Textarea 
 
@@ -1141,11 +1491,15 @@ export function InterviewRequestForm() { return null; }
         <FormField;
           control={form.control}
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           name="notes";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Notes (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
 
                 <Textarea;
                   placeholder="Share what you'd like to discuss in this interview";
@@ -1174,6 +1528,23 @@ export function InterviewRequestForm() { return null; }
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt - 4">;
+=======
+
+
+        </div>;
+      </form>;
+    </Form>;
+  );
+}
+
+            )}
+          />
+        )}'"
+                  placeholder="Share what you'd like to discuss in this interview""
+                  className="h-20"
+                  {...field}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <Button variant="outline" on_click={on_close} type="button">;
             Cancel;
@@ -1375,6 +1746,7 @@ export function InterviewRequestForm() { return null; }
         </div>;
       </form>;
     </Form>);
+<<<<<<< HEAD
 
   ),; interface InterviewRequestFormProps {
   talent: TalentProfile;
@@ -1400,13 +1772,86 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
   return;
 }setIsSubmitting (true);
 }finally {
+=======
+
+
+  talent: TalentProfile;
+onClose: () => void;
+userDetails?: UserProfile;
+}const formSchema = z.object ({}
+  date: z.date ({"
+  required error: "Please select a date for the interview." 
+}) .refine (date => date > new Date (), {"
+  message: "Interview date must be in the future" 
+});"
+time: z.string () .min (1, "Please select a time for the interview.");"
+duration: z.string () .min (1, "Please select the interview duration.");"
+platform: z.string () .min (1, "Please select a meeting platform.");
+const form = useForm<z.infer<typeof formSchema>> ({}
+  resolver: zodResolver (formSchema), defaultValues: {}`
+  title: `Interview with $ {}
+  talent.full name;`
+}`;
+async function onSubmit (values: z.infer<typeof formSchema>) {}
+  if (!userDetails?.id) {}
+  toast ({}
+  return;
+}setIsSubmitting (true);
+}finally {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   setIsSubmitting (false) 
 }
 
 }
 ;
+<<<<<<< HEAD
 
 
 
 
+=======
+
+"
+}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];"
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {}
+  field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) 
+}</SelectContent> </Select> <FormMessage /> </FormItem>) "
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {}
+  field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {}
+  field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> </div> {'
+  form.watch ('platform') !== 'in-app' && (<FormField control= {}
+  form.control;
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {}`
+  `Add your $ {'
+  form.watch ('platform') `
+}link here` 
+}{}
+  ...field;
+
+}/> </FormControl> <FormMessage /> </FormItem>) 
+}/>) 
+}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </Button> </div> </form> </Form>) 
+}
+}
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

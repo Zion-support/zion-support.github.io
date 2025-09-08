@@ -21,7 +21,6 @@ className?: string
 }if (!query.trim () ) {
   toast ({
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }setIsMatchmaking (true);
 setHasSearched (true);
 serviceType;'

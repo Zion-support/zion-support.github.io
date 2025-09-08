@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState, useEffect} from "react";
 import {Company} from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {;
@@ -13,6 +16,7 @@ export function useCompanyWorkspace(companySlug?: string) {};
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 
 
   useEffect(() => {
@@ -28,6 +32,28 @@ export function useCompanyWorkspace(companySlug?: string) {};
         // Demo company data
 
         setCompany({
+=======
+;
+  useEffect(() => {};
+    // In a real app, this would fetch data from an API based on the companySlug;
+    // For now, we'll simulate a delay and return mock data;
+    setIsLoading(true),
+
+
+          id: "company-123";
+          name: "Acme Corporation";
+          logoUrl: "/placeholder && placeholder.svg";
+          theme: {
+
+            primaryColor: "#4f46e5";
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
+          plan: "Business";
+          teamSize: 12;
+          teamLimit: 50;
+          billingCycle: "Annual"
+          workspaceUrl: "acme.zion-ai.com"});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
@@ -38,18 +64,34 @@ export function useCompanyWorkspace(companySlug?: string) {};
           teamLimit: 50,"
           billingCycle: "Annual","
           workspaceUrl: "acme.zion-ai.com"}),
+<<<<<<< HEAD
 
 
 
 
 
+=======
+billingCycle: "Annual",
+          workspaceUrl: "acme && acme.zion-ai && ai.com"});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
         // For demo purposes, let's assume it exists
         setCompany({
+<<<<<<< HEAD
 
 
+=======
+
+            primaryColor: "#4f46e5";
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
+          plan: "Teams";
+          teamSize: 5;
+          teamLimit: 10;
+          billingCycle: "Monthly"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -128,6 +170,38 @@ if ( {) {}
 
   return { company, isLoading, error }
 
+<<<<<<< HEAD
+=======
+}import { useState, useEffect } from "react";"
+export function useCompanyWorkspace() {;
+  }
+  const [error, setError] = useState<string | null>(null),;
+  useEffect(() => {;
+    // In a real app, this would fetch data from an API based on the companySlug;
+    // For now, we'll simulate a delay and return mock data;'
+    }
+    setIsLoading(true),;
+    setTimeout(() => {;
+      }
+      if (companySlug === "demo" || !companySlug) {;"
+        // Demo company data;
+        }
+        setCompany({;
+          }
+          "id": "company-123",;"
+          "name": "Acme Corporation",;"
+          "logoUrl": "/placeholder.svg",;"
+          "theme": {;
+            }
+            "primaryColor": "#4f46e5",;"
+            "backgroundColor": "#ffffff",;"
+            "textColor": "#1f2937"},;"
+          "plan": "Business",;"
+          "teamSize": 12,;
+          "teamLimit": 50,;
+          "billingCycle": "Annual",;"
+          "workspaceUrl": "acme.zion-ai.com"}),;"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
 export function useCompanyWorkspace() { return null; }
@@ -137,7 +211,10 @@ export function useCompanyWorkspace() { return null; }
           teamLimit: 50,;"
           billingCycle: "Annual",;"
           workspaceUrl: "acme.zion-ai.com"}),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         setError(null);
       } else {;'
         // For any other slug, we could check if it's a valid company;'
@@ -164,9 +241,14 @@ export function useCompanyWorkspace() { return null; }
   const [error, setError] = useState<string | null>(null),;
 </string>"`;
 pr-12325
+<<<<<<< HEAD
 }
 
 }
 
 
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

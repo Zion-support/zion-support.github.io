@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 status?: "connected" | "disconnected" | "pending";
 
   href?: string;
@@ -9,6 +12,15 @@ status?: "connected" | "disconnected" | "pending";
   description;
 
 
+<<<<<<< HEAD
+=======
+
+interface IntegrationCardProps {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   title: string,
   description: string,
   icon: React.ReactNode,"
@@ -16,16 +28,34 @@ status?: "connected" | "disconnected" | "pending";
   href?: string,
 
 
+<<<<<<< HEAD
+
+=======
+;
+export function IntegrationCard({;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+  href;
+export function IntegrationCard({};
+  title;
+  description;
+  icon;
 
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
           <div className="flex items-center gap-3">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             <div className="h-9 w-9 flex items-center justify-center bg-muted rounded-md">
               {icon}
@@ -62,6 +92,10 @@ status?: "connected" | "disconnected" | "pending";
             <span>Connect</span>"
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",;
 
 import { ArrowRight, Check, ExternalLink } from "lucide-react",;
@@ -75,6 +109,7 @@ interface IntegrationCardProps {;
 }
 ;
 
+<<<<<<< HEAD
 export function IntegrationCard({;
   title,;
   description,;
@@ -87,16 +122,22 @@ export function IntegrationCard({;
         <div className="flex justify-between items-start">;
           <div className="flex items-center gap-3">;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <div className="h-9 w-9 flex items-center justify-center bg-muted rounded-md">;
               {icon}
             </div>;
             <div>;
 
+<<<<<<< HEAD
               <h3 className="font-semibold">{title}</h3>;
             </div>;
           </div>;
           {status === "connected" ? (;
             <Badge variant="outline" className="bg-green-100 text-green-800 gap-1">;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           )}
         </div>;
@@ -109,8 +150,25 @@ export function IntegrationCard({;
           <Button variant="outline" className="w-full" asChild>;"
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">;
               <span>Manage</span>;
+<<<<<<< HEAD
 
 
+=======
+
+
+          </Button>;
+
+        )}
+      </CardFooter>;
+    </Card>;
+
+export function IntegrationCards() {;
+
+export function IntegrationCards() { return null; }
+export function IntegrationCards() {}
+  return (";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
 
@@ -118,6 +176,7 @@ export function IntegrationCard({;
   );
 }
 
+<<<<<<< HEAD
 
 export function IntegrationCards() {;
   return (
@@ -130,6 +189,14 @@ import React from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
+=======
+
+      </CardFooter>;
+    </Card>;
+  );
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { ArrowRight, Check, ExternalLink } from './lucide-react';
 interface IntegrationCardProps {}
@@ -152,16 +219,24 @@ export /**;
  * IntegrationCards - Function description;
  */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="grid md:grid-cols-3 gap-6">
       {/* Integration cards would go here */}
     </div>
   )
 }
 
+<<<<<<< HEAD
 
 }
 ;
 
 
 
+=======
+};
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

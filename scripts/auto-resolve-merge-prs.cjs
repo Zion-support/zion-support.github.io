@@ -28,6 +28,8 @@ function sh(cmd, opts = {}) {}
 <<<<<<< HEAD
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -58,12 +60,18 @@ function sh(cmd, opts = {}) {}
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin);
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error(Unable to parse owner/repo from origin');
   return { "owner: m[1], repo": m[2] }}"
 function getToken() {}
+<<<<<<< HEAD
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
+    },
+    "body": body ? JSON.stringify(body) : undefined;"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,6 +124,7 @@ function resolveConflictsFiles() {}
     },
     "body": body ? JSON.stringify(body) : undefined;"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 })
   const text = await res.text();"
   return data}
@@ -124,9 +133,12 @@ async function listOpenPRs(owner, repo) {}`
   return prs}
 function resolveConflictsFiles() {}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true);
   const files = output.split(\n').filter(Boolean);

@@ -12,7 +12,20 @@ return (
       </div>;
       {certifications && certifications.length > 0 && (;
 
+<<<<<<< HEAD
 
+=======
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import { useState  } from 'react';
@@ -28,6 +41,7 @@ import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 
+<<<<<<< HEAD
 
         <CertificationsList 
           certifications={certifications} 
@@ -35,6 +49,25 @@ import { CertificationFormFields  } from './CertificationFormFields';
           onDelete={handleDelete} 
         />
 
+=======
+import { CertificationFormValues, certificationSchema } from './types';
+interface CertificationsFormProps {
+  resumeId: string;
+  certifications: Certification[];
+  onComplete: () => void;
+
+
+                    setEditingId(null),
+                    setEditingId(null),
+                    form.reset({
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+                      credential_url: ''})
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   } else {
                     onBack()
       <div className='bg-muted/40 p-6 rounded-lg'>;
@@ -73,6 +106,17 @@ import { CertificationFormFields  } from './CertificationFormFields';
                   }
                 }}
               >
+<<<<<<< HEAD
+=======
+                {editingId ? 'Cancel' : 'Back'}'
+              </Button>
+              <div className="flex gap-2">"
+                <Button type="submit" disabled={isLoading}>"
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
+                  {editingId ? 'Update' : 'Add'} Certification'
+                </Button>
+                <Button type="button" onClick={onComplete}>"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 {editingId ? 'Cancel' : 'Back'}
 
@@ -92,8 +136,34 @@ import { CertificationFormFields  } from './CertificationFormFields';
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 
+=======
+              </Button>;
+              <div className='flex gap-2'>;
+                <Button type='submit' disabled={isLoading}>;
+                  {isLoading && (;
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  )}
+                  {editingId ? 'Update' : 'Add'} Certification;
+                </Button>;
+                <Button type='button' onClick={onComplete}>;
+                  Next;
+                </Button>;
+              </div>;
+            </div>;
+          </form>;
+        </Form>;
+      </div>;
+    </div>;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  );
+}> {;
+  editingId ? 'Cancel' : 'Back' ;
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
+}'"}"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       // Check condition
 if ( {) {
   $2
@@ -200,14 +270,25 @@ if ( {) {
       </div>;
     </div>);
 }> {
+<<<<<<< HEAD
 
   editingId ? 'Cancel' : 'Back'
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
 }'"}
+=======
+  editing_id ? 'Cancel' : 'Back';
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
+}'"}"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
 }
 ;
+<<<<<<< HEAD
 
 }
 
+=======
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba

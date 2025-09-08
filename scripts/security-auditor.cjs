@@ -78,7 +78,10 @@ class SecurityAuditor {
       if (auditData.vulnerabilities) {
         this.vulnerabilities = Object.values(auditData.vulnerabilities);
         console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
       
       return {
@@ -275,7 +278,6 @@ const sensitivePatterns = [/API_KEY/i,;
           })} catch (error) {
           // Skip files that can't be read
         }
-      }
 
       this.log(`🔍 Found ${securityIssues.length} potential security issues`);
 
@@ -299,11 +301,14 @@ const sensitivePatterns = [/API_KEY/i,;
       } catch (error) {
         console.log('❌ Could not apply automatic fixes');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       "analysis": {"
         npmAudit: await this.runNpmAudit(),"
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
     } catch (error) {
       console.error('Error auditing dependencies:', error);
@@ -469,11 +474,23 @@ module.exports = SecurityAuditor;
 =======
 >>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+    this.reportsDir = path.join(this.projectRoot, 'security-reports')
+    this.log(' Running npm audit...')
+const result = execSync('npm audit --audit-level=moderate --json');
+        "encoding"
+        "status"
+          "name"
+=======
 
         "status"
         status
         "status"
           name
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "severity"
           name
           "severity"
@@ -486,7 +503,11 @@ module.exports = SecurityAuditor;
         "type"
         priority
         "message"
+<<<<<<< HEAD
+        "impact"
+=======
         impact
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "type"
         priority
         "message"
@@ -506,6 +527,8 @@ module.exports = SecurityAuditor;
         impact
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       console.error('\n� Security Auditor "failed")
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -530,3 +553,4 @@ main
 =======
       console.error('\n� Security Auditor "failed")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

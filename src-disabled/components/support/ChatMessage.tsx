@@ -1,6 +1,50 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
 import { useTheme } from "@/hooks/useTheme";
+
+  message: string;
+  isUser: boolean;
+=======
+<<<<<<< HEAD
+import React, { useMemo } from 'react'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { cn } from '@/lib/utils'
+import { format } from 'date-fns'
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+import { useTheme } from '@/hooks/useTheme'
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+import { useTheme } from "@/hooks/useTheme"
+interface ChatMessageProps {
+  message: string
+  isUser: boolean
+  timestamp: Date
+export const ChatMessage: React.FC<ChatMessageProps> = ({
+  message,
+  isUser,
+  timestamp,
+}: ChatMessageProps) => {
+  const { theme } = useTheme()
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
+  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
+  const sanitizedHtml = useMemo<{ __html: string }>(
+    () => ({ __html: formatMessageWithLinks(message) }),    [message]
+  )
+import React, { useMemo } from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+import { useTheme } from "@/hooks/useTheme";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   message: string;
   isUser: boolean;
@@ -70,7 +114,30 @@ ursor/fix-website-loading-errors-and-merge-6662
             : theme === 'dark'
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        )}
+      >
+<<<<<<< HEAD
+=======
+        <div dangerouslySetInnerHTML={sanitizedHtml} />
+        <div
+          className={cn(
+            'text-xs mt-1'
+            isUser
+              ? 'text-white/70'
+              : theme === 'dark'
+                ? 'text-gray-300'
+                : 'text-gray-500'
+          )}
+        >
+          {format(timestamp, 'h:mm a')}
+      
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         )}
       >
@@ -103,6 +170,16 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -117,6 +194,37 @@ ursor/fix-website-loading-errors-and-merge-6662
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+function formatMessageWithLinks(message: string): string {
+  // First, escape any HTML so that user input cannot break out of the intended
+  // markup.
+  const safeText = escapeHtml(message)
+  // Replace URLs
+  const urlRegex = /(https?:\/\/[^\s]+)/g
+  let formattedMessage = safeText.replace(
+    urlRegex
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  // Replace help-center references like [Getting Started]
+  const helpCenterRegex = /\[([^\]]+)\]/g
+  formattedMessage = formattedMessage.replace(
+    helpCenterRegex
+    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  return formattedMessage; return formattedMessage
+}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -341,3 +449,28 @@ function formatMessageWithLinks (message: string): string {
   formatted_message = formatted_message.replace (
     helpCenterRegex,
 
+<<<<<<< HEAD
+=======
+    '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
+  return formatted_message; return formatted_message;
+}
+;
+
+  timestamp: Date
+export const ChatMessage: React.FC<ChatMessageProps> = ({
+  );
+
+<<<<<<< HEAD
+  return formattedMessage;
+=======
+  return formattedMessage;
+=======
+    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  return formattedMessage; return formattedMessage
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/ChatMessage.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

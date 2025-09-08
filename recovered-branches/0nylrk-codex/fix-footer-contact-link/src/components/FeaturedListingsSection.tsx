@@ -2,11 +2,24 @@ import { ProductListingCard } from "@/components/ProductListingCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 
 
+=======
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+
+import { ProductListingCard } from '@/components / ProductListingCard';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Button } from '@/components / ui / button';
+import { Link } from './react-router-dom';
+
+interface FeaturedListingsSectionProps {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface FeaturedListingsSectionProps {
 
   show_title?: boolean;
@@ -21,8 +34,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
     {
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       id: "advanced-nlp-model",
 
       title: "Advanced NLP Model for Text Analysis",
@@ -30,14 +46,20 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,"
       currency: "$",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
       reviewCount: 124,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
@@ -47,7 +69,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },
     {"
       id: "image-generation-service","
@@ -62,15 +87,22 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
       reviewCount: 89,
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
 
 
+<<<<<<< HEAD
+=======
+    },
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     {
       id: "fullstack-ai-dev"
@@ -79,7 +111,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: null, // Custom pricing
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       currency: "$",
       category: "Services",
       tags: ["Development", "Full-stack", "AI"],
@@ -88,7 +123,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
       reviewCount: 56,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       author: {
         name: "DataMinds Consulting"
@@ -106,6 +144,7 @@ import {Link} from "react-router-dom";
       createdAt: "2024-01-05T11:15:00.000Z"
 
       author: {
+<<<<<<< HEAD
         name: "SocialAI"
 
         id: "social-ai"
@@ -275,11 +314,17 @@ import { Link } from "react-router-dom",;
 
 
 
+=======
+        name: "DataMinds Consulting"
+        id: "dataminds-consulting"
+      }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 
+<<<<<<< HEAD
 
 
               key={listing.id}
@@ -287,6 +332,15 @@ import {Link} from "react-router-dom";
 
 
 
+=======
+      tags: ["API", "Sentiment", "Analytics"];
+      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]
+      createdAt: "2024-01-05T11:15:00.000Z"
+      rating: 4.6
+
+              key={listing.id}
+              listing={listing}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               view="grid"
 
 }
@@ -303,6 +357,7 @@ import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 
+<<<<<<< HEAD
 
               Featured Listings;
             </GradientHeading>;
@@ -315,12 +370,19 @@ import { Link } from "react-router-dom",;
           {featured_listings.map ((listing) => (
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <ProductListingCard
               key={listing.id}
               listing={listing}
 
 
+<<<<<<< HEAD
 
+=======
+view="grid"
+              onRequestQuote={() => {}}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               view="grid"
               onRequestQuote={() => {}}
 
@@ -361,7 +423,10 @@ import { Link } from "react-router-dom",;
               onRequestQuote={() => {}}
         </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="mt-10 text-center">;
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
@@ -385,6 +450,7 @@ import { Link } from "react-router-dom",;
         </div>;"
         <div className="mt-10 text-center">;"
             asChild>;
+<<<<<<< HEAD
 
             />))}
         </div>;
@@ -393,6 +459,14 @@ import { Link } from "react-router-dom",;
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";
             as_child;
             />;
+=======
+
+
+        <div className="mt - 10 text - center">;"
+            className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";"
+            as_child;
+/>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           ))}
         </div>;
@@ -401,7 +475,10 @@ import { Link } from "react-router-dom",;
           <Button ;
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
             asChild;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
         </div>;
         <div className="mt-10 text-center">;
@@ -409,27 +486,50 @@ import { Link } from "react-router-dom",;
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
             asChild;
           >;
+<<<<<<< HEAD
 
 
 
+=======
+
+              onRequestQuote={() => {}}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
       </div>;
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 </section>);
 }
 
     </section>);
 }
+<<<<<<< HEAD
+=======
+
+    </section>;
+  );}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+<<<<<<< HEAD
 
 
 
+=======
+}
+;
+    </section>);
 
-
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

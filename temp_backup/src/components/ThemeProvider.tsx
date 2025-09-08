@@ -27,7 +27,7 @@ const root  = window.document.documentElement;root.classList.remove('light', 'da
         : 'light';root.classList.add(systemTheme)return;}
     }root.classList.add(theme)}, [theme])const value = {theme,setTheme: (theme: Theme) => {localStorage.setItem(storageKey, theme)setTheme(theme)},toggleTheme: () => ;
   const newTheme = theme === 'light' ? 'dark' : 'light';
-      localStorage.setItem(storageKey, newTheme)setTheme(newTheme)}}return (<ThemeProviderContext.Provider {...props} value={value} />;
+      localStorage.setItem(storageKey, newTheme)setTheme(newTheme)}return (<ThemeProviderContext.Provider {...props} value={value} />;
       {children}
     </ThemeProviderContext.Provider>;
   )}

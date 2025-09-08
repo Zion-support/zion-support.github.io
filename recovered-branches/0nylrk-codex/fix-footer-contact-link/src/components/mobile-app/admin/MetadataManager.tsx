@@ -1,21 +1,46 @@
 
+<<<<<<< HEAD
 
   appTitle: string,
 
+=======
+appTitle: string,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   shortDescription: string,
   longDescription: string,
   keywords: string[],
   version: string,
 
 
+<<<<<<< HEAD
 
   const handleSaveMetadata = async (data: AppMetadataValues) => {
 
+=======
+  const handleSaveMetadata = async (data: AppMetadataValues) => {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production
 
+<<<<<<< HEAD
 
+=======
+  const handleSaveMetadata = async (data: AppMetadataValues) => {}
+    setIsSaving(true)
+    try {};
+      // This would be implemented with actual API calls in production;
+'
+import React, { useState } from './react';'
+import { use_form } from './react - hook - form';'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
+import { MetadataForm } from './MetadataForm';'
+import { ScreenshotManager } from './ScreenshotManager';'
+import { ChangelogManager } from './ChangelogManager';'
+import { ExportPanel } from './ExportPanel';'
+import { Button } from '@/components / ui / button';'
+import { toast } from './sonner';"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export type AppPlatform = "ios" | "android";
 ;
@@ -56,9 +81,15 @@ export const MetadataManager: React.FC = () => {";
       await new Promise (resolve => set_timeout (resolve, 1000));
 ;"
       toast.success (`${current_platform === "ios" ? "iOS" : "Android"} metadata saved successfully!`);
+<<<<<<< HEAD
 
     } catch (error) {
 
+=======
+
+
+    } catch (error) {"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toast.error ("Failed to save metadata");
       console.error (error);
     } finally {}
@@ -66,13 +97,20 @@ export const MetadataManager: React.FC = () => {";
     }
   }
 
+<<<<<<< HEAD
 
+=======
+"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       // // // console.log("Saving metadata for", currentPlatform, data),
       
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`)
     } catch (error) {"
@@ -82,12 +120,22 @@ export const MetadataManager: React.FC = () => {";
       setIsSaving(false)
     }
 
+<<<<<<< HEAD
 
 
   },
 
 
 
+=======
+  },
+
+  },
+
+  }
+  },
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
 
@@ -104,6 +152,10 @@ export const MetadataManager: React.FC = () => {";
           </TabsList>
 
 
+<<<<<<< HEAD
+=======
+          <Button 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
@@ -140,6 +192,7 @@ export const MetadataManager: React.FC = () => {";
   )
 
 
+<<<<<<< HEAD
 
 
 },
@@ -156,12 +209,52 @@ import { toast } from "sonner",;
 
 export type AppPlatform = "ios" | "android",;
 
+=======
+},
+import { useForm } from "react-hook-form";"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { MetadataForm } from "./MetadataForm",;"
+import { ScreenshotManager } from "./ScreenshotManager",;"
+import { ChangelogManager } from "./ChangelogManager",;"
+import { ExportPanel } from "./ExportPanel",;"
+import { Button } from "@/components/ui/button",;"
+import { toast } from "sonner",;"
+export type AppPlatform = "ios" | "android",;    } finally {;"
+      }
+export type AppMetadataValues = {;
+  appTitle: string,;
+  shortDescription: string,;
+  longDescription: string,;
+  keywords: string[],;
+  version: string,;
+  platform: AppPlatform;
+
+
+  const handleSaveMetadata = async (data: AppMetadataValues) => {;
+    setIsSaving(true),;
+
+    try {;
+      // This would be implemented with actual API calls in production;
+
+
+      // Simulate API call;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      toast && toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`);
+    } catch (error) {;
+      toast && toast.error("Failed to save metadata");
+      console && console.error(error);
+    } finally {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setIsSaving(false);
     }
   };
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
           <TabsList className="bg-zion-blue">;
@@ -173,13 +266,20 @@ export type AppPlatform = "ios" | "android",;
               Google Play (Android);
             </TabsTrigger>;
 
+<<<<<<< HEAD
           </TabsList>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
 
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={iosForm} />;"
               <ChangelogManager platform="ios" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             </div>;
 
@@ -190,6 +290,7 @@ export type AppPlatform = "ios" | "android",;
       </Tabs>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -203,3 +304,6 @@ export type AppPlatform = "ios" | "android",;
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

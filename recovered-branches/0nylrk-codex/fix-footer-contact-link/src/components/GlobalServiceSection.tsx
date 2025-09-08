@@ -1,15 +1,28 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
 
+<<<<<<< HEAD
 
+=======
+
+import { Button } from "./ui/button",
+
+import {GradientHeading} from "./GradientHeading";
+import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
+import {Button} from "./ui/button";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
 
+<<<<<<< HEAD
 
 
 
@@ -18,6 +31,10 @@ import { Button } from "./ui/button",
 const services = [
 
 
+=======
+const services = [
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     title: "Servers"
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support"
@@ -36,26 +53,37 @@ const services = [;
     title: "Servers",
     description: "Enterprise - grade servers for any workload with 24 / 7 maintenance and support",
     icon: <Server className="h - 10 w - 10" />},
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     title: "Storage",
     description: "Scalable storage solutions from SSDs to large - scale enterprise storage systems",
 
+<<<<<<< HEAD
     icon: <HardDrive className="h - 10 w - 10" />},
   {
   {
     title: "Networking"
     description: "Connectivity solutions including switches, routers, and network security devices";
     icon: <Network className="h-10 w-10" />}
+=======
+  {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     title: "Networking",
     description: "Connectivity solutions including switches, routers, and network security devices",
     icon: <Network className="h-10 w-10" />},
+<<<<<<< HEAD
 
 
   {
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     title: "24x7x365 Support"
     description: "Around-the-clock technical support with rapid response times guaranteed"
@@ -97,6 +125,7 @@ const services = [;
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",;
     icon: <Truck className="h-10 w-10" />}],;
+<<<<<<< HEAD
 
   return (
 
@@ -108,6 +137,20 @@ export function GlobalServiceSection() {;
   return (
 
 
+=======
+
+
+export function GlobalServiceSection() {;
+}
+return (;
+import { GradientHeading } from "./GradientHeading";"
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons";"
+import { Button } from "./ui/button",;"
+import { GradientHeading } from "./GradientHeading",;
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
+import { Button } from "./ui/button",;
+const services = [;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {;
     title: "Servers",
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",;
@@ -135,8 +178,11 @@ export function GlobalServiceSection() {;
 export function GlobalServiceSection() {;
   return (;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <section className="py-20 bg-zion-blue" id="global-services">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-16">;
@@ -145,14 +191,20 @@ export function GlobalServiceSection() {;
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
         </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services && services.map((service, index) => (;
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
               <div className="text-zion-cyan mb-4">;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     icon: <Network className="h - 10 w - 10" />},
   {
     title: "24x7x365 Support",
@@ -190,7 +242,26 @@ function GlobalServiceSection() {
               <p className="text - zion - slate - light mb-4">{service.description}</p>;
             </div>))}
         </div>;
+<<<<<<< HEAD
 
+=======
+
+
+            Get Your Free Commercial Proposal;
+          </Button>;
+        </div>;
+      </div>;
+    </section>);
+
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {services.map((service, index) => (;
+            <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
+              <div className="text-zion-cyan mb-4">;
+
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
 }
@@ -198,7 +269,12 @@ function GlobalServiceSection() {
 }
 ;
 ;
+<<<<<<< HEAD
 }
 
 
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

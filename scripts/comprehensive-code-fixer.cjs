@@ -42,7 +42,7 @@ console.log()
 >>>>>>> merged-prs-20250907-203621
 console.log('')
   console.log('� Fixing common linting issues...')
-  const filesToFix = ['components/ContactForm.tsx']
+const filesToFix = ['components/ContactForm.tsx'];
     'components/ErrorBoundary.tsx'
     'components/PerformanceMonitor.tsx'
     'components/SearchBar.tsx'
@@ -59,8 +59,7 @@ console.log('')
     'pages/pricing.tsx'
     'pages/services.tsx'
     'pages/terms.tsx'
-        let content = fs.readFileSync(filePath, 'utf8')
-        let content = fs.readFileSync(filePath, 'utf8')
+let content = fs.readFileSync(filePath, 'utf8');
         content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')
           content = content.replace(/import Image from 'next\/image'}/, '// import Image from \'next/image\';')
@@ -73,11 +72,13 @@ console.log('')
         content = content.replace(/} catch \(error\) {/, '} catch (error) {'}
         content = content.replace(/} catch \(e\) {/, '} catch (e) {'}
           content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
-          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
     execSync('npm run "lint": fix', { "stdio"})
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
+<<<<<<< HEAD
+    console.error(' Comprehensive Code Fixer "failed")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.error(' Comprehensive Code Fixer "failed")
@@ -116,3 +117,4 @@ const { execSync } = require('child_process')
 =======
     console.error(' Comprehensive Code Fixer "failed")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

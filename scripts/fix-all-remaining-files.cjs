@@ -25,12 +25,16 @@ const path = require('path')
 >>>>>>> merged-prs-20250907-203621
 // console.log(' Fixing All Remaining Files...')
 console.log('=====')
-const problematicFiles = ['pages/docs/integration-examples.tsx']
+const problematicFiles = ['pages/docs/integration-examples.tsx'];
   'pages/services.tsx'
   'pages/services/ai-analytics.tsx'
   'pages/services/blockchain.tsx'
   'pages/signup.tsx'
+<<<<<<< HEAD
+let content = '';
+=======
     let content = ''
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "firstName"
@@ -39,6 +43,9 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
     "password"
     "confirmPassword"
     console.log('Signup "attempt")
+<<<<<<< HEAD
+        <meta name="description" content="
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +80,4 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 =======
         <meta name="description" content="
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const fs = require("$1)
 const path = require($1")
@@ -23,34 +22,6 @@ const { execSync } = require("child_process)
       content = content.replace(/from\s+"lucide-react;$/gm, "from lucide-react")
       content = content.replace(/"const: \s*(\w+):\s*(\w+):\s*=\s*\(\s*\)\s*=>\s*,\s*\{/g, const $"1": $2 = () => {}
       content = content.replace(/question:\s*([^"]*):\s*([^"]*),, ";"/g, question": "$1: $2, 
-=======
-
-<<<<<<< HEAD
-
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
-      let content = fs.readFileSync(filePath, "utf8")
-      content = content.replace(/"import": \s*/g, "import ")
-      content = content.replace(/"const": \s*/g, "const ")
-      content = content.replace(/"interface": \s*/g, "interface ")
-      content = content.replace(/"type": \s*/g, "type ")
-      content = content.replace(/"from": \s*/g, "from ")
-      content = content.replace(/=\s*\(\s*\)\s*=>\s*,\s*\{/g, "= () => {"}
-      content = content.replace(/,\s*\{/g, " {"})
-      content = content.replace(/;\s*\{/g, " {"})
-      content = content.replace(/;\s*\[/g, " [")]
-      content = content.replace(/;\s*\(/g, " (")
-      content = content.replace(/import\s+([^]+);"import\s+/g, "import $1;\nimport "
-      content = content.replace(/""import\s+/g, ";\nimport ")
-      content = content.replace(/""interface\s+/g, ";\ninterface ")
-      content = content.replace(/""const\s+/g, ";\nconst ")
-      content = content.replace(/from\s+"next;$/gm, "from "next"")
-      content = content.replace(/from\s+"react;$/gm, "from "react"")
-      content = content.replace(/from\s+"lucide-react;$/gm, "from "lucide-react"")
-      content = content.replace(/"const": \s*(\w+):\s*(\w+):\s*=\s*\(\s*\)\s*=>\s*,\s*\{/g, "const $"1": $2 = () => {"}
-      content = content.replace(/question:\s*"([^"]*):\s*([^"]*),", "";"/g, ""question": "$1: $2", "
->>>>>>> origin/chore/fix-lint-and-merge
       content = content.replace(/const\s+(\w+)\s*=\s*\[/g, "const $1 = ["]
       content = content.replace(/{\s*;/g, {})
       content = content.replace(/;\s*}/g, "}")
@@ -87,27 +58,8 @@ const { execSync } = require("child_process")
       this.log(` Git operations "failed"`)
     this.log( Starting Final Automation Fix)
       this.log("� Final Automation Fix completed successfully!")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      this.log(` Final automation fix "failed"`)
-      this.log(` Final automation fix "failed"`)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      this.log(` Final automation fix "failed"`)
-=======
-      this.log(` Final automation fix "failed"`)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

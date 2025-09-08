@@ -104,15 +104,15 @@ export default function AIServices() {}
         <section className="py-20 px-4 sm:px-6 lg:px-8" />;
           <div className="max-w-7xl mx-auto" />;
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 
-              animate={{ opacity: 1, y: 0 ,}
+              animate={ opacity: 1, y: 0 ,}
 
-                  initial={{ opacity: 0, y: 20 ,}
+                  initial={ opacity: 0, y: 20 ,}
 
-                  animate={{ opacity: 1, y: 0 ,}
+                  animate={ opacity: 1, y: 0 ,}
 
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 ,}
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 ,}
 }
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group" />;
                   <div className="mb-6" />;
@@ -133,7 +133,7 @@ export default function AIServices() {}
                   </ul>
                   <motion&& motion.a
                     href={service && service.href}
-                    whileHover={{ x: 5 }}
+                    whileHover={ x: 5 }
         {/* CTA Section *,}
 }
         <section className="py-20 px-4 sm:px-6 lg:px-8" />;
@@ -145,8 +145,8 @@ export default /**;
  */;
 function AIServices() {} /> <Head /> <title /> AI Services | Zion Tech Group</title> </div>) )}</div>) )}</ul> </div> </motion.div> </div> </section> > <h2 className="text - 4xl md: text - 5xl font - bold text-white mb-6"  /> Our AI Service Portfolio </h2> <p className="text - xl text - gray - 400 max-w-3xl mx-auto"  /> Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )}</ul> <motion.a  /> Learn More <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ,
 }</div> </div> </section> <motion.div initial= {opacity: 0, coordinate_y: 20;}
-}animate= {{opacity: 1, coordinate_y: 0;}
-}transition= {{duration: 0.8, delay: 0.4;}
+}animate= {opacity: 1, coordinate_y: 0;}
+}transition= {duration: 0.8, delay: 0.4;}
 } /> <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6"  /> Ready to Transform Your Business with AI? </h2> <p className="text - xl text - gray-400 mb-8"  /> Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex - col sm:flex - row gap-4 justify-center"  /> <motion.button  /> Schedule Consultation </motion.button> <motion.button export default /**;
  * AIServices - Function description;
  */;
@@ -185,11 +185,11 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
         <section className="py - 20 px - 4 sm:px-6 lg:px-8" />;
           <div className="max-w-7xl mx-auto" />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 ,}
+              initial={ opacity: 0, coordinate_y: 20 ,}
 }
-              animate={{ opacity: 1, coordinate_y: 0 ,}
+              animate={ opacity: 1, coordinate_y: 0 ,}
 }
-              transition={{ duration: 0.8, delay: 0.2 ,}
+              transition={ duration: 0.8, delay: 0.2 ,}
 }
               className="text-center mb-16" />
 
@@ -203,11 +203,11 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8" />;
               {ai_services.map ((service, index) => (<motion.div;}
                   key={service.title}
-                  initial={{ opacity: 0, coordinate_y: 20 ,}
+                  initial={ opacity: 0, coordinate_y: 20 ,}
 }
-                  animate={{ opacity: 1, coordinate_y: 0 ,}
+                  animate={ opacity: 1, coordinate_y: 0 ,}
 }
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}
+                  transition={ duration: 0.6, delay: index * 0.1 ,}
 }
                   className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 8 hover:border - cyan - 500 / 50 transition-all duration-300 group" />
 
@@ -228,7 +228,7 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
                   </ul>;
                   <motion.a;
                     href={service.href}
-                    while_hover={{coordinate_x: 5 }
+                    while_hover={coordinate_x: 5 }
 }
                     className="inline - flex items - center text - cyan - 400 hover:text - cyan - 300 font - semibold group - hover:text - cyan-300 transition-colors" />
 
@@ -242,12 +242,12 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
         <section className="py - 20 px - 4 sm:px-6 lg:px-8" />;
           <div className="max - w-4xl mx-auto text-center" />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 ,}
+              initial={ opacity: 0, coordinate_y: 20 ,}
 }
-              animate={{ opacity: 1, coordinate_y: 0 ,}
+              animate={ opacity: 1, coordinate_y: 0 ,}
 }
 
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={ duration: 0.8, delay: 0.4 }
 
              />
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" />
@@ -258,16 +258,16 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center" />
                 <motion.button;
-whileHover={{ scale: 1.05 }}
-                  whileTap={{scale: 0.95 }
+whileHover={ scale: 1.05 }
+                  whileTap={scale: 0.95 }
 }
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300" />
 
                   Schedule Consultation;
                 </motion.button>;
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
 
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300"
                  />
@@ -280,8 +280,8 @@ whileHover={{ scale: 1.05 }}
               {ai_services.map ((service, index) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
 
                         {feature}
                       </li>))}

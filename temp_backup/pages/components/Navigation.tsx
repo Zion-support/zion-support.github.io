@@ -209,9 +209,9 @@ export default function Navigation() {
                 {/* Submenu */}
                 {activeSubmenu === item.title && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={ opacity: 0, y: 10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: 10 }
                     className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
                   >
                     <div className="grid grid-cols-1 gap-2">
@@ -270,9 +270,9 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: "auto" }
+            exit={ opacity: 0, height: 0 }
             className="lg:hidden border-t border-gray-200 py-4"
           >
             <div className="space-y-4">

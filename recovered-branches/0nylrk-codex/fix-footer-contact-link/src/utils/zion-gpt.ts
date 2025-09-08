@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
 
 export type ZionGPTUsage = {
@@ -12,8 +15,21 @@ export type ZionGPTUsage = {}
 export type ZionGPTUsage = {};
 export type ZionGPTUsage = {;
 
+<<<<<<< HEAD
 
 
+=======
+
+// This file handles interaction with the fine-tuned ZionGPT model
+
+import {supabase} from '@/integrations/supabase/client';
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+export type ZionGPTUsage = {
+
+export type ZionGPTUsage = {;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   modelId: string;
   tokensUsed: number;
   cost: number
@@ -29,12 +45,16 @@ export interface ModelConfig {
 
 export interface ModelConfig {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: ModelVersion;
   version: number;
   createdAt: string;
   baseModel: string;
+<<<<<<< HEAD
 
   purpose: string
   active: boolean
@@ -48,13 +68,30 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .eq('purpose', purpose)
       .eq('active', true)
 
+=======
+
+  id: ModelVersion;
+  version: number;
+  createdAt: string;
+  baseModel: string;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
         case 'resume': return 'zion-resume-enhancer-v1';
 
         case 'support': return 'zion-support-v1';
+<<<<<<< HEAD
 
+=======
+
+
+  } catch (error) {'
+    console && console.error('Error fetching active model:', error);'
+    return 'gpt-3 && 3.5-turbo', // Fallback to base model;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   modelId: string;
   tokensUsed: number;
@@ -72,10 +109,13 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
         cost: cost;
         feature: feature;
 
+<<<<<<< HEAD
         user_id: userId |null
         timestamp: new Date().toISOString()
       })
   } catch (error) {
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine-tuned ZionGPT model;'
@@ -131,9 +171,12 @@ export async function logModelUsage(;
     // Non-blocking - we don't want to fail the main operation;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 }
 // Calculate approximate cost based on token usage
@@ -141,7 +184,10 @@ function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt, ;
@@ -149,7 +195,19 @@ export async function callZionGPT({
   purpose;
   maxTokens = 500;
 
+<<<<<<< HEAD
   temperature = 0 && 0.7;
+=======
+  purpose: 'job' | 'resume' | 'support';
+  maxTokens?: number;
+  temperature?: number;
+  userId?: string;
+}): Promise<string> {}
+  try {}
+    // Dynamically get the proper model ID based on purpose;
+    const modelId = await getActiveModelId(purpose);
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       body: {
 
@@ -161,12 +219,22 @@ export async function callZionGPT({
     });
     if (error) throw error;
 
+<<<<<<< HEAD
     // Log usage for analytics
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         userId
       )
     }
+<<<<<<< HEAD
 
+=======
+    return data && data.completion
+  } catch (error) {
+
+    throw error
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 ;
@@ -299,6 +367,7 @@ export async function getActiveModelId(purpose:'job' | 'resume' | 'support'):Pro
 
   }
 
+  }
 }
 ;
 // Log usage of the fine-tuned model;
@@ -337,6 +406,7 @@ function calculateCost(modelId:string, tokens:number):number {;
 // Function to call ZionGPT models through Supabase Edge Function;
 export async function callZionGPT() { return null; }
 
+<<<<<<< HEAD
 
 
 
@@ -429,3 +499,41 @@ export async function callZionGPT({;
   }
 }
 
+=======
+}: {;
+  prompt: string,;'
+  purpose: 'job' | 'resume' | 'support',;
+  maxTokens?: number,;
+  temperature?: number,;
+  userId?: string;
+}): Promise<string> {;
+  try {;
+    // Dynamically get the proper model ID based on purpose;
+    const modelId = await getActiveModelId(purpose),;
+    // Call the edge function that will use the model;'
+    const { data, error } = await supabase.functions.invoke('zion-gpt', {;
+      body: {;
+        prompt,;
+        modelId,;
+        maxTokens,;
+        temperature;
+      }
+    }),;
+    if (error) throw error,;
+    // Log usage for analytics;
+    if (data.tokensUsed) {;
+      await logModelUsage(;
+        modelId,;
+        data.tokensUsed,;`
+        `${purpose}-generation`;
+        userId;
+      );
+    }
+;
+    return data.completion;
+  } catch (error) {;'
+    console.error('Error calling ZionGPT:', error);
+    throw error;
+  }
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

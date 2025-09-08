@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
 
   adminOnly?: boolean;
@@ -51,9 +54,12 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -67,10 +73,13 @@ import { useWhitelabel } from '@/context/WhitelabelContext',
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
 
+<<<<<<< HEAD
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
   children,
   adminOnly = false,
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   tenantAdminAllowed = false,
 
@@ -84,9 +93,12 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -109,6 +121,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
     return <Navigate to="/unauthorized" />
 
 
+<<<<<<< HEAD
+=======
+  }
+  return <>{children}</>
+}
+export default ProtectedRoute;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import React from 'react',;
@@ -125,8 +144,12 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
   adminOnly = false,;
 
+<<<<<<< HEAD
 
 
+=======
+import {use_auth} from '@/hooks / use_auth';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
 
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -185,7 +208,10 @@ if ( {) {}
 export default ProtectedRoute;
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
@@ -239,5 +265,8 @@ export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
 };
 
 export default ProtectedRoute;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

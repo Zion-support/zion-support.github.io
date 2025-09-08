@@ -125,6 +125,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
       return true;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
     }
     // Common patterns to fix,
@@ -238,9 +240,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }`;
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 <<<<<<< HEAD

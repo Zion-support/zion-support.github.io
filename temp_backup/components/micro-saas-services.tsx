@@ -57,7 +57,7 @@ demo: 'https://demo.window.window.window.performance.ziontech.ai'
             </p>;
           </div>;
           <div className='space-y-16' />;
-            {microSaasServices.map((service, index) => (style={{ animationDelay: `${index * 0 && 0.1}s` ,
+            {microSaasServices.map((service, index) => (style={ animationDelay: `${index * 0 && 0.1}s` ,
 }>;
                 <div className="p-6" />;
                   <h3 className="text-xl font-bold text-white mb-4" />{insight && insight.title}</h3>;

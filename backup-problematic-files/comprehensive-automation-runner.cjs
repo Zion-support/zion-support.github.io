@@ -1,34 +1,18 @@
 #!/usr/bin/env node
 /**
- * Comprehensive Automation Runner;
- * Runs all automation scripts and provides comprehensive testing and improvement;
+ * Comprehensive Automation Runner
+ * Runs all automation scripts and provides comprehensive testing and improvement
  */
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 class ComprehensiveAutomationRunner {
-  // TODO: Implement
-}
   constructor() {
-
+    this.logDir = path.join(__dirname, 'automation', 'logs');
     this.ensureLogDir();
     this.startTime = Date.now();
     this.results = {
@@ -38,27 +22,16 @@ class ComprehensiveAutomationRunner {
       optimizations: 0,
       errors: []
     };
-<<<<<<< HEAD
-  ensureLogDir() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-
-=======
   }
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
       fs.mkdirSync(this.logDir, { recursive: true });
     }
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message};
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Write to log file
     const logFile = path.join(this.logDir, 'comprehensive-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -66,36 +39,21 @@ class ComprehensiveAutomationRunner {
   async runCommand(command, description, timeout = 30000) {
     this.log(`🔧 ${description}`);
     try {
-<<<<<<< HEAD
-      const result = execSync(command, {
-        encoding: 'utf8',
-        stdio: 'pipe',
-        timeout: timeout
-=======
       const result = execSync(command, { 
         encoding: 'utf8', 
         stdio: 'pipe',
         timeout: timeout 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
-=======
-    // Write to log file;
-
-        timeout: timeout;)
-      });`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
-
+    } catch(error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       this.results.errors.push({
         command,
         description,
-        error: error.message;)
+        error: error.message
       });
       return { success: false, error: error.message };
-<<<<<<< HEAD
-
-=======
     }
   }
   async runSyntaxFixes() {
@@ -104,18 +62,16 @@ class ComprehensiveAutomationRunner {
       { command: 'npm run lint:fix', description: 'ESLint Auto-fix' },
       { command: 'npm run format', description: 'Prettier Code Formatting' },
       { command: 'npm run type-check', description: 'TypeScript Type Checking' }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     ];
     let fixes = 0;
     for (const task of syntaxTasks) {
       const result = await this.runCommand(task.command, task.description);
       if (result.success) {
         fixes++;
+      }
+    }
     this.results.syntaxFixes = fixes;
     return fixes;
-<<<<<<< HEAD
-
-=======
   }
   async runBuildProcess() {
     this.log('🏗️ Starting build process...');
@@ -123,32 +79,32 @@ class ComprehensiveAutomationRunner {
       { command: 'npm run clean', description: 'Clean Previous Builds' },
       { command: 'npm run build', description: 'Application Build' }
     ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     let buildSuccess = true;
     for (const task of buildTasks) {
+      const result = await this.runCommand(task.command, task.description);
       if (!result.success) {
         buildSuccess = false;
+      }
+    }
     this.results.buildSuccess = buildSuccess;
     return buildSuccess;
+  }
 
   async runTests() {
-<<<<<<< HEAD
-
-=======
     this.log('🧪 Running comprehensive tests...');
     const testTasks = [
       { command: 'npm test', description: 'Unit Tests' },
       { command: 'npm run test:coverage', description: 'Test Coverage' }
     ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     let testsPassed = 0;
     for (const task of testTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      if (result.success) {
         testsPassed++;
+      }
+    }
     this.results.testsPassed = testsPassed;
     return testsPassed;
-<<<<<<< HEAD
-
-=======
   }
   async runOptimizations() {
     this.log('⚡ Starting performance optimizations...');
@@ -156,21 +112,15 @@ class ComprehensiveAutomationRunner {
       { command: 'npm run analyze', description: 'Bundle Analysis' },
       { command: 'npm run security:audit', description: 'Security Audit' }
     ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     let optimizations = 0;
     for (const task of optimizationTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      if (result.success) {
         optimizations++;
+      }
+    }
     this.results.optimizations = optimizations;
     return optimizations;
-<<<<<<< HEAD
-
-    if (!fs.existsSync(scriptsDir)) {
-      fs.mkdirSync(scriptsDir, { recursive: true });
-    for (const script of additionalScripts) {
-      const scriptPath = path.join(scriptsDir, script.name);
-      fs.writeFileSync(scriptPath, script.content);
-
-=======
   }
   async createAdditionalScripts() {
     this.log('📝 Creating additional automation scripts...');
@@ -210,20 +160,10 @@ class DeploymentAutomation {
     }
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
   deployment.deploy().catch(console.error);
-<<<<<<< HEAD
-}`;
-module.exports = DeploymentAutomation;`;
-
-  const monitoring = new MonitoringAutomation();
-  monitoring.monitor().catch(console.error);
-module.exports = MonitoringAutomation;`;
-
-=======
 }
 module.exports = DeploymentAutomation;`;
   }
@@ -264,15 +204,11 @@ class BackupAutomation {
         fs.mkdirSync(backupDir, { recursive: true });
       }
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       const backupFile = path.join(backupDir, \`backup-\${timestamp}.json\`);
       const backupData = {
         timestamp: new Date().toISOString(),
         version: require('../package.json').version,
         files: this.getFileList()
-<<<<<<< HEAD
-
-=======
       };
       fs.writeFileSync(backupFile, JSON.stringify(backupData, null, 2));
       console.log('✅ Backup completed successfully');
@@ -283,7 +219,6 @@ class BackupAutomation {
   getFileList() {
     const files = [];
     const srcDir = path.join(__dirname, '..', 'src');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (fs.existsSync(srcDir)) {
       const walkDir = (dir) => {
         const items = fs.readdirSync(dir);
@@ -293,19 +228,13 @@ class BackupAutomation {
           if (stat.isDirectory()) {
             walkDir(fullPath);
           } else {
-  // TODO: Implement
             files.push(fullPath);
+          }
+        }
+      };
       walkDir(srcDir);
+    }
     return files;
-<<<<<<< HEAD
-  const backup = new BackupAutomation();
-  backup.backup().catch(console.error);
-module.exports = BackupAutomation;`;
-
-  const healthCheck = new HealthCheckAutomation();
-  healthCheck.healthCheck().catch(console.error);
-module.exports = HealthCheckAutomation;`;
-=======
   }
 }
 if (require.main === module) {
@@ -349,44 +278,33 @@ if (require.main === module) {
 }
 module.exports = HealthCheckAutomation;`;
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   async generateComprehensiveReport() {
     const duration = Date.now() - this.startTime;
     const report = {
-      timestamp: new Date().toISOString(),`;
+      timestamp: new Date().toISOString(),
       duration: `${duration}ms`,
       results: this.results,
-      summary: {,
-  totalSteps: 4,
+      summary: {
+        totalSteps: 4,
         successfulSteps: [
           this.results.syntaxFixes > 0,
           this.results.buildSuccess,
           this.results.testsPassed > 0,
-          this.results.optimizations > 0;]
+          this.results.optimizations > 0
         ].filter(Boolean).length,
-        failedSteps: this.results.errors.length;
+        failedSteps: this.results.errors.length
       },
       recommendations: this.generateRecommendations()
-<<<<<<< HEAD
-
-    return report;
-=======
     };
     const reportPath = path.join(this.logDir, 'comprehensive-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📄 Comprehensive report saved to: ${reportPath}`);
     return report;
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   generateRecommendations() {
     const recommendations = [];
     if (this.results.syntaxFixes === 0) {
       recommendations.push('Consider running syntax fixes to improve code quality');
-<<<<<<< HEAD
-
-  // TODO: Implement
-      // Run all automation steps;
-=======
     }
     if (!this.results.buildSuccess) {
       recommendations.push('Fix build issues to ensure application can be deployed');
@@ -406,17 +324,10 @@ module.exports = HealthCheckAutomation;`;
     this.log('🚀 Starting Comprehensive Automation Runner...');
     try {
       // Run all automation steps
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       await this.runSyntaxFixes();
       await this.runBuildProcess();
       await this.runTests();
       await this.runOptimizations();
-<<<<<<< HEAD
-      // Create additional scripts;
-      await this.createAdditionalScripts();
-      // Generate comprehensive report;
-      const report = await this.generateComprehensiveReport();
-=======
       // Create additional scripts
       await this.createAdditionalScripts();
       // Generate comprehensive report
@@ -432,29 +343,14 @@ module.exports = HealthCheckAutomation;`;
     }
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-      throw error;
-
-// Run if called directly;
+// Run if called directly
+if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
   runner.run().catch(console.error);
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-module.exports = ComprehensiveAutomationRunner;
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = ComprehensiveAutomationRunner;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

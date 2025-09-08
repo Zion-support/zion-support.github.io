@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
+
+
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync, spawn } = require("child_process");"const fs = require("fs")"const path = require("path")class AdvancedAppImprovementSuite { constructor() { this.projectRoot = process.cwd();" this.reportsDir = path.join(this.projectRoot, "improvement-reports");" this.logFile = path.join(this.reportsDir, "app-improvement.log"); this.ensureDirectories()} ensureDirectories() { if (true) {" fs.mkdirSync(this.reportsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString() { ) {" fs.mkdirSync(this.reportsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage);" fs.appendFileSync(this.logFile, logMessage + "\n")} async runCommand(command, description) {"` this.log(` Starting: ${description}`); try { const result = execSync(command, {" cwd: this.projectRoot," encoding: "utf8"," timeout: 300000 / 5 minutes timeout };);"` this.log(` Completed: ${description}`);" return { success: true, output: result }} catch (error) {"` this.log(` Failed: ${description} - ${error.message}`);" return { success: false, error: error.message }} } async optimizeBundleSize() {" this.log(" Optimizing bundle size."); const optimizations = [{" command: "npm run analyze"," description: "Bundle Analysis" }, {" command: "npm run build"," description: "Production Build" } ]; const results = []; for (const optimization of optimizations) { const result = await this.runCommand(optimization.command, optimization.description;); results.push({ .optimization, result })} return results} async improvePerformance() {" this.log(" Improving performance."); const performanceTasks = [{" command: "npm run lint:fix"," description: "Fix Linting Issues" }, {" command: "npm run type-check"," description: "TypeScript Type Check" } ]; const results = []; for (const task of performanceTasks) { const result = await this.runCommand(task.command, task.description;); results.push({ .task, result })} return results} async enhanceSecurity() {" this.log(" Enhancing security."); const securityTasks = [{" command: "npm audit --audit-level=moderate"," description: "Security Audit" }, {" command: "npm audit fix --force"," description: "Fix Security Vulnerabilities" } ]; const results = []; for (const task of securityTasks) { const result = await this.runCommand(task.command, task.description;); results.push({ .task, result })} return results} async runTests() {" this.log(" Running tests."); const testTasks = [{" command: "npm test"," description: "Run Test Suite" }, {" command: "npm run test:coverage"," description: "Generate Test Coverage" } ]; const results = []; for (const task of testTasks) { const result = await this.runCommand(task.command, task.description;); results.push({ .task, result })} return results} async generateReports() {" this.log(" Generating improvement reports."); const report = {" timestamp: new Date().toISOString()," bundleOptimization: await this.optimizeBundleSize()," performanceImprovements: await this.improvePerformance()," securityEnhancements: await this.enhanceSecurity()," testResults: await this.runTests() };" const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json";); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));"` this.log(` Report saved to: ${reportFile}`); return report} async run() {" this.log(" Starting Advanced App Improvement Suite."); try { const results = await this.generateReports(;);" this.log(" Advanced App Improvement Suite completed successfully!"); return results} catch (error) {"` this.log(` Advanced App Improvement Suite failed: ${error.message}`); throw error} }}if ( { const suite = new AdvancedAppImprovementSuite) { { const suite = new AdvancedAppImprovementSuite}(;); suite.run().catch(console.error)}module.exports = AdvancedAppImprovementSuite;"`"`
-=======
 #!/usr/bin/env node
-<<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-#!/usr/bin/env node;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-========
->>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:advanced-app-improvement-suite.cjs
-const { execSync, spawn } = require("child_process");
+<#!/usr/bin/env node;
+=>const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 class AdvancedAppImprovementSuite {}
@@ -28,91 +13,31 @@ class AdvancedAppImprovementSuite {}
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
     this.ensureDirectories()}
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-#!/usr/bin/env node
-
-const { execSync, spawn } = require("child_process");
-const fs = require("fs");
-<<<<<<< HEAD
-const path = require("path");"
-
-<<<<<<< HEAD
 
 
 #!/usr/bin/env node
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
-const path = require("path");
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-const path = require("path");
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 class AdvancedAppImprovementSuite {
   // TODO: Implement
 }
   constructor(projectRoot) {
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-    this.projectRoot = projectRoot || process.cwd();
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
-    this.reportsDir = path.join(this.projectRoot, "improvement-reports");
-    this.logFile = path.join(this.reportsDir, "app-improvement.log");
-<<<<<<< HEAD
-<<<<<<< HEAD
     this.ensureDirectories();
   }
 
-=======
-    this.startTime = new Date();
-    this.results = {};
-    this.ensureDirectories();
-  }
-
-<<<<<<< HEAD
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
-:backup-problematic-files/advanced-app-improvement-suite.cjs
-    }  }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
+
     }  }
 
-=======
-=======
     this.projectRoot = projectRoot || process.cwd();"
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.startTime = new Date();
     this.results = {};
     this.ensureDirectories();
@@ -120,172 +45,39 @@ class AdvancedAppImprovementSuite {
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-:backup-problematic-files/advanced-app-improvement-suite.cjs
-    }  }
-:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-:backup-problematic-files/advanced-app-improvement-suite.cjs;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    }  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n");
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
 
-=======
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
-    this.improvements = [];
-    this.errors = [];
-  }
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-  }
-
-<<<<<<< HEAD
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-=======
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
-<<<<<<< HEAD
-=======
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 log(message) {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message};`;
     fs.appendFileSync(this.logFile, logMessage + "\n")}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-  async runCommand(command, description) {
-
-      return { success: false, error: error.message };
-    }
-  }
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  async optimizeBundleSize() {
-    this.log("Optimizing bundle size...");
-    const optimizations = [
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-
-<<<<<<< HEAD
-  async optimizeBundle() {
-    this.log("📦 Optimizing bundle size...");
-    const tasks = [
-=======
-  async optimizeBundleSize() {
-    this.log("Optimizing bundle size...");
-    const optimizations = [
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
-    }  }
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n");
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
-    this.improvements = [];
-    this.errors = [];
-  }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  log(message) {
-<<<<<<< HEAD
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
-<<<<<<< HEAD
-=======
+
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message};
     console.log(logMessage);"
     fs.appendFileSync(this.logFile, logMessage + "\n");"
->>>>>>> origin/chore/fix-lint-and-merge
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-log(message) {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] ${message};`;
-    fs.appendFileSync(this.logFile, logMessage + "\n")}
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   async runCommand(command, description) {
     this.log(`Starting: ${description}`);
-=======
     const timestamp = new Date().toISOString(});`;
     const logMessage = `[${timestamp}] ${message};`;"
     fs.appendFileSync(this.logFile, logMessage + "\n")}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
   // TODO: Implement
       const result = execSync(command, {
@@ -294,401 +86,146 @@ log(message) {
         timeout: 300000 // 5 minutes timeout;)
 
       return { success: false, error: error.message };
-<<<<<<< HEAD
     }
   }
   async optimizeBundleSize() {
     this.log("Optimizing bundle size...");
     const optimizations = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
     this.log("Optimizing bundle size...");
     const optimizations = [
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
-=======
+
   async optimizeBundleSize() {"
     this.log("Optimizing bundle size...");"
     const optimizations = ["
     const optimizations = [
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       { command: "npm run analyze", description: "Bundle Analysis" },
       { command: "npm run build", description: "Production Build" }"]
     ];
     const results = [];
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-    for (const task of tasks) {
-      const result = await this.runCommand(task.command, task.description);
-      results.push({ ...task, ...result });
-=======
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-    for (const optimization of optimizations) {
-      const result = await this.runCommand(optimization.command, optimization.description);
-      results.push({ ...optimization, result });
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-    for (const optimization of optimizations) {
-      const result = await this.runCommand(optimization.command, optimization.description);
-      results.push({ ...optimization, result });
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    for (const optimization of optimizations) {
-      const result = await this.runCommand(optimization.command, optimization.description);
-      results.push({ ...optimization, result });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     for (const optimization of optimizations) {
       const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
+    for (const optimization of optimizations) {
+      const result = await this.runCommand(optimization.command, optimization.description);
+      results.push({ ...optimization, result });
+
     }
     return results;
   }
   async improvePerformance() {
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.log("⚡ Improving performance...");
-    const tasks = [
-=======
+
     this.log("Improving performance...");
     const performanceTasks = [
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-    this.log("Improving performance...");
-    const performanceTasks = [
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
-    this.log("Improving performance...");
-    const performanceTasks = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
       { command: "npm run lint:fix", description: "Fix Linting Issues" },
       { command: "npm run type-check", description: "TypeScript Type Check" }
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const results = [];
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
-=======
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
->>>>>>> origin/chore/fix-lint-and-merge
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
     }
     return results;
   }
   async enhanceSecurity() {
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.log("🔒 Enhancing security...");
-    const tasks = [
-=======
+
     this.log("Enhancing security...");
     const securityTasks = [
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-    this.log("Enhancing security...");
-    const securityTasks = [
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
-    this.log("Enhancing security...");
-    const securityTasks = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
       { command: "npm audit --audit-level=moderate", description: "Security Audit" },
       { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const results = [];
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
-=======
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
->>>>>>> origin/chore/fix-lint-and-merge
     for (const task of securityTasks) {
       results.push({ ...task, result });
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
     }
     return results;
   }
   async runTests() {
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.log("🧪 Running tests...");
-    const tasks = [
-=======
+
     this.log("Running tests...");
     const testTasks = [
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-    this.log("Running tests...");
-    const testTasks = [
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
-    this.log("Running tests...");
-    const testTasks = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
       { command: "npm test", description: "Run Test Suite" },
       { command: "npm run test:coverage", description: "Generate Test Coverage" }
     ];
     const results = [];
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-    for (const task of tasks) {
-      const result = await this.runCommand(task.command, task.description);
-      results.push({ ...task, ...result });
-=======
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-    for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
-      results.push({ ...task, result });
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-    for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
-      results.push({ ...task, result });
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 
     for (const task of testTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
+    for (const task of testTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, result });
+
     }
     return results;
   }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   async runTests() {
     this.log("Running tests...");
     const testTasks = [
       { command: "npm test", description: "Run Test Suite" },
       { command: "npm run test:coverage", description: "Generate Test Coverage" }
     ];
-<<<<<<< HEAD
+
     
-=======
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async generateReport(results) {
-    this.log("📊 Generating improvement reports...");
-    const report = {
-      timestamp: new Date().toISOString(),
-      bundleOptimization: results.bundleOptimization,
-      performanceImprovements: results.performanceImprovements,
-      securityEnhancements: results.securityEnhancements,
-      testResults: results.testResults
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-    const results = [];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     for (const task of testTasks) {
       results.push({ ...task, result });
     }
     return results;
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   async generateReports() {
     this.log("Generating improvement reports...");
-=======
     return results;
   async improvePerformance() {"
     this.log("Improving performance...");"
@@ -712,46 +249,19 @@ log(message) {
     for (const task of testTasks) {
   async generateReports() {"
     this.log("Generating improvement reports...");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const report = {
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   async generateReports() {
     this.log("Generating improvement reports...");
     const report = {
       timestamp: new Date().toISOString(),
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       bundleOptimization: await this.optimizeBundleSize(),
       performanceImprovements: await this.improvePerformance(),
       securityEnhancements: await this.enhanceSecurity(),
       testResults: await this.runTests()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
+
     };
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -761,27 +271,7 @@ log(message) {
     this.log("Starting Advanced App Improvement Suite...");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportFile}`);
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-console.log(`[${timestamp}] ${message}`);
 
-};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-
-  async start() {
-=======
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  async start() {}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.log("🚀 Starting Advanced App Improvement Suite...");
     
     try {
@@ -796,42 +286,23 @@ console.log(`[${timestamp}] ${message}`);
       this.log("✅ Advanced App Improvement Suite completed successfully!");
     } catch (error) {
       this.log(`❌ Advanced App Improvement Suite failed: ${error.message}`, 'ERROR');
-<<<<<<< HEAD
-=======
-    };
-  };
-};
-// Run if called directly;
-if (require.main === module) {}
-  const suite = new AdvancedAppImprovementSuite(process.cwd());
-  suite.start().catch(console.error);
-};
-module.exports = AdvancedAppImprovementSuite;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     console.log(`[${timestamp}] ${message}`);
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  async runPerformanceOptimizations() {
+    this.log('🚀 Running performance optimizations...');
 
     console.log(`[${timestamp}] ${message}`);
 
   }
   async runPerformanceOptimizations() {
     this.log('🚀 Running performance optimizations...');
-<<<<<<< HEAD
-    
-=======
+
 console.log(`[${timestamp}] ${message}`);
-=======
     };"
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 };
   async start() {}"
@@ -848,15 +319,12 @@ if (require.main === module) {}
   const suite = new AdvancedAppImprovementSuite(process.cwd());
   suite.start().catch(console.error);
 
-<<<<<<< HEAD
     console.log(`[${timestamp}] ${message}`);
 
   }
   async runPerformanceOptimizations() {
     this.log('🚀 Running performance optimizations...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     try {
       // Optimize images
       this.log('📸 Optimizing images...');
@@ -865,28 +333,14 @@ if (require.main === module) {}
     } catch (error) {
       this.log(`⚠️ Image optimization failed: ${error.message}`);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Bundle analysis
       this.log('📦 Analyzing bundle...');
       execSync('npm run analyze:bundle', { stdio: 'inherit' });
       this.improvements.push('Bundle analysis completed');
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-this.log(`Fatal error: ${error.message}`, 'ERROR');
-      this.generateReport();
-    }
-  }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       this.log(`⚠️ Bundle analysis failed: ${error.message}`);
     }
   }
@@ -980,12 +434,6 @@ this.log(`Fatal error: ${error.message}`, 'ERROR');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`📊 Improvement report saved to: ${reportPath}`);
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
   }
 
   async start() {
@@ -1003,15 +451,8 @@ this.log(`Fatal error: ${error.message}`, 'ERROR');
       this.log("✅ Advanced App Improvement Suite completed successfully!");
     } catch (error) {
       this.log(`❌ Advanced App Improvement Suite failed: ${error.message}`, 'ERROR');
-=======
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
+
     return report;
   }
 
@@ -1023,103 +464,40 @@ this.log(`Fatal error: ${error.message}`, 'ERROR');
       return results;
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
+
       throw error;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-<<<<<<< HEAD
-      throw error;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-      throw error;    }
-  }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
       throw error;
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-      this.log(`❌ Fatal error: ${error.message}`);
-      this.errors.push({ type: 'fatal', message: error.message });
-      process.exit(1);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-      this.log(`❌ Fatal error: ${error.message}`);
-      this.errors.push({ type: 'fatal', message: error.message });
-      process.exit(1);
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
+
 this.log(`Fatal error: ${error.message}`, 'ERROR');
       this.generateReport();
     }
   }
 this.log(`Fatal error: ${error.message}`, 'ERROR');
       this.generateReport();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
     }
   }
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run if called directly
-if (require.main === module) {
-  const suite = new AdvancedAppImprovementSuite(process.cwd());
-  suite.start().catch(console.error);
-=======
-if (require.main === module) {
-  const suite = new AdvancedAppImprovementSuite();
-  suite.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-}
-<<<<<<< HEAD
+
 module.exports = AdvancedAppImprovementSuite;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 if (require.main === module) {
   const suite = new AdvancedAppImprovementSuite();
   suite.run().catch(console.error);
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite
-<<<<<<< HEAD
 
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 
-=======
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-=======
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite;
 // Run the improvement suite;
@@ -1127,12 +505,7 @@ module.exports = AdvancedAppImprovementSuite;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     this.ensureDirectories();,
 
   ensureDirectories() {;
@@ -1140,10 +513,6 @@ module.exports = AdvancedAppImprovementSuite;
   fs.mkdirSync(this.reportsDir, { recursive: true });,
 
   log(message) {;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");,"
 
@@ -1157,35 +526,21 @@ module.exports = AdvancedAppImprovementSuite;
   command: "npm run analyze",
         description: "Bundle Analysis";,"
 },
-<<<<<<< HEAD
       {;
   command: "npx next-bundle-analyzer",
         description: "Next.js Bundle Analysis";,
 }
     ];
-=======
-
-        description: "Next.js Bundle Analysis";,"
-}]
->>>>>>> origin/chore/fix-lint-and-merge
     for (const opt of optimizations) {;
   const result = await this.runCommand(opt.command, opt.description);
       results.push({ ...opt, ...result });,
 
     return results;,
 
-<<<<<<< HEAD
   async improvePerformance() {;
   this.log("⚡ Improving performance...");
     // Create performance optimization script;
     const perfScript = `;
-=======
-  async improvePerformance() {;"
-  this.log("⚡ Improving performance...");"
-    // Create performance optimization script;`;
-    const perfScript = `;"
-
->>>>>>> origin/chore/fix-lint-and-merge
 class PerformanceOptimizer {;
   constructor() {;
   this.projectRoot = process.cwd();,
@@ -1219,12 +574,9 @@ optimizer.run().catch(console.error);`;
   this.log("🔒 Enhancing security...");"`;
     const securityScript = `;"
 
-<<<<<<< HEAD
   async enhanceSecurity() {;
   this.log("🔒 Enhancing security...");
     const securityScript = `;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 class SecurityEnhancer {;
 
   async addSecurityHeaders() {;"
@@ -1254,18 +606,9 @@ const cspHeader = {;"
 
 const enhancer = new SecurityEnhancer();
 
-<<<<<<< HEAD
   async improveSEO() {;
   this.log("🔍 Improving SEO...");
     const seoScript = `;
-=======
-    return await this.runCommand("node scripts/security-enhancer.cjs", "Security Enhancement");,"
-
-  async improveSEO() {;"
-  this.log("🔍 Improving SEO...");"`;
-    const seoScript = `;"
-
->>>>>>> origin/chore/fix-lint-and-merge
 class SEOImprover {;
 
   async generateSitemap() {;"
@@ -1286,7 +629,6 @@ class SEOImprover {;
     <loc>https://bolt.new.zion.app/contact</loc>;
     <changefreq>monthly</changefreq>;
     <priority>0.6</priority>;
-<<<<<<< HEAD
   </url>;
 </urlset>\`;
     fs.writeFileSync(path.join(this.projectRoot, "public/sitemap.xml"), sitemapContent);
@@ -1532,42 +874,14 @@ suite.run();
 })
 // Run the improvement suite
 suite.run().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-module.exports = AdvancedAppImprovementSuite;
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
+
+
 
 }
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:advanced-app-improvement-suite.cjs
-=======
   </url>;`;
 </urlset>\`;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

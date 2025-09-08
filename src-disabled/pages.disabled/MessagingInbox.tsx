@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { use_messaging } from '@/context / MessagingContext';
@@ -7,6 +8,8 @@ import { ConversationsList, ConversationDetailView } from '@/components / messag
 import { useIsMobile } from '@/hooks / use - mobile';
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {logErrorToProduction} from '@/utils/productionLogger';
 
@@ -17,6 +20,7 @@ import React, { useEffect, useState } from 'react',;
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react'
 
+<<<<<<< HEAD
 import { useMessaging } from '@/context/MessagingContext',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ConversationsList, ConversationDetailView } from '@/components/messaging',
@@ -25,6 +29,8 @@ import { toast } from 'sonner',
 import { Button } from '@/components/ui/button',
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export default function MessagingInbox() {
@@ -37,11 +43,16 @@ export default function MessagingInbox() {
     activeConversation
     setActiveConversation
 
+<<<<<<< HEAD
 
+=======
+    conversations;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     markAsRead;
     fetchConversations;
+<<<<<<< HEAD
 
     isLoading
   } = useMessaging();
@@ -49,6 +60,11 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile();
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null);
+=======
+export default function MessagingInbox() {
+
+    isLoading
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
       <div className="min-h-screen bg-zion-blue">
@@ -75,8 +91,17 @@ export default function MessagingInbox() {
               </Button>
             )}
           </div>
+<<<<<<< HEAD
 
 
+=======
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">"
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>`,
+              {/* Conversations List */}
+              {isLoading ? (
+                <div className="flex-1 flex items-center justify-center p-8">"
+                  <LoadingSpinner variant="primary" />"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
@@ -88,8 +113,11 @@ export default function MessagingInbox() {
               ) : (
                 <ConversationsList
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
 import { ProtectedRoute } from '@/components/ProtectedRoute',;
@@ -130,8 +158,12 @@ export default function MessagingInbox() {;
       return;
     }
 ;
+<<<<<<< HEAD
 
 
+=======
+    const roomId = `msg-${activeConversation.id}`,;`
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const roomId = `msg-${activeConversation.id}`,;
     setActiveCall(roomId),;
     // Show toast notification;
@@ -139,8 +171,12 @@ export default function MessagingInbox() {;
       description: "Initializing video call connection...";
     });
     // Navigate to video call page;
+<<<<<<< HEAD
 
 
+=======
+    router.push(`/call/${roomId}`), // Changed from navigate;`
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     router.push(`/call/${roomId}`), // Changed from navigate;
   };
   return (;
@@ -165,8 +201,15 @@ export default function MessagingInbox() {;
                 Start Call;
               </Button>;
             )}
+<<<<<<< HEAD
 
 
+=======
+          </div>;
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;`,
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -178,10 +221,31 @@ export default function MessagingInbox() {;
                   activeConversation={activeConversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
+<<<<<<< HEAD
 
 
                 />;
               )}
+=======
+                />;
+              )}
+;
+              {/* Conversation Detail */}
+              <ConversationDetailView />
+                <ConversationsList
+                  conversations = {conversations,}
+                  activeConversation = {activeConversation,}
+                  setActiveConversation = {setActiveConversation,}
+                  markAsRead = {markAsRead,}
+                />;
+              )}
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+;
+
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -195,8 +259,55 @@ export default function MessagingInbox() {;
         {isMobile && <div className="h-16"></div>}"
       </div>
     </ProtectedRoute>
+<<<<<<< HEAD
 
 
+=======
+              {/* Conversation Detail */}
+              <ConversationDetailView />;
+            </div>;
+          </div>;
+        </div>;
+        {/* Add extra bottom padding on mobile to account for the bottom nav */}
+        {isMobile && <div className="h-16"></div>}"
+      </div>;
+    </ProtectedRoute>;
+  );
+};
+loadData () ;
+}, [fetchConversations]);,
+}const roomId = `msg-$ {;`
+  activeConversation && activeConversation.id ;
+}`;`
+setActiveCall (roomId);
+//Show toast notification //Navigate to video call page router && router.push (`/call/$ {;`
+  roomId ;
+}`), //Changed from navigate ;`
+};
+return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1className= {"
+  `text-$ {`
+  isMobile ? '2xl' : '3xl' '
+}font-bold text-white flex items-center gap-2` ""
+}> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={"
+  startVideoCall ""
+}className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) ;
+}</div> </div>) : (<ConversationsListconversations= {
+  conversations
+}activeConversation= {
+  activeConversation
+}setActiveConversation= {
+  setActiveConversation
+}markAsRead= {
+  markAsRead
+}/>) ;
+}{/* Conversation Detail */ ;
+}<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
+}'"}"
+        logErrorToProduction ('Failed to load conversations:', { data: error }),'
+        {isMobile && <div className="h-16"></div>}
+      </div>
+    </ProtectedRoute>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }/>) ;
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
@@ -346,5 +457,10 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
 
   )
 }
+<<<<<<< HEAD
 
 
+=======
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba

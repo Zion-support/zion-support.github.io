@@ -1,7 +1,16 @@
 
 
+<<<<<<< HEAD
+=======
+  const load = $2;
+  useEffect(() => {
+    load()
+  }, []),
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [token, setToken] = useState('');
 
+<<<<<<< HEAD
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -24,6 +33,102 @@ const headers = useMemo(
             Authorization: `Bearer ${token}`
             'Content-Type': 'application/json'
 
+=======
+  const [items, setItems] = useState<GrantApplication[]>([]),
+  const [selected, setSelected] = useState<GrantApplication | null>(null),
+  const [milestones, setMilestones] = useState<Milestone[]>([]),
+
+  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, Content-Type': 'application/json } : { Content-Type': 'application/json }), [token]),
+
+  const load = $2;
+  useEffect(() => {
+    load()
+  }, []),
+
+  const setStatus = async (id: string, status: Under Review' | 'Approved | Rejected') => {
+    await fetch(`/api/grants/${id}/status`, { method: 'POST, headers, body: JSON.stringify({ status }) }),
+    load()
+  },
+
+  const saveMilestones = $2;
+    await fetch(`/api/grants/${selected.id}/milestones`, { method: POST', headers, body: JSON.stringify({ milestones }) }),
+    alert('Milestones saved)
+  },
+
+  const markComplete = $2;
+    await fetch($2);
+    const r = $2;
+    setSelected(r.record)
+  },
+
+  return (
+    <EnhancedLayout>
+
+
+export default function GrantsAdminPage() {;
+
+
+import {useEffect, useMemo, useState} from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication, Milestone } from '../../types/grants';
+
+export default function GrantsAdminPage() {;
+import { useEffect, useMemo, useState  } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication, Milestone } from '../../types/grants';
+import {useEffect, useMemo, useState} from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication, Milestone } from '../../types/grants';
+
+export default function GrantsAdminPage() {;
+
+export default function GrantsAdminPage() {
+  const [token, setToken] = useState('');
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [selected, setSelected] = useState<GrantApplication | null>(null);
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
+  const load = () => {
+    fetch(/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
+  }
+  useEffect(() => {
+    load()
+  }, []);
+  const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
+    await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) }),
+    load()
+
+  const setStatus = async (;
+    id: string,;
+    status: 'Under Review' | 'Approved' | 'Rejected';
+  ) => {;
+    await fetch(`/api/grants/${id}/status`, {;
+
+export default function GrantsAdminPage() {};
+  const [token, setToken] = useState('');
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [selected, setSelected] = useState<GrantApplication | null>(null);
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+
+  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
+
+  const load = () => {
+    fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
+  }
+  useEffect(() => {}
+
+const setStatus = async (
+    id: string;
+status: 'Under Review' | 'Approved' | 'Rejected'
+  ) => {}
+    await fetch(`/api/grants/${i,}
+}/status`, {
+      method: 'POST'}
+      headers;}
+body: JSON.stringify({ status })
+   ,
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     load()
   }, []);'
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {'`
@@ -39,6 +144,7 @@ const headers = useMemo(
       body: JSON && JSON.stringify({ status }),;
     });
 
+<<<<<<< HEAD
     load();  };
   const saveMilestones = async () => {;
     if (!selected) return;
@@ -65,6 +171,8 @@ const headers = useMemo(
     alert('Milestones saved');
   };
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;
     await fetch(;
@@ -73,10 +181,15 @@ const headers = useMemo(
     );
     const r = await fetch(`/api/grants/${selected && selected.id}`).then(x => x && x.json());
 
+<<<<<<< HEAD
     setSelected(r && r.record);  };
   return (
 
 
+=======
+    setSelected(r && r.record)
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types / grants';
@@ -290,7 +403,10 @@ if (return) {}
     const r = await fetch (`/api / grants/${selected.id}`).then (coordinate_x => x.json ());
     set_selected (r.record);  }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 const markComplete = async (milestoneId: string) => {
@@ -311,9 +427,26 @@ const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
 <h1 className = 'text-2xl font-semibold mb-4'    />Grants Admin</h1>
  ;
   return (
+<<<<<<< HEAD
 
     <EnhancedLayout    />    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
 
+=======
+    <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
+    const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
+    set_selected (r.record);
+  }
+;
+  return (
+    <EnhancedLayout>;'
+      <h1 className='text - 2xl font - semibold mb - 4'>Grants Admin</h1>;'
+      <div className='grid md:grid - cols - 3 gap - 6'>;'
+        <div className='md:col - span - 2'>;'
+          <div className='mb - 3 flex items - center gap - 2'>;
+            <input;'
+              className='border rounded p - 2';'
+    <EnhancedLayout />    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
     set_selected (r.record)
@@ -322,12 +455,19 @@ const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
   return (
     <EnhancedLayout    />;
 
+<<<<<<< HEAD
 
       <h1 className='text - 2xl font - semibold mb - 4'    />Grants Admin</h1>;
       <div className='grid md:grid - cols - 3 gap - 6'    />;
         <div className='md:col - span - 2'    />;
           <div className='mb - 3 flex items - center gap - 2'    />;
 
+=======
+      <h1 className='text - 2xl font - semibold mb - 4' />Grants Admin</h1>;
+      <div className='grid md:grid - cols - 3 gap - 6' />;
+        <div className='md:col - span - 2' />;
+          <div className='mb - 3 flex items - center gap - 2' />;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <input;
               className='border rounded p - 2';
               placeholder='Admin Token';
@@ -340,6 +480,7 @@ const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
               className='border rounded p-2'
               placeholder='Admin Token'
               value={token}
+<<<<<<< HEAD
 
               on_change={e =    /> set_token (e.target.value)}
             />;
@@ -389,12 +530,73 @@ className='px-2 py-1 border rounded'
                       onClick={() =    /> setSelected(g)}
 
 
+=======
+              on_change={e => set_token (e.target.value)}
+            />;
+          </div>;'
+          <div className='grid gap - 3'>;
+            {items.map (g => (
+              <div;
+                key={g.id}'`
+                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`}
+              >;'
+                <div className='flex items - center justify - between'>;
+                  <div>;'
+                    <div className='font - medium'>{g.project_name}</div>;'
+                    <div className='text - xs text - gray - 600'>;
+                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`}
+              >;
+                <div className='flex items - center justify - between'>;
+                  <div>;
+                    <div className='font - medium'>{g.project_name}</div>;'
+                    <div className='text - xs text - gray - 600'>;'
+              placeholder='Admin Token;
+              value={token}
+              on_change={e => set_token (e.target.value)}
+            />;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     >;
                       Milestones;
                     </button>                  </div>;
                 </div>;
+<<<<<<< HEAD
 
 
+=======
+              </div>))}                  <div className="flex gap-2">;
+                    <button className="px-2 py-1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
+                    <button className="px - 2 py - 1 bg - emerald-600 text-white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
+                    <button className="px - 2 py - 1 bg - red-600 text-white rounded" on_click={() => set_status (g.id, 'Rejected')}>Reject</button>;
+                    <button className="px-2 py-1 border rounded" on_click={() => set_selected (g)}>Milestones</button>;
+          </div>;
+        </div>;
+        <div>;
+          <div className='border rounded p-3'>;
+            <h2 className='font-medium mb-2'>Milestone Planner</h2>;
+            {selected ? (;
+              <div className='space-y-2'>;
+                {(milestones && milestones.length === 0;
+                  ? selected && selected.milestones || [];
+                  : milestones;
+                ).map((m, idx) => (;
+                  <div key={m && m.id || idx} className='border rounded p-2'>;
+                    <input
+                      className='w-full border rounded p-2 mb-2'
+                      placeholder='Title'
+                      value={m && m.title}
+                      onChange={e =>;
+                        setMilestones(ms => {;
+                          const copy = ms && ms.length;
+                            ? [...ms];
+                            : [...(selected && selected.milestones || [])];
+                          copy[idx] = { ...copy[idx], title: e && e.target.value };
+              </div>))}                  <div className="flex gap - 2">;
+                    <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
+                    <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
+                    <button className="px - 2 py - 1 bg - red - 600 text - white rounded" on_click={() => set_status (g.id, 'Rejected')}>Reject</button>;
+                    <button className="px - 2 py - 1 border rounded" on_click={() => set_selected (g)}>Milestones</button>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 </div>;
               </div>))}
             {items.length === 0 && (<div className='text - sm text - gray - 600'>;
@@ -459,6 +661,7 @@ className='px-2 py-1 border rounded'
                       on_change={e =    />;
                         set_milestones (ms = > ;
   const copy = ms.length;
+<<<<<<< HEAD
 
                             ? [...ms];
 
@@ -474,8 +677,44 @@ className='px-2 py-1 border rounded'
 
                     />;
 
+=======
+                            ? [...ms];
+
+                            : [...(selected.milestones || [])];
+                          copy[idx] = { ...copy[idx], "title": e.target.value
+}
+                          return copy;
+                        })}
+                    />;
+                    <textarea;
+                      className='w - full border rounded p - 2 mb - 2';'
+                      placeholder='Description';'
+                      value={m.description || ''}
+                      on_change={e =>;
+                        set_milestones (ms => {const copy = ms.length;
+                            ? [...ms];
+                            : [...(selected.milestones || [])];
+
+                          copy[idx] = {...copy[idx],"description": e.target.value}
+                          return copy;
+                        });
+                      }
+                    />;'
+                        value={m && m.dueDate || ''}
+                        onChange={e =>;
+                          setMilestones(ms => {;
+                            const copy = ms && ms.length;
+                              ? [...ms];
+                              : [...(selected && selected.milestones || [])];
+                            copy[idx] = {;
+                              ...copy[idx],;
+                              dueDate: e && e.target.value,;
+                            };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <div className='grid grid - cols - 2 gap - 2'>;
                       <input;'
+                    <div className='grid grid - cols - 2 gap - 2'>;'
+                      <input;
                         className='border rounded p - 2';'
                         placeholder='Due date (YYYY - MM - DD)';'
                         value={m.due_date || ''}
@@ -488,7 +727,18 @@ className='px-2 py-1 border rounded'
                               ...copy[idx],
                               due_date: e.target.value,
                             }
+<<<<<<< HEAD
 
+=======
+                      className='w - full border rounded p - 2 mb - 2';
+                      placeholder='Description';
+                      value={m.description || ''}
+                      on_change={e =    />;
+                        set_milestones (ms = > ;
+  const copy = ms.length;
+                            ? [...ms];}
+                            : [...(selected.milestones || [])];}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                           copy[idx] = {...copy[idx],description: e.target.value,}
                           return copy;
                         })}
@@ -501,6 +751,7 @@ className='px-2 py-1 border rounded'
                         on_change={e =    />;
                           set_milestones (ms = > ;
   const copy = ms.length;
+<<<<<<< HEAD
 
                               ? [...ms];}
                               : [...(selected.milestones || [])];}
@@ -508,6 +759,19 @@ className='px-2 py-1 border rounded'
                             copy[idx] = {...copy[idx],due_date: e.target.value,}
                             return copy;
                           })}
+=======
+                              ? [...ms];
+                              : [...(selected.milestones || [])];
+
+                            copy[idx] = {
+                              ...copy[idx],
+                              due_date: e.target.value,
+                            }
+                            copy[idx] = {...copy[idx],"due_date": e.target.value}
+                            return copy;
+                          });
+                        }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       />;
 
                       <input;
@@ -515,6 +779,7 @@ className='px-2 py-1 border rounded'
                         placeholder='Tranche (amount)';
                         type='number';
                         value={m.tranche_amount || 0}
+<<<<<<< HEAD
 
                         on_change={e =    />;
                           set_milestones (ms = > ;
@@ -530,11 +795,40 @@ className='px-2 py-1 border rounded'
 
                     </div>;
 
+=======
+                        on_change={e =>;
+                          set_milestones (ms => {const copy = ms.length;
+                              ? [...ms];
+                              : [...(selected.milestones || [])];
+                        on_change={e =>;
+                          set_milestones (ms => {}
+                            const copy = ms.length;
+                              ? [...ms];
+                              : [...(selected.milestones || [])];
+                            copy[idx] = {}
+                              ...copy[idx],
+                              tranche_amount: Number (e.target.value),
+                            }
+
+                            copy[idx] = {...copy[idx],"tranche_amount": Number (e.target.value)}
+                            return copy;
+                          })}
+                      />;
+                    </div>>
+
+                    <div className='mt - 2 flex items - center gap - 2'>;
+                      <button;
+                        className='px - 2 py - 1 border rounded';
+                        on_click={() => mark_complete (m.id!)}
+                        disabled={!m.id}
+                      >;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                         Mark Complete;
                       </button>;
                     </div>;
 
 
+<<<<<<< HEAD
                 <div className='flex gap - 2 mt - 2'>;
                   <button;'
                     className='px - 2 py - 1 border rounded';
@@ -547,10 +841,26 @@ className='px-2 py-1 border rounded'
                           title: '',
                           tranche_amount: 0,'
 
+=======
+                  </div>))}
+                <div className='flex gap - 2 mt - 2'    />;
+                  <button;
+                    className='px - 2 py - 1 border rounded';
+                    on_click={() =    />;
+                      set_milestones (ms => [;
+
+                        ...(ms.length ? ms : selected.milestones || []),}
+                        {}
+                          id: `${Date.now ()}-${Math.random (,}
+}`,
+                          title: '',
+  tranche_amount: 0,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                           tranche_currency: 'USDC',
                         } as any,
                       ]);
                     }
+<<<<<<< HEAD
 
 
     <EnhancedLayout>
@@ -607,27 +917,98 @@ className='px-2 py-1 border rounded'
                   <button className=px-2 py-1 border rounded onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones |[])), { id: `${Date.now()}-${Math.random()}`, title: ', trancheAmount: 0, trancheCurrency: 'USDC } as any])}>Add Milestone</button>"
                   <button className="px-2 py-1 bg-blue-600 text-white rounded onClick={saveMilestones}>Save Milestones</button>
                 </div>
+=======
+                  >;
+                    Add Milestone;
+                  </button>;
+
+            )}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             )}
 
 
+<<<<<<< HEAD
+=======
+            )}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           </div>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 
 
+=======
+);
+}
+}
+
+            ) : (<div className='text-sm text-gray-600'>;
+                Select a grant to plan milestones.;
+              </div>;
+            )}
+          </div>;
+        </div>;
+      </div>;
+    </EnhancedLayout>;
+                    onClick={saveMilestones}>;
+
+                    onClick={saveMilestones}>;
+                    Save Milestones;
+                  </button>;
+                </div>;
+              </div>;
+            ) : (<div className='text-sm text-gray-600'>;
+                Select a grant to plan milestones.;
+              </div>            )}          </div>;
+        </div>;
+        <div>;
+          <div className='border rounded p-3'>;
+            <h2 className='font-medium mb-2'>Milestone Planner</h2>;
+            {selected ? (<div className='space-y-2'>;
+                {(milestones && milestones.length === 0 ? (selected && selected.milestones || []) : milestones).map((m, idx) => (<div key={m && m.id || idx} className='border rounded p-2'>;
+                    <input className='w-full border rounded p-2 mb-2' placeholder='Title' value={m && m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e && e.target.value }, return copy })} />;
+                    <textarea className='w-full border rounded p-2 mb-2' placeholder='Description' value={m && m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e && e.target.value }, return copy })} />;
+                    <div className='grid grid-cols-2 gap-2'>;
+                      <input className='border rounded p-2' placeholder='Due date (YYYY-MM-DD)' value={m && m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e && e.target.value }, return copy })} />;
+                      <input className='border rounded p-2' placeholder='Tranche (amount)' type='number' value={m && m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e && e.target.value) }, return copy })} />;
+                    </div>;
+                    <div className='mt-2 flex items-center gap-2'>;
+                      <button className='px-2 py-1 border rounded' onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
+                    </div>;
+                  </div>;
+                ))}
+                <div className='flex gap-2 mt-2'>;
+                  <button className='px-2 py-1 border rounded' onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
+                  <button className='px-2 py-1 bg-blue-600 text-white rounded' onClick={saveMilestones}>Save Milestones</button>;
+                </div>;
+              </div>;
+            ) : (<div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;
+            )}
+          </div>;
+        </div>;
+      </div>;
+    </EnhancedLayout>;
+  ))}
+
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   );
 }
 
+<<<<<<< HEAD
 
 }
+=======
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
-}
   );
 }
+<<<<<<< HEAD
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -671,3 +1052,5 @@ className='px-2 py-1 border rounded'
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

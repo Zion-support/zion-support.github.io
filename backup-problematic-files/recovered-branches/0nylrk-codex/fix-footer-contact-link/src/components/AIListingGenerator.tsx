@@ -120,6 +120,7 @@ pr-12325
 </p>
           </p>;
 
+<<<<<<< HEAD
         </CardHeader>;
         <CardContent className="space-y-4">;
           <div className="space-y-2">;
@@ -441,3 +442,13 @@ toast ({
 }</div>) 
 }
 
+=======
+        <CardContent className="space-y-4">;"
+          <div className="space-y-2">;"
+            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;"
+            <Input;"
+              id="title";"
+              value={title})"
+
+              onChange={(e) => handleInputChange(e, 'title')}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

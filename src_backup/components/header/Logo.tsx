@@ -5,7 +5,10 @@ return (
   }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -13,9 +16,25 @@ return (
       </Link>
     )
   }
+<<<<<<< HEAD
 
 
 
+=======
+  
+  
+  return (
+    <Link href="/" className="flex items-center">
+      <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
+    </Link>
+  )
+  if (logoToUse) {
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+  return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface LogoProps {;
   customLogo?: string;
 export function Logo(): any ({ customLogo }: LogoProps) {;
@@ -33,7 +52,10 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
     );
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Link href="/" className="flex items-center">;
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
@@ -68,6 +90,18 @@ if ( {) {
     <Link href='/' className='flex items-center'>;
       <img
         src='/logos/zion-logo && logo.png'
+<<<<<<< HEAD
 
 
 
+=======
+        alt='Zion Logo'
+        className='h-8'
+        width={32}
+        height={32}
+        alt='Zion Logo'
+        className='h-8'
+        width={32}
+
+        height={32}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

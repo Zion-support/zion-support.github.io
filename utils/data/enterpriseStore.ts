@@ -11,7 +11,7 @@ const seedCompany: CompanyRecord = $2;
     seatsUsed: 3,
     usageLimits: {
       monthlyJobPosts: 50,
-      budgetCapUsd: 10000}},
+      budgetCapUsd: 10000},
   members: [
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
@@ -42,7 +42,7 @@ export const store = $2;
         tier: 'teams',
         seatsPurchased: 10,
         seatsUsed: 0,
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000}},
+        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000},
       members: [],
       activity: [],
       invoices: []},

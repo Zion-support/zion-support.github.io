@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {;
   application: JobApplication;
@@ -9,10 +12,13 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
   const score = application && application.match_score || 0;
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -26,8 +32,11 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
       {score ? `${score}%` : "Not scored"}
     </span>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   )
 
 import { JobApplication } from "@/types/jobs",;
@@ -36,8 +45,11 @@ interface ScoreBadgeProps {;
 }
 ;
 
+<<<<<<< HEAD
 export function ScoreBadge({ application }: ScoreBadgeProps) {;
   const score = application.match_score || 0,;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   // Determine color based on score;
 
@@ -54,12 +66,15 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
     </span>;
 
 
+<<<<<<< HEAD
 
 import { JobApplication  } from '@/types / jobs';
 interface ScoreBadgeProps {
   application: JobApplication;
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
 
@@ -71,10 +86,31 @@ interface ScoreBadgeProps {
     </span>;"`;
 pr-12325
     </span>);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 ;
 
 
+<<<<<<< HEAD
 
 
+=======
+import { JobApplication } from "@/types/jobs",;
+;
+interface ScoreBadgeProps {;
+  application:JobApplication;
+}
+;
+
+
+      {score ? `${score}%` : "Not scored"}
+    </span>;
+  );
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

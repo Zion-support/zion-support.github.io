@@ -1,26 +1,6 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -211,123 +191,28 @@ class HealthMonitor {
       process.exit(1);
 // Run the health monitor;
 const monitor = new HealthMonitor();
-<<<<<<< HEAD
+
+#!/usr/bin/env node;
 monitor.run().catch(error => {)
 
-=======
-monitor.run().catch(error => {
-  process.exit(1);
-});
-#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");const log = (message) => { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] Health Monitor: ${message}`);};const runCommand = (command, description) => { try {` log(`Starting: ${description}`); const output = execSync(command, { " encoding: "utf8", " stdio: "pipe", cwd: process.cwd() });` log(`Completed: ${description}`); return { success: true, output }; } catch (error) {` log(`Failed: ${description} - ${error.message}`); return { success: false, error: error.message }; }};const checkSystemHealth = () => {" log("Checking system health"); / Check if the application is running" const appCheck = runCommand("curl -f http:/localhost:3000 | echo "App not responding"", "Checking application health"); / Check disk space" const diskCheck = runCommand("df -h .", "Checking disk space"); / Check memory usage" const memoryCheck = runCommand("free -m", "Checking memory usage"); return { app: appCheck.success, disk: diskCheck.success, memory: memoryCheck.success, overall: appCheck.success && diskCheck.success && memoryCheck.success };};const generateHealthReport = (results) => { const report = { timestamp: new Date().toISOString(), system: results.system, overall: {" status: results.system.overall ? "HEALTHY" : "UNHEALTHY" } }; / Save report" const reportPath = "logs/pm2/health-report.json"; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));` log(`Health report saved to ${reportPath}`); return report;};const main = async () => {" log("Starting Health Monitor Process"); / Check system health const systemResults = checkSystemHealth(); / Generate comprehensive report const results = { system: systemResults }; const report = generateHealthReport(results); " if (report.overall.status === "HEALTHY") {" log("System health check passed: All systems operational"); } else {" log("System health check failed: Issues detected"); } " log("Health Monitor Process completed");};/ Handle process termination"process.on("SIGINT", () => {" log("Health Monitor Process interrupted"); process.exit(0);});"process.on("SIGTERM", () => {" log("Health Monitor Process terminated"); process.exit(0);});/ Run the main functionmain().catch(error => {` log(`Health Monitor Process failed: ${error.message}`); process.exit(1);});'"`'"`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
-#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 /**
  * Health Monitor Script for PM2;
  * Replaces GitHub Actions health monitoring workflows;
  * Runs every 5 minutes to monitor system health;
-<<<<<<< HEAD
- */"
-=======
- */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const log = (message) => {}
   const timestamp = new Date().toISOString();
 };
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+ */"
 
-<<<<<<< HEAD
 
 const log = (message) => {}
   
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const log = (message) => {}
-  const timestamp = new Date().toISOString();
-};
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
@@ -344,29 +229,7 @@ const runCommand = (command, description) => {}
     return { success: false, error: error.message };
   };
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 const checkSystemHealth = () => {}
   log('Checking system health');
   // Check if the application is running;
@@ -375,17 +238,6 @@ const checkSystemHealth = () => {}
   const diskCheck = runCommand('df -h .', 'Checking disk space');
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 const checkSystemHealth = () => {}
   log('Checking system health');
@@ -399,10 +251,7 @@ const checkSystemHealth = () => {}
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
   
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
+
 const checkSystemHealth = () => {}
   log('Checking system health');
   // Check if the application is running;
@@ -411,193 +260,46 @@ const checkSystemHealth = () => {}
   const diskCheck = runCommand('df -h .', 'Checking disk space');
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return {}
     app: appCheck.success,
     disk: diskCheck.success,
     memory: memoryCheck.success,
     overall: appCheck.success && diskCheck.success && memoryCheck.success;
-<<<<<<< HEAD
-=======
-  };
-};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
 const generateHealthReport = (results) => {}
   const report = {}
     system: results.system,
     overall: {}
-<<<<<<< HEAD
 
-  // Save report;
-  const reportPath = 'logs/pm2/health-report.json';
-=======
-      status: results.system.overall ? 'HEALTHY' : 'UNHEALTHY'
-    };
-  };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
+
   
   
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
   
   
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-  
-  
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-  
-  
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Save report;
   const reportPath = 'logs/pm2/health-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Health report saved to ${reportPath}`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   return report;
 };
 const main = async () => {}
   log('Starting Health Monitor Process');
   // Check system health;
   const systemResults = checkSystemHealth();
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   
   return report;
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+  // Save report;
+  const reportPath = 'logs/pm2/health-report.json';
 
 const main = async () => {}
   log('Starting Health Monitor Process');
@@ -608,76 +310,22 @@ const main = async () => {}
   // Check system health;
 
   // Check system health;
-<<<<<<< HEAD
-  // Generate comprehensive report;
-  const results = {}
-    system: systemResults;
-=======
-  const systemResults = checkSystemHealth();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   // Generate comprehensive report;
   const results = {}
     system: systemResults;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const report = generateHealthReport(results);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  const report = generateHealthReport(results);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-  
-  
-  
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-  const report = generateHealthReport(results);
-=======
   
   const report = generateHealthReport(results);
   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  
+  
+
+  const report = generateHealthReport(results);
+  
+  const report = generateHealthReport(results);
+  
   if (report.overall.status === 'HEALTHY') {}
     log('System health check passed: All systems operational');
   } else {}
@@ -685,226 +333,55 @@ const main = async () => {}
   };
   log('Health Monitor Process completed');
 };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/chore/fix-lint-and-merge
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 // Handle process termination;
 
   log('Health Monitor Process interrupted');
   process.exit(0);
-<<<<<<< HEAD
-=======
-}
-});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
   process.exit(0);
 }
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 
 
-<<<<<<< HEAD
+
+
+
+
+
 // Run the main function;
 
 });});
 `;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
+});});
+});});
+});
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+});});
 // Run the main function;
-main().catch(error => {})
-  log(`Health Monitor Process failed: ${error.message}`);
-  process.exit(1);
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
+
 });});
-});});
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-});
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
-});});
-=======
-});
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-});});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-});
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-});});
-});});
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+`;

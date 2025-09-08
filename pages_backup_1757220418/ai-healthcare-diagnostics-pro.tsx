@@ -611,4 +611,14 @@ const AIHealthcareDiagnosticsPro: React.FC = $2;
             transition = $2;
 
 export default AIHealthcareDiagnosticsPro,
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+export default AIHealthcareDiagnosticsPro,
+=======
+export default AIHealthcareDiagnosticsPro,
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

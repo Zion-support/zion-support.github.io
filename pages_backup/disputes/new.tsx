@@ -4,6 +4,7 @@ class ErrorBoundary extends React.Component {}
     this.state = { hasError: false };
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -13,24 +14,46 @@ class ErrorBoundary extends React.Component {}
   render() {
     if (this.state.hasError) {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
 
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 '
 import {useCurrentUser} from '../../utils/auth';
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+import {useRouter} from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import {useCurrentUser} from '../../utils/auth';
+
+
+import { useRouter } from 'next/router';
+import { useCurrentUser } from '../../utils/auth';
+
+  const user = useCurrentUser();
+
+  const [projectId, setProjectId] = useState(qProjectId || '');
+  const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
+  const user = useCurrentUser();
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
@@ -38,6 +61,7 @@ import {useCurrentUser} from '../../utils/auth';
   const [files, setFiles] = useState<File[]>([]);
 
 
+<<<<<<< HEAD
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(;
     clientId || (user && user.role === 'client' ? user && user.id : '');
@@ -50,12 +74,15 @@ import {useCurrentUser} from '../../utils/auth';
     if (!projectId || !description || !clientUserId || !talentUserId);
       return alert('Please fill required fields');    setSubmitting(true);
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     try {;
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
 
         headers: { 'Content-Type': 'application/json' },;
 
+<<<<<<< HEAD
         body: JSON && JSON.stringify({;
           projectId,;
           entityType,;
@@ -68,6 +95,8 @@ import {useCurrentUser} from '../../utils/auth';
         }),;
       });      if (!res && res.ok) throw new Error('Failed to create');
       const { dispute } = await res && res.json();
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       if (files && files.length > 0) {;
         const filePayload = await Promise && Promise.all(;
@@ -88,6 +117,7 @@ import {useCurrentUser} from '../../utils/auth';
           method: 'POST',;'
           headers: { 'Content-Type': 'application/json' },;
 
+<<<<<<< HEAD
           body: JSON && JSON.stringify({ files: filePayload }),;
         });
       }
@@ -99,6 +129,8 @@ import {useCurrentUser} from '../../utils/auth';
       setSubmitting(false);    }
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [talentUserId, setTalentUserId] = useState(talentId || '');
 const [clientUserId, setClientUserId] = useState(
     clientId || (user.role === 'client' ? user.id : '')
@@ -113,17 +145,23 @@ if (!projectId || !description || !clientUserId || !talentUserId)
       return alert('Please fill required fields');
     setSubmitting(true);
 
+<<<<<<< HEAD
 import {use_router} from 'next / router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
 
 
+<<<<<<< HEAD
 const REASONS = [
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -132,7 +170,60 @@ const REASONS = [
   'Other',
 ] as const;
 
+<<<<<<< HEAD
 
+=======
+
+;
+type ReasonType = (typeof REASONS)[number];
+;
+export default /**;
+ * NewDisputePage - Function description;
+ */
+function NewDisputePage() {}
+  const router = use_router ();
+  const {}
+    project_id: qProjectId,
+    entity_type,
+    entity_id,
+    talent_id,
+    client_id,
+  } = router.query as Record < string, string>;  const user = useCurrentUser ();
+;'
+  const [project_id, setProjectId] = useState (qProjectId || '');'
+  const [reason, set_reason] = useState < ReasonType>('Scope Disagreement');'
+  const [reason_details, setReasonDetails] = useState ('');'
+  const [description, set_description] = useState ('');
+  const [files, set_files] = useState < File[]>([]);'
+  const [talentUserId, setTalentUserId] = useState (talent_id || '');
+  const [clientUserId, setClientUserId] = useState ('
+    client_id || (user.role === 'client' ? user.id : ''));
+  const [submitting, set_submitting] = useState (false);
+;
+  useEffect (() => {}
+    if (setProjectId (qProjectId)) {}
+  $2;
+}  }, [qProjectId]);
+;
+  async /**
+ * handle_submit - Function description;
+ */
+function handle_submit() {}
+    e.prevent_default ();
+    if ('
+      return alert ('Please fill required fields')) {}
+  $2;
+}    set_submitting (true);
+    try {'
+      const res = await fetch ('/api / disputes', {'
+        method: 'POST',
+
+  return (
+
+    <EnhancedLayout>;'
+      <div className='max - w-2xl mx - auto'>;'
+        <h1 className='text - 2xl font - semibold mb - 4'>Raise a Dispute</h1>;'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <form on_submit={handle_submit} className='space - y-4'>;
           <div>;'
             <label className='block text - sm font - medium'>Project ID</label>;
@@ -164,23 +255,40 @@ const REASONS = [
                 on_change={e => setTalentUserId (e.target.value)}
                 required;'
                 className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               />;
             </div>;
           </div>;
           <div>;
+<<<<<<< HEAD
 
 
 
+=======
+              onChange={e => setFiles(Array && Array.from(e && e.target.files || []))}
+              onChange={e => setFiles(Array && Array.from(e && e.target.files || []))}'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               className='mt-1';
             />;
           </div>;'
           <div className='pt-2'>;
+<<<<<<< HEAD
 
 
 
+=======
+            <button
+              disabled={submitting}
+              className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
+            <button;
+              disabled={submitting}'
+              className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <label className='block text - sm font - medium'>Reason</label>;
             <select;
               value={reason}
@@ -227,20 +335,31 @@ const REASONS = [
               disabled={submitting}'
               className='px - 4 py - 2 rounded bg - blue - 600 text - white hover:bg - blue - 700 disabled:opacity - 50';
 
+<<<<<<< HEAD
             >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>          </div>;
         </form>;
       </div>;
 
+<<<<<<< HEAD
 
 
+=======
+
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = reject;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 function toBase64(): any (file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     reader && reader.onload = () => resolve(String(reader && reader.result));
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
+<<<<<<< HEAD
 
 
   });
@@ -260,6 +379,15 @@ const reader = new FileReader ();
 ;
 
 
+=======
+  });
+}
+}
+
+
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   } catch (error) {
     console.error("Error:", error);
 
@@ -268,6 +396,9 @@ const reader = new FileReader ();
 }
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

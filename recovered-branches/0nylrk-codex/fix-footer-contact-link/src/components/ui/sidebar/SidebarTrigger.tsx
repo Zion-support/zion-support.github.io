@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 
 import {Button} from "@/components/ui/button";
@@ -11,20 +14,37 @@ import { Button } from "@/components/ui/button",
 import { Menu, X } from "lucide-react",
 import { useSidebar } from "./sidebar-context",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
 
 
+<<<<<<< HEAD
 
+=======
+  return (
+    <Button"
+      variant="ghost""
+      size="icon"
+
+import React from "react",;
+
+  className?: string;
+interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
+  className?: string
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
 
 
+<<<<<<< HEAD
 
 
 
@@ -34,6 +54,10 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       size="icon"
 
 
+=======
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
+  const { open, toggleSidebar } = useSidebar(),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Button } from "@/components/ui/button",;
 import { Menu, X } from "lucide-react",;
@@ -51,12 +75,26 @@ export function SidebarTrigger() { return null; }
       variant="ghost";"
       size="icon";
 
+<<<<<<< HEAD
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;
 
 
 
+=======
+className={cn("", className)}
+      onClick={toggleSidebar}
+      {...props}
+    >;
+      className={cn("", className)}
+      onClick={toggleSidebar}
+      {...props}>;
+className={cn("", className)}
+      onClick={toggleSidebar}
+      {...props}
+    >;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
 
       <span className="sr-only">Toggle Sidebar</span>
@@ -64,6 +102,9 @@ export function SidebarTrigger() { return null; }
   );
 
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

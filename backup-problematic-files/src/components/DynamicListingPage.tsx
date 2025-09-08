@@ -110,10 +110,15 @@ export function DynamicListingPage({;
                     onValueChange={(value:string) =>;
 
                     min={0}
+<<<<<<< HEAD
 
                     max={priceRange.max}
                     step={priceRange.max / 100}
 
+=======
+                    max={priceRange.max}
+                    step={priceRange.max / 100}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     value={currentPriceFilter}
 
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -198,6 +203,7 @@ export function DynamicListingPage({;
       </div>;
 
     </div>;
+<<<<<<< HEAD
   ),; import {;
   Select;
 SelectValue;
@@ -296,3 +302,5 @@ setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

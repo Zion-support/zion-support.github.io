@@ -1,26 +1,26 @@
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import { ChevronDown } from 'lucide-react'
-"
-import { cn } from "@/lib/utils"
+'
+import { cn } from '@/lib/utils'
 
 const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
 
-    className={cn("border-b", className)}
+    className={cn('border-b', className)}
     {...props}
 
-AccordionItem.displayName = "AccordionItem"
-"
-AccordionItem.displayName = "AccordionItem"
+AccordionItem.displayName = 'AccordionItem'
+'
+AccordionItem.displayName = 'AccordionItem'
 
 const AccordionTrigger = React.forwardRef<
 
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
->(({ className, children, ...props }, ref) => ("
-  <AccordionPrimitive.Header className="flex">
+>(({ className, children, ...props }, ref) => ('
+  <AccordionPrimitive.Header className='flex'>
     <AccordionPrimitive.Trigger;
       ref={ref}
       className={cn(

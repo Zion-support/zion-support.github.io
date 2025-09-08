@@ -1,11 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
+
+export default function aiseooptimization() {
+=======
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AISEOOptimizationPage() {
   const service = $2;
   if (!service) return null,
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Layout>
       <Head>
@@ -22,5 +27,9 @@ export default function AISEOOptimizationPage() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
+  );
+=======
   )
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

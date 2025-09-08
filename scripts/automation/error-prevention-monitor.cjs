@@ -1,13 +1,27 @@
 <<<<<<< HEAD
+#!/""usr/bin/env"" node;
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 #!/"usr/bin/env" node;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node
-const fs = require("fs);
-const path = require(path");
-const { execSync } = require("child_process);
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+console.log('🛡️ Starting error prevention monitor...');
+#!/usr/bin/env node;"
 
+<<<<<<< HEAD
+class ErrorPreventionMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+=======
 console.log('🛡️ Starting error prevention monitor...);
 #!/usr/bin/env node;
 =======
@@ -29,6 +43,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 console.log('🛡️ Starting error prevention monitor...');
 #!/usr/bin/env node;"
 
@@ -93,6 +108,10 @@ class ErrorPreventionMonitor {
 <<<<<<< HEAD
           } catch (error) {
       })} catch (error) {
+=======
+<<<<<<< HEAD
+          } catch (error) {
+      })} catch (error) {
       // Directory access error
     }      return false}
 
@@ -105,65 +124,78 @@ class ErrorPreventionMonitor {
   fixedLine = line.replace(;)"
 =======
           } catch (error) {})} catch (error) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Directory access error;
     }      return false}
+;
   async fixUnsafeCode(line) {
   let fixedLine = line;
     // Replace eval with safer alternatives;
 
+<<<<<<< HEAD
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}"
+    // Replace innerHTML with textContent where possible;"
+    if (line.includes(".innerHTML =")) {"
+  fixedLine = line.replace(;)"
+=======
   fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}
     // Replace innerHTML with textContent where possible;
     if (line.includes(".innerHTML =")) {
   fixedLine = line.replace(;)
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         /\.innerHTML\s*=\s*([^]+)/g,.textContent = $1";"
-    // Replace eval with safer alternatives;
+    // Replace eval with safer alternatives;"
 
-    // Replace innerHTML with textContent where possible;
+    // Replace innerHTML with textContent where possible;"
       )}
     return fixedLine}
   async fixMemoryLeak(line) {
     // Add cleanup for event listeners;"
-    if (line.includes("addEventListener)) {
+    if (line.includes("addEventListener")) {"
 
   async fixAsyncError(line) {
     // Add error handling for promises;"
 
   async fixTypeIssue(line) {
     // Replace any with more specific types;"
-    if (line.includes(: any)) {
-  fixedLine = line.replace(/: any/g, ": unknown");
-    // Replace any with more specific types;
+    if (line.includes(": any")) {
+  fixedLine = line.replace(/: any/g, ": unknown");"
+    // Replace any with more specific types;"
 
-  fixedLine = line.replace(/: "any/g", : unknown)}"
+  fixedLine = line.replace(/: "any/g", ": unknown")}"
 ;"
-    if (line.includes(as any)) {
-  fixedLine = line.replace(/as "any/g", as unknown)}"
+    if (line.includes("as any")) {
+  fixedLine = line.replace(/as "any/g", "as unknown")}"
   async generateReport(fixResults) {"
-  this.log(📊 Generating error prevention monitoring report...);"
+  this.log("📊 Generating error prevention monitoring report...");"
     const report = {"
-  timestamp: new Date().toISOString(),
-      "summary": {
-  totalIssues: fixResults.totalIssues,
+  "timestamp": new Date().toISOString(),
+      "summary": {"
+  totalIssues: fixResults.totalIssues,"
         "fixedIssues": fixResults.fixedCount,
+<<<<<<< HEAD
+        "preventionRate": fixResults.totalIssues > 0;"
+=======
 <<<<<<< HEAD
         "preventionRate": fixResults.totalIssues > 0;"
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
 =======
         preventionRate: fixResults.totalIssues > 0;"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
 >>>>>>> merged-prs-20250907-203621
                 2;)
               )
             : 100},"
-      fixResults: fixResults.results,
-      "recommendations": [Review applied fixes to ensure they meet your requirements, Consider adding more specific type annotations", "Implement proper error handling for async operations, Regularly review code for potential security issues]}"
+      "fixResults": fixResults.results,
+      "recommendations": ["Review applied fixes to ensure they meet your requirements, "Consider adding more specific type annotations", "Implement proper error handling for async operations, "Regularly review code for potential security issues", ]}"
     const reportFile = path.join(;"
-      this.reportsPath,error-prevention-monitor-report.json;)
+      this.reportsPath,error-prevention-monitor-report.json";")
 
     return report}
   async run() {"
-  this.log("🚀 Starting Error Prevention Monitor...);
+  this.log("🚀 Starting Error Prevention Monitor...");"
   // TODO: Implement
 <<<<<<< HEAD
   // Scan for potential errors
@@ -180,26 +212,36 @@ class ErrorPreventionMonitor {
   // Scan for potential errors;
       const potentialErrors = await this.scanForPotentialErrors();
       if (potentialErrors.length === 0) {"
-  this.log("🎉 No potential errors detected!);
-        return { success": true, "issues: [], fixed": 0 }"
+  this.log("🎉 No potential errors detected!");
+        return { "success": true, "issues": [], "fixed": 0 }"
       // Apply preventive fixes;
       const fixResults = await this.applyPreventiveFixes(potentialErrors);
       // Generate report;
+<<<<<<< HEAD
+      const report = await this.generateReport(fixResults);"`;
+      this.log("🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);"
+=======
       const report = await this.generateReport(fixResults);`;
       this.log(🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return {
   // TODO: Implement
-}
-  success": fixResults.fixedCount > 0,
-        "issues: potentialErrors,
-        fixed": fixResults.fixedCount,"
+}"
+  "success": fixResults.fixedCount > 0,
+        "issues": potentialErrors,
+        "fixed": fixResults.fixedCount,"
         report,
   // TODO: Implement
   // Scan for potential errors
       // Apply preventive fixes
       // Generate report
       throw error}
+<<<<<<< HEAD
+      execSync('bash start-simple-error-prevention.sh', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+=======
 <<<<<<< HEAD
       execSync('bash start-simple-error-prevention.sh', { 
         "cwd": this.projectRoot, 
@@ -227,13 +269,20 @@ class ErrorPreventionMonitor {
         "stdio": 'pipe' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       });
-      this.log(Auto-fix process completed')} catch (error) {
-      this.log(`Auto-fix process failed: ${error.message}`)}
+      this.log('Auto-fix process completed')} catch (error) {
+      this.log(`Auto-fix process "failed": ${error.message}`)}
   }
   checkBuildStatus() {
 >>>>>>> merged-prs-20250907-203621
     try {
+<<<<<<< HEAD
+      this.log('Checking build status...');
+      execSync('yarn build', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+=======
 <<<<<<< HEAD
       this.log('Checking build status...);
 
@@ -263,14 +312,21 @@ class ErrorPreventionMonitor {
         "stdio": 'pipe' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       });
-      this.log(Build check passed')} catch (error) {
+      this.log('Build check passed')} catch (error) {
       this.log(`Build check "failed": ${error.message}`);
       this.triggerAutoFix()}
   }
-    this.reportsDir = path.join(this.projectRoot, 'error-reports);
-    this.logsDir = path.join(this.projectRoot, automation/logs');
+    this.reportsDir = path.join(this.projectRoot, 'error-reports');
+    this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
+<<<<<<< HEAD
+    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true';
+    // Ensure directories exist
+    [this.reportsDir, this.logsDir].forEach(dir => {
+  triggerAutoFix() {"
+=======
     this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true;
 >>>>>>> merged-prs-20250907-203621
     // Ensure directories exist
@@ -281,6 +337,7 @@ class ErrorPreventionMonitor {
 =======
   triggerAutoFix() {"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   checkBuildStatus() {
   // TODO: Implement
@@ -289,6 +346,15 @@ class ErrorPreventionMonitor {
     [this.reportsDir, this.logsDir].forEach(dir => {)
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (!fs.existsSync(dir)) {
+<<<<<<< HEAD
+        fs.mkdirSync(dir, { "recursive": true })}"
+    this.preventionHistory = [];
+    this.riskFactors = new Map()}"
+  log(message, level = 'INFO') {
+    console.log(`[${timestamp}] [${level}] ${message}`)}
+  async checkFileSizeIssues() {
+    this.log('Checking for file size issues...', 'INFO');
+=======
 <<<<<<< HEAD
         fs.mkdirSync(dir, { "recursive": true })}
     });
@@ -312,6 +378,7 @@ class ErrorPreventionMonitor {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -341,8 +408,8 @@ class ErrorPreventionMonitor {
 >>>>>>> merged-prs-20250907-203621
           largeFiles.push({
             file,
-            size": stats.size,")
-            sizeMB": (stats.size / (1024 * 1024)).toFixed(2)"
+            "size": stats.size,")"
+            "sizeMB": (stats.size / (1024 * 1024)).toFixed(2)"
           })}
 
     const circularDeps = []
@@ -350,10 +417,14 @@ class ErrorPreventionMonitor {
 
       if (output.trim()) {
 <<<<<<< HEAD
+        const lines = output.split('\n').filter(line => line.trim());
+=======
+<<<<<<< HEAD
         const lines = output.split('\n').filter(line => line.trim())
   for($2) {
 =======
         const lines = output.split('\n).filter(line => line.trim());
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         for (const line of lines) {
 >>>>>>> merged-prs-20250907-203621
           circularDeps.push({)
@@ -373,7 +444,7 @@ class ErrorPreventionMonitor {
     const vulnerabilities = []
   // TODO: Implement
 
-            recommendation: vuln.recommendation;")
+            "recommendation": vuln.recommendation;")
       return vulnerabilities} catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found
   // TODO: Implement
@@ -384,6 +455,19 @@ class ErrorPreventionMonitor {
       const foundFrameworks = cssFrameworks.filter(framework => 
         packageJson.dependencies && packageJson.dependencies[framework]
       );
+  // TODO: Implement
+
+      const foundFrameworks = cssFrameworks.filter(framework => 
+        packageJson.dependencies && packageJson.dependencies[framework])
+      if (foundFrameworks.length > 1) {
+
+    const qualityIssues = []
+=======
+<<<<<<< HEAD
+      const foundFrameworks = cssFrameworks.filter(framework => 
+        packageJson.dependencies && packageJson.dependencies[framework]
+      );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // TODO: Implement
 
       const foundFrameworks = cssFrameworks.filter(framework => 
@@ -447,6 +531,9 @@ class ErrorPreventionMonitor {
         const filePath = path.join(dir, file)
           walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
           sourceFiles.push(filePath)}
+<<<<<<< HEAD
+    };
+=======
     }
 <<<<<<< HEAD
     walkDir(srcDir)
@@ -456,24 +543,29 @@ class ErrorPreventionMonitor {
   for($2) {
         if (lines[i].includes('TODO') || lines[i].includes('FIXME')) {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     walkDir(srcDir);
   findTodoComments() {
     const todos = [];
 
-      const lines = content.split(\n');
+      const lines = content.split('\n');
       for (let i = 0; i < lines.length; i++) {
+<<<<<<< HEAD
+        if (lines[i].includes('TODO') || lines[i].includes('FIXME')) {
+=======
         if (lines[i].includes('TODO) || lines[i].includes(FIXME')) {
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           todos.push({
 
-            line: i + 1,")"
-            comment: lines[i].trim()"
+            "line": i + 1,")"
+            "comment": lines[i].trim()"
     return todos}
   findConsoleStatements($2) {
     const consoleStatements = []
   for($2) {"
 
-            statement: lines[i].trim()"
+            "statement": lines[i].trim()"
     return consoleStatements}
 <<<<<<< HEAD
   findHardcodedValues($2) {
@@ -486,6 +578,10 @@ class ErrorPreventionMonitor {
   findHardcodedValues() {
     const hardcodedValues = [];
 <<<<<<< HEAD
+    const files = this.getAllSourceFiles();
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     for (const file of files) {
       const content = fs.readFileSync(file, 'utf8');
       const lines = content.split('\n');
@@ -518,8 +614,12 @@ const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
       "default": return null}"
 =======
         return await this.flagTodosForReview(issue);
+<<<<<<< HEAD
+      "default": return null}"
+=======
       default: return null}"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async removeUnusedDependency(issue) {
   // TODO: Implement
 
@@ -532,6 +632,9 @@ const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
 
 <<<<<<< HEAD
     content += `Total TODOs "found": ${todos.length}\n\n`;"
+=======
+<<<<<<< HEAD
+    content += `Total TODOs "found": ${todos.length}\n\n`;"
   for($2) {`
       content += `## ${todo.file}:${todo.line}\n`;`
       content += `${todo.comment}\n\n`}
@@ -542,6 +645,7 @@ const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
       // Run all prevention checks
 =======
     content += `Total TODOs "found: ${todos.length}\n\n`;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     for (const todo of todos) {`;
       content += `## ${todo.file}:${todo.line}\n`;`;
       content += `${todo.comment}\n\n`}
@@ -566,11 +670,16 @@ const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
       ])
           largeFiles: largeFiles.length,"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "circularDeps": circularDeps.length,
           "unusedDeps": unusedDeps.length,
           "vulnerabilities": vulnerabilities.length,
           "performanceIssues": performanceIssues.length,
           "qualityIssues": qualityIssues.length;"
+<<<<<<< HEAD
+=======
       // Save report;`
       const reportPath = path.join(this.reportsDir, `prevention-report-${Date.now()}.json`)
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
@@ -583,6 +692,7 @@ const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
           "vulnerabilities: vulnerabilities.length,
           performanceIssues": performanceIssues.length,
           "qualityIssues: qualityIssues.length;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Save report;`;
       const reportPath = path.join(this.reportsDir, `prevention-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -620,16 +730,21 @@ const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
     setInterval(() => {
 =======
     process.exit(0)});
-  process.on('SIGTERM, () => {
+  process.on('SIGTERM', () => {
   // Start monitor;
 
     process.exit(1)})}
   run() {
-    this.log(Error Prevention Monitor started');
+    this.log('Error Prevention Monitor started');
     // Run initial health check;
     this.checkProjectHealth();
     // Schedule periodic health checks;
     setInterval(() => {
+<<<<<<< HEAD
+monitor.run();
+
+monitor.run();
+=======
 <<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -674,6 +789,7 @@ monitor.run();
 =======
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 

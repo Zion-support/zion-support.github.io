@@ -1,65 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-#!/usr/bin/env node;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
 
 
 
@@ -131,21 +79,8 @@ export const messageChannelHandler = {;"
     try {;
 #!/usr/bin/env node;
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> merged-prs-20250907-203621
+
+
 #!/usr/bin/env node;
 main
 
@@ -154,18 +89,7 @@ main
 "
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
 const fs = require("fs")
 
   log(message, type = "INFO")
@@ -201,74 +125,14 @@ export const sanitizeHtml = ("html")
   this.log("\\n Fixes "Applied": ")
       this.log("\\n� Final TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> merged-prs-20250907-203621
 
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> merged-prs-20250907-203621
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -288,15 +152,4 @@ main
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

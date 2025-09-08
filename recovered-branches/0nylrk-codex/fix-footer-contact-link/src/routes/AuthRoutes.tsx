@@ -1,17 +1,38 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <ProtectedRoute>;
             <ServiceOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
 
     </Routes>;
+=======
+
+
+export default AuthRoutes;
+
+          <ProtectedRoute>
+            <ServiceOnboarding />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+
+};
+
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 };
 
 },
 
+<<<<<<< HEAD
 
 
 export default AuthRoutes;
@@ -27,6 +48,9 @@ import TalentOnboarding from "@/pages / TalentOnboarding";
 import ServiceOnboarding from "@/pages / ServiceOnboarding";
 const AuthRoutes = () =>: any {
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Routes>;
       {/* Auth Routes */}
@@ -53,7 +77,13 @@ export default AuthRoutes,; const AuthRoutes = () => {
 };
 export default AuthRoutes;
 
+<<<<<<< HEAD
 ;
 
 
 
+=======
+  );
+},;
+export default AuthRoutes;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

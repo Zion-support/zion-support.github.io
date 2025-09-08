@@ -95,9 +95,12 @@ return (<SmartContractBuilder isOpen= {;
 }onClose= {;
 
   () => setTemplateManagerOpen (false) ;
+<<<<<<< HEAD
 }onSelectTemplate= {;
   handleLoadTemplate ;
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

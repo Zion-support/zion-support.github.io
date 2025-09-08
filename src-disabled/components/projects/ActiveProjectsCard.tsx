@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 
 
+=======
+import { useEffect, useState } from "react",
+import Link from "next/link",
+import { BriefcaseIcon, Clock } from 'lucide-react'
+
+export function ActiveProjectsCard() {
+  const { projects, isLoading } = useProjects(),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   useEffect(() => {
     if (projects && !isLoading) {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
       ).slice(0, 3), // Limit to 3 most recent projects;
@@ -13,11 +25,21 @@
     }
   }, [projects, isLoading]),
 
+<<<<<<< HEAD
   
 
 
 
 
+=======
+<<<<<<< HEAD
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+          <CardTitle className='flex items-center gap-2'>
+            <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <BriefcaseIcon className="h-5 w-5 text-primary" />
       <Card>
         <CardHeader>
@@ -38,8 +60,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }          <div className="space-y-2">;
             {[1, 2].map(idx => (
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -80,8 +105,25 @@ import { Project } from "@/types/projects",;
         </CardContent>;
       </Card>;
 
+<<<<<<< HEAD
     );
 
+=======
+  });
+<div className='space-y-2'>
+            {[1, 2].map(idx => (
+              <div
+                key={idx}
+                className='h-16 animate-pulse bg-muted rounded'
+              ></div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   }
   
@@ -95,9 +137,20 @@ import { Project } from "@/types/projects",;
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+<CardTitle className='flex items-center gap-2'>
+            <BriefcaseIcon className='h-5 w-5 text-primary' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+            <span>Active Projects</span>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
@@ -133,7 +186,10 @@ import { Project } from "@/types/projects",;
     )
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
   }
   return (
@@ -147,7 +203,21 @@ import { Project } from "@/types/projects",;
       </CardHeader>;'
       <CardContent className='space-y-4'>  ;
 
+<<<<<<< HEAD
 
+=======
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <BriefcaseIcon className="h-5 w-5 text-primary" />;
+        </CardTitle>;
+        <CardDescription>Your ongoing work</CardDescription>;
+      </CardHeader>;
+      <CardContent className='space-y-4'>;
+        {activeProjects && activeProjects.map(project => (;
+          <div key={project && project.id} className='border rounded-md p-3'>;
+            <div className='flex justify-between items-start mb-2'>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
               <Badge
@@ -156,10 +226,16 @@ import { Project } from "@/types/projects",;
 
                   project.status === 'in_progress' ? 'default' : 'outline'
                 }
+<<<<<<< HEAD
                 className={
                   project.status === 'in_progress'
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
 
+=======
+                className={'
+                  project.status === 'in_progress''
+                    ? 'bg-blue-100 text-blue-800 hover:bg-blue-100''
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     : ''
 
 
@@ -183,12 +259,28 @@ import { Project } from "@/types/projects",;
         </CardFooter>;
       )}
 
+<<<<<<< HEAD
+=======
+              </Badge>
+            </div>
+            <div className='flex items-center text-xs text-muted-foreground gap-2'>
+              <Clock className='h-3 w-3' />
+              <span>
+                Started {new Date(project.start_date).toLocaleDateString()}
+              </span>
+            </div>
+            <Button size='sm' variant='outline' className='w-full mt-2' asChild>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -312,6 +404,7 @@ if ( {) {}
       {activeProjects.length > 2 && (;
         <CardFooter>;
           <Button variant="ghost" className="w-full" asChild>;
+<<<<<<< HEAD
 
             <Link href="/projects">View All Projects</Link>;
           </Button>;
@@ -321,3 +414,56 @@ if ( {) {}
   );
 }
 
+=======
+            <Link href="/projects" />View All Projects</Link>;
+          </Button>;
+        </CardFooter>;
+      )}
+    </Card>;
+  );
+}
+;
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BriefcaseIcon className="h-5 w-5 text-primary" />
+          <span>Active Projects</span>
+        </CardTitle>
+        <CardDescription>Your ongoing work</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {activeProjects.map(project => (
+          <div key={project.id} className="border rounded-md p-3">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-medium text-sm">{project.job?.title}</h3>
+              <Badge 
+                variant={project.status === "in_progress" ? "default" : "outline"}
+                className={project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
+              >
+                {project.status === "offer_accepted" ? "Starting" : "In Progress"}
+              </Badge>
+            </div>
+            <div className="flex items-center text-xs text-muted-foreground gap-2">
+              <Clock className="h-3 w-3" />
+              <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
+            </div>
+            <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+              <Link href={`/project/${project.id}`}>View Project</Link>
+            </Button>
+          </div>
+        ))}
+      </CardContent>;
+
+            <Link href="/projects">View All Projects</Link>;
+          </Button>;
+        </CardFooter>)}
+    </Card>);
+}, [projects, is_loading]);
+return (<Card> <CardHeader> <CardTitle className="flex items - center gap-2" > <BriefcaseIcon className="h - 5 w - 5 text-primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent>) );
+}</div> </CardContent> </Card>);
+}// Check condition
+if ( {'") {
+  $2
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

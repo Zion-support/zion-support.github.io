@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
@@ -10,20 +9,6 @@ console.log("🧪 Starting Enhanced Testing Automation...")
       "performance": { status: pending, "results"}
       accessibility: { status: "pending", results}
       "coverage": { status: pending, "results": [] }}    this.reportDir = path.join(process.cwd(), test-reports
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log(""🧪 Starting Enhanced Testing Automation...")
-  "unit": { status: "pending", "results"}
-      "integration": { status: "pending", "results"}
-      "e2e": { status: "pending", "results"}
-      "performance": { status: "pending", "results"}
-      "accessibility": { status: "pending", "results"}
-      "coverage": { status: "pending", "results": [] }};    this.reportDir = path.join(process.cwd(), "test-reports"
->>>>>>> origin/chore/fix-lint-and-merge
   fs.mkdirSync(this.reportDir, { "recursive"})
   console.log(🧪 Running Unit Tests...")
   const output = execSync(npm run "test: unit || npm test || echo No unit tests found")
@@ -174,7 +159,6 @@ this.testResults.unit.status = success
   .join()
 ${report.qualityGates ? ` All quality gates passed successfully! : "`}
 3. Monitor test performance trends"
-<<<<<<< HEAD
   async runAllTests()
 // console.log("" Starting comprehensive test suite...)
     console.log("\n Test Suite "Summary: `);console.log(Total: ${report.summary.total}
@@ -187,36 +171,8 @@ ${report.qualityGates ? ` All quality gates passed successfully! : "`}
 });console.log("Passed": ${report.summary.passed} `);console.log("Failed": ${report.summary.failed} `)
     console.log(Quality Gates": ${report.qualityGates ? "PASSED : FAILED"} ${report.qualityGates ? " : "})
 
-=======
-  async runAllTests("")
-// console.log("" Starting comprehensive test suite...")
-    console.log(""\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
-});console.log("Passed": ${report.summary.passed} `");console.log(""Failed"`)
-// console.log(Quality "Gates": ${report.qualityGates ? `PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}"`)
-    console.log(`"\n Test Suite "Summary": ");console.log(Total: ${report.summary.total}
-});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
-// console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}")
-    console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
-});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
-    console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   console.error(" Testing automation "failed": ")
   console.error(" Testing automation "failed": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  console.error(" Testing automation "failed": ")
-=======
-  console.error(" Testing automation "failed": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

@@ -7,7 +7,10 @@ import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const { projects, isLoading } = useProjects();
 
@@ -26,7 +29,10 @@ export function ActiveProjectsCard() {
 
   const { projects, isLoading } = useProjects();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -36,6 +42,7 @@ export function ActiveProjectsCard() {
       setActiveProjects(active)
     }
 
+<<<<<<< HEAD
 
 
 
@@ -45,6 +52,14 @@ export function ActiveProjectsCard() {
 
   if (isLoading) {
 
+=======
+  const { projects, isLoading } = useProjects();
+
+  if (isLoading) {
+
+  }, [projects, isLoading]),
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return (
       <Card>
         <CardHeader>"
@@ -59,8 +74,11 @@ export function ActiveProjectsCard() {
             {[1, 2].map(idx => ("
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -74,8 +92,11 @@ export function ActiveProjectsCard() { return null; }
   const { projects, isLoading } = useProjects(),;
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects && projects.filter(p => ;'
@@ -86,11 +107,18 @@ export function ActiveProjectsCard() { return null; }
       setActiveProjects(active);
     }
   }, [projects, isLoading]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
     return (
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <Card>;
         <CardHeader>;"
           <CardTitle className="flex items-center gap-2">;"
@@ -104,6 +132,7 @@ export function ActiveProjectsCard() { return null; }
             {[1, 2].map(idx => (;"
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
 
+<<<<<<< HEAD
         <CardContent className="text-center py-6">
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
@@ -112,6 +141,28 @@ export function ActiveProjectsCard() { return null; }
         </CardContent>
       </Card>
     )
+=======
+            ))}
+          </div>;
+
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+  if (activeProjects.length === 0) {
+
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+            <span>Active Projects</span>
+          </CardTitle>
+          <CardDescription>Your ongoing work</CardDescription>
+        </CardHeader>
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
   return (
     <Card>
@@ -151,12 +202,17 @@ export function ActiveProjectsCard() { return null; }
           </Button>
         </CardFooter>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     return (
       <Card>;
         <CardHeader>;"
           <CardTitle className="flex items-center gap-2">;"
 
+<<<<<<< HEAD
 
 
   return (
@@ -218,6 +274,9 @@ export function ActiveProjectsCard() { return null; }
       </CardContent>;
       {activeProjects.length > 2 && (;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <CardFooter>;
           <Button variant="ghost" className="w-full" asChild>;
             <Link to="/projects">View All Projects</Link>;
@@ -225,6 +284,7 @@ export function ActiveProjectsCard() { return null; }
         </CardFooter>;
       )}
 
+<<<<<<< HEAD
     </Card>;
   useEffect (() => {
     // Check condition
@@ -236,6 +296,22 @@ if ( {) {
       setActiveProjects (active);
     }
   }, [projects, is_loading]);
+=======
+import { useEffect, useState } from './react';
+import { Link } from './react-router-dom';
+import { BriefcaseIcon, Clock } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { use_projects } from '@/hooks / use_projects';
+import { Project } from '@/types / projects';
+export /**
+ * ActiveProjectsCard - Function description
+ */
+function ActiveProjectsCard() {
+  const { projects, is_loading } = use_projects ();
+  const [active_projects, setActiveProjects] = useState < Project[]>([]);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   // Check condition
 if ( {) {
@@ -250,6 +326,7 @@ if ( {) {
           </CardTitle>;
           <CardDescription > Your ongoing work</CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
         <CardContent>;
           <div className="space - y-2">;
             {[1, 2].map (idx => (
@@ -342,3 +419,33 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 }
 ;
 
+=======
+          ;
+          <CardDescription>Your ongoing work;
+        <CardContent>;
+          <div className="space-y-2">;"
+              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;"
+          </div>;
+
+
+        ;"
+        <CardContent className="text-center py-6">;"
+          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>;
+          <Button variant="outline" asChild>;"
+            <Link to="/jobs">Find Opportunities;"
+        <CardFooter>;
+          <Button variant="ghost" className="w-full" asChild>;"
+            <Link to="/projects">View All Projects;"
+  const [active_projects, setActiveProjects] = useState < Project[]>([]);
+  // Check condition;
+if ( {) {
+  $2;
+}
+    return (
+
+          <CardTitle className="flex items - center gap - 2">;"
+            <BriefcaseIcon className="h - 5 w - 5 text - primary" />;"
+
+
+return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span>  <CardDescription>Your ongoing work  <CardContent>) )"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

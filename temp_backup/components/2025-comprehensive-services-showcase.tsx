@@ -21,15 +21,15 @@ const ComprehensiveServicesShowcase2025  = null;// All services combined const a
 ...industrySpecificSolutions;
 ...emergingTechnologyServices ];
   {opacity: 0, y: 20;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{}initial= {{}initial= {{opacity: 0, y: 20;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{{opacity: 0;}
-}animate= {{opacity: 1;}
-}exit= {{}initial= {{}initial= {{opacity: 0, y: 20;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {{}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {/* Service Header */ ;}
-}transition= {{}className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {,}
+}animate= {opacity: 1, y: 0;}
+}transition= {}initial= {}initial= {opacity: 0, y: 20;}
+}animate= {opacity: 1, y: 0;}
+}transition= {{opacity: 0;}
+}animate= {opacity: 1;}
+}exit= {}initial= {}initial= {opacity: 0, y: 20;}
+}animate= {opacity: 1, y: 0;}
+}transition= {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {/* Service Header */ ;}
+}transition= {}className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {,}
 }className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {/* Service Header */ ;}
 }<divclassName= {`p-6 bg-gradient-to-r $ {service && service.color;}
 }text-white`;
@@ -68,13 +68,13 @@ const ComprehensiveServicesShowcase2025  = null;// All services combined const a
 }target=" blank" rel="noopener noreferrer" className="bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors text-sm font-medium flex items-center"> Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </div> </div> </div> </motion && motion.div>) )}</motion && motion.div>,
 }</AnimatePresence> {/* No Results */ ;}
 }{filteredServices && filteredServices.length === 0 && (<div className="text-center py-12" /> <div className="text-gray-400 mb-4" /> <Search className="w-16 h-16 mx-auto" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2" />No services found</h3> <p className="text-gray-600" />Try adjusting your search terms or category filters.</p> </div>)}</div> </section> {/* Why Choose Us */ ;}
-}<section className="py-20 bg-white" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /> <div className="text-center mb-16" /> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto" /> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /> <motion&& motion.div initial= {{opacity: 0, y: 20;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{{opacity: 0, y: 20;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{{opacity: 0, y: 20;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{}export default ComprehensiveServicesShowcase;
+}<section className="py-20 bg-white" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /> <div className="text-center mb-16" /> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto" /> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /> <motion&& motion.div initial= {opacity: 0, y: 20;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {{opacity: 0, y: 20;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {{opacity: 0, y: 20;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {}export default ComprehensiveServicesShowcase;
 }transition = {;}
 }
 
@@ -193,15 +193,15 @@ const filteredServices = activeTab === 'all';
         <div className="absolute inset-0 bg-black/20" /></div>;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" />;
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center";
            />;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            animate={ opacity: 1, y: 0 }
+            transition={duration: 0.8 }
 }
             className="text-center">
 
@@ -277,11 +277,11 @@ const filteredServices = activeTab === 'all';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
             {filteredServices.map((service, index) => (<motion.div;}
                 key={service.id}
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={ duration: 0.5, delay: index * 0.1 }
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";
                />;
                 {/* Service Header */}
@@ -365,15 +365,15 @@ const filteredServices = activeTab === 'all';
 ...industrySpecificSolutions;
 ...emergingTechnologyServices ];
   {opacity: 0, y: 20;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{}initial= {{}initial= {{opacity: 0, y: 20;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{{opacity: 0;}
-}animate= {{opacity: 1;}
-}exit= {{}initial= {{}initial= {{opacity: 0, y: 20;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" /> {{}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {/* Service Header */ ;}
-}transition= {{}className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {,}
+}animate= {opacity: 1, y: 0;}
+}transition= {}initial= {}initial= {opacity: 0, y: 20;}
+}animate= {opacity: 1, y: 0;}
+}transition= {{opacity: 0;}
+}animate= {opacity: 1;}
+}exit= {}initial= {}initial= {opacity: 0, y: 20;}
+}animate= {opacity: 1, y: 0;}
+}transition= {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" /> {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {/* Service Header */ ;}
+}transition= {}className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {,}
 }className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {/* Service Header */ ;}
 }<divclassName= {`p-6 bg-gradient-to-r $ {service && service.color;}
 }text-white`;
@@ -412,13 +412,13 @@ const filteredServices = activeTab === 'all';
 }target=" blank" rel="noopener noreferrer" className="bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors text-sm font-medium flex items-center"> Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </div> </div> </div> </motion && motion.div>) )}</motion && motion.div>,
 }</AnimatePresence> {/* No Results */ ;}
 }{filteredServices && filteredServices.length === 0 && (<div className="text-center py-12" /> <div className="text-gray-400 mb-4" /> <Search className="w-16 h-16 mx-auto" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2" />No services found</h3> <p className="text-gray-600" />Try adjusting your search terms or category filters.</p> </div>)}</div> </section> {/* Why Choose Us */ ;}
-}<section className="py-20 bg-white" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /> <div className="text-center mb-16" /> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto" /> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /> <motion&& motion.div initial= {{opacity: 0, y: 20;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{{opacity: 0, y: 20;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{{opacity: 0, y: 20;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{}export default ComprehensiveServicesShowcase;
+}<section className="py-20 bg-white" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /> <div className="text-center mb-16" /> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto" /> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /> <motion&& motion.div initial= {opacity: 0, y: 20;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {{opacity: 0, y: 20;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {{opacity: 0, y: 20;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {}export default ComprehensiveServicesShowcase;
 }transition = {;}
 }
 
@@ -538,26 +538,26 @@ ursor/fix-netlify-build-and-merge-to-main-9571;}
             {viewMode === 'grid' ? (<motion.div;
 ursor/automate-test-improve-and-merge-code-646c;}
                 key="grid";}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                exit={ opacity: 0 }className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
                 {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
                     key={service && service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" />;
                     {/* Service Header */}
                     <div className={`p-6 bg-gradient-to-r ${service && service.color} text-white`} />;
-                exit={{opacity: 0 }
+                exit={opacity: 0 }
 }className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
                     key={service && service.id}
-                    initial={{ opacity: 0, y: 20 ,}
+                    initial={ opacity: 0, y: 20 ,}
 }
-                    animate={{ opacity: 1, y: 0 ,}
+                    animate={ opacity: 1, y: 0 ,}
 }
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 ,}
+                    transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 ,}
 }
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" />;
                     {/* Service Header */}
@@ -609,20 +609,20 @@ ursor/automate-test-improve-and-merge-code-646c;
             {viewMode === 'grid' ? (
               <motion.div;}
 key="grid"}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{opacity: 0 }
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                exit={opacity: 0 }
 }
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                />
                 {filteredServices.map((service, index) => (}
                   <motion.div;}
 key={service.id}
-                    initial={{ opacity: 0, y: 20 ,}
+                    initial={ opacity: 0, y: 20 ,}
 }
-                    animate={{ opacity: 1, y: 0 ,}
+                    animate={ opacity: 1, y: 0 ,}
 }
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={ duration: 0.5, delay: index * 0.1 }
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";
                    />;
                     {/* Service Header */}
@@ -675,17 +675,17 @@ key={service.id}
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
                     key={service && service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" />;
                     {/* Service Header */}
                     <div className={`p-6 bg-gradient-to-r ${service && service.color} text-white`} />;
-                    initial={{ opacity: 0, y: 20 ,}
+                    initial={ opacity: 0, y: 20 ,}
 }
-                    animate={{ opacity: 1, y: 0 ,}
+                    animate={ opacity: 1, y: 0 ,}
 }
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 ,}
+                    transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 ,}
 }
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">;
                     {/* Service Header */}
@@ -1054,10 +1054,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
             <motion.div;
-initial={{ opacity: 0, y: 20 ,}
+initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{duration: 0.5 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={duration: 0.5 }
 }
               className="text-center p-6"
              />
@@ -1072,11 +1072,11 @@ initial={{ opacity: 0, y: 20 ,}
 
 
             <motion.div;
-initial={{ opacity: 0, y: 20 ,}
+initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0.5, delay: 0.1 ,}
+              transition={ duration: 0.5, delay: 0.1 ,}
 }
               className="text-center p-6"
              />
@@ -1091,11 +1091,11 @@ initial={{ opacity: 0, y: 20 ,}
 
 
             <motion.div;
-initial={{ opacity: 0, y: 20 ,}
+initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={ duration: 0.5, delay: 0.2 }
               className="text-center p-6"
              />
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4" />
@@ -1159,9 +1159,9 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.5 }
               className="text-center p-6";
              />;
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4" />;
@@ -1176,9 +1176,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.5, delay: 0.1 }
               className="text-center p-6";
              />;
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" />;
@@ -1193,9 +1193,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.5, delay: 0.2 }
               className="text-center p-6";
              />;
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4" />;
@@ -1257,11 +1257,11 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             </p>;
           </div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 }
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{duration: 0.5 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={duration: 0.5 }
 }
               className="text-center p-6" />
 
@@ -1277,11 +1277,11 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
             <motion.div;
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0.5, delay: 0.1 ,}
+              transition={ duration: 0.5, delay: 0.1 ,}
 }
               className="text-center p-6" />
 
@@ -1297,11 +1297,11 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
             <motion.div;
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0.5, delay: 0.2 ,}
+              transition={ duration: 0.5, delay: 0.2 ,}
 }
               className="text-center p-6" />
 
@@ -1364,10 +1364,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             </p>;
           </div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{duration: 0 && 0.5 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={duration: 0 && 0.5 }
 }
               className="text-center p-6" />;
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4" />;
@@ -1378,14 +1378,14 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 Cutting-edge AI and machine learning solutions that deliver real business value;
               </p>;
             </motion && motion.div>;<motion&& motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.1 }}
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.5, delay: 0 && 0.1 }
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.1 ,}
+              transition={ duration: 0 && 0.5, delay: 0 && 0.1 ,}
 }
               className="text-center p-6" />;
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" />;
@@ -1396,14 +1396,14 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 Bank-grade security and compliance for mission-critical business applications;
               </p>;
             </motion && motion.div>;<motion&& motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.2 }}
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.5, delay: 0 && 0.2 }
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.2 ,}
+              transition={ duration: 0 && 0.5, delay: 0 && 0.2 ,}
 }
               className="text-center p-6" />;
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4" />;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
@@ -93,4 +96,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
 
 
+<<<<<<< HEAD
 
+=======
+    </div>'
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 },) => {
   return (
@@ -44,7 +47,14 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+<<<<<<< HEAD
 
+=======
+      )}
+    </div>
+  )
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import React from "react",;
@@ -86,6 +96,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
       </p>;
       {hasFilters && (;
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+<<<<<<< HEAD
 
 
 
@@ -93,6 +104,17 @@ interface EmptyFraudStateProps {
   has_filters: boolean,
 
 
+=======
+      )}
+    </div>;
+  )}
+'";
+import { Button } from '@/components/ui/button';
+import React from "react",import { Button } from "@/components/ui/button",interface EmptyFraudStateProps  {hasFilters: boolean;
+
+interface EmptyFraudStateProps {
+  has_filters: boolean,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onResetFilters: () => void;
 }
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
@@ -140,5 +162,9 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 }) => {
   return (
 
+<<<<<<< HEAD
 
 
+=======
+    <div className;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

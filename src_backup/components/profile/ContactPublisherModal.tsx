@@ -149,7 +149,11 @@ if ( {) {
   $2
 }
       setLoginOpen (true);
+<<<<<<< HEAD
+      return }    default_values: { subject: '', message: '' }),
+=======
       return }    default_values: { subject: '', message: '' }}),
+>>>>>>> origin/resolved-merge-conflicts
   const handle_send = async () => {
     // Check condition
 if ( {) {

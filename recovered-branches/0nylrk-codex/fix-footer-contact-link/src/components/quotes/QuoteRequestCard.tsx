@@ -1,20 +1,34 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
 
 
 
 
+=======
+import React from "react",
+import { format } from "date-fns",
+
+import React from "react",
+import { format } from "date-fns",
+import React from "react",
+import { format } from "date-fns",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { 
 
   Card;
   CardContent;
   CardHeader;
+<<<<<<< HEAD
 
   CardTitle;
   CardDescription
@@ -38,6 +52,36 @@ type QuoteRequestCardProps = {
 
 
 
+=======
+
+
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
+import type { QuoteRequest } from "@/types/quotes",
+type QuoteRequestCardProps = {
+  quote: QuoteRequest,
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded?: (id: string) => void,
+
+
+type QuoteRequestCardProps = {
+  quote: QuoteRequest
+  onViewDetails: (quote: QuoteRequest) => void
+  onMarkAsResponded?: (id: string) => void
+  onToggleArchive: (id: string, isArchived: boolean) => void
+}
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+  quote;
+  onViewDetails;
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+  quote;
+  onViewDetails;
+  onMarkAsResponded
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onToggleArchive
 }) => {
   // Format date for display
@@ -48,6 +92,7 @@ type QuoteRequestCardProps = {
       return dateString
     }
 
+<<<<<<< HEAD
 
   },
 
@@ -80,13 +125,27 @@ type QuoteRequestCardProps = {
         <div className="flex justify-between items-center mt-4">
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <Button
             variant="outline"
             size="sm"
             onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
 
 
 
+=======
+            className="flex items-center gap-1"
+          >
+            <Eye className="h-4 w-4" />
+            View Details
+          </Button>
+          
+          <div className="flex items-center">
+            {quote.status !== 'responded' && onMarkAsResponded && (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <Button
                 variant="ghost"
                 size="sm"
@@ -97,12 +156,17 @@ type QuoteRequestCardProps = {
                 Mark Responded
               </Button>
             )}
+<<<<<<< HEAD
 
 
+=======
+            
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <Button
               variant="ghost"
               size="sm"
               onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
+<<<<<<< HEAD
 
               className="flex items-center gap-1"
             >
@@ -111,6 +175,10 @@ type QuoteRequestCardProps = {
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
 
+=======
+              className = $2;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",;
 import { format } from "date-fns",;
@@ -169,6 +237,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <span>Timeline: {quote.timeline}</span>;
         </div>;
 
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
@@ -183,6 +252,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <span>Timeline:{quote.timeline}</span>;
         </div>;
         ;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <div className="flex justify-between items-center mt-4">;
           <Button;
@@ -190,27 +261,39 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             size="sm";
             onClick={() => onViewDetails(quote)}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
             View Details;
           </Button>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => onMarkAsResponded(quote && quote.id)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 className="flex items-center gap-1";
               >;
                 <MessageSquare className="h-4 w-4" />;
                 Mark Responded;
               </Button>;
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 <RefreshCw className="h-4 w-4" />;
               ) : (;
@@ -226,7 +309,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 }
 
 ;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,5 +1,26 @@
 
 interface Speaker  {}
+<<<<<<< HEAD
+interface Speaker  {'name': string,'title': string,'avatar': string,twitter?: string;
+}
+import Image from 'next/image',import { Twitter, Linkedin  } from 'lucide-react';'
+interface Speaker  {'name': string,'title': string,'avatar': string,twitter?: string,linkedin?: string;
+}'name': string,'title': string,'avatar': string,twitter?: string;
+interface Speaker  {'name': string,'title': string,'avatar': string,twitter?: string,linkedin?: string;
+}'name': string;
+  'title': string;
+  'avatar': string;
+  twitter?: string;
+  linkedin?: string;
+}
+const 'speakers': Speaker[] = [;
+  {import Image from 'next/image';'
+}
+interface Speaker  {'name': string;
+  }
+  'title': string;
+  'avatar': string;
+=======
 interface Speaker  {"name": string,"title": string,"avatar": string,twitter?: string;
 }
 import Image from "next/image",import { Twitter, Linkedin  } from 'lucide-react';'
@@ -19,16 +40,32 @@ interface Speaker  {"name": string;
   }
   "title": string;
   "avatar": string;
+>>>>>>> origin/resolved-merge-conflicts
   twitter?: string;
   linkedin?: string;
   linkedin?: string;
 }
+<<<<<<< HEAD
+interface Speaker  {linkedin?: string;const 'speakers': Speaker[] = [;
+  {'name': 'Alex Zion','title': 'Founder & CEO','avatar': ''https'://placehold.co/100x100','twitter': '#','linkedin': '#'}];'
+=======
 interface Speaker  {linkedin?: string;const "speakers": Speaker[] = [;
   {"name": 'Alex Zion',"title": 'Founder & CEO',"avatar": '"https"://placehold.co/100x100',"twitter": '#',"linkedin": '#'}];'
+>>>>>>> origin/resolved-merge-conflicts
   linkedin?: string;
 }
   {"name": 'Alex Zion';'
     }
+<<<<<<< HEAD
+    'title': 'Founder & CEO';'
+    'avatar': ''https'://placehold.co/100x100';'
+    'twitter': '#';'
+    'linkedin': '#'}],'name': 'Alex Zion';'
+    'title': 'Founder & CEO';'
+    'avatar': ''https'://placehold.co/100x100';'
+    'twitter': '#';'
+    'linkedin': '#';'
+=======
     "title": 'Founder & CEO';'
     "avatar": '"https"://placehold.co/100x100';'
     "twitter": '#';'
@@ -37,12 +74,17 @@ interface Speaker  {linkedin?: string;const "speakers": Speaker[] = [;
     "avatar": '"https"://placehold.co/100x100';'
     "twitter": '#';'
     "linkedin": '#';'
+>>>>>>> origin/resolved-merge-conflicts
   }
 ];
 export function SpeakersSection() {return (<section className='py-12 bg-zion-blue-dark text-white' id='speakers'>;'
       <div className='container mx-auto px-4'>;'
         <h2 className='text-3xl font-bold mb-8 text-center'>Speakers</h2>;'
+<<<<<<< HEAD
+        <div className='grid gap-8 'sm':grid-cols-2 'md':grid-cols-3 'lg':grid-cols-4 justify-items-center'>;'
+=======
         <div className='grid gap-8 "sm":grid-cols-2 "md":grid-cols-3 "lg":grid-cols-4 justify-items-center'>;'
+>>>>>>> origin/resolved-merge-conflicts
           {speakers.map(sp => (<div key={sp.name} className='text-center space-y-2'>;'
               <Image;
                 src={sp.avatar}

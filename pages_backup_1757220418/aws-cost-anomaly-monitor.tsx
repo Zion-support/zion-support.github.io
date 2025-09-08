@@ -19,6 +19,11 @@ export default function awscostanomalymonitor() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
+  );
+}
+=======
   )
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

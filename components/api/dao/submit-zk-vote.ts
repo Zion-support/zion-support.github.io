@@ -1,5 +1,12 @@
 
 
+<<<<<<< HEAD
+=======
+  }
+}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { NextApiRequest, NextApiResponse } from './next';
 export default async /**
  * handler - Function description
@@ -10,6 +17,7 @@ if ( {) {
   $2
 }
     res.status (405).json ({ error: "Method not allowed" });
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -29,14 +37,10 @@ export default async function handler(
     }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
 
-export default async function handler(
-  req: NextApiRequest;,
-  res: NextApiResponse;,
-) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' ;});
-    return;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
   }
 
   try {
@@ -47,8 +51,11 @@ export default async function handler(
     }
 
 
+<<<<<<< HEAD
 
 
   }
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

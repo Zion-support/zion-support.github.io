@@ -1,12 +1,32 @@
+<<<<<<< HEAD
 
 
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
+=======
+
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+
+}
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Activity  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Head from 'next/head';
+
+import { Phone, Mail, MapPin, Check, ArrowRight, Activity  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';,
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export default function PerformanceOptimizationSREPage() {
 
 
+<<<<<<< HEAD
 
   );
 
@@ -111,6 +131,39 @@ href='/contact'
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
+=======
+  );
+
+  if (!service) return null;
+return (;
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+
+                <div className='flex items-center space-x-2>;
+                  <MapPin className=w-4 h-4 text-green-400' />;
+                  <span className='text-xs>{service && service.contactInfo.address}</span>;
+                </div>              </div>              <Button href="/contact variant=quantum" size="lg className=w-full">Request Proposal<ArrowRight className="w-5 h-5 ml-2 /></Button>;
+              <div className=mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2><Phone className=w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
+                <div className="flex items-center space-x-2><Mail className=w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
+                <div className="flex items-center space-x-2><MapPin className=w-4 h-4 text-green-400" /><span className="text-xs>{service && service.contactInfo.address}</span></div>;
+import Head from next / head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Activity } from 'lucide-react;
+import UltraAdvancedFuturisticBackground from ../components / ui / UltraAdvancedFuturisticBackground';
+import Button from '../components / ui / Button;
+import { extra_services  } from ../data / extra - services';
+export default /**;
+ * PerformanceOptimizationSREPage - Function description;
+ */;
+function PerformanceOptimizationSREPage() {const service = extra_services.find (string =>;
+    s.link.ends_with ('/performance - optimization - sre))// Check condition;
+if (return null) {$2;
+}export default /**;
+ * PerformanceOptimizationSREPage - Function description;
+ */;
+if (return null) {$2;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
   return (<UltraAdvancedFuturisticBackground>;
@@ -182,6 +235,7 @@ href='/contact'
                   <span>{service.contact_info.email}</span>;
                 </div>;
 
+<<<<<<< HEAD
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{service.contact_info.address}</span>;
@@ -190,13 +244,61 @@ href='/contact'
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
+=======
+                <div className=flex items - center space - x-2'>;
+                  <MapPin className='w - 4 h - 4 text - green - 400 />;
+                  <span className=text - xs'>{service.contact_info.address}</span>;
+                </div>              </div>              <Button href=/contact" variant="quantum size=lg" className="w-full>Request Proposal < ArrowRight className=w - 5 h-5 ml-2" /></Button>;
+              <div className="mt - 6 space - y-3 text - sm text-slate-300>;
+                <div className=flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400 /><span>{service.contact_info.mobile}</span></div>;
+                <div className=flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400 /><span>{service.contact_info.email}</span></div>;
+                <div className=flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400 /><span className=text-xs">{service.contact_info.address}</span></div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
+=======
+
+  const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service.name} - Zion Tech Group</title>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300>;
+                <div className=flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400 /><span>{service.contactInfo.mobile}</span></div>;
+                <div className=flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400 /><span>{service.contactInfo.email}</span></div>;
+                <div className=flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400 /><span className=text-xs">{service.contactInfo.address}</span></div>;
+                className=w-full';
+              >;
+                Request Proposal;
+                <ArrowRight className='w-5 h-5 ml-2 />;
+              </Button>;
+              <div className=mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2>;
+                  <Phone className=w-4 h-4 text-cyan-400' />;
+                  <span>{service.contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-2>;
+                  <Mail className=w-4 h-4 text-purple-400' />;
+                  <span>{service.contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-2>;
+                  <MapPin className=w-4 h-4 text-green-400' />;
+                  <span className='text-xs'>{service.contactInfo.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+}
+}</UltraAdvancedFuturisticBackground>)})}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
   if (!service) return null;
 
@@ -205,27 +307,45 @@ href='/contact'
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 
+=======
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+
+}</UltraAdvancedFuturisticBackground>)})}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

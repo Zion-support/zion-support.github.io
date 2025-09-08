@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,9 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     }
     return this.props.children;

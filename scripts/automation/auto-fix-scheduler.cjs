@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,6 +23,7 @@
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "daily": "0 2 * * *"
       "weekly": "0 2 * * 0"
       "monthly": "0 2 1 * *"
@@ -24,11 +31,21 @@ const { execSync } = require("child_process")
       "weekly"
       "monthly"
   console.log(""⏰ Starting Auto-Fix Scheduler...")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Create logs directory if it doesn"
-  console.log("⏰ Starting Auto-Fix Scheduler...)
-    // Create logs directory if it doesn
+  console.log("⏰ Starting Auto-Fix Scheduler...")
     // Create logs directory if it doesn"
+<<<<<<< HEAD
+const logsDir = path.join(this.projectRoot, "logs");
+  fs.mkdirSync(logsDir, { "recursive"})
+const historyFile = path.join(this.projectRoot, "logs", "fix-history.json");
+const history = JSON.parse(fs.readFileSync(historyFile, "utf8");
+  console.log(""⚠  Could not load fix history, starting fresh")
+const historyFile = path.join(this.projectRoot, "logs", "fix-history.json");
+=======
 <<<<<<< HEAD
 
 =======
@@ -39,6 +56,7 @@ const { execSync } = require("child_process")
   const history = JSON.parse(fs.readFileSync(historyFile, "utf8")
   console.log(""⚠  Could not load fix history, starting fresh")
   const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "lastRun"
       "fixHistory"
 // console.log(""� Setting up fix schedules...")
@@ -68,6 +86,15 @@ const { execSync } = require("child_process")
 // console.log("🧹 Running deep cleanup...")
   console.log("� Fixing import issues...")
 <<<<<<< HEAD
+const fs = require("fs");
+const path = require("path");
+            .replace(/from\\s+[""]([^"]+)\\.ts["]/g, from "$1"
+            .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[""]\\s*\\)/g, "require("child_process")"
+const srcDir = path.join(process.cwd(), "src";
+  if (filePath.endsWith(".tsx") || filePath.endsWith(".ts")
+const content = fs.readFileSync(filePath, "utf8");
+=======
+<<<<<<< HEAD
 
 =======
         const fs = require("fs")
@@ -78,15 +105,24 @@ const { execSync } = require("child_process")
         const srcDir = path.join(process.cwd(), "src"
   if (filePath.endsWith(".tsx") || filePath.endsWith(".ts")
   const content = fs.readFileSync(filePath, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   fs.writeFileSync(filePath, fixedContent, ")
             if (stat.isDirectory() && !item.startsWith(`.``)
   if (stat.isDirectory() && !item.startsWith(".")
         console.log(" Import fixes completed"")
+<<<<<<< HEAD
+const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
+execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }")
+  console.error(" Import fixes "failed": ")
+        console.log(" Import fixes completed"")
+const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
+=======
       const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }")
   console.error(" Import fixes "failed": ")
         console.log(" Import fixes completed"")
       const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
   console.error(" Import fixes "failed": ")
   console.log(" Fixing syntax issues...")
@@ -105,13 +141,19 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
   "cwd"
         "stdio": "inherit"
   console.error(" Comprehensive error fixer "failed": ")
+<<<<<<< HEAD
+=======
   console.error(" Comprehensive error fixer "failed": ")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.log("🧹 Fixing unused imports...")
       execSync("npm run lint -- --fix")
   "cwd"
         "stdio": "inherit"
   console.error(" Unused import fixes "failed": ")
+<<<<<<< HEAD
+=======
   console.error(" Unused import fixes "failed": ")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.log(" Running full TypeScript check...")
       execSync("npm run type-check")
   "cwd"
@@ -119,26 +161,39 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
 // console.log(" Full TypeScript check passed")
   console.log("⚠  Full TypeScript check found issues")
   console.log("🧹 Cleaning up duplicate files...")
+<<<<<<< HEAD
+=======
       // For now, just log that it"
 >>>>>>> origin/chore/fix-lint-and-merge
       console.log(" Duplicate file cleanup completed")
   console.error( Duplicate file cleanup failed": ")
   console.log(� Optimizing project imports...)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // For now, just log that it"
-      console.log(" Project import optimization completed)
-  console.error( Project import optimization "failed": )
-  console.log( Generating project health report...")
-  "timestamp
-        fixHistory"
-        "projectStats
-        recommendations"
-  "timestamp
-        fixHistory"
-        "projectStats
-        recommendations"
+      console.log(" Duplicate file cleanup completed")
+  console.error(" Duplicate file cleanup "failed": ")
+  console.log("� Optimizing project imports...")
+      // For now, just log that it"
+      console.log(" Project import optimization completed")
+  console.error(" Project import optimization "failed": ")
+  console.log(" Generating project health report...")
+  "timestamp"
+        "fixHistory"
+        "projectStats"
+        "recommendations"
+  "timestamp"
+        "fixHistory"
+        "projectStats"
+        "recommendations"
         this.projectRoot,logs"
-        project-health-report.json
+        "project-health-report.json"
       console.log(" Project health report generated")
+<<<<<<< HEAD
+  console.error(" Project health report generation "failed": ")
+const content = fs.readFileSync(file, "utf8");
+return total + content.split("\n");
+  "totalFiles"
+=======
 <<<<<<< HEAD
 
 =======
@@ -148,9 +203,12 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
         return total + content.split("\n")
   "totalFiles"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "averageLinesPerFile"
-      const failedFixes = recentFixes.filter(fix => fix.status === failed)
+      const failedFixes = recentFixes.filter(fix => fix.status === "failed")
   recommendations.push(Review failed fixes and address underlying issues")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           "Consider adjusting fix schedules if running too frequently
   recommendations.push(Auto-fix system is running smoothly")
@@ -165,6 +223,7 @@ process.on(SIGINT")
 process.on(SIGTERM")
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "Consider adjusting fix schedules if running too frequently"
   recommendations.push("Auto-fix system is running smoothly")
       "startTime"
@@ -179,10 +238,13 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
   console.log(")
@@ -190,6 +252,12 @@ process.on("SIGTERM")
   console.log(")
   console.log(")
 
+<<<<<<< HEAD
+
+
+
+
+=======
 
 
 =======
@@ -218,3 +286,4 @@ process.on("SIGTERM")
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

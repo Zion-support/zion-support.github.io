@@ -1,9 +1,10 @@
-const dateObj = new Date(date);
-  switch (format) {'
-    case 'short':
 
 
+<<<<<<< HEAD
 
+=======
+      return dateObj && dateObj.toLocaleDateString(),'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     case 'medium':
       return dateObj && dateObj.toLocaleDateString(undefined, { '
         year: 'numeric', '
@@ -22,6 +23,7 @@ const dateObj = new Date(date);
         year: 'numeric', '
         month: 'long', '
         day: 'numeric' 
+<<<<<<< HEAD
 
 
 
@@ -55,11 +57,50 @@ const dateObj = new Date(date);
 
 
 
+=======
+
+      });'
+    case 'relative':
+      // Simple relative time (today, yesterday, or date)
+      const now = new Date();
+      if (dateObj >= today) {'
+        return 'Today'
+      } else if (dateObj >= yesterday) {'
+        return 'Yesterday'
+      } else {}
+        return dateObj.toLocaleDateString()
+
 /**
  * Format a date to show how long ago it was;
  * @param date Date to format;
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
+/**
+ * Format a date string or timestamp into a readable format
+ * @param date Date to format
+ * @param format Optional format specification
+ * @returns Formatted date string
+ */
+
+
+      });'
+    case 'relative':
+      // Simple relative time (today, yesterday, or date)
+      const now = new Date();
+      if (dateObj >= today) {'
+        return 'Today'
+      } else if (dateObj >= yesterday) {'
+        return 'Yesterday'
+      } else {}
+        return dateObj.toLocaleDateString()
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+/**
+ * Format a date to show how long ago it was;
+ * @param date Date to format;
+ * @returns Time ago string (e && e.g., "2 hours ago")
+ */
+<<<<<<< HEAD
 
 }
 return interval === 1 ? '1 minute ago' : `${interval} minutes ago`;`  }
@@ -182,3 +223,8 @@ export const timeAgo = (date: Date | string | number): string => {
 
 
 
+=======
+
+
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba

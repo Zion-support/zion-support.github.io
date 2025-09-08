@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 interface CountryTabsProps {
@@ -37,6 +38,8 @@ interface CountryTabsProps {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from "react";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -45,6 +48,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {CountryServiceCard} from "@/components/services/CountryServiceCard";
 import {CountryPricing} from "@/data/onsiteServicePricing";
 
+<<<<<<< HEAD
 
 interface CountryTabsProps {;
   popularCountries: string[],;
@@ -56,6 +60,8 @@ interface CountryTabsProps {;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
 
         <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">;
@@ -74,27 +80,37 @@ interface CountryTabsProps {;
           </p>;
         </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <CountryServiceCard
 
                 key={country && country.country} 
                 country={country} 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <CountryServiceCard 
                 key={country.country} 
                 country={country} 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
             ));
           }
 
+<<<<<<< HEAD
 
         </div>;
       </TabsContent>;
@@ -116,18 +132,26 @@ interface CountryTabsProps {;
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               onChange={(e) => setSearchQuery(e && e.target.value)}
             />;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
+=======
+"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">;
           {filteredCountries && filteredCountries.slice(0, 12).map(country => (;
             <CountryServiceCard;
               key={country && country.country} 
               country={country} 
 
+<<<<<<< HEAD
 
             <CountryServiceCard 
 
@@ -280,3 +304,7 @@ interface CountryTabsProps {
 
 
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

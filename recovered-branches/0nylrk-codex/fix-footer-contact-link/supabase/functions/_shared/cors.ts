@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 export const corsHeaders = {;
@@ -12,3 +13,6 @@ export const corsHeaders = {;
 
 
 
+=======
+export const corsHeaders = {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

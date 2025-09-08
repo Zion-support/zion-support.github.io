@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { useState  } from "react";
+import { useState  } from 'react';
 export const useAuthState = () => {;
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -15,4 +15,4 @@ export const useAuthState = () => {;
     tokens,;
     setTokens;
   };''
-};'''"
+};''''

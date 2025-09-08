@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+#!/""usr/bin/env""
+const pm2 = require("pm2");
+const fs = require("fs");
+const path = require("path");
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -17,6 +23,7 @@
 const pm2 = require("pm2")
 const fs = require("fs")
 const path = require("path")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "maxConcurrentProcesses"
       "healthCheckInterval"
       "retryAttempts"
@@ -29,7 +36,10 @@ const path = require("path")
       bus.on(""log": err")
       bus.on(""log": out")
   case "start"
+<<<<<<< HEAD
+=======
   case "start"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         this.processes.set(process.name, { ...process, "status": `online``})
       case "stop`:console.log(⏸  Process ${process.name} stopped```)
         this.processes.set(process.name, { ...process, "status": "})
@@ -39,13 +49,24 @@ const path = require("path")
         this.processes.set(process.name, { ...process, "status": "online"})
       case "exit":console.log(" Process ${process.name} exited")
         this.processes.set(process.name, { ...process, "status": "errored"})
+<<<<<<< HEAD
+const { process, log } = data;console.error(" Error in ${process.name}:");
+=======
   const { process, log } = data;console.error(" Error in ${process.name}:")
   this.processes.get(process.name).status = "errored"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.processes.get(process.name).status = "errored"
     if (log.includes("ERROR") || log.includes("CRITICAL")) {console.error("⚠  ${process.name}:", log)} else if (log.includes("SUCCESS") || log.includes("COMPLETED")) {console.log(" ${process.name}:")
 // console.log("� Critical process ${processName} failed, attempting recovery...")
   console.log("� Critical process ${processName} failed, attempting recovery...")
     if (!process) return;"
+<<<<<<< HEAD
+"
+    // Check if this is a critical process"
+    if (this.isCriticalProcess(processName)) {"}
+  const criticalProcesses = ["console-error-fixer", "security-audit"", "performance-monitor", ""]
+        if (status === "online") {console.log( ${processName} recovered successfully"")
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
 "
     // Check if this is a critical process"
@@ -58,13 +79,18 @@ const path = require("path")
   const criticalProcesses = [console-error-fixer", "security-audit, "performance-monitor", ]
         if (status === "online") {console.log( ${processName} recovered successfully)
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Wait a bit and check if it"
   async attemptRecovery(processName) {"}
-    try {}
-      // Wait a bit and check if its running"
+    try {"}
+      // Wait a bit and check if it"s running"
       setTimeout(async () => {"}
 <<<<<<< HEAD
+        if (status === "online") {console.log( ${processName} recovered successfully`")} else {console.error(" ${processName} recovery failed"`)
+=======
+<<<<<<< HEAD
   if($2) {console.log( ${processName} recovered successfully`")} else {console.error(" ${processName} recovery failed"`)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }, 10000)} catch (error) {  console.error(" Failed to recover ${processName  }:")
     this.schedules.set("console-error-fixer")
   "interval"
@@ -110,12 +136,20 @@ const path = require("path")
   "interval"
       "priority": "low"
       "dependencies": ["link-checker"]
+<<<<<<< HEAD
+        if (health.status === "unhealthy") {console.warn(`⚠  Unhealthy process "detected"`})
+=======
   if($2) {console.warn(`⚠  Unhealthy process "detected"`})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.error(" Health check "failed": ")
   "status": "healthy"
       "issues"
       "metrics"
+<<<<<<< HEAD
+        if (health.status === "unhealthy") {console.warn(`⚠  Unhealthy process "detected"`})
+=======
   if($2) {console.warn(`⚠  Unhealthy process "detected"`})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.error(" Health check "failed": ")
   "status": "healthy"
       "issues"
@@ -128,6 +162,49 @@ const path = require("path")
       health.issues.push("Excessive restarts")
       health.status = "unhealthy"
       health.issues.push("Low uptime")
+<<<<<<< HEAD
+  handleUnhealthyProcess(processName, health) {console.warn(`� Process ${processName} is "unhealthy"`)
+      health.issues.includes("Excessive restarts")
+      health.issues.includes("Low uptime")
+  console.log(`� Attempting to restart unhealthy process ${processName}...``)
+      health.issues.includes(`Excessive restarts``)
+      health.issues.includes("Low uptime")
+// console.log("� Attempting to restart unhealthy process ${processName}...")
+      console.log("� Attempting to restart unhealthy process ${processName}..."")
+      );"
+      this.restartProcess(processName).catch(error => {console.error( Failed to restart ${processName}:, error.message")
+return process ? process.pm2_env.status : ";
+return "unknown";
+  return this.healthChecks.get(processName) || { "status": "unknown"}
+  "timestamp"
+      "summary"
+        "healthyProcesses"
+        "unhealthyProcesses"
+        "erroredProcesses"
+      "processes"
+      "recommendations"
+    for (const ["name", "process")]
+  const health = this.healthChecks.get(name) || { "status": "unknown"}
+      if (health.status === "healthy")
+  report.summary.healthyProcesses++} else if (health.status === "unhealthy")
+  report.summary.unhealthyProcesses++} else if (process.status === "errored")
+        "status"
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : """N/A"""
+        "priority": schedule.priority || """N/A"""
+} else if (health.status === "unhealthy")
+  report.summary.unhealthyProcesses++} else if (process.status === "errored")
+        "status"
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : ""N/A""
+        "priority": schedule.priority || ""N/A""
+  report.recommendations.push("Review and optimize unhealthy processes")
+  report.recommendations.push("Investigate and fix errored processes")
+        __dirname,.."
+        "reports",automation-report.json"
+      await fs.mkdir(path.dirname(reportPath), { "recursive"}
+  console.error(" Failed to save "report": ")
+      console.log(" Automation Orchestrator started")
+
+=======
   handleUnhealthyProcess($2) {console.warn(`� Process ${processName} is "unhealthy"`)
       health.issues.includes("Excessive restarts")
       health.issues.includes("Low uptime")
@@ -308,9 +385,16 @@ const path = require("path")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.error(" Orchestrator "error")
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+
+
+
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -322,3 +406,4 @@ const path = require("path")
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

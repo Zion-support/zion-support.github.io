@@ -67,9 +67,9 @@ export default function QuotePage() {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Get a Quote</h1>
@@ -87,9 +87,9 @@ export default function QuotePage() {
               {/* Form */}
               <motion.div
                 className="bg-white rounded-lg shadow-lg p-8"
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, x: -30 }
+                animate={ opacity: 1, x: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
                   <Calculator className="w-8 h-8 mr-3 text-blue-600" />
@@ -274,9 +274,9 @@ export default function QuotePage() {
               {/* Benefits Sidebar */}
               <motion.div
                 className="space-y-8"
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, x: 30 }
+                animate={ opacity: 1, x: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >
                 <div className="bg-white rounded-lg shadow-lg p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us?</h3>

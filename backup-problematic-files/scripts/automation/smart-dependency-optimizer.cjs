@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
 const { execSync, spawn } = require("child_process)
 const crypto = require(crypto")
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
->>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
       smart-dependency-optimizer.log
       this.projectRoot,logs"
@@ -253,31 +244,11 @@ const crypto = require("crypto")
 this.log(` Optimization Report "generated"`)
   this.log( Smart Dependency Optimizer starting...)
 this.log(" Smart Dependency Optimization completed successfully")
-<<<<<<< HEAD
       this.log(� Total savings: ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization failed: ${error.message  }",ERROR"
 
-=======
-      this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
-        " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
         ` Smart Dependency Optimization "failed": ${error.message}"
         ` Smart Dependency Optimization "failed": ${error.message}"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-        ` Smart Dependency Optimization "failed": ${error.message}"
-=======
-        ` Smart Dependency Optimization "failed": ${error.message}"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

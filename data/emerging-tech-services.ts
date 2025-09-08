@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   }
 ];
@@ -1309,4 +1312,8 @@ export const emergingTechServices: EmergingTechService[] = [;
     reviews: 28;
   }
 ];
+<<<<<<< HEAD
 
+=======
+];
+>>>>>>> origin/cursor/delete-old-data-records-6bba

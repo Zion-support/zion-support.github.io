@@ -1,5 +1,14 @@
 
 
+<<<<<<< HEAD
+=======
+    launchDate: '2025-06-01',
+    customers: 3,
+    rating: 5.0,
+    reviews: 2}
+],
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   }
 ];
@@ -314,4 +323,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     reviews: 2;
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

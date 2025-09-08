@@ -8,8 +8,39 @@ const SystemAdministrationChat: NextPage = () => ;
 
 ;
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const SystemAdministrationChat: NextPage = () => ;
+  return (<div />;
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const SystemAdministrationChat: NextPage = () => {;
   return (
@@ -89,8 +120,43 @@ name=\"description\"}
 
 export default SystemAdministrationChat;
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const SystemAdministrationChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title />SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title />SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title />SystemAdministrationChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -99,8 +165,26 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default SystemAdministrationChat;
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SystemAdministrationChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const "SystemAdministrationChat": NextPage = () => {
+=======
+const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
  ;
   return (
     <div />
@@ -113,8 +197,43 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > SystemAdministrationChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const SystemAdministrationChat: NextPage = () => ;
+  return (<div />;
+const SystemAdministrationChat: NextPage = () => {
+  return (
+    <div />;
+      <Head />;
+        <title  /> SystemAdministrationChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <meta;
           name=\"description\";}
           content=\"SystemAdministrationChat blog post\";}
@@ -142,8 +261,37 @@ export default SystemAdministrationChat;<div />;
     </div>;
   )},export default SystemAdministrationChat;
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const SystemAdministrationChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />SystemAdministrationChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <meta;
           name=\"description\";
           content=\"SystemAdministrationChat blog post\";
@@ -167,8 +315,25 @@ export default SystemAdministrationChat;<title />SystemAdministrationChat - Zion
 
 ;
 export default SystemAdministrationChat;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const SystemAdministrationChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
  ;
   return (
     <div />
@@ -190,8 +355,25 @@ name=\"description\"}
 
 export default SystemAdministrationChat;
 export default SystemAdministrationChat;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const SystemAdministrationChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
  ;
   return (
     <div />
@@ -216,8 +398,25 @@ export default SystemAdministrationChat;
         <title />SystemAdministrationChat - Zion Tech Solutions</title>
         <title />SystemAdministrationChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const SystemAdministrationChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
  ;
   return (
     <div />

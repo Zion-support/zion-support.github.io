@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -15,9 +18,12 @@ import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface AddSkillFormProps {
 
 interface AddSkillFormProps {}
@@ -25,6 +31,7 @@ interface AddSkillFormProps {}
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
 
+<<<<<<< HEAD
 
 
 
@@ -32,6 +39,9 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [skillName, setSkillName] = useState('');
 
   const [skillCategory, setSkillCategory] = useState('');
@@ -42,6 +52,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     const newSkill: Skill = {}
       name: skillName.trim()'
       category: skillCategory |'Other'
+<<<<<<< HEAD
 
       proficiency: proficiency}
 
@@ -102,6 +113,50 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
 
   return (
+=======
+
+
+  }
+  const handleEnhanceSkill = (enhancedCategory: string) => {}
+    setSkillCategory(enhancedCategory)
+  }
+  };
+
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
+import { Skill } from '@/types/resume',;
+
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
+
+interface AddSkillFormProps {;
+  resumeId: string,;
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+}
+;
+export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
+
+  },
+
+  const handleEnhanceSkill = (enhancedCategory: string) => {}
+    setSkillCategory(enhancedCategory)
+  },
+
+  return (
+
+  const handleEnhanceSkill = (enhancedCategory: string) => {
+    setSkillCategory(enhancedCategory)
+  },
+  return (
+
+  const handleEnhanceSkill = (enhancedCategory: string) => {;
+    setSkillCategory(enhancedCategory);
+  };
+  return (
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -143,10 +198,15 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
   ;
   return (;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
           <Label htmlFor="skill-name">Skill Name</Label>;
+<<<<<<< HEAD
 
             onChange={(e) => setSkillName(e && e.target.value)}
             placeholder="Enter a skill (e && e.g., React)";
@@ -168,17 +228,45 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
 
 
 
+=======
+
+
+  return (
+
+    <form onSubmit={handleSubmit} className="space-y-4">;"
+      <div className="flex flex-col gap-4 md:flex-row">;"
+        <div className="flex-1">;"
+          <Label htmlFor="skill-name">Skill Name</Label>;
+
+            onChange={(e) => setSkillName(e && e.target.value)}"
+            placeholder="Enter a skill (e && e.g., React)";
+          />;
+        </div>;
+"
+        <div className="w-full md:w-44">;"
+          <div className="flex justify-between items-center">;"
+
+            <Label htmlFor="skill-category">Category</Label>;
+            {skillName && (;
+              <AIEnhancementButton ;
+                currentContent={skillName}
+                enhancementType="general";
+                onEnhanced={handleEnhanceSkill}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
           <Select;
             value={skillCategory} 
             onValueChange={setSkillCategory}>;"
             <SelectTrigger id="skill-category">;
 
+<<<<<<< HEAD
 import {Button} from '@/components / ui / button';
 import {Input} from '@/components / ui / input';
 import {Label} from '@/components / ui / label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components / ui / select';
 import {Skill} from '@/types / resume';
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {AIEnhancementButton} from '@/components / resume - builder / forms / AIEnhancementButton';
 interface AddSkillFormProps {}
@@ -243,6 +331,7 @@ if ( {) {}
             onValueChange={setSkillCategory}
           >;"
             <SelectTrigger id="skill - category">;
+<<<<<<< HEAD
 
                 buttonText="Suggest";
                 className="h-4";
@@ -268,12 +357,29 @@ if ( {) {}
             </SelectContent>;
           </Select>;
         </div>;
+=======
+
+
+                currentContent={skillName}"
+                enhancementType="general";
+                onEnhanced={handleEnhanceSkill}
+"
+              <SelectValue placeholder="Select category" />;
+
+            <Button type="submit">Add</Button>
+          </div>
+        </div>
+      </div>
+    </form>
+  )
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 },
 };
 },
 
+<<<<<<< HEAD
 
 
   return (
@@ -352,11 +458,15 @@ if ( {) {}
               onChange={(e) => setProficiency(Number(e.target.value))}
               className="w-20";
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             />;
 
             <Button type="submit">Add</Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
       </div>;
     </form>;
@@ -374,3 +484,7 @@ const newSkill: Skill = {
 
 
 
+=======
+
+      </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

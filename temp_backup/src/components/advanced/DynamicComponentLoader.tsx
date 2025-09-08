@@ -5,7 +5,7 @@
   default: ComponentType<any> ;
 }> fallback?: React.ReactNode loadingComponent?: React.ComponentType enableRetry?: boolean maxRetries?: number prefetch?: boolean className?: string children?: React.ReactNode [key: string]: unknown ;
 }//Enhanced Loading Component const EnhancedLoading: React.FC< {;
-  progress?: number message?: string <motion.div className="absolute inset-0 rounded-full border-2 border-primary" style= {;
+  progress?: number message?: string <motion.div className='absolute inset-0 rounded-full border-2 border-primary' style= {;
   {;
   background: `conic-gradient (from 0deg,  var (--primary) 0%, var (--primary) $ {;
   progress ;
@@ -33,25 +33,25 @@ const EnhancedLoading: React.FC<{progress?: number;
         <div className='relative' />;
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (<motion&& motion.div;}
               className='absolute inset-0 rounded-full border-2 border-primary';}
-              style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
+              style={background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
   progress?: number;
   message?: string;
   show_progress?: boolean;
 } /> = ({progress = 0,message = 'Loading component...',showProgress = true;}
 }) => (<motion.div;
-              className="absolute inset-0 rounded-full border-2 border-primary";
-              style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;"
-  message = 'Loading component...',show_progress = true}) = /> (<Card className="w-full max-w-md mx-auto" />;"
-    <CardContent className="p-6" />;"
-      <div className="flex flex-col items-center space-y-4" />;"
-        <div className="relative" />;"
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-          {showProgress && (<motion.div;}"
-              className="absolute inset-0 rounded-full border-2 border-primary";}
-              style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
-              }}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }
+              className='absolute inset-0 rounded-full border-2 border-primary';
+              style={background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;'
+  message = 'Loading component...',show_progress = true}) = /> (<Card className='w-full max-w-md mx-auto' />;'
+    <CardContent className='p-6' />;'
+      <div className='flex flex-col items-center space-y-4' />;'
+        <div className='relative' />;'
+          <Loader2 className='h-8 w-8 animate-spin text-primary' />;
+          {showProgress && (<motion.div;}'
+              className='absolute inset-0 rounded-full border-2 border-primary';}
+              style={background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
+              }
+              initial={ rotate: 0 }
+              animate={ rotate: 360 }
 }
 }animate= {;
   {;
@@ -63,16 +63,16 @@ const EnhancedLoading: React.FC<{progress?: number;
 }
 }/>) ;
 }</div> {;
-  Math.round (progress) ;"
-}% loaded </p>) ;"'"
-}</div> </div> </CardContent> </Card>) //Enhanced Error Component const EnhancedError: React.FC< {";'"'"
-  error: Error retry: () => void isOnline: boolean retryCount: number) : (<WifiOff className="h-6 w-6 text-red-600" />) ';''
+  Math.round (progress) ;'
+}% loaded </p>) ;'''
+}</div> </div> </CardContent> </Card>) //Enhanced Error Component const EnhancedError: React.FC< {';''''
+  error: Error retry: () => void isOnline: boolean retryCount: number) : (<WifiOff className='h-6 w-6 text-red-600' />) ';''
 }</div> ? error.message || 'Failed to load component' : 'Please check your internet connection' ;
 }</p> </p>) ;
-}</div> {;"
-  retryCount < maxRetries && (<Button onClick={;""
-  retry ";""
-}variant="outline" size="sm" className="border-red-300 text-red-700 hover:bg-red-100" > <RefreshCw className="h-4 w-4 mr-2" /> Try Again </Button>) ;'
+}</div> {;'
+  retryCount < maxRetries && (<Button onClick={;''
+  retry ';''
+}variant='outline' size='sm' className='border-red-300 text-red-700 hover:bg-red-100' > <RefreshCw className='h-4 w-4 mr-2' /> Try Again </Button>) ;'
 }</div> </CardContent> </Card>) //Network Status Hook const useNetworkStatus = () => {;''
   const [isOnline, setIsOnline] = useState (true) useEffect ( () => {';''
   const updateOnlineStatus = () => setIsOnline (navigator.onLine) window.addEventListener ('online', updateOnlineStatus) window.addEventListener ('offline', updateOnlineStatus) return () => {';''
@@ -109,7 +109,7 @@ const EnhancedLoading: React.FC<{progress?: number;
   ...prev, isLoading: false, error: error as Error,  retryCount: prev.retryCount + 1, isOnline ;
 }) ) ;
 }
-            animate={{ opacity: 1, y: 0 }
+            animate={ opacity: 1, y: 0 }
 }
 }//Prefetch on hover/focus useEffect ( () => {;
   if (prefetch) {;
@@ -136,9 +136,9 @@ interface DynamicLoaderProps  {importFn: () => Promise<{ default: ComponentType<
 
 const EnhancedLoading: React.FC<{progress?: number;
   message?: string;}
-  showProgress?: boolean;}"
-}> = ({progress;//   {//     loadingComponent: () => (//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center" />;"
-//         <span className="text-muted-foreground" />Loading 3D renderer...</span>;}
+  showProgress?: boolean;}'
+}> = ({progress;//   {//     loadingComponent: () => (//       <div className='w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center' />;'
+//         <span className='text-muted-foreground' />Loading 3D renderer...</span>;}
 //       </div>;}
 //     )//   }
 // )export default DynamicComponentLoader;
@@ -194,6 +194,6 @@ if ( {) {$2;}
 }{;
   ... (props as any) ;
 }/>) ;
-}//Predefined dynamic loaders for common heavy components //Note: These are examples - uncomment and install types as needed //</div> //), //prefetch: true // ;'"
-}//) //</div> //) // ;'"'"
-}//) export default DynamicComponentLoader '"'"'"`
+}//Predefined dynamic loaders for common heavy components //Note: These are examples - uncomment and install types as needed //</div> //), //prefetch: true // ;''
+}//) //</div> //) // ;''''
+}//) export default DynamicComponentLoader ''''''`

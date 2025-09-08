@@ -15,7 +15,11 @@ if ( {) {$2;
     }
     try {setIsGenerating (true)// Call the Supabase Edge Function;
       }
+<<<<<<< HEAD
+      const { data, error } = await supabase.functions.invoke ('talent - profile - enhancer',{"body": {"talent_data": {"name": form_data.name,"title": form_data.title,"bio": form_data.bio,"skills": skill_tags,"location": form_data.location}}// Check if data exists before type assertion;'
+=======
       const { data, error } = await supabase.functions.invoke ('talent - profile - enhancer',{"body": {"talent_data": {"name": form_data.name,"title": form_data.title,"bio": form_data.bio,"skills": skill_tags,"location": form_data.location}}}// Check if data exists before type assertion;'
+>>>>>>> origin/resolved-merge-conflicts
       // Check condition;
 if ( {) {$2;
 }
@@ -23,17 +27,29 @@ if ( {) {$2;
             'AI has created a professional bio and suggested additional skills for your profile.'})} else {// Fallback for mock / development mode;'
         }
         log_warn ('Mock AI response - using fallback content')setGeneratedContent ({"summary":;'
+<<<<<<< HEAD
+            'Experienced professional with expertise in modern technologies and best practices.',"categorized_skills": {"programming": ['JavaScript', 'TypeScript', 'React'],"devops": ['Docker', 'CI / CD', 'AWS'],"platforms": ['Node.js', 'Next.js', 'Vercel'],"soft_skills": ['Communication', 'Problem Solving', 'Team Leadership'],"other": ['Project Management', 'Technical Writing']})toast ({"title": 'Enhanced Profile Generated',"description":;'
+=======
             'Experienced professional with expertise in modern technologies and best practices.',"categorized_skills": {"programming": ['JavaScript', 'TypeScript', 'React'],"devops": ['Docker', 'CI / CD', 'AWS'],"platforms": ['Node.js', 'Next.js', 'Vercel'],"soft_skills": ['Communication', 'Problem Solving', 'Team Leadership'],"other": ['Project Management', 'Technical Writing']}})toast ({"title": 'Enhanced Profile Generated',"description":;'
+>>>>>>> origin/resolved-merge-conflicts
             'AI has created a professional bio and suggested additional skills for your profile.'})}'
     } catch ("error": any) {logErrorToProduction ('Error generating enhanced "profile":', {"data": error})toast ({"title": 'Generation failed',"description":;'
           }
           error.message ||;
           'There was an error generating your enhanced profile. Please try again.',"variant": 'destructive'})} finally {setIsGenerating (false)}'
+<<<<<<< HEAD
+  })if (error) {throw new Error(error.message)"name": user?.displayName || "","title": "","bio": "","location": "","skills": "","hourlyRate": "","availability": "available","enhancedProfile": true}),// Handle adding skill tags;"
+  const handleRemoveSkill = ("skill": string) => {setSkillTags(skillTags.filter((s) => s !== skill))},// Handle key press in skills input (add on enter)const handleSkillKeyPress = ("e": React.KeyboardEvent) => {if (e.key === "Enter") {e.preventDefault(),handleAddSkill()export function TalentRegistrationForm() {// Remove the useToast() hook since we're importing the toast function directly;'
+  }
+  const { user } = useAuth(),const [isSubmitting, setIsSubmitting] = useState(false),const [skillTags, setSkillTags] = useState<string[]>([]),const [isGenerating, setIsGenerating] = useState(false),const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),// Initialize form with default values;
+  const form = useForm<TalentFormValues>({"resolver": zodResolver(talentProfileSchema) as any,"defaultValues": {"name": user?.displayName || "","title": "","bio": "","location": "","skills": "","hourlyRate": "","availability": "available","enhancedProfile": true}),// Handle adding skill tags;"
+=======
   })if (error) {throw new Error(error.message)"name": user?.displayName || "","title": "","bio": "","location": "","skills": "","hourlyRate": "","availability": "available","enhancedProfile": true}}),// Handle adding skill tags;"
   const handleRemoveSkill = ("skill": string) => {setSkillTags(skillTags.filter((s) => s !== skill))},// Handle key press in skills input (add on enter)const handleSkillKeyPress = ("e": React.KeyboardEvent) => {if (e.key === "Enter") {e.preventDefault(),handleAddSkill()export function TalentRegistrationForm() {// Remove the useToast() hook since we're importing the toast function directly;'
   }
   const { user } = useAuth(),const [isSubmitting, setIsSubmitting] = useState(false),const [skillTags, setSkillTags] = useState<string[]>([]),const [isGenerating, setIsGenerating] = useState(false),const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),// Initialize form with default values;
   const form = useForm<TalentFormValues>({"resolver": zodResolver(talentProfileSchema) as any,"defaultValues": {"name": user?.displayName || "","title": "","bio": "","location": "","skills": "","hourlyRate": "","availability": "available","enhancedProfile": true}}),// Handle adding skill tags;"
+>>>>>>> origin/resolved-merge-conflicts
   const handleRemoveSkill = ("skill": string) => {setSkillTags(skillTags.filter((s) => s !== skill))},// Handle key press in skills input (add on enter)const handleAvatarUpload = ("e": React.ChangeEvent<HTMLInputElement>) => {const file = e.target.files?.[0],if (file) {const reader = new FileReader(),reader.onloadend = () => {setUploadedAvatar(reader.result as string)},reader.readAsDataURL(file)}
   },// Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({"title": "More information needed","description": "Please provide at least a detailed bio before generating enhanced content."}),return;"
@@ -44,7 +60,11 @@ if ( {) {$2;
           }
         }
       }),if (error) {throw new Error(error.message)}// Check if data exists before type assertion;
+<<<<<<< HEAD
+      if (data && typeof data === 'object') {} catch ("error": any) {logErrorToProduction('Error generating enhanced "profile":', { "data": error }),toast({"title": "Generation failed","description": error.message || "There was an error generating your enhanced profile. Please try again.","variant": "destructive"})} finally {setIsGenerating(false)}"
+=======
       if (data && typeof data === 'object') {}} catch ("error": any) {logErrorToProduction('Error generating enhanced "profile":', { "data": error }),toast({"title": "Generation failed","description": error.message || "There was an error generating your enhanced profile. Please try again.","variant": "destructive"})} finally {setIsGenerating(false)}"
+>>>>>>> origin/resolved-merge-conflicts
   },// Apply generated content to form;
   const applyGeneratedContent = () => {if (generatedContent) {form.setValue("bio", generatedContent.summary),// Extract all skills from categorized skills and properly type cast them;"
       }
@@ -74,20 +94,32 @@ const talentProfileSchema = z && z.object({"name": z && z.string().min(2, 'Full 
   }
   const { user } = useAuth()const [isSubmitting, setIsSubmitting] = useState(false)const [skillTags, setSkillTags] = useState<string[]>([])const [isGenerating, setIsGenerating] = useState(false)const [generatedContent, setGeneratedContent] =;
     useState<EnhancedProfile | null>(null)const [uploadedAvatar, setUploadedAvatar]  = useState<string | null>(null)// Initialize form with default values;
+<<<<<<< HEAD
+  const form = useForm<TalentFormValues>({"resolver": zodResolver(talentProfileSchema) as any,"defaultValues": {"name": user?.displayName || '',"title": '',"bio": '',"location": '',"skills": '',"hourlyRate": '',"availability": 'available',"enhancedProfile": true})// Handle adding skill tags;'
+=======
   const form = useForm<TalentFormValues>({"resolver": zodResolver(talentProfileSchema) as any,"defaultValues": {"name": user?.displayName || '',"title": '',"bio": '',"location": '',"skills": '',"hourlyRate": '',"availability": 'available',"enhancedProfile": true}})// Handle adding skill tags;'
+>>>>>>> origin/resolved-merge-conflicts
   const handleRemoveSkill = ("skill": string) => {setSkillTags(skillTags && skillTags.filter(s => s !== skill))}// Handle key press in skills input (add on enter)const handleAvatarUpload = ("e": React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];    if (file) {const reader = new FileReader()reader && reader.onloadend = () => {setUploadedAvatar(reader && reader.result as string)}reader && reader.readAsDataURL(file)}
   }// Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {const formData = form && form.getValues()if (!formData && formData.bio || formData && formData.bio.length < 20) {toast({"title": 'More information needed',"description":;'
           'Please provide at least a detailed bio before generating enhanced content.'})return;'
     }try {setIsGenerating(true)// Call the Supabase Edge Function;
       }
+<<<<<<< HEAD
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{"body": {"talentData": {"name": formData && formData.name,"title": formData && formData.title,"bio": formData && formData.bio,"skills": skillTags,"location": formData && formData.location}}'
+=======
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{"body": {"talentData": {"name": formData && formData.name,"title": formData && formData.title,"bio": formData && formData.bio,"skills": skillTags,"location": formData && formData.location}}}'
+>>>>>>> origin/resolved-merge-conflicts
       )if (error) {throw new Error(error && error.message)}// Check if data exists before type assertion;
       if (data && typeof data === 'object') {setGeneratedContent(data as EnhancedProfile)toast({"title": 'Enhanced Profile Generated',"description":;'
             'AI has created a professional bio and suggested additional skills for your profile.'})} else {// Fallback for mock/development mode;'
         }
         logWarn('Mock AI response - using fallback content')setGeneratedContent({"summary":;'
+<<<<<<< HEAD
+            'Experienced professional with expertise in modern technologies and best practices.',"categorizedSkills": {"programming": ['JavaScript', 'TypeScript', 'React'],"devops": ['Docker', 'CI/CD', 'AWS'],"platforms": ['Node && Node.js', 'Next && Next.js', 'Vercel'],"softSkills": ['Communication', 'Problem Solving', 'Team Leadership'],"other": ['Project Management', 'Technical Writing']})toast({"title": 'Enhanced Profile Generated',"description":;'
+=======
             'Experienced professional with expertise in modern technologies and best practices.',"categorizedSkills": {"programming": ['JavaScript', 'TypeScript', 'React'],"devops": ['Docker', 'CI/CD', 'AWS'],"platforms": ['Node && Node.js', 'Next && Next.js', 'Vercel'],"softSkills": ['Communication', 'Problem Solving', 'Team Leadership'],"other": ['Project Management', 'Technical Writing']}})toast({"title": 'Enhanced Profile Generated',"description":;'
+>>>>>>> origin/resolved-merge-conflicts
             'AI has created a professional bio and suggested additional skills for your profile.'})}'
     } catch ("error": any) {logErrorToProduction('Error generating enhanced "profile":', {"data": error})toast({"title": 'Generation failed',"description":;'
           }
@@ -118,7 +150,11 @@ if ( {) {$2;
 if () {) {$2;
 }
               new_skills.push (skill)}
+<<<<<<< HEAD
+          })})// Check condition;
+=======
           })}})// Check condition;
+>>>>>>> origin/resolved-merge-conflicts
 if ( {) {$2;
 }
         setSkillTags ([...skill_tags, ...new_skills])}
@@ -138,7 +174,11 @@ if ( {) {$2;
         return 'bg-gray-500/20 "hover":bg-gray-500/30 text-gray-500';'
       "default":;
         return 'bg-zion-purple/20 "hover":bg-zion-purple/30 text-zion-purple';'
+<<<<<<< HEAD
+    },// Send notification email;
+=======
     }},// Send notification email;
+>>>>>>> origin/resolved-merge-conflicts
   const sendEnhancementNotification = async ("userId": string, "email": string) => {try {await supabase.functions.invoke('send-email', {"body": {"to": email,"subject": "Your Zion Talent Profile Has Been Enhanced","html": `;`          <div style="font-"family": Arial, sans-serif; max-"width": 600px; "margin": 0 auto;">;"
             <h2 style=""color": #6D28D9;">Profile Enhancement Complete</h2>;"
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;'
@@ -158,7 +198,11 @@ if ( {) {$2;
               <p style=""color": #666; font - "size": 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;"
             </div>;
           </div>;
+<<<<<<< HEAD
+          `})} catch (error) {logErrorToProduction ('Failed to send notification "email":', {"data": error})}'
+=======
           `}})} catch (error) {logErrorToProduction ('Failed to send notification "email":', {"data": error})}'
+>>>>>>> origin/resolved-merge-conflicts
   }
   // Handle form submission;
   const on_submit = async ("values": TalentFormValues, ) => {// Check condition;
@@ -172,7 +216,11 @@ if ( {) {$2;
       if (!user?.id) {throw new Error('User not authenticated')"title": "Skills required","description": "Please add at least one skill to your profile.","variant": "destructive"}),return;"
     }setIsSubmitting(true),try {// For actual implementation with Supabase;
       }
+<<<<<<< HEAD
+      if (!user?.id) {throw new Error("User not authenticated")})setIsSubmitting(true),try {// For actual implementation with Supabase;"
+=======
       if (!user?.id) {throw new Error("User not authenticated")}})setIsSubmitting(true),try {// For actual implementation with Supabase;"
+>>>>>>> origin/resolved-merge-conflicts
       }
       if (!user?.id) {throw new Error("User not authenticated")}// Enhance profile if not already done;"
       let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try {const { "data": aiData } = await supabase.functions.invoke('talent-profile-enhancer', {"body": {"talentData": {"name": values.name,"title": values.title,"bio": values.bio,"skills": skillTags,"location": values.location;'
@@ -185,7 +233,11 @@ if ( {) {$2;
     }setIsSubmitting(true),try {// For actual implementation with Supabase;
       }
       if (!user?.id) {throw new Error("User not authenticated")}// Enhance profile if not already done;"
+<<<<<<< HEAD
+      let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try {const { "data": aiData } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{"body": {"talentData": {"name": values && values.name,"title": values && values.title,"bio": values && values.bio,"skills": skillTags,"location": values && values.location}}'
+=======
       let finalSummary = "",let finalSkills = skillTags,if (values.enhancedProfile && !generatedContent) {try {const { "data": aiData } = await supabase && supabase.functions.invoke('talent-profile-enhancer',{"body": {"talentData": {"name": values && values.name,"title": values && values.title,"bio": values && values.bio,"skills": skillTags,"location": values && values.location}}}'
+>>>>>>> origin/resolved-merge-conflicts
           )if (aiData) {finalSummary = (aiData as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user-provided skills;
             }
@@ -198,7 +250,11 @@ if ( {) {$2;
       // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
+        try {const { "data": ai_data } = await supabase.functions.invoke ('talent - profile - enhancer',{"body": {"talent_data": {"name": values.name,"title": values.title,"bio": values.bio,"skills": skill_tags,"location": values.location}}'
+=======
         try {const { "data": ai_data } = await supabase.functions.invoke ('talent - profile - enhancer',{"body": {"talent_data": {"name": values.name,"title": values.title,"bio": values.bio,"skills": skill_tags,"location": values.location}}}'
+>>>>>>> origin/resolved-merge-conflicts
           )// Check condition;
 if ( {) {$2;
 }
@@ -214,13 +270,21 @@ if ( {) {$2;
 if ( {) {$2;
 }
                     ai_skills.push (skill)}
+<<<<<<< HEAD
+                })})// Create a unique set of skills;
+=======
                 })}})// Create a unique set of skills;
+>>>>>>> origin/resolved-merge-conflicts
             final_skills = [...new Set ([...skill_tags, ...ai_skills])];}
         } catch (error) {logErrorToProduction('Error enhancing "profile":', { "data": error })// Continue with submission even if enhancement fails;'
           finalSummary = '';'
         }
       } else if (generatedContent) {finalSummary = generatedContent.summary;
+<<<<<<< HEAD
+      }),// Create a unique set of skills;
+=======
       }}),// Create a unique set of skills;
+>>>>>>> origin/resolved-merge-conflicts
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
           }
         } catch (error) {logErrorToProduction('Error enhancing "profile":', { "data": error }),// Continue with submission even if enhancement fails;'
@@ -1187,7 +1251,11 @@ const talentProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4 
 //Apply generated content to form const applyGeneratedContent = () =>: any {// Check condition;
 }
 if ( {) {$2;
+<<<<<<< HEAD
+}
+=======
 }}
+>>>>>>> origin/resolved-merge-conflicts
 //Apply generated content to form const applyGeneratedContent = () => {if (generatedContent) {//Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent.categorizedSkills;
 }
 const "newSkills": string[] = [];
@@ -1369,4 +1437,8 @@ return (<div className="max-w-4xl mx-auto p-4 "md":p-6"> <Card className="bg-zio
   }
   skill_tags.length === 0 && (<p className="text - zion - slate text - sm italic">No skills added yet</p>)}</div> </div> {/* Availability Section */ ";"
 }<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Availability</h3> <FormField <FormLabel className="text - zion - slate - light">Current Status</FormLabel> <FormControl> <div className="space - y-2"> <div className="flex items - center space - x-2" > <input /> <label html_for="available" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - green - 500"></div> Available Now </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="limited" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="unavailable" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
+<<<<<<< HEAD
+}/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col "sm":flex - row gap - 4 w - full "sm":justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light "hover":bg - zion - blue - light "hover":text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)}'"}'";
+=======
 }/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col "sm":flex - row gap - 4 w - full "sm":justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light "hover":bg - zion - blue - light "hover":text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)}'"}}'";
+>>>>>>> origin/resolved-merge-conflicts

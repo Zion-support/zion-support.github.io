@@ -15,7 +15,11 @@ interface MetadataFormProps  {"form": UseFormReturn<AppMetadataValues>;
 }
 export const "MetadataForm": React.FC<MetadataFormProps> = ({ form }) => {const { control, register, watch, setValue } = form;
   const keywords = watch("keywords")const platform = watch("platform")const addKeyword = ("e": React.KeyboardEvent<HTMLInputElement>,) => {if (e.key === "Enter" |e.key === ",") {e.preventDefault()const value = e.currentTarget.value.trim()if (value && !keywords.includes(value)) {setValue("keywords", [...keywords, value])e.currentTarget.value = "";"
+<<<<<<< HEAD
+      }}const maxDescriptionLength = platform === "ios" ? 4000 : 4000;"
+=======
       }}}const maxDescriptionLength = platform === "ios" ? 4000 : 4000;"
+>>>>>>> origin/resolved-merge-conflicts
 }const removeKeyword = ("keyword": string,) => {setValue("keywords";"
       }
       keywords.filter((k,) => k !== keyword))}
@@ -219,7 +223,11 @@ if ( {) {$2;
           </div>;
         </Form>;
       </CardContent>;</Card>)},;
+<<<<<<< HEAD
+  )}/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>)}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {longDescription.length ;
+=======
   )}}/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>)}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {longDescription.length ;
+>>>>>>> origin/resolved-merge-conflicts
 }/ {maxDescriptionLength ;
 }characters </FormDescription> </FormItem>)}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3" /> </button> </Badge>) ) ";"
 }</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>)}/> </div> </Form> </CardContent> </Card>)}'";

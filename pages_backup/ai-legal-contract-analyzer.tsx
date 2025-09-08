@@ -75,6 +75,7 @@ import {
               <a'
                 href='/contact'
 
+<<<<<<< HEAD
 
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'>;
                 Review Contracts Faster;
@@ -101,14 +102,24 @@ import React from 'react';
 
 
 
+=======
+
+import Head from 'next/head';
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   Phone,
   Mail,
   MapPin,
   Check,
   ArrowRight,
+<<<<<<< HEAD
 
 
 
+=======
+  Star,;
+  Scale,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 } from 'lucide-react';
 
 import Layout from '../components / layout / Layout';
@@ -200,45 +211,86 @@ if (return null) {}
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
 
 
+=======
+        <div className="bg - amber - 50 rounded - lg p - 8 text - center">;
+          <h2 className="text - 2xl font - bold mb - 4">Streamline Legal Work</h2>;
+          <p className="text - lg text - gray - 700 mb - 6">;
+            Accelerate your legal work with AI - powered contract analysis and document review tools.;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </p>;
           <div className="flex justify - center gap - 4">;"
             <a href="/contact" className="bg - amber - 600 text - white px - 6 py - 3 rounded - lg hover: bg - amber - 700">;
               Get Started;
             </a>;
 
+<<<<<<< HEAD
             <a href="/about" className="border border - amber - 600 text - amber - 600 px - 6 py - 3 rounded - lg hover:bg - amber - 50">;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               Learn More;
             </a>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
+
+export default function AILegalContractAnalyzerPage() {
+
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-legal-contract-analyzer');
   );  if (!service) return null;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
+
+=======
+    s.link.endsWith('/ai-legal-contract-analyzer')
+  );
+  if (!service) return null;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
-
+<<<<<<< HEAD
+=======
+export default function AILegalContractAnalyzerPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
+  if (!service) return null,
+export default function AILegalContractAnalyzerPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
+  if (!service) return null,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Layout>
       <Head>
@@ -267,6 +319,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
 
+<<<<<<< HEAD
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5"><Check /><span>{feat}</span></li>
 
 
@@ -282,3 +335,44 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
+=======
+              </ul>
+            </div>
+            <div className='bg-black/30 rounded-2xl border border-amber-500/30 p-6 h-fit'>
+              <div className='flex items-end justify-between mb-3'>
+                <div>
+                  <div className='text-3xl font-bold text-white text-slate-400 text-base'>
+                    {service.price}
+                    <span>{service.period}</span>
+                  </div>
+                  <div className='text-slate-400'>
+                    {service.trialDays}-day free trial • Setup:{' '}
+                    {service.setupTime}
+                  </div>
+                </div>
+                <div className='flex items-center text-yellow-400 w-4 h-4 mr-1'>
+                  <Star />
+                  {service.rating.toFixed(1)}
+                </div>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </Layout>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+    </Layout>);
+;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import React from 'react';
@@ -20,6 +21,9 @@ import {Star} from 'lucide-react';
         <div className='flex items-center gap-2'>
           <StarRating
 
+=======
+<StarRating
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             value={review && review.rating}
             onChange={() => {}}
@@ -35,6 +39,7 @@ import {Star} from 'lucide-react';
 </div>"
         <div className="flex items-center gap-2">;"
           <StarRating value={review && review.rating} onChange={() => {}} readOnly size={18} />;
+<<<<<<< HEAD
 
           <span className="text-sm text-gray-500">{new Date(review && review.createdAt).toLocaleDateString()}</span>;
         </div>;
@@ -47,39 +52,96 @@ import {Star} from 'lucide-react';
         <span className='text-sm font-medium'>{review && review.authorName}</span>;
         {review && review.categories?.wouldWorkWithAgain && (;
           <span className='pill pill-success'>Would work again</span>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
         >
           Report abuse
         </button>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       <div className='flex items-center gap-2 mb-3'>
         <span className='text-sm font-medium'>{review.authorName}</span>
           <span className='pill pill-success'>Would work again</span>
 
+<<<<<<< HEAD
+=======
+
+        )}
+
+      </div>;
+      <p className='text-sm leading-6'>{review && review.text}</p>;
+
+        )}
+      </div>;
+      <p className='text-sm leading-6'>{review && review.text}</p>;
+      <div className='flex flex-wrap gap-2 mt-3'>;
+          <span className='pill'>;
+            Communication: {review && review.categories.communication}★;
+          </span>;
+
+        )}
+        {typeof review && review.categories?.qualityOfWork === 'number' && (;
+          <span className='pill'>;
+            Quality: {review && review.categories.qualityOfWork}★;
+          </span>;
+        )}
+        {typeof review && review.categories?.timeliness === 'number' && (;
+          <span className='pill'>;
+            Timeliness: {review && review.categories.timeliness}★;
+          </span>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         )}
       </div>;
     </div>;
   );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <span className="pill pill-success">Would work again</span>
         )}
       </div>
       <p className="text-sm leading-6">{review.text}</p>
+<<<<<<< HEAD
 
 
+=======
+      <div className="flex flex-wrap gap-2 mt-3">
+        {typeof review.categories?.communication === 'number' && (
+          <span className="pill">Communication: {review.categories.communication}★</span>
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
           <span className="pill pill-success">Would work again</span>;
         )}
       </div>;
+<<<<<<< HEAD
 
       <p className="text-sm leading-6">{review && review.text}</p>;
       <div className="flex flex-wrap gap-2 mt-3">;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className="pill">Communication: {review && review.categories.communication}★</span>;
+=======
+          <span className="pill pill-success">Would work again</span>
+        )}
+      </div>
+      <p className="text-sm leading-6">{review.text}</p>
+      <div className="flex flex-wrap gap-2 mt-3">
+        {typeof review.categories?.communication === 'number' && (
+          <span className="pill">Communication: {review.categories.communication}★</span>
+};
+export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
+          <span className="pill pill-success">Would work again</span>;
+        )}
+      </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         )}
       </div>;
@@ -90,9 +152,12 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
 };
 export default ReviewCard;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 > Report abuse </button> </div>);
 }</div> </div>) }
 ;
@@ -187,20 +252,35 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
 export default ReviewCard;
 ;
 
+<<<<<<< HEAD
 
+=======
+        {typeof review.categories?.timeliness === 'number' && ('
+          <span className="pill">"Timeliness": {review.categories.timeliness}★</span>"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         )}
       </div>
     </div>
   )
 }
 
+<<<<<<< HEAD
 :components/reviews/ReviewCard.tsx;
     "main":components/reviews/ReviewCard.tsx,
 
+=======
+      <p className="text-sm leading-6">{review && review.text}</p>;
+      <div className="flex flex-wrap gap-2 mt-3">;
+        {typeof review && review.categories?.communication === 'number' && (;
+          <span className="pill">Communication: {review && review.categories.communication}★</span>;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default ReviewCard;
 
 :components/reviews/ReviewCard.tsx
 main:components/reviews/ReviewCard.tsx
+<<<<<<< HEAD
 export default ReviewCard;
 
 
@@ -210,3 +290,9 @@ export default ReviewCard;
 
 
 
+=======
+
+
+export default ReviewCard;
+export default ReviewCard;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

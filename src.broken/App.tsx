@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import InstallPrompt from "./components/InstallPrompt";
+import { ThemeProvider } from './components/ThemeProvider';
+import { WhitelabelProvider } from './context/WhitelabelContext';
+import { Toaster } from './components/ui/toaster';
+import { Toaster as SonnerToaster } from './components/ui/sonner';
+import InstallPrompt from './components/InstallPrompt';
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -62,7 +62,7 @@ const App = () => {
   return (
     <WhitelabelProvider>
       <ThemeProvider>
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+        <Suspense fallback={<div className='p-4 text-center'>Loading...</div>}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key = $2;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -12,6 +13,18 @@ import { Cloud,
   Zap,
 
 
+=======
+import { motion } from 'framer-motion';'
+import Link from 'next/link';'
+import Layout from '../../components/Layout';'
+import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';'
+import React from 'react';'
+import Link from 'next/link';';'
+import { Cloud 
+  }
+  Shield, 
+  Zap, 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   CheckCircle,
   ArrowRight,
   BarChart3,
@@ -26,15 +39,23 @@ import { Cloud,
 
 const phases = [;
   {}
+<<<<<<< HEAD
 
     title: 'Assessment & Planning,',;
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
 
+=======
+
+    title: 'Assessment & Planning,',,
+  description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     icon: BarChart3,;
     steps: [,;
       'Infrastructure audit,',;
       'Workload analysis',',;
       'Migration strategy',',;
+<<<<<<< HEAD
 
       'Risk assessment'';
     ];
@@ -44,6 +65,15 @@ const phases = [;
     description: 'Cloud-native architecture design and security framework implementation.,',;
     icon: Settings,;
     steps: [,;
+=======
+
+      'Risk assessment;']
+    ];
+  },;
+  {}
+
+    icon: Settings,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       'Cloud architecture design,',;
       'Security framework',',;
@@ -52,12 +82,18 @@ const phases = [;
     ];
   },;
   {}
+<<<<<<< HEAD
 
     title: 'Migration Execution,',;
     description: 'Phased migration with minimal downtime and comprehensive testing.,',;
     icon: Cloud,;
     steps: [,;
 
+=======
+
+
+    icon: Cloud,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       'Data migration,',;
       'Application migration',',;
       'Testing & validation',',;
@@ -65,6 +101,7 @@ const phases = [;
     ];
   },;
   {}
+<<<<<<< HEAD
 
     title: 'Optimization,',;
     description: 'Continuous monitoring and optimization for peak performance.,',;
@@ -75,16 +112,34 @@ const phases = [;
       'Security updates',',;
       'Continuous improvement'';
     ];
+=======
+
+
+    icon: Zap,;
+      'Performance monitoring,',;
+      'Cost optimization',',;
+      'Security updates',',;
+      'Continuous improvement;']
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   }
 ;];
 
 const services = [;
   {}
+<<<<<<< HEAD
 
     title: 'AWS Migration,',;
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
     icon: Cloud,;
+=======
+
+
+    icon: Cloud,;
+    title: 'AWS Migration,',;
+    description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     features: [,;
       'EC2 instance migration,',;
@@ -94,12 +149,18 @@ const services = [;
     ];
   },;
   {}
+<<<<<<< HEAD
 
     title: 'Azure Migration,',;
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
     icon: Shield,;
     features: [,;
 
+=======
+
+
+    icon: Shield,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       'Azure Virtual Machines,',;
       'Azure SQL Database',',;
       'Azure Storage migration',',;
@@ -107,12 +168,18 @@ const services = [;
     ];
   },;
   {}
+<<<<<<< HEAD
 
     title: 'Google Cloud Migration,',;
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
     icon: Brain,;
     features: [,;
 
+=======
+
+
+    icon: Brain,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       'Compute Engine migration,',;
       'Cloud SQL migration',',;
       'Cloud Storage migration',',;
@@ -120,6 +187,7 @@ const services = [;
     ];
   },;
   {}
+<<<<<<< HEAD
 
     title: 'Multi-Cloud Strategy,',;
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
@@ -156,6 +224,18 @@ const benefits = [;
   }
 ;];
 
+=======
+
+
+    icon: Globe,;
+      'Cross-cloud integration,',;
+      'Disaster recovery',',;
+      'Load balancing',',;
+
+const benefits = [;
+  {}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services.""
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"">;
@@ -170,6 +250,7 @@ const benefits = [;
 
           <div className="container mx-auto px-4 relative z-10">";
             <motion&& motion.div
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -228,11 +309,53 @@ const benefits = [;
                   <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>"
                   
 
+=======
+
+
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}"
+              className="text-center max-w-4xl mx-auto"">;"
+</motion>"
+              <div className="flex items-center justify-center mb-6">";"
+                <Cloud className="w-12 h-12 text-blue-400 mr-4" />";"
+"
+                <h1 className="text-5xl md: text-6xl font-bold">", Cloud,;"
+</h1>"
+                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";"
+</span>
+                  </span>;
+                </h1>;
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">";"
+</p>
+              </p>;"
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;"
+                ;"
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Migration Success Stories,;"
+
+                ;
+              </div>;
+            </motion && motion.div>;
+        </section>;"
+        <section className="py-20 bg-white">";"
+          <div className="container mx-auto px-4">";"
+              className="text-center mb-16"">;"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our Cloud Migration Process,;"
+</h2>
+              </h2>;"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";"
+                <motion&& motion.div}),
+                  key={phase && phase.title}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   <ul className="space-y-2 text-left">";
                     {phase && phase.steps.map((step, stepIndex) => (,;
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                         {step}
+<<<<<<< HEAD
 
                       </li>,;
                     ))}
@@ -259,6 +382,15 @@ const benefits = [;
               </p>;
             </motion.div>;
 
+=======
+
+
+                      </li>,;
+                  </ul>,;
+              ))}
+            </div>,;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {services && services.map((service, index) => (,;
@@ -276,6 +408,7 @@ const benefits = [;
                   </div>;
 
                   <div>;
+<<<<<<< HEAD
 
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;
                       {service && service.features.map((feature, featureIndex) => (,;
@@ -335,6 +468,18 @@ const benefits = [;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
+=======
+
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;"
+                      {service && service.features.map((feature, featureIndex) => (,;"
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";"
+
+                </motion && motion.div>;)
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Cloud Migration?,;"
+                  key={benefit && benefit.title}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -379,5 +524,21 @@ const benefits = [;
       </div>
     </Layout>
 
+<<<<<<< HEAD
+=======
+
+        </section>;
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">"
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
+              </p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+            </motion.div>
+
+        </section>
+>>>>>>> origin/cursor/delete-old-data-records-6bba

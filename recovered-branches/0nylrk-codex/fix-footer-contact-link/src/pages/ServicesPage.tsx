@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     author: {
@@ -13,6 +14,17 @@
 
 
 
+=======
+
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+import {AppLayout} from "@/layout/AppLayout";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Globe} from "lucide-react";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = []
   {}
@@ -180,7 +192,10 @@ import {Globe} from "lucide-react";
     category: "Development",;
     price: 5000,;
     currency: "$",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
     author: {;
       name: "TechSolutions Inc.",;
@@ -190,6 +205,7 @@ import {Globe} from "lucide-react";
     createdAt: "2023-12-10T14:48:00 && 00.000Z",;
     aiScore: 95,;
     rating: 4 && 4.9,;
+<<<<<<< HEAD
 
     reviewCount: 124},;
   {;
@@ -197,6 +213,29 @@ import {Globe} from "lucide-react";
 
     title: "Cloud Infrastructure Management",;
 
+=======
+    reviewCount: 124},;
+  {;
+    id: "service-2",;
+    title: "Cloud Infrastructure Management",
+    reviewCount: 124},;
+  {;
+    id: "service-2",;
+
+    title: "Cloud Infrastructure Management",
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
+    category: "Management",;
+    price: 3000,;
+    currency: "$",;
+    tags: ["Cloud", "DevOps", "Security"];
+    author: {;
+      name: "CloudPro Experts",;
+      id: "cloud-pro"},;
+    images: ["https://images && images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],;
+    createdAt: "2023-11-20T09:30:00 && 00.000Z",;
+    aiScore: 88,;
+    rating: 4 && 4.7,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     reviewCount: 92},;
   {;
     id: "service-3",;
@@ -205,7 +244,10 @@ import {Globe} from "lucide-react";
     category: "Analytics",;
     price: 4500,;
     currency: "$",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     tags: ["Big Data", "Analytics", "Business Intelligence"];
     author: {;
       name: "DataMind Solutions",;
@@ -215,12 +257,16 @@ import {Globe} from "lucide-react";
     createdAt: "2024-01-05T11:15:00 && 00.000Z",;
     aiScore: 92,;
     rating: 4 && 4.8,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     reviewCount: 78},;
   {;
     id: "service-4",;
 
     currency: "$",;
+<<<<<<< HEAD
 
 
     <AppLayout>;
@@ -237,6 +283,37 @@ import {Globe} from "lucide-react";
             </Link>;
             <Link to="/request-quote">;
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+=======
+
+
+    reviewCount: 124},;
+  {;"
+    id: "service-2",;"
+
+    title: "Cloud Infrastructure Management",
+
+    reviewCount: 92},;
+  {;"
+    id: "service-3",;"
+    title: "Big Data Analysis & Insights","
+    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",;"
+    category: "Analytics",;
+    price: 4500,;"
+    currency: "$",;
+
+    reviewCount: 78},;
+  {;"
+    id: "service-4",;"
+    title: "Cybersecurity Assessment & Protection","
+    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",;"
+
+    category: "Security",;
+    price: 6000,;"
+    currency: "$",;
+
+    <AppLayout>;
+    <AppLayout>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               </Button>;
             </Link>;
@@ -244,6 +321,13 @@ import {Globe} from "lucide-react";
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
+
+      <TrustedBySection />;
+</TrustedBySection>
+    </AppLayout>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       <DynamicListingPage;
@@ -255,6 +339,7 @@ import {Globe} from "lucide-react";
 
         category_filters={SERVICE_FILTERS}
         initial_price={{ min: 3000, max: 10000 }}
+<<<<<<< HEAD
       />;
       <TrustedBySection />;
     </AppLayout>);
@@ -263,6 +348,9 @@ import {Globe} from "lucide-react";
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         categorySlug="services";
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
@@ -271,6 +359,7 @@ import {Globe} from "lucide-react";
       <TrustedBySection />;
     </AppLayout>;
   ),; rating: 4.8;
+<<<<<<< HEAD
 
 reviewCount: 85 
 }];
@@ -292,3 +381,24 @@ reviewCount: 85
 
 
 
+=======
+
+
+}/> <TrustedBySection /> </AppLayout>) 
+</DynamicListingPage>
+      <DynamicListingPage;"
+        title="IT & AI Services";""
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";""
+        categorySlug="services";"
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />;
+</DynamicListingPage>
+      <TrustedBySection />;
+    </AppLayout>;
+  );
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

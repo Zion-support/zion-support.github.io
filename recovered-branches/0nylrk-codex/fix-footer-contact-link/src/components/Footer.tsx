@@ -1,13 +1,42 @@
 
+<<<<<<< HEAD
+=======
+import { NewsletterForm } from "@/components/NewsletterForm";
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
+import { Link } from "react-router-dom";
+import { NewsletterForm } from "@/components/NewsletterForm",
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
+import { Link } from "react-router-dom",
+
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react","
+import { Link } from "react-router-dom","
+import { NewsletterForm } from "@/components/NewsletterForm","
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
+import { Link } from "react-router-dom",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
+<<<<<<< HEAD
 
 export function Footer() {
 
+=======
+export function Footer() {
+
+  return (
+  return (
+className="text-zion-slate hover:text-zion-cyan transition-colors">;
+import { NewsletterForm } from "@/components/NewsletterForm",;
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function Footer() {;
+  return (;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
 className="text-zion-slate hover:text-zion-cyan transition-colors">;
@@ -23,6 +52,7 @@ export function Footer() {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
           <div>;"
             <div className="mb-4">;
+<<<<<<< HEAD
 
               <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>;
             </div>;
@@ -52,6 +82,17 @@ export function Footer() {;
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
 import { NewsletterForm  } from '@/components / NewsletterForm';
 import { Twitter, Linkedin, Facebook, Instagram, Github  } from './lucide-react';
+=======
+
+
+              </a>;
+            </div>;
+          </div>;
+
+                  className="text-zion-slate hover:text-zion-cyan transition-colors">;
+import { NewsletterForm  } from '@/components / NewsletterForm';'
+import { Twitter, Linkedin, Facebook, Instagram, Github  } from './lucide-react';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Link  } from './react-router-dom';
 export /**;
@@ -64,6 +105,7 @@ export /**;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                 <Link;
                   to="/services";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
@@ -76,37 +118,48 @@ export /**;
                   to="/talent";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Talent;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                 <Link;
                   to="/equipment";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Equipment;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                 <Link;
                   to="/categories";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Categories;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
                 <Link;
                   to="/green - it";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Green IT;
                 </Link>;
@@ -114,6 +167,7 @@ export /**;
             </ul>;
           </div>;
 
+<<<<<<< HEAD
           <div>;
             <h3 className="text - white font - semibold mb - 4 text - lg">Company</h3>;
             <ul className="space - y-2">;
@@ -122,63 +176,81 @@ export /**;
                   to="/content / about";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   About Us;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                 <Link;
                   to="/blog";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Blog;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                 <Link;
                   to="/partners";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Partners;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                 <Link;
                   to="/careers";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Careers;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                 <Link;
                   to="/contact";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Contact;
                 </Link>;
               </li>;
               <li>;
 
+<<<<<<< HEAD
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
                 <Link;
                   to="/sitemap - page";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   Sitemap;
                 </Link>;
               </li>;
             </ul>;
           </div>;
+<<<<<<< HEAD
 
           <div>;
             <h3 className="text - white font - semibold mb - 4 text - lg">;
@@ -231,6 +303,34 @@ export /**;
             <div className="flex space-x-6 mt-4 md:mt-0">;
               <Link to="/privacy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>;
               <Link to="/terms" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>;
+=======
+
+
+            <NewsletterForm />;
+          </div>;
+        </div>;
+
+              &copy, {new Date ().getFullYear ()} Zion Tech Group. All rights;
+              reserved.;
+            </p>;
+            <div className="flex space - x-6 mt - 4 md: mt - 0">;
+              <Link;
+                to="/privacy";
+                className="text - zion - slate hover:text - zion - cyan text - sm transition - colors";
+              >;
+                Privacy Policy;
+              </Link>;
+              <Link;
+                to="/terms";
+                className="text - zion - slate hover:text - zion - cyan text - sm transition - colors";
+              >;
+
+                Terms of Service;
+              </Link>;
+                Terms of Service;
+              </Link>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             </div>;
           </div>;
@@ -238,13 +338,17 @@ export /**;
       </div>;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <Link to="/privacy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
   );
 }
@@ -345,3 +449,8 @@ export function Footer() {;
 
 
 
+=======
+    </footer>
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

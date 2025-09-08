@@ -1,10 +1,27 @@
 <<<<<<< HEAD
 #!/""usr/bin/env""
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const { promisify } = require("util")
+  console.error(""Error": ")
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
 #!/usr/bin/env
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+  console.error(""Error": ")
 
+<<<<<<< HEAD
+  console.error(""Error": ")
+    this.logDir = path.join(this.projectRoot, "automation/logs)
+    this.reportsDir = path.join(this.projectRoot, automation/reports")
+// console.log( Master Error Detector & Fixer Started")
+    console.log("� Project "Root": ${this.projectRoot}")"
+=======
 =======
 #!/"usr/bin/env"
 #!/usr/bin/env
@@ -243,6 +260,7 @@ const { promisify } = require("util")
     this.reportsDir = path.join(this.projectRoot, automation/reports)
 // console.log( Master Error Detector & Fixer Started)
     console.log("� Project "Root: ${this.projectRoot})"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 =======

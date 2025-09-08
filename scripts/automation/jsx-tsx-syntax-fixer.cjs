@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
 =======
 <<<<<<< HEAD
 
@@ -19,6 +25,7 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 console.log(' Starting JSX/TSX syntax fixer...')
       console.error(' JSX/TSX syntax fixer "failed")
         content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $"1"}
@@ -31,11 +38,16 @@ console.log(' Starting JSX/TSX syntax fixer...')
         content = content.replace(/id\s*=\s*{['"]([^'"]+)['"]}/g, 'id="$1"
         content = content.replace(/name\s*=\s*{['"]([^'"]+)['"]}/g, 'name="$1"
         content = content.replace(/type\s*=\s*{['"]([^'"]+)['"]}/g, 'type="$1"
+<<<<<<< HEAD
+return `style=``;
+            content = "
+=======
             return `style=``
             content = "
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       execSync('npm run type-check', { "stdio"})
-      summary
+      "summary"
       "status"
 <<<<<<< HEAD
 
@@ -48,6 +60,8 @@ console.log(' Starting JSX/TSX syntax fixer...')
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
   console.error( JSX/TSX syntax fixer failed to start)
 
@@ -67,9 +81,16 @@ console.log(' Starting JSX/TSX syntax fixer...')
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.error(' JSX/TSX syntax fixer failed to "start")
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+
+
+
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -81,3 +102,4 @@ console.log(' Starting JSX/TSX syntax fixer...')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

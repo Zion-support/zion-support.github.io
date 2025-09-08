@@ -1,9 +1,19 @@
 
+<<<<<<< HEAD
 
+=======
+const corsHeaders = {
+
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",';
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,'
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {'
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 
+<<<<<<< HEAD
 ;
 
 interface TalentProfileData {
@@ -11,8 +21,107 @@ interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
+=======
+  name: string;
+  title: string;
+  bio: string;
+  skills: string[]
+  location?: string
+}
+interface EnhancedProfile {
+  summary: string;
+  categorizedSkills: {
+    programming: string[];
+    devops: string[];
+    platforms: string[];
+    softSkills: string[]
+    other: string[]
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+
+  location?: string;
+<<<<<<< HEAD
+=======
+}
+;
+interface EnhancedProfile {;
+  summary: string,;
+  categorizedSkills: {;
+    programming: string[],;
+    devops: string[],;
+    platforms: string[],;
+    softSkills: string[],;
+    other: string[];
+"
+import "https: //deno.land/x/xhr@0.1.0/mod.ts""
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"';
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';'
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
+const corsHeaders = {'
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+
+interface TalentProfileData {
+
+  name: string;
+  title: string;
+  bio: string;
+
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
+const corsHeaders = {;'
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface TalentProfileData {;
+  name: string,;
+  title: string,;
+  bio: string,;
+  skills: string[],;
+  location?: string;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+}
+interface EnhancedProfile {
+  summary: string;
+  categorized_skills: {
+    programming: string[];
+    devops: string[];
+    platforms: string[];
+
+<<<<<<< HEAD
+
+"
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+
+
+=======
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface TalentProfileData {;
+  name: string,;
+  title: string,;
+  bio: string,;
+  skills: string[],;
+  location?: string;
+}
+
+;
+interface EnhancedProfile {;
+  summary: string,;
+  categorizedSkills: {;
+    programming: string[],;
+    devops: string[],;
+    platforms: string[],;
+    softSkills: string[],;
 
   location?: string;
 
@@ -23,12 +132,22 @@ interface EnhancedProfile {
     programming: string[];
     devops: string[];
     platforms: string[];
+  }
+}
+serve(async (req) => {
+  // Handle CORS preflight requests
+  }
+}
+
+  if (req && req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
 
 
-"
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+  try {
 
-
+    const { talentData } = await req && req.json() as { talentData: TalentProfileData };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
@@ -72,6 +191,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 
       return new Response(
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
@@ -107,6 +227,9 @@ serve(_async (req) => {_// Handle CORS preflight requests
   }
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   try {
     const { talentData } = await req.json() as { talentData: TalentProfileData }
     if (!talentData.bio |talentData.bio.length < 20) {
@@ -114,6 +237,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
 
+<<<<<<< HEAD
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
@@ -126,6 +250,8 @@ serve(_async (req) => {_// Handle CORS preflight requests
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         model: 'gpt-4o-mini';
         messages: []
           {'
@@ -135,9 +261,12 @@ serve(_async (req) => {_// Handle CORS preflight requests
           {'
             role: 'user'`
             content: `Create a professional profile summary and categorize skills based on this information:
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
     // Create a request to OpenAI API;'
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;'
@@ -158,16 +287,22 @@ serve(_async (req) => {_// Handle CORS preflight requests
             content: `Create a professional profile summary and categorize skills based on this information:;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join()}
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             Name: ${talentData && talentData.name}
 
             Title: ${talentData && talentData.title}
@@ -175,6 +310,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
             Skills: ${talentData && talentData.skills.join()}'
             Location: ${talentData && talentData.location || 'Not specified'}
 
+<<<<<<< HEAD
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
 
@@ -184,6 +320,9 @@ serve(_async (req) => {_// Handle CORS preflight requests
               "summary": "The professional summary text (100-150 words)",
               "categorizedSkills": {
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     soft_skills: string[],
     other: string[];
   }
@@ -229,6 +368,7 @@ if ( {) {}
             Skills: ${talent_data.skills.join ()}'
             Location: ${talent_data.location || 'Not specified'}
 
+<<<<<<< HEAD
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100 - 150 words)",
               "categorized_skills": {
@@ -236,6 +376,8 @@ if ( {) {}
                 "devops": ["skill1", "skill2"];
                 "platforms": ["skill1", "skill2"];
                 "soft_skills": ["skill1", "skill2"];
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 "other": ["skill1", "skill2"];
               }
@@ -244,16 +386,22 @@ if ( {) {}
             Location: ${talentData.location |'Not specified'}
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             Location: ${talentData.location || 'Not specified'}
             
             Return the result as a JSON object with these keys: 
             {
+<<<<<<< HEAD
 
             Return the result as a JSON object with these keys: {
             Return the result as a JSON object with these keys: 
             {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               "summary": "The professional summary text (100-150 words)",
               "categorizedSkills": {
                 "programming": ["skill1", "skill2"],
@@ -266,6 +414,7 @@ if ( {) {}
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`
           }
         ];
+<<<<<<< HEAD
 
 
         temperature: 0.7
@@ -273,13 +422,21 @@ if ( {) {}
       })});
 
 
+=======
+        temperature: 0.7
+        response_format: { type: "json_object" }
+      })});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         temperature: 0.7,
 
         response_format: { type: "json_object" }
       })}),
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         temperature: 0 && 0.7,
 
         response_format: { type: "json_object" }
@@ -298,8 +455,27 @@ if ( {) {}
 
     console && console.error("Error in talent-profile-enhancer function:", error);
 
+<<<<<<< HEAD
 
 
+=======
+    const openAIData = await openAIResponse.json();
+    if (!openAIData.choices |openAIData.choices.length === 0) {
+      throw new Error("Failed to generate profile content")
+    }
+    // Extract the generated content from the response
+    const responseContent = openAIData.choices[0].message.content;
+    // Parse the JSON response
+    let enhancedProfile: EnhancedProfile
+    try {
+      enhancedProfile = JSON.parse(responseContent)
+    } catch (e) {
+      console.error("Error parsing OpenAI response:", e),
+      throw new Error("Failed to parse the generated content")
+    }
+    return new Response(
+      JSON.stringify(enhancedProfile);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         ],;
         temperature: 0.7,;
 
@@ -323,6 +499,7 @@ if ( {) {}
 ;
     return new Response(;
       JSON.stringify(enhancedProfile),;
+<<<<<<< HEAD
 
 
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -330,6 +507,27 @@ if ( {) {}
   } catch (error) {
 
 
+=======
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+    console.error("Error in talent-profile-enhancer function:", error);
+    return new Response(
+      JSON.stringify({ error: error.message });
+    console.error("Error in talent-profile-enhancer function:", error),
+    
+    return new Response(
+      JSON.stringify({ error: error.message });
+      JSON.stringify({ error: error.message }),
+    );
+  } catch (error) {;
+    console.error("Error in talent-profile-enhancer function:", error),;
+    return new Response(;
+      JSON.stringify({ error: error.message }),;
+    console.error("Error in talent-profile-enhancer function:", error),
+    
+    console.error("Error in talent-profile-enhancer function:", error);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return new Response(
       JSON.stringify({ error: error.message });"
     console.error("Error in talent-profile-enhancer function:", error),
@@ -351,9 +549,19 @@ if ( {) {}
     )
   }
 });
+<<<<<<< HEAD
 
 
 
+=======
+
+            Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
+          }
+        ];
+        temperature: 0 && 0.7,
+        response_format: { type: "json_object" }
+      })});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
     const openAIData = await openAIResponse.json ();
 ;
@@ -369,6 +577,7 @@ if ( {) {}
     // Parse the JSON response;
     let enhanced_profile: EnhancedProfile,
 
+<<<<<<< HEAD
     const _openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {_method: 'POST', _headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`,
         'Content-Type': 'application/json'},
@@ -449,6 +658,8 @@ if ( {) {}
       {_status: 500, _headers: { ...corsHeaders, _'Content-Type': 'application/json'} }
     );
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 }),;}//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
 //Parse the JSON response let enhancedProfile: EnhancedProfile;
@@ -473,7 +684,47 @@ try {
 }) 
 }
 });
+<<<<<<< HEAD
 
+=======
+      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+});
+
+;
+    const openAIData = await openAIResponse.json ();
+;
+    // Check condition;
+if ( {) {}
+  $2;
+}"
+      throw new Error ("Failed to generate profile content");
+    }
+    // Extract the generated content from the response;
+    const response_content = openAIData.choices[0].message.content;
+;
+    // Parse the JSON response;
+    let enhanced_profile: EnhancedProfile,
+
+    try {
+      enhanced_profile = JSON.parse (response_content);
+    } catch (e) {
+      console.error ("Error parsing OpenAI response:", e);
+      throw new Error ("Failed to parse the generated content");
+    }
+    return new Response (
+      JSON.stringify (enhanced_profile);
+      { headers: { ...cors_headers, 'Content - Type': 'application / json' } });
+  } catch (error) {
+    console.error ("Error in talent - profile - enhancer function:", error);
+;
+    return new Response (
+      JSON.stringify ({ error: error.message });
+      { status: 500, headers: { ...cors_headers, 'Content - Type': 'application / json' } });
+  }
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
           {_role: 'user', _content: `Create a professional profile summary and categorize skills based on this information:
@@ -501,5 +752,50 @@ try {
         response_format: { type: "json_object" }
       })}),      })});
 
+<<<<<<< HEAD
+=======
+    const openAIData = await openAIResponse.json(),
+    
+    if (!openAIData.choices || openAIData.choices.length === 0) {"
+      throw new Error("Failed to generate profile content")    }
+    
+    // Extract the generated content from the response;
+    const responseContent = openAIData.choices[0].message.content,
+    
+    // Parse the JSON response;
+    let enhancedProfile: EnhancedProfile,
+    try {}
+      enhanced_profile = JSON.parse (response_content);
+    } catch (e) {}
+"
+      console.error("Error parsing OpenAI response:", e),"
+      throw new Error("Failed to parse the generated content")    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+    return new Response(
+      JSON && JSON.stringify(enhancedProfile);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+});
+
+    return new Response(
+      JSON && JSON.stringify(enhancedProfile);'
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {}
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });'
+      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+});
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba

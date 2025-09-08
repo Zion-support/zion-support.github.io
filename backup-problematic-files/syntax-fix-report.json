@@ -1,10 +1,13 @@
 {
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   "timestamp": "2025-09-06T00:33:39.754Z",
   "duration": "6853ms",
   "fixedFiles": 517,
@@ -528,6 +531,7 @@
     "/workspace/src/utils/seo-optimizer.ts",
     "/workspace/src/utils/serverless-polyfill.ts"
   ],
+<<<<<<< HEAD
 
 
 
@@ -583,3 +587,7 @@
 
 
 
+=======
+  "errorDetails": []
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

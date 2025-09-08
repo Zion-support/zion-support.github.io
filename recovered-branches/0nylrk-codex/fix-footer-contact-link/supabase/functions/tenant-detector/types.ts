@@ -9,7 +9,10 @@ id: string;
     headline: string;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string,;
   brand_name: string,;
   subdomain: string,;
@@ -20,6 +23,7 @@ id: string;
   landing_page_copy: {;
     headline: string,;
     subtitle: string,;
+<<<<<<< HEAD
 
 
 }
@@ -52,6 +56,17 @@ export interface TenantResponse {;
 
 }
 
+=======
+
+
+  tenant: TenantInfo | null;
+  error?: string;
+    subtitle: string,
+    cta: string;
+  }
+  is_active: boolean;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export interface TenantResponse {
   tenant: TenantInfo | null,
   error?: string;
@@ -86,6 +101,13 @@ export interface TenantResponse {
 
 export interface TenantInfo {;
 
+<<<<<<< HEAD
 
 
 
+=======
+  },;
+;
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

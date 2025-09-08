@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+<<<<<<< HEAD
 
 
 import {SEO} from '@/components/SEO';
@@ -36,6 +37,14 @@ function DisputeDetailPage() {
         <SEO
           title="Dispute Details | Zion AI Marketplace"
 
+=======
+import { SEO  } from '@/components/SEO';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { DisputeDetail  } from '@/components/disputes';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           description="View and manage dispute details"
         />
         <AppHeader />
@@ -65,6 +74,7 @@ function DisputeDetailPage() {}
       <>;
         <SEO;"
           title="Dispute Details | Zion AI Marketplace";
+<<<<<<< HEAD
 
           description="View and manage dispute details";
 
@@ -84,3 +94,14 @@ export default DisputeDetailPage;
 
 
 
+=======
+
+
+    </ProtectedRoute>);
+}
+
+export default DisputeDetailPage;
+;
+
+export default DisputeDetailPage;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

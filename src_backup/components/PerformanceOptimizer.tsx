@@ -50,7 +50,7 @@ interface PerformanceMetrics  {fcp: number;
     }
   }, [])useEffect(() => {preloadCriticalResources()prefetchNextRoutes()optimizeResourceHints()measurePerformance()setupLazyLoading()registerServiceWorker()// Cleanup;
     return () => {// Cleanup performance observers if needed;
-    }}, [preloadCriticalResources, prefetchNextRoutes, optimizeResourceHints, measurePerformance, setupLazyLoading, registerServiceWorker])// Route change optimization;
+    }, [preloadCriticalResources, prefetchNextRoutes, optimizeResourceHints, measurePerformance, setupLazyLoading, registerServiceWorker])// Route change optimization;
   useEffect(() => {// Prefetch next likely route based on current location;
     const currentPath  = location.pathname;if (currentPath === '/') {// Prefetch services page from home;
       const link = document.createElement('link')link.rel = 'prefetch';
@@ -74,7 +74,11 @@ const optimizeImages = () => {const images = document.querySelectorAll ('img)   
           img.decoding = 'async        }      })}// Initialize optimizations;';
     preloadCriticalResources ()optimizeImages ()// Set up intersection observer for lazy loading;
 const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {if (entry.isIntersecting) {const target = entry.target as HTMLElement;
+<<<<<<< HEAD
+            if (target.dataset.src) {'';
+=======
             if (target.dataset.src) {"";
+>>>>>>> origin/resolved-merge-conflicts
 target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }
           }", "
 })}, { rootMargin: '50px' }') ';// Observe lazy load elements;""
@@ -83,5 +87,9 @@ target.style.backgroundImage = `url (${target.dataset.src}) `              targe
   }, []) 
   return <>{children}</>,
 }
+<<<<<<< HEAD
+'`'
+=======
 "`"
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

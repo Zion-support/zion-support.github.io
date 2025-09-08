@@ -5,21 +5,37 @@
 //Import next/image import {;''
   Sparkles ';''
 }from 'lucide-react' //Define the form schema with zod const productSchema = z.object ({;
+<<<<<<< HEAD
+  title: z.string () .min (3, 'Title must be at least 3 characters');';''
+description: z.string () .min (10,  'Description must be at least 10 characters');''
+price: z .string () .refine ( (val) => !isNaN (parseFloat (val) ) && parseFloat (val) >= 0, {';''
+  message: 'Price must be a valid number' ;'''
+});';''''
+category: z.string () .min (1, 'Please select a category');';''
+=======
   title: z.string () .min (3, "Title must be at least 3 characters");";""
 description: z.string () .min (10,  "Description must be at least 10 characters");""
 price: z .string () .refine ( (val) => !isNaN (parseFloat (val) ) && parseFloat (val) >= 0, {";""
   message: "Price must be a valid number" ;"'"
 });";'"'"
 category: z.string () .min (1, "Please select a category");';''
+>>>>>>> origin/resolved-merge-conflicts
 video: typeof window === 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();';''
 model: typeof window === 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();
 tags: z.string () .optional () ;
 });
+<<<<<<< HEAD
+//Type for our form values type ProductFormValues = z.infer<typeof productSchema>;'
+const [isSubmitting, setIsSubmitting] = React.useState (false);''
+const [imagePreview, setImagePreview] = React.useState (null as string | null);';''
+const [activeTab, setActiveTab] = React.useState ('manual');
+=======
 //Type for our form values type ProductFormValues = z.infer<typeof productSchema>;"
 const [isSubmitting, setIsSubmitting] = React.useState (false);""
 const [imagePreview, setImagePreview] = React.useState (null as string | null);";""
 const [activeTab, setActiveTab] = React.useState ("manual");
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Initialize the form //Handle image upload preview const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+>>>>>>> origin/resolved-merge-conflicts
   const file = e.target.files?.[0];
 if (file) {;
   reader.onloadend = () => {;
@@ -49,6 +65,18 @@ const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
   const file = e.target.files?.[0];
 if (file) {;
 }
+<<<<<<< HEAD
+  },const handleModelChange = (e: React.ChangeEvent<HTMLInputElement />) => ;'
+  const file = e.target.files?.[0],if (file) {form.setValue('model', file)}
+  },// Apply AI-generated content to the form;
+'
+const handleApplyGenerated = (form.setValue('description', content.description),form.setValue('tags', content.tags.join(', ')),// Set a default price as the middle of the suggested range;
+'
+const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),form.setValue('price', averagePrice),// Switch to the manual tab to show applied content;) => {
+  return $3;}
+}'
+    setActiveTab('manual')},// Handle form submission;
+=======
   },const handleModelChange = (e: React.ChangeEvent<HTMLInputElement />) => ;"
   const file = e.target.files?.[0],if (file) {form.setValue("model", file)}
   },// Apply AI-generated content to the form;
@@ -59,14 +87,21 @@ const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) 
   return $3;}
 }"
     setActiveTab("manual")},// Handle form submission;
+>>>>>>> origin/resolved-merge-conflicts
 
 const onSubmit = async (values: ProductFormValues) => {if (!user) {toast(}
 };
   return;
+<<<<<<< HEAD
+}setIsSubmitting (true);''
+author: {';''
+  name: user.displayName || 'Anonymous Creator';
+=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;"
 }setIsSubmitting (true);""
 author: {";""
   name: user.displayName || "Anonymous Creator";
+>>>>>>> origin/resolved-merge-conflicts
 id: user.id ;
 };
 createdAt: new Date () .toISOString () ;'
@@ -178,7 +213,11 @@ if ( {) {$2;}
           throw new Error (update_error.message)}
       }
       // Send listing to moderation service;try {await supabase.functions.invoke ('moderate - listing', {body: {listing_id: product_record.id,listing_type: 'product'}
+<<<<<<< HEAD
+  description: values.description,images: imagePublicUrl ? [imagePublicUrl] : [],seller_id: user.id}
+=======
   description: values.description,images: imagePublicUrl ? [imagePublicUrl] : [],seller_id: user.id}}
+>>>>>>> origin/resolved-merge-conflicts
 } catch (err) {logErrorToProduction ('Error invoking moderation:', { data: err }
 }import React from 'react';
 import { useForm, ControllerRenderProps  } from 'react-hook-form';
@@ -189,8 +228,13 @@ import { useAuth  } from '@/hooks/useAuth';
 import { useToast  } from '@/hooks/use-toast';
 import { useRouter  } from 'next/router';
 import Image from 'next/image'; // Import next/image;
+<<<<<<< HEAD
+import { logErrorToProduction  } from '@/utils/productionLogger';'
+          name: user.displayName || 'Anonymous Creator',id: user.i
+=======
 import { logErrorToProduction  } from '@/utils/productionLogger';"
           name: user.displayName || "Anonymous Creator",id: user.i
+>>>>>>> origin/resolved-merge-conflicts
 },createdAt: new Date().toISOString(
 },const { data: productRecord, error: productError}
 } = await supabase;
@@ -246,6 +290,34 @@ const onSubmit = async (values: ProductFormValues,) => {if (!user) {toast({title
   description: 'You must be logged in to publish products',variant: 'destructive}
 };
 return (<Tabs value= {;
+<<<<<<< HEAD
+  activeTab ;'
+}onValueChange= {;''
+  setActiveTab ';''
+}className='w-full'> <TabsList className='grid grid-cols-2 mb-6' > <TabsTrigger value='manual' className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple' > ai'className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'> <Sparkles className='h-4 w-4 mr-2'/> AI-Powered Creation </TabsTrigger> </TabsList> ;''
+}';'''
+}/> <FormField Describe your product in detail...' className='min-h-32' {;'''
+  ...field ';''''
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ';''
+}/> <div className='grid grid-cols-1 md:grid-cols-2 gap-6' > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type='number' min='0' step='0.01' placeholder='0.00' {;'
+  ...field ;''
+}/> ';''
+}/> <FormField >Select a category</option> <option value='digital product' >Digital Product</option> <option value='service' >Service</option> <option value='ai tool' >AI Tool</option> <option value='course' >Course</option> <option value='template' >Template</option> <option value='other' >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ';''
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder='Enter tags separated by commas' {;'
+  ...field ;''
+}/> ';''
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type='file' accept='image/*' onChange= {;'''
+  handleImageChange ';''''`
+}className='cursor-pointer' /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';'''
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) ;''
+}</FormItem>) ';''
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type='file' accept='video/mp4' onChange= {;''
+  handleVideoChange ';''
+}className='cursor-pointer' /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;''
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ';'''
+}/> <div className='flex justify-end' > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value='ai' > <AIListingGenerator /> </TabsContent> </Tabs>) ;''''
+}''''''`
+=======
   activeTab ;"
 }onValueChange= {;""
   setActiveTab ";""
@@ -272,3 +344,4 @@ return (<Tabs value= {;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";"'"
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;'"'"
 }'"'"'"`
+>>>>>>> origin/resolved-merge-conflicts

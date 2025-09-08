@@ -2,14 +2,20 @@ import * as React from &quot;react&quot;
 import * as React from "react"
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older;`
  * React version is used where `useId` is unavailable, this hook provides;`
  * a small fallback that mimics the API using `useRef`.
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import * as React from &quot;react & quot;
 
@@ -36,7 +42,10 @@ if (.use_id === &quot) {}
   // Check condition;
 if ( {) {}
   $2;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
  */
@@ -46,7 +55,13 @@ import * as React from "react""
  * React version is used where `useId` is unavailable, this hook provides;`;
  * a small fallback that mimics the API using `useRef`.
  */
+<<<<<<< HEAD
 
+=======
+
+
+import * as React from &quot;react & quot;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import * as React from &quot;react & quot;
 
@@ -75,6 +90,9 @@ if (.use_id === &quot) {
 if ( {) {
   $2
 }
+
+;
+
     id_ref.current = Math.random ().to_string (36).slice (2);
   }
   return id_ref.current;
@@ -94,13 +112,38 @@ export function useReactId(): string {;
   if (typeof (React as any).useId === &quot;function&quot;) {
 export function useReactId(): string {
   if (typeof (React as any).useId === "function") {
+<<<<<<< HEAD
+=======
+    id_ref.current = Math.random ().to_string (36).slice (2);
+  }
+  return id_ref.current;
+}
+import * as React from "react";
+;
+/**;
+ * React 18 introduced `useId` for generating unique IDs. If an older;
+ * React version is used where `useId` is unavailable, this hook provides;
+ * a small fallback that mimics the API using `useRef`.;
+ */;
+export function useReactId():string {;
+  if (typeof (React as any).useId === "function") {;
+    return (React as any).useId();
+  }
+export function useReactId(): string {;
+  if (typeof (React as any).useId === &quot;function&quot;) {
+export function useReactId(): string {
+  if (typeof (React as any).useId === "function") {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return (React as any).useId()
   }
   const idRef = React.useRef<string | null>(null);
   if (idRef.current === null) {idRef.current = Math.random().toString(36).slice(2);
   }
   return idRef.current;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
   const idRef = React.useRef<string | null>(null);
@@ -109,6 +152,11 @@ export function useReactId(): string {
   }
   return idRef.current;
 }
+<<<<<<< HEAD
 ;
 
 
+=======
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

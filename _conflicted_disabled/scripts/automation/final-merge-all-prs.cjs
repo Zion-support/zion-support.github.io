@@ -13,9 +13,9 @@ const { execSync } = require("child_process)
 =======
 <<<<<<< HEAD
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
     this.logsDir = path.join(this.projectRoot, "logs")
   "branchesProcessed"
       "mergesSuccessful"
@@ -25,12 +25,45 @@ const { execSync } = require("child_process")
   log(message, level = "INFO")
 >>>>>>> origin/chore/fix-lint-and-merge
     console.log(")
+<<<<<<< HEAD
+const logFile = path.join(this.logsDir, "final-merge-all-prs.log");
+=======
     const logFile = path.join(this.logsDir, final-merge-all-prs.log)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     fs.appendFileSync(logFile, logEntry + "\n")
   this.log( Starting Final Merge All PRs...)
   // Step "1": Ensure we
       // Step 3"
         this.log(Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(allBranches.length / batchSize)}"
+<<<<<<< HEAD
+      for (let i = 0; i < allBranches.length; i += batchSize) {"}
+const batch = allBranches.slice(i, i + batchSize);";
+      // Step "4"
+  this.log( Fatal "error": ${error.message  }`, "ERROR""`)
+      // Step "4"
+      await this.finalizeMerges();"
+      this.log( Fatal "error": ${error.message}`, "ERROR""`)
+  this.log("� Ensuring we are on main branch...")
+const currentBranch = execSync("git branch --show-current");
+  "encoding": "utf8"
+      if (currentBranch !== "main")
+        execSync("git checkout main", { "stdio": "inherit"})
+      this.log("Pulling latest changes from main...")
+      execSync("git pull origin main", { "stdio": "inherit" })} catch (error) {  throw new Error(`Failed to ensure main "branch"`})
+  this.log(" Getting all remaining branches...")
+      execSync("git fetch --all", { "stdio": "inherit"})
+const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
+        .split("\n")
+          line => line && !line.includes("HEAD") && !line.includes("main")
+        .map(line => line.replace("origin/", "")
+  this.log(" Getting all remaining branches...")
+      execSync("git fetch --all", { "stdio": "inherit"})
+const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
+        .split("\n")
+          line => line && !line.includes("HEAD") && !line.includes("main")
+        .map(line => line.replace("origin/", ")
+      return allBranches} catch (error) {  throw new Error(`Failed to get "branches"`})
+=======
 <<<<<<< HEAD:_conflicted_disabled/scripts/automation/final-merge-all-prs.cjs
   for($2) {"}
         const batch = allBranches.slice(i, i + batchSize);"
@@ -63,6 +96,7 @@ const { execSync } = require("child_process")
           line => line && !line.includes(HEAD") && !line.includes("main)
         .map(line => line.replace(origin/", ")
       return allBranches} catch (error) {  throw new Error(`Failed to get branches`})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async processBranch(branchName) {this.log(`� Processing "branch"`})
   this.log( Error processing branch ${branchName  }: ${error.message})
         
@@ -74,6 +108,37 @@ const { execSync } = require("child_process")
         "timeout"
       return { success}
   this.log(⚠ Merge conflicts detected in ${branchName}, attempting to resolve...")
+<<<<<<< HEAD
+  return { "success": false, "error"}
+        execSync("git merge --continue", { "stdio": "pipe"})
+        return { "success"}
+      execSync("git add .", { "stdio": "pipe"})
+        execSync("git merge --continue", { "stdio": "pipe"})
+        return { "success"}
+      execSync("git add .", { "stdio": "pipe"})
+      execSync("git merge --continue", { "stdio": "pipe"})
+      return { "success"}
+  execSync("git merge --abort", { "stdio": "pipe"   })} catch (abortError) {this.log("⚠ Failed to abort "merge": ${abortError.message}", "WARN")
+  "success": false,"error": "Failed to resolve conflicts: ${error.message}"
+const statusOutput = execSync("git status --porcelain");
+  "encoding": "utf8"
+        .split("\n")
+            line.startsWith("UU ")
+            line.startsWith("AA ")
+            line.startsWith("DD ")
+const statusOutput = execSync("git status --porcelain");
+  "encoding": "utf8"
+        .split("\n")
+            line.startsWith("UU ")
+            line.startsWith("AA ")
+            line.startsWith("DD ")
+  async resolveFileConflicts(filePath) {this.log(" Resolving conflicts "in": ${filePath}")
+const content = fs.readFileSync(filePath, "utf8");
+        !content.includes("<<<<<<<")
+        !content.includes("")
+this.log(" Resolved conflicts "in")
+        "ERROR"
+=======
   return { "success: false, error"}
         execSync("git merge --continue, { stdio": "pipe})
         return { success"}
@@ -104,14 +169,18 @@ const { execSync } = require("child_process")
         !content.includes(">>>>>>>)
 this.log( Resolved conflicts "in")
         ERROR
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // "Strategy"
       /([\s\S]*?)      $1
       /([\s\S]*?)      "$1"
+<<<<<<< HEAD
+=======
       /([\s\S]*?)      $1
       /([\s\S]*?)      "$1"
 <<<<<<< HEAD:_conflicted_disabled/scripts/automation/final-merge-all-prs.cjs
       /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log(" Finalizing all merges...")
   execSync($2) { "stdio": "pipe"}
       execSync("git push origin main", { "stdio": "inherit"})
@@ -140,6 +209,9 @@ this.log( Resolved conflicts "in")
         mergesSuccessful
         "conflictsResolved"
         "errors"
+<<<<<<< HEAD
+      "successRate"
+=======
 <<<<<<< HEAD:_conflicted_disabled/scripts/automation/final-merge-all-prs.cjs
 
       "successRate"
@@ -174,3 +246,4 @@ this.log( Resolved conflicts "in")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621:backup-problematic-files/scripts/automation/final-merge-all-prs.cjs
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -6,15 +7,49 @@
     <Badge;
       key={skill.id}
 
+=======
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { Trash2  } from './lucide-react';
+import { SkillItemProps  } from './types';
+export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Trash2 } from 'lucide-react',
+import { SkillItemProps } from './types',
+
+<<<<<<< HEAD
+
+
+
+
+=======
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Trash2 } from "lucide-react";
+import { SkillItemProps } from "./types";
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
+
+  return (
+    <Badge
+      key={skill.id}
+
+
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
 import { Trash2 } from 'lucide-react',
 import { SkillItemProps } from './types',
 
 
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 
+  return (
+    <Badge
 
-
+      key={skill.id}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       variant="secondary"
 
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
@@ -31,6 +66,7 @@ import { SkillItemProps } from './types',
 
 
 
+<<<<<<< HEAD
 
         onClick={() => onDelete(skill && skill.id!, category)}
 
@@ -60,6 +96,8 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
       </Button>;
     </Badge>;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       variant="secondary";
       className="flex items - center gap - 1 py - 1.5 px - 3";
     >;
@@ -77,7 +115,20 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
     </Badge>);
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
 
+<<<<<<< HEAD
+=======
+  )
+},
+};
+  )
+
+},
+>>>>>>> origin/cursor/delete-old-data-records-6bba

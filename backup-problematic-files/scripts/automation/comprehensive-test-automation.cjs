@@ -5,7 +5,6 @@ const { execSync } = require('child_process');
 class ComprehensiveTestAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, automation', 'logs, comprehensive-test-automation.log');
     this.ensureDirectories();
     this.results = {}
@@ -31,51 +30,22 @@ class ComprehensiveTestAutomation {}
     })}
   log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString(}
-=======
-
-    dirs.forEach(dir => {})
-      const dirPath = path.join(this.projectRoot, dir;);
-      if () {}
-        fs.mkdirSync(dirPath, { "recursive": true })};"
-    })};"
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString() {}
-    ) {}
-
-    const timestamp = new Date().toISOString(})
->>>>>>> origin/chore/fix-lint-and-merge
 });
     const logMessage = `[${timestamp}] [${level}] ${message}`
     console.log(logMessage);
     try {}
-<<<<<<< HEAD
       fs.appendFileSync(this.logFile, logMessage + \n')} catch(error) {}
       console.error('Failed to write to log file": , error.message)}
   }
-=======
-<<<<<<< HEAD
-      fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
-      console.error('Failed to write to log "file": ', error.message)};
-  };
->>>>>>> origin/chore/fix-lint-and-merge
   async runUnitTests() {}
     this.log(Running unit tests...');
     try {}
-<<<<<<< HEAD
       execSync('npm test -- --coverage --watchAll=false, {})
         "cwd: this.projectRoot, 
         stdio": pipe',
         "timeout: 120000;
-=======
-      execSync('npm test -- --coverage --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 120000;
->>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       this.results.tests.push({ type": 'unit-tests, "status: passed' }
@@ -90,21 +60,12 @@ class ComprehensiveTestAutomation {}
   async runTypeChecking() {}
     this.log('Running TypeScript type checking...);
     try {}
-<<<<<<< HEAD
       execSync(npx tsc --noEmit', {})
         "cwd: this.projectRoot, 
         stdio": 'pipe,
         "timeout: 60000;
-=======
-      execSync('npx tsc --noEmit', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 60000;
->>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       this.results.tests.push({ type": type-checking', "status: 'passed }
@@ -119,21 +80,12 @@ class ComprehensiveTestAutomation {}
   async runLinting() {}
     this.log(Running ESLint...');
     try {}
-<<<<<<< HEAD
       execSync('npx eslint . --max-warnings 0, {})
         "cwd: this.projectRoot, 
         stdio": pipe',
         "timeout: 60000;
-=======
-      execSync('npx eslint . --max-warnings 0', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 60000;
->>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       this.results.tests.push({ type": 'linting, "status: passed' }
@@ -148,21 +100,12 @@ class ComprehensiveTestAutomation {}
   async runBuildTest() {}
     this.log('Running build test...);
     try {}
-<<<<<<< HEAD
       execSync(npm run build', {})
         "cwd: this.projectRoot, 
         stdio": 'pipe,
         "timeout: 300000;
-=======
-      execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 300000;
->>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       this.results.tests.push({ type": build-test', "status: 'passed }
@@ -180,46 +123,29 @@ class ComprehensiveTestAutomation {}
 
     try {}
       // Check bundle size;
-<<<<<<< HEAD
       const buildOutput = execSync('npm run build, {})
         "cwd: this.projectRoot, 
         encoding": utf8',
         "stdio: 'pipe,
         timeout": 300000;
       });
-=======
-      const buildOutput = execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
->>>>>>> origin/chore/fix-lint-and-merge
 
       // Extract bundle size information;
       const bundleSizeMatch = buildOutput.match(/First Load JS shared by all\s+(\d+\.?\d*)\s+kB;/;);
       if ( {})
         performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])) {}
      {}
-<<<<<<< HEAD
         performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])}
         this.log(`Bundle "size: ${performanceResults.bundleSize} kB`)}
-=======
-        performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])};"`;
-        this.log(`Bundle "size": ${performanceResults.bundleSize} kB`)};"
->>>>>>> origin/chore/fix-lint-and-merge
       // Check for large pages;
       const pageSizeMatches = buildOutput.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB/;g;);
         performanceResults.pageSizes = pageSizeMatches.map(match => {})
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB) {}
-<<<<<<< HEAD
      {}
         performanceResults.pageSizes = pageSizeMatches.map(match => {})
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);
@@ -242,18 +168,11 @@ class ComprehensiveTestAutomation {}
       // Check for alt text in images;
       const pagesDir = path.join(this.projectRoot, 'pages;);
       const componentsDir = path.join(this.projectRoot, components';);
-=======
-          const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);"
-          return { "page": parts[1], "size": parseFloat(parts[2]) }})};"
-      this.results.performance = performanceResults;"
-
->>>>>>> origin/chore/fix-lint-and-merge
       let totalImages = ;0;
       let imagesWithAlt = ;0;
 
       [pagesDir, componentsDir].forEach(dir => {})
           const files = this.findReactFiles(dir) {}
-<<<<<<< HEAD
     ) {}
           const files = this.findReactFiles(dir}
 });
@@ -280,15 +199,6 @@ class ComprehensiveTestAutomation {}
             const content = fs.readFileSync(file, utf8;);
             const headings = content.match(/<h[1-6][^>]*>/g) || [];
             headingStructure.push(...headings)})}
-=======
-          const files = this.findReactFiles(dir})
-
-            const images = content.match(/<img[^>]*>/g) || [];
-</img>
-            const headings = content.match(/<h[1-6][^>]*>/g) || [];
-<<<<<<< HEAD
-            headingStructure.push(...headings)})};
->>>>>>> origin/chore/fix-lint-and-merge
       }
 });
 
@@ -311,19 +221,10 @@ class ComprehensiveTestAutomation {}
     try {}
       // Run npm audit;
       try {}
-<<<<<<< HEAD
         execSync('npm audit --audit-level=moderate', {})
           "cwd": this.projectRoot, 
           stdio: pipe,
-=======
-        execSync('npm audit --audit-level=moderate', { })
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
-          "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           "stdio": 'pipe',
->>>>>>> origin/chore/fix-lint-and-merge
           "timeout": 60000;
         }
 });
@@ -352,19 +253,11 @@ class ComprehensiveTestAutomation {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-<<<<<<< HEAD
 
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
 
-=======
-    
-    items.forEach(item => {})
-      const fullPath = path.join(dir, item;);
-      const stat = fs.statSync(fullPath;);
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith(.tsx) || item.endsWith('.jsx') || item.endsWith(.ts) || item.endsWith('.js')) {}
         files.push(fullPath)}
@@ -416,30 +309,11 @@ if ( {})
   const testAutomation = new ComprehensiveTestAutomation) {}
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
-<<<<<<< HEAD
   testAutomation.run().catch(console.error)}
 
-=======
-  testAutomation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = ComprehensiveTestAutomation;
 module.exports = ComprehensiveTestAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </h>`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = ComprehensiveTestAutomation;
-=======
-module.exports = ComprehensiveTestAutomation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

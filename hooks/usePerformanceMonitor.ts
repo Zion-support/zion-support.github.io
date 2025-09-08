@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -130,3 +131,8 @@ if ( {) {
 
 }
 
+=======
+};
+;
+export default usePerformanceMonitor;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

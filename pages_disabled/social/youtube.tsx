@@ -17,6 +17,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD:pages_disabled/social/youtube.tsx
 import React, { useEffect } from 'react';
 
 
@@ -24,3 +25,24 @@ import React, { useEffect } from 'react';
 
 
 
+=======
+import React from 'react';
+interface CareersProps {;
+  // Add props here as needed;
+}
+export default function Careers(): any ({ }: CareersProps) {;
+  return (
+    <div>;
+      <h1>Careers</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  );
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba:temp_exclude/pages_backup_conflicts/careers.tsx

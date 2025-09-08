@@ -259,13 +259,13 @@ setSubmitSuccess (true);
 } /> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6" /> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" /> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12" /> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /> <div className="text-center" /> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4" /> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2" />Revolutionary Technology</h3> <p className="text-gray-300" />Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center" /> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4" /> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2" />Expert Team</h3> <p className="text-gray-300" />World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center" /> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4" /> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2" />Proven Results</h3> <p className="text-gray-300" />Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion && motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)             {/* Contact Form *,}
 }
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={once: true }
 }
-                    initial={{ opacity: 0, scale: 0.9 ,}
+                    initial={ opacity: 0, scale: 0.9 ,}
 }
               className="max-w-4xl mx-auto" />;
               <div className="text-center mb-12" />;
@@ -277,9 +277,9 @@ setSubmitSuccess (true);
                 </p>;
               </div>;<div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20" />;
                 {submitSuccess ? (<motion&& motion.div;}
-                    initial={{ opacity: 0, scale: 0 && 0.9 ,}
+                    initial={ opacity: 0, scale: 0 && 0.9 ,}
 }
-                    animate={{ opacity: 1, scale: 1 ,}
+                    animate={ opacity: 1, scale: 1 ,}
 }
                           Email Address *;
                         " />;
@@ -365,21 +365,21 @@ setSubmitSuccess (true);
         <section className="py-20 px-4 sm:px-6 lg:px-8" />;
           <div className="max-w-7xl mx-auto" />;
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={once: true }
 }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
               {popularServices.map((service, index) => (<motion.div;}
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 ,}
+                  initial={ opacity: 0, y: 20 ,}
 }
-                  whileInView={{ opacity: 1, y: 0 ,}
+                  whileInView={ opacity: 1, y: 0 ,}
 }
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{once: true }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                  viewport={once: true }
 }
                   className="group cursor-pointer" />;
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" />;
@@ -535,11 +535,11 @@ setSubmitSuccess (true);
         <section className="py - 20 px - 4 sm:px-6 lg:px-8" />;
           <div className="max-w-7xl mx-auto" />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
+              initial={ opacity: 0, coordinate_y: 30 ,}
 }
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={once: true }
 }
               className="text-center mb-12" />
 
@@ -553,12 +553,12 @@ setSubmitSuccess (true);
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8" />;
               {popular_services.map ((service, index) => (<motion.div;}
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 20 ,}
+                  initial={ opacity: 0, coordinate_y: 20 ,}
 }
-                  whileInView={{ opacity: 1, coordinate_y: 0 ,}
+                  whileInView={ opacity: 1, coordinate_y: 0 ,}
 }
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{once: true }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={once: true }
 }
                   className="group cursor-pointer" />
 
@@ -609,9 +609,9 @@ setSubmitSuccess (true);
         <section className="py-20 px-4 sm:px-6 lg:px-8" />;
           <div className="max-w-4xl mx-auto text-center" />;
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
                       </span />;
                       <span className="text - gray-400 text-sm" />{service.period}</span>;
@@ -632,11 +632,11 @@ setSubmitSuccess (true);
         <section className="py - 20 px - 4 sm:px-6 lg:px-8" />;
           <div className="max - w-4xl mx-auto text-center" />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
+              initial={ opacity: 0, coordinate_y: 30 ,}
 }
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
              />
               <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6" />

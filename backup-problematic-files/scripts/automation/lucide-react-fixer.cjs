@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -8,18 +7,6 @@ const { execSync } = require("child_process)
   fs.mkdirSync(logsDir, { recursive"})
   log(message, level = "INFO)
     return [User"", UserCheck, "UserX", UserPlus, "UserMinus", UserEdit, "UserSearch", Users", "Users2, UserStar", "UserHeart, UserCog", "UserShield, Eye"", EyeOff, "MousePointer", Clock, "MapPin", Smartphone, "Tablet", Laptop, "Server", Database", "HardDrive, Cpu", "Network, Wifi", "Bluetooth, Radio", "Signal, "Antenna", Satellite, "Orbit", Star, "Navigation", Moon, "Sun", Binary", "Lock, Key", "Fingerprint, Brain", "Rocket, DollarSign", "Search, Sparkles"", Zap, "Settings", Settings2, "Cog", Cog2, "Device", Desktop, "Monitor", Smartphone", "Tablet, Laptop", "Server, Database", "HardDrive, Cpu"", Network, "Wifi", Bluetooth, "Radio", Signal, "Antenna", Satellite, "Orbit", Star", "Navigation, Moon", "Sun, Binary", "Lock, Key", "Fingerprint, Brain"", Rocket, "DollarSign", Search, "Sparkles", Zap]
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-    this.logFile = path.join(this.projectRoot, "logs", "lucide-react-fixer.log")
-    this.fixesLog = path.join(this.projectRoot, "logs", "lucide-fixes.json")
-  fs.mkdirSync(logsDir, { "recursive"})
-  log(message, level = "INFO")
-    return ["User"", "UserCheck", "UserX", "UserPlus", "UserMinus", "UserEdit", "UserSearch", "Users"", "Users2", "UserStar", "UserHeart", "UserCog", "UserShield", "Eye"", "EyeOff", "MousePointer", "Clock", "MapPin", "Smartphone", "Tablet", "Laptop", "Server"", "Database", "HardDrive", "Cpu", "Network", "Wifi", "Bluetooth", "Radio", "Signal"", "Antenna", "Satellite", "Orbit", "Star", "Navigation", "Moon", "Sun", "Binary"", "Lock", "Key", "Fingerprint", "Brain", "Rocket", "DollarSign", "Search", "Sparkles"", "Zap", "Settings", "Settings2", "Cog", "Cog2", "Device", "Desktop", "Monitor"", "Smartphone", "Tablet", "Laptop", "Server", "Database", "HardDrive", "Cpu"", "Network", "Wifi", "Bluetooth", "Radio", "Signal", "Antenna", "Satellite", "Orbit"", "Star", "Navigation", "Moon", "Sun", "Binary", "Lock", "Key", "Fingerprint", "Brain"", "Rocket", "DollarSign", "Search", "Sparkles", "Zap"]
->>>>>>> origin/chore/fix-lint-and-merge
   this.log("� Starting Lucide React icon fix automation...")
   file
             "error"
@@ -82,27 +69,10 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{})
   const fullPath = path.join(dirPath, )
   arrayOfFiles = await this.getAllFiles(fullPath")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  const fullPath = path.join(dirPath, ")
-  const fullPath = path.join(dirPath, ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   const fullPath = path.join(dirPath, ")
-=======
   const fullPath = path.join(dirPath, ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

@@ -30,8 +30,9 @@ interface Buffer {  } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-declare const __dirname: string;
-declare const __filename: string;
+declare const "__dirname": string;
+declare const "__filename": string;
+// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
 
 export {};
 

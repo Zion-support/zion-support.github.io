@@ -1,5 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  ShoppingCart, 
+  Users, 
+  BarChart3, 
+  Smartphone, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const features = [
+  {
+    icon: ShoppingCart,
+    title: 'E-commerce Platform',
+    description: 'Complete online store solution with payment processing'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   },
   {
     icon: Users,
@@ -141,6 +162,7 @@ const benefits = [;
   description: 'Seamless integration across all sales channels';
   }
 ;];
+<<<<<<< HEAD
 
 const solutions = [;
   'E-commerce Platform Development',',;
@@ -154,6 +176,18 @@ const solutions = [;
   'Omnichannel Solutions',',;
   'Retail Mobile Applications'';
 
+=======
+  'E-commerce Platform Development',',;'
+  'Mobile Commerce Applications',',;'
+  'Inventory Management Systems',',;'
+  'Customer Relationship Management',',;'
+  'Point of Sale (POS) Systems',',;'
+  'Supply Chain Management',',;'
+  'Retail Analytics & BI',',;'
+  'Personalization Engines',',;'
+  'Omnichannel Solutions',',;'
+  'Retail Mobile Applications'';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;];
 export default function RetailSolutionsPage() {;
   return (
@@ -209,6 +243,7 @@ export default function RetailSolutionsPage() {;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";
                   <p className="text-gray-300">{feature && feature.description}</p>";
                 </div>;
+<<<<<<< HEAD
 
 const benefits = [;
   'Increased online sales and revenue',;
@@ -218,40 +253,22 @@ const benefits = [;
   'Streamlined operations',;
   'Mobile-first customer engagement';
 
+=======
+  'Increased online sales and revenue',;'
+  'Improved customer experience',;'
+  'Better inventory management',;'
+  'Enhanced data-driven decision making',;'
+  'Streamlined operations',;'
+  'Mobile-first customer engagement';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ];
 
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
-    title: 'E-commerce Platform',;
-    description: 'Complete online shopping experience with advanced features';
-  },;
-  {;
-    icon: Users,;
-    title: 'Customer Management',;
-    description: 'Comprehensive customer relationship management system';
-  },;
-  {;
-    icon: BarChart3,;
-    title: 'Analytics & Insights',;
-    description: 'Advanced analytics for sales, inventory, and customer behavior';
-  },;
-  {;
-    icon: Smartphone,;
-    title: 'Mobile Commerce',;
-    description: 'Mobile-first shopping experience and mobile app solutions';
-  },;
-  {;
-    icon: CheckCircle,;
-    title: 'Inventory Management',;
-    description: 'Real-time inventory tracking and automated reordering';
-  },;
-  {;
-    icon: ArrowRight,;
-    title: 'Omnichannel',;
-    description: 'Seamless integration across all sales channels';
   }
 ;];
+<<<<<<< HEAD
 const solutions = [;
   'E-commerce Platform Development',',;
   'Mobile Commerce Applications',',;
@@ -435,6 +452,18 @@ const solutions = [;
   'Omnichannel Solutions',',
   'Retail Mobile Applications'';
 
+=======
+  'E-commerce Platform Development',','
+  'Mobile Commerce Applications',','
+  'Inventory Management Systems',','
+  'Customer Relationship Management',','
+  'Point of Sale (POS) Systems',','
+  'Supply Chain Management',','
+  'Retail Analytics & BI',','
+  'Personalization Engines',','
+  'Omnichannel Solutions',','
+  'Retail Mobile Applications'';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;];
 export default function RetailSolutionsPage() {
   return (;
@@ -491,6 +520,7 @@ export default function RetailSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
+<<<<<<< HEAD
 
 const benefits = [
   'Increased online sales and revenue',
@@ -513,6 +543,34 @@ export default function RetailSolutions() {;
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">
+=======
+  'Increased online sales and revenue','
+  'Improved customer experience','
+  'Better inventory management','
+  'Enhanced data-driven decision making','
+  'Streamlined operations','
+  'Mobile-first customer engagement''
+];
+export default function RetailSolutions() {
+
+
+    icon: Smartphone,
+    title: 'Mobile Commerce',
+    description: 'Mobile-optimized shopping experience'
+  }
+];
+
+export default function RetailSolutionsPage() {
+
+  return (
+    <>
+      <Head>
+        <title>Retail Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
@@ -655,7 +713,10 @@ export default function RetailSolutions() {;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
 
+<<<<<<< HEAD
                 </ul>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               </div>;
             </div>;
@@ -746,5 +807,8 @@ export default function RetailSolutions() {;
     </Layout>
 
     </>
+<<<<<<< HEAD
     </>
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -110,11 +110,11 @@ async function runAll() {
       } catch (error) {
         console.log(`❌ ${script} failed: ${error.message}`);
       }
-    }
-  }
-}
 
 const executor = new ExecuteAllScripts();
+<<<<<<< HEAD
+executor.run().catch(console.error);
+=======
 <<<<<<< HEAD
 executor.run().catch(console.error);
 <<<<<<< HEAD
@@ -197,3 +197,4 @@ executor.run().catch(console.error);
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

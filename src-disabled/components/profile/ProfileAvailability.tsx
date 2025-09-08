@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ProfileAvailabilityProps {
   availability: Availability
 }
@@ -42,6 +45,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 
 export function ProfileAvailability({
   availability
+<<<<<<< HEAD
 
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
@@ -79,6 +83,9 @@ function ProfileAvailability() {
         return '' }
   }
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         >
           {getStatusText(availability.status)}
@@ -140,6 +147,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30',;
       default: return '';
     }
+<<<<<<< HEAD
 
   },;
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {;
@@ -147,6 +155,13 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'available': return 'Available Now',;
       case 'limited': return 'Limited Availability',;
 
+=======
+  };
+  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
+    switch(status) {
+      case 'available': return 'Available Now';
+      case 'limited': return 'Limited Availability';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       case 'unavailable': return 'Currently Unavailable';
       default: return '';
     }
@@ -160,8 +175,12 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
           variant="outline" 
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >;
+<<<<<<< HEAD
 
 
+=======
+        >
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {getStatusText(availability.status)}
         </Badge>
         {availability.nextAvailable && availability.status !== 'available' && (
@@ -175,7 +194,52 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <p className="text-zion-slate mb-4">{availability.message}</p>
       )}
 
+<<<<<<< HEAD
       
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {availability.availableHours && availability.availableHours.length > 0 && (
+        <div className="mt-4">
+          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+<<<<<<< HEAD
+            {availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">
+            {availability.availableHours.map((slot, index) => (
+              <div key={index} className="flex items-center gap-2 text-zion-slate">
+=======
+
+
+            {availability.availableHours.map((slot, index) => (
+              <div key={index} className="flex items-center gap-2 text-zion-slate">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                <div className="w-20 text-zion-slate-light">{slot.day}:</div>
+                <div className="flex items-center gap-1">
+                  <Clock className="h-4 w-4 text-zion-cyan" />
+                  <span>{slot.hours}</span>
+<<<<<<< HEAD
+      
+        <div className="mt-4">
+          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">
+                <div className="flex items-center gap-1">
+                  <Clock className="h-4 w-4 text-zion-cyan" />
+                  <span>{slot.hours}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+    </div>
+  )
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
@@ -193,8 +257,13 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
+<<<<<<< HEAD
 
 
+=======
+                </div>
+              </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 interface ProfileAvailabilityProps {;
   availability: Availability;
@@ -406,5 +475,12 @@ export function ProfileAvailability(): any ({;
 }
 ;
 
+<<<<<<< HEAD
 
 
+=======
+;
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba

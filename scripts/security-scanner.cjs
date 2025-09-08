@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -12,20 +14,31 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require('fs')
-const path = require(path')
+const path = require('path')
 const { execSync } = require('child_process')
 <<<<<<< HEAD
+  log(message, type = 'INFO')
+          this.stats[riskLevel + 'Risk']
+      this.log(`Found ${this.stats.vulnerabilitiesFound} dependency vulnerabilities`, 'WARNING'`)
+      this.log(`Dependency scan failed: ${error.message}`, 'ERROR'`)
+    this.log('Scanning code for security issues...', 'SECURITY')
+        pattern: /password\s*=\s*['"][^'']
+        pattern: /api[_-]?key\s*=\s*['"][^'']
+=======
+<<<<<<< HEAD
   log(message, type = INFO')
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-          this.stats[riskLevel + 'Risk]
-      this.log(`Found ${this.stats.vulnerabilitiesFound} dependency vulnerabilities`, WARNING'`)
-      this.log(`Dependency scan failed: ${error.message}`, 'ERROR`)
-    this.log(Scanning code for security issues...', 'SECURITY)
-        pattern: /password\s*=\s*["][^'']
-        pattern: /api[_-]?key\s*=\s*[][^']
+        pattern: /secret\s*=\s*['"][^'']
 
 
+<<<<<<< HEAD
+
+
+
+=======
         pattern: /secret\s*=\s*['][^]
 
         pattern: /secret\s*=\s*['"][^']
@@ -102,3 +115,4 @@ const { execSync } = require('child_process')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

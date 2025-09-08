@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 echo "🔍 Running pre-commit checks..."
 
 # Run linting

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
   const featuredNews = [;
     {;
@@ -31,12 +34,420 @@ import React from 'react';
       featured:true;
     },;
     {;
+<<<<<<< HEAD
 
+=======
+      }
+      "id":2,;
+      "title":"New Partnership with Global Healthcare Consortium",;"
+      "excerpt":"We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",;"
+      "category":"Partnership",;"
+      "author":"Business Development",;"
+      "date":"2025-01-12",;"
+      "readTime":"4 min read",;"
+      "image":"/images/news/healthcare-partnership.jpg",;"
+      "tags":["Healthcare", "Partnership", "AI"];"
+    },;
+    {;
+      id:3,;
+      title:"Breakthrough in Autonomous Cybersecurity Systems",;
+      excerpt:"Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",;
+      category:"Research",;
+      author:"Research Team",;
+      date:"2025-01-10",;
+      readTime:"6 min read",;
+      image:"/images/news/cybersecurity-breakthrough.jpg",;
+      tags:["Cybersecurity", "Research", "Autonomous Systems"];
+    },;
+    {;
+      id:4,;
+      title:"Space Technology Division Expands Operations",;
+      excerpt:"Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",;
+      category:"Company News",;
+      author:"Space Technology Team",;
+      date:"2025-01-08",;
+      readTime:"3 min read",;
+      image:"/images/news/space-expansion.jpg",;
+      tags:["Space Technology", "Expansion", "Satellites"];
+    },;
+    {;
+      id:5,;
+      title:"AI Ethics and Governance Framework Released",;
+      excerpt:"We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",;
+      category:"Policy",;
+      author:"AI Ethics Team",;
+      date:"2025-01-05",;
+      readTime:"7 min read",;
+      image:"/images/news/ai-ethics-framework.jpg",;
+      tags:["AI Ethics", "Governance", "Policy"];
+    },;
+    {;
+      id:6,;
+      title:"Financial Services Innovation Award Winner",;
+      excerpt:"Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",;
+      category:"Awards",;
+      author:"Marketing Team",;
+      date:"2025-01-03",;
+      readTime:"3 min read",;
+      image:"/images/news/financial-award.jpg",;
+      tags:["Awards", "Financial Services", "Quantum Computing"];
+export default function News() {;
+
+      id:2,;
+            </motion.div>;
+          </div>;
+        </section>;
+;
+        {/* Featured Article */}
+        {featuredArticle && (;
+          <section className="py-20">;
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+              <motion.div;
+                initial={{ opacity:0, y:30 }}
+                whileInView={{ opacity:1, y:0 }}
+                transition={{ duration:0.8 }}
+                viewport={{ once:true }}
+                className="text-center mb-12";
+              >;
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
+                  Featured Story;
+                </h2>;
+              </motion.div>;
+              ;
+              <motion.div;
+                initial={{ opacity:0, y:30 }}
+                whileInView={{ opacity:1, y:0 }}
+                transition={{ duration:0.8, delay:0.2 }}
+                viewport={{ once:true }}
+                className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden";
+              >;
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">;
+                  <div className="p-8 lg:p-12">;
+                    <div className="flex items-center space-x-4 mb-4">;
+                      <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">;
+                        {featuredArticle.category}
+                      </span>;
+                      <span className="text-gray-400 text-sm">;
+                        <Calendar className="w-4 h-4 inline mr-1" />;
+                        {new Date(featuredArticle.date).toLocaleDateString()}
+                      </span>;
+                    </div>;
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">;
+                      {featuredArticle.title}
+                    </h3>;
+                    <p className="text-lg text-gray-300 mb-6">;
+                      {featuredArticle.excerpt}
+                    </p>;
+                    <div className="flex items-center space-x-4 mb-6">;
+                      <div className="flex items-center space-x-2">;
+                        <User className="w-4 h-4 text-gray-400" />;
+                        <span className="text-gray-400">{featuredArticle.author}</span>;
+                      </div>;
+                    </div>;
+                    <div className="flex flex-wrap gap-2 mb-6">;
+                      {featuredArticle.tags.map((tag) => (;
+                        <span;
+                          key={tag}
+                          className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50";
+                        >;
+                          {tag}
+                        </span>;
+                      ))}
+                    </div>;
+                    <Link;
+                      href={`/news/${featuredArticle.id}`}
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300";
+                    >;
+                      Read Full Article;
+                      <ArrowRight className="w-5 h-5 ml-2" />;
+                    </Link>;
+                  </div>;
+                  <div className="relative h-64 lg:h-auto">;
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50 flex items-center justify-center">;
+                      <Newspaper className="w-24 h-24 text-purple-400" />;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </section>;
+        )}
+;
+        {/* Category Filter */}
+        <section className="py-12 bg-black/50">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="flex flex-wrap justify-center gap-4">;
+              {categories.map((category) => (;
+                <button;
+                  key={category.name}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${;
+                    category.active;
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white';
+                      :'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
+                  }`}
+                >;
+                  {category.name}
+                  <span className="ml-2 text-sm opacity-75">({category.count})</span>;
+                </button>;
+              ))}
+            </div>;
+          </section>;
+        )}
+;
+        {/* News Grid */}
+              viewport={{ once:true }}
+              className="text-center mb-16";
+            >;
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
+                Latest News;
+              </h2>;
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
+                Stay updated with our latest developments and breakthroughs;
+              </p>;
+            </motion.div>;
+            ;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {newsArticles.filter(article => !article.featured).map((article, index) => (;
+                <motion.article;
+                  key={article.id}
+                  initial={{ opacity:0, y:30 }}
+                  whileInView={{ opacity:1, y:0 }}
+        {/* CTA Section */}
+        <section className="py-20 relative">;
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+            <motion.div;
+              initial={{ opacity:0, y:20 }}
+              whileInView={{ opacity:1, y:0 }}
+              transition={{ duration:0.8 }}
+                  transition={{ duration:0.6, delay:index * 0.1 }}
+                  viewport={{ once:true }}
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden";
+                >;
+                  <div className="relative h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">;
+                    <Newspaper className="w-16 h-16 text-purple-400" />;
+                  </div>;
+                  <div className="p-6">;
+                    <div className="flex items-center space-x-4 mb-4">;
+                      <span className="bg-gray-800/50 text-purple-400 text-xs font-semibold px-2 py-1 rounded-full">;
+                        {article.category}
+                      </span>;
+                      <span className="text-gray-400 text-xs">;
+                        <Calendar className="w-3 h-3 inline mr-1" />;
+                        {new Date(article.date).toLocaleDateString()}
+                      </span>;
+                    </div>;
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">;
+                      {article.title}
+                    </h3>;
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">;
+                      {article.excerpt}
+                    </p>;
+                    <div className="flex items-center justify-between mb-4">;
+                      <div className="flex items-center space-x-2">;
+                        <User className="w-4 h-4 text-gray-400" />;
+                        <span className="text-gray-400 text-sm">{article.author}</span>;
+                      </div>;
+                    </div>;
+                    <div className="flex flex-wrap gap-2 mb-4">;
+                      {article.tags.slice(0, 2).map((tag) => (;
+                        <span;
+                          key={tag}
+                          className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30";
+                        >;
+                          {tag}
+                        </span>;
+                      ))}
+                    </div>;
+                    <Link;
+                      href={`/news/${article.id}`}
+                      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300";
+                    >;
+                      Read More;
+                      <ArrowRight className="w-4 h-4 ml-1" />;
+                    </Link>;
+                  </div>;
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <motion.div;
+              initial={{ opacity:0, y:20 }}
+              animate={{ opacity:1, y:0 }}
+              transition={{ duration:0.6, delay:0.2 }}
+              className="text-center mb-16";
+            >;
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">;
+                <Newspaper className="w-4 h-4 mr-2" />;
+        <section className="relative py-20 px-4">;
+          <div className="container mx-auto max-w-6xl">;
+            <motion.div;
+              initial={{ opacity:0, y:20 }}
+              animate={{ opacity:1, y:0 }}
+              transition={{ duration:0.8 }}
+              className="text-center";
+            >;
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">;
+                Latest News & Updates;
+              </div>;
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">;
+                News & Press;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+                Stay updated with the latest developments, breakthroughs, and innovations ;
+                from Zion Tech Group and the technology industry.;
+              </p>;
+            </motion.div>;
+;
+        {/* Category Filter */}
+        <section className="py-10 px-4">;
+          <div className="container mx-auto max-w-6xl">;
+            <motion.div;
+              initial={{ opacity:0, y:20 }}
+              animate={{ opacity:1, y:0 }}
+              transition={{ duration:0.8, delay:0.2 }}
+              className="flex flex-wrap justify-center gap-4";
+            >;
+              {categories.map((category, index) => (;
+                <button;
+                  key={category}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${;
+                    category === "All News";
+                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white";
+                      :"bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
+            </motion.div>;
+          </div>;
+        </section>;"
+          <section className="py-20">;"
+</section>"
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
+              <motion.div;
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8 ;}}
+                viewport={{ once: true ;}}"
+                className="text-center mb-12";"
+              >;
+</motion>"
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;"
+</h2>
+                </h2>;
+                transition={{ duration: 0.8;, delay: 0.2 ;}}
+                className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden";"
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">;"
+</div>"
+                  <div className="p-8 lg:p-12">;"
+                    <div className="flex items-center space-x-4 mb-4">;"
+                      <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">;"
+</span>
+                      </span>;"
+                      <span className="text-gray-400 text-sm">;"
+</span>"
+                        <Calendar className="w-4 h-4 inline mr-1" />;"
+
+                      </span>;
+                    </div>;"
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">;"
+</h3>
+                    </h3>;"
+                    <p className="text-lg text-gray-300 mb-6">;"
+</p>
+                    </p>;"
+                    <div className="flex items-center space-x-4 mb-6">;"
+                      <div className="flex items-center space-x-2">;"
+                        <User className="w-4 h-4 text-gray-400" />;"
+                        <span className="text-gray-400">{featuredArticle.author}</span>;"
+                    <div className="flex flex-wrap gap-2 mb-6">;"
+                        <span;
+                          key={tag}"
+                          className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50";"
+                    <Link;
+                      href={`/news/${featuredArticle.id}`}"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300";"
+                      <ArrowRight className="w-5 h-5 ml-2" />;"
+
+                  <div className="relative h-64 lg:h-auto">;"
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50 flex items-center justify-center">;"
+                      <Newspaper className="w-24 h-24 text-purple-400" />;"
+
+        <section className="py-12 bg-black/50">;"
+            <div className="flex flex-wrap justify-center gap-4">;"
+                <button;
+                  key={category.name}`;
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${;
+                    category.active;"
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white';
+                      :'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';`;
+                  }`}
+</button>
+                  <span className="ml-2 text-sm opacity-75">({category.count})</span>;"
+                </button>;
+              </h2>;"
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;"
+              </p>;
+            ;"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
+                <motion.article;
+                  key={article.id}
+        {/* CTA Section */}"
+        <section className="py-20 relative">;"
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;"
+              initial={{ opacity: 0;, y: 20 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden";"
+                  <div className="relative h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">;"
+                    <Newspaper className="w-16 h-16 text-purple-400" />;"
+
+                  <div className="p-6">;"
+                      <span className="bg-gray-800/50 text-purple-400 text-xs font-semibold px-2 py-1 rounded-full">;"
+                      <span className="text-gray-400 text-xs">;"
+                        <Calendar className="w-3 h-3 inline mr-1" />;"
+
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">;"
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">;"
+                    <div className="flex items-center justify-between mb-4">;"
+                        <span className="text-gray-400 text-sm">{article.author}</span>;"
+                    <div className="flex flex-wrap gap-2 mb-4">;"
+                          className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30";"
+                    <Link;`;
+                      href={`/news/${article.id}`}"
+                      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300";"
+                      <ArrowRight className="w-4 h-4 ml-1" />;"
+
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+          <div className="max-w-7xl mx-auto">;"
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.6;, delay: 0.2 ;}}"
+              className="text-center mb-16";"
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">;"
+                <Newspaper className="w-4 h-4 mr-2" />;"
+        <section className="relative py-20 px-4">;"
+          <div className="container mx-auto max-w-6xl">;"
+              transition={{ duration: 0.8 ;}}"
+              className="text-center";"
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">;"
+</h1>
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">;"
+              </h1>;"
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;"
+        {/* Category Filter */}"
+        <section className="py-10 px-4">;"
+              transition={{ duration: 0.8;, delay: 0.2 ;}}"
+              className="flex flex-wrap justify-center gap-4";"
+</motion>
+                  key={category}`;
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${;"
+                    category === "All News";""
+                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white";""
+                      :"bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";""
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { ;
   Search, Calendar, Clock, User, Tag, ;
   ArrowRight, ExternalLink, TrendingUp, ;
   BookOpen, Globe, Video;
 } from 'lucide-react',;
+<<<<<<< HEAD
 
 import Link from 'next/link';
 export default function News() {;
@@ -136,6 +547,24 @@ export default function News() {;
 
           <motion.div ;
 
+=======
+import Link from 'next/link';
+export default function News() {;
+
+          <motion.h2 ;"
+    'All NewsCompany News',;
+    'PartnershipsAI & Ethics',;
+    'Quantum TechnologySpace Technology',;
+    'Micro SAASIT Services',;
+    'MetaverseIndustry Insights';
+  const formatDate = (dateString:string) => {;
+      <section className="relative py-20 lg:py-32 overflow-hidden">;"
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>;""
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;"
+            className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-6";"
+            className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8";"
+          <motion.div ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">;"
 </a>
               <span>Read Featured News</span>;"
@@ -306,7 +735,10 @@ export default function News() {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
                   key={news.title}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },;
     {;
       id:3,;
@@ -317,8 +749,11 @@ export default function News() {;
       author:"Dr. Emily Watson",;
       readTime:"4 min read",;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },;
     {;
       id:4,;
@@ -329,8 +764,11 @@ export default function News() {;
       author:"Marcus Rodriguez",;
       readTime:"2 min read",;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },;
     {;
       id:5,;
@@ -341,8 +779,11 @@ export default function News() {;
       author:"Dr. James Wilson",;
       readTime:"5 min read",;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },;
     {;
       id:6,;
@@ -353,8 +794,11 @@ export default function News() {;
       author:"Lisa Park",;
       readTime:"6 min read",;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },;
     {;
       id:7,;
@@ -365,8 +809,11 @@ export default function News() {;
       author:"Alex Thompson",;
       readTime:"4 min read",;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },;
     {;
       id:8,;
@@ -377,8 +824,11 @@ export default function News() {;
       author:"Prof. Maria Garcia",;
       readTime:"7 min read",;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
   ],;
 ;
@@ -387,7 +837,10 @@ export default function News() {;
   return (;
 
     <>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <title>News | Zion Tech Group - Latest Updates & Insights</title>;"
         <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;"
@@ -415,11 +868,17 @@ export default function News() {;
                     <h2 className="text-3xl font-bold mb-4 text-white hover:text-cyan-400 transition-colors">;"
                     <p className="text-white/80 mb-4 text-lg leading-relaxed">;"
                     <div className="flex items-center gap-4 text-sm text-white/60 mb-4">;"
+<<<<<<< HEAD
 
                       <span>By {article.author}</span>;
 
                       <span>{article.readTime}</span>;
 
+=======
+                      <span>By {article.author}</span>;
+
+                      <span>{article.readTime}</span>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;"
                 <article key={article.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">;"
 </article>"
@@ -437,6 +896,7 @@ export default function News() {;
                 <h2 className="text-2xl font-bold mb-4 text-cyan-400">Stay in the Loop</h2>;""
                 <p className="text-white/70 mb-6">;"
                     className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50";"
+<<<<<<< HEAD
 
         </main>;
     </>;
@@ -444,3 +904,9 @@ export default function News() {;
   );
 }
 
+=======
+        </main>;
+    </>;
+
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba

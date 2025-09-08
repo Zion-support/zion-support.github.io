@@ -30,7 +30,7 @@ const path = require('path');
 
 console.log('======')
   log(message, type = 'info')
-      const result = execSync(command, {"encoding": 'utf8',"stdio"})
+const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(` ${description} "failed"`)
       this.log(`Master automation "failed"`)
       this.log(`Tests "failed"`)
@@ -38,6 +38,9 @@ console.log('======')
       this.log(`Performance monitoring "failed"`)
 // console.log('\n Errors "encountered")
     console.log('\n Comprehensive report saved "to")
+<<<<<<< HEAD
+  console.error('Master automation "failed")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   console.error('Master automation "failed")
@@ -84,3 +87,4 @@ console.log('======)
 =======
   console.error('Master automation "failed")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

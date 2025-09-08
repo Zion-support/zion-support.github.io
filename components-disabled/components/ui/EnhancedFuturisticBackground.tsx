@@ -341,17 +341,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       window && window.removeEventListener('resize', resizeCanvas);
     }
 
-        style={{ background: 'transparent' }}
+        style={ background: 'transparent' }
       />;
       {/* Overlay gradient */}
       <div;'
         className='fixed inset - 0 pointer - events - none z - 0';
-        style={{}
+        style={}
       {/* Content */}'
       <div className='relative z-10'>{children}</div>;
     </div>;
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,
-        }}
+        }
       />
 
       {/* Content */}
@@ -366,7 +366,7 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 `
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
+        }
       />;
 {/* Content */}'
       <div className='relative z - 10'>{children}</div>;

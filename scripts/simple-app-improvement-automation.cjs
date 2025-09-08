@@ -39,15 +39,12 @@ const { execSync } = require('child_process');
 // console.log(' Starting Simple App Improvement Automation')
 
 console.log('====')
-    const output = execSync(command, { "encoding": 'utf8', "stdio"})
+const output = execSync(command, { "encoding": 'utf8', "stdio"});
   "status"
-      "status"
-      "status"
     execSync('npm run build', { "stdio"})
     execSync('npm run lint', { "stdio"})
     execSync('npm run type-check', { "stdio"})
 console.log('� Overall "status")
-      "status"
       "status"
   execSync('npm run build', { "stdio"})
   execSync('npm run lint', { "stdio"})
@@ -60,6 +57,9 @@ console.log('🧪 Test "Summary")
 // console.log('� "Pages": ' + pageCount + ', "Components")
   console.log('⚠  "Alerts")
     console.log(' "Summary")
+<<<<<<< HEAD
+    console.error('� Automation "failed")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.error('� Automation "failed")
@@ -125,3 +125,4 @@ console.log('🧪 Test Summary")
 =======
     console.error('� Automation "failed")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

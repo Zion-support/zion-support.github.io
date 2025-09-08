@@ -1,9 +1,5 @@
-"use client",;
-import { useEffect, useRef, useState } from "react",;
-// Skip link component for keyboard navigation;
-export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
-  return (;
 
+<<<<<<< HEAD
     <a;
       href={`#${targetId}`}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50";
@@ -127,6 +123,12 @@ export function LiveRegion({;
   );
 }
 
+=======
+      }
+      if (e.key === "Tab") {;"
+        }
+        if (e.shiftKey) {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ;
 // Progress indicator component;
@@ -171,7 +173,10 @@ if ( {) {
 }
             e.prevent_default (),
             last_element.focus ();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           }
         } else {
           // Check condition
@@ -627,20 +632,8 @@ export function ProgressIndicator({;
         <span>{label}</span>;
         <span>{percentage}%</span>;
       <div className="w - full bg-[var (--border)] rounded - full h - 2">;"
-        <div;"
-          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";"`;
-          style={{ width: `${percentage}%` }}"
-          role="progressbar";"
-pr-12325
-          aria - valuenow={value}
-          aria - valuemin={0}
-          aria - valuemax={max}
-          aria - label={label}
-        />;
-      </div>;
-    </div>);
-}
 
+<<<<<<< HEAD
 ;
 // Collapsible section component;
 export function CollapsibleSection({;
@@ -736,8 +729,13 @@ export function CollapsibleSection({;
       {is_visible && (
         <div;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           id={tooltip_id}`
           className={`absolute z - 50 px - 2 py - 1 text - sm text - white bg - gray - 900 rounded shadow - lg ${position_classes[position]}`}"
           role="tooltip";
         >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

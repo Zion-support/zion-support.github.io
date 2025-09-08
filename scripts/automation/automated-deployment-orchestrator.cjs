@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/""usr/bin/env"" node;
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -16,16 +19,22 @@
 #!/""usr/bin/env"" node;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Automated Deployment Orchestrator;
+<<<<<<< HEAD
+ * ;"
+ * This automation system provides intelligent deployment management "including": * - Automated deployment with intelligent rollback; * - Deployment health monitoring;"
+=======
  * ;
 <<<<<<< HEAD
  * This automation system provides intelligent deployment management "including": * - Automated deployment with intelligent rollback; * - Deployment health monitoring;
 =======
  * This automation system provides intelligent deployment management including": * - Automated deployment with intelligent rollback; * - Deployment health monitoring;"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  * - Environment-specific configurations;
  * - Deployment validation and testing;
  * - Rollback strategies and automation;
@@ -33,6 +42,21 @@
  * @author Zion Tech Group;
  * @version 2.0.0;
  */;
+<<<<<<< HEAD
+ */;"
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const { promisify } = require("util");"
+// Configuration;
+const CONFIG = {}"
+  "PROJECT_ROOT": process.cwd(),
+  "LOG_DIR": "./logs",
+  "DEPLOYMENT_AUTOMATION_MODE": process.env.DEPLOYMENT_AUTOMATION_MODE === "true",
+  "AUTO_DEPLOY_ENABLED": process.env.AUTO_DEPLOY_ENABLED === "true",
+  "ROLLBACK_ENABLED": process.env.ROLLBACK_ENABLED === "true",
+  "PM2_PATH": process.env.PM2_PATH || "pm2","
+=======
 <<<<<<< HEAD
  * ;
  * @author Zion Tech Group;
@@ -65,18 +89,32 @@ const CONFIG = {}"
   ROLLBACK_ENABLED": process.env.ROLLBACK_ENABLED === "true,
   PM2_PATH": process.env.PM2_PATH || "pm2,
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Deployment environments;"
-  "ENVIRONMENTS: {}
+  "ENVIRONMENTS": {}"
   development: {}"
 
-      "rollbackThreshold: 0}
+      "rollbackThreshold": 0};"
   },
   // Health check configurations;"
-  "HEALTH_CHECKS: {}
+  "HEALTH_CHECKS": {}"
   build: {}"
 
-      "retries: 1}
+      "retries": 1};"
   // Rollback strategies;"
+<<<<<<< HEAD
+  "ROLLBACK_STRATEGIES": {}
+  immediate: "immediate",
+    "gradual": "gradual",
+    "intelligent": "intelligent"};"
+};
+// Utility functions;"
+const log = (message, level = "INFO") => {}"
+  const timestamp = new Date().toISOString();
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
+  console.log("logMessage);
+  const logMessage = `[${timestamp}] [${level}] ${message};`"
+=======
 <<<<<<< HEAD
   "ROLLBACK_STRATEGIES": {}
   immediate: "immediate",
@@ -112,9 +150,14 @@ const log = (message, level = INFO") => {}"
 =======
   const logMessage = `[${timestamp}] [${level}] ${message};`"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.log("logMessage);"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Ensure log directory exists;
+<<<<<<< HEAD
+  if (!fs.existsSync(CONFIG.LOG_DIR)) {}"
+  fs.mkdirSync(CONFIG.LOG_DIR, { "recursive": true })};"
+=======
 <<<<<<< HEAD
   if (!fs.existsSync(CONFIG.LOG_DIR)) {}"
   fs.mkdirSync(CONFIG.LOG_DIR, { "recursive": true })};"
@@ -126,15 +169,25 @@ const executeCommand = (command, options = {}) => {}
 =======
   if (!fs.existsSync(CONFIG.LOG_DIR)) {}
   fs.mkdirSync(CONFIG.LOG_DIR, { recursive": true })}"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ;
-  // Write to log file;
-  fs.appendFileSync(path.join(CONFIG.LOG_DIR, automated-deployment-orchestrator.log"), logMessage + "\n)}
+  // Write to log file;"
+  fs.appendFileSync(path.join(CONFIG.LOG_DIR, "automated-deployment-orchestrator.log"), logMessage + "\n")};"
 const executeCommand = (command, options = {}) => {}
   try {}
 <<<<<<< HEAD
+const result = execSync(command, {});
+  "cwd": CONFIG.PROJECT_ROOT,
+      "encoding": "utf8",
+      "stdio": options.silent ? "pipe" : "inherit","
+=======
+<<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ...options}
-
+});"
+    return { "success": true, "output": result };"
+  } catch (error) {}"
 
 =======
 >>>>>>> merged-prs-20250907-203621
@@ -164,10 +217,14 @@ const npmCommand = (command, options = {}) => {return executeCommand(`npm ${comm
 >>>>>>> origin/chore/fix-lint-and-merge
 // Deployment State Management;
 class $1 {}
-  constructor() {}
-  this.stateFile = path.join(CONFIG.LOG_DIR, deployment-state.json");"
-    this.state = this.loadState()}
+  constructor() {}"
+  this.stateFile = path.join(CONFIG.LOG_DIR, "deployment-state.json");"
+    this.state = this.loadState()};
   loadState() {}
+<<<<<<< HEAD
+  if (fs.existsSync(this.stateFile)) {}"
+  return JSON.parse(fs.readFileSync(this.stateFile, "utf8"));"
+=======
   if (fs.existsSync(this.stateFile)) {}
 <<<<<<< HEAD
   return JSON.parse(fs.readFileSync(this.stateFile, utf8"));"
@@ -278,38 +335,39 @@ class DeploymentSystem {}
   if($2) {log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, "WARN");"
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Deployment State Management;
 class DeploymentState {}
 
-    return {}
-  deployments": [],
-      "rollbacks: [],
-      currentDeployment": null,
-      "lastUpdated: new Date().toISOString()}
+    return {}"
+  "deployments": [],
+      "rollbacks": [],
+      "currentDeployment": null,
+      "lastUpdated": new Date().toISOString()};"
   saveState() {}
 
   addDeployment(deployment) {}
   this.state.deployments.push(deployment);
     this.state.currentDeployment = deployment;
-    this.saveState()}
+    this.saveState()};
   addRollback(rollback) {}
   this.state.rollbacks.push(rollback);
   getCurrentDeployment() {}
-  return this.state.currentDeployment}
+  return this.state.currentDeployment};
   getDeploymentHistory(limit = 10) {}
-  return this.state.deployments.slice(-limit)}
+  return this.state.deployments.slice(-limit)};
   getRollbackHistory(limit = 10) {}
-  return this.state.rollbacks.slice(-limit)}
+  return this.state.rollbacks.slice(-limit)};
 // Health Check System;
 class HealthCheckSystem {}
   constructor() {}
-  this.healthChecks = CONFIG.HEALTH_CHECKS}
+  this.healthChecks = CONFIG.HEALTH_CHECKS};
   async runHealthChecks(environment) {log(`Running health checks for ${environment.name} environment`);
     const results = {}"
-  "environment: environment.name,
-      timestamp": new Date().toISOString(),
-      "checks: {},
-      overall": { passed: true, "score: 0, totalChecks": 0 }"
+  "environment": environment.name,
+      "timestamp": new Date().toISOString(),
+      "checks": {},
+      "overall": { passed: true, "score": 0, "totalChecks": 0 };"
     const requiredChecks = environment.healthChecks;
     let passedChecks = 0;
     for (const checkName of requiredChecks) {}
@@ -318,26 +376,34 @@ class HealthCheckSystem {}
       results.checks[checkName] = checkResult;
       results.overall.totalChecks++;
       if (checkResult.passed) {}
-  passedChecks++}
+  passedChecks++};
     // Calculate overall score;
     results.overall.score = Math.round((passedChecks / results.overall.totalChecks) * 100);
-    results.overall.passed = results.overall.score >= 80; // 80% threshold;`;
-    log(`Health checks completed for ${environment.name}. Score": ${results.overall.score}%`);"
-    return results}
+    results.overall.passed = results.overall.score >= 80; // 80% threshold;"`;
+    log(`Health checks completed for ${environment.name}. "Score": ${results.overall.score}%`);"
+    return results};
   async runHealthCheck(checkName, checkConfig) {}
-  const result = {}
-  name": checkName,
-      "command: checkConfig.command,
-      passed": false,
-      "output: ,
-      error": null,
-      "duration: 0,
-      retries": 0}"
+  const result = {}"
+  "name": checkName,
+      "command": checkConfig.command,
+      "passed": false,
+      "output": ,
+      "error": null,
+      "duration": 0,
+      "retries": 0};"
     const startTime = Date.now();
     for (let attempt = 0; attempt <= checkConfig.retries; attempt++) {}`;
   try {log(`Running ${checkName} (attempt ${attempt + 1}/${checkConfig.retries + 1})`);
 <<<<<<< HEAD
+const checkResult = executeCommand(checkConfig.command, {});
+  "silent": true,
+          "timeout": checkConfig.timeout;
+const checkResult = executeCommand(checkConfig.command, {});
+  "silent": true,
+=======
+<<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "timeout": checkConfig.timeout }
 =======
         const checkResult = executeCommand(checkConfig.command, {})"
@@ -351,27 +417,34 @@ class HealthCheckSystem {}
   result.passed = true;
           result.output = checkResult.output;
 
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry} else {log(`Health check ${checkName} failed after ${checkConfig.retries + 1} attempts`, ERROR")}"
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry} else {log(`Health check ${checkName} failed after ${checkConfig.retries + 1} attempts`, "ERROR")};"
       } catch (error) {}
   result.error = error.message;
 
-          await new Promise(resolve => setTimeout(resolve, 2000))} else {log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, ERROR)}"
+          await new Promise(resolve => setTimeout(resolve, 2000))} else {log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, "ERROR")};"
     result.duration = Date.now() - startTime;
-    return result}
+    return result};
 // Deployment System;
 class DeploymentSystem {}
   // Deployment System;
   this.state = new DeploymentState();
-    this.healthChecker = new HealthCheckSystem()}
+    this.healthChecker = new HealthCheckSystem()};
   async deploy(environmentName, options = {}) {}
 
     log(`Starting deployment to ${environment.name} environment`);
     // Check if auto-deploy is enabled;"`;
+<<<<<<< HEAD
+    if (!environment.autoDeploy && !options.force) {log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, "WARN");"
+=======
     if (!environment.autoDeploy && !options.force) {log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, WARN);"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-        "requiresApproval: true}
+        "requiresApproval": true};"
   // Pre-deployment health checks;"
+<<<<<<< HEAD
+      log("Running pre-deployment health checks");"
+=======
 <<<<<<< HEAD
       log("Running pre-deployment health checks");"
       const preDeploymentHealth = await this.healthChecker.runHealthChecks(environment);"`
@@ -432,71 +505,73 @@ class DeploymentSystem {}
       const verifyResult = await this.verifyDeployment(environment)
 =======
       log("Running pre-deployment health checks);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const preDeploymentHealth = await this.healthChecker.runHealthChecks(environment);"`;
-      if (!preDeploymentHealth.overall.passed) {log(`Pre-deployment health checks failed. "Score: ${preDeploymentHealth.overall.score}%`, ERROR");"
+      if (!preDeploymentHealth.overall.passed) {log(`Pre-deployment health checks failed. "Score": ${preDeploymentHealth.overall.score}%`, "ERROR");"
 
-          healthCheckResults: preDeploymentHealth}"
+          "healthCheckResults": preDeploymentHealth};"
       // Create deployment record;
       const deployment = {}"
 
-        healthChecks: preDeploymentHealth,"
-        options}
+        "healthChecks": preDeploymentHealth,"
+        options};
       this.state.addDeployment(deployment);
       // Execute deployment;
       const deploymentResult = await this.executeDeployment(environment, deployment);
       // Update deployment record;"
-      deployment.status = deploymentResult.success ? completed : "failed";
+      deployment.status = deploymentResult.success ? "completed" : "failed";"
       // Execute deployment;
-      // Update deployment record;
+      // Update deployment record;"
       deployment.result = deploymentResult;
       deployment.completedAt = new Date().toISOString();
       this.state.saveState();
       // Post-deployment health checks;
       if (deploymentResult.success) {}"
-  log("Running post-deployment health checks);
+  log("Running post-deployment health checks");"
         const postDeploymentHealth = await this.healthChecker.runHealthChecks(environment);"`;
-        if (!postDeploymentHealth.overall.passed) {log(`Post-deployment health checks failed. "Score: ${postDeploymentHealth.overall.score}%`, WARN");"
+        if (!postDeploymentHealth.overall.passed) {log(`Post-deployment health checks failed. "Score": ${postDeploymentHealth.overall.score}%`, "WARN");"
           // Consider automatic rollback;
-          if (this.shouldAutoRollback(environment, postDeploymentHealth)) {}
-  log(Initiating automatic rollback due to failed health checks");"
-            await this.rollback(environment.name, {})
-  reason": "Failed post-deployment health checks,
-              healthCheckResults": postDeploymentHealth})}"
+          if (this.shouldAutoRollback(environment, postDeploymentHealth)) {}"
+  log("Initiating automatic rollback due to failed health checks");"
+            await this.rollback(environment.name, {})"
+  "reason": "Failed post-deployment health checks",
+              "healthCheckResults": postDeploymentHealth})};"
         deployment.postDeploymentHealth = postDeploymentHealth;
 
       // Update deployment record;
-      if (deployment) {}
-  deployment.status = failed";"
+      if (deployment) {}"
+  deployment.status = "failed";"
         deployment.error = error.message;
-        this.state.saveState()}
+        this.state.saveState()};
 
-      log(Step 1: Updating source code);"
+      log("Step 1: Updating source code");"
       // Step 1: Update source code;"
       const updateResult = await this.updateSourceCode(environment);
       if (!updateResult.success) {}
-  return updateResult}
-      // Step 2": Install dependencies;
-      log("Step 2: Installing dependencies);
+  return updateResult};
+      ;"
+      // Step "2": Install dependencies;
+      log("Step 2: Installing dependencies");"
       const installResult = await this.installDependencies(environment);
       if (!installResult.success) {}
-  return installResult}
+  return installResult};
 
-      log("Step 3: Building application");
+      log("Step 3: Building application");"
       const buildResult = await this.buildApplication(environment);
       if (!buildResult.success) {}
-  return buildResult}
+  return buildResult};
 
-      log(Step 4: Deploying with PM2");"
+      log("Step 4: Deploying with PM2");"
       const pm2Result = await this.deployWithPM2(environment);
       if (!pm2Result.success) {}
-  return pm2Result}
+  return pm2Result};
 
-      log(Step 5: Verifying deployment);"
+      log("Step 5: Verifying deployment");"
       const verifyResult = await this.verifyDeployment(environment);
 >>>>>>> merged-prs-20250907-203621
       return {}
   success: true,"
-        steps: {}"
+        "steps": {}"
   update: updateResult,"
 
 <<<<<<< HEAD
@@ -506,18 +581,22 @@ class DeploymentSystem {}
   if($2) {}
 =======
   try {log(`Updating source code from ${environment.branch} branch`);
-      // Fetch latest changes;
-      const fetchResult = gitCommand(fetch origin", { "silent: true })
+      // Fetch latest changes;"
+      const fetchResult = gitCommand("fetch origin", { "silent": true }")
       if (!fetchResult.success) {}
 >>>>>>> merged-prs-20250907-203621
 
-          "step": pull}"
+          "step": "pull"};"
       // Get current commit hash;"
-      const commitResult = gitCommand(rev-parse HEAD, { "silent": true })
+      const commitResult = gitCommand("rev-parse HEAD", { "silent": true }")
 
-        step": "update-source}
+        "step": "update-source"};"
   async installDependencies(environment) {}
   try {}"
+<<<<<<< HEAD
+  log("Installing dependencies");
+      const installResult = npmCommand("install", { "silent": true }")
+=======
 <<<<<<< HEAD
   log("Installing dependencies")
       const installResult = npmCommand("install", { "silent": true }")
@@ -525,25 +604,33 @@ class DeploymentSystem {}
   log("Installing dependencies);
       const installResult = npmCommand(install", { "silent: true })
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-          "step": install}"
-      log("Dependencies installed successfully);
+          "step": "install"};"
+      log("Dependencies installed successfully");"
 
-          "step": build}"
-      log("Application built successfully);
+          "step": "build"};"
+      log("Application built successfully");"
 
+<<<<<<< HEAD
+      // Check if PM2 is runningconst pm2StatusResult = executeCommand(`${CONFIG.PM2_PATH} status`, { "silent": true }")
+=======
 <<<<<<< HEAD
       // Check if PM2 is runningconst pm2StatusResult = executeCommand(`${CONFIG.PM2_PATH} status`, { "silent": true }")
   if($2) {}
 =======
       // Check if PM2 is runningconst pm2StatusResult = executeCommand(`${CONFIG.PM2_PATH} status`, { "silent": true })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (!pm2StatusResult.success) {}
 >>>>>>> merged-prs-20250907-203621
 
-          step": "pm2-reload}
-      log("PM2 deployment completed successfully");
+          "step": "pm2-reload"};"
+      log("PM2 deployment completed successfully");"
 
   async verifyDeployment(environment) {}
+<<<<<<< HEAD
+  log("Verifying deployment");"
+=======
 <<<<<<< HEAD
   log("Verifying deployment");"
       // Check if application is responding
@@ -558,18 +645,25 @@ class DeploymentSystem {}
     const criticalChecks = ["build", "test"];"
 =======
   log(Verifying deployment");"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Check if application is responding;
       const healthCheckResult = await this.healthChecker.runHealthChecks(environment);
-      if (healthCheckResult.overall.passed) {}
-  log(Deployment verification successful");"
+      if (healthCheckResult.overall.passed) {}"
+  log("Deployment verification successful");"
 
   shouldAutoRollback(environment, healthCheckResults) {}
   // Check if health check score is below threshold;
     if (healthCheckResults.overall.score < 60) {}
+<<<<<<< HEAD
+  return true};
+    // Check if critical health checks failed;"
+    const criticalChecks = ["build", "test"];"
+=======
   return true}
     // Check if critical health checks failed;
     const criticalChecks = [build", "test];
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const failedCriticalChecks = criticalChecks.filter(check => } catch (error) {}
 
   // Check if health check score is below threshold
@@ -583,14 +677,21 @@ class DeploymentSystem {}
       healthCheckResults.checks[check] && !healthCheckResults.checks[check].passed;
     );
     if (failedCriticalChecks.length > 0) {}
+<<<<<<< HEAD
+    return false};
+=======
 >>>>>>> merged-prs-20250907-203621
     return false}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async rollback(environmentName, options = {}) {}
 
     log(`Initiating rollback for ${environment.name} environment`)
   // Create rollback record
       const rollback = {}"
 
+<<<<<<< HEAD
+        "status": "in-progress"};"
+=======
 <<<<<<< HEAD
         "status": "in-progress"};"
       this.state.addRollback(rollback)
@@ -621,39 +722,43 @@ class DeploymentSystem {}
   if($2) {}
 =======
         status: "in-progress"}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.state.addRollback(rollback);
       // Execute rollback;
       const rollbackResult = await this.executeRollback(environment, rollback);
-      // Update rollback record;
-      rollback.status = rollbackResult.success ? "completed" : failed;"
+      // Update rollback record;"
+      rollback.status = rollbackResult.success ? "completed" : "failed";"
       // Execute rollback;
       // Update rollback record;"
       rollback.result = rollbackResult;
       rollback.completedAt = new Date().toISOString();
 
-      if (rollback) {}
-  rollback.status = failed";"
+      if (rollback) {}"
+  rollback.status = "failed";"
         rollback.error = error.message;
-  success: false,"
+  "success": false,"
 
-      log("Step 1: Reverting to previous commit);
+      log("Step 1: Reverting to previous commit");"
       const revertResult = await this.revertToPreviousCommit(environment);
       if (!revertResult.success) {}
-  return revertResult}
+  return revertResult};
 
-      log("Step 5: Verifying rollback");
-  revert: revertResult,
+      log("Step 5: Verifying rollback");"
+  revert: revertResult,"
 
   async revertToPreviousCommit(environment) {}
-  log("Reverting to previous commit");
-      // Get current commit hash;
-      const currentCommitResult = gitCommand("rev-parse HEAD", { silent: true }")
+  log("Reverting to previous commit");"
+      // Get current commit hash;"
+      const currentCommitResult = gitCommand("rev-parse HEAD", { "silent": true }")
       if (!currentCommitResult.success) {}
 >>>>>>> merged-prs-20250907-203621
 
-          "step: get-current-commit";"
-      // Get current commit hash;
+          "step": "get-current-commit";"
+      // Get current commit hash;"
 
+<<<<<<< HEAD
+          "step": "get-current-commit"};"
+=======
 <<<<<<< HEAD
           "step": "get-current-commit"};"
       const currentCommit = currentCommitResult.output.trim()
@@ -673,20 +778,31 @@ const main = async () => {}"
   log("Automated Deployment Orchestrator started");"
 =======
           step": "get-current-commit}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const currentCommit = currentCommitResult.output.trim();
       // Get previous commit hash;"
-      const previousCommitResult = gitCommand("rev-parse HEAD~1, { silent": true }")
+      const previousCommitResult = gitCommand("rev-parse HEAD~1", { "silent": true }")
       if (!previousCommitResult.success) {}
 
   getDeploymentStatus(environmentName) {}
   const currentDeployment = this.state.getCurrentDeployment();
     if (currentDeployment && currentDeployment.environment === environmentName) {}
-  return currentDeployment}
-    return null}
+  return currentDeployment};
+    return null};
   getDeploymentHistory(environmentName, limit = 10) {}
   const history = this.state.getDeploymentHistory(limit);
-    return history.filter(deployment => deployment.environment === environmentName)}
+    return history.filter(deployment => deployment.environment === environmentName)};
 // Main execution;
+<<<<<<< HEAD
+const main = async () => {}"
+  log("Automated Deployment Orchestrator started");"
+  const deploymentSystem = new DeploymentSystem();
+    // Check for deployment requests;
+
+    throw error};
+  
+} else {log(`Deployment to ${request.environment} "failed": ${result.error}`, "ERROR");
+=======
 const main = async () => {}
   log(Automated Deployment Orchestrator started");"
 >>>>>>> merged-prs-20250907-203621
@@ -712,27 +828,35 @@ const checkDeploymentRequests = async () => {}
 >>>>>>> merged-prs-20250907-203621
 } else {log(`Deployment to ${request.environment} "failed": ${result.error}`, "ERROR");
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           // Consider automatic rollback;
-          if (CONFIG.ROLLBACK_ENABLED && request.environment !== production) {log(`Initiating automatic rollback for ${request.environment}`);
-            await deploymentSystem.rollback(request.environment, {"reason": `Automatic rollback due to failed deployment: ${result.error}`})}
-        }
-        } catch (error) {log(`Error processing deployment request for ${request.environment}: ${error.message}`, ERROR)}
-    }
+          if (CONFIG.ROLLBACK_ENABLED && request.environment !== "production") {log(`Initiating automatic rollback for ${request.environment}`);
+            await deploymentSystem.rollback(request.environment, {"reason": `Automatic rollback due to failed deployment: ${result.error}`})};
+        };
+        } catch (error) {log(`Error processing deployment request for ${request.environment}: ${error.message}`, "ERROR")};
+    };
+    ;
     // Generate deployment report;
     const report = await generateDeploymentReport(deploymentSystem);
     log("Automated Deployment Orchestrator completed successfully");
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     return report} catch (error) {log(`Automated Deployment Orchestrator failed: ${error.message}`, "ERROR");log(`Stack trace: ${error.stack}`, "ERROR");
     throw error}
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return report} catch (error) {log(`Automated Deployment Orchestrator "failed": ${error.message}`, "ERROR");log(`Stack "trace": ${error.stack}`, "ERROR");
     throw error};
 };
 ;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const checkDeploymentRequests = async () => {}
 
 <<<<<<< HEAD
@@ -741,22 +865,29 @@ const checkDeploymentRequests = async () => {}
 =======
   // This would typically check for deployment triggers;
   // For now, return an empty array;
+<<<<<<< HEAD
+  return []};
+=======
 >>>>>>> merged-prs-20250907-203621
   return []}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const generateDeploymentReport = async (deploymentSystem) => {}
-  const report = {}
+  const report = {}"
 
-    summary": {}"
-  totalDeployments: deploymentSystem.state.getDeploymentHistory().length,
-      totalRollbacks": deploymentSystem.state.getRollbackHistory().length,
-      "currentDeployment: deploymentSystem.state.getCurrentDeployment()},
-    recentDeployments": deploymentSystem.state.getDeploymentHistory(5),
-    "recentRollbacks: deploymentSystem.state.getRollbackHistory(5)}
+    "summary": {}"
+  totalDeployments: deploymentSystem.state.getDeploymentHistory().length,"
+      "totalRollbacks": deploymentSystem.state.getRollbackHistory().length,
+      "currentDeployment": deploymentSystem.state.getCurrentDeployment()},
+    "recentDeployments": deploymentSystem.state.getDeploymentHistory(5),
+    "recentRollbacks": deploymentSystem.state.getRollbackHistory(5)};"
   // Save report;"
-  const reportPath = path.join(CONFIG.LOG_DIR, "deployment-report.json);
+  const reportPath = path.join(CONFIG.LOG_DIR, "deployment-report.json");"
 
-  return report}
+  return report};
 // Handle process signals;"
+<<<<<<< HEAD
+process.on("SIGINT", () => {}
+=======
 <<<<<<< HEAD
 process.on("SIGINT", () => {}
 
@@ -766,6 +897,7 @@ process.on("SIGINT", () => {}
 =======
 <<<<<<< HEAD
 process.on("SIGINT, () => {}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 process.on("SIGINT", () => {}
@@ -777,6 +909,20 @@ process.on("SIGINT", () => {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 // Handle process signals;
+<<<<<<< HEAD
+process.on("SIGINT", () => {}
+  log("Received SIGINT. Shutting down gracefully...");
+  process.exit(0)}
+});
+
+  log("Received SIGINT. Shutting down gracefully...");"
+// Handle process signals;"
+
+  process.exit(0)}
+"
+process.on("SIGTERM", () => {}
+  log("Received SIGTERM. Shutting down gracefully...");"
+=======
 process.on(SIGINT", () => {}
   log("Received SIGINT. Shutting down gracefully...);
 >>>>>>> merged-prs-20250907-203621
@@ -812,19 +958,23 @@ process.on("SIGTERM", () => {}
   main()
 =======
   log(Received SIGTERM. Shutting down gracefully...);"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Start the main execution;
 if (require.main === module) {}
   main();
 >>>>>>> merged-prs-20250907-203621
     .then(report => {})"
-  log(Automated Deployment Orchestrator completed successfully);"
+  log("Automated Deployment Orchestrator completed successfully");"
 
-      process.exit(1)})}
+      process.exit(1)})};
 module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
 <<<<<<< HEAD
+  main};
+=======
+<<<<<<< HEAD
 
   main};
   main};
@@ -833,9 +983,15 @@ module.exports = {}
 
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+  main};
+
+<<<<<<< HEAD
+  main};
+
+  main};
 =======
-
   main}
 =======
 <<<<<<< HEAD
@@ -863,6 +1019,7 @@ module.exports = {}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   main}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 <<<<<<< HEAD

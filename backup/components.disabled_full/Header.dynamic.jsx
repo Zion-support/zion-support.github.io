@@ -1,4 +1,4 @@
-const Header = dynamic(() => import("./Header"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Header' ,'
+const Header = dynamic(() => import('./Header'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default Header' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const Header = dynamic(() => import("./Header"),{'; "loading": () => <p>Loading.
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const Header = dynamic(() => import(\"./Header\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default Header\' ,const Header = dynamic(() => import(\"./Header\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default Header\" ,\"\"\";
-const Header = dynamic(() => import(\"./Header\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Header' ,';
+const Header = dynamic(() => import(\'./Header\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default Header\' ,const Header = dynamic(() => import(\'./Header\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default Header\' ,\'\'\';
+const Header = dynamic(() => import(\'./Header\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default Header' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const Header = dynamic(() => import(\"./Header\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Header' ,'
+const Header = dynamic(() => import(\'./Header\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default Header' ,'
 </p>'
 </p>'
 </p>'

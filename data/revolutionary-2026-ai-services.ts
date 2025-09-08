@@ -1,10 +1,39 @@
+<<<<<<< HEAD
 
 
+=======
+export interface Revolutionary2026AiService {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string}
+}
+export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
+  {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "2026-revolutionary-ai",
     name: "2026 Revolutionary AI Platform",
     tagline: "Revolutionary AI for 2026",
     price: "$249/month",
     description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
+<<<<<<< HEAD
+=======
+    id: '2026-revolutionary-ai'
+    name: '2026 Revolutionary AI Platform'
+    tagline: 'Revolutionary AI for 2026'
+    price: '$249/month'
+    description:
+      'Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     features: [
       "Revolutionary AI",
       "Transformative capabilities",
@@ -18,6 +47,7 @@
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -33,3 +63,9 @@
   }
 ];
 
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

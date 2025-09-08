@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   return <div>{children}</div>;
@@ -42,3 +43,6 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 
 
 
+=======
+  return <div>{children}</div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba

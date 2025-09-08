@@ -1,6 +1,10 @@
 /* eslint-disable */
+<<<<<<< HEAD
+   //Step 1: Basic Info basicInfo: z.object ({;
+=======
  >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define the form schema with validation const talentSchema = z.object ({;
   //Step 1: Basic Info basicInfo: z.object ({;
+>>>>>>> origin/resolved-merge-conflicts
   ) .optional () .default ([]);
 cv: z.any () .optional () ;
 }) ;

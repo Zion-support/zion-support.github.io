@@ -1,32 +1,51 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   active?: boolean;
   href?: string;
   target?: string;
   badge?: React && React.ReactNode;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
+<<<<<<< HEAD
 
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
+=======
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
+<<<<<<< HEAD
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
   badge?: React.ReactNode
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import React, { forwardRef } from "react",;
@@ -42,8 +61,11 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string,;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
@@ -62,7 +84,10 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
   badge?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             className
           )}
 
@@ -77,7 +102,10 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
       )
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(;"
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;"
@@ -86,6 +114,10 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
             className;
           )}
         >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -97,8 +129,11 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
           {badge && <span>{badge}</span>}
         </a>;
       );
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           className={cn (
             "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
@@ -112,13 +147,17 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
         </a>);
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     return (
       <button;
         ref={ref}
 
+<<<<<<< HEAD
 
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
           active && "bg-accent font-medium text-accent-foreground",
@@ -145,6 +184,21 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
 
       >;
         <div className="flex items-center gap-2">;
+=======
+
+"
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent","
+          active && "bg-accent font-medium text-accent-foreground",
+
+    }
+
+    return (
+      <button;
+        ref={ref}
+          className;
+
+        )}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           {icon && <span className="text-muted-foreground">{icon}</span>}
           <span>{children}</span>;
@@ -152,6 +206,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
         {badge && <span>{badge}</span>}
       </button>;
 
+<<<<<<< HEAD
 
 
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
@@ -173,6 +228,18 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
 
 
 
+=======
+
+    );
+  }
+"
+SidebarMenuItem.displayName = "SidebarMenuItem",
+
+),
+),
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -185,7 +252,10 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export { SidebarMenuItem, SidebarMenuGroup },
 ),;
@@ -194,13 +264,24 @@ interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
 
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   title: string,;
   children: React && React.ReactNode;
 }
+<<<<<<< HEAD
 
+=======
+interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+
+  title: string,;
+  children: React && React.ReactNode;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         className={cn (
           "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
@@ -225,6 +306,7 @@ interface SidebarMenuGroupProps extends React.HTMLAttributes < HTMLDivElement> {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 export { SidebarMenuItem, SidebarMenuGroup }
 ;
@@ -237,3 +319,8 @@ export { SidebarMenuItem, SidebarMenuGroup };
 
 
 
+=======
+
+export { SidebarMenuItem, SidebarMenuGroup };
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

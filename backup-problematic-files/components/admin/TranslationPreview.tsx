@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="space-y-4">;
@@ -15,3 +18,7 @@
 pr-12325
         value={text}
 
+<<<<<<< HEAD
+=======
+})"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

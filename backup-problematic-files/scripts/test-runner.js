@@ -5,7 +5,7 @@ const fs = // // require('fs');
 const path = // // require('path');
 class TestRunner {
   constructor() {
-    this && this.results = {
+    this.results = {
       "unit": { passed: 0, "failed": 0 },
       "integration": { passed: 0, "failed": 0 },
       "e2e": { passed: 0, "failed": 0 }
@@ -13,11 +13,16 @@ class TestRunner {
   checkTestFiles() {
     const testDirs = ['__tests__', 'src/__tests__', 'tests'];
     let testFilesFound = 0;
+<<<<<<< HEAD
 
     testDirs && testDirs.forEach(dir => {
       if (fs && fs.existsSync(dir)) {
         const files = fs && fs.readdirSync(dir);
         const testFiles = files && files.filter(file => 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           file && file.includes('.test.') || file && file.includes('.spec.')
 
         );
@@ -26,6 +31,7 @@ class TestRunner {
     });
     if (testFilesFound === 0) {
 
+<<<<<<< HEAD
       console.log('⚠️ No test files found');
       console && console.log('⚠️ No test files found');
     } else {
@@ -33,6 +39,8 @@ class TestRunner {
     }
     return testFilesFound;
   }
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       console.log('⚠️ No test files found')} else {
       console.log(`✅ Found ${testFilesFound} test files`)}
@@ -43,6 +51,7 @@ class TestRunner {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
 
+<<<<<<< HEAD
         console.log('⚠️ No test script found in package.json');
         return false;
       }
@@ -66,6 +75,8 @@ class TestRunner {
       console && console.log('❌ Error reading package && package.json:', error && error.message);
       return false;
     }
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         return false}
       console && console.log('✅ Test script found in package && package.json');
@@ -78,13 +89,13 @@ class TestRunner {
   generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),
-      "results": this && this.results,
+      "results": this.results,
       "summary": {
-        testFilesFound: this && this.checkTestFiles(),
-        "testScriptExists": this && this.checkPackageJsonScripts()
+        testFilesFound: this.checkTestFiles(),
+        "testScriptExists": this.checkPackageJsonScripts()
       }
-    fs && fs.writeFileSync('test-report && report.json', JSON && JSON.stringify(report, null, 2));
-    console && console.log('Test report generated');
+    fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
+    console.log('Test report generated');
   }
 
   runner.generateReport();

@@ -1,10 +1,49 @@
+<<<<<<< HEAD
 
 
+=======
+"resumeOptions": ResumeOption[],
+  "selectedResume": ResumeOption | null,
+  "handleResumeSelect": ("resumeId": string) => void,
+  "handleDownloadResume": () => void,
+  "isLoading": boolean
+}
+
+export function SelectResumeSection({;
+}
+import React from 'react';'
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;import React from 'react';'
+import { FileText } from 'lucide-react';'
+import { ResumeOption } from '../resume-selector/types',;'
+import { ResumePreviewCard } from './ResumePreviewCard',;'
+import { Resume } from '@/types/resume',;'
+interface SelectResumeSectionProps {;
+  }
+  "resumeOptions": ResumeOption[],;
+  "selectedResume": ResumeOption | null,;
+  "handleResumeSelect": ("resumeId": string) => void,;
+  "handleDownloadResume": () => void,;
+  "isLoading": boolean;
+}
+                  : 'bg-zion-blue-dark/30 "hover":bg-zion-blue-dark/50''
+              }`}`
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
   handleDownloadResume: () => void,
   isLoading: boolean
+<<<<<<< HEAD
+=======
+resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
+  isLoading: boolean;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
@@ -13,14 +52,28 @@ import React from 'react';
   resumeOptions;
   selectedResume;
   handleResumeSelect;
+<<<<<<< HEAD
 
 
 
+=======
+  handleDownloadResume;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
 import { ResumePreviewCard } from './ResumePreviewCard',;
 
+<<<<<<< HEAD
+=======
+import React from 'react',;
+
+import { FileText } from 'lucide-react',;
+import { ResumeOption } from '../resume-selector/types',;
+import { ResumePreviewCard } from './ResumePreviewCard',;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Resume } from '@/types/resume',;
 interface SelectResumeSectionProps {;
   resumeOptions: ResumeOption[],;
@@ -32,9 +85,23 @@ resumeOptions: ResumeOption[],
   isLoading: boolean;
 }
 
+<<<<<<< HEAD
+=======
+  resumeOptions: ResumeOption[]
+  selectedResume: ResumeOption | null;
+  handleResumeSelect: (resumeId: string) => void;
+  handleDownloadResume: () => void;
+  isLoading: boolean;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+                selectedResume?.id === option && option.id '
+                  ? 'bg-zion-purple/20 border border-zion-purple' 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   resumeOptions: ResumeOption[]
@@ -65,8 +132,11 @@ resumeOptions,
                 selectedResume?.id === option.id
                   ? 'bg-zion-purple/20 border border-zion-purple'
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {FileText} from 'lucide-react';
 import {ResumeOption} from '../resume - selector / types';
 import {ResumePreviewCard} from './ResumePreviewCard';
@@ -80,20 +150,35 @@ import {ResumePreviewCard} from './ResumePreviewCard';
             >;
               <div className="flex items-center">;"
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;"
-                <span className="text-white">{option && option.title}</span>;
+                <span className="text-white">{option && option.title}</span>;"
               </div>;
             </button>;
           ))}
-
-              resume={selectedResume && selectedResume.resume as Resume}
+            <ResumePreviewCard,
+resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
-              isLoading={isLoading}
-            />;
+              isLoading={isLoading} />;
           )}
         </>;
+<<<<<<< HEAD
 
 
 
+=======
+      )}
+
+
+
+    </div>;
+  );
+}
+
+
+import React from 'react',;
+import { FileText } from 'lucide-react',;
+import { ResumeOption } from '../resume-selector/types',;
+import { ResumePreviewCard } from './ResumePreviewCard',;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Resume } from '@/types/resume',;
 ;
@@ -106,6 +191,7 @@ interface SelectResumeSectionProps {;
 }
 ;
 
+<<<<<<< HEAD
 export function SelectResumeSection({;
   resumeOptions,;
   selectedResume,;
@@ -131,13 +217,18 @@ export function SelectResumeSection({;
             >;
               <div className="flex items-center">;
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 <span className="text-white">{option.title}</span>;
               </div>;
             </button>;
           ))}
 
+<<<<<<< HEAD
           ;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
             <ResumePreviewCard;
@@ -149,8 +240,20 @@ export function SelectResumeSection({;
       )}
     </div>;
   ),;}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
 
 
+<<<<<<< HEAD
+=======
+      )}
+    </div>
+  )
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

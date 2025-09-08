@@ -71,14 +71,23 @@ export function ListingCard(): any ({;
 
 
       {images && images.length > 0 && images[0] && (
+<<<<<<< HEAD
+        <div className='h-48 w-full overflow-hidden relative'>
+=======
         <div className="h-48 w-full overflow-hidden relative">
+>>>>>>> origin/resolved-merge-conflicts
           <Image
             src={images[0]}
             alt={title}
 
 
+<<<<<<< HEAD
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            loading='lazy'
+=======
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
+>>>>>>> origin/resolved-merge-conflicts
           />
 
 
@@ -94,17 +103,28 @@ export function ListingCard(): any ({;
 
 
 
+<<<<<<< HEAD
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>{title}</h3>
+        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
+=======
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
+>>>>>>> origin/resolved-merge-conflicts
         
         {tags && tags.length > 0 && (
 
 
 
 
+<<<<<<< HEAD
+          <div className='flex flex-wrap gap-2 mb-4'>
+            {tags.map((tag, i) => (
+              <Badge key={i} variant='outline' className='border-zion-slate-dark text-zion-slate-light'>
+=======
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+>>>>>>> origin/resolved-merge-conflicts
                 {tag}
 
 
@@ -144,16 +164,28 @@ export function ListingCard(): any ({;
 
         
         {author && (
+<<<<<<< HEAD
+          <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
+            {author.avatarUrl ? (
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className='rounded-full mr-2' loading='lazy' />
+            ) : (
+              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
+=======
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
               <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+>>>>>>> origin/resolved-merge-conflicts
             )}
 
 
 
+<<<<<<< HEAD
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>
+=======
             <span className="text-sm text-zion-slate-light">{author.name}</span>
+>>>>>>> origin/resolved-merge-conflicts
           </div>
         )}
 
@@ -163,7 +195,11 @@ export function ListingCard(): any ({;
   );
 }
 
+<<<<<<< HEAD
+;'}) })'
+=======
 ;"}) })"
+>>>>>>> origin/resolved-merge-conflicts
   );
 }
 
@@ -182,11 +218,19 @@ import Image from 'next / image';interface ListingCardProps {
   class_name?: string,
   profile_type?: 'service' | 'talent';
 }
+<<<<<<< HEAD
+import React from 'react',
+import { cn } from '@/lib/utils',
+import { Badge } from '@/components/ui/badge',
+import Link from 'next/link';
+import Image from 'next/image';
+=======
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link";
 import Image from "next/image";
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ListingCardProps {
   id?: string;

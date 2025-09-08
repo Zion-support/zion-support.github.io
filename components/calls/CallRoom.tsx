@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 
 
 } from 'livekit-client';
+=======
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
+
+
+  Room,
+  RoomEvent,
+  RemoteParticipant,
+  LocalParticipant,
+  createLocalTracks,;
+  VideoPresets,;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -8,6 +24,7 @@ import Controls from './Controls';
 export type StartMode = any;
 
 import {
+<<<<<<< HEAD
 
   Room;
 RoomEvent,
@@ -21,6 +38,27 @@ VideoPresets;}
 export type StartMode = 'video' | 'audio';
 
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+import ParticipantTile from ./ParticipantTile';
+import Controls from './Controls;
+export type StartMode = any;
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
+  Room
+  RoomEvent
+  RemoteParticipant
+  LocalParticipant
+  createLocalTracks
+import { Room;
+  RoomEvent;
+  RemoteParticipant;
+  LocalParticipant;
+  createLocalTracks;
+  VideoPresets;
+  Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
+export type StartMode = 'video' | 'audio';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   projectId: string;
   userId: string;
   displayName: string;
@@ -28,13 +66,23 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
+<<<<<<< HEAD
 
+=======
+  onLeave?: (durationSec: number) => void;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   onLeave?: (durationSec: number) => void}
 
 
+<<<<<<< HEAD
 
 
+=======
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function CallRoom(): any ({;
   projectId,;
   userId,;
@@ -46,8 +94,21 @@ export default function CallRoom(): any ({;
   onLeave,;}
 }: Props) {;
 
+<<<<<<< HEAD
 
 
+=======
+  projectId;
+userId,
+displayName;
+roomName,
+serverUrl;
+token,
+startMode;}
+onLeave}
+}: Props) {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   projectId,
   userId,
   displayName,
@@ -57,16 +118,36 @@ export default function CallRoom(): any ({;
   startMode,}
   onLeave,}
 }: Props) {;
+<<<<<<< HEAD
 
 
 
+=======
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave
+}: Props) {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
+<<<<<<< HEAD
 
 
 
+=======
+import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
+import ParticipantTile from './ParticipantTile';
+
+import Controls from './Controls';
+export type StartMode = 'video' | 'audio';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
@@ -79,13 +160,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
     const r = new Room();
+<<<<<<< HEAD
+=======
+const [participants, setParticipants] = useState<
+    Array<RemoteParticipant | LocalParticipant    />
+  >([]);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+const connect = useCallback(async () => {
+   ;
+  const r = new Room();
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     r.on(RoomEvent.ParticipantConnected, () => rebuild());
     r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
     r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r.on(RoomEvent.LocalTrackPublished, () => rebuild());
     r.on(RoomEvent.TrackSubscribed, () => rebuild());
+<<<<<<< HEAD
 
 
   const [room, setRoom] = useState<Room | null>(null);
@@ -134,6 +228,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const handleLeave = (
     if (room) {
+=======
+
+    // create local tracks per start mode
+    let localTracks: any[] = [],
+    if (startMode === 'video') {
+      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
+    } else {
+      localTracks = await createLocalTracks({ audio: true, video: false })
+
+
+
+});
+    }
+
+    await r.connect(serverUrl, token, {
+      autoSubscribe: true}
+   ,}
+});
+    // publish local tracks;
+setRoom(r);
+    setConnectedAt(Date.now());
+    rebuild(r);
+// eslint-disable-next-line react-hooks/exhaustive-deps;
+  }, [serverUrl, token, startMode]);
+
+const rebuild = (
+   ;
+  const r = current |room;
+    if (!r) return;
+
+const list: Array<RemoteParticipant | LocalParticipant    /> = [
+      r.localParticipant,
+      ...Array.from(r.participants.values()),
+    ];
+    setParticipants(list)) => {
+  return $3;}
+}
+};
+
+
+  useEffect(() => {
+    connect();
+    return () => {
+
+}
+room.disconnect();
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const handleLeave = () => {}
+    if (room) {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -142,17 +286,23 @@ const handleLeave = (
       }
       room.disconnect()
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
   }, [connect]);
 
 
       room && room.disconnect();
 
+<<<<<<< HEAD
 room.disconnect();) => {
   return $3;}
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
   }, [connect]);
 
@@ -161,28 +311,63 @@ const handleLeave = (;
       room && room.disconnect();) => {
   return $3;}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
 
 const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
+<<<<<<< HEAD
+=======
+
+  onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
+  userId;
+  displayName;
+  roomName;
+  serverUrl;
+  token;
+  startMode;
+  onLeave;
+}: Props) {projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {const [room, setRoom]  = useState<Room | null>(null)const [participants, setParticipants] = useState<;
+    Array<RemoteParticipant | LocalParticipant>;
+  >([])const [connectedAt, setConnectedAt] = useState<number | null>(null)import ParticipantTile from './ParticipantTile';
+export type StartMode = 'video' | 'audio';}export default function CallRoom() {const [room, setRoom] = useState<Room | null>(null)const [participants, setParticipants]  = useState<Array<RemoteParticipant | LocalParticipant>>([])const [participants, setParticipants] = useState<;
+    Array<RemoteParticipant | LocalParticipant>;
+  >([])const [connectedAt, setConnectedAt] = useState<number | null>(null)const connect = useCallback(async () => {const r = new Room()r.on(RoomEvent.ParticipantConnected, () => rebuild())r.on(RoomEvent.ParticipantDisconnected, () => rebuild())r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild())r.on(RoomEvent.LocalTrackPublished, () => rebuild())r.on(RoomEvent.TrackSubscribed, () => rebuild())// create local tracks per start mode;
+    let localTracks: any[] = [];
+    if (startMode === 'video') {const [room, setRoom] = useState<Room | null>(null)const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([])const [connectedAt, setConnectedAt]  = useState<number | null>(null)const connect = useCallback(async () => {const r  = new Room()r && r.on(RoomEvent && RoomEvent.ParticipantConnected, () => rebuild())r && r.on(RoomEvent && RoomEvent.ParticipantDisconnected, () => rebuild())r && r.on(RoomEvent && RoomEvent.ActiveSpeakersChanged, () => rebuild())r && r.on(RoomEvent && RoomEvent.LocalTrackPublished, () => rebuild())r && r.on(RoomEvent && RoomEvent.TrackSubscribed, () => rebuild())// create local tracks per start mode;
+    let localTracks: any[] = [];
+    if (startMode === 'video') {localTracks = await createLocalTracks({audio: true,video: VideoPresets && VideoPresets.h720,localTracks = await createLocalTracks({audio: true,video: VideoPresets.h720,})} else {localTracks = await createLocalTracks({ audio: true, video: false })}setConnectedAt(Date && Date.now())rebuild(r)// eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode])} else {localTracks = await createLocalTracks({ audio: true, video: false })}
+    await r && r.connect(serverUrl, token, {autoSubscribe: true}),// publish local tracks;
+    for (const t of localTracks) {await r && r.localParticipant.publishTrack(t)}
+      }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     onLeave?.(durationSec)
 };
 
 
+<<<<<<< HEAD
 
 
 const gridCols = useMemo(() => {
    ;
+=======
+  const gridCols = useMemo(() => {
+    const count = participants.length || 1;
+    if (count <= 1) return 'grid-cols-1';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const count = participants.length |1;
 
 const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)const gridCols = useMemo(() => ;
   const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
+<<<<<<< HEAD
 
 
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
@@ -313,6 +498,13 @@ if ( {) {
   $2
 }
         room.disconnect ();
+=======
+    if (count === 2) return 'grid-cols-2';
+    if (count <= 4) return 'grid-cols-2 md: grid-cols-2',
+    if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
+    return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       }
     }  }, [connect]);
 ;
@@ -505,12 +697,38 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {$2;
       </div>;
     </div>);
           />
+<<<<<<< HEAD
 
 
+=======
+  return (
+    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'    />
+      <div className='p-4 flex items-center justify-between border-b border-gray-800'    />
+        <div    />
+          <h2 className='text-lg font-semibold'    />Project Room: {projectId}</h2>
+          <p className='text-xs text-gray-400'    />Room {roomName}</p>
+        </div>
+        <Controls room={room} onLeave={handleLeave} accent='cyan'    />
+      </div>
+      <div className={`flex-1 p-4 grid gap-4 ${gridCols},
+}    />
+        {participants.map((p, idx) => (}
+<ParticipantTile;}
+key={String((p as any).sid || (p as any).identity) + idx}
+            participant={p}
+            is_local={p instanceof LocalParticipant}
+            display_name={
+              (p as any).name ||;}
+              (p instanceof LocalParticipant ? 'You' : undefined);}
+            }
+
+             />
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         ))}
       </div>
     </div>
   );
+<<<<<<< HEAD
 
 }
 
@@ -518,3 +736,9 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {$2;
 
 
 
+=======
+        ))}
+      </div>
+  );
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -85,8 +85,13 @@ export function ResumeSelector() {const [selectedOption, setSelectedOption] = us
       {selectedOption === 'recent' && resume && (<div className="space-y-4">;"
           <ResumePreviewCard;
             }
+<<<<<<< HEAD
+            resume={"id": resume.id || 'recent',"name": resume.title || 'Most Recent Resume',"lastModified": resume.updatedAt || new Date().toISOString(),"preview": resume.summary || 'No preview available';'
+            }
+=======
             resume={{"id": resume.id || 'recent',"name": resume.title || 'Most Recent Resume',"lastModified": resume.updatedAt || new Date().toISOString(),"preview": resume.summary || 'No preview available';'
             }}
+>>>>>>> origin/resolved-merge-conflicts
             onSelect={() => handleResumeSelect({"id": resume.id || 'recent',"name": resume.title || 'Most Recent Resume',"lastModified": resume.updatedAt || new Date().toISOString(),"preview": resume.summary || 'No preview available';'
             })}
             isSelected={selectedResume?.id === resume.id}
@@ -122,7 +127,11 @@ export function ResumeSelector() {const [selectedOption, setSelectedOption] = us
 import { UploadSection   } from './UploadSection';'
 import { SelectResumeSection   } from './SelectResumeSection';'
 import { ResumeOption, ResumeSelectorProps   } from './types';'
+<<<<<<< HEAD
+export function ResumeSelector() {)}, [fetchResume])//Update resume options when resume data changes useEffect ( () => {if (resume) {const "options": ResumeOption[] = [ {setResumeOptions (options)//Pre-select the most recent resume ;}, [resume, selectedOption, onResumeSelected])';'
+=======
 export function ResumeSelector() {)}}, [fetchResume])//Update resume options when resume data changes useEffect ( () => {if (resume) {const "options": ResumeOption[] = [ {setResumeOptions (options)//Pre-select the most recent resume ;}, [resume, selectedOption, onResumeSelected])';'
+>>>>>>> origin/resolved-merge-conflicts
 //Handle radio option change //Check if it's a PDF file if (file.type !== 'application/pdf') {toast ({return;'
 }//Create a custom resume option setCustomFile (file)setSelectedResume (customOption)onResumeSelected (customOption)}//Handle resume download ;
 }catch (error) {';'

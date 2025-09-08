@@ -1,29 +1,38 @@
 
+<<<<<<< HEAD
 
 interface PartnerProfile {
+=======
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {toast} from "@/hooks/use-toast";
+import {Check, Flag, Search, Settings, X} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
 
-  id: string,
-  user_id: string,
-  name: string,'
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
+import { useState, useEffect } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { useNavigate } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { toast } from "@/hooks/use-toast",
+import { Check, Flag, Search, Settings, X } from "lucide-react";
 
-
-
-
-interface PartnerProfile {
-
-  id: string,
-  user_id: string,
-  name: string,'
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-
-
+  social_media?: Record < string, string>;
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -33,6 +42,262 @@ interface PartnerProfile {
   const [isLoading, setIsLoading] = useState(true);"
   const [searchQuery, setSearchQuery] = useState("");"
 
+  const [isLoading, setIsLoading] = useState(true),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
+  const [commissionRate, setCommissionRate] = useState(25),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+  const navigate = useNavigate();
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!isAuthenticated) {
+  useEffect(() => {;
+    if (!isAuthenticated) {;
+      navigate("/login");
+      return
+    }
+      navigate("/login");
+      return
+    }
+    fetchPartners()
+  }, [isAuthenticated, navigate]);
+  const fetchPartners = async () => {
+    try {
+      setIsLoading(true);
+      // In a real application, check admin permissions here
+      const { data, error } = await supabase
+        .from('partner_profiles')
+        .select('*')
+        .order('created_at', { ascending: false })
+      if (error) throw error;
+      // If no data is returned, use mock data
+      if (!data |data.length === 0) {
+        const mockData: PartnerProfile[] = [
+          {
+            id: '1'
+            user_id: 'user1'
+            name: 'AI Bytes'
+            status: 'pending'
+            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
+            niche: 'AI Tutorials'
+            audience_size: '10k-50k'
+            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' }
+            website: 'aibytes.com'
+            bio: 'We create AI tutorials and insights for developers.'
+            payout_method: 'paypal'
+            fraud_flags: 0
+            commission_rate: 25
+          }
+          {
+            id: '2'
+            user_id: 'user2'
+            name: 'ML Academy'
+            status: 'approved'
+            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString()
+            niche: 'Machine Learning Education'
+            audience_size: 'over100k'
+            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' }
+            website: 'mlacademy.edu'
+            bio: 'Premiere online academy for machine learning enthusiasts.'
+            payout_method: 'bank'
+            fraud_flags: 0
+            commission_rate: 30
+          }
+          {
+            id: '3'
+            user_id: 'user3'
+            name: 'Tech Insights'
+            status: 'rejected'
+            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
+            niche: 'Technology News'
+            audience_size: '1k-10k'
+            social_media: { twitter: '@techinsights' }
+            website: 'techinsights.io'
+            bio: 'We share insights about the latest in tech.'
+            payout_method: 'crypto'
+            fraud_flags: 2
+            commission_rate: 20
+          }
+          {
+            id: '4'
+            user_id: 'user4'
+            name: 'CodeMaster'
+            status: 'approved'
+            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
+            niche: 'Coding Tutorials'
+            audience_size: '50k-100k'
+            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' }
+            website: 'codemaster.dev'
+            bio: 'Learn to code with our expert tutorials.'
+            payout_method: 'paypal'
+            fraud_flags: 0
+            commission_rate: 25
+          }
+          {
+            id: '5'
+            user_id: 'user5'
+            name: 'AI Daily'
+            status: 'pending'
+            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
+            niche: 'AI News'
+            audience_size: '10k-50k'
+            social_media: { twitter: '@aidaily', instagram: '@aidailynews' }
+            website: 'aidaily.news'
+            bio: 'Daily updates on the world of artificial intelligence.'
+            payout_method: 'platform_credit'
+            fraud_flags: 1
+            commission_rate: 20
+          }
+        ];
+        setPartners(mockData);
+        filterPartners(mockData, activeTab, searchQuery)
+      } else {
+        setPartners(data as PartnerProfile[]);
+        filterPartners(data as PartnerProfile[], activeTab, searchQuery)
+export default function PartnerManager() {
+  const [partners, setPartners] = useState<PartnerProfile[]>([]),
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
+  const [commissionRate, setCommissionRate] = useState(25),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate("/login"),
+      return
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useNavigate } from "react-router-dom",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
+import { toast } from "@/hooks/use-toast",;
+import { Check, Flag, Search, Settings, X } from "lucide-react",;
+import { supabase } from "@/integrations/supabase/client",;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {toast} from "@/hooks/use-toast";
+import {Check, Flag, Search, Settings, X} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { useNavigate } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { toast } from "@/hooks/use-toast",
+import { Check, Flag, Search, Settings, X } from "lucide-react";
+interface PartnerProfile {;
+  id: string,;
+  user_id: string,;
+  name: string,;
+  status: 'pending' | 'approved' | 'rejected',;
+  created_at: string,;
+  niche: string,;
+  audience_size: string,;
+
+import { supabase } from "@/integrations/supabase/client";
+interface PartnerProfile {}
+  id: string;
+  user_id: string;
+  name: string;
+  status: 'pending' | 'approved' | 'rejected'
+  created_at: string;
+  niche: string;
+  audience_size: string;
+  social_media?: Record<string, string>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+  id: string,
+  user_id: string,
+  name: string,'
+  status: 'pending' | 'approved' | 'rejected',
+  created_at: string,
+  niche: string,
+  audience_size: string,
+
+<<<<<<< HEAD
+
+
+
+interface PartnerProfile {
+
+  id: string,
+  user_id: string,
+  name: string,'
+  status: 'pending' | 'approved' | 'rejected',
+  created_at: string,
+  niche: string,
+  audience_size: string,
+
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  website?: string;
+  bio?: string;
+  payout_method?: string;
+  fraud_flags?: number;
+  commission_rate?: number;
+}
+  const [isLoading, setIsLoading] = useState(true);"
+  const [searchQuery, setSearchQuery] = useState("");"
+<<<<<<< HEAD
+
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
 
@@ -40,6 +305,12 @@ interface PartnerProfile {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
+=======
+  const [activeTab, setActiveTab] = useState("pending");"
+const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -53,7 +324,130 @@ interface PartnerProfile {
     }
 
 
+<<<<<<< HEAD
 
+=======
+    fetchPartners();
+  }, [isAuthenticated, navigate]);
+  const fetchPartners = async () => {;
+    try {;
+      setIsLoading(true);
+  social_media?: Record<string string>,;
+  website?: string,;
+  bio?: string,;
+  payout_method?: string,;
+  fraud_flags?: number,;
+  commission_rate?: number;
+}
+;
+export default function PartnerManager() {;
+  const [partners, setPartners] = useState<PartnerProfile[]>([]),;
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [activeTab, setActiveTab] = useState("pending"),;
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false),;
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false),;
+  const [commissionRate, setCommissionRate] = useState(25),;
+  const { user, isAuthenticated } = useAuth(),;
+  const navigate = useNavigate(),;
+  useEffect(() => {;
+    if (!isAuthenticated) {;
+      navigate("/login"),;
+      return;
+    }
+;
+    fetchPartners();
+  }, [isAuthenticated, navigate]),;
+  const fetchPartners = async () => {;
+    try {;
+      setIsLoading(true),;
+      // In a real application, check admin permissions here;
+      const { data, error } = await supabase;
+        .from('partner_profiles');
+        .select('*');
+        .order('created_at', { ascending: false }),;
+      if (error) throw error,;
+      // If no data is returned, use mock data;
+      if (!data || data.length === 0) {;
+        const mockData: PartnerProfile[] = [;
+          {;
+            id: '1',;
+            user_id: 'user1',;
+            name: 'AI Bytes',;
+            status: 'pending',;
+            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),;
+            niche: 'AI Tutorials',;
+            audience_size: '10k-50k',;
+            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },;
+            website: 'aibytes.com',;
+            bio: 'We create AI tutorials and insights for developers.',;
+            payout_method: 'paypal',;
+            fraud_flags: 0,;
+            commission_rate: 25;
+          },;
+          {;
+            id: '2',;
+            user_id: 'user2',;
+            name: 'ML Academy',;
+            status: 'approved',;
+            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),;
+            niche: 'Machine Learning Education',;
+            audience_size: 'over100k',;
+            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },;
+            website: 'mlacademy.edu',;
+            bio: 'Premiere online academy for machine learning enthusiasts.',;
+            payout_method: 'bank',;
+            fraud_flags: 0,;
+            commission_rate: 30;
+          },;
+          {;
+            id: '3',;
+            user_id: 'user3',;
+            name: 'Tech Insights',;
+            status: 'rejected',;
+            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),;
+            niche: 'Technology News',;
+            audience_size: '1k-10k',;
+            social_media: { twitter: '@techinsights' },;
+            website: 'techinsights.io',;
+            bio: 'We share insights about the latest in tech.',;
+            payout_method: 'crypto',;
+            fraud_flags: 2,;
+            commission_rate: 20;
+          },;
+          {;
+            id: '4',;
+            user_id: 'user4',;
+            name: 'CodeMaster',;
+            status: 'approved',;
+            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),;
+            niche: 'Coding Tutorials',;
+            audience_size: '50k-100k',;
+            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },;
+            website: 'codemaster.dev',;
+            bio: 'Learn to code with our expert tutorials.',;
+            payout_method: 'paypal',;
+            fraud_flags: 0,;
+            commission_rate: 25;
+          },;
+          {;
+            id: '5',;
+            user_id: 'user5',;
+            name: 'AI Daily',;
+            status: 'pending',;
+            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),;
+            niche: 'AI News',;
+            audience_size: '10k-50k',;
+            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },;
+            website: 'aidaily.news',;
+            bio: 'Daily updates on the world of artificial intelligence.',;
+            payout_method: 'platform_credit',;
+            fraud_flags: 1,;
+            commission_rate: 20;
+          }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
@@ -61,7 +455,10 @@ interface PartnerProfile {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default /**
  * PartnerManager - Function description
 
@@ -94,9 +491,12 @@ if ( {) {}
     try {}
       setIsLoading (true);
       // In a real application, check admin permissions here;
+<<<<<<< HEAD
 
       const { data, error } = await supabase;'
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .from ('partner_profiles');'
         .select ('*');'
         .order ('created_at', { ascending: false }),
@@ -194,6 +594,7 @@ if ( {) {}
         filter_partners (data as PartnerProfile[], active_tab, search_query);
 
 
+<<<<<<< HEAD
 
       }
 
@@ -229,6 +630,8 @@ if ( {) {}
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
@@ -237,9 +640,14 @@ if ( {) {}
       filtered = filtered.filter(p => p.status === status)
 
 
+<<<<<<< HEAD
 
 
 
+=======
+    } catch (error) {;
+      console.error("Error fetching partners:", error),;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toast({;
         title: "Error",,
   description: "Failed to load partner data",;
@@ -248,7 +656,10 @@ if ( {) {}
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   };
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
@@ -270,7 +681,16 @@ if ( {) {}
       );
     }
 
+<<<<<<< HEAD
 
+=======
+
+    setFilteredPartners(filtered)
+  },
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
 
@@ -282,6 +702,7 @@ if ( {) {}
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
 
+<<<<<<< HEAD
 
 
 
@@ -297,15 +718,37 @@ if ( {) {}
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
+<<<<<<< HEAD
 
 
 
 
+=======
+      )),
+      
+
+      ));
+      )),
+      
+      filterPartners(
+        partners.map(p => p.id === partnerId ? { ...p, status } : p),
+        activeTab,
+        searchQuery
+      ),
+      
+
+      );
+      ),
+      
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toast({
 
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
@@ -315,6 +758,7 @@ if ( {) {}
       if (isDetailsOpen && selectedPartner?.id === partnerId) {}
         setIsDetailsOpen(false)
       }
+<<<<<<< HEAD
 
     } catch (error) {
 
@@ -325,10 +769,69 @@ if ( {) {}
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
 
 
+=======
+
+    }
+
+    try {
+      // Update commission rate
+      setPartners(partners.map(p => 
+        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate} : p
+      )),
+      
+      filterPartners($2);
+      toast({;
+        title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;
+        description: `The partner has been ${status}.`,;
+        variant: status === 'approved' ? "default" : "destructive"}),;
+      // Close the dialog if open;
+      if (isDetailsOpen && selectedPartner?.id === partnerId) {;
+        setIsDetailsOpen(false);
+      }
+    } catch (error) {;
+      console && console.error("Error updating partner status:", error);
+      toast({;
+        title: "Error",;
+        description: "Failed to update partner status",;
+        variant: "destructive"});
+    }
+  };
+  const handleSaveSettings = async () => {;
+    if (!selectedPartner) return;
+    try {;
+      // Update commission rate;
+      setPartners(partners && partners.map(p => ;
+        p && p.id === selectedPartner && selectedPartner.id ? { ...p, commission_rate: commissionRate } : p;
+      ));
+      filterPartners(;
+        partners && partners.map(p => p && p.id === selectedPartner && selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),;
+      ));
+      filterPartners(
+        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p)
+        activeTab;
+        searchQuery
+      );
+      )),
+      
+      filterPartners(
+        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         activeTab,
         searchQuery
       ),
       
+<<<<<<< HEAD
+=======
+      toast($2);
+      setIsSettingsOpen(false)
+    } catch (error) {
+      console.error($2);
+      toast({
+        title: "Error",
+        description: "Failed to update partner settings",
+        variant: "destructive"})
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       toast({
@@ -337,8 +840,21 @@ if ( {) {}
 
         variant: "default"})
       setIsSettingsOpen(false)
+<<<<<<< HEAD
 
     } catch (error) {
+=======
+
+    } catch (error) {"
+      console.error("Error updating partner settings:", error),
+      toast({"
+        title: "Error""
+        description: "Failed to update partner settings""
+        variant: "destructive"})
+
+  };
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ;
     setFilteredPartners(filtered);
@@ -372,6 +888,7 @@ if ( {) {}
         activeTab;
         searchQuery;
 
+<<<<<<< HEAD
       ),;
       toast({;
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;
@@ -401,6 +918,8 @@ if ( {) {}
         activeTab,;
         searchQuery;
       ),;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       case 'under1k': return 'Under 1,000';
       case '1k-10k': return '1,000 - 10,000';
@@ -418,21 +937,34 @@ if ( {) {}
       case 'approved':;
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
 
+<<<<<<< HEAD
   },
 
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       case 'rejected':;
 
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
       default:;"
         return <Badge variant="outline">{status}</Badge>;
     }
+<<<<<<< HEAD
 
   };
 
+=======
+
+
+    return (
+"
+      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">"
+        <Flag className="h-3 w-3" />
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   },;
   const getStatusBadge = (status: string) => {;
     switch (status) {;'
@@ -474,6 +1006,7 @@ if ( {) {}
                 <CardTitle className="text-sm font-medium text-zion-slate-light">;
                   Pending Applications;
 
+<<<<<<< HEAD
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
 
@@ -497,12 +1030,17 @@ if ( {) {}
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 </div>
               </CardHeader>"
               <CardContent className="pt-0">"
                 <p className="text-xs text-zion-slate-light">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   Total potential fraud flags detected
 
                 </p>
@@ -510,15 +1048,23 @@ if ( {) {}
             </Card>
           </div>
         </CardContent>
+<<<<<<< HEAD
 
       </Card>"
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
 
+=======
+      </Card>"
+      <Card className="bg-zion-blue-dark border-zion-blue-light">"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4">
           <div>
             <CardTitle>Partners</CardTitle>
             <CardDescription>Manage partnership applications and settings</CardDescription>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>"
           <div className="w-full md:w-80">"
             <div className="relative">"
@@ -531,6 +1077,7 @@ if ( {) {}
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 
 ;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -569,12 +1116,25 @@ if ( {) {}
                 partners={filteredPartners} 
                 isLoading={isLoading}
 
+=======
+
+              <Input"
+                placeholder="Search partners...""
+                className="pl-8"
+                value={searchQuery}
+                onChange={handleSearch}
+
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
+<<<<<<< HEAD
                 getFraudFlagBadge={getFraudFlagBadge}
 
 
@@ -594,20 +1154,7 @@ if ( {) {}
 
 
 
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-
-
-
-
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-
-                getFraudFlagBadge={getFraudFlagBadge}
+=======
 
               <div className="grid grid-cols-2 gap-2">
                 <div>"
@@ -622,7 +1169,91 @@ if ( {) {}
               {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && ("
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">"
                   <AlertTitle className="flex items-center gap-2">"
+              />
+            </TabsContent>
+            <TabsContent value="rejected" className="space-y-4">
+              <PartnerTable
+                partners={filteredPartners}
+                isLoading={isLoading}
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus} 
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
+                getFraudFlagBadge={getFraudFlagBadge}
+              />
+            </TabsContent>
+            <TabsContent value="all" className="space-y-4">
+              <PartnerTable 
+                partners={filteredPartners} 
+            ;
+            <TabsContent value="rejected" className="space-y-4">;
+              <PartnerTable ;
+                partners={filteredPartners} ;                isLoading={isLoading}
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus} ;
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
+                getFraudFlagBadge={getFraudFlagBadge}
+              />;
+            </TabsContent>;
+            ;
+            <TabsContent value="all" className="space-y-4">;
+              <PartnerTable ;
+                partners={filteredPartners} ;                isLoading={isLoading}
+                isLoading={isLoading}
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus}
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
 
+
+<<<<<<< HEAD
+
+=======
+                isLoading={isLoading}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus}
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
+<<<<<<< HEAD
+
+                getFraudFlagBadge={getFraudFlagBadge}
+
+=======
+
+
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+                onViewDetails={handleViewDetails}
+                onUpdateStatus={handleUpdateStatus}
+                onOpenSettings={handleOpenSettings}
+                getStatusBadge={getStatusBadge}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+              <div className="grid grid-cols-2 gap-2">
+                <div>"
+                  <p className="text-xs text-zion-slate-light">Payout Method</p>"
+                  <p className="text-white capitalize">{selectedPartner.payout_method |"Not specified"}</p>
+                </div>
+                <div>"
+                  <p className="text-xs text-zion-slate-light">Commission Rate</p>"
+                  <p className="text-white">{selectedPartner.commission_rate |25}%</p>
+                </div>
+              </div>
+              {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && ("
+                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">"
+                  <AlertTitle className="flex items-center gap-2">"
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <Flag className="h-4 w-4" />
                     Potential Fraud Detected ({selectedPartner.fraud_flags})
                   </AlertTitle>
@@ -630,15 +1261,106 @@ if ( {) {}
                     This application has triggered our fraud detection system. Review carefully before approving.
                   </AlertDescription>
                 </Alert>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               )}'
               {selectedPartner.status === 'pending' && ("
                 <div className="flex justify-end gap-2 mt-4">
 
+<<<<<<< HEAD
+=======
+                  >
+
+                    <X className="h-4 w-4 mr-1" />
+                    Reject;
+                  </Button>
+                  <Button"
+                    className="bg-green-600 hover:bg-green-700"'
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                  >"
+                    <Check className="h-4 w-4 mr-1" />
+                    Approve;
+                  <Button
+                    variant="destructive"
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+                  >
+                    <X className="h-4 w-4 mr-1" />
+                    Reject
+                  </Button>
+                  <Button
+                    className="bg-green-600 hover:bg-green-700"
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                  >
+                    <Check className = $2;
+  isLoading: boolean,
+  onViewDetails: (partner: PartnerProfile) => void,
+  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,
+  onOpenSettings: (partner: PartnerProfile) => void,
+  getStatusBadge: (status: string) => JSX.Element,
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null
+}
+                  </Button>
+                </div>
+              )}
+            </div>
+                  <Button "
+                    variant="destructive" '
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+
+              <div className="grid grid-cols-2 gap-2">;
+                <div>;"
+                  <p className="text-xs text-zion-slate-light">Payout Method</p>;"
+                  <p className="text-white capitalize">{selectedPartner && selectedPartner.payout_method || "Not specified"}</p>;
+                </div>;
+                <div>;"
+                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;"
+                  <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
+                </div>;
+              </div>;
+
+              {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;"
+                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;"
+                  <AlertTitle className="flex items-center gap-2">;"
+                    <Flag className="h-4 w-4" />;
+                    Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
+
+
+              />;
+            </TabsContent>;
+          </Tabs>;
+        </CardContent>;
+      </Card>;
+            <DialogDescription>;
+              Review the details of the partner application;
+            </DialogDescription>;
+          </DialogHeader>;
+                        {handle}
+                      </p>;
+                    ))}
+                  </div>;
+                </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   </AlertTitle>;
                   <AlertDescription>;
                     This application has triggered our fraud detection system. Review carefully before approving.;
                   </AlertDescription>;
+<<<<<<< HEAD
+=======
+
+                  <Button"
+                    className="bg-green-600 hover:bg-green-700"'
+                    onClick={() => handleUpdateStatus(selectedPartner && selectedPartner.id, 'approved')}
+
+                    <Check className="h-4 w-4 mr-1" />;
+                    Approve;
+                  </Button>;
+                </div>;
+              )}
+            </div>;
+          )}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
             <DialogDescription>;
@@ -646,40 +1368,69 @@ if ( {) {}
             </DialogDescription>;
           </DialogHeader>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           )}
         </DialogContent>;
       </Dialog>;
     </div>;
 
 
+<<<<<<< HEAD
+=======
+interface PartnerTableProps {
+  partners: PartnerProfile[]
+  isLoading: boolean
+  onViewDetails: (partner: PartnerProfile) => void
+  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void
+  onOpenSettings: (partner: PartnerProfile) => void
+  getStatusBadge: (status: string) => JSX.Element
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null
+
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 function PartnerTable({ 
 
   partners, 
   isLoading, 
   onViewDetails, 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <div className="text-center py-8">;
 
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+
+  }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return (
 
         <p className="text-zion-slate-light">No partners found.</p>;
@@ -688,7 +1439,10 @@ function PartnerTable({
     );
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
 
           <TableHead > Name</TableHead>;
@@ -697,6 +1451,7 @@ function PartnerTable({
           <TableHead > Status</TableHead>;
 
                 {partner.name}
+<<<<<<< HEAD
                 {getFraudFlagBadge (partner.fraud_flags)}
 
 
@@ -708,6 +1463,18 @@ function PartnerTable({
 
                   size="sm"
                   onClick={() => onViewDetails(partner)}
+=======
+                {getFraudFlagBadge(partner.fraud_flags)}
+              </div>;
+            </TableCell>;
+
+
+              {partner.audience_size.replace ('k, 000').replace ('- - ').replace ('over_over ')}
+            </TableCell>;
+            <TableCell />{getStatusBadge (partner.status)}</TableCell>;
+            <TableCell />;
+              {new Date (partner.created_at).toLocaleDateString ()}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   <>;
                     <Button;
@@ -738,11 +1505,14 @@ function PartnerTable({
                   size="sm";
                   on_click={() => onViewDetails (partner)}
 
+<<<<<<< HEAD
                 ;
                 <Button ;
                   variant="outline" ;
                   size="sm";
                   onClick={() => onViewDetails(partner)}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 >;
                   View;
@@ -750,6 +1520,7 @@ function PartnerTable({
               </div>;
             </TableCell>;
 
+<<<<<<< HEAD
 
       </TableBody>
     </Table>
@@ -786,3 +1557,8 @@ commission rate?: number
 
 
 
+=======
+          </TableRow>))}
+      </TableBody>;
+    </Table>);
+>>>>>>> origin/cursor/delete-old-data-records-6bba

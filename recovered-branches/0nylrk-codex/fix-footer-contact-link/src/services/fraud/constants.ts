@@ -1,6 +1,59 @@
 
+<<<<<<< HEAD
 
 
+=======
+// Common constants used across fraud detection modules;
+// Phrases that might indicate fraud;
+export const suspicious_phrases = [;
+
+  "whatsapp me";
+  "contact me outside";
+  "cashapp only";
+  "western union";
+  "pay directly";
+  "bypass";
+  "telegram";
+  "signal me";
+  "avoid fees";
+  "payment link";
+  "urgent payment";
+
+  "deal outside";
+];
+
+;
+// Email domains often used for throwaway accounts;
+export const suspiciousEmailDomains = [;
+
+export const suspiciousPhrases = [
+  "whatsapp me",
+  "contact me outside",
+  "cashapp only",
+  "western union",
+  "pay directly",
+  "bypass",
+  "telegram",
+  "signal me",
+  "avoid fees",
+  "payment link",
+  "urgent payment",
+
+];
+
+],
+
+// Email domains often used for throwaway accounts
+export const suspiciousEmailDomains = [;
+
+  "tempmail";
+
+  "throwaway";
+  "fakeemail";
+  "mailinator";
+  "guerrillamail";
+"10minutemail"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export const suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
@@ -11,6 +64,19 @@ export const suspiciousEmailDomains = [
 
 
 
+<<<<<<< HEAD
+=======
+// Common constants used across fraud detection modules;
+// Phrases that might indicate fraud;
+export const suspicious_phrases = [;
+
+  "10minutemail";
+];
+
+;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   "deal outside"
 
 ],
@@ -27,8 +93,11 @@ export const suspiciousEmailDomains = [
 
 
 ];
+<<<<<<< HEAD
 ];
 ];
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

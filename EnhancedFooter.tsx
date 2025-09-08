@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 ;
@@ -194,3 +195,6 @@ import _React from 'react'; import Link from 'next/link'; import { Mail,Phone,Ma
 }
 ;
 export default EnhancedFooter;
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

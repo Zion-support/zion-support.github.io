@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+
 console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting All Remaining Syntax Errors Fix...');
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');

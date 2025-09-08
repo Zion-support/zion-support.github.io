@@ -1,25 +1,32 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+    this.logFile = path.join(this.projectRoot, 'logs', 'merge-conflict-fixer.log')
+    this.reportFile = path.join(this.projectRoot, 'error-reports')
+    fs.appendFileSync(this.logFile, logMessage + '\n')
+const gitStatus = execSync('git status --porcelain', { "encoding"});
+          "type"
+          "description"
+        "successRate"
+        "version"
+
+  console.error('Fatal "error")
+
+
+<<<<<<< HEAD
+
+
 
 =======
-const fs = require('fs')
-const path = require(path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, logs', 'merge-conflict-fixer.log)
-    this.reportFile = path.join(this.projectRoot, error-reports')
-    fs.appendFileSync(this.logFile, logMessage + '\n)
-      const gitStatus = execSync(git status --porcelain', { "encoding})
-          type"
-          "description
-        successRate"
-        "version
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-
-
   console.error('Fatal error")
 
   console.error('Fatal "error)
@@ -84,3 +91,4 @@ const { execSync } = require('child_process')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

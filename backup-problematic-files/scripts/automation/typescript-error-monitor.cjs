@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 #!/"usr/bin/env" node;
 #!/usr/bin/env node
 const fs = require("fs);
 const path = require(path");
 const { execSync } = require("child_process);
-=======
-#!/usr/bin/env node;"
-#!/usr/bin/env node"
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");"
->>>>>>> origin/chore/fix-lint-and-merge
 class $1 {
   // TODO: Implement
 }
   constructor() {
-<<<<<<< HEAD
   this.workspacePath = process.cwd();
     this.logsPath = path.join(this.workspacePath, logs");
     this.reportsPath = path.join(this.workspacePath, "automation-reports);
@@ -32,26 +23,6 @@ class TypeScriptErrorMonitor {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, automation/logs');
     this.reportsDir = path.join(this.projectRoot, 'error-reports);
-=======
-  this.workspacePath = process.cwd();"
-    this.logsPath = path.join(this.workspacePath, "logs");
-    this.reportsPath = path.join(this.workspacePath, "automation-reports");"
-    this.ensureDirectories();
-    this.errorHistory = new Map();
-    this.fixAttempts = new Map()}
-;
-  ensureDirectories() {"
-  ["this.logsPath", "this.reportsPath"].forEach(dir => {")
-  if (!fs.existsSync(dir)) {"
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const chokidar = require('chokidar');
-class TypeScriptErrorMonitor {
-  // TODO: Implement
-
->>>>>>> origin/chore/fix-lint-and-merge
     this.watcher = null;
     this.isRunning = false;
     this.lastCheck = null;
@@ -59,7 +30,6 @@ class TypeScriptErrorMonitor {
     // Ensure directories exist;
     [this.logsDir, this.reportsDir].forEach(dir => {)
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD
         fs.mkdirSync(dir, { "recursive: true })}
     })}
   log(message, level = INFO") {
@@ -152,68 +122,10 @@ class TypeScriptErrorMonitor {
       this.log(`Failed to check TypeScript errors": ${error.message}`, 'ERROR);
       return []}
   }
-=======
-        fs.mkdirSync(dir, { "recursive": true })}"
-    })}
-;"
-  log(message, level = "INFO") {"
-  const timestamp = new Date().toISOString();
-
-    fs.appendFileSync(logFile, logMessage + "\n")}"
-  async runTypeScriptCheck() {
-  try {
-  // TODO: Implement
-}"
-  this.log("🔍 Running TypeScript type check...");
-      const result = execSync("npx tsc --noEmit --pretty", {
-  "cwd": this.workspacePath,
-        "encoding": "utf8",")"
-        "stdio": "pipe"});
-      this.log("✅ TypeScript check passed - no errors found");
-      return { "success": true, "output": result, "errors": [] }"
-    } catch (error) {
-  if (error.stdout) {`;
-  const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length  } errors`);`;
-        const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length} errors`);"
-        return { "success": false, "output": error.stdout, errors }"
-      return { "success": false, "output": error.message, "errors": [] }"
-  parseTypeScriptErrors(output) {
-  const errors = [];"
-    const lines = output.split("\n");"
-    for (const line of lines) {"
-  if (line.includes("error TS")) {"
-  const match = line.match(;)
-          /(.+):(\d+):(\d+)\s*-\s*error TS(\d+):\s*(.+)/;"
-          /(.+):(\d+):(\d+)\s*-\s*error TS(\d+):\s*(.+)/;
-        );
-        if (match) {
-  errors.push({)"
-  "file": match[1].trim(),
-            "line": parseInt(match[2]),
-            "column": parseInt(match[3]),
-            "code": match[4],
-            "message": match[5].trim(),
-            "severity": "error"})}
-      } else if (line.includes("warning TS")) {"
-          /(.+):(\d+):(\d+)\s*-\s*warning TS(\d+):\s*(.+)/;
-
-  async runCommand(command, options = {}) {
-  // TODO: Implement
-
-      return { "success": false, "error": error.message, "output": error.stdout || error.stderr }}"
-  async checkTypeScriptErrors() {"
-
-      if (result.success) {"
-        this.log('No TypeScript errors found');
-        this.errorCache.clear();
-        return []}
-
->>>>>>> origin/chore/fix-lint-and-merge
   parseTypeScriptErrors(errorOutput) {
     const lines = errorOutput.split(\n');
     for (const line of lines) {
       const match = line.match(/(\S+\.(ts|tsx|js|jsx))\((\d+),(\d+)\):\s*(.+)/);
-<<<<<<< HEAD
       if (match) {
         errors.push({
           "file: match[1],
@@ -239,24 +151,10 @@ class TypeScriptErrorMonitor {
       const lineIndex = error.line - 1;
       if (lineIndex < 0 || lineIndex >= lines.length) {
   return false}
-=======
-
-          "timestamp": Date.now()"
-    return errors}
-  async fixTypeScriptError(error) {
-
-      return false}
-  // TODO: Implement
-
-      const lines = content.split("\n");"
-      const lineIndex = error.line - 1;
-      if (lineIndex < 0 || lineIndex >= lines.length) {
->>>>>>> origin/chore/fix-lint-and-merge
       const originalLine = lines[lineIndex];
       let fixedLine = originalLine;
       let fixed = false;
       // Apply fixes based on error code;
-<<<<<<< HEAD
       switch (error.code) {
   case "2307: // Cannot find module;
           fixedLine = await this.fixModuleImportError(error, lines, lineIndex);
@@ -287,32 +185,9 @@ class TypeScriptErrorMonitor {
             error,
             lines,
         default": ;
-=======
-      switch (error.code) {"
-  case "2307": // Cannot find module;"
-          fixedLine = await this.fixModuleImportError(error, lines, lineIndex);
-          fixed = fixedLine !== originalLine;
-          break;"
-        case "2339": // Property does not exist;"
-          fixedLine = await this.fixPropertyError(error, lines, lineIndex);
-        case "2345": // Argument type mismatch;"
-          fixedLine = await this.fixTypeMismatchError(error, lines, lineIndex);
-        case "7006": // Parameter implicitly has "any" type;"
-          fixedLine = await this.fixImplicitAnyError(error, lines, lineIndex);
-        case "2322": // Type assignment error;"
-          fixedLine = await this.fixTypeAssignmentError(;
-            error,
-            lines,
-            lineIndex;)
-        "default": // Generic fix attempt;"
-          fixedLine = await this.fixGenericTypeScriptError(;
-            lines,"
-        "default": ;"
->>>>>>> origin/chore/fix-lint-and-merge
           // Generic fix attempt;
           fixed = fixedLine !== originalLine}
       if (fixed) {
-<<<<<<< HEAD
   lines[lineIndex] = fixedLine;
         fs.writeFileSync(filePath, lines.join("\n));
         this.log(✅ Fixed TypeScript error in ${error.file}:${error.line} (TS${error.code});
@@ -332,38 +207,17 @@ class TypeScriptErrorMonitor {
       // Fix relative imports;
       if (line.includes("./") || line.includes(../)) {
   const importPath = line.match(/[""]([^]+)[]/)?.[1];
-=======
-  lines[lineIndex] = fixedLine;"
-        fs.writeFileSync(filePath, lines.join("\n"));
-        this.log(✅ Fixed TypeScript error in ${error.file}:${error.line} (TS${error.code})";"
-        return true}
-      return false} catch (fixError) {"
-
-  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR";")
-  async fixModuleImportError(error, lines, lineIndex) {
-  const line = lines[lineIndex];"`;
-    if (line.includes(`import") || line.includes("require")) {"
-  // Try to fix common import issues;
-      let fixedLine = line;
-      // Fix relative imports;"
-      if (line.includes("./") || line.includes("../")) {
-  const importPath = line.match(/[]([^"]+)["]/)?.[1];"
->>>>>>> origin/chore/fix-lint-and-merge
         if (importPath) {
   const resolvedPath = await this.resolveImportPath(;
             error.file,
             importPath;)
           if (resolvedPath) {
   fixedLine = line.replace(importPath, resolvedPath)}
-<<<<<<< HEAD
         }
       }
-=======
->>>>>>> origin/chore/fix-lint-and-merge
       // Fix missing extensions;
       if (;)"
         line.includes("import") &&;
-<<<<<<< HEAD
         !line.includes(.js) &&;
         !line.includes(".ts");
       ) {
@@ -371,20 +225,10 @@ class TypeScriptErrorMonitor {
         if (importPath && !importPath.includes(.)) {
   // Try to find the file with different extensions;
           const extensions = [".ts", .tsx, ".js", .jsx];
-=======
-        !line.includes(".js") &&;
-        !line.includes(".ts");"
-      ) {"
-  const importPath = line.match(/["]([^"]+)[]/)?.[1];
-        if (importPath && !importPath.includes(".")) {"
-  // Try to find the file with different extensions;"
-          const extensions = [".ts", ".tsx", ".js", ".jsx"];"
->>>>>>> origin/chore/fix-lint-and-merge
           for (const ext of extensions) {
   const fullPath = path.resolve(;)
               path.dirname(error.file),
       // Fix missing extensions;
-<<<<<<< HEAD
       if (;
         line.includes("import") &&;
         !line.includes(.js) &&;
@@ -396,15 +240,10 @@ class TypeScriptErrorMonitor {
           const extensions = [.ts, ".tsx", .js, ".jsx"];
           for (const ext of extensions) {
               path.dirname(error.file),
-=======
-
-  // Try to find the file with different extensions;"
->>>>>>> origin/chore/fix-lint-and-merge
               importPath + ext;
             if (fs.existsSync(fullPath)) {
   fixedLine = line.replace(importPath, importPath + ext);
               break}
-<<<<<<< HEAD
           }
         }
       }
@@ -416,33 +255,17 @@ class TypeScriptErrorMonitor {
       const fullPath = path.resolve(currentDir, importPath);
       // Try different extensions;
       for (const ext of extensions) {
-=======
-      return fixedLine}
-    return line}
-  async resolveImportPath(currentFile, importPath) {"
-  if (importPath.startsWith(".")) {"
-  const currentDir = path.dirname(currentFile);
-      const fullPath = path.resolve(currentDir, importPath);
-      // Try different extensions;"
->>>>>>> origin/chore/fix-lint-and-merge
   if (fs.existsSync(fullPath + ext)) {
   return importPath + ext}
     return null}
   async fixPropertyError(error, lines, lineIndex) {
-<<<<<<< HEAD
     if (line.includes(".")) {
   if (line.includes(.)) {
-=======
-  const line = lines[lineIndex];"
-    if (line.includes(".")) {
-  if (line.includes(".")) {"
->>>>>>> origin/chore/fix-lint-and-merge
   // Look for object property access;
       const propertyMatch = line.match(/\.(\w+)/);
       if (propertyMatch) {
   const property = propertyMatch[1];
         // Add type assertion;
-<<<<<<< HEAD
         const fixedLine = line.replace(;
           new RegExp(`\\.${property}\\b`),.${property} as any";
         );
@@ -480,50 +303,19 @@ class TypeScriptErrorMonitor {
     }
     return line}
   async attemptFixes(errors) {this.log(🔧 Attempting to fix ${errors.length} TypeScript errors...");
-=======
-        const fixedLine = line.replace(;)"`;
-          new RegExp(`\\.${property}\\b`),.${property} as any";"
-  async fixTypeMismatchError(error, lines, lineIndex) {
-  const line = lines[lineIndex];
-    // Add type assertions for function calls;"
-    if (line.includes("(") && line.includes(")")) {"
-  // Add type assertions for function calls;"
-    if (line.includes("(") && line.includes(")")) {
-  const fixedLine = line.replace(/\(([^)]+)\)/g, "(($1) as any)");"
-  async fixImplicitAnyError(error, lines, lineIndex) {
-    // Add explicit any type for parameters;"
-
-  async fixTypeAssignmentError(error, lines, lineIndex) {
-    // Add type assertion for assignments;"
-    if (line.includes("=")) {"
-  // Add type assertion for assignments;"
-    if (line.includes("=")) {
-  const fixedLine = line.replace(/=\s*([^]+);?$/, "= ($1) as any;");"
-  async fixGenericTypeScriptError(error, lines, lineIndex) {
-
-  return line.replace(";", " as any;")} else {"
-  // TODO: Implement
-  return line + " as any"}"
-  async attemptFixes(errors) {this.log("🔧 Attempting to fix ${errors.length} TypeScript errors...");"
->>>>>>> origin/chore/fix-lint-and-merge
     let fixedCount = 0;
     for (const error of errors) {
   // TODO: Implement
   const fixed = await this.fixTypeScriptError(error);
   fixedCount++}
         fixResults.push({
-<<<<<<< HEAD
   error,
           fixed,
           "timestamp: new Date().toISOString()});
         // Track fix attemptsconst errorKey = ${error.file}:${error.line}:${error.code}`;
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
         this.fixAttempts.set(;
           errorKey)
           (this.fixAttempts.get(errorKey) || 0) + 1;
-<<<<<<< HEAD
         )} catch (fixError) {
   this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,
           "ERROR";
@@ -572,44 +364,6 @@ class TypeScriptErrorMonitor {
       const lines = content.split(\n');
       // Fix common TypeScript errors
       if (error.message.includes('Cannot find module) || error.message.includes(Module not found')) {
-=======
-
-        )} catch (fixError) {"
-  this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}",
-          "ERROR";")
-  error,"
-          "fixed": false,
-          "error": fixError.message,")"
-          "timestamp": new Date().toISOString()})}"
-;`;
-    this.log(✅ Fixed ${fixedCount} out of ${errors.length} TypeScript errors`;)
-    );"
-    return { fixedCount, "totalErrors": errors.length, "results": fixResults }"
-  async generateReport(fixResults) {"
-  this.log("📊 Generating TypeScript error monitoring report...");"
-    const report = {"
-  "timestamp": new Date().toISOString(),
-      "summary": {"
-  totalErrors: fixResults.totalErrors,"
-        "fixedErrors": fixResults.fixedCount,
-        "successRate": fixResults.totalErrors > 0;"
-            ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(;
-                2;)
-            : 100},"
-      "fixResults": fixResults.results,
-      "recommendations": ["Review any remaining errors manually, "Consider adding proper type definitions", "Run npm run type-check to verify fixes, "Monitor for recurring error patterns", ]}"
-    const reportFile = path.join(;"
-      this.reportsPath,typescript-error-monitor-report.json";")
-
-  // TODO: Implement
-      const filePath = path.join(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) {
-        return false}"
-
-      const lines = content.split('\n');
-      // Fix common TypeScript errors;
-      if (error.message.includes('Cannot find module') || error.message.includes('Module not found')) {
->>>>>>> origin/chore/fix-lint-and-merge
         return await this.fixModuleImportError(error, lines, filePath)}
       if (error.message.includes('Property) && error.message.includes(does not exist')) {
         return await this.fixPropertyError(error, lines, filePath)}
@@ -619,7 +373,6 @@ class TypeScriptErrorMonitor {
         return await this.fixImplicitAnyError(error, lines, filePath)}
       if (error.message.includes('Object is possibly)) {
         return await this.fixNullCheckError(error, lines, filePath)}
-<<<<<<< HEAD
       return false} catch (error) {
       this.log(`Failed to fix TypeScript "error: ${error.message}`, ERROR');
       return false}
@@ -692,15 +445,6 @@ class TypeScriptErrorMonitor {
     return false}
   async autoFixErrors(errors) {
     for (const error of errors) {
-=======
-
-  async fixModuleImportError(error, lines, filePath) {
-    const line = lines[error.line - 1];
-    if (line.includes('import') || line.includes('require')) {
-      // Try to fix import path;
-
-  async autoFixErrors(errors) {
->>>>>>> origin/chore/fix-lint-and-merge
       if (await this.fixTypeScriptError(error)) {
     if (fixedCount > 0) {`;
       this.log(`Auto-fixed ${fixedCount} TypeScript errors`);
@@ -713,7 +457,6 @@ class TypeScriptErrorMonitor {
         this.log(`${remainingErrors.length} errors remain after auto-fix`)}
     return fixedCount}
   async generateReport(errors, fixedCount) {
-<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
       totalErrors: errors.length,
       "fixedErrors": fixedCount,
@@ -725,34 +468,16 @@ class TypeScriptErrorMonitor {
         message: error.message
       }))
     }
-=======
-    const report = {
-
-      "errors": errors.map(error => ({"
-        file: error.file,"
-        "line": error.line,
-        "column": error.column,
-        "message": error.message;")
-      }))
-    };`;
->>>>>>> origin/chore/fix-lint-and-merge
     const reportPath = path.join(this.reportsDir, `typescript-error-report-${Date.now()}.json`);
 
     return report}
-<<<<<<< HEAD
   async run() {
   this.log(🚀 Starting TypeScript Error Monitor...);
     try {
-=======
-  async run() {"
-  this.log("🚀 Starting TypeScript Error Monitor...");"
-  // TODO: Implement
->>>>>>> origin/chore/fix-lint-and-merge
   // Run TypeScript check;
       const checkResult = await this.runTypeScriptCheck();
       if (checkResult.success) {"
   this.log("🎉 No TypeScript errors found!");
-<<<<<<< HEAD
         return { success: true, "errors": [], fixed: 0 }
       }
       // Attempt to fix errors;
@@ -809,43 +534,6 @@ class TypeScriptErrorMonitor {
       .on(unlink, (filePath) => {
         this.log("File "removed: ${filePath})});
     this.isRunning = true;
-=======
-        return { "success": true, "errors": [], "fixed": 0 }"
-      // Attempt to fix errors;
-      const fixResults = await this.attemptFixes(checkResult.errors);
-      // Generate report;
-      const report = await this.generateReport(fixResults);"
-      this.log("🎉 TypeScript Error Monitor completed!");"`;
-      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;)
-  // TODO: Implement
-  // Run TypeScript check;
-
-      // Attempt to fix errors;
-      // Generate report;
-
-      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors";")
-      return {
-  // TODO: Implement
-
-        "fixed": fixResults.fixedCount,"
-        report}"`;
-    } catch (error) {  this.log(`💥 TypeScript Error Monitor "failed": ${error.message  }", "ERROR");"
-      throw error}
-// Run the automation if called directly;
-  async startWatching() {"
-
-    // Initial check;
-    const initialErrors = await this.checkTypeScriptErrors();
-    if (initialErrors.length > 0) {
-      await this.autoFixErrors(initialErrors)}
-    // Set up file watcher;
-
-      "ignoreInitial": true;")
-    this.watcher;"
-
-        this.log("File "removed": ${filePath}")});"
-    this.isRunning = true;"
->>>>>>> origin/chore/fix-lint-and-merge
     this.log('TypeScript error monitoring is active')}
   async handleFileChange(filePath) {
     // Debounce rapid changes;
@@ -863,17 +551,11 @@ class TypeScriptErrorMonitor {
     if (this.watcher) {
       await this.watcher.close();
       this.watcher = null}
-<<<<<<< HEAD
     this.isRunning = false;
     this.log(TypeScript error monitoring stopped)}
-=======
-
-    this.log('TypeScript error monitoring stopped')}
->>>>>>> origin/chore/fix-lint-and-merge
   async run() {
   // TODO: Implement
       await this.startWatching();
-<<<<<<< HEAD
       // Keep the process running
       process.on('SIGINT', async () => {
         this.log(Received SIGINT, shutting down...);
@@ -884,31 +566,17 @@ class TypeScriptErrorMonitor {
         await this.stop();
         process.exit(0)})} catch (error) {
       this.log("TypeScript error monitor "failed: ${error.message}`, 'ERROR');
-=======
-      // Keep the process running;
-
->>>>>>> origin/chore/fix-lint-and-merge
       process.exit(1)}
 // Run the monitor;
 if (require.main === module) {
   const monitor = new TypeScriptErrorMonitor();
-<<<<<<< HEAD
   monitor.run().catch(error => {
     console.error('TypeScript error monitor failed": ', error);
     process.exit(1)})}
-<<<<<<< HEAD
-=======
+
   monitor.run().catch(error => {)
 
     process.exit(1)})}
 module.exports = TypeScriptErrorMonitor;
->>>>>>> origin/chore/fix-lint-and-merge
 
-=======
-;
-<<<<<<< HEAD
-module.exports = TypeScriptErrorMonitor
-=======
-module.exports = TypeScriptErrorMonitor
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

@@ -1,11 +1,27 @@
+<<<<<<< HEAD
 
+=======
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+// Initialize Supabase client"
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;"
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -15,30 +31,58 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const url = new URL(req && req.url);
   const type = url && url.searchParams.get("type"), // "open" or "click"
   const campaignId = url && url.searchParams.get("cid");
   const userId = url && url.searchParams.get("uid");
 
   const redirectUrl = url && url.searchParams.get("redirect");
+<<<<<<< HEAD
 
   const url = new URL(req.url),
   const type = url.searchParams.get("type"), // "open" or "click"
 
 
+=======
+
+
+// Initialize Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
+// Initialize Supabase client
+serve(async (req) => {
+  // Parse the URL to get the tracking parameters
+  const url = new URL(req.url),
+  const type = url.searchParams.get("type"), // "open" or "click"
+  const campaignId = url.searchParams.get("cid");
+  const userId = url.searchParams.get("uid");
+  const redirectUrl = url.searchParams.get("redirect");
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const campaignId = url.searchParams.get("cid"),
   const userId = url.searchParams.get("uid"),
   const redirectUrl = url.searchParams.get("redirect"),
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Validate required parameters
   if (!type |!campaignId |!userId) {
 
     return new Response("Missing required parameters", { status: 400 })
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
   try {}
     // Update the email campaign record based on event type"
@@ -48,14 +92,20 @@ serve(async (req) => {
         .update({ opened_at: new Date().toISOString() })"
         .eq("id", campaignId)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
 
+<<<<<<< HEAD
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
 // Initialize Supabase client;"
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;"
@@ -99,9 +149,12 @@ if ( {) {}
           0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
 
+<<<<<<< HEAD
         {
           headers: {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
@@ -109,8 +162,11 @@ if ( {) {}
             "Pragma": "no-cache",
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             "Expires": "0"}}
 
       )
@@ -120,8 +176,26 @@ if ( {) {}
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })"
         .eq("id", campaignId)
+<<<<<<< HEAD
 
 
+=======
+
+        .eq("user_id", userId),
+
+      // Redirect to the specified URL or default to dashboard;
+      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+
+        .eq("user_id", userId),
+
+      // Redirect to the specified URL or default to dashboard
+      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+      return new Response(null, {
+        status: 302
+        headers: {
+          Location: destination}})
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     // If it was a click event, still try to redirect the user
@@ -130,7 +204,10 @@ if ( {) {}
         status: 302
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return new Response ("Invalid event type", { status: 400 });
 
   } catch (error) {
@@ -144,6 +221,7 @@ if ( {) {}
 }
       return new Response (null, {}
         status: 302,
+<<<<<<< HEAD
 
         headers: {
           Location: redirect_url}});
@@ -154,6 +232,10 @@ if ( {) {}
 });
 
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -221,6 +303,7 @@ serve(async (req) => {;
 ;"
     return new Response("Error processing event", { status: 500 });
 
+<<<<<<< HEAD
 
 
   }
@@ -228,3 +311,8 @@ serve(async (req) => {;
 ;
 
 
+=======
+
+  }
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba

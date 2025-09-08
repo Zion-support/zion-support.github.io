@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from 'react';
 
 import {supabase} from '@/integrations / supabase / client';
@@ -10,11 +13,15 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface TranslationResponse {
 
   translations: Record < SupportedLanguage, string>;
   error?: string;
+<<<<<<< HEAD
 
 }
 export function useTranslationService() {
@@ -24,6 +31,11 @@ export function useTranslationService() {;
 
 
 
+=======
+
+export function useTranslationService() {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [isTranslating, setIsTranslating] = useState(false);
 
   const { currentLanguage } = useLanguage();
@@ -35,6 +47,7 @@ export function useTranslationService() {;
   ): Promise<TranslationResponse> => {}
     setIsTranslating(true)
 
+<<<<<<< HEAD
     try {
 
         const initialTranslations: Record<SupportedLanguage, string> = {
@@ -45,6 +58,10 @@ export function useTranslationService() {;
 
         }
         initialTranslations[sourceLanguage] = content;
+=======
+        body: {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 type ContentType = 'job' | 'profile' | 'service' | 'general',;
 interface TranslationResponse {;
@@ -67,6 +84,7 @@ interface TranslationResponse {;
         },;
         initialTranslations[sourceLanguage] = content,;
 
+<<<<<<< HEAD
 
 
         return { translations: initialTranslations, error: error.message }
@@ -76,6 +94,8 @@ interface TranslationResponse {;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     } catch (err) {;
       setIsTranslating(false),;'
       console.error('Translation service error:', err),;
@@ -96,6 +116,7 @@ interface TranslationResponse {;
     }
 
 
+<<<<<<< HEAD
 
   },;
   const getTranslation = (translations: Record<SupportedLanguage string>, fallback: string = '') => {;
@@ -107,6 +128,16 @@ interface TranslationResponse {;
     isTranslating;
     getTranslation;
 
+=======
+        ar: '';
+      },;
+      initialTranslations[sourceLanguage] = content,;
+      return {;
+        translations: initialTranslations,;'
+        error: err instanceof Error ? err.message : 'Unknown translation error';
+      }
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   }
@@ -116,6 +147,7 @@ interface TranslationResponse {;
     // Check condition
 
 if (return fallback, ) {
+<<<<<<< HEAD
 
   $2
 
@@ -124,6 +156,11 @@ if (return fallback, ) {
 
 ;
 
+=======
+
+    return translations[current_language] || translations.en || fallback;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return {
   // TODO: Implement
     translate_content;
@@ -131,7 +168,12 @@ if (return fallback, ) {
     get_translation;
   }
 
+<<<<<<< HEAD
 
 }
 
 
+=======
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

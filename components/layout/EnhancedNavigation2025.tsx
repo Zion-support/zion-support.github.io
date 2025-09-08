@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -84,11 +85,42 @@
                       activeSubmenu === item && item.name ? 'rotate-180' : ''
                     }`} />;
                   </button>;
+=======
+service;
+'use client',
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, ChevronDown,
+  Brain, Rocket, Shield, 
+  Zap,
+  Target, Atom,
+  BookOpen,
+  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight,
+  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb,
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
+} from 'lucide-react',
+
+const navigationItems = $2;
+    href: '/2025-innovative-services-showcase',
+    icon: <Globe className = $2;
+  Zap;
+  Target, Atom;
+  BookOpen;
+  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
+  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -100,6 +132,7 @@
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
                         <div className="p-6">;
                           {item && item.submenu?.map((subitem) => (;
+<<<<<<< HEAD
 
       {/* Main Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -551,6 +584,29 @@ className="ml - 8 mt - 2 space - y-2";
 
 
 
+=======
+      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div className="flex items-center gap-4 mb-2 sm:mb-0">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-cyan-300" />
+                <span>{contactInfo.phone}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-purple-300" />
+                <span>{contactInfo.email}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-green-300" />
+              <span className="text-xs">{contactInfo.address}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </motion.div>)}
       </AnimatePresence>;
                             className="ml-8 space-y-2"
@@ -617,8 +673,17 @@ className="ml - 8 mt - 2 space - y-2";
       <div className="h - 20" />;
     </>);
 }
+<<<<<<< HEAD
+=======
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon}
+ } from 'lucide-react';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
 
 
+=======
+const navigationItems = null;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

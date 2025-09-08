@@ -2,6 +2,18 @@
 
 const fs = require('fs');
 <<<<<<< HEAD
+const path = require('path');
+
+
+
+
+main
+
+
+function fixTestFile(filePath) {
+  try {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> merged-prs-20250907-203621
@@ -25,28 +37,29 @@ main
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Function to fix malformed test files;
+function fixTestFile(filePath) {}
   try {}
 <<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common syntax errors in test files
-    content = content.replace(/render\(<[^>]+>\)""/g, render(<$1>);');
-    content = content.replace(/render\(<[^>]+>\)\n\s*expect/g, 'render(<$1>);\n    expect);
-    content = content.replace(/it\(displays expected content', \(\) => \{\s*render\(<[^>]+>\)\s*\}/g, 'it(\displays expected content\, () => {\n    render(<$1>);\n  });');
+    content = content.replace(/render\(<[^>]+>\)""/g, 'render(<$1>);');
+    content = content.replace(/render\(<[^>]+>\)\n\s*expect/g, 'render(<$1>);\n    expect');
+    content = content.replace(/it\('displays expected content', \(\) => \{\s*render\(<[^>]+>\)\s*\}/g, 'it(\'displays expected content\', () => {\n    render(<$1>);\n  });');
     
     // Fix missing semicolons after render calls
-    content = content.replace(/(render\(<[^>]+>\))(?!;)/g, '$1;);
+    content = content.replace(/(render\(<[^>]+>\))(?!;)/g, '$1;');
     
     // Fix missing closing braces and semicolons
-    content = content.replace(/(\s+it\(displays expected content', \(\) => \{\s*render\(<[^>]+>\);\s*)(?!\})/g, '$1  }););
+    content = content.replace(/(\s+it\('displays expected content', \(\) => \{\s*render\(<[^>]+>\);\s*)(?!\})/g, '$1  });');
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
-}
 
 function findAndFixTestFiles(dir) {
   const files = fs.readdirSync(dir);
@@ -215,7 +228,7 @@ function walkDir(dir) {
     if (stat.isDirectory()) {
 <<<<<<< HEAD
       findAndFixTestFiles(filePath);
-    } else if (file.endsWith(.test.tsx') || file.endsWith('.test.ts)) {
+    } else if (file.endsWith('.test.tsx') || file.endsWith('.test.ts')) {
       fixTestFile(filePath);
 =======
   async fixAllTestFiles() {
@@ -289,9 +302,12 @@ function walkDir(dir) {
       throw error;
 >>>>>>> pr/11282
     }
-  }
-}
 
+<<<<<<< HEAD
+console.log('Fixing test files...');
+findAndFixTestFiles('./src');
+console.log('Done fixing test files.');
+=======
 <<<<<<< HEAD
 // Run if called directly
 if (require.main === module) {
@@ -365,3 +381,4 @@ module.exports = TestFileFixer;
 >>>>>>> pr/11282
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

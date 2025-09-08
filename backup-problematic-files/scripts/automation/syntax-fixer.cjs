@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const fs = require("fs)
 const path = require(path")
@@ -18,29 +17,6 @@ const { exec } = require("child_process)
   this.log("error, Failed to create backup for ${filePath  }:")
   this.log("error, Failed to create backup for ${filePath}:")
     fixed = fixed.replace(/^([^"\\n]*)([^)]
-=======
-
-<<<<<<< HEAD
-
-const fs = require("fs")
-const path = require("path")
-const { exec } = require("child_process")
-  this.projectRoot = "/workspace"
-    this.logDir = path.join(this.projectRoot, "logs")
-    this.backupDir = path.join(this.projectRoot, "backups")
-  fs.mkdirSync(dir, { "recursive"})
-  process.on("SIGTERM")
-    process.on("SIGINT")
-  process.on("SIGTERM")
-    process.on("SIGINT")
-    const message = "[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}"
-    const logFile = path.join(this.logDir, "syntax-fixer.log")
-    fs.appendFileSync(logFile, message + "\\n")
-  fs.mkdirSync(backupDir, { "recursive"})
-  this.log("error", "Failed to create backup for ${filePath  }:")
-  this.log("error", "Failed to create backup for ${filePath}:")
-    fixed = fixed.replace(/^([^"\\n]*)"([^")]
->>>>>>> origin/chore/fix-lint-and-merge
   if (!after.includes("")
         return before +  + after + 
     fixed = fixed.replace(/^([^\\n]*)"([^")]
@@ -90,27 +66,8 @@ const { exec } = require("child_process")
   this.log("info", Syntax Fixer heartbeat - running normally)
   this.log("info", Syntax Fixer shutting down...)
   fixer.log("info", "Syntax Fixer started in continuous mode")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error("Syntax fixer "failed")
-  console.error("Syntax fixer "failed")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  console.error("Syntax fixer "failed")
-=======
-  console.error("Syntax fixer "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

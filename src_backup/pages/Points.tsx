@@ -293,12 +293,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text - sm text - muted - foreground'>;
                     {opportunity.description}
 
+<<<<<<< HEAD
+          <CardContent className='space-y-4'>
+            {earningOpportunities.map((opportunity, index) => (
+              <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>
+                <div className='text-primary mt-1'>{opportunity.icon}</div>
+                  <h4 className='font-medium'>{opportunity.title}</h4>
+                  <p className='text-sm text-muted-foreground'>{opportunity.description}</p>
+=======
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <div className="text-primary mt-1">{opportunity.icon}</div>
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
@@ -335,11 +344,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
                   <p className='text-sm text-muted-foreground'>;
                     {opportunity && opportunity.description}
+<<<<<<< HEAD
+                  </p>              <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>;
+                <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>;
+                <div className='flex-1'>;
+                  <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
+                  <p className='text-sm text-muted-foreground'>{opportunity && opportunity.description}</p>;
+=======
                   </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">;
                 <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>;
                 <div className="flex-1">;
                   <h4 className="font-medium">{opportunity && opportunity.title}</h4>;
                   <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p>;
+>>>>>>> origin/resolved-merge-conflicts
                 </div>;
                 <div className='text-right'>;
                   <Badge variant='secondary' className='mb-1'>;
@@ -348,9 +365,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-xs text-muted-foreground'>;
                     {opportunity && opportunity.action}
                   </p>                </div>                </div>;
+<<<<<<< HEAD
+                <div className='text-right'>;
+                  <Badge variant='secondary' className='mb-1'>{opportunity && opportunity.points}</Badge>;
+                  <p className='text-xs text-muted-foreground'>{opportunity && opportunity.action}</p>;
+=======
                 <div className="text-right">;
                   <Badge variant="secondary" className="mb-1">{opportunity && opportunity.points}</Badge>;
                   <p className="text-xs text-muted-foreground">{opportunity && opportunity.action}</p>;
+>>>>>>> origin/resolved-merge-conflicts
                 </div>;
               </div>;
             ))}
@@ -360,8 +383,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Card>;
           <CardHeader>;
             <CardTitle className='flex items-center gap-2'>;
+<<<<<<< HEAD
+              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className='flex items-center gap-2'>;
+              <Gift className='h-5 w-5' />;
+=======
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">;
               <Gift className="h-5 w-5" />;
+>>>>>>> origin/resolved-merge-conflicts
               Available Rewards;
             </CardTitle>;
             <CardDescription>;
@@ -419,21 +447,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='space-y-2 mt-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {ledger.map(entry => (
+<<<<<<< HEAD
+                  <div key={entry.id} className='flex items-center justify-between py-2 border-b'>
+=======
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
+>>>>>>> origin/resolved-merge-conflicts
                     <div>
                       variant='outline'
                       className={
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
+<<<<<<< HEAD
+                      }                      variant='outline'
+=======
                       }                      variant="outline"
+>>>>>>> origin/resolved-merge-conflicts
                       className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
                     >
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts
                     </Badge>
                   </div>
+<<<<<<< HEAD
+                      variant='outline'
+=======
                       variant="outline"
+>>>>>>> origin/resolved-merge-conflicts
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >;
                       {entry && entry.delta >= 0 ? '+' : ''}                      {entry && entry.delta} pts                    </Badge>;
@@ -446,11 +486,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </ScrollArea>
           )}
+<<<<<<< HEAD
+      <Card className='text-center'>
+        <CardContent className='pt-6'>
+          <Star className='h-12 w-12 text-primary mx-auto mb-4' />
+          <h3 className='text-2xl font-bold mb-2'>Full Rewards System Coming Soon</h3>
+          <p className='text-muted-foreground mb-4'>
+=======
       <Card className="text-center">
         <CardContent className="pt-6">
           <Star className="h-12 w-12 text-primary mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
+>>>>>>> origin/resolved-merge-conflicts
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
 
 

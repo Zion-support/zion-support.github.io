@@ -12,7 +12,7 @@ const aiSolutions = null;
         </title>
         <meta;
 name='description'
-          content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems."
+          content='Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems.'
         />
         <meta property='og:title' content='AI Solutions | Zion Tech Group' />
         <meta;
@@ -70,21 +70,21 @@ key={featureIndex}
                           {feature}
                         </li>;
                       ))}
-            <div className="mb-16" />;
-              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400" />Our AI Solutions</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" />;
-                {aiSolutions && aiSolutions.map((solution, index) => (<div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300" />;
-                    <div className="text-4xl mb-4" />{solution && solution.icon}</div>;
-                    <div className="flex items-center gap-2 mb-3" />;
-                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full" />{solution && solution.category}</span>;
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full" />{solution && solution.complexity}</span>;
+            <div className='mb-16' />;
+              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400' />Our AI Solutions</h2>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' />;
+                {aiSolutions && aiSolutions.map((solution, index) => (<div key={index} className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300' />;
+                    <div className='text-4xl mb-4' />{solution && solution.icon}</div>;
+                    <div className='flex items-center gap-2 mb-3' />;
+                      <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full' />{solution && solution.category}</span>;
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full' />{solution && solution.complexity}</span>;
                     </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white" />{solution && solution.title}</h3>;
-                    <p className="text-white/70 mb-4" />{solution && solution.description}</p>;
-                    <ul className="space-y-1 mb-4" />;
+                    <h3 className='text-xl font-bold mb-3 text-white' />{solution && solution.title}</h3>;
+                    <p className='text-white/70 mb-4' />{solution && solution.description}</p>;
+                    <ul className='space-y-1 mb-4' />;
 
                       {solution && solution.features.map((feature, featureIndex) => (;}
-                        <li key={featureIndex} className="text-sm text-white/60 flex items-center" />;
+                        <li key={featureIndex} className='text-sm text-white/60 flex items-center' />;
                     </ul>
 
 <Link;
@@ -101,25 +101,25 @@ href={`/services#${solution.id}`}
                       href={`/services#${solution && solution.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors' />;
                       Learn More <span className='ml-1' />→</span>                    </Link>                      href={`/services#${solution && solution.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>
 
-                      Learn More <span className="ml-1" />→</span>;
+                      Learn More <span className='ml-1' />→</span>;
                     </Link>;
                   </div>;
             {/* AI Solutions Grid */}
-            <div className="mb-16" />;
-              <h2 className="text - 3xl font - bold mb - 8 text - center text-cyan-400" />Our AI Solutions</h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6" />;
-                {ai_solutions.map ((solution, index) => (<div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition-all duration-300" />;
-                    <div className="text-4xl mb-4" />{solution.icon}</div>;
-                    <div className="flex items - center gap-2 mb-3" />;
-                      <span className="px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text-sm rounded-full" />{solution.category}</span>;
-                      <span className="px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text-sm rounded-full" />{solution.complexity}</span>;
+            <div className='mb-16' />;
+              <h2 className='text - 3xl font - bold mb - 8 text - center text-cyan-400' />Our AI Solutions</h2>;
+              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6' />;
+                {ai_solutions.map ((solution, index) => (<div key={index} className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition-all duration-300' />;
+                    <div className='text-4xl mb-4' />{solution.icon}</div>;
+                    <div className='flex items - center gap-2 mb-3' />;
+                      <span className='px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text-sm rounded-full' />{solution.category}</span>;
+                      <span className='px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text-sm rounded-full' />{solution.complexity}</span>;
                     </div>;
-                    <h3 className="text - xl font - bold mb-3 text-white" />{solution.title}</h3>;
-                    <p className="text-white / 70 mb-4" />{solution.description}</p>;
-                    <ul className="space-y-1 mb-4" />;
-                      {solution.features.map ((feature, feature_index) => (<li key={feature_index} className="text - sm text-white / 60 flex items-center" />;</div>;
+                    <h3 className='text - xl font - bold mb-3 text-white' />{solution.title}</h3>;
+                    <p className='text-white / 70 mb-4' />{solution.description}</p>;
+                    <ul className='space-y-1 mb-4' />;
+                      {solution.features.map ((feature, feature_index) => (<li key={feature_index} className='text - sm text-white / 60 flex items-center' />;</div>;
                 ))}</div>;
             </div>;{/* Industry Use Cases */}
 <div className='mb-16' />;

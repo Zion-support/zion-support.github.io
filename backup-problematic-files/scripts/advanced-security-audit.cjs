@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process)
 const path = require(child_process")
@@ -65,63 +64,9 @@ const { execSync } = require("child_process)
           !item.startsWith(".")
           item !== node_modules
       // Skip directories that can"
-<<<<<<< HEAD
-    this.log(" Generating security report...)
-    const report = {timestamp": new Date().toISOString(),"dependencies: await this.checkDependencies(),codeSecurity"}
-        "type: dependencies"
-        "action: Run npm audit fix to resolve vulnerabilities"
-      issue => issue.severity === "high
-        type": "code
-        action": "Review and fix high severity security issues in code
-        type": "environment
-        action": "Review environment variables and ensure sensitive data is properly secured
-      advanced-security-report.json"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8
-    this.log(` Security report generated"`)
-    this.log(" Starting Advanced Security Audit)
-      this.log(� Advanced Security Audit Completed")
-      this.log(` "Recommendations`)
-      this.log(` Fatal error in security audit"`)
-// console.log(" Advanced Security Audit completed successfully!)
-    console.log(` Recommendations"`)
 
-=======
-    this.log(" Generating security report...")
-    const report = {"timestamp": new Date().toISOString(),"dependencies": await this.checkDependencies(),"codeSecurity"}
-        "type": "dependencies"
-        "action": "Run npm audit fix to resolve vulnerabilities"
-      issue => issue.severity === "high"
-        "type": "code"
-        "action": "Review and fix high severity security issues in code"
-        "type": "environment"
-        "action": "Review environment variables and ensure sensitive data is properly secured"
-      "advanced-security-report.json"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8"
-    this.log(` Security report "generated"`)
-    this.log(" Starting Advanced Security Audit")
-      this.log("� Advanced Security Audit Completed")
-      this.log(` "Recommendations"`)
-      this.log(` Fatal error in security "audit"`)
-// console.log(" Advanced Security Audit completed successfully!")
-    console.log(` "Recommendations"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
     console.error(" Security audit "failed": ")
     console.error(" Security audit "failed": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-    console.error(" Security audit "failed": ")
-=======
-    console.error(" Security audit "failed": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
