@@ -1,76 +1,25 @@
-name: Continuous Improvement
+name: Continuous Improvement (DISABLED - Migrated to PM2)
 
 on:
-  schedule:
-    - cron: '0 */4 * * *'
-  workflow_dispatch:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling continuous improvement tasks
+  # Now handled by PM2 process: continuous-improvement (every 2 hours)
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  improve:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Run continuous improvement
+      - name: Workflow Disabled
         run: |
-          npm run automation:improvement || true
-          npm run diversify || true
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement + diversity results"
-          title: "chore(improvement): apply continuous improvement and diversity results"
-          body: |
-            Automated improvement and diversity loop.
-
-            - Runs automation:improvement orchestration
-            - Runs diversification orchestrator
-          branch: automation/continuous-improvement
-          delete-branch: true
-          signoff: false
-          labels: |
-            automation
-            improvement
-            auto-merge
-      - name: Enable Auto-merge
-        if: steps.cpr.outputs.pull-request-number
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
-          merge-method: squash
-      - name: Attempt immediate merge
-        if: steps.cpr.outputs.pull-request-number
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const pr = Number(core.getInput('pr'))
-            try {
-              await github.pulls.merge({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pr,
-                merge_method: 'squash'
-              })
-            } catch (e) {
-              core.info(`Merge not completed yet: ${e.message}`)
-            }
-          result-encoding: string
-          inputs: |
-            pr: ${{ steps.cpr.outputs.pull-request-number }}
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "The following PM2 process now handles these tasks:"
+          echo "- continuous-improvement (every 2 hours)"
+          echo "Continuous improvement functionality is now handled by PM2 processes"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

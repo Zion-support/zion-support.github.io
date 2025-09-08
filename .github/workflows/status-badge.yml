@@ -1,4 +1,4 @@
-name: status (DISABLED - Migrated to PM2)
+name: status-badge (DISABLED - Migrated to PM2)
 
 on:
   # This workflow is disabled and migrated to PM2 automation
