@@ -1,20 +1,13 @@
 [build]
-  # Use prebuilt dist; skip install/build entirely in Netlify
-  command = "echo 'Skipping build; using prebuilt dist'"
+  # Publish prebuilt dist without running a build
+  command = "echo Skipping build; deploying prebuilt dist"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
-  MISE_PYTHON_COMPILE = "false"
-  # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
-  # Disable mise shims entirely during Netlify builds
-  MISE_DISABLE = "1"
-  MISE_SHIMS = "0"
-  # Force mise to use system Python even during Netlify's dependency stage (defensive)
-  MISE_TOOL_VERSIONS__python = "system"
+
 
 
 
