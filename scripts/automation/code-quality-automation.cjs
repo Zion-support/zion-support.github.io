@@ -1,410 +1,342 @@
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting comprehensive code quality automation...")
-const { execSync } = require("child_process")
-<<<<<<< HEAD
+#!/usr/bin/env node
 
-=======
-const fs = require("fs")
-const path = require("path")
->>>>>>> merged-prs-20250907-203621
-console.log("" Starting comprehensive code quality automation...")
-// Get automation interval from environment variable ("default")
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  console.log(` Running code quality automation at ${new Date().toISOString()}
-console.log(` Starting comprehensive code quality automation...``)
-// Get automation interval from environment variable ("default")
-  console.log(" Running code quality automation at ${new Date().toISOString()}"
-// console.log(""� Improving code formatting and style...")
-    console.log("� Organizing imports...")
-    console.log(""� Improving code formatting and style...")
-"
-    // 1. Code formatting and style"
-// console.log("� Improving code formatting and style...")
-    console.log("� Organizing imports...")
-// console.log("� Optimizing code structure...")
-    console.log("⚡ Optimizing performance...")
-// console.log("� Improving security...")
-    console.log("♿ Improving accessibility...")
-// console.log("🧪 Improving test coverage...")
-    console.log("� Improving documentation...")
-    console.log(" Running final quality assessment...")
-  "timestamp"
-      "summary": Code quality automation completed - Made ${totalImprovements} improvements, Quality "Score"
-      "status": "completed"
-      "details"
-        "imports"
-        "structure"
-        "performance"
-        "security"
-        "accessibility"
-        "testing"
-        "documentation"
-    console.log( Code quality automation completed successfully - Made ${totalImprovements} improvements, Quality "Score": ${qualityScore}/100")
-    "
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const { promisify } = require('util');
+const writeFile = promisify(fs.writeFile);
+const readFile = promisify(fs.readFile);
 
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  console.error(" Code quality automation "failed": ")
-  execSync("npx prettier --write ")
-  execSync("npx prettier --write src/**/*.{js,jsx,ts,tsx}")
-  "stdio": "pipe"
-  execSync("npx prettier --write "src/**/*.{js,jsx,tstsx}")
-  "stdio": "pipe"
-// console.log(""   Applied Prettier formatting")
-  console.log(""  ⚠  Prettier not available, using manual formatting")
-<<<<<<< HEAD
-const filesToFormat = ["""src/components"""", """src/pages""", """src/utils"""", """src/services""", ""];
-=======
-    const filesToFormat = ["""src/components"""", """src/pages""", """src/utils"""", """src/services""", ""]
-              f.endsWith(".tsx")
->>>>>>> origin/chore/fix-lint-and-merge
-              f.endsWith(".ts")
-              f.endsWith(.js)
-              f.endsWith(".jsx")
-<<<<<<< HEAD
+class CodeQualityAutomation {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'reports');
+    this.qualityScore = 0;
+    this.issuesFound = [];
+    this.improvementsMade = [];
+    this.startTime = Date.now();
+  }
 
-=======
-// console.log(""  ⚠  Prettier not available, using manual formatting")
-      console.log("   Applied Prettier formatting")
-  console.log("  ⚠  Prettier not available, using manual formatting")
-              f.endsWith(".jsx")
-    const filesToFormat = [""src/components"", ""src/pages"", ""src/utils"", ""src/services"", "]
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-              f.endsWith(".tsx")
-              f.endsWith(".ts")
-              f.endsWith(".js")
-<<<<<<< HEAD
-              f.endsWith(".jsx")
-// console.log(""  ⚠  Prettier not available, using manual formatting")
-      console.log("   Applied Prettier formatting")
-  console.log("  ⚠  Prettier not available, using manual formatting")
-              f.endsWith(".jsx")
-const filesToFormat = [""src/components"", ""src/pages"", ""src/utils"", ""src/services"", "];
-              f.endsWith(".tsx")
-              f.endsWith(".ts")
-              f.endsWith(".js")
-              f.endsWith(".jsx")
-const filePath = path.join(dir, ");
-let content = fs.readFileSync(filePath", "utf8");
-=======
-<<<<<<< HEAD
+  async init() {
+    console.log('🚀 Code Quality Automation Starting...');
+    console.log(`📁 Project Root: ${this.projectRoot}`);
+    
+    // Ensure reports directory exists
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
 
-=======
-              f.endsWith(".jsx")
-  const filePath = path.join(dir, ")
-  let content = fs.readFileSync(filePath", "utf8")
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-            content = content.replace(/\n\s*\n\s*\""n/g"", "\n\n")
-              /(\w)\s*([+\-*/=<>!&|])\s*(\w)/g,$1 $2 $3"
-            content = content.replace(/\s*\(\s*/g, " (")
-            content = content.replace(/\s*\)\s*/g, ") "
-            if (content !== fs.readFileSync(filePath, "utf8")
-  fs.writeFileSync(filePath, content, "utf8")
-  // Skip files that can"
-            content = content.replace(/\n\s*\n\s*\"n/g", "\n\n")
-              /(\w)\s*([+\-*/=<>!&|])\s*(\w)/g,$1 $2 $3"
-            content = content.replace(/\s*\(\s*/g, " (")
-            content = content.replace(/\s*\)\s*/g, ") "
-            if (content !== fs.readFileSync(filePath, "utf8")
-  fs.writeFileSync(filePath, content, "utf8")
-  // Skip files that can"
-    console.log(   Made ${improvements} formatting improvements)} catch (error) {  console.log(  ⚠  Code formatting improvement "failed": ${error.message  }")
-<<<<<<< HEAD
-const filesToOrganize = ["""src/components"""", """src/pages""", """src/utils"""", """src/services""", ""];
-=======
-  const filesToOrganize = ["""src/components"""", """src/pages""", """src/utils"""", """src/services""", ""]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-              f.endsWith(".tsx")
-              f.endsWith(".ts")
-              f.endsWith(".js")
-              f.endsWith(".jsx")
-<<<<<<< HEAD
-const filePath = path.join(dir, ");
-let content = fs.readFileSync(filePath", "utf8");
-const lines = content.split("\n");
-=======
-  const filePath = path.join(dir, ")
-  let content = fs.readFileSync(filePath", "utf8")
-            const lines = content.split("\n")
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-                line.trim().startsWith("import ")
-                line.trim().startsWith("export ")
-                line.trim().startsWith("import ")
-                line.trim().startsWith("export ")
-              if (a.includes("react") && !b.includes("react")
-              if (!a.includes("react") && b.includes("react")
-              if (a.includes("@") && !b.includes("@")
-              if (!a.includes("@") && b.includes("@")
-              if (a.startsWith(".") && !b.startsWith(".")
-              if (!a.startsWith(".") && b.startsWith(".")
-<<<<<<< HEAD
-const newContent = ["...importLines", "", "...otherLines"].join("\n");
-  fs.writeFileSync(filePath, newContent, "utf8")
-  // Skip files that can"
-const newContent = ["...importLines", ", "...otherLines"].join("\n");
-  fs.writeFileSync(filePath, newContent, "utf8")
-  // Skip files that can"
-    console.log(   Organized imports in ${improvements} files"")} catch (error) {  console.log(`  ⚠  Import organization "failed"`})
-const filesToOptimize = ["""src/components""", """src/pages""", """src/utils"""];
-          .filter(f => f.endsWith(".tsx") || f.endsWith(".ts")
-const filePath = path.join(dir, ");
-let content = fs.readFileSync(filePath", "utf8");
-const lines = content.split("\n");
-                  !line.includes("export")
-=======
-            const newContent = ["...importLines", "", "...otherLines"].join("\n")
-  fs.writeFileSync(filePath, newContent, "utf8")
-  // Skip files that can"
-            const newContent = ["...importLines", ", "...otherLines"].join("\n")
-  fs.writeFileSync(filePath, newContent, "utf8")
-  // Skip files that can"
-    console.log(   Organized imports in ${improvements} files"")} catch (error) {  console.log(`  ⚠  Import organization "failed"`})
-  const filesToOptimize = ["""src/components""", """src/pages""", """src/utils"""]
-          .filter(f => f.endsWith(".tsx") || f.endsWith(".ts")
-  const filePath = path.join(dir, ")
-  let content = fs.readFileSync(filePath", "utf8")
-            const lines = content.split("\n")
-            const lines = content.split("\n")
-                  !line.includes("export")
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  content = filteredLines.join("\n")
-            if (file.endsWith(".tsx")
-  // This is a basic optimization - in practice, you"
-  fs.writeFileSync(filePath, content, "utf8")
-  // Skip files that can"
-console.log(`   Optimized structure in ${improvements} files`)} catch (error) {  console.log(`  ⚠  Code structure optimization "failed"`})
-<<<<<<< HEAD
-const filesToOptimize = ["""src/components""", """src/pages""", """src/utils"""];
-const filesToOptimize = [""src/components"", ""src/pages"", ""src/utils""];
-          .filter(f => f.endsWith(".tsx") || f.endsWith(".ts")
-const filePath = path.join(dir, ");
-let content = fs.readFileSync(filePath", "utf8");
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+  async analyzeCodeQuality() {
+    console.log('🔍 Analyzing code quality...');
+    
+    const qualityMetrics = {
+      linting: await this.runLintingAnalysis(),
+      typescript: await this.runTypeScriptAnalysis(),
+      complexity: await this.analyzeCodeComplexity(),
+      duplication: await this.analyzeCodeDuplication(),
+      coverage: await this.analyzeTestCoverage(),
+      dependencies: await this.analyzeDependencies()
+    };
+    
+    this.qualityScore = this.calculateQualityScore(qualityMetrics);
+    return qualityMetrics;
+  }
 
-=======
->>>>>>> merged-prs-20250907-203621
-  const filesToOptimize = ["""src/components""", """src/pages""", """src/utils"""]
-  const filesToOptimize = [""src/components"", ""src/pages"", ""src/utils""]
-          .filter(f => f.endsWith(".tsx") || f.endsWith(".ts")
-  const filePath = path.join(dir, ")
-  let content = fs.readFileSync(filePath", "utf8")
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-              file.endsWith(".tsx")
-              content.includes("export default function")
-              !content.includes("/**")
-<<<<<<< HEAD
-const componentName = file.replace(".tsx", ");
-const docComment = ";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+  async runLintingAnalysis() {
+    try {
+      const result = execSync('npm run lint', { encoding: 'utf8' });
+      const lines = result.split('\n');
+      const errors = lines.filter(line => line.includes('error'));
+      const warnings = lines.filter(line => line.includes('warning'));
+      
+      return {
+        errors: errors.length,
+        warnings: warnings.length,
+        total: errors.length + warnings.length
+      };
+    } catch (error) {
+      const output = error.stdout?.toString() || '';
+      const lines = output.split('\n');
+      const errors = lines.filter(line => line.includes('error'));
+      const warnings = lines.filter(line => line.includes('warning'));
+      
+      return {
+        errors: errors.length,
+        warnings: warnings.length,
+        total: errors.length + warnings.length
+      };
+    }
+  }
 
-=======
->>>>>>> merged-prs-20250907-203621
-  const componentName = file.replace(".tsx", ")
-              const docComment = "
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  fs.writeFileSync(filePath, content, "utf8")
-  // Skip files that can"
-// console.log("   Added documentation to ${improvements} files")} catch (error) {  console.log("  ⚠  Documentation improvement "failed": ${error.message  }")
-  console.log(""   Running code quality metrics...")
-<<<<<<< HEAD
-const loc = countLinesOfCode("src");console.log(`     Lines of "code"`);
-  console.log(`"   Running code quality metrics..."`)
-const loc = countLinesOfCode("src");console.log(`     Lines of "code"`);
-const testFiles = countTestFiles(`src`);console.log(    🧪 Test "files": ${testFiles}```);
-const issues = await checkCommonIssues();console.log("    ⚠  Common issues "found": ${issues}");
-=======
-    const loc = countLinesOfCode("src");console.log(`     Lines of "code"`)
-  console.log(`"   Running code quality metrics..."`)
-    const loc = countLinesOfCode("src");console.log(`     Lines of "code"`)
-    const testFiles = countTestFiles(`src`);console.log(    🧪 Test "files": ${testFiles}```)
-    const issues = await checkCommonIssues();console.log("    ⚠  Common issues "found": ${issues}")
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  execSync("npm run lint", { "stdio": "pipe"})
-// console.log(""     Linting passed")
-  console.log(""    ⚠  Linting has issues")
-  execSync("npm run type-check", { "stdio": "pipe"})
-// console.log(""     Type checking passed")
-  console.log(")
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  } catch (error) {  console.log(    ⚠  Quality assessment "failed"})
-    console.log(`   Running code quality metrics...``)
-    const loc = countLinesOfCode("src");console.log("     Lines of "code": ${loc}
-});"
-"
-<<<<<<< HEAD
-const testFiles = countTestFiles("src");console.log(    🧪 Test "files": ${testFiles}```);
-const issues = await checkCommonIssues();console.log("    ⚠  Common issues "found": ${issues}");
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+  async runTypeScriptAnalysis() {
+    try {
+      const result = execSync('npm run type-check', { encoding: 'utf8' });
+      const lines = result.split('\n');
+      const errors = lines.filter(line => line.includes('error'));
+      
+      return {
+        errors: errors.length,
+        total: errors.length
+      };
+    } catch (error) {
+      const output = error.stdout?.toString() || '';
+      const lines = output.split('\n');
+      const errors = lines.filter(line => line.includes('error'));
+      
+      return {
+        errors: errors.length,
+        total: errors.length
+      };
+    }
+  }
 
-=======
->>>>>>> merged-prs-20250907-203621
-    const testFiles = countTestFiles("src");console.log(    🧪 Test "files": ${testFiles}```)
-    const issues = await checkCommonIssues();console.log("    ⚠  Common issues "found": ${issues}")
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  execSync("npm run lint", { "stdio": "pipe"})
-// console.log(""     Linting passed")
-  console.log(""    ⚠  Linting has issues")
-  execSync("npm run type-check", { "stdio": "pipe"})
-// console.log(""     Type checking passed")
-  console.log("     Type checking passed")
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  console.log("    ⚠  Type checking has issues")
-  } catch (error) {console.log(    ⚠  Quality assessment "failed"})
-        item.endsWith(".ts")
-<<<<<<< HEAD
-=======
-        item.endsWith(.tsx)
-        item.endsWith(".js")
-<<<<<<< HEAD
+  async analyzeCodeComplexity() {
+    console.log('🔍 Analyzing code complexity...');
+    
+    let totalComplexity = 0;
+    let fileCount = 0;
+    
+    const analyzeFile = (filePath) => {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const lines = content.split('\n');
+        
+        // Simple complexity analysis
+        let complexity = 0;
+        lines.forEach(line => {
+          if (line.includes('if') || line.includes('else')) complexity += 1;
+          if (line.includes('for') || line.includes('while')) complexity += 2;
+          if (line.includes('switch')) complexity += 3;
+          if (line.includes('catch')) complexity += 2;
+        });
+        
+        totalComplexity += complexity;
+        fileCount += 1;
+      } catch (error) {
+        // Skip files that can't be read
+      }
+    };
+    
+    const walkDir = (dir) => {
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        
+        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+          walkDir(filePath);
+        } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
+          analyzeFile(filePath);
+        }
+      });
+    };
+    
+    walkDir(path.join(this.projectRoot, 'src'));
+    
+    return {
+      averageComplexity: fileCount > 0 ? totalComplexity / fileCount : 0,
+      totalComplexity,
+      fileCount
+    };
+  }
 
-=======
-        item.endsWith(".jsx")
-  const content = fs.readFileSync(fullPath, "utf8")
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-          count += content.split("\n")
-  // Skip files that can
-  // Skip directories that can
-  count += countTestFiles(fullPath)} else if (item.includes(".test.") || item.includes(.spec.)
-  // Skip directories that can"
-  // Skip directories that can"
-    const consoleFiles = findFilesWithPattern(src, "console.")
-    const todoFiles = findFilesWithPattern(src, "TODO")
-    const fixmeFiles = findFilesWithPattern(src, "FIXME")
-  const fullPath = path.join(dir, )
-  files.push(...findFilesWithPattern(fullPath)
-        item.endsWith(".ts")
-        item.endsWith(.tsx)
-        item.endsWith(".js")
-<<<<<<< HEAD
+  async analyzeCodeDuplication() {
+    console.log('🔍 Analyzing code duplication...');
+    
+    // Simple duplication detection
+    const allCode = [];
+    const walkDir = (dir) => {
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        
+        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+          walkDir(filePath);
+        } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            allCode.push(content);
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      });
+    };
+    
+    walkDir(path.join(this.projectRoot, 'src'));
+    
+    // Find similar code blocks
+    let duplicationScore = 0;
+    for (let i = 0; i < allCode.length; i++) {
+      for (let j = i + 1; j < allCode.length; j++) {
+        const similarity = this.calculateSimilarity(allCode[i], allCode[j]);
+        if (similarity > 0.8) {
+          duplicationScore += similarity;
+        }
+      }
+    }
+    
+    return {
+      duplicationScore: Math.min(duplicationScore, 100),
+      filesAnalyzed: allCode.length
+    };
+  }
 
-=======
-        item.endsWith(".jsx")
-  const content = fs.readFileSync(fullPath, "utf8")
-          count += content.split("\n")
-  // Skip files that can"
-  // Skip directories that can"
-  count += countTestFiles(fullPath)} else if (item.includes(".test.") || item.includes(".spec.")
-  // Skip directories that can"
-  // Skip directories that can"
-    const consoleFiles = findFilesWithPattern("src", "console.")
-    const todoFiles = findFilesWithPattern("src", "TODO")
-    const fixmeFiles = findFilesWithPattern("src", "FIXME")
-  const fullPath = path.join(dir, ")
-  files.push(...findFilesWithPattern(fullPath")
-        item.endsWith(".ts")
-        item.endsWith(".tsx")
-        item.endsWith(".js")
-        item.endsWith(".jsx")
-  const content = fs.readFileSync(fullPath, "utf8")
-  // Skip files that can"
-  // Skip directories that can"
->>>>>>> origin/chore/fix-lint-and-merge
-process.on("SIGINT")
-  console.log(`� Received SIGINT, shutting down gracefully...``)
-        item.endsWith(.ts)
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        item.endsWith(".tsx")
-        item.endsWith(".js")
-        item.endsWith(".jsx")
-<<<<<<< HEAD
-const content = fs.readFileSync(fullPath, "utf8");
-          count += content.split("\n")
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+  calculateSimilarity(str1, str2) {
+    const words1 = str1.split(/\s+/);
+    const words2 = str2.split(/\s+/);
+    
+    const commonWords = words1.filter(word => words2.includes(word));
+    return commonWords.length / Math.max(words1.length, words2.length);
+  }
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  // Skip files that can"
-  // Skip directories that can"
-        item.endsWith(".ts")
-        item.endsWith(".tsx")
-        item.endsWith(".js")
-        item.endsWith(".jsx")
-const content = fs.readFileSync(fullPath, "utf8");
-          count += content.split("\n")
-  // Skip files that can"
-  // Skip directories that can"
-  count += countTestFiles(fullPath)} else if (item.includes(".test.") || item.includes(".spec.")
-  // Skip directories that can"
-const consoleFiles = findFilesWithPattern("src", "console.");
-const todoFiles = findFilesWithPattern("src", "TODO");
-const fixmeFiles = findFilesWithPattern("src", "FIXME");
-const fullPath = path.join(dir, ");
-  files.push(...findFilesWithPattern(fullPath")
-        item.endsWith(".ts")
-        item.endsWith(".tsx")
-        item.endsWith(".js")
-        item.endsWith(".jsx")
-const content = fs.readFileSync(fullPath, "utf8");
-  // Skip files that can"
-  // Skip directories that can"
-process.on("SIGINT")
-  console.log(`� Received SIGINT, shutting down gracefully...``)
-        item.endsWith(".ts")
-        item.endsWith(".tsx")
-        item.endsWith(".js")
-        item.endsWith(".jsx")
-const content = fs.readFileSync(fullPath, "utf8");
-  // Skip files that can"
-  // Skip directories that can"
-  console.log( Starting code quality automation with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
-  console.log("� Received SIGTERM, shutting down gracefully...")
+  async analyzeTestCoverage() {
+    console.log('🔍 Analyzing test coverage...');
+    
+    try {
+      // Check if tests exist
+      const testDir = path.join(this.projectRoot, 'tests');
+      const testFiles = fs.existsSync(testDir) ? fs.readdirSync(testDir) : [];
+      
+      return {
+        testFiles: testFiles.length,
+        hasTests: testFiles.length > 0,
+        coverage: testFiles.length > 0 ? Math.min(testFiles.length * 10, 100) : 0
+      };
+    } catch (error) {
+      return {
+        testFiles: 0,
+        hasTests: false,
+        coverage: 0
+      };
+    }
+  }
 
-  console.error(" Failed to start code quality "automation": ")
+  async analyzeDependencies() {
+    console.log('🔍 Analyzing dependencies...');
+    
+    try {
+      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+      const dependencies = Object.keys(packageJson.dependencies || {});
+      const devDependencies = Object.keys(packageJson.devDependencies || {});
+      
+      // Check for outdated packages
+      let outdatedCount = 0;
+      try {
+        const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
+        const outdated = JSON.parse(outdatedResult);
+        outdatedCount = Object.keys(outdated).length;
+      } catch (error) {
+        // No outdated packages
+      }
+      
+      return {
+        totalDependencies: dependencies.length + devDependencies.length,
+        outdatedPackages: outdatedCount,
+        dependencyHealth: Math.max(0, 100 - outdatedCount * 5)
+      };
+    } catch (error) {
+      return {
+        totalDependencies: 0,
+        outdatedPackages: 0,
+        dependencyHealth: 0
+      };
+    }
+  }
 
-<<<<<<< HEAD
-// Get automation interval from environment variable ("default")"
-=======
+  calculateQualityScore(metrics) {
+    let score = 100;
+    
+    // Deduct points for issues
+    score -= metrics.linting.errors * 2;
+    score -= metrics.linting.warnings * 0.5;
+    score -= metrics.typescript.errors * 3;
+    score -= Math.min(metrics.complexity.averageComplexity * 5, 20);
+    score -= metrics.duplication.duplicationScore * 0.5;
+    score -= (100 - metrics.coverage.coverage) * 0.3;
+    score -= (100 - metrics.dependencies.dependencyHealth) * 0.2;
+    
+    return Math.max(0, Math.round(score));
+  }
 
-  console.error( Failed to start code quality "automation": )
+  async generateQualityReport(metrics) {
+    const endTime = Date.now();
+    const duration = endTime - this.startTime;
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: `${duration}ms`,
+      qualityScore: this.qualityScore,
+      metrics,
+      summary: `Code quality score: ${this.qualityScore}/100`,
+      recommendations: this.generateRecommendations(metrics)
+    };
+    
+    const reportPath = path.join(this.reportsDir, 'code-quality-report.json');
+    await writeFile(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log('\n📊 Code Quality Report:');
+    console.log(`⏱️  Duration: ${duration}ms`);
+    console.log(`🎯 Quality Score: ${this.qualityScore}/100`);
+    console.log(`📁 Report saved to: ${reportPath}`);
+    
+    return report;
+  }
 
-  console.error( Failed to start code quality "automation": )
-=======
->>>>>>> merged-prs-20250907-203621
-  const content = fs.readFileSync(fullPath, "utf8")
-  // Skip files that can"
-  // Skip directories that can"
-  console.log( Starting code quality automation with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
-  console.log("� Received SIGTERM, shutting down gracefully...")
-  console.error(" Failed to start code quality "automation": ")
+  generateRecommendations(metrics) {
+    const recommendations = [];
+    
+    if (metrics.linting.errors > 0) {
+      recommendations.push('Fix linting errors to improve code quality');
+    }
+    
+    if (metrics.linting.warnings > 10) {
+      recommendations.push('Address linting warnings to improve code consistency');
+    }
+    
+    if (metrics.typescript.errors > 0) {
+      recommendations.push('Fix TypeScript errors to improve type safety');
+    }
+    
+    if (metrics.complexity.averageComplexity > 5) {
+      recommendations.push('Reduce code complexity by breaking down complex functions');
+    }
+    
+    if (metrics.duplication.duplicationScore > 20) {
+      recommendations.push('Reduce code duplication by extracting common functionality');
+    }
+    
+    if (metrics.coverage.coverage < 50) {
+      recommendations.push('Increase test coverage to improve code reliability');
+    }
+    
+    if (metrics.dependencies.outdatedPackages > 5) {
+      recommendations.push('Update outdated dependencies to improve security and performance');
+    }
+    
+    return recommendations;
+  }
+
+  async run() {
+    await this.init();
+    
+    try {
+      const metrics = await this.analyzeCodeQuality();
+      const report = await this.generateQualityReport(metrics);
+      return report;
+    } catch (error) {
+      console.error('❌ Error in Code Quality Automation:', error);
+      throw error;
+    }
+  }
+}
+
+// Run the automation if called directly
+if (require.main === module) {
+  const automation = new CodeQualityAutomation();
+  automation.run().catch(console.error);
+}
+
+module.exports = CodeQualityAutomation;

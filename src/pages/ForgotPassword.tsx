@@ -7,16 +7,28 @@ export default function ForgotPassword() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [step, setStep] = useState<'email' | 'verification' | 'reset'>('email');
+  const [verificationCode, setVerificationCode] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
 
     setIsLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitted(true);
+    setError('');
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSuccess('Verification code sent to your email!');
+      setStep('verification');
+    } catch (err) {
+      setError('Failed to send verification code. Please try again.');
+    } finally {
       setIsLoading(false);
     }, 2000);
   };
@@ -30,11 +42,9 @@ export default function ForgotPassword() {
 
     setIsLoading(true);
     setError('');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
       setSuccess('Code verified! Please set your new password.');
       setStep('reset');
     } catch (err) {
@@ -57,11 +67,9 @@ export default function ForgotPassword() {
 
     setIsLoading(true);
     setError('');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       setSuccess('Password reset successfully! Redirecting to login...');
       setTimeout(() => {
         window.location.href = '/login';
@@ -82,7 +90,6 @@ export default function ForgotPassword() {
   };
 
   const passwordStrength = getPasswordStrength(newPassword);
-
   const securityFeatures = [
     {
       icon: <Shield className="w-6 h-6" />,
@@ -175,7 +182,6 @@ export default function ForgotPassword() {
       </form>
     </motion.div>
   );
-
   const renderVerificationStep = () => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -253,7 +259,6 @@ export default function ForgotPassword() {
       </form>
     </motion.div>
   );
-
   const renderResetStep = () => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -352,7 +357,6 @@ export default function ForgotPassword() {
       </form>
     </motion.div>
   );
-
   return (
     <>
       <SEO

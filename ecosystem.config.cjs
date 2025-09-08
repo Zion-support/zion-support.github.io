@@ -35,10 +35,10 @@ module.exports = {
       }
     },
 
-    // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    // Enhanced Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
-      name: 'intelligent-predictive-monitor',
-      script: './scripts/automation/intelligent-predictive-monitor.cjs',
+      name: 'enhanced-error-fixer',
+      script: './scripts/automation/enhanced-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -77,7 +77,34 @@ module.exports = {
       }
     },
 
-    // 🛡️ NEW: Intelligent Error Prevention - runs every 10 minutes (HIGHEST PRIORITY)
+    // Code Quality Automation - runs every 2 hours
+    {
+      name: 'code-quality-automation',
+      script: './scripts/automation/code-quality-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Automation Orchestrator - runs continuously and manages all automations
+    {
+      name: 'automation-orchestrator',
+      script: './scripts/automation/automation-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      }
+    },
+
+    // Continuous link checker - runs every 30 minutes
     {
       name: 'intelligent-error-prevention',
       script: './scripts/automation/intelligent-error-prevention.cjs',

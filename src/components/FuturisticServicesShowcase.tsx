@@ -253,7 +253,7 @@ export default function FuturisticServicesShowcase(...args: []):  {
 							>
 								<div className="flex items-center justify-between mb-4">
 									<div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
-										{React.createElement(service.icon, { className: "w-6 h-6 text-white" })}
+										<service.icon className="w-6 h-6 text-white"     />
 									</div>
 									<span className={`px-2 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(service.status)}`}>
 										{getStatusText(service.status)}
