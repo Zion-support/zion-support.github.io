@@ -1,25 +1,17 @@
 import { checkOnline, safeFetch } from '@/integrations/supabase/client';
-import { afterEach, vi } from 'vitest';
-
-let originalNavigator: Navigator | undefined;
+import { vi, afterEach } from 'vitest';
 
 afterEach(() => {
   vi.restoreAllMocks();
-  if (originalNavigator) {
-    Object.defineProperty(globalThis, 'navigator', {
-      value: originalNavigator,
-      writable: true,
-    });
-  } else {
-    delete (globalThis as any).navigator;
-  }
+  // clean up navigator modifications between tests
+  delete (globalThis as any).navigator;
 });
 
 // Test that checkOnline returns false when navigator is offline
 it('checkOnline returns false when navigator is offline', async () => {
-  originalNavigator = globalThis.navigator;
   Object.defineProperty(globalThis, 'navigator', {
     value: { onLine: false },
+    configurable: true,
     writable: true,
   });
   const result = await checkOnline();
@@ -42,9 +34,9 @@ it('checkOnline returns false when navigator is offline', async () => {
 
 // Test that safeFetch throws custom error when fetch fails
 it('safeFetch throws when fetch rejects', async () => {
-  originalNavigator = globalThis.navigator;
   Object.defineProperty(globalThis, 'navigator', {
     value: { onLine: true },
+    configurable: true,
     writable: true,
   });
   // ensure the online check succeeds so safeFetch proceeds to call fetch
