@@ -1,74 +1,39 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
-    "useDefineForClassFields": true,
+    "target": "es5",
     "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
-    "module": "ESNext",
+    "allowJs": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"]
-    },
-    "types": ["vite/client", "react", "react-router-dom", "node"],
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
     "incremental": true,
-    "noEmitOnError": false
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
   "include": [
-    "src/**/*",
-    "pages/**/*",
-    "*.ts",
-    "*.tsx"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "dist",
-    "out",
-    "build",
-    "coverage",
-    "src-disabled",
-    "src.broken",
-    "src_disabled_*",
-    "pages._archive_corrupted",
-    "pages.bak",
-    "*.disabled",
-    "*.backup",
-    "*.bak",
-    "recovered-branches",
-    "backup",
-    "corrupted*",
-    "*_backup*",
-    "temp*",
-    "tmp*",
-    "*.tmp",
-    "*.temp"
+    "node_modules"
   ]
 }
