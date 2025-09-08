@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+FROM python:3.12-slim
+=======
 FROM python:3.10-slim
+>>>>>>> origin/cursor/install-python-dependencies-with-mise-d777
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
