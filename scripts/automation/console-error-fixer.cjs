@@ -1,322 +1,121 @@
 #!/usr/bin/env node
 
-/**
- * Console Error Fixer Automation
- * Monitors and automatically fixes console errors in the Zion Tech Group application
- */
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Configuration
-const CONFIG = {
-  name: 'console-error-fixer',
-  interval: process.env.AUTOMATION_INTERVAL || 900000, // 15 minutes default
-  logFile: path.join(__dirname, '../../logs/console-error-fixer.log'),
-  errorPatterns: [
-    /console\.error\(/g,
-    /console\.warn\(/g,
-    /console\.log\(/g,
-    /throw new Error\(/g,
-    /Error: /g
-  ],
-  fixStrategies: {
-    'console.error': '// console.error removed by automation',
-    'console.warn': '// console.warn removed by automation',
-    'console.log': '// console.log removed by automation',
-    'throw new Error': '// Error throwing removed by automation'
-  }
-};
+console.log('🚀 Console Error Fixer Automation Started');
 
-// Utility functions
-function log(message, level = 'INFO') {
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level}] ${message}`;
+// Function to scan for console errors in code
+function scanForConsoleErrors() {
+  console.log('📋 Scanning for console errors...');
   
-  console.log(logMessage);
-  
-  // Ensure log directory exists
-  const logDir = path.dirname(CONFIG.logFile);
-  if (!fs.existsSync(logDir)) {
-    fs.mkdirSync(logDir, { recursive: true });
-  }
-  
-  // Append to log file
-  fs.appendFileSync(CONFIG.logFile, logMessage + '\n');
-}
-
-function scanForErrors() {
   try {
-    log('Starting console error scan...');
+    // Scan common directories for console statements
+    const directories = ['src', 'pages', 'components', 'utils'];
+    let consoleErrors = [];
     
-    const srcDir = path.join(__dirname, '../../src');
-    const pagesDir = path.join(__dirname, '../../pages');
-    const componentsDir = path.join(__dirname, '../../components');
-    
-    let totalFiles = 0;
-    let filesWithErrors = 0;
-    let totalErrors = 0;
-    
-    // Scan source files
-    const scanDirectory = (dir) => {
-      if (!fs.existsSync(dir)) return;
-      
-      const files = fs.readdirSync(dir, { withFileTypes: true });
-      
-      for (const file of files) {
-        if (file.isDirectory()) {
-          scanDirectory(path.join(dir, file.name));
-        } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
-          totalFiles++;
-          const filePath = path.join(dir, file.name);
-          const errors = scanFileForErrors(filePath);
-          
-          if (errors.length > 0) {
-            filesWithErrors++;
-            totalErrors += errors.length;
-            log(`Found ${errors.length} errors in ${filePath}`, 'WARN');
-          }
-        }
-      }
-    };
-    
-    scanDirectory(srcDir);
-    scanDirectory(pagesDir);
-    scanDirectory(componentsDir);
-    
-    log(`Scan complete: ${totalFiles} files scanned, ${filesWithErrors} files with errors, ${totalErrors} total errors found`);
-    
-    return { totalFiles, filesWithErrors, totalErrors };
-    
-  } catch (error) {
-    log(`Error during scan: ${error.message}`, 'ERROR');
-    return null;
-  }
-}
-
-function scanFileForErrors(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const errors = [];
-    
-    CONFIG.errorPatterns.forEach((pattern, index) => {
-      const matches = content.match(pattern);
-      if (matches) {
-        errors.push({
-          pattern: Object.keys(CONFIG.fixStrategies)[index],
-          count: matches.length,
-          filePath
-        });
+    directories.forEach(dir => {
+      const dirPath = path.join(process.cwd(), dir);
+      if (fs.existsSync(dirPath)) {
+        scanDirectory(dirPath, consoleErrors);
       }
     });
     
-    return errors;
+    console.log(`🔍 Found ${consoleErrors.length} potential console statements`);
+    return consoleErrors;
   } catch (error) {
-    log(`Error reading file ${filePath}: ${error.message}`, 'ERROR');
+    console.error('❌ Error scanning for console statements:', error.message);
     return [];
   }
 }
 
-function fixErrors() {
+function scanDirectory(dirPath, consoleErrors) {
   try {
-    log('Starting error fixing process...');
+    const files = fs.readdirSync(dirPath);
     
-    const srcDir = path.join(__dirname, '../../src');
-    const pagesDir = path.join(__dirname, '../../pages');
-    const componentsDir = path.join(__dirname, '../../components');
-    
-    let filesFixed = 0;
-    let totalFixes = 0;
-    
-    const fixDirectory = (dir) => {
-      if (!fs.existsSync(dir)) return;
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stat = fs.statSync(filePath);
       
-      const files = fs.readdirSync(dir, { withFileTypes: true });
-      
-      for (const file of files) {
-        if (file.isDirectory()) {
-          fixDirectory(path.join(dir, file.name));
-        } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
-          const filePath = path.join(dir, file.name);
-          const fixes = fixFileErrors(filePath);
-          
-          if (fixes > 0) {
-            filesFixed++;
-            totalFixes += fixes;
-            log(`Fixed ${fixes} errors in ${filePath}`);
-          }
-        }
-      }
-    };
-    
-    fixDirectory(srcDir);
-    fixDirectory(pagesDir);
-    fixDirectory(componentsDir);
-    
-    log(`Error fixing complete: ${filesFixed} files fixed, ${totalFixes} total fixes applied`);
-    
-    return { filesFixed, totalFixes };
-    
-  } catch (error) {
-    log(`Error during fixing: ${error.message}`, 'ERROR');
-    return null;
-  }
-}
-
-function fixFileErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let fixes = 0;
-    
-    // Apply fixes
-    Object.entries(CONFIG.fixStrategies).forEach(([pattern, replacement]) => {
-      const regex = new RegExp(pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-      const matches = content.match(regex);
-      
-      if (matches) {
-        content = content.replace(regex, replacement);
-        fixes += matches.length;
+      if (stat.isDirectory()) {
+        scanDirectory(filePath, consoleErrors);
+      } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
+        scanFile(filePath, consoleErrors);
       }
     });
-    
-    // Only write if changes were made
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      log(`Applied ${fixes} fixes to ${filePath}`);
-    }
-    
-    return fixes;
-    
   } catch (error) {
-    log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');
-    return 0;
+    console.error(`❌ Error scanning directory ${dirPath}:`, error.message);
   }
 }
 
-function runHealthCheck() {
+function scanFile(filePath, consoleErrors) {
   try {
-    log('Running health check...');
+    const content = fs.readFileSync(filePath, 'utf8');
+    const lines = content.split('\n');
     
-    // Check if key directories exist
-    const requiredDirs = [
-      path.join(__dirname, '../../src'),
-      path.join(__dirname, '../../pages'),
-      path.join(__dirname, '../../components')
-    ];
-    
-    const missingDirs = requiredDirs.filter(dir => !fs.existsSync(dir));
-    
-    if (missingDirs.length > 0) {
-      log(`Missing required directories: ${missingDirs.join(', ')}`, 'WARN');
-      return false;
-    }
-    
-    // Check if we can read/write files
-    const testFile = path.join(__dirname, '../../temp-test-file');
-    try {
-      fs.writeFileSync(testFile, 'test');
-      fs.unlinkSync(testFile);
-    } catch (error) {
-      log(`File system access test failed: ${error.message}`, 'ERROR');
-      return false;
-    }
-    
-    log('Health check passed');
-    return true;
-    
+    lines.forEach((line, index) => {
+      if (line.includes('console.log') || line.includes('console.error') || line.includes('console.warn')) {
+        consoleErrors.push({
+          file: filePath,
+          line: index + 1,
+          content: line.trim()
+        });
+      }
+    });
   } catch (error) {
-    log(`Health check failed: ${error.message}`, 'ERROR');
-    return false;
+    console.error(`❌ Error scanning file ${filePath}:`, error.message);
   }
 }
 
-// Main automation loop
-async function main() {
-  log(`Starting ${CONFIG.name} automation`);
+// Function to fix console errors (remove or replace with proper logging)
+function fixConsoleErrors(consoleErrors) {
+  console.log('🔧 Fixing console errors...');
   
-  // Initial health check
-  if (!runHealthCheck()) {
-    log('Initial health check failed, exiting', 'ERROR');
-    process.exit(1);
-  }
+  let fixedCount = 0;
   
-  // Main loop
-  setInterval(async () => {
+  consoleErrors.forEach(error => {
     try {
-      log('Running automation cycle...');
+      const content = fs.readFileSync(error.file, 'utf8');
+      const lines = content.split('\n');
       
-      // Scan for errors
-      const scanResults = scanForErrors();
-      if (scanResults && scanResults.totalErrors > 0) {
-        log(`Found ${scanResults.totalErrors} errors, starting fix process...`);
-        
-        // Fix errors
-        const fixResults = fixErrors();
-        if (fixResults) {
-          log(`Fixed ${fixResults.totalFixes} errors in ${fixResults.filesFixed} files`);
-        }
-      } else {
-        log('No errors found, system is clean');
+      // Replace console statements with proper logging or remove them
+      if (lines[error.line - 1].includes('console.log')) {
+        lines[error.line - 1] = lines[error.line - 1].replace(/console\.log\([^)]*\);?/g, '// console.log removed for production');
+        fixedCount++;
       }
       
-      // Health check
-      runHealthCheck();
+      const newContent = lines.join('\n');
+      fs.writeFileSync(error.file, newContent, 'utf8');
       
     } catch (error) {
-      log(`Error in main loop: ${error.message}`, 'ERROR');
+      console.error(`❌ Error fixing file ${error.file}:`, error.message);
     }
-  }, CONFIG.interval);
-  
-  // Initial run
-  try {
-    log('Running initial scan...');
-    const scanResults = scanForErrors();
-    if (scanResults && scanResults.totalErrors > 0) {
-      log(`Initial scan found ${scanResults.totalErrors} errors, starting fix process...`);
-      const fixResults = fixErrors();
-      if (fixResults) {
-        log(`Initial fix complete: ${fixResults.totalFixes} errors fixed in ${fixResults.filesFixed} files`);
-      }
-    }
-  } catch (error) {
-    log(`Error in initial run: ${error.message}`, 'ERROR');
-  }
-}
-
-// Error handling
-process.on('uncaughtException', (error) => {
-  log(`Uncaught Exception: ${error.message}`, 'ERROR');
-  log(`Stack: ${error.stack}`, 'ERROR');
-});
-
-process.on('unhandledRejection', (reason, promise) => {
-  log(`Unhandled Rejection at: ${promise}, reason: ${reason}`, 'ERROR');
-});
-
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  log('Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-process.on('SIGINT', () => {
-  log('Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the automation
-if (require.main === module) {
-  main().catch(error => {
-    log(`Failed to start automation: ${error.message}`, 'ERROR');
-    process.exit(1);
   });
+  
+  console.log(`✅ Fixed ${fixedCount} console statements`);
+  return fixedCount;
 }
 
-module.exports = {
-  scanForErrors,
-  fixErrors,
-  runHealthCheck,
-  main
-};
+// Main execution
+function main() {
+  console.log('🔄 Starting console error fixer automation...');
+  
+  const consoleErrors = scanForConsoleErrors();
+  
+  if (consoleErrors.length > 0) {
+    const fixedCount = fixConsoleErrors(consoleErrors);
+    console.log(`🎯 Automation completed: ${fixedCount} console statements fixed`);
+  } else {
+    console.log('✅ No console statements found to fix');
+  }
+  
+  console.log('🏁 Console Error Fixer Automation Completed');
+}
+
+// Run the automation
+main();
+
+// Keep the process running for PM2
+setInterval(() => {
+  console.log('💓 Console Error Fixer heartbeat...');
+}, 900000); // 15 minutes

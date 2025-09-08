@@ -215,10 +215,21 @@ const InteractiveUserExperience: React.FC = () => {
     setUserActivities(activities);
   }, []);
 
-  const updatePreference = useCallback((id: string, value: string | boolean | number)    => {
-    setPreferences(prev => prev.map(pref => 
-      pref.id === id ? { ...pref, value } : pref
-    ));
+  const submitFeedback = useCallback(() => {
+    // Here you would typically send feedback to your backend
+    // console.log removed for production
+    
+    // Update user engagement
+    setUserEngagement(prev => ({
+      ...prev,
+      interactions: prev.interactions + 1
+    }));
+    
+    // Show success message
+    alert('Thank you for your feedback!');
+    setShowFeedback(false);
+    setFeedbackMessage('');
+  }, [feedbackType, feedbackMessage]);
 
     // Apply preference changes
     const preference = preferences.find(p => p.id === id);

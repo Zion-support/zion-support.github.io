@@ -98,6 +98,77 @@ class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
   }
+
+  private static generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      // In a real app, you'd send this to your error monitoring service
+      // like Sentry, LogRocket, or a custom endpoint
+      const errorReport = {
+        errorId: this.state.errorId,
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      };
+
+      // Example: Send to monitoring service
+      // await fetch('/api/error-reporting', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorReport)
+      // });
+
+      // console.log removed for production
+    } catch (reportingError) {
+      console.warn('Failed to report error:', reportingError);
+    }
+  };
+
+  private handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      showStackTrace: false
+    });
+  };
+
+  private handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  private toggleStackTrace = () => {
+    this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
+  };
+
+  private copyErrorDetails = async () => {
+    if (this.state.error && this.state.errorInfo) {
+      const errorDetails = `
+Error ID: ${this.state.errorId}
+Message: ${this.state.error.message}
+Stack: ${this.state.error.stack}
+Component Stack: ${this.state.errorInfo.componentStack}
+URL: ${window.location.href}
+Timestamp: ${new Date().toISOString()}
+      `.trim();
+
+      try {
+        await navigator.clipboard.writeText(errorDetails);
+        // You could show a toast notification here
+        // console.log removed for production
+      } catch (err) {
+        console.warn('Failed to copy error details:', err);
+      }
+    }
+  };
+
   render() {
     if (this.state.hasError) {
       // Custom fallback UI

@@ -24,11 +24,41 @@ export default function Login() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Login attempt:', formData);
-    alert('Login functionality will be implemented with authentication system.');
-  };
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {}
+
+    if (!formData.email.trim()) newErrors.email = 'Email is required'
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
+    
+    if (!formData.password) newErrors.password = 'Password is required'
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!validateForm()) return
+
+    setIsSubmitting(true)
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      
+      // Success - redirect or show success message
+      // console.log removed for production
+      
+    } catch (error) {
+      console.error('Login error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const title = 'Sign In — Zion Tech Group'
+  const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
 
   return (
     <>

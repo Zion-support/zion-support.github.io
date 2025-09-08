@@ -1,25 +1,6 @@
 module.exports = {
-  apps: [
-    // Main application - Vite dev server
-    {
-      name: 'bolt-app-dev',
-      script: 'npm',
-      args: 'run dev',
-      cwd: './',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      },
-      env_production: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      }
-    },
-
+  // Enhanced Automation Processes
+  automation: [
     // Core automation processes
     {
       name: 'console-error-fixer',

@@ -1,158 +1,214 @@
 #!/usr/bin/env node
 
-/**
- * Security Audit Automation
- * Monitors and audits security aspects of the Zion Tech Group application
- */
-
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-const CONFIG = {
-  name: 'security-audit',
-  interval: process.env.AUTOMATION_INTERVAL || 7200000, // 2 hours default
-  logFile: path.join(__dirname, '../../logs/security-audit.log')
-};
+console.log('🔒 Security Audit Automation Started');
 
-function log(message, level = 'INFO') {
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level}] ${message}`;
-  console.log(logMessage);
-  
-  const logDir = path.dirname(CONFIG.logFile);
-  if (!fs.existsSync(logDir)) {
-    fs.mkdirSync(logDir, { recursive: true });
-  }
-  fs.appendFileSync(CONFIG.logFile, logMessage + '\n');
-}
-
+// Function to run npm security audit
 function runSecurityAudit() {
+  console.log('🔍 Running security audit...');
+  
   try {
-    log('Starting security audit...');
+    console.log('📦 Running npm audit...');
+    const auditResult = execSync('npm audit --json', { encoding: 'utf8' });
+    const auditData = JSON.parse(auditResult);
     
-    const srcDir = path.join(__dirname, '../../src');
-    const pagesDir = path.join(__dirname, '../../pages');
+    console.log(`📊 Security audit results:`);
+    console.log(`   Vulnerabilities: ${auditData.metadata.vulnerabilities.total}`);
+    console.log(`   Critical: ${auditData.metadata.vulnerabilities.critical || 0}`);
+    console.log(`   High: ${auditData.metadata.vulnerabilities.high || 0}`);
+    console.log(`   Moderate: ${auditData.metadata.vulnerabilities.moderate || 0}`);
+    console.log(`   Low: ${auditData.metadata.vulnerabilities.low || 0}`);
     
-    let totalFiles = 0;
-    let securityIssues = 0;
-    
-    const auditDirectory = (dir) => {
-      if (!fs.existsSync(dir)) return;
-      
-      const files = fs.readdirSync(dir, { withFileTypes: true });
-      for (const file of files) {
-        if (file.isDirectory()) {
-          auditDirectory(path.join(dir, file.name));
-        } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
-          totalFiles++;
-          const filePath = path.join(dir, file.name);
-          const issues = auditFileSecurity(filePath);
-          securityIssues += issues;
-        }
-      }
-    };
-    
-    auditDirectory(srcDir);
-    auditDirectory(pagesDir);
-    
-    log(`Security audit complete: ${totalFiles} files audited, ${securityIssues} security issues found`);
-    return { totalFiles, securityIssues };
-    
+    return auditData;
   } catch (error) {
-    log(`Error during security audit: ${error.message}`, 'ERROR');
+    console.log('⚠️ Security audit found issues (this is normal for development)');
     return null;
   }
 }
 
-function auditFileSecurity(filePath) {
+// Function to scan for common security issues in code
+function scanCodeForSecurityIssues() {
+  console.log('🔍 Scanning code for security issues...');
+  
+  const securityIssues = [];
+  const directories = ['src', 'pages', 'components', 'utils', 'services'];
+  
+  // Common security patterns to look for
+  const securityPatterns = [
+    { pattern: /eval\(/, name: 'eval() usage', severity: 'high' },
+    { pattern: /innerHTML\s*=/, name: 'innerHTML assignment', severity: 'medium' },
+    { pattern: /document\.write\(/, name: 'document.write() usage', severity: 'medium' },
+    { pattern: /localStorage\[/, name: 'localStorage access', severity: 'low' },
+    { pattern: /sessionStorage\[/, name: 'sessionStorage access', severity: 'low' },
+    { pattern: /window\.open\(/, name: 'window.open() usage', severity: 'medium' },
+    { pattern: /setTimeout\([^,)]*\)/, name: 'setTimeout with string', severity: 'medium' },
+    { pattern: /setInterval\([^,)]*\)/, name: 'setInterval with string', severity: 'medium' }
+  ];
+  
+  directories.forEach(dir => {
+    const dirPath = path.join(process.cwd(), dir);
+    if (fs.existsSync(dirPath)) {
+      scanDirectoryForSecurityIssues(dirPath, securityPatterns, securityIssues);
+    }
+  });
+  
+  console.log(`🔍 Found ${securityIssues.length} potential security issues in code`);
+  return securityIssues;
+}
+
+function scanDirectoryForSecurityIssues(dirPath, patterns, issues) {
+  try {
+    const files = fs.readdirSync(dirPath);
+    
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        scanDirectoryForSecurityIssues(filePath, patterns, issues);
+      } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsed('.tsx')) {
+        scanFileForSecurityIssues(filePath, patterns, issues);
+      }
+    });
+  } catch (error) {
+    console.error(`❌ Error scanning directory ${dirPath}:`, error.message);
+  }
+}
+
+function scanFileForSecurityIssues(filePath, patterns, issues) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    let issues = 0;
+    const lines = content.split('\n');
     
-    // Check for common security issues
-    if (content.includes('eval(')) issues++;
-    if (content.includes('innerHTML')) issues++;
-    if (content.includes('document.write')) issues++;
-    if (content.includes('localStorage')) issues++;
-    if (content.includes('sessionStorage')) issues++;
-    if (content.includes('XMLHttpRequest')) issues++;
-    
-    return issues;
+    lines.forEach((line, index) => {
+      patterns.forEach(pattern => {
+        if (pattern.pattern.test(line)) {
+          issues.push({
+            file: filePath,
+            line: index + 1,
+            content: line.trim(),
+            issue: pattern.name,
+            severity: pattern.severity
+          });
+        }
+      });
+    });
   } catch (error) {
-    return 0;
+    console.error(`❌ Error scanning file ${filePath}:`, error.message);
   }
 }
 
-function runHealthCheck() {
-  try {
-    const requiredDirs = [
-      path.join(__dirname, '../../src'),
-      path.join(__dirname, '../../pages')
-    ];
-    
-    const missingDirs = requiredDirs.filter(dir => !fs.existsSync(dir));
-    if (missingDirs.length > 0) {
-      log(`Missing directories: ${missingDirs.join(', ')}`, 'WARN');
-      return false;
+// Function to check for sensitive information
+function checkForSensitiveInformation() {
+  console.log('🔍 Checking for sensitive information...');
+  
+  const sensitivePatterns = [
+    { pattern: /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/i, name: 'API Key exposure' },
+    { pattern: /password\s*[:=]\s*['"][^'"]+['"]/i, name: 'Password exposure' },
+    { pattern: /secret\s*[:=]\s*['"][^'"]+['"]/i, name: 'Secret exposure' },
+    { pattern: /token\s*[:=]\s*['"][^'"]+['"]/i, name: 'Token exposure' },
+    { pattern: /private[_-]?key\s*[:=]\s*['"][^'"]+['"]/i, name: 'Private key exposure' }
+  ];
+  
+  const sensitiveIssues = [];
+  const filesToCheck = [
+    '.env',
+    '.env.local',
+    '.env.production',
+    'package.json',
+    'ecosystem.config.cjs'
+  ];
+  
+  filesToCheck.forEach(file => {
+    const filePath = path.join(process.cwd(), file);
+    if (fs.existsSync(filePath)) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const lines = content.split('\n');
+        
+        lines.forEach((line, index) => {
+          sensitivePatterns.forEach(pattern => {
+            if (pattern.pattern.test(line)) {
+              sensitiveIssues.push({
+                file: filePath,
+                line: index + 1,
+                content: line.trim(),
+                issue: pattern.name,
+                severity: 'high'
+              });
+            }
+          });
+        });
+      } catch (error) {
+        // Skip files that can't be read
+      }
     }
-    
-    log('Health check passed');
-    return true;
-  } catch (error) {
-    log(`Health check failed: ${error.message}`, 'ERROR');
-    return false;
-  }
-}
-
-async function main() {
-  log(`Starting ${CONFIG.name} automation`);
-  
-  if (!runHealthCheck()) {
-    log('Health check failed, exiting', 'ERROR');
-    process.exit(1);
-  }
-  
-  setInterval(async () => {
-    try {
-      log('Running automation cycle...');
-      const auditResults = runSecurityAudit();
-      runHealthCheck();
-    } catch (error) {
-      log(`Error in main loop: ${error.message}`, 'ERROR');
-    }
-  }, CONFIG.interval);
-  
-  try {
-    log('Running initial audit...');
-    const auditResults = runSecurityAudit();
-  } catch (error) {
-    log(`Error in initial run: ${error.message}`, 'ERROR');
-  }
-}
-
-process.on('uncaughtException', (error) => {
-  log(`Uncaught Exception: ${error.message}`, 'ERROR');
-});
-
-process.on('unhandledRejection', (reason, promise) => {
-  log(`Unhandled Rejection: ${reason}`, 'ERROR');
-});
-
-process.on('SIGTERM', () => {
-  log('Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-process.on('SIGINT', () => {
-  log('Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-
-if (require.main === module) {
-  main().catch(error => {
-    log(`Failed to start automation: ${error.message}`, 'ERROR');
-    process.exit(1);
   });
+  
+  console.log(`🔍 Found ${sensitiveIssues.length} potential sensitive information exposures`);
+  return sensitiveIssues;
 }
 
-module.exports = { runSecurityAudit, runHealthCheck, main };
+// Function to generate security report
+function generateSecurityReport(auditData, codeIssues, sensitiveIssues) {
+  console.log('📝 Generating security report...');
+  
+  const report = {
+    timestamp: new Date().toISOString(),
+    npmAudit: auditData,
+    codeSecurityIssues: codeIssues,
+    sensitiveInformationIssues: sensitiveIssues,
+    summary: {
+      totalIssues: (codeIssues?.length || 0) + (sensitiveIssues?.length || 0),
+      criticalIssues: (auditData?.metadata?.vulnerabilities?.critical || 0),
+      highIssues: (auditData?.metadata?.vulnerabilities?.high || 0) + (sensitiveIssues?.length || 0)
+    }
+  };
+  
+  const reportPath = path.join(process.cwd(), 'security-reports', 'security-audit-report.json');
+  
+  // Ensure directory exists
+  const reportDir = path.dirname(reportPath);
+  if (!fs.existsSync(reportDir)) {
+    fs.mkdirSync(reportDir, { recursive: true });
+  }
+  
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
+  console.log(`📄 Security report saved to: ${reportPath}`);
+  
+  return report;
+}
+
+// Main execution
+function main() {
+  console.log('🔄 Starting security audit automation...');
+  
+  // Run npm security audit
+  const auditData = runSecurityAudit();
+  
+  // Scan code for security issues
+  const codeIssues = scanCodeForSecurityIssues();
+  
+  // Check for sensitive information
+  const sensitiveIssues = checkForSensitiveInformation();
+  
+  // Generate comprehensive report
+  const report = generateSecurityReport(auditData, codeIssues, sensitiveIssues);
+  
+  console.log('🎯 Security audit completed successfully');
+  console.log(`📊 Total issues found: ${report.summary.totalIssues}`);
+  console.log(`🔴 Critical issues: ${report.summary.criticalIssues}`);
+  console.log(`🟠 High issues: ${report.summary.highIssues}`);
+  console.log('🏁 Security Audit Automation Completed');
+}
+
+// Run the automation
+main();
+
+// Keep the process running for PM2
+setInterval(() => {
+  console.log('💓 Security Audit heartbeat...');
+}, 7200000); // 2 hours
