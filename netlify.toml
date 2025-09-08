@@ -45,11 +45,3 @@
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=300"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
- 
->>>>>>> origin/pr/12597
-=======
->>>>>>> origin/pr/12596
