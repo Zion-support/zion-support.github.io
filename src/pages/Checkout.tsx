@@ -4,6 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 import { CheckoutShippingOptions, ShippingRate } from '@/components/CheckoutShippingOptions';
 import {
@@ -19,11 +20,42 @@ import {
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
   const watchAddr = form.watch(['name', 'address', 'city', 'country']);
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const productParam = params.get('product');
+    const stored = localStorage.getItem('cart');
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored) as CartItem[];
+        if (parsed.length > 0) {
+          setItems(parsed);
+          return;
+        }
+      } catch {
+        // ignore parsing errors
+      }
+    }
+    if (productParam) {
+      setItems([
+        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
+      ]);
+    } else {
+      // Provide mock data if cart empty
+      setItems([
+        {
+          id: 'prod_mock',
+          name: 'Test Item',
+          price: 25,
+          quantity: 1,
+        },
+      ]);
+    }
+  }, [location.search]);
 
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
@@ -32,7 +64,7 @@ export default function Checkout() {
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const res = await fetch('/api/create-payment-intent', {
+      const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: total }),

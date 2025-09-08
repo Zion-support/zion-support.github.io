@@ -174,7 +174,22 @@ export function LoginForm() {
   FormLabel,;
         fireEvent('login', { method: 'email' });
       }
-    } finally {;
+
+      await login(data.email, data.password);
+
+      const next = searchParams.get('next') || '/';
+      if (next === '/checkout') {
+        const intended = sessionStorage.getItem('intendedProduct');
+        sessionStorage.removeItem('intendedProduct');
+        if (intended) {
+          navigate(`/checkout?product=${intended}`);
+        } else {
+          navigate('/checkout');
+        }
+      } else {
+        navigate(next);
+      }
+    } finally {
       setIsSubmitting(false);
     }
   };
