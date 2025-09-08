@@ -12,8 +12,5 @@ core
 tsconfig.tsbuildinfo
 core
 tsconfig.tsbuildinfo
-<<<<<<< HEAD
-dist
-=======
 dist/
->>>>>>> main
+build/
