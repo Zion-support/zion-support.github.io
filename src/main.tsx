@@ -2,56 +2,62 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-let showApiError = (error: unknown) => console.error(error);
 
 // Import i18n configuration
 import './i18n';
-const LanguageProvider: React.FC<{ children: React.ReactNode; authState?: any }> = ({ children }) => <>{children}</>;
-const LanguageDetectionPopup: React.FC = () => null;
-const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
 
-// Import auth and notification providers
-const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+// Register service worker
+import { registerServiceWorker } from './serviceWorkerRegistration';
 
-// Import analytics provider
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const registerServiceWorker = () => {};
+// Error handling function
+const showApiError = (error: unknown): void => {
+  console.error('API Error:', error);
+};
 
-// Initialize a React Query client with global error handling
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      onError: (error) => showApiError(error),
-    },
-    mutations: {
-      onError: (error) => showApiError(error),
-    },
-  },
+// Global error handler
+const handleGlobalError = (error: Error): void => {
+  console.error('Global error caught:', error);
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    rootElement.innerHTML = `
+      <div style="padding: 20px; text-align: center; font-family: sans-serif; color: #333;">
+        <h1>Application Error</h1>
+        <p>A critical error occurred while loading the application.</p>
+        <p>Error: ${error.message}</p>
+        <p>Please check the console for more details.</p>
+        <button onclick="window.location.reload()" style="padding: 10px 20px; margin-top: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+          Reload Page
+        </button>
+      </div>
+    `;
+  }
+};
+
+// Set up global error handlers
+window.addEventListener('error', (event) => {
+  handleGlobalError(event.error);
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  handleGlobalError(new Error(event.reason));
 });
 
 try {
-  ReactDOM.createRoot(document.getElementById('root')!).render(
+  const rootElement = document.getElementById('root');
+  if (!rootElement) {
+    throw new Error('Root element not found');
+  }
+
+  ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,
   );
-} catch (error) {
-  console.error("Global error caught in main.tsx:", error);
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
-        <h1>Application Error</h1>
-        <p>A critical error occurred while loading the application.</p>
-        <p>Error: ${(error as Error).message}</p>
-        <p>Please check the console for more details.</p>
-      </div>
-    `;
+
+  // Register service worker in production
+  if (process.env.NODE_ENV === 'production') {
+    registerServiceWorker();
   }
+} catch (error) {
+  handleGlobalError(error as Error);
 }
