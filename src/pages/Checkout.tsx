@@ -4,7 +4,9 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
+s1yros-codex/fix-unauthenticated-user-redirect-flow
 import { useNavigate, useSearchParams } from 'react-router-dom';
+main
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
 
@@ -37,6 +39,7 @@ export default function Checkout() {
         // ignore parsing errors
       }
     }
+    s1yros-codex/fix-unauthenticated-user-redirect-flow
     // Provide mock data if cart empty
     setItems([
       {
@@ -47,9 +50,12 @@ export default function Checkout() {
       },
     ]);
   }, [searchParams]);
+  }, [searchParams]);
 
-  const handleCheckout = async () => {
-    const product = items[0];
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  main
+
+  const onSubmit = async (data: CheckoutForm) => {
     try {
       const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
