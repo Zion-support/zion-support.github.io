@@ -1,488 +1,636 @@
-import { ProductListing } from '@/types/listings';
+import { ProductListing } from "@/types/listings";
 
-// Comprehensive Pricing Guide for 2030 - Market Competitive Pricing
-export const COMPREHENSIVE_PRICING_2030 = {
-  // AI & Machine Learning Services
-  aiServices: {
-    title: "AI & Machine Learning Services",
-    description: "Cutting-edge AI solutions for business transformation and automation",
-    services: [
+export interface PricingTier {
+  name: string;
+  price: number;
+  currency: string;
+  billing: string;
+  features: string[];
+  limitations: string[];
+  bestFor: string[];
+  popular?: boolean;
+}
+
+export interface ServicePricing {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  pricingTiers: PricingTier[];
+  marketAnalysis: {
+    averagePrice: string;
+    priceRange: string;
+    competitors: string[];
+    roi: string;
+    setupTime: string;
+    marketSize: string;
+    growthRate: string;
+  };
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
+}
+
+export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
+  {
+    id: "ai-autonomous-business-operations-2030",
+    title: "AI Autonomous Business Operations 2030",
+    category: "AI & Operations",
+    description: "Next-generation autonomous business platform with self-optimizing workflows, predictive decision-making, and zero-touch operations.",
+    pricingTiers: [
       {
-        name: "AI Predictive Analytics Platform",
-        price: 3999,
+        name: "Starter",
+        price: 7999,
         currency: "$",
-        period: "monthly",
-        description: "Advanced predictive analytics with real-time insights and automated decision-making",
+        billing: "monthly",
         features: [
-          "Real-time data processing",
-          "Automated insights generation",
-          "Custom dashboard creation",
-          "API integration",
-          "Advanced reporting tools",
-          "24/7 support"
+          "Basic autonomous workflows",
+          "AI decision support",
+          "Standard integrations",
+          "Email support",
+          "Basic analytics"
         ],
-        benefits: [
-          "Increase revenue by 15-25%",
-          "Reduce operational costs by 20-30%",
-          "Improve decision accuracy by 85%"
+        limitations: [
+          "Limited AI models",
+          "Basic reporting",
+          "Standard SLA"
         ],
-        marketComparison: "30% below market average",
-        bestFor: "Enterprise businesses, Data-driven companies"
+        bestFor: ["Small businesses", "Startups", "Pilot programs"]
       },
       {
-        name: "AI Content Creation Studio",
-        price: 2999,
-        currency: "$",
-        period: "monthly",
-        description: "AI-powered content generation with brand consistency and SEO optimization",
-        features: [
-          "Multi-format content generation",
-          "Brand voice consistency",
-          "SEO optimization tools",
-          "Multi-language support",
-          "Content templates library",
-          "Performance analytics"
-        ],
-        benefits: [
-          "Create content 10x faster",
-          "Improve SEO rankings by 40%",
-          "Reduce content costs by 70%"
-        ],
-        marketComparison: "25% below market average",
-        bestFor: "Marketing teams, Content creators, Agencies"
-      },
-      {
-        name: "AI Customer Experience Platform",
-        price: 4499,
-        currency: "$",
-        period: "monthly",
-        description: "Intelligent customer engagement with personalization and predictive analytics",
-        features: [
-          "AI-powered personalization",
-          "Real-time sentiment analysis",
-          "Proactive customer support",
-          "Omnichannel engagement",
-          "Customer journey optimization",
-          "Predictive analytics"
-        ],
-        benefits: [
-          "Increase customer satisfaction by 45%",
-          "Improve conversion rates by 35%",
-          "Reduce churn by 50%"
-        ],
-        marketComparison: "35% below market average",
-        bestFor: "E-commerce, SaaS companies, Customer service teams"
-      }
-    ]
-  },
-
-  // Quantum Computing Solutions
-  quantumServices: {
-    title: "Quantum Computing Solutions",
-    description: "Revolutionary quantum computing for complex problem-solving",
-    services: [
-      {
-        name: "Quantum AI Optimization Suite",
+        name: "Professional",
         price: 15999,
         currency: "$",
-        period: "monthly",
-        description: "Quantum computing combined with AI for solving intractable problems",
+        billing: "monthly",
         features: [
-          "Quantum algorithm optimization",
-          "AI-powered problem decomposition",
-          "Real-time quantum simulation",
-          "Advanced mathematical modeling",
-          "Research collaboration tools",
-          "Performance benchmarking"
+          "Advanced autonomous operations",
+          "Full AI decision making",
+          "Advanced integrations",
+          "Priority support",
+          "Advanced analytics",
+          "Custom AI training"
         ],
-        benefits: [
-          "Solve problems 1000x faster",
-          "Revolutionary breakthroughs in research",
-          "Unprecedented optimization precision"
+        limitations: [
+          "Limited customization",
+          "Standard compliance"
         ],
-        marketComparison: "40% below market average",
-        bestFor: "Research institutions, Financial services, Pharmaceutical companies"
-      }
-    ]
-  },
-
-  // Cybersecurity Services
-  cybersecurityServices: {
-    title: "AI-Powered Cybersecurity",
-    description: "Next-generation security with AI threat detection and response",
-    services: [
+        bestFor: ["Medium businesses", "Growing companies", "Multi-department"]
+      },
       {
-        name: "AI Cybersecurity Intelligence Platform",
-        price: 5999,
+        name: "Enterprise",
+        price: 29999,
         currency: "$",
-        period: "monthly",
-        description: "AI-powered threat detection and automated incident response",
+        billing: "monthly",
         features: [
-          "AI-powered threat detection",
-          "Behavioral analysis",
-          "Automated incident response",
-          "Real-time threat intelligence",
-          "Advanced forensics tools",
-          "Compliance reporting"
+          "Full autonomous operations",
+          "Custom AI models",
+          "Unlimited integrations",
+          "24/7 dedicated support",
+          "Advanced compliance",
+          "Custom development",
+          "White-label options"
         ],
-        benefits: [
-          "Detect threats 95% faster",
-          "Reduce false positives by 80%",
-          "Automate 90% of responses",
-          "99.9% threat prevention rate"
-        ],
-        marketComparison: "45% below market average",
-        bestFor: "Financial institutions, Healthcare, Government agencies"
+        limitations: [],
+        bestFor: ["Large enterprises", "Multi-national companies", "Regulated industries"],
+        popular: true
       }
-    ]
+    ],
+    marketAnalysis: {
+      averagePrice: "$15,000-25,000/month",
+      priceRange: "$8,000-40,000/month",
+      competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
+      roi: "800% within 12 months",
+      setupTime: "8-12 weeks",
+      marketSize: "$25.6 billion by 2030",
+      growthRate: "23.4% annually"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-autonomous-operations-2030",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
   },
 
-  // Business Automation Services
-  businessAutomation: {
-    title: "Business Automation & Operations",
-    description: "Fully autonomous business operations and process optimization",
-    services: [
+  {
+    id: "quantum-ai-cybersecurity-2030",
+    title: "Quantum AI Cybersecurity 2030",
+    category: "Cybersecurity",
+    description: "Revolutionary quantum-resistant cybersecurity platform with AI-powered threat detection, quantum encryption, and autonomous incident response.",
+    pricingTiers: [
       {
-        name: "AI Autonomous Business Operations",
+        name: "Basic",
+        price: 14999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Quantum-resistant encryption",
+          "AI threat detection",
+          "Basic incident response",
+          "Standard compliance",
+          "Email support"
+        ],
+        limitations: [
+          "Limited AI models",
+          "Basic reporting",
+          "Standard SLA"
+        ],
+        bestFor: ["Small organizations", "Basic security needs", "Compliance requirements"]
+      },
+      {
+        name: "Advanced",
+        price: 24999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Advanced quantum security",
+          "AI-powered threat hunting",
+          "Automated incident response",
+          "Advanced compliance",
+          "Priority support",
+          "Custom security policies"
+        ],
+        limitations: [
+          "Limited customization",
+          "Standard integrations"
+        ],
+        bestFor: ["Medium organizations", "High security needs", "Regulated industries"]
+      },
+      {
+        name: "Enterprise",
+        price: 39999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Full quantum security suite",
+          "Custom AI models",
+          "Zero-trust architecture",
+          "Full compliance suite",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options"
+        ],
+        limitations: [],
+        bestFor: ["Large enterprises", "Government agencies", "Financial institutions"],
+        popular: true
+      }
+    ],
+    marketAnalysis: {
+      averagePrice: "$25,000-40,000/month",
+      priceRange: "$15,000-60,000/month",
+      competitors: ["Post-Quantum", "ISARA", "Crypta Labs"],
+      roi: "1000% within 18 months",
+      setupTime: "12-16 weeks",
+      marketSize: "$403.1 billion by 2030",
+      growthRate: "15.2% annually"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-ai-cybersecurity-2030",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+
+  {
+    id: "ai-content-creation-studio-2030",
+    title: "AI Content Creation Studio 2030",
+    category: "AI & Content",
+    description: "Advanced AI-powered content creation platform with multi-modal generation, brand voice consistency, and automated content strategy.",
+    pricingTiers: [
+      {
+        name: "Creator",
+        price: 4999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "AI content generation",
+          "Basic brand voice",
+          "Standard templates",
+          "Email support",
+          "Basic analytics"
+        ],
+        limitations: [
+          "Limited AI models",
+          "Basic customization",
+          "Standard content types"
+        ],
+        bestFor: ["Content creators", "Small businesses", "Marketing teams"]
+      },
+      {
+        name: "Professional",
         price: 8999,
         currency: "$",
-        period: "monthly",
-        description: "Fully autonomous business operations with AI decision-making",
+        billing: "monthly",
         features: [
-          "Autonomous decision-making",
-          "Real-time resource optimization",
-          "Predictive maintenance",
-          "Automated performance tuning",
-          "Intelligent workflow orchestration",
-          "Continuous learning"
+          "Advanced AI generation",
+          "Custom brand voice",
+          "Advanced templates",
+          "Priority support",
+          "Advanced analytics",
+          "Multi-modal content"
         ],
-        benefits: [
-          "Reduce operational costs by 40-60%",
-          "Increase efficiency by 300%",
-          "24/7 autonomous operation",
-          "Eliminate human error"
+        limitations: [
+          "Limited integrations",
+          "Standard compliance"
         ],
-        marketComparison: "50% below market average",
-        bestFor: "Manufacturing, Logistics, Large enterprises"
-      }
-    ]
-  },
-
-  // Edge Computing & IoT
-  edgeComputing: {
-    title: "Edge Computing & IoT Solutions",
-    description: "Advanced edge computing for real-time processing and low latency",
-    services: [
+        bestFor: ["Marketing agencies", "Medium businesses", "Content teams"]
+      },
       {
-        name: "AI IoT Edge Computing Platform",
-        price: 7499,
-        currency: "$",
-        period: "monthly",
-        description: "Edge computing with AI processing for IoT devices",
-        features: [
-          "AI-powered edge processing",
-          "Real-time data analytics",
-          "Local decision-making",
-          "Low-latency communication",
-          "Scalable edge management",
-          "Advanced security protocols"
-        ],
-        benefits: [
-          "Reduce latency by 90%",
-          "Lower bandwidth costs by 70%",
-          "Enable real-time decisions",
-          "Improve reliability"
-        ],
-        marketComparison: "30% below market average",
-        bestFor: "IoT companies, Smart cities, Industrial automation"
-      }
-    ]
-  },
-
-  // Healthcare Technology
-  healthcareTech: {
-    title: "Healthcare Technology Solutions",
-    description: "AI-powered healthcare analytics and personalized medicine",
-    services: [
-      {
-        name: "AI Healthcare Analytics Platform",
-        price: 12999,
-        currency: "$",
-        period: "monthly",
-        description: "Comprehensive healthcare analytics with predictive diagnostics",
-        features: [
-          "Predictive patient diagnostics",
-          "Personalized treatment recommendations",
-          "Real-time health monitoring",
-          "Clinical decision support",
-          "Population health analytics",
-          "Regulatory compliance"
-        ],
-        benefits: [
-          "Improve patient outcomes by 35%",
-          "Reduce healthcare costs by 25%",
-          "Increase diagnostic accuracy by 90%",
-          "Enable personalized medicine"
-        ],
-        marketComparison: "35% below market average",
-        bestFor: "Hospitals, Clinics, Healthcare networks"
-      }
-    ]
-  },
-
-  // Blockchain & Supply Chain
-  blockchainServices: {
-    title: "Blockchain & Supply Chain",
-    description: "Transparent supply chain optimization with blockchain and AI",
-    services: [
-      {
-        name: "AI Blockchain Supply Chain Platform",
-        price: 8499,
-        currency: "$",
-        period: "monthly",
-        description: "Blockchain transparency with AI optimization",
-        features: [
-          "Blockchain-based transparency",
-          "AI-powered optimization",
-          "Real-time tracking",
-          "Automated fraud detection",
-          "Smart contract automation",
-          "Advanced analytics"
-        ],
-        benefits: [
-          "Increase efficiency by 40%",
-          "Reduce fraud by 95%",
-          "Improve transparency",
-          "Optimize inventory"
-        ],
-        marketComparison: "40% below market average",
-        bestFor: "Manufacturing, Retail, Logistics companies"
-      }
-    ]
-  },
-
-  // Financial Technology
-  fintechServices: {
-    title: "Financial Technology Solutions",
-    description: "AI and quantum computing for advanced financial services",
-    services: [
-      {
-        name: "AI Quantum Financial Trading Platform",
-        price: 19999,
-        currency: "$",
-        period: "monthly",
-        description: "High-frequency trading with AI and quantum optimization",
-        features: [
-          "AI-powered trading strategies",
-          "Quantum computing optimization",
-          "Real-time market analysis",
-          "Advanced risk management",
-          "Portfolio optimization",
-          "Compliance tools"
-        ],
-        benefits: [
-          "Increase profits by 200-500%",
-          "Reduce risk by 60%",
-          "Execute trades in microseconds",
-          "Optimize portfolio performance"
-        ],
-        marketComparison: "45% below market average",
-        bestFor: "Investment firms, Hedge funds, Trading companies"
-      }
-    ]
-  },
-
-  // Industry-Specific Solutions
-  industrySolutions: {
-    title: "Industry-Specific Solutions",
-    description: "Tailored solutions for manufacturing, retail, and specialized industries",
-    services: [
-      {
-        name: "AI Manufacturing Optimization Suite",
+        name: "Enterprise",
         price: 15999,
         currency: "$",
-        period: "monthly",
-        description: "Comprehensive manufacturing optimization with AI",
+        billing: "monthly",
         features: [
-          "Production line optimization",
-          "Quality control automation",
-          "Predictive maintenance",
-          "Real-time monitoring",
-          "Supply chain integration",
-          "Advanced analytics"
+          "Full AI content suite",
+          "Custom AI models",
+          "Unlimited content types",
+          "Advanced compliance",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options"
         ],
-        benefits: [
-          "Increase efficiency by 30%",
-          "Reduce downtime by 60%",
-          "Improve quality by 25%",
-          "Lower costs by 20%"
-        ],
-        marketComparison: "35% below market average",
-        bestFor: "Manufacturing companies, Industrial facilities"
-      },
+        limitations: [],
+        bestFor: ["Large enterprises", "Media companies", "Marketing agencies"],
+        popular: true
+      }
+    ],
+    marketAnalysis: {
+      averagePrice: "$8,000-15,000/month",
+      priceRange: "$5,000-25,000/month",
+      competitors: ["Jasper", "Copy.ai", "Writesonic"],
+      roi: "600% within 8 months",
+      setupTime: "6-8 weeks",
+      marketSize: "$18.4 billion by 2030",
+      growthRate: "28.7% annually"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-content-creation-studio-2030",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+
+  {
+    id: "ai-sales-intelligence-2030",
+    title: "AI Sales Intelligence 2030",
+    category: "AI & Marketing",
+    description: "Intelligent sales platform with predictive lead scoring, automated outreach, and real-time market insights.",
+    pricingTiers: [
       {
-        name: "AI Retail Intelligence Platform",
-        price: 6999,
+        name: "Sales Pro",
+        price: 7999,
         currency: "$",
-        period: "monthly",
-        description: "Intelligent retail optimization with AI insights",
+        billing: "monthly",
         features: [
-          "AI-powered demand forecasting",
-          "Dynamic pricing optimization",
-          "Personalized recommendations",
-          "Inventory management",
-          "Customer behavior analysis",
-          "Sales analytics"
+          "AI lead scoring",
+          "Basic outreach automation",
+          "Standard analytics",
+          "Email support",
+          "Basic integrations"
         ],
-        benefits: [
-          "Increase sales by 25-40%",
-          "Reduce inventory costs by 30%",
-          "Improve customer satisfaction",
-          "Optimize pricing"
+        limitations: [
+          "Limited AI models",
+          "Basic reporting",
+          "Standard SLA"
         ],
-        marketComparison: "30% below market average",
-        bestFor: "Retail chains, E-commerce platforms"
+        bestFor: ["Sales teams", "Small businesses", "Startups"]
+      },
+      {
+        name: "Sales Enterprise",
+        price: 12999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Advanced AI scoring",
+          "Full outreach automation",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Custom AI training"
+        ],
+        limitations: [
+          "Limited customization",
+          "Standard compliance"
+        ],
+        bestFor: ["Sales organizations", "Medium businesses", "Growing companies"]
+      },
+      {
+        name: "Sales Intelligence Suite",
+        price: 19999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Full AI sales suite",
+          "Custom AI models",
+          "Unlimited integrations",
+          "Advanced compliance",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options"
+        ],
+        limitations: [],
+        bestFor: ["Large enterprises", "Sales organizations", "Multi-national companies"],
+        popular: true
       }
-    ]
-  }
-};
-
-// Pricing Tiers for Different Business Sizes
-export const PRICING_TIERS_2030 = {
-  startup: {
-    name: "Startup",
-    description: "Perfect for startups and small businesses",
-    priceRange: "$2,999 - $7,999",
-    features: [
-      "Essential AI tools",
-      "Basic support",
-      "Standard integrations",
-      "Community forum access"
     ],
-    bestServices: [
-      "AI Content Creation Studio",
-      "AI Customer Experience Platform",
-      "AI IoT Edge Computing Platform"
-    ]
+    marketAnalysis: {
+      averagePrice: "$12,000-20,000/month",
+      priceRange: "$8,000-30,000/month",
+      competitors: ["Salesforce Einstein", "HubSpot", "Pipedrive"],
+      roi: "700% within 10 months",
+      setupTime: "8-10 weeks",
+      marketSize: "$14.7 billion by 2030",
+      growthRate: "25.3% annually"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-sales-intelligence-2030",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
   },
-  growing: {
-    name: "Growing Business",
-    description: "Ideal for growing companies with established operations",
-    priceRange: "$4,499 - $12,999",
-    features: [
-      "Advanced AI capabilities",
-      "Priority support",
-      "Custom integrations",
-      "Dedicated account manager"
-    ],
-    bestServices: [
-      "AI Predictive Analytics Platform",
-      "AI Healthcare Analytics Platform",
-      "AI Blockchain Supply Chain Platform"
-    ]
-  },
-  enterprise: {
-    name: "Enterprise",
-    description: "Comprehensive solutions for large enterprises",
-    priceRange: "$8,999 - $19,999",
-    features: [
-      "Full AI suite access",
-      "24/7 premium support",
-      "Custom development",
-      "On-site implementation",
-      "Training and certification"
-    ],
-    bestServices: [
-      "Quantum AI Optimization Suite",
-      "AI Autonomous Business Operations",
-      "AI Quantum Financial Trading Platform"
-    ]
-  }
-};
 
-// Value Propositions and ROI Calculations
-export const VALUE_PROPOSITIONS_2030 = {
-  costSavings: {
-    title: "Cost Savings & ROI",
-    calculations: [
+  {
+    id: "ai-customer-support-automation-2030",
+    title: "AI Customer Support Automation 2030",
+    category: "AI & Customer Support",
+    description: "Advanced customer support platform with natural language processing, emotional intelligence, and seamless human handoff.",
+    pricingTiers: [
       {
-        service: "AI Predictive Analytics",
-        investment: "$3,999/month",
-        annualSavings: "$48,000 - $72,000",
-        roi: "300-450%",
-        timeframe: "6-12 months"
+        name: "Support Basic",
+        price: 4999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "AI chatbot",
+          "Basic NLP",
+          "Standard integrations",
+          "Email support",
+          "Basic analytics"
+        ],
+        limitations: [
+          "Limited AI models",
+          "Basic customization",
+          "Standard SLA"
+        ],
+        bestFor: ["Small businesses", "Basic support needs", "Startups"]
       },
       {
-        service: "AI Autonomous Operations",
-        investment: "$8,999/month",
-        annualSavings: "$216,000 - $324,000",
-        roi: "200-300%",
-        timeframe: "8-16 months"
+        name: "Support Pro",
+        price: 7999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Advanced AI support",
+          "Emotional intelligence",
+          "Advanced integrations",
+          "Priority support",
+          "Advanced analytics",
+          "Custom AI training"
+        ],
+        limitations: [
+          "Limited customization",
+          "Standard compliance"
+        ],
+        bestFor: ["Medium businesses", "Growing support teams", "Customer service"]
       },
       {
-        service: "AI Cybersecurity Platform",
-        investment: "$5,999/month",
-        annualSavings: "$180,000 - $240,000",
-        roi: "250-333%",
-        timeframe: "4-8 months"
+        name: "Support Enterprise",
+        price: 12999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Full AI support suite",
+          "Custom AI models",
+          "Unlimited integrations",
+          "Advanced compliance",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options"
+        ],
+        limitations: [],
+        bestFor: ["Large enterprises", "Support organizations", "Multi-national companies"],
+        popular: true
       }
-    ]
+    ],
+    marketAnalysis: {
+      averagePrice: "$8,000-12,000/month",
+      priceRange: "$5,000-20,000/month",
+      competitors: ["Zendesk", "Intercom", "Freshdesk"],
+      roi: "500% within 6 months",
+      setupTime: "5-7 weeks",
+      marketSize: "$12.3 billion by 2030",
+      growthRate: "22.1% annually"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-customer-support-automation-2030",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
   },
-  efficiencyGains: {
-    title: "Efficiency & Productivity Gains",
-    metrics: [
+
+  {
+    id: "ai-data-analytics-bi-2030",
+    title: "AI Data Analytics & BI 2030",
+    category: "AI & Business Intelligence",
+    description: "Next-generation business intelligence platform with real-time analytics, predictive modeling, and automated insights.",
+    pricingTiers: [
       {
-        area: "Content Creation",
-        improvement: "10x faster",
-        service: "AI Content Creation Studio"
+        name: "Analytics Basic",
+        price: 9999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Basic AI analytics",
+          "Standard reporting",
+          "Basic integrations",
+          "Email support",
+          "Basic dashboards"
+        ],
+        limitations: [
+          "Limited AI models",
+          "Basic customization",
+          "Standard SLA"
+        ],
+        bestFor: ["Small businesses", "Basic analytics needs", "Startups"]
       },
       {
-        area: "Customer Support",
-        improvement: "45% satisfaction increase",
-        service: "AI Customer Experience Platform"
+        name: "Analytics Pro",
+        price: 14999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Advanced AI analytics",
+          "Predictive modeling",
+          "Advanced integrations",
+          "Priority support",
+          "Advanced dashboards",
+          "Custom AI training"
+        ],
+        limitations: [
+          "Limited customization",
+          "Standard compliance"
+        ],
+        bestFor: ["Medium businesses", "Growing analytics teams", "Data-driven companies"]
       },
       {
-        area: "Manufacturing",
-        improvement: "30% efficiency increase",
-        service: "AI Manufacturing Optimization"
-      },
-      {
-        area: "Trading",
-        improvement: "200-500% profit increase",
-        service: "AI Quantum Financial Trading"
+        name: "Analytics Enterprise",
+        price: 24999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Full AI analytics suite",
+          "Custom AI models",
+          "Unlimited integrations",
+          "Advanced compliance",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options"
+        ],
+        limitations: [],
+        bestFor: ["Large enterprises", "Analytics organizations", "Multi-national companies"],
+        popular: true
       }
-    ]
-  }
-};
-
-// Contact Information and Next Steps
-export const CONTACT_INFO_2030 = {
-  title: "Get Started with Zion Tech Group",
-  description: "Transform your business with cutting-edge AI and technology solutions",
-  contact: {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
-    website: "https://ziontechgroup.com"
+    ],
+    marketAnalysis: {
+      averagePrice: "$15,000-25,000/month",
+      priceRange: "$10,000-40,000/month",
+      competitors: ["Tableau", "Power BI", "Qlik"],
+      roi: "800% within 12 months",
+      setupTime: "8-10 weeks",
+      marketSize: "$22.8 billion by 2030",
+      growthRate: "19.7% annually"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-data-analytics-bi-2030",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
   },
-  nextSteps: [
-    "Schedule a free consultation",
-    "Get a custom quote",
-    "Request a demo",
-    "Download our pricing guide"
-  ],
-  consultationBenefits: [
-    "Free technology assessment",
-    "Custom solution design",
-    "ROI calculation",
-    "Implementation roadmap"
-  ]
+
+  {
+    id: "cloud-infrastructure-devops-2030",
+    title: "Cloud Infrastructure & DevOps 2030",
+    category: "Cloud & DevOps",
+    description: "Intelligent cloud infrastructure platform with AI-driven optimization, automated scaling, and zero-downtime deployments.",
+    pricingTiers: [
+      {
+        name: "Infrastructure Basic",
+        price: 12999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Basic cloud management",
+          "Standard DevOps",
+          "Basic monitoring",
+          "Email support",
+          "Basic scaling"
+        ],
+        limitations: [
+          "Limited AI optimization",
+          "Basic customization",
+          "Standard SLA"
+        ],
+        bestFor: ["Small businesses", "Basic cloud needs", "Startups"]
+      },
+      {
+        name: "Infrastructure Pro",
+        price: 18999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Advanced cloud management",
+          "AI optimization",
+          "Advanced monitoring",
+          "Priority support",
+          "Advanced scaling",
+          "Custom AI training"
+        ],
+        limitations: [
+          "Limited customization",
+          "Standard compliance"
+        ],
+        bestFor: ["Medium businesses", "Growing cloud teams", "DevOps organizations"]
+      },
+      {
+        name: "Infrastructure Enterprise",
+        price: 29999,
+        currency: "$",
+        billing: "monthly",
+        features: [
+          "Full cloud infrastructure suite",
+          "Custom AI models",
+          "Unlimited integrations",
+          "Advanced compliance",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options"
+        ],
+        limitations: [],
+        bestFor: ["Large enterprises", "Cloud organizations", "Multi-national companies"],
+        popular: true
+      }
+    ],
+    marketAnalysis: {
+      averagePrice: "$20,000-30,000/month",
+      priceRange: "$15,000-50,000/month",
+      competitors: ["AWS", "Azure", "Google Cloud"],
+      roi: "900% within 15 months",
+      setupTime: "10-12 weeks",
+      marketSize: "$35.2 billion by 2030",
+      growthRate: "21.4% annually"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/cloud-infrastructure-devops-2030",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+export const getPricingByCategory = (category: string): ServicePricing[] => {
+  return COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
+    service.category === category
+  );
 };
 
-// Export all pricing data
-export const COMPLETE_PRICING_2030 = {
-  services: COMPREHENSIVE_PRICING_2030,
-  tiers: PRICING_TIERS_2030,
-  value: VALUE_PROPOSITIONS_2030,
-  contact: CONTACT_INFO_2030
+export const getPricingByPriceRange = (minPrice: number, maxPrice: number): ServicePricing[] => {
+  return COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => {
+    const avgPrice = service.pricingTiers[1]?.price || service.pricingTiers[0]?.price;
+    return avgPrice >= minPrice && avgPrice <= maxPrice;
+  });
+};
+
+export const getPopularPricing = (): ServicePricing[] => {
+  return COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
+    service.pricingTiers.some(tier => tier.popular)
+  );
+};
+
+export const getPricingStats = () => {
+  const totalServices = COMPREHENSIVE_PRICING_GUIDE_2030.length;
+  const totalCategories = [...new Set(COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.category))].length;
+  const avgPrice = COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => {
+    const avgPrice = service.pricingTiers[1]?.price || service.pricingTiers[0]?.price;
+    return sum + avgPrice;
+  }, 0) / totalServices;
+
+  return {
+    totalServices,
+    totalCategories,
+    averagePrice: Math.round(avgPrice),
+    priceRanges: {
+      low: "$5,000-10,000/month",
+      medium: "$10,000-20,000/month",
+      high: "$20,000-40,000/month"
+    }
+  };
 };
