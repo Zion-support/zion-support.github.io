@@ -24,12 +24,8 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
-    host: true,
-    open: true,
-    cors: true,
-  },
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-  },
+    hmr: {
+      clientPort: 443
+    }
+  }
 })
