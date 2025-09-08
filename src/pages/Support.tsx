@@ -141,18 +141,19 @@ const Support: React.FC = () => {
     }
   ];
 
-// Removed unused:   const contactForm = {
-    name: '',
-    email: '',
-    company: '',
-    category: 'general',
-    priority: 'medium',
-    subject: '',
-    message: ''
-  };
+  const filteredIssues = selectedCategory === 'all' 
+    ? commonIssues 
+    : commonIssues.filter(issue => issue.category === selectedCategory);
+
+  const filteredSearchIssues = searchQuery 
+    ? filteredIssues.filter(issue => 
+        issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        issue.description.toLowerCase().includes(searchQuery.toLowerCase())
+  {/* Removed stray closing parenthesis */}
+    : filteredIssues;
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Support Center - Zion Tech Group"
         description="Get expert technical support for all Zion Tech Group services. 24/7 AI-powered assistance, phone support, and comprehensive resources."

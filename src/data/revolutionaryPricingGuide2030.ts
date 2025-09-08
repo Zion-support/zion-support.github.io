@@ -523,7 +523,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com/brain-computer-interface-ai"
     }
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Utility functions for pricing guide management

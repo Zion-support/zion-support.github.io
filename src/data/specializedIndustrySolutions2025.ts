@@ -628,7 +628,19 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
       security: ["Data encryption", "Access controls", "Audit logging"],
       compliance: ["SOC 2", "ISO 27001", "Legal industry standards"]
     },
-    competitors: ["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance"
-  }
+    estimatedTime: '6-12 weeks',
+    technologies['AI/ML', 'Big Data', 'Cloud Computing', 'Streaming', 'Analytics', 'Content Management'],
+    industryScore: 94,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],
+    certifications['ISO 27001', 'SOC 2 Type II', 'Content Management']
+  {/* Removed stray closing brace */}
 ];
+export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[]  => {
+  if (industry === 'All') {
+    return SPECIALIZED_INDUSTRY_SOLUTIONS_2025}
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
+export const getAllIndustrySolutions = (): IndustrySolution[] => {
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};

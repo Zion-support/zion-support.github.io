@@ -297,4 +297,4 @@ export default function AIESGCompliancePlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

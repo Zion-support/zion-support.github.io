@@ -145,4 +145,5 @@ if (typeof window !== 'undefined') {
             }
         }
     }
-}
+  {/* Removed stray closing brace */}
+export default PerformanceOptimizer;

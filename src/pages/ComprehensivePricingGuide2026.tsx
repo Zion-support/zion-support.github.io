@@ -103,7 +103,7 @@ export default function ComprehensivePricingGuide2026() {
   };
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Comprehensive Pricing Guide 2026 | Zion Tech Group"
         description="Complete pricing guide for our 2026 innovative services. Compare AI, IT, and micro SAAS solutions with market prices and ROI analysis."

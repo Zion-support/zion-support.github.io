@@ -15,7 +15,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
   children: unknown, title = 'Zion Tech Group - Leading Technology Solutions Provider': unknown, description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture: unknown, we help companies transform their digital presence.': unknown, keywords = 'AI services: unknown, IT solutions: unknown, SAAS platforms: unknown, web development: unknown, mobile apps: unknown, cybersecurity: unknown, cloud migration: unknown, data analytics: unknown, Zion Tech Group': unknown, canonical = 'https://ziontechgroup.com'
 }) => {
   return (
-    <>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -79,7 +79,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
-              ]
+  {/* Removed stray closing bracket */}
             })
           }}
         />

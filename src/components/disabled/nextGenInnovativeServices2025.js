@@ -347,6 +347,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
         launchDate: "Q2 2025",
         betaAccess: true
-    }
+  {/* Removed stray closing brace */}
 ];
 export default nextGenInnovativeServices2025;

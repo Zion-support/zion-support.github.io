@@ -144,9 +144,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         " include improved efficiency, cost savings, and enhanced user experience.",
                         " are numerous and well-documented in industry research.",
                         " can be measured through key performance indicators."
-                    ]
-                });
-            }
+  {/* Removed stray closing bracket */}
+                })}
             setEditorState(prev => ({
                 ...prev,
                 suggestions: [...prev.suggestions, ...suggestions]

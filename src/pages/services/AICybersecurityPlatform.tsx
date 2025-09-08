@@ -558,4 +558,4 @@ export default function AICybersecurityPlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

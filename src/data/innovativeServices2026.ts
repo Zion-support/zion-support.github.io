@@ -178,162 +178,41 @@ export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
     rating: 4.8,
     reviewCount: 156,
     featured: true,
-    location: "Global",
-    availability: "4-6 Weeks",
-    aiScore: 93,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-project-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$4,000-8,000",
-    competitors: ["Asana", "Monday.com", "ClickUp"],
-    roi: "600% within 6 months",
-    setupTime: "4-6 weeks",
-    integrations: ["Slack", "Microsoft Teams", "Jira", "Trello", "Time Tracking Tools"]
-  },
-
-  // IT Infrastructure - Edge Computing Platform
-  {
-    id: "edge-computing-platform",
-    title: "Edge Computing Platform",
-    description: "Distributed edge computing infrastructure that brings processing closer to data sources. Reduces latency by 80% and improves performance for IoT and real-time applications.",
-    category: "IT Infrastructure",
-    subcategory: "Edge Computing",
-    price: 18999,
-    currency: "$",
-    tags: ["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Infrastructure"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/edge-computing-platform.jpg"],
-    createdAt: "2024-02-01T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 78,
-    featured: true,
-    location: "Global",
-    availability: "8-10 Weeks",
-    aiScore: 92,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/edge-computing-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$15,000-30,000",
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
-    roi: "750% within 10 months",
-    setupTime: "8-10 weeks",
-    integrations: ["IoT Devices", "Cloud Platforms", "5G Networks", "Industrial Systems"]
-  },
-
-  // AI Healthcare Analytics Platform
-  {
-    id: "ai-healthcare-analytics-platform",
-    title: "AI Healthcare Analytics Platform",
-    description: "Advanced healthcare analytics platform that processes medical data to provide predictive insights, early disease detection, and personalized treatment recommendations with 96% accuracy.",
-    category: "AI & Healthcare",
-    subcategory: "Analytics",
-    price: 22999,
-    currency: "$",
-    tags: ["Healthcare Analytics", "Predictive Medicine", "Early Detection", "Personalized Treatment", "Medical AI"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-healthcare-analytics.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 45,
-    featured: true,
-    location: "Global",
-    availability: "10-12 Weeks",
-    aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-healthcare-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$18,000-35,000",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
-    roi: "900% within 12 months",
-    setupTime: "10-12 weeks",
-    integrations: ["EMR Systems", "Medical Devices", "Clinical Databases", "Health Information Exchanges"]
-  },
-
-  // Blockchain Supply Chain Solution
-  {
-    id: "blockchain-supply-chain-platform",
-    title: "Blockchain Supply Chain Platform",
-    description: "Transparent and secure supply chain management using blockchain technology. Provides end-to-end traceability, reduces fraud by 95%, and improves efficiency by 40%.",
-    category: "Blockchain & Web3",
-    subcategory: "Supply Chain",
-    price: 16999,
-    currency: "$",
-    tags: ["Blockchain", "Supply Chain", "Traceability", "Fraud Prevention", "Transparency"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/blockchain-supply-chain.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 67,
-    featured: true,
-    location: "Global",
-    availability: "8-10 Weeks",
-    aiScore: 89,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/blockchain-supply-chain",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$12,000-25,000",
-    competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
-    roi: "650% within 10 months",
-    setupTime: "8-10 weeks",
-    integrations: ["ERP Systems", "WMS", "Logistics Platforms", "IoT Sensors", "Smart Contracts"]
-  },
-
-  // Sustainable Technology Platform
-  {
-    id: "sustainable-technology-platform",
-    title: "Sustainable Technology Platform",
-    description: "Comprehensive platform for monitoring and optimizing environmental impact. Helps organizations reduce carbon footprint by 60% and achieve sustainability goals with AI-powered insights.",
-    category: "Sustainable Technology",
-    subcategory: "Environmental Monitoring",
-    price: 12999,
-    currency: "$",
-    tags: ["Sustainability", "Environmental Monitoring", "Carbon Footprint", "AI Insights", "Green Technology"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/sustainable-technology.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
-    availability: "6-8 Weeks",
-    aiScore: 91,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/sustainable-technology",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$10,000-20,000",
-    competitors: ["Watershed", "Normative", "Carbon Analytics"],
-    roi: "550% within 8 months",
-    setupTime: "6-8 weeks",
-    integrations: ["IoT Sensors", "Energy Management Systems", "Building Management", "Sustainability Reporting Tools"]
-  }
+    marketSize: '$5.8B',
+    roi: '350%',
+    implementationTime: '12-16 weeks',
+    supportLevel: 'Business hours + metaverse experts',
+    compliance['Digital rights', 'Privacy regulations'],
+    integrations['E-commerce platforms', 'Payment gateways', 'Social media'],
+    api: true,
+    mobile: true,
+    enterprise: true,
+    startup: true,
+    smb: true
+  {/* Removed stray closing brace */}
 ];
 
-// Service Categories for 2026
-export const SERVICE_CATEGORIES_2026 = [
-  "AI & Operations",
-  "Cybersecurity",
-  "Quantum Computing",
-  "AI & Content",
-  "AI & Customer Support",
-  "IT Infrastructure",
-  "AI & Healthcare",
-  "Blockchain & Web3",
-  "Sustainable Technology"
+export const serviceCategories = [
+  {
+    name: 'Micro SaaS',
+    description: 'Scalable software solutions for specific business needs',
+    services: innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
+  },
+  {
+    name: 'AI Solutions',
+    description: 'Advanced artificial intelligence and machine learning solutions',
+    services: innovativeServices2026.filter(s  => s.category === 'AI Solutions')
+  },
+  {
+    name: 'IT Services',
+    description: 'Comprehensive IT consulting and implementation services',
+    services: innovativeServices2026.filter(s  => s.category === 'IT Services')
+  },
+  {
+    name: 'Emerging Technologies',
+    description: 'Cutting-edge technologies shaping the future',
+    services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+  {/* Removed stray closing brace */}
 ];
 
 // Service Statistics for 2026

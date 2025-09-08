@@ -431,10 +431,113 @@ class ProjectHealthMonitor {
       timestamp: new Date().toISOString()
     });
     
-    this.healthScore = Math.max(0, this.healthScore + scoreImpact);
-  }
+    for (const [file, errors] of Object.entries(fileErrors)) {
+      try {
+        const filePath = path.join(this.projectRoot, file);
+        if (!fs.existsSync(filePath)) continue;
+        
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        
+        // Fix common import syntax issues
+        content = content.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g, "import { $1 } from '$2'");
+        content = content.replace(/const:\s*([^,]+),\s*([^:]+):\s*\.FC/g, "const $1: React.FC");
+        
+        // Fix unclosed JSX tags (basic heuristic)
+        const openTags = content.match(/<([A-Z][a-zA-Z]*)/g) || [];
+        const closeTags = content.match(/<\/([A-Z][a-zA-Z]*)/g) || [];
+        
+        if (openTags.length > closeTags.length) {
+          // Add missing closing tags (simplified approach)
+          const missingTags = openTags.length - closeTags.length;
+          for (let i = 0; i < missingTags; i++) {
+            content += '\n      </div>';
+          }
+          modified = true;
+        }
+        
+        if (modified) {
+          fs.writeFileSync(filePath, content);
+          fixedFiles.push(file);
+        }
+        
+      } catch (error) {
+        this.log(`Failed to fix file ${file}: ${error.message}`, 'ERROR');
+      }
+    }
+    
+    return fixedFiles;
+  {/* Removed stray closing brace */}
 
-  async generateHealthReport() {
+  async fixDependencies(issue) {
+    if (issue.message.includes('corrupted packages') || issue.message.includes('Missing critical dependencies')) {
+      try {
+        this.log('Attempting to fix dependency issues...');
+        
+        // Remove corrupted node_modules
+        const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+        const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
+        
+        if (fs.existsSync(nodeModulesPath)) {
+          fs.rmSync(nodeModulesPath, { recursive: true, force: true });
+          this.log('Removed corrupted node_modules');
+        }
+        
+        if (fs.existsSync(packageLockPath)) {
+          fs.unlinkSync(packageLockPath);
+          this.log('Removed package-lock.json');
+        }
+        
+        // Reinstall dependencies
+        this.log('Reinstalling dependencies...');
+        execSync('npm install', { cwd: this.projectRoot, stdio: 'pipe' });
+        
+        return {
+          type: 'DEPENDENCIES_FIX',
+          message: 'Reinstalled dependencies to fix corruption issues',
+          details: 'Removed corrupted node_modules and package-lock.json, then ran npm install',
+          timestamp: new Date().toISOString()
+        };
+        
+      } catch (error) {
+        this.log(`Failed to fix dependencies: ${error.message}`, 'ERROR');
+      }
+    }
+    
+    return null;
+  {/* Removed stray closing brace */}
+
+  async fixCorruptedFiles(issue) {
+    if (issue.message.includes('corrupted source files')) {
+      try {
+        const fixedFiles = [];
+        
+        for (const corruptedFile of issue.corruptedFiles) {
+          if (corruptedFile.issue === 'Malformed import/export syntax') {
+            const fixed = await this.fixJSXSyntax({ [corruptedFile.file]: [] });
+            if (fixed.length > 0) {
+              fixedFiles.push(corruptedFile.file);
+            }
+          }
+        }
+        
+        if (fixedFiles.length > 0) {
+          return {
+            type: 'FILE_INTEGRITY_FIX',
+            message: `Fixed ${fixedFiles.length} corrupted source files`,
+            details: `Fixed files: ${fixedFiles.join(', ')}`,
+            timestamp: new Date().toISOString()
+          };
+        }
+      } catch (error) {
+        this.log(`Failed to fix corrupted files: ${error.message}`, 'ERROR');
+      }
+    }
+    
+    return null;
+  {/* Removed stray closing brace */}
+
+  async generateHealthReport(issues, fixes) {
     const report = {
       timestamp: new Date().toISOString(),
       healthScore: this.healthScore,
@@ -444,10 +547,15 @@ class ProjectHealthMonitor {
       recommendations: this.getRecommendations()
     };
     
-    const reportPath = path.join(this.reportDir, `health-report-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Health report saved to ${reportPath}`);
-  }
+    // Save detailed report
+    fs.writeFileSync(this.issuesLog, JSON.stringify(report, null, 2));
+    
+    // Log summary
+    this.log(`Health check completed: ${issues.length} issues found, ${fixes.length} auto-fixed`);
+    this.log(`Critical: ${report.summary.criticalIssues}, High: ${report.summary.highIssues}, Medium: ${report.summary.mediumIssues}`);
+    
+    return report;
+  {/* Removed stray closing brace */}
 
   getHealthSummary() {
     if (this.healthScore >= 90) {
@@ -481,31 +589,52 @@ class ProjectHealthMonitor {
     }
     
     return recommendations;
-  }
-}
+  {/* Removed stray closing brace */}
+
+  async triggerRebuild() {
+    try {
+      this.log('Triggering project rebuild...');
+      
+      // Run type check again
+      execSync('npm run type-check', { cwd: this.projectRoot, stdio: 'pipe' });
+      this.log('TypeScript compilation successful after fixes');
+      
+      // Try building
+      execSync('npm run build', { cwd: this.projectRoot, stdio: 'pipe' });
+      this.log('Project build successful after fixes');
+      
+    } catch (error) {
+      this.log(`Rebuild failed: ${error.message}`, 'WARN');
+    }
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
 
 // Main continuous loop
 async function runContinuous() {
   console.log(`🚀 Starting project health monitor with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   
-  const healthMonitor = new ProjectHealthMonitor();
-  
-  // Run initial health check
-  await healthMonitor.runHealthCheck();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await healthMonitor.runHealthCheck();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Project health monitor running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  try {
+    const result = await monitor.runHealthCheck();
+    
+    // Exit with appropriate code
+    if (result.issues.some(i => i.severity === 'CRITICAL')) {
+      process.exit(1);
+    } else if (result.issues.length > 0) {
+      process.exit(2);
+    } else {
+      process.exit(0);
+    }
+    
+  } catch (error) {
+    monitor.log(`Fatal error: ${error.message}`, 'ERROR');
+    process.exit(1);
+  }
+  {/* Removed stray closing brace */}
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+// Run if called directly
+if (require.main === module) {
+  main();
+  {/* Removed stray closing brace */}
 
 process.on('SIGTERM', () => {
   console.log('🛑 Received SIGTERM, shutting down gracefully...');

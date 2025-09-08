@@ -28,7 +28,7 @@ function collectAllServices(): ServiceItem[] {
 		addedMicroSaaS2025,
 		addedITServices2025,
 		addedAIServices2025,
-	]
+  {/* Removed stray closing bracket */}
 	const map = new Map<string, ServiceItem>()
 	for (const arr of arrays) {
 		for (const item of arr) {
@@ -49,12 +49,12 @@ function collectAllServices(): ServiceItem[] {
 		}
 	}
 	return Array.from(map.values())
-}
+  {/* Removed stray closing brace */}
 export const getStaticPaths: GetStaticPaths = async () => {
 	const services = collectAllServices()
 	const paths = services.map((s) => ({ params: { id: s.id } }))
 	return { paths, fallback: false }
-}
+  {/* Removed stray closing brace */}
 export const getStaticProps: GetStaticProps = async (context) => {
 	const id = context.params?.id as string
 	const services = collectAllServices()
@@ -63,12 +63,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		return { notFound: true }
 	}
 	return { props: { service } }
-}
-export default function ServiceDetail({ service }: { service: ServiceItem }) {
+  {/* Removed stray closing brace */}
+export default function ServiceDetail(...args[]):  {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (
-		<div>
+  {/* Empty JSX fragment */}
 			<Helmet>
 				<title>{title}</title>
 				<meta name="description" content={description} />
@@ -92,6 +92,6 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
 					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">Contact us</Link>
 				</div>
 			</main>
-		</div>
-	)
-}>
+		</>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

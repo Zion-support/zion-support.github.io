@@ -43,9 +43,9 @@ const securityStandards = [
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "Healthcare Solutions",
-        features: ["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
-        benefits: ["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
-    }
+        features["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
+        benefits["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
+  {/* Removed stray closing brace */}
 ];
 const complianceFrameworks = [
     {
@@ -81,9 +81,9 @@ const complianceFrameworks = [
         description: "Federal Risk and Authorization Management Program compliance",
         implementation: "In Progress",
         maturity: "Authorization Phase",
-        controls: ["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
-        benefits: ["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
-    }
+        controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
+        benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
+  {/* Removed stray closing brace */}
 ];
 const securityFeatures = [
     {
@@ -125,9 +125,9 @@ const securityFeatures = [
         icon: <Network className="w-8 h-8"/>,
         title: "Network Security",
         description: "Comprehensive network protection with firewalls and intrusion detection",
-        features: ["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
-        benefits: ["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
-    }
+        features["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
+        benefits["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
+  {/* Removed stray closing brace */}
 ];
 const securityStats = [
     { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },

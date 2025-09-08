@@ -250,6 +250,6 @@ export default function AffiliateTracking() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 // Duplicate leftover block removed

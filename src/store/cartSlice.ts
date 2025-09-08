@@ -5,7 +5,7 @@ type CartState = {
   items: CartItem[];
   total: number;
   itemCount: number;
-}
+  {/* Removed stray closing brace */}
 
 const initialState: CartState = {
   items: [],

@@ -61,6 +61,6 @@ export default function Profile() {
         </div>
       </div>
       
-    </React.Fragment>)}
-;
+    </>)}
+  {/* Removed stray semicolon */}
 export default Profile;

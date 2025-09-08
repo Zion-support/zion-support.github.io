@@ -117,7 +117,7 @@ export default function AIFinancialTradingRiskManagement() {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="AI Financial Trading & Risk Management - Zion Tech Group"
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."

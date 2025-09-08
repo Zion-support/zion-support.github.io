@@ -62,10 +62,311 @@ export const emergingTechServices2025: EmergingTechService[] = [
       "Environmental data insights",
       "Space exploration capabilities"
     ],
-    targetAudience: [
-      "Telecommunications companies",
-      "Government agencies",
-      "Environmental organizations",
+    useCases[
+      "Drug discovery",
+      "Financial modeling",
+      "Cryptography research",
+      "Material science",
+      "Machine learning optimization"
+    ],
+    targetAudience[
+      "Research institutions",
+      "Pharmaceutical companies",
+      "Financial services",
+      "Technology companies",
+      "Government agencies"
+    ],
+    tags["Quantum Computing", "Cloud Services", "Research", "Optimization", "Innovation"],
+    estimatedDelivery: "20-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,999 - $19,999/month",
+    roi: "500-800%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // RAG Search for Enterprise Knowledge
+  {
+    id: "enterprise-rag-knowledge-search",
+    title: "Enterprise RAG Knowledge Search",
+    description: "Secure retrieval‑augmented generation over your docs, wikis, tickets, and data lakes with granular ACLs and audit trails.",
+    category: "AI & Analytics",
+    subcategory: "Enterprise Search",
+    price: 1299,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "Connectors (Google Drive, Confluence, Jira, Slack, SharePoint)",
+      "SSO + row‑level permissions",
+      "Citations + sources",
+      "Query analytics",
+      "Prompt guardrails",
+      "Feedback loops",
+      "Vector + hybrid search",
+      "PII redaction",
+      "Air‑gapped option",
+      "Admin dashboard"
+    ],
+    benefits[
+      "Faster answers for employees",
+      "Lower ticket volume",
+      "Reduced onboarding time",
+      "Improved knowledge reuse",
+      "Auditable responses"
+    ],
+    useCases["IT helpdesk", "Policy Q&A", "Onboarding", "Engineering runbooks"],
+    targetAudience["IT", "HR", "Support", "Engineering"],
+    tags["RAG", "Search", "Vector DB", "Security"],
+    estimatedDelivery: "2–3 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,000 – $4,000/month",
+    roi: "200–400%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  },
+
+  // Edge Computer Vision for Manufacturing QA
+  {
+    id: "edge-vision-quality-inspection",
+    title: "Edge Vision Quality Inspection",
+    description: "On‑prem/edge CV models detect defects in real‑time on production lines with sub‑100ms latency and offline operation.",
+    category: "IoT & Edge Computing",
+    subcategory: "Computer Vision",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "Pretrained defect models",
+      "Active learning",
+      "Edge inference acceleration",
+      "Low‑light robustness",
+      "PLC/SCADA integration",
+      "Operator assist UI",
+      "Drift monitoring",
+      "Line‑side analytics",
+      "REST/OPC‑UA APIs",
+      "24/7 monitoring"
+    ],
+    benefits[
+      "Scrap reduction",
+      "Higher first‑pass yield",
+      "Fewer line stoppages",
+      "Traceable quality data",
+      "Rapid model iteration"
+    ],
+    useCases["Electronics", "Automotive", "Food & Bev", "Pharma"],
+    targetAudience["Plant managers", "Quality engineers", "Ops"],
+    tags["Edge AI", "Computer Vision", "Manufacturing", "OPC‑UA"],
+    estimatedDelivery: "6–10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,000 – $12,000/month",
+    roi: "300–600%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology["ONNX Runtime", "TensorRT", "OpenVINO", "gRPC"],
+      integrations["Ignition", "Kepware", "Siemens"],
+      apiEndpoints: 27,
+      uptime: "99.95%",
+      security["Network isolation", "Offline mode"]
+    }
+  },
+
+  // LLM Content Compliance for Regulated Industries
+  {
+    id: "llm-content-compliance",
+    title: "LLM Content Compliance",
+    description: "Policy‑aware generation for regulated industries with automated review, redaction, and archiving for audits.",
+    category: "AI & Legal Tech",
+    subcategory: "Compliance",
+    price: 1599,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "Custom policy definitions",
+      "PII/PHI detection",
+      "Redaction + templating",
+      "Holdouts + approvals",
+      "Immutable logs",
+      "DLP integrations",
+      "Watermarking",
+      "Human‑in‑the‑loop",
+      "Model choice controls",
+      "E‑discovery ready"
+    ],
+    benefits[
+      "Safer AI adoption",
+      "Lower legal risk",
+      "Faster content review",
+      "Audit readiness",
+      "Consistent brand voice"
+    ],
+    useCases["Healthcare content", "Bank marketing", "Legal drafting"],
+    targetAudience["Compliance", "Legal", "Marketing Ops"],
+    tags["LLM", "Compliance", "DLP", "Audit"],
+    estimatedDelivery: "3–5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,200 – $6,000/month",
+    roi: "200–300%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  {/* Removed stray closing brace */}
+
+  // AR/VR Enterprise Solutions
+  {
+    id: "ar-vr-enterprise-solutions",
+    title: "AR/VR Enterprise Solutions Platform",
+    description: "Comprehensive augmented and virtual reality platform for enterprise applications including training, design, collaboration, and customer engagement across various industries.",
+    category: "AR/VR & Immersive Tech",
+    subcategory: "Enterprise Solutions",
+    price: 3299,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "AR/VR content creation",
+      "Multi-platform deployment",
+      "Collaborative virtual spaces",
+      "Training simulation modules",
+      "3D visualization tools",
+      "Analytics and insights",
+      "Integration APIs",
+      "Content management system",
+      "Mobile app support",
+      "Cloud rendering"
+    ],
+    benefits[
+      "Reduce training costs by 60%",
+      "Improve learning retention by 80%",
+      "Enhanced collaboration",
+      "Remote work capabilities",
+      "Immersive customer experiences"
+    ],
+    useCases[
+      "Employee training",
+      "Product design and prototyping",
+      "Virtual meetings",
+      "Customer demonstrations",
+      "Maintenance and repair"
+    ],
+    targetAudience[
+      "Manufacturing companies",
+      "Healthcare organizations",
+      "Educational institutions",
+      "Retail businesses",
+      "Training providers"
+    ],
+    tags["AR/VR", "Immersive Technology", "Training", "Collaboration", "3D Visualization"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,299 - $9,999/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // 5G Network Optimization Platform
+  {
+    id: "5g-network-optimization",
+    title: "5G Network Optimization Platform",
+    description: "Advanced 5G network optimization platform that provides real-time monitoring, performance analysis, and automated optimization for 5G networks and applications.",
+    category: "5G & Telecommunications",
+    subcategory: "Network Optimization",
+    price: 3899,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "5G network monitoring",
+      "Performance analytics",
+      "Automated optimization",
+      "Quality of service management",
+      "Network slicing",
+      "Edge computing integration",
+      "Real-time reporting",
+      "Predictive maintenance",
+      "API integration",
+      "Mobile app access"
+    ],
+    benefits[
+      "Improve network performance by 40%",
+      "Reduce operational costs by 30%",
+      "Enhanced user experience",
+      "Automated network management",
+      "Future-ready infrastructure"
+    ],
+    useCases[
+      "Telecommunications",
+      "Smart cities",
+      "Industrial IoT",
+      "Mobile operators",
+      "Enterprise networks"
+    ],
+    targetAudience[
+      "Telecom operators",
+      "Network providers",
+      "City governments",
+      "Industrial companies",
+      "Technology consultants"
+    ],
+    tags["5G", "Network Optimization", "Telecommunications", "IoT", "Edge Computing"],
+    estimatedDelivery: "14-18 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,899 - $11,999/month",
+    roi: "350-550%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Space Technology Solutions
+  {
+    id: "space-technology-solutions",
+    title: "Space Technology Solutions Platform",
+    description: "Comprehensive space technology platform providing satellite data analytics, space mission planning, and Earth observation services for commercial and research applications.",
+    category: "Space Technology",
+    subcategory: "Satellite & Earth Observation",
+    price: 4999,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "Satellite data processing",
+      "Earth observation analytics",
+      "Mission planning tools",
+      "Satellite tracking",
+      "Data visualization",
+      "API access",
+      "Real-time monitoring",
+      "Historical data analysis",
+      "Custom algorithms",
+      "Expert consultation"
+    ],
+    benefits[
+      "Access to space-based data",
+      "Global monitoring capabilities",
+      "Environmental insights",
+      "Research and development support",
+      "Competitive advantage"
+    ],
+    useCases[
+      "Environmental monitoring",
+      "Agriculture optimization",
+      "Climate research",
+      "Urban planning",
+      "Disaster response"
+    ],
+    targetAudience[
+      "Research institutions",
+      "Environmental agencies",
       "Agricultural companies",
       "Logistics companies",
       "Research institutions"
@@ -641,30 +942,9 @@ export const emergingTechServices2025: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$25,000/month (Industry average: $50,000/month)",
-    competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
-    roi: "400% ROI within 10 months",
-    setupTime: "4-6 weeks",
-    integrations: ["ROS", "Industrial systems", "Cloud platforms", "IoT networks"],
-    freeTier: true,
-    trialPeriod: "30 days",
-    innovationScore: 96,
-    useCases: [
-      "Manufacturing automation",
-      "Warehouse operations",
-      "Agricultural automation",
-      "Healthcare assistance",
-      "Construction automation",
-      "Service robotics"
-    ],
-    compliance: ["Safety standards", "Industry regulations", "Quality standards"],
-    scalability: "Unlimited autonomous systems",
-    support: "Robotics expert support",
-    futurePotential: "General purpose robots, humanoid robots, swarm intelligence"
-  }
+      website: "https://ziontechgroup.com"
+    }
+  {/* Removed stray closing brace */}
 ];
 
 export default emergingTechServices2025;

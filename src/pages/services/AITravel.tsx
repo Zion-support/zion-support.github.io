@@ -171,4 +171,4 @@ export default function AITravel() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

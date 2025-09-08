@@ -171,4 +171,4 @@ export default function AIPrometheus() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

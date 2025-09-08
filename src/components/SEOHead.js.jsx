@@ -42,39 +42,33 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       """
       {/* Structured Data */}""""
       <script type="application/ld+json">
-        {JSON.stringify({}
-"""
-""""
-            "@context": "https://schema.org",""""
-            "@type": "Organization",""""
-            "name": "Zion Tech Group",""""
-            "url": "https://ziontechgroup.com",""""
-            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",""""
-            "description": description,""""
-            "address": {}
-"""
-""""
-                "@type": "PostalAddress",""""
-                "streetAddress": "364 E Main St STE 1008",""""
-                "addressLocality": "Middletown",""""
-                "addressRegion": "DE",""""
-                "postalCode": "19709",""""
-                "addressCountry": "US""""
-            },""""
-            "contactPoint": {}
-"""
-""""
-                "@type": "ContactPoint",""""
-                "telephone": "+1-302-464-0950",""""
-                "contactType": "customer service",""""
-                "email": "kleber@ziontechgroup.com""""
-            },""""
-            "sameAs"[;""""
-                "https://linkedin.com/company/ziontechgroup",""""
-                "https://twitter.com/ziontechgroup",""""
-                "https://github.com/ziontechgroup"""
-            ]
-        }) }
+        {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+            "description": description,
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"
+            },
+            "sameAs"[
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https://github.com/ziontechgroup"
+  {/* Removed stray closing bracket */}
+        })}
       </script>
       '"""
       {/* Article specific structured data */}'"'"""

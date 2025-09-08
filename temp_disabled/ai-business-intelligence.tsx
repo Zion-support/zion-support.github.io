@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function AIBusinessIntelligence() {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>AI Business Intelligence - Zion Tech Group</title>
         <meta name="description" content="Transform your business data into actionable insights with AI-powered business intelligence, predictive analytics, and intelligent reporting." />
@@ -260,4 +260,4 @@ export default function AIBusinessIntelligence() {
       </div>
     </React.Fragment>
   );
-}>
+  {/* Removed stray closing brace */}

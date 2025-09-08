@@ -1,34 +1,68 @@
 import { motion } from 'framer-motion';
 import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
 const highlights = [
-    {
-        icon: Brain,
-        title: 'AI-Powered Intelligence',
-        description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-        features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
-        color: 'from-zion-purple to-zion-purple-dark',
-        bgColor: 'bg-zion-purple/10',
-        borderColor: 'border-zion-purple/20'
-    },
-    {
-        icon: Globe,
-        title: 'Global Network',
-        description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-        features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'],
-        color: 'from-zion-cyan to-zion-cyan-dark',
-        bgColor: 'bg-zion-cyan/10',
-        borderColor: 'border-zion-cyan/20'
-    },
-    {
-        icon: Shield,
-        title: 'Enterprise Security',
-        description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-        features: ['Data Protection', 'Access Control', 'Audit Trails'],
-        color: 'from-zion-blue to-zion-blue-dark',
-        bgColor: 'bg-zion-blue/10',
-        borderColor: 'border-zion-blue/20'
-    }
+  {
+    icon: Brain,
+    title: 'AI-Powered Intelligence',
+    description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
+    features['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
+    color: 'from-zion-purple to-zion-purple-dark',
+    bgColor: 'bg-zion-purple/10',
+    borderColor: 'border-zion-purple/20'
+  },
+  {
+    icon: Globe,
+    title: 'Global Network',
+    description: 'Connect with professionals and businesses from over 150 countries worldwide.',
+    features['Multi-language Support', 'Local Expertise', '24/7 Availability'],
+    color: 'from-zion-cyan to-zion-cyan-dark',
+    bgColor: 'bg-zion-cyan/10',
+    borderColor: 'border-zion-cyan/20'
+  },
+  {
+    icon: Shield,
+    title: 'Enterprise Security',
+    description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
+    features['Data Protection', 'Access Control', 'Audit Trails'],
+    color: 'from-zion-blue to-zion-blue-dark',
+    bgColor: 'bg-zion-blue/10',
+    borderColor: 'border-zion-blue/20'
+  {/* Removed stray closing brace */}
 ];
+
+const features = [
+  {
+    icon: "🚀",
+    title: "Cutting-Edge Technology",
+    description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
+  },
+  {
+    icon: "⚡",
+    title: "Lightning Fast Performance",
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-level security protocols and compliance standards to protect your valuable data"
+  },
+  {
+    icon: "🌐",
+    title: "Global Scalability",
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
+  },
+  {
+    icon: "🤖",
+    title: "AI-Powered Intelligence",
+    description: "Smart automation and predictive analytics that adapt to your business requirements"
+  },
+  {
+    icon: "📊",
+    title: "Real-Time Analytics",
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"
+  {/* Removed stray closing brace */}
+];
+
 const achievements = [
     { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
     { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },

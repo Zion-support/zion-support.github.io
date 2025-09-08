@@ -7,7 +7,7 @@ export async function rewardOnboarding(userId: string) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' }),
   });
-}
+  {/* Removed stray closing brace */}
 
 export async function earnTokensForPurchase(
   userId: string,
@@ -19,7 +19,7 @@ export async function earnTokensForPurchase(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, amount: 20, reason: 'Referral' }),
   });
-}
+  {/* Removed stray closing brace */}
 
 export async function earnTokensForReferral(
   userId: string,
@@ -30,4 +30,4 @@ export async function earnTokensForReferral(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' }),
   });
-}
+  {/* Removed stray closing brace */}

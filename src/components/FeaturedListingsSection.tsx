@@ -30,21 +30,83 @@ const featuredListings = [
     price: "$599/month",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
     rating: 4.7,
-    reviews: 234
-  },
-  {
-    id: 4,
-    title: "IoT Edge Computing Platform",
-    description: "Real-time IoT data processing and analytics at the edge for instant insights.",
-    category: "IoT",
-    price: "$449/month",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",
-    rating: 4.6,
-    reviews: 178
-  }
+    reviews: 156,
+    views: 3241,
+    likes: 189,
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
+    price: "$18,500",
+    tags["AWS", "Docker", "Kubernetes", "CI/CD"],
+    duration: "2-3 months",
+    team: "4 experts",
+    location: "On-site",
+    featured: true,
+    technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
+    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
+  {/* Removed stray closing brace */}
 ];
 
-export function FeaturedListingsSection() {
+const featuredServices = [
+  {
+    title: 'AI-Powered Business Intelligence',
+    description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+    category: 'AI Solutions',
+    rating: 4.9,
+    reviews: 127,
+    price: 'From $2,500',
+    image: '🤖',
+    link: '/services/ai',
+    features['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
+  },
+  {
+    title: 'Cloud Migration & Optimization',
+    description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
+    category: 'Cloud & DevOps',
+    rating: 4.8,
+    reviews: 89,
+    price: 'From $5,000',
+    image: '☁️',
+    link: '/services/cloud',
+    features['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
+  },
+  {
+    title: 'Cybersecurity Assessment & Implementation',
+    description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
+    category: 'Cybersecurity',
+    rating: 4.9,
+    reviews: 156,
+    price: 'From $3,500',
+    image: '🔒',
+    link: '/services/cybersecurity',
+    features['Security Audits', 'Threat Detection', 'Incident Response']
+  {/* Removed stray closing brace */}
+];
+
+export function FeaturedListingsSection(...args[]):  {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [hoveredListing, setHoveredListing] = useState<any>(null);
+  const [showFilters, setShowFilters] = useState(false);
+
+  const filteredListings = selectedCategory === "All" 
+    ? featuredListings: featuredListings.filter(listing  => listing.category === selectedCategory);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const renderStars = (rating: number)  => {
+    return Array.from({ length: 5 }, (_, i)  => (
+      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
+        ★
+      </span>
+    ))};
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">

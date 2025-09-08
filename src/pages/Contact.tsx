@@ -92,7 +92,7 @@ function Contact(): JSX.Element {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO
         title="Contact Us | Zion Tech Group - Get Expert Consultation"
         description="Contact Zion Tech Group for expert consultation on AI-powered micro SAAS, cloud infrastructure, data analytics, and security solutions. Get in touch today!"

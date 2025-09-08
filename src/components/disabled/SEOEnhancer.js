@@ -80,7 +80,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                                 description: 'Comprehensive security solutions including threat detection and compliance'
                             }
                         }
-                    ]
+  {/* Removed stray closing bracket */}
                 }
             })
         };

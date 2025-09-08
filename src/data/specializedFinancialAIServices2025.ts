@@ -296,8 +296,8 @@ export const specializedFinancialAIServices2025: FinancialAIService[] = [
       "Financial planning",
       "Wealth management"
     ],
-    technologies: ["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"]
-  }
+    technologies["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"]
+  {/* Removed stray closing brace */}
 ];
 
 export default specializedFinancialAIServices2025;

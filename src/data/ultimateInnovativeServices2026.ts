@@ -757,7 +757,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     competitors["Watershed", "Normative", "CarbonChain"],
     marketSize: "$1.2 trillion by 2027",
     uniqueValue: "First comprehensive AI platform combining sustainability optimization with environmental impact assessment"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default ULTIMATE_INNOVATIVE_SERVICES_2026;

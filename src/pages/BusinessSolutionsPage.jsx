@@ -150,7 +150,7 @@ const BusinessSolutions = [
         category: "Sustainability",
         badge: "New",
         link: "/request-quote?service=sustainability-consulting"
-    }
+  {/* Removed stray closing brace */}
 ];
 const categories = [
     { name: "All", value: "all", icon: <Building className="h-4 w-4"/> },

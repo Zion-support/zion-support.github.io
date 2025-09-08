@@ -16,11 +16,11 @@ interface Notification {
   priority: 'low' | 'medium' | 'high';
   category: string;
   expiresAt?: Date;
-}
+  {/* Removed stray closing brace */}
 
 interface Props {
   enabled?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function SmartNotificationSystem({ enabled = true }: Props) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -407,4 +407,4 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       </motion.div>
     </AnimatePresence>
   );
-}
+  {/* Removed stray closing brace */}

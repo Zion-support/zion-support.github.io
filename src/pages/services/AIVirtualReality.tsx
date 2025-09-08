@@ -171,4 +171,4 @@ export default function AIVirtualReality() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

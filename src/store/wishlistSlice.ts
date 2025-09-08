@@ -4,7 +4,7 @@ import { WishlistItem } from '@/types/listings';
 type WishlistState = {
   items: WishlistItem[];
   itemCount: number;
-}
+  {/* Removed stray closing brace */}
 
 const initialState: WishlistState = {
   items: [],

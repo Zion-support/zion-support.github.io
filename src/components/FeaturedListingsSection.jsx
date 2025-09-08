@@ -102,10 +102,9 @@ const featuredListings = [
     team: "7 experts",
     location: "Hybrid",
     featured: false,
-    technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
-    highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"],
-    link: "/services/iot-smart-city"
-  }
+    technologies["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
+    highlights["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
+  {/* Removed stray closing brace */}
 ];
 
 export function FeaturedListingsSection() {

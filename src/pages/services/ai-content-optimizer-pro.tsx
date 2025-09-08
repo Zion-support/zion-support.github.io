@@ -152,7 +152,7 @@ const AIContentOptimizerPro: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO
         title="AI Content Optimizer Pro | Zion Tech Group"
         description="Advanced AI-powered content optimization platform. Improve SEO, readability, and engagement with machine learning algorithms. Start free trial today."

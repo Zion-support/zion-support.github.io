@@ -113,9 +113,9 @@ const featuredListings = [
         team: "6 experts",
         location: "Remote",
         featured: false,
-        technologies: ["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
-        highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
-    }
+        technologies["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
+        highlights["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
+  {/* Removed stray closing brace */}
 ];
 const categories = [
     "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
@@ -137,7 +137,7 @@ export function FeaturedListingsSection() {
             }
         }
     };
-    
+  {/* Removed stray semicolon */}
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★

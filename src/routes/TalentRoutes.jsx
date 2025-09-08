@@ -5,5 +5,5 @@ export default function TalentRoutes() {
     return (<React.Fragment>
       <Route path="directory" element={<TalentDirectory />}/>
       <Route path="list" element={<TalentsPage />}/>
-    </React.Fragment>);
-}
+    </>);
+  {/* Removed stray closing brace */}

@@ -368,7 +368,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     status: 'active',
     sla: 'Consulting success guarantee',
     support: 'Strategic advisory team'
-  }
+  {/* Removed stray closing brace */}
 ];
 export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[]  => {
   if (category === 'All') {

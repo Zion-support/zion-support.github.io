@@ -594,154 +594,21 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
         savings: "Save 30% with annual billing"
       }
     ],
-    marketPrice: "$800-1500/month",
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
-    roi: "400-600% within 12 months",
-    setupTime: "2-4 weeks",
-    freeTier: false,
-    trialPeriod: "30 days",
-    contactInfo: zionContact
-  },
-  {
-    serviceId: 9,
-    serviceName: "AI Workflow Orchestrator",
-    category: "Business Process Automation",
-    description: "Intelligent workflow automation platform that orchestrates complex business processes and eliminates manual tasks",
-    pricingTiers: [
-      {
-        name: "Starter",
-        price: 199,
-        billingCycle: "monthly",
-        features: [
-          "Basic workflow automation",
-          "Pre-built templates",
-          "Standard integrations",
-          "Email support",
-          "Basic reporting"
-        ],
-        limitations: [
-          "Up to 10 workflows",
-          "Limited customization",
-          "Basic integrations"
-        ],
-        recommendedFor: ["Small businesses", "Startups", "Individual users"]
-      },
-      {
-        name: "Professional",
-        price: 329,
-        billingCycle: "monthly",
-        features: [
-          "Everything in Starter",
-          "Advanced automation",
-          "Custom workflows",
-          "Performance monitoring",
-          "Advanced integrations",
-          "Priority support",
-          "Custom dashboards"
-        ],
-        limitations: [
-          "Up to 100 workflows",
-          "No custom AI models"
-        ],
-        recommendedFor: ["Medium businesses", "Operations teams", "Growing companies"],
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 699,
-        billingCycle: "monthly",
-        features: [
-          "Everything in Professional",
-          "Unlimited workflows",
-          "Custom AI models",
-          "Full API access",
-          "White-label options",
-          "Advanced security",
-          "Dedicated support"
-        ],
-        limitations: [],
-        recommendedFor: ["Large enterprises", "Global operations", "Complex organizations"],
-        savings: "Save 25% with annual billing"
-      }
-    ],
-    marketPrice: "$500-800/month",
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
-    roi: "300-500% within 10 months",
-    setupTime: "2-3 weeks",
-    freeTier: true,
-    trialPeriod: "21 days",
-    contactInfo: zionContact
-  },
-  {
-    serviceId: 10,
-    serviceName: "AI Predictive Maintenance Platform",
-    category: "Industrial IoT",
-    description: "Intelligent predictive maintenance platform that monitors equipment health and predicts failures before they occur",
-    pricingTiers: [
-      {
-        name: "Industrial",
-        price: 299,
-        billingCycle: "monthly",
-        features: [
-          "Equipment monitoring (up to 50 devices)",
-          "Basic failure prediction",
-          "Maintenance scheduling",
-          "Email support",
-          "Standard integrations"
-        ],
-        limitations: [
-          "Basic analytics",
-          "Limited customization",
-          "No custom models"
-        ],
-        recommendedFor: ["Small manufacturers", "Local facilities", "Startup operations"]
-      },
-      {
-        name: "Professional",
-        price: 449,
-        billingCycle: "monthly",
-        features: [
-          "Everything in Industrial",
-          "Advanced analytics",
-          "Custom alerts",
-          "Performance optimization",
-          "Advanced integrations",
-          "Priority support",
-          "Custom dashboards"
-        ],
-        limitations: [
-          "Up to 500 devices",
-          "No custom AI training"
-        ],
-        recommendedFor: ["Medium manufacturers", "Industrial facilities", "Growing operations"],
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 899,
-        billingCycle: "monthly",
-        features: [
-          "Everything in Professional",
-          "Unlimited devices",
-          "Custom AI training",
-          "Full API access",
-          "White-label options",
-          "Advanced security",
-          "Dedicated support"
-        ],
-        limitations: [],
-        recommendedFor: ["Large manufacturers", "Global facilities", "Complex operations"],
-        savings: "Save 30% with annual billing"
-      }
-    ],
-    marketPrice: "$700-1200/month",
-    competitors: ["GE Digital", "Siemens", "ABB"],
-    roi: "350-550% within 12 months",
-    setupTime: "3-4 weeks",
-    freeTier: false,
-    trialPeriod: "30 days",
-    contactInfo: zionContact
-  }
+    compliance['Research standards', 'Data security', 'International collaboration', 'Export controls'],
+    support: {
+      email: true,
+      phone: true,
+      chat: true,
+      dedicated: true,
+      sla: '99.9% uptime, 8-hour response time'
+    },
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  {/* Removed stray closing brace */}
 ];
 
 export default COMPREHENSIVE_PRICING_GUIDE_2027;

@@ -144,7 +144,7 @@ export default function DigitalTwin() {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Digital Twin Solutions | Zion Tech Group"
         description="Transform your physical assets into intelligent digital twins with real-time monitoring, predictive analytics, and automated optimization."

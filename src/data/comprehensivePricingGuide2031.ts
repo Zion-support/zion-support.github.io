@@ -16,7 +16,7 @@ export type PricingTier2031 = {
   roi: string;
   implementationTime: string;
   supportLevel: string;
-}
+  {/* Removed stray closing brace */}
 
 export type ServiceCategory2031 = {
   id: string;
@@ -42,7 +42,7 @@ export type ServiceCategory2031 = {
       website: string;
     };
   }[];
-}
+  {/* Removed stray closing brace */}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
   {
@@ -677,7 +677,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
         }
       }
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export const PRICING_SUMMARY_2031 = {

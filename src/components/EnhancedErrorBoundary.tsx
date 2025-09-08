@@ -7,14 +7,14 @@ interface Props {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
-}
+  {/* Removed stray closing brace */}
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -226,7 +226,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
+  {/* Removed stray closing brace */}
 
 // Export as ErrorBoundary for backward compatibility
 export const ErrorBoundary = EnhancedErrorBoundary;

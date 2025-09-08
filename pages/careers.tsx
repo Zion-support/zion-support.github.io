@@ -3,9 +3,40 @@ import { Link } from 'react-router-dom'
 import { Users, Heart, Zap, Globe, Award, ArrowRight, MapPin } from 'lucide-react';
 
 
-export default function Careers() {
+export default function Careers(...args[]):  {
+	const openPositions = [
+		{
+			title: 'Senior AI Engineer',
+			department: 'AI & Machine Learning',
+			location: 'Remote / San Francisco',
+			type: 'Full-time',
+			description: 'Build next-generation autonomous AI systems and multi-agent workflows.'
+		},
+		{
+			title: 'Cloud Infrastructure Engineer',
+			department: 'Cloud & DevOps',
+			location: 'Remote / New York',
+			type: 'Full-time',
+			description: 'Design and implement scalable cloud architectures for enterprise clients.'
+		},
+		{
+			title: 'Cybersecurity Specialist',
+			department: 'Security',
+			location: 'Remote / Austin',
+			type: 'Full-time',
+			description: 'Develop advanced security solutions and compliance frameworks.'
+		},
+		{
+			title: 'Frontend Developer',
+			department: 'Engineering',
+			location: 'Remote',
+			type: 'Full-time',
+			description: 'Create intuitive user interfaces for our AI-powered platforms.'
+		}
+  {/* Removed stray closing bracket */}
+
 	return (
-		<div>
+  {/* Empty JSX fragment */}
 			{/* Hero Section */}
 			<section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-blue-900 overflow-hidden">
 				<div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
@@ -74,7 +105,6 @@ export default function Careers() {
 					</div>
 				</div>
 			</section>
-		</div>
-	)
-}
->
+		</>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

@@ -448,7 +448,7 @@ export const innovativeServices2028 = [
     integrations: ["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],
     freeTier: false,
     trialPeriod: "90 days"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Service Categories for Navigation
@@ -523,8 +523,8 @@ export const serviceCategories = [
     description: "Next-generation network optimization",
     icon: "Network",
     color: "from-blue-600 to-indigo-600",
-    services: [10]
-  }
+    services[10]
+  {/* Removed stray closing brace */}
 ];
 
 // Pricing Tiers
@@ -570,7 +570,7 @@ export const pricingTiers = [
       "White-label options"
     ],
     recommended: false
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Contact Information

@@ -63,7 +63,7 @@ function ReturnsManagement() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 
 export default ReturnsManagement;
 

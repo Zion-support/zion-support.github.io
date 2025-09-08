@@ -212,5 +212,5 @@ ${errorInfo.componentStack}
           </motion.div>
         </div>)}
         return this.props.children}
-}
+  {/* Removed stray closing brace */}
 export default EnhancedErrorBoundary;

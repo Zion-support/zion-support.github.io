@@ -176,12 +176,135 @@ class ConsoleErrorFixer {
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     console.log(`📊 Console Error Fixer report generated: ${this.reportFile}`);
   }
-}
+  {/* Removed stray closing brace */}
 
-// Auto-start if run directly
-if (require.main === module) {
-  const fixer = new ConsoleErrorFixer();
-  fixer.start();
-}
+function findConsoleStatements(dir) {
+  const consoleStatements = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+            const lines = content.split('\n');
+            
+            lines.forEach((line, index) => {
+              if (line.includes('console.')) {
+                const match = line.match(/console\.\w+/);
+                if (match) {
+                  consoleStatements.push({
+                    file: path.relative(process.cwd(), fullPath),
+                    line: index + 1,
+                    statement: match[0]
+                  });
+                }
+              }
+            });
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  scanDirectory(dir);
+  return consoleStatements;
+  {/* Removed stray closing brace */}
 
-module.exports = ConsoleErrorFixer;
+function findErrorPatterns(dir) {
+  const errorPatterns = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+            const lines = content.split('\n');
+            
+            lines.forEach((line, index) => {
+              // Check for common error patterns
+              const patterns = [
+                'throw new Error',
+                'throw Error',
+                'console.error',
+                'console.warn',
+                'debugger',
+                'alert(',
+                'confirm(',
+                'prompt('
+              ];
+              
+              patterns.forEach(pattern => {
+                if (line.includes(pattern)) {
+                  errorPatterns.push({
+                    file: path.relative(process.cwd(), fullPath),
+                    line: index + 1,
+                    pattern: pattern
+                  });
+                }
+              });
+            });
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  scanDirectory(dir);
+  return errorPatterns;
+  {/* Removed stray closing brace */}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial console error fixer
+  await runConsoleErrorFixer();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runConsoleErrorFixer();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+  {/* Removed stray closing brace */}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous console error fixer
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous console error fixer:', error);
+  process.exit(1);
+});

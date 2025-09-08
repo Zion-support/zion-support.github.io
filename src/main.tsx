@@ -15,13 +15,14 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </HelmetProvider>
     </Router>
   </React.StrictMode>,
-)
+  {/* Removed stray closing parenthesis */}
 
-// Register service worker with error handling
-try {
-  registerServiceWorker().catch(error => {
-    // // console.warn('Service worker registration failed:', error);
-  });
-} catch (error) {
-  // // console.warn('Service worker registration error:', error);
-}
+// Register service worker in production only
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+	window.addEventListener('load', () => {
+		const swUrl = '/sw.js'
+		navigator.serviceWorker.register(swUrl).catch((error) => {
+			console.error('Service worker registration failed:', error)
+		})
+	})
+  {/* Removed stray closing brace */}

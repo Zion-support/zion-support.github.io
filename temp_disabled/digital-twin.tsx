@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>Digital Twin Solutions - Zion Tech Group</title>
         <meta name="description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
@@ -314,4 +314,4 @@ export default function DigitalTwin() {
       </div>
     </React.Fragment>
   );
-}>
+  {/* Removed stray closing brace */}

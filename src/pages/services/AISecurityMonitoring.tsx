@@ -171,4 +171,4 @@ export default function AISecurityMonitoring() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

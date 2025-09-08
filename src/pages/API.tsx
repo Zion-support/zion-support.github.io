@@ -53,14 +53,60 @@ const API: React.FC = () => {
     }
   ];
 
-  const sdks = [
-    { name: 'JavaScript/Node.js', icon: '🔷' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'Java', icon: '☕' },
-    { name: 'C#', icon: '🔷' },
-    { name: 'Go', icon: '🐹' },
-    { name: 'PHP', icon: '🐘' }
-  ];
+url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
+headers = {"Authorization": "Bearer YOUR_API_KEY"}
+
+response = requests.post(url, json={
+    "text": "Your text here",
+    "analysis_type": "sentiment"
+})
+
+print(response.json())`,
+    category: 'AI & ML'
+  },
+  {
+    title: 'Cloud Resource Management',
+    language: 'JavaScript',
+    description: 'Example of managing cloud resources through our infrastructure API.',
+    code: `const axios = require('axios');
+
+const api = axios.create({
+    baseURL: 'https://api.ziontechgroup.com/v1/cloud',
+    headers: {'Authorization': 'Bearer YOUR_API_KEY'}
+});
+
+const createInstance = async () => {
+    const response = await api.post('/instances', {
+        type: 'compute',
+        size: 'medium',
+        region: 'us-east-1'
+    });
+    return response.data};`,
+    category: 'Cloud & DevOps'
+  },
+  {
+    title: 'Security Threat Detection',
+    language: 'Python',
+    description: 'Implement real-time threat detection using our security API.',
+    code: `import requests
+
+def check_threat(ip_address):
+    url = "https://api.ziontechgroup.com/v1/security/threat-check"
+    headers = {"Authorization": "Bearer YOUR_API_KEY"}
+    
+    response = requests.post(url, json={
+        "ip": ip_address,
+        "check_type": "comprehensive"
+    })
+    
+    return response.json()`,
+    category: 'Security'
+  {/* Removed stray closing brace */}
+];
+
+export default function API(...args[]):  {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

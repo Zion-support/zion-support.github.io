@@ -422,7 +422,7 @@ export default function ComprehensiveServicesShowcase2030() {
   };
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO
         title="Comprehensive Services Showcase 2030 - Zion Tech Group"
         description="Explore our complete portfolio of innovative AI-powered services, micro SAAS solutions, and cutting-edge technology services for 2030 and beyond."

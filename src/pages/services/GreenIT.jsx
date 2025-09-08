@@ -306,4 +306,4 @@ export default function GreenIT() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

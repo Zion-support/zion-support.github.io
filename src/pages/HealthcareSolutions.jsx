@@ -97,8 +97,8 @@ const healthcareSolutions = [
     price: "From $45,000",
     timeline: "8-16 weeks",
     category: "Security",
-    compliance: ["NIST", "ISO 27001", "HITRUST"]
-  }
+    compliance["NIST", "ISO 27001", "HITRUST"]
+  {/* Removed stray closing brace */}
 ];
 
 const complianceStandards = [
@@ -124,8 +124,8 @@ const complianceStandards = [
     name: "SOC 2",
     description: "System and Organization Controls",
     icon: CheckCircle,
-    requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality"]
-  }
+    requirements["Security", "Availability", "Processing Integrity", "Confidentiality"]
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -155,7 +155,7 @@ const successStories = [
     solution: "Developed FDA-approved AI diagnostic platform",
     results: "95% accuracy rate, 30% faster diagnosis, FDA clearance",
     logo: "DD"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -186,7 +186,7 @@ const processSteps = [
     description: "Validate compliance and obtain necessary certifications",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function HealthcareSolutions() {

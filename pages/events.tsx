@@ -3,30 +3,53 @@ import { Link } from 'react-router-dom'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe } from 'lucide-react';
 
 
-export default function EventsPage() {
-  return (
-    <>
-      <Head>
-        <title>Events | Zion Tech Group</title>
-        <meta name="description" content="Explore upcoming events, conferences, and community meetups hosted by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Upcoming Events</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join us at our latest events to learn about AI, quantum computing, micro SAAS innovations, and more.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="p-6 rounded-lg bg-white border border-gray-200 shadow-sm">
-              <h2 className="text-xl font-semibold mb-3">No events announced yet</h2>
-              <p className="text-gray-600 mb-4">
-                We are curating our 2025 event calendar. Check back soon or follow our social channels for updates.
-              </p>
-            </div>
-          </div>
+export default function Events(...args[]):  {
+	const upcomingEvents = [
+		{
+			id: 1,
+			title: 'AI in Enterprise: A Practical Guide',
+			date: '2025-02-15',
+			time: '10:00 AM - 12:00 PM PST',
+			location: 'Virtual Event',
+			attendees: 150,
+			type: 'Webinar',
+			description: 'Learn how to implement AI solutions in your enterprise environment with real-world case studies and best practices.',
+			speaker: 'Dr. Sarah Chen, AI Solutions Architect'
+		},
+		{
+			id: 2,
+			title: 'Cloud Security Summit 2025',
+			date: '2025-02-22',
+			time: '9:00 AM - 5:00 PM PST',
+			location: 'San Francisco, CA',
+			attendees: 300,
+			type: 'Conference',
+			description: 'Join industry experts for a comprehensive look at the latest cloud security threats and defense strategies.',
+			speaker: 'Alex Thompson, Chief Security Officer'
+		},
+		{
+			id: 3,
+			title: 'Micro SaaS Workshop',
+			date: '2025-03-01',
+			time: '2:00 PM - 4:00 PM PST',
+			location: 'Virtual Event',
+			attendees: 75,
+			type: 'Workshop',
+			description: 'Hands-on workshop on building and scaling micro SaaS solutions for modern businesses.',
+			speaker: 'Michael Rodriguez, SaaS Solutions Lead'
+		},
+		{
+			id: 4,
+			title: 'Quantum Computing in Business',
+			date: '2025-03-08',
+			time: '11:00 AM - 1:00 PM PST',
+			location: 'Virtual Event',
+			attendees: 120,
+			type: 'Webinar',
+			description: 'Explore the potential of quantum computing and how it will transform business operations.',
+			speaker: 'Dr. Emily Watson, Quantum Research Lead'
+		}
+  {/* Removed stray closing bracket */}
 
 	const pastEvents = [
 		{
@@ -45,10 +68,10 @@ export default function EventsPage() {
 			attendees: 180,
 			type: 'Webinar'
 		}
-	]
+  {/* Removed stray closing bracket */}
 
 	return (
-		<div>
+  {/* Empty JSX fragment */}
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -239,6 +262,6 @@ export default function EventsPage() {
 					</div>
 				</div>
 			</section>
-		</div>
-	)
-}>
+		</>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

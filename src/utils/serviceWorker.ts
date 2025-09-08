@@ -326,7 +326,7 @@ export function registerServiceWorker() {
     }
     return outputArray;
   }
-}
+  {/* Removed stray closing brace */}
 
 export function unregisterServiceWorker() {
   if ('serviceWorker' in navigator) {

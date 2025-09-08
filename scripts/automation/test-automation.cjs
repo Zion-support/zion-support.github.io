@@ -677,19 +677,38 @@ this.log(Tests completed successfully. Test "count": ${testCount});
       const verifyResult = await this.verifyBuildOutput()
           "timestamp": new Date().toISOString()})};"
       // Run tests
-      const testResult = await this.runTests()
-        `ERROR";"
-      process.exit(1)} else {}"
-  this.log("All tests passed successfully!", "INFO")};"
-// Run the automation if this script is executed directly
-  if($2) {}
-  // Run the automation if this script is executed directly
-  const test = new TestAutomation()
-=======
-          "timestamp: new Date().toISOString()})}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      // Run tests;
       const testResult = await this.runTests();
+      results.push({
+        step: 'tests',
+        success: testResult.success,
+        details: testResult,
+        timestamp: new Date().toISOString()
+      });
+    }
+
+    // Generate final report
+    const report = await this.generateTestReport(results);
+    
+    this.log(`Test automation completed. Status: ${report.status}`);
+    this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
+    
+    if (report.status === 'FAILED') {
+      this.log('Test automation failed. Check the report for details.', 'ERROR');
+      process.exit(1);
+    } else {
+      this.log('All tests passed successfully!', 'INFO');
+    }
+  }
+  {/* Removed stray closing brace */}
+
+// Run the automation if this script is executed directly
+if (require.main === module) {
+  const test = new TestAutomation();
+  test.run().catch(error => {
+    console.error('Test automation failed:', error);
+    process.exit(1);
+    });
+  {/* Removed stray closing brace */}
 
         `ERROR";"
       process.exit(1)} else {}"

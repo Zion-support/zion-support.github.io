@@ -88,7 +88,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Innovative Micro SAAS Services - Zion Tech Group"
         description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."

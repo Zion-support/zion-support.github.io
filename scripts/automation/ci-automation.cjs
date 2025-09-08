@@ -681,8 +681,16 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
 ;
     // Generate final report;
     const report = await this.generateReport(results);
-<<<<<<< HEAD
-this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}`);
+    
+    this.log(`CI automation completed. Status: ${report.status}`);
+    this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
+    
+    if (report.status === 'FAILED') {
+      this.log('CI automation failed. Check the report for details.', 'ERROR');
+      process.exit(1);
+    }
+  }
+  {/* Removed stray closing brace */}
 
     if (report.status === "FAILED") {}
   this.log("CI automation failed. Check the report for details.", "ERROR");
@@ -713,7 +721,11 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(""Passe
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const ci = new CIAutomation();
-  ci.run().catch(error => {})"
+  ci.run().catch(error => {
+    console.error('CI automation failed:', error);
+    process.exit(1);
+  });
+  {/* Removed stray closing brace */}
 
 <<<<<<< HEAD
     process.exit(1)})};

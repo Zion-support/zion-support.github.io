@@ -155,4 +155,4 @@ export default function AIIoTEdgeComputing() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

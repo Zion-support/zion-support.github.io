@@ -9,7 +9,7 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
-}
+  {/* Removed stray closing brace */}
 
 interface AccessibilityEnhancerProps {
   className?: string;
@@ -255,7 +255,7 @@ const AccessibilityEnhancer: React.FC = () => {
   ] as const;
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Accessibility Toggle Button */}
       <button
         onClick={togglePanel}

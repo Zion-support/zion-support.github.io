@@ -2,5 +2,5 @@
 export default function DeveloperRoutes() {
     return (<React.Fragment>
       {/* Developer portal routes can be added here */}
-    </React.Fragment>);
-}
+    </>);
+  {/* Removed stray closing brace */}

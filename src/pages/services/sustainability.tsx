@@ -261,6 +261,4 @@ const SustainableTechnology: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default SustainableTechnology;
+  {/* Removed stray closing brace */}

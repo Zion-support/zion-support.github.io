@@ -68,7 +68,7 @@ export default function MicroSaasServicesPage() {
 
 const MicroSAASServicesPage = () => {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Micro SAAS Services - Zion Tech Group"
         description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions."

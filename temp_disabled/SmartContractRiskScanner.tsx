@@ -505,4 +505,4 @@ export default function SmartContractRiskScanner() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

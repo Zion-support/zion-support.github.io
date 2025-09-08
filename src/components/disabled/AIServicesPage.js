@@ -115,7 +115,7 @@ const AIServices = [
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Content",
         link: "/request-quote?service=ai-content"
-    }
+  {/* Removed stray closing brace */}
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },

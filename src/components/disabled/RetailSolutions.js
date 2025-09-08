@@ -205,4 +205,4 @@ export default function RetailSolutions() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

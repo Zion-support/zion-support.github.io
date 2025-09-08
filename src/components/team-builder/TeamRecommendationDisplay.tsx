@@ -14,7 +14,7 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
   // onEditRole: (roleId: string)  => void; // For future add/remove
   // onRemoveRole: (roleId: string)  => void; // For future add/remove
 
-}
+  {/* Removed stray closing brace */}
 
 export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInviteTalent }: TeamRecommendationDisplayProps) => {
   if (!recommendation) return null;

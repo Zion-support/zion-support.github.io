@@ -176,7 +176,8 @@ const HealthcareSolutions = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>);
-};
-export default HealthcareSolutions;
+      </section>
+    </div>
+  );
+  {/* Removed stray closing brace */}
+

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function AISupplyChainOptimization() {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
         <meta name="description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
@@ -377,4 +377,4 @@ export default function AISupplyChainOptimization() {
       </div>
     </React.Fragment>
   );
-}>
+  {/* Removed stray closing brace */}

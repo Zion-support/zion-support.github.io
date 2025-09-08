@@ -101,7 +101,7 @@ export default function AIContentGenerator() {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="AI Content Generator - Create Engaging Content with AI"
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."

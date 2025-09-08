@@ -176,9 +176,8 @@ const { baseUrl, urls } = this.config;
 </html>`;
         return html;
     }
-}
-// Default sitemap configuration for Zion Tech Group;;;
-
+  {/* Removed stray closing brace */}
+// Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
     baseUrl: 'https://ziontechgroup.com',
     urls: [
@@ -219,7 +218,7 @@ export const defaultSitemapConfig = {
         // Legal
         { url: '/privacy', changefreq: 'yearly', priority: 0.3 },
         { url: '/terms', changefreq: 'yearly', priority: 0.3 }
-    ]
+  {/* Removed stray closing bracket */}
 };
 // Utility function to generate all sitemap files;;;
 

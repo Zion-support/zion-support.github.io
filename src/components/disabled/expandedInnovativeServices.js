@@ -870,8 +870,8 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],
         compliance: ["COPPA", "SOC 2", "GDPR"],
         roi: "300% within 12 months",
-        competitors: ["Unity", "Epic Games", "Steam", "Twitch", "Discord"]
-    }
+        competitors["Unity", "Epic Games", "Steam", "Twitch", "Discord"]
+  {/* Removed stray closing brace */}
 ];
 export const EXPANDED_SERVICE_CATEGORIES = [
     "AI & Content Marketing",

@@ -298,5 +298,5 @@ const totalPages = pageMetrics.length;
     clearCache() {
         this.analyzedPages.clear();
     }
-}
+  {/* Removed stray closing brace */}
 export default ContentQualityAnalyzer;

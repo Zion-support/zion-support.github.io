@@ -93,7 +93,7 @@ const solutionCategories = [
       'Change Management',
       'Technology Consulting'
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const industrySolutions = [
@@ -174,7 +174,7 @@ const industrySolutions = [
       'Infrastructure Management'
     ],
     color: 'from-gray-500 to-slate-600'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const featuredSolutions = [
@@ -249,7 +249,7 @@ const featuredSolutions = [
     implementation: '8-16 weeks',
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function Solutions() {

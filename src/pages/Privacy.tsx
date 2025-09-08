@@ -427,5 +427,5 @@ export default function Privacy() {
         </div>
       </section>
     </div>
-  );
-}
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

@@ -186,7 +186,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   if (!isVisible) return null;
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Performance Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}

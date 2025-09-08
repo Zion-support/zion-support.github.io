@@ -97,8 +97,8 @@ const sustainabilitySolutions = [
     price: "From $60,000",
     timeline: "12-20 weeks",
     category: "Carbon Management",
-    technologies: ["Carbon Analytics", "IoT Monitoring", "Blockchain", "AI Reporting"]
-  }
+    technologies["Carbon Analytics", "IoT Monitoring", "Blockchain", "AI Reporting"]
+  {/* Removed stray closing brace */}
 ];
 
 const sustainabilityTechnologies = [
@@ -129,7 +129,7 @@ const sustainabilityTechnologies = [
     icon: Network,
     useCase: "Energy Distribution",
     reliability: "Critical"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -159,7 +159,7 @@ const successStories = [
     solution: "Implemented electric fleet, route optimization, and carbon tracking systems",
     results: "75% reduction in carbon emissions, 25% decrease in fuel costs, improved delivery efficiency",
     logo: "SL"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -190,7 +190,7 @@ const processSteps = [
     description: "Track performance and continuously improve sustainability metrics",
     icon: Gauge,
     duration: "Ongoing"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const sustainabilityBenefits = [
@@ -216,8 +216,8 @@ const sustainabilityBenefits = [
     title: "Brand Enhancement",
     description: "Improved reputation and competitive advantage in the market",
     icon: Award,
-    examples: ["Customer loyalty", "Market differentiation", "Stakeholder trust"]
-  }
+    examples["Customer loyalty", "Market differentiation", "Stakeholder trust"]
+  {/* Removed stray closing brace */}
 ];
 
 export default function Sustainability() {

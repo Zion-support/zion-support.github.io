@@ -169,23 +169,8 @@ User Agent: ${navigator.userAgent}
       );
     }
 
-    return this.props.children;
-  }
-}
-
-// Higher-order component for functional components
-export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
-) {
-  return function WrappedComponent(props: P) {
-    return (
-      <ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props} />
-      </ErrorBoundary>
-    );
-  };
-}
+    return this.props.children}
+  {/* Removed stray closing brace */}
 
 // Hook for functional components to catch errors
 export function useErrorHandler() {

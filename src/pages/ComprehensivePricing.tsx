@@ -7,15 +7,53 @@ import { specializedInnovativeServices2027 } from '../../data/2027-specialized-i
 
 import { Link } from "react-router-dom";
 
-          <CardContent className="space-y-4">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">
-                {formatPrice(service.price, service.pricingModel)}
-              </div>
-              <div className="text-sm text-slate-400 mb-4">
-                Market Price: {service.marketPrice}
-              </div>
-            </div>
+const pricingTiers = [
+  {
+    name: 'Starter',
+    price: '$999',
+    period: '/month',
+    description: 'Perfect for small businesses and startups',
+    features[
+      'Basic AI automation',
+      'Standard support',
+      'Core integrations',
+      'Basic analytics',
+      'Email support'
+    ],
+    popular: false
+  },
+  {
+    name: 'Professional',
+    price: '$2,999',
+    period: '/month',
+    description: 'Ideal for growing businesses',
+    features[
+      'Advanced AI features',
+      'Priority support',
+      'Custom integrations',
+      'Advanced analytics',
+      'Phone & email support',
+      'Training sessions'
+    ],
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: '$7,999',
+    period: '/month',
+    description: 'For large organizations',
+    features[
+      'Full AI suite',
+      '24/7 dedicated support',
+      'Custom development',
+      'Enterprise analytics',
+      'Dedicated account manager',
+      'Custom training programs',
+      'SLA guarantees'
+    ],
+    popular: false
+  {/* Removed stray closing brace */}
+];
 
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-slate-300">Key Features:</h4>

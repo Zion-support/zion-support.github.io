@@ -64,7 +64,7 @@ const navigation = {
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
       { name: 'News', href: '/news', icon: Newspaper, description: 'Comp updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
-    ]
+  {/* Removed stray closing bracket */}
   };
 
 interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: boolean;}
@@ -100,8 +100,11 @@ const MainSidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
   '            >`              <item.icon className="w-4 h-4 flex-shrink-0" />"              <div className="flex-1 min-w-0">"                <div className="font-medium">{item.name}</div>"                {item.description && ("                  <div className="text-xs text-gray-500 truncate">{item.description}</div>"                )}"              </div></Link>'))}
         </div>
       )}
-    </div>;
-  )return (<>;
+    </div>
+  );
+
+  return (
+  {/* Empty JSX fragment */}
       {/* Backdrop */}
       {isOpen && (<div;}
           className="fixed inset-0 bg-black/50 z-40 lg: hidden";}

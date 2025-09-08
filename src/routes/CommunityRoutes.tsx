@@ -7,4 +7,4 @@ export default function CommunityRoutes() {
       <Route path="" element={<CommunityPage />} />
     </
   );
-}>
+  {/* Removed stray closing brace */}

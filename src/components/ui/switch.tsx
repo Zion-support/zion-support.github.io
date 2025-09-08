@@ -7,7 +7,7 @@ interface SwitchProps {
   className?: string;
   id?: string;
   'aria-label'?: string;
-}
+  {/* Removed stray closing brace */}
 
 export function Switch({
   checked = false,
@@ -33,9 +33,20 @@ export function Switch({
       disabled={disabled}
       onClick={handleToggle}
       className={cn(
-        &quot,pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0&quot)};
-    />
-  </SwitchPrimitives.Root>
-))
-Switch.displayName = SwitchPrimitives.Root.displayName
-export { Switch };
+        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
+        checked ? 'bg-primary' : 'bg-input',
+        disabled && 'opacity-50 cursor-not-allowed',
+        className
+      )}
+      id={id}
+      {...props}
+    >
+      <span
+        className={cn(
+          'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',
+          checked ? 'translate-x-5' : 'translate-x-0'
+        )}
+      />
+    </button>
+  );
+  {/* Removed stray closing brace */}

@@ -54,7 +54,7 @@ export default function LoginPage() {
 
 export default function Login() {
   return (
-    <div>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -124,6 +124,6 @@ export default function Login() {
           </div>
         </section>
       </main>
-    </div>
-  )
-}>
+    </>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

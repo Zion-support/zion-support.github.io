@@ -130,7 +130,7 @@ const iotServices = [
         badge: "Featured",
         link: "/services",
         image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const iotBenefits = [
     {
@@ -152,7 +152,7 @@ const iotBenefits = [
         title: "Predictive Maintenance",
         description: "Prevent equipment failures with predictive analytics and proactive maintenance scheduling",
         icon: <TrendingUp className="h-6 w-6"/>
-    }
+  {/* Removed stray closing brace */}
 ];
 const iotUseCases = [
     {
@@ -174,7 +174,7 @@ const iotUseCases = [
         title: "Smart Agriculture",
         description: "Precision farming, environmental monitoring, and automated irrigation systems",
         icon: <Settings className="h-6 w-6"/>
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function IoTServicesPage() {
     return (<div className="min-h-screen bg-background">

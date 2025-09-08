@@ -211,4 +211,4 @@ export default function GovernmentSolutions() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

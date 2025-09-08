@@ -137,8 +137,8 @@ const mockBusinessProcesses = [
                 triggerCount: 8
             }
         ],
-        dependencies: ['ticket_classification', 'agent_availability']
-    }
+        dependencies['ticket_classification', 'agent_availability']
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false);

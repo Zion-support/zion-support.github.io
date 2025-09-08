@@ -171,4 +171,4 @@ export default function AIEnergyOptimization() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

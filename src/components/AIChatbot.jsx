@@ -25,7 +25,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "How can I get a quote?",
                     "What technologies do you use?",
                     "Contact information"
-                ]
+  {/* Removed stray closing bracket */}
             })}
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
@@ -112,7 +112,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "Get a quote",
                     "View services",
                     "Contact sales"
-                ]
+  {/* Removed stray closing bracket */}
             });
             // Track successful interaction
             trackChatbotInteraction('conversation_success', {

@@ -97,8 +97,8 @@ const digitalTwinSolutions = [
     price: "From $120,000",
     timeline: "20-28 weeks",
     category: "Buildings",
-    technologies: ["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
-  }
+    technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
+  {/* Removed stray closing brace */}
 ];
 
 const digitalTwinTechnologies = [
@@ -129,7 +129,7 @@ const digitalTwinTechnologies = [
     icon: RefreshCw,
     useCase: "Monitoring",
     reliability: "Critical"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -159,7 +159,7 @@ const successStories = [
     solution: "Built energy infrastructure digital twin with predictive maintenance and load balancing",
     results: "15% improvement in grid efficiency, 40% reduction in outages, optimized energy distribution",
     logo: "RPG"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -190,7 +190,7 @@ const processSteps = [
     description: "Implement AI algorithms and predictive analytics",
     icon: Brain,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const digitalTwinBenefits = [
@@ -216,8 +216,8 @@ const digitalTwinBenefits = [
     title: "Cost Optimization",
     description: "Reduced operational costs through better resource management",
     icon: Gauge,
-    examples: ["Energy optimization", "Maintenance planning", "Resource allocation"]
-  }
+    examples["Energy optimization", "Maintenance planning", "Resource allocation"]
+  {/* Removed stray closing brace */}
 ];
 
 export default function DigitalTwin() {

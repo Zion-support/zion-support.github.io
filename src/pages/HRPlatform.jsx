@@ -97,8 +97,8 @@ const hrPlatformSolutions = [
     price: "From $50,000",
     timeline: "14-22 weeks",
     category: "Analytics",
-    technologies: ["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
-  }
+    technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
+  {/* Removed stray closing brace */}
 ];
 
 const hrTechnologies = [
@@ -129,7 +129,7 @@ const hrTechnologies = [
     icon: Cloud,
     useCase: "Infrastructure",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -159,7 +159,7 @@ const successStories = [
     solution: "Built performance tracking platform with goal setting and development planning",
     results: "35% improvement in productivity, 45% increase in employee engagement, better retention",
     logo: "MC"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -190,7 +190,7 @@ const processSteps = [
     description: "Deploy platform and train HR teams and employees",
     icon: Users,
     duration: "2-6 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const hrBenefits = [
@@ -216,8 +216,8 @@ const hrBenefits = [
     title: "Compliance & Security",
     description: "Built-in compliance features and enterprise-grade security protect sensitive HR data",
     icon: Shield,
-    examples: ["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"]
-  }
+    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"]
+  {/* Removed stray closing brace */}
 ];
 
 export default function HRPlatform() {

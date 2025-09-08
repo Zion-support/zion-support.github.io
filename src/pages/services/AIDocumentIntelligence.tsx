@@ -150,4 +150,4 @@ export default function AIDocumentIntelligence() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

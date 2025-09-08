@@ -36,7 +36,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string;
   compliance?: string[];
-}
+  {/* Removed stray closing brace */}
 
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {
@@ -75,4 +75,4 @@ export function map2026ServicesToExistingStructure(): Service[] {
     marketSize: service.marketSize,
     compliance: ["SOC 2", "ISO 27001"] // Default compliance
   }));
-}
+  {/* Removed stray closing brace */}

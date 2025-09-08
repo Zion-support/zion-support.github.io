@@ -727,6 +727,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       </section>
     </div>
   );
-};
+  {/* Removed stray closing brace */}
 
 export default EnhancedServicesShowcase2025;

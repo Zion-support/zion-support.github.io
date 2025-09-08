@@ -117,7 +117,7 @@ export default function CybersecurityServicesPage() {
   };
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Cybersecurity Services | Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."

@@ -23,7 +23,7 @@ const Separator = React.forwardRef<
       {...props}
     />
   )
-)
+  {/* Removed stray closing parenthesis */}
 Separator.displayName = SeparatorPrimitive.Root.displayName
 
 export { Separator }

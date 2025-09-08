@@ -100,5 +100,5 @@ if (typeof window !== 'undefined') {
                 window.gc()}
         }
     }
-}
+  {/* Removed stray closing brace */}
 export default PerformanceOptimizer;

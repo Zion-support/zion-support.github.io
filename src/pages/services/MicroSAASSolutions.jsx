@@ -220,5 +220,5 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
-        </div>);
-}
+    </div>);
+  {/* Removed stray closing brace */}

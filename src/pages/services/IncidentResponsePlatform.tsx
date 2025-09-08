@@ -24,5 +24,5 @@ export default function IncidentResponsePlatform() {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 

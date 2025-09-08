@@ -448,7 +448,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     status: 'active',
     scalability: 'Unlimited data processing',
     deployment: 'Cloud-based analytics platform'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default iotEdgeComputingServices2025;

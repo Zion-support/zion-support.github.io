@@ -143,7 +143,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.99% uptime guarantee",
-    responseTime: "< 1 second",
+    responseTime: "< 1 second", />
     availability: "Global",
     location: "Global",
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
@@ -236,7 +236,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 2 seconds",
+    responseTime: "< 2 seconds", />
     availability: "Global",
     location: "Global",
     tags: ["AI Threat Hunting", "Cybersecurity", "Threat Detection", "Incident Response", "SOC"],
@@ -329,7 +329,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 1 second",
+    responseTime: "< 1 second", />
     availability: "Global",
     location: "Global",
     tags: ["Zero Trust", "Network Security", "Access Control", "Identity Management", "VPN Alternative"],
@@ -422,7 +422,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 2 seconds",
+    responseTime: "< 2 seconds", />
     availability: "Global",
     location: "Global",
     tags: ["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
@@ -515,7 +515,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     freeTrial: true,
     moneyBackGuarantee: true,
     sla: "99.9% uptime guarantee",
-    responseTime: "< 3 seconds",
+    responseTime: "< 3 seconds", />
     availability: "Global",
     location: "Global",
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
@@ -523,7 +523,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default innovativeCybersecurityServices2030;

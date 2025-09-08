@@ -350,4 +350,4 @@ export default function Accessibility() {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

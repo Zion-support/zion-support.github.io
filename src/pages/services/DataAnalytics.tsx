@@ -485,4 +485,4 @@ export default function DataAnalytics() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

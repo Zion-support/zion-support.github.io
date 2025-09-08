@@ -100,7 +100,7 @@ import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices20
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Revolutionary Services 2026 - Zion Tech Group"
         description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more."

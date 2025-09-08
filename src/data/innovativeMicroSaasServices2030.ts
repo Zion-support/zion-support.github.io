@@ -358,8 +358,8 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Real-time processing",
       "Cloud integration"
     ],
-    compliance: ["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
-  }
+    compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
+  {/* Removed stray closing brace */}
 ];
 
 // Service Categories for 2030

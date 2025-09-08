@@ -155,7 +155,7 @@ const EquipmentPage = () => {
             ))
           ) : (
             // Sample equipment data
-            [
+  {/* Removed stray opening bracket */}
               {
                 title: "Dell PowerEdge R750 Server",
                 category: "Servers",

@@ -2,6 +2,131 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Globe, ArrowRight, CheckCircle, Server, Cloud, Code, Rocket, Phone, Mail, DollarSign, Target, Image, Calculator, Plus, Key, TrendingUp } from 'lucide-react';
 
+const pricingData2028 = {
+  aiServices[
+    {
+      name: 'Quantum Consciousness AI',
+      price: '$25,999',
+      period: '/month',
+      category: 'AI & Consciousness',
+      marketSize: '$1.2B',
+      growthRate: '500%',
+      roi: '800%',
+      setupTime: '4-6 weeks',
+      trialDays: 30,
+      features['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
+      targetAudience: 'AI research institutions, Government agencies, Ethics committees'
+    },
+    {
+      name: 'Quantum Financial Trading AI',
+      price: '$35,999',
+      period: '/month',
+      category: 'AI & Finance',
+      marketSize: '$15.8B',
+      growthRate: '280%',
+      roi: '600%',
+      setupTime: '2-3 weeks',
+      trialDays: 14,
+      features['Quantum market analysis', 'Predictive trading', 'Risk management'],
+      targetAudience: 'Hedge funds, Investment banks, Trading firms'
+    },
+    {
+      name: 'Quantum Healthcare AI',
+      price: '$28,999',
+      period: '/month',
+      category: 'AI & Healthcare',
+      marketSize: '$8.9B',
+      growthRate: '320%',
+      roi: '450%',
+      setupTime: '3-4 weeks',
+      trialDays: 21,
+      features['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
+      targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
+    }
+  ],
+  microSAAS[
+    {
+      name: 'AI Content Creator Pro',
+      price: '$299',
+      period: '/month',
+      category: 'AI Content & Marketing',
+      marketSize: '$4.2B',
+      growthRate: '180%',
+      roi: '300%',
+      setupTime: '1-2 days',
+      trialDays: 14,
+      features['AI article generation', 'Content optimization', 'Multi-language support'],
+      targetAudience: 'Content marketers, Digital agencies, Small businesses'
+    },
+    {
+      name: 'AI Image Generator Plus',
+      price: '$199',
+      period: '/month',
+      category: 'AI Design & Creative',
+      marketSize: '$2.8B',
+      growthRate: '250%',
+      roi: '400%',
+      setupTime: '1 day',
+      trialDays: 7,
+      features['High-resolution generation', 'Brand customization', 'Commercial rights'],
+      targetAudience: 'Designers, Marketing agencies, E-commerce businesses'
+    },
+    {
+      name: 'AI Code Generator Pro',
+      price: '$499',
+      period: '/month',
+      category: 'AI Development & Coding',
+      marketSize: '$6.8B',
+      growthRate: '280%',
+      roi: '500%',
+      setupTime: '2-3 days',
+      trialDays: 21,
+      features['Multi-language support', 'Bug detection', 'Code optimization'],
+      targetAudience: 'Software developers, Development teams, Tech companies'
+    }
+  ],
+  itServices[
+    {
+      name: 'Quantum Cloud Infrastructure',
+      price: '$45,999',
+      period: '/month',
+      category: 'Cloud & Infrastructure',
+      marketSize: '$18.5B',
+      growthRate: '320%',
+      roi: '700%',
+      setupTime: '6-8 weeks',
+      trialDays: 30,
+      features['Quantum-ready nodes', 'Zero-latency networking', 'Auto-scaling'],
+      targetAudience: 'Enterprises, Cloud providers, Data centers'
+    },
+    {
+      name: 'AI-Powered Cybersecurity Suite',
+      price: '$32,999',
+      period: '/month',
+      category: 'Cybersecurity',
+      marketSize: '$15.2B',
+      growthRate: '280%',
+      roi: '500%',
+      setupTime: '2-3 weeks',
+      trialDays: 14,
+      features['AI threat detection', 'Zero-trust architecture', 'Automated response'],
+      targetAudience: 'Enterprises, Government agencies, Financial institutions'
+    },
+    {
+      name: 'Quantum DevOps Automation',
+      price: '$35,999',
+      period: '/month',
+      category: 'DevOps & Automation',
+      marketSize: '$9.8B',
+      growthRate: '300%',
+      roi: '600%',
+      setupTime: '4-5 weeks',
+      trialDays: 21,
+      features['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
+      targetAudience: 'Development teams, DevOps engineers, Technology companies'
+    }
+  {/* Removed stray closing bracket */}
+};
 
 export default function ComprehensivePricingGuide2028() {
   const [selectedCategory, setSelectedCategory] = useState('all');

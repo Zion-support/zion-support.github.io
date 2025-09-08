@@ -169,14 +169,16 @@ export default function Help() {
     { day: 'Sunday', hours: 'Emergency Support Only', available: false }
   ];
 
-  const filteredCategories = helpCategories.filter(category =>
-    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.articles.some(article =>
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+  const searchResults = searchQuery 
+    ? helpCategories.flatMap(category => 
+        category.articles.filter(article => 
+          article.title.toLowerCase().includes(searchQuery.toLowerCase())
+        ).map(article => ({ ...category, article }))
+  {/* Removed stray closing parenthesis */}
+    [];
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? helpCategories: helpCategories.filter(category  => category.id === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

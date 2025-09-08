@@ -18,7 +18,104 @@ interface SearchResult {
   featured?: boolean;
 }
 
-export default function SearchPage() {
+const mockSearchResults: SearchResult[] = [
+  {
+    id: '1',
+    type: 'service',
+    title: 'AI Business Intelligence Platform',
+    description: 'Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
+    category: 'AI & Analytics',
+    rating: 4.9,
+    reviewCount: 127,
+    price: '$2,500/mo',
+    location: 'Remote',
+    tags['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
+    path: '/services/ai-analytics',
+    featured: true
+  },
+  {
+    id: '2',
+    type: 'service',
+    title: 'Cybersecurity Suite',
+    description: 'Comprehensive security solution including threat detection, 24/7 monitoring, compliance management, and incident response.',
+    category: 'Cybersecurity',
+    rating: 4.8,
+    reviewCount: 89,
+    price: '$3,200/mo',
+    location: 'Remote',
+    tags['Security', 'Threat Detection', 'Compliance', 'Monitoring'],
+    path: '/services/cybersecurity',
+    featured: true
+  },
+  {
+    id: '3',
+    type: 'talent',
+    title: 'Senior AI Engineer',
+    description: 'Experienced AI engineer specializing in machine learning, deep learning, and natural language processing. Available for remote work.',
+    category: 'AI & Machine Learning',
+    rating: 4.9,
+    reviewCount: 45,
+    price: '$150/hr',
+    location: 'San Francisco, CA',
+    tags['AI', 'Machine Learning', 'Python', 'TensorFlow', 'Remote'],
+    path: '/talent/ai-engineer'
+  },
+  {
+    id: '4',
+    type: 'equipment',
+    title: 'Quantum Computing Workstation',
+    description: 'High-performance quantum computing workstation for research and development. Includes latest quantum processors and development tools.',
+    category: 'Hardware',
+    price: '$25,000',
+    location: 'New York, NY',
+    tags['Quantum Computing', 'Hardware', 'Research', 'Development'],
+    path: '/equipment/quantum-workstation'
+  },
+  {
+    id: '5',
+    type: 'service',
+    title: 'Cloud Infrastructure Management',
+    description: 'Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability.',
+    category: 'Cloud & DevOps',
+    rating: 4.7,
+    reviewCount: 156,
+    price: '$1,800/mo',
+    location: 'Remote',
+    tags['Cloud', 'DevOps', 'Infrastructure', 'Scalability'],
+    path: '/services/cloud-devops'
+  },
+  {
+    id: '6',
+    type: 'talent',
+    title: 'DevOps Specialist',
+    description: 'DevOps engineer with expertise in AWS, Docker, Kubernetes, and CI/CD pipelines. Available for contract work.',
+    category: 'DevOps',
+    rating: 4.8,
+    reviewCount: 32,
+    price: '$120/hr',
+    location: 'Austin, TX',
+    tags['DevOps', 'AWS', 'Docker', 'Kubernetes', 'CI/CD'],
+    path: '/talent/devops-specialist'
+  {/* Removed stray closing brace */}
+];
+
+const categories = [
+  { id: 'all', name: 'All Categories', icon: Grid, count: 0 },
+  { id: 'services', name: 'Services', icon: Code, count: 0 },
+  { id: 'talent', name: 'Talent', icon: Users, count: 0 },
+  { id: 'equipment', name: 'Equipment', icon: Cpu, count: 0 },
+  { id: 'companies', name: 'Companies', icon: Building, count: 0 }
+];
+
+const filters = {
+  type['service', 'talent', 'equipment', 'comp'],
+  category['AI & Analytics', 'Cybersecurity', 'Cloud & DevOps', 'IoT & Edge', 'Quantum Computing', 'Blockchain'],
+  location['Remote', 'On-site', 'Hybrid'],
+  priceRange['$0-$100', '$100-$500', '$500-$1000', '$1000+'],
+  rating['4.5+', '4.0+', '3.5+']
+};
+
+export default function SearchPage(...args[]):  {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [isSearching, setIsSearching] = useState(false);

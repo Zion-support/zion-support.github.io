@@ -69,12 +69,12 @@ export function PWAUpdater() {
                 className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-medium rounded-md hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 disabled:opacity-50"
               >
                 {isUpdating ? (
-                  <React.Fragment>
+  {/* Empty JSX fragment */}
                     <RefreshCw className="w-3 h-3 animate-spin" />
                     Updating...
                   </React.Fragment>
                 ) : (
-                  <React.Fragment>
+  {/* Empty JSX fragment */}
                     <CheckCircle className="w-3 h-3" />
                     Update Now
                   </React.Fragment>
@@ -98,4 +98,4 @@ export function PWAUpdater() {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

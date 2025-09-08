@@ -525,7 +525,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     rating: 4.7,
     reviews: 189,
     customers: 345
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default ADVANCED_MICRO_SAAS_SERVICES_2025;

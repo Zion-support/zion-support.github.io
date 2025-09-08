@@ -171,4 +171,4 @@ export default function AIDataSecurity() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

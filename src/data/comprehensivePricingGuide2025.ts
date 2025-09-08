@@ -570,7 +570,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ComprehensivePricingGuide[] = [
     rating: 4.9,
     reviews: 345,
     customers: 567
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default COMPREHENSIVE_PRICING_GUIDE_2025;

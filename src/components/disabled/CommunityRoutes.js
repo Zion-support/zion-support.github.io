@@ -3,5 +3,5 @@ import CommunityPage from '@/pages/CommunityPage';
 export default function CommunityRoutes() {
     return (<React.Fragment>
       <Route path="" element={<CommunityPage />}/>
-    </React.Fragment>);
-}
+    </>);
+  {/* Removed stray closing brace */}

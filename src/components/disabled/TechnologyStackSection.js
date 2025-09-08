@@ -47,9 +47,9 @@ const frontendTechnologies = [
         expertise: "Expert",
         projects: 180,
         rating: 5,
-        features: ["Utility Classes", "Responsive Design", "Dark Mode", "Customization"],
-        alternatives: ["Bootstrap", "Material-UI", "Chakra UI"]
-    }
+        features["Utility Classes", "Responsive Design", "Dark Mode", "Customization"],
+        alternatives["Bootstrap", "Material-UI", "Chakra UI"]
+  {/* Removed stray closing brace */}
 ];
 const backendTechnologies = [
     {
@@ -97,9 +97,9 @@ const backendTechnologies = [
         expertise: "Expert",
         projects: 110,
         rating: 5,
-        features: ["Caching", "Session Storage", "Real-time", "Pub/Sub"],
-        alternatives: ["Memcached", "Hazelcast", "Apache Ignite"]
-    }
+        features["Caching", "Session Storage", "Real-time", "Pub/Sub"],
+        alternatives["Memcached", "Hazelcast", "Apache Ignite"]
+  {/* Removed stray closing brace */}
 ];
 const cloudTechnologies = [
     {
@@ -147,9 +147,9 @@ const cloudTechnologies = [
         expertise: "Expert",
         projects: 100,
         rating: 5,
-        features: ["IaC", "Multi-cloud", "State Management", "Modules"],
-        alternatives: ["CloudFormation", "Pulumi", "Ansible", "Chef"]
-    }
+        features["IaC", "Multi-cloud", "State Management", "Modules"],
+        alternatives["CloudFormation", "Pulumi", "Ansible", "Chef"]
+  {/* Removed stray closing brace */}
 ];
 const aiTechnologies = [
     {
@@ -197,9 +197,9 @@ const aiTechnologies = [
         expertise: "Expert",
         projects: 50,
         rating: 5,
-        features: ["Model Hub", "Transformers", "Datasets", "Spaces"],
-        alternatives: ["ModelScope", "Replicate", "Gradio", "Streamlit"]
-    }
+        features["Model Hub", "Transformers", "Datasets", "Spaces"],
+        alternatives["ModelScope", "Replicate", "Gradio", "Streamlit"]
+  {/* Removed stray closing brace */}
 ];
 const developmentTools = [
     {
@@ -247,9 +247,9 @@ const developmentTools = [
         expertise: "Expert",
         projects: 200,
         rating: 5,
-        features: ["Unit Testing", "Mocking", "Coverage", "Snapshot Testing"],
-        alternatives: ["Vitest", "Mocha", "Jasmine", "Cypress"]
-    }
+        features["Unit Testing", "Mocking", "Coverage", "Snapshot Testing"],
+        alternatives["Vitest", "Mocha", "Jasmine", "Cypress"]
+  {/* Removed stray closing brace */}
 ];
 const technologyStats = [
     { icon: <Code className="w-6 h-6"/>, value: "50+", label: "Technologies" },

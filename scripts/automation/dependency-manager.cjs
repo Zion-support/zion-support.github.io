@@ -965,32 +965,55 @@ const reportFile = path.join(;);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`Dependency report "generated": ${reportFile}");
 
-    return report};
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  async commitDependencyChanges(actions) {}
-  this.log("Committing dependency changes...");"
-      // Add package.json and package-lock.json;"
+  async commitDependencyChanges(actions) {
+    try {
+      this.log('Committing dependency changes...');
+      
+      // Add package.json and package-lock.json
+      execSync('git add package.json package-lock.json', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe' 
+      });
+      
+      // Commit
+      const commitMessage = `chore: Auto-manage dependencies (${actions.length} actions)`;
+      execSync(`git commit -m "${commitMessage}"`, { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe' 
+      });
+      
+      this.log('Dependency changes committed successfully');
+      
+    } catch (error) {
+      this.log(`Failed to commit dependency changes: ${error.message}`, 'WARN');
+    }
+  }
+  {/* Removed stray closing brace */}
 
 // Main execution
 async function $1() {}
   const manager = new DependencyManager();
+  
+  try {
+    const result = await manager.runDependencyManagement();
+    
+    if (result.errors.length === 0 && result.actions.length > 0) {
+      process.exit(0); // Success
+    } else if (result.errors.length > 0) {
+      process.exit(1); // Errors occurred
+    } else {
+      process.exit(2); // No actions needed
+    }
+    
+  } catch (error) {
+    manager.log(`Fatal error: ${error.message}`, 'ERROR');
+    process.exit(1);
+  }
+  {/* Removed stray closing brace */}
 
-  try {}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-  const result = await manager.runDependencyManagement();
-    if (result.errors.length === 0 && result.actions.length > 0) {}
-  process.exit(0); // Success} else if (result.errors.length > 0) {}
-  process.exit(1); // Errors occurred} else {}
-
-    process.exit(1)};
-if (require.main === module) {}
-<<<<<<< HEAD
-  main()};
-module.exports = DependencyManager;
+if (require.main === module) {
+  main();
+  {/* Removed stray closing brace */}
 
 module.exports = DependencyManager;
 

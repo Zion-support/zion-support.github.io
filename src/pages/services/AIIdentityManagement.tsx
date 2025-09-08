@@ -171,4 +171,4 @@ export default function AIIdentityManagement() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

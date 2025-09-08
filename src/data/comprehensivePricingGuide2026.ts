@@ -368,4 +368,20 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   }
 ];
 
-export default COMPREHENSIVE_PRICING_GUIDE_2026;
+// Market Summary
+export const marketSummary2026 = {
+  totalMarketSize: "$8.6 billion by 2026",
+  growthRate: "Average 250% annual growth",
+  keyTrends[
+    "Quantum computing mainstream adoption",
+    "Edge AI infrastructure expansion",
+    "Autonomous AI agent proliferation",
+    "Blockchain enterprise integration"
+  ],
+  competitiveAdvantages[
+    "First-to-market quantum solutions",
+    "Advanced edge computing capabilities",
+    "Ethical AI framework integration",
+    "Comprehensive compliance automation"
+  {/* Removed stray closing bracket */}
+};

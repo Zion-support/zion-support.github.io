@@ -62,7 +62,7 @@ const BENEFITS = [
         icon: <TrendingUp className="h-6 w-6"/>,
         title: "Proven ROI",
         description: "Average 300% ROI within 6 months of implementation"
-    }
+  {/* Removed stray closing brace */}
 ];
 
 export default function AllServices2027() {
@@ -446,4 +446,4 @@ export default function AllServices2027() {
             </section>
         </div>
     );
-}
+  {/* Removed stray closing brace */}

@@ -170,7 +170,7 @@ export const Sidebar: React.FC = () => {
   };
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(true)}

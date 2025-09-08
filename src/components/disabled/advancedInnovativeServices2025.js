@@ -650,5 +650,5 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         },
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer"
-    }
+  {/* Removed stray closing brace */}
 ];

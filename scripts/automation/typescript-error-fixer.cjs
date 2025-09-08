@@ -446,6 +446,203 @@ class TypeScriptErrorFixer {
     } catch (error) {
       this.logger.error(`Error during verification: ${error.message}`);
     }
+  {/* Removed stray closing brace */}
+
+  async fixSolutionsPage() {
+    const filePath = 'src/pages/solutions.tsx';
+    if (!fs.existsSync(filePath)) return;
+    
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      
+      // Fix missing colons in object properties
+      content = content.replace(/features\[/g, 'features: [');
+      content = content.replace(/benefits\[/g, 'benefits: [');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.errorsFixed++;
+        this.log(`Fixed object property syntax in ${filePath}`);
+      }
+      
+      this.filesProcessed++;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`);
+    }
+  {/* Removed stray closing brace */}
+
+  async fixEnterpriseSolutions() {
+    const filePath = 'src/pages/solutions/Enterprise.tsx';
+    if (!fs.existsSync(filePath)) return;
+    
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      
+      // Fix missing function declaration
+      if (content.includes('const solutions = [') && !content.includes('export default function')) {
+        content = 'export default function EnterpriseSolutions() {\n  ' + content;
+        
+        if (!content.includes('}')) {
+          content += '\n}';
+        }
+      }
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.errorsFixed++;
+        this.log(`Fixed function declaration in ${filePath}`);
+      }
+      
+      this.filesProcessed++;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`);
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
+
+  async fixHealthcareSolutions() {
+    const filePath = 'src/pages/solutions/Healthcare.tsx';
+    if (!fs.existsSync(filePath)) return;
+    
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      
+      // Fix missing function declaration
+      if (content.includes('const solutions = [') && !content.includes('export default function')) {
+        content = 'export default function HealthcareSolutions() {\n  ' + content;
+        
+        if (!content.includes('}')) {
+          content += '\n}';
+        }
+      }
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.errorsFixed++;
+        this.log(`Fixed function declaration in ${filePath}`);
+      }
+      
+      this.filesProcessed++;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`);
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
+
+  async fixTeamBuilderPage() {
+    const filePath = 'src/pages/team-builder/index.tsx';
+    if (!fs.existsSync(filePath)) return;
+    
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      
+      // Fix missing catch block types
+      content = content.replace(/catch \(error: \)/g, 'catch (error: any)');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.errorsFixed++;
+        this.log(`Fixed catch block types in ${filePath}`);
+      }
+      
+      this.filesProcessed++;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`);
+    }
+  {/* Removed stray closing brace */}
+
+  async fixCommonPatterns() {
+    this.log('Fixing common patterns across all TypeScript files...');
+    
+    const tsFiles = this.findFiles(['**/*.ts', '**/*.tsx']);
+    
+    for (const file of tsFiles) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        let originalContent = content;
+        
+        // Fix common patterns
+        content = this.applyCommonFixes(content);
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content, 'utf8');
+          this.errorsFixed++;
+          this.log(`Applied common fixes to ${file}`);
+        }
+        
+        this.filesProcessed++;
+      } catch (error) {
+        this.log(`Error processing ${file}: ${error.message}`);
+      }
+    }
+  {/* Removed stray closing brace */}
+
+  applyCommonFixes(content) {
+    // Fix missing colons in object properties
+    content = content.replace(/(\w+)\s*\[/g, '$1: [');
+    
+    // Fix missing function declarations
+    content = content.replace(/^(\s*)(const|let|var)\s+(\w+)\s*=\s*\[/gm, '$1export default function $3() {\n$1  $2 $3 = [');
+    
+    // Fix missing return statements
+    content = content.replace(/return\s*\(\s*$/gm, 'return (');
+    
+    // Fix missing JSX fragments
+    content = content.replace(/<>\s*$/gm, '<>');
+    content = content.replace(/^\s*<\/>/gm, '</>');
+    
+    // Fix missing catch block types
+    content = content.replace(/catch\s*\(\s*error\s*:\s*\)/g, 'catch (error: any)');
+    
+    // Fix missing semicolons
+    content = content.replace(/^(\s*)(\w+)\s*=\s*([^;]+)$/gm, '$1$2 = $3;');
+    
+    // Fix missing React imports
+    if (content.includes('React') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+    }
+    
+    return content;
+  }
+
+  findFiles(patterns) {
+    const files = [];
+    const self = this;
+    
+    function walkDir(dir) {
+      const items = fs.readdirSync(dir);
+      
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (stat.isFile()) {
+          for (const pattern of patterns) {
+            if (self.matchesPattern(fullPath, pattern)) {
+              files.push(fullPath);
+              break;
+            }
+          }
+        }
+      }
+    }
+    
+    walkDir(this.projectRoot);
+    return files;
+  }
+
+  matchesPattern(filePath, pattern) {
+    const relativePath = path.relative(this.projectRoot, filePath);
+    const regexPattern = pattern
+      .replace(/\*\*/g, '.*')
+      .replace(/\*/g, '[^/]*')
+      .replace(/\./g, '\\.');
+    
+    return new RegExp(`^${regexPattern}$`).test(relativePath);
   }
 
   generateReport() {
@@ -475,36 +672,12 @@ class TypeScriptErrorFixer {
     
     return report;
   }
-
-  async run() {
-    const command = process.argv[2] || 'fix';
-    
-    switch (command) {
-      case 'fix':
-        await this.fixAllTypeScriptErrors();
-        break;
-      case 'report':
-        const report = this.generateReport();
-        console.log(JSON.stringify(report, null, 2));
-        break;
-      case 'status':
-        const errors = await this.getTypeScriptErrors();
-        console.log(`Current TypeScript errors: ${errors.length}`);
-        break;
-      default:
-        console.log('Usage: node typescript-error-fixer.cjs [fix|report|status]');
-        process.exit(1);
-    }
-  }
-}
+  {/* Removed stray closing brace */}
 
 // CLI interface
 if (require.main === module) {
   const fixer = new TypeScriptErrorFixer();
-  fixer.run().catch(error => {
-    console.error('Error:', error.message);
-    process.exit(1);
-  });
-}
+  fixer.fixAllErrors().catch(console.error);
+  {/* Removed stray closing brace */}
 
 module.exports = TypeScriptErrorFixer;

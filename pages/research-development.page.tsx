@@ -111,7 +111,7 @@ const researchAreas = [
     publications: 20,
     patents: 10,
     projects: 16
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const researchProjects = [
@@ -222,7 +222,7 @@ const researchProjects = [
     ],
     icon: Brain,
     color: 'from-purple-500 to-indigo-600'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const publications = [
@@ -275,7 +275,7 @@ const publications = [
     citations: 38,
     area: 'Cloud-Native',
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const patents = [
@@ -328,7 +328,7 @@ const patents = [
     patentNumber: 'US 2026/0098765',
     area: 'Cloud-Native',
     description: 'A security architecture pattern for cloud-native applications.'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function ResearchDevelopment() {

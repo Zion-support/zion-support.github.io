@@ -233,7 +233,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, [isOpen, announceToScreenReader]);
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Toggle Button */}
       <motion.button
         initial={{ opacity: 0 }}

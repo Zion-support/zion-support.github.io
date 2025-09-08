@@ -60,24 +60,63 @@ const logMessage = `[${timestamp}] ${message}\;n;`;`;
   for($2) {}
                         links.push({})
 
-        this.log(`Found ${links.length} links in project files`)) {`}
-     {}
-                        links.push({})"
+  async run() {
+    this.log('Starting link checker automation...');
+    
+    // Install dependencies
+    const depsResult = await this.installDependencies();
+    if (!depsResult) {
+      this.log('Skipping link check due to dependency installation failure', 'ERROR');
+      return;
+    }
+    
+    // Install linkinator
+    const linkinatorResult = await this.installLinkinator();
+    if (!linkinatorResult) {
+      this.log('Skipping link check due to linkinator installation failure', 'ERROR');
+      return;
+    }
+    
+    // Run build
+    const buildResult = await this.runBuild();
+    if (!buildResult) {
+      this.log('Skipping link check due to build failure', 'ERROR');
+      return;
+    }
+    
+    // Check internal links
+    const internalResult = await this.checkInternalLinks();
+    
+    // Check external links
+    const externalResult = await this.checkExternalLinks();
+    
+    // Generate comprehensive report
+    const report = await this.generateLinkReport(internalResult, externalResult);
+    
+    this.log(`Link checker automation completed.`);
+    this.log(`Total links: ${report.summary.totalLinks}`);
+    this.log(`Broken links: ${report.summary.brokenLinks}`);
+    
+    if (report.summary.brokenLinks > 0) {
+      this.log('Broken links detected. Check the report for details.', 'WARN');
+      this.log('Recommendations:');
+      report.recommendations.forEach(rec => {
+        this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}`);
+      });
+    } else {
+      this.log('No broken links found. All links are working correctly!', 'INFO');
+    }
+  }
+  {/* Removed stray closing brace */}
 
-        const files = [];
-        
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
-            
-            const items = fs.readdirSync(dir;);
-            for (const item of items) {}
-                const fullPath = path.join(dir, item;);
-                const stat = fs.statSync(fullPath;);
-                
-                if (&& !item.startsWith('.') && item !== 'node_modules') {}
-=======
-<<<<<<< HEAD
+// Run the automation if this script is executed directly
+if (require.main === module) {
+  const linkChecker = new LinkCheckerAutomation();
+  linkChecker.run().catch(error => {
+    console.error('Link checker automation failed:', error);
+    process.exit(1);
+  });
+  {/* Removed stray closing brace */}
 
 =======
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

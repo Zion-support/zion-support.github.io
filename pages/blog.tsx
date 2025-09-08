@@ -76,7 +76,7 @@ export default function Blog() {
       featured: false,
       image: '/blog/cyber-threats.jpg'
     }
-  ]
+  {/* Removed stray closing bracket */}
 
   const categories = [
     { name: 'All', count: blogPosts.length },
@@ -85,7 +85,7 @@ export default function Blog() {
     { name: 'Cloud & DevOps', count: 2 },
     { name: 'Emerging Tech', count: 1 },
     { name: 'AI & Ethics', count: 1 }
-  ]
+  {/* Removed stray closing bracket */}
 
 const Page = () => {
   return (
@@ -103,4 +103,152 @@ const Page = () => {
   );
 };
 
-export default BlogPage;
+      {/* Featured Post */}
+      <section className="py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            {blogPosts.filter(post => post.featured).map(post => (
+              <div key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      Featured
+                    </span>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                      {post.category}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h2>
+                  <p className="text-lg text-gray-600 mb-6">{post.excerpt}</p>
+                  
+                  <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      {new Date(post.date).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                      })}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4" />
+                      {post.readTime}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {post.tags.map(tag => (
+                      <span key={tag} className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
+                  >
+                    Read Full Article
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Posts Grid */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-16">
+            <h2 className="text-base font-semibold leading-7 text-blue-600">Latest Articles</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Stay informed with our latest insights
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Explore our collection of articles covering the latest trends, best practices, and industry insights.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 gap-8 md: grid-cols-2 lg:grid-cols-3">
+            {blogPosts.filter(post  => !post.featured).map((post, index) => (
+              <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                      {post.category}
+                    </span>
+                    <span className="text-xs text-gray-500">{post.readTime}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                    <div className="flex items-center gap-1">
+                      <User className="h-3 w-3" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      {new Date(post.date).toLocaleDateString('en-US', { 
+                        month: 'short', 
+                        day: 'numeric' 
+                      })}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {post.tags.slice(0, 3).map(tag => (
+                      <span key={tag} className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-700">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+                  >
+                    Read More
+                    <ArrowRight className="ml-1 h-3 w-3" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+              Never miss an insight
+            </h2>
+            <p className="text-lg leading-8 text-gray-600 mb-8">
+              Subscribe to our newsletter and get the latest technology insights, industry trends, and expert advice delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

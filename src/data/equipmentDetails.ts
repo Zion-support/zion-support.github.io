@@ -85,5 +85,5 @@ export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
     specs: ["ARM Cortex-A72", "4GB RAM", "32GB eMMC", "WiFi 6"],
     availability: true
-  }
-};
+  {/* Removed stray closing brace */}
+];

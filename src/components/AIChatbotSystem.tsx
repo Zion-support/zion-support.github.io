@@ -189,7 +189,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}

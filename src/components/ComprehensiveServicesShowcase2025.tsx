@@ -8,7 +8,7 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
-}
+  {/* Removed stray closing brace */}
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -320,7 +320,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               >
                 {viewMode === 'grid' ? (
                   // Grid View
-                  <React.Fragment>
+  {/* Empty JSX fragment */}
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -380,7 +380,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   </React.Fragment>
                 ) : (
                   // List View
-                  <React.Fragment>
+  {/* Empty JSX fragment */}
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
                         <div className="flex items-center gap-3">

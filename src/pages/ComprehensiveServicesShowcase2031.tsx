@@ -10,7 +10,7 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
-}
+  {/* Removed stray closing brace */}
 
 const ComprehensiveServicesShowcase2031: React.FC = () => {
   const featuredServices = [

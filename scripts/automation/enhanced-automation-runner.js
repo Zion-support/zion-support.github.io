@@ -294,12 +294,18 @@ class EnhancedAutomationRunner {
     
     console.log('\n📁 Detailed report saved to:', this.reportFile);
   }
-}
+  {/* Removed stray closing brace */}
 
 // Auto-start if run directly
 if (require.main === module) {
   const runner = new EnhancedAutomationRunner();
-  runner.start();
-}
+  global.currentRunner = runner;
+  
+  runner.start().catch(async (error) => {
+    console.error('Fatal error:', error);
+    await runner.shutdown();
+    process.exit(1);
+  });
+  {/* Removed stray closing brace */}
 
 module.exports = EnhancedAutomationRunner;

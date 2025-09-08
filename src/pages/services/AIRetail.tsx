@@ -171,4 +171,4 @@ export default function AIRetail() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function DigitalTransformation() {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>Digital Transformation - Zion Tech Group</title>
         <meta name="description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />
@@ -377,4 +377,4 @@ export default function DigitalTransformation() {
       </div>
     </React.Fragment>
   );
-}>
+  {/* Removed stray closing brace */}

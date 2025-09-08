@@ -271,39 +271,12 @@ class AutomationOrchestrator {
       throw error;
     }
   }
-
-  async shutdown() {
-    console.log('🔄 Shutting down Automation Orchestrator...');
-    
-    await this.stopScheduledAutomations();
-    this.status = 'shutdown';
-    
-    console.log('✅ Automation Orchestrator shutdown complete');
-  }
-}
+  {/* Removed stray closing brace */}
 
 // Run the orchestrator if called directly
 if (require.main === module) {
   const orchestrator = new AutomationOrchestrator();
-  
-  // Handle graceful shutdown
-  process.on('SIGINT', async () => {
-    console.log('\n🔄 Received SIGINT, shutting down gracefully...');
-    await orchestrator.shutdown();
-    process.exit(0);
-  });
-  
-  process.on('SIGTERM', async () => {
-    console.log('\n🔄 Received SIGTERM, shutting down gracefully...');
-    await orchestrator.shutdown();
-    process.exit(0);
-  });
-  
-  orchestrator.run().catch(async (error) => {
-    console.error('❌ Fatal error in orchestrator:', error);
-    await orchestrator.shutdown();
-    process.exit(1);
-  });
-}
+  orchestrator.run().catch(console.error);
+  {/* Removed stray closing brace */}
 
 module.exports = AutomationOrchestrator;

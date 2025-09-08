@@ -171,4 +171,4 @@ export default function AIBlockchain() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

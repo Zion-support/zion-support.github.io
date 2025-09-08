@@ -117,8 +117,7 @@ const specialServices = [
         link: "/cloud-solutions",
         icon: <Zap className="w-5 h-5"/>,
         description: "Scalable cloud infrastructure"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    }
+  {/* Removed stray closing brace */}
 ];
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {

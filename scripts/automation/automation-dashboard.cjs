@@ -326,25 +326,12 @@ class AutomationDashboard {
     
     this.log('Continuous dashboard mode started. Press Ctrl+C to stop.');
   }
-}
+  {/* Removed stray closing brace */}
 
 // Run the dashboard if called directly
 if (require.main === module) {
   const dashboard = new AutomationDashboard();
-  
-  // Check for command line arguments
-  const args = process.argv.slice(2);
-  
-  if (args.includes('--continuous') || args.includes('-c')) {
-    const interval = parseInt(args.find(arg => arg.startsWith('--interval='))?.split('=')[1]) || 30000;
-    dashboard.runContinuousMode(interval).catch(console.error);
-  } else if (args.includes('--json')) {
-    dashboard.generateDashboard().then(result => {
-      console.log(JSON.stringify(result, null, 2));
-    }).catch(console.error);
-  } else {
-    dashboard.displayDashboard().catch(console.error);
-  }
-}
+  dashboard.run().catch(console.error);
+  {/* Removed stray closing brace */}
 
 module.exports = AutomationDashboard;

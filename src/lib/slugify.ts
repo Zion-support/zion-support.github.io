@@ -3,18 +3,16 @@ export function slugify(text: string): string {
     .toString()
     .toLowerCase()
     .trim()
-    .replace(/\s+/g, '-')        // Replace spaces with -
-    .replace(/[^\w-]+/g, '')    // Remove all non-word chars
-    .replace(/--+/g, '-')      // Replace multiple - with single -
-    .replace(/^-+/, '')          // Trim - from start of text
-    .replace(/-+$/, '');         // Trim - from end of text
-}
+    .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
+    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
+    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+  {/* Removed stray closing brace */}
 
 export function deslugify(slug: string): string {
   return slug
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (char) => char.toUpperCase());
-}
+  {/* Removed stray closing brace */}
 
 /**
  * Generate a unique slug by appending a number if the slug already exists
@@ -33,4 +31,4 @@ export function generateUniqueSlug(text: string, existingSlugs: string[]): strin
   }
 
   return uniqueSlug;
-}
+  {/* Removed stray closing brace */}

@@ -25,39 +25,43 @@ export default function BlogPost() {
          p.tags.some(tag => currentPost.tags.includes(tag)))
       ).slice(0, 3);
       
-      setRelatedPosts(related);
-    } else {
-      // Post not found
-      navigate("/blog", { replace: true });
-    }
-    
-    // Scroll to top when post changes
-    window.scrollTo(0, 0);
-  }, [slug, navigate]);
-  
-  if (!post) {
-    return (
-      <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
-        <div className="animate-pulse">Loading article...</div>
-      </div>
-    );
-  }
-  
-  // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title);
-    
-    switch (platform) {
-      case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-      case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-      case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-      default:
-        return '#';
-    }
+      <h3 class="text-xl font-semibold text-white mb-3 mt-6">Key Trends Shaping AI Adoption</h3>
+      <ul class="list-disc list-inside mb-6 text-zion-slate-light space-y-2">
+        <li><strong>Democratization of AI:</strong> Cloud-based AI services are making advanced capabilities accessible to small and medium businesses</li>
+        <li><strong>AI-Powered Analytics:</strong> Real-time insights and predictive modeling are becoming standard business practices</li>
+        <li><strong>Conversational AI:</strong> Chatbots and virtual assistants are improving customer service and engagement</li>
+        <li><strong>AI in Cybersecurity:</strong> Machine learning is enhancing threat detection and response capabilities</li>
+      </ul>
+    `,
+    author: "Kleber Santos",
+    authorAvatar: "KS",
+    publishDate: "2024-01-15",
+    readTime: "8 min read",
+    views: "2.4k",
+    likes: "156",
+    comments: "23",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
+    tags["AI", "Business", "Technology", "Innovation"],
+    relatedPosts[
+      {
+        id: "2",
+        title: "AI-Powered Cybersecurity: Protecting Your Business",
+        excerpt: "Learn how AI is revolutionizing cybersecurity and protecting businesses from evolving threats.",
+        category: "Cybersecurity",
+        readTime: "6 min read",
+        publishDate: "2024-01-10",
+        slug: "ai-cybersecurity"
+      },
+      {
+        id: "3",
+        title: "The Rise of Quantum Computing in Business",
+        excerpt: "Explore how quantum computing will transform business operations and create new opportunities.",
+        category: "Quantum Computing",
+        readTime: "7 min read",
+        publishDate: "2024-01-05",
+        slug: "quantum-computing-business"
+      }
+  {/* Removed stray closing bracket */}
   };
   
   return (

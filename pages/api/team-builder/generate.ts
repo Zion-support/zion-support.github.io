@@ -41,11 +41,9 @@ export default async function handler(
   } catch (error: ) {
     console.error('Error in /api/team-builder/generate:', error);
     if (error.context && error.context.errorMessage) {
-        return res.status(500).json({ error: `Failed to generate team recommendation: ${error.context.errorMessage}` });
-    }
-    return res.status(500).json({ error: `Failed to generate team recommendation: ${error.message || 'Unknown error'}` });
-  }
-}
+        return res.status(500).json({ error: `Failed to generate team recommendation: ${error.context.errorMessage}` })}
+    return res.status(500).json({ error: `Failed to generate team recommendation: ${error.message || 'Unknown error'}` })}
+  {/* Removed stray closing brace */}
 */
 
 export {}; // Keep it as a module

@@ -294,5 +294,5 @@ export const INNOVATIVE_AI_SERVICES = [
         aiCapabilities: ["Demand Forecasting", "Route Optimization", "Inventory Planning", "Risk Assessment"],
         trainingData: "10+ years of supply chain data",
         accuracy: "92% forecast accuracy"
-    }
+  {/* Removed stray closing brace */}
 ];

@@ -205,20 +205,25 @@ const auditResult = execSync('npm audit --json', { });
     generateDependencyReport() {}
         this.log('Generating dependency management report...');
         
-        const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "analysis": {}
-                dependencies: this.analyzeDependencies(),
-                "outdated": this.checkOutdatedPackages(),
-                "security": this.checkSecurityVulnerabilities();
-            },
-            "actions": {}
-                update: this.updateDependencies(),
-                "securityFix": this.fixSecurityIssues()
-            },
-            "recommendations": this.generateRecommendations();
-       };
+        // Display top recommendations
+        const topRecommendations = report.recommendations.slice(0, 3);
+        if (topRecommendations.length > 0) {
+          this.log('Top Recommendations:');
+          topRecommendations.forEach((rec, index) => {
+            this.log(`  ${index + 1}. ${rec.message} (${rec.priority})`);
+          });
+        }
+      }
+      
+      // Schedule next analysis
+      setTimeout(() => this.run(), 7200000); // 2 hours
+      
+    } catch (error) {
+      this.log(`Intelligent Dependency Manager failed: ${error.message}`, 'ERROR');
+      setTimeout(() => this.run(), 1800000); // 30 minutes on error
+    }
+  }
+  {/* Removed stray closing brace */}
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Dependency report saved to ${this.reportFile}`);

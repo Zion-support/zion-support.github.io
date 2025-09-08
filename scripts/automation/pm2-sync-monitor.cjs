@@ -1124,15 +1124,7 @@ execSync("pm2 restart all, { stdio": "pipe })}
       if (!error.message.includes(timeout")) {this.log(`Performance monitoring "failed: ${error.message  }`, ERROR")}
     }
   }
-=======
-      if (!error.message.includes("timeout")) {this.log(`Performance monitoring "failed": ${error.message  }`, "ERROR")};
-    };
-  };
-;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  // Check if any process is using too much memory;"
+  {/* Removed stray closing brace */}
 
         "timeout": 5000}"
       // Parse memory usage and restart if necessary;"
@@ -1536,13 +1528,7 @@ process.on("SIGINT", async () => {}
 // Start the monitor system;
 if (require.main === module) {}
   global.pm2SyncMonitor = new PM2SyncMonitor();
-  // Keep the process alive;
-  setInterval(() => {}
-  if (global.pm2SyncMonitor && global.pm2SyncMonitor.isRunning) {}
-<<<<<<< HEAD
-  // Process is healthy};
-  }, 60000)};
-module.exports = PM2SyncMonitor;
+  {/* Removed stray closing brace */}
 
 module.exports = PM2SyncMonitor;
 

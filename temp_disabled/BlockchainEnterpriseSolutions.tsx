@@ -292,4 +292,4 @@ export default function BlockchainEnterpriseSolutions() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

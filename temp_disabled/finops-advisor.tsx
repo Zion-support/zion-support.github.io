@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function FinOpsAdvisor() {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>FinOps Advisor - Zion Tech Group</title>
         <meta name="description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI." />
@@ -419,4 +419,4 @@ export default function FinOpsAdvisor() {
       </div>
     </React.Fragment>
   );
-}>
+  {/* Removed stray closing brace */}

@@ -97,8 +97,8 @@ const infrastructureSolutions = [
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Data Center",
-    technologies: ["Data Center Design", "Implementation", "Management", "Optimization"]
-  }
+    technologies["Data Center Design", "Implementation", "Management", "Optimization"]
+  {/* Removed stray closing brace */}
 ];
 
 const infrastructureTechnologies = [
@@ -129,7 +129,7 @@ const infrastructureTechnologies = [
     icon: Cloud,
     useCase: "Cloud Infrastructure",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -159,7 +159,7 @@ const successStories = [
     solution: "Built robust IT infrastructure with high availability and security",
     results: "99.9% uptime, 70% performance improvement, better patient care, improved efficiency",
     logo: "HTL"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -190,7 +190,7 @@ const processSteps = [
     description: "Test systems and optimize performance",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const infrastructureBenefits = [
@@ -216,8 +216,8 @@ const infrastructureBenefits = [
     title: "Scalability",
     description: "Flexible infrastructure supports business growth",
     icon: Rocket,
-    examples: ["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
-  }
+    examples["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
+  {/* Removed stray closing brace */}
 ];
 
 export default function ITInfrastructure() {

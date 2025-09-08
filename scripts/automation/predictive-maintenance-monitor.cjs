@@ -579,14 +579,98 @@ process.on(SIGTERM")
 =======
   console.error( Failed to start predictive maintenance "monitor": ")
 
-=======
-  // Skip directories that can"
-  "memoryUsage"
-      "cpuUsage"
-      "diskUsage"
-process.on("SIGINT")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
-  console.log("� Received SIGTERM, shutting down gracefully...")
-  console.error(" Failed to start predictive maintenance "monitor": ")
+  findFiles(dir, extensions) {
+    const files = [];
+    
+    function scanDirectory(currentDir) {
+      try {
+        const items = fs.readdirSync(currentDir);
+        
+        for (const item of items) {
+          const fullPath = path.join(currentDir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            scanDirectory(fullPath);
+          } else if (extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        // Skip directories that can't be accessed
+      }
+    }
+    
+    scanDirectory(dir);
+    return files;
+  }
+
+  calculateDirectorySize(dir) {
+    let totalSize = 0;
+    
+    function calculateSize(currentDir) {
+      try {
+        const items = fs.readdirSync(currentDir);
+        
+        for (const item of items) {
+          const fullPath = path.join(currentDir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            calculateSize(fullPath);
+          } else {
+            totalSize += stat.size;
+          }
+        }
+      } catch (error) {
+        // Skip directories that can't be accessed
+      }
+    }
+    
+    calculateSize(dir);
+    return totalSize;
+  }
+
+  getSystemInfo() {
+    // Simplified system info collection
+    return {
+      memoryUsage: process.memoryUsage().heapUsed / 1024 / 1024, // MB
+      cpuUsage: process.cpuUsage().user / 1000000, // seconds
+      diskUsage: 0 // Would need additional libraries to get disk usage
+    };
+  }
+  {/* Removed stray closing brace */}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🔮 Starting predictive maintenance monitor with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  const monitor = new PredictiveMaintenanceMonitor();
+  
+  // Run initial monitoring
+  await monitor.monitorSystemHealth();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await monitor.monitorSystemHealth();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Predictive maintenance monitor running. Next monitoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+  {/* Removed stray closing brace */}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the predictive maintenance monitor
+runContinuous().catch(error => {
+  console.error('❌ Failed to start predictive maintenance monitor:', error);
+  process.exit(1);
+});

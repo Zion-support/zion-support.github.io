@@ -143,7 +143,7 @@ title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', ico
         ]
       }
     ]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
@@ -174,13 +174,13 @@ export default function EnhancedSidebar2025({ isOpen: unknown, onClose }: Enhanc
   useEffect((: unknown) => {
     if (isOpen) {
 
-document.body.style.overflow =
-  'hidden'} else {''
-  '      document.body.style.overflow = 'unset
-  '}';'    return () => {;'
-      document.body.style.overflow =
-  'unset'}}, [isOpen]);''
-  '  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return ('<>
+    return () => {
+      document.body.style.overflow = 'unset'}}, [isOpen]);
+
+  const isActive = (href: string)  => router.pathname === href;
+
+  return (
+  {/* Empty JSX fragment */}
       {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (

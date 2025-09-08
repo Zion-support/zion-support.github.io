@@ -10,83 +10,83 @@ import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
-    {
-        id: "SR-1001",
-        user: "john.doe@example.com",
-        userId: "user-123",
-        issue: "Cannot access account after password reset",
-        status: "open",
-        priority: "high",
-        createdAt: "2023-12-15T14:30:00Z",
-        lastUpdated: "2023-12-15T15:45:00Z",
-        category: "authentication"
-    },
-    {
-        id: "SR-1002",
-        user: "sarah.smith@company.co",
-        userId: "user-456",
-        issue: "Payment failed but funds were deducted",
-        status: "in-progress",
-        priority: "high",
-        createdAt: "2023-12-14T09:15:00Z",
-        lastUpdated: "2023-12-15T13:20:00Z",
-        category: "billing"
-    },
-    {
-        id: "SR-1003",
-        user: "tech.guru@startup.io",
-        userId: "user-789",
-        issue: "Unable to download invoice PDF",
-        status: "open",
-        priority: "medium",
-        createdAt: "2023-12-15T11:00:00Z",
-        lastUpdated: "2023-12-15T11:00:00Z",
-        category: "billing"
-    },
-    {
-        id: "SR-1004",
-        user: "developer@codelab.dev",
-        userId: "user-235",
-        issue: "API integration documentation is outdated",
-        status: "open",
-        priority: "low",
-        createdAt: "2023-12-13T16:45:00Z",
-        lastUpdated: "2023-12-13T16:45:00Z",
-        category: "api"
-    },
-    {
-        id: "SR-1005",
-        user: "maria.rodriguez@design.co",
-        userId: "user-567",
-        issue: "Dispute with freelancer over delivered work quality",
-        status: "in-progress",
-        priority: "high",
-        createdAt: "2023-12-12T10:30:00Z",
-        lastUpdated: "2023-12-15T09:15:00Z",
-        category: "disputes"
-    },
-    {
-        id: "SR-1006",
-        user: "alex.wong@datacompany.com",
-        userId: "user-890",
-        issue: "Profile verification pending for over 7 days",
-        status: "resolved",
-        priority: "medium",
-        createdAt: "2023-12-08T13:20:00Z",
-        lastUpdated: "2023-12-15T08:30:00Z",
-        category: "verification"
-    },
-    {
-        id: "SR-1007",
-        user: "jamie.taylor@tech.org",
-        userId: "user-345",
-        issue: "Cannot upload portfolio images",
-        status: "resolved",
-        priority: "medium",
-        createdAt: "2023-12-10T15:10:00Z",
-        lastUpdated: "2023-12-13T11:25:00Z",
-        category: "profile"
-    }
+  {
+    id: "SR-1001",
+    user: "john.doe@example.com",
+    userId: "user-123",
+    issue: "Cannot access account after password reset",
+    status: "open",
+    priority: "high",
+    createdAt: "2023-12-15T14:30:00Z",
+    lastUpdated: "2023-12-15T15:45:00Z",
+    category: "authentication"
+  },
+  {
+    id: "SR-1002",
+    user: "sarah.smith@comp.co",
+    userId: "user-456",
+    issue: "Payment failed but funds were deducted",
+    status: "in-progress",
+    priority: "high",
+    createdAt: "2023-12-14T09:15:00Z",
+    lastUpdated: "2023-12-15T13:20:00Z",
+    category: "billing"
+  },
+  {
+    id: "SR-1003",
+    user: "tech.guru@startup.io",
+    userId: "user-789",
+    issue: "Unable to download invoice PDF",
+    status: "open",
+    priority: "medium",
+    createdAt: "2023-12-15T11:00:00Z",
+    lastUpdated: "2023-12-15T11:00:00Z",
+    category: "billing"
+  },
+  {
+    id: "SR-1004",
+    user: "developer@codelab.dev",
+    userId: "user-235",
+    issue: "API integration documentation is outdated",
+    status: "open",
+    priority: "low",
+    createdAt: "2023-12-13T16:45:00Z", 
+    lastUpdated: "2023-12-13T16:45:00Z",
+    category: "api"
+  },
+  {
+    id: "SR-1005",
+    user: "maria.rodriguez@design.co",
+    userId: "user-567",
+    issue: "Dispute with freelancer over delivered work quality",
+    status: "in-progress",
+    priority: "high",
+    createdAt: "2023-12-12T10:30:00Z",
+    lastUpdated: "2023-12-15T09:15:00Z",
+    category: "disputes"
+  },
+  {
+    id: "SR-1006",
+    user: "alex.wong@datacomp.com",
+    userId: "user-890",
+    issue: "Profile verification pending for over 7 days",
+    status: "resolved",
+    priority: "medium",
+    createdAt: "2023-12-08T13:20:00Z",
+    lastUpdated: "2023-12-15T08:30:00Z",
+    category: "verification"
+  },
+  {
+    id: "SR-1007",
+    user: "jamie.taylor@tech.org",
+    userId: "user-345",
+    issue: "Cannot upload portfolio images",
+    status: "resolved",
+    priority: "medium",
+    createdAt: "2023-12-10T15:10:00Z",
+    lastUpdated: "2023-12-13T11:25:00Z",
+    category: "profile"
+  {/* Removed stray closing brace */}
 ];
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -134,7 +134,7 @@ export default function SupportRequests() {
   };
   
   return (
-    <Fragment>
+  {/* Empty JSX fragment */}
       <SEO 
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
@@ -337,5 +337,4 @@ export default function SupportRequests() {
       </div>
     </div>
   );
-}
->
+  {/* Removed stray closing brace */}

@@ -370,4 +370,4 @@ export default function AIAutonomousBusinessIntelligence() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

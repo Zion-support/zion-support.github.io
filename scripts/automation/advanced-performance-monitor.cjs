@@ -42,27 +42,29 @@ class $1 {}
     this.performanceHistory = [];
     this.alertHistory = [];
     this.autoFixEnabled = true;
-    // Performance optimization strategies;
-    this.optimizationStrategies = {}
-  "memory": ["Force garbage collection"", "Restart PM2 processes", "Clear build cache"", "Optimize bundle size", ""],
-      "cpu": ["Reduce concurrent processes"", "Optimize build configuration", "Enable incremental compilation"", "Use worker threads", ""],
-      "disk": ["Clean up temporary files"", "Remove old build artifacts", "Optimize log rotation"", "Clear npm cache", ""]};
-  };
-;
-  ensureLogsDirectory() {}
-  const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {}
-  fs.mkdirSync(logsDir, { "recursive": true })};
-  };
-;
-  log(message, level = "INFO") {}
-  log(message, level = "INFO") {}
-  const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
-;
-  async startMonitoring() {}
-  this.log("Starting advanced performance monitoring...");
+    
+    // Performance optimization strategies
+    this.optimizationStrategies = {
+      memory: [
+        'Force garbage collection',
+        'Restart PM2 processes',
+        'Clear build cache',
+        'Optimize bundle size'
+      ],
+      cpu: [
+        'Reduce concurrent processes',
+        'Optimize build configuration',
+        'Enable incremental compilation',
+        'Use worker threads'
+      ],
+      disk: [
+        'Clean up temporary files',
+        'Remove old build artifacts',
+        'Optimize log rotation',
+        'Clear npm cache'
+  {/* Removed stray closing bracket */}
+    };
+  }
 
   async startMonitoring() {}"
   this.log("Starting advanced performance monitoring...");"
@@ -536,8 +538,13 @@ return (;);
         "stdio": "pipe"}
 });
 
-      return { "success": true, "message": "Disk space cleaned up successfully" };
-    } catch (error) {}
+  getOverallStatus(cpu, memory, disk) {
+    if (cpu > 90 || memory > 90 || disk > 95) return 'CRITICAL';
+    if (cpu > 80 || memory > 80 || disk > 90) return 'WARNING';
+    if (cpu > 70 || memory > 70 || disk > 80) return 'ATTENTION';
+    return 'HEALTHY';
+  }
+  {/* Removed stray closing brace */}
 
         if (result.success) {}"
 
@@ -658,11 +665,14 @@ if (require.main === module) {}
       process.on("SIGINT", () => {}
   console.log("Stopping performance monitor...");"
         monitor.stopMonitoring();
-        process.exit(0)})}
-    .catch(error => {})"
-  console.error("Advanced Performance Monitor "failed": ", error);"
-      process.exit(1)})};
-module.exports = AdvancedPerformanceMonitor;
+        process.exit(0);
+      });
+    })
+    .catch(error => {
+      console.error('Advanced Performance Monitor failed:', error);
+      process.exit(1);
+    });
+  {/* Removed stray closing brace */}
 
 module.exports = AdvancedPerformanceMonitor;
 

@@ -201,7 +201,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
             <form onSubmit={handleSubmit(onSubmit)}>
               <CardContent className="space-y-6">
                 {currentStep === 0 && (
-                  <React.Fragment>
+  {/* Empty JSX fragment */}
                     <div>
                       <Label htmlFor="projectName">Project Name</Label>
                       <Controller
@@ -223,7 +223,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
                   </React.Fragment>
                 )}
                 {currentStep === 1 && (
-                  <React.Fragment>
+  {/* Empty JSX fragment */}
                     <div>
                       <Label htmlFor="timeline">Timeline</Label>
                       <Controller

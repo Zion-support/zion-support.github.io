@@ -26,7 +26,7 @@ export default function ResearchDevelopment() {
 			icon: Rocket,
 			color: 'green'
 		}
-	]
+  {/* Removed stray closing bracket */}
 
 	const currentProjects = [
 		{
@@ -53,7 +53,7 @@ export default function ResearchDevelopment() {
 			team: 6,
 			timeline: 'Q1 2025'
 		}
-	]
+  {/* Removed stray closing bracket */}
 
 	const publications = [
 		{
@@ -77,10 +77,10 @@ export default function ResearchDevelopment() {
 			year: '2024',
 			doi: '10.1016/j.comnet.2024.109876'
 		}
-	]
+  {/* Removed stray closing bracket */}
 
 	return (
-		<div>
+  {/* Empty JSX fragment */}
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -312,6 +312,6 @@ export default function ResearchDevelopment() {
 					</div>
 				</div>
 			</section>
-		</div>
-	)
-}>
+		</>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

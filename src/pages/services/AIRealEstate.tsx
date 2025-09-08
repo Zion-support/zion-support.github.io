@@ -171,4 +171,4 @@ export default function AIRealEstate() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

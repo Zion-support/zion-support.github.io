@@ -630,5 +630,5 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
-  }
+  {/* Removed stray closing brace */}
 ];

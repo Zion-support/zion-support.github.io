@@ -230,7 +230,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [addNotification]);
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Notification Bell */}
       <div className={`fixed ${getPositionClasses()} z-50`}>
         <button

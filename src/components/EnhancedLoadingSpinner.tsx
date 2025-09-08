@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { Loader2, Zap, Brain, Atom } from 'lucide-react';
 
-
-interface EnhancedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  text?: string
-  className?: string
-}
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
+  text?: string;
+  showProgress?: boolean;
+  progress?: number;
+  {/* Removed stray closing brace */}
 
 export default function EnhancedLoadingSpinner({ 
   size = 'md', 
@@ -34,7 +35,7 @@ export default function EnhancedLoadingSpinner({
         
         {/* Orbiting particles for futuristic variants */}
         {variant !== 'default' && (
-          <React.Fragment>
+  {/* Empty JSX fragment */}
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
@@ -93,5 +94,8 @@ export default function EnhancedLoadingSpinner({
         ))}
       </div>
     </div>
-  )
-}
+  );
+  {/* Removed stray closing brace */}
+
+// Export as ZionLoadingSpinner for backward compatibility
+export const ZionLoadingSpinner = EnhancedLoadingSpinner;

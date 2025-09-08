@@ -449,4 +449,4 @@ export default function IoTEdgeComputingServices() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

@@ -46,7 +46,7 @@ const ENHANCED_SERVICES = [
         benefits: ["Cost savings", "Improved performance", "Scalability"],
         tags: ["Cloud", "DevOps", "Optimization"],
         location: "Global"
-    }
+  {/* Removed stray closing brace */}
 ];
 const EnhancedServicesOverview = () => {
     // Get featured services (first 6)

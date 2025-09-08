@@ -240,4 +240,4 @@ declare global {
   type Window = {
 
     gtag?: (...args[])  => void}
-}
+  {/* Removed stray closing brace */}

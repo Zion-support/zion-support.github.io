@@ -335,4 +335,4 @@ export default function AICustomerSupportAutomation() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

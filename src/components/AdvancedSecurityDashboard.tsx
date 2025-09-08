@@ -36,7 +36,7 @@ const mockSecurityEvents = [
         status: 'open',
         assignedTo: 'Compliance Officer',
         priority: 'high'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockComplianceRequirements = [
     {
@@ -70,8 +70,8 @@ const mockComplianceRequirements = [
         nextAudit: '2024-02-01T00:00:00.000Z',
         riskLevel: 'high',
         description: 'Conduct DPIA for all new data processing activities.',
-        controls: ['Risk assessment', 'Mitigation planning', 'Documentation']
-    }
+        controls['Risk assessment', 'Mitigation planning', 'Documentation']
+  {/* Removed stray closing brace */}
 ];
 const mockSecurityMetrics = [
     {
@@ -113,7 +113,7 @@ const mockSecurityMetrics = [
         trend: 'up',
         change: 3.2,
         category: 'Remediation'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockThreatIntelligence = [
     {
@@ -135,7 +135,7 @@ const mockThreatIntelligence = [
         mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8
-    }
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedSecurityDashboard() {
     const [isOpen, setIsOpen] = useState(false);

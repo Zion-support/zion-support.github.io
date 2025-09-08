@@ -97,8 +97,8 @@ const aiAnalyticsSolutions = [
     price: "From $28,000",
     timeline: "12-18 weeks",
     category: "Anomaly Detection",
-    integrations: ["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
-  }
+    integrations["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
+  {/* Removed stray closing brace */}
 ];
 
 const aiCapabilities = [
@@ -125,7 +125,7 @@ const aiCapabilities = [
     description: "Image and video analysis for visual data insights",
     icon: Eye,
     impact: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -155,7 +155,7 @@ const successStories = [
     solution: "Developed AI-driven patient insights platform",
     results: "40% improvement in patient outcomes, 35% reduction in readmissions",
     logo: "HN"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -186,7 +186,7 @@ const processSteps = [
     description: "Deploy models and continuously optimize performance",
     icon: Zap,
     duration: "2-4 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default function AIAnalytics() {

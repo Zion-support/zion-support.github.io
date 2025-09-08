@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function AIEnterpriseOrchestrator() {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>AI Enterprise Orchestrator - Zion Tech Group</title>
         <meta name="description" content="Transform your enterprise with AI-powered workflow orchestration, multi-agent coordination, and intelligent process automation." />
@@ -235,4 +235,4 @@ export default function AIEnterpriseOrchestrator() {
       </div>
     </React.Fragment>
   );
-}>
+  {/* Removed stray closing brace */}

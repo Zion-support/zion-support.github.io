@@ -171,4 +171,4 @@ export default function AICassandra() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

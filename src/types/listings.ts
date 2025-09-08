@@ -23,67 +23,52 @@ export type Listing = {
   createdAt: Date;
   updatedAt: Date;
   views: number;
-  favorites: number;
-  condition: 'new' | 'like-new' | 'good' | 'fair' | 'poor';
-  specifications?: Record<string, any>;
-  shipping?: {
-    available: boolean;
+  likes: number;
+  shares: number;
+  {/* Removed stray closing brace */}
+
+export interface ProductListing extends Listing {
+  brand?: string;
+  model?: string;
+  condition: 'new' | 'used' | 'refurbished';
+  warranty?: string;
+  shipping: {
     cost: number;
     method: string;
     estimatedDays: number;
   };
-  returns?: {
-    allowed: boolean;
-    days: number;
-    cost: number;
-  };
-}
+  {/* Removed stray closing brace */}
 
-export interface ListingFilter {
-  category?: string;
-  priceRange?: {
-    min: number;
-    max: number;
-  };
-  location?: string;
-  condition?: string;
-  tags?: string[];
-  sellerRating?: number;
-  sortBy?: 'price' | 'date' | 'rating' | 'views';
-  sortOrder?: 'asc' | 'desc';
-}
+export interface ServiceListing extends Listing {
+  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+  duration?: string;
+  availability: string[];
+  experience: number;
+  certifications: string[];
+  portfolio?: string[];
+  {/* Removed stray closing brace */}
 
-export interface ListingSearchResult {
-  listings: Listing[];
-  total: number;
-  page: number;
-  limit: number;
-  hasMore: boolean;
-}
+export interface TalentListing extends Listing {
+  skills: string[];
+  experience: number;
+  education: string[];
+  certifications: string[];
+  languages: string[];
+  availability: string[];
+  hourlyRate: number;
+  portfolio?: string[];
+  references?: string[];
+  {/* Removed stray closing brace */}
 
 export type CartItem = {
   id: string;
   title: string;
   description: string;
   price: number;
-  currency: string;
-  category: string;
-  tags: string[];
-  images: File[];
-  condition: string;
-  specifications: Record<string, any>;
-  shipping: {
-    available: boolean;
-    cost: number;
-    method: string;
-    estimatedDays: number;
-  };
-  returns: {
-    allowed: boolean;
-    days: number;
-    cost: number;
-  };
-}
+  quantity: number;
+  type: 'product' | 'service' | 'talent';
+  image?: string;
+  {/* Removed stray closing brace */}
 
 export type WishlistItem = {
   id: string;
@@ -91,4 +76,4 @@ export type WishlistItem = {
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string;
-}
+  {/* Removed stray closing brace */}

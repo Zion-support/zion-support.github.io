@@ -2,116 +2,135 @@ import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
 
 const mockMetrics = [
-  {
-    id: 'metric-1',
-    name: 'Revenue Growth',
-    value: 15.7,
-    unit: '%',
-    trend: 'up',
-    change: 2.3,
-    category: 'Financial',
-    target: 12.0
-  },
-  {
-    id: 'metric-2',
-    name: 'Customer Acquisition Cost',
-    value: 45.20,
-    unit: 'USD',
-    trend: 'down',
-    change: -8.5,
-    category: 'Customer',
-    target: 50.0
-  },
-  {
-    id: 'metric-3',
-    name: 'Customer Lifetime Value',
-    value: 1250.00,
-    unit: 'USD',
-    trend: 'up',
-    change: 12.8,
-    category: 'Customer',
-    target: 1200.0
-  },
-  {
-    id: 'metric-4',
-    name: 'Conversion Rate',
-    value: 3.2,
-    unit: '%',
-    trend: 'up',
-    change: 0.5,
-    category: 'Operations',
-    target: 3.0
-  },
-  {
-    id: 'metric-5',
-    name: 'Market Share',
-    value: 18.5,
-    unit: '%',
-    trend: 'up',
-    change: 1.2,
-    category: 'Growth',
-    target: 20.0
-  }
+    {
+        id: 'revenue',
+        name: 'Monthly Revenue',
+        value: 2847500,
+        target: 3000000,
+        unit: 'USD',
+        trend: 'up',
+        change: 8.5,
+        category: 'Financial',
+        priority: 'high',
+        lastUpdated: '2024-01-15T10:00:00.000Z'
+    },
+    {
+        id: 'customers',
+        name: 'Active Customers',
+        value: 15420,
+        target: 15000,
+        unit: 'Users',
+        trend: 'up',
+        change: 12.3,
+        category: 'Customer',
+        priority: 'high',
+        lastUpdated: '2024-01-15T10:00:00.000Z'
+    },
+    {
+        id: 'satisfaction',
+        name: 'Customer Satisfaction',
+        value: 94.2,
+        target: 90,
+        unit: '%',
+        trend: 'up',
+        change: 2.1,
+        category: 'Customer',
+        priority: 'medium',
+        lastUpdated: '2024-01-15T10:00:00.000Z'
+    },
+    {
+        id: 'efficiency',
+        name: 'Operational Efficiency',
+        value: 87.5,
+        target: 85,
+        unit: '%',
+        trend: 'up',
+        change: 1.8,
+        category: 'Operations',
+        priority: 'medium',
+        lastUpdated: '2024-01-15T10:00:00.000Z'
+    },
+    {
+        id: 'costs',
+        name: 'Operating Costs',
+        value: 1250000,
+        target: 1200000,
+        unit: 'USD',
+        trend: 'down',
+        change: -3.2,
+        category: 'Financial',
+        priority: 'high',
+        lastUpdated: '2024-01-15T10:00:00.000Z'
+  {/* Removed stray closing brace */}
 ];
 
 const mockInsights = [
-  {
-    id: 'insight-1',
-    type: 'prediction',
-    title: 'Revenue will increase by 22% in Q2',
-    description: 'Based on current trends and seasonal patterns',
-    confidence: 87,
-    priority: 'high',
-    actions: ['Optimize pricing strategy', 'Increase marketing spend', 'Expand sales team']
-  },
-  {
-    id: 'insight-2',
-    type: 'anomaly',
-    title: 'Unusual spike in customer churn',
-    description: 'Churn rate increased by 15% in the last week',
-    confidence: 92,
-    priority: 'high',
-    actions: ['Investigate customer feedback', 'Review recent changes', 'Implement retention campaign']
-  },
-  {
-    id: 'insight-3',
-    type: 'opportunity',
-    title: 'Untapped market segment identified',
-    description: 'Small businesses showing 40% higher conversion rates',
-    confidence: 78,
-    priority: 'medium',
-    actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-  }
+    {
+        id: 'insight-1',
+        type: 'prediction',
+        title: 'Revenue Growth Prediction',
+        description: 'Based on current trends, monthly revenue is predicted to reach $3.2M by Q2 2024, representing a 15% increase.',
+        confidence: 87,
+        impact: 'high',
+        category: 'Financial',
+        timestamp: '2024-01-15T10:00:00.000Z',
+        actionable: true,
+        actions['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
+    },
+    {
+        id: 'insight-2',
+        type: 'anomaly',
+        title: 'Customer Churn Anomaly',
+        description: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
+        confidence: 92,
+        impact: 'high',
+        category: 'Customer',
+        timestamp: '2024-01-15T09:30:00.000Z',
+        actionable: true,
+        actions['Investigate customer feedback', 'Review product updates', 'Enhance support response']
+    },
+    {
+        id: 'insight-3',
+        type: 'opportunity',
+        title: 'Market Expansion Opportunity',
+        description: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
+        confidence: 78,
+        impact: 'medium',
+        category: 'Growth',
+        timestamp: '2024-01-15T08:45:00.000Z',
+        actionable: true,
+        actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
+  {/* Removed stray closing brace */}
 ];
 
 const mockModels = [
-  {
-    id: 'model-1',
-    name: 'Customer Lifetime Value Predictor',
-    accuracy: 94.2,
-    lastTrained: '2024-01-10T00:00:00.000Z',
-    status: 'active',
-    predictions: 15420,
-    category: 'Customer Analytics'
-  },
-  {
-    id: 'model-2',
-    name: 'Revenue Forecasting Model',
-    accuracy: 89.7,
-    lastTrained: '2024-01-08T00:00:00.000Z',
-    status: 'active',
-    predictions: 2847500,
-    category: 'Financial Analytics'
-  },
-  {
-    id: 'model-3',
-    name: 'Churn Prediction Model',
-    accuracy: 91.5,
-    lastTrained: '2024-01-12T00:00:00.000Z',
-    status: 'training',
-    predictions: 15420,
-    category: 'Customer Analytics'
-  }
+    {
+        id: 'model-1',
+        name: 'Customer Lifetime Value Predictor',
+        accuracy: 94.2,
+        lastTrained: '2024-01-10T00:00:00.000Z',
+        status: 'active',
+        predictions: 15420,
+        category: 'Customer Analytics'
+    },
+    {
+        id: 'model-2',
+        name: 'Revenue Forecasting Model',
+        accuracy: 89.7,
+        lastTrained: '2024-01-08T00:00:00.000Z',
+        status: 'active',
+        predictions: 2847500,
+        category: 'Financial Analytics'
+    },
+    {
+        id: 'model-3',
+        name: 'Churn Prediction Model',
+        accuracy: 91.5,
+        lastTrained: '2024-01-12T00:00:00.000Z',
+        status: 'training',
+        predictions: 15420,
+        category: 'Customer Analytics'
+  {/* Removed stray closing brace */}
 ];
 
 export function AdvancedBusinessIntelligence() {

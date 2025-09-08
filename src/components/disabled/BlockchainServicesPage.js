@@ -130,7 +130,7 @@ const blockchainServices = [
         badge: "Expert",
         link: "/services",
         image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    }
+  {/* Removed stray closing brace */}
 ];
 const blockchainBenefits = [
     {
@@ -152,7 +152,7 @@ const blockchainBenefits = [
         title: "Innovation",
         description: "Enable new business models and revenue streams through tokenization and DeFi",
         icon: <TrendingUp className="h-6 w-6"/>
-    }
+  {/* Removed stray closing brace */}
 ];
 const useCases = [
     {
@@ -174,7 +174,7 @@ const useCases = [
         title: "Decentralized Finance",
         description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
         icon: <Wallet className="h-6 w-6"/>
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function BlockchainServicesPage() {
     return (<div className="min-h-screen bg-background">

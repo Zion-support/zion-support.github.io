@@ -23,11 +23,10 @@ const existing = state.items.find(i => i.id === action.payload.id);
             return { items: [] };
         default:
             return state}
-};
-const CartContext = createContext(undefined);;;;
-
-export function useCart() {;
-const ctx = useContext(CartContext);
+  {/* Removed stray closing brace */}
+const CartContext = createContext(undefined);
+export function useCart() {
+    const ctx = useContext(CartContext);
     if (!ctx)
         throw new Error('useCart must be used within a CartProvider');
     return ctx}

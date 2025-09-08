@@ -44,34 +44,26 @@ const categories = [
     },
 ];
 const specialServices = [
-    {
-        title: "Enhanced AI & IT Services",
-        link: "/enhanced-services"
-    },
-    {
-        title: "IT Onsite Services",
-        link: "/it-onsite-services",
-        icon: <Shield className="w-5 h-5"/>,
-        description: "Professional on-site technical support"
-    },
-    {
-        title: "Comprehensive Services",
-        link: "/comprehensive-services",
-        icon: <Rocket className="w-5 h-5"/>,
-        description: "End-to-end technology solutions"
-    },
-    {
-        title: "AI Integration",
-        link: "/ai-integration",
-        icon: <Sparkles className="w-5 h-5"/>,
-        description: "Seamless AI implementation"
-    },
-    {
-        title: "Cloud Solutions",
-        link: "/cloud-solutions",
-        icon: <Zap className="w-5 h-5"/>,
-        description: "Scalable cloud infrastructure"
-    }
+  {
+    title: "Enhanced AI & IT Services",
+    link: "/enhanced-services"
+  },
+  {
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+  },
+  {
+    title: "AI Development",
+    link: "/ai-development"
+  },
+  {
+    title: "Cloud Migration",
+    link: "/cloud-migration"
+  },
+  {
+    title: "Cybersecurity",
+    link: "/cybersecurity"
+  {/* Removed stray closing brace */}
 ];
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {

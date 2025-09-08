@@ -171,4 +171,4 @@ export default function AIInsurance() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

@@ -124,7 +124,7 @@ const services: Service[] = [
     reviews: 78,
     color: 'from-emerald-500 to-teal-500',
     link: '/ai-services/healthcare'
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const categories = [

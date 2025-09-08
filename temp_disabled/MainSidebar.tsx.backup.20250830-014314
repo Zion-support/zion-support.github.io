@@ -373,7 +373,7 @@ export function MainSidebar(...args: []):  {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Overlay */}
       {isOpen && (
         <div 

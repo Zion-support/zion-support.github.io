@@ -225,6 +225,6 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     competitors: ["Tableau", "Power BI", "Qlik"],
     roi: "900% within 20 months",
     setupTime: "10-12 weeks",
-    integrations: ["EHR Systems", "Data Warehouses", "Business Intelligence Tools", "Reporting Systems", "Operational Systems"]
-  }
+    integrations["EHR Systems", "Data Warehouses", "Business Intelligence Tools", "Reporting Systems", "Operational Systems"]
+  {/* Removed stray closing brace */}
 ];

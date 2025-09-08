@@ -88,8 +88,8 @@ class TypeScriptSyntaxFixer {
       { pattern: /<>\s*<\/>([a-zA-Z][a-zA-Z0-9]*)/g, replacement: '<>$1</>' }
     ];
 
-    await this.applyFixes(jsxFixes, '.tsx');
-  }
+    return corruptionPatterns.some(pattern => pattern.test(content));
+  {/* Removed stray closing brace */}
 
   async fixMalformedInterfaces() {
     this.log('🔧 Fixing malformed TypeScript interfaces...', 'info');
@@ -227,7 +227,126 @@ class TypeScriptSyntaxFixer {
     return files;
   }
 
-  async generateReport() {
+  async fixFile(fileInfo) {
+    const { path: filePath, content, issues } = fileInfo;
+    
+    try {
+      this.log(`Fixing file: ${filePath}`);
+      
+      let fixedContent = content;
+      let fixesApplied = [];
+
+      // Fix malformed imports
+      if (issues.includes('MALFORMED_IMPORT')) {
+        fixedContent = this.fixMalformedImports(fixedContent);
+        fixesApplied.push('MALFORMED_IMPORT');
+      }
+
+      // Fix malformed const declarations
+      if (issues.includes('MALFORMED_CONST')) {
+        fixedContent = this.fixMalformedConst(fixedContent);
+        fixesApplied.push('MALFORMED_CONST');
+      }
+
+      // Fix malformed from statements
+      if (issues.includes('MALFORMED_FROM')) {
+        fixedContent = this.fixMalformedFrom(fixedContent);
+        fixesApplied.push('MALFORMED_FROM');
+      }
+
+      // Fix JSX balance
+      if (issues.includes('UNBALANCED_JSX')) {
+        fixedContent = this.fixJSXBalance(fixedContent);
+        fixesApplied.push('UNBALANCED_JSX');
+      }
+
+      // Write fixed content
+      if (fixedContent !== content) {
+        fs.writeFileSync(filePath, fixedContent);
+        
+        return {
+          file: filePath,
+          fixesApplied: fixesApplied,
+          timestamp: new Date().toISOString()
+        };
+      }
+
+    } catch (error) {
+      this.log(`Failed to fix file ${filePath}: ${error.message}`, 'ERROR');
+      throw error;
+    }
+
+    return null;
+  }
+
+  fixMalformedImports(content) {
+    // Fix: import: { Component } from 'react'
+    content = content.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g, "import { $1 } from '$2'");
+    
+    // Fix: import: React from 'react'
+    content = content.replace(/import:\s*([^,]+),\s*from,\s*'([^']+)'/g, "import $1 from '$2'");
+    
+    // Fix: import: { Component }, from, 'react'
+    content = content.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g, "import { $1 } from '$2'");
+    
+    return content;
+  {/* Removed stray closing brace */}
+
+  fixMalformedConst(content) {
+    // Fix: const: Component, React: .FC
+    content = content.replace(/const:\s*([^,]+),\s*([^:]+):\s*\.FC/g, "const $1: React.FC");
+    
+    // Fix: const: Component: React.FC
+    content = content.replace(/const:\s*([^:]+):\s*React\.FC/g, "const $1: React.FC");
+    
+    return content;
+  {/* Removed stray closing brace */}
+
+  fixMalformedFrom(content) {
+    // Fix: from, 'react'
+    content = content.replace(/from,\s*'([^']+)'/g, "from '$1'");
+    
+    // Fix: }, from, 'react'
+    content = content.replace(/},\s*from,\s*'([^']+)'/g, "} from '$1'");
+    
+    return content;
+  {/* Removed stray closing brace */}
+
+  fixJSXBalance(content) {
+    // Count open and close tags
+    const openTags = content.match(/<([A-Z][a-zA-Z]*)/g) || [];
+    const closeTags = content.match(/<\/([^>]*)/g) || [];
+    
+    if (openTags.length > closeTags.length) {
+      const missingTags = openTags.length - closeTags.length;
+      
+      // Add missing closing tags at the end
+      for (let i = 0; i < missingTags; i++) {
+        content += '\n      </div>';
+      }
+    }
+    
+    return content;
+  {/* Removed stray closing brace */}
+
+  async runTypeCheck() {
+    try {
+      this.log('Running TypeScript type check...');
+      execSync('npm run type-check', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe' 
+      });
+      
+      return { success: true, errors: 0 };
+    } catch (error) {
+      const output = error.stdout || error.stderr || '';
+      const errorCount = (output.match(/error TS/g) || []).length;
+      
+      return { success: false, errors: errorCount, output };
+    }
+  {/* Removed stray closing brace */}
+
+  async generateReport(fixes, errors, typeCheckResult) {
     const report = {
       timestamp: new Date().toISOString(),
       duration: Date.now() - this.startTime,
@@ -237,16 +356,56 @@ class TypeScriptSyntaxFixer {
       status: this.fixesApplied > 0 ? 'success' : 'no-fixes-needed'
     };
     
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${this.reportFile}`, 'info');
-  }
-}
+    this.log(`Syntax fix report generated: ${fixes.length} fixes applied, ${errors.length} errors encountered`);
+    
+    return report;
+  {/* Removed stray closing brace */}
+
+  async commitFixes(fixes) {
+    try {
+      this.log('Committing syntax fixes...');
+      
+      // Add fixed files
+      for (const fix of fixes) {
+        execSync(`git add "${fix.file}"`, { cwd: this.projectRoot, stdio: 'pipe' });
+      }
+      
+      // Commit
+      const commitMessage = `fix: Auto-fix TypeScript/JSX syntax issues (${fixes.length} files)`;
+      execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot, stdio: 'pipe' });
+      
+      this.log('Syntax fixes committed successfully');
+      
+    } catch (error) {
+      this.log(`Failed to commit fixes: ${error.message}`, 'WARN');
+    }
+  {/* Removed stray closing brace */}
+  {/* Removed stray closing brace */}
 
 // Main execution
-if (require.main === module) {
+async function main() {
   const fixer = new TypeScriptSyntaxFixer();
-  fixer.run().catch(console.error);
-}
+  
+  try {
+    const result = await fixer.runSyntaxFix();
+    
+    if (result.errors.length === 0 && result.fixes.length > 0) {
+      process.exit(0); // Success
+    } else if (result.errors.length > 0) {
+      process.exit(1); // Errors occurred
+    } else {
+      process.exit(2); // No fixes needed
+    }
+    
+  } catch (error) {
+    fixer.log(`Fatal error: ${error.message}`, 'ERROR');
+    process.exit(1);
+  }
+  {/* Removed stray closing brace */}
+
+if (require.main === module) {
+  main();
+  {/* Removed stray closing brace */}
 
             
             

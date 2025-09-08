@@ -299,5 +299,5 @@ export class ContentQualityAnalyzer {
     clearCache() {
         this.analyzedPages.clear();
     }
-}
+  {/* Removed stray closing brace */}
 export default ContentQualityAnalyzer;

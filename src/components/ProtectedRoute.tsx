@@ -5,7 +5,7 @@ interface ProtectedRouteProps {
   children: React.ReactNode;
   requireAuth?: boolean;
   roles?: string[];
-}
+  {/* Removed stray closing brace */}
 
 export function ProtectedRoute({ children, requireAuth = true, roles = [] }: ProtectedRouteProps) {
   const { user, isAuthenticated, isLoading } = useAuth();
@@ -27,6 +27,5 @@ export function ProtectedRoute({ children, requireAuth = true, roles = [] }: Pro
     return <Navigate to="/unauthorized" replace />;
   }
 
-  return <React.Fragment>{children}</React.Fragment>;
-}
->
+  return <>{children}</>;
+  {/* Removed stray closing brace */}

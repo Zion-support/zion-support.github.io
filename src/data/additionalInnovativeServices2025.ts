@@ -20,17 +20,16 @@ export type AdditionalInnovativeService2025 = {
     email: string;
     website: string;
   };
-  technology: string[];
-  compliance: string[];
-  integrations: string[];
-  apiAccess: boolean;
-  mobileApp: boolean;
-  whiteLabel: boolean;
-  customBranding: boolean;
-  dataRetention: string;
-  uptime: string;
-  securityFeatures: string[];
-}
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+  {/* Removed stray closing brace */}
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
   // AI-Powered Financial Services
@@ -641,15 +640,274 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-    compliance: ["ISO 9001", "GDPR", "SOC 2"],
-    integrations: ["Jira", "Confluence", "Figma", "SolidWorks", "PLM systems"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "10 years",
-    uptime: "99.99%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-  }
+    technicalSpecs: {
+      technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"],
+      integrations: ["SIEM systems", "Firewalls", "EDR solutions", "Cloud platforms", "Security tools"],
+      apiEndpoints: 300,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "End-to-end encryption", "Zero trust"]
+    },
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    marketSize: "$45.2 billion by 2025"
+  },
+
+  // AI-Powered Healthcare Platform
+  {
+    id: "ai-healthcare-platform",
+    title: "AI Healthcare Platform",
+    description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance, treatment recommendations, patient monitoring, and healthcare analytics to improve patient outcomes and reduce costs.",
+    category: "AI & Healthcare",
+    subcategory: "Healthcare AI",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI diagnostics",
+      "Treatment recommendations",
+      "Patient monitoring",
+      "Health analytics",
+      "Telemedicine support",
+      "Electronic health records",
+      "Compliance management",
+      "Integration APIs",
+      "Mobile app",
+      "24/7 support"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 40%",
+      "Reduce treatment costs by 30%",
+      "Enhance patient care",
+      "Ensure compliance",
+      "24/7 healthcare support"
+    ],
+    useCases: [
+      "Medical diagnostics",
+      "Patient care",
+      "Health monitoring",
+      "Treatment planning",
+      "Healthcare analytics"
+    ],
+    targetAudience: [
+      "Hospitals",
+      "Clinics",
+      "Healthcare providers",
+      "Insurance companies",
+      "Public health agencies"
+    ],
+    tags: ["AI", "Healthcare", "Diagnostics", "Patient Care", "Health Analytics"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,999 - $12,999/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["EMR systems", "HL7", "FHIR", "Medical devices", "Healthcare APIs"],
+      apiEndpoints: 400,
+      uptime: "99.99%",
+      security: ["HIPAA", "SOC 2", "GDPR", "End-to-end encryption", "Audit trails"]
+    },
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Health"],
+    marketSize: "$67.8 billion by 2025"
+  },
+
+  // Digital Transformation Services
+  {
+    id: "digital-transformation-services",
+    title: "Digital Transformation Services",
+    description: "Comprehensive digital transformation consulting and implementation services that help businesses modernize their operations, adopt new technologies, and achieve digital excellence.",
+    category: "Digital Transformation",
+    subcategory: "Consulting",
+    price: 4999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Digital strategy",
+      "Technology assessment",
+      "Process optimization",
+      "Change management",
+      "Implementation support",
+      "Training programs",
+      "Performance monitoring",
+      "Integration services",
+      "Ongoing support",
+      "Expert consulting"
+    ],
+    benefits: [
+      "Accelerate digital adoption by 3x",
+      "Improve operational efficiency by 50%",
+      "Reduce costs by 30%",
+      "Enhance customer experience",
+      "Future-proof business operations"
+    ],
+    useCases: [
+      "Business modernization",
+      "Technology adoption",
+      "Process optimization",
+      "Change management",
+      "Digital strategy"
+    ],
+    targetAudience: [
+      "Enterprises",
+      "Mid-market companies",
+      "Government agencies",
+      "Non-profits",
+      "Educational institutions"
+    ],
+    tags: ["Digital Transformation", "Consulting", "Technology Adoption", "Process Optimization", "Change Management"],
+    estimatedDelivery: "12-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,999 - $15,000/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Various technologies", "Cloud platforms", "AI/ML", "IoT", "Blockchain"],
+      integrations: ["Enterprise systems", "Cloud services", "Business tools", "Legacy systems", "Modern platforms"],
+      apiEndpoints: 500,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "Industry standards"]
+    },
+    competitors: ["McKinsey", "BCG", "Bain", "Deloitte Digital"],
+    marketSize: "$89.7 billion by 2025"
+  },
+
+  // Data Analytics Services
+  {
+    id: "data-analytics-services",
+    title: "Data Analytics Services",
+    description: "Comprehensive data analytics services that help businesses collect, analyze, and visualize data to gain insights, make informed decisions, and drive business growth.",
+    category: "Data & Analytics",
+    subcategory: "Analytics Services",
+    price: 1799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Data collection",
+      "Data analysis",
+      "Data visualization",
+      "Predictive modeling",
+      "Business insights",
+      "Custom reports",
+      "Integration services",
+      "Training programs",
+      "Ongoing support",
+      "Expert consulting"
+    ],
+    benefits: [
+      "Uncover hidden insights",
+      "Make data-driven decisions",
+      "Improve business performance",
+      "Reduce operational costs",
+      "Identify growth opportunities"
+    ],
+    useCases: [
+      "Business analytics",
+      "Performance monitoring",
+      "Customer insights",
+      "Market analysis",
+      "Operational optimization"
+    ],
+    targetAudience: [
+      "Businesses",
+      "Analysts",
+      "Consultants",
+      "Researchers",
+      "Government agencies"
+    ],
+    tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Modeling", "Insights"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,799 - $5,999/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "R", "SQL", "Tableau", "Power BI"],
+      integrations: ["Databases", "Cloud platforms", "Business tools", "APIs", "Data sources"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "Data encryption", "Access controls"]
+    },
+    competitors: ["Tableau", "Power BI", "Looker", "Qlik", "SAS"],
+    marketSize: "$41.2 billion by 2025"
+  },
+
+  // Digital Twin Services
+  {
+    id: "digital-twin-services",
+    title: "Digital Twin Services",
+    description: "Advanced digital twin solutions that create virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization of complex operations.",
+    category: "Digital Twin",
+    subcategory: "Virtual Replication",
+    price: 3499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "3D modeling",
+      "Real-time monitoring",
+      "Predictive maintenance",
+      "Performance optimization",
+      "Simulation capabilities",
+      "Integration APIs",
+      "Custom dashboards",
+      "Mobile access",
+      "Expert support",
+      "Training programs"
+    ],
+    benefits: [
+      "Reduce maintenance costs by 40%",
+      "Improve operational efficiency by 35%",
+      "Prevent equipment failures",
+      "Optimize performance",
+      "Real-time system insights"
+    ],
+    useCases: [
+      "Manufacturing",
+      "Infrastructure",
+      "Healthcare",
+      "Smart cities",
+      "Energy systems"
+    ],
+    targetAudience: [
+      "Manufacturers",
+      "Infrastructure companies",
+      "Healthcare providers",
+      "Government agencies",
+      "Energy companies"
+    ],
+    tags: ["Digital Twin", "IoT", "3D Modeling", "Predictive Maintenance", "Real-time Monitoring"],
+    estimatedDelivery: "10-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,499 - $9,999/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["3D modeling", "IoT sensors", "AI/ML", "Cloud computing", "Real-time processing"],
+      integrations: ["IoT platforms", "SCADA systems", "Enterprise systems", "Cloud services", "Data sources"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["SOC 2", "IoT security", "Data encryption", "Access controls"]
+    },
+    competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"],
+    marketSize: "$15.8 billion by 2025"
+  {/* Removed stray closing brace */}
 ];

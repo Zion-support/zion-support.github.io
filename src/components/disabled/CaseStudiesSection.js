@@ -105,7 +105,7 @@ const caseStudies = [
         rating: 5,
         videoUrl: '/videos/manufacturing-case-study.mp4',
         imageUrl: '/images/manufacturing-iot.jpg'
-    }
+  {/* Removed stray closing brace */}
 ];
 const industries = [
     { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5"/> },

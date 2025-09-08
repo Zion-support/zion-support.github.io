@@ -329,7 +329,7 @@ export const ModernUIEnhancer: React.FC = () => {
     setActiveTheme(theme)};
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* UI Enhancement Toggle Button */}
       <motion.button
         whileHover={{ scale: 1.05, rotate: 5 }}

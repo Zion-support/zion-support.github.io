@@ -653,4 +653,4 @@ export default function AIFinancialPlanning() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

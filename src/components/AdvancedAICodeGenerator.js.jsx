@@ -245,13 +245,53 @@ export function useApi<T>(url: string, options: UseApiOptions = {}): UseApiResul
     }
   }
 }`,
-    tags: ['javascript', 'validation', 'forms', 'class'],
-    complexity: 'high',
-    rating: 4.9,
-    usageCount: 2100,
-    createdAt: '2024-01-12'
-  }
+        tags['javascript', 'forms', 'validation', 'class'],
+        complexity: 'high',
+        rating: 4.9,
+        usageCount: 2100,
+        createdAt: '2024-01-08'
+  {/* Removed stray closing brace */}
 ];
+const mockCodeAnalysis = [
+    {
+        id: '1',
+        snippetId: '1',
+        quality: 92,
+        performance: 88,
+        security: 95,
+        maintainability: 90,
+        suggestions[
+            'Consider adding request timeout handling',
+            'Add retry logic for failed requests',
+            'Implement request cancellation with AbortController'
+        ],
+        warnings[
+            'No input validation for URL parameter',
+            'Consider rate limiting for API calls'
+        ],
+        timestamp: '2024-01-15T10:30:00Z'
+    },
+    {
+        id: '2',
+        snippetId: '2',
+        quality: 85,
+        performance: 95,
+        security: 100,
+        maintainability: 88,
+        suggestions[
+            'Add vendor prefixes for better browser support',
+            'Consider using CSS custom properties for colors',
+            'Add animation performance optimizations'
+        ],
+        warnings[],
+        timestamp: '2024-01-10T14:20:00Z'
+  {/* Removed stray closing brace */}
+];
+const mockAIGenerations = [
+    {
+        id: '1',
+        prompt: 'Create a React hook for managing local storage with TypeScript',
+        generatedCode: `import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
@@ -302,7 +342,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             'Alternative 3: With custom serializer'
         ],
         timestamp: '2024-01-15T11:45:00Z'
-    }
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false);

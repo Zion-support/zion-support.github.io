@@ -155,7 +155,7 @@ const NewsletterSection: React.FC = () => {
                       Subscribing...
                     </div>
                   ) : (
-                    <React.Fragment>
+  {/* Empty JSX fragment */}
                       Subscribe Now
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </React.Fragment>

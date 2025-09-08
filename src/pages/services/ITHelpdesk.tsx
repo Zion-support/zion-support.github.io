@@ -77,5 +77,5 @@ export default function ITHelpdesk() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 

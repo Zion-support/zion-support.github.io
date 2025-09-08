@@ -36,7 +36,7 @@ const mockParticipants = [
         hasRaisedHand: false,
         status: 'away',
         joinTime: '2024-01-15T10:05:00.000Z'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockChatMessages = [
     {
@@ -64,8 +64,8 @@ const mockChatMessages = [
         message: 'Perfect! I\'ll share the presentation now.',
         timestamp: '2024-01-15T10:02:00.000Z',
         type: 'text',
-        reactions: []
-    }
+        reactions[]
+  {/* Removed stray closing brace */}
 ];
 const mockDocuments = [
     {
@@ -85,7 +85,7 @@ const mockDocuments = [
         lastModified: '2024-01-15T08:45:00.000Z',
         sharedBy: 'Michael Chen',
         permissions: 'view'
-    }
+  {/* Removed stray closing brace */}
 ];
 const mockMeetings = [
     {
@@ -97,7 +97,7 @@ const mockMeetings = [
         status: 'active',
         recording: true,
         password: 'Q4Review2024'
-    }
+  {/* Removed stray closing brace */}
 ];
 export function AdvancedCollaborationPlatform() {
     const [isOpen, setIsOpen] = useState(false);

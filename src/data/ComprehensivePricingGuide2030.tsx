@@ -337,7 +337,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const priceRangeData = getPriceRange();
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
         description="Explore our complete pricing guide for micro SAAS, IT infrastructure, and AI services. Compare prices, ROI, and market data to find the perfect solution for your business."

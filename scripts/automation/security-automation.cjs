@@ -435,7 +435,7 @@ this.log(`Security automation completed. "Status": ${report.status}`);this.log(`
 ;
   this.log(No security vulnerabilities found. System is secure., "INFO")}
   }
-}
+  {/* Removed stray closing brace */}
 
   
   
@@ -467,7 +467,11 @@ if (require.main === module) {}
 } else {}"
 // Run the automation if this script is executed directly;
   const security = new SecurityAutomation();
-security.run().catch(error => {})"
+  security.run().catch(error => {
+    console.error('Security automation failed:', error);
+    process.exit(1);
+  });
+  {/* Removed stray closing brace */}
 
     process.exit(1)})};
 module.exports = SecurityAutomation;

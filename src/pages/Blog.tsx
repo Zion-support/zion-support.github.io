@@ -100,12 +100,16 @@ import { Search } from "lucide-react";
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPosts(prev => [...prev, generateRandomBlogPost()]);
-    }, 120000); // every 2 minutes
-    return () => clearInterval(interval);
-  }, []);
+  const filteredPosts = selectedCategory === 'all' 
+    ? recentPosts: recentPosts.filter(post  => post.category === selectedCategory);
+
+  const searchResults = searchQuery 
+    ? [...featuredPosts, ...recentPosts].filter(post => 
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.author.toLowerCase().includes(searchQuery.toLowerCase())
+  {/* Removed stray closing parenthesis */}
+    : [];
 
   // Filter blog posts based on search and category
   const filteredPosts = posts.filter(post => {
@@ -433,6 +437,4 @@ import { Search } from "lucide-react";
       </div>
     </>
   );
-}
-
-export default Blog;
+  {/* Removed stray closing brace */}

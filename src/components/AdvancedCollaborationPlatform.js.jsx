@@ -24,24 +24,104 @@ import {
 } from 'lucide-react';
 
 const mockParticipants = [
-  { id: '1', name: 'Sarah Johnson', role: 'Project Manager', isOnline: true, hasRaisedHand: false, isSpeaking: true },
-  { id: '2', name: 'Mike Chen', role: 'Developer', isOnline: true, hasRaisedHand: false, isSpeaking: false },
-  { id: '3', name: 'Emily Davis', role: 'Designer', isOnline: true, hasRaisedHand: true, isSpeaking: false },
-  { id: '4', name: 'Alex Thompson', role: 'QA Engineer', isOnline: false, hasRaisedHand: false, isSpeaking: false }
+    {
+        id: '1',
+        name: 'Sarah Johnson',
+        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&h=100',
+        isHost: true,
+        isMuted: false,
+        isVideoOff: false,
+        isScreenSharing: false,
+        hasRaisedHand: false,
+        status: 'online',
+        joinTime: '2024-01-15T10:00:00.000Z'
+    },
+    {
+        id: '2',
+        name: 'Michael Chen',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100',
+        isHost: false,
+        isMuted: true,
+        isVideoOff: false,
+        isScreenSharing: false,
+        hasRaisedHand: true,
+        status: 'online',
+        joinTime: '2024-01-15T10:02:00.000Z'
+    },
+    {
+        id: '3',
+        name: 'Emily Rodriguez',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100',
+        isHost: false,
+        isMuted: false,
+        isVideoOff: true,
+        isScreenSharing: false,
+        hasRaisedHand: false,
+        status: 'away',
+        joinTime: '2024-01-15T10:05:00.000Z'
+  {/* Removed stray closing brace */}
+];
+const mockChatMessages = [
+    {
+        id: '1',
+        senderId: '1',
+        senderName: 'Sarah Johnson',
+        message: 'Welcome everyone to our quarterly review meeting!',
+        timestamp: '2024-01-15T10:00:00.000Z',
+        type: 'text',
+        reactions[]
+    },
+    {
+        id: '2',
+        senderId: '2',
+        senderName: 'Michael Chen',
+        message: 'Thanks Sarah! I have some questions about the Q4 metrics.',
+        timestamp: '2024-01-15T10:01:00.000Z',
+        type: 'text',
+        reactions[{ emoji: '👍', count: 2 }]
+    },
+    {
+        id: '3',
+        senderId: '1',
+        senderName: 'Sarah Johnson',
+        message: 'Perfect! I\'ll share the presentation now.',
+        timestamp: '2024-01-15T10:02:00.000Z',
+        type: 'text',
+        reactions[]
+  {/* Removed stray closing brace */}
 ];
 
 const mockDocuments = [
-  { id: '1', name: 'Q4_Strategy_2024.pdf', type: 'pdf', size: '2.4 MB', lastModified: '2024-01-15' },
-  { id: '2', name: 'Budget_Planning.xlsx', type: 'excel', size: '1.8 MB', lastModified: '2024-01-14' },
-  { id: '3', name: 'Design_Mockups.fig', type: 'figma', size: '5.2 MB', lastModified: '2024-01-13' },
-  { id: '4', name: 'Meeting_Notes.docx', type: 'word', size: '0.8 MB', lastModified: '2024-01-15' }
+    {
+        id: '1',
+        name: 'Q4_2024_Review.pptx',
+        type: 'presentation',
+        size: '2.4 MB',
+        lastModified: '2024-01-15T09:30:00.000Z',
+        sharedBy: 'Sarah Johnson',
+        permissions: 'edit'
+    },
+    {
+        id: '2',
+        name: 'Financial_Report_Q4.xlsx',
+        type: 'spreadsheet',
+        size: '1.8 MB',
+        lastModified: '2024-01-15T08:45:00.000Z',
+        sharedBy: 'Michael Chen',
+        permissions: 'view'
+  {/* Removed stray closing brace */}
 ];
-
-const mockTasks = [
-  { id: '1', title: 'Review Q4 performance metrics', assignee: 'Sarah Johnson', dueDate: '2024-01-20', status: 'in-progress' },
-  { id: '2', title: 'Finalize budget allocation', assignee: 'Mike Chen', dueDate: '2024-01-18', status: 'completed' },
-  { id: '3', title: 'Update design system', assignee: 'Emily Davis', dueDate: '2024-01-25', status: 'pending' },
-  { id: '4', title: 'Conduct user testing', assignee: 'Alex Thompson', dueDate: '2024-01-22', status: 'in-progress' }
+const mockMeetings = [
+    {
+        id: '1',
+        title: 'Q4 2024 Review Meeting',
+        startTime: '2024-01-15T10:00:00.000Z',
+        endTime: '2024-01-15T11:30:00.000Z',
+        participants: 3,
+        status: 'active',
+        recording: true,
+        password: 'Q4Review2024'
+  {/* Removed stray closing brace */}
 ];
 
 export function AdvancedCollaborationPlatform() {

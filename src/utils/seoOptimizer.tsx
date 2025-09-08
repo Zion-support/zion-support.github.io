@@ -205,5 +205,5 @@ const textContent = content.replace(/<[^>]*>/g, '').trim();
     </script>
     `;
     }
-}
+  {/* Removed stray closing brace */}
 export const seoOptimizer = new SEOOptimizer();

@@ -119,8 +119,24 @@ export default function ServicesAdvertisingPage() {
       note: 'SMB budgets: $50–$2,000/mo.'
     }
   ];
-
-  function ext(url: string) {
+  const external = {
+    privacy[
+      { name: 'OneTrust', href: 'https://www.onetrust.com/pricing/' },
+      { name: 'Transcend', href: 'https://transcend.io/pricing/' }
+    ],
+    finops[
+      { name: 'CloudZero', href: 'https://www.cloudzero.com/pricing' },
+      { name: 'Vantage', href: 'https://www.vantage.sh/pricing' }
+    ],
+    devex[
+      { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
+    ],
+    seo[
+      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
+      { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
+  {/* Removed stray closing bracket */}
+  } as const;
+  function ext(...args[]):  {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
     );

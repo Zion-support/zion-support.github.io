@@ -3,53 +3,55 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Zap, Shield, Cloud, Brain, Users, CheckCircle, Star, Clock } from 'lucide-react';
 
 
-const stats = [
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Happy Clients' },
-  { number: '99%', label: 'Client Satisfaction' },
-  { number: '24/7', label: 'Support Available' }
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Cpu, Star, Phone, Mail, MapPin } from 'lucide-react';
-import Layout from '../components/Layout';
+export default function Index(...args[]):  {
+	const features = [
+		{
+			icon: Brain,
+			title: 'AI Autonomous Systems',
+			description: 'Multi-agent workflows, RAG systems, and intelligent automation platforms that learn and adapt.',
+			href: '/services#ai',
+			color: 'from-blue-500 to-cyan-500'
+		},
+		{
+			icon: Cloud,
+			title: 'Cloud Platforms',
+			description: 'Serverless infrastructure, Kubernetes orchestration, and DevOps automation for scalable solutions.',
+			href: '/services#cloud',
+			color: 'from-purple-500 to-pink-500'
+		},
+		{
+			icon: Shield,
+			title: 'Cybersecurity',
+			description: 'Zero-trust architecture, compliance frameworks, and advanced threat intelligence systems.',
+			href: '/services#cybersecurity',
+			color: 'from-green-500 to-emerald-500'
+		}
+  {/* Removed stray closing bracket */}
 
-const stats = [
-  { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Countries Served' }
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-];
+	const stats = [
+		{ number: '500+', label: 'Projects Delivered', icon: CheckCircle },
+		{ number: '50+', label: 'Enterprise Clients', icon: Users },
+		{ number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+		{ number: '24/7', label: 'Support Available', icon: Clock }
+  {/* Removed stray closing bracket */}
 
-const services = [
-  {
-    title: 'AI Services',
-<<<<<<< HEAD
-    description: 'Cutting-edge artificial intelligence solutions for modern businesses',
-    icon: Brain,
-    href: '/ai-services',
-    features: ['Machine Learning', 'Computer Vision', 'Natural Language Processing', 'AI Strategy']
-  },
-  {
-    title: 'IT Services',
-    description: 'Comprehensive IT solutions including cloud computing and cybersecurity',
-    icon: Cloud,
-    href: '/it-services',
-    features: ['Cloud Migration', 'DevOps', 'Cybersecurity', 'Data Analytics']
-  },
-  {
-    title: 'Micro SaaS',
-    description: 'Custom software solutions designed for small and medium businesses',
-    icon: Zap,
-    href: '/micro-saas',
-    features: ['SaaS Development', 'API Integration', 'User Management', 'Payment Processing']
-  }
-];
+	const testimonials = [
+		{
+			quote: "Zion Tech Group transformed our digital infrastructure, reducing costs by 40% while improving performance.",
+			author: "Sarah Johnson",
+			position: "CTO, TechCorp Inc.",
+			rating: 5
+		},
+		{
+			quote: "Their AI solutions have revolutionized our customer service operations. Highly recommended!",
+			author: "Michael Chen",
+			position: "VP Engineering, InnovateTech",
+			rating: 5
+		}
+  {/* Removed stray closing bracket */}
 
 	return (
-		<div>
+  {/* Empty JSX fragment */}
 			{/* Hero Section */}
 			<section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 sm:py-32 overflow-hidden">
 				{/* Animated Background Elements */}
@@ -218,6 +220,6 @@ export default function HomePage() {
 					</div>
 				</div>
 			</section>
-		</div>
-	)
-}>
+		</>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

@@ -290,17 +290,123 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
       "Infrastructure companies",
       "Engineering firms"
     ],
-    tags: ["Digital Twins", "AI", "Simulation", "Predictive", "IoT"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "24/7 Premium Support",
-    marketPrice: "Starting from $28,000/month",
-    demoUrl: "https://ziontechgroup.com/demo/digital-twins",
-    documentationUrl: "https://ziontechgroup.com/docs/digital-twins",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    benefits[
+      'Privacy preservation',
+      'Collaborative learning',
+      'Reduced data transfer',
+      'Regulatory compliance'
+    ],
+    useCases[
+      'Healthcare collaboration',
+      'Financial services',
+      'Cross-organization AI',
+      'Privacy-sensitive domains'
+    ],
+    pricing: {
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '8-16 weeks',
+    technologies['Federated Learning', 'Homomorphic Encryption', 'Secure Multi-party Computation', 'Python', 'PyTorch', 'TensorFlow'],
+    aiScore: 95,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'production',
+    ethicalCompliance['Privacy Protection', 'Data Security', 'Transparency', 'Accountability']
+  },
+  {
+    id: 'ai-research-platform',
+    title: 'AI Research & Development Platform',
+    description: 'Comprehensive platform for AI research and experimentation',
+    longDescription: 'Accelerate your AI research with our comprehensive platform. Features experimental tools, research frameworks, and collaboration tools for AI researchers.',
+    icon: 'TestTube',
+    color: 'from-indigo-500 to-purple-600',
+    category: 'ai-research',
+    features[
+      'Experimental frameworks',
+      'Research tools',
+      'Collaboration features',
+      'Version control',
+      'Experiment tracking',
+      'Result analysis'
+    ],
+    benefits[
+      'Faster research cycles',
+      'Better collaboration',
+      'Reproducible results',
+      'Research acceleration'
+    ],
+    useCases[
+      'AI research labs',
+      'Academic institutions',
+      'Corporate R&D',
+      'Startup research'
+    ],
+    pricing: {
+      starter: '$299/month',
+      professional: '$799/month',
+      enterprise: '$1,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '2-4 weeks',
+    technologies['Research Tools', 'Experiment Tracking', 'Version Control', 'Collaboration Tools', 'Python', 'Jupyter'],
+    aiScore: 93,
+    marketPrice: '$299-$1,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'research',
+    ethicalCompliance['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science']
+  },
+  {
+    id: 'ai-optimization-engine',
+    title: 'AI Optimization Engine',
+    description: 'Advanced optimization algorithms for complex decision making',
+    longDescription: 'Solve complex optimization problems with our AI-powered engine. Features genetic algorithms, neural optimization, and multi-objective optimization for business applications.',
+    icon: 'Target',
+    color: 'from-yellow-500 to-orange-600',
+    category: 'machine-learning',
+    features[
+      'Genetic algorithms',
+      'Neural optimization',
+      'Multi-objective optimization',
+      'Constraint handling',
+      'Real-time optimization',
+      'Scalable algorithms'
+    ],
+    benefits[
+      'Optimal solutions',
+      'Faster decision making',
+      'Cost optimization',
+      'Resource efficiency'
+    ],
+    useCases[
+      'Supply chain optimization',
+      'Resource allocation',
+      'Scheduling problems',
+      'Portfolio optimization'
+    ],
+    pricing: {
+      starter: '$899/month',
+      professional: '$2,299/month',
+      enterprise: '$5,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '4-8 weeks',
+    technologies['Genetic Algorithms', 'Neural Networks', 'Optimization Libraries', 'Python', 'SciPy', 'NumPy'],
+    aiScore: 94,
+    marketPrice: '$899-$5,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'production',
+    ethicalCompliance['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
+  {/* Removed stray closing brace */}
 ];
+export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[]  => {
+  if (category === 'All') {
+    return NEXT_GEN_AI_SERVICES_2025}
+  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
+export const getAllNextGenAIServices = (): NextGenAIService[] => {
+  return NEXT_GEN_AI_SERVICES_2025};

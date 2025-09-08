@@ -443,4 +443,4 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

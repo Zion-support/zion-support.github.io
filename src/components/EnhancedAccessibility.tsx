@@ -281,7 +281,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   if (!enabled) return null;
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Accessibility Toggle Button */}
       {showControls && (
         <motion.button

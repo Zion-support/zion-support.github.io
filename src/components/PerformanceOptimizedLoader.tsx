@@ -8,8 +8,7 @@ interface LoaderProps {
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-}
-
+  {/* Removed stray closing brace */}
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({ 
   size = 'md', 
   color = 'primary', 
@@ -83,7 +82,7 @@ export function SkeletonLoader(...args: []):  {
       ))}
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 // Card skeleton loader
 export function CardSkeleton(...args: []):  {
   return (
@@ -105,7 +104,7 @@ export function CardSkeleton(...args: []):  {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 // Grid skeleton loader
 export function GridSkeleton(...args: []):  {
   return (
@@ -115,7 +114,7 @@ export function GridSkeleton(...args: []):  {
       ))}
     </div>
   );
-}
+  {/* Removed stray closing brace */}
 // Page skeleton loader
 export function PageSkeleton(...args: []):  {
   return (
@@ -134,4 +133,4 @@ export function PageSkeleton(...args: []):  {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

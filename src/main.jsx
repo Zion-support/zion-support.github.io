@@ -61,22 +61,19 @@ function renderApp() {
     );
     
     if (rootElement?.hasChildNodes()) {
-        hydrateRoot(rootElement, app);
-    } else if (rootElement) {
-        createRoot(rootElement).render(app);
-    }
-}
+        hydrateRoot(rootElement, app)}
+    else if (rootElement) {
+        createRoot(rootElement).render(app)}
+  {/* Removed stray closing brace */}
 
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
-            <div style="padding:20px;text-align:center;font-family:sans-serif;">
-                <h1>Application Error</h1>
-                <p>${message}</p>
-            </div>`;
-    }
-}
-
+      <div style="padding:20px;text-align:center;font-family:sans-serif;">
+        <h1>Application Error</h1>
+        <p>${message}</p>
+      </div>`}
+  {/* Removed stray closing brace */}
 try {
     renderApp();
 } catch (error) {

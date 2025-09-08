@@ -9,7 +9,7 @@ export interface ApiResponse<T = any> {
   error?: string;
   message?: string;
   count?: number;
-}
+  {/* Removed stray closing brace */}
 
 // Generic API error
 class ApiError extends Error {
@@ -17,15 +17,31 @@ class ApiError extends Error {
     super(message);
     this.name = 'ApiError';
   }
-}
+  {/* Removed stray closing brace */}
 
 
+  try {
+    const response = await fetch(url, config);
+    
+    if (!response.ok) {
+      throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    if (error instanceof ApiError) {
+      throw error;
+    }
+    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+  {/* Removed stray closing brace */}
 
 type ApiClientOptions = {
   method?: string;
   body?: string;
   headers?: Record<string, string>;
-}
+  {/* Removed stray closing brace */}
 
 export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
   const { method = 'GET', body, headers = {} } = options;
@@ -54,7 +70,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
     // console.error('API request failed:', error);
     throw error;
   }
-}
+  {/* Removed stray closing brace */}
 
 export const api: any = {
   get: (endpoint: string, headers?: Record<string, string>) => 

@@ -1043,18 +1043,24 @@ const report = {
 
 const reportPath = path.join(process.cwd(), ';automation-health-report.json')fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))this.reports.health = report;'
     return report}
-  formatUptime(uptime) {if (!uptime) return;
-  "N/A";"
+  {/* Removed stray closing brace */}
 
-}
-
-const seconds = Math.floor((Date.now() - uptime) / 1000)const hours = Math.floor(seconds / 3600;
-  const minutes = Math.floor((seconds % 3600) / 60;
-  return "${hours}h ${minutes}m"}"
-  async displayDashboard() {console.clear()// // // // // // // console.log('🚀 "PM2": Automation Dashboard')';'
-    // // // // // // // console.log('=' .repeat(50))';'
-
-}
+// Main execution
+async function main() {
+  const dashboard = new AutomationDashboard();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', async () => {
+    console.log('\n🛑 Shutting down automation dashboard...');
+    await dashboard.generatePerformanceReport();
+    console.log('✅ Performance report saved');
+    process.exit(0)});
+  
+  try {
+    await dashboard.startMonitoring()} catch (error) {
+    console.error('❌ Dashboard failed:', error);
+    process.exit(1)}
+  {/* Removed stray closing brace */}
 
 const status = await this.getPM2Status(;
 const health = await this.generateHealthReport()// // // // // // // console.log("📊 "Status": ${health.summary.onlineProcesse,s}/${health.summary.totalProcesses} "processes": online")// // // // // // // console.log("⏰ "Last": "Updated": ${"new": Date().toLocaleTimeString(,;"

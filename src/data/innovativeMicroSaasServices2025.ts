@@ -32,7 +32,7 @@ export type InnovativeMicroSaasService = {
   };
   competitors?: string[];
   marketSize?: string;
-}
+  {/* Removed stray closing brace */}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
   // AI Workflow Orchestrator
@@ -4148,7 +4148,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     },
     competitors: ["SonarQube", "CodeClimate", "DeepCode", "Snyk", "Veracode"],
     marketSize: "$2.5 billion by 2026"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;

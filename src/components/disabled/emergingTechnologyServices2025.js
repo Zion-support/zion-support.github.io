@@ -583,5 +583,5 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         maintenanceIncluded: true,
         researchPartnerships: true,
         pilotPrograms: true
-    }
+  {/* Removed stray closing brace */}
 ];

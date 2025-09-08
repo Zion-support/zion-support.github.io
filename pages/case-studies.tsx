@@ -2,9 +2,77 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const CaseStudies: NextPage = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedService, setSelectedService] = useState('All');
+export default function CaseStudies(...args[]):  {
+	const caseStudies = [
+		{
+			id: 1,
+			title: 'TechCorp: 300% Efficiency Increase with AI Automation',
+			client: 'TechCorp Inc.',
+			industry: 'Technology',
+			challenge: 'Manual processes were slowing down operations and causing errors in customer service.',
+			solution: 'Implemented AI-powered multi-agent system for customer service and sales operations.',
+			results[
+				'300% increase in operational efficiency',
+				'90% reduction in response time',
+				'$2.5M annual cost savings',
+				'Improved customer satisfaction scores'
+			],
+			duration: '6 months',
+			team: 12,
+			rating: 5
+		},
+		{
+			id: 2,
+			title: 'HealthCare Solutions: Secure Cloud Migration',
+			client: 'HealthCare Solutions',
+			industry: 'Healthcare',
+			challenge: 'Legacy on-premise systems were expensive to maintain and lacked scalability.',
+			solution: 'Migrated to secure cloud infrastructure with HIPAA compliance and disaster recovery.',
+			results[
+				'40% reduction in infrastructure costs',
+				'99.9% uptime achieved',
+				'Full HIPAA compliance',
+				'Improved data security'
+			],
+			duration: '8 months',
+			team: 8,
+			rating: 5
+		},
+		{
+			id: 3,
+			title: 'ManufacturingCo: IoT and AI Integration',
+			client: 'ManufacturingCo',
+			industry: 'Manufacturing',
+			challenge: 'Production inefficiencies and lack of real-time monitoring were causing delays.',
+			solution: 'Deployed IoT sensors and AI analytics for predictive maintenance and optimization.',
+			results[
+				'25% increase in production output',
+				'60% reduction in downtime',
+				'Predictive maintenance alerts',
+				'Real-time production monitoring'
+			],
+			duration: '10 months',
+			team: 15,
+			rating: 5
+		},
+		{
+			id: 4,
+			title: 'FinTech Startup: Micro SaaS Platform',
+			client: 'FinTech Startup',
+			industry: 'Financial Services',
+			challenge: 'Needed a scalable platform to manage multiple financial services efficiently.',
+			solution: 'Built custom micro SaaS platform with automated workflows and AI-powered insights.',
+			results[
+				'50% faster service delivery',
+				'Automated compliance reporting',
+				'Scalable architecture',
+				'Reduced operational overhead'
+			],
+			duration: '4 months',
+			team: 6,
+			rating: 5
+		}
+  {/* Removed stray closing bracket */}
 
   const caseStudies = [
     {
@@ -635,7 +703,7 @@ export default CaseStudies;
 =======
 export default function CaseStudiesPage() {
 	return (
-		<div>
+  {/* Empty JSX fragment */}
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -869,6 +937,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-		</div>
-	)
-}>
+		</>
+  {/* Removed stray closing parenthesis */}
+  {/* Removed stray closing brace */}

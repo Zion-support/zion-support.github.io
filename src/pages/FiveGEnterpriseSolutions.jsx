@@ -97,8 +97,8 @@ const fiveGSolutions = [
     price: "From $180,000",
     timeline: "20-32 weeks",
     category: "Analytics",
-    technologies: ["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
-  }
+    technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
+  {/* Removed stray closing brace */}
 ];
 
 const fiveGTechnologies = [
@@ -129,7 +129,7 @@ const fiveGTechnologies = [
     icon: Server,
     useCase: "Edge Processing",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -159,7 +159,7 @@ const successStories = [
     solution: "Built 5G network with IoT and analytics platform",
     results: "40% operational improvement, 50% cost savings, better citizen services, enhanced monitoring",
     logo: "SCS"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -190,7 +190,7 @@ const processSteps = [
     description: "Test 5G systems and optimize performance",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const fiveGBenefits = [
@@ -216,8 +216,8 @@ const fiveGBenefits = [
     title: "IoT Integration",
     description: "Seamless integration of IoT devices and applications",
     icon: Wifi,
-    examples: ["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]
-  }
+    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]
+  {/* Removed stray closing brace */}
 ];
 
 export default function FiveGEnterpriseSolutions() {

@@ -11,4 +11,4 @@ export function getStripe(: any) {
     stripePromise = loadStripe(key);
   }
   return stripePromise;
-}
+  {/* Removed stray closing brace */}

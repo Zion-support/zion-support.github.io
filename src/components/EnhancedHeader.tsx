@@ -317,7 +317,7 @@ export const EnhancedHeader: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Matrix Rain Background */}
       <div className="matrix-rain"></div>
       
@@ -704,6 +704,6 @@ export const EnhancedHeader: React.FC = () => {
       </motion.header>
     </React.Fragment>
   );
-}
+  {/* Removed stray closing brace */}
 
 export default EnhancedHeader;>

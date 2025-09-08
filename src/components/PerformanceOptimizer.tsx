@@ -23,14 +23,7 @@ interface PerformanceMetrics {
   fid: number;
   cls: number;
   ttfb: number;
-
-interface PerformanceOptimizerProps {
-  enabled: boolean;
-  showMetrics?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCompression?: boolean;
-}
+  {/* Removed stray closing brace */}
 
             // Lazy load background images
             if (target.dataset.bgSrc) {

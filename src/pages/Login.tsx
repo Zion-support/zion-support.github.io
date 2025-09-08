@@ -182,12 +182,12 @@ export default function Login() {
               className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
             >
               {isLoading ? (
-                <React.Fragment>
+  {/* Empty JSX fragment */}
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                   Signing In...
                 </React.Fragment>
               ) : (
-                <React.Fragment>
+  {/* Empty JSX fragment */}
                   Sign In
                   <ArrowRight className="h-5 w-5" />
                 </React.Fragment>

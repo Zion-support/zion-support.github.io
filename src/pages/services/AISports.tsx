@@ -171,4 +171,4 @@ export default function AISports() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

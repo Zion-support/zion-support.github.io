@@ -171,7 +171,7 @@ const AllServicesIndex: React.FC = () => {
   });
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO
         title="All Services Index | Zion Tech Group - Complete Service Directory"
         description="Browse our complete portfolio of AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect solution for your business needs."

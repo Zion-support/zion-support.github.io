@@ -7,7 +7,7 @@ interface ServiceWorkerState {
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function ServiceWorker() {
   const [swState, setSwState] = useState<ServiceWorkerState>({
@@ -116,4 +116,4 @@ export function ServiceWorker() {
       )}
     </AnimatePresence>
   );
-}
+  {/* Removed stray closing brace */}

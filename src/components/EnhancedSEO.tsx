@@ -60,19 +60,11 @@ export function EnhancedSEO({
       "contactType": "customer service",
       "url": "https://ziontechgroup.com/contact"
     },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "serviceType": [
-      "AI Services",
-      "IT Consulting",
-      "Digital Transformation",
-      "Cloud Computing",
-      "Cybersecurity"
-    ]
+    "sameAs"[
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+  {/* Removed stray closing bracket */}
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;

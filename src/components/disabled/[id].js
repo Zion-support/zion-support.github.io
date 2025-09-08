@@ -62,5 +62,5 @@ export default function TalentProfilePage() {
             </div>)}
         </div>
       </main>
-    </React.Fragment>);
-}
+    </>);
+  {/* Removed stray closing brace */}

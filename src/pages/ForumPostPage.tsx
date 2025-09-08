@@ -108,7 +108,7 @@ const mockReplies = [
         likes: 4,
         isSolution: false,
         isAnswer: false
-    }
+  {/* Removed stray closing brace */}
 ];
 export default function ForumPostPage() {
     // Using `useParams` without type arguments avoids issues when TypeScript

@@ -204,4 +204,4 @@ export default function FinancialSolutions() {
         </div>
       </section>
     </div>);
-}
+  {/* Removed stray closing brace */}

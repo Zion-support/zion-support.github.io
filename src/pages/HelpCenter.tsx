@@ -3,7 +3,183 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Search, BookOpen, Video, FileText, MessageCircle, Mail, Phone, Users, Shield, Cloud, Brain, ArrowRight, Play, Star } from 'lucide-react';
 
-export default function HelpCenter() {
+interface FAQItem {
+
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+  tags: string[]}
+
+interface HelpCategory {
+
+  id: string;
+  title: string;
+  description: string;
+  icon;color: string;
+  articleCount: number;
+  path: string}
+
+interface SupportOption {
+
+  title: string;
+  description: string;
+  icon;color: string;
+  action: string;
+  path: string}
+
+const helpCategories: HelpCategory[] = [
+  {
+    id: 'getting-started',
+    title: 'Getting Started',
+    description: 'Learn the basics of using Zion Tech Group services',
+    icon: BookOpen,
+    color: 'from-blue-500 to-cyan-500',
+    articleCount: 12,
+    path: '/help/getting-started'
+  },
+  {
+    id: 'services',
+    title: 'Services Guide',
+    description: 'Detailed information about our technology services',
+    icon: Code,
+    color: 'from-purple-500 to-pink-500',
+    articleCount: 25,
+    path: '/help/services'
+  },
+  {
+    id: 'marketplace',
+    title: 'Marketplace',
+    description: 'How to use our marketplace for talent and equipment',
+    icon: Building,
+    color: 'from-green-500 to-teal-500',
+    articleCount: 18,
+    path: '/help/marketplace'
+  },
+  {
+    id: 'billing',
+    title: 'Billing & Payments',
+    description: 'Payment methods, invoices, and billing questions',
+    icon: Award,
+    color: 'from-yellow-500 to-orange-500',
+    articleCount: 8,
+    path: '/help/billing'
+  },
+  {
+    id: 'account',
+    title: 'Account Management',
+    description: 'Profile settings, security, and account preferences',
+    icon: Users,
+    color: 'from-indigo-500 to-purple-500',
+    articleCount: 15,
+    path: '/help/account'
+  },
+  {
+    id: 'troubleshooting',
+    title: 'Troubleshooting',
+    description: 'Common issues and their solutions',
+    icon: AlertCircle,
+    color: 'from-red-500 to-pink-500',
+    articleCount: 22,
+    path: '/help/troubleshooting'
+  {/* Removed stray closing brace */}
+];
+
+const supportOptions: SupportOption[] = [
+  {
+    title: 'Live Chat',
+    description: 'Get instant help from our support team',
+    icon: MessageCircle,
+    color: 'from-green-500 to-teal-500',
+    action: 'Start Chat',
+    path: '/chat'
+  },
+  {
+    title: 'Email Support',
+    description: 'Send us a detailed message and get a response within 24 hours',
+    icon: Mail,
+    color: 'from-blue-500 to-cyan-500',
+    action: 'Send Email',
+    path: '/contact'
+  },
+  {
+    title: 'Phone Support',
+    description: 'Call us directly for urgent technical issues',
+    icon: Phone,
+    color: 'from-purple-500 to-pink-500',
+    action: 'Call Now',
+    path: 'tel:+13024640950'
+  },
+  {
+    title: 'Video Tutorials',
+    description: 'Watch step-by-step guides and tutorials',
+    icon: Video,
+    color: 'from-orange-500 to-red-500',
+    action: 'Watch Videos',
+    path: '/help/videos'
+  {/* Removed stray closing brace */}
+];
+
+const faqData: FAQItem[] = [
+  {
+    id: '1',
+    question: 'How do I get started with Zion Tech Group services?',
+    answer: 'Getting started is easy! Simply browse our services, contact our team for a consultation, or use our online quote request form. We\'ll assess your needs and recommend the best solutions for your business.',
+    category: 'getting-started',
+    tags['onboarding', 'consultation', 'services']
+  },
+  {
+    id: '2',
+    question: 'What payment methods do you accept?',
+    answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment plans for enterprise clients. All payments are processed securely through our encrypted payment system.',
+    category: 'billing',
+    tags['payment', 'billing', 'security']
+  },
+  {
+    id: '3',
+    question: 'How quickly can you deploy AI solutions?',
+    answer: 'Deployment timelines vary based on complexity. Simple AI integrations can be deployed in 2-4 weeks, while complex enterprise solutions typically take 8-12 weeks. We\'ll provide a detailed timeline during consultation.',
+    category: 'services',
+    tags['ai', 'deployment', 'timeline']
+  },
+  {
+    id: '4',
+    question: 'Do you provide ongoing support after deployment?',
+    answer: 'Yes! We offer comprehensive post-deployment support including 24/7 monitoring, regular maintenance, updates, and technical support. Our support packages are customizable to your needs.',
+    category: 'services',
+    tags['support', 'maintenance', 'monitoring']
+  },
+  {
+    id: '5',
+    question: 'Can you work with existing IT infrastructure?',
+    answer: 'Absolutely! We specialize in integrating with existing systems. Our team will assess your current infrastructure and design solutions that work seamlessly with what you already have.',
+    category: 'troubleshooting',
+    tags['integration', 'infrastructure', 'compatibility']
+  },
+  {
+    id: '6',
+    question: 'What security measures do you implement?',
+    answer: 'We implement enterprise-grade security including SOC2 compliance, end-to-end encryption, regular security audits, and 24/7 threat monitoring. Your data security is our top priority.',
+    category: 'account',
+    tags['security', 'compliance', 'encryption']
+  },
+  {
+    id: '7',
+    question: 'How do I find talent through your marketplace?',
+    answer: 'Browse our talent marketplace by skills, experience, or location. You can post job requirements, review profiles, and connect directly with qualified professionals. We also offer managed recruitment services.',
+    category: 'marketplace',
+    tags['talent', 'recruitment', 'hiring']
+  },
+  {
+    id: '8',
+    question: 'What if I\'m not satisfied with a service?',
+    answer: 'We stand behind our work with a 100% satisfaction guarantee. If you\'re not completely satisfied, we\'ll work to fix the issue or provide a full refund. Your success is our success.',
+    category: 'billing',
+    tags['guarantee', 'refund', 'satisfaction']
+  {/* Removed stray closing brace */}
+];
+
+export default function HelpCenter(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -133,7 +309,7 @@ export const HelpCenter: React.FC = () => {
 // Removed unused:   const filteredArticles = filteredCategories.flatMap(cat => cat.articles);
 
   return (
-    <Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />

@@ -207,4 +207,4 @@ export default function IoTEdge() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

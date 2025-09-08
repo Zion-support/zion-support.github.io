@@ -55,12 +55,17 @@ const benefits = [
   {
     icon: <CheckCircle className="w-8 h-8" />,
     title: "Quality Guaranteed",
-    description: "100% satisfaction guarantee with our comprehensive testing process",
-    color: "from-zion-purple to-zion-cyan",
-    bgColor: "from-zion-purple/20 to-zion-cyan/20",
-    stats: "100% Success",
-    features: ["Comprehensive Testing", "Quality Assurance", "Satisfaction Guarantee"]
-  }
+    description: "30-day money-back guarantee with free migration support.",
+    stats: "100% Quality",
+    color: "from-purple-500 to-pink-500",
+    bgColor: "from-purple-500/20 to-pink-500/20",
+    features[
+      "Comprehensive testing",
+      "Code quality standards",
+      "Performance benchmarks",
+      "User experience focus"
+    ]
+  {/* Removed stray closing brace */}
 ];
 
 const additionalStats = [

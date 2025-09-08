@@ -325,12 +325,12 @@ export default function ComprehensiveServicesOverview2026() {
                     className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30"
                   >
                     {expandedCategory === category.id ? (
-                      <React.Fragment>
+  {/* Empty JSX fragment */}
                         <EyeOff className="w-4 h-4" />
                         Show Less
                       </React.Fragment>
                     ) : (
-                      <React.Fragment>
+  {/* Empty JSX fragment */}
                         <Eye className="w-4 h-4" />
                         View All Services
                       </React.Fragment>

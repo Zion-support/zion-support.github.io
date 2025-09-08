@@ -427,4 +427,4 @@ export default function DSRPortal() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

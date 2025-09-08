@@ -320,7 +320,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     innovationLevel: "Advanced",
     marketSize: "$12.5B by 2025",
     growthRate: "23% annually"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Innovative IT Infrastructure Services 2031
@@ -539,7 +539,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$128.9B by 2028",
     compliance["GDPR", "HIPAA", "SOX", "Industry-specific standards"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Innovative AI Services 2031
@@ -793,7 +793,7 @@ export const innovativeAIServices2031: AIService[] = [
     innovationLevel: "Advanced",
     marketSize: "$15.8B by 2026",
     ethicalAI["Transparency", "Fairness", "Sustainability", "Data privacy", "Ethical sourcing"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Export all services

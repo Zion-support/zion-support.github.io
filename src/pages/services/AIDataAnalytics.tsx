@@ -376,4 +376,4 @@ export default function AIDataAnalytics() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

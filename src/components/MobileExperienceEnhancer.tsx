@@ -538,7 +538,7 @@ export function MobileExperienceEnhancer({
   }, [mobileOptimizationFeatures, applyMobileOptimization, toggleTouchGesture]);
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Mobile Experience Controls Button */}
       {showControls && isMobile && (
         <button

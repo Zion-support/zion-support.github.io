@@ -85,10 +85,9 @@ export default function ITOnsiteServicesPage() {
           <EnterpriseCallToAction />
         </div>
       </section>
-        ,
+  {/* Removed stray comma */}
             <GlobalServiceSection />
-                ,
+  {/* Removed stray comma */}
                     <TrustedBySection />
-                        ,
-                            <QuoteFormSection />);
-}
+  {/* Removed stray comma */}
+                            <QuoteFormSection />)}

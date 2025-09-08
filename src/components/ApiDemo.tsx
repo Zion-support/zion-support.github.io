@@ -5,7 +5,7 @@ interface User {
   name: string;
   email: string;
   createdAt?: string;
-}
+  {/* Removed stray closing brace */}
 
 const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);

@@ -171,4 +171,4 @@ export default function AIKubernetes() {
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

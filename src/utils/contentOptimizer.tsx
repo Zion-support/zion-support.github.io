@@ -328,5 +328,5 @@ export class ContentOptimizer {
         const pageKeywords = this.extractPageKeywords(page).join(' ');
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
     }
-}
+  {/* Removed stray closing brace */}
 export const contentOptimizer = new ContentOptimizer();

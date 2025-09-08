@@ -401,4 +401,4 @@ export default function NewInnovativeServices2025() {
       </div>
     </div>
   );
-}
+  {/* Removed stray closing brace */}

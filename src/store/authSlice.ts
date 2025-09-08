@@ -5,12 +5,15 @@ type User = {
   email: string;
   name: string;
   avatar?: string;
-}
+  {/* Removed stray closing brace */}
 
 type AuthState = {
 
   isLoggedIn: boolean;
-}
+  user:  | null;
+  token: string | null;
+
+  {/* Removed stray closing brace */}
 
 const initialState: AuthState = {
   isLoggedIn: false,

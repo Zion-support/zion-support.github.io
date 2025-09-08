@@ -97,8 +97,8 @@ const contentCreationSolutions = [
     price: "From $100,000",
     timeline: "20-32 weeks",
     category: "Distribution",
-    technologies: ["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
-  }
+    technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
+  {/* Removed stray closing brace */}
 ];
 
 const contentTechnologies = [
@@ -129,7 +129,7 @@ const contentTechnologies = [
     icon: BarChart3,
     useCase: "Performance Analysis",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -159,7 +159,7 @@ const successStories = [
     solution: "Implemented AI-powered content creation system with brand voice consistency",
     results: "500% increase in content output, 60% improvement in SEO performance, higher conversion rates",
     logo: "EB"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -190,7 +190,7 @@ const processSteps = [
     description: "Publish content and track performance metrics",
     icon: BarChart3,
     duration: "Ongoing"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const contentBenefits = [
@@ -216,8 +216,8 @@ const contentBenefits = [
     title: "Data-driven Insights",
     description: "Analytics and performance tracking optimize content strategy",
     icon: BarChart3,
-    examples: ["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]
-  }
+    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]
+  {/* Removed stray closing brace */}
 ];
 
 export default function ContentCreation() {

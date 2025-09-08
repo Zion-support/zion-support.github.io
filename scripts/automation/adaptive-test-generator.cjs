@@ -456,54 +456,246 @@ process.on("SIGTERM")
 =======
   console.error( Failed to start adaptive test "generator")
 
-=======
->>>>>>> merged-prs-20250907-203621
-  return `import { describe, it, expect } from "vitest"
-  it("should handle normal input")
-    const result = ${utility.name}("test input")
-  it("should handle edge cases")
-  return "import { describe, it, expect  } from "vitest"
-import { ${utility.name} } from "./${path.basename(utility.path, path.extname(utility.path))}"
-describe("${utility.name}")
-  it("should handle normal input")
-    const result = ${utility.name}("test input")
-  it("should handle edge cases")
-  it("should handle error cases")
-  "navigation": "import { render, screen, fireEvent } from "@testing-""library/react"""
-  "navigation": "import { render, screen, fireEvent  } from "@testing-";library/react""
-import { describe, it, expect  } from "vitest"
-import { BrowserRouter  } from "react-router-dom"
-import App from "../"src/App""
-describe("Navigation Integration")
-  it("should navigate between main routes")
-    const homeLink = screen.getByText(/""home/i"")
-    expect(window.location.pathname).toBe("/")})}
-});"
-"form": "import { render, screen, fireEvent, waitFor  } from "@testing-";library/react""
-import { describe, it, expect  } from "vitest"
-describe("Form Submission Integration")
-  it("should handle form submission correctly")
-    const input = screen.getByLabelText(/""email/i"")
-    fireEvent.change(input, { "target": { value: "test@example.com"})
-    const submitButton = screen.getByRole("button", { "name": /""submit/i""})
-  expect(screen.getByText(/""success/i"")
-    const input = screen.getByLabelText(/"email/i")
-    fireEvent.change(input, { "target": { value: "test@example.com"})
-    const submitButton = screen.getByRole("button", { "name": /"submit/i"})
-  expect(screen.getByText(/"success/i")).toBeInTheDocument()})})}
-});"
-"api": "import { render, screen, waitFor  } from "@testing-";library/react""
-import { describe, it, expect, vi  } from "vitest"
-describe("API Integration")
-  it("should fetch and display data")
-  "json": () => Promise.resolve({ data: "test data"})
-  expect(screen.getByText("test data")).toBeInTheDocument()})})}
-});"
-  expect(screen.getByText("test data")).toBeInTheDocument()})})}
-});"
-  console.log("🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
-  console.log("� Received SIGTERM, shutting down gracefully...")
-  console.error(" Failed to start adaptive test "generator")
+  async generateReport() {
+    console.log('📊 Generating test generation report...');
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalFilesAnalyzed: this.testMetrics.testPatterns.get('structure') ? 
+          Object.values(this.testMetrics.testPatterns.get('structure')).reduce((sum, arr) => sum + arr.length, 0) : 0,
+        untestedFiles: this.testMetrics.untestedFiles.length,
+        generatedTests: this.testMetrics.generatedTests.length,
+        testCoverage: this.testMetrics.testCoverage
+      },
+      metrics: this.testMetrics,
+      suggestions: this.testMetrics.testSuggestions
+    };
+    
+    const reportPath = path.join(this.reportDir, `test-generation-${Date.now()}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    // Also save latest report
+    const latestReportPath = path.join(process.cwd(), 'test-generation-report.json');
+    fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
+    
+    console.log(`📊 Test generation report saved to ${reportPath}`);
+  }
+
+  findFiles(dir, extensions) {
+    const files = [];
+    
+    function scanDirectory(currentDir) {
+      try {
+        const items = fs.readdirSync(currentDir);
+        
+        for (const item of items) {
+          const fullPath = path.join(currentDir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            scanDirectory(fullPath);
+          } else if (extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        // Skip directories that can't be accessed
+      }
+    }
+    
+    scanDirectory(dir);
+    return files;
+  }
+
+  hasExistingTests(filePath) {
+    const testExtensions = ['.test.ts', '.test.tsx', '.spec.ts', '.spec.tsx'];
+    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, '');
+    
+    return testExtensions.some(ext => {
+      const testPath = basePath + ext;
+      return fs.existsSync(testPath);
+    });
+  }
+
+  getTestPath(filePath) {
+    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, '');
+    return basePath + '.test.ts';
+  }
+
+  extractComponentName(content) {
+    const match = content.match(/export\s+(?:default\s+)?(?:function|const)\s+(\w+)/);
+    return match ? match[1] : 'UnknownComponent';
+  }
+
+  extractFunctionName(content) {
+    const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
+    return match ? match[1] : 'UnknownFunction';
+  }
+
+  extractHookName(content) {
+    const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
+    return match ? match[1] : 'UnknownHook';
+  }
+
+  extractTypeName(content) {
+    const match = content.match(/(?:interface|type)\s+(\w+)/);
+    return match ? match[1] : 'UnknownType';
+  }
+
+  extractServiceName(content) {
+    const match = content.match(/export\s+(?:function|const|class)\s+(\w+)/);
+    return match ? match[1] : 'UnknownService';
+  }
+
+  generateComponentTest(component) {
+    return `import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import ${component.name} from './${path.basename(component.path, path.extname(component.path))}';
+
+describe('${component.name}', () => {
+  it('renders without crashing', () => {
+    render(<${component.name} />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+
+  it('displays correct content', () => {
+    render(<${component.name} />);
+    // Add specific content checks based on component functionality
+  });
+
+  it('handles user interactions', () => {
+    render(<${component.name} />);
+    // Add interaction tests based on component functionality
+  });
+});
+`;
+  }
+
+  generateUtilityTest(utility) {
+    return `import { describe, it, expect } from 'vitest';
+import { ${utility.name} } from './${path.basename(utility.path, path.extname(utility.path))}';
+
+describe('${utility.name}', () => {
+  it('should handle normal input', () => {
+    // Add test cases based on utility function behavior
+    const result = ${utility.name}('test input');
+    expect(result).toBeDefined();
+  });
+
+  it('should handle edge cases', () => {
+    // Add edge case tests
+    const result = ${utility.name}(null);
+    expect(result).toBeDefined();
+  });
+
+  it('should handle error cases', () => {
+    // Add error handling tests
+    expect(() => ${utility.name}(undefined)).not.toThrow();
+  });
+});
+`;
+  }
+
+  generateIntegrationTest(type) {
+    const templates = {
+      navigation: `import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import { BrowserRouter } from 'react-router-dom';
+import App from '../src/App';
+
+describe('Navigation Integration', () => {
+  it('should navigate between main routes', () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+    
+    // Test navigation between main routes
+    const homeLink = screen.getByText(/home/i);
+    fireEvent.click(homeLink);
+    expect(window.location.pathname).toBe('/');
+  });
+});`,
+      
+      form: `import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+
+describe('Form Submission Integration', () => {
+  it('should handle form submission correctly', async () => {
+    render(<YourFormComponent />);
+    
+    // Fill out form
+    const input = screen.getByLabelText(/email/i);
+    fireEvent.change(input, { target: { value: 'test@example.com' } });
+    
+    // Submit form
+    const submitButton = screen.getByRole('button', { name: /submit/i });
+    fireEvent.click(submitButton);
+    
+    // Wait for submission
+    await waitFor(() => {
+      expect(screen.getByText(/success/i)).toBeInTheDocument();
+    });
+  });
+});`,
+      
+      api: `import { render, screen, waitFor } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
+
+describe('API Integration', () => {
+  it('should fetch and display data', async () => {
+    // Mock API response
+    global.fetch = vi.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({ data: 'test data' }),
+      })
+    );
+    
+    render(<YourApiComponent />);
+    
+    await waitFor(() => {
+      expect(screen.getByText('test data')).toBeInTheDocument();
+    });
+  });
+});`
+    };
+    
+    return templates[type] || templates.navigation;
+  }
+  {/* Removed stray closing brace */}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  const generator = new AdaptiveTestGenerator();
+  
+  // Run initial test generation
+  await generator.generateAdaptiveTests();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await generator.generateAdaptiveTests();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Adaptive test generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+  {/* Removed stray closing brace */}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the adaptive test generator
+runContinuous().catch(error => {
+  console.error('❌ Failed to start adaptive test generator:', error);
+  process.exit(1);
+});

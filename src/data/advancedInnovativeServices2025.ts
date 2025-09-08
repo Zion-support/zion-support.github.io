@@ -451,137 +451,94 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
 
   // AI-Powered Workflow Automation & Process Optimization Platform
   {
-    id: "ai-workflow-automation-process-optimization",
-    title: "AI Workflow Automation & Process Optimization Platform",
-    description: "Intelligent platform that automates complex business workflows, optimizes processes, and increases productivity by 300% through AI-driven decision making and automation.",
-    category: "AI & Business Process",
-    subcategory: "Workflow Automation",
-    price: 1199,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Visual workflow builder with drag-and-drop interface",
-      "AI-powered process optimization recommendations",
-      "Automated decision making and routing",
-      "Integration with 500+ business applications",
-      "Real-time process monitoring and analytics",
-      "Custom automation rules and triggers",
-      "Mobile app for remote workflow management",
-      "Advanced reporting and performance metrics"
-    ],
-    benefits: [
-      "Increase productivity by 300%",
-      "Reduce manual tasks by 80%",
-      "Improve process efficiency by 60%",
-      "Reduce operational costs by 40%",
-      "Enable 24/7 automated operations"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Financial services",
-      "Healthcare organizations",
-      "Retail and e-commerce",
-      "Professional services"
-    ],
-    targetAudience: [
-      "Operations managers",
-      "Process improvement specialists",
-      "Business analysts",
-      "IT managers",
-      "Business owners"
-    ],
-    tags: ["AI", "Workflow Automation", "Process Optimization", "Business Intelligence", "RPA"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,199 - $4,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technology: ["TensorFlow", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
-    integrations: ["Salesforce", "HubSpot", "Slack", "Microsoft 365", "Google Workspace"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "CCPA", "HIPAA"],
-    roi: "500% within 12 months",
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
-    launchDate: "Q1 2025",
-    betaAccess: true,
-    aiScore: 95,
-    rating: 4.8,
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/ai-workflow-automation",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-workflow-automation"
-  },
-
-  // AI-Powered Data Analytics & Business Intelligence Platform
-  {
-    id: "ai-data-analytics-business-intelligence",
-    title: "AI Data Analytics & Business Intelligence Platform",
-    description: "Advanced analytics platform that transforms raw data into actionable insights, provides predictive analytics, and enables data-driven decision making with 90% accuracy improvement.",
-    category: "AI & Analytics",
-    subcategory: "Business Intelligence",
-    price: 899,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time data processing and analysis",
-      "Predictive analytics and forecasting",
-      "Interactive dashboards and visualizations",
-      "Natural language query interface",
-      "Automated report generation",
-      "Data quality monitoring and cleaning",
-      "Multi-source data integration",
-      "Advanced statistical modeling"
-    ],
-    benefits: [
-      "Improve decision accuracy by 90%",
-      "Reduce data analysis time by 80%",
-      "Identify new business opportunities",
-      "Optimize business processes",
-      "Enable real-time business insights"
-    ],
-    useCases: [
-      "Financial services",
-      "Retail and e-commerce",
-      "Healthcare organizations",
-      "Manufacturing companies",
-      "Marketing agencies"
-    ],
-    targetAudience: [
-      "Data analysts",
-      "Business intelligence specialists",
-      "Data scientists",
-      "Business analysts",
-      "Executives and managers"
-    ],
-    tags: ["AI", "Data Analytics", "Business Intelligence", "Predictive Analytics", "Data Science"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "premium",
-    marketPrice: "$899 - $3,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technology: ["TensorFlow", "PyTorch", "Python", "React", "Node.js", "PostgreSQL"],
-    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Tableau", "Power BI"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "CCPA", "HIPAA"],
-    roi: "400% within 12 months",
-    competitors: ["Tableau", "Power BI", "Qlik", "Looker", "Domo"],
-    launchDate: "Q1 2025",
-    betaAccess: true,
-    aiScore: 94,
-    rating: 4.8,
-    reviewCount: 267,
-    featured: true,
-    location: "Global",
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/ai-data-analytics",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-data-analytics"
-  }
+    name: 'Advanced Data Management',
+    slug: 'advanced-data',
+    description: 'Next-generation data management and governance solutions',
+    items: [
+      {
+        id: 'ai-data-governance-platform',
+        title: 'AI Data Governance Platform',
+        description: 'Intelligent data governance platform that automatically discovers, classifies, and manages data across the enterprise.',
+        category: 'Data & Analytics',
+        price: '$4,499',
+        billing: 'month',
+        features: [
+          'Automated data discovery',
+          'Intelligent classification',
+          'Data lineage tracking',
+          'Compliance monitoring',
+          'Privacy protection',
+          'Quality assessment',
+          'Access controls',
+          'Audit reporting'
+        ],
+        benefits: [
+          'Reduce compliance risks by 80%',
+          'Improve data quality by 60%',
+          'Automate governance processes',
+          'Ensure regulatory compliance'
+        ],
+        useCases: [
+          'Data compliance',
+          'Privacy protection',
+          'Data quality management',
+          'Audit preparation',
+          'Risk assessment'
+        ],
+        ctaLabel: 'Data Governance Assessment',
+        href: 'https://ziontechgroup.com/contact',
+        marketPosition: 'Leading AI-powered data governance platform',
+        competitiveAdvantage: 'Proprietary AI algorithms for automatic data classification and risk assessment',
+        integrationCapabilities: ['Data warehouses', 'Lakes', 'Databases', 'Cloud platforms', 'Business applications'],
+        complianceStandards: ['GDPR', 'CCPA', 'SOC 2', 'ISO 27001', 'Industry-specific regulations'],
+        supportLevel: 'Data governance experts with compliance support',
+        deploymentOptions: ['Cloud', 'On-premise', 'Hybrid', 'Multi-cloud'],
+        scalability: 'Manages 100PB+ of data across multiple systems',
+        securityFeatures: ['Data encryption', 'Access controls', 'Audit logging', 'Privacy protection', 'Compliance monitoring']
+      },
+      {
+        id: 'real-time-data-streaming',
+        title: 'Real-Time Data Streaming Platform',
+        description: 'High-performance real-time data streaming platform that processes and analyzes data streams with sub-millisecond latency.',
+        category: 'Data & Analytics',
+        price: '$3,999',
+        billing: 'month',
+        features: [
+          'Sub-millisecond processing',
+          'Real-time analytics',
+          'Stream processing',
+          'Event correlation',
+          'Pattern recognition',
+          'Alerting system',
+          'Scalable architecture',
+          'Integration APIs'
+        ],
+        benefits: [
+          'Process data 100x faster than batch systems',
+          'Enable real-time decision making',
+          'Reduce infrastructure costs',
+          'Improve user experience'
+        ],
+        useCases: [
+          'Real-time analytics',
+          'IoT data processing',
+          'Financial trading',
+          'Fraud detection',
+          'Monitoring systems'
+        ],
+        ctaLabel: 'Streaming Platform Demo',
+        href: 'https://ziontechgroup.com/contact',
+        marketPosition: 'High-performance real-time data streaming platform',
+        competitiveAdvantage: 'Proprietary streaming engine with 10x better performance than competitors',
+        integrationCapabilities: ['Kafka', 'Spark', 'Databases', 'Cloud services', 'IoT platforms'],
+        complianceStandards: ['SOC 2', 'ISO 27001', 'Data protection standards'],
+        supportLevel: 'Streaming experts with performance optimization support',
+        deploymentOptions: ['Cloud', 'On-premise', 'Hybrid', 'Edge deployment'],
+        scalability: 'Processes 1M+ events per second with linear scaling',
+        securityFeatures: ['Data encryption', 'Access controls', 'Audit logging', 'Performance monitoring']
+      }
+    ]
+  {/* Removed stray closing brace */}
 ];
+
+export default advancedInnovativeServices2025;

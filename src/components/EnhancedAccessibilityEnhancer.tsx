@@ -24,7 +24,7 @@ interface AccessibilitySettings {
     primary: string;
     secondary: string;
   };
-}
+  {/* Removed stray closing brace */}
 
 interface AccessibilityFeature {
   id: string;
@@ -33,7 +33,8 @@ interface AccessibilityFeature {
   enabled: boolean;
   category: 'visual' | 'motor' | 'cognitive' | 'auditory';
   wcagLevel: 'A' | 'AA' | 'AAA';
-}
+  impact: 'high' | 'medium' | 'low';
+  {/* Removed stray closing brace */}
 
 interface AccessibilityAudit {
   id: string;
@@ -516,8 +517,8 @@ export default function EnhancedAccessibilityEnhancer() {
   }, [screenReaderMode]);
 
   return (
-    <React.Fragment>
-      {/* Accessibility Controls Button */}
+  {/* Empty JSX fragment */}
+      {/* Floating Accessibility Button */}
       {showControls && (
         <button
           onClick={togglePanel}
@@ -802,4 +803,4 @@ export default function EnhancedAccessibilityEnhancer() {
       `}</style>
     </div>
   );
-}>
+  {/* Removed stray closing brace */}

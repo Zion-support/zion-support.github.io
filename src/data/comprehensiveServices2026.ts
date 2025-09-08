@@ -221,7 +221,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     innovationLevel: "Advanced",
     marketSize: "$2.1 billion by 2026",
     growthRate: "180% annual growth"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Revolutionary IT Infrastructure Services 2026
@@ -311,7 +311,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$2.8 billion by 2026",
     compliance["GDPR", "HIPAA", "Industry 4.0"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Revolutionary AI Services 2026
@@ -403,7 +403,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 billion by 2026",
     ethicalAI["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]
-  }
+  {/* Removed stray closing brace */}
 ];
 
 // Export all services

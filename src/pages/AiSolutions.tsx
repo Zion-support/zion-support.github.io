@@ -347,4 +347,5 @@ import { SEO } from '@/components/SEO';
       </section>
     </div>
   );
-}
+  {/* Removed stray closing brace */}
+

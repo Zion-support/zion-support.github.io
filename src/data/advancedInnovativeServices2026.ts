@@ -622,7 +622,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       uptime: '99.9%',
       security: ['Research Security', 'Data Integrity', 'Access Control']
     },
-    competitors: ['CERN', 'Fermilab', 'Theoretical Physics Institutions'],
-    caseStudies: ['Advanced theoretical research', 'International collaboration', 'Educational innovation']
-  }
+    competitors['CERN', 'Fermilab', 'Theoretical Physics Institutions'],
+    caseStudies['Advanced theoretical research', 'International collaboration', 'Educational innovation']
+  {/* Removed stray closing brace */}
 ];

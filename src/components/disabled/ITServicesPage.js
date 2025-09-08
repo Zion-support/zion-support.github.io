@@ -152,7 +152,7 @@ const ITServices = [
         category: "Support",
         badge: "Featured",
         link: "/request-quote?service=24-7-support"
-    }
+  {/* Removed stray closing brace */}
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },

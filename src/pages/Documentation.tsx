@@ -186,7 +186,18 @@ const Documentation: React.FC = () => {
     } else {
       cat.count = documentationItems.filter(item => item.category === cat.id).length;
     }
-  });
+  };
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
+
+  const searchResults = searchQuery 
+    ? docCategories.flatMap(category => 
+        category.articles.filter(article => 
+          article.title.toLowerCase().includes(searchQuery.toLowerCase())
+        ).map(article => ({ ...category, article }))
+  {/* Removed stray closing parenthesis */}
+    : [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

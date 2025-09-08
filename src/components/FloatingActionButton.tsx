@@ -4,7 +4,7 @@ import { Plus, MessageCircle, Phone, Mail, ArrowUp, Settings, HelpCircle, X, Sta
 
 interface FloatingActionButtonProps {
   enabled?: boolean;
-}
+  {/* Removed stray closing brace */}
 
 export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -140,7 +140,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   if (!enabled) return null;
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       {/* Main Floating Action Button */}
       <AnimatePresence>
         {isVisible && (
@@ -293,4 +293,4 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       </motion.button>
     </React.Fragment>
   );
-}>
+  {/* Removed stray closing brace */}

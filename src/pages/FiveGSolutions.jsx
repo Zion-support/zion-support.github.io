@@ -97,8 +97,8 @@ const fiveGSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Manufacturing",
-    technologies: ["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
-  }
+    technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
+  {/* Removed stray closing brace */}
 ];
 
 const fiveGTechnologies = [
@@ -129,7 +129,7 @@ const fiveGTechnologies = [
     icon: Layers,
     useCase: "Service Isolation",
     reliability: "High"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const successStories = [
@@ -159,7 +159,7 @@ const successStories = [
     solution: "Implemented 5G healthcare network with telemedicine platforms and IoT devices",
     results: "Enhanced telemedicine capabilities, improved patient monitoring, reduced hospital visits",
     logo: "RHN"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const processSteps = [
@@ -190,7 +190,7 @@ const processSteps = [
     description: "Test network performance and optimize for efficiency",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+  {/* Removed stray closing brace */}
 ];
 
 const fiveGBenefits = [
@@ -216,8 +216,8 @@ const fiveGBenefits = [
     title: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
     icon: Layers,
-    examples: ["Customized services", "Service isolation", "Quality guarantees"]
-  }
+    examples["Customized services", "Service isolation", "Quality guarantees"]
+  {/* Removed stray closing brace */}
 ];
 
 export default function FiveGSolutions() {

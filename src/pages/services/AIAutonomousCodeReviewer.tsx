@@ -116,7 +116,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <Helmet>
         <title>AI Autonomous Code Reviewer — Zion Tech Group | Automated Code Quality & Security</title>
         <meta name="description" content="Revolutionize your code review process with AI-powered automated analysis. Detect security vulnerabilities, optimize performance, and maintain code quality across multiple programming languages."/>

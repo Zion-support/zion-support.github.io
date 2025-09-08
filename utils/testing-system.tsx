@@ -44,5 +44,4 @@ export class TestingSystem {
         break;
     }
   }
-}
-import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+  {/* Removed stray closing brace */}

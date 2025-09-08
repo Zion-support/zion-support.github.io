@@ -1,6 +1,102 @@
 // Removed unused: import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award } from 'lucide-react';
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+const steps = [
+    {
+        icon: <Search className="w-8 h-8"/>,
+        title: "Discover",
+        description: "Browse our comprehensive catalog of services, talent, and solutions",
+        color: "from-zion-cyan to-zion-cyan-dark",
+        bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
+        details: [
+            "AI-powered search and filtering",
+            "Curated service categories",
+            "Expert talent matching",
+            "Real-time availability"
+        ],
+        duration: "1-2 hours",
+        success: "95% match rate"
+    },
+    {
+        icon: <Users className="w-8 h-8"/>,
+        title: "Connect",
+        description: "Get matched with the perfect team or service for your project",
+        color: "from-zion-purple to-zion-purple-dark",
+        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+        details: [
+            "Smart matching algorithm",
+            "Profile verification",
+            "Portfolio review",
+            "Direct communication"
+        ],
+        duration: "2-4 hours",
+        success: "98% satisfaction"
+    },
+    {
+        icon: <FileText className="w-8 h-8"/>,
+        title: "Plan",
+        description: "Collaborate on project requirements, timeline, and deliverables",
+        color: "from-zion-blue to-zion-blue-dark",
+        bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
+        details: [
+            "Interactive project planning",
+            "Timeline optimization",
+            "Resource allocation",
+            "Risk assessment"
+        ],
+        duration: "4-8 hours",
+        success: "90% on-time delivery"
+    },
+    {
+        icon: <Rocket className="w-8 h-8"/>,
+        title: "Execute",
+        description: "Watch your vision come to life with our expert execution",
+        color: "from-zion-cyan-light to-zion-cyan",
+        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
+        details: [
+            "Agile development process",
+            "Regular progress updates",
+            "Quality assurance",
+            "Performance monitoring"
+        ],
+        duration: "1-4 weeks",
+        success: "99% quality score"
+    },
+    {
+        icon: <CheckCircle className="w-8 h-8"/>,
+        title: "Deliver",
+        description: "Receive your completed project with ongoing support and maintenance",
+        color: "from-zion-purple-light to-zion-purple",
+        bgColor: "from-zion-purple-light/20 to-zion-purple/20",
+        details: [
+            "Comprehensive testing",
+            "Documentation delivery",
+            "Training and handover",
+            "Post-launch support"
+        ],
+        duration: "Ongoing",
+        success: "100% client retention"
+  {/* Removed stray closing brace */}
+];
+const stats = [
+    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
+    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
+    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
+    { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
+];
+export function HowItWorksSection() {
+    const [hoveredStep, setHoveredStep] = useState(null);
+    const [activeStep, setActiveStep] = useState(0);
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            }
+        }
+    };
 
 const steps = [
   {
@@ -292,4 +388,4 @@ export function HowItWorksSection() {
       </div>
     </section>
   );
-}
+  {/* Removed stray closing brace */}

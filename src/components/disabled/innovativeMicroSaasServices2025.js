@@ -618,6 +618,6 @@ export const innovativeMicroSaasServices2025 = [
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited customers",
         support: "Customer experience expert support"
-    }
+  {/* Removed stray closing brace */}
 ];
 export default innovativeMicroSaasServices2025;

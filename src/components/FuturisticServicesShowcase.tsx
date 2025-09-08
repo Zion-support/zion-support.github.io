@@ -71,7 +71,7 @@ const futuristicServices: ServiceShowcase[] = [
 		features: ['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],
 		price: '$22,000/month',
 		status: 'active'
-	}
+  {/* Removed stray closing brace */}
 ];
 export default function FuturisticServicesShowcase(...args: []):  {
 	const [currentService, setCurrentService] = useState(0);

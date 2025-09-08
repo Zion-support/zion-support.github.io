@@ -2,7 +2,7 @@ import { SEO } from '../components/SEO';
 
 export default function ServicesComparisonPage(...args[]):  {
   return (
-    <React.Fragment>
+  {/* Empty JSX fragment */}
       <SEO
         title="Services Comparison | Zion Tech Group"
         description="Compare our comprehensive range of technology services and find the perfect solution for your business needs."

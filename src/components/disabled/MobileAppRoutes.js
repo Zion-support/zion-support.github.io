@@ -3,5 +3,5 @@ import MobileLaunchPage from '@/pages/MobileLaunchPage';
 export default function MobileAppRoutes() {
     return (<React.Fragment>
       <Route path="launch" element={<MobileLaunchPage />}/>
-    </React.Fragment>);
-}
+    </>);
+  {/* Removed stray closing brace */}
