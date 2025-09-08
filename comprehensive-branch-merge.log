@@ -3812,3 +3812,551 @@ fatal: couldn't find remote ref cursor/analyze-improve-and-deploy-application-1a
 [2025-09-08T20:43:54.136Z] ✅ Success: Get git status
 [2025-09-08T20:43:54.136Z] 📄 Found 0 conflicted files
 [2025-09-08T20:43:54.136Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:43:54.216Z] ✅ Success: Add resolved files
+[2025-09-08T20:43:54.216Z] 🚀 Commit merge for cursor/analyze-improve-and-deploy-application-1a50: git commit -m "Resolve conflicts and merge cursor/analyze-improve-and-deploy-application-1a50"
+[2025-09-08T20:43:54.266Z] ✅ Success: Commit merge for cursor/analyze-improve-and-deploy-application-1a50
+[2025-09-08T20:43:54.266Z] ✅ Successfully resolved conflicts and merged: cursor/analyze-improve-and-deploy-application-1a50
+[2025-09-08T20:43:55.267Z] 📦 Processing batch 41/509
+[2025-09-08T20:43:55.267Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-1a51
+[2025-09-08T20:43:55.267Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-1a51: git fetch origin cursor/analyze-improve-and-deploy-application-1a51
+[2025-09-08T20:43:55.602Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-1a51
+[2025-09-08T20:43:55.602Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-1a51: git merge origin/cursor/analyze-improve-and-deploy-application-1a51 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-1a51 into main"
+[2025-09-08T20:43:56.025Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-1a51
+[2025-09-08T20:43:56.025Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-1a51
+[2025-09-08T20:43:56.025Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-1b99
+[2025-09-08T20:43:56.025Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-1b99: git fetch origin cursor/analyze-improve-and-deploy-application-1b99
+[2025-09-08T20:43:56.358Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-1b99
+[2025-09-08T20:43:56.359Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-1b99: git merge origin/cursor/analyze-improve-and-deploy-application-1b99 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-1b99 into main"
+[2025-09-08T20:43:56.779Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-1b99
+[2025-09-08T20:43:56.780Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-1b99
+[2025-09-08T20:43:56.780Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-1ca5
+[2025-09-08T20:43:56.780Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-1ca5: git fetch origin cursor/analyze-improve-and-deploy-application-1ca5
+[2025-09-08T20:43:57.113Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-1ca5
+[2025-09-08T20:43:57.113Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-1ca5: git merge origin/cursor/analyze-improve-and-deploy-application-1ca5 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-1ca5 into main"
+[2025-09-08T20:43:57.549Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-1ca5
+[2025-09-08T20:43:57.549Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-1ca5
+[2025-09-08T20:43:57.549Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-1d6c
+[2025-09-08T20:43:57.549Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-1d6c: git fetch origin cursor/analyze-improve-and-deploy-application-1d6c
+[2025-09-08T20:43:57.915Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-1d6c
+[2025-09-08T20:43:57.915Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-1d6c: git merge origin/cursor/analyze-improve-and-deploy-application-1d6c --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-1d6c into main"
+[2025-09-08T20:43:58.360Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-1d6c
+[2025-09-08T20:43:58.360Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-1d6c
+[2025-09-08T20:43:58.360Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-1ea3
+[2025-09-08T20:43:58.360Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-1ea3: git fetch origin cursor/analyze-improve-and-deploy-application-1ea3
+[2025-09-08T20:43:58.704Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-1ea3
+[2025-09-08T20:43:58.704Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-1ea3: git merge origin/cursor/analyze-improve-and-deploy-application-1ea3 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-1ea3 into main"
+[2025-09-08T20:43:59.139Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-1ea3
+[2025-09-08T20:43:59.139Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-1ea3
+[2025-09-08T20:43:59.139Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2027
+[2025-09-08T20:43:59.139Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2027: git fetch origin cursor/analyze-improve-and-deploy-application-2027
+[2025-09-08T20:43:59.461Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2027
+[2025-09-08T20:43:59.461Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2027: git merge origin/cursor/analyze-improve-and-deploy-application-2027 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2027 into main"
+[2025-09-08T20:43:59.893Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2027
+[2025-09-08T20:43:59.893Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2027
+[2025-09-08T20:43:59.893Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2135
+[2025-09-08T20:43:59.893Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2135: git fetch origin cursor/analyze-improve-and-deploy-application-2135
+[2025-09-08T20:44:00.213Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2135
+[2025-09-08T20:44:00.213Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2135: git merge origin/cursor/analyze-improve-and-deploy-application-2135 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2135 into main"
+[2025-09-08T20:44:00.632Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2135
+[2025-09-08T20:44:00.633Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2135
+[2025-09-08T20:44:00.633Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2157
+[2025-09-08T20:44:00.633Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2157: git fetch origin cursor/analyze-improve-and-deploy-application-2157
+[2025-09-08T20:44:00.977Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2157
+[2025-09-08T20:44:00.978Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2157: git merge origin/cursor/analyze-improve-and-deploy-application-2157 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2157 into main"
+[2025-09-08T20:44:01.415Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2157
+[2025-09-08T20:44:01.415Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2157
+[2025-09-08T20:44:01.415Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2183
+[2025-09-08T20:44:01.415Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2183: git fetch origin cursor/analyze-improve-and-deploy-application-2183
+[2025-09-08T20:44:01.735Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2183
+[2025-09-08T20:44:01.735Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2183: git merge origin/cursor/analyze-improve-and-deploy-application-2183 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2183 into main"
+[2025-09-08T20:44:02.156Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2183
+[2025-09-08T20:44:02.156Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2183
+[2025-09-08T20:44:02.156Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-235f
+[2025-09-08T20:44:02.156Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-235f: git fetch origin cursor/analyze-improve-and-deploy-application-235f
+[2025-09-08T20:44:02.487Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-235f
+[2025-09-08T20:44:02.487Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-235f: git merge origin/cursor/analyze-improve-and-deploy-application-235f --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-235f into main"
+[2025-09-08T20:44:02.904Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-235f
+[2025-09-08T20:44:02.904Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-235f
+[2025-09-08T20:44:03.906Z] 📦 Processing batch 42/509
+[2025-09-08T20:44:03.906Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-242c
+[2025-09-08T20:44:03.906Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-242c: git fetch origin cursor/analyze-improve-and-deploy-application-242c
+[2025-09-08T20:44:04.254Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-242c
+[2025-09-08T20:44:04.254Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-242c: git merge origin/cursor/analyze-improve-and-deploy-application-242c --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-242c into main"
+[2025-09-08T20:44:04.678Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-242c
+[2025-09-08T20:44:04.678Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-242c
+[2025-09-08T20:44:04.678Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-257a
+[2025-09-08T20:44:04.678Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-257a: git fetch origin cursor/analyze-improve-and-deploy-application-257a
+[2025-09-08T20:44:05.025Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-257a
+[2025-09-08T20:44:05.025Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-257a: git merge origin/cursor/analyze-improve-and-deploy-application-257a --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-257a into main"
+[2025-09-08T20:44:05.453Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-257a
+[2025-09-08T20:44:05.453Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-257a
+[2025-09-08T20:44:05.453Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-26bf
+[2025-09-08T20:44:05.453Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-26bf: git fetch origin cursor/analyze-improve-and-deploy-application-26bf
+[2025-09-08T20:44:05.787Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-26bf
+[2025-09-08T20:44:05.787Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-26bf: git merge origin/cursor/analyze-improve-and-deploy-application-26bf --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-26bf into main"
+[2025-09-08T20:44:06.218Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-26bf
+[2025-09-08T20:44:06.219Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-26bf
+[2025-09-08T20:44:06.219Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-27ff
+[2025-09-08T20:44:06.219Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-27ff: git fetch origin cursor/analyze-improve-and-deploy-application-27ff
+[2025-09-08T20:44:06.569Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-27ff
+[2025-09-08T20:44:06.569Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-27ff: git merge origin/cursor/analyze-improve-and-deploy-application-27ff --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-27ff into main"
+[2025-09-08T20:44:07.024Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-27ff
+[2025-09-08T20:44:07.025Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-27ff
+[2025-09-08T20:44:07.025Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2827
+[2025-09-08T20:44:07.025Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2827: git fetch origin cursor/analyze-improve-and-deploy-application-2827
+[2025-09-08T20:44:07.365Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2827
+[2025-09-08T20:44:07.365Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2827: git merge origin/cursor/analyze-improve-and-deploy-application-2827 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2827 into main"
+[2025-09-08T20:44:07.789Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2827
+[2025-09-08T20:44:07.789Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2827
+[2025-09-08T20:44:07.789Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-29ee
+[2025-09-08T20:44:07.789Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-29ee: git fetch origin cursor/analyze-improve-and-deploy-application-29ee
+[2025-09-08T20:44:08.142Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-29ee
+[2025-09-08T20:44:08.142Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-29ee: git merge origin/cursor/analyze-improve-and-deploy-application-29ee --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-29ee into main"
+[2025-09-08T20:44:08.583Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-29ee
+[2025-09-08T20:44:08.583Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-29ee
+[2025-09-08T20:44:08.583Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2b33
+[2025-09-08T20:44:08.583Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2b33: git fetch origin cursor/analyze-improve-and-deploy-application-2b33
+[2025-09-08T20:44:08.914Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2b33
+[2025-09-08T20:44:08.915Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2b33: git merge origin/cursor/analyze-improve-and-deploy-application-2b33 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2b33 into main"
+[2025-09-08T20:44:09.331Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2b33
+[2025-09-08T20:44:09.331Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2b33
+[2025-09-08T20:44:09.331Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2b67
+[2025-09-08T20:44:09.331Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2b67: git fetch origin cursor/analyze-improve-and-deploy-application-2b67
+[2025-09-08T20:44:09.646Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2b67
+[2025-09-08T20:44:09.647Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2b67: git merge origin/cursor/analyze-improve-and-deploy-application-2b67 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2b67 into main"
+[2025-09-08T20:44:10.062Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2b67
+[2025-09-08T20:44:10.062Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2b67
+[2025-09-08T20:44:10.062Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2b72
+[2025-09-08T20:44:10.062Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2b72: git fetch origin cursor/analyze-improve-and-deploy-application-2b72
+[2025-09-08T20:44:10.414Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2b72
+[2025-09-08T20:44:10.414Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2b72: git merge origin/cursor/analyze-improve-and-deploy-application-2b72 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2b72 into main"
+[2025-09-08T20:44:10.835Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2b72
+[2025-09-08T20:44:10.835Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2b72
+[2025-09-08T20:44:10.835Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2f79
+[2025-09-08T20:44:10.835Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2f79: git fetch origin cursor/analyze-improve-and-deploy-application-2f79
+[2025-09-08T20:44:11.148Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2f79
+[2025-09-08T20:44:11.148Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2f79: git merge origin/cursor/analyze-improve-and-deploy-application-2f79 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2f79 into main"
+[2025-09-08T20:44:11.614Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2f79
+[2025-09-08T20:44:11.614Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2f79
+[2025-09-08T20:44:12.616Z] 📦 Processing batch 43/509
+[2025-09-08T20:44:12.616Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2f8d
+[2025-09-08T20:44:12.616Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2f8d: git fetch origin cursor/analyze-improve-and-deploy-application-2f8d
+[2025-09-08T20:44:12.956Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2f8d
+[2025-09-08T20:44:12.957Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2f8d: git merge origin/cursor/analyze-improve-and-deploy-application-2f8d --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2f8d into main"
+[2025-09-08T20:44:13.387Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2f8d
+[2025-09-08T20:44:13.387Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2f8d
+[2025-09-08T20:44:13.387Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-2ffe
+[2025-09-08T20:44:13.387Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-2ffe: git fetch origin cursor/analyze-improve-and-deploy-application-2ffe
+[2025-09-08T20:44:13.853Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-2ffe
+[2025-09-08T20:44:13.853Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-2ffe: git merge origin/cursor/analyze-improve-and-deploy-application-2ffe --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-2ffe into main"
+[2025-09-08T20:44:14.304Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-2ffe
+[2025-09-08T20:44:14.304Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-2ffe
+[2025-09-08T20:44:14.304Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-317d
+[2025-09-08T20:44:14.304Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-317d: git fetch origin cursor/analyze-improve-and-deploy-application-317d
+[2025-09-08T20:44:14.650Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-317d
+[2025-09-08T20:44:14.650Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-317d: git merge origin/cursor/analyze-improve-and-deploy-application-317d --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-317d into main"
+[2025-09-08T20:44:15.083Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-317d
+[2025-09-08T20:44:15.083Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-317d
+[2025-09-08T20:44:15.083Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-31de
+[2025-09-08T20:44:15.083Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-31de: git fetch origin cursor/analyze-improve-and-deploy-application-31de
+[2025-09-08T20:44:15.403Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-31de
+[2025-09-08T20:44:15.403Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-31de: git merge origin/cursor/analyze-improve-and-deploy-application-31de --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-31de into main"
+[2025-09-08T20:44:15.819Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-31de
+[2025-09-08T20:44:15.820Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-31de
+[2025-09-08T20:44:15.820Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-32ce
+[2025-09-08T20:44:15.820Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-32ce: git fetch origin cursor/analyze-improve-and-deploy-application-32ce
+[2025-09-08T20:44:16.131Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-32ce
+[2025-09-08T20:44:16.131Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-32ce: git merge origin/cursor/analyze-improve-and-deploy-application-32ce --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-32ce into main"
+[2025-09-08T20:44:16.554Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-32ce
+[2025-09-08T20:44:16.554Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-32ce
+[2025-09-08T20:44:16.554Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3397
+[2025-09-08T20:44:16.554Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3397: git fetch origin cursor/analyze-improve-and-deploy-application-3397
+[2025-09-08T20:44:16.916Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3397
+[2025-09-08T20:44:16.916Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3397: git merge origin/cursor/analyze-improve-and-deploy-application-3397 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3397 into main"
+[2025-09-08T20:44:17.351Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3397
+[2025-09-08T20:44:17.351Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3397
+[2025-09-08T20:44:17.351Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-33bf
+[2025-09-08T20:44:17.351Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-33bf: git fetch origin cursor/analyze-improve-and-deploy-application-33bf
+[2025-09-08T20:44:17.686Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-33bf
+[2025-09-08T20:44:17.686Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-33bf: git merge origin/cursor/analyze-improve-and-deploy-application-33bf --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-33bf into main"
+[2025-09-08T20:44:18.115Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-33bf
+[2025-09-08T20:44:18.115Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-33bf
+[2025-09-08T20:44:18.115Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3468
+[2025-09-08T20:44:18.115Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3468: git fetch origin cursor/analyze-improve-and-deploy-application-3468
+[2025-09-08T20:44:18.448Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3468
+[2025-09-08T20:44:18.449Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3468: git merge origin/cursor/analyze-improve-and-deploy-application-3468 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3468 into main"
+[2025-09-08T20:44:18.864Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3468
+[2025-09-08T20:44:18.864Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3468
+[2025-09-08T20:44:18.864Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-347d
+[2025-09-08T20:44:18.864Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-347d: git fetch origin cursor/analyze-improve-and-deploy-application-347d
+[2025-09-08T20:44:19.178Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-347d
+[2025-09-08T20:44:19.178Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-347d: git merge origin/cursor/analyze-improve-and-deploy-application-347d --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-347d into main"
+[2025-09-08T20:44:19.625Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-347d
+[2025-09-08T20:44:19.625Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-347d
+[2025-09-08T20:44:19.625Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-34ad
+[2025-09-08T20:44:19.625Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-34ad: git fetch origin cursor/analyze-improve-and-deploy-application-34ad
+[2025-09-08T20:44:19.971Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-34ad
+[2025-09-08T20:44:19.971Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-34ad: git merge origin/cursor/analyze-improve-and-deploy-application-34ad --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-34ad into main"
+[2025-09-08T20:44:20.400Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-34ad
+[2025-09-08T20:44:20.400Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-34ad
+[2025-09-08T20:44:21.402Z] 📦 Processing batch 44/509
+[2025-09-08T20:44:21.402Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3555
+[2025-09-08T20:44:21.402Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3555: git fetch origin cursor/analyze-improve-and-deploy-application-3555
+[2025-09-08T20:44:21.719Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3555
+[2025-09-08T20:44:21.719Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3555: git merge origin/cursor/analyze-improve-and-deploy-application-3555 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3555 into main"
+[2025-09-08T20:44:22.137Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3555
+[2025-09-08T20:44:22.137Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3555
+[2025-09-08T20:44:22.137Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-35af
+[2025-09-08T20:44:22.137Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-35af: git fetch origin cursor/analyze-improve-and-deploy-application-35af
+[2025-09-08T20:44:22.453Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-35af
+[2025-09-08T20:44:22.453Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-35af: git merge origin/cursor/analyze-improve-and-deploy-application-35af --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-35af into main"
+[2025-09-08T20:44:22.871Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-35af
+[2025-09-08T20:44:22.871Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-35af
+[2025-09-08T20:44:22.871Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-35fe
+[2025-09-08T20:44:22.871Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-35fe: git fetch origin cursor/analyze-improve-and-deploy-application-35fe
+[2025-09-08T20:44:23.201Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-35fe
+[2025-09-08T20:44:23.201Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-35fe: git merge origin/cursor/analyze-improve-and-deploy-application-35fe --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-35fe into main"
+[2025-09-08T20:44:23.630Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-35fe
+[2025-09-08T20:44:23.630Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-35fe
+[2025-09-08T20:44:23.630Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-36d0
+[2025-09-08T20:44:23.630Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-36d0: git fetch origin cursor/analyze-improve-and-deploy-application-36d0
+[2025-09-08T20:44:23.950Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-36d0
+[2025-09-08T20:44:23.950Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-36d0: git merge origin/cursor/analyze-improve-and-deploy-application-36d0 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-36d0 into main"
+[2025-09-08T20:44:24.377Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-36d0
+[2025-09-08T20:44:24.377Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-36d0
+[2025-09-08T20:44:24.377Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-36f1
+[2025-09-08T20:44:24.377Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-36f1: git fetch origin cursor/analyze-improve-and-deploy-application-36f1
+[2025-09-08T20:44:24.708Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-36f1
+[2025-09-08T20:44:24.709Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-36f1: git merge origin/cursor/analyze-improve-and-deploy-application-36f1 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-36f1 into main"
+[2025-09-08T20:44:25.144Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-36f1
+[2025-09-08T20:44:25.144Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-36f1
+[2025-09-08T20:44:25.144Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-37dd
+[2025-09-08T20:44:25.144Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-37dd: git fetch origin cursor/analyze-improve-and-deploy-application-37dd
+[2025-09-08T20:44:25.467Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-37dd
+[2025-09-08T20:44:25.467Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-37dd: git merge origin/cursor/analyze-improve-and-deploy-application-37dd --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-37dd into main"
+[2025-09-08T20:44:25.882Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-37dd
+[2025-09-08T20:44:25.882Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-37dd
+[2025-09-08T20:44:25.882Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-384b
+[2025-09-08T20:44:25.882Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-384b: git fetch origin cursor/analyze-improve-and-deploy-application-384b
+[2025-09-08T20:44:26.195Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-384b
+[2025-09-08T20:44:26.195Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-384b: git merge origin/cursor/analyze-improve-and-deploy-application-384b --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-384b into main"
+[2025-09-08T20:44:26.622Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-384b
+[2025-09-08T20:44:26.622Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-384b
+[2025-09-08T20:44:26.622Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-39f8
+[2025-09-08T20:44:26.622Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-39f8: git fetch origin cursor/analyze-improve-and-deploy-application-39f8
+[2025-09-08T20:44:26.947Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-39f8
+[2025-09-08T20:44:26.947Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-39f8: git merge origin/cursor/analyze-improve-and-deploy-application-39f8 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-39f8 into main"
+[2025-09-08T20:44:27.371Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-39f8
+[2025-09-08T20:44:27.371Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-39f8
+[2025-09-08T20:44:27.371Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3a4d
+[2025-09-08T20:44:27.371Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3a4d: git fetch origin cursor/analyze-improve-and-deploy-application-3a4d
+[2025-09-08T20:44:27.730Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3a4d
+[2025-09-08T20:44:27.730Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3a4d: git merge origin/cursor/analyze-improve-and-deploy-application-3a4d --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3a4d into main"
+[2025-09-08T20:44:28.163Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3a4d
+[2025-09-08T20:44:28.163Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3a4d
+[2025-09-08T20:44:28.163Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3d02
+[2025-09-08T20:44:28.163Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3d02: git fetch origin cursor/analyze-improve-and-deploy-application-3d02
+[2025-09-08T20:44:28.486Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3d02
+[2025-09-08T20:44:28.487Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3d02: git merge origin/cursor/analyze-improve-and-deploy-application-3d02 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3d02 into main"
+[2025-09-08T20:44:28.906Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3d02
+[2025-09-08T20:44:28.906Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3d02
+[2025-09-08T20:44:29.907Z] 📦 Processing batch 45/509
+[2025-09-08T20:44:29.908Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3df7
+[2025-09-08T20:44:29.908Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3df7: git fetch origin cursor/analyze-improve-and-deploy-application-3df7
+[2025-09-08T20:44:30.223Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3df7
+[2025-09-08T20:44:30.223Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3df7: git merge origin/cursor/analyze-improve-and-deploy-application-3df7 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3df7 into main"
+[2025-09-08T20:44:30.646Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3df7
+[2025-09-08T20:44:30.646Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3df7
+[2025-09-08T20:44:30.646Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3e37
+[2025-09-08T20:44:30.646Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3e37: git fetch origin cursor/analyze-improve-and-deploy-application-3e37
+[2025-09-08T20:44:30.970Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3e37
+[2025-09-08T20:44:30.970Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3e37: git merge origin/cursor/analyze-improve-and-deploy-application-3e37 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3e37 into main"
+[2025-09-08T20:44:31.396Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3e37
+[2025-09-08T20:44:31.396Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3e37
+[2025-09-08T20:44:31.396Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3ebf
+[2025-09-08T20:44:31.396Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3ebf: git fetch origin cursor/analyze-improve-and-deploy-application-3ebf
+[2025-09-08T20:44:31.715Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3ebf
+[2025-09-08T20:44:31.715Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3ebf: git merge origin/cursor/analyze-improve-and-deploy-application-3ebf --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3ebf into main"
+[2025-09-08T20:44:32.146Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3ebf
+[2025-09-08T20:44:32.146Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3ebf
+[2025-09-08T20:44:32.146Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3ee0
+[2025-09-08T20:44:32.146Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3ee0: git fetch origin cursor/analyze-improve-and-deploy-application-3ee0
+[2025-09-08T20:44:32.459Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3ee0
+[2025-09-08T20:44:32.459Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3ee0: git merge origin/cursor/analyze-improve-and-deploy-application-3ee0 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3ee0 into main"
+[2025-09-08T20:44:32.887Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3ee0
+[2025-09-08T20:44:32.887Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3ee0
+[2025-09-08T20:44:32.887Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-3fec
+[2025-09-08T20:44:32.887Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-3fec: git fetch origin cursor/analyze-improve-and-deploy-application-3fec
+[2025-09-08T20:44:33.202Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-3fec
+[2025-09-08T20:44:33.202Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-3fec: git merge origin/cursor/analyze-improve-and-deploy-application-3fec --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-3fec into main"
+[2025-09-08T20:44:33.615Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-3fec
+[2025-09-08T20:44:33.615Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-3fec
+[2025-09-08T20:44:33.615Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-46fa
+[2025-09-08T20:44:33.615Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-46fa: git fetch origin cursor/analyze-improve-and-deploy-application-46fa
+[2025-09-08T20:44:33.923Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-46fa
+[2025-09-08T20:44:33.923Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-46fa: git merge origin/cursor/analyze-improve-and-deploy-application-46fa --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-46fa into main"
+[2025-09-08T20:44:34.349Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-46fa
+[2025-09-08T20:44:34.349Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-46fa
+[2025-09-08T20:44:34.349Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4751
+[2025-09-08T20:44:34.349Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4751: git fetch origin cursor/analyze-improve-and-deploy-application-4751
+[2025-09-08T20:44:34.682Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4751
+[2025-09-08T20:44:34.682Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4751: git merge origin/cursor/analyze-improve-and-deploy-application-4751 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4751 into main"
+[2025-09-08T20:44:35.110Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4751
+[2025-09-08T20:44:35.110Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4751
+[2025-09-08T20:44:35.110Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4850
+[2025-09-08T20:44:35.110Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4850: git fetch origin cursor/analyze-improve-and-deploy-application-4850
+[2025-09-08T20:44:35.450Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4850
+[2025-09-08T20:44:35.450Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4850: git merge origin/cursor/analyze-improve-and-deploy-application-4850 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4850 into main"
+[2025-09-08T20:44:35.890Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4850
+[2025-09-08T20:44:35.890Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4850
+[2025-09-08T20:44:35.890Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4852
+[2025-09-08T20:44:35.890Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4852: git fetch origin cursor/analyze-improve-and-deploy-application-4852
+[2025-09-08T20:44:36.227Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4852
+[2025-09-08T20:44:36.227Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4852: git merge origin/cursor/analyze-improve-and-deploy-application-4852 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4852 into main"
+[2025-09-08T20:44:36.645Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4852
+[2025-09-08T20:44:36.645Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4852
+[2025-09-08T20:44:36.645Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4881
+[2025-09-08T20:44:36.645Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4881: git fetch origin cursor/analyze-improve-and-deploy-application-4881
+[2025-09-08T20:44:36.974Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4881
+[2025-09-08T20:44:36.974Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4881: git merge origin/cursor/analyze-improve-and-deploy-application-4881 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4881 into main"
+[2025-09-08T20:44:37.402Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4881
+[2025-09-08T20:44:37.402Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4881
+[2025-09-08T20:44:38.403Z] 📦 Processing batch 46/509
+[2025-09-08T20:44:38.404Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4a98
+[2025-09-08T20:44:38.404Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4a98: git fetch origin cursor/analyze-improve-and-deploy-application-4a98
+[2025-09-08T20:44:38.746Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4a98
+[2025-09-08T20:44:38.746Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4a98: git merge origin/cursor/analyze-improve-and-deploy-application-4a98 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4a98 into main"
+[2025-09-08T20:44:39.167Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4a98
+[2025-09-08T20:44:39.168Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4a98
+[2025-09-08T20:44:39.168Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4ac9
+[2025-09-08T20:44:39.168Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4ac9: git fetch origin cursor/analyze-improve-and-deploy-application-4ac9
+[2025-09-08T20:44:39.498Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4ac9
+[2025-09-08T20:44:39.498Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4ac9: git merge origin/cursor/analyze-improve-and-deploy-application-4ac9 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4ac9 into main"
+[2025-09-08T20:44:39.913Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4ac9
+[2025-09-08T20:44:39.913Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4ac9
+[2025-09-08T20:44:39.913Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4b02
+[2025-09-08T20:44:39.913Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4b02: git fetch origin cursor/analyze-improve-and-deploy-application-4b02
+[2025-09-08T20:44:40.257Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4b02
+[2025-09-08T20:44:40.257Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4b02: git merge origin/cursor/analyze-improve-and-deploy-application-4b02 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4b02 into main"
+[2025-09-08T20:44:40.673Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4b02
+[2025-09-08T20:44:40.673Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4b02
+[2025-09-08T20:44:40.673Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4b5b
+[2025-09-08T20:44:40.674Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4b5b: git fetch origin cursor/analyze-improve-and-deploy-application-4b5b
+[2025-09-08T20:44:41.007Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4b5b
+[2025-09-08T20:44:41.008Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4b5b: git merge origin/cursor/analyze-improve-and-deploy-application-4b5b --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4b5b into main"
+[2025-09-08T20:44:41.438Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4b5b
+[2025-09-08T20:44:41.438Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4b5b
+[2025-09-08T20:44:41.438Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4ce1
+[2025-09-08T20:44:41.438Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4ce1: git fetch origin cursor/analyze-improve-and-deploy-application-4ce1
+[2025-09-08T20:44:41.772Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4ce1
+[2025-09-08T20:44:41.772Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4ce1: git merge origin/cursor/analyze-improve-and-deploy-application-4ce1 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4ce1 into main"
+[2025-09-08T20:44:42.213Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4ce1
+[2025-09-08T20:44:42.213Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4ce1
+[2025-09-08T20:44:42.213Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-4dbb
+[2025-09-08T20:44:42.213Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-4dbb: git fetch origin cursor/analyze-improve-and-deploy-application-4dbb
+[2025-09-08T20:44:42.570Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-4dbb
+[2025-09-08T20:44:42.570Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-4dbb: git merge origin/cursor/analyze-improve-and-deploy-application-4dbb --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-4dbb into main"
+[2025-09-08T20:44:43.039Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-4dbb
+[2025-09-08T20:44:43.039Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-4dbb
+[2025-09-08T20:44:43.039Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5002
+[2025-09-08T20:44:43.039Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5002: git fetch origin cursor/analyze-improve-and-deploy-application-5002
+[2025-09-08T20:44:43.379Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5002
+[2025-09-08T20:44:43.379Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5002: git merge origin/cursor/analyze-improve-and-deploy-application-5002 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5002 into main"
+[2025-09-08T20:44:43.805Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5002
+[2025-09-08T20:44:43.805Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5002
+[2025-09-08T20:44:43.805Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-50b5
+[2025-09-08T20:44:43.805Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-50b5: git fetch origin cursor/analyze-improve-and-deploy-application-50b5
+[2025-09-08T20:44:44.134Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-50b5
+[2025-09-08T20:44:44.134Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-50b5: git merge origin/cursor/analyze-improve-and-deploy-application-50b5 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-50b5 into main"
+[2025-09-08T20:44:44.558Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-50b5
+[2025-09-08T20:44:44.558Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-50b5
+[2025-09-08T20:44:44.558Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-514f
+[2025-09-08T20:44:44.558Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-514f: git fetch origin cursor/analyze-improve-and-deploy-application-514f
+[2025-09-08T20:44:44.887Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-514f
+[2025-09-08T20:44:44.888Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-514f: git merge origin/cursor/analyze-improve-and-deploy-application-514f --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-514f into main"
+[2025-09-08T20:44:45.309Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-514f
+[2025-09-08T20:44:45.309Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-514f
+[2025-09-08T20:44:45.310Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-535c
+[2025-09-08T20:44:45.310Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-535c: git fetch origin cursor/analyze-improve-and-deploy-application-535c
+[2025-09-08T20:44:45.610Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-535c
+[2025-09-08T20:44:45.610Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-535c: git merge origin/cursor/analyze-improve-and-deploy-application-535c --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-535c into main"
+[2025-09-08T20:44:46.037Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-535c
+[2025-09-08T20:44:46.037Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-535c
+[2025-09-08T20:44:47.039Z] 📦 Processing batch 47/509
+[2025-09-08T20:44:47.039Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5379
+[2025-09-08T20:44:47.039Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5379: git fetch origin cursor/analyze-improve-and-deploy-application-5379
+[2025-09-08T20:44:47.354Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5379
+[2025-09-08T20:44:47.354Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5379: git merge origin/cursor/analyze-improve-and-deploy-application-5379 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5379 into main"
+[2025-09-08T20:44:47.957Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5379
+[2025-09-08T20:44:47.957Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5379
+[2025-09-08T20:44:47.957Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5389
+[2025-09-08T20:44:47.957Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5389: git fetch origin cursor/analyze-improve-and-deploy-application-5389
+[2025-09-08T20:44:48.322Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5389
+[2025-09-08T20:44:48.322Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5389: git merge origin/cursor/analyze-improve-and-deploy-application-5389 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5389 into main"
+[2025-09-08T20:44:48.741Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5389
+[2025-09-08T20:44:48.741Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5389
+[2025-09-08T20:44:48.741Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5390
+[2025-09-08T20:44:48.742Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5390: git fetch origin cursor/analyze-improve-and-deploy-application-5390
+[2025-09-08T20:44:49.070Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5390
+[2025-09-08T20:44:49.070Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5390: git merge origin/cursor/analyze-improve-and-deploy-application-5390 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5390 into main"
+[2025-09-08T20:44:49.488Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5390
+[2025-09-08T20:44:49.488Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5390
+[2025-09-08T20:44:49.488Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5759
+[2025-09-08T20:44:49.488Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5759: git fetch origin cursor/analyze-improve-and-deploy-application-5759
+[2025-09-08T20:44:49.837Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5759
+[2025-09-08T20:44:49.837Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5759: git merge origin/cursor/analyze-improve-and-deploy-application-5759 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5759 into main"
+[2025-09-08T20:44:50.264Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5759
+[2025-09-08T20:44:50.264Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5759
+[2025-09-08T20:44:50.264Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-579b
+[2025-09-08T20:44:50.264Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-579b: git fetch origin cursor/analyze-improve-and-deploy-application-579b
+[2025-09-08T20:44:50.579Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-579b
+[2025-09-08T20:44:50.579Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-579b: git merge origin/cursor/analyze-improve-and-deploy-application-579b --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-579b into main"
+[2025-09-08T20:44:51.004Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-579b
+[2025-09-08T20:44:51.004Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-579b
+[2025-09-08T20:44:51.004Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-58ef
+[2025-09-08T20:44:51.004Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-58ef: git fetch origin cursor/analyze-improve-and-deploy-application-58ef
+[2025-09-08T20:44:51.350Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-58ef
+[2025-09-08T20:44:51.350Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-58ef: git merge origin/cursor/analyze-improve-and-deploy-application-58ef --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-58ef into main"
+[2025-09-08T20:44:51.769Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-58ef
+[2025-09-08T20:44:51.769Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-58ef
+[2025-09-08T20:44:51.769Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5973
+[2025-09-08T20:44:51.769Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5973: git fetch origin cursor/analyze-improve-and-deploy-application-5973
+[2025-09-08T20:44:52.081Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5973
+[2025-09-08T20:44:52.081Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5973: git merge origin/cursor/analyze-improve-and-deploy-application-5973 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5973 into main"
+[2025-09-08T20:44:52.519Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5973
+[2025-09-08T20:44:52.519Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5973
+[2025-09-08T20:44:52.519Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5a07
+[2025-09-08T20:44:52.519Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5a07: git fetch origin cursor/analyze-improve-and-deploy-application-5a07
+[2025-09-08T20:44:52.851Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5a07
+[2025-09-08T20:44:52.851Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5a07: git merge origin/cursor/analyze-improve-and-deploy-application-5a07 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5a07 into main"
+[2025-09-08T20:44:53.290Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5a07
+[2025-09-08T20:44:53.290Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5a07
+[2025-09-08T20:44:53.290Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5aed
+[2025-09-08T20:44:53.290Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5aed: git fetch origin cursor/analyze-improve-and-deploy-application-5aed
+[2025-09-08T20:44:53.619Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5aed
+[2025-09-08T20:44:53.619Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5aed: git merge origin/cursor/analyze-improve-and-deploy-application-5aed --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5aed into main"
+[2025-09-08T20:44:54.043Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5aed
+[2025-09-08T20:44:54.043Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5aed
+[2025-09-08T20:44:54.043Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5b25
+[2025-09-08T20:44:54.043Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5b25: git fetch origin cursor/analyze-improve-and-deploy-application-5b25
+[2025-09-08T20:44:54.385Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5b25
+[2025-09-08T20:44:54.385Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5b25: git merge origin/cursor/analyze-improve-and-deploy-application-5b25 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5b25 into main"
+[2025-09-08T20:44:54.809Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5b25
+[2025-09-08T20:44:54.809Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5b25
+[2025-09-08T20:44:55.811Z] 📦 Processing batch 48/509
+[2025-09-08T20:44:55.811Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5b61
+[2025-09-08T20:44:55.811Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5b61: git fetch origin cursor/analyze-improve-and-deploy-application-5b61
+[2025-09-08T20:44:56.165Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5b61
+[2025-09-08T20:44:56.165Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5b61: git merge origin/cursor/analyze-improve-and-deploy-application-5b61 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5b61 into main"
+[2025-09-08T20:44:56.588Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5b61
+[2025-09-08T20:44:56.588Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5b61
+[2025-09-08T20:44:56.588Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5bdc
+[2025-09-08T20:44:56.588Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5bdc: git fetch origin cursor/analyze-improve-and-deploy-application-5bdc
+[2025-09-08T20:44:56.909Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5bdc
+[2025-09-08T20:44:56.909Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5bdc: git merge origin/cursor/analyze-improve-and-deploy-application-5bdc --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5bdc into main"
+[2025-09-08T20:44:57.337Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5bdc
+[2025-09-08T20:44:57.337Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5bdc
+[2025-09-08T20:44:57.337Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5bdf
+[2025-09-08T20:44:57.337Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5bdf: git fetch origin cursor/analyze-improve-and-deploy-application-5bdf
+[2025-09-08T20:44:57.672Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5bdf
+[2025-09-08T20:44:57.672Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5bdf: git merge origin/cursor/analyze-improve-and-deploy-application-5bdf --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5bdf into main"
+[2025-09-08T20:44:58.117Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5bdf
+[2025-09-08T20:44:58.117Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5bdf
+[2025-09-08T20:44:58.117Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5c1d
+[2025-09-08T20:44:58.117Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5c1d: git fetch origin cursor/analyze-improve-and-deploy-application-5c1d
+[2025-09-08T20:44:58.467Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5c1d
+[2025-09-08T20:44:58.467Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5c1d: git merge origin/cursor/analyze-improve-and-deploy-application-5c1d --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5c1d into main"
+[2025-09-08T20:44:58.893Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5c1d
+[2025-09-08T20:44:58.893Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5c1d
+[2025-09-08T20:44:58.893Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5e4b
+[2025-09-08T20:44:58.893Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5e4b: git fetch origin cursor/analyze-improve-and-deploy-application-5e4b
+[2025-09-08T20:44:59.207Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5e4b
+[2025-09-08T20:44:59.207Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5e4b: git merge origin/cursor/analyze-improve-and-deploy-application-5e4b --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5e4b into main"
+[2025-09-08T20:44:59.629Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5e4b
+[2025-09-08T20:44:59.630Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5e4b
+[2025-09-08T20:44:59.630Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-5fcc
+[2025-09-08T20:44:59.630Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-5fcc: git fetch origin cursor/analyze-improve-and-deploy-application-5fcc
+[2025-09-08T20:44:59.952Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-5fcc
+[2025-09-08T20:44:59.952Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-5fcc: git merge origin/cursor/analyze-improve-and-deploy-application-5fcc --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-5fcc into main"
+[2025-09-08T20:45:00.379Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-5fcc
+[2025-09-08T20:45:00.380Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-5fcc
+[2025-09-08T20:45:00.380Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-609a
+[2025-09-08T20:45:00.380Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-609a: git fetch origin cursor/analyze-improve-and-deploy-application-609a
+[2025-09-08T20:45:00.694Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-609a
+[2025-09-08T20:45:00.694Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-609a: git merge origin/cursor/analyze-improve-and-deploy-application-609a --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-609a into main"
+[2025-09-08T20:45:01.121Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-609a
+[2025-09-08T20:45:01.121Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-609a
+[2025-09-08T20:45:01.121Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-60e5
+[2025-09-08T20:45:01.121Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-60e5: git fetch origin cursor/analyze-improve-and-deploy-application-60e5
+[2025-09-08T20:45:01.445Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-60e5
+[2025-09-08T20:45:01.446Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-60e5: git merge origin/cursor/analyze-improve-and-deploy-application-60e5 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-60e5 into main"
+[2025-09-08T20:45:01.867Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-60e5
+[2025-09-08T20:45:01.867Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-60e5
+[2025-09-08T20:45:01.867Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-616f
+[2025-09-08T20:45:01.867Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-616f: git fetch origin cursor/analyze-improve-and-deploy-application-616f
+[2025-09-08T20:45:02.202Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-616f
+[2025-09-08T20:45:02.202Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-616f: git merge origin/cursor/analyze-improve-and-deploy-application-616f --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-616f into main"
+[2025-09-08T20:45:02.618Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-616f
+[2025-09-08T20:45:02.618Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-616f
+[2025-09-08T20:45:02.618Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-629a
+[2025-09-08T20:45:02.618Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-629a: git fetch origin cursor/analyze-improve-and-deploy-application-629a
+[2025-09-08T20:45:02.960Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-629a
+[2025-09-08T20:45:02.960Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-629a: git merge origin/cursor/analyze-improve-and-deploy-application-629a --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-629a into main"
+[2025-09-08T20:45:03.383Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-629a
+[2025-09-08T20:45:03.384Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-629a
+[2025-09-08T20:45:04.385Z] 📦 Processing batch 49/509
+[2025-09-08T20:45:04.385Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-62d1
+[2025-09-08T20:45:04.385Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-62d1: git fetch origin cursor/analyze-improve-and-deploy-application-62d1
+[2025-09-08T20:45:04.739Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-62d1
+[2025-09-08T20:45:04.739Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-62d1: git merge origin/cursor/analyze-improve-and-deploy-application-62d1 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-62d1 into main"
+[2025-09-08T20:45:05.161Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-62d1
+[2025-09-08T20:45:05.161Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-62d1
+[2025-09-08T20:45:05.161Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-64bc
+[2025-09-08T20:45:05.161Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-64bc: git fetch origin cursor/analyze-improve-and-deploy-application-64bc
+[2025-09-08T20:45:05.485Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-64bc
+[2025-09-08T20:45:05.485Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-64bc: git merge origin/cursor/analyze-improve-and-deploy-application-64bc --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-64bc into main"
+[2025-09-08T20:45:05.910Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-64bc
+[2025-09-08T20:45:05.910Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-64bc
+[2025-09-08T20:45:05.910Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-6548
+[2025-09-08T20:45:05.910Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-6548: git fetch origin cursor/analyze-improve-and-deploy-application-6548
+[2025-09-08T20:45:06.247Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-6548
+[2025-09-08T20:45:06.247Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-6548: git merge origin/cursor/analyze-improve-and-deploy-application-6548 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-6548 into main"
+[2025-09-08T20:45:06.676Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-6548
+[2025-09-08T20:45:06.676Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-6548
+[2025-09-08T20:45:06.676Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-65a3
+[2025-09-08T20:45:06.676Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-65a3: git fetch origin cursor/analyze-improve-and-deploy-application-65a3
+[2025-09-08T20:45:07.008Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-65a3
+[2025-09-08T20:45:07.008Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-65a3: git merge origin/cursor/analyze-improve-and-deploy-application-65a3 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-65a3 into main"
+[2025-09-08T20:45:07.448Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-65a3
+[2025-09-08T20:45:07.448Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-65a3
+[2025-09-08T20:45:07.448Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-6680
+[2025-09-08T20:45:07.448Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-6680: git fetch origin cursor/analyze-improve-and-deploy-application-6680
+[2025-09-08T20:45:07.772Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-6680
+[2025-09-08T20:45:07.772Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-6680: git merge origin/cursor/analyze-improve-and-deploy-application-6680 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-6680 into main"
+[2025-09-08T20:45:08.195Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-6680
+[2025-09-08T20:45:08.196Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-6680
+[2025-09-08T20:45:08.196Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-6908
+[2025-09-08T20:45:08.196Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-6908: git fetch origin cursor/analyze-improve-and-deploy-application-6908
+[2025-09-08T20:45:08.530Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-6908
+[2025-09-08T20:45:08.530Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-6908: git merge origin/cursor/analyze-improve-and-deploy-application-6908 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-6908 into main"
+[2025-09-08T20:45:08.963Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-6908
+[2025-09-08T20:45:08.964Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-6908
+[2025-09-08T20:45:08.964Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-6910
+[2025-09-08T20:45:08.964Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-6910: git fetch origin cursor/analyze-improve-and-deploy-application-6910
+[2025-09-08T20:45:09.290Z] ✅ Success: Fetch origin/cursor/analyze-improve-and-deploy-application-6910
+[2025-09-08T20:45:09.290Z] 🚀 Merge cursor/analyze-improve-and-deploy-application-6910: git merge origin/cursor/analyze-improve-and-deploy-application-6910 --no-ff -m "Merge branch cursor/analyze-improve-and-deploy-application-6910 into main"
+[2025-09-08T20:45:09.732Z] ✅ Success: Merge cursor/analyze-improve-and-deploy-application-6910
+[2025-09-08T20:45:09.732Z] ✅ Successfully merged: cursor/analyze-improve-and-deploy-application-6910
+[2025-09-08T20:45:09.732Z] 🔄 Attempting to merge branch: cursor/analyze-improve-and-deploy-application-6912
+[2025-09-08T20:45:09.732Z] 🚀 Fetch origin/cursor/analyze-improve-and-deploy-application-6912: git fetch origin cursor/analyze-improve-and-deploy-application-6912
+[2025-09-08T20:45:09.845Z] ❌ Error in Fetch origin/cursor/analyze-improve-and-deploy-application-6912: Command failed: git fetch origin cursor/analyze-improve-and-deploy-application-6912
+fatal: couldn't find remote ref cursor/analyze-improve-and-deploy-application-6912
+
+[2025-09-08T20:45:09.845Z] ❌ Failed to merge cursor/analyze-improve-and-deploy-application-6912: Command failed: git fetch origin cursor/analyze-improve-and-deploy-application-6912
+fatal: couldn't find remote ref cursor/analyze-improve-and-deploy-application-6912
+
+[2025-09-08T20:45:09.845Z] 🔧 Attempting to resolve conflicts for: cursor/analyze-improve-and-deploy-application-6912
+[2025-09-08T20:45:09.845Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:45:09.921Z] ✅ Success: Get git status
+[2025-09-08T20:45:09.921Z] 📄 Found 0 conflicted files
+[2025-09-08T20:45:09.921Z] 🚀 Add resolved files: git add .
