@@ -37,7 +37,7 @@ class SimpleScriptFixer {
       const originalContent = content;
       
       // Remove merge conflict markers
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?      content = content.replace(/<<<<<<< HEAD[\s\S]*?      content = content.replace(/=======[\s\S]*?      
+      content = content.replace(/[\s\S]*?      content = content.replace(/
       // Remove cursor branch references
       content = content.replace(/cursor\/[^;]+;/g, '');
       

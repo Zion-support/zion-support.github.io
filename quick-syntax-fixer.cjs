@@ -35,15 +35,21 @@ class QuickSyntaxFixer {;
         this.log(`File not found: ${filePath}`, 'WARNING');
         return false;
       }
->>>>>>> origin/chore/fix-lint-and-merge
+
 
       const content = fs.readFileSync(filePath, 'utf8');
       let fixedContent = content;
 
+>>>>>>> merged-prs-20250907-203621=======
+[\s\S]*?        .replace(/^>>>>>>>.*$/gm, ')
+
+
         .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor
@@ -92,8 +98,8 @@ class QuickSyntaxFixer {;
 
 const fixer = new QuickSyntaxFixer();
 fixer.run().catch(console.error);
->>>>>>> origin/chore/fix-lint-and-merge
-=======
+
+
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+

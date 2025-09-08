@@ -1,18 +1,3 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-export interface User {
-  id: string;
-  email: string;
-  name?: string;
-  avatar?: string;
-  role?: string;
-}
-
-export interface AuthState {
-  isAuthenticated: boolean;
-  user: User | null;
-  isLoading: boolean;
-  error: string | null;
 }
 
 export interface AuthContextType extends AuthState {
@@ -20,60 +5,41 @@ export interface AuthContextType extends AuthState {
   logout: () => Promise<void>;
   register: (email: string, password: string, name?: string) => Promise<void>;
   clearError: () => void;
-}
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
 
-export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+  const login = async (email: string, password: string) => {
+    setLoading(true);
+    // Simulate login
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setUser({ id: '1', email, name: 'User' });
+    setLoading(false);
+  };
 
-// Remove this since we have useAuth in hooks/useAuth.ts
+  const logout = () => {
+    setUser(null);
+  };
 
-interface AuthProviderProps {
-  children: ReactNode;
-}
+  return (
+    <AuthContext.Provider value={{ 
+      user, 
+      isAuthenticated: !!user, 
+      login, 
+      logout, 
+      loading 
+    }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
-export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [authState, setAuthState] = useState<AuthState>({
-    isAuthenticated: false,
-    user: null,
-    isLoading: true,
-    error: null,
-  });
-
-  useEffect(() => {
-    // Check for existing session
-    const checkAuth = async () => {
-      try {
-        // Mock authentication check
-        const token = localStorage.getItem('auth_token');
-        if (token) {
-          // In a real app, validate the token with your backend
-          setAuthState({
-            isAuthenticated: true,
-            user: {
-              id: '1',
-              email: 'user@example.com',
-              name: 'Demo User',
-            },
-            isLoading: false,
-            error: null,
-          });
-        } else {
-          setAuthState(prev => ({ ...prev, isLoading: false }));
-        }
-      } catch (error) {
-        setAuthState({
-          isAuthenticated: false,
-          user: null,
-          isLoading: false,
-          error: 'Authentication check failed',
-        });
-      }
-    };
-
-    checkAuth();
-  }, []);
-
-  const login = async (email: string, _password: string) => {
-    setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
+export const useAuth = () => {  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+  const login = async (email: string, password: string) => {    setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
     
     try {
       // Mock login - in a real app, call your authentication API
@@ -173,4 +139,3 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-};

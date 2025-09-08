@@ -1,14 +1,12 @@
-import { _useState } from 'react';
-import { _Link } from 'react-router-dom';
-import { _Menu, _X, _Search } from 'lucide-react';
-
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search } from 'lucide-react';
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 _sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
@@ -39,10 +37,9 @@ export function AppHeader() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 _hover:text-blue-600 p-2"
+              className="text-gray-700 hover:text-blue-600 p-2"
             >
-              {mobileMenuOpen ? <X size={_24} /> : <Menu size={_24} />}
-            </button>
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}            </button>
           </div>
         </div>
 
@@ -59,29 +56,25 @@ export function AppHeader() {
               </Link>
               <Link
                 to="/about"
-                className="text-gray-700 _hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"                onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 to="/services"
-                className="text-gray-700 _hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"                onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-700 _hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"                onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 to="/blog"
-                className="text-gray-700 _hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"                onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
               </Link>

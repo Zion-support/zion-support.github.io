@@ -1,6 +1,6 @@
 [build]
-  # Build the project on Netlify
-  command = "npm install && npm run build"
+  # Build the Vite project on Netlify
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -8,7 +8,7 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  NPM_FLAGS = "--omit=optional"
+  NPM_FLAGS = "--legacy-peer-deps"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NETLIFY_FUNCTIONS_TIMEOUT = "30"
   # Avoid optional binary downloads (electron, playwright, cypress)
@@ -26,11 +26,10 @@
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "echo 'Skipping build; using prebuilt out/ directory'"
 
 [context.branch-deploy]
-  command = "npm ci --no-audit --no-fund && npm run build"
-
+  command = "echo 'Skipping build; using prebuilt out/ directory'"
 # Vite/React SPA configuration
 [[redirects]]
   from = "/*"

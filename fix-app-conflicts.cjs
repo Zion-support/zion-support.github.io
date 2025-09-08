@@ -28,40 +28,11 @@ function fixMergeConflicts(filePath) {
           takeHead = true;
           continue;
         } else if (line.includes('')) {
-          inConflict = false;
-          continue;
-        }
-        
-        if (!inConflict || takeHead) {
-          resolvedLines.push(line);
-        }
-      }
-      
-      const resolvedContent = resolvedLines.join('\n);
-      fs.writeFileSync(filePath, resolvedContent, utf8');
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
 
-function findAndFixConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      findAndFixConflicts(filePath);
-    } else if (file.endsWith('.tsx) || file.endsWith(.ts') || file.endsWith('.jsx) || file.endsWith(.js')) {
-      fixMergeConflicts(filePath);
-    }
-  }
-}
+console.log('Fixing merge conflicts in app directory...);
+findAndFixConflicts(./app');
+console.log('Merge conflicts fixed!');
 
-// Fix conflicts in app directory
 console.log('Fixing merge conflicts in app directory...');
 findAndFixConflicts('./app');
 console.log('Merge conflicts fixed!');

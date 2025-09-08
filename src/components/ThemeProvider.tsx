@@ -1,8 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
+<<<<<<< HEAD
 type Theme = 'light' | 'dark' | 'system';
 
-interface ThemeContextType {
+=======export type Theme = 'light' | 'dark' | 'system';
+
+interface ThemeContextValue {
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   theme: Theme;
   setTheme: (theme: Theme) => void;
   actualTheme: 'light' | 'dark';

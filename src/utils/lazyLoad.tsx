@@ -1,72 +1,19 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy, ComponentType } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner';
-
-// Loading fallback component
-const LoadingFallback = ({ size = 'medium' }: { size?: 'small' | 'medium' | 'large' }) => (
-  <div className="flex items-center justify-center p-4">
-    <LoadingSpinner size={size} />
-  </div>
-);
-
-// Higher-order component for lazy loading
-export const withLazyLoad = <P extends object>(
-  Component: ComponentType<P>,
-  fallbackSize: 'small' | 'medium' | 'large' = 'medium'
+// Generic lazy loading utility
+export const lazyLoad = <T extends ComponentType<any>>(
+  importFn: () => Promise<{ default: T }>
 ) => {
-  return (props: P) => (
-    <Suspense fallback={<LoadingFallback size={fallbackSize} />}>
-      <Component {...props} />
-    </Suspense>
-  );
+  return lazy(importFn);
 };
 
-// Lazy load pages
-export const LazyHome = lazy(() => import('../pages/Home'));
+import React, { lazy } from 'react';
+
+// Lazy loaded pagesexport const LazyHome = lazy(() => import('../pages/Home'));
 export const LazyAbout = lazy(() => import('../pages/About'));
 export const LazyContact = lazy(() => import('../pages/Contact'));
 export const LazyNotFound = lazy(() => import('../pages/NotFound'));
-
-// Lazy load components
-export const LazyAnalytics = lazy(() => import('../components/Analytics'));
-export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceMonitor'));
-
-// Utility function to preload components
-export const preloadComponent = (importFn: () => Promise<unknown>) => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.as = 'script';
-  link.href = importFn.toString();
-  document.head.appendChild(link);
-};
-
-// Intersection Observer for lazy loading images
-export const useIntersectionObserver = (
-  ref: React.RefObject<HTMLElement>,
-  options: IntersectionObserverInit = {}
-) => {
-  const [isIntersecting, setIsIntersecting] = React.useState(false);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.1, ...options }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [ref, options]);
-
-  return isIntersecting;
-};
 
 // Lazy image component
 interface LazyImageProps {
@@ -128,3 +75,7 @@ export default {
   useIntersectionObserver,
   LazyImage,
 };
+=======
+// Lazy loaded components
+export const LazyAnalytics = lazy(() => import('../components/PerformanceDashboard'));
+export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceOptimizations'));>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
