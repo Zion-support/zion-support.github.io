@@ -17,7 +17,8 @@ import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { ModeToggle } from '@/components/ModeToggle';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -100,7 +101,9 @@ export function PrimaryNav() {
                     });
                   }
                 }}
-                searchSuggestions={suggestions}
+                suggestions={suggestions}
+                placeholder={t('nav.search_placeholder', 'Search...')}
+                className="w-full"
               />
             </form>
             
@@ -153,7 +156,7 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-            {isLoggedIn && <UserMenu />}
+              {isLoggedIn && <UserMenu />}
             </div>
           </div>
           
