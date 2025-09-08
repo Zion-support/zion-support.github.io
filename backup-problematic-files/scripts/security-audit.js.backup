@@ -1,14 +1,13 @@
+<<<<<<< HEAD
 export const Security-audit = () => {
   // Implementation here
   return null
   // Implementation here;
   return null;
 
-<<<<<<< HEAD
-};
-
-
+export default Security-audit;
 =======
-pr-12325
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+>>>>>>> main

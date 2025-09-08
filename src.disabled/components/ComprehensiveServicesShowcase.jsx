@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-" " " """;"";";"""
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 " " " """;"";";"""
 
 ' \' \' \''\';\'";\";
 " " " """;"";";"""
 
-=======
-
-
-" " " """;"";";"""
-ursor/add-new-services-and-deploy-updates-0462
->>>>>>> main
 

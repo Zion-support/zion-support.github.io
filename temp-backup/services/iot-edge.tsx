@@ -13,7 +13,3 @@ export default function Iotedge(): any ({ }: IotedgeProps) {;
     </div>;
   );
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main

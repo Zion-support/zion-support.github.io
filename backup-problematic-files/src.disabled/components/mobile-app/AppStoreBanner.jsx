@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 interface AppStoreBannerProps {
   // Add props here as needed
@@ -29,14 +28,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
-=======
-
->>>>>>> main
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);'
   }
   render() {
@@ -48,17 +39,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <p>This component is under development.</p>
     </div>
 
-<<<<<<< HEAD
   );
 };
 
 export default AppStoreBanner;
-=======
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  );
-};
-
-
->>>>>>> main

@@ -7,32 +7,6 @@ const getRelativeTime = () => {;
 
 }` ;
 
-<<<<<<< HEAD
-=======
-}` ;`}
-}if (success) {toast ({"title": `Interview $ {status ;`}`;`}setIsLoading (false)}}setIsLoading (false)}const getStatusBadge = () => {switch (interview.status) {';'
-  }
-  case 'requested': "default": return <Badge> {interview.status ;'
-};
-if (success) {;
-  }
-  toast ({;
-  }
-  "title": `Interview $ {;`  }
-  status ;
-}`;`
-}setIsLoading (false) 
-};
-}setIsLoading (false) 
-};
-  }
-  switch (interview.status) {';'
-  }
-  case 'requested': "default": return <Badge> {;'
-  }
-  interview.status ;
-}</Badge> ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 };
 if (success) {;
@@ -71,7 +45,3 @@ pr-12325
   isLoading ;
 }/> </DialogContent> </Dialog> </Card>) ;
 }'"
-=======
-}/> </DialogContent> </Dialog> </Card>) ;
-
->>>>>>> main

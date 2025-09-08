@@ -1,7 +1,1 @@
 
-<<<<<<< HEAD
-=======
-
-import _React from';react''';'';
-
->>>>>>> main

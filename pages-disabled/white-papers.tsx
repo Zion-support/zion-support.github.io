@@ -11,7 +11,6 @@ import { Card } from
   '../components/ui/Card';
 import { Badge } from
   '../components/ui/Badge';
->>>>>>> origin/main
 import { 
   FileText, Download,
   Calendar, User,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 interface Login.testProps {
   // TODO: Implement
@@ -16,11 +15,3 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
 pr-12325
 
 export default Login.test;
-=======
-
-    <div className={className || }>
-</div>
-
-
-
->>>>>>> main

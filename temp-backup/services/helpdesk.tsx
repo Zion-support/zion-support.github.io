@@ -13,7 +13,3 @@ export default function Helpdesk(): any ({ }: HelpdeskProps) {;
     </div>;
   );
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main

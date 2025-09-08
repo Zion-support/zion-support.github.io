@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> main
 import React from 'react';
 
 const Cart = ({ className }) => {
@@ -29,6 +31,8 @@ const Cart = ({ className }) => {
   );
 };
 
-
+<<<<<<< HEAD
+export default Cart;
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+>>>>>>> main

@@ -183,4 +183,3 @@ export const ReplyCard = ({
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD

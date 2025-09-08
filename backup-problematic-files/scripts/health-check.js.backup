@@ -1,14 +1,13 @@
+<<<<<<< HEAD
 export const Health-check = () => {
   // Implementation here
   return null
   // Implementation here;
   return null;
 
-<<<<<<< HEAD
-};
-
-
+export default Health-check;
 =======
-pr-12325
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+>>>>>>> main

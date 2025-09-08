@@ -427,4 +427,3 @@ function ApiKeysManager() {
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD

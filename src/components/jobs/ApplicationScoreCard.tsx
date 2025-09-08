@@ -510,4 +510,3 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD

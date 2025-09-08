@@ -119,4 +119,3 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
-<<<<<<< HEAD

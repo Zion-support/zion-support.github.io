@@ -254,6 +254,5 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs."
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }

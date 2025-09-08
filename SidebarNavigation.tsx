@@ -1,23 +1,16 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 ;
 const SidebarNavigation: React.FC = () => {
   const [is_open, setIsOpen] = useState (false);
 ;
   const navigation_items = [;
 
-<<<<<<< HEAD
     { name: 'Home', href: '/', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings }
   ];
 
 ;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -59,7 +52,6 @@ const SidebarNavigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -130,16 +122,3 @@ import React,{ useState } from \'react\'; import { Link,useLocation } from \'rea
 }
 ;
 export default SidebarNavigation;
-=======
-
-
-
-
-;
-
-
-
-
-
-
->>>>>>> main

@@ -123,11 +123,6 @@ export const 'PerformanceOptimizer': 'React.FC = () => {''';'
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;''',';';'
           'networkLatency': '});'
         // 'Check': if performance is optimized;'
-<<<<<<< HEAD
-=======
-          "networkLatency": "});"
-        // "Check": if performance is optimized;"
->>>>>>> origin/resolved-merge-conflicts
         const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance)
       )}';
@@ -136,16 +131,9 @@ export const 'PerformanceOptimizer': 'React.FC = () => {''';'
 }';';';'
 };';';';';';
     // Measure: performance after page load',';';';';
-=======
-    // 'Measure': performance after page load',';';';';'
->>>>>>> main
         setIsOptimized(isGoodPerformance);
       )'}'
           'networkLatency': }
-<<<<<<< HEAD
-=======
-          "networkLatency": }
->>>>>>> origin/resolved-merge-conflicts
     );
         // "Check": if performance is optimized,
         setIsOptimized(isGoodPerformance))}
@@ -164,10 +152,6 @@ export const 'PerformanceOptimizer': 'React.FC = () => {''';'
     if (document.readyState === 'complete') {',',';';
     ;
       }
-<<<<<<< HEAD
-=======
-    // 'Measure': 'performance after page load'',';';'
->>>>>>> main
       measurePerformance()} 'else': '{;'
       }
       window.addEventListener('load'', measurePerformance);'}';';';'

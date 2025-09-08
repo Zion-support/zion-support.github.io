@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
->>>>>>> main
-import React from 'react';
-
-<<<<<<< HEAD
 
   return (
     <div className={className || ''}>
@@ -24,5 +8,3 @@ import React from 'react';
 
 
 export default EquipmentDetail;
-=======
->>>>>>> main

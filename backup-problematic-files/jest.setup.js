@@ -93,9 +93,6 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -115,10 +112,3 @@ beforeEach(() => {
 };
 };
 :backup-problematic-files/jest.setup.js
-=======
-
-};
-
-
-
->>>>>>> main

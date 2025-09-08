@@ -25,4 +25,3 @@
     user;
     isLoading}
 }
-<<<<<<< HEAD

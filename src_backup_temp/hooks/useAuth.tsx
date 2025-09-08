@@ -1,8 +1,4 @@
     localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}return { "success": tru e, "user": mockUse r }// Clear localStorage;'
-<<<<<<< HEAD
-=======
-    localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}return { "success": tru e, "user": mockUse r }}// Clear localStorage;'
->>>>>>> origin/resolved-merge-conflicts
     localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}const register = async ("email": string, "password": string, "name": string) => {// Mock registration - in real app this would call an API;'
     }
     const "mockUser": Use r = {"id": '1',email,name,"role": 'user',"userType": 'individual',"displayName": nam e,"avatarUrl": '/default-avatar.png';'
@@ -96,10 +92,6 @@ localStorage.setItem('zion_user', JSON.stringify(updatedUser));'
     logout,
     register,
 :src/hooks/useAuth.tsx,
-<<<<<<< HEAD
-=======
-    return { "success": tru e, "user": mockUse r };
->>>>>>> main
 updateProfile}
 ''
     updateProfile

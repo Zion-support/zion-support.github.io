@@ -565,4 +565,3 @@ export function TeamManagement() {;
                 </TableCell>;
               </TableRow>;
             ))}
-<<<<<<< HEAD

@@ -1,9 +1,5 @@
 
 console && console.log('🔒 Setting up security headers...');
 console && console.log('✅ Security headers setup completed');
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 #!/usr / bin / env node;
 

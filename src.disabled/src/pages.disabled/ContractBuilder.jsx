@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };=======
-=======
-=======
-
->>>>>>> main
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
 
 
@@ -17,39 +10,3 @@ const React from "react";"""; import SEO from "@/components/SEO";"""; import { P
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
 
 
-<<<<<<< HEAD
-=======
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)}
-}
-}
-
-export default ContractBuilderPage;
-}
-}
-
-export default ContractBuilderPage;
-}
-}
-
-export default ContractBuilderPage;
-}
-}
-
-export default ContractBuilderPage;
-}
-}
-
-export default ContractBuilderPage;
-}
-}
-
-export default ContractBuilderPage;
-}
-}
-
-export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
->>>>>>> origin/main
-=======
->>>>>>> main

@@ -13,7 +13,3 @@ export default function Consulting(): any ({ }: ConsultingProps) {;
     </div>;
   );
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/components-catalog-runner.js
 :backup-problematic-files/netlify/functions/components-catalog-runner.js
 const path = require('path'),;
@@ -52,26 +51,9 @@ exports.handler = async () => {
   );
 
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-=======
-
-
->>>>>>> main
-  return { statusCode: 200, body: logs.join('\n') }
-
-
-:netlify/functions/components-catalog-runner.js
-};  step('components:catalog', () => runNode('automation/components-catalog.cjs'))
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
-  return { statusCode: 200, body: logs.join('\n') }
-
-<<<<<<< HEAD
 },
 main:netlify/functions/components-catalog-runner.js
 :backup-problematic-files/netlify/functions/components-catalog-runner.js
 :netlify/functions/components-catalog-runner.js
 main:netlify/functions/components-catalog-runner.js
 :backup-problematic-files/netlify/functions/components-catalog-runner.js
-=======
-
-
->>>>>>> main

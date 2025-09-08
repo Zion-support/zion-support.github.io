@@ -87,4 +87,3 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD

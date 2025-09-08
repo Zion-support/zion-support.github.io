@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
@@ -152,15 +151,3 @@ class PerformanceOptimizer {
     console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
 
-<<<<<<< HEAD
-=======
->>>>>>> main
-    this && this.log('⚡ Starting performance optimization');
-    const files = glob && glob.sync('**/*.{js,jsx,ts,tsx}', {
-      "cwd": this && this.srcDir,
-        results && results.errors.push({ file, error: error && error.message });
-        this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`);
-      }
-    fs && fs.writeFileSync(scriptPath, monitoringScript);
-    this && this.log(`✅ Performance monitoring script created: ${scriptPath}`);
-  }

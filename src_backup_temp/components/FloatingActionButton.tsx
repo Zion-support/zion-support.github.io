@@ -1,8 +1,4 @@
   }, []), [])}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;'
-<<<<<<< HEAD
-=======
-  }}, []), [])}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;'
->>>>>>> origin/resolved-merge-conflicts
       mediaQuery.addEventListener('change', handleChange);';';'
       return () => mediaQuery.removeEventListener('change', handleChange)} else {'
 }, []);, []);
@@ -525,9 +521,6 @@ case 'top-right':''
 key={action.id}``                  className={``                    }
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
                     ${action.color} text-white transform opacity-0 scale-75;
-<<<<<<< HEAD
-=======
->>>>>>> main
     "hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{"
 `';'
                     }
@@ -540,13 +533,6 @@ key={action.id}``                  className={``                    }
 ``                    }
                     "animationDelay": `${index * 100}"ms`,`                    "animation": 'slideInUp 0.3s ease-out forwards''
                   }
-<<<<<<< HEAD
-=======
-"hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{{"
-``                    }
-                    "animationDelay": `${index * 100}}"ms`,`                    "animation": 'slideInUp 0.3s ease-out forwards''
-                  }}
->>>>>>> origin/resolved-merge-conflicts
                 >
                   <action.icon size={20} />""
                   <span className="whitespace-nowrap text-sm font-medium">"
@@ -694,7 +680,4 @@ export default FloatingActionButton;
 </any>
 </FloatingActionButtonProps>
 </any>';'
-<<<<<<< HEAD
-=======
->>>>>>> main
 </FloatingActionButtonProps>;';';'

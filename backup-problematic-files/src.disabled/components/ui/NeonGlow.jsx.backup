@@ -1,5 +1,5 @@
-
 <<<<<<< HEAD
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,11 +18,11 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> main
 import React from 'react';
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -95,10 +95,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   )
 };
 
-
-<<<<<<< HEAD
-
+export default NeonGlow;
 =======
-    </div>'
-pr-12325
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> main

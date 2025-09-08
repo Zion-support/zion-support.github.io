@@ -57,9 +57,6 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
@@ -99,8 +96,3 @@ onDismiss ;
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/notifications/NotificationItem.tsx
-=======
-
-
-
->>>>>>> main

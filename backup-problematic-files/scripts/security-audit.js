@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const Security-audit = () => {
   // Implementation here
   return null
@@ -6,8 +5,3 @@ export const Security-audit = () => {
   return null;
 
 export default Security-audit;
-=======
-};
-
-
->>>>>>> main

@@ -17,9 +17,3 @@ export default function Apiquickstart({ }: ApiquickstartProps) {
     </div>
   );
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> main

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDetail } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputeDetailPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/> <DisputeDetail /> ></div> </ProtectedRoute>)}; export { DisputeDetailPage }; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage };=======
-=======
-=======
-
->>>>>>> main
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDetail } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputeDetailPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/> <DisputeDetail /> ></div> </ProtectedRoute>)}; export { DisputeDetailPage }; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage };
 
 
@@ -17,32 +10,3 @@ const React from "react";"""; import SEO from "@/components/SEO";"""; import { D
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDetail } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputeDetailPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/> <DisputeDetail /> ></div> </ProtectedRoute>)}; export { DisputeDetailPage }; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage };
 
 
-<<<<<<< HEAD
-=======
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDetail } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputeDetailPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/> <DisputeDetail /> ></div> </ProtectedRoute>)}; export { DisputeDetailPage };
-}
-
-export default DisputeDetailPage;
-}
-
-export default DisputeDetailPage;
-}
-
-export default DisputeDetailPage;
-}
-
-export default DisputeDetailPage;
-}
-
-export default DisputeDetailPage;
-}
-
-export default DisputeDetailPage;
-}
-
-export default DisputeDetailPage; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage };
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDetail } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputeDetailPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/> <DisputeDetail /> ></div> </ProtectedRoute>)}; export { DisputeDetailPage }; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage };
-import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDetail } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputeDetailPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/> <DisputeDetail /> ></div> </ProtectedRoute>)}; export { DisputeDetailPage }; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export default DisputeDetailPage; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage }; export { DisputeDetailPage };
->>>>>>> origin/main
-=======
->>>>>>> main

@@ -472,4 +472,3 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD

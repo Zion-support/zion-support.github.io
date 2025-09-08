@@ -316,4 +316,3 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
       </div>;
     </div>;
   );
-<<<<<<< HEAD

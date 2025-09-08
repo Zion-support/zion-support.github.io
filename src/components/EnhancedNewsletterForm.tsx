@@ -103,13 +103,6 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>);
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> main
             type="email"
             id="enhanced-newsletter-email"
             name="email"

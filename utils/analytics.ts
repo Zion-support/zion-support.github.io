@@ -31,24 +31,3 @@ export type TrackEventPayload = {
 
   }
 }
-=======
-
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON.stringify(payload);
-      keepalive: true as any});
-
-  }
-}
-  } catch (error) {
-    // swallow;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

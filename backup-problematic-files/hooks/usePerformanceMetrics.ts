@@ -1,8 +1,3 @@
-
-const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-
-<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
@@ -52,7 +47,6 @@ export function usePerformanceMetrics() {
     }
     setIsSupported(true);
     const measurePerformance = () => {
->>>>>>> origin/cursor/delete-old-data-records-6bba
       const navigationEntries =
         window.performance.getEntriesByType("navigation");
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
@@ -108,28 +102,9 @@ export function usePerformanceMetrics() {;
   return { metrics, isSupported }
 :hooks/usePerformanceMetrics.ts
 }
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> main
-
-  return { metrics, isSupported }
-
-
-<<<<<<< HEAD
   return { metrics, isSupported };
 }
 main:hooks/usePerformanceMetrics.ts
 }
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
-=======
->>>>>>> main

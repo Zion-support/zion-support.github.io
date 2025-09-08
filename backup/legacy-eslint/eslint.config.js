@@ -67,7 +67,6 @@ export default [
           jsx: true
         }
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-c8cb
     },
     plugins: {
       react,
@@ -358,6 +357,5 @@ export default [
       '*.sar',
       '*.nar'
     ]
->>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   }
 ];

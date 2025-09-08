@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 :hooks/useResponsive.ts
         "isDesktop":width >= 1024})}
     updateDimensions();
@@ -17,22 +15,6 @@ export default useResponsive,;import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
 import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
-=======
-
->>>>>>> main
-
-  'resize', updateDimensions)}, []);
-
-}
-const defaultBreakpoints: Breakpoints = {
-  sm: 640
-  md: 768
-  lg: 1024
-  xl: 1280
-  '2xl': 1536
-}
-
-<<<<<<< HEAD
     updateDimensions(),
     window.addEventListener(
   'resize', updateDimensions),
@@ -64,7 +46,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     window.addEventListener(,)
   'resize', updateDimensions);
 
-<<<<<<< HEAD
     return () => window.removeEventListener(;
   'resize', updateDimensions)}, []);
   return state};
@@ -93,19 +74,3 @@ origin/main
 :backup-problematic-files/hooks/useResponsive.ts
 main:hooks/useResponsive.ts
 :backup-problematic-files/hooks/useResponsive.ts
-=======
-
-    return () => window.removeEventListener(;
-  'resize', updateDimensions)}, []);
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> main

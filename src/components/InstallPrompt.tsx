@@ -207,4 +207,3 @@ export default InstallPrompt,;
 },
 export default InstallPrompt,
 ;
-<<<<<<< HEAD

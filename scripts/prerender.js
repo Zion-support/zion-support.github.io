@@ -24,7 +24,6 @@
 }
 
 prerender().catch((err) => {
->>>>>>> origin/main
   // // // // // // // console.error('"Error": prerendering:', err)';
 process.exit(1);process.exit(1)})}
         "name": ';alias',

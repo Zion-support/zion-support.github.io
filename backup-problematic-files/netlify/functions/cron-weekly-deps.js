@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
 const { upsertFile } = require('./_lib/github'),;
@@ -47,24 +46,6 @@ const fs = require('fs');
 const path = require('path');
 async function getLatest(pkg) {
   try {
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> main
-
-  // TODO: Implement
-}
-
-
-exports.handler = async function () {
-  // TODO: Implement
-
-
-
-
-<<<<<<< HEAD
   } catch (_) {
     return null
   }
@@ -72,14 +53,6 @@ exports.handler = async function () {
 :netlify/functions/cron-weekly-deps.js
 exports.handler = async function() {
   try {
-=======
-
->>>>>>> main
-
-
-
-
-<<<<<<< HEAD
     const entries = [],
     for (const [name, current] of Object.entries(deps)) {
       const latest = await getLatest(name),
@@ -97,18 +70,6 @@ exports.handler = async function() {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
-=======
->>>>>>> main
-
-  }
-
-
-},
-
-
-
-
-<<<<<<< HEAD
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
   } catch (e) {
@@ -128,5 +89,3 @@ main:netlify/functions/cron-weekly-deps.js
 }
 main:netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
-=======
->>>>>>> main

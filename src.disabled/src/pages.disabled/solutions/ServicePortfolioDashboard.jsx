@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() {}; return null} )}=======import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() {}; return null} )}
-=======
-=======
-
->>>>>>> main
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() {}; return null} )}
 
 
@@ -30,13 +23,3 @@ import _React from "react"; import Link from "next/link"; import { ArrowRight,Ph
 
 
 
-<<<<<<< HEAD
-=======
-import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; );
-}
-
-export default function Serviceportfoliodashboard() {}; return null} )}
-import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() {}; return null} )}
->>>>>>> origin/main
-=======
->>>>>>> main

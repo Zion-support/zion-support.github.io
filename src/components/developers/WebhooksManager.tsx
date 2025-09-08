@@ -1272,4 +1272,3 @@ clearTestResult ()
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD

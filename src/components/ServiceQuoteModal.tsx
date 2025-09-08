@@ -458,11 +458,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       </DialogContent>
     </Dialog>
   )
-=======
-...formData;            startDate: startDate?.toISOString()
-            endDate: endDate?.toISOString()}
-        }
-      })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 ;

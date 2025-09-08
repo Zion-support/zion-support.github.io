@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
     return format(new Date(dateString), 'PP');
   } catch (e) {;
     return dateString;
@@ -12,5 +10,3 @@
 
   }
 },; 
-=======
->>>>>>> main

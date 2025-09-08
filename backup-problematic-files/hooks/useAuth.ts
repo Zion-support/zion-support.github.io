@@ -1,15 +1,3 @@
-
-
-interface User {
-  // TODO: Implement
-}
-  id: string;,
-  email: string;
-  name: string;
-
-}
-
-<<<<<<< HEAD
 interface User {
   id: string;
   email: string;
@@ -30,20 +18,3 @@ export const useAuth = () => {;
     user
     loading
     login: (email: string, password: string) => {
-=======
-;
-
-
->>>>>>> main
-
-      // Simulate login;
-      set_user ({ id: "1", email, name: "User" });
-    },
-    logout: () => {
-      set_user (null);
-    },
-  }
-}
-
-;
-

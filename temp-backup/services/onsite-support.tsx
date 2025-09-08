@@ -13,7 +13,3 @@ export default function Onsitesupport(): any ({ }: OnsitesupportProps) {;
     </div>;
   );
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main

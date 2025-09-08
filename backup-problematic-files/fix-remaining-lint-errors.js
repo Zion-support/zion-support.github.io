@@ -36,9 +36,6 @@
     } catch (error) {;
       // Skip files that can't be accessed'};
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       continue;
 };
 // Function to fix specific parsing errors;
@@ -53,9 +50,6 @@
     _,'
 }
 };
-=======
-
->>>>>>> main
         fixedCount++}
     } catch (error) {_;
 
@@ -75,7 +69,3 @@
   };
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-<<<<<<< HEAD
-=======
-
->>>>>>> main

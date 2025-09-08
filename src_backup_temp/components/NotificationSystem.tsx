@@ -55,10 +55,6 @@ initial={ "opacity": 0 }
                                     markAsRead(notification.id)}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 "hover": "b g-zion-cyan/20 text-zion-cyan rounded transition-colors";"
                                     markAsRead(notification.id)}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 "hover": b g-zion-cyan/20 text-zion-cyan rounded transition-colors""
   return { addNotification };
-<<<<<<< HEAD
-=======
-  return { addNotification }};
->>>>>>> origin/resolved-merge-conflicts
 // Utility functions for common notification types';'
 export ';';'
         "priority": 'medium',';';'
@@ -126,7 +122,4 @@ export ';';'
 </any>
 </NotificationSettings>
 </Notification>';'
-<<<<<<< HEAD
-=======
->>>>>>> main
 </NotificationSystemProps>;';';'

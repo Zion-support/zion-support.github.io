@@ -21,10 +21,6 @@ setNewEntry ({;
   version: "";"
 date: new Date () .toISOString () .split ('T') [0] || new Date () .toLocaleDateString ('en-CA');""
 };";""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<Card className=" bg-zion-blue border-zion-purple/30"> <CardHeader> <CardTitle>Version History</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex flex-col md:flex-row gap-3"> <div className=" flex-1 grid grid-cols-2 gap-3"> <Input /> </div> <Button onClick={;
->>>>>>> origin/resolved-merge-conflicts
   handleAddEntry ;"
 }disabled= {;""
   !newEntry.version || !newEntry.changes ";""

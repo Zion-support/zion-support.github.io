@@ -360,7 +360,6 @@ const AIQuantumHybridPlatform: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold">{feature.title}</h3>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
@@ -388,7 +387,6 @@ const AIQuantumHybridPlatform: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 20 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 
 
@@ -439,7 +437,6 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 
                 <div className="text-purple-400 font-semibold text-lg">
                   {useCase.price}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </motion.div>
             ))}

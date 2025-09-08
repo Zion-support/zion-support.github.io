@@ -335,26 +335,6 @@ export const 'EnhancedFooter': React.FC = () => {
             </div>;
             <div className='flex items-center'>;'
               <Globe className='w-4 h-4 mr-2 text-purple-400' />;'
-<<<<<<< HEAD
-=======
-      <div className="border-t border-gray-800 bg-gray-800">;"
-        <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-4">;"
-          <div className="flex flex-col "md":flex-row items-center justify-center space-y-2 "md":space-y-0 "md":space-x-8 text-sm text-gray-400">;"
-            <div className="flex items-center">;"
-              <Shield className="w-4 h-4 mr-2 text-green-400" />;"
-              <span>Enterprise Security</span>;
-            </div>;
-            <div className="flex items-center">;"
-              <Award className="w-4 h-4 mr-2 text-yellow-400" />;"
-              <span>Certified Solutions</span>;
-            </div>;
-            <div className="flex items-center">;"
-              <Clock className="w-4 h-4 mr-2 text-blue-400" />;"
-              <span>24/7 Support</span>;
-            </div>;
-            <div className="flex items-center">;"
-              <Globe className="w-4 h-4 mr-2 text-purple-400" />;"
->>>>>>> origin/resolved-merge-conflicts
               <span>Global Reach</span>;
             </div>;
           </div>;
@@ -364,26 +344,6 @@ export const 'EnhancedFooter': React.FC = () => {
   )
 };
 ';'
-<<<<<<< HEAD
-=======
-'}<div className='border-t border-gray-800 bg-gray-800'>;'
-        <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8 py-4'>;'
-          <div className='flex flex-col 'md':flex-row items-center justify-center space-y-2 'md':space-y-0 'md':space-x-8 text-sm text-gray-400'>;'
-            <div className='flex items-center'>;'
-              <Shield className='w-4 h-4 mr-2 text-green-400' />;'
-              <span>Enterprise Security</span>;
-            </div>;
-            <div className='flex items-center'>;'
-              <Award className='w-4 h-4 mr-2 text-yellow-400' />;'
-              <span>Certified Solutions</span>;
-            </div>;
-            <div className='flex items-center'>;'
-              <Clock className='w-4 h-4 mr-2 text-blue-400' />;'
-              <span>24/7 Support</span>;
-            </div>;
-            <div className='flex items-center'>;'
-              <Globe className='w-4 h-4 mr-2 text-purple-400' />;'
->>>>>>> main
 export default EnhancedFooter;';';'
 ;
 export default EnhancedFooter;

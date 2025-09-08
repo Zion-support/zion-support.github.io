@@ -291,9 +291,6 @@ export default function ComprehensiveInnovativeServices() {
                         <span className="text-green-400 font-semibold">{service.currency}{service.price}/mo</span>
                       </div>
                       <div className="flex items-center justify-between text-sm mt-1">
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3843
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                         <span className="text-zion-cyan/70">Delivery:</span>
                         <span className="text-white font-semibold">{service.estimatedDelivery}</span>
                       </div>

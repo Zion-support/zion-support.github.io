@@ -160,4 +160,3 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
-<<<<<<< HEAD

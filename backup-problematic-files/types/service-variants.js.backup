@@ -1,14 +1,13 @@
+<<<<<<< HEAD
 export const Analytics = () => {
   // Implementation here
   return null
   // Implementation here;
   return null;
 
-<<<<<<< HEAD
-};
-
-
+export default Analytics;
 =======
-pr-12325
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+>>>>>>> main

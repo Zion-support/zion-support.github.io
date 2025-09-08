@@ -297,4 +297,3 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
-<<<<<<< HEAD

@@ -34,9 +34,3 @@ export default function Enterprise({ }: EnterpriseProps) {
     </div>
   );
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> main

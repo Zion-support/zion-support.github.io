@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 interface MainNavigationProps {
   // Add props here as needed
@@ -14,14 +13,6 @@ interface MainNavigationProps {
 :src.disabled/layout/MainNavigation.jsx
 }
 }
-=======
-
->>>>>>> main
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);'
   }
   render() {
@@ -35,9 +26,3 @@ interface MainNavigationProps {
 
 
 export default MainNavigation;
-=======
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-
->>>>>>> main

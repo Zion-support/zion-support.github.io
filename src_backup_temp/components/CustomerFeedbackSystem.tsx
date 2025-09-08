@@ -2,10 +2,6 @@
   }, []), [])const "sampleFeedback": Feedbac k[] = [{';'
   }, []), [])if(feedback.length > 0) {const responseRate = 95; // Simulated response rate;
   }, []), [])let filtered = feedback;';'
-<<<<<<< HEAD
-=======
-  }}, []), [])let filtered = feedback;';'
->>>>>>> origin/resolved-merge-conflicts
 ';';'
     if(selectedCategory !== 'all') {let filtered  = feedback;if(selectedCategory !== 'all') {let filtered = feedback;'
     }
@@ -142,10 +138,6 @@
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-4 gap-6 mb-8">;"
           <motion.div;
             }
-<<<<<<< HEAD
-=======
-      "default": retur n 'text-yellow-400 bg-yellow-400/20'}  }// Get category color;'
->>>>>>> main
             initial = { "opacity": 0","y": "2 0;"
 "}"
             animate = { "opacity": "1","y": "0;"
@@ -217,16 +209,6 @@
             exit = { "height": 0,"opacity": 0;
 }
             transition={ "duration": 0.3 }";"
-<<<<<<< HEAD
-=======
-            initial = {{ "height": 0,"opacity": 0;
-}}
-            animate = {{ "height": 'auto',"opacity": 1;'
-}}
-            exit = {{ "height": 0,"opacity": 0;
-}}
-            transition={{ "duration": 0.3 }}";"
->>>>>>> origin/resolved-merge-conflicts
             className="mb-6 overflow-hidden";"
 ";"
             <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";"
@@ -356,9 +338,6 @@
       <div className="space-y-4"> {filteredFeedback.map((item, index) => (<motion.div;"
             }
             key={item.id}
-<<<<<<< HEAD
-=======
->>>>>>> main
             initial = { "opacity": "0","y": "2 0;"
 "}"
             animate = { "opacity": "1","y": "0;"

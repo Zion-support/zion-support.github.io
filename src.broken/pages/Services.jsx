@@ -3,10 +3,6 @@
 }
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
 
     <div className={className || ''}>
@@ -16,9 +12,6 @@
   )
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> main
   );
 
 

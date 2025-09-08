@@ -13,7 +13,3 @@ export default function Marketplace(): any ({ }: MarketplaceProps) {;
     </div>;
   );
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main

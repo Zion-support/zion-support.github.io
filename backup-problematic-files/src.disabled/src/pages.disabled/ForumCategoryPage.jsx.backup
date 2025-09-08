@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> main
 import React from 'react';
 
 const ForumCategoryPage = ({ className }) => {
@@ -29,6 +31,8 @@ const ForumCategoryPage = ({ className }) => {
   );
 };
 
-
+<<<<<<< HEAD
+export default ForumCategoryPage;
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+>>>>>>> main

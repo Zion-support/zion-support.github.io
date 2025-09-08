@@ -53,11 +53,6 @@ pr-12243
   )export default function Page() {'<p    />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/automation</a></p><h2    />Purpose</h2><p    />Operational steps to execute reliably with measurable outcomes.</p><h2    />Checklist</h2><ol    /><li    />Define objectives, KPIs, and guardrails.</li><li    />Inventory data, models, tools, and constraints.</li><li    />Design evaluation and feedback loops upfront.</li><li    />Implement smallest viable slice with telemetry.</li><li    />Iterate, measure, and harden for production.</li></ol><h2    />Notes</h2><p class=\"text-white/75\"    />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';"
               '<p    />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/automation</a></p><h2    />Purpose</h2><p    />Operational steps to execute reliably with measurable outcomes.</p><h2    />Checklist</h2><ol    /><li    />Define objectives, KPIs, and guardrails.</li><li    />Inventory data, models, tools, and constraints.</li><li    />Design evaluation and feedback loops upfront.</li><li    />Implement smallest viable slice with telemetry.</li><li    />Iterate, measure, and harden for production.</li></ol><h2    />Notes</h2><p class=\"text-white/75\"    />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';
 
-<<<<<<< HEAD
-=======
-  )export default function Page() {'<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Purpose</h2><p />Operational steps to execute reliably with measurable outcomes.</p><h2 />Checklist</h2><ol /><li />Define objectives, KPIs, and guardrails.</li><li />Inventory data, models, tools, and constraints.</li><li />Design evaluation and feedback loops upfront.</li><li />Implement smallest viable slice with telemetry.</li><li />Iterate, measure, and harden for production.</li></ol><h2 />Notes</h2><p class=\"text-white/75\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';"
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Purpose</h2><p />Operational steps to execute reliably with measurable outcomes.</p><h2 />Checklist</h2><ol /><li />Define objectives, KPIs, and guardrails.</li><li />Inventory data, models, tools, and constraints.</li><li />Design evaluation and feedback loops upfront.</li><li />Implement smallest viable slice with telemetry.</li><li />Iterate, measure, and harden for production.</li></ol><h2 />Notes</h2><p class=\"text-white/75\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>';
->>>>>>> origin/cursor/delete-old-data-records-6bba
         <div;
 className='mt-4'
           dangerouslySetInnerHTML={{
@@ -255,23 +250,4 @@ export default function Page() {
   }
 }
 ;
-=======
-
-
-
-  return (
-
-}
-
-
-
-
-
-
-    <div className="min-h-screen bg-slate-950 text-white">
-
-
-
-
->>>>>>> main
 

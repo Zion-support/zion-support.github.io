@@ -1,10 +1,7 @@
-                        )}
-<<<<<<< HEAD
                       >;
 
                           <span>Pick a date</span>;
 
-<<<<<<< HEAD
                         )}
                       <Button;
                         variant="outline";
@@ -94,5 +91,3 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" />   <SelectContent> <SelectItem value="zoom" >Zoom <SelectItem value="google-meet" >Google Meet <SelectItem value="teams" >Microsoft Teams <SelectItem value="other" >Other   <FormMessage /> )"
 }/> </div> {"
   form.watch ('platform') !== 'in-app' && (<FormField control= {
-=======
->>>>>>> main

@@ -168,4 +168,3 @@ export {
   Carousel,
   CarouselContent,
   CarouselItem,
-<<<<<<< HEAD

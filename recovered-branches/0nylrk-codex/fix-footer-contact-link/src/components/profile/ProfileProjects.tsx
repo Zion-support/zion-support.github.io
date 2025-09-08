@@ -8,9 +8,6 @@ interface ProfileProjectsProps {
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
             className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300"
           >
             {project.imageUrl ? (
@@ -94,26 +91,3 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
     </div>
   )}
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-=======
-
-
-
-                <img
-                  src={project && project.imageUrl} 
-                  alt={project && project.title} 
-
-
-                <div className="flex flex-wrap gap-1 mb-2">;
-                  {project.tags.map((tag, i) => (;
-
-
-
-
-                      {tag}
-
-
-
-
-
->>>>>>> main

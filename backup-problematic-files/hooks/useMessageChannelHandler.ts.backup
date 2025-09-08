@@ -1,8 +1,17 @@
 
 <<<<<<< HEAD
+import { useEffect, useCallback } from 'react';
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+// Define MessageEvent type if not available
+
+import { useEffect, useCallback  } from './react';
+;
+// Define MessageEvent if not available;
+import { useEffect, useCallback } from 'react';
+// Define MessageEvent type if not available
+import { useEffect, useCallback  } from './react';
+;
+// Define MessageEvent if not available;
 interface Event {
   // TODO: Implement
 }
@@ -10,11 +19,7 @@ interface Event {
   target: EventTarget | null;
 type EventListener = (event: Event) => void;
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 interface EventTarget {
   // TODO: Implement
   addEventListener (type: string, listener: EventListener): void;
@@ -31,10 +36,8 @@ interface MessagePort {
 
 }
 
-=======
+interface MessageEvent < T = any> extends Event {
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   data: T;
 
   origin: string;
@@ -49,15 +52,13 @@ interface MessageChannelHandlerProps {
 
 }
 
-=======
+export /**
+ * useMessageChannelHandler - Function description
+ */
+function useMessageChannelHandler() {
+  const handle_message = useCallback (
+    (event: MessageEvent < unknown>) => {
 
-
-  onError
-}: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback(
-    (event: MessageEvent<unknown>) => {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       try {
   // TODO: Implement
         // Check condition;
@@ -71,38 +72,53 @@ if ( {) {
 
         }
 
-=======
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {
+        onMessage(event && event.data);
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
-<<<<<<< HEAD
 
 
 
-
-
-
-
-
-=======
-
-    [onMessage, onError]
-  );
-  useEffect(() => {
       }
     }
     [onMessage, onError]
   );
   useEffect(() => {
+
     window && window.addEventListener('message', handleMessage);
     return () => {
       window && window.removeEventListener('message', handleMessage);
     };
 
+  }, [handleMessage]);
+
+
+
+}
+
+}
+
+
+
+}
+
+      }
+    },
+    [on_message, on_error],
+  );
+;
+  useEffect (() => {
+    window.addEventListener ("message", handle_message);
+    return () => {
+      window.removeEventListener ("message", handle_message);
+    }
+  }, [handle_message]);
+}
 }
 
 }
@@ -123,19 +139,24 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 origin/main
 origin/automation-improvements-final
-      }
-    },
-    [on_message, on_error],
-  );
-;
-  useEffect (() => {
-    window.addEventListener ("message", handle_message);
-    return () => {
-      window.removeEventListener ("message", handle_message);
-    }
-  }, [handle_message]);
+=======
+
+
+
 }
-    [onMessage, onError]
-  );
-  useEffect(() => {
->>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+}
+
+
+        }
+
+
+
+
+
+
+
+
+
+>>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }};
 ;
 export default nextConfig;
@@ -76,27 +75,6 @@ domains: ["localhost", "ziontechgroup.com"]
   distDir: '.next'
 }
 module.exports = nextConfig;
-=======
-
-
->>>>>>> main
-
-module.exports = nextConfig;
-
-module.exports = nextConfig;
-
-module.exports = nextConfig;
-module.exports = nextConfig;
-=======
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
-  images: {
-    domains: ["localhost", "ziontechgroup.com"],
-  },
-  output: "standalone",
-  trailingSlash: false,
-  distDir: '.next',
-};
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
   reactStrictMode:true,;
@@ -115,17 +93,3 @@ module.exports = nextConfig;};
 };
 ;
 export default nextConfig;
-=======
-module.exports = nextConfig;
-
-
-  distDir: '.next'
-},
-
-
-module.exports = nextConfig;
-
-
-
-
->>>>>>> main

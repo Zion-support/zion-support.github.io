@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -8,7 +7,6 @@ const fs = // // require("child_process");
 const path = // // require("path")
 class AdvancedMonitor {
   constructor() {
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   checkDiskSpace() {
@@ -35,9 +33,3 @@ monitor.startMonitoring()
 <
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
-<<<<<<< HEAD
-=======
->>>>>>> main
-
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
-

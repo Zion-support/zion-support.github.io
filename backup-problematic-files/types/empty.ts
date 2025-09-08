@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 module && module.exports = type __Empty = unknown;
 module && module.exports = type __Empty = unknown;
@@ -6,7 +5,3 @@ module && module.exports = type __Empty = unknown;
 // Empty types file
 // Empty types file;
 export type Empty = unknown;
-=======
-module && module.exports = type __Empty = unknown;
-module && module.exports = type __Empty = unknown;
->>>>>>> main

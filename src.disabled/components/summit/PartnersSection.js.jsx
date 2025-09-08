@@ -1,7 +1,1 @@
 
-<<<<<<< HEAD
-=======
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-
-
->>>>>>> main

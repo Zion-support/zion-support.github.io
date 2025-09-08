@@ -112,8 +112,6 @@ const AIAutonomousDecisionEngine: React.FC = () => {
                 </p>
               </div>
             </div>
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -190,10 +188,6 @@ const AIAutonomousDecisionEngine: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-cd9f
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </section>
 

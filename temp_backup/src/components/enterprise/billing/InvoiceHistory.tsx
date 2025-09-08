@@ -46,10 +46,6 @@ period: "Jan 2025" ;
   default: return <Badge variant="outline" > {;
   status ;
 }</Badge>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;"
->>>>>>> origin/resolved-merge-conflicts
 }""
 };";""
 <Input type="search" placeholder="Search invoices..." className="w-[200px] md:w-[300px] pl-9" /> </div> </div> <div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Invoice Number</TableHead> <TableHead>Date</TableHead> <TableHead>Billing Period</TableHead> <TableHead>Amount</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;"

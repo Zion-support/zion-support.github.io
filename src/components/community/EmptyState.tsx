@@ -65,4 +65,3 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </TooltipProvider>;
     </div>;
   );
-<<<<<<< HEAD

@@ -7,7 +7,6 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import App 
 
 
 import { render, screen } from '@testing-library/react'
->>>>>>> origin/main
 import { describe, it, expect } from 'vitest'
 import App from '../App'
 describe('App'
@@ -18,10 +17,3 @@ describe('App'
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'../App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
 
-<<<<<<< HEAD
-=======
-});
-
-
-
->>>>>>> main

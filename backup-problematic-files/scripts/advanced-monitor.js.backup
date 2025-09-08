@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-=======
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -27,8 +26,9 @@ class AdvancedMonitor {
       const memoryUsage = execSync("free -h", { "encoding": "utf8" })
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`
-
-
+      fs && fs.appendFileSync(this && this.logPath, logEntry)} catch (error) {
+      console && console.error("Memory check "error": ", error)}
+  }
 // Start monitoring
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()
@@ -36,9 +36,8 @@ monitor.startMonitoring()
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 <<<<<<< HEAD
-
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
-
 =======
+>>>>>>> main
+
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+

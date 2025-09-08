@@ -34,9 +34,3 @@ export default function Predictiveanalytics({ }: PredictiveanalyticsProps) {
     </div>
   );
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> main

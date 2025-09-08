@@ -224,4 +224,3 @@ export const MobileLaunchHero: React.FC = () => {
     </section>);
 }
 "  );
-<<<<<<< HEAD

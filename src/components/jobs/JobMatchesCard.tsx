@@ -330,4 +330,3 @@ if (return null) {
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD

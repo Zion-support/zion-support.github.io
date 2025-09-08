@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -12,42 +7,12 @@ const next_config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
->>>>>>> origin/main
 /** @type {import('next').NextConfig} */;
 
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
 
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  compress: true,;
-  poweredByHeader: false,;
-  eslint: { ignoreDuringBuilds: true },;
-  typescript: { ignoreBuildErrors: true },;'
-  pageExtensions: ['tsxtsjsxjs'],;
-
-
-  // Image optimization;
-
-    formats: ['image / webpimage / avif'];
-
-<<<<<<< HEAD
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = $2;
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true},
-  typescript: { ignoreBuildErrors: true},
-  pageExtensions: ['tsxtsjsxjs'],
-  
-  // Image optimization
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webpimage/avif']
->>>>>>> origin/cursor/delete-old-data-records-6bba
   },
   
   // Output configuration
@@ -69,11 +34,3 @@ const nextConfig = $2;
   distDir: '.next'
 },
 module.exports = next_config,
->>>>>>> origin/main
-=======
-
-  // Generate ETags;
-
-
-
->>>>>>> main

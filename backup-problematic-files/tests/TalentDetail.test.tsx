@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 interface TalentDetail.testProps {
   // TODO: Implement
@@ -16,11 +15,3 @@ const TalentDetail.test: React.FC<TalentDetail.testProps> = ({ className }) => {
 pr-12325
 
 export default TalentDetail.test;
-=======
-
-    <div className={className || }>
-</div>
-
-
-
->>>>>>> main

@@ -174,4 +174,3 @@ interface ModelVersionData extends ModelConfig {
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD

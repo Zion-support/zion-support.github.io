@@ -9,7 +9,3 @@
     r:bg-cyan-500/10>''' <span className='relative z-10 flex items-center>''' Get Started Today'''' <Rocket className='w-5 h-5 ml-2 group-hove,
     r: translate-y-[-2px] transition-transform duration-300'/> </span> </button> </motion.div> {} <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {}, { duration: 1, '''' delay: 1.5 '''' }} className='absolute bottom-8 left-1/2 transform -translate-x-1/2'> <motion.div animate = {}, { y: [0, 10, 0] }} transition = {}, { duration: 2, '''' repeat: Infinity '''' }} className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'> <motion.div animate = {}, { y: [0, 12, 0] }} transition = {}, { duration: 2, '''' repeat: Infinity '''' }} className='w-1 h-3 bg-cyan-400 rounded-full mt-2'/> </motion.div>' </motion.div>'' </div>'''' {}'' <div className='absolute inset-0 pointer-events-none>''' {[...Array(50)].map((_, i) => (<motion.div key={i} className='absolute w-1 h-1 bg-cyan-400 rounded-full' initial = {}, {} x: Math.random() * window.innerWidth, '' y: Math.random() * window.innerHeight, '`'' opacity: Math.random(), '`''`';;'"`;`
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main

@@ -37,14 +37,6 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
-<<<<<<< HEAD
-=======
-
-
-
-import fs from 'fs';'
-import path from 'path';'
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 </div> </div>) ) 
 
@@ -64,12 +56,6 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
-=======
-
-
-</div> </div>) )
- </div> </div>) ) 
->>>>>>> main
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -220,19 +206,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items ;} }
 }
-<<<<<<< HEAD
-=======
-export default /**;
- * AiTrendsPage - Function description;
- */
-function AiTrendsPage() {}
-  return (
-
-            </div>;
-          </div>))}
-      </div>;
-    </div>);
-
-
-
->>>>>>> main

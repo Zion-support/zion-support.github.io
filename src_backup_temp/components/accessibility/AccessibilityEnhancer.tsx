@@ -520,10 +520,6 @@ fontSize,
       // Add skip links,
 skipLink.className='sr-only 'focus': no t-sr-only 'focus': absolute 'focus':top-4 'focus': lef t-4 bg-blue-600 text-white px-4 py-2 rounded z-50';';';'
       // Enhance focus visibility';';';';';'
-<<<<<<< HEAD
-=======
-      // Enhance focus visibility";';';';';'
->>>>>>> origin/resolved-merge-conflicts
       // Add focus trap for modals','
     ';';';';';'
       modals.forEach((modal) => {if (!modal.getAttribute('aria-modal')) {',';'
@@ -600,49 +596,6 @@ skipLink.className='sr-only 'focus': no t-sr-only 'focus': absolute 'focus':top-
     }
     setHighContrast(!highContrast);',';'
     ';';';';';'
-<<<<<<< HEAD
-=======
-  const toggleHighContrast = ('props': any) => {';';';';';'
-    }
-    setHighContrast(!highContrast);',';';';';'
-    ';';';';';'
-      document.documentElement.classList.toggle('high-contrast', !highContrast);'};';';';';'
-  const toggleLargeText = ('props': any) => {';';';';';'
-    }
-    setLargeText(!largeText);',';';';';'
-    ';';';';';'
-      document.documentElement.classList.toggle('large-text', !largeText);'};';';'
-  return (';';';'
-    <'div': classNam e='fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50'>';';';';';';';'
-      <'div': classNam e='flex items-center justify-between mb-2'>';';';';';';';';'
-        <'h3': classNam e='text-sm font-semibold text-gray-900'>Accessibility</h3>';';`;',';';';';'    ';';';';';'
-        <'div': classNam e={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;',';';';';'    ';';';';';'
-    if (typeof document !== 'undefined') {'';';';';';'
-  }
-  const toggleHighContrast = ('props': any) => {setHighContrast(!highContrast);',';';';';'
-    ';';';';';'
-      }
-      document.documentElement.classList.toggle('high-contrast', !highContrast);';';';';';'
-    setHighContrast(!highContrast);`'',';';';';'
-    ';';';';';'
-    if (typeof document !== 'undefined') {''',';';';';'
-  const toggleHighContrast = ('props': 'any) => {';';';'
-    }
-    setHighContrast(!highContrast);'',';';'
-    ';';';'
-      document.documentElement.classList.toggle('high-contrast', !highContrast);'};';';'
-  const toggleLargeText = ('props': 'any) => {';';';'
-    }
-    setLargeText(!largeText);'',';';'
-    ';';';'
-      document.documentElement.classList.toggle('large-text', !largeText);'};'
-  return (';'
-    <'div': 'classNam e='fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50'>';';';';';'
-      <'div': classNam e='flex items-center justify-between mb-2'>';';';';';';'
-        <'h3': classNam e='text-sm font-semibold text-gray-900'>Accessibility';';`;'',';';';';';'}&apos}';';';';'
-  const toggleHighContrast = (props) => {setHighContrast(!highContrast)',';'
-        <'h3': classNam e='text-sm font-semibold text-gray-900'>Accessibility';';`;'',';';'
->>>>>>> main
       document.documentElement.classList.toggle('high-contrast', !highContrast);'};';';';';'
       document.documentElement.classList.toggle('large-text', !largeText);'};';';'
   return (';'

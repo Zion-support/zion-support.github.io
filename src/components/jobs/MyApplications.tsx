@@ -1,7 +1,6 @@
       default:        return <Badge variant="outline">{status}</Badge>
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">

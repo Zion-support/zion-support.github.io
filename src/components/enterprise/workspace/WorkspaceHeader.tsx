@@ -267,4 +267,3 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
