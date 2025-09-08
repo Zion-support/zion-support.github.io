@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceWrapper from './components/PerformanceWrapper';
@@ -15,6 +17,16 @@ import Services from './pages/ServicesPage';
 import NotFound from './pages/NotFound';
 import './App.css';
 import './components/AccessibilityEnhancements.css';
+
+// Create a client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      retry: 1,
+    },
+  },
+});
 
 function App() {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
@@ -47,59 +59,65 @@ function App() {
 
   return (
     <EnhancedErrorBoundary>
-      <ThemeProvider>
-        <PerformanceWrapper>
-          <AccessibilityEnhancements>
-            <EnhancedSEO 
-              title="Zion Tech Group - AI & IT Solutions"
-              description="Leading provider of AI-powered solutions, quantum computing, and micro SAAS services for modern businesses."
-              keywords="AI solutions, quantum computing, micro SAAS, IT services, technology consulting, digital transformation, cloud infrastructure, cybersecurity"
-              image="/og-image.png"
-              type="website"
-              author="Zion Tech Group"
-              structuredData={{
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "description": "Leading provider of AI-powered solutions, quantum computing, and micro SAAS services for modern businesses.",
-                "url": "https://zion.app",
-                "logo": "https://zion.app/logo.png",
-                "sameAs": [
-                  "https://twitter.com/ZionTechGroup",
-                  "https://linkedin.com/company/zion-tech-group"
-                ],
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+1-555-ZION-TECH",
-                  "contactType": "customer service",
-                  "availableLanguage": "English"
-                }
-              }}
-            />
-            <Router>
-              <div className="App">
-                <Header />
-                <main className="main-content">
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="*" element={<NotFound />} />
-                  </Routes>
-                </main>
-                <Footer />
-                
-                {/* Performance Monitor */}
-                <AdvancedPerformanceMonitor 
-                  isVisible={showPerformanceMonitor}
-                  onToggle={() => setShowPerformanceMonitor(!showPerformanceMonitor)}
+      <QueryClientProvider client={queryClient}>
+        <HelmetProvider>
+          <ThemeProvider>
+            <PerformanceWrapper>
+              <AccessibilityEnhancements>
+                <EnhancedSEO 
+                  title="Zion Tech Group - AI & IT Solutions"
+                  description="Leading provider of AI-powered solutions, quantum computing, and micro SAAS services for modern businesses."
+                  keywords="AI solutions, quantum computing, micro SAAS, IT services, technology consulting, digital transformation, cloud infrastructure, cybersecurity"
+                  image="/og-image.png"
+                  type="website"
+                  author="Zion Tech Group"
+                  structuredData={{
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "Zion Tech Group",
+                    "description": "Leading provider of AI-powered solutions, quantum computing, and micro SAAS services for modern businesses.",
+                    "url": "https://zion.app",
+                    "logo": "https://zion.app/logo.png",
+                    "sameAs": [
+                      "https://twitter.com/ZionTechGroup",
+                      "https://linkedin.com/company/zion-tech-group"
+                    ],
+                    "contactPoint": {
+                      "@type": "ContactPoint",
+                      "telephone": "+1-555-ZION-TECH",
+                      "contactType": "customer service",
+                      "availableLanguage": "English"
+                    }
+                  }}
                 />
-              </div>
-            </Router>
-          </AccessibilityEnhancements>
-        </PerformanceWrapper>
-      </ThemeProvider>
+                <Router>
+                  <div className="App">
+                    <Header />
+                    <main className="main-content">
+                      <Suspense fallback={<div className="loading">Loading...</div>}>
+                        <Routes>
+                          <Route path="/" element={<Home />} />
+                          <Route path="/about" element={<About />} />
+                          <Route path="/contact" element={<Contact />} />
+                          <Route path="/services" element={<Services />} />
+                          <Route path="*" element={<NotFound />} />
+                        </Routes>
+                      </Suspense>
+                    </main>
+                    <Footer />
+                    
+                    {/* Performance Monitor */}
+                    <AdvancedPerformanceMonitor 
+                      isVisible={showPerformanceMonitor}
+                      onToggle={() => setShowPerformanceMonitor(!showPerformanceMonitor)}
+                    />
+                  </div>
+                </Router>
+              </AccessibilityEnhancements>
+            </PerformanceWrapper>
+          </ThemeProvider>
+        </HelmetProvider>
+      </QueryClientProvider>
     </EnhancedErrorBoundary>
   );
 }
