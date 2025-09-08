@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
+// import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
+// import { Logo } from '@/components/header/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
 import { Input } from "@/components/ui/input"; // Added
 import { Menu, X, Search } from 'lucide-react'; // Added Search
@@ -16,18 +16,18 @@ export function AppHeader() {
   
   // Try to access the messaging context, but provide a fallback value if it's not available
   let unreadCount = 0;
-  try {
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
-  } catch (error) {
-    console.warn('Messaging context not available');
-  }
+  // try {
+  //   const { unreadCount: count } = useMessaging();
+  //   unreadCount = count;
+  // } catch (error) {
+  //   console.warn('Messaging context not available');
+  // }
   
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo />
+          {/* <Logo /> */}
           <div className="ml-6 hidden md:flex items-center"> {/* Changed: removed flex-1, added items-center */}
             <MainNavigation unreadCount={unreadCount} />
           </div>

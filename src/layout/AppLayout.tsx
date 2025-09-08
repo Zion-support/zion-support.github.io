@@ -2,7 +2,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
+// import { Footer } from "@/components/Footer";
 
 interface AppLayoutProps {
   children?: React.ReactNode;
@@ -16,7 +16,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       <main className="flex-grow">
         {children ?? <Outlet />}
       </main>
-      {!hideFooter && <Footer />}
+      {/* {!hideFooter && <Footer />} */}
     </div>
   );
 }

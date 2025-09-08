@@ -1,7 +1,7 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/header/Header";
+// import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { completeSitemap } from "@/config/sitemap";
+// import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 
 export default function Sitemap() {
@@ -18,17 +18,20 @@ export default function Sitemap() {
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
           <ul className="space-y-2">
-            {completeSitemap.map(route => (
+            {/* {completeSitemap.map(route => (
               <li key={route.path}>
                 <Link to={route.path} className="text-zion-cyan hover:underline">
                   {route.label}
                 </Link>
               </li>
-            ))}
+            ))} */}
+            <li><Link to="/" className="text-zion-cyan hover:underline">Home</Link></li>
+            <li><Link to="/services" className="text-zion-cyan hover:underline">Services</Link></li>
+            <li><Link to="/contact" className="text-zion-cyan hover:underline">Contact</Link></li>
           </ul>
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

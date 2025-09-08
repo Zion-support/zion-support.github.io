@@ -6,33 +6,33 @@ import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { showApiError } from '@/utils/apiErrorHandler';
-import './utils/globalFetchInterceptor';
+// import { showApiError } from '@/utils/apiErrorHandler';
+// import './utils/globalFetchInterceptor';
 
 // Import i18n configuration
 import './i18n';
-import { LanguageProvider } from '@/context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+// import { LanguageProvider } from '@/context/LanguageContext';
+// import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
-import { AuthProvider } from '@/context/auth/AuthProvider';
+// import { AuthProvider } from '@/context/auth/AuthProvider';
 import { NotificationProvider } from './context';
 
 // Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
+// import { AnalyticsProvider } from './context/AnalyticsContext';
+// import { ViewModeProvider } from './context/ViewModeContext';
+// import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      onError: (error) => showApiError(error),
+      onError: (error) => console.error('Query error:', error),
     },
     mutations: {
-      onError: (error) => showApiError(error),
+      onError: (error) => console.error('Mutation error:', error),
     },
   },
 });
@@ -46,20 +46,20 @@ try {
         <QueryClientProvider client={queryClient}>
           <WhitelabelProvider>
             <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
+              {/* <AuthProvider> */}
+                {/* <NotificationProvider> */}
+                  {/* <AnalyticsProvider> */}
+                    {/* <LanguageProvider authState={{ isAuthenticated: false, user: null }}> */}
+                      {/* <ViewModeProvider> */}
                         <AppLayout>
                           <App />
                         </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
+                      {/* </ViewModeProvider> */}
+                      {/* <LanguageDetectionPopup /> */}
+                    {/* </LanguageProvider> */}
+                  {/* </AnalyticsProvider> */}
+                {/* </NotificationProvider> */}
+              {/* </AuthProvider> */}
             </Router>
           </WhitelabelProvider>
         </QueryClientProvider>

@@ -17,16 +17,11 @@ const defaultConfig = {
 const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);
 
-export function WhitelabelProvider({ children, config = {} }) {
-	const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...config.contactInfo } };
-	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
-}
-
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
+export const WhitelabelProvider: React.FC<{ children: ReactNode; config?: any }> = ({ 
   children, 
   config = {} 
 }) => {
-  const mergedConfig = { ...defaultConfig, ...config };
+  const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...config.contactInfo } };
 
   return (
     <WhitelabelContext.Provider value={mergedConfig}>

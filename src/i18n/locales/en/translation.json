@@ -1,0 +1,64 @@
+{
+  "general": {
+    "app_name": "Zion AI Marketplace",
+    "loading": "Loading...",
+    "search": "Search",
+    "select_language": "Select Language",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "yes": "Yes",
+    "no": "No",
+    "success": "Success",
+    "error": "Error"
+  },
+  "nav": {
+    "home": "Home",
+    "marketplace": "Marketplace",
+    "categories": "Categories",
+    "talent": "Talent",
+    "equipment": "Equipment",
+    "community": "Community",
+    "dashboard": "Dashboard",
+    "messages": "Messages",
+    "post_job": "Post Job",
+    "analytics": "Analytics"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "forgot_password": "Forgot Password?",
+    "remember_me": "Remember Me",
+    "login_success": "Login successful",
+    "logout_success": "Logout successful"
+  },
+  "home": {
+    "hero_title": "The Future of Tech & AI Marketplace",
+    "hero_subtitle": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
+    "browse_marketplace": "Browse Marketplace",
+    "create_profile": "Create Profile",
+    "explore_tools": "Explore Our Tools",
+    "tools_description": "Everything you need to connect with AI and technology systems"
+  },
+  "jobs": {
+    "post_job_title": "Post a Job",
+    "post_job_description": "Fill out the form below to post your job and find the right talent",
+    "job_title": "Job Title",
+    "job_description": "Job Description",
+    "skills_required": "Skills Required",
+    "budget": "Budget",
+    "deadline": "Deadline",
+    "job_posted": "Job posted successfully"
+  },
+  "language": {
+    "en": "English",
+    "es": "Español",
+    "pt": "Português",
+    "ar": "العربية",
+    "language_changed": "Language changed to {{language}}",
+    "switch_to_detected": "Switch to {{language}}?"
+  }
+}

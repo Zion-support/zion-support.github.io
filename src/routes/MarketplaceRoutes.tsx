@@ -15,7 +15,7 @@ import ServicesPage from "@/pages/ServicesPage";
 import RequestQuote from "@/pages/RequestQuote";
 import AIMatcher from "@/pages/AIMatcher";
 import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator";
-import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
+// import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
 import SearchPage from "@/pages/SearchPage";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
@@ -63,7 +63,7 @@ const MarketplaceRoutes = () => {
       
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />
-      <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
+      {/* <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} /> */}
       <Route path="/request-quote" element={<RequestQuote />} />
       <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
       

@@ -3,8 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
 import { LoginContent } from '@/components/auth/login';
-import ErrorBoundary from '@/components/GlobalErrorBoundary';
-import { useCart } from '@/context/CartContext';
+// import ErrorBoundary from '@/components/GlobalErrorBoundary';
+// import { useCart } from '@/context/CartContext';
 import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
 import { toast } from '@/hooks/use-toast';
 
@@ -12,7 +12,7 @@ export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const { dispatch } = useCart();
+  // const { dispatch } = useCart();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
@@ -49,10 +49,10 @@ export default function Login() {
         const product = productId && SAMPLE_EQUIPMENT[productId] ? SAMPLE_EQUIPMENT[productId] : null;
 
         if (product) {
-          dispatch({
-            type: 'ADD_ITEM',
-            payload: { id: product.id, name: product.name, price: product.price, quantity: 1 }
-          });
+          // dispatch({
+          //   type: 'ADD_ITEM',
+          //   payload: { id: product.id, name: product.name, price: product.price, quantity: 1 }
+          // });
           toast.success(`${product.name} added to cart!`);
           // Clear relevant query params before navigating to cart
           params.delete('next');
@@ -81,17 +81,7 @@ export default function Login() {
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (
-      <ErrorBoundary fallbackRender={(error) => (
-        <div style={{ padding: '20px', textAlign: 'center', color: 'red' }}>
-          <h1>Login Error</h1>
-          <p>Sorry, the login form could not be displayed due to an error.</p>
-          {process.env.NODE_ENV === 'development' && (
-            <pre>{error.stack}</pre>
-          )}
-        </div>
-      )}>
-        <LoginContent />
-      </ErrorBoundary>
+      <LoginContent />
     );
   }
 

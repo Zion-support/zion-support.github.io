@@ -2,11 +2,11 @@
 import * as React from "react";
 import { Toaster as HotToaster } from "react-hot-toast";
 
-export function Toaster() {
-  return (
-    <HotToaster position="top-right" />
-  );
-}
+// export function Toaster() {
+//   return (
+//     <HotToaster position="top-right" />
+//   );
+// }
 import { cn } from '@/lib/utils';
 
 export interface Toast {
