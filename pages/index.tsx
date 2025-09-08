@@ -856,11 +856,11 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Ultimate Redundancy</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Multi-layer failover systems</li>
-                  <li>• Geographic distribution</li>
-                  <li>• Automatic recovery</li>
-                  <li>• Health monitoring</li>
-                  <li>• Self-healing infrastructure</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">Main README</Link> - Project overview</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">Architecture Guide</Link> - System design</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">API Documentation</Link> - Integration guide</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">Deployment Guide</Link> - Setup instructions</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">Contributing Guide</Link> - Development workflow</li>
                 </ul>
                 <Link href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
@@ -870,11 +870,11 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🚀 Comprehensive Automation</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• 227+ autonomous agents</li>
-                  <li>• Self-managing systems</li>
-                  <li>• Continuous improvement</li>
-                  <li>• Error prevention</li>
-                  <li>• Continuous improvement</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300" target="_blank" rel="noopener noreferrer">Ultimate Redundancy</Link> - System overview</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300" target="_blank" rel="noopener noreferrer">Comprehensive Redundancy</Link> - Advanced features</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" className="text-purple-400 hover:text-purple-300" target="_blank" rel="noopener noreferrer">PM2 Redundancy</Link> - Process management</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_GITHUB_ACTIONS.md" className="text-purple-400 hover:text-purple-300" target="_blank" rel="noopener noreferrer">GitHub Actions</Link> - CI/CD automation</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/README_CONTINUOUS_OPERATION.md" className="text-purple-400 hover:text-purple-300" target="_blank" rel="noopener noreferrer">Continuous Operation</Link> - Zero-downtime</li>
                 </ul>
                 <Link href="/docs/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
@@ -884,11 +884,11 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Advanced Features</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Security Guide</a> - Protection measures</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Testing Guide</a> - Quality assurance</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SERVICE_GENERATION_README.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Service Generation</a> - Auto-creation</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Automation README</a> - System details</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Growth Automation</a> - Scaling systems</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Security Guide</Link> - Protection measures</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Testing Guide</Link> - Quality assurance</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/SERVICE_GENERATION_README.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Service Generation</Link> - Auto-creation</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Automation README</Link> - System details</li>
+                  <li>• <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-green-400 hover:text-green-300" target="_blank" rel="noopener noreferrer">Growth Automation</Link> - Scaling systems</li>
                 </ul>
                 <Link href="/docs/pm2-redundancy" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
