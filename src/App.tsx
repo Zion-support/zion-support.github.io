@@ -190,14 +190,7 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
-const FinancialSolutions = lazy(() => import('./pages/solutions/Financial'));
-const GovernmentSolutions = lazy(() => import('./pages/solutions/Government'));
-const SMBSolutions = lazy(() => import('./pages/solutions/SMB'));
-const StartupSolutions = lazy(() => import('./pages/solutions/Startup'));
-const ManufacturingSolutions = lazy(() => import('./pages/solutions/Manufacturing'));
-const RetailSolutions = lazy(() => import('./pages/solutions/Retail'));
-const EducationSolutions = lazy(() => import('./pages/solutions/Education'));
-const EnergySolutions = lazy(() => import('./pages/solutions/Energy'));
+const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
 const AISalesCopilot = lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = lazy(() => import('./pages/services/AIComplianceAssistant'));
@@ -400,8 +393,44 @@ function App() {
                 <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
                 <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                 
-                {/* Catch all route */}
-                <Route path="*" element={<Home />} />
+                {/* Advanced AI service routes */}
+                <Route path="/services/ai-autonomous-business-intelligence" element={<AIAutonomousBusinessIntelligence />} />
+                <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
+                
+                {/* Service Showcase Pages */}
+                <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
+                <Route path="/comprehensive-improvements-2025" element={<ComprehensiveImprovements2025 />} />
+                
+                {/* Additional innovative AI service routes */}
+                <Route path="/services/ai-code-review-security-scanner" element={<AICodeReviewSecurityScanner />} />
+                <Route path="/services/ai-devops-automation-platform" element={<AIDevOpsAutomationPlatform />} />
+                <Route path="/services/ai-business-intelligence-analytics" element={<AIBusinessIntelligenceAnalytics />} />
+                <Route path="/services/ai-customer-experience-support" element={<AICustomerExperienceSupport />} />
+                <Route path="/services/ai-marketing-automation-personalization" element={<AIMarketingAutomationPersonalization />} />
+                
+                {/* 2029 Services Showcase */}
+                <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
+                <Route path="/2029-comprehensive-services-showcase" element={<ComprehensiveServicesShowcase2029 />} />
+                
+                {/* 2031 Comprehensive Services Showcase */}
+                <Route path="/comprehensive-services-showcase-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                <Route path="/services-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                <Route path="/ai-services-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                <Route path="/it-services-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                <Route path="/micro-saas-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                
+                {/* Additional Pages */}
+                <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/it-consulting" element={<ITConsulting />} />
+                <Route path="/space-tech" element={<SpaceTech />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                
+                {/* Enhanced Services Showcase 2025 */}
+                <Route path="/services/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
+                
+                {/* 404 Page */}
+                <Route path="*" element={<div>Page not found</div>} />
               </Routes>
             </Suspense>
           </main>

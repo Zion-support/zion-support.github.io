@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  FileText, 
-  Scale, 
-  Brain, 
   Shield, 
+  Lock, 
   Zap, 
   CheckCircle, 
   ArrowRight, 
@@ -13,76 +11,84 @@ import {
   Clock, 
   DollarSign,
   BarChart3,
-  Lock,
-  Search,
+  Eye,
   BookOpen,
   MessageCircle,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Globe,
+  Database,
+  Network,
+  Target,
+  TrendingUp,
+  Key,
+  AlertTriangle,
+  Settings,
+  Monitor
 } from 'lucide-react';
 
-const AILegalDocumentAnalysis: React.FC = () => {
+const ZeroTrustNetworkAccess: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Document Analysis',
-      description: 'Advanced machine learning algorithms analyze legal documents with unprecedented accuracy and speed.'
-    },
-    {
       icon: Shield,
-      title: 'Secure & Compliant',
-      description: 'Enterprise-grade security with full compliance for legal document handling and data protection.'
+      title: 'Zero Trust Architecture',
+      description: 'Never trust, always verify approach with continuous authentication and authorization.'
     },
     {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Instant document analysis and insights with real-time collaboration capabilities.'
+      icon: Lock,
+      title: 'Advanced Encryption',
+      description: 'End-to-end encryption with quantum-resistant algorithms for maximum security.'
     },
     {
-      icon: Search,
-      title: 'Intelligent Search',
-      description: 'Semantic search across legal documents with context-aware results and relevance scoring.'
+      icon: Eye,
+      title: 'Continuous Monitoring',
+      description: 'Real-time threat detection and response with AI-powered security analytics.'
+    },
+    {
+      icon: Key,
+      title: 'Identity-Based Access',
+      description: 'Granular access control based on user identity, device, and context.'
     }
   ];
 
   const benefits = [
-    'Reduce document review time by 80%',
-    'Improve accuracy and consistency',
-    'Automate routine legal tasks',
-    'Enhance collaboration and workflow',
-    'Ensure regulatory compliance',
-    'Scale operations efficiently'
+    'Reduce security breaches by 95%',
+    'Eliminate network perimeter vulnerabilities',
+    'Improve compliance and audit capabilities',
+    'Enable secure remote work at scale',
+    'Reduce IT security overhead',
+    'Provide granular access control'
   ];
 
   const useCases = [
     {
-      title: 'Contract Analysis',
-      description: 'Automated contract review, risk assessment, and clause extraction.',
-      icon: FileText
+      title: 'Remote Workforce Security',
+      description: 'Secure access for distributed teams with zero trust principles.',
+      icon: Users
     },
     {
-      title: 'Legal Research',
-      description: 'AI-powered case law research and precedent analysis.',
-      icon: Search
+      title: 'Cloud Security',
+      description: 'Protect cloud resources with identity-based access control.',
+      icon: Network
     },
     {
-      title: 'Compliance Monitoring',
-      description: 'Automated compliance checking and regulatory updates.',
+      title: 'IoT Device Security',
+      description: 'Secure IoT devices with zero trust network segmentation.',
+      icon: Network
+    },
+    {
+      title: 'Compliance & Governance',
+      description: 'Meet regulatory requirements with comprehensive security controls.',
       icon: Shield
-    },
-    {
-      title: 'Document Generation',
-      description: 'AI-assisted legal document drafting and template generation.',
-      icon: BookOpen
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20"></div>
         <div className="container mx-auto px-4 py-24 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -91,24 +97,24 @@ const AILegalDocumentAnalysis: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-              <Scale className="w-4 h-4 mr-2" />
-              AI Legal Technology Platform
+              <Shield className="w-4 h-4 mr-2" />
+              Zero Trust Security Platform
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Legal Document
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Analysis</span>
+              Zero Trust
+              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent"> Network Access</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your legal practice with AI-powered document analysis, contract review, and legal research automation. 
-              Reduce time spent on routine tasks and focus on what matters most.
+              Transform your security posture with zero trust network access. Never trust, always verify 
+              with continuous authentication and granular access control.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -135,11 +141,11 @@ const AILegalDocumentAnalysis: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Legal Technology
+              Zero Trust Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge natural language processing with deep legal domain knowledge 
-              to deliver unparalleled document analysis capabilities.
+              Our zero trust network access platform provides comprehensive security with 
+              continuous verification and granular access control.
             </p>
           </motion.div>
 
@@ -171,11 +177,11 @@ const AILegalDocumentAnalysis: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose AI Legal Document Analysis?
+                Why Choose Zero Trust Network Access?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our AI platform delivers measurable improvements in efficiency, accuracy, and cost savings 
-                for legal professionals and organizations.
+                Our zero trust platform delivers unmatched security with continuous verification, 
+                reducing risk and improving compliance across your organization.
               </p>
               
               <div className="space-y-4">
@@ -198,25 +204,25 @@ const AILegalDocumentAnalysis: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8"
+              className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-8"
             >
-              <h3 className="text-2xl font-bold text-white mb-6">Key Metrics</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Security Performance</h3>
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Document Processing Speed</span>
-                  <span className="text-blue-400 font-bold">80% Faster</span>
+                  <span className="text-gray-300">Breach Reduction</span>
+                  <span className="text-blue-400 font-bold">95%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Accuracy Rate</span>
-                  <span className="text-green-400 font-bold">95%+</span>
+                  <span className="text-gray-300">Response Time</span>
+                  <span className="text-green-400 font-bold">Real-time</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Cost Reduction</span>
-                  <span className="text-purple-400 font-bold">60%</span>
+                  <span className="text-gray-300">Compliance</span>
+                  <span className="text-indigo-400 font-bold">100%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Time Savings</span>
-                  <span className="text-cyan-400 font-bold">70%</span>
+                  <span className="text-gray-300">Uptime</span>
+                  <span className="text-cyan-400 font-bold">99.99%</span>
                 </div>
               </div>
             </motion.div>
@@ -234,11 +240,11 @@ const AILegalDocumentAnalysis: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Use Cases & Applications
+              Zero Trust Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI Legal Document Analysis can transform various aspects of legal practice 
-              and business operations.
+              Discover how zero trust network access can secure your organization 
+              across various use cases and environments.
             </p>
           </motion.div>
 
@@ -270,19 +276,19 @@ const AILegalDocumentAnalysis: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Legal Practice?
+              Ready to Implement Zero Trust?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading law firms and legal departments who are already using AI to streamline their operations 
-              and deliver better client outcomes.
+              Join leading organizations who have transformed their security posture 
+              with zero trust network access.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started Today
+                Secure Your Network Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
@@ -323,4 +329,4 @@ const AILegalDocumentAnalysis: React.FC = () => {
   );
 };
 
-export default AILegalDocumentAnalysis;
+export default ZeroTrustNetworkAccess;

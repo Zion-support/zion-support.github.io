@@ -54,62 +54,117 @@ interface AppHeaderProps {
   ];
 
   const services = [
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
-    { name: 'AI Data Governance', href: '/services/ai-data-governance', icon: Shield, description: 'AI-Powered Data Protection' },
-    { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Users, description: 'Proactive Customer Engagement' },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', icon: Server, description: 'Ultra-Low Latency Processing' },
-    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
-    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
-    { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
-    { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Bot, description: 'Fully autonomous business operations' },
-    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Next-generation computational power' },
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Legal Tech Platform',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'FinTech AI Solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Workflow, 
+      description: 'Supply Chain AI',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Cloud & DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Building, 
+      description: 'Enterprise Infrastructure',
+      featured: true,
+      color: 'from-slate-500 to-gray-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI Autonomous Research Assistant', 
+      href: '/services/ai-autonomous-research-assistant', 
+      icon: Search, 
+      description: 'AI Research & Discovery',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    }
   ];
 
   const servicesCategories = [
     {
-      name: 'Core Services',
-      icon: Settings,
-      color: 'from-blue-600 to-cyan-600',
-      services: [
-        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
-        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
-        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
-      ]
+      name: 'Enterprise Solutions',
+      href: '/solutions/enterprise',
+      icon: Building2,
+      description: 'Large-scale business transformations',
+      featured: true
     },
     {
-      name: 'AI & Analytics',
+      name: 'Healthcare Solutions',
+      href: '/solutions/healthcare',
+      icon: Heart,
+      description: 'Digital health transformation',
+      featured: true
+    },
+    {
+      name: 'AI Solutions',
+      href: '/ai-solutions',
       icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      services: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent Process Automation' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-Powered Data Protection' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
-      ]
-    },
-    {
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      color: 'from-green-600 to-emerald-600',
-      services: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
-      ]
+      description: 'AI-powered business solutions',
+      featured: true
     },
     {
       name: 'Edge & IoT',
@@ -165,14 +220,53 @@ interface AppHeaderProps {
       ]
     },
     {
-      name: 'Innovation Showcase',
-      icon: TrendingUp,
-      color: 'from-green-600 to-emerald-600',
-      solutions: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-        { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
-      ]
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileText,
+      description: 'In-depth research and analysis',
+      featured: true
+    },
+    {
+      name: 'Webinars',
+      href: '/webinars',
+      icon: Users,
+      description: 'Expert-led learning sessions',
+      featured: true
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: Code,
+      description: 'Technical guides and APIs',
+      featured: true
+    },
+    {
+      name: 'FAQ & Support',
+      href: '/faq',
+      icon: HelpCircle,
+      description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2025',
+      href: '/comprehensive-pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete pricing information',
+      featured: true
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Join our community',
+      featured: false
+    },
+    {
+      name: 'Developers',
+      href: '/developers',
+      icon: Code,
+      description: 'Developer resources',
+      featured: false
     }
   ];
 
