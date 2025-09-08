@@ -1,100 +1,48 @@
-# Zion AI Marketplace - Talent Profile AI Workflow
+### Operator Reminder Workflow
 
-This repo provides a secure, production-ready workflow to enhance talent profiles using AI when a form is submitted.
+Automated email nudges to improve activation and engagement based on inactivity and stalled milestones.
 
-## What it does
-- On form submission or profile update, securely calls OpenAI via a Supabase Edge Function
-- Generates a concise 100–150 word professional summary
-- Extracts and normalizes up to 8 categorized skill tags
-- Saves the results to the `talents` table (`summary`, `skills`, `profile_incomplete`)
-- Caches AI results to reduce cost and latency
-- Optionally sends a confirmation email to the user
+#### What it does
+- Scheduled or on-demand run
+- Queries user activity from Supabase
+- Applies conditions:
+  - 72h inactivity AND Talent with <3 milestones → onboarding nudge
+  - 72h inactivity AND Client posted a job but 0 invites → invite reminder
+  - 72h inactivity AND Client viewed talent but 0 quotes → quote nudge
+- Generates email via OpenAI (optional) with templates fallback
+- Sends via Resend or SendGrid
+- Logs to `reminder_log` to prevent repeats during cooldown
 
-## Architecture
-- Edge Function: `supabase/functions/ai-profile` (Deno)
-- Database: `talents`, `ai_skill_cache` (see `sql/schema.sql`)
-- Optional email: Resend API
+#### Setup
+1. Copy `.env.example` to `.env` and fill values.
+2. Apply SQL (adjust table names if needed):
+   - `sql/001_reminder_log.sql`
+3. Install deps and run:
 
-## Prerequisites
-- Supabase project (URL + keys)
-- OpenAI API key
-- Optional: Resend API key for email notifications
+```bash
+npm i
+npm run dev      # dry-run
+npm run run      # live (if DRY_RUN is false)
+```
 
-## Setup
-1. Create tables/policies
-   - Apply `sql/schema.sql` to your Supabase project (Studio SQL editor or CLI):
-     ```sql
-     -- paste contents of sql/schema.sql
-     ```
-2. Configure environment for the Edge Function
-   - In your Supabase project, set function secrets:
-     - `OPENAI_API_KEY`
-     - `OPENAI_MODEL` (optional, default `gpt-4o-mini`)
-     - `RESEND_API_KEY` (optional)
-     - `FROM_EMAIL` (optional, e.g., `Zion AI <no-reply@zion.ai>`) 
-     - `SUPABASE_URL` (provided by Supabase)
-     - `SUPABASE_ANON_KEY` (provided by Supabase)
+CLI flags:
+- `--dry-run` force dry mode
+- `--limit=50` limit number of users
+- `--user-id=<uuid>` run for one user
 
-3. Deploy the Edge Function
-   ```bash
-   supabase functions deploy ai-profile
-   ```
+#### Scheduling
+- Cron (e.g., GitHub Actions/Vercel Cron/Supabase Scheduler) to run daily.
+- Example crontab (server): `0 13 * * * cd /path && npm run run | ts --no-ts`.
 
-4. Client integration (Lovable/onboarding form)
-   - On form submission (or profile update), call the function endpoint:
-   - Endpoint: `POST https://<PROJECT-REF>.functions.supabase.co/ai-profile`
-   - Headers:
-     - `Authorization: Bearer <user JWT>`
-     - `Content-Type: application/json`
-   - Body:
-     ```json
-     {
-       "talentId": "<uuid>",
-       "fullName": "Ada Lovelace",
-       "bio": "Pioneer in computing with experience in analytical engines and algorithm design...",
-       "skillsRaw": "Python, JavaScript, leadership, AWS, Docker, Kubernetes",
-       "roles": "Software Engineer, Tech Lead",
-       "industry": "AI/ML, Cloud",
-       "email": "ada@example.com",
-       "notify": true
-     }
-     ```
+#### Security
+- Service Role key kept secret server-side only
+- Emails include only name and public info
+- Opt-out via `profiles.receive_reminders = false`
 
-## Output
-- The function updates the `talents` row:
-  - `summary`: AI-generated 100–150 word summary
-  - `skills`: categorized skills JSON with up to 8 tags total
-  - `profile_incomplete`: flag if inputs appear incomplete
-- Returns JSON:
-  ```json
-  {
-    "talentId": "<uuid>",
-    "summary": "...",
-    "skills": {
-      "programming": ["Python", "JavaScript"],
-      "devops": ["Docker", "Kubernetes"],
-      "platforms": ["AWS"],
-      "soft_skills": ["Leadership"]
-    },
-    "profile_incomplete": false,
-    "missing_fields": [],
-    "cache_key": "<sha256>"
-  }
-  ```
+#### Deep links
+- Talent: `DASHBOARD_DEEP_LINK_TALENT`
+- Client: `DASHBOARD_DEEP_LINK_CLIENT`
 
-## Caching
-- Cache key is computed from the normalized input fields; results stored in `ai_skill_cache`.
-- Avoids repeated OpenAI calls for identical inputs.
-
-## Security
-- OpenAI API key is kept server-side in the Edge Function. The client never sees it.
-- Database writes are made with the user's JWT (RLS enforced), ensuring users can only update their own row.
-
-## Email Notification (optional)
-- If `RESEND_API_KEY` is configured and `notify` is true, sends:
-  "Your profile has been enhanced with AI. You’re now more discoverable to recruiters and companies!"
-
-## Notes
-- You can trigger this on both create and update actions in your client app.
-- Adjust the `missing_fields` logic inside the function to match your business rules.
-- For high-volume usage, consider adding TTL/expiry to `ai_skill_cache` or a periodic cleanup job.
+#### Notes
+- The `user_activity_summary` view in `sql/001_reminder_log.sql` is a reference and may need adjustments to match your schema.
+- A cooldown of `REMINDER_COOLDOWN_DAYS` prevents repeat nudges for the same reason.
