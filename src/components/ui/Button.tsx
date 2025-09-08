@@ -12,6 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   fullWidth = false,
   className = '',
+  asChild = false,
   ...props
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
@@ -39,6 +40,14 @@ export const Button: React.FC<ButtonProps> = ({
     widthClasses,
     className
   ].filter(Boolean).join(' ');
+
+  if (asChild && React.isValidElement(children)) {
+    return React.cloneElement(children, {
+      className: `${classes} ${children.props.className || ''}`,
+      disabled: disabled || loading,
+      ...props
+    });
+  }
 
   return (
     <button

@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { LanguageProvider } from './context/LanguageContext';
@@ -12,7 +12,14 @@ import { ViewModeProvider } from './context/ViewModeContext';
 import { AppLayout } from './layout/AppLayout';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/LoadingSpinner';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { AppConfig } from './types/app';
+
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Initialize React Query client with better configuration
 const queryClient = new QueryClient({
@@ -39,8 +46,8 @@ const queryClient = new QueryClient({
 const appConfig: AppConfig = {
   name: 'Zion Tech Group',
   version: '1.0.0',
-  environment: (process.env.NODE_ENV as any) || 'development',
-  apiUrl: process.env.REACT_APP_API_URL || '/api',
+  environment: (import.meta.env.MODE as any) || 'development',
+  apiUrl: import.meta.env.VITE_API_URL || '/api',
   features: {
     analytics: true,
     notifications: true,
@@ -72,8 +79,16 @@ const App: React.FC = () => {
                     <AnalyticsProvider>
                       <ViewModeProvider>
                         <Suspense fallback={<AppLoadingFallback />}>
-                          <AppLayout config={appConfig} />
+                          <AppLayout config={appConfig}>
+                            <Routes>
+                              <Route path="/" element={<Home />} />
+                              <Route path="/about" element={<About />} />
+                              <Route path="/contact" element={<Contact />} />
+                              <Route path="*" element={<NotFound />} />
+                            </Routes>
+                          </AppLayout>
                         </Suspense>
+                        <PerformanceMonitor />
                         {/* <ReactQueryDevtools initialIsOpen={false} /> */}
                       </ViewModeProvider>
                     </AnalyticsProvider>

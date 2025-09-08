@@ -36,6 +36,7 @@ export interface ButtonProps extends BaseComponentProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
+  asChild?: boolean;
 }
 
 // Input props

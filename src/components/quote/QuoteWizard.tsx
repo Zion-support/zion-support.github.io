@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { useQuoteWizard, ServiceItem } from '@/hooks/useQuoteWizard';
 import { useDelayedError } from '@/hooks/useDelayedError';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Textarea } from '@/components/ui/textarea';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import Skeleton from '@/components/ui/skeleton';
