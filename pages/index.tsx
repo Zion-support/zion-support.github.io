@@ -69,7 +69,10 @@ const Index: NextPage = () => {
               <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
                 Our Services
               </a>
-              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Case Studies
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-orange-400/50">
                 Contact
               </a>
               <a href="/api-documentation" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
@@ -81,43 +84,59 @@ const Index: NextPage = () => {
             </div>
           </section>
 
-          {/* Features Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Core Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Autonomous AI</h3>
-                <p className="text-white/80">
-                  Our systems learn, adapt, and evolve continuously, providing intelligent solutions that improve over time.
-                </p>
+          {/* Success Stories Section */}
+          <section className="mx-auto max-w-7xl px-6 pb-14 mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold tracking-wide text-white/90 mb-4">Success Stories</h2>
+              <p className="text-white/70 max-w-2xl mx-auto mb-6">
+                Discover how our autonomous AI solutions have transformed businesses across industries
+              </p>
+              <a href="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                View All Case Studies →
+              </a>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-6 rounded-2xl border border-blue-500/30">
+                <div className="text-3xl mb-3">🏥</div>
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">Healthcare</h3>
+                <p className="text-white/70 text-sm mb-3">40% reduction in patient wait times</p>
+                <div className="text-2xl font-bold text-white">$2.3M</div>
+                <div className="text-xs text-white/60">Annual savings</div>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-fuchsia-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">24/7 Operation</h3>
-                <p className="text-white/80">
-                  Round-the-clock autonomous operation ensures your systems never sleep and continuously optimize performance.
-                </p>
+              
+              <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 p-6 rounded-2xl border border-green-500/30">
+                <div className="text-3xl mb-3">🏭</div>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Manufacturing</h3>
+                <p className="text-white/70 text-sm mb-3">35% increase in efficiency</p>
+                <div className="text-2xl font-bold text-white">$4.1M</div>
+                <div className="text-xs text-white/60">Annual ROI</div>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-indigo-400">Global Scale</h3>
-                <p className="text-white/80">
-                  Multi-region infrastructure with intelligent load balancing and synchronization for worldwide performance.
-                </p>
+              
+              <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 p-6 rounded-2xl border border-purple-500/30">
+                <div className="text-3xl mb-3">💳</div>
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Finance</h3>
+                <p className="text-white/70 text-sm mb-3">95% fraud detection accuracy</p>
+                <div className="text-2xl font-bold text-white">$8.7M</div>
+                <div className="text-xs text-white/60">Fraud prevented</div>
               </div>
+              
+              <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 p-6 rounded-2xl border border-orange-500/30">
+                <div className="text-3xl mb-3">🚚</div>
+                <h3 className="text-lg font-semibold text-orange-400 mb-2">Logistics</h3>
+                <p className="text-white/70 text-sm mb-3">45% faster delivery</p>
+                <div className="text-2xl font-bold text-white">$6.2M</div>
+                <div className="text-xs text-white/60">Annual savings</div>
+              </div>
+            </div>
+          </section>
+
+          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold tracking-wide text-white/90 mb-4">Latest Autonomous Content</h2>
+              <a href="/reports" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                View All Reports →
+              </a>
             </div>
           </section>
 
