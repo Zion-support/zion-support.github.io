@@ -602,19 +602,8 @@ export default function Home() {
 
       <Suspense fallback={<LoadingFallback message="Loading featured listings..." />}>
         <FeaturedListingsSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading newsletter..." />}>
-        <NewsletterSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading IT service request..." />}>
-        <ITServiceRequestHero />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading floating CTA..." />}>
-        <FloatingCTA />
-      </Suspense>
+      </div>
+      <NewsletterSection className="animate-fadeIn" style={{ animationDelay: '0.8s' }} />
     </div>
   );
 }
