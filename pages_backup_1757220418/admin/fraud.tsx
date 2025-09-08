@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+
 interface FraudItem {
   id: string,
   userId: string | null,
