@@ -1,3 +1,11 @@
+export default function Page() {
+  return (
+    <div className="p-8">
+      <h1 className="text-3xl font-bold">Welcome to Zion Tech Group</h1>
+      <p className="mt-4 text-gray-300">Home page temporarily simplified while resolving merge conflicts.</p>
+    </div>
+  )
+}
   LightBulbIcon
   CpuChipIcon
   GlobeAltIcon
