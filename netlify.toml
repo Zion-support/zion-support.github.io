@@ -1,23 +1,6 @@
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "20"
-  NPM_FLAGS = "--legacy-peer-deps"
-
-[context.production.environment]
-  NODE_ENV = "production"
-
-[context.deploy-preview]
-  command = "npm ci --no-audit --no-fund && npm run build"
-
-[context.branch-deploy]
-  command = "npm ci --no-audit --no-fund && npm run build"
-
-[build]
   # Build the project on Netlify
-  command = "npm ci && npm run build"
+  command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -25,7 +8,7 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  NPM_FLAGS = "--omit=optional"
+  
 
 # Vite/React SPA configuration
 
