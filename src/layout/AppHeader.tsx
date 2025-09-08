@@ -74,10 +74,10 @@ interface AppHeaderProps {
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI Legal Document Analysis', 
-      href: '/services/ai-legal-document-analysis', 
-      icon: Scale, 
-      description: 'Legal AI & Document Processing',
+      name: 'AI Content Generator', 
+      href: '/services/ai-content-generator', 
+      icon: PenTool, 
+      description: 'Content Generation & Optimization',
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
