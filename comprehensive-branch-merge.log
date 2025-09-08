@@ -25566,3 +25566,20 @@ fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-e5e5
 [2025-09-08T21:34:46.946Z] 🔧 Resolving conflicts in: vite.config.ts
 [2025-09-08T21:34:46.946Z] ✅ Resolved conflicts in: vite.config.ts
 [2025-09-08T21:34:46.946Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:34:47.074Z] ✅ Success: Add resolved files
+[2025-09-08T21:34:47.074Z] 🚀 Commit merge for cursor/fix-netlify-build-and-merge-to-main-e9a7: git commit -m "Resolve conflicts and merge cursor/fix-netlify-build-and-merge-to-main-e9a7"
+[2025-09-08T21:34:47.130Z] ✅ Success: Commit merge for cursor/fix-netlify-build-and-merge-to-main-e9a7
+[2025-09-08T21:34:47.131Z] ✅ Successfully resolved conflicts and merged: cursor/fix-netlify-build-and-merge-to-main-e9a7
+[2025-09-08T21:34:47.131Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-f68b
+[2025-09-08T21:34:47.131Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-f68b: git fetch origin cursor/fix-netlify-build-and-merge-to-main-f68b
+[2025-09-08T21:34:47.237Z] ❌ Error in Fetch origin/cursor/fix-netlify-build-and-merge-to-main-f68b: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-f68b
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-f68b
+
+[2025-09-08T21:34:47.237Z] ❌ Failed to merge cursor/fix-netlify-build-and-merge-to-main-f68b: Command failed: git fetch origin cursor/fix-netlify-build-and-merge-to-main-f68b
+fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-f68b
+
+[2025-09-08T21:34:47.237Z] 🔧 Attempting to resolve conflicts for: cursor/fix-netlify-build-and-merge-to-main-f68b
+[2025-09-08T21:34:47.237Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:34:47.288Z] ✅ Success: Get git status
+[2025-09-08T21:34:47.288Z] 📄 Found 0 conflicted files
+[2025-09-08T21:34:47.288Z] 🚀 Add resolved files: git add .
