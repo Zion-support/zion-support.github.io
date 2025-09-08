@@ -3,12 +3,18 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 console.log('🚀 Starting PR Resolution and Merge Process...\n');
 // Function to run git commands safely;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 function runGitCommand(command, description) {
   try {
   // TODO: Implement
 }
     console.log(`📝 ${description}...`);
+<<<<<<< HEAD
+
+=======
 
     const result = execSync(command, { 
       encoding: utf8', 
@@ -16,6 +22,7 @@ function runGitCommand(command, description) {
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       cwd: process.cwd()
     });`;
     console.log(`✅ ${description} completed successfully`);
@@ -25,17 +32,23 @@ function runGitCommand(command, description) {
 
 // Function to check if we can merge a PR;
 function canMergePR(prNumber) {
+<<<<<<< HEAD
+=======
 
   try {
     const result = runGitCommand(
       `curl -s -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,
       `Checking PR #${prNumber} status`
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   // TODO: Implement
     const result = runGitCommand(`;
       `curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,"`;
       `Checking PR #${prNumber} status`)
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     );
     if (result) {
       const pr = JSON.parse(result);
@@ -47,6 +60,8 @@ function canMergePR(prNumber) {
         mergeable_state: pr.mergeable_state,
         head: pr.head.ref,
         base: pr.base.ref,
+<<<<<<< HEAD
+=======
 
         draft: pr.draft
       }
@@ -78,6 +93,7 @@ function resolveMergeConflicts() {
         .filter(line => line.includes('UU') || line.includes(AA) || line.includes('DD'))
         .map(line => line.split( ).pop());
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         draft: pr.draft;
       };
 
@@ -91,6 +107,9 @@ function resolveMergeConflicts() {"
       const conflictedFiles = statusResult;
         .split('\n')
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
+<<<<<<< HEAD
+=======
+=======
 
         .map(line => line.split(' ').pop());
 
@@ -122,6 +141,7 @@ function resolveMergeConflicts() {"
               .replace(/[^\n]+\n/g, '');
 
               .replace(/
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
               .replace(/
 
               .replace(/\n/g, '')
@@ -166,6 +186,8 @@ function resolveMergeConflicts() {"
 
   if (prInfo.draft) {`;
     console.log(`⚠️  PR #${prNumber} is a draft. Converting to ready for review...`);
+<<<<<<< HEAD
+=======
 
     // Convert draft to ready for review
     runGitCommand(
@@ -176,15 +198,22 @@ function resolveMergeConflicts() {"
   
   if (prInfo.mergeable === false) {
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     // Convert draft to ready for review;
 
       `Converting PR #${prNumber} to ready for review`)
   if (prInfo.mergeable === false) {`;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     console.log(`⚠️  PR #${prNumber} has merge conflicts. Attempting to resolve...`);
     resolveMergeConflicts();
   // Try to merge the PR;`;
   console.log(`🔄 Attempting to merge PR #${prNumber}...`);
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 
   const mergeResult = runGitCommand(
     `curl -X PUT -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d '{"merge_method:merge"}'`,
@@ -206,11 +235,14 @@ function resolveMergeConflicts() {"
 }
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
       return false;
 
 // Main execution;
 async function main() {
+<<<<<<< HEAD
+=======
 
   console.log(📋 Checking open PRs...\n);
   
@@ -260,6 +292,7 @@ async function main() {
 }
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
         const merged = mergePR(pr.number, prInfo);
         if (merged) {`;

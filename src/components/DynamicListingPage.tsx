@@ -6,11 +6,11 @@ import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import Skeleton from "@/components/ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import {
   Pagination,
   PaginationContent,
@@ -50,6 +50,7 @@ export function DynamicListingPage({
   detailBasePath = '/marketplace/listing',
   itemsPerPage,
 }: DynamicListingPageProps) {
+  const { toast } = useToast();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");

@@ -59,9 +59,6 @@ class CodeQualityAutoEnhancer {}
     };
     return { results, totalIssues }};
   parseQualityIssues(output, checkType) {}
-    const issues = [];"
-    const lines = output.split('\n');
-=======
     for (const line of lines) {}
       if (line.includes('error') || line.includes('warning') || line.includes('failed')) {}
         const match = line.match(/([^:]+):(\d+):(\d+)/);
@@ -78,6 +75,10 @@ class CodeQualityAutoEnhancer {}
 =======
     for (const issue of issues) {}
         if (await this.applyEnhancement(issue)) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        // Apply common ESLint fixes;
+>>>>>>> merged-prs-20250907-203621
+=======
           enhancementsApplied++};
 
         return await this.applyTestCoverageEnhancement(issue);
@@ -88,6 +89,7 @@ class CodeQualityAutoEnhancer {}
         const lines = content.split('\n');
 =======
         // Apply common ESLint fixes;
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
         const enhancements = [this.fixUnusedVariables.bind(this)]
           this.fixMissingSemicolons.bind(this),
           this.fixUnusedImports.bind(this),
@@ -95,35 +97,6 @@ class CodeQualityAutoEnhancer {}
           this.fixPreferConst.bind(this),
           this.fixNoVar.bind(this),
           this.fixTrailingSpaces.bind(this);
-        ];
-        let originalContent = content;
-        let modifiedContent = content;
-
-        let originalContent = content;
-        let modifiedContent = content;
-
-        for (const enhancement of enhancements) {}
-            const result = enhancement(lines, issue);
-            if (result.modified) {}
-
-      return false};
-  async applyPrettierEnhancement(issue) {}
-    try {}
-      // Run Prettier auto-fix;
-      if (issue.file && issue.file !== 'unknown') {}
-        execSync(`npx prettier --write "${issue.file}"`, { "stdio": 'pipe' }
-});
-        return true};
-      return false} catch (error) {}
-      this.log(`Failed to apply Prettier "enhancement": ${error.message}`, 'ERROR');
-      return false};
-  };
-  async applyTypeScriptEnhancement(issue) {}
-    try {}
-      if (issue.file && issue.file !== 'unknown') {}
-        const content = fs.readFileSync(issue.file, 'utf8');
-        const lines = content.split('\n');
-=======
 
         // Apply common TypeScript enhancements;
         const enhancements = [this.fixAnyType.bind(this)]
@@ -132,34 +105,14 @@ class CodeQualityAutoEnhancer {}
           this.fixInterfaceIssues.bind(this),
           this.fixGenericTypes.bind(this),
           this.fixOptionalProperties.bind(this);
-        ];
-        let originalContent = content;
-        let modifiedContent = content;
-
-
-        for (const enhancement of enhancements) {}
-          try {}
-            const result = enhancement(lines, issue);
-            if (result.modified) {}
-              modifiedContent = result.content;
-              this.log(`Applied TypeScript enhancement to ${issue.file}: ${result.description}`, 'INFO')};
-          } catch (enhancementError) {}
-            this.log(`TypeScript enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN')};
-        };
-        if (modifiedContent !== originalContent) {}
-          fs.writeFileSync(issue.file, modifiedContent);
-          return true};
-      };
-      return false} catch (error) {}
-      this.log(`Failed to apply TypeScript "enhancement": ${error.message}`, 'ERROR');
-      return false};
-  };
-=======
 
   async applyTestCoverageEnhancement(issue) {}
       // Generate test files for uncovered code;
       const uncoveredFiles = this.findUncoveredFiles();
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       for (const file of uncoveredFiles) {}
         await this.generateTestFile(file)};
 
@@ -207,6 +160,21 @@ class CodeQualityAutoEnhancer {}
               "modified": true,
               "content": lines.join('\n'),
               "description": `Commented out unused import ${importName}
+    const lineIndex = issue.line - 1;
+    const line = lines[lineIndex];
+    
+
+
+    
+    if (issue.message.includes('implicitly has an any type)) {}
+=======
+          lines.unshift(importStatement)};
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    if (issue.message.includes(Generic type') && issue.message.includes('requires)) {}
+=======
+    const lineIndex = issue.line - 1;
+    const line = lines[lineIndex];
+=======
             }};
         };
       };
@@ -379,6 +347,7 @@ class CodeQualityAutoEnhancer {}
     };
     return { "modified": false, "content": lines.join('\n') }};
 =======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
   findUncoveredFiles() {}
     // This is a simplified version - in a real implementation, you'd parse coverage reports;
@@ -400,10 +369,7 @@ class CodeQualityAutoEnhancer {}
         fs.mkdirSync(testDir, { "recursive": true })};
       const fileName = path.basename(sourceFile, path.extname(sourceFile));
       const testContent = `import { render, screen } from '@testing-library/react';
-import ${fileName} from '../${path.relative(testDir, sourceFile)}';
-describe('${fileName}', () => {}
-  test('renders without crashing', () => {}
-=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       if (!fs.existsSync(testDir)) {}
         fs.mkdirSync(testDir, { "recursive": true })};"
 
@@ -475,6 +441,9 @@ describe('${fileName}', () => {}
 =======
       const report = {}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
         "initialIssues": checkResult.totalIssues,"
         enhancementsApplied,"
         "remainingIssues": postCheckResult.totalIssues,

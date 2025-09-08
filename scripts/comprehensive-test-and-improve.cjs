@@ -1,4 +1,10 @@
 #!/usr/bin/env node;
+=======
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+["]([^')]
+
+=======
+=======
+=======
 
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -47,6 +53,7 @@ const content = fs.readFileSync(scriptFile, 'utf8');
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+["]([^')]
 
 
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

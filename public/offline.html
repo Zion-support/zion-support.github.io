@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     <style>
         * {
             margin: 0;
@@ -13,6 +14,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+<<<<<<< HEAD
+=======
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
@@ -93,6 +96,33 @@
             50% { opacity: 0.5; }
             100% { opacity: 1; }
         }
+>>>>>>> origin/main
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading .loading-spinner {
+            display: inline-block;
+=======
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+=======
         
         .features {
             margin-top: 2rem;

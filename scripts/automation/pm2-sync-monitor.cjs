@@ -292,6 +292,16 @@ class $1 {}
   "isHealthy": false,"issues": [`Git repository check failed: ${error.message  }`]}};
   };
 ;
+<<<<<<< HEAD
+      if (status.trim()) {;
+        issues.push('Uncommitted changes detected');
+        isHealthy = false}
+
+
+      }}
+  }
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   async checkBuildStatus() {}
   try {}
   const issues = [];

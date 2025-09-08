@@ -17,22 +17,6 @@ class SEOOptimizer {}
         this.projectRoot = process.cwd();
 
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString() {}
-    ) {}"
-        const timestamp = new Date().toISOString(})
-});
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
-        fs.appendFileSync(this.logFile, logMessage);
-
-        console.log(message)};
-    generateSitemap() {}
-        this.log('Generating sitemap...');
-        const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
-        const pages = this.findPages(;);
-=======
         console.log(message)};
     generateSitemap() {}
         this.log('Generating sitemap...');
@@ -50,35 +34,6 @@ ${pages.map(page => `  <url>`})
     <loc>https://ziontechgroup.com${page}</loc>"
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>").join('\n')};
-</urlset;>;";
-        fs.writeFileSync(sitemapPath, sitemap);
-        this.log(`Sitemap generated with ${pages.length} pages`);
-
-  </url>").join('\n')};
-</urlset;>;";"
-        fs.writeFileSync(sitemapPath, sitemap);`;
-        this.log(`Sitemap generated with ${pages.length} pages`);
-        
-        return { "status": 'success', "pages": pages.length }};
-    findPages() {}
-        const pagesDir = path.join(this.projectRoot, 'pages';);
-        const appDir = path.join(this.projectRoot, 'app';);
-        const pages = ['/'];
-        // Find pages from pages directory;
-        if () {}
-            this.findPagesInDirectory(pagesDir, '', pages)};
-=======
-        "
-        return { "status": success, "pages": pages.length }};"
-    findPages() {}"
-
-            this.findPagesInDirectory(pagesDir, , pages)};
-        // Find pages from app directory (App Router);
-        if (fs.existsSync(appDir)) {}
-            this.findPagesInAppDirectory(appDir, , pages)};
-        return [...new Set(pages)) {}]
     ) {}
 
         return [...new Set(pages)}]; // Remove duplicates;
@@ -94,12 +49,10 @@ ${pages.map(page => `  <url>`})
                 this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
                 let pagePath = path.join(basePath, item}
 });
-                pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, '');
-                pagePath = pagePath.replace(/\\/g, '/');
-                if ( {})
-                    pagePath = basePath || '/'};
-                if (pagePath !== '/index') {}
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
@@ -302,6 +255,19 @@ export default function SEO({})
                     "type": "image/png"
                 },
                 {}
+            "recommendations": this.generateSEORecommendations();
+       };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log("SEO optimization report saved to ${this.reportFile}");
+=======
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log("SEO optimization report saved to ${this.reportFile}");
+        
+=======
                     "src": "/android-chrome-512x512.png",
                     "sizes": "512x512",
                     "type": "image/png"

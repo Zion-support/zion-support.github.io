@@ -20,7 +20,7 @@ i18n
       ar: { translation: arTranslation }
     },
     fallbackLng: 'en',
-    debug: import.meta.env.DEV, // Using Vite's import.meta.env instead of process.env
+    debug: import.meta.env.MODE === 'development', // Using Vite's import.meta.env instead of process.env
     interpolation: {
       escapeValue: false // React already escapes by default
     },

@@ -22,6 +22,21 @@ class JSXSyntaxFixer {}
     this.log('Fixing JSX syntax errors in AIChatbotSystem.tsx...');
     let content = fs.readFileSync(this.filePath, 'utf8');
     // Fix various JSX syntax errors;
+=======
+#!/usr/bin/env node;
+=======
+
+const fs = require('fs');
+const path = require('path');
+class JSXSyntaxFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+    
+    let content = fs.readFileSync(this.filePath, 'utf8');
+    
+    // Fix various JSX syntax errors;
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     const fixes = [// Fix missing closing tags and syntax errors;]
       { "pattern": /className="flex justify-start"\s*$/gm, "replacement": 'className="flex justify-start">' },
       { "pattern": /className="p-4 border-t border-zinc-700\/50">;\s*$/gm, "replacement": 'className="p-4 border-t border-zinc-700/50">' },
@@ -52,19 +67,6 @@ class JSXSyntaxFixer {}
     fs.writeFileSync(this.filePath, content);
     this.log('JSX syntax errors fixed successfully!')};
   async run() {}
-    this.log('Starting JSX Syntax Fixer...');
-    try {}
-      this.fixJSXSyntax();
-      this.log('JSX Syntax Fixer completed successfully!')} catch (error) {}
-      this.log(`Error in JSX Syntax "Fixer": ${error.message}`);
-      throw error};
-  };
-};
-// Run the automation if this script is executed directly;
-if (require.main === module) {}
-  const automation = new JSXSyntaxFixer();
-
-=======
   automation.run();
     .then(() => {}
       console.log('JSX Syntax Fixer completed successfully!');

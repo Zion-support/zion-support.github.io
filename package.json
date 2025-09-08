@@ -9,15 +9,12 @@
   "scripts": {
     "dev": "vite",
     "build": "NODE_ENV=production vite build --mode production",
-
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
     "analyze": "node scripts/bundle-analyzer.js",
     "build:preview": "npm run build && npm run preview",
-
     "build:optimized": "npm run clean && npm run build && npm run optimize && npm run perf:check",
     "build:production": "NODE_ENV=production npm run build:optimized",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "preview": "NODE_ENV=production vite preview",
@@ -32,7 +29,6 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
-
     "prebuild": "echo 'Skipping type-check and lint for build compatibility'",
     "postbuild": "echo 'Build completed successfully' && npm run optimize && npm run perf:check",
     "health": "node -e \"console.log('✅ Node.js:', process.version); console.log('✅ NPM:', process.env.npm_version || 'unknown'); console.log('✅ Build status: OK');\"",
@@ -87,7 +83,6 @@
     "@reduxjs/toolkit": "^2.9.0",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@sendgrid/mail": "^8.1.5",
-
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.2",
