@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:13:02.495Z",
+  "generatedAt": "2025-08-11T23:13:36.648Z",
   "functions": [
     "accessibility-quickscan",
     "ai-changelog-runner",
@@ -65,7 +65,7 @@
     "marketing-and-features-promo",
     "marketing-scheduler",
     "media-og-and-optimize",
-    "meta-tags-audit-runner",
+    "meta-accelerator",
     "netlify-auto-healer-runner",
     "newsroom-auto-curator",
     "newsroom-runner",

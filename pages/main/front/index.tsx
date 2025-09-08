@@ -453,11 +453,7 @@ export default function FrontLanding() {
               { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' },
               { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' },
               { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },
-              { label: 'Smart Redirect Manager', desc: 'Fixes internal 404s; updates public/_redirects and report.', href: '/.netlify/functions/redirect-manager' },
-              { label: 'A11y Alt‑Text Auditor', desc: 'Scans for missing alt attributes and publishes reports.', href: '/.netlify/functions/a11y-audit-runner' },
-              { label: 'Content Freshness', desc: 'Analyzes file freshness; publishes a repo report.', href: '/.netlify/functions/content-freshness-runner' },
-              { label: 'Meta Tags Audit', desc: 'Audits title/description/OG/Twitter tags across top URLs.', href: '/.netlify/functions/meta-tags-audit-runner' },
-              { label: 'Internal Link Graph', desc: 'Builds internal link graph to inform navigation and redirects.', href: '/.netlify/functions/internal-link-graph-runner' },
+              { label: 'Meta Accelerator', desc: 'Refreshes docs, README, knowledge graph, and TODOs every 2m.', href: '/.netlify/functions/meta-accelerator' },
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
