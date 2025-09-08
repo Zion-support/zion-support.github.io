@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-
+// Removed unused: import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, Network, Atom, CpuIcon } from 'lucide-react';
 

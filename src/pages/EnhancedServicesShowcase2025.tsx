@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Search, Filter, TrendingUp, Clock, Users, Rocket, Zap, CheckCircle, Phone, Mail, MapPin, Award, MessageCircle, Zap as ZapIcon, MessageCircle as MessageCircleIcon } from 'lucide-react';

@@ -1,10 +1,11 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, CheckCircle, Heart } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {
-  const aiServices = [
+// Removed unused:   const aiServices = [
     {
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",

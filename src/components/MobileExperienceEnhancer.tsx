@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+// Removed unused: import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Monitor, RotateCw, Touch, Hand, Wifi, Battery, Settings, X, CheckCircle, Zap, Shield, Target, RotateCcw, Save, Loader2, Smartphone as PhoneIcon, Wifi as WifiIcon, Battery as BatteryIcon, ArrowLeft, RotateCw as Rotate, MousePointer, Clock } from 'lucide-react';
 
@@ -137,11 +137,9 @@ export function MobileExperienceEnhancer({
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
-  // Touch gesture handlers
-  const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
-  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number } | null>(null);
-  const [pinchDistance, setPinchDistance] = useState<number>(0);
-  const [rotationAngle, setRotationAngle] = useState<number>(0);
+  const mobileRef = useRef<HTMLDivElement>(null);
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
+// Removed unused:   const gestureTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Mobile-specific settings
   const [mobileFontSize, setMobileFontSize] = useState(16);
@@ -209,186 +207,51 @@ export function MobileExperienceEnhancer({
     };
   }, []);
 
-  // Mobile optimizations
-  const mobileOptimizationFeatures: MobileOptimization[] = [
-    {
-      id: 'touch-optimization',
-      name: 'Touch Optimization',
-      description: 'Optimize touch targets and interactions for mobile devices',
-      enabled: false,
-      category: 'touch',
-      impact: 'high'
-    },
-    {
-      id: 'gesture-support',
-      name: 'Gesture Support',
-      description: 'Enable swipe, pinch, and rotate gestures',
-      enabled: false,
-      category: 'touch',
-      impact: 'high'
-    },
-    {
-      id: 'mobile-layout',
-      name: 'Mobile Layout',
-      description: 'Optimize layout for mobile screens',
-      enabled: false,
-      category: 'layout',
-      impact: 'high'
-    },
-    {
-      id: 'performance-optimization',
-      name: 'Performance Optimization',
-      description: 'Reduce animations and optimize for mobile performance',
-      enabled: false,
-      category: 'performance',
-      impact: 'medium'
-    },
-    {
-      id: 'visual-optimization',
-      name: 'Visual Optimization',
-      description: 'Adjust colors, fonts, and spacing for mobile',
-      enabled: false,
-      category: 'visual',
-      impact: 'medium'
-    }
-  ];
-
-  // Touch gestures
-  const availableTouchGestures: TouchGesture[] = [
-    {
-      id: 'swipe-left',
-      name: 'Swipe Left',
-      description: 'Navigate to next page or item',
-      gesture: 'Swipe left →',
-      action: 'Next',
-      enabled: false
-    },
-    {
-      id: 'swipe-right',
-      name: 'Swipe Right',
-      description: 'Navigate to previous page or item',
-      gesture: 'Swipe right ←',
-      action: 'Previous',
-      enabled: false
-    },
-    {
-      id: 'swipe-up',
-      name: 'Swipe Up',
-      description: 'Show additional options or expand content',
-      gesture: 'Swipe up ↑',
-      action: 'Expand',
-      enabled: false
-    },
-    {
-      id: 'swipe-down',
-      name: 'Swipe Down',
-      description: 'Refresh content or collapse options',
-      gesture: 'Swipe down ↓',
-      action: 'Refresh',
-      enabled: false
-    },
-    {
-      id: 'pinch-zoom',
-      name: 'Pinch Zoom',
-      description: 'Zoom in/out on content',
-      gesture: 'Pinch in/out',
-      action: 'Zoom',
-      enabled: false
-    },
-    {
-      id: 'rotate',
-      name: 'Rotate',
-      description: 'Rotate content or view',
-      gesture: 'Two finger rotate',
-      action: 'Rotate',
-      enabled: false
-    },
-    {
-      id: 'double-tap',
-      name: 'Double Tap',
-      description: 'Quick action or zoom',
-      gesture: 'Double tap',
-      action: 'Quick Action',
-      enabled: false
-    },
-    {
-      id: 'long-press',
-      name: 'Long Press',
-      description: 'Context menu or additional options',
-      gesture: 'Long press',
-      action: 'Context Menu',
-      enabled: false
-    }
-  ];
-
-  // Touch event handlers
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    if (!mobileGestures) return;
-
-    const touch = e.touches[0];
-    setTouchStart({ x: touch.clientX, y: touch.clientY });
-
-    // Handle pinch start
-    if (e.touches.length === 2) {
-      const touch1 = e.touches[0];
-      const touch2 = e.touches[1];
-      const distance = Math.sqrt(
-        Math.pow(touch2.clientX - touch1.clientX, 2) +
-        Math.pow(touch2.clientY - touch1.clientY, 2)
-      );
-      setPinchDistance(distance);
-    }
-  }, [mobileGestures]);
-
-  const handleTouchMove = useCallback((e: React.TouchEvent) => {
-    if (!mobileGestures) return;
-
-    // Handle pinch zoom
-    if (e.touches.length === 2) {
-      const touch1 = e.touches[0];
-      const touch2 = e.touches[1];
-      const distance = Math.sqrt(
-        Math.pow(touch2.clientX - touch1.clientX, 2) +
-        Math.pow(touch2.clientY - touch1.clientY, 2)
-      );
-
-      if (pinchDistance > 0) {
-        const scale = distance / pinchDistance;
-        document.documentElement.style.setProperty('--mobile-zoom', scale.toString());
+  // Touch gesture handling
+  useEffect(() => {
+    if (!settings.touchGestures) return;
+    
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        touchStartRef.current = {
+          x: touch?.clientX,
+          y: touch?.clientY,
+          time: Date.now()
+        };
       }
-
-      // Handle rotation
-      const angle = Math.atan2(
-        touch2.clientY - touch1.clientY,
-        touch2.clientX - touch1.clientX
-      ) * 180 / Math.PI;
-      setRotationAngle(angle);
-    }
-  }, [mobileGestures, pinchDistance]);
-
-  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
-    if (!mobileGestures || !touchStart) return;
-
-    const touch = e.changedTouches[0];
-    const endX = touch.clientX;
-    const endY = touch.clientY;
-
-    const diffX = touchStart.x - endX;
-    const diffY = touchStart.y - endY;
-
-    // Determine swipe direction
-    if (Math.abs(diffX) > Math.abs(diffY)) {
-      if (diffX > 50) {
-        handleSwipe('left');
-      } else if (diffX < -50) {
-        handleSwipe('right');
+    };
+    
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (!touchStartRef.current || e.touches.length !== 0) return;
+      
+      const touch = e.changedTouches[0];
+      const start = touchStartRef.current;
+      const deltaX = touch?.clientX - start?.x;
+      const deltaY = touch?.clientY - start?.y;
+      const deltaTime = Date.now() - start.time;
+      
+      // Detect gesture type
+      let gestureType: TouchGesture['type'] = 'tap';
+      let direction: TouchGesture['direction'] | undefined;
+      
+      if (deltaTime < 300 && Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
+        gestureType = 'tap';
+      } else if (deltaTime > 500) {
+        gestureType = 'longPress';
+      } else if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+        gestureType = 'swipe';
+        direction = deltaX > 0 ? 'right' : 'left';
+      } else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
+        gestureType = 'swipe';
+        direction = deltaY > 0 ? 'down' : 'up';
       }
       
       const gesture: TouchGesture = {
         type: gestureType,
         direction,
         timestamp: Date.now(),
-        coordinates: { x: touch.clientX, y: touch.clientY },
+        coordinates: { x: touch??.clientX, y: touch??.clientY },
         intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY)
       };
       

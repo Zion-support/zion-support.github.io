@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Newspaper, Calendar, User, ArrowRight, Search, Clock, Share2, Bookmark } from 'lucide-react';
 

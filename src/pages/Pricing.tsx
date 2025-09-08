@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check, Zap, Brain, Cloud, Shield, ShoppingCart, Building, Clock, Globe, Lock, ArrowRight } from 'lucide-react';

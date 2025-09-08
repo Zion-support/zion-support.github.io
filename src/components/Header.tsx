@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// Removed unused: import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Brain, Shield, Cpu, Heart, Rocket, Sparkles, BarChart3, Network, Globe, FileText } from 'lucide-react';

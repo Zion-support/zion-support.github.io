@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Check, Star, Brain, Zap, Rocket, Target, ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign } from 'lucide-react';
@@ -15,19 +15,19 @@ export default function ComprehensivePricing2027() {
 
   // Get unique categories
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-
-  // Filter services
-  const filteredServices = useMemo(() => {
-    return allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      
-      const matchesPrice = selectedPriceRange === 'All' || 
-        (selectedPriceRange === 'Under $100' && service.price < 100) ||
-        (selectedPriceRange === '$100-$299' && service.price >= 100 && service.price <= 299) ||
-        (selectedPriceRange === '$300-$599' && service.price >= 300 && service.price <= 599) ||
-        (selectedPriceRange === '$600+' && service.price >= 600);
-
-      return matchesCategory && matchesPrice;
+  
+  const filteredServices = allServices
+    .filter(service => 
+      (selectedCategory === 'All' || service.category === service.category) &&
+      (searchQuery === '' || 
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
+    )
+    .sort((a, b) => {
+      if (sortBy === 'price') return a.price - b.price;
+      if (sortBy === 'aiScore') return b??.aiScore - a.aiScore;
+      return b??.rating - a.rating;
     });
   }, [selectedCategory, selectedPriceRange, allServices]);
 
@@ -112,11 +112,18 @@ export default function ComprehensivePricing2027() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto"
           >
-            <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-              <div className="flex items-center justify-center space-x-2">
-                <Globe className="w-4 h-4 text-cyan-400" />
-                <span>ziontechgroup.com</span>
+            {[
+              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
+              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s?.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s?.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
+            ].map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                <div className="text-lg font-semibold text-gray-300">{stat.label}</div>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Phone className="w-4 h-4 text-cyan-400" />
@@ -235,15 +242,15 @@ export default function ComprehensivePricing2027() {
                           <div className="flex items-center gap-4">
                             <div className="flex items-center gap-1">
                               <Brain className="w-4 h-4 text-zion-cyan" />
-                              <span className="text-sm text-gray-300">{service.aiScore}%</span>
+                              <span className="text-sm text-gray-300">{service?.aiScore}%</span>
                             </div>
                             <div className="flex items-center gap-1">
                               <Star className="w-4 h-4 text-yellow-500" />
-                              <span className="text-sm text-gray-300">{service.rating}</span>
+                              <span className="text-sm text-gray-300">{service?.rating}</span>
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-xs text-zion-slate-light">{service.availability}</div>
+                            <div className="text-xs text-zion-slate-light">{service?.availability}</div>
                           </div>
                         </div>
 
@@ -299,7 +306,7 @@ export default function ComprehensivePricing2027() {
 
                               {/* CTA Button */}
                               <button 
-                                onClick={() => window.open(service.website, '_blank')}
+                                onClick={() => window.open(service?.website, '_blank')}
                                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
                               >
                                 Get Started
@@ -313,7 +320,7 @@ export default function ComprehensivePricing2027() {
                         {/* Service Image */}
                         <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
                           <img 
-                            src={service.images[0]} 
+                            src={service?.images[0]} 
                             alt={service.title}
                             className="w-full h-full object-cover"
                           />
@@ -339,11 +346,11 @@ export default function ComprehensivePricing2027() {
                           <div className="flex items-center gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <Brain className="w-4 h-4 text-zion-cyan" />
-                              AI Score: {service.aiScore}%
+                              AI Score: {service?.aiScore}%
                             </div>
                             <div className="flex items-center gap-1">
                               <Star className="w-4 h-4 text-yellow-500" />
-                              Rating: {service.rating}
+                              Rating: {service?.rating}
                             </div>
                             <div className="flex items-center gap-1">
                               <Target className="w-4 h-4 text-green-500" />
@@ -364,7 +371,7 @@ export default function ComprehensivePricing2027() {
                             </div>
                             
                             <button 
-                              onClick={() => window.open(service.website, '_blank')}
+                              onClick={() => window.open(service?.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
                             >
                               Get Started

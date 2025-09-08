@@ -1,3 +1,5 @@
+// Removed unused: import { ProductListing } from "@/types/listings";
+// Removed unused: import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
@@ -634,5 +636,43 @@ export const getPricingStats = () => {
       medium: "$10,000-20,000/month",
       high: "$20,000-40,000/month"
     }
-  };
+    acc[service?.category]?.push(service?.basePrice);
+    return acc;
+  }, {} as Record<string, number[]>),
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
+    serviceName: service.serviceName,
+    roi: service.roi,
+    setupTime: service.setupTime,
+    price: service.basePrice
+  }))
+};
+
+// Payment and Discount Information
+export const PAYMENT_OPTIONS_2030 = {
+  paymentMethods: ["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],
+  installmentPlans: ["3-month plan", "6-month plan", "12-month plan"],
+  volumeDiscounts: [
+    "5-10 licenses: 15% discount",
+    "11-25 licenses: 25% discount",
+    "26-50 licenses: 35% discount",
+    "51+ licenses: Custom pricing"
+  ],
+  enterpriseFeatures: [
+    "Custom development",
+    "White-label solutions",
+    "Dedicated support",
+    "On-premise deployment",
+    "Custom integrations",
+    "SLA guarantees"
+  ]
+};
+
+// Contact Information for Pricing Inquiries
+export const PRICING_CONTACT_2030 = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
+  responseTime: "Within 24 hours for pricing inquiries"
 };

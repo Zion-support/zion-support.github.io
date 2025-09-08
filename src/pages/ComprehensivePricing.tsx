@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -88,15 +88,15 @@ import { Link } from "react-router-dom";
             </CardDescription>
           </CardHeader>
 
-          <CardContent className="space-y-4">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">
-                {formatPrice(service.price, service.pricingModel)}
-              </div>
-              <div className="text-sm text-purple-300 mb-4">
-                Market Price: {service.marketPrice}
-              </div>
-            </div>
+// Removed unused:   const getPriceRangeLabel = (range: string) => {
+    switch (range) {
+      case 'under-1000': return 'Under $1,000';
+      case '1000-3000': return '$1,000 - $3,000';
+      case '3000-5000': return '$3,000 - $5,000';
+      case 'over-5000': return 'Over $5,000';
+      default: return 'All Prices';
+    }
+  };
 
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-purple-200">Key Features:</h4>

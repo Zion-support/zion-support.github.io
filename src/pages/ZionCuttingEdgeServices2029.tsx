@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, TrendingUp, Shield, Zap, Brain, Rocket, Phone, Mail, MapPin, ExternalLink, ArrowRight, CheckCircle } from 'lucide-react';
 import { SEO } from '@/components/SEO';
@@ -25,16 +25,16 @@ export default function ZionCuttingEdgeServices2029() {
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
       if (max) {
-        matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max;
+        matchesPrice = service?.pricing?.starter >= min && service?.pricing?.starter <= max;
       } else {
-        matchesPrice = service.pricing.starter >= min;
+        matchesPrice = service?.pricing?.starter >= min;
       }
     }
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: string) => {
+// Removed unused:   const getPriceRangeLabel = (range: string) => {
     switch (range) {
       case '0-1000': return '$0 - $1,000/month';
       case '1000-3000': return '$1,000 - $3,000/month';

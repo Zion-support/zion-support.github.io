@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, MapPin, Clock, CheckCircle, Shield, Zap, Brain, Phone, Mail, Star, Award, Building, Wrench, Settings, Network, Eye, AlertTriangle, ArrowRight, Globe } from 'lucide-react';
 import { SEO } from '../components/SEO';
@@ -236,11 +237,64 @@ export default function OnsiteSupport() {
                 }`}>
                   <AlertTriangle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{item.priority}</h3>
-                <div className="text-2xl font-bold text-cyan-400 mb-2">{item.time}</div>
-                <p className="text-slate-300 text-sm">{item.description}</p>
-              </motion.div>
-            ))}
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Faster Resolution</h3>
+                  <p className="text-slate-300 text-sm">Direct access to hardware and systems means faster problem identification and resolution.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Enhanced Security</h3>
+                  <p className="text-slate-300 text-sm">Our technicians follow strict security protocols and maintain confidentiality of your systems.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Personalized Service</h3>
+                  <p className="text-slate-300 text-sm">Face-to-face interaction allows for better understanding of your specific needs and environment.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
+// Fixed missing name:                   <Tool className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Hands-on Expertise</h3>
+                  <p className="text-slate-300 text-sm">Physical access to equipment enables comprehensive diagnostics and repairs.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Reduced Downtime</h3>
+                  <p className="text-slate-300 text-sm">Quick onsite response minimizes business disruption and productivity loss.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Knowledge Transfer</h3>
+                  <p className="text-slate-300 text-sm">Learn from our experts and gain insights to prevent future issues.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

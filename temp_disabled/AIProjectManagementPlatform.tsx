@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Brain, Target, TrendingUp, Users, Calendar, CheckCircle, Calendar as CalendarIcon, Users as UsersIcon } from 'lucide-react';

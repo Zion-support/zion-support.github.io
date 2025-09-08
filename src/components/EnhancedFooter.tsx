@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Zap, Brain, Shield, Cloud, Rocket, Cpu, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Server, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Linkedin, Twitter, Github, Facebook, Instagram, Youtube } from 'lucide-react';
@@ -45,7 +46,7 @@ export function EnhancedFooter() {
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Team', href: '/team', icon: Award },
         { name: 'Careers', href: '/careers', icon: Workflow },
-        { name: 'Partners', href: '/partners', icon: Handshake },
+// Fixed missing name:         { name: 'Partners', href: '/partners', icon: Handshake },
         { name: 'News & Updates', href: '/news', icon: FileText },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
       ]

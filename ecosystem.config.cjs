@@ -2,312 +2,92 @@ module.exports = {
   apps: [
     // Main application
     {
-      name: 'zion-app',
+      name: 'zion-tech-app',
       script: 'npm',
-      args: 'start',
-      cwd: './',
+      args: 'run dev',
+      cwd: '/workspace',
+      watch: false,
       instances: 1,
       autorestart: true,
-      watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      },
-      env_production: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      }
-    },
-    
-    // Backend server
-    {
-      name: 'zion-backend',
-      script: 'npm',
-      args: 'start',
-      cwd: './server',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development',
+        PORT: 3000
       }
     },
 
-    // Enhanced Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
-    {
-      name: 'enhanced-error-fixer',
-      script: './scripts/automation/enhanced-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      }
-    },
-
-    // 🎯 NEW: PM2 Error Automation Orchestrator - runs every 10 minutes (HIGHEST PRIORITY)
-    {
-      name: 'pm2-error-automation-orchestrator',
-      script: './scripts/automation/pm2-error-automation-orchestrator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
-    },
-
-    // 🔧 NEW: Comprehensive Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
-    {
-      name: 'comprehensive-error-fixer',
-      script: './scripts/automation/comprehensive-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // Code Quality Automation - runs every 2 hours
-    {
-      name: 'code-quality-automation',
-      script: './scripts/automation/code-quality-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Automation Orchestrator - runs continuously and manages all automations
-    {
-      name: 'automation-orchestrator',
-      script: './scripts/automation/automation-orchestrator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      }
-    },
-
-    // Continuous link checker - runs every 30 minutes
-    {
-      name: 'intelligent-error-prevention',
-      script: './scripts/automation/intelligent-error-prevention.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
-    },
-
-    // 🤖 NEW: AI Code Optimizer - runs every hour
-    {
-      name: 'ai-code-optimizer',
-      script: './scripts/automation/ai-code-optimizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-
-    // 📦 NEW: Smart Dependency Manager - runs every 6 hours
-    {
-      name: 'smart-dependency-manager',
-      script: './scripts/automation/smart-dependency-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // 🆕 NEW: Comprehensive Code Quality Automator - runs every 2 hours (HIGH PRIORITY)
-    {
-      name: 'comprehensive-code-quality-automator',
-      script: './scripts/automation/comprehensive-code-quality-automator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // 🆕 NEW: ESLint Auto-Fixer - runs every 15 minutes (HIGHEST PRIORITY)
-    {
-      name: 'eslint-auto-fixer',
-      script: './scripts/automation/eslint-auto-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // 🆕 NEW: TypeScript Error Fixer - runs every 30 minutes (HIGH PRIORITY)
+    // TypeScript Error Fixer - runs every 5 minutes
     {
       name: 'typescript-error-fixer',
-      script: './scripts/automation/typescript-error-fixer.cjs',
+      script: 'scripts/automation/robust-typescript-fixer.cjs',
+      cwd: '/workspace',
+      watch: false,
       instances: 1,
       autorestart: true,
-      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+        NODE_ENV: 'development'
       }
     },
 
-    // 🆕 NEW: Unused Import Cleaner - runs every hour
+    // Comprehensive Error Fixer - runs every 10 minutes
     {
-      name: 'unused-import-cleaner',
-      script: './scripts/automation/unused-import-cleaner.cjs',
+      name: 'comprehensive-error-fixer',
+      script: 'scripts/automation/comprehensive-error-fixer.cjs',
+      cwd: '/workspace',
+      watch: false,
       instances: 1,
       autorestart: true,
-      watch: false,
+      cron_restart: '*/10 * * * *', // Every 10 minutes
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
+        NODE_ENV: 'development'
       }
     },
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // Duplicate Identifier Fixer - runs every 15 minutes
     {
-      name: 'console-error-fixer',
-      script: 'scripts/error-fixer.js',
+      name: 'duplicate-identifier-fixer',
+      script: 'scripts/automation/duplicate-identifier-fixer.cjs',
+      cwd: '/workspace',
+      watch: false,
       instances: 1,
       autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '*/15 * * * *', // Every 15 minutes
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      error_file: 'logs/console-error-fixer-error.log',
-      out_file: 'logs/console-error-fixer-out.log',
-      log_file: 'logs/console-error-fixer-combined.log',
-      time: true
+        NODE_ENV: 'development'
+      }
     },
 
-    // Linting Automation
+    // Error Monitoring Dashboard - runs every 30 minutes
     {
-      name: 'lint-automation',
-      script: 'scripts/lint-automation.js',
+      name: 'error-monitoring-dashboard',
+      script: 'scripts/automation/error-monitoring-dashboard.cjs',
+      cwd: '/workspace',
+      watch: false,
       instances: 1,
       autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-      error_file: 'logs/lint-automation-error.log',
-      out_file: 'logs/lint-automation-out.log',
-      log_file: 'logs/lint-automation-combined.log',
-      time: true
+        NODE_ENV: 'development'
+      }
     },
 
-    // Type Checking Automation
+    // Project Health Check - runs every hour
     {
-      name: 'type-check-automation',
-      script: 'scripts/type-check-automation.js',
+      name: 'project-health-check',
+      script: 'scripts/automation/project-health-check.cjs',
+      cwd: '/workspace',
+      watch: false,
       instances: 1,
       autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 * * * *', // Every hour
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 */8 * * *', // Restart every 8 hours
-      error_file: 'logs/type-check-automation-error.log',
-      out_file: 'logs/type-check-automation-out.log',
-      log_file: 'logs/type-check-automation-combined.log',
-      time: true
-    },
-
-    // Code Quality Automation
-    {
-      name: 'code-quality-automation',
-      script: 'scripts/code-quality-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 */12 * * *', // Restart every 12 hours
-      error_file: 'logs/code-quality-automation-error.log',
-      out_file: 'logs/code-quality-automation-out.log',
-      log_file: 'logs/code-quality-automation-combined.log',
-      time: true
-    },
-
-    // Dependency Management Automation
-    {
-      name: 'dependency-automation',
-      script: 'scripts/dependency-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      cron_restart: '0 2 * * *', // Restart daily at 2 AM
-      error_file: 'logs/dependency-automation-error.log',
-      out_file: 'logs/dependency-automation-out.log',
-      log_file: 'logs/dependency-automation-combined.log',
-      time: true
-    },
-
-    // Security Audit Automation
-    {
-      name: 'security-audit-automation',
-      script: 'scripts/security-audit-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
+        NODE_ENV: 'development'
       }
     },
 
@@ -457,7 +237,7 @@ module.exports = {
       user: 'node',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'git@github.com:username/repo.git',
+      repo: 'git@github.com:repo/name.git',
       path: '/var/www/production',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
     }

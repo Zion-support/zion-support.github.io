@@ -1,9 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * Error Monitoring Dashboard Automation
- * Comprehensive monitoring and reporting for all error fixing automations
- * Runs every 5 minutes as part of PM2 automation system
+ * Error Monitoring Dashboard - PM2 Automation Script
+ * 
+ * This script provides comprehensive monitoring and reporting of project errors:
+ * - Real-time error tracking
+ * - Error trend analysis
+ * - Fix effectiveness metrics
+ * - Performance monitoring
+ * - Automated alerting
+ * 
+ * Runs every 5 minutes to provide continuous monitoring
  */
 
 const fs = require('fs');
@@ -14,559 +21,577 @@ const glob = require('glob');
 class ErrorMonitoringDashboard {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'reports');
+    this.dashboardFile = path.join(this.projectRoot, 'error-monitoring-dashboard.json');
+    this.historyFile = path.join(this.projectRoot, 'error-monitoring-history.json');
     this.startTime = Date.now();
-    
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
+    this.errorHistory = this.loadErrorHistory();
   }
 
   async run() {
-    this.log('🚀 Starting Error Monitoring Dashboard');
+    console.log('🚀 Starting Error Monitoring Dashboard...');
     
     try {
-      // Step 1: Collect error statistics
-      const errorStats = await this.collectErrorStatistics();
+      // Step 1: Collect current error metrics
+      const currentMetrics = await this.collectCurrentMetrics();
       
-      // Step 2: Analyze error patterns
-      const errorPatterns = await this.analyzeErrorPatterns();
+      // Step 2: Analyze error trends
+      const trendAnalysis = this.analyzeErrorTrends(currentMetrics);
       
       // Step 3: Generate comprehensive report
-      await this.generateComprehensiveReport(errorStats, errorPatterns);
+      const dashboard = this.generateDashboard(currentMetrics, trendAnalysis);
       
-      // Step 4: Generate error fixing recommendations
-      await this.generateErrorFixingRecommendations(errorStats, errorPatterns);
+      // Step 4: Save to history
+      this.saveToHistory(currentMetrics);
       
-      // Step 5: Update dashboard data
-      await this.updateDashboardData(errorStats, errorPatterns);
+      // Step 5: Generate alerts if needed
+      await this.generateAlerts(dashboard);
       
-      this.log(`✅ Error Monitoring Dashboard completed successfully!`);
+      console.log('✅ Error Monitoring Dashboard completed!');
       
     } catch (error) {
-      this.log(`❌ Error in Error Monitoring Dashboard: ${error.message}`, 'ERROR');
+      console.error('❌ Error in Error Monitoring Dashboard:', error);
       await this.generateErrorReport(error);
     }
   }
 
-  async collectErrorStatistics() {
-    this.log('📊 Collecting error statistics...');
+  async collectCurrentMetrics() {
+    console.log('📊 Collecting current error metrics...');
     
-    const stats = {
-      totalErrors: 0,
-      errorsByType: {},
-      errorsByFile: {},
-      errorsBySeverity: {},
-      automationPerformance: {},
-      recentFixes: [],
-      errorTrends: []
+    const metrics = {
+      timestamp: new Date().toISOString(),
+      typescript: await this.getTypeScriptMetrics(),
+      eslint: await this.getESLintMetrics(),
+      build: await this.getBuildMetrics(),
+      runtime: await this.getRuntimeMetrics(),
+      performance: await this.getPerformanceMetrics(),
+      files: await this.getFileMetrics()
     };
     
+    return metrics;
+  }
+
+  async getTypeScriptMetrics() {
     try {
-      // Collect TypeScript errors
-      const tsErrors = await this.getTypeScriptErrors();
-      stats.totalErrors += tsErrors.length;
-      stats.errorsByType['TypeScript'] = tsErrors.length;
+      const output = execSync('npm run type-check 2>&1', { encoding: 'utf8' });
+      const errors = this.parseTypeScriptErrors(output);
       
-      // Collect ESLint errors
-      const eslintErrors = await this.getESLintErrors();
-      stats.totalErrors += eslintErrors.length;
-      stats.errorsByType['ESLint'] = eslintErrors.length;
-      
-      // Collect build errors
-      const buildErrors = await this.getBuildErrors();
-      stats.totalErrors += buildErrors.length;
-      stats.errorsByType['Build'] = buildErrors.length;
-      
-      // Analyze error patterns by file
-      const allErrors = [...tsErrors, ...eslintErrors, ...buildErrors];
-      stats.errorsByFile = this.groupErrorsByFile(allErrors);
-      
-      // Analyze error severity
-      stats.errorsBySeverity = this.analyzeErrorSeverity(allErrors);
-      
-      // Collect automation performance data
-      stats.automationPerformance = await this.getAutomationPerformance();
-      
-      // Collect recent fixes
-      stats.recentFixes = await this.getRecentFixes();
-      
-      // Analyze error trends
-      stats.errorTrends = await this.analyzeErrorTrends();
-      
+      return {
+        totalErrors: errors.length,
+        errorTypes: this.categorizeTypeScriptErrors(errors),
+        filesWithErrors: this.getFilesWithErrors(errors),
+        criticalErrors: errors.filter(e => this.isCriticalError(e)).length,
+        warnings: errors.filter(e => e.message.includes('warning')).length
+      };
     } catch (error) {
-      this.log(`⚠️  Warning: Could not collect all error statistics: ${error.message}`, 'WARN');
+      return {
+        totalErrors: 0,
+        errorTypes: {},
+        filesWithErrors: [],
+        criticalErrors: 0,
+        warnings: 0
+      };
     }
+  }
+
+  async getESLintMetrics() {
+    try {
+      const output = execSync('npm run lint 2>&1', { encoding: 'utf8' });
+      const errors = this.parseESLintErrors(output);
+      
+      return {
+        totalErrors: errors.length,
+        errorTypes: this.categorizeESLintErrors(errors),
+        filesWithErrors: this.getFilesWithErrors(errors),
+        criticalErrors: errors.filter(e => this.isCriticalError(e)).length,
+        warnings: errors.filter(e => e.message.includes('warning')).length
+      };
+    } catch (error) {
+      return {
+        totalErrors: 0,
+        errorTypes: {},
+        filesWithErrors: [],
+        criticalErrors: 0,
+        warnings: 0
+      };
+    }
+  }
+
+  async getBuildMetrics() {
+    try {
+      const startTime = Date.now();
+      execSync('npm run build 2>&1', { encoding: 'utf8' });
+      const buildTime = Date.now() - startTime;
+      
+      return {
+        success: true,
+        buildTime,
+        bundleSize: this.getBundleSize(),
+        buildErrors: 0
+      };
+    } catch (error) {
+      return {
+        success: false,
+        buildTime: 0,
+        bundleSize: 0,
+        buildErrors: this.parseBuildErrors(error.stdout || error.stderr || error.message).length
+      };
+    }
+  }
+
+  async getRuntimeMetrics() {
+    // Check for runtime errors in logs or console
+    const logFiles = glob.sync('*.log') || [];
+    const runtimeErrors = [];
     
-    return stats;
-  }
-
-  async getTypeScriptErrors() {
-    try {
-      const result = execSync('npm run type-check 2>&1', { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
-        timeout: 30000 
-      });
-      
-      const output = result.toString();
-      const errors = output.split('\n')
-        .filter(line => line.includes('error TS'))
-        .map(line => {
-          const match = line.match(/error TS\d+:\s*(.+)/);
-          return {
-            type: 'TypeScript',
-            code: line.match(/error (TS\d+):/)?.[1] || 'Unknown',
-            message: match?.[1] || line,
-            severity: 'error',
-            file: line.match(/([^:]+):\d+:/)?.[1] || 'Unknown'
-          };
-        });
-      
-      return errors;
-    } catch (error) {
-      // TypeScript check failed, parse the error output
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return output.split('\n')
-        .filter(line => line.includes('error TS'))
-        .map(line => {
-          const match = line.match(/error TS\d+:\s*(.+)/);
-          return {
-            type: 'TypeScript',
-            code: line.match(/error (TS\d+):/)?.[1] || 'Unknown',
-            message: match?.[1] || line,
-            severity: 'error',
-            file: line.match(/([^:]+):\d+:/)?.[1] || 'Unknown'
-          };
-        });
-    }
-  }
-
-  async getESLintErrors() {
-    try {
-      const result = execSync('npm run lint 2>&1', { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
-        timeout: 30000 
-      });
-      
-      const output = result.toString();
-      const errors = output.split('\n')
-        .filter(line => line.includes('error'))
-        .map(line => {
-          const match = line.match(/([^:]+):(\d+):(\d+):\s*error\s+(.+)/);
-          return {
-            type: 'ESLint',
-            code: 'ESLint',
-            message: match?.[4] || line,
-            severity: 'error',
-            file: match?.[1] || 'Unknown',
-            line: parseInt(match?.[2]) || 0,
-            column: parseInt(match?.[3]) || 0
-          };
-        });
-      
-      return errors;
-    } catch (error) {
-      // ESLint failed, parse the error output
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return output.split('\n')
-        .filter(line => line.includes('error'))
-        .map(line => {
-          const match = line.match(/([^:]+):(\d+):(\d+):\s*error\s+(.+)/);
-          return {
-            type: 'ESLint',
-            code: 'ESLint',
-            message: match?.[4] || line,
-            severity: 'error',
-            file: match?.[1] || 'Unknown',
-            line: parseInt(match?.[2]) || 0,
-            column: parseInt(match?.[3]) || 0
-          };
-        });
-    }
-  }
-
-  async getBuildErrors() {
-    try {
-      const result = execSync('npm run build 2>&1', { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
-        timeout: 60000 
-      });
-      
-      const output = result.toString();
-      const errors = output.split('\n')
-        .filter(line => line.includes('error') || line.includes('Error'))
-        .map(line => ({
-          type: 'Build',
-          code: 'Build',
-          message: line.trim(),
-          severity: 'error',
-          file: 'Build Process'
-        }));
-      
-      return errors;
-    } catch (error) {
-      // Build failed, parse the error output
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return output.split('\n')
-        .filter(line => line.includes('error') || line.includes('Error'))
-        .map(line => ({
-          type: 'Build',
-          code: 'Build',
-          message: line.trim(),
-          severity: 'error',
-          file: 'Build Process'
-        }));
-    }
-  }
-
-  groupErrorsByFile(errors) {
-    const grouped = {};
-    
-    errors.forEach(error => {
-      const file = error.file || 'Unknown';
-      if (!grouped[file]) {
-        grouped[file] = [];
+    for (const logFile of logFiles) {
+      try {
+        const content = fs.readFileSync(logFile, 'utf8');
+        const errorLines = content.split('\n').filter(line => 
+          line.includes('ERROR') || line.includes('Error') || line.includes('error')
+        );
+        runtimeErrors.push(...errorLines);
+      } catch (error) {
+        // Skip files that can't be read
       }
-      grouped[file].push(error);
-    });
+    }
     
-    return grouped;
-  }
-
-  analyzeErrorSeverity(errors) {
-    const severity = {
-      error: 0,
-      warning: 0,
-      info: 0
+    return {
+      totalErrors: runtimeErrors.length,
+      errorTypes: this.categorizeRuntimeErrors(runtimeErrors),
+      criticalErrors: runtimeErrors.filter(e => this.isCriticalError(e)).length
     };
-    
-    errors.forEach(error => {
-      const sev = error.severity || 'error';
-      severity[sev] = (severity[sev] || 0) + 1;
-    });
-    
-    return severity;
   }
 
-  async getAutomationPerformance() {
-    const performance = {};
-    
+  async getPerformanceMetrics() {
     try {
-      // Read automation report files
-      const reportFiles = glob.sync('reports/*-report.json', { cwd: this.projectRoot });
+      const startTime = Date.now();
+      execSync('npm run dev 2>&1', { timeout: 30000 }); // 30 second timeout
+      const startupTime = Date.now() - startTime;
       
-      for (const reportFile of reportFiles) {
-        try {
-          const content = fs.readFileSync(path.join(this.projectRoot, reportFile), 'utf8');
-          const report = JSON.parse(content);
-          
-          if (report.automation && report.duration) {
-            performance[report.automation] = {
-              lastRun: report.timestamp,
-              duration: report.duration,
-              status: report.status,
-              fixesApplied: report.fixesApplied || 0,
-              errorsFixed: report.errorsFixed || 0
-            };
-          }
-        } catch (parseError) {
-          // Skip invalid JSON files
+      return {
+        startupTime,
+        memoryUsage: process.memoryUsage(),
+        cpuUsage: process.cpuUsage()
+      };
+    } catch (error) {
+      return {
+        startupTime: 0,
+        memoryUsage: process.memoryUsage(),
+        cpuUsage: process.cpuUsage()
+      };
+    }
+  }
+
+  async getFileMetrics() {
+    const tsxFiles = glob.sync('src/**/*.{ts,tsx,js,jsx}');
+    const totalFiles = tsxFiles.length;
+    const totalLines = tsxFiles.reduce((total, file) => {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        return total + content.split('\n').length;
+      } catch (error) {
+        return total;
+      }
+    }, 0);
+    
+    return {
+      totalFiles,
+      totalLines,
+      averageLinesPerFile: totalLines / totalFiles,
+      fileTypes: this.getFileTypeDistribution(tsxFiles)
+    };
+  }
+
+  parseTypeScriptErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(/src\/[^:]+:\d+:\d+ - error TS\d+:(.+)/);
+        if (match) {
+          errors.push({
+            type: 'typescript',
+            message: match[1].trim(),
+            fullLine: line,
+            file: line.match(/src\/[^:]+/)?.[0] || null,
+            lineNumber: line.match(/:(\d+):/)?.[1] || null,
+            errorCode: line.match(/error TS(\d+):/)?.[1] || null
+          });
         }
       }
-    } catch (error) {
-      this.log(`⚠️  Warning: Could not read automation performance data: ${error.message}`, 'WARN');
     }
     
-    return performance;
+    return errors;
   }
 
-  async getRecentFixes() {
-    const fixes = [];
+  parseESLintErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
     
-    try {
-      // Read recent automation reports
-      const reportFiles = glob.sync('reports/*-report.json', { cwd: this.projectRoot });
-      
-      for (const reportFile of reportFiles) {
-        try {
-          const content = fs.readFileSync(path.join(this.projectRoot, reportFile), 'utf8');
-          const report = JSON.parse(content);
-          
-          if (report.timestamp && report.fixesApplied > 0) {
-            fixes.push({
-              automation: report.automation,
-              timestamp: report.timestamp,
-              fixesApplied: report.fixesApplied,
-              errorsFixed: report.errorsFixed
-            });
-          }
-        } catch (parseError) {
-          // Skip invalid JSON files
-        }
-      }
-      
-      // Sort by timestamp (most recent first)
-      fixes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-      
-    } catch (error) {
-      this.log(`⚠️  Warning: Could not read recent fixes: ${error.message}`, 'WARN');
-    }
-    
-    return fixes.slice(0, 10); // Return last 10 fixes
-  }
-
-  async analyzeErrorTrends() {
-    const trends = [];
-    
-    try {
-      // Read historical error data
-      const reportFiles = glob.sync('reports/*-report.json', { cwd: this.projectRoot });
-      const dailyStats = {};
-      
-      reportFiles.forEach(reportFile => {
-        try {
-          const content = fs.readFileSync(path.join(this.projectRoot, reportFile), 'utf8');
-          const report = JSON.parse(content);
-          
-          if (report.timestamp) {
-            const date = report.timestamp.split('T')[0];
-            if (!dailyStats[date]) {
-              dailyStats[date] = { errors: 0, fixes: 0 };
-            }
-            
-            dailyStats[date].errors += report.errorsFixed || 0;
-            dailyStats[date].fixes += report.fixesApplied || 0;
-          }
-        } catch (parseError) {
-          // Skip invalid JSON files
-        }
-      });
-      
-      // Convert to trend data
-      Object.entries(dailyStats).forEach(([date, stats]) => {
-        trends.push({
-          date,
-          errors: stats.errors,
-          fixes: stats.fixes,
-          netChange: stats.fixes - stats.errors
+    for (const line of lines) {
+      if (line.includes('error') || line.includes('warning')) {
+        errors.push({
+          type: 'eslint',
+          message: line.trim(),
+          fullLine: line
         });
-      });
-      
-      // Sort by date
-      trends.sort((a, b) => new Date(a.date) - new Date(b.date));
-      
-    } catch (error) {
-      this.log(`⚠️  Warning: Could not analyze error trends: ${error.message}`, 'WARN');
+      }
     }
+    
+    return errors;
+  }
+
+  parseBuildErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('error') || line.includes('failed') || line.includes('Error')) {
+        errors.push({
+          type: 'build',
+          message: line.trim(),
+          fullLine: line
+        });
+      }
+    }
+    
+    return errors;
+  }
+
+  categorizeTypeScriptErrors(errors) {
+    const categories = {};
+    
+    for (const error of errors) {
+      if (error.message.includes('Duplicate identifier')) {
+        categories.duplicateIdentifiers = (categories.duplicateIdentifiers || 0) + 1;
+      } else if (error.message.includes('Module has no default export')) {
+        categories.missingExports = (categories.missingExports || 0) + 1;
+      } else if (error.message.includes('Object literal may only specify known properties')) {
+        categories.objectLiteral = (categories.objectLiteral || 0) + 1;
+      } else if (error.message.includes('is not assignable to parameter of type')) {
+        categories.typeMismatch = (categories.typeMismatch || 0) + 1;
+      } else if (error.message.includes('is declared but its value is never read')) {
+        categories.unusedVariables = (categories.unusedVariables || 0) + 1;
+      } else {
+        categories.other = (categories.other || 0) + 1;
+      }
+    }
+    
+    return categories;
+  }
+
+  categorizeESLintErrors(errors) {
+    const categories = {};
+    
+    for (const error of errors) {
+      if (error.message.includes('import')) {
+        categories.importIssues = (categories.importIssues || 0) + 1;
+      } else if (error.message.includes('export')) {
+        categories.exportIssues = (categories.exportIssues || 0) + 1;
+      } else if (error.message.includes('unused')) {
+        categories.unusedVariables = (categories.unusedVariables || 0) + 1;
+      } else {
+        categories.other = (categories.other || 0) + 1;
+      }
+    }
+    
+    return categories;
+  }
+
+  categorizeRuntimeErrors(errors) {
+    const categories = {};
+    
+    for (const error of errors) {
+      if (error.includes('TypeError')) {
+        categories.typeErrors = (categories.typeErrors || 0) + 1;
+      } else if (error.includes('ReferenceError')) {
+        categories.referenceErrors = (categories.referenceErrors || 0) + 1;
+      } else if (error.includes('SyntaxError')) {
+        categories.syntaxErrors = (categories.syntaxErrors || 0) + 1;
+      } else {
+        categories.other = (categories.other || 0) + 1;
+      }
+    }
+    
+    return categories;
+  }
+
+  getFilesWithErrors(errors) {
+    const files = new Set();
+    
+    for (const error of errors) {
+      if (error.file) {
+        files.add(error.file);
+      }
+    }
+    
+    return Array.from(files);
+  }
+
+  isCriticalError(error) {
+    const criticalPatterns = [
+      'Cannot find module',
+      'Module parse failed',
+      'Unexpected token',
+      'SyntaxError',
+      'ReferenceError'
+    ];
+    
+    return criticalPatterns.some(pattern => 
+      error.message.includes(pattern) || error.fullLine.includes(pattern)
+    );
+  }
+
+  getBundleSize() {
+    try {
+      if (fs.existsSync('dist')) {
+        const stats = fs.statSync('dist');
+        return stats.size;
+      }
+      return 0;
+    } catch (error) {
+      return 0;
+    }
+  }
+
+  getFileTypeDistribution(files) {
+    const distribution = {};
+    
+    for (const file of files) {
+      const ext = path.extname(file);
+      distribution[ext] = (distribution[ext] || 0) + 1;
+    }
+    
+    return distribution;
+  }
+
+  analyzeErrorTrends(currentMetrics) {
+    const trends = {
+      typescript: this.analyzeTypeScriptTrends(currentMetrics.typescript),
+      eslint: this.analyzeESLintTrends(currentMetrics.eslint),
+      overall: this.analyzeOverallTrends(currentMetrics)
+    };
     
     return trends;
   }
 
-  async analyzeErrorPatterns() {
-    const patterns = {
-      commonErrors: {},
-      errorHotspots: {},
-      fixableErrors: [],
-      persistentErrors: []
-    };
+  analyzeTypeScriptTrends(current) {
+    const previous = this.getPreviousMetrics('typescript');
     
-    try {
-      // Get current errors
-      const tsErrors = await this.getTypeScriptErrors();
-      const eslintErrors = await this.getESLintErrors();
-      const allErrors = [...tsErrors, ...eslintErrors];
-      
-      // Analyze common error patterns
-      allErrors.forEach(error => {
-        const key = `${error.code}: ${error.message}`;
-        patterns.commonErrors[key] = (patterns.commonErrors[key] || 0) + 1;
-      });
-      
-      // Find error hotspots (files with many errors)
-      const fileErrorCounts = {};
-      allErrors.forEach(error => {
-        const file = error.file;
-        fileErrorCounts[file] = (fileErrorCounts[file] || 0) + 1;
-      });
-      
-      patterns.errorHotspots = Object.entries(fileErrorCounts)
-        .filter(([file, count]) => count > 5)
-        .sort(([,a], [,b]) => b - a)
-        .slice(0, 10);
-      
-      // Identify fixable errors
-      patterns.fixableErrors = allErrors.filter(error => 
-        error.message.includes('unused') ||
-        error.message.includes('duplicate') ||
-        error.message.includes('missing') ||
-        error.message.includes('import')
-      );
-      
-      // Identify persistent errors (errors that appear frequently)
-      patterns.persistentErrors = Object.entries(patterns.commonErrors)
-        .filter(([, count]) => count > 3)
-        .sort(([,a], [,b]) => b - a)
-        .slice(0, 10);
-      
-    } catch (error) {
-      this.log(`⚠️  Warning: Could not analyze error patterns: ${error.message}`, 'WARN');
+    if (!previous) {
+      return { trend: 'new', change: 0, improvement: false };
     }
     
-    return patterns;
+    const change = current.totalErrors - previous.totalErrors;
+    const improvement = change < 0;
+    
+    return {
+      trend: improvement ? 'improving' : change > 0 ? 'worsening' : 'stable',
+      change: Math.abs(change),
+      improvement,
+      percentageChange: ((change / previous.totalErrors) * 100).toFixed(2)
+    };
   }
 
-  async generateComprehensiveReport(errorStats, errorPatterns) {
-    this.log('📊 Generating comprehensive error report...');
+  analyzeESLintTrends(current) {
+    const previous = this.getPreviousMetrics('eslint');
     
-    const report = {
+    if (!previous) {
+      return { trend: 'new', change: 0, improvement: false };
+    }
+    
+    const change = current.totalErrors - previous.totalErrors;
+    const improvement = change < 0;
+    
+    return {
+      trend: improvement ? 'improving' : change > 0 ? 'worsening' : 'stable',
+      change: Math.abs(change),
+      improvement,
+      percentageChange: ((change / previous.totalErrors) * 100).toFixed(2)
+    };
+  }
+
+  analyzeOverallTrends(current) {
+    const totalCurrent = current.typescript.totalErrors + current.eslint.totalErrors;
+    const previous = this.getPreviousMetrics('overall');
+    
+    if (!previous) {
+      return { trend: 'new', change: 0, improvement: false };
+    }
+    
+    const change = totalCurrent - previous;
+    const improvement = change < 0;
+    
+    return {
+      trend: improvement ? 'improving' : change > 0 ? 'worsening' : 'stable',
+      change: Math.abs(change),
+      improvement,
+      percentageChange: ((change / previous) * 100).toFixed(2)
+    };
+  }
+
+  getPreviousMetrics(type) {
+    if (this.errorHistory.length === 0) return null;
+    
+    const lastMetrics = this.errorHistory[this.errorHistory.length - 1];
+    
+    if (type === 'overall') {
+      return lastMetrics.typescript.totalErrors + lastMetrics.eslint.totalErrors;
+    }
+    
+    return lastMetrics[type]?.totalErrors || 0;
+  }
+
+  generateDashboard(metrics, trends) {
+    const dashboard = {
       timestamp: new Date().toISOString(),
       summary: {
-        totalErrors: errorStats.totalErrors,
-        errorsByType: errorStats.errorsByType,
-        errorsBySeverity: errorStats.errorsBySeverity,
-        automationStatus: Object.keys(errorStats.automationPerformance).length
+        totalErrors: metrics.typescript.totalErrors + metrics.eslint.totalErrors,
+        criticalErrors: metrics.typescript.criticalErrors + metrics.eslint.criticalErrors,
+        buildStatus: metrics.build.success ? 'success' : 'failed',
+        overallTrend: trends.overall.trend
       },
-      detailedStats: errorStats,
-      errorPatterns: errorPatterns,
-      recommendations: await this.generateRecommendations(errorStats, errorPatterns)
+      details: {
+        typescript: {
+          ...metrics.typescript,
+          trends: trends.typescript
+        },
+        eslint: {
+          ...metrics.eslint,
+          trends: trends.eslint
+        },
+        build: metrics.build,
+        runtime: metrics.runtime,
+        performance: metrics.performance,
+        files: metrics.files
+      },
+      recommendations: this.generateRecommendations(metrics, trends),
+      alerts: this.generateAlerts(metrics, trends)
     };
     
-    const reportPath = path.join(this.reportsDir, 'comprehensive-error-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Comprehensive error report generated: ${reportPath}`);
+    fs.writeFileSync(this.dashboardFile, JSON.stringify(dashboard, null, 2));
+    return dashboard;
   }
 
-  async generateErrorFixingRecommendations(errorStats, errorPatterns) {
-    this.log('💡 Generating error fixing recommendations...');
-    
+  generateRecommendations(metrics, trends) {
     const recommendations = [];
     
-    // High priority recommendations
-    if (errorStats.totalErrors > 100) {
+    if (metrics.typescript.totalErrors > 100) {
       recommendations.push({
-        priority: 'HIGH',
-        action: 'Run comprehensive error fixer immediately',
-        reason: `Project has ${errorStats.totalErrors} errors that need immediate attention`,
-        automation: 'comprehensive-error-fixer'
+        priority: 'high',
+        category: 'typescript',
+        message: 'High number of TypeScript errors detected. Consider running the TypeScript Error Fixer automation.',
+        action: 'Run typescript-error-fixer automation'
       });
     }
     
-    // TypeScript specific recommendations
-    if (errorStats.errorsByType.TypeScript > 50) {
+    if (metrics.typescript.duplicateIdentifiers > 50) {
       recommendations.push({
-        priority: 'HIGH',
-        action: 'Run TypeScript error fixer',
-        reason: `High number of TypeScript errors (${errorStats.errorsByType.TypeScript})`,
-        automation: 'typescript-error-fixer'
+        priority: 'high',
+        category: 'duplicate-identifiers',
+        message: 'Many duplicate identifier errors. Run the Duplicate Identifier Fixer automation.',
+        action: 'Run duplicate-identifier-fixer automation'
       });
     }
     
-    // Icon import recommendations
-    if (errorPatterns.commonErrors['ESLint: Module has no exported member']) {
+    if (!metrics.build.success) {
       recommendations.push({
-        priority: 'MEDIUM',
-        action: 'Run Lucide React icon fixer',
-        reason: 'Multiple icon import errors detected',
-        automation: 'lucide-react-icon-fixer'
+        priority: 'critical',
+        category: 'build',
+        message: 'Build is failing. Fix critical errors before deployment.',
+        action: 'Review build errors and fix critical issues'
       });
     }
     
-    // File-specific recommendations
-    errorPatterns.errorHotspots.forEach(([file, count]) => {
-      if (count > 10) {
-        recommendations.push({
-          priority: 'MEDIUM',
-          action: `Focus on fixing errors in ${file}`,
-          reason: `File has ${count} errors (error hotspot)`,
-          automation: 'manual-review'
-        });
+    if (trends.overall.trend === 'worsening') {
+      recommendations.push({
+        priority: 'medium',
+        category: 'trends',
+        message: 'Error count is increasing. Review recent changes and run error fixers.',
+        action: 'Run comprehensive-error-fixer automation'
+      });
+    }
+    
+    return recommendations;
+  }
+
+  generateAlerts(metrics, trends) {
+    const alerts = [];
+    
+    if (metrics.typescript.totalErrors > 500) {
+      alerts.push({
+        level: 'critical',
+        message: `Critical: ${metrics.typescript.totalErrors} TypeScript errors detected`,
+        timestamp: new Date().toISOString()
+      });
+    }
+    
+    if (metrics.build.success === false) {
+      alerts.push({
+        level: 'critical',
+        message: 'Critical: Build is failing',
+        timestamp: new Date().toISOString()
+      });
+    }
+    
+    if (trends.overall.trend === 'worsening' && trends.overall.change > 100) {
+      alerts.push({
+        level: 'warning',
+        message: `Warning: Error count increased by ${trends.overall.change} errors`,
+        timestamp: new Date().toISOString()
+      });
+    }
+    
+    return alerts;
+  }
+
+  saveToHistory(metrics) {
+    this.errorHistory.push(metrics);
+    
+    // Keep only last 100 entries
+    if (this.errorHistory.length > 100) {
+      this.errorHistory = this.errorHistory.slice(-100);
+    }
+    
+    fs.writeFileSync(this.historyFile, JSON.stringify(this.errorHistory, null, 2));
+  }
+
+  loadErrorHistory() {
+    try {
+      if (fs.existsSync(this.historyFile)) {
+        return JSON.parse(fs.readFileSync(this.historyFile, 'utf8'));
       }
-    });
+    } catch (error) {
+      console.log('Could not load error history, starting fresh');
+    }
     
-    const recommendationsReport = {
-      timestamp: new Date().toISOString(),
-      recommendations: recommendations,
-      summary: `Generated ${recommendations.length} recommendations for error fixing`
-    };
-    
-    const reportPath = path.join(this.reportsDir, 'error-fixing-recommendations.json');
-    fs.writeFileSync(reportPath, JSON.stringify(recommendationsReport, null, 2));
-    
-    this.log(`💡 Error fixing recommendations generated: ${reportPath}`);
+    return [];
   }
 
-  async updateDashboardData(errorStats, errorPatterns) {
-    this.log('📈 Updating dashboard data...');
-    
-    const dashboardData = {
-      lastUpdated: new Date().toISOString(),
-      currentStatus: {
-        totalErrors: errorStats.totalErrors,
-        errorsByType: errorStats.errorsByType,
-        errorsBySeverity: errorStats.errorsBySeverity
-      },
-      automationStatus: errorStats.automationPerformance,
-      recentActivity: errorStats.recentFixes.slice(0, 5),
-      errorTrends: errorStats.errorTrends.slice(-7), // Last 7 days
-      topErrorHotspots: errorPatterns.errorHotspots.slice(0, 5),
-      recommendations: await this.generateQuickRecommendations(errorStats, errorPatterns)
-    };
-    
-    const dashboardPath = path.join(this.reportsDir, 'error-dashboard.json');
-    fs.writeFileSync(dashboardPath, JSON.stringify(dashboardData, null, 2));
-    
-    this.log(`📈 Dashboard data updated: ${dashboardPath}`);
-  }
-
-  async generateQuickRecommendations(errorStats, errorPatterns) {
-    const quickRecs = [];
-    
-    if (errorStats.totalErrors > 0) {
-      quickRecs.push('Run error fixing automations');
+  async generateAlerts(dashboard) {
+    if (dashboard.alerts.length > 0) {
+      console.log('🚨 Alerts generated:');
+      for (const alert of dashboard.alerts) {
+        console.log(`  ${alert.level.toUpperCase()}: ${alert.message}`);
+      }
     }
-    
-    if (errorStats.errorsByType.TypeScript > 0) {
-      quickRecs.push('Focus on TypeScript errors');
-    }
-    
-    if (errorPatterns.errorHotspots.length > 0) {
-      quickRecs.push('Address error hotspots');
-    }
-    
-    return quickRecs;
   }
 
   async generateErrorReport(error) {
-    const errorReport = {
+    const report = {
       timestamp: new Date().toISOString(),
-      automation: 'Error Monitoring Dashboard',
+      duration: Date.now() - this.startTime,
       status: 'error',
       error: error.message,
-      stack: error.stack,
-      duration: Date.now() - this.startTime
+      stack: error.stack
     };
     
-    const reportPath = path.join(this.reportsDir, 'error-monitoring-dashboard-error.json');
-    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
-    
-    this.log(`❌ Error report generated: ${reportPath}`);
+    fs.writeFileSync(this.dashboardFile, JSON.stringify(report, null, 2));
+    console.log(`❌ Error report generated: ${this.dashboardFile}`);
   }
 }
 
-// Main execution
-if (require.main === module) {
-  const dashboard = new ErrorMonitoringDashboard();
-  dashboard.run().catch(console.error);
-}
-
-module.exports = ErrorMonitoringDashboard;
+// Run the automation
+const dashboard = new ErrorMonitoringDashboard();
+dashboard.run().catch(console.error);

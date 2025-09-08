@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Building, Users, TrendingUp, ArrowRight, Search, Share2, Bookmark, Zap, Brain, Cloud, Shield, Atom, Network, Heart, DollarSign, Clock, Factory } from 'lucide-react';
 

@@ -82,7 +82,7 @@ import { Brain, Shield, Cloud, Globe, Code, Rocket, Server, ChevronRight, Star, 
     }
   };
 
-  const itemVariants = {
+// Removed unused:   const itemVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: { 
       opacity: 1, 

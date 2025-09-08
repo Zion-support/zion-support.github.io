@@ -43,20 +43,125 @@ const FuturisticBackground = React.memo(() => {
 });
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
-      {particles.map((particle) => (
-        <div
-          key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400/30 rounded-full animate-pulse"
-          style={{
-            left: particle.left,
-            top: particle.top,
-            animationDelay: `${particle.delay}s`,
-            animationDuration: `${particle.duration}s`
-          }}
-        />
-      ))}
-    </div>
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Hero Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">
+            <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            Leading the future of technology with cutting-edge AI solutions, quantum computing, 
+            and innovative micro SAAS services that transform businesses worldwide.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/services"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
+              aria-label="Explore our services"
+            >
+              <span>Explore Services</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <button
+              onClick={onGetStarted}
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
+              aria-label="Get started with Zion Tech"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Hero Slides */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-6xl mx-auto"
+        >
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12"
+              >
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6">
+                      {React?.createElement(heroSlides[currentSlide]?.icon, { className: "w-8 h-8 text-cyan-400" })}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                      {heroSlides[currentSlide]?.title}
+                    </h3>
+                    <p className="text-gray-300 mb-6">
+                      {heroSlides[currentSlide]?.description}
+                    </p>
+                    <div className="grid grid-cols-2 gap-3">
+                      {heroSlides[currentSlide]?.features?.map((feature, index) => (
+                        <div key={index} className="flex items-center text-sm text-cyan-400">
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Navigation Controls */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6 text-cyan-400" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-6 h-6 text-cyan-400" />
+            </button>
+
+            {/* Slide Indicators */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {heroSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-cyan-400 scale-125' 
+                      : 'bg-cyan-400/30 hover:bg-cyan-400/50'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 });
 

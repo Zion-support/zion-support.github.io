@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, Shield, BarChart3, Target, Star, ArrowRight, Lock, Users, Phone, Mail, MapPin, Network, Server, Code, Truck, Atom, Cloud, MessageCircle, GitFork } from 'lucide-react';

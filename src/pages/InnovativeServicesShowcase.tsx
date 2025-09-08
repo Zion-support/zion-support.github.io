@@ -15,45 +15,127 @@ const InnovativeServicesShowcase: React.FC = () => {
     'Over $5,000'
   ];
 
-  const filteredServices = INNOVATIVE_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
-    let matchesPrice = true;
-    if (selectedPriceRange !== 'all') {
-      const price = service.price;
-      switch (selectedPriceRange) {
-        case 'Under $1,000':
-          matchesPrice = price < 1000;
-          break;
-        case '$1,000 - $2,000':
-          matchesPrice = price >= 1000 && price < 2000;
-          break;
-        case '$2,000 - $3,000':
-          matchesPrice = price >= 2000 && price < 3000;
-          break;
-        case '$3,000 - $5,000':
-          matchesPrice = price >= 3000 && price < 5000;
-          break;
-        case 'Over $5,000':
-          matchesPrice = price >= 5000;
-          break;
+  const filteredServices = useMemo(() => {
+    let filtered = INNOVATIVE_SERVICES_2025;
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(service =>
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    }
+
+    // Filter by price range
+    if (priceRange !== 'all') {
+      const [min, max] = priceRange.split('-').map(Number);
+      if (priceRange === '3000+') {
+        filtered = filtered.filter(service => service.price >= 3000);
+      } else {
+        filtered = filtered??.filter(service => service??.price >= min && service??.price <= max);
       }
     }
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getPriceRange = (price: number) => {
-    if (price < 1000) return 'Under $1,000';
-    if (price < 2000) return '$1,000 - $2,000';
-    if (price < 3000) return '$2,000 - $3,000';
-    if (price < 5000) return '$3,000 - $5,000';
-    return 'Over $5,000';
-  };
+    // Sort services
+    switch (sortBy) {
+      case 'rating':
+        filtered.sort((a, b) => b??.rating - a.rating);
+        break;
+      case 'aiScore':
+        filtered.sort((a, b) => b??.aiScore - a.aiScore);
+        break;
+      case 'price':
+        filtered.sort((a, b) => a.price - b.price);
+        break;
+      case 'launchDate':
+        filtered.sort((a, b) => new Date(b??.launchDate).getTime() - new Date(a.launchDate).getTime());
+        break;
+    }
+
+    return filtered;
+  }, [searchTerm, selectedCategory, priceRange, sortBy]);
+
+  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
+    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+      <div className="flex items-start justify-between mb-4">
+        <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+        <div className="flex items-center space-x-2">
+          <span className="text-yellow-500">★</span>
+          <span className="text-sm text-gray-600">{service?.rating}</span>
+          <span className="text-xs text-gray-400">({service?.reviews})</span>
+        </div>
+      </div>
+      
+      <p className="text-gray-600 mb-4">{service.description}</p>
+      
+      <div className="flex items-center justify-between mb-4">
+        <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
+        <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
+          AI Score: {service?.aiScore}
+        </span>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+        <ul className="text-sm text-gray-600 space-y-1">
+          {service.features.slice(0, 4).map((feature, index) => (
+            <li key={index} className="flex items-center">
+              <span className="text-green-500 mr-2">✓</span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+        <ul className="text-sm text-gray-600 space-y-1">
+          {service.benefits.slice(0, 3).map((benefit, index) => (
+            <li key={index} className="flex items-center">
+              <span className="text-blue-500 mr-2">→</span>
+              {benefit}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-semibold text-gray-900 mb-2">Technology Stack:</h4>
+        <div className="flex flex-wrap gap-2">
+          {service?.technology.map((tech, index) => (
+            <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="border-t pt-4">
+        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+          <span>Delivery: {service.estimatedDelivery}</span>
+          <span>Support: {service.supportLevel}</span>
+        </div>
+        
+        <div className="flex space-x-3">
+          <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+            Get Quote
+          </button>
+          <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

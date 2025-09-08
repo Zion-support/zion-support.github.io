@@ -1,4 +1,5 @@
-import { cn } from '@/lib/utils';
+import React from 'react';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', className = '', customColor }) {
     const getGlowStyles = () => {
         const baseColor = customColor || (color === 'zion-cyan' ? '#00d4ff' :

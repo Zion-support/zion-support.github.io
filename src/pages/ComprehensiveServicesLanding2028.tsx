@@ -1,6 +1,55 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Cloud, Shield, Rocket, Heart, Globe, Users, CheckCircle, Star, TrendingUp, Award, Lightbulb, Scale, Truck, Target, Home, Wrench, FileText, Phone, Mail, MapPin, Clock, Target as TargetIcon, X, ChevronRight, ChevronLeft } from 'lucide-react';
+// Removed unused: import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Globe,
+  Zap,
+  Users,
+  ShoppingCart,
+  MessageCircle,
+  BookOpen,
+  DollarSign,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Award,
+  Lightbulb,
+  Database,
+  Network,
+  Smartphone,
+  Server,
+  Scale,
+  Truck,
+  Target,
+  Building,
+  Home,
+  Wrench,
+  FileText,
+  Video,
+  Mic,
+  Camera,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Calendar,
+  Clock,
+  BarChart3,
+  Target as TargetIcon,
+  Check,
+  X,
+  Play,
+  ChevronRight,
+  ChevronLeft
+} from 'lucide-react';
 import { 
   revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
@@ -221,23 +270,23 @@ export default function ComprehensiveServicesLanding2028() {
                     <span className="text-white font-medium">{service.category}</span>
                   </div>
                   
-                  {service.price && (
+                  {service?.price && (
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light text-sm">Price:</span>
-                      <span className="text-zion-cyan font-bold">${service.price.toLocaleString()}</span>
+                      <span className="text-zion-cyan font-bold">${service?.price.toLocaleString()}</span>
                     </div>
                   )}
 
-                  {service.hourlyRate && (
+                  {service?.hourlyRate && (
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light text-sm">Hourly Rate:</span>
-                      <span className="text-zion-cyan font-bold">${service.hourlyRate}/hr</span>
+                      <span className="text-zion-cyan font-bold">${service?.hourlyRate}/hr</span>
                     </div>
                   )}
 
                   <div className="flex items-center justify-between">
                     <span className="text-zion-slate-light text-sm">ROI:</span>
-                    <span className="text-green-400 font-medium">{service.roi}</span>
+                    <span className="text-green-400 font-medium">{service?.roi}</span>
                   </div>
                 </div>
 
@@ -301,25 +350,25 @@ export default function ComprehensiveServicesLanding2028() {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"
             >
               <div className="flex justify-center mb-6">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                {[?.?.?.Array(testimonials[currentTestimonial]?.rating)]?.map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
               
               <blockquote className="text-xl text-white mb-6 italic">
-                "{testimonials[currentTestimonial].content}"
+                "{testimonials[currentTestimonial]?.content}"
               </blockquote>
               
               <div className="flex items-center justify-center gap-4">
                 <img 
-                  src={testimonials[currentTestimonial].avatar} 
-                  alt={testimonials[currentTestimonial].name}
+                  src={testimonials[currentTestimonial]?.avatar} 
+                  alt={testimonials[currentTestimonial]?.name}
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div className="text-left">
-                  <div className="font-semibold text-white">{testimonials[currentTestimonial].name}</div>
-                  <div className="text-zion-slate-light">{testimonials[currentTestimonial].role}</div>
-                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].comp}</div>
+                  <div className="font-semibold text-white">{testimonials[currentTestimonial]?.name}</div>
+                  <div className="text-zion-slate-light">{testimonials[currentTestimonial]?.role}</div>
+                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial]?.company}</div>
                 </div>
               </div>
             </motion.div>
@@ -480,12 +529,12 @@ export default function ComprehensiveServicesLanding2028() {
             <div className="p-6">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(selectedService.category)}`}>
-                    {React.createElement(getCategoryIcon(selectedService.category), { className: "w-6 h-6 text-white" })}
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(selectedService?.category)}`}>
+                    {React.createElement(getCategoryIcon(selectedService?.category), { className: "w-6 h-6 text-white" })}
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-white">{selectedService.name}</h2>
-                    <p className="text-zion-slate-light">{selectedService.category}</p>
+                    <h2 className="text-2xl font-bold text-white">{selectedService?.name}</h2>
+                    <p className="text-zion-slate-light">{selectedService?.category}</p>
                   </div>
                 </div>
                 <Button
@@ -501,11 +550,11 @@ export default function ComprehensiveServicesLanding2028() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Description</h3>
-                  <p className="text-zion-slate-light mb-6">{selectedService.description}</p>
+                  <p className="text-zion-slate-light mb-6">{selectedService?.description}</p>
 
                   <h3 className="text-lg font-semibold text-white mb-3">Features</h3>
                   <ul className="space-y-2 mb-6">
-                    {selectedService.features.map((feature, index) => (
+                    {selectedService?.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
@@ -515,7 +564,7 @@ export default function ComprehensiveServicesLanding2028() {
 
                   <h3 className="text-lg font-semibold text-white mb-3">Benefits</h3>
                   <ul className="space-y-2 mb-6">
-                    {selectedService.benefits.map((benefit, index) => (
+                    {selectedService?.benefits.map((benefit, index) => (
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {benefit}
@@ -528,35 +577,35 @@ export default function ComprehensiveServicesLanding2028() {
                   <div className="bg-white/5 rounded-lg p-4 mb-6">
                     <h3 className="text-lg font-semibold text-white mb-3">Pricing & Details</h3>
                     <div className="space-y-3">
-                      {selectedService.price && (
+                      {selectedService?.price && (
                         <div className="flex justify-between">
                           <span className="text-zion-slate-light">Price:</span>
-                          <span className="text-zion-cyan font-bold">${selectedService.price.toLocaleString()}</span>
+                          <span className="text-zion-cyan font-bold">${selectedService?.price.toLocaleString()}</span>
                         </div>
                       )}
-                      {selectedService.hourlyRate && (
+                      {selectedService?.hourlyRate && (
                         <div className="flex justify-between">
                           <span className="text-zion-slate-light">Hourly Rate:</span>
-                          <span className="text-zion-cyan font-bold">${selectedService.hourlyRate}/hr</span>
+                          <span className="text-zion-cyan font-bold">${selectedService?.hourlyRate}/hr</span>
                         </div>
                       )}
-                      {selectedService.projectRate && (
+                      {selectedService?.projectRate && (
                         <div className="flex justify-between">
                           <span className="text-zion-slate-light">Project Rate:</span>
-                          <span className="text-zion-cyan font-bold">${selectedService.projectRate.toLocaleString()}</span>
+                          <span className="text-zion-cyan font-bold">${selectedService?.projectRate.toLocaleString()}</span>
                         </div>
                       )}
                       <div className="flex justify-between">
                         <span className="text-zion-slate-light">Market Price:</span>
-                        <span className="text-white font-medium">{selectedService.marketPrice}</span>
+                        <span className="text-white font-medium">{selectedService?.marketPrice}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zion-slate-light">ROI:</span>
-                        <span className="text-green-400 font-medium">{selectedService.roi}</span>
+                        <span className="text-green-400 font-medium">{selectedService?.roi}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zion-slate-light">Setup Time:</span>
-                        <span className="text-white font-medium">{selectedService.setupTime}</span>
+                        <span className="text-white font-medium">{selectedService?.setupTime}</span>
                       </div>
                     </div>
                   </div>
@@ -564,7 +613,7 @@ export default function ComprehensiveServicesLanding2028() {
                   <div className="bg-white/5 rounded-lg p-4 mb-6">
                     <h3 className="text-lg font-semibold text-white mb-3">Target Audience</h3>
                     <div className="flex flex-wrap gap-2">
-                      {selectedService.targetAudience.map((audience, index) => (
+                      {selectedService?.targetAudience.map((audience, index) => (
                         <Badge key={index} variant="secondary" className="bg-zion-cyan/20 text-zion-cyan">
                           {audience}
                         </Badge>
@@ -572,11 +621,11 @@ export default function ComprehensiveServicesLanding2028() {
                     </div>
                   </div>
 
-                  {selectedService.integrations && (
+                  {selectedService?.integrations && (
                     <div className="bg-white/5 rounded-lg p-4">
                       <h3 className="text-lg font-semibold text-white mb-3">Integrations</h3>
                       <div className="flex flex-wrap gap-2">
-                        {selectedService.integrations.map((integration, index) => (
+                        {selectedService?.integrations.map((integration, index) => (
                           <Badge key={index} variant="outline" className="border-zion-cyan/30 text-zion-cyan">
                             {integration}
                           </Badge>

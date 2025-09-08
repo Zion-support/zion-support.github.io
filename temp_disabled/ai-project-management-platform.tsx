@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Brain, Users, Calendar, TrendingUp, Shield, Zap, CheckCircle, Clock, Target, BarChart3, MessageSquare, GitBranch } from 'lucide-react';
@@ -125,7 +126,7 @@ export default function AIProjectManagementPlatform() {
     {
       title: 'Construction Projects',
       description: 'Track progress and manage resources across multiple sites with predictive analytics',
-      icon: Building
+// Fixed missing name:       icon: Building
     },
     {
       title: 'Event Planning',

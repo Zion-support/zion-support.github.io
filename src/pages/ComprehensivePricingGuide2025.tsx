@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Brain, Cloud, Shield, ArrowRight, Heart, TrendingUp, Play, Phone, Mail, MapPin, Calculator, BarChart3, Home, Car, Factory, City, ShoppingCart, Factory as FactoryIcon, City as CityIcon, Home as HomeIcon, Car as CarIcon, Factory as FactoryIcon2, City as CityIcon2, Home as HomeIcon2, Car as CarIcon2 } from 'lucide-react';

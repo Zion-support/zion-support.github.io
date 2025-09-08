@@ -1,4 +1,5 @@
-import React from 'react';
+// Removed unused: import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, MapPin, Users, Filter, Search, ArrowRight, Globe, Zap, Brain, Shield, Cloud, TrendingUp, BookOpen, CheckCircle } from 'lucide-react';
 

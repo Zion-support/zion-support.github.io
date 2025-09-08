@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+// Removed unused: import React, { useState } from "react";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
 import { useAuth } from "@/hooks/useAuth";
 import { Card } from '@/components/ui/card';import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

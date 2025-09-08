@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Search, BookOpen, Video, FileText, MessageCircle, Mail, Phone, Users, Shield, Cloud, Brain, ArrowRight, Play, Star } from 'lucide-react';
@@ -28,10 +28,43 @@ export const HelpCenter: React.FC = () => {
       articles: ["Common Issues", "Error Messages", "Performance Tips"]
     },
     {
-      title: "API & Integration",
-      description: "Learn how to integrate with our APIs and services",
-      icon: "🔌",
-      articles: ["API Documentation", "Authentication", "Webhooks"]
+      id: 'security',
+      name: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security features and compliance documentation',
+      color: 'from-red-500 to-orange-500',
+      articles: [
+        { title: 'Security Best Practices', type: 'guide', readTime: '20 min' },
+        { title: 'Compliance Requirements', type: 'guide', readTime: '25 min' },
+        { title: 'Access Control Setup', type: 'tutorial', readTime: '15 min' },
+        { title: 'Audit Trail Management', type: 'guide', readTime: '18 min' }
+      ]
+    },
+    {
+      id: 'integrations',
+      name: 'Integrations',
+// Fixed missing name:       icon: Network,
+      description: 'Third-party integrations and API documentation',
+      color: 'from-indigo-500 to-purple-500',
+      articles: [
+        { title: 'API Reference Guide', type: 'reference', readTime: '40 min' },
+        { title: 'Webhook Setup', type: 'tutorial', readTime: '20 min' },
+        { title: 'Third-party Integrations', type: 'guide', readTime: '25 min' },
+        { title: 'Custom Connectors', type: 'guide', readTime: '30 min' }
+      ]
+    },
+    {
+      id: 'troubleshooting',
+      name: 'Troubleshooting',
+// Fixed missing name:       icon: HelpCircle,
+      description: 'Common issues and solutions',
+      color: 'from-yellow-500 to-orange-500',
+      articles: [
+        { title: 'Common Error Codes', type: 'reference', readTime: '15 min' },
+        { title: 'Performance Issues', type: 'guide', readTime: '20 min' },
+        { title: 'Connection Problems', type: 'guide', readTime: '18 min' },
+        { title: 'Data Sync Issues', type: 'guide', readTime: '22 min' }
+      ]
     }
   ];
 
@@ -58,6 +91,47 @@ export const HelpCenter: React.FC = () => {
     }
   ];
 
+  const supportOptions = [
+    {
+      icon: MessageCircle,
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      availability: '24/7',
+      responseTime: 'Immediate',
+      action: 'Start Chat'
+    },
+    {
+      icon: Mail,
+      title: 'Email Support',
+      description: 'Send us a detailed message',
+      availability: '24/7',
+      responseTime: 'Within 4 hours',
+      action: 'Send Email'
+    },
+    {
+      icon: Phone,
+      title: 'Phone Support',
+      description: 'Speak directly with our experts',
+      availability: 'Mon-Fri 9AM-6PM EST',
+      responseTime: 'Immediate',
+      action: 'Call Now'
+    },
+    {
+      icon: Users,
+      title: 'Community Forum',
+      description: 'Connect with other users',
+      availability: '24/7',
+      responseTime: 'Varies',
+      action: 'Visit Forum'
+    }
+  ];
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? helpCategories 
+    : helpCategories.filter(cat => cat.id === selectedCategory);
+
+// Removed unused:   const filteredArticles = filteredCategories.flatMap(cat => cat.articles);
+
   return (
     <React.Fragment>
       <Helmet>
@@ -77,7 +151,7 @@ export const HelpCenter: React.FC = () => {
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <HelpCircle className="w-10 h-10 text-white" />
+// Fixed missing name:                 <HelpCircle className="w-10 h-10 text-white" />
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">

@@ -1,6 +1,4 @@
-export default Blog;
-
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User, Search, Filter, ArrowRight, BookOpen, Eye } from 'lucide-react';
 

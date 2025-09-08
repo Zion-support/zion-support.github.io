@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, CheckCircle, Award, FileText, Users, Globe, Lock, Eye, Database, Network, Cloud, Monitor, AlertTriangle } from 'lucide-react';
 import { SEO } from '../components/SEO';
@@ -112,16 +113,16 @@ export default function Compliance() {
       status: 'In Progress'
     },
     {
-      industry: 'Manufacturing',
-      icon: Cpu,
-      color: 'from-orange-500 to-red-600',
-      regulations: [
-        'NIST Cybersecurity Framework',
-        'ISO 27001/27002',
-        'Industry-specific standards',
-        'Supply chain security requirements'
-      ],
-      status: 'Compliant'
+      title: 'Application Security',
+      description: 'Secure software development and application security',
+// Fixed missing name:       icon: Code,
+      color: 'from-orange-500 to-red-500',
+      standards: [
+        'OWASP Top 10',
+        'Secure SDLC',
+        'Code Review Standards',
+        'Vulnerability Management'
+      ]
     }
   ];
 

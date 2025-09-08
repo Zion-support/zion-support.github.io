@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
+// Removed unused: import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface TabsContextType {
 

@@ -22,7 +22,7 @@ const ApiDemo: React.FC = () => {
 
   const checkHealth = async () => {
     try {
-      const response = await api.health();
+      const response = await api?.health();
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
     } catch (err) {
       setHealthStatus('❌ API Unhealthy');
@@ -34,7 +34,7 @@ const ApiDemo: React.FC = () => {
     setError(null);
     
     try {
-      const response = await api.getUsers();
+      const response = await api?.getUsers();
       if (response.success && response.data) {
         setUsers(response.data);
       }
@@ -57,7 +57,7 @@ const ApiDemo: React.FC = () => {
     setError(null);
 
     try {
-      const response = await api.createUser(newUser);
+      const response = await api?.createUser(newUser);
       if (response.success && response.data) {
         setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' });

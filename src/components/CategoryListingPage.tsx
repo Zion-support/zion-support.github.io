@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Footer } from "@/components/Footer";
+import { Footer } from 'node_modules/react-day-picker/src/components/Footer';
 import { GradientHeading } from "@/components/GradientHeading";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";

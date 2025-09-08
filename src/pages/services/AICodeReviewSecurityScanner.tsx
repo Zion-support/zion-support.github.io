@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Globe, Lock, Database, Activity, Eye as EyeIcon, Activity as ActivityIcon, Minus, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon } from 'lucide-react';
 
@@ -142,7 +143,7 @@ const AICodeReviewSecurityScanner = () => {
     {
       title: 'Insecure Dependencies',
       description: 'Identify and update vulnerable third-party libraries and dependencies.',
-      icon: Package,
+// Fixed missing name:       icon: Package,
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']
     }
   ];

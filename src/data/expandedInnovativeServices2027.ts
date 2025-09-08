@@ -1091,7 +1091,6 @@ export const searchExpandedServices = (query: string): ExpandedService2027[] => 
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
-    service.subcategory.toLowerCase().includes(lowercaseQuery)
+    service?.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   );
 };

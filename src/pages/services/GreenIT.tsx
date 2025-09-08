@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, Zap, Shield, Globe, TrendingUp, Database, Cloud, CheckCircle, Sun, Recycle, Gauge, Target, Award } from 'lucide-react';
 import { SEO } from '../../components/SEO';
@@ -48,7 +49,7 @@ export default function GreenIT() {
     {
       title: 'Green Software Development',
       description: 'Develop energy-efficient software applications and optimize existing systems',
-      icon: Code,
+// Fixed missing name:       icon: Code,
       benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance']
     }
   ];
@@ -57,25 +58,25 @@ export default function GreenIT() {
     {
       industry: 'Enterprise',
       description: 'Large-scale IT infrastructure optimization and sustainability initiatives',
-      icon: Building,
+// Fixed missing name:       icon: Building,
       metrics: ['Energy Savings', 'Carbon Reduction', 'Cost Optimization']
     },
     {
       industry: 'Healthcare',
       description: 'Sustainable medical technology and energy-efficient healthcare IT systems',
-      icon: Heart,
+// Fixed missing name:       icon: Heart,
       metrics: ['Equipment Efficiency', 'Energy Costs', 'Environmental Impact']
     },
     {
       industry: 'Education',
       description: 'Green campus technology and sustainable educational IT infrastructure',
-      icon: GraduationCap,
+// Fixed missing name:       icon: GraduationCap,
       metrics: ['Student Experience', 'Operational Costs', 'Sustainability Goals']
     },
     {
       industry: 'Manufacturing',
       description: 'Smart manufacturing with energy-efficient automation and monitoring',
-      icon: Factory,
+// Fixed missing name:       icon: Factory,
       metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance']
     }
   ];

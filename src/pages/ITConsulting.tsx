@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Target, TrendingUp, Zap, Shield, ArrowRight, CheckCircle, Play, Clock, Award, MessageSquare } from 'lucide-react';
 

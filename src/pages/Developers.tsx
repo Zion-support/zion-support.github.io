@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Code, ArrowRight, MessageCircle, BookOpen, HelpCircle, Building, Github, Terminal, Play, ExternalLink } from 'lucide-react';
 import { SEO } from '../components/SEO';

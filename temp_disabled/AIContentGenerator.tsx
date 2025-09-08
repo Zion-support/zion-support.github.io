@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { PenTool, Image, Video, CheckCircle, Search, Target, BarChart3 } from 'lucide-react';

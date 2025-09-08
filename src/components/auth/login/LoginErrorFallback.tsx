@@ -1,4 +1,5 @@
-import { AlertTriangle} from 'lucide-react';
+// Removed unused: import React from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react';
 interface LoginErrorFallbackProps {
   error: Error;
   resetErrorBoundary: () => void;

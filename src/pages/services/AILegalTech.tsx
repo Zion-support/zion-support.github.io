@@ -123,7 +123,7 @@ export default function AILegalTech() {
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                <Target className="w-5 h-5 text-slate-600 mr-3" />
+// Fixed missing name:                 <Target className="w-5 h-5 text-slate-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
               </div>
             ))}

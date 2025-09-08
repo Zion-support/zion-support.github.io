@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { Users, Brain, Target, Zap, BarChart3, Clock, Award, Star, Globe, Cpu, Shield, TrendingUp, Video, Download, Share2 } from 'lucide-react';
@@ -111,12 +112,12 @@ export default function InterviewAssessmentAI() {
     {
       industry: "Finance",
       description: "Risk assessment, compliance, and financial analysis role evaluations",
-      icon: DollarSign
+// Fixed missing name:       icon: DollarSign
     },
     {
       industry: "Healthcare",
       description: "Medical professional, nursing, and healthcare administration assessments",
-      icon: Heart
+// Fixed missing name:       icon: Heart
     },
     {
       industry: "Sales & Marketing",
@@ -126,12 +127,12 @@ export default function InterviewAssessmentAI() {
     {
       industry: "Education",
       description: "Teaching, administration, and educational leadership assessments",
-      icon: GraduationCap
+// Fixed missing name:       icon: GraduationCap
     },
     {
       industry: "Manufacturing",
       description: "Production, quality control, and operational role assessments",
-      icon: Settings
+// Fixed missing name:       icon: Settings
     }
   ];
 

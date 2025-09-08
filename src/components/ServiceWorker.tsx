@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+// Removed unused: import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Wifi, WifiOff } from 'lucide-react';
 

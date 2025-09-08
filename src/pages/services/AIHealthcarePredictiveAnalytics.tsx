@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Brain, TrendingUp, Users, Database, BarChart3, CheckCircle, ArrowRight, Phone, Mail, MapPin, AlertTriangle, Building, Activity, Stethoscope, Microscope, Shield, Activity as Heartbeat, UserCheck, TestTube } from 'lucide-react';
 import { SEO } from '../../components/SEO';

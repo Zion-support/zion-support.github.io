@@ -1,7 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
-import { Link } from 'react-router-dom';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 

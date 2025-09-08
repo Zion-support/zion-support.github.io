@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Cpu, Zap, Target, CheckCircle, ArrowRight, Play, Code, Cloud, Eye, MessageSquare, Heart, DollarSign, Factory, ShoppingCart } from 'lucide-react';
 

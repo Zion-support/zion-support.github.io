@@ -139,12 +139,12 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-gray-400">AI Intelligence Score</span>
-                  <span className="text-lg font-bold text-green-400">{service.aiScore}/100</span>
+                  <span className="text-lg font-bold text-green-400">{service?.aiScore}/100</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-3">
                   <div 
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-300"
-                    style={{ width: `${service.aiScore}%` }}
+                    style={{ width: `${service?.aiScore}%` }}
                   ></div>
                 </div>
               </div>
@@ -153,7 +153,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                 <ul className="space-y-2">
-                  {service.features.map((feature, index) => (
+                  {service?.features.map((feature, index) => (
                     <li key={index} className="text-sm text-gray-300 flex items-start">
                       <span className="text-green-400 mr-2 mt-0.5">✓</span>
                       {feature}
@@ -166,7 +166,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>
                 <ul className="space-y-2">
-                  {service.benefits.map((benefit, index) => (
+                  {service?.benefits.map((benefit, index) => (
                     <li key={index} className="text-sm text-gray-300 flex items-start">
                       <span className="text-blue-400 mr-2 mt-0.5">→</span>
                       {benefit}
@@ -176,11 +176,11 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
               </div>
 
               {/* Pricing Details */}
-              {service.pricing && (
+              {service?.pricing && (
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Plan Includes:</h4>
                   <ul className="space-y-2">
-                    {service.pricing.features.map((feature, index) => (
+                    {service?.pricing.features.map((feature, index) => (
                       <li key={index} className="text-sm text-gray-300 flex items-start">
                         <span className="text-purple-400 mr-2 mt-0.5">•</span>
                         {feature}
@@ -205,15 +205,15 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
               <div className="mb-6 text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="text-yellow-400">★</span>
-                  <span className="text-white font-semibold">{service.rating}</span>
-                  <span className="text-gray-400">({service.reviewCount} reviews)</span>
+                  <span className="text-white font-semibold">{service?.rating}</span>
+                  <span className="text-gray-400">({service?.reviewCount} reviews)</span>
                 </div>
               </div>
 
               {/* Action Buttons */}
               <div className="space-y-3">
                 <a
-                  href={service.link}
+                  href={service?.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
@@ -221,7 +221,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   Get Started
                 </a>
                 <a
-                  href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                  href={`mailto:${service?.contactInfo.email}?subject=Inquiry about ${service.title}`}
                   className="block w-full text-center px-4 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300"
                 >
                   Contact Sales

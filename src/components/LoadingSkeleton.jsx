@@ -1,4 +1,5 @@
-import { cn } from '@/lib/utils';
+import React from 'react';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function Skeleton({ className, width, height, rounded = 'md', animated = true }) {
     const roundedClasses = {
         none: '',

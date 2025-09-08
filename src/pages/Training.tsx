@@ -1,3 +1,5 @@
+// Removed unused: import React from 'react';
+import { SEO } from '@/components/SEO';
 
 
 import React, { useState } from 'react';

@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+
+import { useState } from "react";
+// Removed unused: import { Header } from "@/components/Header";
+// Removed unused: import { Footer } from 'node_modules/react-day-picker/src/components/Footer';
 import { useTalentQuotes } from "@/hooks/useTalentQuotes";
 import { useAuth } from "@/hooks/useAuth";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Play, Settings, Target, Zap, BarChart3, TrendingUp, Calculator, Cloud, Zap, Gauge, BarChart4, TrendingUp, Lightbulb, Rocket } from 'lucide-react';
 
@@ -9,7 +10,7 @@ const CloudFinOpsOptimizer = () => {
       description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
     },
     {
-      icon: Zap2,
+// Fixed missing name:       icon: Zap2,
       title: 'Automated Optimization',
       description: 'AI-powered recommendations and automated cost reduction actions'
     },
@@ -24,7 +25,7 @@ const CloudFinOpsOptimizer = () => {
       description: 'Deep insights into spending patterns and optimization opportunities'
     },
     {
-      icon: TrendingUp2,
+// Fixed missing name:       icon: TrendingUp2,
       title: 'Predictive Modeling',
       description: 'Forecast future costs and identify optimization trends'
     },

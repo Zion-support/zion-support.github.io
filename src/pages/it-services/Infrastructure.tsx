@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Server, Network, Shield, Zap, ArrowRight, Cloud } from 'lucide-react';
 

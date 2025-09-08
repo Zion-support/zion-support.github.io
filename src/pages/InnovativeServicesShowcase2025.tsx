@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom, ArrowRight, Phone, Mail, Zap, Target, Clock, Check } from 'lucide-react';
 import { SEO } from '@/components/SEO';

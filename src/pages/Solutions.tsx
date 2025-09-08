@@ -1,3 +1,4 @@
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, Shield, Cloud, TrendingUp, Zap, Globe, Cpu, Network, Code, Rocket, Heart, ShoppingCart, CheckCircle, ArrowRight, Star, Clock, DollarSign, Search, Filter } from 'lucide-react';
@@ -150,7 +151,7 @@ const industrySolutions = [
   },
   {
     industry: 'Education',
-    icon: BookOpen,
+// Fixed missing name:     icon: BookOpen,
     solutions: [
       'Learning Management Systems',
       'Virtual Classrooms',

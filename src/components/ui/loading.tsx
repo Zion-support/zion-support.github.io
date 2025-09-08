@@ -1,4 +1,5 @@
-import { cn } from '@/lib/utils';
+import React from 'react';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     const sizeClasses = {
         sm: 'w-4 h-4',

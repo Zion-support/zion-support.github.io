@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Clock, DollarSign, Users, Brain, Shield, Cloud, Code, ArrowRight, CheckCircle } from 'lucide-react';

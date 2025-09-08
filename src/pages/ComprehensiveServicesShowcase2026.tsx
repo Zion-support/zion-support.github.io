@@ -307,13 +307,19 @@ import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices20
                       Most Popular
                     </span>
                   </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{tier.price}</span>
-                    <span className="text-zion-slate-light ml-1">{tier.period}</span>
+                  {/* Description */}
+                  <p className="text-zinc-300 mb-4 line-clamp-3">{service.description}</p>
+                  {/* Pricing */}
+                  <div className="mb-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl font-bold text-white">
+                        ${'price' in service ? service.price.toLocaleString() : service.hourlyRate}
+                      </span>
+                      <span className="text-zinc-400">
+                        /{'pricingModel' in service ? service.pricingModel : 'hour'}
+                      </span>
+                    </div>
+                    <p className="text-sm text-zinc-400">{'marketPrice' in service ? service.marketPrice : `$${service?.projectRate?.toLocaleString()}/project`}</p>
                   </div>
                   <p className="text-zion-slate-light mt-2">{tier.description}</p>
                 </div>

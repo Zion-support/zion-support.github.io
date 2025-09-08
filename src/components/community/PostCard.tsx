@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 
 interface PostCardProps {
   post: {

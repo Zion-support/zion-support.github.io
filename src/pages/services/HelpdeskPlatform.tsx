@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { MessageCircle, Brain, Zap, BarChart3, Clock, Award, Star, Globe, Cpu, Users, Phone, Mail, Search, Ticket, Headphones, Download, Share2, ShoppingCart, Heart, GraduationCap, Settings, Smartphone } from 'lucide-react';
@@ -121,7 +122,7 @@ export default function HelpdeskPlatform() {
     {
       industry: "Financial Services",
       description: "Customer support and account management for financial institutions",
-      icon: DollarSign
+// Fixed missing name:       icon: DollarSign
     },
     {
       industry: "Education",

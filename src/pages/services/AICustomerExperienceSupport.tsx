@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Headphones, CheckCircle, Zap, ArrowRight, Bot, Users, TrendingUp } from 'lucide-react';
 
@@ -13,7 +14,7 @@ export default function AICustomerExperienceSupport() {
     'Integration with CRM, helpdesk, and e-commerce platforms',
   ];
 
-  const benefits = [
+// Removed unused:   const benefits = [
     'Increase customer satisfaction scores by 35-50%',
     'Reduce support response time by 80% with AI automation',
     'Cut support costs by 40-60% through intelligent automation',

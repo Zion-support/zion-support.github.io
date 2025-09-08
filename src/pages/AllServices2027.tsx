@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+// Removed unused: import { SEO } from "../components/SEOHead";
 import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
 import { Brain, Shield, Zap, Code, Signal, Users, ArrowRight, Phone, Mail, MapPin, CheckCircle, Globe } from 'lucide-react';
 
@@ -58,8 +59,8 @@ const AllServices2027: React.FC = () => {
   };
 
   return (
-    <React.Fragment>
-      <SEOHead 
+    <>
+// Fixed missing name:       <SEOHead 
         title="All Services 2027 - Zion Tech Group"
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
         canonical="/all-services-2027"
@@ -334,7 +335,7 @@ const ServiceCard: React.FC<{ service: unknown }> = ({ service }) => {
 
   return (
     <motion.div
-      variants={itemVariants}
+// Fixed missing name:       variants={itemVariants}
       className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden hover:border-cyan-500 transition-all duration-300"
     >
       {/* Service Image */}

@@ -79,6 +79,58 @@ export default function Webinars() {
     }
   ];
 
+  // Update counts
+  React.useEffect(() => {
+    categories.forEach(cat => {
+      cat.count = webinars.filter(w => w.category === cat.id).length;
+    });
+
+    filterTypes.forEach(type => {
+      if (type.id === 'all') {
+        type.count = webinars.length;
+      } else {
+        type.count = webinars.filter(w => w.type === type.id).length;
+      }
+    });
+  }, []);
+
+  const filteredWebinars = webinars.filter(webinar => {
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
+    const matchesType = filterType === 'all' || webinar.type === filterType;
+    
+    return matchesSearch && matchesCategory && matchesType;
+  });
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+// Removed unused:   const formatTimeUntil = (dateString: string) => {
+    const now = new Date();
+    const webinarDate = new Date(dateString);
+    const diffTime = webinarDate.getTime() - now.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays < 0) return 'Past';
+    if (diffDays === 0) return 'Today';
+    if (diffDays < 7) return `${diffDays} days`;
+    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
+    return `${Math.ceil(diffDays / 30)} months`;
+  };
+
+  const getCategoryIcon = (categoryId: string) => {
+    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}

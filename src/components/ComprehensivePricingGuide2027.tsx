@@ -13,7 +13,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setIsVisible(true);
         }
       },
@@ -42,14 +42,14 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       source: 'innovative',
       category: service.category,
       features: service.features || [],
-      ctaLabel: service.ctaLabel || 'Get Started',
-      href: service.href || '/contact'
+      ctaLabel: service?.ctaLabel || 'Get Started',
+      href: service?.href || '/contact'
     }))
   ];
 
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = service?.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -67,7 +67,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.title.localeCompare(b.title);
+        return a??.title.localeCompare(b.title);
       case 'price':
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'category':
@@ -110,21 +110,21 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       'IT Services': Shield,
       'Cybersecurity': Shield,
       'Data & Analytics': BarChart3,
-      'Cloud & DevOps': Cloud,
-      'Quantum Computing': Atom,
+// Fixed missing name:       'Cloud & DevOps': Cloud,
+// Fixed missing name:       'Quantum Computing': Atom,
       'Blockchain Solutions': Lock,
-      'IoT & Edge Computing': Network,
+// Fixed missing name:       'IoT & Edge Computing': Network,
       'FinTech Solutions': DollarSign,
-      'HealthTech Solutions': Heart,
-      'EdTech Solutions': BookOpen,
-      'GreenTech Solutions': Leaf,
+// Fixed missing name:       'HealthTech Solutions': Heart,
+// Fixed missing name:       'EdTech Solutions': BookOpen,
+// Fixed missing name:       'GreenTech Solutions': Leaf,
       'SpaceTech Solutions': Rocket,
-      'Robotics & Automation': Cpu,
-      'AR/VR Solutions': Eye,
-      'Biotech Solutions': Dna,
-      'LegalTech Solutions': Scale,
-      'Real Estate Tech': Home,
-      'Supply Chain Solutions': Truck
+// Fixed missing name:       'Robotics & Automation': Cpu,
+// Fixed missing name:       'AR/VR Solutions': Eye,
+// Fixed missing name:       'Biotech Solutions': Dna,
+// Fixed missing name:       'LegalTech Solutions': Scale,
+// Fixed missing name:       'Real Estate Tech': Home,
+// Fixed missing name:       'Supply Chain Solutions': Truck
     };
     return iconMap[category] || Target;
   };
@@ -261,7 +261,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                       <span className="text-zion-cyan text-xs font-medium">{service.category}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                      {service.title}
+                      {service?.title}
                     </h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
                       {service.description}
@@ -297,10 +297,10 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                       {service.price}
                     </div>
                     <div className="text-gray-400 text-sm">
-                      {service.billing === 'month' && 'per month'}
-                      {service.billing === 'project' && 'per project'}
-                      {service.billing === 'hour' && 'per hour'}
-                      {service.billing === 'year' && 'per year'}
+                      {service?.billing === 'month' && 'per month'}
+                      {service?.billing === 'project' && 'per project'}
+                      {service?.billing === 'hour' && 'per hour'}
+                      {service?.billing === 'year' && 'per year'}
                     </div>
                   </div>
                 </div>
@@ -313,7 +313,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                       <div className="text-gray-400 text-xs">Market Size</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-zion-purple font-bold text-sm">{service.roi}</div>
+                      <div className="text-zion-purple font-bold text-sm">{service?.roi}</div>
                       <div className="text-gray-400 text-xs">ROI</div>
                     </div>
                   </div>
@@ -322,13 +322,13 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                 {/* CTA Button */}
                 <a
                   href={service.href}
-                  target={service.external ? "_blank" : "_self"}
-                  rel={service.external ? "noopener noreferrer" : ""}
+                  target={service?.external ? "_blank" : "_self"}
+                  rel={service?.external ? "noopener noreferrer" : ""}
                   className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
                 >
                   {service.ctaLabel}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  {service.external && <ExternalLink className="w-4 h-4" />}
+                  {service?.external && <ExternalLink className="w-4 h-4" />}
                 </a>
               </div>
             </motion.div>

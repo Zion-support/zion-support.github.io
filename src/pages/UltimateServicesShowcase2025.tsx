@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Search } from 'lucide-react';
@@ -17,7 +17,7 @@ export default function UltimateServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {
+// Removed unused:   const getCategoryIcon = (category: string) => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
@@ -99,10 +99,21 @@ export default function UltimateServicesShowcase2025() {
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service) => (<div key={service.id} className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-6 border border-gray-600/30 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105">
               {/* Service Header */}
-              <div className="mb-4">
-                <div className="flex items-center justify-between mb-3">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getSupportLevelColor(service.supportLevel)}`}>
-                    {service.supportLevel}
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600">
+                    <span className="text-2xl">🚀</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-400">{service.category}</p>
+                  </div>
+                </div>
+                {service?.featured && (
+                  <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full">
+                    Featured
                   </span>
                   <span className="text-2xl font-bold text-cyan-400">
                     {formatPrice(service.price)}
@@ -118,63 +129,86 @@ export default function UltimateServicesShowcase2025() {
                 </div>
               </div>
 
-              {/* Key Features */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-blue-300 mb-2">Key Features</h4>
-                <ul className="text-xs text-gray-300 space-y-1">
-                  {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-start">
-                      <span className="text-cyan-400 mr-2">•</span>
-                      {feature}
-                    </li>))}
-                </ul>
+              {/* Pricing and ROI */}
+              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-2xl font-bold text-white">${service.price.toLocaleString()}</span>
+                  <span className="text-gray-400">One-time</span>
+                </div>
+                <p className="text-sm text-gray-300 mb-2">
+                  <strong>Market Price:</strong> {service?.marketPrice}
+                </p>
+                <p className="text-sm text-gray-300 mb-2">
+                  <strong>ROI:</strong> {service?.roi}
+                </p>
+                <p className="text-xs text-gray-400">
+                  <strong>Setup Time:</strong> {service?.setupTime}
+                </p>
               </div>
 
-              {/* Benefits */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-green-300 mb-2">Key Benefits</h4>
-                <ul className="text-xs text-gray-300 space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      {benefit}
-                    </li>))}
-                </ul>
+              {/* Integrations */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3">Integrations</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service?.integrations.slice(0, 4).map((integration, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30"
+                    >
+                      {integration}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* ROI */}
-              {service.roi && (<div className="mb-4">
-                  <h4 className="text-sm font-semibold text-yellow-300 mb-2">ROI</h4>
-                  <div className="text-xs text-gray-300">
-                    <span className="text-yellow-400 mr-2">📈</span>
-                    {service.roi}
+              {/* Contact Information */}
+              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
+                <h4 className="text-white font-semibold mb-3">Contact Information</h4>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4 text-blue-400" />
+                    <span>{service?.contactInfo.phone}</span>
                   </div>
-                </div>)}
-
-              {/* Technology */}
-              {service.technology && (<div className="mb-4">
-                  <h4 className="text-sm font-semibold text-purple-300 mb-2">Technology</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {service.technology.slice(0, 4).map((tech, index) => (<span key={index} className="px-2 py-1 bg-purple-900/30 text-purple-300 text-xs rounded border border-purple-700/50">
-                        {tech}
-                      </span>))}
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-4 h-4 text-blue-400" />
+                    <span>{service?.contactInfo.email}</span>
                   </div>
-                </div>)}
-
-              {/* Market Price Comparison */}
-              <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
-                <h4 className="text-sm font-semibold text-orange-300 mb-1">Market Price</h4>
-                <p className="text-xs text-gray-300">{service.marketPrice}</p>
-                <p className="text-xs text-cyan-400 mt-1">Our Price: {formatPrice(service.price)}/{service.pricingModel}</p>
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="w-4 h-4 text-blue-400" />
+                    <span className="text-xs">{service?.contactInfo.address}</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Contact and Action */}
-              <div className="border-t border-gray-600/30 pt-4">
-                <div className="text-center mb-3">
-                  <p className="text-xs text-gray-400 mb-2">Ready to get started?</p>
-                  <div className="flex flex-col space-y-2">
-                    <a href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`} className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
-                      Contact Us
-                    </a>
-                    <a href={`tel:${service.contactInfo.phone}`} className="bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300">
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to={`/services/${service.id}`}
+                  className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <a
+                  href={service?.contactInfo.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+
+              {/* Contact Information */}
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="text-center">
+                  <p className="text-sm text-gray-400 mb-2">Ready to get started?</p>
+                  <div className="flex flex-col sm:flex-row gap-2 text-sm">
+                    <a
+                      href="tel:+13024640950"
+                      className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 rounded-md border border-green-400/30 hover:bg-green-600/30 transition-colors"
+                    >
+                      <Phone className="w-3 h-3 mr-1" />
                       Call Now
                     </a>
                   </div>

@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, ArrowRight, Play, Settings, Target, Network, Key, Fingerprint, Monitor, Globe2, Database } from 'lucide-react';
 
@@ -70,9 +71,9 @@ const ZeroTrustNetworkAccess = () => {
       description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
     },
     {
-      icon: Smartphone,
-      title: 'Smartphone Security',
-      description: 'Smartphone health checks, compliance validation, and security posture assessment'
+// Fixed missing name:       icon: Device,
+      title: 'Device Security',
+      description: 'Device health checks, compliance validation, and security posture assessment'
     },
     {
       icon: Globe2,

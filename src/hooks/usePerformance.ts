@@ -37,8 +37,8 @@ export function usePerformance() {
   });
 
   const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
-  const observerRef = useRef<PerformanceObserver | null>(null);
-
+  const [isMonitoring, setIsMonitoring] = useState(false);
+// Removed unused:   const observerRef = useRef<PerformanceObserver | null>(null);
   useEffect(() => {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
@@ -146,15 +146,11 @@ export function usePerformance() {
   };
 
   // Log performance metrics
-  const logMetrics = () => {
-    const metricsWithRatings = getMetricsWithRatings();
+// Removed unused:   const logMetrics = () => {
+// Removed unused:     const metricsWithRatings = getMetricsWithRatings();
     console.group('🚀 Performance Metrics');
-    
-    metricsWithRatings.forEach(({ name, value, rating }) => {
-      const emoji = rating === 'good' ? '✅' : rating === 'needs-improvement' ? '⚠️' : '❌';
-      console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`);
-    });
-    
+    // Measure basic timing
+// Fixed missing name:     measureNavigationTiming();
     console.groupEnd();
   };
 
@@ -200,11 +196,10 @@ export function usePerformance() {
     metrics,
     observers: getMetricsWithRatings(),
     performanceScore: getPerformanceScore(),
-    logMetrics,
-    getRating: (metric: keyof PerformanceMetrics) => {
-      const value = metrics[metric];
-      return value !== null ? getRating(metric, value) : null;
-    }
+// Fixed missing name:     insights: getPerformanceInsights(),
+    startMonitoring,
+    stopMonitoring,
+    resetMetrics,
   };
 }
 

@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, TrendingUp, BarChart3, Zap, Shield, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { SEO } from '@/components/SEO';

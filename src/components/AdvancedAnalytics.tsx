@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+// Removed unused: import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart3, Users, Eye, MousePointer, Clock, X, Activity, Zap, Target, Award, Monitor, Smartphone, Tablet } from 'lucide-react';
 
@@ -363,8 +363,8 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
           {/* Smartphone Distribution */}
           <div>
             <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Smartphone className="w-4 h-4 text-purple-500" />
-              Smartphone Distribution
+// Fixed missing name:               <Device className="w-4 h-4 text-purple-500" />
+              Device Distribution
             </h4>
             
             <div className="space-y-2">

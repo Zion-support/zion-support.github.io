@@ -1,7 +1,8 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Atom, CheckCircle, ArrowRight, Play, Settings, Target, Cloud, Binary, Network, Database2, Lock2, Brain2, Cpu2, Memory, HardDrive, Server2 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+// Removed unused: import { Link } from 'react-router-dom';
 
 const QuantumComputing = () => {
   const features = [

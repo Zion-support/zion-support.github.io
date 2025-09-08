@@ -5,6 +5,9 @@ import { ProductListing } from "@/types/listings";
 import { DollarSign } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
+// Removed unused: import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+// Removed unused: import { addItem } from '@/store/cartSlice';
 // Regular img tag will be used instead of next/image
 
 interface ProductListingCardProps {
@@ -92,7 +95,7 @@ export function ProductListingCard(...args: []):  {
             className="w-full h-full object-cover"
             onError={handleImageError}
           />
-          {listing.featured && (
+          {listing?.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>
@@ -109,8 +112,8 @@ export function ProductListingCard(...args: []):  {
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount} />
+            {listing?.rating && (
+              <RatingStars value={listing?.rating} count={listing?.reviewCount} />
             )}
           </div>
           

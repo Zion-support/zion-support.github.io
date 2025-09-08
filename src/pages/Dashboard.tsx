@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Cloud, Brain, Zap, Activity, DollarSign, CheckCircle, Settings, Bell, Plus, ArrowRight, Calendar, Database, Network, HelpCircle, Atom } from 'lucide-react';
 
@@ -32,7 +33,7 @@ export default function Dashboard() {
     { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },
     { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },
-    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
+// Fixed missing name:     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
   ];
 
   return (

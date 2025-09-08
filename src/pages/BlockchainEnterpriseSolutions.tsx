@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Shield, CheckCircle, ArrowRight, Star, Lock, Eye, Code, FileText, Wrench, Gauge, Network, Building, TrendingUp, Package, Financial, Healthcare, Manufacturing, Fintech, Platform, Data, Security, Decentralized, Array,  } from 'lucide-react';
 
@@ -39,7 +39,7 @@ const blockchainSolutions = [
     id: 3,
     title: "Financial Blockchain Solutions",
     description: "Blockchain-based financial services and payment solutions.",
-    icon: DollarSign,
+// Fixed missing name:     icon: DollarSign,
     features: [
       "Digital payments",
       "Cross-border transfers",

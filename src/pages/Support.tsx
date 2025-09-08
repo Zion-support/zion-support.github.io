@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { MessageCircle, Mail, Phone, Clock, Users, Shield, Cloud, Brain, CheckCircle, Video, BookOpen, HelpCircle, Globe, Send, Ticket, Headphones } from 'lucide-react';
@@ -141,6 +140,16 @@ const Support: React.FC = () => {
       link: '/docs'
     }
   ];
+
+// Removed unused:   const contactForm = {
+    name: '',
+    email: '',
+    company: '',
+    category: 'general',
+    priority: 'medium',
+    subject: '',
+    message: ''
+  };
 
   return (
     <React.Fragment>

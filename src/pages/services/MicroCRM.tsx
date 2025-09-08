@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, CheckCircle, ArrowRight, Play, Settings, Activity, BarChart3, Shield, Cloud, Phone, Calendar, MessageSquare, UserPlus } from 'lucide-react';
 

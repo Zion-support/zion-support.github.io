@@ -1,7 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Search, User, ChevronDown, Zap, Brain, Shield, Rocket, Globe, Heart, Atom, Star, TrendingUp, Network, ArrowRight, Sparkles, Satellite, Sparkles as SparklesIcon } from 'lucide-react';
-import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  ChevronDown, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Users, 
+  ShoppingCart, 
+  BookOpen, 
+  MessageCircle, 
+  HelpCircle, 
+  DollarSign, 
+  Gauge, 
+  Workflow, 
+  Atom, 
+  Star, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  Code, 
+  Truck, 
+  Building, 
+  BarChart3, 
+  PenTool, 
+  Eye, 
+  Server, 
+  Smartphone, 
+  Database, 
+  Network, 
+  Clock, 
+  ArrowRight, 
+  PanelLeft, 
+  Sparkles, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Satellite, 
+  FileText,
+  Sparkles as SparklesIcon
+} from 'lucide-react';
+// Removed unused: import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -620,7 +669,7 @@ export const EnhancedHeader: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-cyan-400 mb-4">Popular Services</h3>
                     <div className="space-y-3">
-                      {services.filter(s => s.popular).slice(0, 4).map((service) => (
+                      {services.filter(s => s?.popular).slice(0, 4).map((service) => (
                         <Link
                           key={service.name}
                           to={service.href}

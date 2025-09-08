@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Coins, Shield, Zap, Database, Globe, CheckCircle, ArrowRight, Network, Rocket, Users, Clock, Check } from 'lucide-react';
 

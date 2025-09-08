@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, BookOpen, Code, Api, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud } from 'lucide-react';
-import { Link } from 'react-router-dom';
+// Removed unused: import React, { useState } from 'react';
+import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
 
 interface DocSection {
   id: string;

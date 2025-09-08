@@ -1,4 +1,5 @@
-import { cn } from '@/lib/utils';
+import React from 'react';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function EnhancedCard({ children, className, variant = 'default', hover = true, onClick, as: Component = 'div', href }) {
     const baseClasses = 'rounded-xl transition-all duration-300';
     const variantClasses = {

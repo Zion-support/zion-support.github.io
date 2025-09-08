@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { cn } from "@/lib/utils";
+import { cn } from 'node_modules/@babel/types/lib/utils';
 import { useAuth } from "@/hooks/useAuth";
 import { useFavorites } from "@/hooks/useFavorites";
 export function MobileBottomNav({ unreadCount = 0 }) {

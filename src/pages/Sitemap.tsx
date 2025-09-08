@@ -1,80 +1,19 @@
-import { Link } from 'react-router-dom';
-import { Home, Users, Building, BookOpen, MessageCircle, Zap, Brain, Cloud, Shield, ShoppingCart, Code, Globe, ArrowRight, Star, FileText, Calendar, HelpCircle, Target, TrendingUp, Rocket, Network, DollarSign } from 'lucide-react';
-
-interface SitemapSection {
-  title: string;
-  icon: unknown;
-  color: string;
-  pages: SitemapPage[];
-}
-
-const sitemapData: SitemapSection[] = [
-  {
-    title: 'Data Analytics & AI',
-    icon: BarChart3,
-    links: [
-      { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence & insights' },
-      { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Healthcare data analysis' },
-      { name: 'AI Financial Trading', path: '/services/ai-financial-trading', description: 'AI-powered trading' },
-    ]
-  },
-  {
-    title: 'Micro SaaS Solutions',
-    icon: ShoppingCart,
-    links: [
-      { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
-      { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' },
-      { name: 'Website Analytics', path: '/services/website-analytics', description: 'Performance tracking & insights' },
-      { name: 'IT Helpdesk', path: '/services/it-helpdesk', description: 'IT support system' },
-      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', description: 'Affiliate program management' },
-      { name: 'Mobile Survey', path: '/services/mobile-survey', description: 'Mobile survey platform' },
-      { name: 'Email Sequencer', path: '/services/email-sequencer', description: 'Email automation' },
-      { name: 'Podcast Transcription', path: '/services/podcast-transcription', description: 'Audio transcription service' },
-      { name: 'Returns Management', path: '/services/returns-management', description: 'Returns processing system' },
-    ]
-  },
-  {
-    title: 'Industry Solutions',
-    icon: Building,
-    links: [
-      { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Enterprise-grade solutions' },
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare industry solutions' },
-    ]
-  },
-  {
-    title: 'Specialized Services',
-    icon: Star,
-    links: [
-      { name: 'AI Legal Document Automation', path: '/services/ai-legal-document-automation', description: 'Legal document AI' },
-      { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', description: 'Content creation AI' },
-      { name: 'AI HR Platform', path: '/services/ai-hr-platform', description: 'HR automation platform' },
-      { name: 'AI Content Creation', path: '/services/ai-content-creation', description: 'AI content generation' },
-      { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', description: 'AI security solutions' },
-    ]
-  },
-  {
-    title: 'Advanced Service Showcases',
-    icon: Target,
-    links: [
-      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', description: 'Revolutionary AI & Quantum Solutions' },
-      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', description: 'Cutting-edge Innovation & Emerging Tech' },
-      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', description: 'Future-ready Technology Solutions' },
-      { name: 'Comprehensive Services 2025', path: '/comprehensive-services-showcase-2025', description: 'Comprehensive service overview' },
-      { name: 'Innovative Services 2025', path: '/innovative-services-showcase-2025', description: 'Innovative service showcase' },
-      { name: 'Ultimate Innovative Services 2025', path: '/ultimate-innovative-services-showcase-2025', description: 'Ultimate innovative services' },
-      { name: 'New Services 2025', path: '/new-services-showcase-2025', description: 'New service offerings' },
-    ]
-  },
-  {
-    title: 'Pricing & Guides',
-    icon: DollarSign,
-    links: [
-      { name: 'Comprehensive Pricing 2026', path: '/comprehensive-pricing-2026', description: '2026 pricing guide' },
-      { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', description: '2028 pricing guide' },
-      { name: 'Comprehensive Pricing Guide 2027', path: '/comprehensive-pricing-guide-2027', description: '2027 pricing guide' },
-    ]
-  }
-];
+// Removed unused: import React from 'react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  BarChart3, 
+  ShoppingCart, 
+  Building, 
+  Star, 
+  Target, 
+  DollarSign,
+  Mail, 
+  Video, 
+  Heart,
+  Globe,
+  ArrowRight
+} from 'lucide-react';
 
 interface SitemapSection {
   title: string;

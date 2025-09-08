@@ -1,3 +1,5 @@
+// Removed unused: import React from 'react';
+
 interface CheckboxProps {
   checked: boolean;
   onChange: (checked: boolean) => void;

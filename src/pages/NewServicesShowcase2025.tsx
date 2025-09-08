@@ -1,6 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { TrendingUp, ArrowRight, ExternalLink, Phone, Mail, Shield, ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star } from 'lucide-react';
+// Removed unused: import React from 'react';
+// Removed unused: import { Link } from 'react-router-dom';
+// Removed unused: import { motion } from 'framer-motion';
+import { 
+  Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3, 
+  DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,
+  Calendar, Shield, Filter, Headphones, Calculator, PieChart,
+  ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star
+} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function NewServicesShowcase2025() {

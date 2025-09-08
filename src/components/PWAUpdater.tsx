@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-
+// Removed unused: import React, { useEffect, useState } from 'react';
+import { RefreshCw, X, CheckCircle } from 'lucide-react';
 
 export function PWAUpdater() {
   const [updateAvailable, setUpdateAvailable] = useState(false);

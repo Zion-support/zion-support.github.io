@@ -357,7 +357,11 @@ export default function SearchPage() {
                   type="submit"
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                 >
-                  Search
+                  {category.icon}
+                  {category.name}
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+                    {category.id === 'all' ? results.length : results.filter(r => r?.type === category.id).length}
+                  </span>
                 </button>
               </div>
             </form>
@@ -365,18 +369,46 @@ export default function SearchPage() {
         </div>
       </section>
 
-      {/* Quick Search Options */}
-      {!searchQuery && searchResults.length === 0 && (
-        <section className="py-16">
-          <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto">
-              {/* Recent Searches */}
-              {recentSearches.length > 0 && (
-                <div className="mb-12">
-                  <h3 className="text-xl font-bold text-white mb-6">Recent Searches</h3>
-                  <div className="flex flex-wrap gap-3">
-                    {recentSearches.map((search, index) => (
-                      <button
+          {/* Results */}
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto"></div>
+              <p className="text-zion-slate-light mt-4">Searching...</p>
+            </div>
+          ) : results.length > 0 ? (
+            <div className="space-y-6">
+              {results.map((result) => (
+                <div
+                  key={result?.id}
+                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
+                    result?.featured ? 'ring-2 ring-zion-cyan' : ''
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      {getTypeIcon(result?.type)}
+                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                        {getTypeLabel(result?.type)}
+                      </span>
+                      {result?.featured && (
+                        <span className="text-xs bg-zion-cyan text-zion-slate-dark px-2 py-1 rounded-full font-medium">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-white font-medium">{result?.rating}</span>
+                      <span className="text-zion-slate-light text-sm">({result?.reviews})</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-2">{result?.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{result?.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {result?.tags.map((tag, index) => (
+                      <span
                         key={index}
                         onClick={() => handleQuickSearch(search)}
                         className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 text-gray-300 rounded-lg hover:bg-slate-700/50 hover:text-white transition-all duration-200"
@@ -392,13 +424,13 @@ export default function SearchPage() {
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
-                        {result.location}
+                        {result?.location}
                       </div>
                       <div className="flex items-center gap-1">
                         <Building className="w-4 h-4" />
-                        {result.comp}
+                        {result?.company}
                       </div>
-                      <div className="text-zion-cyan font-medium">{result.price}</div>
+                      <div className="text-zion-cyan font-medium">{result?.price}</div>
                     </div>
 
               {/* Search Categories */}

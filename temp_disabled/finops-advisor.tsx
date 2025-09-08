@@ -1,3 +1,4 @@
+// Removed unused: import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Activity, Database, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
