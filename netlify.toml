@@ -1,7 +1,7 @@
 [build]
   # Do not run any build. Deploy the prebuilt static export from out/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt static export'"
-  publish = "out"
+  command = "echo 'Skipping build; deploying prebuilt Vite dist'"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
