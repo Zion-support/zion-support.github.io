@@ -3,44 +3,52 @@ import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
 import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
-const ComprehensiveServicesShowcase2025 = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedIndustry, setSelectedIndustry] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
-    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-    const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
-    // Filter services based on selection
-    const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesIndustry = selectedIndustry === 'all' ||
-            ('industry' in service ? service.industry === selectedIndustry : true);
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesIndustry && matchesSearch;
-    });
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+
+const ComprehensiveServicesShowcase2025: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
+
+  const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
+  
+  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
+
+  // Filter services based on selection
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesIndustry = selectedIndustry === 'all' || 
+      ('industry' in service ? service.industry === selectedIndustry : true);
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    return matchesCategory && matchesIndustry && matchesSearch;
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -297,7 +305,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             </motion.button>
           </div>
         </div>
-      </motion.section>
-    </div>);
+      </div>
+    </div>
+  );
 };
 export default ComprehensiveServicesShowcase2025;

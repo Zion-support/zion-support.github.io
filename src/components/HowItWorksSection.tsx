@@ -91,16 +91,16 @@ export function HowItWorksSection() {
     const [hoveredStep, setHoveredStep] = useState(null);
     const [activeStep, setActiveStep] = useState(0);
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
 
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },

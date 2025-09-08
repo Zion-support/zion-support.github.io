@@ -131,9 +131,117 @@ export function Header({ className }: HeaderProps) {
                   >
                     {item.name}
                   </Link>
-                  {item.children && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {item.children.map((child) => (
+                )}
+              </div>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-zion-slate-dark border-t border-zion-blue-light/30">
+          <div className="container mx-auto px-4 py-6">
+            {/* Mobile Navigation */}
+            <nav className="space-y-4">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="flex items-center justify-between w-full text-left text-white hover:text-zion-cyan transition-colors py-2"
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                      </button>
+                      {activeDropdown === item.name && (
+                        <div className="ml-4 mt-2 space-y-2">
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1"
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block text-white hover:text-zion-cyan transition-colors py-2"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </Link>
+              ))}
+            </nav>
+
+            {/* CTA Button */}
+            <div className="hidden lg:block">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Services
+                <ChevronDownIcon className="ml-1 h-4 w-4 inline transition-transform duration-200 group-hover:rotate-180" />
+                {location.pathname.startsWith('/services') && (
+                  <motion.div 
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"
+                    layoutId="activeTab"
+                  />
+                )}
+              </button>
+              
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <div className="p-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {services.map((service) => (
+                          <Link
+                            key={service.path}
+                            to={service.path}
+                            className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
+                          >
+                            <span className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-200">
+                              {service.icon}
+                            </span>
+                            <div className="flex-1">
+                              <div className="text-white font-medium">{service.name}</div>
+                              <div className="text-gray-400 text-sm">{service.description}</div>
+                            </div>
+                            <svg className="h-4 w-4 text-gray-400 group-hover:text-blue-400 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-white/20">
                         <Link
                           key={child.name}
                           href={child.path}

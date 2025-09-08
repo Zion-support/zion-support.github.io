@@ -1,27 +1,26 @@
 import React, { createContext, useContext } from 'react';
 
-interface AuthContextType {
-  user: any;
-  setUser: (user: any) => void;
-  isLoading: boolean;
-  setIsLoading: (loading: boolean) => void;
-  onboardingStep: number;
-  setOnboardingStep: (step: number) => void;
-  tokens: any;
-  setTokens: (tokens: any) => void;
-  login: (email: string, password: string) => Promise<any>;
-  register: (name: string, email: string, password: string) => Promise<any>;
-  signup: (email: string, password: string, userData: any) => Promise<any>;
-  logout: () => void;
-  resetPassword: (email: string) => Promise<any>;
-  updateProfile: (data: any) => Promise<any>;
-  loginWithGoogle: () => Promise<any>;
-  loginWithFacebook: () => Promise<any>;
-  loginWithTwitter: () => Promise<any>;
-  loginWithWeb3: () => Promise<any>;
+export interface User {
+  id: string;
+  email: string;
+  name?: string;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+export interface AuthContextType {
+  user: User | null;
+  isLoading: boolean;
+  login: (email: string, password: string) => Promise<{ error: string | null }>;
+  register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
+  logout: () => Promise<void>;
+  resetPassword: (email: string) => Promise<{ error: string | null }>;
+  updateProfile: (updates: Partial<User>) => Promise<{ error: string | null }>;
+  loginWithGoogle: () => Promise<{ error: string | null }>;
+  loginWithFacebook: () => Promise<{ error: string | null }>;
+  loginWithTwitter: () => Promise<{ error: string | null }>;
+  loginWithWeb3: () => Promise<{ error: string | null }>;
+}
+
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -30,5 +29,3 @@ export const useAuth = () => {
   }
   return context;
 };
-
-export { AuthContext };

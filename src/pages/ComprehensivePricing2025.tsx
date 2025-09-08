@@ -89,26 +89,26 @@ const ComprehensivePricing2025 = () => {
       <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${selectedCategory === category.id
-                ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'}`}>
-                <Download className="w-5 h-5"/>
-                Download Pricing Guide
-              </motion.button>
-            ,
-                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300">
-                <Play className="w-5 h-5"/>
-                Schedule Demo
-              </motion.button>))}
-            </div>
-          </motion.div>
-        </></div>);
-};
-div >
-    { /* Contact Information Banner */}
-    < div;
-className = "bg-gradient-to-r from-green-800 to-blue-800 py-6" >
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
+                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Banner */}
+      <div className="bg-gradient-to-r from-green-800 to-blue-800 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-white">
             <div className="flex items-center gap-4 mb-4 md:mb-0">
               <Phone className="w-5 h-5 text-green-300"/>
@@ -122,13 +122,13 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-6" >
               <MapPin className="w-5 h-5 text-green-300"/>
               <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
-          </motion.div>
-        </div>;
-div >
-    { /* Search and Filters */}
-    < div;
-className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
-    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-12">
+          </div>
+        </div>
+      </div>
+
+      {/* Search and Filters */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             <div className="md:col-span-2">
               <div className="relative">
@@ -339,8 +339,11 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
             <a href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               <Phone className="w-5 h-5 inline mr-2"/>
               Call +1 302 464 0950
-            </motion.button>
-            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-all duration-300">
+            </a>
+            <a
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-all duration-300"
+            >
               Schedule Consultation
             </a>
           </div>
