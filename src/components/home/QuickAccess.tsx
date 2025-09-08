@@ -662,18 +662,18 @@ export default function Page() {";
           {quick_links.map ((link, index <motion.div;
 
               key={link.title}
-              variants={hover_variants}";
-              while_hover="hover";
-              onHoverStart={(: unknown setHoveredCategory (link.title)}
-              onHoverEnd={: unknown setHoveredCategory (null)}
-              on_click={: unknown setSelectedCategory (selected_category === link.title ? null : link.title)}
-              className={`group cursor - pointer ${link.bg_color} ${link.border_color} border rounded - 2xl p - 6 backdrop - blur - sm transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 25`}
-            >;
-              {/* Icon and Header */}";
-              <div className="flex items - start justify - between mb-4">;
-                <motion.div`;
-                  className={`p - 3 rounded - xl bg - gradient - to - r ${link.color} bg - opacity - 20`}
-                  while_hover={{ rotate: 360 }}
+              variants={itemVariants}
+              whileHover="hover"
+              onHoverStart={() => setHoveredCategory(link.title)}
+              onHoverEnd={() => setHoveredCategory(null)}
+              onClick={() => setSelectedCategory(selectedCategory === link.title ? null : link.title)}
+              className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25`}
+            >
+              {/* Icon and Header */}
+              <div className="flex items-start justify-between mb-4">
+                <motion.div
+                  className={`p-3 rounded-xl bg-gradient-to-r ${link.color} bg-opacity-20`}
+                  whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >";
                   <link.icon className="w - 6 h - 6 text-white" />;

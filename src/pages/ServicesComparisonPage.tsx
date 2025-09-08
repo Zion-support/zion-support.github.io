@@ -1,302 +1,518 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Check, 
+  X, 
+  Star, 
+  ArrowRight, 
+  Info,
+  Brain,
+  Shield,
+  Cloud,
+  Building,
+  Zap,
+  Heart,
+  Lock,
+  Leaf,
+  Rocket,
+  Cpu,
+  TrendingUp,
+  Users,
+  Clock,
+  BarChart3,
+  Target,
+  Lightbulb,
+  Award,
+  BookOpen,
+  Play,
+  FileText,
+  Settings,
+  Key,
+  Globe,
+  Database,
+  Network,
+  MessageCircle,
+  Mail,
+  Phone
+} from 'lucide-react';
 
-// Service comparison data
-const SERVICE_COMPARISONS = [
+const ServicesComparisonPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'table' | 'cards'>('table');
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Globe },
+    { id: 'ai-ml', name: 'AI & ML', icon: Brain },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud },
+    { id: 'transformation', name: 'Digital Transformation', icon: Building },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: Zap }
+  ];
+
+  const serviceTiers = [
     {
-        category: "AI & Automation",
-        services: [
-            {
-                name: "AI Business Process Automation",
-                starter: { price: "$2,999", features: ["Basic workflow automation", "Email automation", "Document processing", "Standard support"] },
-                professional: { price: "$4,999", features: ["Advanced AI capabilities", "Custom integrations", "Priority support", "Training sessions", "Analytics dashboard"] },
-                enterprise: { price: "$7,999+", features: ["Full AI suite", "Custom development", "24/7 support", "On-site training", "SLA guarantees", "White-label options"] }
-            },
-            {
-                name: "AI Customer Intelligence",
-                starter: { price: "$3,999", features: ["Basic customer analytics", "Churn prediction", "Email support"] },
-                professional: { price: "$5,999", features: ["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
-                enterprise: { price: "$8,999+", features: ["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
-            }
-        ]
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: 'From $99/month',
+      color: 'from-green-500 to-emerald-600',
+      features: [
+        'Basic functionality',
+        'Standard support',
+        'Community documentation',
+        'Email support',
+        'Basic integrations',
+        'Standard security'
+      ],
+      limitations: [
+        'Limited customization',
+        'Basic reporting',
+        'Standard SLA',
+        'No dedicated support'
+      ]
     },
     {
-        category: "Cybersecurity & Compliance",
-        services: [
-            {
-                name: "AI Threat Detection System",
-                starter: { price: "$5,999", features: ["Basic threat detection", "Email alerts", "Standard support"] },
-                professional: { price: "$7,999", features: ["Advanced threat detection", "Behavioral analysis", "Priority support", "Custom rules", "Training"] },
-                enterprise: { price: "$12,999+", features: ["Full security suite", "Custom development", "24/7 monitoring", "Dedicated team", "Compliance reporting"] }
-            },
-            {
-                name: "Compliance Management Platform",
-                starter: { price: "$2,999", features: ["Basic compliance monitoring", "GDPR support", "Email support"] },
-                professional: { price: "$4,999", features: ["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
-                enterprise: { price: "$6,999+", features: ["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
-            }
-        ]
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: 'From $299/month',
+      color: 'from-blue-500 to-cyan-600',
+      features: [
+        'Advanced functionality',
+        'Priority support',
+        'Comprehensive documentation',
+        'Phone & email support',
+        'Advanced integrations',
+        'Enhanced security',
+        'Custom workflows',
+        'Advanced analytics'
+      ],
+      limitations: [
+        'Limited customization',
+        'Standard SLA',
+        'No dedicated account manager'
+      ]
     },
     {
-        category: "Cloud & DevOps",
-        services: [
-            {
-                name: "Cloud Cost Optimization",
-                starter: { price: "$1,999", features: ["Basic cost analysis", "Resource optimization", "Email support"] },
-                professional: { price: "$3,999", features: ["Advanced optimization", "Automated scaling", "Priority support", "Custom policies", "Training"] },
-                enterprise: { price: "$5,999+", features: ["Full optimization suite", "Custom algorithms", "Dedicated support", "Advanced analytics", "Multi-cloud support"] }
-            },
-            {
-                name: "DevOps Automation Platform",
-                starter: { price: "$2,999", features: ["Basic CI/CD", "Automated testing", "Email support"] },
-                professional: { price: "$4,999", features: ["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
-                enterprise: { price: "$7,999+", features: ["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
-            }
-        ]
-    },
-    {
-        category: "Data & Analytics",
-        services: [
-            {
-                name: "Data Quality Platform",
-                starter: { price: "$3,999", features: ["Basic data validation", "Data cleaning", "Email support"] },
-                professional: { price: "$5,999", features: ["Advanced validation", "Custom rules", "Priority support", "Advanced analytics", "Training"] },
-                enterprise: { price: "$8,999+", features: ["Full data suite", "Custom algorithms", "Dedicated support", "Advanced governance", "Compliance features"] }
-            },
-            {
-                name: "Real-Time Analytics Dashboard",
-                starter: { price: "$1,999", features: ["Basic dashboard", "Real-time data", "Email support"] },
-                professional: { price: "$3,999", features: ["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
-                enterprise: { price: "$5,999+", features: ["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
-            }
-        ]
+      name: 'Enterprise',
+      description: 'For large organizations with complex needs',
+      price: 'Custom pricing',
+      color: 'from-purple-500 to-pink-600',
+      features: [
+        'Full functionality',
+        '24/7 dedicated support',
+        'Custom documentation',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Enterprise security',
+        'Unlimited customization',
+        'Advanced analytics',
+        'Custom SLA',
+        'On-site training',
+        'White-label options',
+        'API access'
+      ],
+      limitations: [
+        'Higher cost',
+        'Longer implementation',
+        'Requires internal resources'
+      ]
     }
-];
+  ];
 
-export default function ServicesComparisonPage() {
-    const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
-    
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-            <SEO 
-                title="Services Comparison & Pricing - Zion Tech Group" 
-                description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." 
-                keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" 
-                canonical="https://ziontechgroup.com/services-comparison"
-            />
+  const serviceComparison = [
+    {
+      category: 'AI & Machine Learning',
+      services: [
+        {
+          name: 'AI Enterprise Orchestrator',
+          starter: { available: false, notes: 'Not available' },
+          professional: { available: true, notes: 'Limited agents' },
+          enterprise: { available: true, notes: 'Unlimited agents' }
+        },
+        {
+          name: 'AI Business Intelligence',
+          starter: { available: true, notes: 'Basic reports' },
+          professional: { available: true, notes: 'Advanced analytics' },
+          enterprise: { available: true, notes: 'Custom ML models' }
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          starter: { available: false, notes: 'Not available' },
+          professional: { available: true, notes: 'Standard models' },
+          enterprise: { available: true, notes: 'Custom healthcare models' }
+        }
+      ]
+    },
+    {
+      category: 'Cybersecurity',
+      services: [
+        {
+          name: 'AI Cybersecurity Suite',
+          starter: { available: true, notes: 'Basic protection' },
+          professional: { available: true, notes: 'Advanced threat detection' },
+          enterprise: { available: true, notes: 'Custom security policies' }
+        },
+        {
+          name: 'Zero Trust Architecture',
+          starter: { available: false, notes: 'Not available' },
+          professional: { available: true, notes: 'Standard implementation' },
+          enterprise: { available: true, notes: 'Custom zero-trust setup' }
+        },
+        {
+          name: 'Incident Response',
+          starter: { available: false, notes: 'Not available' },
+          professional: { available: true, notes: '8/5 support' },
+          enterprise: { available: true, notes: '24/7 dedicated team' }
+        }
+      ]
+    },
+    {
+      category: 'Cloud & Infrastructure',
+      services: [
+        {
+          name: 'Cloud DevOps',
+          starter: { available: true, notes: 'Basic automation' },
+          professional: { available: true, notes: 'Advanced CI/CD' },
+          enterprise: { available: true, notes: 'Custom DevOps platform' }
+        },
+        {
+          name: 'Digital Twin Solutions',
+          starter: { available: false, notes: 'Not available' },
+          professional: { available: true, notes: 'Standard monitoring' },
+          enterprise: { available: true, notes: 'Custom twin models' }
+        },
+        {
+          name: 'IoT Edge Computing',
+          starter: { available: true, notes: 'Basic edge processing' },
+          professional: { available: true, notes: 'Advanced edge analytics' },
+          enterprise: { available: true, notes: 'Custom edge solutions' }
+        }
+      ]
+    },
+    {
+      category: 'Digital Transformation',
+      services: [
+        {
+          name: 'Digital Transformation Consulting',
+          starter: { available: false, notes: 'Not available' },
+          professional: { available: true, notes: 'Standard consulting' },
+          enterprise: { available: true, notes: 'Dedicated transformation team' }
+        },
+        {
+          name: 'IT Infrastructure Modernization',
+          starter: { available: false, notes: 'Not available' },
+          professional: { available: true, notes: 'Standard modernization' },
+          enterprise: { available: true, notes: 'Custom infrastructure design' }
+        }
+      ]
+    },
+    {
+      category: 'Micro SaaS Solutions',
+      services: [
+        {
+          name: 'AI Lead Scoring',
+          starter: { available: true, notes: 'Basic scoring' },
+          professional: { available: true, notes: 'Advanced algorithms' },
+          enterprise: { available: true, notes: 'Custom ML models' }
+        },
+        {
+          name: 'Website AI Chatbot',
+          starter: { available: true, notes: 'Basic chatbot' },
+          professional: { available: true, notes: 'Advanced AI features' },
+          enterprise: { available: true, notes: 'Custom chatbot training' }
+        },
+        {
+          name: 'AI Content Optimizer',
+          starter: { available: true, notes: 'Basic optimization' },
+          professional: { available: true, notes: 'Advanced SEO features' },
+          enterprise: { available: true, notes: 'Custom optimization rules' }
+        }
+      ]
+    }
+  ];
 
-            {/* Hero Section */}
-            <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
-                <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                        Services Comparison & Pricing
-                    </h1>
-                    <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                        Compare our comprehensive AI and IT services to find the perfect solution for your business. 
-                        Transparent pricing with flexible plans designed for every organization size.
-                    </p>
-                    
-                    {/* Contact Information */}
-                    <div className="flex flex-wrap justify-center gap-6 mb-8">
-                        <div className="flex items-center gap-2 text-cyan-400">
-                            <Phone className="w-5 h-5"/>
-                            <span>+1 302 464 0950</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-cyan-400">
-                            <Mail className="w-5 h-5"/>
-                            <span>kleber@ziontechgroup.com</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-cyan-400">
-                            <MapPin className="w-5 h-5"/>
-                            <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  const filteredComparison = selectedCategory === 'all' 
+    ? serviceComparison 
+    : serviceComparison.filter(cat => cat.category.toLowerCase().includes(selectedCategory));
 
-            {/* Service Comparisons */}
-            <section className="py-16 bg-slate-800">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-white mb-4">Detailed Service Comparisons</h2>
-                        <p className="text-slate-300 text-lg">
-                            Compare features, capabilities, and pricing across all our services
-                        </p>
-                    </div>
-
-                    <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-                        <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-slate-700">
-                            {SERVICE_COMPARISONS.map((category) => (
-                                <TabsTrigger 
-                                    key={category.category} 
-                                    value={category.category} 
-                                    className="data-[state=active]:bg-cyan-500 data-[state=active]:text-slate-900"
-                                >
-                                    {category.category}
-                                </TabsTrigger>
-                            ))}
-                        </TabsList>
-
-                        {SERVICE_COMPARISONS.map((category) => (
-                            <TabsContent key={category.category} value={category.category} className="mt-8">
-                                <div className="space-y-8">
-                                    {category.services.map((service, serviceIndex) => (
-                                        <Card key={serviceIndex} className="border-slate-600 bg-slate-700">
-                                            <CardHeader>
-                                                <CardTitle className="text-2xl text-white">{service.name}</CardTitle>
-                                                <CardDescription className="text-slate-300">
-                                                    Compare features and pricing across different service tiers
-                                                </CardDescription>
-                                            </CardHeader>
-                                            <CardContent>
-                                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                                                    {/* Starter Plan */}
-                                                    <div className="text-center p-6 border border-slate-600 rounded-lg bg-slate-800">
-                                                        <h3 className="text-xl font-semibold text-white mb-2">Starter</h3>
-                                                        <div className="text-3xl font-bold text-cyan-400 mb-4">{service.starter.price}</div>
-                                                        <ul className="space-y-3 text-left">
-                                                            {service.starter.features.map((feature, featureIndex) => (
-                                                                <li key={featureIndex} className="flex items-center gap-2">
-                                                                    <CheckCircle className="w-4 h-4 text-green-500"/>
-                                                                    <span className="text-sm text-slate-300">{feature}</span>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                        <Button className="w-full mt-4 bg-cyan-500 hover:bg-cyan-600 text-slate-900">
-                                                            Choose Starter
-                                                        </Button>
-                                                    </div>
-
-                                                    {/* Professional Plan */}
-                                                    <div className="text-center p-6 border-2 border-cyan-500 rounded-lg bg-slate-800/50">
-                                                        <Badge className="mb-2 bg-cyan-500 text-slate-900">Most Popular</Badge>
-                                                        <h3 className="text-xl font-semibold text-white mb-2">Professional</h3>
-                                                        <div className="text-3xl font-bold text-cyan-400 mb-4">{service.professional.price}</div>
-                                                        <ul className="space-y-3 text-left">
-                                                            {service.professional.features.map((feature, featureIndex) => (
-                                                                <li key={featureIndex} className="flex items-center gap-2">
-                                                                    <CheckCircle className="w-4 h-4 text-green-500"/>
-                                                                    <span className="text-sm text-slate-300">{feature}</span>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                        <Button className="w-full mt-4 bg-cyan-500 hover:bg-cyan-600 text-slate-900">
-                                                            Choose Professional
-                                                        </Button>
-                                                    </div>
-
-                                                    {/* Enterprise Plan */}
-                                                    <div className="text-center p-6 border border-slate-600 rounded-lg bg-slate-800">
-                                                        <h3 className="text-xl font-semibold text-white mb-2">Enterprise</h3>
-                                                        <div className="text-3xl font-bold text-cyan-400 mb-4">{service.enterprise.price}</div>
-                                                        <ul className="space-y-3 text-left">
-                                                            {service.enterprise.features.map((feature, featureIndex) => (
-                                                                <li key={featureIndex} className="flex items-center gap-2">
-                                                                    <CheckCircle className="w-4 h-4 text-green-500"/>
-                                                                    <span className="text-sm text-slate-300">{feature}</span>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                        <Button className="w-full mt-4 bg-cyan-500 hover:bg-cyan-600 text-slate-900">
-                                                            Contact Sales
-                                                        </Button>
-                                                    </div>
-                                                </div>
-                                            </CardContent>
-                                        </Card>
-                                    ))}
-                                </div>
-                            </TabsContent>
-                        ))}
-                    </Tabs>
-                </div>
-            </section>
-
-            {/* Value Proposition */}
-            <section className="py-16 bg-slate-900">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
-                        <p className="text-slate-300 text-lg">
-                            Proven expertise and results that speak for themselves
-                        </p>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Brain className="w-8 h-8 text-slate-900"/>
-                            </div>
-                            <h3 className="text-xl font-semibold text-white mb-2">AI Expertise</h3>
-                            <p className="text-slate-300">Cutting-edge AI solutions with proven results</p>
-                        </div>
-                        
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Shield className="w-8 h-8 text-slate-900"/>
-                            </div>
-                            <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
-                            <p className="text-slate-300">Bank-level security and compliance standards</p>
-                        </div>
-                        
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Users className="w-8 h-8 text-slate-900"/>
-                            </div>
-                            <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
-                            <p className="text-slate-300">Certified professionals with industry experience</p>
-                        </div>
-                        
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <TrendingUp className="w-8 h-8 text-slate-900"/>
-                            </div>
-                            <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
-                            <p className="text-slate-300">Track record of successful implementations</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Contact CTA */}
-            <section className="py-16 bg-slate-800">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Need Help Choosing?</h2>
-                    <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-                        Our experts are here to help you find the perfect solution for your business needs and budget.
-                    </p>
-                    
-                    <div className="flex flex-wrap justify-center gap-4 mb-8">
-                        <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-semibold">
-                            <Phone className="w-5 h-5 mr-2"/>
-                            Call +1 302 464 0950
-                        </Button>
-                        <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-slate-900">
-                            <Mail className="w-5 h-5 mr-2"/>
-                            Email kleber@ziontechgroup.com
-                        </Button>
-                    </div>
-                    
-                    <div className="text-slate-300">
-                        <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
-                        <p className="mt-2">
-                            <a 
-                                href="https://ziontechgroup.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1"
-                            >
-                                ziontechgroup.com <ExternalLink className="w-4 h-4"/>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </section>
+  const renderAvailability = (tier: any) => {
+    if (tier.available) {
+      return (
+        <div className="text-center">
+          <Check className="w-5 h-5 text-green-500 mx-auto mb-1" />
+          <span className="text-xs text-slate-400">{tier.notes}</span>
         </div>
+      );
+    }
+    return (
+      <div className="text-center">
+        <X className="w-5 h-5 text-red-500 mx-auto mb-1" />
+        <span className="text-xs text-slate-400">{tier.notes}</span>
+      </div>
     );
-}
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Services Comparison - Zion Tech Group</title>
+        <meta name="description" content="Compare different service tiers and options from Zion Tech Group. Find the perfect solution for your business needs and budget." />
+        <meta name="keywords" content="services comparison, pricing tiers, service options, business solutions, technology services" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
+              <BarChart3 className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Services Comparison
+            </h1>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Compare our different service tiers and find the perfect solution for your business needs. 
+              From starter packages to enterprise solutions, we have options for every organization.
+            </p>
+          </div>
+          
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 flex items-center space-x-2 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                    : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-slate-600'
+                }`}
+              >
+                <category.icon className="w-4 h-4" />
+                <span>{category.name}</span>
+              </button>
+            ))}
+          </div>
+          
+          {/* View Mode Toggle */}
+          <div className="flex items-center justify-center space-x-2">
+            <span className="text-slate-300 text-sm">View:</span>
+            <div className="flex bg-white/10 rounded-lg p-1">
+              <button
+                onClick={() => setViewMode('table')}
+                className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 ${
+                  viewMode === 'table'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                    : 'text-slate-300 hover:text-white'
+                }`}
+              >
+                Table View
+              </button>
+              <button
+                onClick={() => setViewMode('cards')}
+                className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 ${
+                  viewMode === 'cards'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                    : 'text-slate-300 hover:text-white'
+                }`}
+              >
+                Cards View
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Tiers Overview */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Service Tiers Overview
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {serviceTiers.map((tier, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
+                <div className={`w-16 h-16 bg-gradient-to-r ${tier.color} rounded-lg flex items-center justify-center mx-auto mb-6`}>
+                  <Star className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white text-center mb-2">{tier.name}</h3>
+                <p className="text-slate-300 text-center mb-4">{tier.description}</p>
+                <div className="text-3xl font-bold text-white text-center mb-6">{tier.price}</div>
+                
+                <div className="space-y-4 mb-6">
+                  <h4 className="font-semibold text-white">Features:</h4>
+                  <ul className="space-y-2">
+                    {tier.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-slate-300 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-white">Limitations:</h4>
+                  <ul className="space-y-2">
+                    {tier.limitations.map((limitation, idx) => (
+                      <li key={idx} className="flex items-center space-x-2">
+                        <X className="w-4 h-4 text-red-400 flex-shrink-0" />
+                        <span className="text-slate-300 text-sm">{limitation}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Comparison */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Detailed Service Comparison
+          </h2>
+          
+          {viewMode === 'table' ? (
+            <div className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-slate-800/50">
+                      <th className="px-6 py-4 text-left text-white font-semibold">Service</th>
+                      <th className="px-6 py-4 text-center text-white font-semibold">Starter</th>
+                      <th className="px-6 py-4 text-center text-white font-semibold">Professional</th>
+                      <th className="px-6 py-4 text-center text-white font-semibold">Enterprise</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-700">
+                    {filteredComparison.map((category) => (
+                      <React.Fragment key={category.category}>
+                        <tr className="bg-slate-800/30">
+                          <td colSpan={4} className="px-6 py-3">
+                            <h3 className="text-lg font-semibold text-white">{category.category}</h3>
+                          </td>
+                        </tr>
+                        {category.services.map((service, index) => (
+                          <tr key={index} className="hover:bg-white/5">
+                            <td className="px-6 py-4">
+                              <span className="text-white font-medium">{service.name}</span>
+                            </td>
+                            <td className="px-6 py-4">
+                              {renderAvailability(service.starter)}
+                            </td>
+                            <td className="px-6 py-4">
+                              {renderAvailability(service.professional)}
+                            </td>
+                            <td className="px-6 py-4">
+                              {renderAvailability(service.enterprise)}
+                            </td>
+                          </tr>
+                        ))}
+                      </React.Fragment>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ) : (
+            <div className="space-y-8">
+              {filteredComparison.map((category) => (
+                <div key={category.category} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                  <h3 className="text-2xl font-bold text-white mb-6">{category.category}</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {category.services.map((service, index) => (
+                      <div key={index} className="bg-slate-800/50 rounded-lg p-4">
+                        <h4 className="text-lg font-semibold text-white mb-4">{service.name}</h4>
+                        
+                        <div className="space-y-3">
+                          <div className="text-center">
+                            <span className="text-sm font-medium text-slate-400">Starter</span>
+                            {renderAvailability(service.starter)}
+                          </div>
+                          
+                          <div className="text-center">
+                            <span className="text-sm font-medium text-slate-400">Professional</span>
+                            {renderAvailability(service.professional)}
+                          </div>
+                          
+                          <div className="text-center">
+                            <span className="text-sm font-medium text-slate-400">Enterprise</span>
+                            {renderAvailability(service.enterprise)}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Pricing Guidance */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Need Help Choosing?
+            </h2>
+            <p className="text-slate-300 mb-6">
+              Our expert team can help you understand the differences between service tiers 
+              and recommend the best option for your specific business needs and budget.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="flex flex-col items-center space-y-3">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="font-semibold text-white">Live Chat</h3>
+                <p className="text-slate-300 text-sm">Get instant guidance</p>
+              </div>
+              
+              <div className="flex flex-col items-center space-y-3">
+                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="font-semibold text-white">Phone Consultation</h3>
+                <p className="text-slate-300 text-sm">Speak with experts</p>
+              </div>
+              
+              <div className="flex flex-col items-center space-y-3">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="font-semibold text-white">Email Support</h3>
+                <p className="text-slate-300 text-sm">Detailed analysis</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Get Personalized Recommendation
+              </Link>
+              <Link
+                to="/schedule-demo"
+                className="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-all duration-200"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ServicesComparisonPage;

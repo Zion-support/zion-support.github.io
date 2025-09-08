@@ -1,609 +1,293 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Zap, 
-  Target, 
-  TrendingUp, 
-  Award, 
-  ArrowRight,
-  Users,
-  Clock,
-  Globe,
-  Cpu,
-  Shield,
-  Rocket,
-  Heart,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  MessageSquare,
-  FileText,
-  Search,
-  ShoppingCart,
-  Building,
-  Code,
-  Lock,
-  Cloud,
-  Sparkles,
-  Flame,
-  Crown,
-  Star,
-  Atom,
-  Infinity,
-  Sun,
-  Moon,
-  GitFork,
-  Gauge,
-  GitFork as GitForkIcon,
-  Target as TargetIcon,
-  TrendingUp as TrendingUpIcon,
-  Award as AwardIcon,
-  Code as CodeIcon,
-  Truck as TruckIcon,
-  Building as BuildingIcon
+  Brain, Shield, Cloud, Zap, Rocket, Cpu, TrendingUp, 
+  Target, Users, CheckCircle, ArrowRight, Star, Globe,
+  Lock, Leaf, Heart, Database, Network, Eye, Search
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
-export default function RevolutionaryServices2030() {
+const RevolutionaryServices2030: React.FC = () => {
   const revolutionaryServices = [
     {
-      category: 'AI Autonomous Operations 2030',
+      id: 'ai-enterprise-orchestrator',
+      name: 'AI Enterprise Orchestrator',
+      description: 'Multi-agent AI coordination platform for enterprise workflow automation',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Fully autonomous business operations powered by advanced AI',
-      features: [
-        'Self-optimizing workflows',
-        'Predictive decision making',
-        'Autonomous resource allocation',
-        'Intelligent process optimization',
-        'Real-time performance adaptation',
-        'Zero-touch operations'
-      ],
-      benefits: [
-        '100% operational efficiency',
-        'Zero human intervention required',
-        'Continuous optimization',
-        'Predictive problem resolution'
-      ],
-      href: '#ai-autonomous-business-operations-2030'
+      color: 'from-purple-500 to-pink-600',
+      features: ['Multi-agent coordination', 'Workflow automation', 'Process optimization'],
+      benefits: ['40% efficiency increase', 'Real-time decision making', 'Scalable AI operations']
     },
     {
-      category: 'Quantum AI Cybersecurity 2030',
+      id: 'ai-cybersecurity-suite',
+      name: 'AI Cybersecurity Suite',
+      description: 'Next-generation AI-powered threat detection and response',
       icon: Shield,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Quantum-powered security with AI threat intelligence',
-      features: [
-        'Quantum encryption algorithms',
-        'AI threat prediction',
-        'Zero-day vulnerability detection',
-        'Quantum-resistant protocols',
-        'Real-time threat neutralization',
-        'Future-proof security architecture'
-      ],
-      benefits: [
-        'Unbreakable encryption',
-        'Predictive threat prevention',
-        'Quantum-safe security',
-        'Real-time protection'
-      ],
-      href: '#quantum-ai-cybersecurity-2030'
+      color: 'from-red-500 to-orange-600',
+      features: ['Advanced threat detection', 'Automated response', 'Predictive security'],
+      benefits: ['99.9% threat detection rate', 'Zero false positives', '24/7 protection']
     },
     {
-      category: 'AI Content Creation Studio 2030',
-      icon: PenTool,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Next-generation AI content creation and management',
-      features: [
-        'Multi-modal content generation',
-        'Emotional intelligence integration',
-        'Real-time collaboration tools',
-        'Predictive content optimization',
-        'Cross-platform adaptation',
-        'Creative AI assistance'
-      ],
-      benefits: [
-        'Unlimited content creation',
-        'Emotionally resonant content',
-        'Real-time optimization',
-        'Creative collaboration'
-      ],
-      href: '#ai-content-creation-studio-2030'
-    },
-    {
-      category: 'AI Sales Intelligence 2030',
-      icon: Target,
-      color: 'from-orange-500 to-red-500',
-      description: 'Intelligent sales automation and optimization',
-      features: [
-        'Predictive lead scoring',
-        'Autonomous sales processes',
-        'Emotional intelligence integration',
-        'Real-time market analysis',
-        'Personalized customer journeys',
-        'Revenue optimization AI'
-      ],
-      benefits: [
-        'Predictive sales success',
-        'Automated customer engagement',
-        'Emotional connection building',
-        'Revenue maximization'
-      ],
-      href: '#ai-sales-intelligence-2030'
-    },
-    {
-      category: 'AI Customer Support Automation 2030',
-      icon: MessageSquare,
-      color: 'from-indigo-500 to-purple-500',
-      description: 'Fully autonomous customer support with emotional intelligence',
-      features: [
-        'Emotional AI understanding',
-        'Predictive issue resolution',
-        'Multi-language mastery',
-        'Context-aware responses',
-        'Proactive support initiation',
-        'Sentiment-driven optimization'
-      ],
-      benefits: [
-        'Emotional intelligence',
-        'Predictive support',
-        'Global language support',
-        'Proactive assistance'
-      ],
-      href: '#ai-customer-support-automation-2030'
-    },
-    {
-      category: 'AI Data Analytics & BI 2030',
-      icon: BarChart3,
-      color: 'from-yellow-500 to-orange-500',
-      description: 'Next-generation analytics with predictive intelligence',
-      features: [
-        'Predictive analytics engine',
-        'Real-time data processing',
-        'Autonomous insights generation',
-        'Future trend forecasting',
-        'Intelligent data visualization',
-        'Actionable intelligence delivery'
-      ],
-      benefits: [
-        'Predictive insights',
-        'Real-time analysis',
-        'Autonomous intelligence',
-        'Future trend prediction'
-      ],
-      href: '#ai-data-analytics-bi-2030'
-    },
-    {
-      category: 'Cloud Infrastructure & DevOps 2030',
-      icon: Cloud,
-      color: 'from-cyan-500 to-blue-500',
-      description: 'Autonomous cloud infrastructure with self-healing capabilities',
-      features: [
-        'Self-healing infrastructure',
-        'Autonomous scaling',
-        'Predictive maintenance',
-        'Zero-downtime deployments',
-        'Intelligent resource optimization',
-        'Future-ready architecture'
-      ],
-      benefits: [
-        'Self-healing systems',
-        'Autonomous operations',
-        'Predictive maintenance',
-        'Zero downtime'
-      ],
-      href: '#cloud-infrastructure-devops-2030'
-    },
-    {
-      category: 'IoT Edge Computing 2030',
+      id: 'quantum-ready-platform',
+      name: 'Quantum-Ready Platform',
+      description: 'Future-proof infrastructure for quantum computing integration',
       icon: Cpu,
-      color: 'from-emerald-500 to-green-500',
-      description: 'Intelligent edge computing with autonomous decision making',
-      features: [
-        'Autonomous edge intelligence',
-        'Real-time decision making',
-        'Predictive edge optimization',
-        'Intelligent data processing',
-        'Self-optimizing networks',
-        'Future-ready edge architecture'
-      ],
-      benefits: [
-        'Edge autonomy',
-        'Real-time intelligence',
-        'Predictive optimization',
-        'Self-optimizing systems'
-      ],
-      href: '#iot-edge-computing-2030'
+      color: 'from-indigo-500 to-purple-600',
+      features: ['Quantum algorithm support', 'Hybrid classical-quantum', 'Future scalability'],
+      benefits: ['Quantum advantage preparation', 'Investment protection', 'Competitive edge']
     },
     {
-      category: 'Digital Twin Platform 2030',
-      icon: Eye,
-      color: 'from-violet-500 to-purple-500',
-      description: 'Advanced digital twin technology with predictive capabilities',
-      features: [
-        'Predictive digital twins',
-        'Real-time synchronization',
-        'Autonomous optimization',
-        'Future scenario modeling',
-        'Intelligent simulation',
-        'Predictive maintenance'
-      ],
-      benefits: [
-        'Predictive modeling',
-        'Real-time synchronization',
-        'Autonomous optimization',
-        'Future scenario planning'
-      ],
-      href: '#digital-twin-platform-2030'
-    },
-    {
-      category: 'Blockchain Web3 Platform 2030',
-      icon: Lock,
-      color: 'from-rose-500 to-pink-500',
-      description: 'Next-generation blockchain with AI integration',
-      features: [
-        'AI-powered smart contracts',
-        'Predictive blockchain optimization',
-        'Autonomous governance',
-        'Intelligent consensus mechanisms',
-        'Future-proof architecture',
-        'Scalable Web3 solutions'
-      ],
-      benefits: [
-        'AI-powered contracts',
-        'Predictive optimization',
-        'Autonomous governance',
-        'Future-proof technology'
-      ],
-      href: '#blockchain-web3-platform-2030'
-    }
-  ];
-
-  const futureTechnologies = [
-    {
-      icon: Atom,
-      title: 'Quantum Computing',
-      description: 'Quantum supremacy in business applications'
-    },
-    {
-      icon: Brain,
-      title: 'AGI Development',
-      description: 'Artificial General Intelligence systems'
-    },
-    {
-      icon: Globe,
-      title: 'Global AI Network',
-      description: 'Worldwide AI collaboration platform'
-    },
-    {
-      icon: Rocket,
-      title: 'Space Tech Integration',
-      description: 'Space-based computing and services'
-    },
-    {
-      icon: Heart,
-      title: 'Bio-AI Hybrid',
-      description: 'Biological and AI system integration'
-    },
-    {
-      icon: Infinity,
-      title: 'Infinite Scalability',
-      description: 'Unlimited growth and expansion'
-    }
-  ];
-
-  const innovationMetrics = [
-    {
+      id: 'ai-business-intelligence',
+      name: 'AI Business Intelligence',
+      description: 'Predictive analytics and intelligent business insights',
       icon: TrendingUp,
-      value: '1000x',
-      label: 'Performance Improvement',
-      description: 'Over current technology'
+      color: 'from-green-500 to-emerald-600',
+      features: ['Predictive analytics', 'Real-time insights', 'Automated reporting'],
+      benefits: ['Data-driven decisions', 'Market trend prediction', 'ROI optimization']
+    }
+  ];
+
+  const keyInnovations = [
+    {
+      title: 'AI-First Architecture',
+      description: 'Built from the ground up with AI at the core, not as an afterthought',
+      icon: Brain,
+      color: 'from-cyan-500 to-blue-600'
     },
     {
-      icon: Clock,
-      value: '99.99%',
-      label: 'Uptime Guarantee',
-      description: 'Near-perfect reliability'
+      title: 'Quantum-Ready Infrastructure',
+      description: 'Prepared for the quantum computing revolution with hybrid capabilities',
+      icon: Cpu,
+      color: 'from-purple-500 to-pink-600'
     },
     {
-      icon: Users,
-      value: '10M+',
-      label: 'Global Users',
-      description: 'Worldwide adoption'
+      title: 'Sustainable Technology',
+      description: 'Green computing practices and energy-efficient algorithms',
+      icon: Leaf,
+      color: 'from-green-500 to-emerald-600'
     },
     {
-      icon: Star,
-      value: '100%',
-      label: 'Future Ready',
-      description: '2030 technology standards'
+      title: 'Global Scalability',
+      description: 'Designed to scale across continents with local compliance',
+      icon: Globe,
+      color: 'from-orange-500 to-red-600'
+    }
+  ];
+
+  const futureRoadmap = [
+    {
+      year: '2025',
+      milestones: ['AI Agent Marketplace Launch', 'Quantum Algorithm Library', 'Global Data Centers']
+    },
+    {
+      year: '2027',
+      milestones: ['Full Quantum Integration', 'AI-Human Collaboration Tools', 'Sustainable AI Models']
+    },
+    {
+      year: '2030',
+      milestones: ['Autonomous AI Systems', 'Quantum Supremacy Applications', 'Universal AI Platform']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Revolutionary Services 2030 - Zion Tech Group"
-        description="Experience the future of technology with Zion Tech Group's Revolutionary Services 2030. Cutting-edge AI, quantum computing, and autonomous systems that define tomorrow's business landscape."
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Revolutionary Services 2030 - Zion Tech Group</title>
+        <meta name="description" content="Discover Zion Tech Group's revolutionary technology services designed for 2030 and beyond. AI-first architecture, quantum-ready infrastructure, and sustainable innovation." />
+        <meta name="keywords" content="revolutionary services 2030, AI-first architecture, quantum computing, sustainable technology, Zion Tech Group" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Rocket className="w-12 h-12 text-white" />
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mb-6">
+              <Rocket className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Revolutionary
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Services 2030</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Revolutionary Services
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                2030 & Beyond
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Step into the future with our revolutionary technology services that redefine what's possible. 
-              From autonomous AI operations to quantum-powered security, we're building tomorrow's solutions today.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Experience the future of technology with our revolutionary services designed for 2030. 
+              AI-first architecture, quantum-ready infrastructure, and sustainable innovation.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-400/25"
-              >
-                Explore Future Tech
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Future Roadmap
-              </motion.button>
+          </div>
+          
+          {/* Key Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">AI-First</div>
+              <div className="text-slate-300 text-sm">Architecture</div>
             </div>
-          </motion.div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-400/20 to-pink-500/20 rounded-full blur-3xl"></div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Cpu className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">Quantum</div>
+              <div className="text-slate-300 text-sm">Ready</div>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Leaf className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">Sustainable</div>
+              <div className="text-slate-300 text-sm">Technology</div>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">Global</div>
+              <div className="text-slate-300 text-sm">Scale</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Innovation Metrics */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {innovationMetrics.map((metric, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <metric.icon className="w-8 h-8 text-cyan-400" />
+      {/* Key Innovations */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Key Innovations for 2030
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {keyInnovations.map((innovation, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className={`w-16 h-16 bg-gradient-to-r ${innovation.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  <innovation.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                <div className="text-lg font-semibold text-cyan-400 mb-2">{metric.label}</div>
-                <div className="text-gray-400 text-sm">{metric.description}</div>
-              </motion.div>
+                <h3 className="text-xl font-bold text-white mb-3">{innovation.title}</h3>
+                <p className="text-slate-300 leading-relaxed">{innovation.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Future Technologies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Future Technologies</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our revolutionary services leverage cutting-edge technologies that define the future of business and technology.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {futureTechnologies.map((technology, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mb-4">
-                  <technology.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{technology.title}</h3>
-                <p className="text-gray-400">{technology.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Revolutionary Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Services 2030</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of technology with our revolutionary services that push the boundaries 
-              of what's possible in business automation, security, and intelligence.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {revolutionaryServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
-              >
-                <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mr-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{service.category}</h3>
+      {/* Revolutionary Services */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Revolutionary Services
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {revolutionaryServices.map((service) => (
+              <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <p className="text-gray-400 mb-6">{service.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
+                <p className="text-slate-300 mb-4">{service.description}</p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-white mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-white mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-start">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300 text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="mb-4">
+                  <h4 className="text-white font-semibold mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                        <span className="text-slate-300 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <motion.a
-                  href={service.href}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 font-medium rounded-lg hover:from-cyan-400/30 hover:to-blue-500/30 transition-all duration-300"
+                
+                <div className="mb-4">
+                  <h4 className="text-white font-semibold mb-2">Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center space-x-2">
+                        <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                        <span className="text-slate-300 text-sm">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <Link
+                  to={`/services/${service.id}`}
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </motion.a>
-              </motion.div>
+                </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Future Vision */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Vision for 2030</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We envision a future where technology seamlessly integrates with human potential, 
-              creating a world of unlimited possibilities and unprecedented efficiency.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Brain,
-                title: 'Autonomous Intelligence',
-                description: 'AI systems that operate independently, making decisions and optimizing processes without human intervention.'
-              },
-              {
-                icon: Globe,
-                title: 'Global Connectivity',
-                description: 'Seamless integration of technologies across borders, creating a unified global digital ecosystem.'
-              },
-              {
-                icon: Sparkles,
-                title: 'Innovation Acceleration',
-                description: 'Rapid development and deployment of breakthrough technologies that transform industries.'
-              }
-            ].map((vision, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <vision.icon className="w-10 h-10 text-cyan-400" />
+      {/* Future Roadmap */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Roadmap to 2030
+          </h2>
+          
+          <div className="space-y-8">
+            {futureRoadmap.map((phase, index) => (
+              <div key={index} className="relative">
+                <div className="flex items-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-xl">{phase.year}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Phase {index + 1}</h3>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{vision.title}</h3>
-                <p className="text-gray-400">{vision.description}</p>
-              </motion.div>
+                
+                <div className="ml-20">
+                  <ul className="space-y-2">
+                    {phase.milestones.map((milestone, milestoneIndex) => (
+                      <li key={milestoneIndex} className="flex items-center space-x-3">
+                        <Target className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                        <span className="text-slate-300">{milestone}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {index < futureRoadmap.length - 1 && (
+                  <div className="absolute left-8 top-16 w-0.5 h-16 bg-gradient-to-b from-cyan-500 to-blue-600"></div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Experience the Future?
+      {/* Call to Action */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready for the Future?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join us in shaping the future of technology. Our revolutionary services 2030 are designed 
-              to transform your business and prepare you for tomorrow's challenges.
+            <p className="text-slate-300 mb-6">
+              Join us in shaping the future of technology. Our revolutionary services are designed 
+              to give you a competitive advantage in 2030 and beyond.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.a
-                href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-400/25"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/schedule-demo"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
-                Start Future Journey
-              </motion.a>
-              <motion.a
-                href="/request-quote"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+                Schedule Demo
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-all duration-200"
               >
-                Future Technology Assessment
-              </motion.a>
+                Contact Us
+              </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

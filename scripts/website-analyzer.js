@@ -1,90 +1,232 @@
+#!/usr/bin/env node
 
-  '🔍 Analyzing Zion Tech Group Website...\n');
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-  'pages');
-  const componentsDir = path.join(srcDir,;
-  'components');
-  // Read App.tsx to extract all routes;
-  const appTsxPath = path.join(srcDir, ';App.tsx');
-  const appContent = fs.readFileSync(appTsxPath, ';utf8');
-    // Extract route paths from App.tsx;
+// Configuration
+const BASE_URL = 'https://ziontechgroup.com';
+const OUTPUT_DIR = './link-reports';
+const MAX_DEPTH = 3;
 
->>>>>>> origin/main
-  console && console.error(,"}),"})
-  '❌ Error analyzing "website": ', error && error.message),"}),"})
-  process ;
-  const srcDir = path && path.join(__dirname, ';..', ';src');
-  const pagesDir = path && path.join(srcDir, ';pages');
-  const componentsDir = path && path.join(srcDir, ';components');
-  // Read App && App.tsx to extract all routes;
-  const appTsxPath = path && path.join(srcDir, ';App && App.tsx');
-  const appContent = fs && fs.readFileSync(appTsxPath, ';utf8');
-    // Extract route paths from App && App.tsx;
-<<<<<<< HEAD
-=======
+// Create output directory if it doesn't exist
+if (!fs.existsSync(OUTPUT_DIR)) {
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+}
 
->>>>>>> origin/main
-  const routeRegex = /path='([^']+)"/g;
+// Track all links and their status
+const linkStatus = {
+  working: [],
+  broken: [],
+  missing: [],
+  external: [],
+  total: 0
+};
 
-  const routes = [];
+// Track visited URLs to avoid duplicates
+const visitedUrls = new Set();
+
+// Function to check if a URL is accessible
+async function checkUrl(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'HEAD',
+      timeout: 10000
+    });
+    return response.ok;
+  } catch (error) {
+    return false;
+  }
+}
+
+// Function to extract links from HTML content
+function extractLinks(html, baseUrl) {
+  const links = [];
+  const linkRegex = /href=["']([^"']+)["']/g;
   let match;
-
-
-    routes.push(match[1])}
-  console.log(`📊 Found ${routes.length} routes in App."tsx":`);`;  routes.forEach(route => console.log(`  - ${route}`));`;  // Check which pages exist;
-  const existingPages = [];
-  const missingPages = [];
-
-  function scanDirectory(dir, basePath = ';
-  ') {    const items = fs.readdirSync(dir);
-    items.forEach(item => {;
-
-      const fullPath = path.join(dir, item);
-
-      const stat = fs.statSync(fullPath);
-
-
-        existingPages.push(pagePath)}
-    })}
-
-  scanDirectory(pagesDir);
-
-  '*') return // Skip 404 route;
-    const routePath = route.replace(/^\//, ).replace(/\//g, '-;
-  ');
-    const hasPage = existingPages.some(page =>;
-      page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-;
-  ')) ||;
-      page.includes(route.replace(/\//g, '))    );
-    if (!hasPage) {;
-
-      missingPages.push(route)}
-
-  missingPages.forEach(page => console.log(`  - ${page}`));
-  // Check for placeholder pages (files with minimal content);
-
-  const placeholderPages = [];
-
-  '.tsx');
-    if (fs.existsSync(fullPath)) {;
-      const content = fs.readFileSync(fullPath,;
-  'utf8');
-      if (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
-
-
+  
+  while ((match = linkRegex.exec(html)) !== null) {
+    let link = match[1];
+    
+    // Skip javascript:, mailto:, tel:, etc.
+    if (link.startsWith('javascript:') || link.startsWith('mailto:') || link.startsWith('tel:')) {
+      continue;
     }
-  });
-  console.log(;
+    
+    // Convert relative URLs to absolute
+    if (link.startsWith('/')) {
+      link = baseUrl + link;
+    } else if (!link.startsWith('http')) {
+      link = baseUrl + '/' + link;
+    }
+    
+    links.push(link);
+  }
+  
+  return [...new Set(links)]; // Remove duplicates
+}
 
-    JSON.stringify(report, null, 2));
-  console.log(`\n📝 Analysis report saved to website-analysis-report.json`);
-  return report}
+// Function to crawl a URL and extract links
+async function crawlUrl(url, depth = 0) {
+  if (depth > MAX_DEPTH || visitedUrls.has(url)) {
+    return [];
+  }
+  
+  visitedUrls.add(url);
+  console.log(`Crawling: ${url} (depth: ${depth})`);
+  
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      linkStatus.broken.push({
+        url,
+        status: response.status,
+        depth
+      });
+      return [];
+    }
+    
+    const html = await response.text();
+    linkStatus.working.push({
+      url,
+      status: response.status,
+      depth
+    });
+    
+    if (depth < MAX_DEPTH) {
+      const links = extractLinks(html, BASE_URL);
+      for (const link of links) {
+        if (link.startsWith(BASE_URL)) {
+          await crawlUrl(link, depth + 1);
+        } else {
+          linkStatus.external.push({
+            url: link,
+            depth
+          });
+        }
+      }
+    }
+    
+    return extractLinks(html, BASE_URL);
+  } catch (error) {
+    console.error(`Error crawling ${url}:`, error.message);
+    linkStatus.broken.push({
+      url,
+      error: error.message,
+      depth
+    });
+    return [];
+  }
+}
 
-// Run the analysis;
+// Function to generate report
+function generateReport() {
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const reportPath = path.join(OUTPUT_DIR, `link-analysis-${timestamp}.json`);
+  
+  const report = {
+    timestamp: new Date().toISOString(),
+    baseUrl: BASE_URL,
+    summary: {
+      total: linkStatus.total,
+      working: linkStatus.working.length,
+      broken: linkStatus.broken.length,
+      missing: linkStatus.missing.length,
+      external: linkStatus.external.length
+    },
+    working: linkStatus.working,
+    broken: linkStatus.broken,
+    missing: linkStatus.missing,
+    external: linkStatus.external
+  };
+  
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  console.log(`\nReport generated: ${reportPath}`);
+  
+  // Generate markdown report
+  const markdownPath = path.join(OUTPUT_DIR, `link-analysis-${timestamp}.md`);
+  const markdown = generateMarkdownReport(report);
+  fs.writeFileSync(markdownPath, markdown);
+  console.log(`Markdown report generated: ${markdownPath}`);
+  
+  return report;
+}
 
-  '❌ Error analyzing website:', error.message);
-  process.exit(1)}
+// Function to generate markdown report
+function generateMarkdownReport(report) {
+  return `# Zion Tech Group Website Link Analysis Report
 
+**Generated:** ${new Date().toLocaleString()}
+**Base URL:** ${report.baseUrl}
 
+## 📊 Executive Summary
 
+- **Total Pages Analyzed:** ${report.summary.total}
+- **Working Links:** ${report.summary.working}
+- **Broken Links:** ${report.summary.broken}
+- **Missing Pages:** ${report.summary.missing}
+- **External Links:** ${report.summary.external}
+
+## 🚨 Critical Issues
+
+### Broken Links (${report.summary.broken})
+${report.broken.map(link => `- ${link.url} - Status: ${link.status || 'Error'}${link.error ? ` - ${link.error}` : ''}`).join('\n')}
+
+### Missing Pages (${report.summary.missing})
+${report.missing.map(page => `- ${page.url}`).join('\n')}
+
+## ✅ Working Pages (${report.summary.working})
+${report.working.map(page => `- ${page.url}`).join('\n')}
+
+## 🔗 External Links (${report.summary.external})
+${report.external.map(link => `- ${link.url}`).join('\n')}
+
+## 🎯 Recommendations
+
+1. **Fix all broken links immediately**
+2. **Complete missing page content**
+3. **Verify external link validity**
+4. **Implement proper error handling**
+5. **Add 404 pages for missing routes**
+
+---
+*Report generated by Zion Tech Group Website Analyzer*
+`;
+}
+
+// Main execution
+async function main() {
+  console.log('🚀 Starting Zion Tech Group Website Analysis...');
+  console.log(`Base URL: ${BASE_URL}`);
+  console.log(`Max Depth: ${MAX_DEPTH}`);
+  console.log('=' .repeat(50));
+  
+  try {
+    await crawlUrl(BASE_URL);
+    linkStatus.total = visitedUrls.size;
+    
+    const report = generateReport();
+    
+    console.log('\n🎯 Analysis Complete!');
+    console.log(`Total URLs checked: ${report.summary.total}`);
+    console.log(`Working: ${report.summary.working}`);
+    console.log(`Broken: ${report.summary.broken}`);
+    console.log(`Missing: ${report.summary.missing}`);
+    console.log(`External: ${report.summary.external}`);
+    
+    if (report.summary.broken > 0) {
+      console.log('\n⚠️  Broken links found! Please fix them immediately.');
+    }
+    
+  } catch (error) {
+    console.error('❌ Analysis failed:', error);
+    process.exit(1);
+  }
+}
+
+// Run the analysis
+if (require.main === module) {
+  main();
+}
+
+module.exports = { crawlUrl, checkUrl, generateReport };

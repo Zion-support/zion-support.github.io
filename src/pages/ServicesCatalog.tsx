@@ -1,540 +1,614 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Workflow, 
-  Atom, 
-  Network, 
-  Cpu, 
-  Cloud, 
-  Lock, 
-  TrendingUp, 
-  Users, 
-  MessageCircle, 
-  FileText, 
-  Target, 
-  Rocket, 
+  Search, 
+  Filter, 
   Star, 
+  ArrowRight, 
   CheckCircle,
-  ArrowRight,
-  Search,
-  Filter,
-  Grid3X3,
-  List,
-  Globe,
-  Server,
-  Database,
-  Monitor,
-  Smartphone,
-  Code,
-  Palette,
-  Lightbulb,
-  BookOpen,
-  Calendar,
-  Phone,
-  Mail,
-  MapPin,
   Clock,
-  DollarSign,
+  Users,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Globe,
+  Lock,
+  Heart,
+  Leaf,
+  Rocket,
+  Cpu,
+  Database,
+  Network,
+  Building,
+  TrendingUp,
   Award,
-  Eye,
+  BookOpen,
+  Play,
+  FileText,
   Settings,
-  PenTool,
+  Key,
+  Leaf as LeafIcon,
+  Scale,
   Building2,
-  Handshake,
-  Briefcase,
-  GraduationCap,
-  Video,
-  FileText as FileTextIcon,
-  HelpCircle,
-  BarChart3 as BarChart3Icon
+  Car,
+  Home,
+  Factory,
+  City,
+  CheckCircle as CheckCircleIcon
 } from 'lucide-react';
 
-export default function ServicesCatalog() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'category' | 'popularity'>('popularity');
+const ServicesCatalog: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('name');
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Grid3X3, count: 50, color: 'from-blue-500 to-cyan-500' },
-    { id: 'ai-automation', name: 'AI & Automation', icon: Brain, count: 15, color: 'from-purple-500 to-pink-500' },
-    { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Cloud, count: 12, color: 'from-blue-500 to-indigo-500' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 8, color: 'from-red-500 to-pink-500' },
-    { id: 'data-analytics', name: 'Data & Analytics', icon: BarChart3, count: 10, color: 'from-green-500 to-emerald-500' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom, count: 5, color: 'from-violet-500 to-purple-500' }
+    'All',
+    'AI & Machine Learning',
+    'Cybersecurity',
+    'Cloud & Infrastructure',
+    'Digital Transformation',
+    'IoT & Edge Computing',
+    'Blockchain',
+    'Healthcare Technology',
+    'Financial Technology',
+    'Sustainability',
+    'Micro SaaS Solutions'
   ];
 
-  const allServices = [
-    // AI & Automation Services
+  const services = [
+    // AI & Machine Learning Services
     {
-      id: 'ai-enterprise-automation',
-      name: 'AI Enterprise Automation Platform',
-      category: 'ai-automation',
-      description: 'Comprehensive automation platform for enterprise business processes',
-      features: ['Process automation', 'Workflow optimization', 'Intelligent routing', 'Performance analytics'],
-      icon: Workflow,
-      color: 'from-blue-500 to-cyan-500',
-      link: '/services/ai-enterprise-automation-platform',
-      popularity: 95,
-      pricing: 'Starting from $2,500/month',
-      delivery: '4-8 weeks'
-    },
-    {
-      id: 'ai-data-analytics',
-      name: 'AI Data Analytics Platform',
-      category: 'ai-automation',
-      description: 'Advanced analytics platform powered by machine learning',
-      features: ['Predictive analytics', 'Real-time insights', 'Data visualization', 'Custom dashboards'],
-      icon: BarChart3,
-      color: 'from-green-500 to-emerald-500',
-      link: '/services/ai-data-analytics-platform',
-      popularity: 92,
-      pricing: 'Starting from $1,800/month',
-      delivery: '3-6 weeks'
-    },
-    {
-      id: 'ai-cybersecurity',
-      name: 'AI Cybersecurity Platform',
-      category: 'cybersecurity',
-      description: 'Next-generation security with AI-powered threat detection',
-      features: ['Threat detection', 'Behavioral analysis', 'Incident response', 'Compliance monitoring'],
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      link: '/services/ai-cybersecurity-platform',
-      popularity: 98,
-      pricing: 'Starting from $3,200/month',
-      delivery: '6-10 weeks'
-    },
-    {
-      id: 'ai-healthcare',
-      name: 'AI Healthcare Platform',
-      category: 'ai-automation',
-      description: 'AI solutions for healthcare analytics and patient care',
-      features: ['Patient analytics', 'Diagnostic support', 'Treatment optimization', 'Health monitoring'],
-      icon: Users,
-      color: 'from-purple-500 to-indigo-500',
-      link: '/services/ai-healthcare-platform',
-      popularity: 89,
-      pricing: 'Starting from $4,500/month',
-      delivery: '8-12 weeks'
-    },
-    {
-      id: 'ai-quantum-hybrid',
-      name: 'AI Quantum Hybrid Platform',
-      category: 'quantum-computing',
-      description: 'Hybrid AI platform combining classical and quantum computing',
-      features: ['Quantum algorithms', 'Hybrid optimization', 'Quantum ML', 'Performance scaling'],
-      icon: Atom,
-      color: 'from-violet-500 to-purple-500',
-      link: '/services/ai-quantum-hybrid-platform',
-      popularity: 87,
-      pricing: 'Starting from $8,500/month',
-      delivery: '12-16 weeks'
-    },
-    {
-      id: 'ai-autonomous-research',
-      name: 'AI Autonomous Research Assistant',
-      category: 'ai-automation',
-      description: 'Autonomous AI system for research and development',
-      features: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Report generation'],
-      icon: Lightbulb,
-      color: 'from-yellow-500 to-orange-500',
-      link: '/services/ai-autonomous-research-assistant',
-      popularity: 84,
-      pricing: 'Starting from $2,800/month',
-      delivery: '6-10 weeks'
-    },
-    {
-      id: 'ai-financial-trading',
-      name: 'AI Financial Trading Platform',
-      category: 'ai-automation',
-      description: 'AI-powered platform for financial trading and analysis',
-      features: ['Market analysis', 'Risk assessment', 'Portfolio optimization', 'Trading signals'],
-      icon: TrendingUp,
-      color: 'from-emerald-500 to-teal-500',
-      link: '/services/ai-financial-trading-platform',
-      popularity: 91,
-      pricing: 'Starting from $5,500/month',
-      delivery: '10-14 weeks'
-    },
-    {
-      id: 'ai-supply-chain',
-      name: 'AI Supply Chain Optimization',
-      category: 'ai-automation',
-      description: 'Intelligent optimization for supply chain management',
-      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Cost reduction'],
-      icon: Network,
-      color: 'from-cyan-500 to-blue-500',
-      link: '/services/ai-supply-chain-optimization',
-      popularity: 86,
-      pricing: 'Starting from $3,800/month',
-      delivery: '8-12 weeks'
-    },
-    {
-      id: 'ai-content-creation',
-      name: 'AI Content Creation Studio',
-      category: 'ai-automation',
-      description: 'AI-powered content creation and management platform',
-      features: ['Content generation', 'SEO optimization', 'Brand consistency', 'Performance tracking'],
-      icon: PenTool,
-      color: 'from-pink-500 to-rose-500',
-      link: '/services/ai-content-creation-studio',
-      popularity: 82,
-      pricing: 'Starting from $1,200/month',
-      delivery: '4-6 weeks'
-    },
-    {
-      id: 'ai-business-intelligence',
-      name: 'AI Business Intelligence',
-      category: 'data-analytics',
-      description: 'Advanced BI platform with AI-powered insights',
-      features: ['Data integration', 'Smart dashboards', 'Predictive insights', 'Actionable recommendations'],
-      icon: Target,
-      color: 'from-indigo-500 to-purple-500',
-      link: '/services/ai-business-intelligence',
-      popularity: 88,
-      pricing: 'Starting from $2,200/month',
-      delivery: '6-8 weeks'
-    },
-    {
-      id: 'ai-customer-experience',
-      name: 'AI Customer Experience Analytics',
-      category: 'data-analytics',
-      description: 'Comprehensive customer experience analysis platform',
-      features: ['Customer journey mapping', 'Sentiment analysis', 'Behavioral insights', 'Personalization'],
-      icon: Eye,
-      color: 'from-teal-500 to-green-500',
-      link: '/services/ai-customer-experience-analytics-platform',
-      popularity: 85,
-      pricing: 'Starting from $2,800/month',
-      delivery: '6-10 weeks'
-    },
-    {
-      id: 'ai-sales-copilot',
-      name: 'AI Sales Copilot',
-      category: 'ai-automation',
-      description: 'AI assistant for sales teams and customer engagement',
-      features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Automated follow-ups'],
-      icon: MessageCircle,
-      color: 'from-orange-500 to-red-500',
-      link: '/services/ai-sales-copilot',
-      popularity: 83,
-      pricing: 'Starting from $1,500/month',
-      delivery: '4-6 weeks'
-    },
-    {
-      id: 'ai-compliance-assistant',
-      name: 'AI Compliance Assistant',
-      category: 'cybersecurity',
-      description: 'AI-powered compliance monitoring and reporting',
-      features: ['Regulatory tracking', 'Risk assessment', 'Audit automation', 'Compliance reporting'],
-      icon: CheckCircle,
-      color: 'from-lime-500 to-green-500',
-      link: '/services/ai-compliance-assistant',
-      popularity: 90,
-      pricing: 'Starting from $2,500/month',
-      delivery: '6-8 weeks'
-    },
-    {
-      id: 'ai-quantum-computing',
-      name: 'AI Quantum Computing Solutions',
-      category: 'quantum-computing',
-      description: 'Quantum computing solutions for AI applications',
-      features: ['Quantum algorithms', 'Quantum ML', 'Optimization problems', 'Research support'],
-      icon: Cpu,
-      color: 'from-purple-500 to-violet-500',
-      link: '/services/ai-quantum-computing-solutions',
-      popularity: 79,
-      pricing: 'Starting from $6,500/month',
-      delivery: '12-16 weeks'
-    },
-    {
-      id: 'ai-enterprise-intelligence',
-      name: 'AI Enterprise Intelligence Platform',
-      category: 'data-analytics',
-      description: 'Comprehensive enterprise intelligence platform',
-      features: ['Data unification', 'AI insights', 'Decision support', 'Performance monitoring'],
+      id: 1,
+      name: 'AI Enterprise Orchestrator',
+      category: 'AI & Machine Learning',
+      description: 'Multi-agent AI coordination and workflow automation platform that orchestrates complex business processes.',
+      features: ['Multi-agent coordination', 'Workflow automation', 'Process optimization', 'Real-time monitoring'],
+      pricing: 'Enterprise',
+      rating: 4.9,
+      reviews: 127,
+      featured: true,
       icon: Brain,
-      color: 'from-blue-500 to-indigo-500',
-      link: '/services/ai-enterprise-intelligence-platform',
-      popularity: 87,
-      pricing: 'Starting from $4,200/month',
-      delivery: '8-12 weeks'
+      color: 'from-purple-500 to-pink-600',
+      href: '/services/ai-enterprise-orchestrator'
     },
     {
-      id: 'ai-autonomous-business',
-      name: 'AI Autonomous Business Operations',
-      category: 'ai-automation',
-      description: 'Fully autonomous business operations platform',
-      features: ['Process automation', 'Decision making', 'Resource optimization', 'Continuous learning'],
-      icon: Rocket,
-      color: 'from-rose-500 to-pink-500',
-      link: '/services/ai-autonomous-business-operations-platform',
-      popularity: 81,
-      pricing: 'Starting from $7,500/month',
-      delivery: '12-18 weeks'
+      id: 2,
+      name: 'AI Business Intelligence',
+      category: 'AI & Machine Learning',
+      description: 'Advanced analytics and machine learning solutions for data-driven business insights and decision making.',
+      features: ['Predictive analytics', 'Data visualization', 'Machine learning models', 'Real-time insights'],
+      pricing: 'Professional',
+      rating: 4.8,
+      reviews: 89,
+      featured: true,
+      icon: TrendingUp,
+      color: 'from-blue-500 to-cyan-600',
+      href: '/services/ai-business-intelligence'
     },
     {
-      id: 'ai-quantum-neural',
-      name: 'AI Quantum Neural Network Platform',
-      category: 'quantum-computing',
-      description: 'Quantum neural networks for advanced AI applications',
-      features: ['Quantum neural networks', 'Hybrid learning', 'Quantum advantage', 'Scalable architecture'],
-      icon: Atom,
-      color: 'from-violet-500 to-purple-500',
-      link: '/services/ai-quantum-neural-network-platform',
-      popularity: 76,
-      pricing: 'Starting from $9,500/month',
-      delivery: '16-20 weeks'
+      id: 3,
+      name: 'AI Healthcare Predictive Analytics',
+      category: 'AI & Machine Learning',
+      description: 'AI-powered healthcare analytics platform for predictive diagnostics and patient care optimization.',
+      features: ['Predictive diagnostics', 'Patient monitoring', 'Treatment optimization', 'Clinical insights'],
+      pricing: 'Enterprise',
+      rating: 4.9,
+      reviews: 156,
+      featured: true,
+      icon: Heart,
+      color: 'from-red-500 to-pink-600',
+      href: '/services/ai-healthcare-predictive-analytics'
     },
     {
-      id: 'ai-healthcare-analytics',
-      name: 'AI Healthcare Analytics Platform',
-      category: 'data-analytics',
-      description: 'Advanced analytics for healthcare data and insights',
-      features: ['Patient analytics', 'Clinical insights', 'Population health', 'Predictive medicine'],
-      icon: Users,
-      color: 'from-emerald-500 to-teal-500',
-      link: '/services/ai-healthcare-analytics-platform',
-      popularity: 86,
-      pricing: 'Starting from $3,800/month',
-      delivery: '8-12 weeks'
+      id: 4,
+      name: 'AI Financial Compliance Assistant',
+      category: 'AI & Machine Learning',
+      description: 'Automated regulatory compliance monitoring and reporting for financial institutions.',
+      features: ['Regulatory monitoring', 'Automated reporting', 'Risk assessment', 'Compliance tracking'],
+      pricing: 'Enterprise',
+      rating: 4.7,
+      reviews: 73,
+      featured: false,
+      icon: Shield,
+      color: 'from-green-500 to-emerald-600',
+      href: '/services/ai-financial-compliance-assistant'
     },
     {
-      id: 'blockchain-enterprise',
-      name: 'Blockchain Enterprise Solutions',
-      category: 'cybersecurity',
-      description: 'Enterprise blockchain solutions with AI integration',
-      features: ['Smart contracts', 'Supply chain tracking', 'Identity management', 'Financial services'],
-      icon: Network,
-      color: 'from-amber-500 to-orange-500',
-      link: '/services/blockchain-enterprise-solutions',
-      popularity: 78,
-      pricing: 'Starting from $4,800/month',
-      delivery: '10-14 weeks'
+      id: 5,
+      name: 'AI Supply Chain Optimization',
+      category: 'AI & Machine Learning',
+      description: 'Intelligent supply chain management with predictive analytics and optimization algorithms.',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier analytics'],
+      pricing: 'Professional',
+      rating: 4.6,
+      reviews: 94,
+      featured: false,
+      icon: Truck,
+      color: 'from-orange-500 to-red-600',
+      href: '/services/ai-supply-chain-optimization'
+    },
+
+    // Cybersecurity Services
+    {
+      id: 6,
+      name: 'AI Cybersecurity Suite',
+      category: 'Cybersecurity',
+      description: 'Comprehensive AI-powered cybersecurity platform for threat detection and response.',
+      features: ['Threat detection', 'Incident response', 'Vulnerability scanning', 'Security monitoring'],
+      pricing: 'Enterprise',
+      rating: 4.9,
+      reviews: 203,
+      featured: true,
+      icon: Shield,
+      color: 'from-red-500 to-orange-600',
+      href: '/services/ai-cybersecurity-suite'
     },
     {
-      id: 'edge-computing',
-      name: 'Edge Computing Solutions',
-      category: 'cloud-devops',
-      description: 'AI-powered edge computing for IoT and real-time applications',
-      features: ['Real-time processing', 'Low latency', 'IoT integration', 'Distributed AI'],
-      icon: Cpu,
-      color: 'from-slate-500 to-gray-500',
-      link: '/services/edge-computing-solutions',
-      popularity: 80,
-      pricing: 'Starting from $2,800/month',
-      delivery: '6-10 weeks'
-    },
-    {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps Services',
-      category: 'cloud-devops',
-      description: 'Comprehensive cloud infrastructure and DevOps automation',
-      features: ['Cloud migration', 'CI/CD pipelines', 'Infrastructure as Code', 'Monitoring & logging'],
-      icon: Cloud,
-      color: 'from-blue-500 to-indigo-500',
-      link: '/services/cloud-devops',
-      popularity: 93,
-      pricing: 'Starting from $1,800/month',
-      delivery: '4-8 weeks'
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity Services',
-      category: 'cybersecurity',
-      description: 'End-to-end cybersecurity solutions and consulting',
-      features: ['Security audits', 'Penetration testing', 'Incident response', 'Security training'],
+      id: 7,
+      name: 'Zero Trust Network Architecture',
+      category: 'Cybersecurity',
+      description: 'Modern security framework implementing zero-trust principles for comprehensive network protection.',
+      features: ['Identity verification', 'Access control', 'Network segmentation', 'Continuous monitoring'],
+      pricing: 'Enterprise',
+      rating: 4.8,
+      reviews: 67,
+      featured: false,
       icon: Lock,
-      color: 'from-red-500 to-pink-500',
-      link: '/services/cybersecurity',
-      popularity: 94,
-      pricing: 'Starting from $2,200/month',
-      delivery: '2-6 weeks'
+      color: 'from-purple-500 to-indigo-600',
+      href: '/services/zero-trust-network-architecture'
     },
     {
-      id: 'it-infrastructure',
-      name: 'IT Infrastructure Management',
-      category: 'cloud-devops',
-      description: 'Comprehensive IT infrastructure management and optimization',
-      features: ['Infrastructure design', 'Performance optimization', 'Capacity planning', 'Disaster recovery'],
-      icon: Server,
-      color: 'from-gray-500 to-slate-500',
-      link: '/services/it-infrastructure-management',
-      popularity: 89,
-      pricing: 'Starting from $2,500/month',
-      delivery: '6-10 weeks'
+      id: 8,
+      name: 'Incident Response Platform',
+      category: 'Cybersecurity',
+      description: 'Rapid response and recovery platform for cybersecurity incidents and breaches.',
+      features: ['24/7 monitoring', 'Rapid response', 'Forensic analysis', 'Recovery support'],
+      pricing: 'Professional',
+      rating: 4.7,
+      reviews: 45,
+      featured: false,
+      icon: AlertTriangle,
+      color: 'from-yellow-500 to-orange-600',
+      href: '/services/incident-response-platform'
+    },
+
+    // Cloud & Infrastructure Services
+    {
+      id: 9,
+      name: 'Cloud DevOps',
+      category: 'Cloud & Infrastructure',
+      description: 'End-to-end cloud infrastructure and DevOps automation services for scalable applications.',
+      features: ['Cloud migration', 'DevOps automation', 'Infrastructure as code', 'Monitoring & alerting'],
+      pricing: 'Professional',
+      rating: 4.8,
+      reviews: 178,
+      featured: true,
+      icon: Cloud,
+      color: 'from-cyan-500 to-blue-600',
+      href: '/services/cloud-devops'
     },
     {
-      id: 'digital-transformation',
-      name: 'Digital Transformation',
-      category: 'ai-automation',
-      description: 'End-to-end digital transformation consulting and implementation',
-      features: ['Strategy development', 'Process redesign', 'Technology implementation', 'Change management'],
+      id: 10,
+      name: 'Digital Twin Solutions',
+      category: 'Cloud & Infrastructure',
+      description: 'Digital twin technology for real-time monitoring and predictive maintenance of physical assets.',
+      features: ['Real-time monitoring', 'Predictive maintenance', 'Asset optimization', 'Simulation modeling'],
+      pricing: 'Enterprise',
+      rating: 4.7,
+      reviews: 82,
+      featured: false,
       icon: Rocket,
-      color: 'from-purple-500 to-pink-500',
-      link: '/services/digital-transformation',
-      popularity: 91,
-      pricing: 'Starting from $5,500/month',
-      delivery: '12-24 weeks'
+      color: 'from-indigo-500 to-purple-600',
+      href: '/services/digital-twin'
     },
     {
-      id: 'micro-saas',
-      name: 'Micro SaaS Solutions',
-      category: 'ai-automation',
-      description: 'Custom micro SaaS applications for business automation',
-      features: ['Custom development', 'SaaS architecture', 'Subscription management', 'Analytics & reporting'],
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      link: '/services/micro-saas-solutions-comprehensive',
-      popularity: 85,
-      pricing: 'Starting from $3,200/month',
-      delivery: '8-16 weeks'
+      id: 11,
+      name: 'IoT Edge Computing',
+      category: 'Cloud & Infrastructure',
+      description: 'Edge computing solutions for IoT devices enabling real-time processing and analytics.',
+      features: ['Edge processing', 'IoT connectivity', 'Real-time analytics', 'Device management'],
+      pricing: 'Professional',
+      rating: 4.6,
+      reviews: 56,
+      featured: false,
+      icon: Cpu,
+      color: 'from-green-500 to-teal-600',
+      href: '/services/iot-edge'
+    },
+
+    // Digital Transformation Services
+    {
+      id: 12,
+      name: 'Digital Transformation Consulting',
+      category: 'Digital Transformation',
+      description: 'Strategic consulting services to guide organizations through digital transformation initiatives.',
+      features: ['Strategy development', 'Process optimization', 'Change management', 'Technology roadmap'],
+      pricing: 'Enterprise',
+      rating: 4.8,
+      reviews: 134,
+      featured: true,
+      icon: Building,
+      color: 'from-blue-500 to-indigo-600',
+      href: '/services/digital-transformation'
+    },
+    {
+      id: 13,
+      name: 'IT Infrastructure Modernization',
+      category: 'Digital Transformation',
+      description: 'Modernization of legacy IT infrastructure for improved performance and efficiency.',
+      features: ['Legacy modernization', 'Performance optimization', 'Cost reduction', 'Scalability improvement'],
+      pricing: 'Professional',
+      rating: 4.7,
+      reviews: 91,
+      featured: false,
+      icon: Settings,
+      color: 'from-gray-500 to-slate-600',
+      href: '/services/it-infrastructure'
+    },
+
+    // Blockchain Services
+    {
+      id: 14,
+      name: 'Blockchain Enterprise Solutions',
+      category: 'Blockchain',
+      description: 'Enterprise-grade blockchain solutions for supply chain, identity management, and smart contracts.',
+      features: ['Smart contracts', 'Supply chain tracking', 'Identity management', 'Decentralized applications'],
+      pricing: 'Enterprise',
+      rating: 4.6,
+      reviews: 48,
+      featured: false,
+      icon: Lock,
+      color: 'from-yellow-500 to-orange-600',
+      href: '/services/blockchain-enterprise-solutions'
+    },
+
+    // Healthcare Technology
+    {
+      id: 15,
+      name: 'Healthcare Technology Solutions',
+      category: 'Healthcare Technology',
+      description: 'Comprehensive healthcare technology solutions for hospitals, clinics, and healthcare providers.',
+      features: ['Patient management', 'Clinical workflows', 'Telemedicine', 'Health analytics'],
+      pricing: 'Enterprise',
+      rating: 4.8,
+      reviews: 167,
+      featured: true,
+      icon: Heart,
+      color: 'from-red-500 to-pink-600',
+      href: '/services/healthcare-tech'
+    },
+
+    // Financial Technology
+    {
+      id: 16,
+      name: 'FinOps Advisor',
+      category: 'Financial Technology',
+      description: 'Cloud financial operations optimization platform for cost management and resource optimization.',
+      features: ['Cost optimization', 'Resource management', 'Budget tracking', 'ROI analysis'],
+      pricing: 'Professional',
+      rating: 4.7,
+      reviews: 73,
+      featured: false,
+      icon: DollarSign,
+      color: 'from-green-500 to-emerald-600',
+      href: '/services/finops-advisor'
+    },
+
+    // Sustainability Services
+    {
+      id: 17,
+      name: 'Sustainability Solutions',
+      category: 'Sustainability',
+      description: 'Green technology solutions for reducing environmental impact and achieving sustainability goals.',
+      features: ['Energy optimization', 'Carbon tracking', 'Green infrastructure', 'Sustainability reporting'],
+      pricing: 'Professional',
+      rating: 4.8,
+      reviews: 89,
+      featured: false,
+      icon: Leaf,
+      color: 'from-green-500 to-teal-600',
+      href: '/services/sustainability'
+    },
+
+    // Micro SaaS Solutions
+    {
+      id: 18,
+      name: 'AI Lead Scoring',
+      category: 'Micro SaaS Solutions',
+      description: 'AI-powered lead scoring and qualification platform for sales teams.',
+      features: ['Lead scoring', 'Qualification automation', 'Sales analytics', 'CRM integration'],
+      pricing: 'Starter',
+      rating: 4.6,
+      reviews: 156,
+      featured: false,
+      icon: TrendingUp,
+      color: 'from-blue-500 to-cyan-600',
+      href: '/services/ai-lead-scoring'
+    },
+    {
+      id: 19,
+      name: 'Website AI Chatbot',
+      category: 'Micro SaaS Solutions',
+      description: 'Intelligent chatbot solution for website customer support and lead generation.',
+      features: ['24/7 support', 'Lead generation', 'Customer service', 'Multi-language support'],
+      pricing: 'Starter',
+      rating: 4.7,
+      reviews: 234,
+      featured: false,
+      icon: MessageCircle,
+      color: 'from-purple-500 to-pink-600',
+      href: '/services/website-ai-chatbot'
+    },
+    {
+      id: 20,
+      name: 'AI Content Optimizer Pro',
+      category: 'Micro SaaS Solutions',
+      description: 'AI-powered content optimization platform for SEO and content marketing.',
+      features: ['SEO optimization', 'Content analysis', 'Keyword research', 'Performance tracking'],
+      pricing: 'Professional',
+      rating: 4.8,
+      reviews: 189,
+      featured: false,
+      icon: BookOpen,
+      color: 'from-indigo-500 to-purple-600',
+      href: '/services/ai-content-optimizer-pro'
     }
   ];
 
-  const filteredServices = allServices
-    .filter(service => 
-      (selectedCategory === 'all' || service.category === selectedCategory) &&
-      (searchTerm === '' || 
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase())))
-    )
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'name':
-          return a.name.localeCompare(b.name);
-        case 'category':
-          return a.category.localeCompare(b.category);
-        case 'popularity':
-        default:
-          return b.popularity - a.popularity;
-      }
-    });
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
-  const getCategoryColor = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category?.color || 'from-gray-500 to-slate-500';
-  };
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'rating':
+        return b.rating - a.rating;
+      case 'reviews':
+        return b.reviews - a.reviews;
+      case 'category':
+        return a.category.localeCompare(b.category);
+      default:
+        return 0;
+    }
+  });
 
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category?.name || 'Other';
+  const getPricingColor = (pricing: string) => {
+    switch (pricing) {
+      case 'Starter':
+        return 'bg-green-100 text-green-800';
+      case 'Professional':
+        return 'bg-blue-100 text-blue-800';
+      case 'Enterprise':
+        return 'bg-purple-100 text-purple-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
-      {/* Header */}
-      <div className="bg-zinc-800/50 border-b border-zinc-700/50">
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl mb-6">
-              <BookOpen className="w-10 h-10 text-zion-cyan" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Services Catalog - Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive catalog of AI, cybersecurity, cloud infrastructure, and digital transformation services. Find the perfect solution for your business needs." />
+        <meta name="keywords" content="services catalog, AI services, cybersecurity, cloud computing, digital transformation, technology consulting" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
+              <Settings className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Services <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Catalog</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Services Catalog
             </h1>
-            <p className="text-xl text-zinc-300 leading-relaxed">
-              Explore our comprehensive catalog of technology services. From AI and automation to cloud infrastructure 
-              and cybersecurity, we offer solutions for every business need.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of cutting-edge technology services designed to 
+              transform your business and drive innovation across all industries.
             </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Search and Filter Section */}
-      <div className="container mx-auto px-4 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6 mb-8"
-        >
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search */}
-            <div className="flex-1 max-w-md">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
-              </div>
+          </div>
+          
+          {/* Search and Filter Controls */}
+          <div className="max-w-6xl mx-auto space-y-4">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <input
+                type="text"
+                placeholder="Search services by name, description, or features..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
             </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-3">
+            
+            <div className="flex flex-wrap justify-center gap-2">
               {categories.map((category) => (
                 <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center px-4 py-2 rounded-lg border-2 transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'border-zion-cyan bg-zion-cyan/20 text-zion-cyan'
-                      : 'border-zinc-600 text-zinc-400 hover:border-zinc-500 hover:text-zinc-300'
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                      : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-slate-600'
                   }`}
                 >
-                  <category.icon className="w-4 h-4 mr-2" />
-                  <span className="text-sm font-medium">{category.name}</span>
-                  <span className="ml-2 px-2 py-1 bg-zinc-700/50 rounded-full text-xs">
-                    {category.count}
-                  </span>
+                  {category}
                 </button>
               ))}
             </div>
-
-            {/* View Mode and Sort */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center bg-zinc-700/50 border border-zinc-600 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zinc-400 hover:text-white'
-                  }`}
-                >
-                  <Grid3X3 className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zinc-400 hover:text-white'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
-                </button>
-              </div>
-
+            
+            <div className="flex items-center justify-center gap-4">
+              <span className="text-slate-300 text-sm">Sort by:</span>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'name' | 'category' | 'popularity')}
-                className="px-4 py-2 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-3 py-2 bg-white/10 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
-                <option value="popularity">Sort by Popularity</option>
-                <option value="name">Sort by Name</option>
-                <option value="category">Sort by Category</option>
+                <option value="name">Name</option>
+                <option value="rating">Rating</option>
+                <option value="reviews">Reviews</option>
+                <option value="category">Category</option>
               </select>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* Results Count */}
-        <div className="mb-6">
-          <p className="text-zinc-400">
-            Showing {filteredServices.length} of {allServices.length} services
-          </p>
+      {/* Featured Services */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Featured Services
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {sortedServices.filter(service => service.featured).map((service) => (
+              <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-start justify-between mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPricingColor(service.pricing)}`}>
+                      {service.pricing}
+                    </span>
+                    <span className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-white text-sm">{service.rating}</span>
+                    </span>
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
+                <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>
+                
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {service.features.slice(0, 4).map((feature) => (
+                    <div key={feature} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <span className="text-slate-300 text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="text-slate-400 text-sm">
+                    {service.reviews} reviews
+                  </div>
+                  
+                  <Link
+                    to={service.href}
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* All Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            All Services
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sortedServices.map((service) => (
+              <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center`}>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPricingColor(service.pricing)}`}>
+                      {service.pricing}
+                    </span>
+                    <span className="flex items-center text-yellow-400">
+                      <Star className="w-3 h-3 fill-current" />
+                      <span className="ml-1 text-white text-xs">{service.rating}</span>
+                    </span>
+                  </div>
+                </div>
+                
+                <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
+                <p className="text-slate-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  {service.features.slice(0, 3).map((feature) => (
+                    <div key={feature} className="flex items-center space-x-2">
+                      <CheckCircle className="w-3 h-3 text-cyan-400" />
+                      <span className="text-slate-300 text-xs">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between text-xs text-slate-400 mb-4">
+                  <span>{service.reviews} reviews</span>
+                  <span>{service.category}</span>
+                </div>
+                
+                <Link
+                  to={service.href}
+                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-all duration-200"
+                >
+                  View Details
+                  <ArrowRight className="ml-2 w-3 h-3" />
+                </Link>
+              </div>
+            ))}
+          </div>
+          
+          {sortedServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+              <p className="text-slate-300">Try adjusting your search criteria or browse all categories.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-slate-300 mb-6">
+              Can't find exactly what you need? Our expert team can create custom solutions 
+              tailored to your specific business requirements and goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Get Custom Quote
+              </Link>
+              <Link
+                to="/schedule-demo"
+                className="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-all duration-200"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Services Grid/List */}
