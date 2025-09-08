@@ -6,7 +6,12 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.11.9"
+  # Ensure mise uses prebuilt Python; avoid source compilation on Netlify
+=======
   PYTHON_VERSION = "3.12"
+>>>>>>> origin/cursor/build-image-with-dependency-installation-failure-7403
   MISE_PYTHON_COMPILE = "false"
 
 [[plugins]]
