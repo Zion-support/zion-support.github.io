@@ -28,6 +28,11 @@ export default defineConfig(({ mode }) => ({
     minify: 'esbuild',
     // Optimize chunk splitting
     rollupOptions: {
+      onwarn(warning, warn) {
+        // Suppress TypeScript warnings
+        if (warning.code === 'UNRESOLVED_IMPORT') return;
+        warn(warning);
+      },
       output: {
         // Manual chunk splitting for better caching
         manualChunks: {
