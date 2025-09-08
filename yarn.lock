@@ -4513,6 +4513,11 @@ htmlparser2@^10.0.0:
     domutils "^3.2.1"
     entities "^6.0.0"
 
+http-parser-js@>=0.5.1:
+  version "0.5.10"
+  resolved "https://registry.npmjs.org/http-parser-js/-/http-parser-js-0.5.10.tgz"
+  integrity sha512-Pysuw9XpUq5dVc/2SMHpuTY01RFl8fttgcyunjL7eEMhGM3cI4eOmiCycJDVCo/7O7ClfQD3SaI6ftDzqOXYMA==
+
 http-proxy-agent@^7.0.0, http-proxy-agent@^7.0.1, http-proxy-agent@^7.0.2:
   version "7.0.2"
   resolved "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz"
