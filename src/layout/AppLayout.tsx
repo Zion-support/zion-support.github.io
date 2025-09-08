@@ -11,7 +11,7 @@ interface AppLayoutProps {
   children: React.ReactNode;
 }
 
-const AppLayout: React.FC<AppLayoutProps> = ({ config, children }) => {
+export const AppLayout: React.FC<AppLayoutProps> = ({ config, children }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm border-b">
