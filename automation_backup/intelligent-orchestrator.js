@@ -1,4 +1,3 @@
-
   constructor() {
     this.automationSystems = new Map();
     this.monitoring: = false;
@@ -49,9 +48,6 @@
           successCount:  ,0,
           failureCount:  ,0,
           isRunning: fals,e})}
-    }
-  }
-
       this.updateDependencies()})
     // "Initial": health check;"
     setTimeout(() => {

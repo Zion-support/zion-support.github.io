@@ -9,17 +9,9 @@ import { Helmet } from './react - helmet - async';  keywords?: string;
   ogImage?: string,
   ogUrl?: string,
   canonical?: string,
-<<<<<<< HEAD
 
   noindex?: boolean
 }
-  ogUrl,
-  canonical,
-  noindex}: SEOProps) {
-  const siteTitle = "Zion - The Future of Tech & AI Marketplace",
-  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
-  
-
   return (  return (
     <Helmet>;
       <title>{fullTitle}</title>;"
@@ -63,9 +55,4 @@ export function SEO() { return null; }`
     </Helmet>;
   );
 
-}
 ;
-    </Helmet>);
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

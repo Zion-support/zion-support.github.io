@@ -1,4 +1,3 @@
-
   Home', to: '/ }, { label:,
   About', to: '/about }, { label:,
   Partners', to: '/partners }, { label:,

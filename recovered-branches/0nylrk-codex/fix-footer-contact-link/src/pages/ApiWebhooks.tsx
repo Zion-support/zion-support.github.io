@@ -150,18 +150,6 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
       // // // console.log('New message received:', data.message_id),;
       // Process the message...;
       break,;
-    default:;
-      // // // console.log('Unknown event type:', event_type);
-  }
-;
-  // Always return a 200 response quickly;
-  res.status(200).send('Webhook received');
-}),;
-app.listen(3000, () => {;
-  // // // console.log('Webhook server listening on port 3000');
-}),`,;
-  return (;}),
-
 app.listen(3000, () => {
   // // // console.log('Webhook server listening on port 3000')
 }),`,

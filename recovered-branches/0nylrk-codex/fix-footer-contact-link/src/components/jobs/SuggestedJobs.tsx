@@ -1,23 +1,8 @@
-
-
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 
-<<<<<<< HEAD
-=======
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",    isLoading,
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
-      appliedMatches 
-    } 
-<<<<<<< HEAD
 
   } = useJobSuggestions(currentTalentId),
   const currentTalentId = talentId |user?.id;
@@ -30,11 +15,6 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
       viewedMatches,
       appliedMatches
     }
-<<<<<<< HEAD
-
-  } = useJobSuggestions(currentTalentId);
-  const handleApply = (matchId: string, jobId: string) => {
-
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
   }
@@ -55,13 +35,6 @@ import { NoJobsCard } from "./NoJobsCard",    isLoading,
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
               <JobMatchesCard              />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
                 key={match && match.id} 
 
                 match={match} 
@@ -202,4 +175,3 @@ if (isLoading) {
               />;
 ;
               />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

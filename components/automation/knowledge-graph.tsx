@@ -1,5 +1,3 @@
-
-
 export default function KnowledgeGraph({ report }: Props) {
 };
 ) ) ;
@@ -21,7 +19,6 @@ export default function KnowledgeGraph({ report }: Props) {;
 }</ul> </section> </div>) 
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="space-y-6">;
 
@@ -120,7 +117,6 @@ if (return <div > No knowledge graph yet.</div>) {}
   }
 },
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 

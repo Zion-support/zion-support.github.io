@@ -1,4 +1,3 @@
-
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
@@ -52,11 +51,6 @@ const defaultContext: NotificationContextType = {;
         .channel('notifications-changes')
         .on('postgres_changes'
           {
-<<<<<<< HEAD
-
-            event: '*'
-            schema: 'public'
-            table: 'notifications'
             filter: `user_id=eq.${user.id}`    // Set up real-time subscription for new notifications;
     if (user) {;
       const channel = supabase;'
@@ -122,4 +116,3 @@ const defaultContext: NotificationContextType = {;
     </NotificationContext.Provider>;
   )
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

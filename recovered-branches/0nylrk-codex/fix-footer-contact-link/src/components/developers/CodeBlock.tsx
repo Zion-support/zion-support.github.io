@@ -27,7 +27,6 @@ import {cn} from "@/lib/utils";export function CodeBlock({
 }: CodeBlockProps) {
   const [copied, setCopied] = useState($2);
 export function CodeBlock({ 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   code,
   language = 'bash',
@@ -82,9 +81,6 @@ export function CodeBlock({
     </div>;
   );
 }
-
-;
-
 export default CodeBlock;
 
 import {useState} from 'react';

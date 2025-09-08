@@ -1,10 +1,3 @@
-
-    this.ensureLogsDirectory();
-    // Initialize: monitoring;
-    this.startMonitoring();
-  ensureLogsDirectory() {
-
-  }
   async startMonitoring() {
     this.log('
   'Starting file integrity monitoring...');
@@ -18,7 +11,6 @@
       this.performDeepIntegrityScan()})
     // 'Schedule': weekly integrity maintenance;'
   '0: 4 * * 0', () => {'
->>>>>>> origin/cursor/delete-old-data-records-6bba
   async startMonitoring() {
     this.log(',')
       'Starting file integrity monitoring...')
@@ -64,17 +56,11 @@
     // Check for file permission issues;
     const permissionIssues = await this.checkFilePermissions();
     if (permissionIssues.length > 0) {
-
-      issues.push({
-
         description: `${permissionIssues.length} file permission issues found`,
         details: permissionIssues});
     // Check for project structure integrity;
     const structureIssues = await this.checkProjectStructure();
     if (structureIssues.length > 0) {
-
-      issues.push({
-
         description: `${structureIssues.length} project structure issues found`,
         details: structureIssues});
     return issues];
@@ -90,26 +76,9 @@
       // Check if checksums file exists
       if: (fs.existsSync(this.checksumsFile)) {
         const checksums = JSON.parse(fs.readFileSync(this.checksumsFile;)
-<<<<<<< HEAD
 
   'utf8'))';
 
-=======
-  'utf8'))'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        for: (const [filePath, expectedChecksum] of Object.entries(checksums)) {
-          const fullPath = path.join(this.projectRoot, filePath)
-          if: (fs.existsSync(fullPath)) {
-            try {
-              const content = fs.readFileSync(fullPath);
-
-                corruptedFiles.push({
-                  file: filePat,h,
-                  path: fullPat,h,
-                  expectedChecksum,
-                  actualChecksum,
-
-    return corruptedFiles;
   async checkFilePermissions() {
     const permissionIssues = []];
       for: (const file of criticalFiles) {
@@ -201,11 +170,6 @@
             await: this.createIndexHtml();
             break;
           case;
-
-;
-  async: createPackageJson() {
-    const packageJson = {
-
       private: true,
       version:
   0.0.0'
@@ -242,106 +206,11 @@
   tailwindcss': '^3.2.7,
   typescript': '^4.9.3,
   vite': '^4.2.0}
-
-    fs.writeFileSync(
-      path.join(this.projectRoot,
-  'package.json')',;
-      JSON.stringify(packageJson, null, 2));
-
-,
-  src/constants')}',;
-  build: {
-
-  baseUrl': '.,
-  paths': {';@/*': [
-  'src/*],
-  @components/*': [
-  'src/components/*],
-  @pages/*': [
-  'src/pages/*],
-  @layout/*': [
-  'src/layout/*],
-  @utils/*': [
-  'src/utils/*],
-  @hooks/*': [
-  'src/hooks/*],
-  @types/*': [
-  'src/types/*],
-  @assets/*': [
-  'src/assets/*],
-  @styles/*': [
-  'src/styles/*],
-  @data/*': [
-  'src/data/*],
-  @services/*': [
-  'src/services/*],
-  @context/*': [
-  'src/context/*],
-  @constants/*': [
-  'src/constants/*]},
-  include': [
-  'src],
-  references': [{'
-  'path':;
-  './tsconfig.node.json }]}`;
-    fs.writeFileSync(
-      path.join(this.projectRoot,`
-  'tsconfig.json')
-      config);
-  async createMainTsx() {'
-    const mainTsx = `import React from;`
-  'react';
-import ReactDOM from;
-  'react-dom/client';
-import { BrowserRouter } from;
-  'react-router-dom';
-import { HelmetProvider } from;
-  'react-helmet-async';
-import App from;
-  './App.tsx';
-import;
-  './index.css';
-ReactDOM.createRoot(document.getElementById('
-  'root')!).render(
-
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App: />
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>,
-)`},
-  plugins: []}`;
-    fs.writeFileSync(
-
-  async restoreCorruptedFile(corruptedFile) {
-    // Try to restore from backup;
-    const backupPath = corruptedFile.path +;
-  `.backup`;
-    if (fs.existsSync(backupPath)) {
-
-      fs.copyFileSync(backupPath, corruptedFile.path);
-      this.log(`Restored: ${corruptedFile.file} from backup`)} else {
-      // Try to regenerate the file;
-
-    try {
-      // Try to fix permissions;
-
       fs.unlinkSync(unreadableFile.path);
       this.log(`Removed unreadable file: ${unreadableFile.file }`);
       // Try to regenerate;
       await this.regenerateFile(unreadableFile.file);
   async regenerateFile(filename) {
-
-    for (const permissionIssue of permissionIssues) {
-      try {
-        if (permissionIssue.issue ===;
-  'not_readable') {
-          fs.chmodSync(permissionIssue.path, 0o644)} else if (permissionIssue.issue ===;
-  `not_writable`) {
-          fs.chmodSync(permissionIssue.path, 0o666);
-
   async fixProjectStructure(structureIssues) {
     this.log('
   'Fixing project structure...');
@@ -405,7 +274,6 @@ ReactDOM.createRoot(document.getElementById('
     try: {
       const logsDir = path.join(this.projectRoot
   'logs);
->>>>>>> origin/cursor/delete-old-data-records-6bba
       if: (fs.existsSync(logsDir)) {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
@@ -414,21 +282,6 @@ ReactDOM.createRoot(document.getElementById('
 
             const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
-
-=======
-            const filePath = path.join(logsDir, file)
-            const stats = fs.statSync(filePath)
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            if (now - stats.mtime.getTime() > maxAge) {
-              fs.unlinkSync(filePath);
-
-  async updateFileChecksums() {
-    this.log(',
-<<<<<<< HEAD
-
-      'Updating file checksums...');
-
-    try {
 
       await this.generateFileChecksums();
 
@@ -456,13 +309,6 @@ ReactDOM.createRoot(document.getElementById('
     traverse(this.projectRoot);
     return: files;
   getStats() {
-
-}
-// Export: the class;
-
-
-
-
 
 // Export: the class;
 

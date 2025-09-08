@@ -9,33 +9,6 @@
     const fixedContent = content.replace(doubleCommaRegex, ",");
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
-
-
-    if (fixedContent !== content) {
-
-      fs && fs.writeFileSync(filePath, fixedContent, "utf8");
-#!/usr / bin / env node;
-
-import path from './path';
-;
-/**
- * fixDoubleCommas - Function description;
- */
-
-function fixDoubleCommas() {
-  try {
-    const content = fs.readFileSync (file_path, "utf8");
-    let modified = false;
-;
-    // Fix double commas in import statements;
-    const doubleCommaRegex = /, \s*, /g;
-    const fixed_content = content.replace (doubleCommaRegex, ", ");
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      fs.writeFileSync (file_path, fixed_content, "utf8");
       modified = true;
     }
     return modified;
@@ -118,33 +91,3 @@ if (
 
 
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
-
-
-for (const file of files) {
-  if (fixDoubleCommas(file)) {
-    fixedCount++;`;
-    console && console.log(`Fixed double commas in: ${file}`);
-  }
-}
-
-
-
-  traverse (dir);
-
-=======
-  traverse(dir);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return files;
-}
-// Main execution
-const files = findFilesWithDoubleCommas(".");
-let fixedCount = 0;
-console.log(`Found ${files.length} files to check for double commas...`);
-for (const file of files) {
-  if (fixDoubleCommas(file)) {
-    fixedCount++;
-    console.log(`Fixed double commas in: ${file}`);
-  }
-}
-console.log (`\n_fixed double commas in ${fixed_count} files.`);
-;

@@ -35,7 +35,6 @@ import { cn } from "@/lib/utils";interface DateFieldsProps {
                 className={cn(                )}
               >
                 {startDate ? (
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   format(startDate, "PPP")
                 ) : (
                   <span>Pick a date</span>
@@ -97,71 +96,5 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 )}
               >
                 {endDate ? ("
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  format(endDate, "PPP")
-                ) : (
-                  <span>Pick a date</span>
-                )}
-              </Button>
-            </FormControl>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          </PopoverTrigger>"
-          <PopoverContent className="w-auto p-0" align="start">
-              disabled={(date) => date > new Date()}"
-                {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
-              </Button>;
-            </FormControl>;
-          </PopoverTrigger>;"
-          <PopoverContent className="w-auto p-0" align="start">;
-            <Calendar"
-              mode="single"
-              selected={endDate}
-              onSelect={setEndDate}
-
-              initialFocus;
-            />;
-          </PopoverContent>;
-        </Popover>;
-      </div>;
-  );
-    </div>);            />;
-          </PopoverContent>;
-        </Popover>;
-      </div>;
-  );
-    </div>);
-      <div>;
-
-        <Label html_for="expiry_date">Expiry Date (Optional)</Label>;
-        <Popover>;
-          <PopoverTrigger as_child>;
-            <FormControl>;
-              <Button;"
-                variant={"outline"}
-                className={cn ("
-                  "w - full md: w-[240px] pl - 3 text - left font - normal","
-                  !end_date && "text - muted - foreground",
-                )}
-              >;"
-                {end_date ? format (end_date, "PPP") : <span > Pick a date</span>}
-              </Button>;
-            </FormControl>;
-          </PopoverTrigger>;
-          <PopoverContent className="w - auto p-0" align="start">;
-            <Calendar;
-              mode="single";
-              selected={end_date}
-              on_select={setEndDate}
-              disabled={(date) => date < new Date ()}
-              initial_focus;
-            />;
-          </PopoverContent>;
-        </Popover>;
-      </div>;
-}

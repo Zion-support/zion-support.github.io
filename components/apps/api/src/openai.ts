@@ -14,10 +14,6 @@ Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
-
-
-export function createOpenAIClient(apiKey: string): OpenAIClient {;
-
   return new OpenAI({ apiKey });
 
 
@@ -71,10 +67,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 
 
 }
-
-
-
-
   return completion.output_text
 }
 }

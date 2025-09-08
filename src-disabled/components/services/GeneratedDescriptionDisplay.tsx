@@ -41,60 +41,6 @@ export function GeneratedDescriptionDisplay(): any ({;
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <Button
-            variant='outline'
-            size='sm'
-            onClick={() => setIsEditing(!isEditing)}
-            className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-          <Button 
-            variant="outline" 
-            size="sm" 
-            onClick={() => setIsEditing(!isEditing)}
-            className="border-zion-blue-light text-zion-slate-light hover:text-white"
-          >
-            {isEditing ? (
-              <>
-                <Check className="h-4 w-4 mr-1" />
-                Done
-              </>
-            ) : (
-              <>
-                <Pencil className="h-4 w-4 mr-1" />"
-                <Pencil className="h-4 w-4 mr-1" />
-                Edit
-              </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            )}
-          </Button>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        {isEditing ? (
-          <Textarea
-            value={editedDescription}
-            onChange={e => setEditedDescription(e.target.value)}
-            className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'          />
-        ) : (
-          <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 
 
 import React, { useState } from "react",;
@@ -161,7 +107,6 @@ export function GeneratedDescriptionDisplay({;
           />
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
-<<<<<<< HEAD
 
             {editedDescription}
           </div>
@@ -195,44 +140,3 @@ export function GeneratedDescriptionDisplay({;
 }</div>) ;
 }</CardContent> {;
   isEditing && (<CardFooter> <ButtononClick={
-  handleSave "
-}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
-}</Card>)
-}'"
-}
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        {is_editing ? (
-          <Textarea;
-            value={edited_description}
-            on_change={e => setEditedDescription (e.target.value)}
-            className='bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none'          />) : (',
-          <div className='bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap'>;
-            {edited_description}
-          </div>)}
-      </CardContent>;
-      {is_editing && (
-        <CardFooter>;
-          <Button;
-            on_click={handle_save}
-            className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white'          >;',
-            Save Changes;
-          </Button>;
-        </CardFooter>)}
-    </Card>);
-  is_editing ? (<> <Check className="h - 4 w - 4 mr-1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr-1" /> Edit </>);
-}</Button> </CardTitle> </CardHeader> <CardContent> {
-  is_editing ? (<Textarea value= {
-  edited_description;
-}</div>);
-}</CardContent> {
-  is_editing && (<CardFooter> <Button on_click={
-  handle_save ";
-}className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text-white" > Save Changes </Button> </CardFooter>);
-}</Card>);
-}'";
-
-}
-

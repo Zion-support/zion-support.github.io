@@ -1,16 +1,3 @@
-
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
-import { Filter, X, Star } from "lucide-react",
-import { FilterOptions } from "@/types/search",  filters: {;
-    selectedProductTypes: string[],;
-    selectedLocations: string[],;
-    selectedAvailability: string[],;
-    selectedRating: number | null
 };  };
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
@@ -101,10 +88,6 @@ import { FilterOptions } from "@/types/search",  filters: {;
           ))}
         </div>
       </div>      <div className="mb-6">;
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">;
-          Minimum Rating;
-        </label>;
-        <div className="flex flex-wrap gap-2">;
           {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
             <Button
               key={rating === null ? 'any' : rating}

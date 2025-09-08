@@ -11,8 +11,6 @@ const SidebarNavigation: React.FC = () => {
   ];
 
 ;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -54,7 +52,6 @@ const SidebarNavigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {

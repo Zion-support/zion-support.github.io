@@ -285,11 +285,3 @@ export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 export function formatMessageTime(isoString: string): string {
-=======  const date = new Date(isoString);
-  const now = new Date();
-  if (diffInHours < 1) {
-  } else if (diffInHours < 24) {
-    return `${Math.floor(diffInHours)}h ago`;
-  } else if (diffInHours < 168) { // 7 days
-    return `${Math.floor(diffInHours / 24)}d ago`;
-  } else {

@@ -30,10 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     };
     writeJsonFile('deal/offerings && offerings.json', offerings);
     return res && res.status(200).json(offerings);
-
-
-  }
-
   }
   return res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
@@ -89,35 +85,3 @@ if ( {) {
     writeJsonFile ('deal / offerings.json', offerings);
     return res.status (200).json (offerings);
   }
-<<<<<<< HEAD
-
-return res.status (405).json ({ error: 'Method not allowed' });
-}
-
-return res.status(405).json({ error: 'Method not allowed',}
-
-
-
-
-=======
-  if (req.method = $2;
-    const offerings = { safe: !!body.safe, equity: !!body.equity, token: !!body.token },
-    writeJsonFile($2);
-    return res.status(200).json(offerings)
-  }
-  return res.status(405).json({ error: 'Method not allowed' })
-}
-
-
-
-
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const offerings = readJsonFile('ipo-offerings.json', []);
-  return res.status(200).json(offerings);
-}
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-
-}

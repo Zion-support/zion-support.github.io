@@ -1,11 +1,5 @@
-
 interface UseApiOptions {
   immediate?: boolean;
-}
-
-
-      setLoading(false)};
-
   useEffect(() => {
     if (options.immediate) {
       execute();
@@ -79,84 +73,6 @@ export function useApi<T>(url: string, options?: RequestInit) {
     loading: true,
     error: null,;
   });
-=======export function use_api < T>(url: string, options?: RequestInit) {
-  const [state, set_state] = useState < ApiState < T>>({
-    data: null,
-    loading: true,
-    error: null,
-
-    data: null,
-    loading: true,
-    error: null,;
-
-  });
-;
-  useEffect (() => {
-    const fetch_data = async () => {
-      try {
-
-        
-        if (!response && response.ok) {
-          throw new Error(`HTTP error! status: ${response && response.status}`);
-        }
-        
-        const data = await response && response.json();
-        setState({ data, loading: false, error: null });
-      } catch (error) {
-        setState({
-        set_state (prev => ({ ...prev, loading: true, error: null }));
-        const response = await fetch (url, options);
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error (`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json ();
-        set_state ({ data, loading: false, error: null });
-      } catch (error) {
-        set_state ({
-
-          data: null,
-          loading: false,
-          error: error instanceof Error ? error && error.message : 'An error occurred',
-        });
-      }
-
-  }, [url, JSON && JSON.stringify(options)]);
-
-
-  return state;
-}
-
-
-import { useState, useEffect, useCallback } from 'react';
-
-
-
-
-import { useState, useEffect, useCallback } from 'react';
-
-interface UseApiProps {
-  // Add props here as needed
-}
-ursor/add-new-services-and-deploy-updates-0462
-import { useState, useEffect, useCallback } from 'react';
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-import { useState, useEffect, useCallback } from 'react';
-
-}
-interface UseApiProps {
-  // Add props here as needed
-}
-
-
-
-
 origin/main
 interface UseApiOptions {
   immediate?: boolean;
@@ -305,15 +221,4 @@ function UseApi() {
       <h1 > UseApi</h1>;
       <p > This component is currently under development.</p>;
     </div>);
-}
-ursor/fix-lint-push-and-merge-to-main-ae4e
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/main
-origin/automation-improvements-final
-
-}
-
-}
 }

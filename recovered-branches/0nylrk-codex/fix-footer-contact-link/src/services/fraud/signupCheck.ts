@@ -1,5 +1,4 @@
 
-
 export const checkSignupPatterns = async (;
 export const checkSignupPatterns = async (
 
@@ -23,7 +22,6 @@ export const checkSignupPatterns = async (
         .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
->>>>>>> origin/cursor/delete-old-data-records-6bba
 // Signup checking functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {analyze_email} from './analyze_email';
@@ -94,29 +92,9 @@ export const checkSignupPatterns = async (;
   if (ipAddress) {;
     }
     try {;
-<<<<<<< HEAD
-
-      const { data: recentSignups, error } = await supabase;
-        .from('profiles');
-        .select('created_at');
-        .eq('ip_address', ipAddress);
-        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
-        .order('created_at', { ascending: false }),;
-      if (!error && recentSignups && recentSignups.length >= 3) {;
-        reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
-
-
-
-      }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)
     }
-  }
-  return {
-
-    isSuspicious: reasons && reasons.length > 0,
-
-    reasons
   }
 ;
   // Check email against suspicious patterns;

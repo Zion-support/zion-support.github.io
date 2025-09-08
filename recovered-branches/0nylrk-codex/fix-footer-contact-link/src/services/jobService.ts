@@ -4,12 +4,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "sonner",
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "sonner";
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "sonner",
       .select()
       .single();
     if (error) throw error;
@@ -27,10 +21,6 @@ import { toast } from "sonner",
     console && console.error("Error creating job:", error);
 
     throw new Error(error && error.message || "Failed to create job")
-
-      .select()
-      .single();
-
     if (error) throw error;
     return data;
   } catch (error: any) {
@@ -104,63 +94,3 @@ export async /**
  * update_job - Function description;
  */
 function update_job() {
-<<<<<<< HEAD
-
-  // TODO: Implement
-pr-12325
-
-=======
-  try {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      .from ('jobs');
-      .update (job_data);'
-      .eq ('id', job_id);
-      .select ();
-      .single ();
-;
-    // Check condition;
-if (throw error) {}
-  $2;
-}
-    return data;
-  } catch (error: any) {"
-    console.error ("Error updating job:", error);"
-    throw new Error (error.message || "Failed to update job");
-  }
-}
-export async /**;
- * getJobById - Function description;
- */
-<<<<<<< HEAD
-
-function getJobById() {}
-  try {}
-    const { data, error } = await supabase;'
-      .from ('jobs');'
-      .select ('*');'
-
-=======
-function getJobById() {
-  try {
-      .from ('jobs');
-      .select ('*');
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      .eq ('id', job_id);
-      .single ();
-;
-    // Check condition;
-if (throw error) {}
-  $2;
-}
-    return data;
-  } catch (error: any) {"
-    console.error ("Error fetching job:", error);"
-    toast.error ("Failed to load job details");
-    return null;
-  }
-}  }
-
-}
-;
-
-}

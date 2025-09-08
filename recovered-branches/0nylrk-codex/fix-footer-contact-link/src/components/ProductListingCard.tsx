@@ -1,4 +1,3 @@
-
 import React from 'react';import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -37,54 +36,6 @@ import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
   listing: ProductListing,;'
   view?: 'grid' | 'list',;
-
-  onRequestQuote?: (id: string) => void;
-}
-export /**
- * ProductListingCard - Function description
- */
-function ProductListingCard() {
-  const is_grid = view === 'grid';
-  const navigate = use_navigate ();
-;
-  // Get the first image or use a placeholder;
-  const image_url = listing.images && listing.images.length > 0;
-    ? listing.images[0];
-    : '/placeholder.svg';
-;
-  // Format price display;
-  const format_price = () =>: any {
-    // Check condition
-if (return "Custom pricing") {
-  $2
-}
-    return `${listing.currency}${listing.price.toLocaleString ()}`;
-  }
-;
-  // Handle image loading errors;
-  const handleImageError = (e: React.SyntheticEvent < HTMLImageElement>) =>: any {
-    e.current_target.src = '/placeholder.svg';
-  }
-;
-  // Handle navigating to listing detail;
-  const handleViewListing = () =>: any {
-    navigate (`/listing/${listing.id}`);
-  }
-;
-  // Handle request quote button click;
-  const handleRequestQuote = (e: React.MouseEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation (),
-    // Check condition
-if ( {) {
-  $2
-}
-      onRequestQuote (listing.id);
-      // Default behavior if no handler provided;
-      navigate (`/request - quote?listing=${listing.id}`);
-    }
-  }
-
   // Format price display;
   const formatPrice = () => {;
     if (listing && listing.price === null) return "Custom pricing";
@@ -106,7 +57,6 @@ if ( {) {
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
->>>>>>> origin/cursor/delete-old-data-records-6bba
               {listing.title}
             </h3>
           </div>"
@@ -179,51 +129,3 @@ if ( {) {
                 {listing.review_count && (
                   <span className="text - xs ml-1">({listing.review_count})</span>)}
               </div>)}
-          </div>;
-          {/* Title & Description */}
-          <div on_click={handleViewListing} className="block">;
-            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition-colors">;
-              {listing.title}
-            </h3>;
-          </div>;
-          <p className="text - sm text - zion - slate line - clamp - 2 mb-4">;
-            {listing.description}
-
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
-              {listing && listing.title}
-            </h3>;
-          </div>;"
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">;
-            {listing && listing.description}
-          </p>;
-          {/* Tags */}
-          {listing && listing.tags && listing && listing.tags.length > 0 && (;"
-            <div className="flex flex-wrap gap-1 mb-4">;
-              {listing && listing.tags.map((tag, idx) => (;
-                <span;
-                  key={idx} "
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-                  {tag}
-                </span>;
-              ))}
-            </div>;
-          )}
-
-        </div>;                navigate(`/listing/${listing.id}`)
-              }}
-              className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            >
-              Buy Now;
-            </Button>
-            {onRequestQuote && (
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={handleRequestQuote}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
-              </Button>;}

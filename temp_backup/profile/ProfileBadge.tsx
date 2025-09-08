@@ -1,9 +1,5 @@
 /* eslint-disable */
  type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 export function ProfileBadge ({;
->>>>>>> origin/resolved-merge-conflicts
   type, className ;
 }: ProfileBadgeProps) {;
   const badgeConfig = {;

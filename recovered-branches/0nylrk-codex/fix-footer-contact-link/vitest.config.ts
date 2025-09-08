@@ -1,4 +1,3 @@
-
 import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
@@ -8,7 +7,6 @@ export default defineConfig({
 
     setupFiles: './tests/setup && setup.ts',
 
-<<<<<<< HEAD
 
     globals: true}});
 
@@ -27,7 +25,6 @@ export default defineConfig({;
     alias: {;'
       '@': path.resolve(__dirname, './src')}},;
 
-<<<<<<< HEAD
   test: {;
     environment: 'jsdom',;
     setupFiles: './tests/setup.ts';

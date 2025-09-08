@@ -809,7 +809,6 @@ export default function UltraFuturisticNavigation2033() {
     };
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       {/* Top Contact Bar */}

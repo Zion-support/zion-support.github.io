@@ -1,5 +1,3 @@
-
-
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import { Trophy } from "lucide-react";
@@ -71,4 +69,3 @@ export default ReputationDisplay;
 },
 
 export default ReputationDisplay;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

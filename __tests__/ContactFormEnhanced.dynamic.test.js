@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import ContactFormEnhanceddynamic from "../components/ContactFormEnhanced.dynamic";
@@ -16,5 +14,3 @@ import ContactFormEnhanceddynamic from "../components/ContactFormEnhanced.dynami
 
     render(<ContactFormEnhanceddynamic />);
     // Add styling tests if needed})});
-
-

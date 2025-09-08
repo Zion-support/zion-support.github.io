@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -236,7 +235,6 @@ return (;
 };
 
 export default ResourcesPage;
->>>>>>> origin/cursor/delete-old-data-records-6bba
           ))}
         </div>
       </div>
@@ -244,27 +242,4 @@ export default ResourcesPage;
 );
 
 export default ResourcesPage;
-<<<<<<< HEAD
-
-
-
-
-=======
-  [ {
-  name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' 
-}, {
-  name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' 
-}, {
-  name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' 
-}, {
-  name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' 
-}, {
-  name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' 
-}, {
-  name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' 
-}].map ( (it) => () ) 
-}</div> </div> </UltraFuturisticBackground>) 
-}
-export default ResourcesPage
-
 export default Resources;

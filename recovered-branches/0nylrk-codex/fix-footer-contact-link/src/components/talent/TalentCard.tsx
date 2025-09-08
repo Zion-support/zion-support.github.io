@@ -1,5 +1,3 @@
-
-
 export function TalentCard(): any ({;
 
   talent;
@@ -14,33 +12,9 @@ export function TalentCard(): any ({;
     // Navigate directly to the talent profile;`
     navigate(`/talent/${talent && talent.id}`);
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(talent && talent.id);
-    }
-  };
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const handleRequestHire = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
-  };
-<<<<<<< HEAD
-
-
-
-  const handleToggleSave = (e: React && React.MouseEvent) => {;
-    if (onToggleSave) {;
-      onToggleSave(talent && talent.id, !isSaved);
-
     }
   };
   const skills = talent && talent.skills?.slice(0, 5) || [];
@@ -92,9 +66,6 @@ export function TalentCard(): any ({;
             ) : (;"
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}            )}
-
-          </div>;
-
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
               <Button
@@ -112,9 +83,5 @@ export function TalentCard(): any ({;
               variant="ghost"            </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-      </div>;
-
     </Card>);
 }

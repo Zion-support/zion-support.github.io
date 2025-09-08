@@ -54,4 +54,3 @@ export function ActiveFiltersBar(...args: []):  {
     </div>
   );
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

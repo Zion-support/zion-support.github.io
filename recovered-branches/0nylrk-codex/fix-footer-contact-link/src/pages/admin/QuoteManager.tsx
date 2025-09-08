@@ -1,59 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {useAdminQuotes} from "@/hooks/useAdminQuotes";
-import {useAuth} from "@/hooks/useAuth";
-import {Card, CardContent} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Navigate} from "react-router-dom";import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  Card;
-  CardContent
-} from "@/components/ui/card",
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Navigate } from "react-router-dom",
-import type { QuoteRequest } from "@/types/quotes";
-
-import type { QuoteRequest } from "@/types/quotes";
-"
-import {ProtectedRoute} from "@/components/ProtectedRoute";"
-import {QuoteDetails} from "@/components/quotes/QuoteDetails";"
-import {ExportToCSV} from "@/components/quotes/ExportToCSV";"
-import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-
-
-
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);    quotes;
     is_loading;
     error;
@@ -77,7 +21,6 @@ import {
 } from "@/components/admin/quotes",
   const {
     }
->>>>>>> origin/cursor/delete-old-data-records-6bba
     quotes,
     isLoading,
     error,
@@ -89,88 +32,6 @@ import {
     setSearchQuery,
     dateRange,
     setDateRange,
-<<<<<<< HEAD
-
-
-  } = useAdminQuotes(),
-
-
-=======
-    updateStatus,
-    toggleArchive,
-    deleteQuote            
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
-import { useAuth } from "@/hooks/useAuth",;
-import { ;
-import {;
-  Card,;
-  CardContent;"
-} from "@/components/ui/card",;"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
-import { Navigate } from "react-router-dom",;"
-import type { QuoteRequest } from "@/types/quotes",;"
-import { ProtectedRoute } from "@/components/ProtectedRoute",;"
-import { QuoteDetails } from "@/components/quotes/QuoteDetails",;"
-<<<<<<< HEAD
-
-import { ExportToCSV } from "@/components/quotes/ExportToCSV",;
-import {;
-
-=======
-import { ExportToCSV } from "@/components/quotes/ExportToCSV",;"
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  QuoteStatusCards,;
-  QuotesFilter,;
-  QuotesTable;"
-} from "@/components/admin/quotes",;
-export default function QuoteManager() { return null; }
-  const { user } = useAuth(),;'
-  const isAdmin = user?.userType === 'admin',;
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
-  const [showDetails, setShowDetails] = useState(false),;
-export default function QuoteManager() {;
-  const { user } = useAuth(),;
-
-  const isAdmin = user?.userType === 'admin',;
-
-  ;
-;
-  // Count quotes by status;
-  const statusCounts = {;
-    new:quotes.filter(q => q.status === 'new').length,;
-    in_review:quotes.filter(q => q.status === 'in_review').length,;
-    accepted:quotes.filter(q => q.status === 'accepted').length,;
-    responded:quotes.filter(q => q.status === 'responded').length,;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    closed:quotes.filter(q => q.status === 'closed').length;
-  },;
-;
-  const handleViewDetails = (quote:QuoteRequest) => {;
-    setSelectedQuote(quote),;
-    setShowDetails(true);
-  },;
-;
-    <ProtectedRoute adminOnly>;
-      <div>;
-        <Header />;"
-        <div className="min-h-screen bg-zion-blue px-4 py-8">;"
-          <div className="container mx-auto">;"
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
-              <div>;"
-                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>;"
-                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>;
-              </div>;"
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
-            </div>;
-
-            {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />;
-
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
             ;
@@ -181,61 +42,8 @@ export default function QuoteManager() {;
             <QuoteStatusCards statusCounts={statusCounts} />
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
-;
-export default /**;
- * QuoteManager - Function description;
- */
-function QuoteManager() {}
-  const { user } = use_auth ();'
-  const is_admin = user?.user_type === 'admin';
-;
-  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
-  const [show_details, setShowDetails] = useState (false);
-;
-    }
-    quotes;
-    is_loading;
-    error;
-    status_filter;
-    setStatusFilter;
-    archive_filter;
-    setArchiveFilter;
-    search_query;
-    setSearchQuery;
-    date_range;
-    setDateRange;
-  }
-  return (                    isLoading={isLoading}
-                    updateStatus={updateStatus}
-                    toggleArchive={toggleArchive}
-                    deleteQuote={deleteQuote}
-                    onViewDetails={handleViewDetails}        {/* Quote Details Modal */}
-        <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-          onClose={() => {
-            setShowDetails(false);
-
-          onClose={() => {;
-            setShowDetails(false);
-            setSelectedQuote(null);
-
-          }}
-        />
-        <Footer />
-      </div>
-    </ProtectedRoute>
-  )
             setShowDetails(false),;
             setSelectedQuote(null),;
           }
@@ -337,4 +145,3 @@ const [showDetails, setShowDetails] = useState (false);
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>)
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

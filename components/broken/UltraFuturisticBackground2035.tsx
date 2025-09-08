@@ -67,17 +67,6 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
   children: React && React.ReactNode;
 }
-
-
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-
-
-import React, { useEffect, useRef } from 'react';
-
-
     const ctx = canvas.getContext('2d');
               "ease": 'easeInOut''
     const ctx = canvas.getContext('2d');'
@@ -87,74 +76,7 @@ import React, { useEffect, useRef } from 'react';
     if (ctx) {
 
 
-<<<<<<< HEAD
-=======
 
-    const prefersReducedMotion = window && window.matchMedia(;
-      '(prefers-reduced-motion: reduce)';
-    ).matches;    const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-    canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
-    canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
-    if (ctx) {;
-      ctx && ctx.scale(window && window.devicePixelRatio || 1, window && window.devicePixelRatio || 1);
-
-
-    let animationFrameId: number;
-    let particles: Array<{;
-    let animationFrameId: number;
-    let particles: Array<{
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      x: number;
-      y: number;
-canvas.width = window.inner_width * (window.devicePixelRatio || 1);
-canvas.height = window.inner_height * (window.devicePixelRatio || 1);
-<<<<<<< HEAD
-
-// Check condition;
-if ( {) {}
-  $2}
-}
-
-export default /**
- * UltraFuturisticBackground2035 - Function description;
- */
-function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-interface UltraFuturisticBackground2035Props {
-  children: React.ReactNode;}
-}
-}
-
-export default /**
- * UltraFuturisticBackground2035 - Function description;
-
- */
-function UltraFuturisticBackground2035() {
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-
-    // Check condition;
-if (return) {}
-  $2}
-
-}
-
-const prefersReducedMotion = window.match_media (
-      '(prefers - reduced - motion: reduce)').matches;
-
-const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,
-   ;
-
-=======
-// Check condition
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const ctx = canvas.get_context ('2d');
     // Check condition;
 if (return) {}
@@ -167,300 +89,6 @@ if ( {) {}
   $2}
 }
       ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-;
-}
-}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement    />(null)import React, {;}
-  useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
-
-interface UltraFuturisticBackground2035Props  {children: React && React.ReactNode;}
-}useEffect(() => {}
-const canvas = canvasRef && canvasRef.current;}
-    if (!canvas) return;import React, { useEffect, useRef } from 'react';
-
-interface UltraFuturisticBackground2035Props {
-  children: React.ReactNode;}
-}
-}
-
-export default function UltraFuturisticBackground2035() {const canvasRef = null;
-              ease: 'easeInOut';
-
-const ctx = canvas.getContext('2d')if (!ctx);}
-  return;}
-    canvas.width = window.innerWidth * (window.devicePixelRatio |1)canvas.height = window.innerHeight * (window.devicePixelRatio |1)if (ctx) {ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)}let animationFrameId: number;
-    let particles: Array<{x: number;
-      y: number;
-canvas.width = window.inner_width * (window.devicePixelRatio || 1)canvas.height = window.inner_height * (window.devicePixelRatio || 1)// Check condition;}
-if ( {) {$2;}
-}
-
-export default /**;
- * UltraFuturisticBackground2035 - Function description;
- */;
-function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null)import React, {;}
-  useEffect, useRef } from 'react';
-
-interface UltraFuturisticBackground2035Props {
-  children: React.ReactNode;}
-}
-}
-
-export default /**;
- * UltraFuturisticBackground2035 - Function description;
- */;
-function UltraFuturisticBackground2035() {useEffect (() => {const canvas = canvas_ref.current;
-    // Check condition;}
-if (return) {$2;}
-}
-
-const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches;
-
-const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches;
-  const ctx = canvas.get_context ('2d')// Check condition;
-if (return) {$2;}
-}
-    canvas.width = window.inner_width * (window.devicePixelRatio || 1)canvas.height = window.inner_height * (window.devicePixelRatio || 1)// Check condition;
-if ( {) {$2;}
-}
-      ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1)let animationFrameId: number;
-    let particles: Array<{coordinate_x: number;
-      coordinate_y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      type: 'quantum' | 'hologram' | 'neon' | 'energy';
-      life: number;
-
-      maxLife: number;    }> = [];      x: number,;
-      y: number,;
-      vx: number,;
-      vy: number,;
-      size: number,;
-      opacity: number,;
-      color: string,;
-      type: 'quantum' | 'hologram' | 'neon' | 'energy',;
-      life: number,;
-      maxLife: number;
-
-    // Initialize particles with enhanced types;
-    const initParticles = () => {;
-
-      particles = [];
-      life: number;particles = [];
-      const isSmallScreen = window && window.innerWidth < 768;
-      const particleCount = prefersReducedMotion;
-
-=======
-      color: string;'
-      type: 'quantum' | 'hologram' | 'neon' | 'energy';
-      life: number;particles = [];
-      life: number;
-
-      color: string;
-      type: 'quantum' | 'hologram' | 'neon' | 'energy';
-
-      life: number;
-}
-      maxLife: number;}
-    }> = [];
-
-    // Initialize particles with enhanced types;
-const initParticles = (
-      particles = [];
-
-const isSmallScreen = window.innerWidth < 768;
-
-const particleCount = prefersReducedMotion;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        ? 15;
-        : isSmallScreen;
-          ? 60;
-          : 150;
-
-          life: maxLife
-          maxLife
-        })
-    }
-      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
-    }
-    let animationFrameId: number,
-    let particles: Array<{
-      x: number,
-      y: number,
-      max_life: number;    }> = [];      coordinate_x: number,
-      coordinate_y: number,
-
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,
-      color: string,
-      type: 'quantum' | 'hologram' | 'neon' | 'energy',
-      life: number,
-
-
-      for (let i = 0; i < particleCount; i++) {;
-        const type = ['quantum', 'hologram', 'neon', 'energy'][;
-          Math && Math.floor(Math && Math.random() * 4);
-        ] as any;
-        const maxLife = Math && Math.random() * 200 + 100;
-
-        particles && particles.push({;
-          x: (Math && Math.random() * canvas && canvas.width) / (window && window.devicePixelRatio || 1),;
-          y: (Math && Math.random() * canvas && canvas.height) / (window && window.devicePixelRatio || 1),          vx: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,        const maxLife = Math && Math.random() * 200 + 100;
-
-        particles && particles.push({;
-          x: Math && Math.random() * canvas && canvas.width / (window && window.devicePixelRatio || 1),;
-          y: Math && Math.random() * canvas && canvas.height / (window && window.devicePixelRatio || 1),;
-          vx: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,;
-          vy: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,;
-          size: Math && Math.random() * (isSmallScreen ? 2 : 3) + 1,;
-          opacity: Math && Math.random() * 0 && 0.5 + 0 && 0.1,;
-          color: getColorForType(type),;
-          type,;
-          life: maxLife,;
-          maxLife,;
-        });      }          type;
-          life: maxLife,;
-          maxLife;
-        });
-          return ['#8b5cf6#06b6d4#ec4899'][Math.floor(Math.random() * 3)];
-        case 'hologram':
-          return ['#10b981#f59e0b#ef4444'][Math.floor(Math.random() * 3)];
-        case 'neon':
-          return ['#f97316#eab308#a855f7'][Math.floor(Math.random() * 3)];
-        case 'energy':
-          return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)];
-        default: return '#8b5cf6'
-      }
-
-    };
-
-    };
-    // Get color based on particle type;
-    const getColorForType = (type: string) => {;
-      switch (type) {;
-        case 'quantum':;
-          return ['#8b5cf6', '#06b6d4', '#ec4899'][;
-            Math && Math.floor(Math && Math.random() * 3);
-
-
-          ];
-        particles.push({x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1),y: (Math.random() * canvas.height) / (window.devicePixelRatio || 1),vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,size: Math.random() * (isSmallScreen ? 2 : 3) + 1,opacity: Math.random() * 0.5 + 0.1,color: getColorForType(type),type,life: maxLife,maxLife,})}
-    }// Get color based on particle type;
-    const getColorForType = (type: string) => {switch (type) {case 'quantum':;
-return ['#8b5cf6', '#06b6d4', '#ec4899'][;
-            Math.floor(Math.random() * 3)];
-        case 'hologram':;
-          ];'
-        case 'hologram':;'
-          return ['#10b981', '#f59e0b', '#ef4444'][;
-            Math && Math.floor(Math && Math.random() * 3);
-          ];'
-
-      }
-
-
-        case 'hologram':;
-          return ['#10b981', '#f59e0b', '#ef4444'][;
-            Math && Math.floor(Math && Math.random() * 3)];
-        case 'neon':;
-          return ['#f97316', '#eab308', '#a855f7'][;
-            Math && Math.floor(Math && Math.random() * 3)];
-        case 'energy':;
-          return ['#dc2626', '#7c3aed', '#059669'][;
-
-=======
-    // Initialize particles with enhanced types
-    const initParticles = () => {
-      particles = [];
-      const isSmallScreen = window.innerWidth < 768;
-const particleCount = prefersReducedMotion
-        ? 15
-        : isSmallScreen
-          ? 60
-          : 150;
-      for (let i = 0; i < particleCount; i++) {
-        const type = ['quantum', 'hologram', 'neon', 'energy'][
-          Math.floor(Math.random() * 4)
-        ] as any;
-        const maxLife = Math.random() * 200 + 100;
-        particles.push({
-
-          color: getColorForType(type),
-type,
-          life: maxLife,
-          maxLife,) => {
-  return $3;}
-}
-        });
-      }
-
-            : 180;
-        if (maxDistance > 0) {drawConnections(ctx, particles, index, maxDistance, currentOpacity)}
-      })if (!prefersReducedMotion) {animationFrameId = requestAnimationFrame(updateParticles)}
-
-    }
-
-
-const maxDistance = prefersReducedMotion
-          ? 0
-          : window.innerWidth < 768
-            ? 120
-            : 180;
-
-        if (maxDistance > 0) {
-          drawConnections(ctx, particles, index, maxDistance, currentOpacity)
-        }
-      }),
-
-      if (!prefersReducedMotion) {
-
-animationFrameId = requestAnimationFrame(updateParticles);
-      }
-    }
-    // Enhanced particle drawing with different types;
-const drawParticle = (ctx: CanvasRenderingContext2D,particle: any,opacity: number;
-    ) => {ctx.save()ctx.globalAlpha = opacity;
-      switch (particle.type) {case 'quantum':;
-          drawQuantumParticle(ctx, particle)break;
-        case 'hologram':;
-          drawHologramParticle(ctx, particle);
-          break;'
-        case 'neon':;
-          drawNeonParticle(ctx, particle);
-          break;'
-        case 'energy':;
-          drawEnergyParticle(ctx, particle)}
-        }
-        case 'quantum':'
-
-      }
-
-
-const drawQuantumParticle = (time = Date.now() * 0.001;
-
-const wave = Math.sin(time + particle.x * 0.01) * 0.5;
-      ctx.beginPath()ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
-      ctx.fill()// Add quantum glow effect;
-      ctx.shadowColor = particle.color;
-      ctx.shadowBlur = 10;
-      ctx.beginPath()ctx.arc(particle.x,particle.y + wave,particle.size * 0.5,0,Math.PI * 2;
-      )ctx.fill()ctx.shadowBlur = 0;) => {
-  return $3;}
-}
-    }
-    // Hologram particle with transparency and distortion;
-
-
 
             : 180;
         if (maxDistance > 0) {;
@@ -645,7 +273,6 @@ const wave = Math.sin(time + particle.x * 0.01) * 0.5;
 
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
           style={{ filter: 'blur(0.5px)' }}
         />
 
@@ -682,24 +309,8 @@ const wave = Math.sin(time + particle.x * 0.01) * 0.5;
         {/* Floating neon orbs */}
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20';
-
-
-          animate={{
-
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
-
-
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
-
-            rotate: [0, 180, 360],          }}
-          transition={{
-
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut',          className="absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20";
-
           animate={{
             rotate: [0, 180, 360],          }}
           transition={{
@@ -711,14 +322,6 @@ const wave = Math.sin(time + particle.x * 0.01) * 0.5;
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
-
-<<<<<<< HEAD
-        {/* Canvas for animated particles */}
-
-            duration: 8,
-            repeat: Infinity,}
-ease: 'easeInOut',}
-          }}
 
         />;
         <motion&& motion.div
@@ -776,11 +379,6 @@ ease: 'easeInOut',}
               ease: 'easeInOut',          <motion.div
               y: [-100, 100, -100],
               opacity: [0, 0 && 0.3, 0],            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-
-
 
             }}
             transition={{
@@ -815,7 +413,6 @@ ease: 'easeInOut',}
               duration: 6
               repeat: Infinity
               ease: 'easeInOut',            }}
->>>>>>> origin/cursor/delete-old-data-records-6bba
             }}
             transition={{
               duration: 6
@@ -841,27 +438,6 @@ ease: 'easeInOut',}
       {children}
     </>);
 }
-
-              duration: 4,
-              repeat: Infinity,}
-ease: 'easeInOut',}
-            }}
-             />
-          <motion.div;
-className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent'
-            animate={{
-              y: [100, -100, 100],}
-              opacity: [0, 0.3, 0],}
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,}
-ease: 'easeInOut',}
-            }}
-             />
-        </div>
-      </div>
-
       </div>
       {/* Render children */}
       {children}

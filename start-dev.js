@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/main
 
 '
 console.log('🚀 Starting development server...'),;
@@ -61,18 +58,4 @@ process.on('SIGTERM', () => {;
   console.log('Stopping development server...'),;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
-<<<<<<< HEAD
 }),;
-=======
-}),;
-process.on ('SIGINT', () => {
-  console.log ('Stopping development server...'),
-
-  dev_process.kill ('SIGINT'),
-  process.exit (0);
-
-  dev_process.kill ('SIGTERM'),
-  process.exit (0);
-
-}),
->>>>>>> origin/main

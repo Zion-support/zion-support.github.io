@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   }
@@ -179,5 +176,4 @@ const "ContactFormEnhanced": React.FC = () => {
   );
 };
 export default ContactFormEnhanced;
-
 

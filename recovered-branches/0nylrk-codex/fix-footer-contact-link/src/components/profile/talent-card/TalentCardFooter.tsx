@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -17,13 +15,6 @@ import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent",
 import { UserProfile } from "@/types/auth";
 import { useNavigate } from "react-router-dom";
-interface TalentCardFooterProps {
-
-  profile: TalentProfile
-  onViewProfile: (id: string) => void
-
-  onRequestHire?: (profile: TalentProfile) => void
-}
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
 import { UserProfile } from "@/types/auth",
 import { useNavigate } from "react-router-dom",
@@ -271,4 +262,3 @@ profile.id || ''
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

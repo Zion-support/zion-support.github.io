@@ -1,115 +1,3 @@
-
-import React from 'react';
-
-
-import { GradientHeading } from "./GradientHeading";
-
-
-
-import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
-interface HowItWorksSectionProps {
-
-import { GradientHeading } from './GradientHeading';
-import { Check, Handshake, Search, Send } from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { use_translation } from 'react - i18next';
-interface HowItWorksSectionProps {
-  class_name?: string;
-  style?: React.CSSProperties;
-const get_steps = (t: any, ) =>: any [;
-  {
-    title: t ('how_it_works.post'),
-    description: t ('how_it_works.post_desc'),
-    icon: Send,
-  },
-  {
-    title: t ('how_it_works.match'),
-    description: t ('how_it_works.match_desc'),
-    icon: Search,
-  },
-  {
-    title: t ('how_it_works.hire_buy'),
-    description: t ('how_it_works.hire_buy_desc'),
-    icon: Handshake,
-  },
-  {
-    title: t ('how_it_works.done'),
-    description: t ('how_it_works.done_desc'),
-    icon: Check,
-  },
-];
-import React, { useState } from 'react';
-export /**;
-import { motion, AnimatePresence  } from 'framer-motion';
-export default /**
- * Page - Function description
- */
-function Page() {
-  {
-";
-    icon: <FileText className="w - 8 h - 8"  />, ";
-    title: "Plan", ";
-    description: "Collaborate on project requirements, timeline, and deliverables", ";
-    color: "from - zion - blue to - zion - blue - dark", ";
-    bg_color: "from - zion - blue / 20 to - zion - blue - dark / 20",
-    details: [";
-      "Interactive project planning", ";
-      "Timeline optimization", ";
-      "Resource allocation", ";
-      "Risk assessment" ], ";
-    duration: "4 - 8 hours", ";
-    success: "90% on - time delivery";
-},
-  {
-";
-    icon: <Rocket className="w - 8 h - 8"  />, ";
-    title: "Execute", ";
-    description: "Watch your vision come to life with our expert execution", ";
-    color: "from - zion - cyan - light to - zion - cyan", ";
-    bg_color: "from - zion - cyan - light / 20 to - zion - cyan / 20",
-    details: [";
-      "Agile development process", ";
-      "Regular progress updates", ";
-      "Quality assurance", ";
-      "Performance monitoring" ], ";
-    duration: "1 - 4 weeks", ";
-    success: "99% quality score";
-},
-  {
-";
-    icon: <CheckCircle className="w - 8 h - 8"  />, ";
-    title: "Deliver", ";
-    description: "Receive your completed project with ongoing support and maintenance", ";
-    color: "from - zion - purple - light to - zion - purple", ";
-    bg_color: "from - zion - purple - light / 20 to - zion - purple / 20",
-    details: [";
-      "Comprehensive testing", ";
-      "Documentation delivery", ";
-      "Training and handover", ";
-      "Post - launch support" ], ";
-    duration: "Ongoing", ";
-    success: "100% client retention"}
-];
-const stats = [ ";
-  { icon: <Clock className="w - 6 h - 6"  />, value: "3x Faster", label: "Project Delivery" }, ";
-  { icon: <Target className="w - 6 h - 6"  />, value: "99.9%", label: "Success Rate" }, ";
-  { icon: <TrendingUp className="w - 6 h - 6"  />, value: "50%", label: "Cost Reduction" }, ";
-  { icon: <Award className="w - 6 h - 6"  />, value: "1000+", label: "Projects Completed" }];
-  const [hovered_step, setHoveredStep] = useState < number | null> (null);
-  const [active_step, setActiveStep] = useState < number> (0);
-      transition: {
-        stagger_children: 0.2,
-        delay_children: 0.1}}}
-  const stats_variants = {
-  hidden: { opacity: 0,
-  scale: 0.8;
-},
-    visible: {
-      opacity: 1,      scale: 1
-      transition: {
-<<<<<<< HEAD
     visible: {
       opacity: 1,      scale: 1
       transition: {
@@ -126,44 +14,6 @@ export function HowItWorksSection({
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
-=======
-
-
-const getSteps = (t: any,) => [
-
-
-import React from 'react',
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
-interface HowItWorksSectionProps {
-  className?: string,
-  style?: React.CSSProperties
-}
-
-
-const getSteps = (t: any) => [
-
-
-  {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    title: t('how_it_works.post'),
-    description: t('how_it_works.post_desc'),
-    icon: Send},
-  {
-    title: t('how_it_works.match'),
-    description: t('how_it_works.match_desc'),
-    icon: Search},
-  {
-    title: t('how_it_works.hire_buy'),
-    description: t('how_it_works.hire_buy_desc'),
-    icon: Handshake},
-  {
-    title: t('how_it_works.done'),
-    description: t('how_it_works.done_desc'),
-<<<<<<< HEAD
     icon: Check,
   },
 ]
@@ -401,7 +251,6 @@ function HowItWorksSection() {
                         {step && step.description}
                       </p>                    </div>                    </div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         <div className="relative">
@@ -412,7 +261,6 @@ function HowItWorksSection() {
 
 export default Component;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
 }

@@ -19,7 +19,6 @@ const Sitemap: React.FC = () => {
         ))}
       </ul>
     </div>
->>>>>>> origin/main
   )};
 
 export default SitemapPage;

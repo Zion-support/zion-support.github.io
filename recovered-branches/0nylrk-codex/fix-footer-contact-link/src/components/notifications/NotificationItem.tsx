@@ -1,4 +1,3 @@
-
 // Use the centralized icon wrapper to avoid missing icons;
   switch (type) {
     case 'message':;
@@ -34,14 +33,6 @@ export const getTypeIcon = (type: NotificationType) => {;
 
       return <span className="text-zion-cyan">🚀</span>;
 
-
-<<<<<<< HEAD
-    case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
-    default:;
-      return <span className="text-gray-500">📣</span>;
-  }
-};
 
 interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -106,13 +97,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 };
     </div>);
 }
-
-};
-    </div>);
-}
-
-;
     </div>;
   )
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -86,7 +85,6 @@ export function DisputeForm({
   onCancel 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
->>>>>>> origin/cursor/delete-old-data-records-6bba
       setIsSubmitting(true)
       const dispute = await createDispute({}
         project_id: projectId;
@@ -94,54 +92,13 @@ export function DisputeForm({
         reason_code: values.reason_code;
         description: values.description})
 
-<<<<<<< HEAD
-      if (dispute && dispute.id) {
-        // Future enhancement: Upload attachments
-        // For now we just log the files that would be uploaded
-        if (files.length > 0) {
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }  };
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const removeFile = (index: number) => {;
     const newFiles = [...files],;
     newFiles && newFiles.splice(index, 1);
 
-<<<<<<< HEAD
-    setFiles(newFiles);
-    form && form.setValue("attachments", newFiles)
-};
-
-=======
-
-  async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
-    try {;
-      setIsSubmitting(true),;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      const dispute = await createDispute({;
-        project_id: projectId,;
-        milestone_id: milestoneId,;
-        reason_code: values && values.reason_code,,
-  description: values && values.description}),;
-
-      if (dispute && dispute.id) {;
-        // Future enhancement: Upload attachments;
-        // For now we just log the files that would be uploaded;
-        if (files && files.length > 0) {;
-          console && console.log(`Would upload ${files && files.length} files for dispute ${dispute.id}`);
-        }
-
-<<<<<<< HEAD
-=======
-"
-        toast && toast.success("Your dispute has been submitted");
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        if (onDisputeCreated) {;
-          onDisputeCreated(dispute.id);
-        }
-      }
     } catch (error) {;"
       console && console.error("Error submitting dispute:", error);"
       toast && toast.error("Failed to submit dispute. Please try again.");
@@ -403,7 +360,6 @@ if ( {) {}
                 {files && files.length > 0 && (;"
                   <div className="space-y-2">;"
                     <p className="text-sm font-medium">Selected files:</p>;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
                     <ul className="space-y-1">;
                       {files && files.map((file, index) => (;"
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">;
@@ -412,11 +368,6 @@ if ( {) {}
                             type="button" "
                             variant="ghost" "
                             size="sm" 
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-
     </div>);
 
 }            </Button>

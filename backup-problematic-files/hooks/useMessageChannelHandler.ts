@@ -1,4 +1,3 @@
-
 import { useEffect, useCallback } from 'react';
 
 // Define MessageEvent type if not available
@@ -31,7 +30,6 @@ interface MessagePort {
   post_message (message: any): void;
   start (): void;
   close (): void;
-<<<<<<< HEAD
 
 }
 
@@ -47,7 +45,6 @@ interface MessageChannelHandlerProps {
   // TODO: Implement
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
-<<<<<<< HEAD
 
 }
 
@@ -67,7 +64,6 @@ if ( {) {
       } catch (error) {
         // Check condition;
           on_error (error as Error);
-<<<<<<< HEAD
 
         }
 

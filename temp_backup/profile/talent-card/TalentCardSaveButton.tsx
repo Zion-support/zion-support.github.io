@@ -80,10 +80,6 @@ export function TalentCardSaveButton({;
 }= useToast ();
 const router = useRouter ();
 //Handle save toggle return;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
->>>>>>> origin/resolved-merge-conflicts
 }variant: "default" ;
 }) ;
 };"

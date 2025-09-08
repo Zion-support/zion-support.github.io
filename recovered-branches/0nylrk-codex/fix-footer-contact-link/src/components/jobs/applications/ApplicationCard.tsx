@@ -38,55 +38,6 @@ interface ApplicationCardProps {
   application: JobApplication
 }export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  const handleDownloadResume = () => {
-    // This would typically download the resume file
-    toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
-          <Button variant="default" size="sm">;
-
-            <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
-          </Button>;
-        );"
-      case "interview":;
-        return ("
-          <Button variant="default" size="sm">;"
-            <Calendar className="h-4 w-4 mr-1" /> View Interview Details;
-          </Button>;
-        );"
-      case "hired":;
-        return ("
-          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">;"
-            <FileText className="h-4 w-4 mr-1" /> View Offer;
-          </Button>;
-        );"
-      case "rejected":;
-        return (
-
-            <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
-          </Button>;
-        ),;
-      default:;
-        return null;
-
-    }
-  }    }
-
-  },
-
-  return (
-        {expanded && (
-          <div className="mt - 4 space-y-3">;
-            {application.cover_letter && (            </div>;
-          </div>;
-          <StatusBadge status={application.status} />;
-        </div>;
-      </CardHeader>;
-      <CardContent className="pb-3">;
-        <ApplicationProgress status={application.status} className="my-4" />;
 
         {expanded && (
           <div className="mt - 4 space-y-3">;

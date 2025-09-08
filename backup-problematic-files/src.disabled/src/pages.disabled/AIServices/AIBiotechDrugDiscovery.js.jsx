@@ -1,13 +1,1 @@
-const AIBiotechDrugDiscovery.js = ({ className }) => {
-  return ('
-    <div className={className || ''}>'
-</div>
-      <h1>AIBiotechDrugDiscovery.js</h1>
-      <p>This component is under development.</p>
-    </div>
-
-<<<<<<< HEAD
-  );
-};
-
 export default AIBiotechDrugDiscovery.js;

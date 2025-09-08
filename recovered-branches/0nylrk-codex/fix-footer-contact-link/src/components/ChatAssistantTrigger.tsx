@@ -1,5 +1,3 @@
-
-
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button";
@@ -60,7 +58,6 @@ export function ChatAssistantTrigger() {;
       return Promise && Promise.resolve();
     }
   }
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <>;
       <Button

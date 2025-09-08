@@ -1,4 +1,3 @@
-
   const mPrismaClient = {
     product: {
 
@@ -42,12 +41,6 @@ let prisma: PrismaClient;
         // Not expecting 'product-other' to be fetched by findMany if threshold is 0.3 and it's filtered out by raw query logic
       ];
       // The actual API logic filters by similarity >= 0.3 in $queryRawUnsafe
-<<<<<<< HEAD
-
-      // and then orders. Let's refine mockRawResults to reflect what $queryRawUnsafe would return
-      // based on 'WHERE similarity(name, $1) >= 0.3 OR similarity(description, $1) >= 0.3'
-      const filteredMockRawResults = mockRawResults
-
       (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(
         filteredMockRawResults
       );
@@ -116,7 +109,3 @@ let prisma: PrismaClient;
       expect(prisma.product.findMany).toHaveBeenCalledWith({
         where: {
           id: {
-
-
-
-

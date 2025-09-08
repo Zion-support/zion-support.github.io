@@ -1,20 +1,3 @@
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {ProductSubmissionForm} from "@/components/ProductSubmissionForm";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-export default function PublishProduct() {;
-  const { isAuthenticated, isLoading } = useAuth();
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
-import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-export default function PublishProduct() {};
-  const { isAuthenticated, isLoading } = useAuth();
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {

@@ -39,10 +39,6 @@
 }> <SelectTrigger> <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="0" >Any Rating</SelectItem> <SelectItem value="1" >1+ Stars</SelectItem> <SelectItem value="2" >2+ Stars</SelectItem> <SelectItem value="3" >3+ Stars</SelectItem> <SelectItem value="4" >4+ Stars</SelectItem> <SelectItem value="4.5" >4.5+ Stars</SelectItem> </SelectContent> </Select> </div> </div>) ;"
 };""
 //No Results Component ];";""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 </p> </div> <div className="max-w-md mx-auto space-y-4" > <div> > {;
->>>>>>> origin/resolved-merge-conflicts
   suggestion ;
 }</Button>) ) ;
 }</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) ;

@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React, { useEffect, useState } from "react";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {useInterviews} from "@/hooks/useInterviews";
-import {Interview} from "@/types/interview";
-import {format, isPast, parseISO} from "date-fns";
-import {Link} from "react-router-dom";
-import {Calendar, Clock, Video} from "lucide-react";
-import {Avatar} from "@/components/ui/avatar";
-export function UpcomingInterviewsCard() {;
-
-  const { fetchInterviews } = useInterviews();import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { format, isPast, parseISO } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, Clock, Video } from "lucide-react";
-import { Avatar } from "@/components/ui/avatar";
-export function UpcomingInterviewsCard() {
-  const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-import { Calendar, Clock, Video } from "lucide-react",
-import { Avatar } from "@/components/ui/avatar",
-export function UpcomingInterviewsCard() {
-  const { fetchInterviews } = useInterviews(),
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true);      setIsLoading(true);
@@ -59,31 +24,6 @@ export function UpcomingInterviewsCard() { return null; }
   const { fetchInterviews } = useInterviews(),;
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  useEffect(() => {;
-    const loadInterviews = async () => {;
-      setIsLoading(true),;
-      try {;
-        const interviews = await fetchInterviews(),;
-        const now = new Date(),;
-
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter (interview =>;
-            interview.status === 'confirmed' &&;
-            !is_past (parseISO (interview.scheduled_date)));
-          .sort ((a, b) =>;
-            parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
-          .slice (0, 3), // Take only the next 3 interviews;
-        setUpcomingInterviews (upcoming);
-        console.error ("Error loading upcoming interviews:", error);
-      } finally {}
-        setIsLoading (false);
-      }
-    }
 
           );
           .slice(0, 3), // Take only the next 3 interviews;

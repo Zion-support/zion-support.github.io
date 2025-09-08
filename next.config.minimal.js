@@ -75,22 +75,6 @@ domains: ["localhost", "ziontechgroup.com"]
   distDir: '.next'
 }
 module.exports = nextConfig;
-
-module.exports = nextConfig;
-
-module.exports = nextConfig;
-
-module.exports = nextConfig;
-module.exports = nextConfig;
-=======
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
-  images: {
-    domains: ["localhost", "ziontechgroup.com"],
-  },
-  output: "standalone",
-  trailingSlash: false,
-  distDir: '.next',
-};
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
   reactStrictMode:true,;

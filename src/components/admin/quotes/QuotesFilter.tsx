@@ -1,8 +1,3 @@
-interface QuotesFilterProps {;
-
-import React from "react",
-import { Calendar, RefreshCw } from 'lucide-react'
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",

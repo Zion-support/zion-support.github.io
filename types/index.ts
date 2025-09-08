@@ -1,5 +1,3 @@
-
-
   features: string[];
   technologies: string[];
   deliveryTim,
@@ -143,24 +141,6 @@ export interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   className?: string;
-}
-
-export interface CardProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  className?: string;
-  hover?: boolean;
-}
-
-export interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title?: string;
-  children: React.ReactNode;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-}
-
 // API Types
 export interface NextApiRequest extends Request {
   body: any;
@@ -250,4 +230,3 @@ export interface Environment {'
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: strin,g}
-

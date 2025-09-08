@@ -5,4 +5,3 @@ export const generateMetaTags = () => {
 
 export const optimizeHeadings = () => {
   console.log('Optimizing headings...');
-};

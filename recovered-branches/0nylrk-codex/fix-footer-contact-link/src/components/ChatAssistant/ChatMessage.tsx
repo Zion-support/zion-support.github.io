@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
   message: string,;
@@ -40,46 +36,6 @@ interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
   timestamp?: Date,
-
-  timestamp?: Date;
-  key?: string | number;
-}
-
-  const isUser = role === 'user';
-export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
-
-  const isUser = role === 'user';
-  const isUser = role === 'user',
-  
-  return (
-    <divclassName={cn(
-      "flex items-start gap-2"
-      isUser ? "flex-row-reverse" : "flex-row"
-    )}>;
-      <AvatarclassName={cn(
-        "h-8 w-8 border"
-        isUser ? "border-zion-purple/20" : "border-zion-cyan/20"
-      )}>;
-        {isUser ? (;
-          <AvatarFallback className="bg-zion-purple/20 text-white">U</AvatarFallback>;
-        ) : (;
-          <AvatarImage
-            src="https://placehold && placehold.co/32x32?text=AI"
-            alt="AI Assistant"
-          />;
-        )}
-        {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
-
-      </Avatar>;
-
-      </Avatar>;
-
-      <divclassName={cn(
-        "max-w-[80%] px-4 py-2 rounded-lg"
-        isUser 
-          ? "bg-zion-purple/20 text-white rounded-tr-none" 
-
-          : "bg-zion-cyan/10 text-white rounded-tl-none"
         "max-w-[80%] px-4 py-2 rounded-lg",
         isUser 
           ? "bg-zion-purple/20 text-white rounded-tr-none"       )}>;
@@ -90,27 +46,6 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
       </div>;
     </div>;
   );
-
-  ),; interface ChatMessageProps {
-  role: 'user' | 'assistant';
-message: string;
-timestamp?: Date;
-key?: string | number 
-}export function ChatMessage ({
-  role, message, timestamp 
-}: ChatMessageProps) {
-  const isUser = role === 'user';
-return (<div className= {
-  cn ("flex items-start gap-2";
-isUser ? "flex-row-reverse" : "flex-row") 
-}> <Avatar className= {
-  cn ("h-8 w-8 border";
-isUser ? "border-zion-purple/20" : "border-zion-cyan/20") 
-}> {
-  isUser ? (<AvatarFallback className="bg-zion-purple/20 text-white" >U</AvatarFallback> https://placehold.co/32x32?text=AI"alt=" AI Assistant" />) 
-}</div>) 
-}</div> </div>) 
-}
 }
 }
   );
@@ -121,7 +56,6 @@ interface ChatMessageProps {
   message: string,
   timestamp?: Date;
   key?: string | number;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 }
@@ -161,4 +95,3 @@ function ChatMessage() {
     </div>);
 }}
 }
-

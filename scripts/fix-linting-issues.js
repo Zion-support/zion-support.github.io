@@ -63,56 +63,6 @@
         await this.fixSourceFile(sourceFile)}
 
       console.error('Error fixing source files:', error.message)}
-
-  }
-  async fixSourceFile(filePath) {;
-    try {;
-      const fullPath = path.join(this.projectRoot, filePath);
-      const content = fs.readFileSync(fullPath, `utf8`);
-      // Check if file has linting issues;
-
-        console.log(`🔧 Fixing: ${filePath}`);
-        let fixedContent = content;
-        fixedContent = this.fixTrailingCommas(fixedContent);
-        fixedContent = this.fixUnusedImports(fixedContent);
-        fixedContent = this.fixMissingSemicolons(fixedContent);
-        fixedContent = this.fixQuoteConsistency(fixedContent);
-        fs.writeFileSync(fullPath, fixedContent);
-        this.fixedFiles.push(filePath)}
-
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
-      this.errors.push({;
-        file: filePath,;
-
-        error: error.message})}
-  }
-  hasLintingIssues(content) {;
-    // Check for common linting issue patterns;
-    const issuePatterns = [
-      /,\s*}/g,  // Trailing commas in objects;
-      /,\s*]/g,  // Trailing commas in arrays;
-      /import\s+{\s*}\s+from/g,  // Empty imports];
-    return issuePatterns.some(pattern => pattern.test(content));
-  }
-  fixTrailingCommas(content) {
-
-    // Fix trailing commas in objects and arrays;
-    content = content.replace(/,\s*}/g, '});
-    content = content.replace(/,\s*]/g, ']);
-    return content}
-  fixUnusedImports(content) {;
-    // Remove empty imports;
-    content = content.replace(/import\s+{\s*}\s+from\s+['][^']+['];?\s*\n/g, ');
-    return content}
-  fixMissingSemicolons(content) {;
-    // Add missing semicolons (basic cases);
-    content = content.replace(/([^}])\s*$/gm, '$1;);
-    return content}
-  fixQuoteConsistency(content) {;
-    // Convert double quotes to single quotes for consistency;
-
-    console.log('\n📊 Linting Issues Fix Summary:');
-
     console.log('\n✅ Linting issues fixing completed!')}
 
 }

@@ -213,4 +213,3 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD

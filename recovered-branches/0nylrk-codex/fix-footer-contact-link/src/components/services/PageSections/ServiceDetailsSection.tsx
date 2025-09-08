@@ -4,7 +4,6 @@ interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
           </p>
         </div>

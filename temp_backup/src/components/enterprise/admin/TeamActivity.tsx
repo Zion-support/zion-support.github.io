@@ -77,10 +77,6 @@ if (diffMins < 60) {;
 const getCategoryBadge = (category: string) => {;"
   ;""
 };";""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <Input type="search" placeholder="Search activities..." className="w-[200px] md:w-[300px] pl-9" /> </div> <Button variant="outline" size="icon" className="h-10 w-10" aria-label="Filter by date" > <CalendarIcon className="h-4 w-4" /> </Button> </div> </div> <div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>User</TableHead> <TableHead>Activity</TableHead> <TableHead>Target</TableHead> <TableHead>Category</TableHead> <TableHead>Time</TableHead> </TableRow> </TableHeader> <TableBody> {;
->>>>>>> origin/resolved-merge-conflicts
   activities.map ( (activity) => (<TableRow key= {;"
   activity.id ;""
 }> </TableCell> </TableRow>) ) ";""

@@ -8,7 +8,6 @@ export interface ShortUrl {
   isActive: boolean,
   userId?: string
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 export interface ShortUrl {
@@ -50,15 +49,6 @@ export interface ClickEvent {
       isActive: true,
       userId: request && request.userId
     };
-
-    this && this.urls.set(shortCode, shortUrl);
-    this && this.analytics.set(shortCode, {      totalClicks: 0;
-      uniqueVisitors: 0;      referrers: [];
-      countries: [];
-      devices: [];
-      browsers: [];
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   last_clicked: Date,
   click_history: ClickEvent[];
 }
@@ -352,15 +342,6 @@ if ( {) {
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
-<<<<<<< HEAD
-
-
-      urls: Array && Array.from(this && this.urls.entries());
-      analytics: Array && Array.from(this && this.analytics.entries()),
-      clicks: Array && Array.from(this && this.clicks.entries())
-
-    }
-  }
   async importData(data: any): Promise<void> {  }
 }
 export const urlShortenerService = new UrlShortenerService();

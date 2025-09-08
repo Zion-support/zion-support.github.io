@@ -1,6 +1,3 @@
-
-  'fs');
-
   'no-unused-vars;
   ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,;
   'no-debugger;
@@ -40,14 +37,6 @@ const totalFiles = 0;
 const filesWithIssues = 0;
 function shouldIgnoreFile(filePath) {;
   return ignoreDirs.some(dir => filePath.includes(dir));
-
-    const content = fs.readFileSync(filePath, 'utf8;
-  ');
-    const lines = content.split('\n;
-  ');
-    totalFiles++;
-    const fileIssues = [];
-
     // Check each line for issues;
     lines.forEach((line, lineNum) => {;
       Object.entries(lintRules).forEach(([rule, pattern]) => {;
@@ -56,7 +45,6 @@ function shouldIgnoreFile(filePath) {;
     // // // // // // // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`)}
 }
 function walkDir(dir) {;
->>>>>>> origin/main
   const files = fs.readdirSync(dir);
   files.forEach(file => {;
     const filePath = path.join(dir, file);
@@ -709,55 +697,6 @@ const endTime = Date.now()generateReport()"if": (issues.length > 0) { process.ex
       issuesByFile[issue.file] = [];
 
   // Summary by rule;
-<<<<<<< HEAD
   \n📊 Issues by rule: );>  // // // // // // // console.log(,
-=======
-  // // // // // // // console.log(,;
-  \n📊 Issues by rule: );
->  // // // // // // // console.log(,
->>>>>>> origin/main
-  \n📊 Issues by "rule": );
-  "if": (issues.length > 0) {
-    }
-    process.exit(1);
-// "Run": the checker;
-"if": (require.main === module) {
-  }
-  main();
-module."exports": = { checkFile, walkDir, lintRules }
-}}}}}}}));
-  // Summary by rule;
-
-  // // // // // // // console.log(,;
-  \n📊 Issues by "rule": );
-  // // // // // // // console.log(,
-  \n📊 Issues by "rule": );"
-
-const ruleCounts = { /* empty */ }
-  issues.forEach((issue) => {;
-    }
-    ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1});
-  Object.entries(ruleCounts);
-    .sort(([a], [b]) => b - a);
-
-  // // // // // // // console.log('🔍 Starting lint check...;
-  ');
-  const startTime = Date.now();
-  walkDir('.');
-  const endTime = Date.now();
-  generateReport();
-  // // // // // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
-  // Exit with error code if issues found;
-
-  if (issues.length > 0) {;
-    }
-    process.exit(1);
-// Run the checker;
-if (require.main === module) {;
-  }
-  main();
-module.exports = { checkFile, walkDir, lintRules }
-<<<<<<< HEAD
 }}}}}}}}}}}}}));`
-
 

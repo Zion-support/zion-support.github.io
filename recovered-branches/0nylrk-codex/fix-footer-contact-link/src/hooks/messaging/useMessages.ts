@@ -1,4 +1,3 @@
-
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
@@ -72,7 +71,6 @@ export function useMessages(;
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
->>>>>>> origin/cursor/delete-old-data-records-6bba
       setIsLoading(false)
     }
 
@@ -113,49 +111,6 @@ export function useMessages(;
       }
 ;
       // Send the message;
-<<<<<<< HEAD
-
-      const { data, error } = await supabase;'
-        .from('messages');
-
-=======
-        .from('messages');'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        .insert({;
-          conversation_id: conversationId,;
-          sender_id: user.id,;
-          recipient_id: conversation.user_id,;
-          content,;
-          created_at: new Date().toISOString(),;
-          read: false;
-        });'
-        .select('*');
-        .single(),;
-      if (error) throw error,;
-      // Update active messages if this conversation is selected;
-      if (activeConversation && activeConversation.id === conversationId) {;
-        setActiveMessages(prev => [...prev, data as Message]);
-      }      
-      // Update conversations list
-      await fetchConversations(),
-              .eq('recipient_id', user && user.id)
-        .eq('read', false);
-      if (error) throw error;
-      // Update active messages to show they've been read
-        )
-      );
-      // Update conversations to reflect read messages
-      setConversations(prev =>
-        prev.map(conv =>
-          conv.id === conversationId
-            : conv
-        )
-      );
-      // Recalculate unread count
-      setUnreadCount(prev => {          0
-        )
-      })
-    } catch (error) {
       console && console.error('Error marking messages as read:', error)      console && console.error('Error marking messages as read:', error)
     }
   }

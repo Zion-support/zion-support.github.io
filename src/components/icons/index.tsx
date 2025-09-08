@@ -833,4 +833,3 @@ export const Icon: React.FC<IconProps> = ({;
   // Render the dynamically selected Lucide icon component;
   return <LucideIconComponent size={size} className={className} {...props} />
 };
-<<<<<<< HEAD

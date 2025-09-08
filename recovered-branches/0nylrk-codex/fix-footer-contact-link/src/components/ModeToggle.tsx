@@ -1,4 +1,3 @@
-
 import {Moon, Sun} from "lucide-react"
 import {Button} from "@/components/ui/button"
 // Create a simplified theme hook for offline mode
@@ -35,7 +34,6 @@ theme: "dark"
 });
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       {theme === "dark" ? (

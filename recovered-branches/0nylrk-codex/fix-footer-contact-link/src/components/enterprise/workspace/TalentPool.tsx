@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button",
   return (
     <Card>
       <CardHeader>"
->>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="flex items-center justify-between">
           <div>
             <CardTitle>Dedicated Talent Pool</CardTitle>
@@ -95,7 +94,6 @@ export function TalentPool() {;
               </div>;
               <div className="mt-3 flex gap-2">;
                 <Button size="sm" variant="outline">View Profile</Button>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 <Button size="sm">Contact</Button>;
               </div>;
             </div>;
@@ -136,12 +134,6 @@ default: return <Badge variant="outline"> {
   status 
 }</Badge> 
 }
-
-
-
-
-=======
-
       <CardContent className="p-0">;
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
@@ -165,4 +157,3 @@ default: return <Badge variant="outline"> {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

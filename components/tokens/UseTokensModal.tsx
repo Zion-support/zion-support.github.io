@@ -1,6 +1,3 @@
-
-
-
   isOpen
   onClose
   serviceId
@@ -69,19 +66,11 @@ export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_supp
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function UseTokensModal({
   isOpen,
   onClose,
   serviceId,
   defaultType
-}: {
-  isOpen: boolean,
-  onClose: () => void,
-  serviceId?: string;
-  defaultType?: RedemptionType
-}) {
-  const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
 
   const [tokens, setTokens] = useState<number>(100);
@@ -164,10 +153,6 @@ export default function UseTokensModal({
 
               onChange={(e) => setTokens(parseInt(e && e.target.value || "0", 10))}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2";
-            />;
-            <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>;
-          </div>;
-
           <div className="text-sm">;
             <div className="mb-1">Wallet</div>;
             {account ? (;
@@ -195,7 +180,6 @@ export default function UseTokensModal({
           </div>;
 
           <button
->>>>>>> origin/cursor/delete-old-data-records-6bba
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
             className="enhanced-button enhanced-button-primary disabled: opacity-50">;
@@ -233,36 +217,12 @@ export default function UseTokensModal({
                 Connect MetaMask;
               </button>)}
           </div>;
-<<<<<<< HEAD
-        </div>;
-        <div className="mt - 4 flex items-center justify-between">;
-          <div className="text-xs opacity-70">;
             You can spend tokens to boost visibility, promote listings, or;
             access premium support.;
           </div>;
           <button;
             disabled={!account || is_submitting || tokens <= 0}
-<<<<<<< HEAD
 
-
-=======
-
-            on_click={redeem}
-            className="enhanced - button enhanced - button-primary disabled: opacity-50";
-          >;
-            Redeem;
-          </button>;
-        </div>;
-
-  );
-}
-        <div className="mt-4 flex items-center justify-between">
-
-          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
-          <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>
-        </div>
-      </div>
-    </div>
 
             Redeem;
           </button>;
@@ -287,18 +247,8 @@ export default function UseTokensModal({
 
 }
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
 
 
 
-=======
-  );
-);
-  );
-}
-}
-    </div>);
-}
+
+

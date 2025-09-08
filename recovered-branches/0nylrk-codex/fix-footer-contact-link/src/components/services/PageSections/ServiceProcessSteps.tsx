@@ -11,7 +11,6 @@ export function ServiceProcessSteps() {
             1;
           </div>"
           <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>"
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <p className="text-zion-slate-light">
             Choose the country where you need onsite IT support services.
@@ -41,7 +40,6 @@ export function ServiceProcessSteps() {
           </p>
         </div>
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
             response time.
           </p>
         </div>
@@ -73,4 +71,3 @@ export function ServiceProcessSteps() {
         </div>;
       </div>;
     </div>;
-  );=======

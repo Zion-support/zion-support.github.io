@@ -161,4 +161,3 @@ if ( {) {
           Sign Out;
         </Button>;
       </CardContent>;
-<<<<<<< HEAD

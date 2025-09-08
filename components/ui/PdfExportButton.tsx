@@ -1,79 +1,4 @@
 
-<<<<<<< HEAD
-
-
-=======
-
-import React from 'react';'
-
-export type PdfExportButtonProps = any;
-return (;
-    if (!targetRef.current) return;
-    const element = targetRef.current;
-    const html2pdf = (await import('html2pdf.js')).default;
-    const opt = {
-
-      margin: [10, 10, 10, 10];
-      filename: fileName,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-"margin": [10, 10, 10, 10],
-      "filename": fileName,
-      "image": { "type": 'jpeg', "quality": 0.98,'
-},
-      "html2canvas": { "scale": 2, "useCORS": true
-},
-      "jsPDF": { "unit": 'mm', "format": 'a4', "orientation": 'portrait','
-}
-    } as any;
-
-    html2pdf().set(opt).from(element).save()
-};
-export default function PdfExportButton(): any ({;
-  targetRef,;
-  fileName = 'resume && resume.pdf',;
-}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
-export type PdfExportButtonProps = {;
-  targetRef: React && React.RefObject<HTMLDivElement>,;
-  fileName?: string;
-  theme?: 'light' | 'dark';
-};
-
-
-    }
-    return this.props.children;
-  }
-}
-=======
-
-
-
     >
       Download as PDF;
     </button>
@@ -175,7 +100,6 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
 
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
     html2pdf ().set (opt).from (element).save ();
   }
 ;
@@ -190,9 +114,3 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       Download as PDF;
     </button>);
 }
-      Download as PDF
-    </button>
-  )
-
-}
-

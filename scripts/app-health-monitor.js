@@ -1,4 +1,3 @@
-
     this.projectRoot = path.resolve(__dirname, '..');
     this.healthReport = {;
       timestamp: new Date().toISOString(),;
@@ -33,53 +32,6 @@
       ;
       // Try to run a build check;
       let buildSuccess = false});
-        buildSuccess = true} catch (error) {;
-        // Build failed}
-      ;
-      this.healthReport.checks.build = {;
-        status: buildSuccess ? 'healthy' : 'error',;
-        buildExists: buildExists,;
-        buildAge: buildAge,;
-        buildSuccess: buildSuccess,;
-        issues: buildSuccess ? [] : ['Build process failed']}
-      } catch (error) {;
-      this.healthReport.checks.build = {;
-        status: 'error',;
-        issues: ['Failed to check build health'],;
-        error: error.message}
-
-    console.log('📝 Checking code quality...');
-    try {;
-      const issues = [];
-
-      // Check for console.log statements in production code;
-      const srcFiles = this.findSourceFiles();
-      let consoleLogCount = 0;
-      for (const file of srcFiles) {;
-
-    console.log('⚡ Checking performance...');
-    try {;
-      const issues = [];
-
-      const buildDir = path.join(this.projectRoot, '.next');
-      if (fs.existsSync(buildDir)) {;
-        const bundleSize = this.getDirectorySize(buildDir);
-
-      const publicDir = path.join(this.projectRoot, 'public');
-      if (fs.existsSync(publicDir)) {;
-        const imageSize = this.getImageDirectorySize(publicDir);
-
-    console.log('🔒 Checking security...');
-    try {;
-      const issues = [];
-      ;
-      // Check for hardcoded secrets;
-      const srcFiles = this.findSourceFiles();
-
-          issues.push('Potential hardcoded secrets found');
-          break}
-      }
-
     console.log('♿ Checking accessibility...');
     try {;
       const issues = [];
@@ -273,6 +225,5 @@
 // Run health checks;
 async function main() {;
   const monitor = new AppHealthMonitor();
-
 
 

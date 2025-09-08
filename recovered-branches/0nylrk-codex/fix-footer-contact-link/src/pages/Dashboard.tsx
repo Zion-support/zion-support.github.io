@@ -25,7 +25,6 @@ import { NotificationCenter } from "@/components/NotificationCenter",
 
 import { Link } from "react-router-dom";
 export default function Dashboard() {};
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
@@ -61,12 +60,6 @@ export default function Dashboard() {};
   },
 
   return (
-    <>;
-      <Header />;
-      <div className="min-h-screen bg-zion-blue">;
-        <div className="container mx-auto px-4 py-8">;
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            {/* Left Sidebar - User Profile */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
@@ -112,46 +105,8 @@ export default function Dashboard() {};
                     <span className="text-zion-slate-light">Community Points</span>
                     <span className="text-zion-cyan font-medium">125</span>
                   </div>
-<<<<<<< HEAD
-
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">ZION$ Balance</span>
-                    <span className="text-zion-cyan font-medium">
                       <a href="/wallet" className="hover:underline">View Wallet</Link>                    </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Badges Earned</span>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    <span className="text-zion-cyan font-medium">3/12</span>
-                  </div>
-                  {/* Test notification buttons */}
-                  <div className="flex flex-col gap-2 mt-4">
-                    <Button
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
-                      onClick={handleTestNotification}
-                    >
-                      <Send size={16} className="text-zion-cyan" />
-                      Send Test Notification
-                    </Button>
-
-                    <Button
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
-                      onClick={async () => {
-                        await createOnboardingNotification({                  <CommunityDiscussion />;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      <Footer />;
-
-=======
-    </>);
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -8,4 +7,3 @@ export default function Team({ }: TeamProps) {
   );}
 
 }
-

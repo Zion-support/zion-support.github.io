@@ -1,4 +1,3 @@
-
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 
 import {processJobMatching, storeMatchResults} from "./job-matching ;
@@ -132,8 +131,3 @@ if ( {) {}
 
       }
     );  }
-});
-
-;
-
-=======

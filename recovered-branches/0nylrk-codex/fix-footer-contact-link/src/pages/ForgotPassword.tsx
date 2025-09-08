@@ -1,5 +1,3 @@
-
-
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -27,28 +25,12 @@ import { Input } from "@/components/ui/input","
 
 import { Input } from "@/components/ui/input",
 import {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   Form,
   FormControl,
   FormField,
   FormItem,
 
-<<<<<<< HEAD
-=======
-  FormLabel,"
-  FormMessage} from "@/components/ui/form","
-import { Header } from "@/components/Header","
-import { Footer } from "@/components/Footer",
-// Form validation schema
-
-const forgotPasswordSchema = z.object({
-
-const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")})
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);export default function ForgotPassword() {;
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
@@ -85,19 +67,11 @@ export default function ForgotPassword() {}
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Email address;"
                           <FormControl>;
-<<<<<<< HEAD
 
                             <div className="relative">;
                               <Input
                                 placeholder="you@example && example.com"
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"                                {...field}
-                              />;
-                              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                            </div>;
-                          </FormControl>;
-                          <FormMessage className="text-red-400" />;
-                        </FormItem>;
-                      )}
 
                     />;
 

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-
-import React, { useState } from "react";
-import {Dispute, DisputeStatus} from "@/types/disputes";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Skeleton} from "@/components/ui/skeleton";
-import {formatDistanceToNow} from "date-fns";
-import {ShieldAlert} from "lucide-react";
-import {Link} from "react-router-dom";
-
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -162,4 +149,3 @@ if (isLoading) {
 }</TableBody> </Table> </div> </div>) 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

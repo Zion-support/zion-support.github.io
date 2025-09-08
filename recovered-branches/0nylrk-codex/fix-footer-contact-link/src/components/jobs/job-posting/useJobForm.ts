@@ -94,27 +94,7 @@ export interface JobPostingProps {
     setIsRemote,;
     initialValues,;
     setInitialValues;
-<<<<<<< HEAD
-
-    submit_job;
-      setIsLoading(false)
-
-
-
-=======
-
-    submitJob;
-
-  }
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-}
-
-;
-
   }
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

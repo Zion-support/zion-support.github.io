@@ -180,4 +180,3 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
     </div>;
   );
 }
-<<<<<<< HEAD

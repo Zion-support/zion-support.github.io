@@ -64,10 +64,6 @@ setShowCreateDialog (false);""
 setSelectedScopes ([]);"
 setShowCreateDialog (false) ;""
 };";""`
-<<<<<<< HEAD
-=======
-======= return `curl -X GET " https://api.ziontechgroup.com/v1/jobs"\\ -H " Authorization: Bearer $ {;""
->>>>>>> origin/resolved-merge-conflicts
   key ";""`
 }"\\ -H " Content-Type: application/json"`;""
 };";""

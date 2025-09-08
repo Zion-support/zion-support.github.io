@@ -7,7 +7,6 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import App 
 
 
 import { render, screen } from '@testing-library/react'
->>>>>>> origin/main
 import { describe, it, expect } from 'vitest'
 import App from '../App'
 describe('App'

@@ -156,17 +156,6 @@ export function ComparisonSection() {
                     zion: "$650 / mo",
                     savings: "45%",
                   },                      {item.service}
-                    </TableCell>;
-                    <TableCell className="text - center text - zion - slate-light">;
-                      {item.traditional}
-                    </TableCell>;
-                    <TableCell className="text - center text - zion - cyan font-semibold">;
-                      {item.zion}
-                    </TableCell>;
-                    <TableCell className="text - center text - green - 400 font-bold">;
-                      {item.savings}
-
-            
 
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings;
@@ -185,14 +174,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
               <TableHeader>;
                 <TableRow className="border-b border-zion-purple/20">;
                   <TableHead className="text-white">Service</TableHead>;
-                  <TableHead className="text-white text-center">;
-                    Traditional Providers;
-                  </TableHead>;
-                  <TableHead className="text-white text-center">;
-                    With Zion;
-                  </TableHead>;
-                  <TableHead className="text-white text-center">;
-                    Savings;
                   </TableHead>;                </TableRow>;
               </TableHeader>;
               <TableBody>;

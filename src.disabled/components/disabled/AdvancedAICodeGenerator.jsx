@@ -1,4 +1,3 @@
-
   An error occurred')} finally { setLoading(false)} }  useEffect(() => { if (method ===;
   'GET') { execute()} }, [url])`; return { data, loading, error, execute }}`, tags[`
   'react', hooks;

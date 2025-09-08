@@ -1,5 +1,3 @@
-
-
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 
@@ -24,22 +22,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;  return (
-    <div>
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
-        <p className="text-zion-slate-light">{category.description}</p>
-      </div>
-
-      {filteredArticles.length === 0 ? (
-        <div className="text-center py-8">
-          <h3 className="text-lg font-medium mb-2">No articles found</h3>
-          <p className="text-zion-slate-light">
-            Try adjusting your search query or browse another category.
-          </p>
-        </div>
-      ) : (
-        <div className="space-y-4">
-          {filteredArticles.map((article) => (
             <Card
               key={article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -87,35 +69,6 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
       {filteredArticles && filteredArticles.length === 0 ? (;        <div className="text-center py-8">;
           <h3 className="text-lg font-medium mb-2">No articles found</h3>;
 
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          <p className="text-zion-slate-light">;
-            Try adjusting your search query or browse another category.;
-          </p>;
-        </div>;
-      ) : (;
-        <div className="space-y-4">;
-          {filteredArticles && filteredArticles.map(article => (;
-              key={article && article.id}
-              className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-            >;
-              <CardHeader className="pb-2">;
-                <CardTitle className="text-lg">{article && article.title}</CardTitle>;
-                <CardDescription className="text-zion-slate-light text-sm">;
-                  Last updated: {formatDate(article && article.lastUpdated)}
-      ) :(;
-        <div className="space-y-4">;
-          {filteredArticles.map(article => (;
-            <Card;
-              key={article.id}
-              className="cursor-pointer hover:border-zion-purple/50 transition-colors";
-              onClick={() => onArticleSelect(article.id)}
-            >;
-              <CardHeader className="pb-2">;
-                <CardTitle className="text-lg">{article.title}</CardTitle>;
-                <CardDescription className="text-zion-slate-light text-sm">;
-                  Last updated:{formatDate(article.lastUpdated)}
                 </p>;
               </CardContent>;
             </Card>;
@@ -132,4 +85,3 @@ function formatDate(date: string): string {
     </div>;
   );  })
   })
-

@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -43,15 +41,6 @@ import { randomUUID } from 'crypto';
   const basicTags = Array && Array.from(
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
-
-        .split(/[,\n]/)
-        .map(s => s && s.trim())
-        .filter(Boolean)
-        .map(s => s && s.toLowerCase())
-    )
-  );
-  if (!openaiApiKey) {
-
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
 
@@ -81,94 +70,11 @@ const content = response.choices?.[0]?.message?.content || '';
         { role: 'user', content: prompt }];
       temperature: 0.4
       });
-
-    const content = response.choices?.[0]?.message?.content || '';
-    try {
-      const parsed = JSON.parse(content);
-      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
-        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
-
-      const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
-        { role: 'user', content: prompt }];
-      temperature: 0.4});
-;'
-    const content = response.choices?.[0]?.message?.content || '';
-    try {}
-      const parsed = JSON.parse (content);
-      // Check condition;
-if (
-      ) {) {}
-  $2;
-}
-        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }      }      if () {) {}
-  $2;
-}
-        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
       }
     } catch (_) {
       // fall through to heuristic;
     }
   } catch (err) {
-
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    return res && res.status(405).json({ error: 'Method not allowed' });  }  }
-
-
-  const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
-  return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('AllowPOST');
-    return res && res.status(405).json({ error: 'Method not allowed' })
-  }
-    // ignore and fallback;
-  }
-  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
-  return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('Allow', 'POST');
-    return res.status (405).json ({ error: 'Method not allowed' });  }  }
-  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
-  return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('AllowPOST');
-    return res.status (405).json ({ error: 'Method not allowed' });
-  }
-  try {
-    const id = randomUUID ();
-    const {
-
-
-      fullName,
-      professionalTitle,
-      profilePicture,
-full_name,
-      professional_title,
-      profile_picture,
       bio,
       projects,
       yearsOfExperience,
@@ -209,7 +115,6 @@ full_name,
     }
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
     const dataDir = path.join(process.cwd(), 'datatalent-submissions');
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     let savedProfileImagePath: string | null = null,
@@ -218,135 +123,6 @@ full_name,
       const filename = `${id}-profile${ext}`;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = profilePicture.base64.split()[1];
-      if (base64Data) {
-        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
-        savedProfileImagePath = `/uploads/${filename}`
-      }
-
-    }
-
-
-    let savedCvPath: string | null = null,
-    if (cvFile?.base64 && cvFile?.name) {
-      const ext = path.extname(cvFile.name) || '.pdf';
-      const filename = `${id}-cv${ext}`;
-      const filePath = path.join(uploadsDir, filename);
-      const base64Data = cvFile.base64.split()[1];
-
-      if (base64Data) {
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`
-
-      if (base64Data) {
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`
-      hourly_rate,
-      portfolio_links,
-      cv_file,
-    } = req.body || {}
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({ error: 'Missing required fields' });
-    }
-    const uploads_dir = path.join (process.cwd (), 'public', 'uploads');
-    const data_dir = path.join (process.cwd (), 'data', 'talent - submissions');
-    await fse.ensure_dir (uploads_dir);
-    await fse.ensure_dir (data_dir);
-;
-    let savedProfileImagePath: string | null = null;    // Check condition
-if ( {) {
-  $2
-}
-      const ext = path.extname (profile_picture.name) || '.png';
-=======
-const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
-
-const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');
-    await fse.ensureDir(uploadsDir);
-    await fse.ensureDir(dataDir);
-
-    let savedProfileImagePath: string | null = null;
-    if (profilePicture?.base64 && profilePicture?.name) {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      const filename = `${id}-profile${ext}`;
-      const file_path = path.join (uploads_dir, filename);
-      const base64Data = profile_picture.base64.split (', ')[1];
-        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
-        savedProfileImagePath = `/uploads/${filename}`;
-      }
-    }
-    let savedCvPath: string | null = null;    // Check condition
-if ( {) {
-  $2
-}
-      const ext = path.extname (cv_file.name) || '.pdf';
-      const filename = `${id}-cv${ext}`;
-      const file_path = path.join (uploads_dir, filename);
-      const base64Data = cv_file.base64.split (', ')[1];
-      // Check condition
-if ( {) {
-  $2
-}
-        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`;      }
-    }
-    const { summary, tags } = await summarizeAndTag ({      const base64Data = cv_file.base64.split ()[1];
-      // Check condition
-if ( {) {
-  $2
-}
-        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`;
-    }
-    const { summary, tags } = await summarizeAndTag ({
-      full_name,
-      professional_title,
-      bio,
-      projects,
-      skills,
-      tools,
-    });
-    const record = {
-      id,
-      created_at: new Date ().toISOString (),
-      full_name,
-      professional_title,
-      bio,
-      projects,
-      yearsOfExperience: Number (yearsOfExperience) || 0,
-      skills,
-      tools,
-      availability,
-      timezone,
-hourly_rate: hourly_rate ? Number (hourly_rate) : null,
-      portfolio_links,
-      assets: {
-        profile_image: savedProfileImagePath,
-        cv: savedCvPath,
-      },
-
-
-      ai: {
-
-        summary,
-        tags,
-      },
-
-      if (base64Data) {
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`
-      ai: {
-        summary;
-        tags}};
-
-    const perRecordPath = path && path.join(dataDir, `${id}.json`);
-    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
-
-
-
     const aggregatePath = path && path.join(
       process && process.cwd(),
       'data',
@@ -405,10 +181,6 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       }
     }
 
-
-
-    return res && res.status(200).json({ ok: true, id, summary, tags });
-
   } catch (error) {
     return res && res.status(500).json({ error: 'Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
@@ -444,16 +216,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
     // For now, just return success with AI data
     return res.status(200).json({ ok: true, id, summary, tags });
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' });
-  }    return res.status(200).json({ ok: true, id, summary, tags })
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' })
 }
 }
   }
   }
-}
-  }
-  }
-  }
-}

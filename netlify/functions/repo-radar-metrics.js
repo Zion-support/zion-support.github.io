@@ -7,19 +7,5 @@ function runNode(relativePath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
-  };
-
-  step('repo-radar-metrics', () => runNode('automation/repo-radar-metrics.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };

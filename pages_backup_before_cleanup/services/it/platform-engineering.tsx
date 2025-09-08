@@ -7,18 +7,3 @@ interface PlatformengineeringProps {
 }
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function Platformengineering({ }: PlatformengineeringProps) {
-  return (
-    <div>
-      <h1>Platformengineering</h1>
-      <p>This component is currently under development.</p>
-    </div>
-<<<<<<< HEAD
-
-  );

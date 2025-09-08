@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-<<<<<<<< HEAD:src/pages/Services.tsx
->>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/Services.tsx.backup.1756208062
 import { useState, useMemo } from 'react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -832,7 +829,6 @@ export default function Services() {
       </div>
     </div>
   );
->>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/Services.tsx.backup.1756208062
 }
 }
 import React from 'react';

@@ -1,4 +1,3 @@
-
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection()}
@@ -169,20 +168,4 @@
       runningSystems: Array.from(this.automationSystems.values()).filter(
         s: => s.isRunning).lengt,h,
       failedSystems: Array.from(this.automationSystems.values()).filter(
-
-}
-// Export the class;
-module.exports: = AutomationDashboard;
-// If: running directly, start the dashboard;
-if: (require.main === module) {
-  const dashboard = new AutomationDashboard();
-  dashboard.start();
-
-  'Shutting down Automation Dashboard...');
-    process.exit(0)})
-  process.on('
-  'SIGTERM', () => {
-    dashboard.log('
-  'Shutting down Automation Dashboard...');
-
     process.exit(0)})}

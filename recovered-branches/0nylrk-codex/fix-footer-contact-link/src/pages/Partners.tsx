@@ -1,16 +1,3 @@
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CheckCircle, FileDown, FileText, PieChart, Users} from "lucide-react";
-import {useState} from "react";
-import {PartnerRegistrationForm} from "@/components/partners/PartnerRegistrationForm";
-import {PartnerReferralLinks} from "@/components/partners/PartnerReferralLinks";
-import {PartnerDashboard} from "@/components/partners/PartnerDashboard";
-import {PartnerLeaderboard} from "@/components/partners/PartnerLeaderboard";
-import {PartnerResources} from "@/components/partners/PartnerResources";
-import {useAuth} from "@/hooks/useAuth";
-import {useNavigate} from "react-router-dom";
-export default function Partners() {;
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -26,7 +13,6 @@ export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -142,76 +128,6 @@ export default function Partners() {
                 </p>
               </CardContent>
             </Card>
-
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader className="text-center pb-2">
-                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6 text-zion-cyan" />
-                </div>
-                <CardTitle className="text-lg text-white">
-                  2. Share Your Link
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-sm text-zion-slate-light">
-                <p>
-                  Generate custom referral links and promote to your audience
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader className="text-center pb-2">
-                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  <PieChart className="h-6 w-6 text-zion-cyan" />
-                </div>
-                <CardTitle className="text-lg text-white">
-                  3. Earn Rewards
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-sm text-zion-slate-light">
-                <p>
-                  Get paid when referrals complete onboarding and engage with
-                  our platform
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        <div className="flex justify-center gap-4">
-          <Button
-            size="lg" 
-            className="bg-zion-purple hover:bg-zion-purple-dark"
-            onClick={() => navigate("/signup")}
-          >
-            Apply to Join
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-zion-cyan border-zion-cyan"
-          <Button 
-            size="lg" 
-            variant="outline" 
-
-            className="text-zion-cyan border-zion-cyan"
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",;
-import { useState } from "react",;
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",;
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",;
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",;
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",;
-import { PartnerResources } from "@/components/partners/PartnerResources",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useNavigate } from "react-router-dom",;
-export default function Partners() {;
-  const [activeTab, setActiveTab] = useState("overview"),;
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
@@ -339,11 +255,6 @@ export default function Partners() {;
       </div>
     )
   }
-          <Button
-            size="lg" 
-            variant="outline" 
-
-            className="text-zion-cyan border-zion-cyan"
             onClick={() => navigate('/login')}
           >;
             Partner Login;
@@ -401,134 +312,8 @@ export default function Partners() {;
           <PartnerReferralLinks />
         </TabsContent>
 "
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <TabsContent value="earnings" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>Earnings & Payouts</CardTitle>
-              <CardDescription>
-                Track your earnings and manage payouts;
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              {/* This will be implemented later */}"
-              <p className="text-zion-slate-light">
-                Earnings tracking and payout requests will be available soon.
-      <Tabs;
-        value={activeTab}
-        onValueChange={setActiveTab}"
-        className="space-y-4""
-      >
-</Tabs>"
-        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">"
-</TabsList>"
-          <TabsTrigger value="overview">Overview</TabsTrigger>""
-          <TabsTrigger value="referrals">Referral Links</TabsTrigger>""
-          <TabsTrigger value="earnings">Earnings</TabsTrigger>""
-          <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>""
-          <TabsTrigger value="resources">Resources</TabsTrigger>"
-        </TabsList>
-"
-        <TabsContent value="overview" className="space-y-4">"
-</TabsContent>
-
-          <PartnerDashboard />
-</PartnerDashboard>
-        </TabsContent>
-
-"
-        <TabsContent value="referrals" className="space-y-4">"
-</TabsContent>
-
-          <PartnerReferralLinks />
-</PartnerReferralLinks>
-        </TabsContent>
-
-"
-        <TabsContent value="earnings" className="space-y-4">"
-</TabsContent>
-          <Card>
-</Card>
-            <CardHeader>
-</CardHeader>
-              <CardTitle>Earnings & Payouts</CardTitle>
-              <CardDescription>
-</CardDescription>
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-</CardContent>"
-              <p className="text-zion-slate-light">"
-</p>
-
-              </p>
-            </CardContent>
-          </Card>
-        </TabsContent>
-"
-        <TabsContent value="leaderboard" className="space-y-4">
-          <PartnerLeaderboard />
-        </TabsContent>
-"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <TabsContent value="resources" className="space-y-4">
-          <PartnerResources />
-        </TabsContent>
-      </Tabs>
-    </div>
-  )            Export CSV;
-          </Button>;
-        </div>;
-      </div>;
-
-      <Tabs value={active_tab} onValueChange={setActiveTab} className="space-y-4">;
-        <TabsList className="grid grid - cols - 2 md:grid - cols - 5 mb-4">;
-          <TabsTrigger value="overview">Overview</TabsTrigger>;
-          <TabsTrigger value="referrals">Referral Links</TabsTrigger>;
-          <TabsTrigger value="earnings">Earnings</TabsTrigger>;
-          <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>;
-          <TabsTrigger value="resources">Resources</TabsTrigger>;
-        </TabsList>;
-
-        <TabsContent value="overview" className="space-y-4">;
-          <PartnerDashboard />;
-        </TabsContent>;
-        <TabsContent value="referrals" className="space-y-4">;
-          <PartnerReferralLinks />;
-        </TabsContent>;
-        <TabsContent value="earnings" className="space-y-4">;
-          <Card>;
-            <CardHeader>;
-              <CardTitle > Earnings & Payouts</CardTitle>;
-              <CardDescription > Track your earnings and manage payouts</CardDescription>;
-            </CardHeader>;
-            <CardContent>;
-              {/* This will be implemented later */}
-              <p className="text - zion - slate-light">Earnings tracking and payout requests will be available soon.</p>;
-            </CardContent>;
-          </Card>;
-        </TabsContent>;
-        <TabsContent value="leaderboard" className="space-y-4">;
-          <PartnerLeaderboard />;
-        </TabsContent>;
-        <TabsContent value="resources" className="space-y-4">;
-          <PartnerResources />;
-        </TabsContent>;
-      </Tabs>;
-    </div>);
-}
-}
-;
 
         ;
         <TabsContent value="overview" className="space-y-4">;

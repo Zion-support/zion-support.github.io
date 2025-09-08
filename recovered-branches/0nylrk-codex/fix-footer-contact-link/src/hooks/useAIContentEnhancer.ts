@@ -19,7 +19,6 @@ import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {toast} from '@/hooks / use - toast';
 type EnhancementType =;
->>>>>>> origin/cursor/delete-old-data-records-6bba
   | 'resume - summary';'
   | 'work - description';'
   | 'job - post';'
@@ -32,20 +31,12 @@ type EnhancementType =;
 instructions
         }
       });
-<<<<<<< HEAD
-
-    } catch (err: any) {
-      const errorMessage = err && err.message || 'Failed to enhance content';
-
-      setError(errorMessage);
-      toast({
         title: "AI Enhancement Failed",
   description: errorMessageimport { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
 type EnhancementType =;
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState } from 'react',;
 
 import { supabase } from '@/integrations/supabase/client',;
@@ -85,12 +76,6 @@ export function useAIContentEnhancer() {;
         }
         'body': {;
           }
-          content,;
-          enhancementType,;
-          context,;
-          instructions;
-        }
-      }),;
       if (error) {;
         throw new Error(error.message);        variant: "destructive"
       });

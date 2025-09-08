@@ -97,10 +97,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container-responsive">
           <motion.div
@@ -283,10 +279,6 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="container-responsive text-center">
           <motion.div

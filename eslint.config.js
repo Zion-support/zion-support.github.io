@@ -1,90 +1,6 @@
-import js from '@eslint/js';
-import nextPlugin from '@next/eslint-plugin-next';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import reactRefreshPlugin from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-
-export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
       globals: {
         ...globals.browser,
         ...globals.node,
-        React: 'readonly',
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      parser: tsparser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       },
       parser: tsparser,
       parserOptions: {
@@ -93,60 +9,10 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
-=======
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      }
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      '@next/next': nextPlugin,
-      'react-hooks': reactHooksPlugin,
-      'react-refresh': reactRefreshPlugin,
-    },
-    rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/',
-      'automation/',
-      'public/reports/**',
-      'netlify/',
-      'ecosystem*.cjs',
-      '**/*.cjs',
-      '**/*.disabled/**',
-      '**/tests.disabled/**',
-<<<<<<< HEAD
       '**/typechain-types.disabled/**',
-=======
-<<<<<<< HEAD
-=======
-      '**/typechain-types.disabled/**',
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      '**/types.disabled/**',
-      '**/utils.disabled/**',
-      '**/zion-os.disabled/**',
-      '**/zion_academy/**',
-<<<<<<< HEAD
       'test*.js',
       'test*.ts',
       'test*.tsx'
-=======
-<<<<<<< HEAD
       '**/src_backup/**',
       '**/src_disabled/**',
       '**/services.disabled.temp/**',
@@ -217,12 +83,3 @@ export default [
       '**/comprehensive-automation-test.js',
       '**/debug-paths.js',
       '**/pages/**'
-=======
-      'test*.js',
-      'test*.ts',
-      'test*.tsx'
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    ]
-  }
-];

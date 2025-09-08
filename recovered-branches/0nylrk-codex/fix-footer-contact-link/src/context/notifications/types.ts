@@ -1,4 +1,3 @@
-
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -12,13 +11,7 @@ export interface Notification extends BaseNotification {;
   action_url?: string;
   action_text?: string;
 }
-export type FilterType =
-  | 'all'
-  | 'unread'
-  | 'messages'
-
 export interface NotificationContextType {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface NotificationContextType {export interface NotificationContextType {
   notifications: Notification[];

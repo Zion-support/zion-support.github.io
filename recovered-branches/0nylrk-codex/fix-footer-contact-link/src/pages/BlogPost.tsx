@@ -120,41 +120,6 @@ export default function BlogPost() {;
       <SEO,
 title={post.title}
         description={post.excerpt}
-<<<<<<< HEAD
-        keywords={post.tags.join(", ")}
-
-=======
-        keywords={post.tags.join(", ")}"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        ogImage={post.featuredImage}
-        canonical={`"https"://app.ziontechgroup.com/blog/${post.slug}`}` />      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">"
-        <div className="container mx-auto">"
-          {/* Back to blog button */}
-          <div className="mb-8">"
-            <Button,
-variant="outline";"
-              className="border-zion-blue-light text-zion-slate-light "hover":bg-zion-blue-light "hover":text-white""
-              asChild
-            >
-              <Link to="/blog">"
-                <ArrowLeft className="mr-2 h-4 w-4" />"
-                Back to all articles
-              </Link>
-            </Button>
-          </div>
-          {/* Article header */}
-          <div className="mb-8 max-w-4xl mx-auto">"
-            <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">"
-              {post.category}
-            </span>
-            <h1 className="text-4xl "md":text-5xl font-bold text-white mb-6">"
-              {post.title}
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8">{post.excerpt}</p>"
-            {/* Author and metadata */}
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
-              <div className="flex items-center mb-4 sm:mb-0">
                 <img
                   src={post.author.avatarUrl}
                   alt={post.author.name}
@@ -221,10 +186,6 @@ variant="outline";"
             </div>
           </div>
 
-          {/* Featured image */}
-          <div className="mb-12 max-w-5xl mx-auto">
-            <div className="aspect-[21/9] rounded-lg overflow-hidden">
-
                 className="object-cover w-full h-full"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -256,25 +217,6 @@ variant="outline";"
               ))}            </div>;
 
             <Separator className="my-12 bg-zion-blue-light" />;
-
-            {/* Related articles */}
-            {relatedPosts && relatedPosts.length > 0 && (;"
-              <div className="mt-12">;"
-                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>;"
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-                  {relatedPosts && relatedPosts.map(relatedPost => (;
-                    <Link
-                      key={relatedPost && relatedPost.id}
-                      to={`/blog/${relatedPost && relatedPost.slug}`}
-                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300">;
-                      <div className="aspect-[16/9] relative">;
-                        <img
-                          src={relatedPost && relatedPost.featuredImage} 
-                          alt={relatedPost && relatedPost.title}
-                          className="object-cover w-full h-full"
-                          onError={(e) => {;
-                            const target = e && e.target as HTMLImageElement;
-                            target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
                 </span>;
               ))}
                           }}
@@ -292,7 +234,6 @@ variant="outline";"
 }= useParams () as {
   }
   "slug": string
->>>>>>> origin/cursor/delete-old-data-records-6bba
 };
 const navigate = useNavigate ();
 const [post, setPost] = useState<BlogPostType | null> (null);
@@ -313,52 +254,6 @@ case 'twitter':
 }
 
 
-<<<<<<< HEAD
 
 
 
-=======
-};
-return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-light text-zion-slate-light "hover":bg-zion-blue-light "hover":text-white" asChild > <Link to="/blog" > <ArrowLeft className="mr-2 h-4 w-4" /> Back to all articles </Link> </Button> </div>;"
-}
-}/> <div> <p className="text-white font-medium" > {"
-  }
-  post.author.name
-}</p> <p className="text-sm text-zion-slate-light" > {"
-  }
-  post.author.title
-}</p> </div> </div> <div className="flex items-center space-x-4" > <div className="flex items-center text-zion-slate-light" > <Calendar className="h-4 w-4 mr-1" /> <span className="text-sm" > {"
-  }
-  post.publishedDate
-}</span> </div> <div className="flex items-center text-zion-slate-light" > <Clock className="h-4 w-4 mr-1" /> <span className="text-sm" > {"
-  }
-  post.readTime
-}</span> relative"> <Button > <Share2 className=" h-4 w-4 mr-1" /> <span className=" text-sm">Share</span> </Button> <a href= {"
-  }
-  getShareUrl ('facebook')'
-}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 "hover":bg-zion-blue rounded transition-colors text-zion-slate-light "hover":text-white"> <Facebook className=" h-4 w-4 mr-2" /> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2" /> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2" /> <span>LinkedIn</span> </Link> </div>)"
-}</div> </div> </div> </div>
-}
-}tag
-}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {"
-  }
-  tag
-}</span>) )
-}</div> <Separator className=" my-12 bg-zion-blue-light" /> > <div className=" aspect-[16/9] relative"> <img"
-}
-} /> </div> <div className=" p-4"> <span className=" text-xs text-zion-cyan"> {"
-  }
-  relatedPost.category
-}</span> <h4 className=" text-white font-bold mt-1 line-clamp-2"> {"
-  }
-  relatedPost.title
-}</h4>
-}</div> </div>)
-}<Button asChild > <Link to=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </AppLayout>)"
-}<Button asChild > <Link to=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </AppLayout>) 
-}
-    </AppLayout>;
-  );
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

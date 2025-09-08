@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils",interface SidebarTriggerProps extends React.HTM
   className?: string;
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
@@ -32,10 +31,6 @@ export function SidebarTrigger() { return null; }
     <Button;"
       variant="ghost";"
       size="icon";
-
-      className={cn("", className)}
-      onClick={toggleSidebar}
-      {...props}>;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
 
       <span className="sr-only">Toggle Sidebar</span>

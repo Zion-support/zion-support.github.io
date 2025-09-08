@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -10,7 +6,6 @@ const steps = [
   {
     title: "Create & Post",
     description: "Publish your service, job, or equipment in minutes with our AI-powered smart forms that guide you through the process.",
->>>>>>> origin/cursor/build-and-fix-errors-e276
     icon: Send,
     color: "from-zion-purple to-zion-purple-dark",
     features: ["AI-Powered Forms", "Smart Suggestions", "Instant Validation"]
@@ -33,7 +28,6 @@ const steps = [
     title: "Deliver & Support",
     description: "Complete your project with confidence. Our platform ensures quality delivery and provides ongoing support for all solutions.",
     icon: Check,
-<<<<<<< HEAD
     color: "from-zion-cyan-light to-zion-cyan",
     features: ["Quality Assurance", "24/7 Support", "Escrow Protection"]
   },
@@ -44,90 +38,11 @@ const stats = [
   { number: "150+", label: "Countries", icon: Globe },
   { number: "95%", label: "Success Rate", icon: Check },
   { number: "<2hr", label: "Response Time", icon: Zap }
-=======
-    color: "from-zion-purple-light to-zion-cyan",
-    step: "04"
-  },
->>>>>>> origin/cursor/build-and-fix-errors-e276
-];
-
-export function HowItWorksSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-<<<<<<< HEAD
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: { duration: 0.6 }
-=======
-    hidden: { opacity: 0, y: 30, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6
-      }
-    }
-  };
-
-  const stepVariants = {
-    hidden: { scale: 0, rotate: -180 },
-    visible: {
-      scale: 1,
-      rotate: 0,
-      transition: {
-        duration: 0.5,
-        ease: "backOut"
-      }
->>>>>>> origin/cursor/build-and-fix-errors-e276
-    }
-  };
-=======
-import React from 'react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
-
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-export const HowItWorksSection: React.FC = () => {
-  const steps = [
-    {
-      number: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a comprehensive project plan',
-      icon: '🔍'
-    },
-    {
-      number: '02',
-      title: 'Design & Development',
-      description: 'Our expert team builds your solution using cutting-edge technologies',
-      icon: '⚙️'
-    },
-    {
-      number: '03',
-      title: 'Testing & Quality Assurance',
-      description: 'Rigorous testing ensures your solution meets the highest standards',
-      icon: '✅'
-    },
-    {
-      number: '04',
-      title: 'Deployment & Support',
-      description: 'Smooth deployment with ongoing support and maintenance',
-      icon: '🚀'
-    }
-  ];
-<<<<<<< HEAD
 
   return (
     <section className="py-16 bg-zion-slate-dark">
@@ -172,11 +87,6 @@ export const HowItWorksSection: React.FC = () => {
     </section>
   );
 };
-=======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-
-  return (
-<<<<<<< HEAD
     <section className="py-24 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple-dark relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -184,30 +94,7 @@ export const HowItWorksSection: React.FC = () => {
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.2) 1px, transparent 0)`,
           backgroundSize: '120px 120px'
         }}></div>
-=======
-    <section className="py-20 bg-gradient-to-b from-zion-blue to-zion-blue-dark relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, ${'#8c15e9'} 2px, transparent 2px)`,
-          backgroundSize: '80px 80px'
-        }} />
->>>>>>> origin/cursor/build-and-fix-errors-e276
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center mb-20"
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
-=======
-          initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/build-and-fix-errors-e276
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-<<<<<<< HEAD
           <GradientHeading className="text-4xl md:text-5xl lg:text-6xl mb-6">
             How Zion Works
           </GradientHeading>
@@ -218,122 +105,8 @@ export const HowItWorksSection: React.FC = () => {
         </motion.div>
 
         {/* Stats Section */}
-=======
-          <GradientHeading className="text-4xl md:text-5xl mb-6">How Zion Works</GradientHeading>
-          <p className="text-zion-slate-light text-lg md:text-xl mt-4 max-w-3xl mx-auto leading-relaxed">
-            A streamlined four-step process that leverages AI to connect technology providers with clients seamlessly
-          </p>
-        </motion.div>
-
->>>>>>> origin/cursor/build-and-fix-errors-e276
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          {stats.map((stat, index) => (
-            <motion.div 
-              key={index}
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              viewport={{ once: true }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-purple/30">
-                <stat.icon className="w-10 h-10 text-zion-cyan" />
-              </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div 
-          className="relative"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-<<<<<<< HEAD
           {/* Enhanced Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-1 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden rounded-full"></div>
-=======
-          {/* Enhanced timeline line */}
-          <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-zion-purple via-zion-cyan via-zion-blue to-zion-purple-light transform -translate-x-1/2 hidden md:block" />
->>>>>>> origin/cursor/build-and-fix-errors-e276
-          
-          <div className="space-y-16 md:space-y-0">
-            {steps.map((step, index) => (
-              <motion.div 
-                key={step.title}
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                } relative`}
-                variants={itemVariants}
-              >
-                <div className="md:w-1/2 mb-8 md:mb-0 md:px-12 text-center md:text-right">
-                  {index % 2 === 0 ? (
-                    <div className="group">
-                      <div className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${step.color} rounded-full text-white text-sm font-medium mb-4`}>
-                        Step {index + 1}
-                      </div>
-                      <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
-                        {step.title}
-                      </h3>
-                      <p className="text-zion-slate-light text-lg leading-relaxed mb-6">
-                        {step.description}
-                      </p>
-                      
-                      {/* Features list */}
-                      <ul className="space-y-2">
-                        {step.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-sm">
-                            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </div>
-                
-                <div className="relative z-10 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-zion-blue-dark to-zion-blue border-4 border-zion-purple mx-4 md:mx-0 shadow-2xl shadow-zion-purple/25 group-hover:scale-110 transition-transform duration-300">
-                  <step.icon className="w-10 h-10 text-zion-cyan" />
-                </div>
-
-                <div className="md:w-1/2 md:px-12 text-center md:text-left">
-                  {index % 2 !== 0 ? (
-                    <div className="group">
-                      <div className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${step.color} rounded-full text-white text-sm font-medium mb-4`}>
-                        Step {index + 1}
-                      </div>
-                      <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
-                        {step.title}
-                      </h3>
-                      <p className="text-zion-slate-light text-lg leading-relaxed mb-6">
-                        {step.description}
-                      </p>
-                      
-                      {/* Features list */}
-                      <ul className="space-y-2">
-                        {step.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-sm">
-                            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-<<<<<<< HEAD
         </motion.div>
 
         {/* CTA Section */}
@@ -359,26 +132,3 @@ export const HowItWorksSection: React.FC = () => {
               </button>
             </div>
           </div>
-=======
-
-          {/* CTA section */}
-          <motion.div 
-            className="mt-20 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-                      <div className="inline-flex items-center gap-3 px-8 py-4 bg-zion-purple/20 backdrop-blur-sm border border-zion-purple/30 rounded-full">
-            <TrendingUp className="w-6 h-6 text-zion-cyan" />
-            <span className="text-zion-cyan font-semibold text-lg">Ready to get started?</span>
-            <ArrowRight className="w-5 h-5 text-zion-cyan" />
-          </div>
-          </motion.div>
->>>>>>> origin/cursor/build-and-fix-errors-e276
-        </motion.div>
-      </div>
-    </section>
-  );
-}
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

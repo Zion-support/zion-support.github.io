@@ -28,10 +28,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
   }
   render() {
@@ -43,7 +39,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <p>This component is under development.</p>
     </div>
 
-<<<<<<< HEAD
   );
 };
 

@@ -36,8 +36,6 @@ const AIAutonomousDecisionPlatform: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight } from 'lucide-react';
 
 const AIAutonomousDecisionPlatform: React.FC = () => {
@@ -73,10 +71,6 @@ const AIAutonomousDecisionPlatform: React.FC = () => {
             <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300">
               Watch Demo
             </button>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-ac08
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </section>
 

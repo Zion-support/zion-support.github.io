@@ -1,5 +1,3 @@
-
-
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
@@ -17,13 +15,6 @@ const Menubar = React.forwardRef<
   <MenubarPrimitive.Root;
     ref={ref}
     className={cn(      className
-    )}
-    {...props}
-  />;
-));
-Menubar.displayName = MenubarPrimitive.Root.displayName;
-const MenubarTrigger = React.forwardRef<;
-
   React.ElementRef<typeof MenubarPrimitive.Trigger>,;
 
     className={cn(
@@ -130,56 +121,6 @@ const MenubarSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubTrigger> & {}
     inset?: boolean;
 
-import * as React from "react";
-import * as MenubarPrimitive from "@radix-ui/react-menubar";
-import { Check, ChevronRight, Circle } from "lucide-react";
-;
-import { cn } from "@/lib/utils";
-;
-const MenubarMenu = MenubarPrimitive.Menu;
-;
-const MenubarGroup = MenubarPrimitive.Group;
-;
-const MenubarPortal = MenubarPrimitive.Portal;
-;
-const MenubarSub = MenubarPrimitive.Sub;
-;
-const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
-;
-const Menubar = React.forwardRef<;
-  React.ElementRef<typeof MenubarPrimitive.Root>,;
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>;
->(({ className, ...props }, ref) => (;
-  <MenubarPrimitive.Root;
-    ref={ref}
-    className={cn(;
-      "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",;
-      className;
-    )}
-    {...props}
-  />;
-));
-Menubar.displayName = MenubarPrimitive.Root.displayName;
-;
-const MenubarTrigger = React.forwardRef<;
-  React.ElementRef<typeof MenubarPrimitive.Trigger>,;
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>;
->(({ className, ...props }, ref) => (;
-  <MenubarPrimitive.Trigger;
-    ref={ref}
-    className={cn(;
-      "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",;
-      className;
-    )}
-    {...props}
-  />;
-));
-MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
-;
-const MenubarSubTrigger = React.forwardRef<;
-  React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
-    inset?:boolean;
   }
 >(({ class_name, inset, children, ...props }, ref) => (
   <MenubarPrimitive.SubTrigger;
@@ -214,24 +155,7 @@ const MenubarSubContent = React.forwardRef<
   <MenubarPrimitive.SubContent;
     ref={ref}
     className={cn(      className
-    )}
-    {...props}
-  />
-))
-MenubarSubContent.displayName = MenubarPrimitive.SubContent.displayName
-const MenubarContent = React.forwardRef<
-  React.ElementRef<typeof MenubarPrimitive.Content>
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
->(
   (          className
-        )}
-        {...props}
-      />;
-    </MenubarPrimitive.Portal>;
-  );
-);
-MenubarContent.displayName = MenubarPrimitive.Content.displayName;
-const MenubarItem = React.forwardRef<;
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}

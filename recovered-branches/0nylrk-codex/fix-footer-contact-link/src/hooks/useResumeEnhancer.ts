@@ -1,5 +1,3 @@
-
-
 export function useResumeEnhancer() {;
 
 import {useState} from 'react';

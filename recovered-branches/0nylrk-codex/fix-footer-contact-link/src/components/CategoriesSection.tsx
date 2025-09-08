@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-=======
-import {GradientHeading} from "./GradientHeading";"
-import {Link} from "react-router-dom";"
-import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";"
-const categories = [;
-import { GradientHeading } from './GradientHeading';'
-import { Link } from './react-router-dom';'
-import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';'
-const categories = [;
-  {
-    title: "Services",
-    description: "On - demand IT support, consulting, development, and more";
-    icon: <Briefcase className="w - 10 h-10" />,
-    link: "/services",
-    color: "from - purple - 500 to - indigo - 600"},
-
-import { GradientHeading } from "./GradientHeading",
-import { Link } from "react-router-dom",
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
-
-const categories = [
-  {
-    title: "Services",
-    description: "On-demand IT support, consulting, development, and more",
-    icon: <Briefcase className="w-10 h-10" />,
-    link: "/services",
-
-    color: "from-purple-500 to-indigo-600"},
-  {"
-    title: "Talents","
-    description: "Connect with AI experts, developers, and tech specialists","
-    icon: <Users className="w-10 h-10" />,"
-    link: "/talent","
-    color: "from-cyan-500 to-blue-600"},
-
-<<<<<<< HEAD
-  {
-    title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
-    link: "/equipment",
     color: "from-amber-500 to-orange-600"},  }
 ];
 
@@ -87,7 +45,6 @@ const categories = [;
     icon: <Lightbulb className="w-10 h-10" />,;
     link: "/category/innovation",;
     color: "from-emerald-500 to-green-600"}],;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const specialServices = [;
   {;"
     title: "IT Onsite Services","
@@ -108,7 +65,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
         <div className="mt-8">;
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <div className="flex flex-wrap justify-center gap-4">;
             {specialServices && specialServices.map((service) => (;
               <Link;

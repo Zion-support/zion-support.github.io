@@ -17,8 +17,3 @@ export default function Cookies() {
 		</main>
 	);
 }
-=======
-import {SEO} from '@/components/SEO';
-import {GradientHeading} from '@/components/GradientHeading';
-
-export { Cookies };

@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import EnhancedNavigationdynamic from "../components/EnhancedNavigation.dynamic";
@@ -16,5 +14,3 @@ import EnhancedNavigationdynamic from "../components/EnhancedNavigation.dynamic"
 
     render(<EnhancedNavigationdynamic />);
     // Add styling tests if needed})});
-
-

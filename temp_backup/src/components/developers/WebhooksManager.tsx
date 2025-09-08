@@ -18,10 +18,6 @@ const [showTestResult, setShowTestResult] = useState (false);
 webhookUrl;
 selectedEvents;
 );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Event type options const eventOptions: {;
->>>>>>> origin/resolved-merge-conflicts
   value: WebhookEventType,  label: string, description: string ;
 }[] = [ {;
   value: 'new application',  label: 'New Application', description: 'When a talent applies to a job' ;'

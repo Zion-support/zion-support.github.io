@@ -1,4 +1,3 @@
-
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
   "throwaway";

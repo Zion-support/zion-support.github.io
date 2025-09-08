@@ -4,7 +4,3 @@ module.exports = default function CloudFinOps() { return
 }; return null} } ;'"'"
 import React from 'react';
 interface CloudfinopsProps {
-<<<<<<< HEAD
-=======
-  // Add props here as needed
-=>

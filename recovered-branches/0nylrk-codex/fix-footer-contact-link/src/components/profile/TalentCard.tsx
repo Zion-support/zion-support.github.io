@@ -1,5 +1,3 @@
-
-
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
   onRequestHire: (talent: TalentProfile) => void,;
@@ -19,18 +17,6 @@ export function TalentCard(): any ({;
   const handleViewProfile = () => {;
     if (onViewProfile) {;
 
-<<<<<<< HEAD
-      onViewProfile(talent && talent.id);
-    }
-  };
-
-  const handleRequestHire = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
-  };
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -39,7 +25,6 @@ export function TalentCard(): any ({;
       onToggleSave(talent && talent.id, !isSaved);
     }
   };
-<<<<<<< HEAD
 
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
@@ -96,16 +81,7 @@ export function TalentCard(): any ({;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}            )}
 
-          </div>;
 
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-
-              <Button
-                size="sm"
-                variant="secondary"
-                onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 Hire;
               </Button>;
             )}
@@ -180,7 +156,6 @@ isAuthenticated: boolean;
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 Hire;
               </Button>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
             )}
             <Button"
               size="sm""
@@ -197,4 +172,3 @@ isAuthenticated: boolean;
     </Card>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,5 +24,3 @@ import EnhancedSidebar2025 from '../components/EnhancedSidebar2025';
   test('applies correct styling', () => {
     render(<EnhancedSidebar2025 />);
     // Add styling tests if needed;
-
-

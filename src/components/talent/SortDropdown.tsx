@@ -3,20 +3,6 @@ import React from "react",
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from 'lucide-react'
-<<<<<<< HEAD
-=======
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-interface SortDropdownProps {
-  sortOption: string
-  setSortOption: (option: string) => void
-  sortOption: string
-  setSortOption: (option: string,) => void
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import {
   DropdownMenu;
   DropdownMenuContent;
@@ -25,9 +11,6 @@ import {
 
 interface SortDropdownProps {
   sortOption: string;
-=======
-  sortOption: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setSortOption: (option: string) => void
 }
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {

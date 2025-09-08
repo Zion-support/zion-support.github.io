@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import EnhancedPerformanceMonitordynamic from "../components/EnhancedPerformanceMonitor.dynamic";
@@ -16,5 +14,3 @@ import EnhancedPerformanceMonitordynamic from "../components/EnhancedPerformance
 
     render(<EnhancedPerformanceMonitordynamic />);
     // Add styling tests if needed})});
-
-

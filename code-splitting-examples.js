@@ -1,10 +1,5 @@
 
 const LazyComponent = React && React.lazy(() => import('./LazyComponent'));
-=======
-// Example: Dynamic imports for better code splitting
-const LazyComponent = React.lazy(() => import('./LazyComponent'));
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 // Example: Route-based code splitting
 const HomePage = React.lazy(() => import('../pages/Home'));
 const AboutPage = React.lazy(() => import('../pages/About'));

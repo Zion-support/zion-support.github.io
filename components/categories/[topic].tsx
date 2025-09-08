@@ -1,5 +1,3 @@
-
-
 import type { GetServerSideProps, NextPage } from 'next';
 
 
@@ -22,10 +20,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;
-        <meta name='description' content={`Articles about ${topic}`} />;
-        <meta property='og:title' content={`${topic} - Zion Blog`} />;
-        <meta property='og:description' content={`Articles about ${topic}`} />;
-
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
 
         <meta property='og:type' content='website' />;
@@ -121,16 +115,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
-  const topic = String(ctx && ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
-  return { props: { topic, posts } };
-};
-
-export default TopicPage;      </Head>;
-      <div className="mx-auto max-w-6xl">;
-        <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
-        <div className="mb-6">;
-
 
           <PageShareButtons
             title={`${topic} - Zion Blog`}
@@ -196,10 +180,6 @@ export default TopicPage;      </Head>;
 }
 ;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const topic = String (ctx.params?.topic || '');
-  const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic));
-  return { props: { topic, posts } }
-}
 ;
 export default TopicPage;
 ;
@@ -262,10 +242,6 @@ type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, 
 type Props = any;
 
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
-  return (
-    <div>
-      <Head>
-        <title>{topic} - Zion Blog</title>
         <meta name='description' content={`Articles about ${topic}`} />
         <meta property='og:title' content={`${topic} - Zion Blog`} />
         <meta property='og:description' content={`Articles about ${topic}`} />
@@ -358,4 +334,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 },
-

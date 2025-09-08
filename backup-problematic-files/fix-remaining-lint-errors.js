@@ -1,11 +1,3 @@
-// Main function;
-function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),' const lines = result.split('\n'),' const lastLine = lines[lines.length - 2] _ } catch (error) {}; _,' }}; fixedCount++}} catch (error) {_;  errorCount++}}
- }
-
-    } catch (error) {_;
-      // Skip files that can't be accessed'};
-
-<<<<<<< HEAD
       continue
 }
 }
@@ -44,8 +36,6 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     } catch (error) {;
       // Skip files that can't be accessed'};
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       continue;
 };
 // Function to fix specific parsing errors;

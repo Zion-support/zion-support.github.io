@@ -1,8 +1,3 @@
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Accessibility, 
@@ -18,50 +13,8 @@ import {
   Check,
   Plus,
   Minus
-=======
-import { 
-  Eye, 
-  EyeOff, 
-  Type, 
-  Volume2, 
-  VolumeX, 
-  Contrast, 
-  ZoomIn, 
-  ZoomOut,
-  RotateCcw,
-  Keyboard,
-  MousePointer,
-  Accessibility,
-  HelpCircle
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Accessibility, 
-  Type, 
-  Contrast, 
-  Volume2, 
-  VolumeX,
-  Settings,
-  X,
-  Sun,
-  Moon,
-  Monitor
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-} from 'lucide-react';
-
-interface AccessibilityControlsProps {
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
-<<<<<<< HEAD
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 interface AccessibilitySettings {
@@ -71,16 +24,6 @@ interface AccessibilitySettings {
   soundEnabled: boolean;
   focusIndicator: boolean;
   highContrast: boolean;
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-}
-
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({ 
-  position = 'bottom-right' 
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
   const [fontSize, setFontSize] = useState(16);
   const [contrast, setContrast] = useState<'normal' | 'high' | 'inverted'>('normal');
   const [isMuted, setIsMuted] = useState(false);
@@ -101,8 +44,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
     }
   };
 
-=======
-<<<<<<< HEAD
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',
     contrast: 'normal',
@@ -166,184 +107,13 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         setSettings(parsed);
       } catch (error) {
         console.warn('Failed to parse accessibility settings:', error);
-=======
-}
-
-export function AccessibilityControls({ position = 'bottom-right' }: AccessibilityControlsProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [highContrast, setHighContrast] = useState(false);
-  const [largeText, setLargeText] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [mutedAudio, setMutedAudio] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(100);
-  const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Alt + A to toggle accessibility panel
-      if (event.altKey && event.key === 'a') {
-        event.preventDefault();
-        setIsOpen(prev => !prev);
-      }
-      
-      // Alt + H for high contrast
-      if (event.altKey && event.key === 'h') {
-        event.preventDefault();
-        setHighContrast(prev => !prev);
-      }
-      
-      // Alt + L for large text
-      if (event.altKey && event.key === 'l') {
-        event.preventDefault();
-        setLargeText(prev => !prev);
-      }
-      
-      // Alt + M for reduced motion
-      if (event.altKey && event.key === 'm') {
-        event.preventDefault();
-        setReducedMotion(prev => !prev);
-      }
-      
-      // Alt + Z for zoom reset
-      if (event.altKey && event.key === 'z') {
-        event.preventDefault();
-        setZoomLevel(100);
-      }
-      
-      // Escape to close panel
-      if (event.key === 'Escape' && isOpen) {
-        setIsOpen(false);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-      }
-    }
-  }, []);
-
-  const getFontSizeValue = (size: string) => {
-    switch (size) {
-      case 'small': return '14px';
-      case 'medium': return '16px';
-      case 'large': return '18px';
-      case 'x-large': return '20px';
-      default: return '16px';
-    }
-  };
-
-  const increaseFontSize = () => {
-    const sizes: AccessibilitySettings['fontSize'][] = ['small', 'medium', 'large', 'x-large'];
-    const currentIndex = sizes.indexOf(settings.fontSize);
-    if (currentIndex < sizes.length - 1) {
-      setSettings(prev => ({ ...prev, fontSize: sizes[currentIndex + 1] }));
-    }
-  };
-
-  const decreaseFontSize = () => {
-    const sizes: AccessibilitySettings['fontSize'][] = ['small', 'medium', 'large', 'x-large'];
-    const currentIndex = sizes.indexOf(settings.fontSize);
-    if (currentIndex > 0) {
-      setSettings(prev => ({ ...prev, fontSize: sizes[currentIndex - 1] }));
-    }
-  };
-
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
-    setSettings(prev => ({ ...prev, [key]: !prev[key] }));
-  };
-
-  const updateSetting = <K extends keyof AccessibilitySettings>(
-    key: K, 
-    value: AccessibilitySettings[K]
-  ) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
-  };
-
-  const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
-      fontSize: 'medium',
-      contrast: 'normal',
-      reducedMotion: false,
-      soundEnabled: true,
-      focusIndicator: true,
-      highContrast: false
-    };
-<<<<<<< HEAD
     setSettings(defaultSettings);
   };
-=======
-  const [fontSize, setFontSize] = useState(16);
-  const [contrast, setContrast] = useState<'normal' | 'high' | 'inverted'>('normal');
-  const [isMuted, setIsMuted] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark' | 'auto'>('dark');
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-
-  // Position classes based on prop
-  const getPositionClasses = () => {
-    switch (position) {
-<<<<<<< HEAD
       case 'top-left': return 'top-4 left-4';
       case 'top-right': return 'top-4 right-4';
       case 'bottom-left': return 'bottom-4 left-4';
       case 'bottom-right': return 'bottom-4 right-4';
       default: return 'bottom-4 right-4';
-=======
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
-
-  // Apply accessibility settings
-  useEffect(() => {
-    const root = document.documentElement;
-    
-    if (highContrast) {
-      root.style.setProperty('--high-contrast', '1');
-      root.classList.add('high-contrast');
-    } else {
-      root.style.setProperty('--high-contrast', '0');
-      root.classList.remove('high-contrast');
-=======
-      case 'top-left':
-        return 'top-4 left-4';
-      case 'top-right':
-        return 'top-4 right-4';
-      case 'bottom-left':
-        return 'bottom-4 left-4';
-      case 'bottom-right':
-      default:
-        return 'bottom-4 right-4';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-    }
-    
-    if (largeText) {
-      root.style.setProperty('--text-scale', '1.2');
-      root.classList.add('large-text');
-    } else {
-      root.style.setProperty('--text-scale', '1');
-      root.classList.remove('large-text');
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-    }
-    
-    if (reducedMotion) {
-      root.style.setProperty('--reduced-motion', '1');
-      root.classList.add('reduced-motion');
-    } else {
-      root.style.setProperty('--reduced-motion', '0');
-      root.classList.remove('reduced-motion');
-    }
-    
-    // Apply zoom
-    root.style.setProperty('--zoom-level', `${zoomLevel / 100}`);
-  }, [highContrast, largeText, reducedMotion, zoomLevel]);
-
-  // Reset all settings
-  const resetAll = () => {
-    setHighContrast(false);
-    setLargeText(false);
-    setReducedMotion(false);
-    setMutedAudio(false);
-    setZoomLevel(100);
-  };
-
-<<<<<<< HEAD
   // Save settings to localStorage
   const saveSettings = () => {
     const settings = {
@@ -395,7 +165,6 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
   ];
 
   return (
-<<<<<<< HEAD
     <div className={`fixed ${getPositionClasses()} z-50`}>
       <AnimatePresence>
         {isOpen && (
@@ -410,77 +179,6 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
               <div className="flex items-center space-x-2">
                 <Accessibility className="w-5 h-5 text-cyan-400" />
                 <h3 className="text-white font-semibold">Accessibility</h3>
-=======
-    <div className={`fixed ${positionClasses[position]} z-50`}>
-      {/* Main Toggle Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan/20 hover:border-zion-cyan transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  // Apply font size changes
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${fontSize}px`;
-  }, [fontSize]);
-
-  // Apply contrast changes
-  useEffect(() => {
-    const root = document.documentElement;
-    root.classList.remove('contrast-normal', 'contrast-high', 'contrast-inverted');
-    root.classList.add(`contrast-${contrast}`);
-  }, [contrast]);
-
-  // Apply theme changes
-  useEffect(() => {
-    const root = document.documentElement;
-    if (theme === 'auto') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.classList.toggle('dark', prefersDark);
-    } else {
-      root.classList.toggle('dark', theme === 'dark');
-    }
-  }, [theme]);
-
-  // Toggle mute state
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-    // Here you would implement actual audio muting logic
-    if (isMuted) {
-      // Unmute audio
-      console.log('Audio unmuted');
-    } else {
-      // Mute audio
-      console.log('Audio muted');
-    }
-  };
-
-  // Reset all settings
-  const resetSettings = () => {
-    setFontSize(16);
-    setContrast('normal');
-    setIsMuted(false);
-    setTheme('dark');
-  };
-
-  return (
-    <div className={`fixed ${getPositionClasses()} z-50`}>
-      {/* Main Accessibility Button */}
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center group"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-        aria-label="Accessibility controls"
-        aria-expanded={isOpen}
-        aria-haspopup="dialog"
-      >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <Accessibility className="w-6 h-6" />
       </button>
 
@@ -615,7 +313,6 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
                 >
                   <ZoomIn className="w-4 h-4" />
                 </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
               </div>
               <button
                 onClick={() => setIsOpen(false)}
@@ -625,7 +322,6 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
               </button>
             </div>
 
-<<<<<<< HEAD
             {/* Content */}
             <div className="p-4 space-y-4">
               {/* Font Size Control */}
@@ -648,85 +344,6 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
                     className="p-2 bg-white/10 hover:bg-white/20 rounded disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Plus className="w-4 h-4 text-white" />
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-        <Accessibility className="w-7 h-7" />
-        
-        {/* Pulse animation when open */}
-        {isOpen && (
-          <motion.div
-            className="absolute inset-0 rounded-full border-2 border-cyan-300"
-            animate={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        )}
-      </motion.button>
-
-      {/* Accessibility Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="absolute bottom-20 right-0 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl overflow-hidden"
-            role="dialog"
-            aria-label="Accessibility settings"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
-              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                <Accessibility className="w-5 h-5 text-cyan-400" />
-                Accessibility
-              </h3>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-                aria-label="Close accessibility panel"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Content */}
-            <div className="p-4 space-y-6">
-              {/* Font Size Control */}
-              <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
-                  <Type className="w-4 h-4 text-cyan-400" />
-                  Font Size
-                </label>
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => setFontSize(Math.max(12, fontSize - 2))}
-                    className="w-8 h-8 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center"
-                    aria-label="Decrease font size"
-                  >
-                    A-
-                  </button>
-                  <span className="text-white font-medium min-w-[3rem] text-center">
-                    {fontSize}px
-                  </span>
-                  <button
-                    onClick={() => setFontSize(Math.min(24, fontSize + 2))}
-                    className="w-8 h-8 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center"
-                    aria-label="Increase font size"
-                  >
-                    A+
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-                  </button>
-                </div>
-              </div>
-
-              {/* Contrast Control */}
-              <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 <label className="text-white font-medium mb-2 block">Contrast</label>
                 <div className="grid grid-cols-3 gap-2">
                   {(['normal', 'high', 'inverted'] as const).map((contrast) => (
@@ -740,36 +357,6 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
                       }`}
                     >
                       {contrast.charAt(0).toUpperCase() + contrast.slice(1)}
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
-                  <Contrast className="w-4 h-4 text-cyan-400" />
-                  Contrast
-                </label>
-                <div className="grid grid-cols-3 gap-2">
-                  {(['normal', 'high', 'inverted'] as const).map((contrastOption) => (
-                    <button
-                      key={contrastOption}
-                      onClick={() => setContrast(contrastOption)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                        contrast === contrastOption
-                          ? 'bg-cyan-500 text-white shadow-lg'
-                          : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                      }`}
-                    >
-                      {contrastOption.charAt(0).toUpperCase() + contrastOption.slice(1)}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               {/* Toggle Options */}
               <div className="space-y-3">
                 <label className="flex items-center space-x-3 cursor-pointer">
@@ -820,81 +407,9 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
               >
                 Reset to Defaults
               </button>
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-              {/* Theme Control */}
-              <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
-                  <Settings className="w-4 h-4 text-cyan-400" />
-                  Theme
-                </label>
-                <div className="grid grid-cols-3 gap-2">
-                  {([
-                    { value: 'light', icon: Sun, label: 'Light' },
-                    { value: 'dark', icon: Moon, label: 'Dark' },
-                    { value: 'auto', icon: Monitor, label: 'Auto' }
-                  ] as const).map(({ value, icon: Icon, label }) => (
-                    <button
-                      key={value}
-                      onClick={() => setTheme(value)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-center gap-2 ${
-                        theme === value
-                          ? 'bg-cyan-500 text-white shadow-lg'
-                          : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                      }`}
-                    >
-                      <Icon className="w-4 h-4" />
-                      {label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Audio Control */}
-              <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
-                  {isMuted ? (
-                    <VolumeX className="w-4 h-4 text-red-400" />
-                  ) : (
-                    <Volume2 className="w-4 h-4 text-cyan-400" />
-                  )}
-                  Audio
-                </label>
-                <button
-                  onClick={toggleMute}
-                  className={`w-full px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    isMuted
-                      ? 'bg-red-500 text-white hover:bg-red-600'
-                      : 'bg-green-500 text-white hover:bg-green-600'
-                  }`}
-                >
-                  {isMuted ? 'Unmute Audio' : 'Mute Audio'}
-                </button>
-              </div>
-
-              {/* Reset Button */}
-              <div className="pt-4 border-t border-gray-700/50">
-                <button
-                  onClick={resetSettings}
-                  className="w-full px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium"
-                >
-                  Reset to Defaults
-                </button>
-              </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-<<<<<<< HEAD
     </div>
   );
 };
-=======
-<<<<<<< HEAD
 
       {/* Toggle Button */}
       {!isOpen && (
@@ -914,47 +429,3 @@ export function AccessibilityControls({ position = 'bottom-right' }: Accessibili
 };
 
 export default AccessibilityControls;
-=======
-            {/* Keyboard Shortcuts */}
-            <div className="space-y-2">
-              <button
-                onClick={() => setShowKeyboardShortcuts(!showKeyboardShortcuts)}
-                className="flex items-center space-x-3 text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                aria-expanded={showKeyboardShortcuts}
-              >
-                <Keyboard className="w-5 h-5" />
-                <span className="font-medium">Keyboard Shortcuts</span>
-                <HelpCircle className="w-4 h-4" />
-              </button>
-              
-              {showKeyboardShortcuts && (
-                <div className="ml-8 space-y-2 text-sm">
-                  {keyboardShortcuts.map((shortcut, index) => (
-                    <div key={index} className="flex justify-between text-gray-300">
-                      <kbd className="px-2 py-1 bg-gray-700 rounded text-xs">{shortcut.key}</kbd>
-                      <span>{shortcut.description}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Reset Button */}
-            <button
-              onClick={resetAll}
-              className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/30 rounded text-zion-cyan hover:bg-zion-cyan/20 transition-colors"
-              aria-label="Reset all accessibility settings"
-            >
-              <RotateCcw className="w-4 h-4" />
-              <span>Reset All</span>
-            </button>
-          </div>
-        </div>
-      )}
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-    </div>
-  );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
 

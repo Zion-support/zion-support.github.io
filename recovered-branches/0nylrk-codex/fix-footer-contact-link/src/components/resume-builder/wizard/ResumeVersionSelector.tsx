@@ -1,19 +1,4 @@
 
-
-import {useState} from 'react';
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
-import {Resume} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {
-  currentResume: Resume;
-
-  onResumeChange: (resumeId: string) => void;
-
-}
-
 export function ResumeVersionSelector({
 
   currentResume,
@@ -67,7 +52,6 @@ export function ResumeVersionSelector() { return null; }
       if (resumeId) {;
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;
-<<<<<<< HEAD
 
         setSaveDialogOpen(false);
         setNewResumeTitle('');              className="gap-2"
@@ -76,17 +60,4 @@ export function ResumeVersionSelector() { return null; }
 
               <Save className="h-4 w-4" />
               Save;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    </div>
-  );
-}
-  )
-}
 

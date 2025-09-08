@@ -1,4 +1,3 @@
-
       filelist.push(full)}
 
   }
@@ -16,7 +15,3 @@ function main() {;
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir { recursive: true });
 
 main();
-
-
-
-

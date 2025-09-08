@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -11,11 +10,6 @@ import EnhancedFooter from '../components/EnhancedFooter';
     expect(screen.getByTestId('enhancedfooter)).toBeInTheDocument()});
 
 
-  test('displays correct content', () => {
-    render(<EnhancedFooter />);
-
-    // Add specific content tests based on component
-  });
 
   test('handles user interactions', () => {
 
@@ -25,5 +19,3 @@ import EnhancedFooter from '../components/EnhancedFooter';
   test('applies correct styling', () => {
     render(<EnhancedFooter />);
     // Add styling tests if needed;
-
-

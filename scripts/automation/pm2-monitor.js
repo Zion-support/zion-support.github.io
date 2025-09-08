@@ -209,32 +209,3 @@ class PM2Monitor {
     };
     
     console.log('\n📊 PM2 Health Summary:');
-    console.log('========================');
-    console.log(`Overall Health: ${summary.overallHealth.toUpperCase()}`);
-    console.log(`Total Processes: ${summary.processCount}`);
-    console.log(`Healthy: ${summary.healthyProcesses} | Warning: ${summary.warningProcesses} | Critical: ${summary.criticalProcesses}`);
-    console.log(`Memory Usage: ${summary.memoryUsage}`);
-    console.log('\nTop Recommendations:');
-    summary.topRecommendations.forEach((rec, i) => {
-      console.log(`${i + 1}. ${rec}`);
-    });
-  }
-
-  async sendNotifications() {
-    // Check if notifications are needed
-    if (this.healthReport.overallHealth === 'critical') {
-      console.log('🚨 CRITICAL: Sending emergency notifications...');
-      // Here you could integrate with Slack, email, or other notification systems
-    } else if (this.healthReport.overallHealth === 'warning') {
-      console.log('⚠️  WARNING: Sending alert notifications...');
-    }
-  }
-  {/* Removed stray closing brace */}
-
-// Run the monitor
-if (require.main === module) {
-  const monitor = new PM2Monitor();
-  monitor.start().catch(console.error);
-  {/* Removed stray closing brace */}
-
-module.exports = PM2Monitor;

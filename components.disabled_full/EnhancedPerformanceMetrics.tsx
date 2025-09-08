@@ -1,17 +1,3 @@
-module.exports = {};
-interface ErrorReport {
-  "error": string;
-  stack?: string;
-  componentStack?: string;
-  timestamp: string;
-  userAgent: string;
-  url: string}
-export default function handler("req": NextApiRequest, "res": NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' })}
-  try {
-    const "errorReport": ErrorReport = req.body;
-    // Log the error (in production, you might want to send this to a service like Sentry)
     console.error('Client Error "Report": ', {
       "error": errorReport.error,
       "stack": errorReport.stack,

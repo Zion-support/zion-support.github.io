@@ -4,7 +4,6 @@ export interface TalentProfile {
   full_name: string;
   // TODO: Implement
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
   id: string;,
   user_id: string;

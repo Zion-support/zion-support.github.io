@@ -57,17 +57,6 @@ const Progress = React && React.forwardRef<;
     )}
     {...props}
   >
-<<<<<<< HEAD
-    <ProgressPrimitive.Indicator
-
-export { Progress };
-
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-    />;
-  </ProgressPrimitive && ProgressPrimitive.Root>;
-));
-Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.displayName;
-
 export { Progress };
 import React from 'react';
 import * as React from 'react';
@@ -103,4 +92,3 @@ Progress.display_name = ProgressPrimitive.Root.display_name;
 ;
 export { Progress }
 ;
-

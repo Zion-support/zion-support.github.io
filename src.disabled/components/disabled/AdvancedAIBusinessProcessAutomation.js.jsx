@@ -1,4 +1,3 @@
-
   Employee Onboarding', description: 'Streamlined employee onboarding with automated document processing and task assignment, category: 'placeholder',
   hr', status: 'active, priority:,
   medium', automationLevel: 'semi-automated, aiInsights: [

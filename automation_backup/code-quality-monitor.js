@@ -1,4 +1,3 @@
-
     this.metrics = {
   'complexity': 0,'
       'maintainability': 0,'

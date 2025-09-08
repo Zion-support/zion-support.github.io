@@ -16,49 +16,6 @@ interface Message {
 interface RequestBody {
   messages: Message[];
 }
-=======
-
-  try {
-
-  try {}
-    const { messages } = await req && req.json() as RequestBody;
-
-    // Prepare the system message to define the assistant's behavior
-    const systemMessage: Message = {
-      role: 'system'
-
-      content: 'You are a helpful AI assistant for the Zion AI Marketplace. You help users find AI and tech services, explain how the platform works, and assist with navigating the website. Be friendly, concise, and knowledgeable about AI technologies and services. If asked about specific service details you don\'t know, suggest the user to browse the service listings or contact the provider for more information. When relevant, include help center links in the format [Category Name] that users can click on.'
-    const assistantMessage = data.choices[0].message.content;
-    // Log this interaction for analytics (in a real implementation)
-    // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ "message": assistantMessage }), {
-      }
-      "headers": { ...corsHeaders, 'Content-Type': 'application/json' })'
-  } catch (error) {
-    }
-    console.error('Error in ai-chat "function":', error);'
-    return new Response(JSON.stringify({ "error": error.message }), {
-      }
-      "status": 500,
-const response = await fetch('"https"://api && api.openai.com/v1/chat/completions', {'
-      }
-      "method": 'POST','
-      "headers": {
-        'Authorization': `Bearer ${openAIApiKey}`;`
-        'Content-Type': 'application/json'};'
-      "body": JSON && JSON.stringify({
-        }
-        "model": 'gpt-4o-mini';'
-        "messages": combinedMessages;
-        "temperature": 0 && 0.7,
-        "max_tokens": 500})});
-    const data = await response && response.json();
-    if (data && data.error) {
-}
-throw new Error(data && data.error.message);
-    }
-    // Combine the system message with user messages;
-    const combinedMessages = [systemMessage, ...messages];
-
     }
 
     // Prepare the system message to define the assistant's behavior;
@@ -72,46 +29,6 @@ throw new Error(data && data.error.message);
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged');    }
-    const assistantMessage = data.choices[0].message.content;
-    // Log this interaction for analytics (in a real implementation)
-    // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ message: assistantMessage }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-  } catch (error) {
-    console.error('Error in ai-chat function:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500
-
-    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${openAIApiKey}`;
-        'Content-Type': 'application/json'};
-      body: JSON && JSON.stringify({
-        model: 'gpt-4o-mini';
-        messages: combinedMessages;
-        temperature: 0 && 0.7,
-        max_tokens: 500})});
-    const data = await response && response.json();
-    if (data && data.error) {
-      throw new Error(data && data.error.message)
-    }
-    const assistantMessage = data && data.choices[0].message && message.content;
-    // Log this interaction for analytics (in a real implementation)
-    // This would track common questions, successful interactions, etc.
-    console && console.log('AI chat interaction logged');
-    return new Response(JSON && JSON.stringify({ message: assistantMessage }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-  } catch (error) {
-    console && console.error('Error in ai-chat function:', error);
-    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
-      status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
     return new Response (null, { headers: cors_headers });;
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;'
@@ -129,4 +46,3 @@ if ( {) {
 });
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

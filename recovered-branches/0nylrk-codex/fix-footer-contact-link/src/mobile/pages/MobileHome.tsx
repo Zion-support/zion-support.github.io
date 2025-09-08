@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -20,7 +17,6 @@ import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth($2);
   const isClient = $2;
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const { user } = useAuth();
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';

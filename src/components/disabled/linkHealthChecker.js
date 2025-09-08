@@ -114,27 +114,3 @@ export class LinkHealthChecker {
         const summary = this.getHealthSummary(results);
         const timestamp = new Date().toISOString();
         let report = `Link Health Report - ${timestamp}\n`;
-        report += `=====================================\n\n`;
-        report += `Summary:\n`;
-        report += `- Total Links: ${summary.total}\n`;
-        report += `- Healthy: ${summary.healthy}\n`;
-        report += `- Unhealthy: ${summary.unhealthy}\n`;
-        report += `- Errors: ${summary.errors}\n`;
-        report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
-        report += `Detailed Results:\n`;
-        report += `=================\n\n`;
-        results.forEach((result, index) => {
-            report += `${index + 1}. ${result.url}\n`;
-            report += `   Status: ${result.status}\n`;
-            if (result.statusCode)
-                report += `   Status Code: ${result.statusCode}\n`;
-            if (result.responseTime)
-                report += `   Response Time: ${result.responseTime}ms\n`;
-            if (result.error)
-                report += `   Error: ${result.error}\n`;
-            report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
-        });
-        return report;
-    }
-}
-export default LinkHealthChecker;

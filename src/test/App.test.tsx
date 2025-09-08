@@ -1,4 +1,3 @@
-import React from 'react';
 import { describe, it, expect } from '@jest/globals';
 import { render } from '@testing-library/react';
 
@@ -14,5 +13,3 @@ describe('App', () => {
     const testElement = React.createElement('div', { 'data-testid': 'test' }, 'Test');
     const { getByTestId } = render(testElement);
     expect(getByTestId('test')).toBeInTheDocument();
-  });
-});

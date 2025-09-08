@@ -1,86 +1,3 @@
-<<<<<<< HEAD
-
-
-type Props = {;
-  content: string | null;
-  content: string | null,
-  generated_at: string | null;
-}
-;
-export default /**
- * ChangelogPage - Function description
- */
-function ChangelogPage() {
-  return (
-    <main className='mx-auto max-w-4xl px-4 py-12'>
-      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
-      {generatedAt && (
-        <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
-      )}
-
-    <main className='mx - auto max - w-4xl px - 4 py - 12'>;
-      <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1>;
-      {generated_at && (
-        <p className='mt - 2 text - sm text - gray - 600'>Generated: {generated_at}</p>)}
-      {content ? (
-        <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
-          {content}
-        </pre>) : (
-        <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
-        <p className="mt - 2 text - sm text - gray - 600">Generated: {generated_at}</p>)}
-
-
-      {content ? (
-        <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray-800 shadow-sm">;
-{content}
-        </pre>
-      ) : (
-
-export default function ChangelogPage({ content, generatedAt }: Props) {
-  return (
-    </main>;
-
-          No changelog generated yet.
-
-        </div>
-      )}
-    </main>
-export default function ChangelogPage(): any ({ content, generatedAt }: Props) {;
-  return (
-    <main className='mx-auto max-w-4xl px-4 py-12'>;
-      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>;
-      {generatedAt && (;
-        <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>;
-      )}
-      {content ? (;
-        <pre className='mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm'>;
-          {content}
-        </pre>;
-      ) : (;
-        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>          No changelog generated yet.      {generatedAt && (;
-        <p className="mt-2 text-sm text-gray-600">Generated: {generatedAt}</p>;
-      )}
-      {content ? (;
-        <pre className="mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm">;
-{content}
-        </pre>;
-      ) : (;
-        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">;
-          No changelog generated yet.;
-        </div>)}
-    </main>);
-}
-
-
-
-  );
-}
-
-    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
-        </div>;
-      )}
-    </main>;
   );
 }
   } catch {
@@ -103,7 +20,6 @@ export async function getStaticProps() {;
 
 
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 export async /**;
@@ -131,18 +47,6 @@ function getStaticProps() {
       props: { content, generated_at: new Date ().toISOString () },
       revalidate: 300,
     }
-  } catch {
-    return { props: { content: null, generated_at: null }, revalidate: 300 }
-  }    return { props: { content, generated_at: new Date ().toISOString () }, revalidate: 300 }
-  } catch {
-    return { props: { content: null, generated_at: null }, revalidate: 300 }
-}
-}
-  } catch {
-
-    return { props: { content: null, generatedAt: null }, revalidate: 300 };
-
-
 export async function getStaticProps() {
   try {
     const file = path.join(process.cwd(), 'CHANGELOG.md'),
@@ -227,4 +131,3 @@ export async function getStaticProps() {
   } catch {
 
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
-

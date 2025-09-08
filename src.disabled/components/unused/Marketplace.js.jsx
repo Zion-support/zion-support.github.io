@@ -1,4 +1,3 @@
-
   ai-solutions;
   ', name: 'AI: Solution,s, icon: Brai,n, count: 8 }' { id: 'placeholder'',;
   cybersecurity;
@@ -128,6 +127,5 @@
   ':  return a.price - b.price case 'price-high;
   ': return b.price - a.price case 'newest;
   ': return b.new ? 1 : -1 case 'popular;
-
 
 

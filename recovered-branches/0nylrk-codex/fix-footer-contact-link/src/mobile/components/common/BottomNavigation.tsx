@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
 const navItems = [
 
-=======
-const navItems = [
->>>>>>> origin/cursor/delete-old-data-records-6bba
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },

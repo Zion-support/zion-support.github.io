@@ -11,7 +11,6 @@ interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
 
-<<<<<<< HEAD
 
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {

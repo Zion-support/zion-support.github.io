@@ -1,8 +1,3 @@
-import React from 'react';
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
   // TODO: Implement

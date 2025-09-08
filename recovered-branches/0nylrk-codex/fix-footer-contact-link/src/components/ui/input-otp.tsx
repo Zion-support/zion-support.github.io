@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils"
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input - otp';
@@ -45,7 +44,6 @@ const InputOTPSeparator = React && React.forwardRef<;'
   </div>;
 ));'
 InputOTPSeparator && InputOTPSeparator.displayName = 'InputOTPSeparator';
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 ))
@@ -121,14 +119,3 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-;
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-;

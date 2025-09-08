@@ -1,136 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
-import { useEffect, useState, useRef, ReactNode } from "react",
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
-interface LazyLoadProps {
-
-import {useEffect, useState, useRef, ReactNode} from "react";
-import {cn} from "@/lib/utils";
-
-import {Skeleton} from "@/components/ui/skeleton";
-interface LazyLoadProps {;
-  }
-  height?: string | number;
-  width?: string | number;
-  "children": ReactNode,;
-
-
-  loadingComponent?: ReactNode;
-  className?: string;
-}
-
-export function LazyLoad(): any ({;interface LazyLoadProps {
-  height?: string | number,
-  width?: string | number,
-  children: ReactNode,
-  loadingComponent?: ReactNode,  className?: string
-}
-
-export function LazyLoad({;
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
-export function LazyLoad({
-
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
-  className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  height = "200px","
-  width = "100%","
-  children,
-  loadingComponent,
-  className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false),
-  const [isLoaded, setIsLoaded] = useState(false),
-  const containerRef = useRef<HTMLDivElement>(null),
-
-        threshold: 0.1}
-    );
-
-import { useEffect, useState, useRef, ReactNode } from "react",;
-import { cn } from "@/lib/utils",;
-import { Skeleton } from "@/components/ui/skeleton",;
-interface LazyLoadProps {;
-  height?: string | number,;
-  width?: string | number,;
-  children: ReactNode,;
-  loadingComponent?: ReactNode,;
-  className?: string;
-}
-;
-export function LazyLoad({;
-  height = "200px",;
-  width = "100%",;
-  children,;
-  loadingComponent,;
-  className}: LazyLoadProps) {;
-  const [isVisible, setIsVisible] = useState(false),;
-  const [isLoaded, setIsLoaded] = useState(false),;
-  const containerRef = useRef<HTMLDivElement>(null),;
-
-import { useEffect, useState, useRef, ReactNode } from "react",;
-import { cn } from "@/lib/utils",;
-import { Skeleton } from "@/components/ui/skeleton",;
-;
-interface LazyLoadProps {;
-  height?:string | number,;
-  width?:string | number,;
-  children:ReactNode,;
-  loadingComponent?:ReactNode,;
-  className?:string;
-}
-;
-export function LazyLoad({;
-  height = "200px",;
-  width = "100%",;
-  children,;
-  loadingComponent,;
-  className} LazyLoadProps) {;
-  const [isVisible, setIsVisible] = useState(false),;
-  const [isLoaded, setIsLoaded] = useState(false),;
-  const containerRef = useRef<HTMLDivElement>(null),;
-;
-        threshold: 0.1}
-
-          setIsVisible(true),;
-          observer.disconnect(),;
-        }
-      },;
-      {;
-        rootMargin:"200px", // Start loading when element is within 200px of viewport;
-        threshold:0.1}
-    ),;
-;
-    if (containerRef.current) {;
-      observer.observe(containerRef.current),;
-    }
-;
-    return () => {;
-      if (containerRef.current) {;
-        observer.unobserve(containerRef.current),;
-      }
-    );
-
-    );
-          setIsVisible(true),
-          observer.disconnect()
-        }
-
-      },
-<<<<<<< HEAD
-
-
-
-
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
@@ -157,10 +25,6 @@ export function LazyLoad({;
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
-
-    </div>;
-  );
-}
 ;
   useEffect (() => {
     // Check condition
@@ -210,4 +74,3 @@ return (<div)
 }</>) : (loadingComponent || defaultLoadingComponent) 
 }</div>) 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -279,9 +279,3 @@ pr-12325
     </Card>);
 
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

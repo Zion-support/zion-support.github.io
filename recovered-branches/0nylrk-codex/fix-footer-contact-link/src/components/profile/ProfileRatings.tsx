@@ -1,25 +1,4 @@
-          <Tabs defaultValue="all">
-            <TabsList className="mb-4">
-              <TabsTrigger value="all">
-                All Reviews ({reviews.length})
-              </TabsTrigger>
-              <TabsTrigger value="positive">Positive</TabsTrigger>
-              <TabsTrigger value="critical">Critical</TabsTrigger>
-            </TabsList>
-
             <TabsContent value="all">
-              <ReviewsList
-                reviews={reviews}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-              <ReviewsList
-                reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-              />
-            </TabsContent>
-
-            <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
                 isLoading={isLoading}
@@ -30,18 +9,10 @@
             <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating >= 4)}
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-<<<<<<< HEAD
-          </Tabs>
-        </div>
-      </div>
-    </div>
-
-  );
 }
 ;
   // Fetch reviews when component mounts;

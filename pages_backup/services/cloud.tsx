@@ -4,10 +4,6 @@ import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-import React from 'react';
-import Layout from "../../components/Layout";";
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
     >      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -29,19 +25,5 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
             </motion.div>
           </div>
         </section>
-          <div className="container mx-auto px-4 text-center">";
-
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
-
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
-            </p>;
-              Get Started Today;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion && motion.a>;
-          </div>;
-        </section>;
-      </div>;
     </Layout>;  );
 }

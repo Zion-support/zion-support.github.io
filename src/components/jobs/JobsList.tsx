@@ -437,4 +437,3 @@ return (<div className="grid gap - 6 md:grid - cols-2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
-<<<<<<< HEAD

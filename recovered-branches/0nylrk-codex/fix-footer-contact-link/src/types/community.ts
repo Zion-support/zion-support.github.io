@@ -1,14 +1,3 @@
-
-export type ForumCategory =
-export type ForumCategory = 
-export type ForumCategory = 
-  id: ForumCategory;
-  name: string,
-  description: string;
-  adminOnly: boolean;
-  icon: string;
-}
-
 export interface ForumPost {;
 
   title: string;
@@ -32,25 +21,6 @@ export interface ForumPost {;
 
 export interface ForumReply {;
 
-  post_id: string;
-  parentReplyId?: string;
-  content: string;
-  author_id: string;
-  author_name: string;
-  author_avatar?: string;
-  author_role?: string;
-  created_at: string;
-  updated_at: string;
-  upvotes: number;
-  downvotes: number;
-  isAnswer?: boolean;
-}
-
-export interface Badge {;
-
-  id: string;
-  name: string,
-  description: string;
   icon: string;
   color: string;
 }
@@ -63,7 +33,6 @@ export interface Badge {;
 
 }
 
-<<<<<<< HEAD
 export interface CommunityUser {
 
 export interface CommunityUser {

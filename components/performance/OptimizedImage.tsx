@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -89,29 +88,9 @@ if ( {) {
       width={width |800}
       height={height |600}
       className={className}
-      />);
-  }
-    <Image;
-      src={src}
-      alt={alt}
-      width={width || 800}
-      height={height || 600}
-      className={class_name}
       priority={priority}
       className={className}
       sizes={sizes}
-
-
-
-      quality={quality}
-      style={style}
-
-quality={quality}
-      style={style}
-  );
-}
-;
-export default OptimizedImage;
       quality={quality}
       style={style}
 

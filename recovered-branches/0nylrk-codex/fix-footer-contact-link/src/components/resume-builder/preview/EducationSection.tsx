@@ -1,11 +1,6 @@
 
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import {Education} from '@/types/resume';
-import {format} from 'date-fns';
-
 import { Education  } from '@/types/resume';
 import { format } from 'date-fns';
 import {Education} from '@/types/resume';
@@ -65,10 +60,6 @@ interface EducationSectionProps {;
 }
 ;
 export function EducationSection({ education }: EducationSectionProps) {;
-  // Sort education by date (newest first);
-  const sortedEducation = [...education].sort((a, b) => {;
-    if (a.is_current && !b.is_current) return -1,;
-    if (!a.is_current && b.is_current) return 1,;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
     return dateB.getTime() - dateA.getTime();

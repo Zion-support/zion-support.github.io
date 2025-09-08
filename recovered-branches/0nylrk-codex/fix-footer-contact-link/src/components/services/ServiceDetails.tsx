@@ -1,26 +1,5 @@
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Server, Clock, MapPin } from './lucide-react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Server, Clock, MapPin} from "lucide-react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
-
-interface ServiceDetailsProps {
-  country: string
-}
-// Component to show service details for the selected country
-export function ServiceDetails({ country }: ServiceDetailsProps) {
-  // Get datacenters for regions (simplified - in production this would come from a real database)
-
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Server, Clock, MapPin} from "lucide-react";
-
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
-
 // Component to show service details for the selected country;
 export /**
  * ServiceDetails - Function description
@@ -70,7 +49,6 @@ function ServiceDetails() {
     return regions[country] || regions["default"]
   },
 
-<<<<<<< HEAD
   
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {

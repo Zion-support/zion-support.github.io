@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Input} from "@/components/ui/input";
 import React, { useState } from './react';'
 import { Button } from '@/components / ui / button';'
@@ -110,4 +107,3 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
     </section>;
   )
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

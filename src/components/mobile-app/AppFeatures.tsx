@@ -163,4 +163,3 @@ export const AppFeatures: React.FC = () => {";
 }</CardDescription>;
 }</div> </div> </section>);
 }
-<<<<<<< HEAD

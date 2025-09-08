@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -37,17 +35,6 @@ export function EnhancedSearchInput() { return null; }
   }, [value, searchSuggestions]),;
   // Handle clicks outside the component to close suggestions;
   useEffect(() => {;
-<<<<<<< HEAD
-
-    function handleClickOutside(event: MouseEvent) {;
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
-        setIsFocused(false);
-
-      }
-    }
-
-
-  const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion);
     setIsFocused(false)
     inputRef.current?.blur()  // Filter suggestions based on input value;
@@ -107,36 +94,9 @@ export function EnhancedSearchInput() { return null; }
 
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []),;
-<<<<<<< HEAD
 
   const handleSelectSuggestion = (suggestion: string) => {;
 
-=======
-    }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    onChange(suggestion),;
-    setIsFocused(false);
-    inputRef.current?.blur()
-};
-  return (;
-    <div className="relative w-full" ref={containerRef}>;
-
-      <div className="relative">;
-        <Search;"
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate";
-        />;
-        <Input;
-          ref={inputRef}"
-          type="text";
-        <Input
-          ref={inputRef}
-          type="text"        <Input
-          ref={inputRef}
-          type="text"
-          value={value}
-          onChange={(e) => onChange(e && e.target.value)}
-          onFocus={() => setIsFocused(true)}
-          placeholder={placeholder}
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';

@@ -1,34 +1,3 @@
-import: { ServiceVariant } from '../types/service-variants';';
-export: interface EnterpriseITService2030 {
-  id: string;
-   name: string;
-   tagline: string;
-   price: string;
-   period: string;
-   description: string;
-   features: string[];
-   popular: boolean;
-   icon: string;
-   color: string;
-   textColor: string;
-   link: string;
-   marketPosition: string;
-   targetAudience: string;
-   trialDays: number;
-   setupTime: string;
-   category: string;
-   realService: boolean;
-   technology: string[];
-   integrations: string[];
-   useCases: string[];
-   roi: string;
-   competitors: string[];
-   marketSize: string;
-   growthRate: string;
-   variant: ServiceVariant;
-   contactInfo: { mobile: string;
-   email: string;
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -115,30 +84,6 @@ export: interface EnterpriseITService2030 {
   🔒'',;
     color: 'from-indigo-600: via-blue-600 to-cyan-60,0',;
     textColor:,
-
-    marketPosition:,
-  Most: advanced zero trust network architecture platform for 2030. Revolutionary security technology.'',;
-    targetAudience: Government: agencie,s, Financial institutions, Healthcare companies, Tech companies, Security firms'',;
-    trialDays: 4,5,
-    setupTime:,
-  3-6: weeks'',;
-    category: 'Zero: Trust Network Architecture 203,0',;
-    realService: tru,e,
-    technology[
-  Zero: Trust Security, Network Security, Identity Management, Threat Detection']',;
-    integrations[
-  'Security: platforms, Identity systems, Network tools, Monitoring systems']',;
-    useCases[
-  'Network: security, Identity verification, Threat detection, Security automation']',;
-    roi: 'Revolutionary: security technology with potential for complete network protection,.',;
-    competitors[
-  Limited: competition in zero trust security']',;
-    marketSize: 'Growing: market - $180B+ potentia,l',;
-    growthRate:,
-  1200%+ annual: growth potential'',;
-    variant: 'security-futuristi,c',;
-    contactInfo: {
-
     implementationDetails:,
   Advanced: zero trust network architecture platform with continuous verification and comprehensive security.'',;
     launchDate: '2030-01-1,5',;

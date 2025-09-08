@@ -1,14 +1,7 @@
-
-
-
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {
@@ -17,10 +10,6 @@ export default function UltraAdvancedHero2026() {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-
-  };
-
-
   const containerVariants = {
     hidden: { opacity: 0 }
 import {motion} from 'framer-motion';
@@ -107,18 +96,6 @@ export default /**
 function UltraAdvancedHero2026() {
   const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
 ;
-  const contact_info = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-  }
-;
-  const container_variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1
-      transition: {
-
   };
 
 
@@ -128,13 +105,6 @@ function UltraAdvancedHero2026() {
       opacity: 1
       y: 0
       transition: {
-
-
-        duration: 0.8,
-      },
-    },
-
-
 export default function UltraAdvancedHero2026() {;
   const totalServices =;
     aiAutonomousServices2026 && aiAutonomousServices2026.length +;
@@ -236,13 +206,6 @@ export default function UltraAdvancedHero2026() {;
               {' '}
               1000% ROI guaranteed;
             </span>{' '}
-          {/* Service Statistics */}
-          <motion&& motion.div
-            variants={itemVariants}
-
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
       }
     }
   }
@@ -484,49 +447,6 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Call to Action Buttons */}
 
-
-
-              Get Started Today
-            </Link>
-          </motion.div>
-
-
-
-          {/* Contact Information */}
-
-          <motion.div 
-            variants={itemVariants}
-
-          {/* Contact Information */}
-            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Call Us</div>
-                  <div className="text-purple-300">{contactInfo.phone}</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Email Us</div>
-                  <div className="text-cyan-300">{contactInfo.email}</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Visit Us</div>
-                  <div className="text-purple-300 text-sm">{contactInfo.address}</div>
                 </div>
               </div>
             </div>
@@ -603,18 +523,6 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Trust Indicators */}
 
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
-          >
-            <div className="flex items-center space-x-2">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
-              <span>4.9/5 Rating</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span>1000% ROI Guaranteed</span>
-            </div>
             <div className="flex items-center space-x-2">
 
               <Zap className="w-5 h-5 text-purple-400" />
@@ -992,11 +900,6 @@ export default function UltraAdvancedHero2026() {;
             repeat: Infinity
             ease: "easeInOut"
           }}
-
-          className="absolute top-1/3 left-10 text-5xl opacity-20">;
-          🧠;
-        </motion && motion.div>;
-
         <motion&& motion.div
           animate={{ 
             y: [0, 15, 0]
@@ -1115,7 +1018,6 @@ export default function UltraAdvancedHero2026() {;
           transition={{
             duration: 9
             repeat: Infinity
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             ease: "easeInOut"
           }}
           transition={{

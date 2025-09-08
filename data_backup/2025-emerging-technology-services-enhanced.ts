@@ -1,34 +1,3 @@
-import: { ServiceVariant } from '../types/service-variants';';
-export: interface EmergingTechnologyService {
-  id: string;
-   name: string;
-   tagline: string;
-   price: string;
-   period: string;
-   description: string;
-   features: string[];
-   popular: boolean;
-   icon: string;
-   color: string;
-   textColor: string;
-   link: string;
-   marketPosition: string;
-   targetAudience: string;
-   trialDays: number;
-   setupTime: string;
-   category: string;
-   realService: boolean;
-   technology: string[];
-   integrations: string[];
-   useCases: string[];
-   roi: string;
-   competitors: string[];
-   marketSize: string;
-   growthRate: string;
-   variant: string;
-   contactInfo: { mobile: string;
-   email: string;
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -208,31 +177,6 @@ export: interface EmergingTechnologyService {
   🌍'',;
     color: 'from-purple-600: to-pink-60,0',;
     textColor:,
-
-    marketPosition:,
-  Competes: with Unity Pro ($180/month), Unreal Engine ($0), Roblox Studio ($0). Our advantage: Integrated: metaverse ecosystem with blockchain and social features,.,
-    targetAudience: ;
-  'Gaming: companie,s, Virtual event organizers, Educational institutions, Real estate companies, Entertainment companies'',;
-    trialDays: 1,4,
-    setupTime:,
-  8-10: hours'',;
-    category: 'Metaverse: & Virtual Realit,y',;
-    realService: tru,e,
-    technology[
-  Unity, Unreal: Engine, WebGL, Three.js, React, Node.js, WebRTC']',;
-    integrations[
-  'Meta: Quest, HTC Vive, SteamVR, Blockchain wallets, Payment gateways']',;
-    useCases[
-  'Virtual: events, Gaming platforms, Virtual real estate, Educational experiences, Social networking']',;
-    roi: 'Metaverse: projects report 800% ROI through new revenue streams and user engagement,.',;
-    competitors[
-  Unity, Unreal: Engine, Roblox Studio, Decentraland']',;
-    marketSize: '$47.5B: metaverse marke,t',;
-    growthRate:,
-  42% annual: growth'',;
-    variant: 'metaverse-enterpris,e',;
-    contactInfo: {
-
     implementationDetails:,
   Comprehensive: metaverse development platform with integrated tools for creating immersive virtual experiences.'',;
     launchDate: '2024-12-0,1',;

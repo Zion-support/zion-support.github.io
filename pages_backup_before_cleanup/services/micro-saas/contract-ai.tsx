@@ -7,18 +7,3 @@ interface ContractaiProps {
 }
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function Contractai({ }: ContractaiProps) {
-  return (
-    <div>
-      <h1>Contractai</h1>
-      <p>This component is currently under development.</p>
-    </div>
-<<<<<<< HEAD
-
-  );

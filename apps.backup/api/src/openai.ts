@@ -1,5 +1,4 @@
 
-
 import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -45,11 +44,6 @@ export async function generateJobPost(openai: OpenAIClient, role: string, opts: 
   const prompt = `Create a concise, compelling job post for a ${role}.;
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
-
-
-  return completion.output_text;
-}
-
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({
     model: 'gpt-4o-mini',

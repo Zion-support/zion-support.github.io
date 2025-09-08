@@ -1,5 +1,3 @@
-
-
 export interface ThemeColors {;
 
   const root = document && document.documentElement,

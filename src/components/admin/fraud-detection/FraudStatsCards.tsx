@@ -137,4 +137,3 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
     </div>);
 }
 ";
-<<<<<<< HEAD

@@ -1,5 +1,3 @@
-
-
     let success;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
@@ -47,47 +45,5 @@
     }
   };
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const handleCancel = () => {;
-    if (editingId) {;
-      setEditingId(null);
-    } else {;
-      onBack();
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-    }
-
-  },
-
-  },
-  return (
-
-      <EducationList 
-        educationEntries={educationEntries} 
-
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-          {editingId ? 'Update Education' : 'Add Education'}
-        </h3>        <div className="flex justify-end">;
-          <Button type="button" onClick={onComplete}>;
-            Next;
-          </Button>;
-        </div>;
-      )}
-    </div>;
-  );
-}

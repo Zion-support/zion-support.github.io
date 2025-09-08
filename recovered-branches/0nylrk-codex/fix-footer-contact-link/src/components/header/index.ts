@@ -1,14 +1,3 @@
 
 
-<<<<<<< HEAD
-
-=======
-pr-12325
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export { Header } from './Header',;
-export { Logo } from './Logo',;
-export { MobileMenu, type MobileMenuProps } from './MobileMenu',;
-export { UserMenu } from './UserMenu',;
-
-export { MainNavigation } from './MainNavigation';
 

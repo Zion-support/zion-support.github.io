@@ -46,4 +46,3 @@ export const DownloadSection: React.FC = () => {
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
-<<<<<<< HEAD

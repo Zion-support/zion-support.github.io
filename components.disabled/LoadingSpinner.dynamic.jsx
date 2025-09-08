@@ -1,18 +1,6 @@
-<<<<<<< HEAD
 </p>'</p>'
-=======
-const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default LoadingSpinner' ,'
-
-
-
-</p>'
-
-
-</p>'
-
 </p>'
 </p>'
->>>>>>> origin/main
 </p>'
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'

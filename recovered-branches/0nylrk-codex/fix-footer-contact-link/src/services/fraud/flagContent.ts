@@ -25,19 +25,9 @@ export const flag_content = async (
   content_type: FraudFlag['content_type'];
   content_id: string;
   content_excerpt: string;    // // // console.log('Flagging content for review:', {
-      userId,
-      contentType,
-      contentId,
-      reason,
 
       severity;
     });      reason;
-      ip_address: ipAddress;
-      timestamp: new Date().toISOString()'
-      status: 'pending'
-    });
-    if (error) throw error;
-    return { success: true }
   } catch (error) {    console && console.error('Error flagging content:', error);
     return { 
       success: false, 
@@ -69,13 +59,3 @@ if (throw error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
-=======    }
-  }
-}
-};
-    }
-  }
-}
-    }
-  }
-};

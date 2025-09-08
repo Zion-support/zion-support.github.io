@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
@@ -19,14 +18,6 @@ interface WizardStep {;
 };
   skipText?: string;
 
-<<<<<<< HEAD
-}
-interface OnboardingWizardProps {;
-  type: 'client' | 'talent',;
-  onComplete: () => void,;
-  onSkip: () => void,;
-  className?: string;
-}
 
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
@@ -56,66 +47,9 @@ interface OnboardingWizardProps {;'
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
-
-      icon: <Eye className="h-6 w-6 text-zion-purple" />
-      action: {"
-        text: "Preview Profile"
-        url: `/talent/${user?.id}`
-
       },
       skipText: "Skip for now"
     },
-
-  ];
-  const steps = type === 'client' ? clientSteps : talentSteps;
-  // Navigate to the specified URL
-  const handleAction = () => {
-    if (currentStep < steps.length - 1) {
-      navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      navigate(steps[currentStep].action.url);
-      onComplete()
-    }
-  }
-  // Skip the current step
-  const handleSkip = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      onSkip()
-    }
-  }
-        text: "Enable Matchmaking",
-        url: "/talent-dashboard"
-      }
-    }
-  };
-  ],;
-  const steps = type === 'client' ? clientSteps : talentSteps,;
-  // Navigate to the specified URL;
-  const handleAction = () => {;
-    if (currentStep < steps.length - 1) {;
-      navigate(steps[currentStep].action.url),;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      navigate(steps[currentStep].action.url),;
-      onComplete();
-    }
-  },;
-  // Skip the current step;
-  const handleSkip = () => {;
-    if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      onSkip();
-    }
-  },
-
   
   
   
@@ -201,69 +135,6 @@ interface OnboardingWizardProps {;'
     }
   ];
 
-<<<<<<< HEAD
-  const steps = type === 'client' ? clientSteps : talentSteps;
-
-  // Navigate to the specified URL;
-
-  const handleAction = () => {;
-
-  return ()'
-    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>"
-</Card>
-      <CardHeader>
-</CardHeader>"
-        <CardTitle className="text-center text-white">"
-</CardTitle>"
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,;"
-</FileText>"
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,;"
-</Users>"
-      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,;"
-</MessageSquare>"
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,;"
-</FileText>"
-      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,;"
-</Calendar>"
-      icon: <Eye className="h-6 w-6 text-zion-purple" />,;"
-</Eye>"
-      icon: <Rocket className="h-6 w-6 text-zion-cyan" />,;"
-</Rocket>
-
-
-=======
-  // Navigate to the specified URL;
-    }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    if (currentStep < steps && steps.length - 1) {;
-      navigate(steps[currentStep].action && action.url);
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      navigate(steps[currentStep].action && action.url);
-      onComplete();
-    }
-  };
-  // Skip the current step;
-<<<<<<< HEAD
-
-  const handleSkip = () => {;
-
-=======
-    }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    if (currentStep < steps && steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      onSkip();
-    }
-  };
-
-  return (    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
-      <CardHeader>;
-        <CardTitle className="text-center text-white">;
-          {type === 'client' ? ;
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";            "Ready to find top IT talent?" :;
@@ -276,9 +147,4 @@ interface OnboardingWizardProps {;'
       <CardFooter className="flex flex-col space-y-2">;
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
-
-          onClick={handleAction}>;
-          {steps[currentStep].action && action.text}
-        </Button>;
-
         {steps[currentStep].skipText && (;

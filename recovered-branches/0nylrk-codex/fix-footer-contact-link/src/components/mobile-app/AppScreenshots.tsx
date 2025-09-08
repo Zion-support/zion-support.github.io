@@ -1,5 +1,4 @@
 
-
 import React, { useRef } from "react",
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -8,11 +7,6 @@ import { Button } from "@/components/ui/button";
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]
 export const AppScreenshots: React.FC = () => {;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-
-export const AppScreenshots: React.FC = () => {};
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null),
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
 

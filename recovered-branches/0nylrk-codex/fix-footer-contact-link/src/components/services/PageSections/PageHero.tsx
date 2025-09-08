@@ -1,22 +1,3 @@
-
-export function PageHero() {
-  return (
-    <div className="text-center mb-12">
-      <GradientHeading className="mb-4">
-        Global IT Onsite Services
-      </GradientHeading>
-
-=======
-"
-import { GradientHeading } from "@/components/GradientHeading";"
-import { Clock, Map, DollarSign } from "lucide-react";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-        Professional IT onsite support services with transparent pricing across;
-        190+ countries worldwide;
-      </p>
-
       <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
@@ -50,18 +31,7 @@ import { Clock, Map, DollarSign } from "lucide-react";
           <p className="text-zion-slate-light">
             Clear per-incident pricing includes transportation and first hour;
             onsite;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          </p>
-        </div>
-      </div>
-    </div>
-export function PageHero() {;
-    <div className="text-center mb-12">;
-      <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
-      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide;      </p>;
       <div className="grid grid - cols - 1 md: grid - cols - 3 gap - 8 mt-12">;
         <div className="bg - zion - blue - light p - 6 rounded - lg border border - zion - purple / 20 flex flex - col items - center text-center">;
@@ -120,4 +90,3 @@ export function PageHero() {;
 }
 
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

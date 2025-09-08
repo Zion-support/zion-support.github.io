@@ -64,20 +64,10 @@ const ContentRoutes = () => {;
 
       {/* Green IT Route */}
       <Route path="/green-it" element={<GreenIT />} />
-
-      {/* Careers Route */}
-      <Route path="/careers" element={<Careers />} />;
-
-      {/* Account Settings */}
       <Route path="/settings/account" element={<AccountSettings />} />
 
       {/* Project Room */}
       <Route path="/project-room/:projectId" element={<ProjectRoom />} />
-
-      {/* Video Call */}
-      <Route path="/video-call/:roomId" element={<VideoCall />} />;
-
-      {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />} />
 
       {/* Sitemap Page */}
@@ -115,32 +105,5 @@ const ContentRoutes = () =>: any {}
       {/* Blog Routes */}"
       <Route path="/blog" element={<Blog />} />;"
       <Route path="/blog/:slug" element={<BlogPost />} />;
-<<<<<<< HEAD
 
       {/* Green IT Route */}
-=======
-
-      {/* Green IT Route */}"
-      <Route path="/green - it" element={<GreenIT />} />;
-      {/* Careers Route */}"
-      <Route path="/careers" element={<Careers />} />;
-      {/* Account Settings */}"
-      <Route path="/settings / account" element={<AccountSettings />} />;
-      {/* Project Room */}"
-      <Route path="/project - room/:project_id" element={<ProjectRoom />} />;
-      {/* Video Call */}"
-      <Route path="/video - call/:room_id" element={<VideoCall />} />;
-      {/* Global Search Route */}"
-      <Route path="/search" element={<SearchPage />} />;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      <Route path="/sitemap - page" element={<SitemapPage />} />;
-    </Routes>);
-}
-;
-
-},
-
-export default ContentRoutes;
-;

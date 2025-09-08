@@ -28,7 +28,6 @@ import {
   FraudTabContent"
 } from "@/components/admin/fraud-detection",
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
@@ -38,7 +37,6 @@ export default function FraudDetection() {
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const [stats, setStats] = useState<FraudStats>({
 
@@ -87,122 +85,11 @@ export default function FraudDetection() {
           </div>
         </div>
         {/* Stats Cards */}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <FraudStatsCards stats={stats} />"
-        <Tabs defaultValue="all" className="mb-8">
-          <TabsList>"
-            <TabsTrigger value="all">All Flags</TabsTrigger>"
-            <TabsTrigger value="pending">Pending Review</TabsTrigger>"
-            <TabsTrigger value="dangerous">Dangerous</TabsTrigger>"
-            <TabsTrigger value="actioned">Actioned</TabsTrigger>
-          </TabsList>        title: "Flag updated",,
-  description: `Action '${action}' was applied successfully.`}),;
-
-      // Refresh the data;
-      fetchFraudFlags();
-
-
-<<<<<<< HEAD
 
     } catch (error) {;
 
-=======
-    } catch (error) {;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      console && console.error("Error updating fraud flag:", error);
-      toast({;
-        title: "Error",,
-  description: "Failed to update flag",;
-        variant: "destructive"});
-    }
-  };
-<<<<<<< HEAD
 
-=======
-  const resetFilters = () => {;"
-    setSearchQuery("");
-    setStatusFilter(null);
-    setSeverityFilter(null);
-    setContentTypeFilter(null)
-};
-  const resetFilters = () => {;
-    setSearchQuery("");
-    setStatusFilter(null);
-    setSeverityFilter(null);
-    setContentTypeFilter(null)
-};
-
-  const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-  return (
-    <AppLayout>;
-      <SEO"
-        title="Fraud Detection | Admin Dashboard" "
-        description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
-      />;
-
-      <div className="container mx-auto px-4 py-8">;
-
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
-          <div>;"
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-              Fraud Detection;
-            </h1>;"
-            <p className="text-zion-slate-light mt-2">;
-              Monitor suspicious activities and protect the marketplace from fraud and abuse;
-            </p>;
-          </div>;
-              Refresh Data;
-            </Button>;
-          </div>;
-        </div>;
-        ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        {/* Stats Cards */}
-        <FraudStatsCards stats={stats} />;
-        ;
-        <Tabs defaultValue="all" className="mb-8">;
-            <Card>;
-              <CardContent className="p-0">;
-                <FraudFlagsTable
-                  flags={filteredFlags}
-                <FraudFlagsTable
-
-                  flags={filteredFlags}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  isLoading={isLoading}
-                  hasFilters={hasFilters}
-                  resetFilters={resetFilters}
-                  onAction={handleAction}
-              reset_filters={reset_filters}
-            />;
-            {/* Flags Table */}
-            <Card>;
-              <CardContent className="p-0">;
-                <FraudFlagsTable;
-                  flags={filtered_flags}
-                  is_loading={is_loading}
-                  has_filters={has_filters}
-                  reset_filters={reset_filters}
-                  on_action={handle_action}
-                />;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-          <TabsContent value="pending">;
-            <FraudTabContent tab_value="pending" />;
-          </TabsContent>;
-          <TabsContent value="dangerous">;
-            <FraudTabContent tab_value="dangerous" />;
-          </TabsContent>;
-          <TabsContent value="actioned">;
             <FraudTabContent tab_value="actioned" />;
           </TabsContent>;
         </Tabs>;

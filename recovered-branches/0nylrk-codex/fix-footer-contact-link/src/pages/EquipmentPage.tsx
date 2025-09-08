@@ -73,7 +73,6 @@ export default EquipmentPage;
 export default EquipmentPage;
 }
 export default EquipmentPage;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 

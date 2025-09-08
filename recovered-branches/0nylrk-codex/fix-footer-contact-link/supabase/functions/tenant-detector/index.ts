@@ -1,15 +1,9 @@
-
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
-}
-
-const supabase = createClient($2);
-serve(async (req) => {
-  // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204
@@ -28,7 +22,6 @@ serve(async (req) => {
         .eq('subdomain', subdomainParam)'
         .eq('is_active', true)'
         .single();
-<<<<<<< HEAD
 
       if (error) {
         console && console.error('Database error:', error);
@@ -44,17 +37,6 @@ serve(async (req) => {
         .eq('custom_domain', hostname)'
         .eq('is_active', true)'
         .single();
-<<<<<<< HEAD
-
-      // If no match on custom domain, try subdomain
-      if (!data && !error) {
-        const subdomain = hostname && hostname.split('.')[0];        const subdomain = hostname && hostname.split('.')[0];
-        if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
-          const subdomainResult = await supabase
-            .from('whitelabel_tenants')
-            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
-            .eq('subdomain', subdomain)
-            .eq('is_active', true)
             .single();  theme_preset: string;
 }
 const cors_headers = {
@@ -109,81 +91,6 @@ if ( {) {
   $2
 }
       // Direct subdomain lookup;
-<<<<<<< HEAD
 
       const { data, error } = await supabase;'
 
-=======
-      const { data, error } = await supabase;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        .from ('whitelabel_tenants');'
-        .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');'
-        .eq ('subdomain', subdomain_param);'
-        .eq ('is_active', true);'
-        .single ();
-;
-      // Check condition,
-if ( {) {
-  $2
-}
-        console.error ('Database 'error':', error);'
-        throw new Error (`Database 'error': ${error.message}`);`
-      }
-      tenant_info = data as TenantInfo;
-    } else {
-      // Try matching custom domain first;
-      let { data, error } = await supabase;
-        .from ('whitelabel_tenants');
-        .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-        .eq ('custom_domain', hostname);
-        .eq ('is_active', true);
-        .single ();
-;
-      // If no match on custom domain, try subdomain;      // Check condition
-if ( {) {
-  $2
-}
-        const subdomain = hostname.split ('.')[0];
-=======
-            tenantInfo = subdomainResult.data as TenantInfo,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        if () {) {
-  $2
-}
-          const subdomain_result = await supabase;
-            .from ('whitelabel_tenants');'
-            .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');'
-            .eq ('subdomain', subdomain);'
-            .eq ('is_active', true);'
-            .single ();
-;
-          // Check condition,
-if ( {) {
-  $2
-}
-            tenant_info = subdomain_result.data as TenantInfo;    return new Response (
-      JSON.stringify ({
-        tenant: tenant_info,
-        status: 'success';
-      });
-      {
-        headers: {
-          'Content - Type': 'application / json',
-          ...cors_headers}}
-    );
-  } catch (error) {
-    console.error ('Tenant detector error:', error);
-    return new Response (
-      JSON.stringify ({
-        error: error.message || 'Internal server error',
-        status: 'error';
-      });
-      {
-        status: 500;
-        headers: {  }
-});          'Content - Type': 'application / json',
-          ...cors_headers}}
-    );
-  }
-});
-;

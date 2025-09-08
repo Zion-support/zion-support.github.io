@@ -1,4 +1,3 @@
-
 // Get automation interval from environment variable (default: 30 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes;
 async function checkLinks() {
@@ -60,54 +59,6 @@ function files = [];
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-
-
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-  {/* Removed stray closing brace */}
-
-function findReferences(content) {
-  const references = [];
-  // Find href attributes;
-
-  ']/g);
-  if (hrefMatches) {;
-    hrefMatches.forEach(match => {;
-      const href = match.match(/href=[']([^';
-  ']+)[']/)[1];
-      if (href && !href.startsWith(;
-  '#') && !href.startsWith(;
-  'javascript: ') && !href.startsWith(;
-  'http)) {;
-        references.push(href)});
-  // Find src attributes;
-  const srcMatches = content.match(/src=[']([^']+)[';
-  ']/g);
-  if (srcMatches) {;
-    srcMatches.forEach(match => {;
-      const src = match.match(/src=[']([^';
-  ']+)[']/)[1];
-      if (src && !src.startsWith(;
-  'data: ') && !src.startsWith(;
-  'blob:') && !src.startsWith(;
-  'http)) {;
-        references.push(src)});
-
-        references.push(src)})
-
-  return references;
-
-
-    ref = ref.substring(1);
-  }
-  
-  const fullPath = path.join(distPath, ref);
-  return fs.existsSync(fullPath);
-// Main continuous loop;
-
   // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial check;
   await checkLinks();

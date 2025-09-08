@@ -48,39 +48,6 @@ class ComprehensiveWebsiteAnalyzer {;
           'error': `'HTTP': ${response.statu,s}`;`          'headers': response.header,s})}'
     } 'catch': (error) {this.brokenLinks.push({url;'
         }
-
-        status: 'ERROR;
-  ',;
-        parentUrl,;
-        error: error.message,;
-
-        headers: {}})}
-  }
-
-  extractLinks(html, baseUrl) {;
-    const links = []}
-    return: [...new Set(links)]}
-    const linkRegex = /href=[']([^'';']+)["']/g';
-    "let": match;
-    while: ((match = linkRegex.exec(html)) !== null) {
-      const link = match[1];
-
-
-
-
-        "status": 'ERROR',
->>>>>>> origin/main
-        parentUrl,
-        "error": error.message,
-
-        "headers": {}})}
-  }
-  extractLinks(html, baseUrl) {;
-    const links = [];
-    const linkRegex = /href=[']([^'';']+)["']/g';    let match';    while ((match = linkRegex.exec(html)) !== null) {}
-    "return": [...new Set(links)]}
-  async analyzeWebsite() {
-
   'Starting comprehensive website analysis...');
         // Start with the main page;
     await this.checkUrl(this.baseUrl);
@@ -93,11 +60,6 @@ class ComprehensiveWebsiteAnalyzer {;
     console.log(;);  'Starting comprehensive website analysis...');
 ;        // Start with the main page;;    await this.checkUrl(this.baseUrl);
     // Check common routes];
-    for (const aboutRoute of aboutRoutes) {;
-
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
-    // Check resources sub-routes;
-
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
     console.log(;
 
@@ -108,78 +70,6 @@ class ComprehensiveWebsiteAnalyzer {;
     const duration = endTime - this.startTime;
 
       recommendations: this.generateRecommendations()}
-=======
-const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];'
-    /resources${resourceRoute}`)}`ursor/automate-test-improve-and-merge-code-646c;
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`    // Check resources sub-routes;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];'
-    for (const resourceRoute of resourceRoutes) {await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}ursor/automate-test-improve-and-merge-code-646c;`      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`    // Check resources sub-routes;
-
-const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];'
-    for (const resourceRoute of resourceRoutes) {;
-      }
-      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`    console.log(';Analysis completed!')}'
-  generateReport() {const endTime = Date.now(;
-  }
-  const duration = endTime - this.startTime;
-
-const report = {'timestamp': new Date().toISOString()'baseUrl': this.baseUrl;'
-      }
-      'summary': {totalLinksChecke;
-    }
-    'd': this.checkedUrls.size;
-        'brokenLinks': this.brokenLinks.length;
-        'workingLinks': this.workingLinks.length;
-        'successRate': `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2,`}%`,';'
-        'duration': '${duration}ms';'
-        'errors': this.errors.length;'
-        'warnings': this.warnings.lengt
-}
-      'brokenLinks': this.brokenLinks;'
-      'workingLinks': this.workingLinks;
-      'missingPages': this.missingPages;
-      'errors': this.errors;
-      'warnings': this.warnings;
-      'recommendations': this.generateRecommendations()}return repor
-}
-  generateRecommendations() {const recommendations  = [];if (this.brokenLinks.length > 0) {recommendations.push({if (this.brokenLinks.length > 0) {recommendations.push({'type': ;
-  }
-  critical','title': 'Fix Broken Links,'description': `Found ${this.brokenLinks.lengt,`} broken links that need immediate attention.`,'actions': this.brokenLinks.map(link => ({'url': link.url,'action': ;`  }
-  Create missing page or fix redirect','timestamp': new Date().toISOString(),';      'baseUrl': this.baseUrl,';      'summary': {';        'totalLinksChecked': this.checkedUrls.size,';        'brokenLinks': this.brokenLinks.length,';        'workingLinks': this.workingLinks.length,';        'successRate': `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,`;        'duration': `${duration}ms`,`;        'errors': this.errors.length,';        'warnings': this.warnings.length},';      'brokenLinks': this.brokenLinks,';      'workingLinks': this.workingLinks,';      'missingPages': this.missingPages,';      'errors': this.errors,';      'warnings': this.warnings,';      'recommendations': this.generateRecommendations()}';    return report}'  generateRecommendations() {const recommendations = [];
-    }
-    if (this.brokenLinks.length > 0) {recommendations.push({ursor/automate-test-improve-and-merge-code-646c;
-      'brokenLinks': this.brokenLinks'
-      }
-      'workingLinks': this.workingLinks,
-'missingPages': this.missingPages,
-'errors': this.errors,
-'warnings': this.warnings,
-'recommendations': this.generateRecommendations(
-}
-;
-    return report}
-  generateRecommendations() {;
-    const recommendations = [];
-    if (this.brokenLinks.length > 0) {;
-      recommendations.push({;
-        type:,;
-  critical',;
-        title: 'Fix Broken Links,;
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,;
-        actions: this.brokenLinks.map(link => ({;
-          url: link.url,;
-          action:,;
-  Create missing page or fix redirect',;
-
-      page => !this.workingLinks.some(link => link.url.endsWith(page)));
-
-    return recommendations}
-  async saveReport(filename =,;
-  comprehensive-website-analysis.json') {;
-
-    const report = this.generateReport();
     await fs.writeFile(filename, JSON.stringify(report, null, 2));
     console.log("Report saved to ${filename}");
     return report}
@@ -201,9 +91,6 @@ const report = {'timestamp': new Date().toISOString()'baseUrl': this.baseUrl;'
   '\n=== BROKEN LINKS ===');
       report.brokenLinks.forEach(link => {
         console.log(`❌ ${link.url} - ${link.error}`);
-      });
-    }
-
     if (report.recommendations.length > 0) {
       console.log(
   '\n=== RECOMMENDATIONS ===');

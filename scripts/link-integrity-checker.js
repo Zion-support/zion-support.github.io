@@ -1,4 +1,3 @@
-
   fs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
@@ -26,30 +25,8 @@ class LinkIntegrityChecker {;
       // Check build artifacts;
       await this.checkBuildArtifacts();
       // Generate integrity report;
-<<<<<<< HEAD
 
 
-
-=======
-      await this.generateReport();
-
-      console.log('📄 Checking HTML integrity...;
-  ');
-      const htmlFiles = this.findFiles('.html;
-  ');
-      for (const file of htmlFiles) {;
-        this.checkedFiles++;
-        const content = fs.readFileSync(file,utf8');
-        // Check for broken image references;
-
-            this.issues.push(`Broken script reference in ${file}: ${src}`)}
-        }
-        // Check for broken stylesheet references;`
-        const linkRegex = /<link[^>]+href=[';
-  ']([^']+)[';
-  ']/g;
-        while ((match = linkRegex.exec(content)) !== null) {;
-          const href = match[1];
 
             this.issues.push(`Broken stylesheet reference in ${file}: ${href}`)}
         }
@@ -89,123 +66,6 @@ class LinkIntegrityChecker {;
       const tsFiles = this.findFiles('.ts;
   ');
       const allFiles = [...jsFiles, ...tsFiles];
-<<<<<<< HEAD
-
-
-
-
-=======
-      for (const file of allFiles) {;
-        this.checkedFiles++;
-        const content = fs.readFileSync(file,utf8');
-        // Check for broken import statements;
-        const importRegex = /import\s+.*?from\s+[
-  ']([^']+)[
-  ']/g;
-        let match;
-        while ((match = importRegex.exec(content)) !== null) {;
-          const importPath = match[1];
-
-        this.issues.push('Build directory (dist) does not exist;
-  ');
-        return}
-      // Check for essential build files;
-
-        'index.html;
-  ',css',js;
-  ',assets'];
-      for (const file of essentialFiles) {;
-        const filePath = path.join(distPath, file);
-
-          this.issues.push(`Missing essential build file: ${file}`)}
-      }
-
-          const src = match[1];
-          if (!this.isValidAsset(src, file)) {;
-            this.issues.push(`Broken image reference in ${file}: ${src}`)}`}
-        // Check for broken script references;
-
-          const src = match[1];
-          if (!this.isValidAsset(src, file)) {;
-            this.issues.push(`Broken script reference in ${file}: ${src}`)}`}
-        // Check for broken stylesheet references;
-
-          const href = match[1];
-          if (!this.isValidAsset(href, file)) {;
-            this.issues.push(`Broken stylesheet reference in ${file}: ${href}`)}`}
-      }
-    } catch (error) {;
-      console.warn(,;);  ⚠️  Could not check HTML "integrity": , error.message)}"}
-  async checkCssIntegrity() {;
-    try {;
-      console.log('🎨 Checking CSS integrity...;';  ');';      const cssFiles = this.findFiles('.css;';  ');
-;      for (const file of cssFiles) {;;        this.checkedFiles++;
-        const content = fs.readFileSync(file,utf8');';        // Check for broken image references in CSS;
-        const urlRegex = /url\([
-  '']?([^'')\s]+)[';  '']?\)/g;
-;        let match;;        while ((match = urlRegex.exec(content)) !== null) {;
-          const url = match[1];
-          if (!this.isValidAsset(url, file)) {;
-            this.issues.push(`Broken asset reference in CSS ${file}: ${url}`)}`}
-      }
-    } catch (error) {;
-      console.warn(,;);  ⚠️  Could not check CSS "integrity": , error.message)}"}
-  async checkJsIntegrity() {;
-    try {;
-      console.log('⚡ Checking JavaScript integrity...;';  ');';      const jsFiles = this.findFiles('.js;';  ');';      const tsFiles = this.findFiles('.ts;';  ');
-;      const allFiles = [...jsFiles, ...tsFiles];;;
-      for (const file of allFiles) {;
-        this.checkedFiles++;
-        const content = fs.readFileSync(file,utf8');
-;        // Check for broken import statements;;        const importRegex = /import\s+.*?from\s+[
-  '']([^'']+)[';  '']/g;
-;        let match;;        while ((match = importRegex.exec(content)) !== null) {;
-          const importPath = match[1];
-          if (!this.isValidImport(importPath, file)) {;
-            this.issues.push(`Broken import in ${file}: ${importPath}`)}`}
-        // Check for broken require statements;
-        const requireRegex = /require\s*\(\s*['']([^;';  '']+)['']\s*\)/g;';        while ((match = requireRegex.exec(content)) !== null) {;
-          const requirePath = match[1];
-          if (!this.isValidImport(requirePath, file)) {;
-            this.issues.push(`Broken require in ${file}: ${requirePath}`)}`}
-      }
-    } catch (error) {;
-      console.warn(;);  '⚠️  Could not check JavaScript "integrity":', error.message)}'}';  async checkBuildArtifacts() {;
-    try {;
-      console.log(;);  '🔨 Checking build artifacts...');';      const distPath = path.join(this.projectRoot,dist;);  ');
-;      if (!fs.existsSync(distPath)) {;;        this.issues.push('Build directory (dist) does not exist;';  ');';        return}';      // Check for essential build files;
-      const essentialFiles = [
-        'index.html;';  ',css',js;';  ',assets';
-];;      for (const file of essentialFiles) {;
-        const filePath = path.join(distPath, file);
-        if (!fs.existsSync(filePath)) {;
-          this.issues.push(`Missing essential build "file": ${file}`)}`}
-
-      // Check for broken internal links in build;
-
-        const content = fs.readFileSync(indexHtmlPath,utf8');
-        // Check for broken asset references;
-
-  ']/g;
-        let match;
-        while ((match = assetRegex.exec(content)) !== null) {;
-          const assetPath = match[2];
-          if (assetPath.startsWith('./;
-  ') || assetPath.startsWith('/;
-  ')) {;
-            const fullPath = path.join(distPath, assetPath.replace(/^\.?\//,));
-
-              this.issues.push(`Broken asset reference in build: ${assetPath}`)}
-          }
-        }
-      }
-    } catch (error) {;
-      console.warn(,;
-  ⚠️  Could not check build artifacts: , error.message)}
-  }
-  isValidAsset(assetPath, sourceFile) {;
-    // Skip external URLs;
-
       return true}
     // Skip data URLs;
     if (assetPath.startsWith(,;

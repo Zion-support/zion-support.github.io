@@ -1,23 +1,4 @@
 
-
-import { cn } from "@/lib/utils"
-
-=======
-import * as React from "react"
-import * as ToastPrimitives from "@radix-ui/react-toast"
-import { cva, type VariantProps } from "class-variance-authority"
-import { X } from "lucide-react"
-
-import { cn } from "@/lib/utils"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-const ToastProvider = ToastPrimitives.Provider
-const ToastViewport = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Viewport>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
-></typeof>(({ className, ...props }, ref) => (
-<<<<<<< HEAD
-
   <ToastPrimitives.Viewport
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
@@ -34,10 +15,6 @@ const toastVariants = cva(
     defaultVariants: {
       variant: "default"}}
 )
-
-const Toast = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Root>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVa</typeof>riants>
 >(({ className, variant, ...props }, ref) => {
     />
@@ -115,10 +92,6 @@ const ToastClose = React.forwardRef<
   React.ComponentPropsWithoutRef<type</typeof>of ToastPrimitives.Close>
 >(({ className, ...props }, ref) => (
 
-<<<<<<< HEAD
-  <ToastPrimitives.Close
-ToastAction && ToastAction.displayName = ToastPrimitives && ToastPrimitives.Action.displayName;
-
 const ToastClose = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Close>,;
   React && React.ComponentPropsWithoutRef<type</typeof>of ToastPrimitives && ToastPrimitives.Close>;
@@ -143,67 +116,4 @@ ToastTitle.displayName = ToastPrimitives.Title.displayName;const ToastDescriptio
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
   type ToastProps,
-
-=======
-
-export {
-  type ToastProps
-  type ToastActionElement
-  ToastProvider
-  ToastViewport
-  Toast
-  ToastTitle
-  ToastDescription
-  ToastClose
-  ToastAction
-}
-  type ToastProps,
-))
-ToastDescription.displayName = $2;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  type ToastActionElement,
-  ToastProvider,
-  ToastViewport,
-  Toast,
-  ToastTitle,
-  ToastDescription,
-  ToastClose,
-ToastDescription && ToastDescription.displayName = ToastPrimitives && ToastPrimitives.Description.displayName;
-
-type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
-
-// Older React type definitions may not support generics on `ReactElement`.;
-// Using the base `ReactElement` type here avoids compilation errors while;
-// still representing a valid React element returned by `ToastAction`.;
-type ToastActionElement = React && React.ReactElement;
-  ToastClose,;
-  ToastAction,
-};
-
-// Add useToast hook export;
-export function useToast() {;
-  return {;
-    // Accept a loosely typed props object to allow custo</typeof>m fields like `description`;
-    toast: (props: any) => {;
-      // Implementation of toast functionality;
-      console && console.log('Toast:', props);
-    },
-};
-
-      // Implementation of toast functionality;
-      console.log ('Toast:', props);
-    },
-  }
-;
-const ToastDescription = React.forwardRef<;
-  React.ElementRef<typeof ToastPrimitives.Description>,;
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>;
->(({ className, ...props }, ref) => (;
-  <ToastPrimitives.Description;
-
-    className={cn('text-sm opacity-90', className)}
-    {...props}
-  />
-));
-ToastDescription.displayName = ToastPrimitives.Description.displayName;
 

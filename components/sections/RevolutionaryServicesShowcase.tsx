@@ -155,32 +155,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
-    visible: {
-      opacity: 1
-      y: 0
-      transition: {
-
-
-        duration: 0.5,
-      },
-    },
-
-
-  const filteredServices = activeCategory === 'all' ;
-    ? allServices ;
-    : allServices && allServices.filter(service => {;
-        if (activeCategory === 'ai') return service && service.category.includes('AI');
-        if (activeCategory === 'quantum') return service && service.category.includes('Quantum');
-        if (activeCategory === 'emerging') return emergingTech2025Services && emergingTech2025Services.includes(service);
-        if (activeCategory === 'enterprise') return enterpriseIT2025Services && enterpriseIT2025Services.includes(service);
-        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.includes(service);
-        return true;
-      });
-  const loadMore = () => {;
-    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
-  };
-
-
 
 
   return (
@@ -238,16 +212,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             and emerging technology solutions. Transform your business with;
             services that were once science fiction.          </p>;
         </motion && motion.div>;
-
-
-        {/* Category Filter */}
-        <motion&& motion.div
-          className='flex flex-wrap justify-center gap-4 mb-12'          initial={{ opacity: 0, y: 20 }}              Revolutionary 2025
-
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Revolutionary 2025
-
             </span>
             <br />
             <span className="text-white">Services</span>
@@ -258,30 +222,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           </p>
         </motion.div>
         {/* Category Filter */}
-
-            </span>;
-            <br />;
-            <span className="text-white">Services</span>;
-          </h2>;
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. ;
-            Transform your business with services that were once science fiction.;
-          </p>;
-        </motion && motion.div>;
-
-        {/* Category Filter */}
-        <motion.div
-          className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
-
-        {/* Category Filter */}
-
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          {categories.map((category) => (
           {categories.map((category) => (
             <button
               key={category.id}
@@ -301,11 +241,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           ))}
 
         </motion && motion.div>;
-
-
-
-
-
         </motion && motion.div>;
                 setVisibleServices(12);                setVisibleServices(12)
               }}
@@ -462,10 +397,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         {/* Services Grid */}
 
               className='group relative cursor-pointer'
-
-
-
-
               style={{ perspective: '1000px' }}
             >
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
@@ -485,21 +416,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     POPULAR
                   </div>
                 )}
-
-                {/* Popular Badge */}
-                {service && service.popular && (;
-                  <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
-                    <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">;
-                    <Star className="w-3 h-3 inline mr-1" />;
-                    POPULAR;
-                  </div>;
-                )}
-
-
-
-                {/* Service Header */}
-
-
 
 
                       <div>
@@ -546,45 +462,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     POPULAR;
                   </div>)}
                 {/* Service Header */}
-                <div className='relative z - 10'>;
-                  <div className='flex items - start justify - between mb - 4'>;
-                    <div className='flex items - center space - x-3'>;
-                      <div className='text - 4xl'>{service.icon}</div>;
-                      <div>;
-                        <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
-
-                {/* Service Header */}
-                <div className='relative z-10'>
-                  <div className='flex items-start justify-between mb-4'>
-                    <div className='flex items-center space-x-3'>
-                      <div className='text-4xl'>{service.icon}</div>
-
-                      <div>
-                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
-                      <div>
-                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
-                {/* Popular Badge */}
-                {service && service.popular && (;
-                  <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
-                    <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">;
-                    <Star className="w-3 h-3 inline mr-1" />;
-                    POPULAR;
-                  </div>;
-                )}
-                          {service.name}
-                        </h3>
-                        <p className='text-gray-400 text-sm'>
-                          {service.tagline}
-                        </p>
-                      </div>
-                    </div>
-                    <div className='text-right'>
-                      <div className='text-2xl font-bold text-white'>
-                        {service.price}
-                      </div>
-                      <div className='text-gray-400 text-sm'>
-                        {service.period}
-
                       </div>                    </div>;
                   </div>;
 

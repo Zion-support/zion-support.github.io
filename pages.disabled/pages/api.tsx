@@ -7,7 +7,3 @@ import _React from 'react'; import Head from 'next/head'; import Link from 'next
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main

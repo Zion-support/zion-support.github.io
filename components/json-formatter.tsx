@@ -1,146 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-
-const formatJSON = () => {
-  if (!inputJson.trim () ) {
-  ]
-setInputJson (JSON.stringify (sample, null, 2) )
-setFormattedJson ('')
-setIsValid (true)
-setErrorMessage ('') 
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-
-
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-import {
-
-  Code,
-  Copy,
-  RefreshCw,
-  CheckCircle,
-  XCircle,
-  ArrowRight,
-  Download,
-  Upload,
-} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-import { Star } from 'lucide-react';
-
-import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
-export default function JSONFormatterPage() {
-
-  const [inputJson, setInputJson] = useState('');
-  const [formattedJson, setFormattedJson] = useState('');
-  const [isValid, setIsValid] = useState(true);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [indentSize, setIndentSize] = useState(2);
-  const [compactMode, setCompactMode] = useState(false);
-  const [showLineNumbers, setShowLineNumbers] = useState(true);
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  Code,
-  Copy,
-  RefreshCw,
-  CheckCircle,
-  XCircle,
-  ArrowRight,
-  Download,
-  Upload,
-  Settings,;
-  Eye,;
-} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
-export default function JSONFormatterPage() {;
-  const [inputJson, setInputJson] = useState('');
-  const [formattedJson, setFormattedJson] = useState('');
-  const [isValid, setIsValid] = useState(true);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [indentSize, setIndentSize] = useState(2);
-  const [compactMode, setCompactMode] = useState(false);
-  const [showLineNumbers, setShowLineNumbers] = useState(true);
-
-  Settings,}
-  Eye,;}
-} from 'lucide-react';
-
-
-<<<<<<< HEAD
-
-} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-import { Star } from 'lucide-react';
-
-
-
-  const [inputJson, setInputJson] = useState('');
-
-
-  const formatJSON = () => {
-    if (!inputJson.trim()) {
-      setFormattedJson('');
-      setIsValid(true);
-      setErrorMessage('');
-
-
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-      setFormattedJson('');    }        ? JSON && JSON.stringify(parsed);
-        : JSON && JSON.stringify(parsed, null, indentSize);
-
-
-
-      return;    }
-    try {
-      const parsed = JSON.parse(inputJson);
-      const formatted = compactMode      return
-    }
-    try {
-      const parsed = JSON.parse(inputJson);
-      const formatted = compactMode
-        ? JSON.stringify(parsed)
-        : JSON.stringify(parsed, null, indentSize);
-      setFormattedJson(formatted);
-      setIsValid(true);
-      setErrorMessage('')
-    } catch (error) {
-      setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('');    }        ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indentSize);
@@ -199,56 +56,6 @@ import { Star } from 'lucide-react';
 
       setErrorMessage('')
     } catch (error) {
-
-      setIsValid(false);
-
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-
-  };
-
-
-
-    try {;
-      JSON && JSON.parse(inputJson);
-
-      setIsValid(true);
-      setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false);
-
-
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-  };
-
-  const clearAll = () => {;
-    setInputJson('');
-    setFormattedJson('');
-    setIsValid(true);
-
-
-
-  return (
-
-    <>
-      <Head>
-        <title>JSON Formatter - Zion Tech Group</title>
-        <meta name="description" content="Format, validate, and beautify JSON with our professional JSON formatter. Minify, prettify, and analyze JSON data with ease." />
-        <meta property="og:title" content="JSON Formatter - Zion Tech Group" />
-        <meta property="og:description" content="Professional JSON formatting and validation service." />
-      </Head>
-
-
-      setErrorMessage('');
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-  }
   const validateJSON = () => {
     if (!inputJson.trim()) {
       setIsValid(true);
@@ -285,129 +92,6 @@ const downloadJSON = (
 
 const url = URL.createObjectURL(blob);
 
-<<<<<<< HEAD
-const a = document.createElement('a');
-
-=======
-const a = document.createElement('a');'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-
-URL.revokeObjectURL(url)
-};
-
-
-const loadSampleJSON = (
-   ;
-  const sample = {
-name: 'John Doe',
-  age: 30,
-      email: 'john.doe@example.com',
-  address: {
-        street: '123 Main St',
-  city: 'Anytown'
-        state: 'CA',
-  zipCode: '12345'
-     ,) => {
-  return $3;}
-}
-'name': 'John Doe','
-      'age': 30,
-      'email': 'john.doe@example.com','
-      'address': {
-        }
-        'street': '123 Main St''
-        'city': 'Anytown''
-        'state': 'CA''
-        'zipCode': '12345''
-     
-}
-      'phoneNumbers': [
-        {
-<<<<<<< HEAD
-
-          type: 'home',}
-  number: '555-123-4567',}
-=======
-          }
-          'type': 'home','
-          'number': '555-123-4567','
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        },
-        {
-          }
-          'type': 'work','
-          'number': '555-987-6543','
-        }
-      ]
-      interests: ['programming', 'reading', 'hiking']
-      active: true
-      lastLogin: '2024-01-15T10:30:00Z'
-    }
-    setInputJson(JSON.stringify(sample, null, 2));
-    setFormattedJson('');
-    setIsValid(true)
-};
-
-  const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text)
-};
-
-  const downloadJSON = (content: string, filename: string) => {;
-    const blob = new Blob([content], { type: 'application/json' });    const url = URL && URL.createObjectURL(blob)
-};
-
-  const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text)
-};
-
-  const downloadJSON = (content: string, filename: string) => {;
-    const blob = new Blob([content], { type: 'application/json' }),;
-    const url = URL && URL.createObjectURL(blob);
-    const a = document && document.createElement('a');
-    a && a.href = url;
-    a && a.download = filename;
-    document && document.body.appendChild(a);
-    a && a.click();
-    document && document.body.removeChild(a);
-    URL && URL.revokeObjectURL(url)
-};
-
-  const loadSampleJSON = () => {;
-    const sample = {    URL && URL.revokeObjectURL(url)
-};
-
-  const loadSampleJSON = () => {;
-    const sample = {;
-      name: 'John Doe',;
-      age: 30,;
-      email: 'john && john.doe@example && example.com',;
-      address: {;
-        street: '123 Main St',;
-        city: 'Anytown',;
-        state: 'CA',;
-        zipCode: '12345',;
-      },;
-      phoneNumbers: [;
-          type: 'home',;
-          number: '555-123-4567',;
-        },;
-        {;
-          type: 'work',;
-          number: '555-987-6543',;
-        },;
-      ],;
-      interests: ['programming', 'reading', 'hiking'],;
-      active: true,;
-      lastLogin: '2024-01-15T10:30:00Z',
-};
-
-    setInputJson(JSON.stringify(sample, null, 2));
-<<<<<<< HEAD
     setFormattedJson('');
 
     setIsValid(true);
@@ -424,23 +108,6 @@ name: 'John Doe',
     const lines = text && text.split('\n');
     return lines && lines.map((_, index) => index + 1).join('\n');    return lines && lines.map((_, index) => index + 1).join('\n')
 };
-
-  return (
-    <>
-
-      <Head><title>JSON Formatter - Zion Tech Group</title>
-<meta;
-name='description'
-          content='Format, validate, and beautify JSON with our professional JSON formatter. Minify, prettify, and analyze JSON data with ease.'
-           />
-        <meta property='og: title' content='JSON Formatter - Zion Tech Group'    />
-        <meta;
-property='og:description'
-          content='Professional JSON formatting and validation service.'
-           />
-      </Head>
-=======
-
   return (
     <>
       <Head>
@@ -454,7 +121,6 @@ property='og:description'
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 text-sm font-medium mb-6'    />
               <Code className='w-4 h-4 mr-2'    />
               Professional JSON Tools;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
             </div>
           </div>
@@ -484,22 +150,6 @@ property='og:description'
         </div>
       </section>
       {/* JSON Formatter Tool */}
-
-
-
-                  >
-
-
-
-                    <option value={2}>2 spaces</option>
-                    <option value={4}>4 spaces</option>
-                    <option value={8}>8 spaces</option>
-
-                  </select>
-                </div>
-
-
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -930,22 +580,6 @@ property='og:description'
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-              <div className='space-y-4'>;
-                <div className='relative'>;
-                  {showLineNumbers && (;
-                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}              <div className="space-y-4">;
-                <div className="relative">;
-                  {showLineNumbers && (;
-                    <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">;
-                    </div>;
-                  )}
-                  <textarea
-                    value={inputJson}
-
-                    onChange={(e) => setInputJson(e.target.value)}
-                    placeholder="Paste your JSON data here..."
-
                     onChange={e => setInputJson(e.target.value)}
                     placeholder='Paste your JSON data here...'                    rows={15}                    onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
@@ -954,7 +588,6 @@ property='og:description'
                       showLineNumbers ? 'pl-16' : '';}
                     }`}
 
-<<<<<<< HEAD
 
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
@@ -998,228 +631,6 @@ property='og:description'
                   >
                     Validate
 
-<<<<<<< HEAD
-=======
-variant='outline'
-                    className='border-gray-600 text-gray-300 hover: bg-gray-700 disabled:opacity-50'
-                      />
-                    Validate;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  </Button>
-                </div>
-              </div>
-            </Card>
-
-                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>                    variant="outline";
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
-                  >;
-                    Validate;
-                  </Button>;
-                </div>;
-              </div>;
-            </Card>;
-
-
-            {/* Output Section */}
-            {/* Output Section */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-white flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
-                  Formatted Output
-                </h3>
-                {formattedJson && (
-                  <div className="flex items-center space-x-2">
-
-                    <Button
-                      onClick={() => copyToClipboard(formattedJson)}
-                      variant='outline';
-                      size='sm';
-                      className='border-gray-600 text-gray-300 hover:bg-gray-700';
-                    >;
-                      <Copy className='w-4 h-4 mr-2' />;
-                      Copy;
-                    </Button>;
-                    <Button
-
-
-            {/* Output Section */}
-            <Card className='p-8 bg-gray-800 border border-gray-700'>
-              <div className='flex items-center justify-between mb-6'>
-                <h3 className='text-2xl font-bold text-white flex items-center'>
-                  <CheckCircle className='w-6 h-6 mr-3 text-cyan-400' />
-                  Formatted Output
-                </h3>
-                {formattedJson && (
-                  <div className='flex items-center space-x-2'>
-                    <Button
-                      onClick={() => copyToClipboard(formattedJson)}
-                      variant='outline'
-                      size='sm'
-                      className='border-gray-600 text-gray-300 hover:bg-gray-700'
-                    >
-                      <Copy className='w-4 h-4 mr-2' />
-                      Copy
-                    </Button>
-                    <Button
-                      onClick={() =>
-                        downloadJSON(formattedJson, 'formatted.json')
-                      }
-                      variant='outline'
-                      size='sm'
-                      className='border-gray-600 text-gray-300 hover:bg-gray-700'
-                    >
-                      <Download className='w-4 h-4 mr-2' />                      Download                  Formatted Output
-                </h3>
-                {formattedJson && (
-                  <div className="flex items-center space-x-2">
-                    <Button
-                      onClick={() => copyToClipboard(formattedJson)}
-                      variant="outline"
-                      size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Copy className="w-4 h-4 mr-2" />
-                      Copy
-                    </Button>
-                    <Button
-              </div>;
-              <div className='space-y-4'>;
-                  <div className='relative'>;
-                    {showLineNumbers && (;
-                      <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>;
-                        {getLineNumbers(formattedJson)}
-                      </div>;
-                    )}
-                    <div
-                      className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
-                        showLineNumbers ? 'pl-16' : ''
-                      }`}>;
-                      <pre className='whitespace-pre-wrap'>{formattedJson}</pre>;
-                    </div>;
-                  </div>;
-                ) : (;
-                  <div className='bg-gray-700 p-6 rounded-lg border border-gray-600 text-center'>;
-                    <div className='text-6xl mb-4'>📄</div>;
-                    <p className='text-gray-400'>;
-                      Formatted JSON will appear here. Enter JSON data and click;
-                      format to get started.                    </p>                  <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">;
-                    <div className="text-6xl mb-4">📄</div>;
-                    <p className="text-gray-400">;
-                      Formatted JSON will appear here. Enter JSON data and click format to get started.;
-                  </div>;
-                )}
-                      onClick={() => downloadJSON(formattedJson, 'formatted.json')}
-                      variant="outline"
-                      size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Download className='w-4 h-4 mr-2' />
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-white flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
-                  Formatted Output
-                </h3>
-                {formattedJson && (
-                  <div className="flex items-center space-x-2">
-                    <Button
-                      onClick={() => copyToClipboard(formattedJson)}
-                      variant="outline"
-                      size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Copy className="w-4 h-4 mr-2" />
-                      Copy
-                    </Button>
-                    <Button
-                      onClick={() => downloadJSON(formattedJson, 'formatted.json')}
-                      variant="outline"
-                      size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Download className="w-4 h-4 mr-2" />
-                      <Download className="w-4 h-4 mr-2" />
-                      Download
-                    </Button>
-                  </div>
-                )}
-              </div>
-                    <div className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
-                      showLineNumbers ? 'pl-16' : ''
-                    }`}>
-<pre className="whitespace-pre-wrap">{formattedJson}</pre>
-                    </div>
-                  </div>
-                ) : (
-                  <div className='bg-gray-700 p-6 rounded-lg border border-gray-600 text-center'>
-                    <div className='text-6xl mb-4'>📄</div>
-                    <p className='text-gray-400'>
-                      Formatted JSON will appear here. Enter JSON data and click
-                      format to get started.                    </p>                  <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">
-                    <div className="text-6xl mb-4">📄</div>
-                    <p className="text-gray-400">
-                      Formatted JSON will appear here. Enter JSON data and click format to get started.
-                    </p>
-                  </div>
-                )}
-{formattedJson && (
-                  <div className="text-sm text-gray-400">
-                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
-                  </div>
-              <div className='space-y-4'>
-                  <div className='relative'>
-                    {showLineNumbers && (
-                      <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>
-                        {getLineNumbers(formattedJson)}
-                      </div>
-                    )}
-                    <div
-                      className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
-                        showLineNumbers ? 'pl-16' : ''
-                      }`}
-                    >
-                      <pre className='whitespace-pre-wrap'>{formattedJson}</pre>
-                    </div>
-                  </div>
-                ) : (
-                  <div className='bg-gray-700 p-6 rounded-lg border border-gray-600 text-center'>
-                    <div className='text-6xl mb-4'>📄</div>
-                    <p className='text-gray-400'>
-                      Formatted JSON will appear here. Enter JSON data and click
-                      format to get started.                    </p>                  <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">
-                    <div className="text-6xl mb-4">📄</div>
-                    <p className="text-gray-400">
-                      Formatted JSON will appear here. Enter JSON data and click format to get started.
-                  </div>
-                )}
-                {formattedJson && (
-                  <div className='text-sm text-gray-400'>
-                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>
-                      • Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
-                      KB
-
-
-                    </p>                  </div>                  <div className="text-sm text-gray-400">
-                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
-                    </p>                  </div>
-
-                  </div>
-
-                )}
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-      {/* Features */}
-      <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1314,9 +725,6 @@ variant='outline'
         </div>
       </section>
       {/* Use Cases */}
-
-<<<<<<< HEAD
-
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
@@ -1330,16 +738,6 @@ variant='outline'
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• API development and testing</li>
-                <li>• Configuration file management</li>
-                <li>• Debug and troubleshooting</li>
-
-              </ul>
-            </Card>
-
-
-
-
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
               <p className="text-gray-400 mb-6">
@@ -1353,10 +751,6 @@ variant='outline'
                 <li>• Data validation</li>
               </ul>
             </Card>
-
-
-
-
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>
               <p className="text-gray-400 mb-6">
@@ -1370,13 +764,6 @@ variant='outline'
                 <li>• Deployment automation</li>
               </ul>
             </Card>
-
-
-
-
-                <li>• API documentation</li>
-                <li>• Technical specifications</li>
-
               <div className="text-4xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>
               <p className="text-gray-400 mb-6">
@@ -1409,131 +796,6 @@ variant='outline'
                     <p>• Size: {(formattedJson && formattedJson.length * 2 / 1024).toFixed(2)} KB</p>;
                 )}
               </div>;
-            </Card>;
-          </div>;
-        </div>;
-      </section>;
-
-=======
-    </>
-<section className='py-20 bg-gray-800'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-16'>;
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
-              Professional JSON Formatting Features;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-              Everything you need to work with JSON data efficiently and;
-              professionally.;
-            </p>;
-          </div>;
-
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>✨</div>;
-              <h3 className='text-xl font-bold text-white mb-4'>;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Smart Formatting;
-              </h3>;
-              <p className='text-gray-400'>;
-                Intelligent JSON formatting with customizable indentation and;
-                spacing options.;
-              </p>;
-            </Card>;
-
-<<<<<<< HEAD
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>✅</div>;
-              <h3 className='text-xl font-bold text-white mb-4'>;
-
-=======
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600>;
-              <div className=text-4xl mb-4'>✅</div>;
-              <h3 className='text-xl font-bold text-white mb-4>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Real-time Validation;
-              </h3>;
-              <p className='text-gray-400'>;
-                Instant JSON validation with detailed error messages and syntax;
-                highlighting.;
-              </p>;
-            </Card>;
-
-<<<<<<< HEAD
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>📦</div>;
-              <h3 className='text-xl font-bold text-white mb-4'>;
-
-=======
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600>;
-              <div className=text-4xl mb-4'>📦</div>;
-              <h3 className='text-xl font-bold text-white mb-4>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Minification;
-              </h3>;
-              <p className='text-gray-400'>;
-                Compress JSON data by removing unnecessary whitespace and;
-                formatting.;
-              </p>;
-            </Card>;
-
-<<<<<<< HEAD
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>🔢</div>;
-              <h3 className='text-xl font-bold text-white mb-4'>;
-
-=======
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600>;
-              <div className=text-4xl mb-4'>🔢</div>;
-              <h3 className='text-xl font-bold text-white mb-4>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Line Numbers;
-              </h3>;
-              <p className='text-gray-400'>;
-                Optional line numbering for easier navigation and debugging of;
-                large JSON files.;
-              </p>;
-            </Card>;
-
-<<<<<<< HEAD
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>💾</div>;
-              <h3 className='text-xl font-bold text-white mb-4'>;
-
-=======
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600>;
-              <div className=text-4xl mb-4'>💾</div>;
-              <h3 className='text-xl font-bold text-white mb-4>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Export Options;
-              </h3>;
-              <p className='text-gray-400'>;
-                Download formatted JSON files or copy to clipboard with a single;
-                click.;
-              </p>;
-            </Card>;
-
-<<<<<<< HEAD
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>⚙️</div>;
-              <h3 className='text-xl font-bold text-white mb-4'>;
-
-=======
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600>;
-              <div className=text-4xl mb-4'>⚙️</div>;
-              <h3 className='text-xl font-bold text-white mb-4>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Customizable;
-              </h3>;
-              <p className='text-gray-400'>;
-                Adjust indentation size, toggle compact mode, and customize;
-                display options.;
-              </p>;
             </Card>;
           </div>;
         </div>;

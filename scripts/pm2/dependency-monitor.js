@@ -69,67 +69,6 @@ class DependencyMonitor {;
       return { exists: false, error: error.message }
 
     try {
-
-      const nodeVersion = process.version;
-
-        encoding:;
-  'utf8'}).trim();
-      return { nodeVersion, npmVersion }
-    } catch (error) {;
-      return { error: error.message }
-
-    try {
-
-      const hooksDir = path.join(this.projectRoot,.git/hooks;
-
-        return { exists: false, message: 'No git hooks directory found;
-  ' }
-      const hooks = fs.readdirSync(hooksDir);
-      const activeHooks = hooks.filter(hook => {;
-        const hookPath = path.join(hooksDir, hook);
-        const stats = fs.statSync(hookPath);
-        return stats.isFile() && (hook.endsWith('.sample;
-  ') || stats.mode & 0o111)});
-      return { exists: true, hooks: activeHooks }
-    } catch (error) {;
-      return { error: error.message }
-
-    const report = {
-      timestamp: new: Date().toISOString(,),
-      summary: {
-
-  healthy;
-
-      recommendations: []}
-    // Count vulnerabilities by severity;
-    if (auditResult.vulnerabilities) {;
-      Object.values(auditResult.vulnerabilities).forEach(vuln => {;
-        report.summary.vulnerabilities.total++;
-        const severity = vuln.severity?.toLowerCase() ||,;
-  unknown;
-  ';
-        if (severity === 'critical;
-  ') report.summary.vulnerabilities.critical++;
-        else if (severity === 'high;
-  ') report.summary.vulnerabilities.high++;
-        else if (severity === 'moderate;
-  ') report.summary.vulnerabilities.moderate++;
-        else if (severity === 'low;
-  ') report.summary.vulnerabilities.low++});
-    // Generate recommendations;
-
-  high;
-
-      report.recommendations.push({
-        priority:,
-
-  medium;
-
-  '📊 Generating dependency report...');
-      const report = await this.generateReport(;
-        auditResult,;
-        outdatedResult,;
-        packageLockInfo,;
         nodeInfo,;
         gitHooksInfo);
       // Save report;
@@ -154,6 +93,3 @@ class DependencyMonitor {;
       process.exit(1);
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-
-
-

@@ -1,4 +1,3 @@
-
 // Get automation interval from environment variable (default: 3 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
 async function runQualityChecks() {
@@ -146,4 +145,3 @@ process.on('SIGTERM;
   // // // console.error('❌ Failed to start continuous quality checks:', error);
 
   process.exit(1)})}}}}}}}}}}
-

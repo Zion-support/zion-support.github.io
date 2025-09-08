@@ -182,7 +182,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
           </form>)}
       </CardContent>
-<<<<<<< HEAD
 
     </Card>);
 }

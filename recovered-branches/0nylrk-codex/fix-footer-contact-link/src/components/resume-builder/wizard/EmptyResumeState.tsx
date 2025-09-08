@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -25,15 +21,3 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
 };
 
 
-=======
-
-  );
-
-};            Create Resume;
-          </Button>;
-        </div>;
-      </CardContent>;
-
-    </Card>);
-}
-;

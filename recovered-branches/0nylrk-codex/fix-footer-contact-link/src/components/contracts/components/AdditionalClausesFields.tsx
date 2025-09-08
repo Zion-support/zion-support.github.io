@@ -1,5 +1,3 @@
-
-
 import { UseFormReturn } from "react-hook-form";
 
 import {;
@@ -74,79 +72,14 @@ export function AdditionalClausesFields({
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
-                      checked={field && field.value?.includes("ip")}
-
-                              currentValues.filter((value) => value !== "ip"),
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      checked={field.value?.includes('ip')}
-
-                      onCheckedChange={(checked) => {;
-                        const currentValues = field && field.value || [];
-                        return checked;
-                            );
-                      }}
-                    />
-                  </FormControl>
-                  <div className="space-y-1 leading-none">
-                    <FormLabel>
-                      Intellectual Property Transfer
-                    </FormLabel>
-                    <FormDescription>
-                      Transfer ownership of work products
-                    </FormDescription>
-                  </div>
-                </FormItem>
-              )}
-
-                            );
-                      }}
-                    />;
-                  </FormControl>;
-
                   <div className="space - y-1 leading-none">;
                     <FormLabel > Intellectual Property Transfer</FormLabel>;              name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
-                                (value) => value !== "termination",
-                              ),
-
-                      checked={field.value?.includes('termination')}
-                      onCheckedChange={(checked) => {;
-
-                        const currentValues = field.value || [];
-                        return checked;'
-
-                          ? field.onChange([...currentValues, 'termination']);
-
-                          : field.onChange(;
-                              currentValues.filter((value) => value !== 'termination');                    <FormDescription>;
-                      Define conditions for ending the contract;
-                    </FormDescription>;
-                  </div>;
-            <FormField
-              control={form && form.control}
-            />;
-            <FormField;
-
-              control={form.control}
-            <FormField
-              control={form && form.control}
-              name="additionalClauses"
-              render={({ field }) => (;
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
-                  <FormControl>;
-                    <Checkbox
-
-                      checked={field && field.value?.includes("revisions")}
-                      onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
                         return checked;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                           ? field && field.onChange([...currentValues, "revisions"]);
                           : field && field.onChange(;
                               currentValues && currentValues.filter(;

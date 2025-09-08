@@ -1,0 +1,375 @@
+  "}, []), [])const "sampleFeedback": "Feedbac k[] = [{"id": '1'","customerName": 'Sarah Johnson',"rating": "5","comment": 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',"category": 'service',"sentiment": 'positive',"date": '2024-01-15',"helpful": "2 4","unhelpful": "1",tags['AI',Consulting',Machine Learning'],"verified": "tru e;"
+  }, []), [])const "sampleFeedback": Feedbac k[] = [{';'
+  }, []), [])if(feedback.length > 0) {const responseRate = 95; // Simulated response rate;
+  }, []), [])let filtered = feedback;';'
+<<<<<<< HEAD
+=======
+  }}, []), [])let filtered = feedback;';'
+>>>>>>> origin/resolved-merge-conflicts
+';';'
+    if(selectedCategory !== 'all') {let filtered  = feedback;if(selectedCategory !== 'all') {let filtered = feedback;'
+    }
+    if(selectedCategory !== 'all') {filtered = filtered.filter(f => f.category === selectedCategory)}'
+    if(selectedRating > 0) {filtered = filtered.filter(f => f.rating === selectedRating)}
+    if(searchQuery) {filtered = filtered.filter(f =>;
+        }
+        f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        f.tags.some(tag => { return tag.toLowerCase().includes(searchQuery.toLowerCase())))}filtered = filtered.filter(f => ; }
+        f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        f.tags.some(tag => { return tag.toLowerCase().includes(searchQuery.toLowerCase())))}
+    setFilteredFeedback(filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback])// Handle feedback submission; }
+    if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
+    const "feedback": "Feedbac k = {;
+  "id": Dat e.now().toString()",;
+      "customerName": 'Anonymous Customer',;
+      "rating": "newFeedbac k.rating",;
+      "comment": "newFeedbac k.comment",;
+      "category": "newFeedbac k.category",;
+      "sentiment": "newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative'",;
+      "date": "new Date().toISOString().split('T')[0]",;
+      "helpful": "0",;
+      "unhelpful": "0",;
+      "tags": "[]",;
+  ;
+  ;
+  "verified": "fals e;
+    "};
+;
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ "rating": "0", "comment": '', "category": 'overall' });
+    const feedback: Feedbac k = {
+  id: Dat e.now().toString(),
+      customerName: 'Anonymous Customer',
+      rating: newFeedbac k.rating,
+      comment: newFeedbac k.comment,
+      category: newFeedbac k.category,
+      sentiment: newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
+      date: new Date().toISOString().split('T')[0],
+      helpful: 0,
+      unhelpful: 0,
+    const feedback: Feedbac k = {;
+  id: Dat e.now().toString(),;
+      customerName: 'Anonymous Customer',;
+      rating: newFeedbac k.rating,;
+      comment: newFeedbac k.comment,;
+      category: newFeedbac k.category,;
+      sentiment: newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',;
+      date: new Date().toISOString().split('T')[0],;
+      helpful: 0,;
+      unhelpful: 0,;
+      tags: [],;
+  ;
+  ;
+  verified: fals e
+};';
+';';
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
+    setShowFeedbackForm(false)};';
+';';
+  // Handle helpful/unhelpful votes'
+        return {;';
+          ...f,;';';
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;';'
+};
+;
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
+    setShowFeedbackForm(false)};
+;
+  // Handle helpful/unhelpful votes';
+        return {;
+          ...f,;
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
+          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful}
+};
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' }
+    );
+    setShowFeedbackForm(false)};
+  // Handle helpful/unhelpful votes'
+        return {;
+          ...f,;
+          "helpful": "typ e === 'helpful' ? f.helpful + 1 : f.helpful",;
+          "unhelpful": "typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful"};
+;
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
+          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
+      return f}) ) };
+  // Get sentiment color
+    switch(sentiment) {;
+      case 'positive': "return 'text-green-400 bg-green-400/20';
+      case 'negative': return 'text-red-400 bg-red-400/20';
+      "default": retur n 'text-yellow-400 bg-yellow-400/20'"}  };
+;
+  // Get category color;
+      default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
+  // Get category color
+  ;';
+  ;';';
+'';';
+  'service': 'text-blue-400 bg-blue-400/20','';';
+      'product': 'text-green-400 bg-green-400/20','';';
+      'support': 'text-purple-400 bg-purple-400/20',;  ;';';
+  ;'';';
+  'overall': 'text-zion-cyan bg-zion-cyan/20';'
+};';';
+;
+  // Get sentiment color;
+    switch(sentiment) {;
+      case 'positive': return 'text-green-400 bg-green-400/20';
+      case 'negative': return 'text-red-400 bg-red-400/20';
+      default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
+;
+  // Get category color;
+  ;
+  ;
+'
+  'service': 'text-blue-400 bg-blue-400/20','
+      'product': 'text-green-400 bg-green-400/20','
+      'support': 'text-purple-400 bg-purple-400/20',;  ;
+  ;'
+  'overall': 'text-zion-cyan bg-zion-cyan/20'
+};
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
+  return ()
+    <div className="w-full max-w-6xl mx-auto p-6">
+      {/* Header */}"
+      <div className="text-center mb-8">"
+        <h1 className="text-4xl font-bold text-white mb-4">Customer Feedback</h1>"
+        <p className="text-zinc-400 text-lg">See what our customers are saying about Zion Tech Group</p>
+      </div>
+      {/* Stats Section */}
+      {showStats && (";"
+        <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-4 gap-6 mb-8">;"
+          <motion.div;
+            }
+<<<<<<< HEAD
+=======
+      "default": retur n 'text-yellow-400 bg-yellow-400/20'}  }// Get category color;'
+>>>>>>> main
+            initial = { "opacity": 0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}";"
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.1 }";"
+            transition={ "delay": 0.1 }";"
+  { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "0.1 "}";"
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}";"
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.1 }";"
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "0.2 "}";"
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "0.3 "}";"
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.2 }";"
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.3 }";"
+            transition={ "delay": 0.3 }";"
+                initial = { "opacity": "0","scale": "0.9;"
+"}"
+                animate = { "opacity": "1","scale": "1;"
+"}"
+                transition={ "delay": "inde x * 0.1 "}";"
+                initial = { "opacity": 0,"scale": 0.9;
+}
+                animate = { "opacity": 1,"scale": 1;
+}
+                transition={ "delay": inde x * 0.1 }";"
+            initial = { "height": 0,"opacity": 0;
+}
+            animate = { "height": 'auto',"opacity": 1;'
+}
+  { "height": "0","opacity": "0;"
+"}"
+            animate = { "height": 'auto',"opacity": "1;"
+"}"
+            exit = { "height": "0","opacity": "0;"
+"}"
+            transition={ "duration": "0.3 "}";"
+            initial = { "height": 0,"opacity": 0;
+}
+            animate = { "height": 'auto',"opacity": 1;'
+}
+            exit = { "height": 0,"opacity": 0;
+}
+            transition={ "duration": 0.3 }";"
+<<<<<<< HEAD
+=======
+            initial = {{ "height": 0,"opacity": 0;
+}}
+            animate = {{ "height": 'auto',"opacity": 1;'
+}}
+            exit = {{ "height": 0,"opacity": 0;
+}}
+            transition={{ "duration": 0.3 }}";"
+>>>>>>> origin/resolved-merge-conflicts
+            className="mb-6 overflow-hidden";"
+";"
+            <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";"
+              <h3 className="text-lg font-semibold text-white mb-4">Share Your Experience;"
+";"
+              <div className="space-y-4">;"
+                {/* Rating */}
+                <div>
+                  <label className="block text-sm font - medium text-zinc-300 mb-2">Rating</label>
+                  <div  className="flex gap-2">
+                    {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
+                        onClick={ () => setNewFeedback(prev => ({ ...prev,"rating": "sta r;"
+"}))}";"
+                        className="p-2 "hover": "scal e-110 transition-transform";"
+                        <Star`;`                          className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;`                          "}`}` />;                      </button>;) ) }                  </div>;
+                </div>;
+                        onClick={ () => setNewFeedback(prev => ({ ...prev,"rating": sta r;
+}))}";"
+                        className="p-2 "hover": scal e-110 transition-transform";"
+                        <Star`;`                          className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;`                        }
+                        onClick={ () => setNewFeedback(prev => ({ ...prev,"rating": sta r;
+}))}";"
+                        className="p-2 "hover": scal e-110 transition-transform";"
+                        <Star`;`                          className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;`                          }`}` />;                      </button>;) ) }                  </div>;
+                </div>;
+                {/* Category */}
+                <div>";"
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>;"
+                  <select;
+                    value={newFeedback.category}
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,"category": "e.target.value as Feedback['category'];'
+"}))}";"
+                    className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan";"
+";"
+                    <option value="overall">Overall Experience</option>";"
+                    <option value="service">Service Quality</option>";"
+                    <option value="product">Product/Technology</option>";"
+                    <option value="support">Customer Support</option>;"
+                  </select>;
+                </div>;
+                {/* Comment */"}"
+                <div>";"
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>;"
+                  <textarea;
+                    value={newFeedback.comment}
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,"comment": "e.target.value;"
+"}))}";"
+                    placeholder="Share your experience with Zion Tech Group...";"
+                    rows={4}";"
+                    className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan resize-none";"
+                  />;
+                </div>;
+                {/* Submit Button */"}";"
+                <div className="flex gap-3">;"
+                  <button onClick={handleSubmitFeedback}
+                    disabled={newFeedback.rating === 0 || !newFeedback.comment.trim()}";"
+                    className="px-6 py-2 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors "disabled": opacit y-50 "disabled": curso r-not-allowed flex items-center gap-2";"
+";"
+                    <Send className="w-4 h-4" />                    Submit Feedback;"
+                  </button>;
+                  <button;
+                    onClick={() => setShowFeedbackForm(false)"}";"
+                    className="px-6 py-2 bg-zinc-700 text-white rounded-lg "hover": "b g-zinc-600 transition-colors";"
+                    Cancel;
+                  </button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>) "}"
+      </AnimatePresence>;
+      {/* Feedback List */}";"
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,"category": e.target.value as Feedback['category'];'
+}))}";"
+                    className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white "focus": outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan";"
+";"
+                    <option value="overall">Overall Experience</option>";"
+                    <option value="service">Service Quality</option>";"
+                    <option value="product">Product/Technology</option>";"
+                    <option value="support">Customer Support</option>;"
+                  </select>;
+                </div>;
+                <div>";"
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>;"
+                  <select;
+                    value={newFeedback.category}
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,"category": e.target.value as Feedback['category'];'
+}))}";"
+                    className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white "focus": outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan";"
+";"
+                    <option value="overall">Overall Experience</option>";"
+                    <option value="service">Service Quality</option>";"
+                    <option value="product">Product/Technology</option>";"
+                    <option value="support">Customer Support</option>;"
+                  </select>;
+                </div>;
+                {/* Comment */}
+                <div>";"
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>;"
+                  <textarea;
+                    value={newFeedback.comment}
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,"comment": e.target.value;
+}))}";"
+                    placeholder="Share your experience with Zion Tech Group...";"
+                    rows={4}";"
+                    className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 "focus": outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan resize-none";"
+                  />;
+                </div>;
+                {/* Submit Button */}";"
+                <div className="flex gap-3">;"
+                  <button onClick={handleSubmitFeedback}
+                    disabled={newFeedback.rating === 0 || !newFeedback.comment.trim()}";"
+                    className="px-6 py-2 bg-zion-cyan text-white rounded-lg "hover": b g-zion-cyan/80 transition-colors "disabled": opacit y-50 "disabled": curso r-not-allowed flex items-center gap-2";"
+";"
+                    <Send className="w-4 h-4" />                    Submit Feedback;"
+                  </button>;
+                  <button;
+                    onClick={() => setShowFeedbackForm(false)}";"
+                    className="px-6 py-2 bg-zinc-700 text-white rounded-lg "hover": b g-zinc-600 transition-colors";"
+                    Cancel;
+                  </button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>) }
+      </AnimatePresence>;
+      {/* Feedback List */}";"
+      <div className="space-y-4"> {filteredFeedback.map((item, index) => (<motion.div;"
+            }
+            key={item.id}
+<<<<<<< HEAD
+=======
+>>>>>>> main
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "inde x * 0.1 "}";"
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": inde x * 0.1 }";"
+          initial={ "opacity": "0 "}"
+          animate={ "opacity": "1 "}";"
+          initial={ "opacity": 0 }
+          animate={ "opacity": 1 }";"

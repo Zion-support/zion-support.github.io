@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { withSentry } = require('../withSentry.cjs');
 const { isValidEmail } = require('../emailUtils.cjs');
 const fs = require('fs');
@@ -15,25 +16,3 @@ async function handler(req, res) {
     const { email } = req.body || {};
     
     if (!email) {
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-      res.statusCode = 400;
-
-  const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
-  let existing = [];
-  try {
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array
-  }
-  existing.push({ email, subscribedAt: new Date().toISOString() });
-  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-
-  res.statusCode = 200;
-  res.json({ success: true });
-  } catch (err) {
-    console.error('Subscribe API error:', err);
-    res.statusCode = 500;
-    res.json({ error: err.message ||;
-  'Subscription failed }});'}
-module.exports: = withErrorLogging(handler);

@@ -119,11 +119,6 @@ class ErrorMonitor {
     this.log('✅ Error monitoring cycle completed');
     return true;
   }
-}
-
-// Main execution
-if (require.main === module) {
-  const monitor = new ErrorMonitor();
   
   monitor.runErrorMonitor()
     .then(success => {

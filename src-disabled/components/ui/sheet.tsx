@@ -1,7 +1,3 @@
-import * as SheetPrimitive from "@radix-ui/react-dialog"
-import { cva, type VariantProps } from "class-variance-authority"
-import { X } from 'lucide-react'
-
 const Sheet = SheetPrimitive.Root
 onst Sheet = SheetPrimitive.Root
 const SheetTrigger = SheetPrimitive.Trigger
@@ -38,7 +34,6 @@ import { cn } from "@/lib/utils"
 ))
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
-<<<<<<< HEAD
 const sheetVariants = cva(
 
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
@@ -54,7 +49,6 @@ const sheetVariants = cva(
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
     defaultVariants: {
       side: "right"}}
->>>>>>> origin/cursor/delete-old-data-records-6bba
 )
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>
@@ -112,77 +106,3 @@ const SheetContent = React.forward_ref<;
     <SheetOverlay />;
     <SheetPrimitive.Content;
 
-<<<<<<< HEAD
-=======
->(({ side = "right", className, children, ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
-    <SheetPrimitive.Content
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      ref={ref}
-      className={cn(sheetVariants({ side }), className)}
-      {...props}
-    >;
-      {children}
-
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-
-      </SheetPrimitive.Close>
-  </SheetPortal>
-))
-SheetContent.displayName = SheetPrimitive.Content.displayName
-const SheetHeader = ({
-  className
-
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-
-    )}
-    {...props}
-  />
-)
-
-SheetHeader.displayName = "SheetHeader"
-
-const SheetFooter = ({
-  className
-SheetHeader.displayName = "SheetHeader"
-
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-
-    )}
-    {...props}
-  />
-)
-
-SheetFooter.displayName = "SheetFooter"
-
-const SheetTitle = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Title>
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
->(({ className, ...props }, ref) => (
-  <SheetPrimitive.Title
-
-    {...props}
-  />;
-));
-SheetTitle.displayName = SheetPrimitive.Title.displayName;
-const SheetDescription = React.forwardRef<;
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
->(({ className, ...props }, ref) => (;
-  <SheetPrimitive.Description;
-    ref={ref}
-    {...props}
-  />;
-));
-SheetDescription.displayName = SheetPrimitive.Description.displayName;

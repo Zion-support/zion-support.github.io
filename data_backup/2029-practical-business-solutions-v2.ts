@@ -493,4 +493,3 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 export const getPopularPracticalBusinessSolutions2029 = () => {
   return practicalBusinessSolutions2029.filter(service => service.popular)}
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-

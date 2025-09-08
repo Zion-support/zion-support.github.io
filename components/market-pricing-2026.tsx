@@ -1,13 +1,4 @@
 
-
-} from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-
-
-
-import React, { useState } from 'react',
-import Head from 'next/head';
-
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 
@@ -627,7 +618,6 @@ const priceRanges = [
       name: 'Mid-Range ($5K - $15K)';}
       range: 'Professional solutions for growing companies';}
     }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
     {
       id: 'premium',
@@ -693,14 +683,6 @@ const priceRanges = [
 
 
 
-
-        <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   2026 Market Pricing
@@ -714,147 +696,6 @@ const priceRanges = [
               </p>
               
               {/* Pricing Statistics */}
-<<<<<<< HEAD
-
-
-=======
-              <div className='grid grid-cols-2 'md': grid-cols-5 gap-6 mb-12'>'
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>'
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>{pricingStats.totalServices}</div>'
-                  <div className='text-gray-400 text-sm'>Total Services</div>'
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>'
-                  <div className='text-3xl font-bold text-purple-400 mb-2'>${pricingStats.averagePrice.toFixed(0)}</div>'
-                  <div className='text-gray-400 text-sm'>Avg. Price/Month</div>'
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>'
-                  <div className='text-3xl font-bold text-pink-400 mb-2'>${pricingStats.lowestPrice.toFixed(0)}</div>'
-                  <div className='text-gray-400 text-sm'>Lowest Price</div>'
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>'
-                  <div className='text-3xl font-bold text-green-400 mb-2'>${pricingStats.highestPrice.toFixed(0)}</div>'
-                  <div className='text-gray-400 text-sm'>Highest Price</div>'
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>'
-                  <div className='text-3xl font-bold text-yellow-400 mb-2'>{pricingStats.totalCustomers.toLocaleString()}+</div>'
-                  <div className='text-gray-400 text-sm'>Total Customers</div>'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Filters Section */}
-
-        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-        {/* Filters Section */}
-        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                {/* Category Filter */}
-                <div>
-                  <label className='block text-white font-semibold mb-3'>
-                    Service Category
-                  </label>
-                  <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Category Filter */}
-                <div>
-                  <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                    {categories.map(category => (
-
-        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                {/* Category Filter */}
-                <div>
-                  <label className='block text-white font-semibold mb-3'>
-                    Service Category
-                  </label>
-
-                  <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (
-
-                    {categories.map(category => (
-
-
-                      <button
-                        key={category && category.id}
-                        onClick={() => setSelectedCategory(category && category.id)}
-                        className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${;
-                          selectedCategory === category && category.id;
-                            ? 'bg-cyan-500 text-black';
-                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
-                        }`}
-
-
-                    ))}
-
-                  </div>;
-                </div>;
-
-
-                {/* Price Range Filter */}
-
-
-
-
-                {/* Price Range Filter */}
-
-
-                      >
-                        <div className='flex items-center justify-center space-x-2'>
-                          <category.icon className='w-4 h-4' />
-                          <span>{category.name}</span>
-                        </div>
-                        <div className='text-xs mt-1 opacity-75'>
-                          ({category.count})
-                        </div>                      </button>                        <div className="flex items-center justify-center space-x-2">
-                          <category.icon className="w-4 h-4" />
-                          <span>{category.name}</span>
-                        </div>
-                        <div className="text-xs mt-1 opacity-75">({category.count})</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                        </div>                      </button>
-
-                      </button>
-
-                    ))}
-                  </div>
-                </div>
-
-                {/* Price Range Filter */}
-                <div>
-                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
-                  <div className="space-y-2">
-                    {priceRanges.map(range => (
-                    ))}
-                {/* Price Range Filter */}
-                <div>;
-                  <label className='block text-white font-semibold mb-3'>;
-                    Price Range;
-                  </label>;
-                  <div className='space-y-2'>                    {priceRanges && priceRanges.map(range => (                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>;
-                  <div className="space-y-2">;
-                    {priceRanges && priceRanges.map(range => (;
-                      <button
-                        key={range && range.id}
-                        onClick={() => setPriceRange(range && range.id)}
-                        className={`w-full p-3 rounded-xl text-left transition-all duration-300 ${;
-                          priceRange === range && range.id;
-                            ? 'bg-cyan-500 text-black';
-                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
-                        }`}
-
 
 
 
@@ -1016,92 +857,12 @@ const priceRanges = [
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
 
         {/* Market Analysis Section */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-        {/* Market Analysis Section */}
-        <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-            </motion.div>
-            {/* Market Insights Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>              <motion.div              <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our services are strategically positioned to provide maximum value while maintaining competitive pricing
-                in the rapidly evolving technology landscape
-            </motion.div>
-
-
-
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-            {/* Market Insights Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
-              <motion&& motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-
-
-
-
-
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-12'>;
-              <h2 className='text-4xl font-bold text-white mb-4'>;
-                Market Analysis & Competitive Positioning;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Our services are strategically positioned to provide maximum;
-                value while maintaining competitive pricing in the rapidly;
-                evolving technology landscape              </p>;
-            </motion && motion.div>;
-
-            {/* Market Insights Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
-              <motion&& motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-
-
-
-              >
-                <div className='text-4xl mb-4'>📊</div>
-                <h3 className='text-xl font-bold text-white mb-3'>
-                  Competitive Pricing
-                </h3>
-                <p className='text-gray-300 text-sm mb-4'>
-                  Our pricing is strategically positioned to be 20-40% more
-                  affordable than enterprise competitors while providing
-                  superior features and ROI
-                </p>
-                <div className='flex items-center text-cyan-400 text-sm'>
-                  <TrendingUp className='w-4 h-4 mr-2' />                  <span>20-40% cost savings</span>              >
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-bold text-white mb-3">Competitive Pricing</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Our pricing is strategically positioned to be 20-40% more affordable than enterprise competitors
-                  while providing superior features and ROI
-                </p>
-                <div className="flex items-center text-cyan-400 text-sm">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-
-                  <span>20-40% cost savings</span>
-
-=======
-
 }
             >;
 
@@ -1130,7 +891,6 @@ superior features and ROI;
                 <div className='flex items-center text-cyan-400 text-sm'    />
                   <TrendingUp className='w-4 h-4 mr-2'    />
                   <span    />20-40% cost savings</span>
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 </div>
               </motion.div>
               <motion.div
@@ -1166,38 +926,8 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                 </p>
                 <div className="flex items-center text-green-400 text-sm">
                   <Award className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
 
                   <span>1000% ROI guarantee</span>
-
-=======
-                  <span>1000% ROI guarantee</span>
-className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-                  />
-                <div className='text-4xl mb-4'    />🎯</div>
-                <h3 className='text-xl font-bold text-white mb-3'    />
-                  ROI Guarantee;
-                </h3>
-                <p className='text-gray-300 text-sm mb-4'    />
-                  Every service comes with our 1000% ROI guarantee, ensuring;
-that customers see exceptional;
-  returns on their investment;
-                </p>
-                <div className='flex items-center text-green-400 text-sm'    />
-                  <Award className='w-4 h-4 mr-2'    />
-                  <span    />1000% ROI guarantee</span>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-
-
-
-
 
 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
               >
@@ -1222,85 +952,8 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                 </p>
                 <div className="flex items-center text-purple-400 text-sm">
                   <Zap className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
 
                   <span>Future-proof solutions</span>
-
-=======
-                  <span>Future-proof solutions</span>
-className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-                  />
-                <div className='text-4xl mb-4'    />🚀</div>
-                <h3 className='text-xl font-bold text-white mb-3'    />
-                  Future-Proof Technology;
-                </h3>
-                <p className='text-gray-300 text-sm mb-4'    />
-                  Our 2026 services incorporate cutting-edge technologies that;
-will remain relevant and competitive for years to come;
-                </p>
-                <div className='flex items-center text-purple-400 text-sm'    />
-                  <Zap className='w-4 h-4 mr-2'    />
-                  <span    />Future-proof solutions</span>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
-                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>;
-                <div className='text-4xl mb-4'>📊</div>;
-                <h3 className='text-xl font-bold text-white mb-3'>;
-                  Competitive Pricing;
-                </h3>;
-                <p className='text-gray-300 text-sm mb-4'>;
-                  Our pricing is strategically positioned to be 20-40% more;
-                  affordable than enterprise competitors while providing;
-                  superior features and ROI;
-                </p>;
-                <div className='flex items-center text-cyan-400 text-sm'>;
-                  <TrendingUp className='w-4 h-4 mr-2' />                  <span>20-40% cost savings</span>              >;
-                <div className="text-4xl mb-4">📊</div>;
-                <h3 className="text-xl font-bold text-white mb-3">Competitive Pricing</h3>;
-                <p className="text-gray-300 text-sm mb-4">;
-                  Our pricing is strategically positioned to be 20-40% more affordable than enterprise competitors ;
-                  while providing superior features and ROI;
-                </p>;
-                <div className="flex items-center text-cyan-400 text-sm">;
-                  <TrendingUp className="w-4 h-4 mr-2" />;
-                  <span>20-40% cost savings</span>;
-                </div>;
-              </motion && motion.div>;
-
-              <motion&& motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>;
-                <div className='text-4xl mb-4'>🎯</div>;
-                <h3 className='text-xl font-bold text-white mb-3'>;
-                  ROI Guarantee;
-                </h3>;
-                <p className='text-gray-300 text-sm mb-4'>;
-                  Every service comes with our 1000% ROI guarantee, ensuring;
-                  that customers see exceptional returns on their investment;
-                </p>;
-                <div className='flex items-center text-green-400 text-sm'>;
-                  <Award className='w-4 h-4 mr-2' />                  <span>1000% ROI guarantee</span>              >;
-                <div className="text-4xl mb-4">🎯</div>;
-                <h3 className="text-xl font-bold text-white mb-3">ROI Guarantee</h3>;
-                <p className="text-gray-300 text-sm mb-4">;
-                  Every service comes with our 1000% ROI guarantee, ensuring that customers see ;
-                  exceptional returns on their investment;
-                </p>;
-                <div className="flex items-center text-green-400 text-sm">;
-                  <Award className="w-4 h-4 mr-2" />;
-                  <span>1000% ROI guarantee</span>;
-                </div>;
-              </motion && motion.div>;
 
               <motion&& motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -1357,181 +1010,11 @@ will remain relevant and competitive for years to come;
                   Competitive Pricing;
                 </h3>;
                 <p className='text - gray - 300 text - sm mb - 4'>;
-<<<<<<< HEAD
-
-=======
-                <p className='text - gray - 300 text - sm mb - 4'    />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  Our pricing is strategically positioned to be 20 - 40% more;
-                  affordable than enterprise competitors while providing;
-                  superior features and ROI;
-                </p>;
-                <div className='flex items - center text - cyan - 400 text - sm'>;
-                  <TrendingUp className='w - 4 h - 4 mr - 2' />                  <span > 20 - 40% cost savings</span>              >;
-                <div className="text-4xl mb-4">📊</div>;
-                <h3 className="text - xl font - bold text-white mb-3">Competitive Pricing</h3>;
-                <p className="text - gray - 300 text-sm mb-4">;
-                  Our pricing is strategically positioned to be 20 - 40% more affordable than enterprise competitors;
-                  while providing superior features and ROI;
-                </p>;
-                <div className="flex items - center text - cyan-400 text-sm">;
-                  <TrendingUp className="w - 4 h-4 mr-2" />;
-                  <span > 20 - 40% cost savings</span>;
-                </div>;
-              </motion.div>;
-              <motion.div;
-                initial={ 'opacity': 0, 'coordinate_y': 30 
-}
-                whileInView={ 'opacity': 1, 'coordinate_y': 0 }
-                viewport={ 'once': true 
-}
-                transition={ 'duration': 0.6, 'delay': 0.2 
-}
-                className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm'>'
-
-                <div className='text - 4xl mb - 4'>🎯</div>;'
-                <h3 className='text - xl font - bold text - white mb - 3'>;'
-                  ROI Guarantee;
-                </h3>;
-                <p className='text - gray - 300 text - sm mb - 4'>;'
-                  Every service comes with our 1000% ROI guarantee, ensuring;
-                  that customers see exceptional returns on their investment;
-                </p>;
-                <div className='flex items - center text - green - 400 text - sm'>;
-                  <Award className='w - 4 h - 4 mr - 2' />                  <span > 1000% ROI guarantee</span>              >;
-                <div className="text-4xl mb-4">🎯</div>;
-                <h3 className="text - xl font - bold text-white mb-3">ROI Guarantee</h3>;
-                <p className="text - gray - 300 text-sm mb-4">;
-                  Every service comes with our 1000% ROI guarantee, ensuring that customers see;
-                  exceptional returns on their investment;
-                </p>;
-                <div className="flex items - center text - green-400 text-sm">;
-                  <Award className="w - 4 h-4 mr-2" />;
-                  <span > 1000% ROI guarantee</span>;
-                </div>;
-              </motion.div>;
-              <motion.div;
-                initial={ 'opacity': 0, 'coordinate_y': 30 
-}
-                whileInView={ 'opacity': 1, 'coordinate_y': 0 }
-                viewport={ 'once': true 
-}
-                transition={ 'duration': 0.6, 'delay': 0.3 
-}
-                className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm'>'
-
-                <div className='text - 4xl mb - 4'>🚀</div>;'
-                <h3 className='text - xl font - bold text - white mb - 3'>;'
-                  Future - Proof Technology;
-                </h3>;
-                <p className='text - gray - 300 text - sm mb - 4'>;'
-                  Our 2026 services incorporate cutting - edge technologies that;
-                  will remain relevant and competitive for years to come;
-                </p>;
-                <div className='flex items - center text - purple - 400 text - sm'>;
-                  <Zap className='w - 4 h - 4 mr - 2' />                  <span > Future - proof solutions</span>              >;
-                <div className="text-4xl mb-4">🚀</div>;
-                <h3 className="text - xl font - bold text-white mb-3">Future - Proof Technology</h3>;
-                <p className="text - gray - 300 text-sm mb-4">;
-                  Our 2026 services incorporate cutting - edge technologies that will remain;
-                  relevant and competitive for years to come;
-                </p>;
-                <div className="flex items - center text - purple-400 text-sm">;
-                  <Zap className="w - 4 h-4 mr-2" />;
-                  <span > Future - proof solutions</span>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                <div className='flex items - center text - cyan - 400 text - sm'    />;
-                  <TrendingUp className='w - 4 h - 4 mr - 2'    />                  <span     /> 20 - 40% cost savings</span>              >;
-                <div className=\"text - 4xl mb - 4\"    />📊</div>;
-                <h3 className=\"text - xl font - bold text - white mb - 3\"    />Competitive Pricing</h3>;
-                <p className=\"text - gray - 300 text - sm mb - 4\"    />;
-                  Our pricing is strategically positioned to be 20 - 40% more affordable than enterprise competitors;
-                  while providing superior features and ROI;
-                </p>;
-                <div className=\"flex items - center text - cyan - 400 text - sm\"    />;
-                  <TrendingUp className=\"w - 4 h - 4 mr - 2\"    />;
-                  <span     /> 20 - 40% cost savings</span>;
-                </div>;
-              </motion.div>;
-              <motion.div;
-                initial={{ opacity: 0, coordinate_y: 30 ,}
-}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                viewport={{ once: true ,}
-}
-                transition={{ duration: 0.6, delay: 0.2 ,}
-}
-                className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm'    />
-
-                <div className='text - 4xl mb - 4'    />🎯</div>;
-                <h3 className='text - xl font - bold text - white mb - 3'    />;
-                  ROI Guarantee;
-                </h3>;
-                <p className='text - gray - 300 text - sm mb - 4'    />;
-                  Every service comes with our 1000% ROI guarantee, ensuring;
-                  that customers see exceptional returns on their investment;
-                </p>;
-                <div className='flex items - center text - green - 400 text - sm'    />;
-                  <Award className='w - 4 h - 4 mr - 2'    />                  <span     /> 1000% ROI guarantee</span>              >;
-                <div className=\"text - 4xl mb - 4\"    />🎯</div>;
-                <h3 className=\"text - xl font - bold text - white mb - 3\"    />ROI Guarantee</h3>;
-                <p className=\"text - gray - 300 text - sm mb - 4\"    />;
-                  Every service comes with our 1000% ROI guarantee, ensuring that customers see;
-                  exceptional returns on their investment;
-                </p>;
-                <div className=\"flex items - center text - green - 400 text - sm\"    />;
-                  <Award className=\"w - 4 h - 4 mr - 2\"    />;
-                  <span     /> 1000% ROI guarantee</span>;
-                </div>;
-              </motion.div>;
-              <motion.div;
-                initial={{ opacity: 0, coordinate_y: 30 ,}
-}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                viewport={{ once: true ,}
-}
-                transition={{ duration: 0.6, delay: 0.3 ,}
-}
-                className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm'    />
-
-                <div className='text - 4xl mb - 4'    />🚀</div>;
-                <h3 className='text - xl font - bold text - white mb - 3'    />;
-                  Future - Proof Technology;
-                </h3>;
-                <p className='text - gray - 300 text - sm mb - 4'    />;
-                  Our 2026 services incorporate cutting - edge technologies that;
-                  will remain relevant and competitive for years to come;
-                </p>;
-                <div className='flex items - center text - purple - 400 text - sm'    />;
-                  <Zap className='w - 4 h - 4 mr - 2'    />                  <span     /> Future - proof solutions</span>              >;
-                <div className=\"text - 4xl mb - 4\"    />🚀</div>;
-                <h3 className=\"text - xl font - bold text - white mb - 3\"    />Future - Proof Technology</h3>;
-                <p className=\"text - gray - 300 text - sm mb - 4\"    />;
-                  Our 2026 services incorporate cutting - edge technologies that will remain;
-                  relevant and competitive for years to come;
-                </p>;
-                <div className=\"flex items - center text - purple - 400 text - sm\"    />;
-                  <Zap className=\"w - 4 h - 4 mr - 2\"    />;
-                  <span     /> Future - proof solutions</span>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </div>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
 
         {/* Services Pricing Grid */}
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-
 
         {/* Services Pricing Grid */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
@@ -1561,52 +1044,6 @@ will remain relevant and competitive for years to come;
               <p className='text-xl text-gray-300'    />                {filteredServices && filteredServices.length} services found matching your criteria;
               </p>;
             </motion && motion.div>;
-<<<<<<< HEAD
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service, index) => (              className="text-center mb-12";
-            >;
-              <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>;
-              <p className="text-xl text-gray-300">;
-              </p>;
-            </motion && motion.div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredServices && filteredServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={service && service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-=======
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />              {filteredServices && filteredServices.map((service, index) => (              className=\"text-center mb-12\">
-
-              <h2 className=\"text-4xl font-bold text-white mb-4\"    />Service Pricing & Features</h2>;
-              <p className=\"text-xl text-gray-300\"    />;
-              </p>;
-            </motion && motion.div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />            <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\"    />;}
-              {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
-                  key={service && service.id}
-                  initial={{ opacity: 0, y: 30 ,}
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-                  animate={{ opacity: 1, y: 0 ,}
-}
-
-
-<<<<<<< HEAD
-                    {/* Service Title */}
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
-                    </h3>
-                    {/* Tagline */}
-                    <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
-                    </p>
-                    {/* Pricing Section */}
-                    <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
-                      <div className='text-center'>
-                        <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
                 >
@@ -1655,13 +1092,11 @@ will remain relevant and competitive for years to come;
                           Popular;
 }
                         </span>}
->>>>>>> origin/cursor/delete-old-data-records-6bba
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'    />
 
                       {service.nam,}
 }
                     </h3>;
-<<<<<<< HEAD
 
                     </div>;
                     {/* Service Title */}
@@ -1859,7 +1294,6 @@ will remain relevant and competitive for years to come;
                       <div className='text-center>;
                         <div className=text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300>;
                       {service && service.name}
->>>>>>> origin/cursor/delete-old-data-records-6bba
                     </h3>;
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                    <p className='text-gray-300 text-sm mb-4'>;
@@ -1868,158 +1302,6 @@ will remain relevant and competitive for years to come;
                     {/* Pricing Section */}
                     <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>;
                       <div className='text-center'>;
-<<<<<<< HEAD
-                        <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
-
-                      {service && service.name}
-                    </h3>;
-                    {/* Tagline */}
-                    <p className='text-gray-300 text-sm mb-4>                    <p className=text-gray-300 text-sm mb-4">;
-                      {service && service.tagline}
-                    </p>;
-                    {/* Pricing Section */}
-                    <div className=bg-gray-700/30 rounded-xl p-4 mb-4'>;
-                      <div className='text-center>;
-                        <div className=text-3xl font-bold text-cyan-400 mb-1'>;
-=======
-                        <div className='text-3xl font-bold text-cyan-400 mb-1'>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                          {service && service.price}
-                          <span className='text-gray-400 text-lg font-normal'>;
-                            {service && service.period}
-                          </span>;
-                        </div>;
-                        <div className='text-gray-400 text-sm'>;
-                          Starting price;
-                        </div>                      </div>;
-                    </div>;
-                    {/* Market Position */}                          {service && service.price}
-                          <span className='text-gray-400 text-lg font-normal'>{service && service.period}</span>;
-                        </div>;
-                        <div className='text-gray-400 text-sm'>Starting price</div>;
-                      </div>;
-                    </div>;
-                    {/* Market Position */}
-                    <div className='mb-4'>;
-                      <h4 className='text-white font-semibold mb-2 text-sm'>;
-                        Market Position;
-                      </h4>;
-                      <p className='text-gray-400 text-xs leading-relaxed'>                        {service && service.marketPosition}                    <div className='mb-4'>;
-                      <h4 className='text-white font-semibold mb-2 text-sm'>Market Position</h4>;
-                      <p className='text-gray-400 text-xs leading-relaxed'>;
-                        {service && service.marketPosition}
-                      </p>;
-                    </div>;
-                    {/* ROI & Customers */}
-                    <div className='grid grid-cols-2 gap-4 mb-4'>;
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>;
-                        <div className='text-lg font-bold text-green-400 mb-1'>;
-                          {service && service.roi.split(' ')[0]}
-                        </div>;
-                        <div className='text-gray-400 text-xs'>ROI</div>;
-                      </div>;
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>;
-                        <div className='text-lg font-bold text-blue-400 mb-1'>;
-                          {service && service.customers.toLocaleString()}+;
-                        </div>;
-                        <div className='text-gray-400 text-xs'>Customers</div>                      </div>;
-                    </div>;
-
-<<<<<<< HEAD
-                    {/* Key Features */}                          {service && service.roi.split(' ')[0]}
-
-=======
-                    {/* Key Features */}                          {service && service.roi.split( ')[0]}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                        </div>;
-                        <div className='text-gray-400 text-xs'>ROI</div>;
-                      </div>;
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>;
-                        <div className='text-lg font-bold text-blue-400 mb-1'>;
-                          {service && service.customers.toLocaleString()}+;
-                        </div>;
-                        <div className='text-gray-400 text-xs'>Customers</div>;
-                      </div>;
-                    </div>;
-                      <h4 className='text-white font-semibold mb-2 text-sm'>Key Features</h4>;
-                      <ul className='space-y-1'>;
-                        {service.features.slice(0, 3).map((feature, idx) => (<li key={idx} className='text-gray-400 text-xs flex items-center'>;
-                            <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />;
-                        <div className='text-gray-400 text-xs'>Customers</div>;
-                      </div>;
-                    </div>;
-
-                    {/* Key Features */}
-
-                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
-                      <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className="text-gray-400 text-xs flex items-center">
-                            <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                            {feature}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-                    {/* ROI & Customers */}
-<div className='grid grid-cols-2 gap-4 mb-4'    />;
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'    />;
-                        <div className='text-lg font-bold text-green-400 mb-1'    />;
-                          {service.roi.split(' ')[0]}
-
-                        </div>
-                        <div className='text-gray-400 text-xs'    />ROI</div>
-                      </div>
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'    />
-                        <div className='text-lg font-bold text-blue-400 mb-1'    />
-                          {service.customers.toLocaleString()}+
-                        </div>
-
-                        <div className='text-gray-400 text-xs'    />Customers</div>
-                      </div>
-                    </div>
-
-                    {/* Key Features */}
-<div className='mb-4'    />;
-                      <h4 className='text-white font-semibold mb-2 text-sm'    />;
-                        Key Features;
-                      </h4>;
-                      <ul className='space-y-1'    />;
-                        {service.features.slice(0, 3).map((feature, idx) => (<li;}
-                            key={idx}
-
-                            className='text-gray-400 text-xs flex items-center'
-                              />
-                            <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0'    />
-<<<<<<< HEAD
-
-                            {feature}
-
-
-
-                          </li>
-                        ))}
-
-                          </li>
-                        ))}
-
-                            {feature}
-
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-
-                      </ul>;
-                    </div>;
-
-
-
-
-
-                    {/* Technology Stack */}
-
                           </span>
                         )}
                       </div>;
@@ -2036,85 +1318,6 @@ will remain relevant and competitive for years to come;
                     <a
                       href={service.link}
 
-                    >
-                      View Details
-
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
-
-            </div>;
-
-
-
-
-
-              ))}
-            </div>
-
-              ))}
-            </div>
-
-=======
-className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl 'hover': from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':scale-105 text-center block''
-                    >
-                      View Details
-className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
-                        />
-                      View Details;
-                    </a>
-                  </div>
-                </motion.div>
-
-
-                        {service && service.technology.slice(0, 3).map((tech, idx) => (<span;
-                            }
-                            key={idx}
-
-
-              ),
-}
-            </div>;
-                        ))}
-                    {/* Technology Stack */}
-                    <div className='mb-4'    />;
-                      <h4 className='text-white font-semibold mb-2 text-sm'    />;
-                        Technology;
-                      </h4>;
-                      <div className='flex flex-wrap gap-1'    />;
-                        {service && service.technology.slice(0, 3).map((tech, idx) => (<span;}
-                            key={idx}
-                            className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'    />                            {tech}
-                          </span>;
-                        ))}
-                        {service && service.technology.length > 3 && (<span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'    />                            +{service && service.technology.length - 3} more                    <div className=\"mb-4\"    />;
-                      <h4 className=\"text-white font-semibold mb-2 text-sm\"    />Technology</h4>;
-                      <div className=\"flex flex-wrap gap-1\"    />;
-                        {service && service.technology.slice(0, 3).map((tech, idx) => (<span key={idx} className=\"text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded\"    />;
-                          </span>;
-                        ))}
-                        {service && service.technology.length > 3 && (<span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'    />                          <span className=\"text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded\"    />;}
-                            +{service && service.technology.length - 3} more;
-                          </span>;
-                        )}
-                    {/* CTA Button */}
-                    <a;
-                      href={service && service.link}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':scale-105 text-center block'>                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':scale-105 text-center block'>'
-
-                      View Details;
-                    </a>;
-                  </div>;
-                </motion && motion.div>;
-              ))}
-            {/* No Results */}
-            {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
-                }
-                initial={ 'opacity': 0 }
-
-<<<<<<< HEAD
-
                 animate={{ opacity: 1 }}
 
 
@@ -2125,64 +1328,11 @@ className='text-center py-16''
                 <div className='text-6xl mb-4'>🔍</div>'
                 <h3 className='text-2xl font-bold text-white mb-2'>'
                   No services found
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 </h3>
                 <p className='text-gray-400'>'
                   Try adjusting your category or price range filters
                 </p>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </motion.div>
-            ,
-}
-
-
-
-<<<<<<< HEAD
-
-
-=======
-                animate={{ opacity: 1 }}className='text-center py-16;
-              >;
-                <div className='text-6xl mb-4'>🔍</div>;
-                <h3 className='text-2xl font-bold text-white mb-2'>;
-                  No services found;
-                </h3>;
-                <p className='text-gray-400'>;
-                  Try adjusting your category or price range filters;
-                </p>;
-              </motion.div>;
-            )}</div>;
-        </section>;
-          </div>;
-        </section>;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <motion.div;
-              initial={{ opacity: 0, y: 30 ,}
-}
-              whileInView={{ opacity: 1, y: 0 }}
-            )}
-
-<<<<<<< HEAD
-        {/* Contact Section *,}
-}
-        <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'    />;
-          <div className='max-w-4xl mx-auto text-center'    />            <motion && motion.div        <section className=\"relative z-10 py-20 px-4 sm:px-6 lg:px-8\"    />;
-          <div className=\"max-w-4xl mx-auto text-center\"    />;
-            <motion&& motion.div;
-                          </span    />;
-
-
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-                          </span>;
-
-                        </div>;
-                        <div className='text - gray - 400 text - sm'    />;
 
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
@@ -2214,7 +1364,6 @@ className='text-center py-16''
                           </span>;
                         </div>;
                         <div className='text - gray - 400 text - sm'    />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                           Starting price;
                         </div>                      </div>;
                     </div>;
@@ -2236,108 +1385,6 @@ className='text-center py-16''
                       </p>;
                     </div>;
                     {/* ROI & Customers */}
-<<<<<<< HEAD
-
-                    <div className='grid grid - cols - 2 gap - 4 mb - 4'    />;
-                      <div className='text - center p - 3 bg - gray - 700 / 30 rounded - lg'    />;
-                        <div className='text - lg font - bold text - green - 400 mb - 1'    />;
-                          {service.roi.split (' ')[0]}
-=======
-                    <div className='grid grid - cols - 2 gap - 4 mb - 4'>;'
-                      <div className='text - center p - 3 bg - gray - 700 / 30 rounded - lg'>;'
-                        <div className='text - lg font - bold text - green - 400 mb - 1'>;'
-                          {service.roi.split (' ')[0]}'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                        </div>;
-                        <div className='text - gray - 400 text - xs'>ROI</div>;'
-                      </div>;
-                      <div className='text - center p - 3 bg - gray - 700 / 30 rounded - lg'>;'
-                        <div className='text - lg font - bold text - blue - 400 mb - 1'>;'
-                          {service.customers.toLocaleString ()}+;
-                        </div>;
-                        <div className='text - gray - 400 text - xs'>Customers</div>                      </div>;'
-                    </div>;
-                    {/* Key Features */}                          {service.roi.split (' ')[0]}'
-                        </div>;
-                        <div className="text - gray-400 text-xs">ROI</div>;
-                      </div>;
-                      <div className="text - center p - 3 bg - gray-700 / 30 rounded-lg">;
-                        <div className="text - lg font - bold text - blue-400 mb-1">;
-                          {service.customers.toLocaleString ()}+;
-                        </div>;
-                        <div className="text - gray-400 text-xs">Customers</div>;
-                      </div>;
-                    </div>;
-                    {/* Key Features */}
-                    <div className='mb - 4'>;'
-                      <h4 className='text - white font - semibold mb - 2 text - sm'>;'
-                        Key Features;
-                      </h4>;
-                      <ul className='space - y-1'>;'
-                        {service.features.slice (0, 3).map ((feature, idx) => (<li;
-                            }
-                            key={idx}
-                            className='text - gray - 400 text - xs flex items - center';
-                          >;
-                            <Zap className='w - 3 h - 3 text - cyan - 400 mr - 2 flex - shrink - 0' />                            {feature}                    <div className="mb-4">;
-                      <h4 className="text - white font - semibold mb-2 text-sm">Key Features</h4>;
-                      <ul className="space-y-1">;
-                        {service.features.slice (0, 3).map ((feature, idx) => (
-                          <li key={idx} className="text - gray - 400 text-xs flex items-center">;
-                            <Zap className="w - 3 h - 3 text - cyan - 400 mr - 2 flex-shrink-0" />;
-                          </li>))}
-                      </ul>;
-                    </div>;
-                    {/* Technology Stack */}
-<<<<<<< HEAD
-
-                    <div className='mb - 4'    />;
-                      <h4 className='text - white font - semibold mb - 2 text - sm'    />;
-                        Technology;
-                      </h4>;
-                      <div className='flex flex - wrap gap - 1'    />;
-                        {service.technology.slice (0, 3).map ((tech, idx) => (<span;}
-                            key={idx}
-                            className='text - xs text - gray - 500 bg - gray - 700 / 50 px - 2 py - 1 rounded';
-                              />                            {tech}
-=======
-                    <div className='mb - 4'>;'
-                      <h4 className='text - white font - semibold mb - 2 text - sm'>;'
-                        Technology;
-                      </h4>;
-                      <div className='flex flex - wrap gap - 1'>;'
-                        {service.technology.slice (0, 3).map ((tech, idx) => (<span;
-                            }
-                            key={idx}
-                            className='text - xs text - gray - 500 bg - gray - 700 / 50 px - 2 py - 1 rounded';'
-                          >                            {tech}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                          </span>))}
-                        {service.technology.length > 3 && (
-                          <span className='text - xs text - gray - 500 bg - gray - 700 / 50 px - 2 py - 1 rounded'>                            +{service.technology.length - 3} more                    <div className="mb-4">;
-                      <h4 className="text - white font - semibold mb-2 text-sm">Technology</h4>;
-                      <div className="flex flex-wrap gap-1">;
-                        {service.technology.slice (0, 3).map ((tech, idx) => (
-                          <span key={idx} className="text - xs text - gray - 500 bg - gray - 700 / 50 px-2 py-1 rounded">;
-                          </span>))}
-                        {service.technology.length > 3 && (
-                          <span className='text - xs text - gray - 500 bg - gray - 700 / 50 px - 2 py - 1 rounded'>                          <span className="text - xs text - gray - 500 bg - gray - 700 / 50 px-2 py-1 rounded">;
-                            +{service.technology.length - 3} more;
-                          </span>)}
-                      </div>;
-                    </div>;
-                    {/* CTA Button */}
-                    <a;
-                      href={service.link}
-                      className='w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 3 px - 4 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 text - center block'                    >                      className="w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 3 px - 4 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale-105 text-center block";
-                    >;
-                      View Details;
-                    </a>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-            {/* No Results */}
-<<<<<<< HEAD
 
             {filtered_services.length === 0 && (<motion.div;}
                 initial={{ opacity: 0 }}
@@ -2355,19 +1402,8 @@ className='text-center py-16''
                 <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text - 2xl font - bold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400">Try adjusting your category or price range filters</p>)}
-          </div>;
-        </section>;
-        {/* Contact Section */}
-        <section className='relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 py - 20 px - 4 sm:px-6 lg:px-8">;
-          <div className="max - w-4xl mx-auto text-center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
-}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -2398,79 +1434,6 @@ exceptional ROI;
                     {contactInfo.addres,}
 }
                   </span>
-<<<<<<< HEAD
-
-                </div>
-              </div>
-=======
-                </div>
-              </div>
-
-  );
-}
-
-  );
-
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
-                <div className='flex items - center justify - center space - x-3 text - cyan - 300'>;
-                  <span className='text - 2xl'>📱</span>;
-                  <span className='font - semibold'>{contact_info.mobile}</span>;
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'    />
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                <a;
-href='/contact'
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
-                    />
-                  Get Custom Quote;
-                </a>
-                <a;
-href='/2026-services-showcase'
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
-                    />
-                  View All Services;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              transition={{ duration: 0 && 0.8 }}
-              className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'>;
-              <h2 className='text-3xl font-bold text-white mb-6'>;
-                Ready to Get Started?;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'>;
-              className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
-            >;
-              <h2 className='text - 3xl font - bold text - white mb - 6'>;
-                Ready to Get Started?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8'>;
-                Contact our team to discuss pricing, implementation, and how our;
-                revolutionary 2026 services can transform your business with;
-                exceptional ROI;
-              </p>;
-
-
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            >;
-              <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services ;
-                can transform your business with exceptional ROI;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-                <div className="flex items-center justify-center space-x-3 text-cyan-300">;
-                  <span className="text-2xl">📱</span>;
-                  <span className="font-semibold">{contactInfo && contactInfo.mobile}</span>;
                 </div>;
                 <div className="flex items-center justify-center space-x-3 text-purple-300">;
                   <span className="text-2xl">✉️</span>;
@@ -2512,128 +1475,8 @@ href='/2026-services-showcase'
                 <div className=flex items - center justify - center space - x-3 text - cyan - 300'>;
                   <span className='text - 2xl>📱</span>;
                   <span className=font - semibold'>{contact_info.mobile}</span>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 </div>;
                 <div className='flex items - center justify - center space - x-3 text - purple - 300'>;
                   <span className='text - 2xl'>✉️</span>;
                   <span className='font - semibold'>{contact_info.email}</span>;
                 </div>;
-<<<<<<< HEAD
-                <div className="flex items-center justify-center space-x-3 text-pink-300">;
-                  <span className="text-2xl">📍</span>;
-                  <span className="font-semibold text-sm">{contactInfo && contactInfo.address}</span>;
-                </div>;
-              </div>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-
-
-                <a
-                  href="/contact"
-
-
-
-
-
-                </div>;
-                <div className='flex items - center justify - center space - x-3 text - purple - 300>;
-                  <span className=text - 2xl'>✉️</span>;
-                  <span className='font - semibold>{contact_info.email}</span>;
-                </div>;
-                <div className=flex items - center justify - center space - x-3 text - pink - 300'>;
-                  <span className='text - 2xl>📍</span>;
-                  <span className=font - semibold text - sm'>;
-=======
-                <div className='flex items - center justify - center space - x-3 text - pink - 300'>;
-                  <span className='text - 2xl'>📍</span>;
-                  <span className='font - semibold text - sm'>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    {contact_info.address}
-                  </span>;
-                </div>;
-              </div>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                <a;
-                  href='/contact';
-                  className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105'                >;
-                  Get Custom Quote;
-                </a>;
-                <a;
-                  href='/2026 - services - showcase';
-                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                >            >;
-              <h2 className="text - 3xl font - bold text-white mb-6">Ready to Get Started?</h2>;
-              <p className="text - xl text - gray-300 mb-8">;
-                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services;
-                can transform your business with exceptional ROI;
-              </p>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 mb-8">;
-                <div className="flex items - center justify - center space - x-3 text-cyan-300">;
-                  <span className="text-2xl">📱</span>;
-                  <span className="font-semibold">{contact_info.mobile}</span>;
-                </div>;
-                <div className="flex items - center justify - center space - x-3 text-purple-300">;
-                  <span className="text-2xl">✉️</span>;
-                  <span className="font-semibold">{contact_info.email}</span>;
-                </div>;
-                <div className="flex items - center justify - center space - x-3 text-pink-300">;
-                  <span className="text-2xl">📍</span>;
-                  <span className="font-semibold text-sm">{contact_info.address}</span>;
-                </div>;
-              </div>;
-              <div className="flex flex - col sm: flex - row gap-4 justify-center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration-300 transform hover:scale-105";
-                >;
-                  Get Custom Quote;
-                </a>;
-                <a;
-                  href='/2026 - services - showcase';
-                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                  href="/2026 - services - showcase";
-                  className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300";
-                >;
-                  View All Services;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Custom Quote
-                </a>
-                <a
-                  href='/2026-services-showcase'
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/2026-services-showcase"
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  View All Services
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-
-
-  );
-}
-
-  );
-
-);
-  );
-}
-
-}
-}
-}
-}
-  );
-}
-}

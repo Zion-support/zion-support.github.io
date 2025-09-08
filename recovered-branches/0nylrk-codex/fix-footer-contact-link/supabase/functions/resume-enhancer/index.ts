@@ -10,10 +10,6 @@ const corsHeaders = {
 
     const { content, enhancementType, context } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-
   try {
     const { content, enhancementType, context } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
@@ -77,4 +73,3 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
-

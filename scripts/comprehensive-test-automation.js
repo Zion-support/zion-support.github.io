@@ -1,4 +1,3 @@
-
     console.log('🔍 Running comprehensive test suite...');
     try {;
       // 1. Run unit tests;
@@ -63,16 +62,6 @@
     try {;
 
       // Check for Playwright or Cypress;
-
-      console.log('❌ E2E tests failed:', error.message);
-
-      this.testResults.e2e.failed++;
-      this.errors.push(`E2E tests failed: ${error.message }`)}
-  }
-
-    console.log('⚡ Running performance tests...');
-    try {;
-
       // Run Lighthouse CI if available;
 
           stdio: 'pipe'});
@@ -141,6 +130,3 @@ test('Performance test - Page load time', async ({ page }) => {
 }
 // Run the test automation;
 const testAutomation = new TestAutomation();
-
-
-

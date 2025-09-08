@@ -1,11 +1,4 @@
 import { Skill } from "@/types/resume";
-export interface SkillsFormProps {
-  resumeId: string;
-  skills: Skill[];
-  onComplete: () => void;
-  onBack: () => void;
-}
-
   resumeId: string;
   skills: Skill[];
 
@@ -16,7 +9,6 @@ import { Skill  } from '@/types / resume';
 export interface SkillsFormProps {
   resume_id: string;
 '
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
   resumeId: string;

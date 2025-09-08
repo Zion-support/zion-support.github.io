@@ -32,20 +32,6 @@ import Link from "next/link";
 import React from "react";} from "lucide-react"; export default function Services() { const title = "Services — Zion Tech Group"; const description = "AI autonomous systems,cloud platforms,cybersecurity,and micro SaaS delivery."; return ( <> {} <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center"> <div className="flex items-center justify-center mb-4"> <Award className="h-6 w-6 text-blue-600 mr-2" /> <span className="text-base font-semibold leading-7 text-blue-600">Our Services</span> </div> <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"> Our Services </h1> <p className="mt-6 text-lg leading-8 text-gray-600"> From strategy to production,we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business. </p> </div> </div> </section> {} <section className="py-24 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="grid gap-8 lg:grid-cols-2"> {} <div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-blue-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors"> <Brain className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2> <p className="text-sm text-blue-600 font-medium">Intelligent Automation</p> </div> </div> <p className="text-gray-600 mb-6"> Transform your operations with intelligent automation and AI-powered decision making. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">RAG and workflow orchestration</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Observability and guardrails</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Intelligent process automation</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>2-4 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group" aria-label="Get started with AI services" > Get started with AI <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-green-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors"> <Cloud className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">Cloud Platforms</h2> <p className="text-sm text-green-600 font-medium">Scalable Infrastructure</p> </div> </div> <p className="text-gray-600 mb-6"> Build scalable,resilient cloud infrastructure that grows with your business. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Serverless and Kubernetes</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Data pipelines and ML ops</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">FinOps and SRE practices</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Multi-cloud architecture</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>4-8 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-green-600 "hover": text-green-500 transition-colors group" aria-label="Get started with cloud services" > Get started with Cloud <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="cybersecurity" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-purple-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors"> <Shield className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">Cybersecurity</h2> <p className="text-sm text-purple-600 font-medium">Zero-Trust Security</p> </div> </div> <p className="text-gray-600 mb-6"> Protect your business with enterprise-grade security frameworks and compliance automation. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Zero-trust architecture</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Compliance automation</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Incident response</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Security audits</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>3-6 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group" aria-label="Get started with cybersecurity services" > Get started with Security <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="saas" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-orange-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors"> <Code className="h-7 w-7 text-white" /> ></div> <div> <h2 className="text-xl font-semibold text-gray-900">Micro SaaS></div> <p className="text-sm text-orange-600 font-medium">Custom Solutions></div> ></div> ></div> <p className="text-gray-600 mb-6"> Custom software solutions tailored to your specific business needs and workflows.; ></div> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Custom web applications></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">API development></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Integration services></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Maintenance & support></div> ></div> ></div> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>6-12 weeks delivery></div> ></div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group" aria-label="Get started with custom software services"> Get started with SaaS; <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> ></div> ></div> ></div> ></div> ></div> ></div> {} <section className="py-24 "sm": py-32 bg-gray-50"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl lg:text-center mb-16"> <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Delivery Process></div> <p className="mt-6 text-lg leading-8 text-gray-600"> We follow a proven methodology that ensures quality,speed,and successful outcomes.; ></div> ></div> <div className="grid grid-cols-1 "md": grid-cols-4 gap-8"> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4"> <span className="text-2xl font-bold text-blue-600">1></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Discovery></div> <p className="text-gray-600">Understand your needs and requirements></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4"> <span className="text-2xl font-bold text-green-600">2></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Strategy></div> <p className="text-gray-600">Plan the solution architecture></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4"> <span className="text-2xl font-bold text-purple-600">3></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Development></div> <p className="text-gray-600">Build and test the solution></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4"> <span className="text-2xl font-bold text-orange-600">4></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Deployment></div> <p className="text-gray-600">Launch and monitor performance></div> ></div> ></div> ></div> ></div> {} <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center"> <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to get started?></div> <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100"> Let"s discuss your project requirements and how we can help you achieve your goals.; ></div> <div className="mt-10 flex items-center justify-center gap-x-6"> <Link href="/contact" className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105" aria-label="Contact us to get started"> Contact Us; <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" /> ></div> <Link href="/" className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group" aria-label="Back to homepage"> Back to Home; <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block'>→></div> ></div> ></div> ></div> ></div> ></div> ></div> )}
 import React from "react";
 import Link from "next/link";
-import React from "react";} from "lucide-react"; export default function Services() { const title = "Services — Zion Tech Group"; const description = "AI autonomous systems,cloud platforms,cybersecurity,and micro SaaS delivery."; return ( <> {} <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center"> <div className="flex items-center justify-center mb-4"> <Award className="h-6 w-6 text-blue-600 mr-2" /> <span className="text-base font-semibold leading-7 text-blue-600">Our Services</span> </div> <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"> Our Services </h1> <p className="mt-6 text-lg leading-8 text-gray-600"> From strategy to production,we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business. </p> </div> </div> </section> {} <section className="py-24 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="grid gap-8 lg:grid-cols-2"> {} <div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-blue-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors"> <Brain className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2> <p className="text-sm text-blue-600 font-medium">Intelligent Automation</p> </div> </div> <p className="text-gray-600 mb-6"> Transform your operations with intelligent automation and AI-powered decision making. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">RAG and workflow orchestration</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Observability and guardrails</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Intelligent process automation</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>2-4 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group" aria-label="Get started with AI services" > Get started with AI <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-green-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors"> <Cloud className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">Cloud Platforms</h2> <p className="text-sm text-green-600 font-medium">Scalable Infrastructure</p> </div> </div> <p className="text-gray-600 mb-6"> Build scalable,resilient cloud infrastructure that grows with your business. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Serverless and Kubernetes</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Data pipelines and ML ops</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">FinOps and SRE practices</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Multi-cloud architecture</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>4-8 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-green-600 "hover": text-green-500 transition-colors group" aria-label="Get started with cloud services" > Get started with Cloud <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="cybersecurity" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-purple-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors"> <Shield className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">Cybersecurity</h2> <p className="text-sm text-purple-600 font-medium">Zero-Trust Security</p> </div> </div> <p className="text-gray-600 mb-6"> Protect your business with enterprise-grade security frameworks and compliance automation. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Zero-trust architecture</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Compliance automation</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Incident response</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Security audits</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>3-6 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group" aria-label="Get started with cybersecurity services" > Get started with Security <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="saas" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-orange-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors"> <Code className="h-7 w-7 text-white" /> ></div> <div> <h2 className="text-xl font-semibold text-gray-900">Micro SaaS></div> <p className="text-sm text-orange-600 font-medium">Custom Solutions></div> ></div> ></div> <p className="text-gray-600 mb-6"> Custom software solutions tailored to your specific business needs and workflows.; ></div> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Custom web applications></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">API development></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Integration services></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Maintenance & support></div> ></div> ></div> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>6-12 weeks delivery></div> ></div> <Link; href="/contact"; className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"; aria-label="Get started with custom software services"; > Get started with SaaS; <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> ></div> ></div> ></div> ></div> ></div> ></div> {} <section className="py-24 "sm": py-32 bg-gray-50"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl lg:text-center mb-16"> <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Delivery Process></div> <p className="mt-6 text-lg leading-8 text-gray-600"> We follow a proven methodology that ensures quality,speed,and successful outcomes.; ></div> ></div> <div className="grid grid-cols-1 "md": grid-cols-4 gap-8"> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4"> <span className="text-2xl font-bold text-blue-600">1></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Discovery></div> <p className="text-gray-600">Understand your needs and requirements></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4"> <span className="text-2xl font-bold text-green-600">2></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Strategy></div> <p className="text-gray-600">Plan the solution architecture></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4"> <span className="text-2xl font-bold text-purple-600">3></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Development></div> <p className="text-gray-600">Build and test the solution></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4"> <span className="text-2xl font-bold text-orange-600">4></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Deployment></div> <p className="text-gray-600">Launch and monitor performance></div> ></div> ></div> ></div> ></div> {} <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center"> <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to get started?></div> <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100"> Let"s discuss your project requirements and how we can help you achieve your goals.; ></div> <div className="mt-10 flex items-center justify-center gap-x-6"> <Link; href="/contact"; className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"; aria-label="Contact us to get started"; > Contact Us; <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" /> ></div> <Link; href="/"; className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group"; aria-label="Back to homepage"; > Back to Home; <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block'>→></div> ></div> ></div> ></div> ></div> ></div> ></div> )}
-import React from "react";
-import Link from "next/link";
-import React from "react";} from "lucide-react"; export default function Services() { const title = "Services — Zion Tech Group"; const description = "AI autonomous systems,cloud platforms,cybersecurity,and micro SaaS delivery."; return ( <> {} <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center"> <div className="flex items-center justify-center mb-4"> <Award className="h-6 w-6 text-blue-600 mr-2" /> <span className="text-base font-semibold leading-7 text-blue-600">Our Services</span> </div> <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"> Our Services </h1> <p className="mt-6 text-lg leading-8 text-gray-600"> From strategy to production,we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business. </p> </div> </div> </section> {} <section className="py-24 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="grid gap-8 lg:grid-cols-2"> {} <div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-blue-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors"> <Brain className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2> <p className="text-sm text-blue-600 font-medium">Intelligent Automation</p> </div> </div> <p className="text-gray-600 mb-6"> Transform your operations with intelligent automation and AI-powered decision making. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">RAG and workflow orchestration</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Observability and guardrails</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-blue-600" /> <span className="text-sm text-gray-700">Intelligent process automation</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>2-4 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group" aria-label="Get started with AI services" > Get started with AI <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-green-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors"> <Cloud className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">Cloud Platforms</h2> <p className="text-sm text-green-600 font-medium">Scalable Infrastructure</p> </div> </div> <p className="text-gray-600 mb-6"> Build scalable,resilient cloud infrastructure that grows with your business. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Serverless and Kubernetes</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Data pipelines and ML ops</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">FinOps and SRE practices</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-green-600" /> <span className="text-sm text-gray-700">Multi-cloud architecture</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>4-8 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-green-600 "hover": text-green-500 transition-colors group" aria-label="Get started with cloud services" > Get started with Cloud <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="cybersecurity" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-purple-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors"> <Shield className="h-7 w-7 text-white" /> </div> <div> <h2 className="text-xl font-semibold text-gray-900">Cybersecurity</h2> <p className="text-sm text-purple-600 font-medium">Zero-Trust Security</p> </div> </div> <p className="text-gray-600 mb-6"> Protect your business with enterprise-grade security frameworks and compliance automation. </p> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Zero-trust architecture</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Compliance automation</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Incident response</span> </li> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-purple-600" /> <span className="text-sm text-gray-700">Security audits</span> </li> </ul> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>3-6 weeks delivery</span> </div> <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group" aria-label="Get started with cybersecurity services" > Get started with Security <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> </Link> </div> </div> {} <div id="saas" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shadow-lg transition-all duration-300 hover:border-orange-300"> <div className="flex items-center gap-x-3 mb-6"> <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors"> <Code className="h-7 w-7 text-white" /> ></div> <div> <h2 className="text-xl font-semibold text-gray-900">Micro SaaS></div> <p className="text-sm text-orange-600 font-medium">Custom Solutions></div> ></div> ></div> <p className="text-gray-600 mb-6"> Custom software solutions tailored to your specific business needs and workflows.; ></div> <ul className="space-y-3 mb-6"> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Custom web applications></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">API development></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Integration services></div> ></div> <li className="flex items-center gap-x-3"> <CheckCircle className="h-4 w-4 text-orange-600" /> <span className="text-sm text-gray-700">Maintenance & support></div> ></div> ></div> <div className="flex items-center justify-between"> <div className="flex items-center space-x-2 text-sm text-gray-500"> <Clock className="h-4 w-4" /> <span>6-12 weeks delivery></div> ></div> <Link; href="/contact"; className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"; aria-label="Get started with custom software services"; > Get started with SaaS; <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> ></div> ></div> ></div> ></div> ></div> ></div> {} <section className="py-24 "sm": py-32 bg-gray-50"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl lg:text-center mb-16"> <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Delivery Process></div> <p className="mt-6 text-lg leading-8 text-gray-600"> We follow a proven methodology that ensures quality,speed,and successful outcomes.; ></div> ></div> <div className="grid grid-cols-1 "md": grid-cols-4 gap-8"> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4"> <span className="text-2xl font-bold text-blue-600">1></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Discovery></div> <p className="text-gray-600">Understand your needs and requirements></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4"> <span className="text-2xl font-bold text-green-600">2></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Strategy></div> <p className="text-gray-600">Plan the solution architecture></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4"> <span className="text-2xl font-bold text-purple-600">3></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Development></div> <p className="text-gray-600">Build and test the solution></div> ></div> <div className="text-center group"> <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4"> <span className="text-2xl font-bold text-orange-600">4></div> ></div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Deployment></div> <p className="text-gray-600">Launch and monitor performance></div> ></div> ></div> ></div> ></div> {} <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 "sm": py-32"> <div className="mx-auto max-w-7xl px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center"> <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to get started?></div> <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100"> Let"s discuss your project requirements and how we can help you achieve your goals.; ></div> <div className="mt-10 flex items-center justify-center gap-x-6"> <Link; href="/contact"; className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"; aria-label="Contact us to get started"; > Contact Us; <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" /> ></div> <Link; href="/"; className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group"; aria-label="Back to homepage"; > Back to Home; <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block'>→></div> ></div> ></div> ></div> ></div> ></div> ></div> )}
-import React from "react";
-import Link from "next/link";
-import { 
-	Award, 
-	Brain, 
-	CheckCircle, 
-	Clock, 
-	ArrowRight, 
-	Cloud, 
-	Shield, 
 import { ;
 	Award, ;
 	Brain, ;
@@ -55,10 +41,6 @@ import { ;
 	Cloud, ;
 	Shield, ;
 	Code ;
-} from \"lucide-react\";
-} from "lucide-react";
-} from \"lucide-react\";
-} from "lucide-react";
 	const title = \"Services — Zion Tech Group\";
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\";
 	return (
@@ -89,38 +71,6 @@ import { ;
 							<div className='flex items-center gap-x-3 mb-6'>
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors'>
 									<Brain className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>AI Autonomous Systems</h2>
-									<p className='text-sm text-blue-600 font-medium'>Intelligent Automation</p>
-								</div>
-							</div>
-							<p className='text-gray-600 mb-6'>
-								Transform your operations with intelligent automation and AI-powered decision making.
-							</p>
-							<ul className='space-y-3 mb-6'>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>Sales/CS multi-agent copilots</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>RAG and workflow orchestration</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>Observability and guardrails</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>Intelligent process automation</span>
-								</li>
-							</ul>
-							<div className='flex items-center justify-between'>
-								<div className='flex items-center space-x-2 text-sm text-gray-500'>
-									<Clock className='h-4 w-4' />
-									<span>2-4 weeks delivery</span>
-								</div>
 								<Link
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group'
@@ -183,38 +133,6 @@ import { ;
 							<div className='flex items-center gap-x-3 mb-6'>
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors'>
 									<Shield className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>Cybersecurity</h2>
-									<p className='text-sm text-purple-600 font-medium'>Zero-Trust Security</p>
-								</div>
-							</div>
-							<p className='text-gray-600 mb-6'>
-								Protect your business with enterprise-grade security frameworks and compliance automation.
-							</p>
-							<ul className='space-y-3 mb-6'>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>Zero-trust architecture</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>Compliance automation</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>Incident response</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>Security audits</span>
-								</li>
-							</ul>
-							<div className='flex items-center justify-between'>
-								<div className='flex items-center space-x-2 text-sm text-gray-500'>
-									<Clock className='h-4 w-4' />
-									<span>3-6 weeks delivery</span>
-								</div>
 								<Link
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group'
@@ -230,12 +148,6 @@ import { ;
 							<div className='flex items-center gap-x-3 mb-6'>
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors'>
 									<Code className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>Micro SaaS</h2>
-									<p className='text-sm text-orange-600 font-medium'>Custom Solutions</p>
-								</div>
-							</div>
 							<p className='text-gray-600 mb-6'>
 								Custom software solutions tailored to your specific business needs and workflows.
 							</p>
@@ -266,15 +178,6 @@ import { ;
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
 									aria-label='Get started with custom software services'
-								>
-									Get started with SaaS
-									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
-								</Link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 
 			{/* New Innovative Services Section */}
 			<section className='py-24 sm:py-32 bg-gray-50'>
@@ -283,260 +186,6 @@ import { ;
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative Business Solutions</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 							Discover our latest cutting-edge services designed to solve real business challenges with intelligent automation and modern technology.
-						</p>
-					</div>
-					<div className='grid gap-8 lg:grid-cols-2'>
-						{/* Affiliate Marketing Tracking */}
-						<div className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300'>
-							<div className='flex items-center gap-x-3 mb-6'>
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors'>
-									<Link2 className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>Affiliate Marketing Tracking</h2>
-									<p className='text-sm text-blue-600 font-medium'>Advanced Attribution Platform</p>
-								</div>
-							</div>
-							<p className='text-gray-600 mb-6'>
-								Maximize your affiliate program ROI with fraud detection, cross-device attribution, and automated commission management.
-							</p>
-							<ul className='space-y-3 mb-6'>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>Cross-device attribution tracking</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>AI-powered fraud detection</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>Automated commission payouts</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-blue-600' />
-									<span className='text-sm text-gray-700'>Real-time analytics dashboard</span>
-								</li>
-							</ul>
-							<div className='flex items-center justify-between'>
-								<div className='flex items-center space-x-2 text-sm text-gray-500'>
-									<DollarSign className='h-4 w-4' />
-									<span>Starting $299/month</span>
-								</div>
-								<Link
-									href='/services/affiliate-marketing-tracking'
-									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group'
-								>
-									Learn More
-									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
-								</Link>
-							</div>
-						</div>
-
-						{/* Website Analytics */}
-						<div className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-green-300'>
-							<div className='flex items-center gap-x-3 mb-6'>
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors'>
-									<BarChart3 className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>Website Analytics for Small Business</h2>
-									<p className='text-sm text-green-600 font-medium'>Intuitive Analytics Platform</p>
-								</div>
-							</div>
-							<p className='text-gray-600 mb-6'>
-								Get actionable insights about your website visitors without technical complexity. Designed for business owners.
-							</p>
-							<ul className='space-y-3 mb-6'>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-green-600' />
-									<span className='text-sm text-gray-700'>User-friendly dashboard</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-green-600' />
-									<span className='text-sm text-gray-700'>Traffic source analysis</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-green-600' />
-									<span className='text-sm text-gray-700'>Conversion tracking</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-green-600' />
-									<span className='text-sm text-gray-700'>Marketing performance insights</span>
-								</li>
-							</ul>
-							<div className='flex items-center justify-between'>
-								<div className='flex items-center space-x-2 text-sm text-gray-500'>
-									<DollarSign className='h-4 w-4' />
-									<span>Starting $29/month</span>
-								</div>
-								<Link
-									href='/services/website-analytics'
-									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group'
-								>
-									Learn More
-									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
-								</Link>
-							</div>
-						</div>
-
-						{/* AI Content Creation */}
-						<div className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300'>
-							<div className='flex items-center gap-x-3 mb-6'>
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors'>
-									<Brain className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>AI Content Creation Suite</h2>
-									<p className='text-sm text-purple-600 font-medium'>Automated Content Production</p>
-								</div>
-							</div>
-							<p className='text-gray-600 mb-6'>
-								Revolutionize your content marketing with AI-powered text, image, and video generation at scale.
-							</p>
-							<ul className='space-y-3 mb-6'>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>AI copywriting assistant</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>AI image generation</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>AI video production</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-purple-600' />
-									<span className='text-sm text-gray-700'>Content strategy optimization</span>
-								</li>
-							</ul>
-							<div className='flex items-center justify-between'>
-								<div className='flex items-center space-x-2 text-sm text-gray-500'>
-									<DollarSign className='h-4 w-4' />
-									<span>Starting $99/month</span>
-								</div>
-								<Link
-									href='/services/ai-content-creation'
-									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group'
-								>
-									Learn More
-									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
-								</Link>
-							</div>
-						</div>
-
-						{/* Customer Support Platform */}
-						<div className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-indigo-300'>
-							<div className='flex items-center gap-x-3 mb-6'>
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-600 group-hover:bg-indigo-700 transition-colors'>
-									<MessageSquare className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>Customer Support Platform</h2>
-									<p className='text-sm text-indigo-600 font-medium'>Complete Helpdesk Solution</p>
-								</div>
-							</div>
-							<p className='text-gray-600 mb-6'>
-								Transform customer service with AI chatbots, ticket management, live chat, and knowledge base creation.
-							</p>
-							<ul className='space-y-3 mb-6'>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-indigo-600' />
-									<span className='text-sm text-gray-700'>AI-powered chatbots</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-indigo-600' />
-									<span className='text-sm text-gray-700'>Ticket management system</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-indigo-600' />
-									<span className='text-sm text-gray-700'>Live chat support</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-indigo-600' />
-									<span className='text-sm text-gray-700'>Knowledge base builder</span>
-								</li>
-							</ul>
-							<div className='flex items-center justify-between'>
-								<div className='flex items-center space-x-2 text-sm text-gray-500'>
-									<DollarSign className='h-4 w-4' />
-									<span>Starting $49/month</span>
-								</div>
-								<Link
-									href='/services/customer-support-platform'
-									className='inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-500 transition-colors group'
-								>
-									Learn More
-									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
-								</Link>
-							</div>
-						</div>
-
-						{/* E-commerce Returns */}
-						<div className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-red-300'>
-							<div className='flex items-center gap-x-3 mb-6'>
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-red-600 group-hover:bg-red-700 transition-colors'>
-									<RotateCcw className='h-7 w-7 text-white' />
-								</div>
-								<div>
-									<h2 className='text-xl font-semibold text-gray-900'>E-Commerce Return Management</h2>
-									<p className='text-sm text-red-600 font-medium'>Automated Return Processing</p>
-								</div>
-							</div>
-							<p className='text-gray-600 mb-6'>
-								Streamline return processes with automated return requests, label generation, and status tracking.
-							</p>
-							<ul className='space-y-3 mb-6'>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-red-600' />
-									<span className='text-sm text-gray-700'>Automated return processing</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-red-600' />
-									<span className='text-sm text-gray-700'>Smart label generation</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-red-600' />
-									<span className='text-sm text-gray-700'>Inventory management</span>
-								</li>
-								<li className='flex items-center gap-x-3'>
-									<CheckCircle className='h-4 w-4 text-red-600' />
-									<span className='text-sm text-gray-700'>Analytics & reporting</span>
-								</li>
-							</ul>
-							<div className='flex items-center justify-between'>
-								<div className='flex items-center space-x-2 text-sm text-gray-500'>
-									<DollarSign className='h-4 w-4' />
-									<span>Starting $199/month</span>
-								</div>
-								<Link
-									href='/services/ecommerce-returns'
-									className='inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-500 transition-colors group'
-								>
-									Learn More
-									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
-								</Link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-					</div>
-				</div>
-			</section>
-			{/* Expanded Service Catalog */}
-			<section className='py-24 sm:py-32 bg-white'>
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='mx-auto max-w-4xl text-center mb-14'>
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Comprehensive Technology Solutions</h2>
-						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. 
-							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. 
-							Explore our full capabilities at{' '}
-							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.
-						</p>
 						<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
 							<div className='bg-blue-50 p-4 rounded-lg'>
 								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>

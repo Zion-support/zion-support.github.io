@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -23,10 +21,6 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection",const 
       <SEO
         title="Zion AI Marketplace App"
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
-        keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs"
-export default MobileAppPage;
-
-export default MobileAppPage,
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;

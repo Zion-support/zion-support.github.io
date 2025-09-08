@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import EnhancedErrorBoundarydynamic from "../components/EnhancedErrorBoundary.dynamic";
@@ -16,5 +14,3 @@ import EnhancedErrorBoundarydynamic from "../components/EnhancedErrorBoundary.dy
 
     render(<EnhancedErrorBoundarydynamic />);
     // Add styling tests if needed})});
-
-

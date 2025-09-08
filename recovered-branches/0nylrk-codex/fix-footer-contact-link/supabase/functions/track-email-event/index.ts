@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
@@ -28,78 +27,9 @@ serve(async (req) => {
   if (!type |!campaignId |!userId) {
 
     return new Response("Missing required parameters", { status: 400 })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-  try {}
-    // Update the email campaign record based on event type"
-    if (type === "open") {}
-      await supabase"
-        .from("email_campaigns")
-        .update({ opened_at: new Date().toISOString() })"
-        .eq("id", campaignId)
-
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      // Return a 1x1 transparent GIF
-      return new Response(
-        new Uint8Array([
 
-<<<<<<< HEAD
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
-// Initialize Supabase client;"
-const supabase_url = Deno.env.get ("SUPABASE_URL")!;"
-const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,
-const supabase = create_client (supabase_url, supabaseServiceKey);
-;
-serve (async (req) => {}
-  // Parse the URL to get the tracking parameters;
-  const url = new URL (req.url);"
-  const type = url.search_params.get ("type"), // "open" or "click";"
-  const campaign_id = url.search_params.get ("cid");"
-  const user_id = url.search_params.get ("uid");"
-  const redirect_url = url.search_params.get ("redirect");
-;
-  // Validate required parameters;
-  // Check condition;
-if ( {) {}
-  $2;
-}"
-    return new Response ("Missing required parameters", { status: 400 });
-  }
-  try {}
-    // Update the email campaign record based on event type;
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      await supabase;"
-        .from ("email_campaigns");
-        .update ({ opened_at: new Date ().toISOString () });"
-        .eq ("id", campaign_id);"
-        .eq ("user_id", user_id);
-;
-      // Return a 1x1 transparent GIF;
-      return new Response (
-        new Uint8Array ([;
-
-
-          0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00;
-          0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00;
-          0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
-          0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
-
-<<<<<<< HEAD
-        {
           headers: {            "Expires": "0"}}
       )
     } else if (type === "click") {
@@ -161,7 +91,3 @@ if ( {) {}
 }
       return new Response (null, {}
         status: 302,
-        headers: {
-          Location: redirect_url}});
-    }  }
-});

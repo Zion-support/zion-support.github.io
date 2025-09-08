@@ -1,6 +1,5 @@
 
 try {
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }// Attach handlers once the DOM is fully loaded to avoid null element errors
 

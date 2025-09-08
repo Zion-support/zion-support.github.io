@@ -19,4 +19,3 @@ export: interface AdvancedInnovativeService2032 {
    contactInfo: {
    phone: string;
    email: string;
-

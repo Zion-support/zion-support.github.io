@@ -24,7 +24,6 @@ export type JobCategory =
 export interface JobBudget {;  min: number;
   max: number;
   currency: string;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface Job {;
 
@@ -45,10 +44,6 @@ export interface Job {
   status: JobStatus;
   created_at: string;
   updated_at: string;
-}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 export interface JobFormData {;
 
   created_at: string
@@ -81,48 +76,6 @@ export type ApplicationStatus =
   | "interview"
   | "hired"
   | "rejected";
-
-export interface JobApplication {
-export interface JobApplication {
-
-export interface JobApplication {;
-
-export interface JobApplication {  summary?: string
-  skills?: string[]
-}
-export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-export interface JobApplication {
-
-export interface JobApplication {;
-export interface JobApplication {
-  id: string;
-  job_id: string;
-  talent_id: string;
-  resume_id?: string;
-  status: ApplicationStatus;
-  cover_letter?: string;
-  is_shortlisted: boolean;
-  created_at: string;
-  updated_at?: string;
-  viewed_at?: string;
-  job?: Job;
-  talent_profile?: {
-    id?: string;
-    full_name: string;
-    professional_title: string;
-    profile_picture_url?: string;
-    bio: string;
-    skills: string[]
-};
-  resume?: ResumeAttachment;
-  // New fields for resume scoring;  }
-  resume?: ResumeAttachment;
-  // New fields for resume scoring;
-  match_score?: number;
-  match_summary?: string;
-  match_breakdown?: {
-    skills_match?: {
-      score: number;
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';

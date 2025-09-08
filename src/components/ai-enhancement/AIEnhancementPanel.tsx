@@ -224,4 +224,3 @@ export function AIEnhancementPanel({;  title,;
     </Card>;
   );
 }
-<<<<<<< HEAD

@@ -1,5 +1,3 @@
-
-
 }
 }
 import React from 'react';
@@ -52,5 +50,3 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {}
 }
 
 }
-
-

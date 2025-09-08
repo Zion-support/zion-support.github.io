@@ -23,20 +23,6 @@ function fixAllMissingImports(content, filePath) {;
   if (missingImports.length === 0) {;
     return { content, "changes": 0 };",}
 ;
-  let fixedContent = content;
-  let changes = 0;
-
-    
-    // Find the best place to insert the import`
-    const importIndex = fixedContent.indexOf('import');
-    if (importIndex !== -1) {
-      const nextLineIndex = fixedContent.indexOf('\n', importIndex);
-      fixedContent = fixedContent.slice(0, nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else {
-      fixedContent = newImport + fixedContent}
-    changes++}
-  
-  return { content: fixedContent, changes }}
-
 }
 
   ];
@@ -54,4 +40,3 @@ function fixAllMissingImports(content, filePath) {;
     d: ${filesProcessed}`);`
   console.log(`   Total import fixes: ${totalFixes}`);`
   console.log(`\n✨ Comprehensive missing imports fix completed!`)}
-

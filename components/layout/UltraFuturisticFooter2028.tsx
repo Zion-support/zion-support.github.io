@@ -579,7 +579,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function UltraFuturisticFooter2028() {
   return (
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>

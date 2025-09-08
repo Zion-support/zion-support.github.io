@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import type { CSSProperties } from "react"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -29,14 +28,7 @@ if ( {) {
   $2
 }
     throw new Error ("use_sidebar must be used within a SidebarProvider.");
-  }
-  return context as SidebarContextType;
-
 }
-
-  return context as SidebarContextType
-}
-
   SidebarProviderProps
 >(
   (
@@ -67,102 +59,8 @@ if ( {) {
 
         }
       }
-
-      window.addEventListener("keydown", handleKeyDown)
-
-      return () => window.removeEventListener("keydown", handleKeyDown)
-
-=======
-      window.addEventListener("keydown", handleKeyDown)
-
-      return () => window.removeEventListener("keydown", handleKeyDown)
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    }, [toggleSidebar])"
-    // We add a state so that we can do data-state="expanded" or "collapsed".
-    // This makes it easier to style the sidebar with Tailwind classes."
-    const state = open ? "expanded" : "collapsed" as SidebarState;
-    const contextValue = React.useMemo(
-        // This sets the cookie to keep the sidebar state.;
-
-        document.cookie = `${SIDEBAR_COOKIE_NAME}=${open_state}, path=/, max - age=${SIDEBAR_COOKIE_MAX_AGE}`;
-      }
-      [setOpenProp, open]);
-    // Helper to toggle the sidebar.;
-    const toggle_sidebar = React.useCallback (() => {}
-      return is_mobile;
-        ? setOpenMobile ((open) => !open);
-        : set_open ((open) => !open);
-    }, [is_mobile, set_open, setOpenMobile]);
-    // Adds a keyboard shortcut to toggle the sidebar.;
-    React.useEffect (() => {}
-      const handleKeyDown = (event: KeyboardEvent) =>: any {}
-        // Check condition;
-if (
-        ) {) {}
-  $2;
-}
-          event.prevent_default ();
-          toggle_sidebar ();
-        }
-      }"
-      window.addEventListener ("keydown", handleKeyDown);"
-      return () => window.removeEventListener ("keydown", handleKeyDown);
-    }, [toggle_sidebar]);"
-    // We add a state so that we can do data - state="expanded" or "collapsed".;
-    // This makes it easier to style the sidebar with Tailwind classes.;"
-    const state = open ? "expanded" : "collapsed" as SidebarState;
-    const context_value = React.useMemo (
-
-<<<<<<< HEAD
       (): SidebarContextType => ({
 
-=======
-      (): SidebarContextType => ({}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      open: openProp,;
-      onOpenChange: setOpenProp,;
-      className;
-      style;
-      children;
-      ...props
-};
-    ref;
-  ) => {;
-    const isMobile = useIsMobile();
-    const [openMobile, setOpenMobile] = React && React.useState(false);
-    // This is the internal state of the sidebar.;
-    // We use openProp and setOpenProp for control from outside the component.;
-    const [_open, _setOpen] = React && React.useState(defaultOpen);
-    const open = openProp ?? _open;
-    const setOpen = React && React.useCallback(;
-      (value: boolean | ((value: boolean) => boolean)) => {;"
-        const openState = typeof value === "function" ? value(open) : value;
-      open:openProp,;
-      onOpenChange:setOpenProp,;
-      className,;
-      style,;
-      children,;
-      ...props;
-    },;
-    ref;
-  ) => {;
-
-<<<<<<< HEAD
-    const isMobile = useIsMobile();
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const [openMobile, setOpenMobile] = React.useState(false);
-;
-    // This is the internal state of the sidebar.;
-    // We use openProp and setOpenProp for control from outside the component.;
-    const [_open, _setOpen] = React.useState(defaultOpen);
-
-<<<<<<< HEAD
-    const open = openProp ?? _open;
-    const setOpen = React.useCallback(;
-      (value:boolean | ((value:boolean) => boolean)) => {;
-        const openState = typeof value === "function" ? value(open) :value;
         state;
         open;
         set_open;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -105,61 +106,4 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               )}
             >
 <<<<<<< HEAD
-              <MessageSquare className="w-4 h-4 mr-2" />
-              {t('nav.messages')}
-=======
-              <MessageSquare className="w-4 h-4 mr-1" />
-              Messages
->>>>>>> origin/cursor/website-audit-and-enhancement-de4e
-              {unreadCount > 0 && (
 <<<<<<< HEAD
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-=======
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
-=======
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
-=======
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
-=======
-                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center animate-pulse">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-                  {unreadCount}
-                </span>
-              )}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
-          </li>
-        )}
-
-        {/* Cart icon with badge */}
-        <li>
-          <Link
-            to="/cart"
-            className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
-              location.pathname.startsWith('/cart')
-                ? 'bg-zion-purple/20 text-zion-cyan'
-                : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-            )}
-          >
-            <ShoppingCart className="w-4 h-4 mr-1" />
-            Cart
-            {cartCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                {cartCount}
-              </span>
-            )}
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  );
-}

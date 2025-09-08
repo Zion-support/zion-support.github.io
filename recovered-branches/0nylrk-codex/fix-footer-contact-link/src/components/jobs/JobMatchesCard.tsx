@@ -1,5 +1,4 @@
 
-
 import {;
   Card,;
   CardContent,;
@@ -96,7 +95,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               Apply Now;
             </Button>;
 
-<<<<<<< HEAD
             <Button
               variant="outline"            <Button 
               className="flex-1" 
@@ -110,23 +108,4 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       </CardFooter>;
     </Card>);
 }
-
-<<<<<<< HEAD
-=======
-            <Button
-              variant="outline"
-            <Button 
-              variant="outline" 
-              className="flex-1"
-              onClick={() => onDecline(match.id)}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            >
-              Decline
-            </Button>
-          </div>
-        )}
-      </CardFooter>
-    </Card>
-      </CardFooter>;
-    </Card>;
 

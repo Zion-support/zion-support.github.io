@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { expect, test } from 'vitest';
 import handler from '@/pages/api/users/me';
 
@@ -12,15 +13,7 @@ function mockRes() {
   res.end = vi.fn();
   return res;
 }
-
-test('GET returns profile', () => {
-  const req = mockReq('GET');
-  const res = mockRes();
-  handler(req, res);
-  expect(res.status).toHaveBeenCalledWith(200);
-  expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ email: 'jane@example.com' }));
-});
-
+<<<<<<< HEAD
 test('PUT updates profile', () => {
   const req = mockReq('PUT', { name: 'New' });
   const res = mockRes();

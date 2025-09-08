@@ -19,4 +19,3 @@ import React from';react' "export": interface AdvancedAIService {';
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-

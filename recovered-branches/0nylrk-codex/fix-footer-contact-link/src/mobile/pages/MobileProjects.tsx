@@ -1,22 +1,7 @@
-
-
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
-<<<<<<< HEAD
-
-import { BottomNavigation } from "../components/common/BottomNavigation",
-import { MobileProjectView } from "../components/projects/MobileProjectView",const milestonesData = [;
-  {;
-    id: "milestone-1",;
-    title: "Initial Design Concepts",;
-  return (
-    <div className="min-h-screen">;
-      <MobileHeader
-        title="Project Details"
-        showBack
-
   },
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
@@ -107,7 +92,6 @@ export function MobileProjects() {;
         <MobileProjectView 
           project={projectData} 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
           milestones={milestonesData}
         />
       </main>
@@ -197,4 +181,3 @@ export function MobileProjects() { return null; }
 };
 
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

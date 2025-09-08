@@ -12,18 +12,6 @@ import { format } from './date - fns';
 * @param date_string ISO date string to format;
 * @returns Formatted date string;
 */;
-<<<<<<< HEAD
-
-export const format_date = (date_string: string): string => {
-  try {
-    return format (new Date (date_string), 'PP');
-  } catch (e) {
-
-;
-
-
-=======
-
 export const format_date = (date_string: string): string => {}
   try {";
     return format(new Date(dateString), "PP");
@@ -44,4 +32,3 @@ export const formatDate = (dateString: string): string => {;
     return format(new Date(dateString), 'PP');
   } catch (e) {;
     return dateString;
-  }>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

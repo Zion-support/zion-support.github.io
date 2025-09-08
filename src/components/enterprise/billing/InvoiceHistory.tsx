@@ -296,4 +296,3 @@ export function InvoiceHistory() {;
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
-<<<<<<< HEAD

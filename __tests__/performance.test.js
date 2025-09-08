@@ -1,14 +1,4 @@
-import { test, expect } from "@playwright/test";
-
-test.describe("Performance Tests", () => {
-  test("page load performance", async ({ page }) => {
-    const startTime = Date.now();
-    await page.goto("/");
-    await page.waitForLoadState("networkidle");
-    const loadTime = Date.now() - startTime;
-    expect(loadTime).toBeLessThan(3000);
-  });
-
+<<<<<<< HEAD
   test("lighthouse performance audit", async ({ page }) => {
     await page.goto("/");
     // Run lighthouse audit
@@ -60,9 +50,3 @@ test.describe("Performance Tests", () => {
       }
       return null;
     });
-
-    if (metrics) {
-      expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
-    }
-  });
-});

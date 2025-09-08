@@ -1,28 +1,3 @@
-
-
-  const { projectId } = useParams() as { projectId: string },;
-
-  const [activeTab, setActiveTab] = useState('chat');  const [isInCall, setIsInCall] = useState(false);
-  const [callParticipants, setCallParticipants] = useState<
-    Array<{
-      id: string;
-      name: string;
-      avatar?: string;
-      isMuted?: boolean;
-      isVideoEnabled?: boolean;
-      isScreenSharing?: boolean;
-      isHost?: boolean;
-    }>
-  >([
-    {
-      id: "user-1",
-      name: "You",
-      isHost: true,
-      isVideoEnabled: true,
-      isMuted: false,
-    },
-  ]);
-
   const startVideoCall = () => {import {useParams} from 'react-router-dom';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -41,10 +16,6 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs
 import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
-
-
-  ]),
-
   
   const startVideoCall = () => {
     setIsInCall(true),
@@ -397,36 +368,5 @@ import {toast} from 'sonner';
               </CardContent>;
             </Card>;
           </TabsContent>;
-          <TabsContent value="team" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Team Members</CardTitle>;
-                <CardDescription > Manage project participants</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items - center justify - center h-full">;
-                  <p className="text - muted-foreground">Team management will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          <TabsContent value="settings" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Project Settings</CardTitle>;
-                <CardDescription > Configure project parameters</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items - center justify - center h-full">;
-                  <p className="text - muted-foreground">Settings will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-        </Tabs>;
-      </main>;
-      <Footer />;
-
     </>);
 }

@@ -7,18 +7,3 @@ interface CybersecurityProps {
 }
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function Cybersecurity({ }: CybersecurityProps) {
-  return (
-    <div>
-      <h1>Cybersecurity</h1>
-      <p>This component is currently under development.</p>
-    </div>
-<<<<<<< HEAD
-
-  );

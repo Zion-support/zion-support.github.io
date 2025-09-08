@@ -1,11 +1,9 @@
-
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
 interface FeaturedListingsSectionProps {
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 interface FeaturedListingsSectionProps {
 
   show_title?: boolean;
@@ -39,14 +37,6 @@ function FeaturedListingsSection() {
         {show_title && (
           <div className="text - center mb-12">;
             <GradientHeading className="text - 3xl md:text - 4xl font - bold mb-4">;
-              Featured Listings;
-            </GradientHeading>;
-            <p className="text - zion - slate - light max - w-3xl mx-auto">;
-              Discover our handpicked selection of top AI products and services;
-            </p>;
-          </div>)}
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-6">;
-          {featured_listings.map ((listing) => (
             <ProductListingCard;
               key={listing.id}
               listing={listing}
@@ -71,4 +61,3 @@ function FeaturedListingsSection() {
       </div>
     </section>
   )
-

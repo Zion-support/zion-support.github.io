@@ -1,15 +1,3 @@
-/**;
-* Helper script to update icon imports across the codebase;
-*;
-* Usage: * 1. Run: node scripts / update - icon - imports.js;
-* 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
-*/;
-const fs = require ('fs'),
-const path = require ('path'),
-const glob = require ('glob'),
-// Helper to replace imports in a file;
-/**
-
  * 
  * Usage: * 1. Run: node scripts/update-icon-imports && imports.js      'import {$1} from "@/components/icons"'
     )
@@ -98,4 +86,3 @@ console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

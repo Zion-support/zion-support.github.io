@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';
 import React from 'react';
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import Link from 'next/link';';
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
@@ -13,25 +12,6 @@ const services = [
     icon: Globe,
     features: [;
 
-<<<<<<< HEAD
-      'Online service applications,',
-      'Digital document submission',',
-      'Status tracking systems',',
-    title: 'Citizen Service Portals,',,
-  description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',;
-import Layout from '../../components/Layout';
-const services = [;
-  {;
-    title: 'Citizen Service Portals',,
-  description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',;
-    icon: Globe,;
-    features: [,;
-      'Online service applications,',;
-      'Digital document submission',',;
-      'Status tracking systems',',;      'Compliance monitoring'';
-    ];
-  },
-  {}
     title: 'Digital Identity Solutions,',
     description: 'Secure digital identity verification and management systems for citizens.,',
     icon: Users,
@@ -106,7 +86,6 @@ export default function GovernmentPage() {
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
->>>>>>> origin/cursor/delete-old-data-records-6bba
         <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
@@ -117,58 +96,6 @@ export default function GovernmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-        {/* Services Section */}"
-        <section className="py-20 bg-white">""
-          <div className="container mx-auto px-4">";
-
-=======
-
-
-              className="text-center max-w-4xl mx-auto"
-            >"
-              <div className="flex items-center justify-center mb-6">"
-                <Building className="w-12 h-12 text-indigo-400 mr-4" />"
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Government"
-                  <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
-                    Technology Solutions;
-                  </span>
-                </h1>
-              </div>"
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform government operations with secure, efficient, and citizen-centric technology solutions.
-                Enhance service delivery, improve transparency, and ensure public safety.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Government Consultation;
-                </Link>"
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">
-                  View Government Case Studies;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-
-<<<<<<< HEAD
-
-              className=text-center mb-16"
-
-
-
-=======
-                  <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">";
-                    Technology Solutions;
-                  </span>;
-                </h1>;
-              </div>;
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
-                Transform government operations with secure, efficient, and citizen-centric technology solutions. 
-                Enhance service delivery, improve transparency, and ensure public safety.,
-              </p>;
-
                 </Link>;
               </div>;
             </motion.div>;
@@ -258,83 +185,4 @@ export default function GovernmentPage() {
                   key={benefit && benefit.title}        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              </h2>;
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
-                Let our government technology experts help you implement solutions that enhance;
-                citizen services and improve operational efficiency.;
-              </p>;
-<<<<<<< HEAD
-
-
-            >
-
-
-
-            >
-
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-
-=======
-
-            >
-              <h2 className=text-4xl md:text-5xl font-bold mb-6">
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                Ready to Transform Government?
-              </h2>"
-              <p className=text-xl text-indigo-100 mb-8 max-w-3xl mx-auto>
-                Let our government technology experts help you implement solutions that enhance;
-                citizen services and improve operational efficiency.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center>
-                <Link href="/contact" className=px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold>
-                  Start Your Government Project;
-                </Link>"
-                <Link href="/about className=px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">
-                  Learn About Our Expertise;
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
-                Ready to Transform Government?;
-              </h2>;
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">;
-                Let our government technology experts help you implement solutions that enhance;
-                citizen services and improve operational efficiency.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Start Your Government Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-
-  ),;
-}

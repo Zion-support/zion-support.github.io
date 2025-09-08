@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export interface PricingSuggestion {
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 export interface PricingSuggestion {;
   minRate: number;
   // TODO: Implement
@@ -31,7 +25,6 @@ export interface ClientBudgetParams {
     }
     // Generate explanation,
 const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;`;
->>>>>>> origin/cursor/delete-old-data-records-6bba
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;"
@@ -65,13 +58,11 @@ const explanation = `Based on market rates for ${category} projects, particularl
     const lowercaseTitle = jobTitle.toLowerCase(),;
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;"
       }
->>>>>>> origin/cursor/delete-old-data-records-6bba
       minRate += 20,;
       maxRate += 30;
     } else if (lowercaseTitle.includes("junior")) {;"
       }
       minRate -= 10,;
-<<<<<<< HEAD
       maxRate -= 15,;'
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
 
@@ -91,34 +82,6 @@ const explanation = `Based on market rates for ${category} projects, particularl
       explanation;
     }
   } catch (error) {
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
-
-    }
-      confidence: "Low",
-
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
-    };  }
-}
-
-export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
-  try {;      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
-    }
-      confidence: "Low",
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
-    };
-  }
-}
-
-export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
-  try {;
-    // Simulate API call delay
-
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    // Base rate calculation based on years of experience;
-    let baseRate = 25 + (yearsExperience * 5);
-    // Adjust for in-demand skills'
-    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
-
     const hasInDemandSkills = skills && skills.some(skill => 
       inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill));
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
@@ -255,15 +218,7 @@ if ( {) {
   } catch (error) {
     console.error("Error generating rate suggestion:", error),
     return {}) {
-  try {
-    // In a real implementation, this would save to the database
-    // For now, we'll just log it
-
-    console && console.error("Error tracking pricing suggestion:", error);
-
 }
-;
-    // In a real implementation with Supabase: // await supabase;
     //  .from ('pricing_suggestions');
     //  .insert ([data]),
     return true;

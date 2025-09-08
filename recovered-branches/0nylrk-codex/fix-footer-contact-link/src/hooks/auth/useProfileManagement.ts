@@ -155,7 +155,6 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
   const updateProfile = async (data: Partial<UserProfile>) => {
   setIsLoading (true);
 if (!data.id) {
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }//Update user metadata const {
   error: authError 
@@ -189,21 +188,5 @@ return {
 }
 }catch (error: any) {
 
-<<<<<<< HEAD
   
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}finally {
-  setIsLoading (false) 
-}
-};
-return {
-  updateProfile 
-}
-};
-  return { updateProfile }
-};
-  return { updateProfile }
-
-};

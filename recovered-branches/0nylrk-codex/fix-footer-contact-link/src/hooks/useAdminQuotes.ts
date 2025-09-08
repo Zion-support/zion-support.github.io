@@ -1,4 +1,3 @@
-
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -155,20 +154,6 @@ export const useAdminQuotes = () => {;    enabled: true});
 pr-12325
   return {;
     quotes: filteredQuotes,;
-<<<<<<< HEAD
-    isLoading,;
-    error,;
-    statusFilter,;
-    setStatusFilter,;
-    archiveFilter,;
-    setArchiveFilter,;
-    searchQuery,;
-    setSearchQuery,;
-    dateRange,;
-    setDateRange,;}
-    updateStatus: (id: string, status: QuoteStatus) =>;}
-      updateStatusMutation.mutate({ id, status }),;
-    toggleArchive: (id: string, isArchived: boolean) =>;
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }

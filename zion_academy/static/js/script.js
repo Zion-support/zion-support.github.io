@@ -1,5 +1,3 @@
-document.addEventListener(,
-
                 summaryArea.id =;
   'ai-summary-output';';
                 summaryArea.style.marginTop =;

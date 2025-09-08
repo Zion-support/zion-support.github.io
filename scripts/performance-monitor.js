@@ -1,4 +1,3 @@
-
     this.projectRoot = path.resolve(__dirname, '..');
     this.metrics = {
       timestamp: new Date().toISOString(),;
@@ -181,6 +180,3 @@ const monitor = new PerformanceMonitor();
 
   console.error('❌ Performance Monitor Failed:', error);
   process.exit(1)})
-
-
-
