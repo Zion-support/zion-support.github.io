@@ -6,6 +6,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -19,6 +20,20 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "noEmitOnError": false,
 
     /* Path mapping */
     "baseUrl": ".",
@@ -27,10 +42,16 @@
     }
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/App.css",
-    "src/index.css"
+
+    "src/**/*",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
 

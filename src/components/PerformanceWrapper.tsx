@@ -9,16 +9,14 @@ interface PerformanceWrapperProps {
   className?: string;
 }
 
+
 /**
  * Performance wrapper component that provides basic performance optimizations
  */
 const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   children,
   fallback = <div>Loading...</div>,
-  enableLazyLoading = false,
-  lazyImport,
-  memoize = false,
-  className
+
 }) => {
   const MemoizedComponent = memo ? memo(children as React.ComponentType<any>) : children;
 
@@ -38,4 +36,4 @@ const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   );
 };
 
-export default PerformanceWrapper;
+

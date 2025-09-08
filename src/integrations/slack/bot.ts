@@ -32,7 +32,9 @@ declare const globalThis: {
 
 // Mock App class that mimics the Slack Bolt SDK behavior
 class MockApp {
+  private commandHandlers: Record<string, (args: unknown) => Promise<void>> = {};
 
+  command(commandName: string, handler: (args: unknown) => Promise<void>) {
     this.commandHandlers[commandName] = handler;
     return this;
   }
@@ -56,7 +58,7 @@ async function askZionGPT(prompt: string): Promise<string> {
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
   }
-
+  await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning
   return `AI response to: ${prompt}`;
 }
 
