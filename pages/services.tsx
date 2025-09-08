@@ -1257,19 +1257,21 @@ import {
   return (
     <>
       <Head>
-        <title>Services | Zion Tech Group - AI-Powered Solutions</title>
-        <meta name="description" content="Discover our comprehensive range of AI-powered services including automation, cloud infrastructure, and intelligent solutions." />
-        <meta property="og:title" content="Services - Zion Tech Group" />
-        <meta property="og:description" content="AI-powered automation and cloud solutions." />
+        <title>Services | Zion Tech Group - Autonomous Innovation Solutions</title>
+        <meta name="description" content="Discover Zion Tech Group's comprehensive range of autonomous technology services including AI automation, system optimization, and intelligent infrastructure solutions." />
+        <meta property="og:title" content="Services | Zion Tech Group - Autonomous Innovation Solutions" />
+        <meta property="og:description" content="Discover Zion Tech Group's comprehensive range of autonomous technology services including AI automation, system optimization, and intelligent infrastructure solutions." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      {/* Hero Section */}
-
-              <span className="text-base font-semibold leading-7 text-blue-600">
-                Comprehensive Technology Solutions
-              </span>
-
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Our Services
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Comprehensive autonomous technology solutions designed to transform your business and drive innovation
             </p>
             
             {/* Navigation Links */}
@@ -1362,134 +1364,97 @@ import {
               </div>
             </div>
 
-            {/* Industry Solutions Section */}
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-purple-400">Industry Solutions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="text-2xl mb-3">🏥</div>
-                  <h3 className="text-lg font-semibold mb-2 text-cyan-400">Healthcare</h3>
-                  <p className="text-sm text-white/70 mb-3">AI-powered diagnostics, patient care automation, and medical data analytics.</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Medical Imaging Analysis</li>
-                    <li>• Patient Data Management</li>
-                    <li>• Drug Discovery Support</li>
-                  </ul>
+            {/* Technology Stack Section */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Technology Stack</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-sm">Next.js</span>
+                  </div>
+                  <p className="text-white/80 text-sm">React Framework</p>
                 </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="text-2xl mb-3">🏭</div>
-                  <h3 className="text-lg font-semibold mb-2 text-fuchsia-400">Manufacturing</h3>
-                  <p className="text-sm text-white/70 mb-3">Smart factory solutions, predictive maintenance, and quality control automation.</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Predictive Maintenance</li>
-                    <li>• Quality Control</li>
-                    <li>• Supply Chain Optimization</li>
-                  </ul>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-sm">GitHub</span>
+                  </div>
+                  <p className="text-white/80 text-sm">Actions & CI/CD</p>
                 </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="text-2xl mb-3">💰</div>
-                  <h3 className="text-lg font-semibold mb-2 text-green-400">Finance</h3>
-                  <p className="text-sm text-white/70 mb-3">Risk assessment, fraud detection, and automated trading systems.</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Fraud Detection</li>
-                    <li>• Risk Assessment</li>
-                    <li>• Algorithmic Trading</li>
-                  </ul>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-sm">AI/ML</span>
+                  </div>
+                  <p className="text-white/80 text-sm">Machine Learning</p>
                 </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="text-2xl mb-3">🛒</div>
-                  <h3 className="text-lg font-semibold mb-2 text-blue-400">Retail</h3>
-                  <p className="text-sm text-white/70 mb-3">Customer behavior analysis, inventory management, and personalized marketing.</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Customer Analytics</li>
-                    <li>• Inventory Optimization</li>
-                    <li>• Personalized Marketing</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="text-2xl mb-3">🚗</div>
-                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">Transportation</h3>
-                  <p className="text-sm text-white/70 mb-3">Route optimization, fleet management, and autonomous vehicle systems.</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Route Optimization</li>
-                    <li>• Fleet Management</li>
-                    <li>• Traffic Analysis</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="text-2xl mb-3">🎓</div>
-                  <h3 className="text-lg font-semibold mb-2 text-purple-400">Education</h3>
-                  <p className="text-sm text-white/70 mb-3">Personalized learning, student analytics, and administrative automation.</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Adaptive Learning</li>
-                    <li>• Student Analytics</li>
-                    <li>• Administrative Automation</li>
-                  </ul>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-sm">Cloud</span>
+                  </div>
+                  <p className="text-white/80 text-sm">Native Architecture</p>
                 </div>
               </div>
             </div>
 
-            {/* Technology Partners Section */}
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Technology Partners</h2>
-              <p className="text-white/70 mb-6 text-center">
-                We work with leading technology providers to deliver the best solutions for our clients
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="text-3xl mb-2">☁️</div>
-                  <div className="text-sm text-white/60">AWS</div>
+            {/* Specialized Solutions */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 text-yellow-400">Specialized Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-400/30">
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-300">GitHub Actions Automation</h3>
+                  <p className="text-white/80 mb-4">
+                    Comprehensive CI/CD automation with intelligent workflow management and autonomous optimization.
+                  </p>
+                  <div className="text-sm text-cyan-300/80">
+                    • 227+ Active Workflows<br/>
+                    • Automated Testing<br/>
+                    • Intelligent Deployment<br/>
+                    • Performance Monitoring
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-2">🔷</div>
-                  <div className="text-sm text-white/60">Azure</div>
+
+                <div className="bg-gradient-to-br from-fuchsia-500/20 to-purple-500/20 backdrop-blur-xl rounded-2xl p-6 border border-fuchsia-400/30">
+                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-300">Content Management Systems</h3>
+                  <p className="text-white/80 mb-4">
+                    AI-powered content generation and management with automated optimization and quality control.
+                  </p>
+                  <div className="text-sm text-fuchsia-300/80">
+                    • 2,960+ Generated Pages<br/>
+                    • SEO Optimization<br/>
+                    • Multi-format Support<br/>
+                    • Quality Assurance
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-2">🔶</div>
-                  <div className="text-sm text-white/60">Google Cloud</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-2">🐳</div>
-                  <div className="text-sm text-white/60">Docker</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-2">⚓</div>
-                  <div className="text-sm text-white/60">Kubernetes</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-2">🤖</div>
-                  <div className="text-sm text-white/60">TensorFlow</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-2">🔥</div>
-                  <div className="text-sm text-white/60">PyTorch</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-2">⚛️</div>
-                  <div className="text-sm text-white/60">React</div>
+
+                <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-xl rounded-2xl p-6 border border-green-400/30">
+                  <h3 className="text-xl font-semibold mb-4 text-green-300">Performance Optimization</h3>
+                  <p className="text-white/80 mb-4">
+                    Continuous performance monitoring and optimization with predictive analytics and automated improvements.
+                  </p>
+                  <div className="text-sm text-green-300/80">
+                    • Real-time Monitoring<br/>
+                    • Predictive Analytics<br/>
+                    • Automated Optimization<br/>
+                    • Performance Reporting
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Call to Action Section */}
-            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
-              <h2 className="text-3xl font-bold mb-4 text-white">Ready to Get Started?</h2>
-              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our AI and automation services can transform your business operations 
-                and drive innovation across your organization.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
-                  Schedule a Consultation
-                </a>
-                <a href="/case-studies" className="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300">
-                  View Our Work
-                </a>
+            {/* Call to Action */}
+            <div className="text-center mt-12">
+              <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 backdrop-blur-xl rounded-2xl p-12 border border-cyan-400/30">
+                <h2 className="text-3xl font-bold mb-6 text-white/90">Ready to Transform Your Infrastructure?</h2>
+                <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our autonomous technology solutions can revolutionize your digital operations and drive unprecedented efficiency.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a href="/about" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
+                    Learn More About Us
+                  </a>
+                  <a href="/contact" className="border border-white/30 hover:border-cyan-400/50 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 backdrop-blur-xl">
+                    Schedule Consultation
+                  </a>
+                </div>
               </div>
             </div>
           </section>
