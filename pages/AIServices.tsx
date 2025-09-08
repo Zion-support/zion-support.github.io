@@ -1,8 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import Layout from '../components/Layout';
 import { 
   Brain, 
@@ -11,20 +8,16 @@ import {
   BarChart3, 
   CheckCircle, 
   ArrowRight, 
-  Star,
-  TrendingUp,
-  Building,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  Heart,
-  DollarSign,
-  BookOpen,
-  ShoppingCart,
-  Car,
-  Clock,
-  Users,
+  Clock, 
+  Star, 
+  DollarSign, 
+  Award, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Bot, 
+  FileText,
+  Cog,
   Shield
 } from 'lucide-react';
 =======
@@ -33,36 +26,24 @@ import { Brain, CheckCircle, ArrowRight, Star } from 'lucide-react';
 
 const aiServices = [
   {
-    id: 'ai-consulting',
-    title: 'AI Strategy Consulting',
-    description: 'Comprehensive AI strategy development and implementation planning for your business',
-    icon: Brain,
-    features: ['AI Roadmap Development', 'Technology Assessment', 'ROI Analysis', 'Implementation Planning'],
-    pricing: 'Starting at $5,000/month'
+    title: "AI Content Generation",
+    description: "Automated content creation for blogs, social media, and marketing materials",
+    icon: FileText,
+    category: "Content",
+    features: ["Natural Language Processing", "SEO Optimization", "Multi-language Support", "Brand Voice Consistency"],
+    pricing: "Starting at $299/month",
+    setupTime: "1-2 weeks",
+    targetUsers: "Content Teams, Marketing Agencies, Bloggers"
   },
   {
-    id: 'machine-learning',
-    title: 'Machine Learning Solutions',
-    description: 'Custom ML models and algorithms tailored to your specific business needs',
-    icon: BarChart3,
-    features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making', 'Model Training'],
-    pricing: 'Starting at $3,000/month'
-  },
-  {
-    id: 'computer-vision',
-    title: 'Computer Vision',
-    description: 'Advanced image and video analysis for various applications and industries',
-    icon: Eye,
-    features: ['Object Detection', 'Image Recognition', 'Video Analytics', 'Real-time Processing'],
-    pricing: 'Starting at $4,000/month'
-  },
-  {
-    id: 'nlp',
-    title: 'Natural Language Processing',
-    description: 'Text analysis and language understanding for chatbots and content processing',
-    icon: MessageSquare,
-    features: ['Sentiment Analysis', 'Text Classification', 'Language Translation', 'Chatbot Development'],
-    pricing: 'Starting at $2,500/month'
+    title: "AI Security",
+    description: "Advanced threat detection and security solutions powered by artificial intelligence",
+    icon: Shield,
+    category: "Security",
+    features: ["Threat Detection", "Anomaly Detection", "Fraud Prevention", "Security Monitoring"],
+    pricing: "Starting at $3,200/month",
+    setupTime: "2-4 weeks",
+    targetUsers: "Enterprises, Security Teams, IT Departments"
   }
 ];
 
@@ -133,8 +114,7 @@ export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
-      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
-      keywords="AI services, machine learning, computer vision, NLP, artificial intelligence, automation"
+      description="Comprehensive AI solutions for modern businesses"
     >
       <div className="min-h-screen">
         {/* Hero Section */}
@@ -146,7 +126,7 @@ export default function AIServices() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 AI Services
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -159,13 +139,14 @@ export default function AIServices() {
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Get Started
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
-                  View Case Studies
-                </Link>
+                  View Portfolio
+                </motion.button>
               </div>
             </motion.div>
           </div>
@@ -235,9 +216,25 @@ export default function AIServices() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industries We Serve
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI solutions are designed for various industries and use cases
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let&apos;s discuss how AI can transform your business and give you a competitive edge.
               </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                >
+                  Start AI Project
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                >
+                  Schedule Demo
+                </motion.button>
+              </div>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
