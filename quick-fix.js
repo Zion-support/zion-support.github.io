@@ -22,17 +22,12 @@ criticalFiles.forEach(file => {
     try {
       let content = fs.readFileSync(file, 'utf8');
       
-      if (content.includes('<<<<<<< HEAD')) {
-        console.log(`📝 Fixing: ${file}`);
-        
-        // Remove conflict markers and keep incoming changes
-        let fixed = content
-          .replace(/<<<<<<< HEAD[\s\S]*?=======\n?/, '')
-          .replace(/>>>>>>> [^\n]+/g, '')
-          .replace(/=======\n?[\s\S]*?>>>>>>> [^\n]+/g, '')
-          .replace(/<<<<<<< [^\n]+/g, '')
-          .replace(/=======/g, '')
-          .replace(/>>>>>>> [^\n]+/g, '');
+      if (content.includes('\n?/, '')
+          .replace(/
+          .replace(/\n?[\s\S]*?
+          .replace(/
+          .replace(//g, '')
+          .replace(/
         
         fs.writeFileSync(file, fixed);
         console.log(`✅ Fixed: ${file}`);

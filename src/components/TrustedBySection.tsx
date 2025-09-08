@@ -2,6 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 
+const trustedCompanies = [
+  { name: "TechCorp", logo: "/logos/techcorp.png", description: "Leading technology solutions" },
+  { name: "InnovateLabs", logo: "/logos/innovatelabs.png", description: "Innovation at scale" },
+  { name: "DataFlow", logo: "/logos/dataflow.png", description: "Data-driven insights" },
+  { name: "CloudFirst", logo: "/logos/cloudfirst.png", description: "Cloud infrastructure experts" },
+  { name: "AI Solutions", logo: "/logos/aisolutions.png", description: "Artificial intelligence pioneers" },
+  { name: "SecureNet", logo: "/logos/securenet.png", description: "Cybersecurity specialists" }
+];
+
 export const TrustedBySection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-800 to-zion-slate-900">
