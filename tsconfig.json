@@ -61,25 +61,10 @@
     "zion/**",
     "apps/**",
     "utils/**",
-    "types/**"
-
+    "types/**",
     "src/main.tsx",
     "src/App.tsx",
     "src/App.css",
     "src/index.css"
-  ],
-  "exclude": [
-    "src/pages/**/*",
-    "src/routes/**/*",
-    "src/components/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*",
-    "src/services/**/*",
-    "src/data/**/*",
-    "src/types/**/*",
-    "src/utils/**/*",
-    "src/layout/**/*",
-    "src/lib/**/*"
-
   ]
 }
