@@ -6,6 +6,4 @@ export default function Page() {
     </div>
   )
 }
-export default Page;=======
 export default Page;
->>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3

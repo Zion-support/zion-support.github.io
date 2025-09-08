@@ -127,7 +127,7 @@ echo '🎉 Build optimization complete!'
 
   printSummary() {
     console.log('\n📊 Build Optimization Summary:');
-    console.log('================================');
+    console.log('====');
     
     if (this.optimizations.length > 0) {
       this.optimizations.forEach(opt => console.log(`✅ ${opt}`));

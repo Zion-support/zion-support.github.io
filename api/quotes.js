@@ -1,5 +1,5 @@
-=======>>>>>>> origin/main
->>>>>>> origin/main    res.json({ error: err.message || 'Quote submission failed' });
+
+
   }
 }
 

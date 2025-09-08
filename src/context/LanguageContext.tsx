@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
@@ -39,7 +39,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   );
 };
 
-export const useLanguage = () => {>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
     throw new Error('useLanguage must be used within a LanguageProvider');
@@ -97,4 +97,3 @@ export const useLanguage = () => {>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba2942
       {children}
     </LanguageContext.Provider>
   );
->>>>>>> origin/main};

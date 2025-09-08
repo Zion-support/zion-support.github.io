@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
-=======// import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useNavigate } from 'react-router-dom';
->>>>>>> origin/main
+
 interface CartItem {
   id: string;
   name: string;
@@ -47,7 +44,7 @@ export default function CheckoutPage() {
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
-=======>>>>>>> origin/main    } catch (err) {
+
       console.error('Payment failed', err);
     }
   };
@@ -56,8 +53,7 @@ export default function CheckoutPage() {
     <div className="container max-w-2xl py-10">
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <div className="grid gap-6">
-=======        {/* <Form {...form}>=======
-        {/* <Form {...form}>>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
@@ -114,7 +110,7 @@ export default function CheckoutPage() {
               </button>
             </div>
           </form>
-=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
         </Form> */}
         
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -147,10 +143,9 @@ export default function CheckoutPage() {
               Pay with Stripe (test)
             </button>
           </div>
-        </form>>>>>>>> origin/main
-=======
->>>>>>> origin/main
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+        </form>
+
+
       </div>
     </div>
   );

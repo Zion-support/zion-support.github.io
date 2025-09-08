@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown",
@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils",interface MarkdownProps {
 export function Markdown({ content, className }: MarkdownProps) {
   return (
   )
-import React from "react",;
+import React from "react";;
 import ReactMarkdown from "react-markdown",;
 import { cn } from "@/lib/utils",;
 interface MarkdownProps {;
@@ -48,7 +48,7 @@ function Markdown() {}
 ;
 ;
 
-import React from "react",;
+import React from "react";;
 import ReactMarkdown from "react-markdown",;
 import { cn } from "@/lib/utils",;
 ;
