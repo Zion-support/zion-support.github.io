@@ -30,10 +30,28 @@ import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMoni
 import InteractiveUserExperience from './components/InteractiveUserExperience';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
-// Service pages
-const AIServices = lazy(() => import('./pages/AIServices'));
-const ITServices = lazy(() => import('./pages/ITServices'));
-const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
+// Lazy load pages - only import existing ones
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const Resources = React.lazy(() => import('./pages/Resources'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const News = React.lazy(() => import('./pages/News'));
+const Press = React.lazy(() => import('./pages/Press'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // Additional pages for navigation
 const EnhancedServices = lazy(() => import('./pages/EnhancedServices'));
@@ -90,37 +108,42 @@ function App() {
           {/* Main Content */}
           <main id="main-content">
             <Suspense fallback={<LoadingSpinner />}>
-              <AnimatePresence mode="wait">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/solutions" element={<Solutions />} />
-                  <Route path="/careers" element={<Careers />} />
-                  <Route path="/news" element={<News />} />
-                  <Route path="/case-studies" element={<CaseStudies />} />
-                  <Route path="/white-papers" element={<WhitePapers />} />
-                  <Route path="/privacy" element={<Privacy />} />
-                  <Route path="/terms" element={<Terms />} />
-                  <Route path="/help" element={<HelpCenter />} />
-                  <Route path="/webinars" element={<Webinars />} />
-                  <Route path="/partners" element={<Partners />} />
-                  <Route path="/micro-saas" element={<MicroSaaS />} />
-                  <Route path="/ai-services" element={<AIServices />} />
-                  <Route path="/it-services" element={<ITServices />} />
-                  <Route path="/marketplace" element={<Marketplace />} />
-                  <Route path="/talent" element={<Talent />} />
-                  <Route path="/equipment" element={<Equipment />} />
-                  <Route path="/request-quote" element={<RequestQuote />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/signup" element={<Signup />} />
-                  <Route path="/enhanced-services" element={<EnhancedServices />} />
-                  <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </AnimatePresence>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/cookies" element={<Cookies />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/press" element={<Press />} />
+                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={<Home />} />
+              </Routes>
             </Suspense>
           </main>
           
