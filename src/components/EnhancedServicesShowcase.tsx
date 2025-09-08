@@ -16,6 +16,8 @@ import {
   Lock,
   Cpu
 } from 'lucide-react';
+import enhancedInnovativeServices2025 from '../data/enhancedInnovativeServices2025';
+import enhancedITandAIServices2025 from '../data/enhancedITandAIServices2025';
 
 interface Service {
   id: string;
@@ -35,119 +37,10 @@ export function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
-  const services: Service[] = useMemo(() => [
-    {
-      id: 'ai-solutions',
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge artificial intelligence solutions for business transformation',
-      icon: Brain,
-      color: 'text-zion-cyan',
-      gradient: 'from-zion-cyan to-zion-blue',
-      features: [
-        'Custom AI Model Development',
-        'Natural Language Processing',
-        'Computer Vision Solutions',
-        'Predictive Analytics',
-        'AI-Powered Automation'
-      ],
-      price: 'From $5,000',
-      category: 'ai'
-    },
-    {
-      id: 'cloud-computing',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for modern businesses',
-      icon: Cloud,
-      color: 'text-zion-purple',
-      gradient: 'from-zion-purple to-zion-purple-dark',
-      features: [
-        'Multi-Cloud Strategy',
-        'DevOps Implementation',
-        'Container Orchestration',
-        'Serverless Architecture',
-        'Cloud Migration'
-      ],
-      price: 'From $3,000',
-      category: 'cloud'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Services',
-      description: 'Enterprise-grade security solutions to protect your business',
-      icon: Shield,
-      color: 'text-zion-red',
-      gradient: 'from-zion-red to-zion-red-dark',
-      features: [
-        'Threat Detection & Response',
-        'Security Audits & Compliance',
-        'Penetration Testing',
-        'Incident Response',
-        'Security Training'
-      ],
-      price: 'From $4,000',
-      category: 'security'
-    },
-    {
-      id: 'digital-transformation',
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation consulting services',
-      icon: Zap,
-      color: 'text-zion-green',
-      gradient: 'from-zion-green to-zion-green-dark',
-      features: [
-        'Process Optimization',
-        'Technology Assessment',
-        'Change Management',
-        'Digital Strategy',
-        'Implementation Support'
-      ],
-      price: 'From $6,000',
-      category: 'consulting'
-    },
-    {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure',
-      description: 'Robust and scalable IT infrastructure solutions',
-      icon: Cpu,
-      color: 'text-zion-orange',
-      gradient: 'from-zion-orange to-zion-orange-dark',
-      features: [
-        'Network Design & Implementation',
-        'Data Center Solutions',
-        'Backup & Disaster Recovery',
-        'Performance Monitoring',
-        '24/7 Support'
-      ],
-      price: 'From $2,500',
-      category: 'infrastructure'
-    },
-    {
-      id: 'managed-services',
-      title: 'Managed IT Services',
-      description: 'Comprehensive IT management and support services',
-      icon: Users,
-      color: 'text-zion-blue',
-      gradient: 'from-zion-blue to-zion-blue-dark',
-      features: [
-        'Proactive Monitoring',
-        'Help Desk Support',
-        'Patch Management',
-        'Security Updates',
-        'Performance Optimization'
-      ],
-      price: 'From $1,500/month',
-      popular: true,
-      category: 'consulting'
-    }
-  ], []);
-
-  const categories = [
-    { id: 'all', label: 'All Services', icon: Globe },
-    { id: 'ai', label: 'AI Solutions', icon: Brain },
-    { id: 'cloud', label: 'Cloud Services', icon: Cloud },
-    { id: 'security', label: 'Security', icon: Shield },
-    { id: 'infrastructure', label: 'Infrastructure', icon: Cpu },
-    { id: 'consulting', label: 'Consulting', icon: Users }
+  // Combine all services
+  const allServices: Service[] = [
+    ...enhancedInnovativeServices2025,
+    ...enhancedITandAIServices2025
   ];
 
   const filteredServices = selectedCategory === 'all' 

@@ -29,6 +29,77 @@ import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { ComprehensiveServicesShowcase } from "@/components/ComprehensiveServicesShowcase";
 
 export default function Home() {
+  const featuredServices = [
+    {
+      icon: Brain,
+      title: "AI-Powered Customer Success Automation",
+      description: "Intelligent platform that automates customer onboarding, success tracking, and churn prevention using predictive analytics with 35% churn reduction.",
+      category: "Micro SAAS",
+      price: "$199/month",
+      features: ["AI-driven health scoring", "Predictive churn detection", "Automated workflows", "Real-time insights"],
+      path: "/services",
+      gradient: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: Shield,
+      title: "AI-Powered Cybersecurity Suite",
+      description: "Advanced cybersecurity platform using AI to detect threats 10x faster with 80% reduction in false positives.",
+      category: "Cybersecurity",
+      price: "$699/month",
+      features: ["AI threat detection", "Behavioral analysis", "Automated response", "24/7 SOC monitoring"],
+      path: "/services",
+      gradient: "from-blue-500 to-cyan-600"
+    },
+    {
+      icon: Cpu,
+      title: "AI-Quantum Hybrid Computing Platform",
+      description: "Revolutionary platform combining classical AI with quantum computing for 1000x faster problem solving.",
+      category: "Emerging Tech",
+      price: "$999/month",
+      features: ["Quantum-classical hybrid", "Quantum ML", "Optimization algorithms", "Future-proof technology"],
+      path: "/services",
+      gradient: "from-green-500 to-emerald-600"
+    },
+    {
+      icon: Database,
+      title: "AI Healthcare Analytics Platform",
+      description: "Intelligent healthcare platform improving diagnosis accuracy by 30% and reducing treatment costs.",
+      category: "AI Solutions",
+      price: "$599/month",
+      features: ["Patient data analytics", "Disease prediction", "Treatment optimization", "Clinical decision support"],
+      path: "/services",
+      gradient: "from-red-500 to-orange-600"
+    }
+  ];
+
+  const stats = [
+    { label: "Services Available", value: "50+", icon: Zap },
+    { label: "Innovation Levels", value: "4", icon: Star },
+    { label: "Market Coverage", value: "$100B+", icon: TrendingUp },
+    { label: "Support Levels", value: "4", icon: Users }
+  ];
+
+  const innovationLevels = [
+    {
+      level: "Revolutionary",
+      description: "Breakthrough technologies that redefine industries and create new markets",
+      examples: ["AI-Quantum Hybrid Computing", "Space Technology Platform", "Quantum Computing as a Service"],
+      color: "text-purple-400 border-purple-400"
+    },
+    {
+      level: "Cutting-edge",
+      description: "Advanced solutions using latest AI and emerging technologies",
+      examples: ["AI Cybersecurity Suite", "AI Healthcare Platform", "AI Financial Trading Platform"],
+      color: "text-blue-400 border-blue-400"
+    },
+    {
+      level: "Advanced",
+      description: "Sophisticated solutions with proven track records and market validation",
+      examples: ["AI Customer Success Automation", "AI Content Optimization", "AI Project Management"],
+      color: "text-green-400 border-green-400"
+    }
+  ];
+
   return (
     <>
       <SEO 
@@ -49,8 +120,10 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
+            <p className="text-xl lg:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Zion Tech Group delivers 50+ innovative micro SAAS, IT infrastructure, and AI solutions that drive growth, 
+              efficiency, and competitive advantage. From revolutionary AI-Quantum hybrid computing to cutting-edge AI 
+              cybersecurity and healthcare platforms, we're your partner in digital transformation and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -262,45 +335,73 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
                 <p className="text-gray-300">{reason.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <h3 className="text-xl font-bold text-white mb-4">Innovation First</h3>
+              <p className="text-slate-300">
+                We stay ahead of technology trends with revolutionary AI-Quantum hybrid computing, space technology, and cutting-edge AI solutions that give you a competitive edge.
+              </p>
+            </div>
 
-      {/* Trust Signals Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Trusted by Businesses Worldwide
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our commitment to excellence and customer success has made us a trusted partner
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {trustSignals.map((signal, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <signal.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{signal.label}</h3>
-                <p className="text-gray-300">{signal.description}</p>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-white mb-4">Expert Team</h3>
+              <p className="text-slate-300">
+                Our certified professionals bring deep expertise in AI, cybersecurity, cloud computing, and emerging technologies.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>
+              <p className="text-slate-300">
+                We prioritize security and compliance, ensuring your data and systems are protected with industry-leading standards.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Proven ROI</h3>
+              <p className="text-slate-300">
+                Our solutions deliver measurable business value with clear ROI metrics and performance improvements.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Global Reach</h3>
+              <p className="text-slate-300">
+                We serve clients worldwide with scalable solutions that work across different markets and regulatory environments.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+              <p className="text-slate-300">
+                Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Business?
+      {/* Final CTA */}
+      <div className="py-24 bg-black/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business with AI & Innovation?
           </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join hundreds of businesses that have already revolutionized their operations with our AI-powered solutions
+          <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
+            Let's discuss how our 50+ innovative solutions including AI-Quantum hybrid computing, AI cybersecurity, and AI healthcare platforms can drive growth, efficiency, and competitive advantage for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
