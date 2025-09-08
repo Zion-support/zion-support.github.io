@@ -218,3 +218,13 @@ export function getErrorBoundaryFallback(error: Error): {
     action: 'Reload Page',
   };
 }
+
+// React hook for error handling
+export const useErrorHandler = () => {
+  const handleError = (error: Error | AppError, context?: string) => {
+    logError(error, context);
+    reportError(error);
+  };
+
+  return { handleError };
+};

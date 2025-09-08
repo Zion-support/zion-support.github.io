@@ -1,28 +1,25 @@
 // Mock Supabase client for build
 export const supabase = {
-=======>>>>>>> origin/main          data: [],
+  from: (table: string) => ({
+    select: () => ({
+      eq: () => ({
+        single: () => Promise.resolve({
+          data: null,
           error: null
         })
       })
     }),
-=======    update: () => ({
-      eq: () => ({
-        eq: () => ({=======
-    update: () => ({
-      eq: () => ({
-        eq: () => ({>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
-          error: null
-        })
-      })
+    insert: () => Promise.resolve({
+      data: [],
+      error: null
     }),
-    delete: () => ({
-=======      eq: () => ({
-        eq: () => ({=======
-      eq: () => ({
-        eq: () => ({>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
-          error: null
-        })
-      })
+    update: () => Promise.resolve({
+      data: [],
+      error: null
+    }),
+    delete: () => Promise.resolve({
+      data: [],
+      error: null
     })
   })
 };
