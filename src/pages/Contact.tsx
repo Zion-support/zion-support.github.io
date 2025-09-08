@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  MessageCircle,
-  Send,
-  CheckCircle,
-  Globe,
-  Building,
-  Users
-} from 'lucide-react';
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+import { AppLayout } from "@/layout/AppLayout";
+import api from '@/lib/api';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -58,7 +59,33 @@ export default function Contact() {
     }, 3000);
   };
 
-  const contactInfo = [
+  // Handle sending messages to the AI chat assistant
+  const handleSendMessage = async (message: string): Promise<void> => {
+    try {
+      const response = await api.post(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
+        {
+          messages: [{ role: "user", content: message }]
+        }
+      );
+
+      if (response.status < 200 || response.status >= 300) {
+        throw new Error("Failed to get response from AI assistant");
+      }
+      
+      return Promise.resolve();
+    } catch (error) {
+      console.error("Error in AI chat:", error);
+      toast({
+        title: "Chat Error",
+        description: "There was an error communicating with our AI assistant. Please try again.",
+        variant: "destructive"
+      });
+      return Promise.resolve();
+    }
+  };
+
+  const offices = [
     {
       icon: Phone,
       title: 'Phone',
