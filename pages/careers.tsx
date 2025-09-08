@@ -1,6 +1,23 @@
 import Head from 'next/head';
 import { AppLayout } from '../src/layout/AppLayout';
 import Link from 'next/link';
+import Layout from '../components/Layout';
+import { 
+  MapPin, 
+  Clock, 
+  Users, 
+  Heart, 
+  Zap, 
+  Award, 
+  BookOpen, 
+  Coffee, 
+  Laptop, 
+  Globe, 
+  ArrowRight, 
+  CheckCircle,
+  DollarSign,
+  GraduationCap
+} from 'lucide-react';
 
 export default function Careers() {
 	return (
@@ -113,208 +130,38 @@ export default function Careers() {
 							</Link>
 						</div>
 
-						{/* Cybersecurity Specialist Position */}
-						<div className="p-8 rounded-2xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 bg-gray-800/50 hover:bg-gray-800/80">
-							<div className="flex items-start justify-between mb-6">
-								<div>
-									<h3 className="text-2xl font-semibold text-white mb-2">Cybersecurity Specialist</h3>
-									<p className="text-cyan-400 font-medium">Full-time • Remote</p>
-								</div>
-								<div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center">
-									<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-									</svg>
-								</div>
-							</div>
-							<p className="text-gray-300 mb-6 leading-relaxed">
-								Protect our clients' digital assets with advanced security solutions, threat detection, and incident response capabilities.
-							</p>
-							<div className="mb-6">
-								<h4 className="text-white font-semibold mb-3">Requirements:</h4>
-								<ul className="text-gray-400 text-sm space-y-1">
-									<li>• 5+ years cybersecurity experience</li>
-									<li>• CISSP, CEH, or similar certifications</li>
-									<li>• Penetration testing skills</li>
-									<li>• Security architecture knowledge</li>
-								</ul>
-							</div>
-							<Link 
-								href="/contact" 
-								className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-							>
-								Apply Now
-							</Link>
-						</div>
+export default function CareersPage() {
+  return (
+    <Layout
+      title="Careers - Zion Tech Group"
+      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
+      keywords="careers, jobs, employment, technology careers, AI jobs, software development"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
 
-						{/* Full Stack Developer Position */}
-						<div className="p-8 rounded-2xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 bg-gray-800/50 hover:bg-gray-800/80">
-							<div className="flex items-start justify-between mb-6">
-								<div>
-									<h3 className="text-2xl font-semibold text-white mb-2">Full Stack Developer</h3>
-									<p className="text-cyan-400 font-medium">Full-time • Remote</p>
-								</div>
-								<div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-									<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-									</svg>
-								</div>
-							</div>
-							<p className="text-gray-300 mb-6 leading-relaxed">
-								Build modern web applications and microservices using React, Node.js, and cloud-native technologies.
-							</p>
-							<div className="mb-6">
-								<h4 className="text-white font-semibold mb-3">Requirements:</h4>
-								<ul className="text-gray-400 text-sm space-y-1">
-									<li>• 3+ years full-stack development</li>
-									<li>• React, Node.js, TypeScript</li>
-									<li>• Database design experience</li>
-									<li>• API development skills</li>
-								</ul>
-							</div>
-							<Link 
-								href="/contact" 
-								className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-							>
-								Apply Now
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* Benefits Section */}
-			<section className="py-20 bg-black">
-				<div className="max-w-6xl mx-auto px-6">
-					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-							Why Work With Us?
-						</h2>
-						<p className="text-xl text-gray-400 max-w-3xl mx-auto">
-							We offer competitive benefits and a supportive work environment
-						</p>
-					</div>
-					
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-						<div className="text-center p-6">
-							<div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-								<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-								</svg>
-							</div>
-							<h3 className="text-lg font-semibold text-white mb-2">Flexible Work</h3>
-							<p className="text-gray-400 text-sm">
-								Remote-first culture with flexible hours and work-life balance
-							</p>
-						</div>
-						
-						<div className="text-center p-6">
-							<div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-								<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-								</svg>
-							</div>
-							<h3 className="text-lg font-semibold text-white mb-2">Competitive Pay</h3>
-							<p className="text-gray-400 text-sm">
-								Attractive salary packages with equity options and bonuses
-							</p>
-						</div>
-						
-						<div className="text-center p-6">
-							<div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-								<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-								</svg>
-							</div>
-							<h3 className="text-lg font-semibold text-white mb-2">Learning & Growth</h3>
-							<p className="text-gray-400 text-sm">
-								Continuous learning opportunities and career development
-							</p>
-						</div>
-						
-						<div className="text-center p-6">
-							<div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-								<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-								</svg>
-							</div>
-							<h3 className="text-lg font-semibold text-white mb-2">Great Team</h3>
-							<p className="text-gray-400 text-sm">
-								Collaborate with talented professionals in a supportive environment
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* Application Process Section */}
-			<section className="py-20 bg-gray-900">
-				<div className="max-w-4xl mx-auto px-6 text-center">
-					<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-						How to Apply
-					</h2>
-					<p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-						Our simple application process gets you started quickly
-					</p>
-					
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-						<div className="text-center">
-							<div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-								1
-							</div>
-							<h3 className="text-xl font-semibold text-white mb-2">Submit Application</h3>
-							<p className="text-gray-400">
-								Send us your resume and cover letter through our contact form
-							</p>
-						</div>
-						
-						<div className="text-center">
-							<div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-								2
-							</div>
-							<h3 className="text-xl font-semibold text-white mb-2">Technical Interview</h3>
-							<p className="text-gray-400">
-								Discuss your skills and experience with our team
-							</p>
-						</div>
-						
-						<div className="text-center">
-							<div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-								3
-							</div>
-							<h3 className="text-xl font-semibold text-white mb-2">Join the Team</h3>
-							<p className="text-gray-400">
-								Start your journey with Zion Tech Group
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* CTA Section */}
-			<section className="py-20 bg-gradient-to-r from-cyan-900 to-blue-900">
-				<div className="max-w-4xl mx-auto text-center px-6">
-					<h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-						Ready to Join Us?
-					</h2>
-					<p className="text-xl text-gray-300 mb-8">
-						Don't see a position that fits? Send us your resume and we'll keep you in mind for future opportunities.
-					</p>
-					<div className="flex flex-col sm:flex-row gap-4 justify-center">
-						<Link 
-							href="/contact" 
-							className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-900 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-						>
-							Apply Now
-						</Link>
-						<Link 
-							href="/contact" 
-							className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105"
-						>
-							Send Resume
-						</Link>
-					</div>
-				</div>
-			</section>
-		</AppLayout>
-	);
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Join Our Team
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Build the future of technology with us
+              </p>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
 }

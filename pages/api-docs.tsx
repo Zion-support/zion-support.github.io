@@ -2,46 +2,22 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const APIDocumentationPage: React.FC = () => {
-  const endpoints = [
-    {
-      method: 'GET',
-      path: '/api/health',
-      description: 'Get system health status',
-      response: {
-        status: 'healthy',
-        timestamp: '2025-01-18T12:00:00Z',
-        uptime: '99.9%'
-      }
-    },
-    {
-      method: 'GET',
-      path: '/api/automations',
-      description: 'List all active automations',
-      response: {
-        count: 227,
-        automations: ['sync-branches', 'health-check', 'content-generation']
-      }
-    },
-    {
-      method: 'GET',
-      path: '/api/automations/{id}/status',
-      description: 'Get status of specific automation',
-      response: {
-        id: 'sync-branches',
-        status: 'running',
-        lastRun: '2025-01-18T11:55:00Z',
-        nextRun: '2025-01-18T12:00:00Z'
-      }
-    },
-    {
-      method: 'POST',
-      path: '/api/automations/{id}/trigger',
-      description: 'Manually trigger an automation',
-      response: {
-        success: true,
-        message: 'Automation triggered successfully',
-        runId: 'run_12345'
+const endpoints = [
+  {
+    name: 'AI Email Responder',
+    method: 'POST',
+    path: '/api/ai/email-responder',
+    description: 'Generate intelligent email responses using AI',
+    parameters: [
+      { name: 'message', type: 'string', required: true, description: 'The email message to respond to' },
+      { name: 'context', type: 'object', required: false, description: 'Additional context for the response' }
+    ],
+    response: {
+      status: 200,
+      data: {
+        response: 'string',
+        confidence: 'number',
+        suggestions: 'array'
       }
     }
   ];
