@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Button } from './ui/Button';
 
 interface Props {
   children: ReactNode;
@@ -113,23 +112,22 @@ class ErrorBoundary extends Component<Props, State> {
             )}
 
             <div className="space-y-3">
-              <Button
+              <button
                 onClick={this.handleRetry}
-                className="w-full"
+                className="w-full flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={this.state.retryCount >= this.maxRetries}
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 {this.state.retryCount >= this.maxRetries ? 'Reset' : 'Try Again'}
-              </Button>
+              </button>
               
-              <Button
+              <button
                 onClick={this.handleGoHome}
-                variant="outline"
-                className="w-full"
+                className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Button>
+              </button>
             </div>
 
             {this.state.retryCount > 0 && (
