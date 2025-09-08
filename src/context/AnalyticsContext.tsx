@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 
-export type AnalyticsEventType = 'page_view' | 'click' | 'conversion' | 'custom';
+export type AnalyticsEventType = 'page_view' | 'click' | 'form_submit' | 'conversion' | 'error';
 
 export interface AnalyticsEvent {
   type: AnalyticsEventType;
@@ -9,46 +10,83 @@ export interface AnalyticsEvent {
   elementId?: string;
   timestamp: number;
   userId?: string | null;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, any>;
 }
 
-export interface AnalyticsContextValue {
-  trackEvent: (type: AnalyticsEventType, metadata?: Record<string, unknown>) => void;
-  trackConversion: (conversionType: string, value?: number, metadata?: Record<string, unknown>) => void;
+export interface AnalyticsContextType {
+  trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
+  trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number;
   lastEvent: AnalyticsEvent | null;
   events: AnalyticsEvent[];
   clearEvents: () => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextValue | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const AnalyticsProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
-  const [pageViews, setPageViews] = useState<number>(0);
+export const useAnalytics = (): AnalyticsContextType => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const [pageViews, setPageViews] = useState(0);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
+  const location = useLocation();
 
+  // Track page views automatically
   useEffect(() => {
-    // Count initial page load as a view in a client-side app
-    setPageViews((count) => count + 1);
-  }, []);
+    const event: AnalyticsEvent = {
+      type: 'page_view',
+      path: location.pathname,
+      timestamp: Date.now(),
+    };
+    
+    setPageViews(prev => prev + 1);
+    setEvents(prev => [...prev, event]);
+    setLastEvent(event);
+  }, [location.pathname]);
 
-  const trackEvent = (type: AnalyticsEventType, metadata?: Record<string, unknown>) => {
+  const trackEvent = (type: AnalyticsEventType, metadata?: Record<string, any>) => {
     const event: AnalyticsEvent = {
       type,
+      path: location.pathname,
       timestamp: Date.now(),
       metadata,
     };
-    setEvents((prev) => [...prev, event]);
+    
+    setEvents(prev => [...prev, event]);
     setLastEvent(event);
-    if (process.env.NODE_ENV !== 'production') {
-      // eslint-disable-next-line no-console
-      console.debug('[Analytics] event', event);
-    }
+    
+    // In a real app, you would send this to your analytics service
+    console.log('Analytics Event:', event);
   };
 
-  const trackConversion = (conversionType: string, value?: number, metadata?: Record<string, unknown>) => {
-    trackEvent('conversion', { conversionType, value, ...metadata });
+  const trackConversion = (conversionType: string, value?: number, metadata?: Record<string, any>) => {
+    const event: AnalyticsEvent = {
+      type: 'conversion',
+      path: location.pathname,
+      timestamp: Date.now(),
+      metadata: {
+        conversionType,
+        value,
+        ...metadata,
+      },
+    };
+    
+    setEvents(prev => [...prev, event]);
+    setLastEvent(event);
+    
+    // In a real app, you would send this to your analytics service
+    console.log('Conversion Event:', event);
   };
 
   const clearEvents = () => {
@@ -56,19 +94,18 @@ export const AnalyticsProvider: React.FC<React.PropsWithChildren<{}>> = ({ child
     setLastEvent(null);
   };
 
-  const value = useMemo<AnalyticsContextValue>(
-    () => ({ trackEvent, trackConversion, pageViews, lastEvent, events, clearEvents }),
-    [pageViews, lastEvent, events]
+  return (
+    <AnalyticsContext.Provider
+      value={{
+        trackEvent,
+        trackConversion,
+        pageViews,
+        lastEvent,
+        events,
+        clearEvents,
+      }}
+    >
+      {children}
+    </AnalyticsContext.Provider>
   );
-
-  return <AnalyticsContext.Provider value={value}>{children}</AnalyticsContext.Provider>;
 };
-
-export const useAnalytics = (): AnalyticsContextValue => {
-  const ctx = useContext(AnalyticsContext);
-  if (!ctx) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return ctx;
-};
-

@@ -1,26 +1,91 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-const defaultConfig = {
-	companyName: 'Zion Tech Group',
-	logo: '/logo.svg',
-	primaryColor: '#1e40af',
-	secondaryColor: '#7c3aed',
-	domain: 'https://ziontechgroup.com',
-	isWhitelabel: false,
-	contactInfo: {
-		phone: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-	},
+export interface WhitelabelTenant {
+  id: string;
+  name: string;
+  domain: string;
+  logo: string;
+  primaryColor: string;
+  secondaryColor: string;
+  customCSS?: string;
+  features: string[];
+}
+
+export interface WhitelabelContextType {
+  tenant: WhitelabelTenant | null;
+  setTenant: (tenant: WhitelabelTenant | null) => void;
+  isWhitelabeled: boolean;
+  applyCustomStyles: () => void;
+  resetToDefault: () => void;
+}
+
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+
+export const useWhitelabel = (): WhitelabelContextType => {
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
 };
 
-type WhitelabelConfig = typeof defaultConfig;
-interface WhitelabelProviderProps { children: ReactNode; config?: Partial<WhitelabelConfig> }
+interface WhitelabelProviderProps {
+  children: ReactNode;
+}
 
-const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
-export const useWhitelabel = () => useContext(WhitelabelContext);
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
 
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children, config = {} }) => {
-	const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...(config as any).contactInfo } } as WhitelabelConfig;
-	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
+  const isWhitelabeled = tenant !== null;
+
+  const applyCustomStyles = () => {
+    if (!tenant) return;
+
+    const root = document.documentElement;
+    root.style.setProperty('--primary-color', tenant.primaryColor);
+    root.style.setProperty('--secondary-color', tenant.secondaryColor);
+
+    if (tenant.customCSS) {
+      let styleElement = document.getElementById('whitelabel-custom-css');
+      if (!styleElement) {
+        styleElement = document.createElement('style');
+        styleElement.id = 'whitelabel-custom-css';
+        document.head.appendChild(styleElement);
+      }
+      styleElement.textContent = tenant.customCSS;
+    }
+  };
+
+  const resetToDefault = () => {
+    const root = document.documentElement;
+    root.style.removeProperty('--primary-color');
+    root.style.removeProperty('--secondary-color');
+
+    const styleElement = document.getElementById('whitelabel-custom-css');
+    if (styleElement) {
+      styleElement.remove();
+    }
+
+    setTenant(null);
+  };
+
+  useEffect(() => {
+    if (tenant) {
+      applyCustomStyles();
+    }
+  }, [tenant]);
+
+  return (
+    <WhitelabelContext.Provider
+      value={{
+        tenant,
+        setTenant,
+        isWhitelabeled,
+        applyCustomStyles,
+        resetToDefault,
+      }}
+    >
+      {children}
+    </WhitelabelContext.Provider>
+  );
 };
