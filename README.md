@@ -95,11 +95,15 @@ console.log('Supabase configured:', !!window.location.origin.includes('localhost
 
 ## 🛠️ Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/ziontechgroup-website.git
-   cd ziontechgroup-website
-   ```
+### Background tasks
+
+The Django backend runs scheduled jobs using Celery. To process abandoned cart emails locally run:
+
+```sh
+celery -A backend.celery worker -B
+```
+
+**Edit a file directly in GitHub**
 
 2. **Install dependencies**
    ```bash
