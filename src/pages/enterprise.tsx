@@ -1,120 +1,125 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Atom, 
-  Zap, 
-  Cpu, 
-  Brain, 
+  Building, 
+  Users, 
+  Shield, 
   CheckCircle, 
   ArrowRight, 
   BarChart3,
   TrendingUp,
   Activity,
   Globe,
-  Building,
   FileText,
   Monitor,
-  Shield,
   Lock,
   Database,
   Network,
   Server,
   Code,
-  Calculator,
-  Microscope,
-  Beaker,
+  Smartphone,
+  Zap,
   Target,
   Rocket,
-  Star
+  Star,
+  Workflow,
+  Eye,
+  Settings,
+  Cloud,
+  Cpu,
+  Brain,
+  ShieldCheck,
+  LockKeyhole,
+  ShoppingCart
 } from 'lucide-react';
 
-export default function QuantumComputing() {
-  const services = [
+export default function Enterprise() {
+  const solutions = [
     {
-      title: "Quantum Algorithm Development",
-      description: "Design and implement quantum algorithms for complex computational problems.",
-      icon: Code,
-      features: ["Quantum optimization", "Machine learning", "Cryptography", "Simulation algorithms"]
-    },
-    {
-      title: "Quantum Software Development",
-      description: "Build quantum applications using leading quantum computing frameworks.",
-      icon: Cpu,
-      features: ["Qiskit development", "Cirq applications", "Quantum circuits", "Hybrid classical-quantum"]
-    },
-    {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum computing for advanced machine learning applications.",
+      title: "Enterprise AI Platform",
+      description: "Comprehensive AI solutions for large-scale enterprise operations.",
       icon: Brain,
-      features: ["Quantum neural networks", "Feature selection", "Pattern recognition", "Optimization"]
+      features: ["Machine learning", "Predictive analytics", "Process automation", "Decision support"]
     },
     {
-      title: "Quantum Cryptography",
-      description: "Implement quantum-safe cryptographic solutions for future-proof security.",
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions for enterprise workloads.",
+      icon: Cloud,
+      features: ["Multi-cloud strategy", "Hybrid cloud", "Cloud security", "Performance optimization"]
+    },
+    {
+      title: "Data Management",
+      description: "Enterprise-grade data solutions for analytics and insights.",
+      icon: Database,
+      features: ["Data warehousing", "Big data processing", "Data governance", "Business intelligence"]
+    },
+    {
+      title: "Cybersecurity Suite",
+      description: "Comprehensive security solutions for enterprise protection.",
       icon: Shield,
-      features: ["Post-quantum cryptography", "Quantum key distribution", "Secure communications", "Encryption"]
+      features: ["Threat detection", "Identity management", "Compliance", "Incident response"]
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate quantum systems for research and development applications.",
-      icon: Microscope,
-      features: ["Molecular modeling", "Material science", "Chemical reactions", "Physical systems"]
+      title: "Digital Workspace",
+      description: "Modern workplace solutions for productivity and collaboration.",
+      icon: Users,
+      features: ["Collaboration tools", "Remote work support", "Productivity apps", "Communication platforms"]
     },
     {
-      title: "Quantum Consulting",
-      description: "Strategic guidance on quantum computing adoption and implementation.",
-      icon: Building,
-      features: ["Technology assessment", "Use case identification", "Implementation strategy", "Training"]
+      title: "Enterprise Integration",
+      description: "Seamless integration of enterprise systems and applications.",
+      icon: Network,
+      features: ["API management", "System integration", "Data synchronization", "Workflow automation"]
     }
   ];
 
-  const applications = [
+  const industries = [
     {
       title: "Financial Services",
-      description: "Optimize portfolio management, risk assessment, and trading strategies.",
+      description: "Banking, insurance, and fintech enterprise solutions.",
       icon: BarChart3,
-      features: ["Portfolio optimization", "Risk modeling", "Option pricing", "Fraud detection"]
+      features: ["Risk management", "Compliance", "Customer analytics", "Digital banking"]
     },
     {
-      title: "Healthcare & Pharmaceuticals",
-      description: "Accelerate drug discovery and molecular modeling with quantum computing.",
-      icon: Flask,
-      features: ["Drug discovery", "Protein folding", "Molecular dynamics", "Clinical trials"]
+      title: "Healthcare",
+      description: "Healthcare technology solutions for hospitals and clinics.",
+      icon: ShieldCheck,
+      features: ["Electronic health records", "Patient management", "Telemedicine", "Data security"]
     },
     {
-      title: "Logistics & Supply Chain",
-      description: "Solve complex optimization problems in transportation and logistics.",
-      icon: Globe,
-      features: ["Route optimization", "Inventory management", "Scheduling", "Resource allocation"]
+      title: "Manufacturing",
+      description: "Industry 4.0 solutions for manufacturing enterprises.",
+      icon: Cpu,
+      features: ["Smart factories", "Supply chain", "Quality control", "Predictive maintenance"]
     },
     {
-      title: "Energy & Materials",
-      description: "Optimize energy systems and discover new materials.",
-      icon: Atom,
-      features: ["Energy optimization", "Material discovery", "Catalyst design", "Battery research"]
+      title: "Retail & E-commerce",
+      description: "Omnichannel retail solutions for enterprise businesses.",
+      icon: ShoppingCart,
+      features: ["E-commerce platforms", "Inventory management", "Customer experience", "Analytics"]
     }
   ];
 
   const benefits = [
     {
-      title: "Exponential Speedup",
-      description: "Solve problems that are intractable for classical computers.",
-      icon: Zap
+      title: "Scalability",
+      description: "Solutions that grow with your business needs.",
+      icon: TrendingUp
     },
     {
-      title: "Advanced Optimization",
-      description: "Find optimal solutions for complex multi-variable problems.",
-      icon: Target
-    },
-    {
-      title: "Future-Proof Security",
-      description: "Implement quantum-resistant cryptographic solutions.",
+      title: "Security",
+      description: "Enterprise-grade security and compliance.",
       icon: Shield
     },
     {
-      title: "Competitive Advantage",
-      description: "Stay ahead with cutting-edge quantum computing capabilities.",
-      icon: Star
+      title: "Integration",
+      description: "Seamless integration with existing systems.",
+      icon: Network
+    },
+    {
+      title: "Support",
+      description: "24/7 enterprise support and maintenance.",
+      icon: Users
     }
   ];
 
@@ -125,49 +130,49 @@ export default function QuantumComputing() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Atom className="w-10 h-10 text-white" />
+              <Building className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Quantum Computing
+            Enterprise
             <span className="text-zion-cyan"> Solutions</span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Harness the power of quantum computing to solve complex problems that are beyond 
-            the reach of classical computers. Transform your business with quantum innovation.
+            Comprehensive enterprise solutions designed for large organizations. Scale efficiently, 
+            maintain security, and drive innovation with our enterprise-grade technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl font-semibold hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 hover:scale-105"
             >
-              Explore Quantum
+              Enterprise Solutions
             </Link>
             <Link
               to="/request-quote"
               className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              Quantum Assessment
+              Enterprise Assessment
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Services Grid */}
+      {/* Solutions Grid */}
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Computing Services
+              Enterprise Solutions Portfolio
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From algorithm development to quantum software, we provide comprehensive quantum computing solutions.
+              Comprehensive solutions designed to meet the complex needs of enterprise organizations.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
+            {solutions.map((solution, index) => {
+              const Icon = solution.icon;
               return (
                 <div
                   key={index}
@@ -176,10 +181,10 @@ export default function QuantumComputing() {
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-zion-slate-light mb-6">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{solution.description}</p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
+                    {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
@@ -193,21 +198,21 @@ export default function QuantumComputing() {
         </div>
       </div>
 
-      {/* Industry Applications */}
+      {/* Industry Solutions */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry-Specific Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Discover how quantum computing can transform your industry and solve complex challenges.
+              Tailored enterprise solutions for your industry's unique challenges and requirements.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {applications.map((application, index) => {
-              const Icon = application.icon;
+            {industries.map((industry, index) => {
+              const Icon = industry.icon;
               return (
                 <div
                   key={index}
@@ -216,10 +221,10 @@ export default function QuantumComputing() {
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{application.title}</h3>
-                  <p className="text-zion-slate-light mb-6">{application.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{industry.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{industry.description}</p>
                   <ul className="space-y-2">
-                    {application.features.map((feature, featureIndex) => (
+                    {industry.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
@@ -238,10 +243,10 @@ export default function QuantumComputing() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Quantum Computing?
+              Why Choose Enterprise Solutions?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience the revolutionary benefits of quantum computing technology.
+              Experience the benefits of enterprise-grade technology solutions.
             </p>
           </div>
           
@@ -266,10 +271,10 @@ export default function QuantumComputing() {
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Go Quantum?
+            Ready for Enterprise Solutions?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8">
-            Let's explore how quantum computing can revolutionize your business operations.
+            Let's discuss how our enterprise solutions can transform your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -280,7 +285,7 @@ export default function QuantumComputing() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              to="/quantum-assessment"
+              to="/enterprise-assessment"
               className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               Free Assessment

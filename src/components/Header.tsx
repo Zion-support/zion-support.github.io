@@ -577,6 +577,133 @@ export function Header({ onMenuClick }: HeaderProps) {
                 </div>
               ))}
               
+              {/* Mobile Navigation Links */}
+              <div className="space-y-4">
+                <Link
+                  to="/"
+                  className="block text-white hover:text-zion-cyan transition-colors text-lg font-medium"
+                  onClick={closeMobileMenu}
+                >
+                  Home
+                </Link>
+                
+                <div className="space-y-2">
+                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Services</h3>
+                  <div className="pl-4 space-y-2">
+                    <Link
+                      to="/ai-services"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      AI Services
+                    </Link>
+                    <Link
+                      to="/it-services"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      IT Services
+                    </Link>
+                    <Link
+                      to="/micro-saas"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Micro SAAS
+                    </Link>
+                    <Link
+                      to="/cloud-devops"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Cloud & DevOps
+                    </Link>
+                    <Link
+                      to="/cybersecurity"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Cybersecurity
+                    </Link>
+                    <Link
+                      to="/quantum-computing"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Quantum Computing
+                    </Link>
+                    <Link
+                      to="/blockchain"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Blockchain
+                    </Link>
+                    <Link
+                      to="/digital-transformation"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Digital Transformation
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Solutions</h3>
+                  <div className="pl-4 space-y-2">
+                    <Link
+                      to="/enterprise"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Enterprise
+                    </Link>
+                    <Link
+                      to="/healthcare"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Healthcare
+                    </Link>
+                    <Link
+                      to="/financial"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Financial
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Company</h3>
+                  <div className="pl-4 space-y-2">
+                    <Link
+                      to="/about"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Contact
+                    </Link>
+                    <Link
+                      to="/careers"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Careers
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-700">
                 <Link

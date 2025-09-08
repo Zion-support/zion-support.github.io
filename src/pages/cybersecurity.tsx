@@ -1,120 +1,123 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Atom, 
-  Zap, 
-  Cpu, 
-  Brain, 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
   CheckCircle, 
   ArrowRight, 
+  Zap,
+  Users,
+  Database,
+  Network,
+  Smartphone,
+  Server,
+  Cpu,
   BarChart3,
   TrendingUp,
   Activity,
+  Key,
+  Fingerprint,
+  Scan,
+  Bug,
   Globe,
   Building,
   FileText,
   Monitor,
-  Shield,
-  Lock,
-  Database,
-  Network,
-  Server,
-  Code,
-  Calculator,
-  Microscope,
-  Beaker,
-  Target,
-  Rocket,
-  Star
+  AlertCircle,
+  ShieldCheck,
+  LockKeyhole,
+  Cloud
 } from 'lucide-react';
 
-export default function QuantumComputing() {
+export default function Cybersecurity() {
   const services = [
     {
-      title: "Quantum Algorithm Development",
-      description: "Design and implement quantum algorithms for complex computational problems.",
-      icon: Code,
-      features: ["Quantum optimization", "Machine learning", "Cryptography", "Simulation algorithms"]
-    },
-    {
-      title: "Quantum Software Development",
-      description: "Build quantum applications using leading quantum computing frameworks.",
-      icon: Cpu,
-      features: ["Qiskit development", "Cirq applications", "Quantum circuits", "Hybrid classical-quantum"]
-    },
-    {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum computing for advanced machine learning applications.",
-      icon: Brain,
-      features: ["Quantum neural networks", "Feature selection", "Pattern recognition", "Optimization"]
-    },
-    {
-      title: "Quantum Cryptography",
-      description: "Implement quantum-safe cryptographic solutions for future-proof security.",
+      title: "Zero Trust Security",
+      description: "Implement comprehensive zero-trust architecture for enhanced network security.",
       icon: Shield,
-      features: ["Post-quantum cryptography", "Quantum key distribution", "Secure communications", "Encryption"]
+      features: ["Identity verification", "Access control", "Network segmentation", "Continuous monitoring"]
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate quantum systems for research and development applications.",
-      icon: Microscope,
-      features: ["Molecular modeling", "Material science", "Chemical reactions", "Physical systems"]
+      title: "AI-Powered Threat Detection",
+      description: "Advanced AI algorithms to detect and respond to security threats in real-time.",
+      icon: Eye,
+      features: ["Behavioral analysis", "Anomaly detection", "Predictive analytics", "Automated response"]
     },
     {
-      title: "Quantum Consulting",
-      description: "Strategic guidance on quantum computing adoption and implementation.",
-      icon: Building,
-      features: ["Technology assessment", "Use case identification", "Implementation strategy", "Training"]
+      title: "Endpoint Security",
+      description: "Protect all devices and endpoints with comprehensive security solutions.",
+      icon: Smartphone,
+      features: ["Device encryption", "Malware protection", "Data loss prevention", "Remote management"]
+    },
+    {
+      title: "Cloud Security",
+      description: "Secure cloud environments with enterprise-grade security controls.",
+      icon: Cloud,
+      features: ["Cloud access security", "Data encryption", "Compliance monitoring", "Threat intelligence"]
+    },
+    {
+      title: "Incident Response",
+      description: "24/7 security monitoring and rapid incident response capabilities.",
+      icon: AlertTriangle,
+      features: ["Real-time monitoring", "Rapid response", "Forensic analysis", "Recovery planning"]
+    },
+    {
+      title: "Compliance & Governance",
+      description: "Ensure regulatory compliance with comprehensive security frameworks.",
+      icon: FileText,
+      features: ["GDPR compliance", "SOC 2 certification", "ISO 27001", "Regular audits"]
     }
   ];
 
-  const applications = [
+  const solutions = [
     {
-      title: "Financial Services",
-      description: "Optimize portfolio management, risk assessment, and trading strategies.",
-      icon: BarChart3,
-      features: ["Portfolio optimization", "Risk modeling", "Option pricing", "Fraud detection"]
+      title: "Enterprise Security",
+      description: "Comprehensive security solutions for large organizations.",
+      icon: Building,
+      features: ["Advanced threat protection", "Security operations center", "Risk management", "Employee training"]
     },
     {
-      title: "Healthcare & Pharmaceuticals",
-      description: "Accelerate drug discovery and molecular modeling with quantum computing.",
-      icon: Flask,
-      features: ["Drug discovery", "Protein folding", "Molecular dynamics", "Clinical trials"]
+      title: "Small Business Security",
+      description: "Affordable security solutions designed for growing businesses.",
+      icon: Users,
+      features: ["Essential protection", "Easy management", "Cost-effective", "24/7 support"]
     },
     {
-      title: "Logistics & Supply Chain",
-      description: "Solve complex optimization problems in transportation and logistics.",
-      icon: Globe,
-      features: ["Route optimization", "Inventory management", "Scheduling", "Resource allocation"]
+      title: "Healthcare Security",
+      description: "HIPAA-compliant security solutions for healthcare organizations.",
+      icon: ShieldCheck,
+      features: ["Patient data protection", "HIPAA compliance", "Secure communications", "Audit trails"]
     },
     {
-      title: "Energy & Materials",
-      description: "Optimize energy systems and discover new materials.",
-      icon: Atom,
-      features: ["Energy optimization", "Material discovery", "Catalyst design", "Battery research"]
+      title: "Financial Security",
+      description: "Bank-grade security for financial institutions and fintech companies.",
+      icon: LockKeyhole,
+      features: ["Fraud detection", "Transaction monitoring", "Regulatory compliance", "Secure APIs"]
     }
   ];
 
   const benefits = [
     {
-      title: "Exponential Speedup",
-      description: "Solve problems that are intractable for classical computers.",
-      icon: Zap
-    },
-    {
-      title: "Advanced Optimization",
-      description: "Find optimal solutions for complex multi-variable problems.",
-      icon: Target
-    },
-    {
-      title: "Future-Proof Security",
-      description: "Implement quantum-resistant cryptographic solutions.",
+      title: "Proactive Protection",
+      description: "Identify and prevent threats before they impact your business.",
       icon: Shield
     },
     {
-      title: "Competitive Advantage",
-      description: "Stay ahead with cutting-edge quantum computing capabilities.",
-      icon: Star
+      title: "24/7 Monitoring",
+      description: "Continuous security monitoring and threat detection.",
+      icon: Monitor
+    },
+    {
+      title: "Compliance Ready",
+      description: "Meet regulatory requirements and industry standards.",
+      icon: CheckCircle
+    },
+    {
+      title: "Cost Effective",
+      description: "Reduce security incidents and associated costs.",
+      icon: TrendingUp
     }
   ];
 
@@ -125,29 +128,29 @@ export default function QuantumComputing() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Atom className="w-10 h-10 text-white" />
+              <Shield className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Quantum Computing
+            Cybersecurity
             <span className="text-zion-cyan"> Solutions</span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Harness the power of quantum computing to solve complex problems that are beyond 
-            the reach of classical computers. Transform your business with quantum innovation.
+            Protect your digital assets with enterprise-grade cybersecurity solutions. 
+            Stay ahead of evolving threats with AI-powered detection and response.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl font-semibold hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 hover:scale-105"
             >
-              Explore Quantum
+              Get Protected
             </Link>
             <Link
               to="/request-quote"
               className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              Quantum Assessment
+              Security Assessment
             </Link>
           </div>
         </div>
@@ -158,10 +161,10 @@ export default function QuantumComputing() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Computing Services
+              Comprehensive Security Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From algorithm development to quantum software, we provide comprehensive quantum computing solutions.
+              From threat detection to incident response, we provide end-to-end cybersecurity solutions.
             </p>
           </div>
           
@@ -193,21 +196,21 @@ export default function QuantumComputing() {
         </div>
       </div>
 
-      {/* Industry Applications */}
+      {/* Industry Solutions */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry-Specific Security Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Discover how quantum computing can transform your industry and solve complex challenges.
+              Tailored cybersecurity solutions for your industry's unique challenges and compliance requirements.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {applications.map((application, index) => {
-              const Icon = application.icon;
+            {solutions.map((solution, index) => {
+              const Icon = solution.icon;
               return (
                 <div
                   key={index}
@@ -216,10 +219,10 @@ export default function QuantumComputing() {
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{application.title}</h3>
-                  <p className="text-zion-slate-light mb-6">{application.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{solution.description}</p>
                   <ul className="space-y-2">
-                    {application.features.map((feature, featureIndex) => (
+                    {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
@@ -238,10 +241,10 @@ export default function QuantumComputing() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Quantum Computing?
+              Why Choose Our Cybersecurity Solutions?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience the revolutionary benefits of quantum computing technology.
+              Experience the benefits of enterprise-grade security protection.
             </p>
           </div>
           
@@ -266,10 +269,10 @@ export default function QuantumComputing() {
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Go Quantum?
+            Ready to Secure Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8">
-            Let's explore how quantum computing can revolutionize your business operations.
+            Let's discuss how our cybersecurity solutions can protect your digital assets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -280,7 +283,7 @@ export default function QuantumComputing() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              to="/quantum-assessment"
+              to="/security-assessment"
               className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               Free Assessment

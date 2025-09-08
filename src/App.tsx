@@ -37,9 +37,19 @@ const Solutions = React.lazy(() => import('./pages/Solutions'));
 const Resources = React.lazy(() => import('./pages/Resources'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
+// Additional service pages
+const CloudDevOps = createLazyComponent(() => import('./pages/cloud-devops'));
+const Cybersecurity = createLazyComponent(() => import('./pages/cybersecurity'));
+const QuantumComputing = createLazyComponent(() => import('./pages/quantum-computing'));
+const Blockchain = createLazyComponent(() => import('./pages/blockchain'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/digital-transformation'));
+const Enterprise = createLazyComponent(() => import('./pages/enterprise'));
+
+// New AI Services 2025
+const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
+const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -122,22 +132,20 @@ function App() {
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
-                    {/* Core Routes */}
-                    <Route
-                      path="/"
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <ModernLayout showSidebar={false}>
-                            <Home />
-                          </ModernLayout>
-                        </motion.div>
-                      }
-                    />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/ai-services" element={<AIServices />} />
+                    <Route path="/ai-solutions" element={<AISolutions />} />
+                    <Route path="/it-services" element={<ITServices />} />
+                    <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/cloud-devops" element={<CloudDevOps />} />
+                    <Route path="/cybersecurity" element={<Cybersecurity />} />
+                    <Route path="/quantum-computing" element={<QuantumComputing />} />
+                    <Route path="/blockchain" element={<Blockchain />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/enterprise" element={<Enterprise />} />
                     
                     {/* Additional Core Routes */}
                     <Route path="/get-started" element={<ModernLayout><GetStarted /></ModernLayout>} />

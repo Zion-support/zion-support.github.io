@@ -135,36 +135,119 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
-      name: 'Resources',
-      items: [
-        { name: 'Blog', href: '/blog', icon: BookOpen, badge: null },
-        { name: 'News', href: '/news', icon: FileText, badge: null },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3, badge: null },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, badge: null },
-        { name: 'Webinars', href: '/webinars', icon: Users, badge: null }
-      ],
-      expandable: true,
-      expandedItems: [
-        {
-          title: 'Developer Resources',
-          items: [
-            { name: 'Documentation', href: '/documentation', icon: FileText },
-            { name: 'API Reference', href: '/api', icon: Code },
-            { name: 'Developer Portal', href: '/developers', icon: Cpu },
-            { name: 'Training', href: '/training', icon: BookOpen },
-            { name: 'Help Center', href: '/help', icon: HelpCircle }
-          ]
-        }
+      id: 'enterprise-services',
+      title: 'Enterprise Services',
+      icon: Building,
+      links: [
+        { name: 'Cloud DevOps', href: '/cloud-devops', icon: Cloud, description: 'Cloud infrastructure' },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security solutions' },
+        { name: 'Enterprise Solutions', href: '/enterprise', icon: Building, description: 'Enterprise technology' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp, description: 'Business transformation' },
+        { name: 'IT Infrastructure', href: '/it-services', icon: Settings, description: 'Infrastructure management' },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: Database, description: 'Data processing' }
       ]
     },
     {
-      name: 'Support',
-      items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle, badge: null },
-        { name: 'Contact Support', href: '/support', icon: MessageCircle, badge: null },
-        { name: 'Status Page', href: '/status', icon: CheckCircle, badge: null },
-        { name: 'FAQ', href: '/faq', icon: MessageCircle, badge: null },
-        { name: 'Live Chat', href: '/chat', icon: MessageCircle, badge: '24/7' }
+      id: 'specialized-services',
+      title: 'Specialized Services',
+      icon: Star,
+      links: [
+        { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'Medical technology' },
+        { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock, description: 'Blockchain technology' },
+        { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap, description: 'Quantum solutions' },
+        { name: 'Space Technology', href: '/services/space-tech', icon: Rocket, description: 'Aerospace solutions' },
+        { name: 'Sustainability Tech', href: '/services/sustainability', icon: Globe, description: 'Green technology' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp, description: 'Business modernization' }
+      ]
+    },
+    {
+      id: 'micro-saas-products',
+      title: 'Micro SaaS Products',
+      icon: ShoppingCart,
+      links: [
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'All SaaS products' },
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: Target, description: 'Lead qualification' },
+        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: 'Customer support' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', icon: Search, description: 'SEO automation' },
+        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', icon: TrendingUp, description: 'Customer retention' },
+        { name: 'API Monitoring', href: '/services/api-monitoring', icon: Smartphone, description: 'API health tracking' },
+        { name: 'Returns Management', href: '/services/returns-management', icon: Package, description: 'E-commerce returns' }
+      ]
+    },
+    {
+      id: 'innovative-showcase',
+      title: 'Innovation Hub',
+      icon: Star,
+      links: [
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest innovations' },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future technologies' },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', icon: BarChart3, description: 'Complete portfolio' },
+        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Zap, description: 'Emerging technologies' }
+      ]
+    },
+    {
+      id: 'pricing',
+      title: 'Pricing & Plans',
+      icon: DollarSign,
+      links: [
+        { name: 'Pricing Overview', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
+        { name: 'Pricing Guide', href: '/pricing-guide', icon: FileText, description: 'Detailed pricing info' },
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026', icon: BarChart3, description: 'Future pricing' },
+        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', icon: TrendingUp, description: 'Current pricing' }
+      ]
+    },
+    {
+      id: 'resources',
+      title: 'Resources & Learning',
+      icon: BookOpen,
+      links: [
+        { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Get support' },
+        { name: 'Documentation', href: '/documentation', icon: FileText, description: 'Technical docs' },
+        { name: 'Training', href: '/training', icon: GraduationCap, description: 'Learning resources' },
+        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
+        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Educational events' },
+        { name: 'Case Studies', href: '/case-studies', icon: Award, description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research papers' },
+        { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' }
+      ]
+    },
+    {
+      id: 'company',
+      title: 'Company',
+      icon: Building,
+      links: [
+        { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our experts' },
+        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
+        { name: 'Partners', href: '/partners', icon: Building, description: 'Strategic partnerships' },
+        { name: 'News & Press', href: '/news', icon: FileText, description: 'Latest news' },
+        { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' },
+        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
+        { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Service marketplace' }
+      ]
+    },
+    {
+      id: 'platform',
+      title: 'Platform',
+      icon: Settings,
+      links: [
+        { name: 'Dashboard', href: '/dashboard', icon: BarChart3, description: 'User dashboard' },
+        { name: 'Support Center', href: '/support', icon: HelpCircle, description: 'Technical support' },
+        { name: 'Community', href: '/community', icon: Users, description: 'User community' },
+                 { name: 'Login', href: '/login', icon: User, description: 'Sign in' },
+        { name: 'Sign Up', href: '/signup', icon: Plus, description: 'Create account' }
+      ]
+    },
+    {
+      id: 'legal',
+      title: 'Legal & Policies',
+      icon: FileText,
+      links: [
+        { name: 'Privacy Policy', href: '/privacy', icon: Lock, description: 'Privacy information' },
+        { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Terms and conditions' },
+        { name: 'Cookie Policy', href: '/cookies', icon: Shield, description: 'Cookie usage' },
+        { name: 'Security', href: '/security', icon: Shield, description: 'Security measures' },
+        { name: 'Compliance', href: '/compliance', icon: Award, description: 'Regulatory compliance' },
+        { name: 'Accessibility', href: '/accessibility', icon: Heart, description: 'Accessibility features' }
       ]
     }
   ];
