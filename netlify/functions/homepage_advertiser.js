@@ -3,37 +3,36 @@ const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('homepage_advertiser function triggered');
+    console.log('🚀 homepage_advertiser function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
-    
-    // Run the homepage advertiser automation
-    const result = execSync('node automation/homepage-auto-advertiser.cjs', {
-      cwd: rootDir,
+    // Run the corresponding automation script
+    const scriptPath = path.join(process.cwd(), 'automation', 'homepage-auto-advertiser.cjs');
+    const result = execSync(`node "${scriptPath}"`, { 
       encoding: 'utf8',
-      timeout: 30000
+      cwd: process.cwd(),
+      timeout: 30000 // 30 second timeout
     });
     
-    console.log('homepage_advertiser completed successfully:', result);
+    console.log('✅ homepage_advertiser completed successfully');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
         success: true,
         message: 'Homepage advertiser completed successfully',
-        result: result
+        output: result,
+        timestamp: new Date().toISOString()
       })
     };
   } catch (error) {
-    console.error('homepage_advertiser error:', error);
+    console.error('❌ homepage_advertiser failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
         success: false,
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

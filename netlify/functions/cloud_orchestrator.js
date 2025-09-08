@@ -3,37 +3,36 @@ const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('cloud_orchestrator function triggered');
+    console.log('🚀 cloud_orchestrator function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
-    
-    // Run the cloud orchestrator automation
-    const result = execSync('node automation/cloud-orchestrator-plus.cjs', {
-      cwd: rootDir,
+    // Run the master automation orchestrator
+    const scriptPath = path.join(process.cwd(), 'automation', 'master-automation-orchestrator.cjs');
+    const result = execSync(`node "${scriptPath}" audit`, { 
       encoding: 'utf8',
-      timeout: 60000
+      cwd: process.cwd(),
+      timeout: 60000 // 60 second timeout for orchestrator
     });
     
-    console.log('cloud_orchestrator completed successfully:', result);
+    console.log('✅ cloud_orchestrator completed successfully');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
         success: true,
         message: 'Cloud orchestrator completed successfully',
-        result: result
+        output: result,
+        timestamp: new Date().toISOString()
       })
     };
   } catch (error) {
-    console.error('cloud_orchestrator error:', error);
+    console.error('❌ cloud_orchestrator failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
         success: false,
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

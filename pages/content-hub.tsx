@@ -1,76 +1,13 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
 export default function ContentHub() {
-	const contentCategories = [
-		{
-			name: 'Documentation',
-			description: 'Comprehensive guides, API references, and technical documentation',
-			icon: '📚',
-			count: 156,
-			items: [
-				{ title: 'Getting Started Guide', type: 'Guide', readTime: '10 min' },
-				{ title: 'API Reference', type: 'Reference', readTime: 'Reference' },
-				{ title: 'Deployment Tutorials', type: 'Tutorial', readTime: '15 min' }
-			]
-		},
-		{
-			name: 'Tutorials',
-			description: 'Step-by-step guides and hands-on learning resources',
-			icon: '🎓',
-			count: 89,
-			items: [
-				{ title: 'Building Your First Automation', type: 'Tutorial', readTime: '20 min' },
-				{ title: 'Advanced CI/CD Pipelines', type: 'Tutorial', readTime: '25 min' },
-				{ title: 'Security Best Practices', type: 'Tutorial', readTime: '18 min' }
-			]
-		},
-		{
-			name: 'Case Studies',
-			description: 'Real-world examples and success stories from our customers',
-			icon: '📊',
-			count: 42,
-			items: [
-				{ title: 'Enterprise Scale Automation', type: 'Case Study', readTime: '8 min' },
-				{ title: 'Cost Optimization Success', type: 'Case Study', readTime: '6 min' },
-				{ title: 'Security Implementation', type: 'Case Study', readTime: '10 min' }
-			]
-		},
-		{
-			name: 'Videos',
-			description: 'Video tutorials, demos, and presentations',
-			icon: '🎥',
-			count: 67,
-			items: [
-				{ title: 'Product Demo Walkthrough', type: 'Video', duration: '12:34' },
-				{ title: 'Advanced Features Deep Dive', type: 'Video', duration: '28:15' },
-				{ title: 'Q&A Session', type: 'Video', duration: '45:22' }
-			]
-		},
-		{
-			name: 'Webinars',
-			description: 'Live and recorded webinars on various topics',
-			icon: '🌐',
-			count: 34,
-			items: [
-				{ title: 'Future of Cloud Automation', type: 'Webinar', duration: '60 min' },
-				{ title: 'AI in DevOps', type: 'Webinar', duration: '45 min' },
-				{ title: 'Security Automation', type: 'Webinar', duration: '50 min' }
-			]
-		},
-		{
-			name: 'Community',
-			description: 'User-generated content, discussions, and contributions',
-			icon: '👥',
-			count: 128,
-			items: [
-				{ title: 'User Forum Discussions', type: 'Discussion', readTime: 'Varies' },
-				{ title: 'Community Projects', type: 'Project', readTime: 'Varies' },
-				{ title: 'Contributor Guidelines', type: 'Guide', readTime: '5 min' }
-			]
-		}
-	];
+  const [contentStats, setContentStats] = useState({
+    totalReports: 0,
+    totalComponents: 0,
+    lastUpdated: new Date().toISOString()
+  });
 
 	const featuredContent = [
 		{
@@ -103,16 +40,22 @@ export default function ContentHub() {
 				<meta name="description" content="Comprehensive collection of documentation, tutorials, and learning resources" />
 			</Head>
 
-			<div className="container mx-auto px-4 py-16">
-				<div className="max-w-7xl mx-auto">
-					<div className="text-center mb-16">
-						<h1 className="text-5xl font-bold text-white mb-6">
-							Content Hub
-						</h1>
-						<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-							Explore our comprehensive collection of documentation, tutorials, case studies, and learning resources
-						</p>
-					</div>
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Content Hub | Zion Tech Group</title>
+        <meta name="description" content="Central hub for all our AI, cloud, and technology content." />
+      </Head>
+      
+      <main className="container mx-auto px-6 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            Content Hub
+          </h1>
+          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            Discover, explore, and engage with our comprehensive content library
+          </p>
+        </div>
 
 					{/* Search Bar */}
 					<div className="max-w-2xl mx-auto mb-16">

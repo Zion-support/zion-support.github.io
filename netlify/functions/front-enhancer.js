@@ -3,37 +3,36 @@ const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('front-enhancer function triggered');
+    console.log('🚀 front-enhancer function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
-    
-    // Run the front enhancer automation
-    const result = execSync('node automation/front-futurizer.cjs', {
-      cwd: rootDir,
+    // Run the corresponding automation script
+    const scriptPath = path.join(process.cwd(), 'automation', 'frontend-automation-orchestrator.cjs');
+    const result = execSync(`node "${scriptPath}"`, { 
       encoding: 'utf8',
-      timeout: 30000
+      cwd: process.cwd(),
+      timeout: 30000 // 30 second timeout
     });
     
-    console.log('front-enhancer completed successfully:', result);
+    console.log('✅ front-enhancer completed successfully');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
         success: true,
         message: 'Front enhancer completed successfully',
-        result: result
+        output: result,
+        timestamp: new Date().toISOString()
       })
     };
   } catch (error) {
-    console.error('front-enhancer error:', error);
+    console.error('❌ front-enhancer failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
         success: false,
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

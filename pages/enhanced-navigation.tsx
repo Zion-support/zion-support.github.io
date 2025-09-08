@@ -6,59 +6,15 @@ export default function EnhancedNavigationPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const navigationSections = [
-    {
-      id: 'core',
-      title: "Core Systems",
-      icon: "⚙️",
-      description: "Essential automation and management tools",
-      color: "blue",
-      items: [
-        { name: "Automation Hub", path: "/automation", description: "Manage autonomous systems", tags: ["automation", "management"] },
-        { name: "Live Dashboard", path: "/live-dashboard", description: "Real-time monitoring", tags: ["monitoring", "real-time"] },
-        { name: "System Reports", path: "/reports", description: "Analytics and insights", tags: ["analytics", "reports"] },
-        { name: "Control Center", path: "/front", description: "Main system control", tags: ["control", "dashboard"] }
-      ]
-    },
-    {
-      id: 'content',
-      title: "Content & Resources",
-      icon: "📚",
-      description: "Knowledge base and learning materials",
-      color: "green",
-      items: [
-        { name: "Blog", path: "/blog", description: "Latest insights and updates", tags: ["blog", "news", "insights"] },
-        { name: "Content Hub", path: "/content-hub", description: "Tutorials and resources", tags: ["tutorials", "resources", "learning"] },
-        { name: "Events", path: "/events", description: "Workshops and conferences", tags: ["events", "workshops", "conferences"] },
-        { name: "Newsroom", path: "/newsroom", description: "Press releases and media", tags: ["press", "media", "announcements"] }
-      ]
-    },
-    {
-      id: 'interactive',
-      title: "Interactive Tools",
-      icon: "🎮",
-      description: "Hands-on experience and testing",
-      color: "purple",
-      items: [
-        { name: "Playground", path: "/playground", description: "Try AI automation live", tags: ["demo", "testing", "interactive"] },
-        { name: "Component Library", path: "/component-library", description: "UI components and design", tags: ["ui", "components", "design"] },
-        { name: "Explore", path: "/explore", description: "Discover technologies", tags: ["explore", "discover", "technologies"] },
-        { name: "Discover", path: "/discover", description: "Learning paths and resources", tags: ["learning", "paths", "education"] }
-      ]
-    },
-    {
-      id: 'company',
-      title: "Company & Support",
-      icon: "🏢",
-      description: "About Zion and getting help",
-      color: "orange",
-      items: [
-        { name: "About", path: "/about", description: "Company information", tags: ["company", "about", "info"] },
-        { name: "Services", path: "/services", description: "What we offer", tags: ["services", "offerings", "solutions"] },
-        { name: "Contact", path: "/contact", description: "Get in touch", tags: ["contact", "support", "help"] },
-        { name: "Privacy", path: "/privacy", description: "Privacy policy", tags: ["privacy", "policy", "legal"] }
-      ]
-    }
+  const mainNavItems = [
+    { href: '/', label: 'Home', icon: '🏠' },
+    { href: '/components', label: 'Components', icon: '🧩' },
+    { href: '/reports', label: 'Reports', icon: '📊' },
+    { href: '/content-hub', label: 'Content Hub', icon: '📚' },
+    { href: '/discover', label: 'Discover', icon: '🔍' },
+    { href: '/playground', label: 'Playground', icon: '🎮' },
+    { href: '/live-dashboard', label: 'Live Dashboard', icon: '📈' },
+    { href: '/automation', label: 'Automation', icon: '🤖' }
   ];
 
   const allItems = navigationSections.flatMap(section => 
@@ -87,20 +43,73 @@ export default function EnhancedNavigationPage() {
   return (
     <>
       <Head>
-        <title>Enhanced Navigation | Zion - Advanced Site Navigation</title>
-        <meta name="description" content="Advanced navigation system for Zion's autonomous automation platform with search, filtering, and intelligent routing." />
+        <title>Enhanced Navigation | Zion Tech Group</title>
+        <meta name="description" content="Advanced navigation system showcasing all our features and content." />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Enhanced Navigation
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Advanced navigation system with intelligent search, filtering, and smart routing
-            </p>
+
+      {/* Main Navigation */}
+      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-bold text-cyan-400">
+              Zion Tech Group
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              {mainNavItems.map((item) => (
+                <Link 
+                  key={item.href}
+                  href={item.href} 
+                  className="flex items-center gap-2 text-white/80 hover:text-cyan-400 transition-colors"
+                >
+                  <span>{item.icon}</span>
+                  <span>{item.label}</span>
+                </Link>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden text-white/80 hover:text-cyan-400 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          
+          {/* Report Categories Sub-navigation */}
+          <div className="mt-4 pb-2 border-t border-white/10 pt-4">
+            <div className="flex flex-wrap gap-4 text-sm">
+              {reportCategories.map((category) => (
+                <Link 
+                  key={category.href}
+                  href={category.href} 
+                  className={`flex items-center gap-2 text-white/60 hover:text-cyan-400 transition-colors ${
+                    category.color === 'cyan' ? 'hover:text-cyan-400' :
+                    category.color === 'fuchsia' ? 'hover:text-fuchsia-400' :
+                    category.color === 'emerald' ? 'hover:text-emerald-400' :
+                    category.color === 'amber' ? 'hover:text-amber-400' :
+                    category.color === 'blue' ? 'hover:text-blue-400' :
+                    'hover:text-purple-400'
+                  }`}
+                >
+                  <span>{category.label}</span>
+                  <span className={`px-2 py-1 rounded-full text-xs ${
+                    category.color === 'cyan' ? 'bg-cyan-500/20 text-cyan-400' :
+                    category.color === 'fuchsia' ? 'bg-fuchsia-500/20 text-fuchsia-400' :
+                    category.color === 'emerald' ? 'bg-emerald-500/20 text-emerald-400' :
+                    category.color === 'amber' ? 'bg-amber-500/20 text-amber-400' :
+                    category.color === 'blue' ? 'bg-blue-500/20 text-blue-400' :
+                    'bg-purple-500/20 text-purple-400'
+                  }`}>
+                    {category.count}
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 

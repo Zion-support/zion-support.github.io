@@ -1,14 +1,43 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 
-export default function LiveDashboard() {
-  const metrics = [
-    { name: 'System Uptime', value: '99.99%', change: '+0.01%', status: 'positive' },
-    { name: 'Active Automations', value: '227', change: '+12', status: 'positive' },
-    { name: 'Content Pages', value: '2,960', change: '+45', status: 'positive' },
-    { name: 'API Response Time', value: '45ms', change: '-5ms', status: 'positive' },
-    { name: 'Error Rate', value: '0.02%', change: '-0.01%', status: 'positive' },
-    { name: 'Active Users', value: '1,847', change: '+23', status: 'positive' }
+export default function LiveContentDashboard() {
+  const [dashboardData, setDashboardData] = useState({
+    lastUpdate: new Date().toISOString(),
+    contentGenerated: 0,
+    componentsCreated: 0,
+    reportsPublished: 0
+  });
+
+  const [recentActivity, setRecentActivity] = useState([
+    {
+      type: 'component',
+      name: 'Pagination.tsx',
+      action: 'created',
+      timestamp: new Date().toISOString(),
+      status: 'success'
+    },
+    {
+      type: 'report',
+      name: 'AI Content Generation Insights',
+      action: 'published',
+      timestamp: new Date(Date.now() - 300000).toISOString(),
+      status: 'success'
+    },
+    {
+      type: 'component',
+      name: 'Form.tsx',
+      action: 'created',
+      timestamp: new Date(Date.now() - 600000).toISOString(),
+      status: 'success'
+    }
+  ]);
+
+  const systemMetrics = [
+    { name: 'Content Analysis', value: '0.7s', status: 'optimal' },
+    { name: 'Component Generation', value: '0.8s', status: 'optimal' },
+    { name: 'Report Creation', value: '1.2s', status: 'optimal' },
+    { name: 'Git Sync', value: '2.1s', status: 'optimal' }
   ];
 
   const recentActivities = [
@@ -32,9 +61,19 @@ export default function LiveDashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
-        <title>Live Dashboard - Zion App</title>
-        <meta name="description" content="Real-time monitoring and analytics dashboard" />
+        <title>Live Dashboard | Zion Tech Group</title>
+        <meta name="description" content="Real-time monitoring of our autonomous content generation system." />
       </Head>
+      
+      <main className="container mx-auto px-6 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+            Live Dashboard
+          </h1>
+          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            Real-time monitoring of our autonomous content generation and system performance
+          </p>
+        </div>
 
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-7xl mx-auto">

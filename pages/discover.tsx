@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -38,44 +38,87 @@ export default function DiscoverPage() {
     }
   ];
 
-  const featuredResources = [
-    {
-      title: "Zion Automation Guide",
-      type: "PDF Guide",
-      description: "Comprehensive guide to setting up autonomous automation systems",
-      downloadCount: "2.5k"
-    },
-    {
-      title: "AI Automation Webinar",
-      type: "Video",
-      description: "Live demonstration of Zion's autonomous systems in action",
-      downloadCount: "1.8k"
-    },
-    {
-      title: "Cloud Architecture Templates",
-      type: "Templates",
-      description: "Ready-to-use cloud infrastructure templates for automation",
-      downloadCount: "3.2k"
+  const filteredContent = sampleContent.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
+
+  const sortedContent = [...filteredContent].sort((a, b) => {
+    switch (sortBy) {
+      case 'date':
+        return new Date(b.date) - new Date(a.date);
+      case 'title':
+        return a.title.localeCompare(b.title);
+      case 'readTime':
+        return parseInt(a.readTime) - parseInt(b.readTime);
+      default:
+        return 0;
     }
   ];
 
   return (
     <>
       <Head>
-        <title>Discover | Zion - Learn AI & Automation</title>
-        <meta name="description" content="Discover the latest insights, tutorials, and resources on AI automation and autonomous systems." />
+        <title>Content Discovery | Zion Tech Group</title>
+        <meta name="description" content="Discover and explore our comprehensive content library with AI-powered search and recommendations." />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Discover Zion
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Uncover insights, tutorials, and resources that will transform your understanding of autonomous automation
-            </p>
+      <main className="container mx-auto px-6 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            Content Discovery
+          </h1>
+          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            AI-powered content discovery engine to help you find exactly what you need
+          </p>
+        </div>
+
+        {/* Search and Filters */}
+        <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-white/80 mb-2">Search Content</label>
+              <input
+                type="text"
+                placeholder="Search by title, content, or tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 bg-slate-800 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-white/80 mb-2">Category</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-2 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              >
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.icon} {category.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-white/80 mb-2">Sort By</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="w-full px-4 py-2 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              >
+                <option value="date">Date (Newest)</option>
+                <option value="title">Title (A-Z)</option>
+                <option value="readTime">Read Time</option>
+              </select>
+            </div>
           </div>
         </div>
 

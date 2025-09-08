@@ -58,21 +58,16 @@ export default function ReportsPage() {
   return (
     <>
       <Head>
-        <title>Reports | Zion - System Analytics & Insights</title>
-        <meta name="description" content="Access comprehensive reports on automation health, performance metrics, and system analytics." />
+        <title>Reports & Content | Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive collection of reports, insights, and technical content." />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              System Reports
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Comprehensive insights into your autonomous systems, performance metrics, and operational health
-            </p>
-          </div>
+      <main className="container mx-auto px-6 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-4">Reports & Content</h1>
+          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            Discover our extensive library of AI, cloud, and technology content
+          </p>
         </div>
 
         {/* Report Categories */}
