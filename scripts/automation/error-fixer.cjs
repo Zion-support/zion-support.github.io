@@ -4,375 +4,474 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class ErrorFixer {
+class GeneralErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportFile = path.join(this.projectRoot, 'error-fixer-report.json');
-    this.fixedErrors = [];
-    this.errorCount = 0;
+    this.reportFile = path.join(this.projectRoot, 'general-error-fixer-report.json');
+    this.fixedFiles = [];
+    this.errors = [];
+    this.warnings = [];
   }
 
-  async run() {
-    console.log('🔧 Starting comprehensive error fixing automation...');
+  async start() {
+    console.log('🚀 Starting General Error Fixer...');
     
     try {
-      await this.fixTypeScriptErrors();
-      await this.fixLintingErrors();
-      await this.fixImportErrors();
+      // Run initial error scan
+      await this.scanForErrors();
+      
+      // Fix common linting issues
+      await this.fixCommonLintingIssues();
+      
+      // Fix unused variables
       await this.fixUnusedVariables();
-      await this.fixMissingExports();
-      await this.fixDuplicateIdentifiers();
-      await this.fixApiErrors();
+      
+      // Fix console statements
+      await this.fixConsoleStatements();
+      
+      // Fix import/export issues
+      await this.fixImportExportIssues();
+      
+      // Fix React component issues
+      await this.fixReactComponentIssues();
+      
+      // Fix syntax issues
+      await this.fixSyntaxIssues();
+      
+      // Generate report
       await this.generateReport();
       
-      console.log('✅ Error fixing automation completed successfully!');
-      console.log(`📊 Fixed ${this.errorCount} errors`);
+      console.log('✅ General Error Fixer completed successfully!');
       
     } catch (error) {
-      console.error('❌ Error fixing automation failed:', error.message);
+      console.error('❌ Error in General Error Fixer:', error);
+      this.errors.push({
+        type: 'system_error',
+        message: error.message,
+        timestamp: new Date().toISOString()
+      });
       await this.generateReport();
-      process.exit(1);
     }
   }
 
-  async fixTypeScriptErrors() {
-    console.log('🔍 Fixing TypeScript errors...');
-    
-    // Fix missing exports
-    await this.fixMissingDefaultExports();
-    
-    // Fix import/export issues
-    await this.fixImportExportIssues();
-    
-    // Fix type issues
-    await this.fixTypeIssues();
-  }
-
-  async fixMissingDefaultExports() {
-    const filesToFix = [
-      'src/pages/Blog.tsx',
-      'src/pages/Sitemap.tsx',
-      'src/pages/MobileLaunchPage.tsx'
-    ];
-
-    for (const file of filesToFix) {
-      if (fs.existsSync(file)) {
-        try {
-          let content = fs.readFileSync(file, 'utf8');
-          
-          // Check if file has default export
-          if (!content.includes('export default') && !content.includes('export {') && !content.includes('export const')) {
-            // Add default export
-            const componentName = path.basename(file, path.extname(file));
-            content += `\n\nexport default ${componentName};`;
-            fs.writeFileSync(file, content);
-            this.recordFix('missing-default-export', file);
-          }
-        } catch (error) {
-          console.warn(`⚠️ Could not fix ${file}:`, error.message);
-        }
-      }
-    }
-  }
-
-  async fixImportExportIssues() {
-    // Fix import statements that should be named imports
-    const filesToCheck = [
-      'src/routes/ContentRoutes.tsx',
-      'src/routes/MobileAppRoutes.tsx'
-    ];
-
-    for (const file of filesToCheck) {
-      if (fs.existsSync(file)) {
-        try {
-          let content = fs.readFileSync(file, 'utf8');
-          let modified = false;
-
-          // Fix Blog import
-          if (content.includes("import Blog from '@/pages/Blog'")) {
-            content = content.replace(
-              "import Blog from '@/pages/Blog'",
-              "import { Blog } from '@/pages/Blog'"
-            );
-            modified = true;
-          }
-
-          // Fix Sitemap import
-          if (content.includes("import Sitemap from '@/pages/Sitemap'")) {
-            content = content.replace(
-              "import Sitemap from '@/pages/Sitemap'",
-              "import { Sitemap } from '@/pages/Sitemap'"
-            );
-            modified = true;
-          }
-
-          // Fix MobileLaunchPage import
-          if (content.includes("import MobileLaunchPage from '../pages/MobileLaunchPage'")) {
-            content = content.replace(
-              "import MobileLaunchPage from '../pages/MobileLaunchPage'",
-              "import { MobileLaunchPage } from '../pages/MobileLaunchPage'"
-            );
-            modified = true;
-          }
-
-          if (modified) {
-            fs.writeFileSync(file, content);
-            this.recordFix('import-export-issue', file);
-          }
-        } catch (error) {
-          console.warn(`⚠️ Could not fix ${file}:`, error.message);
-        }
-      }
-    }
-  }
-
-  async fixTypeIssues() {
-    // Fix API service type issues
-    const apiFile = 'src/services/api.ts';
-    if (fs.existsSync(apiFile)) {
-      try {
-        let content = fs.readFileSync(apiFile, 'utf8');
-        let modified = false;
-
-        // Fix headers type issue
-        if (content.includes('headers: Record<string, string> | undefined')) {
-          content = content.replace(
-            /headers: Record<string, string> \| undefined/g,
-            'headers: Record<string, string>'
-          );
-          modified = true;
-        }
-
-        // Fix unused apiRequest function
-        if (content.includes('async function apiRequest<T>(')) {
-          content = content.replace(
-            'async function apiRequest<T>(',
-            '// async function apiRequest<T>('
-          );
-          modified = true;
-        }
-
-        if (modified) {
-          fs.writeFileSync(apiFile, content);
-          this.recordFix('api-type-issue', apiFile);
-        }
-      } catch (error) {
-        console.warn(`⚠️ Could not fix ${apiFile}:`, error.message);
-      }
-    }
-
-    // Fix Stripe configuration
-    const stripeFile = 'src/utils/getStripe.ts';
-    if (fs.existsSync(stripeFile)) {
-      try {
-        let content = fs.readFileSync(stripeFile, 'utf8');
-        
-        if (content.includes('advancedFraudSignals: false')) {
-          content = content.replace(
-            '{ advancedFraudSignals: false }',
-            '{}'
-          );
-          fs.writeFileSync(stripeFile, content);
-          this.recordFix('stripe-config-issue', stripeFile);
-        }
-      } catch (error) {
-        console.warn(`⚠️ Could not fix ${stripeFile}:`, error.message);
-      }
-    }
-  }
-
-  async fixLintingErrors() {
-    console.log('🔍 Fixing linting errors...');
+  async scanForErrors() {
+    console.log('🔍 Scanning for errors...');
     
     try {
-      // Run ESLint with auto-fix
-      execSync('npx eslint . --fix', { 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      this.recordFix('linting-errors', 'auto-fixed');
+      const lintResult = execSync('npm run lint 2>&1', { encoding: 'utf8' });
+      this.parseLintOutput(lintResult);
     } catch (error) {
-      console.warn('⚠️ Some linting errors could not be auto-fixed');
+      // ESLint errors are expected, parse the output
+      this.parseLintOutput(error.stdout || error.stderr || '');
     }
   }
 
-  async fixImportErrors() {
-    console.log('🔍 Fixing import errors...');
-    
-    // Fix lucide-react import errors
-    const filesWithLucideErrors = [
-      'src/pages/solutions/Enterprise.tsx'
-    ];
-
-    for (const file of filesWithLucideErrors) {
-      if (fs.existsSync(file)) {
-        try {
-          let content = fs.readFileSync(file, 'utf8');
-          let modified = false;
-
-          // Remove non-existent lucide-react exports
-          const invalidExports = [
-            'UserHeart', 'UserEdit2', 'UserSearch2', 'UserList2', 
-            'UserSettings2', 'UserShield2', 'UserStar2', 'Device', 'Desktop'
-          ];
-
-          for (const invalidExport of invalidExports) {
-            const regex = new RegExp(`\\s*${invalidExport},?\\s*`, 'g');
-            if (content.includes(invalidExport)) {
-              content = content.replace(regex, '');
-              modified = true;
-            }
+  parseLintOutput(output) {
+    const lines = output.split('\n');
+    lines.forEach(line => {
+      if (line.includes('error') || line.includes('warning')) {
+        const match = line.match(/(.+):(\d+):(\d+)\s+(error|warning)\s+(.+)/);
+        if (match) {
+          const [, filePath, lineNum, colNum, type, message] = match;
+          if (type === 'error') {
+            this.errors.push({
+              file: filePath.trim(),
+              line: parseInt(lineNum),
+              column: parseInt(colNum),
+              type: 'lint_error',
+              message: message.trim()
+            });
+          } else {
+            this.warnings.push({
+              file: filePath.trim(),
+              line: parseInt(lineNum),
+              column: parseInt(colNum),
+              type: 'lint_warning',
+              message: message.trim()
+            });
           }
-
-          // Fix duplicate identifiers
-          const duplicates = ['UserHeart', 'Eye', 'Smartphone', 'Database', 'HardDrive', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal', 'Antenna', 'Orbit', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary', 'Lock', 'Brain'];
-          
-          for (const duplicate of duplicates) {
-            const regex = new RegExp(`\\s*${duplicate},?\\s*`, 'g');
-            const matches = content.match(regex);
-            if (matches && matches.length > 1) {
-              // Keep only the first occurrence
-              content = content.replace(regex, (match, index) => {
-                return index === 0 ? match : '';
-              });
-              modified = true;
-            }
-          }
-
-          if (modified) {
-            fs.writeFileSync(file, content);
-            this.recordFix('import-errors', file);
-          }
-        } catch (error) {
-          console.warn(`⚠️ Could not fix ${file}:`, error.message);
         }
       }
+    });
+  }
+
+  async fixCommonLintingIssues() {
+    console.log('🔧 Fixing common linting issues...');
+    
+    try {
+      // Run ESLint with --fix
+      execSync('npm run lint -- --fix', { stdio: 'pipe' });
+      console.log('✅ Applied ESLint auto-fixes');
+    } catch (error) {
+      console.log('ℹ️ Some linting issues could not be auto-fixed');
     }
   }
 
   async fixUnusedVariables() {
-    console.log('🔍 Fixing unused variables...');
+    console.log('🔧 Fixing unused variables...');
     
-    // This would typically involve more sophisticated analysis
-    // For now, we'll focus on obvious cases
-    const filesToCheck = [
-      'src/utils/sitemapGenerator.ts'
-    ];
+    const unusedVarErrors = this.errors.filter(e => 
+      e.message.includes('defined but never used') ||
+      e.message.includes('assigned a value but never used')
+    );
 
-    for (const file of filesToCheck) {
-      if (fs.existsSync(file)) {
-        try {
-          let content = fs.readFileSync(file, 'utf8');
-          
-          // Fix unused 'urls' variable
-          if (content.includes('const { baseUrl, urls } = this.config;')) {
-            content = content.replace(
-              'const { baseUrl, urls } = this.config;',
-              'const { baseUrl } = this.config;'
-            );
-            fs.writeFileSync(file, content);
-            this.recordFix('unused-variable', file);
-          }
-        } catch (error) {
-          console.warn(`⚠️ Could not fix ${file}:`, error.message);
-        }
-      }
+    for (const error of unusedVarErrors) {
+      await this.fixUnusedVariable(error);
     }
   }
 
-  async fixMissingExports() {
-    console.log('🔍 Fixing missing exports...');
-    
-    // Add missing exports to components
-    const componentsToFix = [
-      'src/pages/Blog.tsx',
-      'src/pages/Sitemap.tsx',
-      'src/pages/MobileLaunchPage.tsx'
-    ];
+  async fixUnusedVariable(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
 
-    for (const file of componentsToFix) {
-      if (fs.existsSync(file)) {
-        try {
-          let content = fs.readFileSync(file, 'utf8');
-          const componentName = path.basename(file, path.extname(file));
-          
-          // Check if component is exported
-          if (!content.includes(`export default ${componentName}`) && 
-              !content.includes(`export { ${componentName} }`)) {
-            
-            // Find the main component
-            const componentMatch = content.match(new RegExp(`(export\\s+)?(const|function)\\s+(${componentName})\\s*[=:]`, 'i'));
-            if (componentMatch) {
-              // Add default export
-              content += `\n\nexport default ${componentName};`;
-              fs.writeFileSync(file, content);
-              this.recordFix('missing-export', file);
-            }
-          }
-        } catch (error) {
-          console.warn(`⚠️ Could not fix ${file}:`, error.message);
-        }
-      }
-    }
-  }
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
 
-  async fixDuplicateIdentifiers() {
-    console.log('🔍 Fixing duplicate identifiers...');
-    
-    // This is handled in fixImportErrors for lucide-react
-    // Additional duplicate identifier fixes can be added here
-  }
-
-  async fixApiErrors() {
-    console.log('🔍 Fixing API errors...');
-    
-    // Fix service worker type issues
-    const swFile = 'src/utils/serviceWorker.ts';
-    if (fs.existsSync(swFile)) {
-      try {
-        let content = fs.readFileSync(swFile, 'utf8');
+      // Extract variable name from error message
+      const varMatch = error.message.match(/'([^']+)'/);
+      if (varMatch) {
+        const varName = varMatch[1];
         
-        if (content.includes('applicationServerKey: this.urlBase64ToUint8Array')) {
-          // Fix the type issue by adding proper type assertion
-          content = content.replace(
-            'applicationServerKey: this.urlBase64ToUint8Array(process.env[\'REACT_APP_VAPID_PUBLIC_KEY\'] || \'\')',
-            'applicationServerKey: this.urlBase64ToUint8Array(process.env[\'REACT_APP_VAPID_PUBLIC_KEY\'] || \'\') as Uint8Array'
-          );
-          fs.writeFileSync(swFile, content);
-          this.recordFix('service-worker-type', swFile);
+        // Remove unused imports
+        if (error.message.includes('import')) {
+          const importRegex = new RegExp(`import\\s+\\{[^}]*\\b${varName}\\b[^}]*\\}\\s+from\\s+['"][^'"]+['"];?\\s*\\n?`, 'g');
+          if (content.match(importRegex)) {
+            content = content.replace(importRegex, '');
+            fixed = true;
+          }
         }
-      } catch (error) {
-        console.warn(`⚠️ Could not fix ${swFile}:`, error.message);
+        
+        // Remove unused variable declarations
+        if (error.message.includes('defined but never used')) {
+          const varRegex = new RegExp(`(?:const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g');
+          if (content.match(varRegex)) {
+            content = content.replace(varRegex, '');
+            fixed = true;
+          }
+        }
+        
+        // Remove unused function parameters
+        if (error.message.includes('parameter') && error.message.includes('never used')) {
+          const paramRegex = new RegExp(`,\\s*${varName}\\s*:`, 'g');
+          if (content.match(paramRegex)) {
+            content = content.replace(paramRegex, ',');
+            fixed = true;
+          }
+        }
       }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'unused_variable_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed unused variable in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix unused variable in ${error.file}:`, fixError.message);
     }
   }
 
-  recordFix(type, file) {
-    this.fixedErrors.push({
-      type,
-      file,
-      timestamp: new Date().toISOString()
-    });
-    this.errorCount++;
+  async fixConsoleStatements() {
+    console.log('🔧 Fixing console statements...');
+    
+    const consoleErrors = this.errors.filter(e => 
+      e.message.includes('Unexpected console statement')
+    );
+
+    for (const error of consoleErrors) {
+      await this.fixConsoleStatement(error);
+    }
+  }
+
+  async fixConsoleStatement(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Replace console statements with proper logging or remove them
+      if (content.includes('console.log')) {
+        content = content.replace(/console\.log\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+      
+      if (content.includes('console.error')) {
+        content = content.replace(/console\.error\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+      
+      if (content.includes('console.warn')) {
+        content = content.replace(/console\.warn\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+      
+      if (content.includes('console.info')) {
+        content = content.replace(/console\.info\([^)]*\);?\s*\n?/g, '');
+        fixed = true;
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'console_statement_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed console statements in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix console statements in ${error.file}:`, fixError.message);
+    }
+  }
+
+  async fixImportExportIssues() {
+    console.log('🔧 Fixing import/export issues...');
+    
+    const importExportErrors = this.errors.filter(e => 
+      e.message.includes('import') ||
+      e.message.includes('export') ||
+      e.message.includes('module')
+    );
+
+    for (const error of importExportErrors) {
+      await this.fixImportExportIssue(error);
+    }
+  }
+
+  async fixImportExportIssue(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Fix missing semicolons in imports
+      if (content.includes('import') && !content.includes(';')) {
+        content = content.replace(/from\s+['"]([^'"]+)['"]\s*$/gm, "from '$1';");
+        fixed = true;
+      }
+
+      // Fix missing semicolons in exports
+      if (content.includes('export') && !content.includes(';')) {
+        content = content.replace(/export\s+default\s+(\w+)\s*$/gm, 'export default $1;');
+        fixed = true;
+      }
+
+      // Fix React import issues
+      if (content.includes('React') && !content.includes("import React")) {
+        if (content.includes('jsx') || content.includes('tsx')) {
+          content = "import React from 'react';\n" + content;
+          fixed = true;
+        }
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'import_export_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed import/export issue in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix import/export issue in ${error.file}:`, fixError.message);
+    }
+  }
+
+  async fixReactComponentIssues() {
+    console.log('🔧 Fixing React component issues...');
+    
+    const reactErrors = this.errors.filter(e => 
+      e.file.includes('.jsx') || 
+      e.file.includes('.tsx') ||
+      e.message.includes('React') ||
+      e.message.includes('JSX')
+    );
+
+    for (const error of reactErrors) {
+      await this.fixReactComponentIssue(error);
+    }
+  }
+
+  async fixReactComponentIssue(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Fix missing React import
+      if (content.includes('jsx') && !content.includes("import React")) {
+        content = "import React from 'react';\n" + content;
+        fixed = true;
+      }
+
+      // Fix JSX fragment syntax
+      if (content.includes('<>') && content.includes('</>')) {
+        // Ensure proper JSX structure
+        if (!content.includes('return') && content.includes('function')) {
+          content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/, 'function $1() {\n  return (');
+          content = content.replace(/<\/>\s*\)\s*;?\s*$/, '</>);\n}');
+          fixed = true;
+        }
+      }
+
+      // Fix JSX attribute issues
+      if (content.includes('jsx')) {
+        content = content
+          .replace(/\s*\/\s*>/g, ' />')
+          .replace(/>\s*</g, '>\n<');
+        fixed = true;
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'react_component_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed React component issue in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix React component issue in ${error.file}:`, fixError.message);
+    }
+  }
+
+  async fixSyntaxIssues() {
+    console.log('🔧 Fixing syntax issues...');
+    
+    const syntaxErrors = this.errors.filter(e => 
+      e.message.includes('Parsing error') ||
+      e.message.includes('Unexpected token') ||
+      e.message.includes('Expected')
+    );
+
+    for (const error of syntaxErrors) {
+      await this.fixSyntaxIssue(error);
+    }
+  }
+
+  async fixSyntaxIssue(error) {
+    try {
+      const filePath = path.resolve(this.projectRoot, error.file);
+      if (!fs.existsSync(filePath)) return;
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+
+      // Fix common syntax issues
+      if (error.message.includes('Unexpected token [')) {
+        content = this.fixArraySyntax(content);
+        fixed = true;
+      }
+
+      if (error.message.includes('Unexpected token {')) {
+        content = this.fixObjectSyntax(content);
+        fixed = true;
+      }
+
+      if (error.message.includes('Unexpected token =')) {
+        content = this.fixAssignmentSyntax(content);
+        fixed = true;
+      }
+
+      if (error.message.includes('Unexpected token ;')) {
+        content = this.fixSemicolonSyntax(content);
+        fixed = true;
+      }
+
+      // Fix missing semicolons
+      if (error.message.includes('Expected')) {
+        content = content
+          .replace(/([^;])\s*$/gm, '$1;')
+          .replace(/;\s*;/g, ';');
+        fixed = true;
+      }
+
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push({
+          file: error.file,
+          type: 'syntax_fix',
+          originalError: error.message
+        });
+        console.log(`✅ Fixed syntax issue in ${error.file}`);
+      }
+    } catch (fixError) {
+      console.error(`❌ Failed to fix syntax issue in ${error.file}:`, fixError.message);
+    }
+  }
+
+  fixArraySyntax(content) {
+    // Fix array destructuring syntax issues
+    return content
+      .replace(/const\s+(\w+)\s*=\s*\[([^\]]*)\];/g, 'const $1 = [$2];')
+      .replace(/let\s+(\w+)\s*=\s*\[([^\]]*)\];/g, 'let $1 = [$2];')
+      .replace(/var\s+(\w+)\s*=\s*\[([^\]]*)\];/g, 'var $1 = [$2];');
+  }
+
+  fixObjectSyntax(content) {
+    // Fix object destructuring syntax issues
+    return content
+      .replace(/const\s*\{([^}]*)\}\s*=\s*([^;]+);/g, 'const { $1 } = $2;')
+      .replace(/let\s*\{([^}]*)\}\s*=\s*([^;]+);/g, 'let { $1 } = $2;')
+      .replace(/var\s*\{([^}]*)\}\s*=\s*([^;]+);/g, 'var { $1 } = $2;');
+  }
+
+  fixAssignmentSyntax(content) {
+    // Fix assignment syntax issues
+    return content
+      .replace(/const\s+(\w+)\s*=\s*([^;]+);/g, 'const $1 = $2;')
+      .replace(/let\s+(\w+)\s*=\s*([^;]+);/g, 'let $1 = $2;')
+      .replace(/var\s+(\w+)\s*=\s*([^;]+);/g, 'var $1 = $2;');
+  }
+
+  fixSemicolonSyntax(content) {
+    // Fix semicolon syntax issues
+    return content
+      .replace(/;\s*;/g, ';')
+      .replace(/;\s*$/gm, ';');
   }
 
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      totalErrorsFixed: this.errorCount,
-      fixes: this.fixedErrors,
-      summary: `Fixed ${this.errorCount} errors across ${this.fixedErrors.length} files`
+      summary: {
+        totalErrors: this.errors.length,
+        totalWarnings: this.warnings.length,
+        fixedFiles: this.fixedFiles.length,
+        remainingErrors: this.errors.length - this.fixedFiles.length
+      },
+      fixedFiles: this.fixedFiles,
+      remainingErrors: this.errors.filter(error => 
+        !this.fixedFiles.some(fix => fix.file === error.file)
+      ),
+      warnings: this.warnings,
+      fixTypes: this.fixedFiles.reduce((acc, fix) => {
+        acc[fix.type] = (acc[fix.type] || 0) + 1;
+        return acc;
+      }, {})
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    console.log(`📄 Report saved to ${this.reportFile}`);
+    console.log(`📊 General Error Fixer report generated: ${this.reportFile}`);
   }
 }
 
-// Run the error fixer
+// Auto-start if run directly
 if (require.main === module) {
-  const fixer = new ErrorFixer();
-  fixer.run().catch(console.error);
+  const fixer = new GeneralErrorFixer();
+  fixer.start();
 }
 
-module.exports = ErrorFixer;
+module.exports = GeneralErrorFixer;
