@@ -74,4 +74,4 @@ Error generating stack: `+s.message+`
           Reload Page
         </button>
       </div>
-    `)};window.addEventListener("error",o=>{uu(o.error)});window.addEventListener("unhandledrejection",o=>{uu(new Error(String(o.reason)))});try{const o=document.getElementById("root");if(!o)throw new Error("Root element not found");vh.createRoot(o).render(x.jsx(Nr.StrictMode,{children:x.jsx(jv,{})})),Tv()}catch(o){uu(o)}
+    `)};window.addEventListener("error",o=>{uu(o.error)});window.addEventListener("unhandledrejection",o=>{uu(new Error(o.reason))});try{const o=document.getElementById("root");if(!o)throw new Error("Root element not found");vh.createRoot(o).render(x.jsx(Nr.StrictMode,{children:x.jsx(jv,{})})),Tv()}catch(o){uu(o)}
