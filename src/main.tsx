@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-// import './index.css';
+import './index.css';
 
 // Import i18n configuration
 import './i18n';
@@ -35,11 +35,11 @@ const handleGlobalError = (error: Error): void => {
 
 // Set up global error handlers
 window.addEventListener('error', (event) => {
-  handleGlobalError(event.error);
+  handleGlobalError(event.error as Error);
 });
 
 window.addEventListener('unhandledrejection', (event) => {
-  handleGlobalError(new Error(event.reason));
+  handleGlobalError(new Error(String(event.reason)));
 });
 
 try {
@@ -48,7 +48,8 @@ try {
     throw new Error('Root element not found');
   }
 
-  ReactDOM.createRoot(rootElement).render(
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,

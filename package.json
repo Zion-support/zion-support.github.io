@@ -39,10 +39,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
-  "prebuild": "echo 'Skipping prebuild checks'",
-  "postbuild": "echo 'Build completed successfully' && npm run optimize",
-  "optimize": "node scripts/optimize-build.js",
-  "build:optimize": "npm run build && npm run optimize"
+    "prebuild": "echo 'Skipping prebuild checks'",
+    "postbuild": "echo 'Build completed successfully' && npm run optimize",
+    "optimize": "node scripts/optimize-build.js",
+    "build:optimize": "npm run build && npm run optimize"
   },
   "dependencies": {
     "@google-analytics/data": "^4.12.1",
@@ -131,6 +131,9 @@
     "swr": "^2.2.0",
     "tailwind-merge": "^2.2.1",
     "vaul": "^1.1.2",
+    "vite": "^6.3.6",
+    "@vitejs/plugin-react": "^5.0.2",
+    "rollup-plugin-visualizer": "^2.7.2",
     "yup": "^1.2.0",
     "zod": "^3.22.4"
   },
@@ -146,7 +149,7 @@
     "@types/react": "^17.0.34",
     "@types/react-dom": "17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^8.39.0",
+    "@typescript-eslint/parser": "^3.10.1",
     "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.16",
     "dotenv": "^17.2.1",
@@ -156,7 +159,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.0.0",
+    "jest": "^28.1.0",
     "jest-axe": "^3.1.1",
     "jest-environment-jsdom": "^27.0.0",
     "jsdom": "^16.5.3",

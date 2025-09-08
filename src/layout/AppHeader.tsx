@@ -19,7 +19,7 @@ export function AppHeader() {
   try {
     const { unreadCount: count } = useMessaging();
     unreadCount = count;
-  } catch (error) {
+  } catch {
     console.warn('Messaging context not available');
   }
   

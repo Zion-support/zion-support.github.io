@@ -5,15 +5,21 @@ export interface User {
   email: string;
   name?: string;
   avatar?: string;
+  role?: string;
 }
 
-export interface AuthContextType {
+export interface AuthState {
   isAuthenticated: boolean;
   user: User | null;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => void;
-  register: (email: string, password: string, name?: string) => Promise<void>;
   isLoading: boolean;
+  error: string | null;
+}
+
+export interface AuthContextType extends AuthState {
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+  register: (email: string, password: string, name?: string) => Promise<void>;
+  clearError: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -31,27 +37,41 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const isAuthenticated = !!user;
+  const [authState, setAuthState] = useState<AuthState>({
+    isAuthenticated: false,
+    user: null,
+    isLoading: true,
+    error: null,
+  });
 
   useEffect(() => {
-    // Check for existing session on mount
+    // Check for existing session
     const checkAuth = async () => {
       try {
-        const token = localStorage.getItem('auth-token');
+        // Mock authentication check
+        const token = localStorage.getItem('auth_token');
         if (token) {
-          // In a real app, you would validate the token with your backend
-          const userData = JSON.parse(localStorage.getItem('user-data') || '{}');
-          setUser(userData);
+          // In a real app, validate the token with your backend
+          setAuthState({
+            isAuthenticated: true,
+            user: {
+              id: '1',
+              email: 'user@example.com',
+              name: 'Demo User',
+            },
+            isLoading: false,
+            error: null,
+          });
+        } else {
+          setAuthState(prev => ({ ...prev, isLoading: false }));
         }
       } catch (error) {
-        console.error('Auth check failed:', error);
-        localStorage.removeItem('auth-token');
-        localStorage.removeItem('user-data');
-      } finally {
-        setIsLoading(false);
+        setAuthState({
+          isAuthenticated: false,
+          user: null,
+          isLoading: false,
+          error: 'Authentication check failed',
+        });
       }
     };
 
@@ -59,66 +79,101 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }, []);
 
   const login = async (email: string, password: string) => {
-    setIsLoading(true);
+    setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
+    
     try {
-      // In a real app, you would make an API call to your backend
-      const mockUser: User = {
-        id: '1',
-        email,
-        name: email.split('@')[0],
-      };
-
-      const mockToken = 'mock-jwt-token';
-      
-      localStorage.setItem('auth-token', mockToken);
-      localStorage.setItem('user-data', JSON.stringify(mockUser));
-      setUser(mockUser);
+      // Mock login - in a real app, call your authentication API
+      if (email && password) {
+        const token = 'mock_token_' + Date.now();
+        localStorage.setItem('auth_token', token);
+        
+        setAuthState({
+          isAuthenticated: true,
+          user: {
+            id: '1',
+            email,
+            name: 'Demo User',
+          },
+          isLoading: false,
+          error: null,
+        });
+      } else {
+        throw new Error('Invalid credentials');
+      }
     } catch (error) {
-      console.error('Login failed:', error);
-      throw error;
-    } finally {
-      setIsLoading(false);
+      setAuthState({
+        isAuthenticated: false,
+        user: null,
+        isLoading: false,
+        error: error instanceof Error ? error.message : 'Login failed',
+      });
+    }
+  };
+
+  const logout = async () => {
+    setAuthState(prev => ({ ...prev, isLoading: true }));
+    
+    try {
+      localStorage.removeItem('auth_token');
+      setAuthState({
+        isAuthenticated: false,
+        user: null,
+        isLoading: false,
+        error: null,
+      });
+    } catch (error) {
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Logout failed',
+      }));
     }
   };
 
   const register = async (email: string, password: string, name?: string) => {
-    setIsLoading(true);
+    setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
+    
     try {
-      // In a real app, you would make an API call to your backend
-      const mockUser: User = {
-        id: '1',
-        email,
-        name: name || email.split('@')[0],
-      };
-
-      const mockToken = 'mock-jwt-token';
-      
-      localStorage.setItem('auth-token', mockToken);
-      localStorage.setItem('user-data', JSON.stringify(mockUser));
-      setUser(mockUser);
+      // Mock registration - in a real app, call your registration API
+      if (email && password) {
+        const token = 'mock_token_' + Date.now();
+        localStorage.setItem('auth_token', token);
+        
+        setAuthState({
+          isAuthenticated: true,
+          user: {
+            id: '1',
+            email,
+            name: name || 'New User',
+          },
+          isLoading: false,
+          error: null,
+        });
+      } else {
+        throw new Error('Invalid registration data');
+      }
     } catch (error) {
-      console.error('Registration failed:', error);
-      throw error;
-    } finally {
-      setIsLoading(false);
+      setAuthState({
+        isAuthenticated: false,
+        user: null,
+        isLoading: false,
+        error: error instanceof Error ? error.message : 'Registration failed',
+      });
     }
   };
 
-  const logout = () => {
-    localStorage.removeItem('auth-token');
-    localStorage.removeItem('user-data');
-    setUser(null);
+  const clearError = () => {
+    setAuthState(prev => ({ ...prev, error: null }));
   };
 
   return (
     <AuthContext.Provider
       value={{
-        isAuthenticated,
-        user,
+        ...authState,
         login,
         logout,
         register,
-        isLoading,
+        clearError,
       }}
     >
       {children}
