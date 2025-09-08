@@ -50,6 +50,22 @@ export function AppHeader() {
 
   const services = [
     { 
+      name: '2025 Services Showcase', 
+      href: '/comprehensive-services-showcase-2025', 
+      icon: Rocket, 
+      description: 'Complete 2025 Portfolio',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'All Services', 
+      href: '/services', 
+      icon: Brain, 
+      description: 'Complete Service Catalog',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -58,8 +74,16 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Healthcare Analytics', 
-      href: '/services/ai-healthcare-analytics', 
+      name: 'Innovative AI Services 2025', 
+      href: '/innovative-ai-services-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Healthcare Platform', 
+      href: '/services/ai-healthcare-platform', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
@@ -147,12 +171,13 @@ export function AppHeader() {
       description: 'Large-scale business transformations',
       featured: true
     },
-    {
-      name: 'Healthcare Solutions',
-      href: '/solutions',
-      icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
+    { 
+      name: 'SMB Solutions', 
+      href: '/solutions/smb', 
+      icon: Building2, 
+      description: 'Small & medium business solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
     },
     {
       name: 'Financial Solutions',

@@ -1,13 +1,13 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
-import { ArrowRight, Code, Brain, Users, Zap, Shield, TrendingUp, Database, Cpu, Target, GitBranch, Terminal } from 'lucide-react';
+import { ArrowRight, Truck, Shield, Users, Database, Globe, Lock, BarChart3, Cpu, Target, TrendingUp, Code, Zap, Activity, Brain, Route } from 'lucide-react';
 
-export default function AIDevelopmentPlatform() {
+export default function TransportationSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Development Platform - Zion Tech Group"
-        description="Accelerate AI development with our comprehensive platform. Code generation, model training, deployment, and monitoring in one integrated solution."
+        title="Transportation Solutions - Zion Tech Group"
+        description="Transform transportation with AI-powered solutions. Optimize logistics, improve safety, and enhance fleet management with smart transportation technology."
       />
       
       {/* Hero Section */}
@@ -15,26 +15,26 @@ export default function AIDevelopmentPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-              <Code className="w-4 h-4 mr-2" />
-              AI-Powered Development
+              <Truck className="w-4 h-4 mr-2" />
+              Smart Transportation Solutions
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Development
+              Transportation
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Platform
+                Solutions
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Build, train, and deploy AI models faster than ever with our comprehensive development platform. 
-              From code generation to production deployment, everything you need in one place.
+              Transform transportation with AI-powered solutions. Optimize logistics, 
+              improve safety, and enhance fleet management with smart transportation technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
-                Get Started
+                Transportation Inquiry
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="inline-flex items-center px-6 py-3 rounded-lg border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white transition-all duration-200">
-                View Demo
+                Schedule Demo
               </button>
             </div>
           </div>
@@ -46,10 +46,10 @@ export default function AIDevelopmentPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Development Features
+              Transportation-Focused Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Everything you need to build, train, and deploy AI models at scale
+              Designed for safety, efficiency, and intelligent fleet management
             </p>
           </div>
           
@@ -58,19 +58,19 @@ export default function AIDevelopmentPlatform() {
               <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">AI Code Generation</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Route Optimization</h3>
               <p className="text-gray-400">
-                Generate production-ready code with AI-powered suggestions and autocompletion.
+                AI-powered route planning and traffic prediction.
               </p>
             </div>
 
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-200">
               <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-blue-400" />
+                <Shield className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Model Training</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Safety Systems</h3>
               <p className="text-gray-400">
-                Distributed training infrastructure with automatic hyperparameter optimization.
+                Advanced driver assistance and collision prevention.
               </p>
             </div>
 
@@ -78,107 +78,107 @@ export default function AIDevelopmentPlatform() {
               <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Collaborative Development</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Fleet Management</h3>
               <p className="text-gray-400">
-                Team-based development with version control and code review workflows.
+                Comprehensive fleet monitoring and optimization.
               </p>
             </div>
 
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-200">
               <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-purple-400" />
+                <Database className="w-6 h-6 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Security & Compliance</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Logistics Analytics</h3>
               <p className="text-gray-400">
-                Enterprise-grade security with SOC 2 compliance and data protection.
+                Real-time supply chain and delivery insights.
               </p>
             </div>
 
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-orange-500/50 transition-all duration-200">
               <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-orange-400" />
+                <Activity className="w-6 h-6 text-orange-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Model Monitoring</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Predictive Maintenance</h3>
               <p className="text-gray-400">
-                Real-time model performance tracking and automated retraining triggers.
+                Vehicle health monitoring and maintenance scheduling.
               </p>
             </div>
 
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-pink-500/50 transition-all duration-200">
               <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-6 h-6 text-pink-400" />
+                <Code className="w-6 h-6 text-pink-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Data Management</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Autonomous Systems</h3>
               <p className="text-gray-400">
-                Comprehensive data pipeline management and versioning for ML datasets.
+                Self-driving technology and automation solutions.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Development Workflow */}
+      {/* Solution Areas */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Streamlined Development Workflow
+              Transportation Service Areas
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From concept to production in record time with our integrated development pipeline
+              Comprehensive solutions for modern transportation operations
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Development Phase</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Fleet Operations</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                   <div>
-                    <h4 className="text-lg font-medium text-white">AI-Assisted Coding</h4>
-                    <p className="text-gray-400">Intelligent code completion and bug detection</p>
+                    <h4 className="text-lg font-medium text-white">Vehicle Tracking</h4>
+                    <p className="text-gray-400">Real-time GPS and telematics monitoring</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
                   <div>
-                    <h4 className="text-lg font-medium text-white">Model Design</h4>
-                    <p className="text-gray-400">Visual model builder and architecture templates</p>
+                    <h4 className="text-lg font-medium text-white">Driver Management</h4>
+                    <p className="text-gray-400">Performance tracking and training systems</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
                   <div>
-                    <h4 className="text-lg font-medium text-white">Testing & Validation</h4>
-                    <p className="text-gray-400">Automated testing and model validation tools</p>
+                    <h4 className="text-lg font-medium text-white">Fuel Optimization</h4>
+                    <p className="text-gray-400">Efficient fuel consumption and cost management</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Deployment Phase</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Logistics & Supply Chain</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
                   <div>
-                    <h4 className="text-lg font-medium text-white">Model Deployment</h4>
-                    <p className="text-gray-400">One-click deployment to production environments</p>
+                    <h4 className="text-lg font-medium text-white">Route Planning</h4>
+                    <p className="text-gray-400">AI-optimized delivery routes and scheduling</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
                   <div>
-                    <h4 className="text-lg font-medium text-white">Performance Monitoring</h4>
-                    <p className="text-gray-400">Real-time metrics and alerting systems</p>
+                    <h4 className="text-lg font-medium text-white">Warehouse Management</h4>
+                    <p className="text-gray-400">Smart inventory and order fulfillment</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
                   <div>
-                    <h4 className="text-lg font-medium text-white">Continuous Improvement</h4>
-                    <p className="text-gray-400">Automated retraining and model updates</p>
+                    <h4 className="text-lg font-medium text-white">Last-Mile Delivery</h4>
+                    <p className="text-gray-400">Efficient final delivery optimization</p>
                   </div>
                 </div>
               </div>
@@ -192,41 +192,51 @@ export default function AIDevelopmentPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Technology Stack
+              Transportation Technology Stack
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Built on the latest AI/ML frameworks and cloud-native technologies
+              Built with cutting-edge technologies for maximum efficiency and safety
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Code className="w-8 h-8 text-cyan-400" />
+                <Cpu className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">AI Frameworks</h3>
-              <p className="text-gray-400">
-                TensorFlow, PyTorch, scikit-learn, and custom model support
+              <h3 className="text-lg font-semibold text-white mb-2">AI/ML</h3>
+              <p className="text-gray-400 text-sm">
+                Machine learning and predictive analytics
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <GitBranch className="w-8 h-8 text-blue-400" />
+                <Database className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Version Control</h3>
-              <p className="text-gray-400">
-                Git integration with ML-specific versioning and experiment tracking
+              <h3 className="text-lg font-semibold text-white mb-2">IoT</h3>
+              <p className="text-gray-400 text-sm">
+                Internet of Things and sensor networks
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Terminal className="w-8 h-8 text-green-400" />
+                <Globe className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">CI/CD Pipeline</h3>
-              <p className="text-gray-400">
-                Automated testing, building, and deployment workflows
+              <h3 className="text-lg font-semibold text-white mb-2">5G</h3>
+              <p className="text-gray-400 text-sm">
+                High-speed connectivity and edge computing
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BarChart3 className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Analytics</h3>
+              <p className="text-gray-400 text-sm">
+                Real-time data analysis and reporting
               </p>
             </div>
           </div>
@@ -238,10 +248,10 @@ export default function AIDevelopmentPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Accelerate Your AI Development
+              Transportation Transformation Benefits
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Reduce development time and increase model performance with our platform
+              Measurable improvements in operational efficiency and safety
             </p>
           </div>
 
@@ -250,29 +260,29 @@ export default function AIDevelopmentPlatform() {
               <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">10x Faster Development</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Cost Reduction</h3>
               <p className="text-gray-400">
-                AI-assisted coding and automated workflows accelerate development
+                30% decrease in fuel and maintenance costs
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-blue-400" />
+                <Zap className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Higher Model Quality</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Efficiency Gains</h3>
               <p className="text-gray-400">
-                Automated testing and validation improve model reliability
+                40% improvement in route optimization
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-green-400" />
+                <TrendingUp className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Reduced Costs</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Safety Improvement</h3>
               <p className="text-gray-400">
-                Optimized infrastructure and automated processes lower development costs
+                60% reduction in accident rates
               </p>
             </div>
           </div>
@@ -283,18 +293,18 @@ export default function AIDevelopmentPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build the Future?
+            Ready to Transform Transportation?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Join leading AI teams in accelerating development with our platform
+            Join leading transportation companies using AI to optimize operations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
-              Start Building Now
+              Transportation Inquiry
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <button className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white transition-all duration-200 text-lg">
-              Schedule Demo
+              Schedule Transportation Demo
             </button>
           </div>
         </div>

@@ -1,353 +1,258 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Globe, 
-  Users, 
-  Eye, 
-  Hand, 
-  Brain, 
-  Zap, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Monitor,
-  Smartphone,
-  Headphones,
-  Shield,
-  Lock,
-  Building,
-  Rocket
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '../../components/SEO';
+import { ArrowRight, Globe, Brain, Users, Zap, Shield, TrendingUp, Code, Database, Cpu, Target } from 'lucide-react';
 
 export default function AIMetaversePlatform() {
-  const features = [
-    {
-      title: "Virtual World Creation",
-      description: "Build immersive 3D environments with AI-generated content and dynamic landscapes",
-      icon: Globe,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "AI-Powered Avatars",
-      description: "Intelligent virtual characters with natural language processing and emotional intelligence",
-      icon: Users,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Immersive Experiences",
-      description: "VR/AR integration with haptic feedback and spatial audio for realistic interactions",
-      icon: Eye,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Social Interaction",
-      description: "Advanced communication tools with AI moderation and language translation",
-      icon: Hand,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Content Generation",
-      description: "AI-driven creation of virtual assets, environments, and interactive elements",
-      icon: Brain,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Real-time Analytics",
-      description: "Comprehensive tracking of user behavior and platform performance metrics",
-      icon: Zap,
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
-
-  const benefits = [
-    "Immersive virtual experiences for users",
-    "AI-powered content generation and personalization",
-    "Scalable infrastructure for large user bases",
-    "Cross-platform compatibility (VR, AR, desktop, mobile)",
-    "Advanced social features and collaboration tools",
-    "Real-time analytics and user insights"
-  ];
-
-  const useCases = [
-    {
-      title: "Virtual Events",
-      description: "Conferences, concerts, and exhibitions in immersive 3D spaces",
-      icon: Users
-    },
-    {
-      title: "Gaming & Entertainment",
-      description: "Next-generation gaming experiences with AI-driven narratives",
-      icon: Star
-    },
-    {
-      title: "Education & Training",
-      description: "Virtual classrooms and skill development environments",
-      icon: Building
-    },
-    {
-      title: "Business Collaboration",
-      description: "Virtual offices and meeting spaces for remote teams",
-      icon: Monitor
-    }
-  ];
-
-  const technologies = [
-    "Virtual Reality (VR) & Augmented Reality (AR)",
-    "3D Graphics & Rendering Engines",
-    "Artificial Intelligence & Machine Learning",
-    "Cloud Computing & Edge Processing",
-    "Blockchain & NFT Integration",
-    "Real-time Communication Protocols"
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Metaverse Platform Development | Zion Tech Group"
-        description="Create immersive virtual worlds with AI-powered metaverse platforms. VR/AR experiences, intelligent avatars, and next-generation social interactions."
-        keywords="metaverse, virtual reality, vr, ar, ai platform, virtual world, immersive experience, 3d environment"
+        title="AI Metaverse Platform - Zion Tech Group"
+        description="Create immersive virtual worlds with our AI-powered metaverse platform. Next-generation VR/AR experiences with intelligent avatars and dynamic environments."
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-500 text-white text-sm font-medium mb-6">
-                <Globe className="w-4 h-4 mr-2" />
-                AI-Powered Metaverse Solutions
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Build the
-                <span className="bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-transparent"> Metaverse</span>
-                of Tomorrow
-              </h1>
-              
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Create immersive virtual worlds powered by artificial intelligence. From intelligent avatars to 
-                dynamic environments, build the next generation of digital experiences.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-indigo-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-indigo-600 transition-all duration-200 transform hover:scale-105"
-                >
-                  Start Your Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
-                >
-                  Schedule Demo
-                </Link>
-              </div>
-            </motion.div>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
+              <Globe className="w-4 h-4 mr-2" />
+              Next-Generation Virtual Reality
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Metaverse
+              <span className="block bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                Platform
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Build the future of virtual reality with our AI-powered metaverse platform. 
+              Create immersive worlds, intelligent avatars, and dynamic experiences that adapt to users in real-time.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all duration-200">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 rounded-lg border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white transition-all duration-200">
+                View Demo
+              </button>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Metaverse Capabilities
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Cutting-edge features designed to create truly immersive virtual experiences
+      {/* Features Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary Metaverse Features
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Advanced AI capabilities that create truly immersive and intelligent virtual experiences
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-200">
+              <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Avatars</h3>
+              <p className="text-gray-400">
+                AI-powered avatars that learn user behavior and provide personalized interactions.
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
-                    <feature.icon className="w-6 h-6 text-white" />
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-indigo-500/50 transition-all duration-200">
+              <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-indigo-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Dynamic Environments</h3>
+              <p className="text-gray-400">
+                Real-time world generation that adapts to user preferences and activities.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-200">
+              <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Social Intelligence</h3>
+              <p className="text-gray-400">
+                AI-driven social interactions and community building features.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500/50 transition-all duration-200">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-green-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Privacy Controls</h3>
+              <p className="text-gray-400">
+                Advanced privacy settings and AI-powered content moderation.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">
+              <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Scalable Infrastructure</h3>
+              <p className="text-gray-400">
+                Cloud-native platform supporting millions of concurrent users worldwide.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-pink-500/50 transition-all duration-200">
+              <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Code className="w-6 h-6 text-pink-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Developer Tools</h3>
+              <p className="text-gray-400">
+                Comprehensive SDKs and APIs for building custom metaverse experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Industries with the Metaverse
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              From entertainment to enterprise, discover how AI-powered virtual worlds can revolutionize your business
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6">Entertainment & Gaming</h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="text-lg font-medium text-white">Virtual Events</h4>
+                    <p className="text-gray-400">Concerts, conferences, and social gatherings in immersive 3D spaces</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-700">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose AI-Powered Metaverse?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover the advantages of intelligent virtual world platforms
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                {benefits.slice(0, 3).map((benefit, index) => (
-                  <motion.div
-                    key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
-                  >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-200 text-lg">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="space-y-6">
-                {benefits.slice(3).map((benefit, index) => (
-                  <motion.div
-                    key={benefit}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
-                  >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-200 text-lg">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Metaverse Applications
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Versatile virtual world solutions for diverse industries and use cases
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => (
-                <motion.div
-                  key={useCase.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-purple-400 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="text-lg font-medium text-white">Gaming Worlds</h4>
+                    <p className="text-gray-400">Massively multiplayer online games with AI-driven NPCs</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Technology Stack Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-700">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Cutting-Edge Technologies
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with the latest VR/AR and AI technology innovations
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map((tech, index) => (
-                <motion.div
-                  key={tech}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-purple-400 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="text-lg font-medium text-white">Social VR</h4>
+                    <p className="text-gray-400">Virtual hangouts and collaborative creative spaces</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{tech}</h3>
-                </motion.div>
-              ))}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6">Enterprise & Education</h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="text-lg font-medium text-white">Virtual Training</h4>
+                    <p className="text-gray-400">Immersive learning experiences and skill development</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="text-lg font-medium text-white">Remote Collaboration</h4>
+                    <p className="text-gray-400">3D workspaces for distributed teams</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="text-lg font-medium text-white">Virtual Showrooms</h4>
+                    <p className="text-gray-400">Product demonstrations and customer experiences</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Build Your Metaverse?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's create immersive virtual worlds that revolutionize how people connect and interact
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-indigo-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-indigo-600 transition-all duration-200 transform hover:scale-105"
-                >
-                  Get Started Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
-                >
-                  Schedule Consultation
-                </Link>
-              </div>
-            </motion.div>
+      {/* Technology Stack */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Cutting-Edge Technology Stack
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Built on the latest VR/AR, AI, and cloud technologies for maximum performance and scalability
+            </p>
           </div>
-        </section>
-      </div>
-    </>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">VR/AR Integration</h3>
+              <p className="text-gray-400">
+                Support for Oculus, HTC Vive, Microsoft HoloLens, and mobile AR devices
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-indigo-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI Engine</h3>
+              <p className="text-gray-400">
+                Machine learning models for natural language processing and computer vision
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Cloud Infrastructure</h3>
+              <p className="text-gray-400">
+                Global CDN, edge computing, and auto-scaling for optimal performance
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Build the Future?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Join the metaverse revolution and create the next generation of virtual experiences
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-200">
+              Start Building Now
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white transition-all duration-200 text-lg">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
