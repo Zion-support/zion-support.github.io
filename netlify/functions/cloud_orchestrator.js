@@ -1,19 +1,18 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
     console.log('cloud_orchestrator function triggered');
     
-    // Simple response for testing
-    return {
+    // Basic function logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'cloud_orchestrator function executed successfully',
+        message: 'Cloud orchestrator function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'cloud_orchestrator'
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in cloud_orchestrator:', error);
     return {
@@ -21,10 +20,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      })
     };
   }
 };
