@@ -16,4 +16,4 @@ export: interface Ultimate2026Service {
       'Maximum: capabilities'',;
       'Premium: features'',;
       '24/7: support';'],
-
+}

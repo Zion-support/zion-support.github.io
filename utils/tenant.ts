@@ -14,14 +14,26 @@ export type Tenant = {
   createdAt?: string;
 };
 
-const isSupabaseConfigured = () => {
-  return (
-    typeof process !== 'undefined' &&
-    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co' &&
-    !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY &&
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY !== 'placeholder-key'
-  );
+export const defaultTenant: Tenant = {
+  id: "default",
+  brandName: "Zion Tech Group",
+  subdomain: null,
+  customDomain: null,
+  primaryColor: "#4f46e5",
+  logoUrl: null,
+  themePreset: "light",
+  navbarLinks: [
+    { label: "Services", href: "/services" },
+    { label: "Autonomy", href: "/autonomy" },
+    { label: "Products", href: "/products" },
+    { label: "Blog", href: "/blog" },
+    { label: "Talent", href: "/talent" },
+    { label: "Contact", href: "/contact" }
+  ],
+  footerText: "© " + new Date().getFullYear() + " Zion Tech Group",
+  heroTitle: "Intelligent AI Platforms for the Next Decade",
+  heroSubtitle: "Ship faster with our high‑performance, white‑label platform and expert services.",
+  suspended: false,
 };
 
 export function getSubdomainFromHost(host?: string): string | null {
@@ -39,32 +51,36 @@ export async function fetchTenantBySubdomain(subdomain: string): Promise<Tenant 
       .eq('subdomain', subdomain)
       .maybeSingle();
     if (error) {
-      // fallback to file if supabase fails
-      // eslint-disable-next-line no-console
-      console.warn('Supabase fetch tenant error, falling back to file:', error.message);
-      return fetchTenantFromFile(subdomain);
+      console.error('Error fetching tenant:', error);
+      return null;
     }
-    return (data as Tenant) ?? null;
+    return data;
   }
-  return fetchTenantFromFile(subdomain);
+  return null;
 }
 
-async function fetchTenantFromFile(subdomain: string): Promise<Tenant | null> {
-  const tenants = await import('../data/tenants.json').then((m) => m.default as Tenant[]);
-  return tenants.find((t) => t.subdomain === subdomain) ?? null;
+export async function fetchTenantById(id: string): Promise<Tenant | null> {
+  if (isSupabaseConfigured()) {
+    const { data, error } = await supabase
+      .from('tenants')
+      .select('*')
+      .eq('id', id)
+      .maybeSingle();
+    if (error) {
+      console.error('Error fetching tenant:', error);
+      return null;
+    }
+    return data;
+  }
+  return null;
 }
 
-export async function resolveTenantFromHost(host: string): Promise<Tenant | null> {
-  const sub = getSubdomainFromHost(host);
-  if (!sub) return null;
-  return fetchTenantBySubdomain(sub);
-}
-
-export type ServerSideTenantResult = { tenant: Tenant | null };
-
-export async function getServerSideTenant(ctx: { req?: any }): Promise<ServerSideTenantResult> {
-  const host: string | undefined = ctx?.req?.headers?.host;
-  if (!host) return { tenant: null };
-  const tenant = await resolveTenantFromHost(host);
-  return { tenant };
-}
+const isSupabaseConfigured = () => {
+  return (
+    typeof process !== 'undefined' &&
+    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co' &&
+    !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY &&
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY !== 'placeholder-key'
+  );
+};

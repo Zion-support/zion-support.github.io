@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Performance monitoring script
- * Monitors build performance and provides recommendations
+ * Performance Monitor Script
+ * Monitors application performance and provides optimization recommendations
  */
 
 import fs from 'fs';
@@ -30,158 +30,74 @@ function log(message, color = 'reset') {
 }
 
 function analyzePerformance() {
-  log('\n⚡ Performance Analysis', 'cyan');
-  log('=' .repeat(50), 'cyan');
+  log('\n🚀 Performance Analysis Report', 'cyan');
+  log('=', 'cyan');
 
   // Check bundle size
   const distPath = path.join(projectRoot, 'dist');
-  if (!fs.existsSync(distPath)) {
-    log('❌ Dist folder not found. Run npm run build first.', 'red');
-    return;
-  }
-
-  const assetsPath = path.join(distPath, 'assets');
-  const files = fs.readdirSync(assetsPath);
-  
-  let totalSize = 0;
-  let jsFiles = 0;
-  let cssFiles = 0;
-  let otherFiles = 0;
-
-  files.forEach(file => {
-    const filePath = path.join(assetsPath, file);
-    const stats = fs.statSync(filePath);
-    totalSize += stats.size;
+  if (fs.existsSync(distPath)) {
+    log('\n📊 Bundle Analysis:', 'blue');
     
-    if (file.endsWith('.js')) {
-      jsFiles++;
-    } else if (file.endsWith('.css')) {
-      cssFiles++;
+    const files = fs.readdirSync(distPath, { recursive: true });
+    let totalSize = 0;
+    
+    files.forEach(file => {
+      if (typeof file === 'string') {
+        const filePath = path.join(distPath, file);
+        const stats = fs.statSync(filePath);
+        if (stats.isFile()) {
+          totalSize += stats.size;
+          const sizeKB = (stats.size / 1024).toFixed(2);
+          log(`  ${file}: ${sizeKB} KB`);
+        }
+      }
+    });
+    
+    const totalMB = (totalSize / (1024 * 1024)).toFixed(2);
+    log(`\n📈 Total Bundle Size: ${totalMB} MB`, 'green');
+    
+    if (totalSize < 1024 * 1024) { // Less than 1MB
+      log('  ✅ Bundle size is excellent!', 'green');
+    } else if (totalSize < 2 * 1024 * 1024) { // Less than 2MB
+      log('  ✅ Bundle size is good', 'green');
     } else {
-      otherFiles++;
+      log('  ⚠️  Bundle size could be optimized', 'yellow');
     }
-  });
-
-  const totalSizeKB = (totalSize / 1024).toFixed(2);
-  const totalSizeMB = (totalSize / 1024 / 1024).toFixed(2);
-
-  log(`\n📊 Bundle Statistics:`, 'yellow');
-  log(`  Total size: ${totalSizeKB} KB (${totalSizeMB} MB)`, 'blue');
-  log(`  JS files: ${jsFiles}`, 'green');
-  log(`  CSS files: ${cssFiles}`, 'green');
-  log(`  Other files: ${otherFiles}`, 'green');
-
-  // Performance recommendations
-  log(`\n💡 Performance Recommendations:`, 'magenta');
-  
-  if (totalSize > 1000 * 1024) { // > 1MB
-    log('  ⚠️  Bundle is large. Consider:', 'yellow');
-    log('     - Implementing code splitting', 'yellow');
-    log('     - Using dynamic imports', 'yellow');
-    log('     - Lazy loading routes', 'yellow');
   }
 
-  if (jsFiles > 10) {
-    log('  ⚠️  Many JS files. Consider:', 'yellow');
-    log('     - Better chunk splitting strategy', 'yellow');
-    log('     - Combining smaller chunks', 'yellow');
-  }
-
-  // Check for optimization opportunities
+  // Check dependencies
+  log('\n🔍 Dependency Analysis:', 'blue');
   const packageJsonPath = path.join(projectRoot, 'package.json');
   if (fs.existsSync(packageJsonPath)) {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+    const deps = Object.keys(packageJson.dependencies || {});
+    const devDeps = Object.keys(packageJson.devDependencies || {});
     
-    log(`\n🔍 Dependency Analysis:`, 'blue');
+    log(`  Dependencies: ${deps.length}`);
+    log(`  Dev Dependencies: ${devDeps.length}`);
     
-    const performanceDeps = [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      '@tanstack/react-query',
-      'framer-motion',
-      'lucide-react',
-      'axios',
-      'date-fns',
-    ];
-    
-    performanceDeps.forEach(dep => {
-      if (dependencies[dep]) {
-        log(`  ✓ ${dep}: ${dependencies[dep]}`, 'green');
+    // Check for common performance libraries
+    const performanceLibs = ['react', 'react-dom', 'framer-motion', 'lucide-react'];
+    performanceLibs.forEach(lib => {
+      if (deps.includes(lib)) {
+        log(`  ✅ ${lib}: Installed`, 'green');
       }
     });
   }
 
-  return {
-    totalSize,
-    totalSizeKB: parseFloat(totalSizeKB),
-    totalSizeMB: parseFloat(totalSizeMB),
-    jsFiles,
-    cssFiles,
-    otherFiles,
-  };
-}
+  // Performance recommendations
+  log('\n💡 Performance Recommendations:', 'magenta');
+  log('  ✅ Use React.memo for expensive components');
+  log('  ✅ Implement lazy loading for routes');
+  log('  ✅ Optimize images with next/image or similar');
+  log('  ✅ Use code splitting for large components');
+  log('  ✅ Minimize bundle size with tree shaking');
+  log('  ✅ Enable gzip compression on server');
+  log('  ✅ Use CDN for static assets');
+  log('  ✅ Implement service worker for caching');
 
-function checkBuildConfiguration() {
-  log('\n🔧 Build Configuration Check', 'cyan');
-  log('=' .repeat(50), 'cyan');
-
-  const viteConfigPath = path.join(projectRoot, 'vite.config.ts');
-  
-  if (fs.existsSync(viteConfigPath)) {
-    const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
-    
-    const checks = [
-      { name: 'ESBuild minification', pattern: /minify:\s*['"]esbuild['"]/ },
-      { name: 'Source maps disabled', pattern: /sourcemap:\s*false/ },
-      { name: 'CSS code splitting', pattern: /cssCodeSplit:\s*true/ },
-      { name: 'Manual chunk splitting', pattern: /manualChunks:/ },
-      { name: 'Bundle analyzer', pattern: /visualizer/ },
-      { name: 'Dependency optimization', pattern: /optimizeDeps:/ },
-      { name: 'ESM target', pattern: /target:\s*['"]esnext['"]/ },
-    ];
-
-    checks.forEach(check => {
-      const isConfigured = check.pattern.test(viteConfig);
-      const status = isConfigured ? '✓' : '✗';
-      const color = isConfigured ? 'green' : 'red';
-      log(`  ${status} ${check.name}`, color);
-    });
-  } else {
-    log('  ⚠️  Vite config not found', 'yellow');
-  }
-}
-
-function generatePerformanceReport() {
-  log('\n🚀 Performance Monitoring Report', 'bright');
-  log('=' .repeat(50), 'bright');
-  
-  const performance = analyzePerformance();
-  checkBuildConfiguration();
-  
-  log('\n📋 Performance Summary:', 'cyan');
-  if (performance) {
-    if (performance.totalSizeKB < 200) {
-      log('  ✅ Excellent performance!', 'green');
-    } else if (performance.totalSizeKB < 500) {
-      log('  ✅ Good performance', 'green');
-    } else if (performance.totalSizeKB < 1000) {
-      log('  ⚠️  Acceptable performance', 'yellow');
-    } else {
-      log('  ❌ Performance needs improvement', 'red');
-    }
-  }
-  
-  log('\n🎯 Optimization Suggestions:', 'magenta');
-  log('  1. Implement lazy loading for routes', 'blue');
-  log('  2. Use dynamic imports for heavy components', 'blue');
-  log('  3. Optimize images and assets', 'blue');
-  log('  4. Consider using lighter alternatives', 'blue');
-  log('  5. Implement service worker for caching', 'blue');
-  
-  log('\n✨ Performance monitoring complete!', 'green');
+  log('\n✨ Performance analysis complete!', 'green');
 }
 
 // Run the analysis
-generatePerformanceReport();
+analyzePerformance();

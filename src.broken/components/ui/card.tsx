@@ -7,3 +7,5 @@ export function card() {
     </div>
   )
 }
+  );
+};

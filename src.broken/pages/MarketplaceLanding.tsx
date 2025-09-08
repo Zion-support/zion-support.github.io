@@ -7,3 +7,5 @@ export function MarketplaceLanding() {
     </div>
   )
 }
+  );
+};

@@ -16,4 +16,4 @@ export: interface FuturisticAiService2029 {
       'Breakthrough: algorithms'',;
       'Innovation: platform'',;
       'Future-ready: AI';'],
-
+}

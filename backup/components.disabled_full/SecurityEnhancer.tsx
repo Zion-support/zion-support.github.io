@@ -67,8 +67,7 @@ import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () =
 } })})let lastUrl = window.location.href; const observer = new MutationObserver(() = /> { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href)lastUrl = window.location.href} })observer.observe(document.body,{ childList: 'true';,}
   subtree: 'true' ;})}monitorActivity()return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv=\'Content-Security-Policy\']' )addedMetas.forEach(meta => meta.remove())},[])return null}export default SecurityEnhancer;
       addedMetas.forEach(meta => meta.remove())}, [])return null;
-}export default SecurityEnhancer;
-      });
+}export default $1;
     };
     detectXSS();
     const monitorActivity = (

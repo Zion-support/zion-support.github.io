@@ -23,4 +23,5 @@ import { TableRow, TableCell } from "@/components/ui/table",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 import { StatusBadge } from "./StatusBadge",;
 import { ScoreBadge } from "./ScoreBadge",;
-
+  );
+};

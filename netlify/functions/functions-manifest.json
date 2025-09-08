@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2025-08-18T17:15:56.035Z",
   "functions": [
     "a11y-alt-text-runner",
     "a11y_alt_text_runner",
+=======
+  "generatedAt": "2025-08-11T23:47:26.091Z",
+  "functions": [
+    "a11y-alt-text-runner",
+    "a11y-landmarks-runner",
+>>>>>>> origin/feat/cloud-autonomy-auditors
     "adaptive-orchestrator",
     "adaptive_orchestrator",
     "ai-changelog-runner",
@@ -28,10 +35,14 @@
     "code_smell_audit_runner",
     "component-coupling-graph-runner",
     "component-size-report",
+<<<<<<< HEAD
     "component_coupling_graph_runner",
     "component_size_report",
     "content-freshness-score-runner",
     "content_freshness_score_runner",
+=======
+    "components-docs-runner",
+>>>>>>> origin/feat/cloud-autonomy-auditors
     "continuous-front-runner",
     "continuous-orchestrator",
     "continuous_front_runner",
@@ -76,11 +87,15 @@
     "image-optimizer-runner",
     "image_optimizer_runner",
     "innovation-lab",
+<<<<<<< HEAD
     "innovation_lab",
     "intelligent-meta-orchestrator",
     "intelligent_meta_orchestrator",
     "internal-link-graph-runner",
     "internal_link_graph_runner",
+=======
+    "internal-anchors-auditor",
+>>>>>>> origin/feat/cloud-autonomy-auditors
     "knowledge-pack-runner",
     "knowledge_pack_runner",
     "license-compliance-auditor",

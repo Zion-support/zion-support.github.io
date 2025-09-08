@@ -29,3 +29,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
+  );
+};

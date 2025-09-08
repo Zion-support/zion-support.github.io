@@ -13,3 +13,5 @@ import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
       </div>
     )
   }
+  );
+};

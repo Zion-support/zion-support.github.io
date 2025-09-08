@@ -7,3 +7,5 @@ export function OfflineToast() {
     </div>
   )
 }
+  );
+};

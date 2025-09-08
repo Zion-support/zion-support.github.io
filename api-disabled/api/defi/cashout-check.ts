@@ -17,19 +17,4 @@ export default function handler(,
   const THRESHOLD = Number(process.env.ZION_CASHOUT_KYC_THRESHOLD || '1000');
   const db = load();
   const profile = db[userId];
-  if (amount <= THRESHOLD) return res.status(200).json({,
-    allowed: true, r,
-    eason: 'Below threshold' });
-  if (!profile) return res.status(200).json({,
-    allowed: false, r,
-    eason: 'KYC not started' });
-  if (profile.status !== 'approved') return res.status(200).json({,
-    allowed: false, r,
-    eason: 'KYC not approved' });
-  if (profile.amlStatus === 'match' || (profile.flags || []).includes('aml_alert')) return res.status(200).json({,
-    allowed: false, r,
-    eason: 'AML alert' });
-  return res.status(200).json({,
-    allowed: true, r,
-    eason: 'KYC approved and AML clear' })
-}
+  if (amount 

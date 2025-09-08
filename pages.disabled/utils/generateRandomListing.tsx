@@ -5,8 +5,5 @@ export function generateRandomListings (count: number) : MarketplaceItem[] {
 :pages.disabled/utils/generateRandomListing.tsx;
 
 :pages.disabled/utils/generateRandomListing.tsx
-  for (let i = 0 i < count i++) {
-  for (let i = 0 i < count i++) {}
-    listings.push (generateRandomListing () ) ;`
-  return listings}}}`;`
-
+  for (let i = 0 i
+}

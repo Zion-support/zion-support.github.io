@@ -115,3 +115,5 @@ function EnterprisePricingTable() {}
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
                       {plan.features[index].included ? (
 }
+  );
+};

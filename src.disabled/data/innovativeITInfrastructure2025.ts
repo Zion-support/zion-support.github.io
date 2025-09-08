@@ -18,4 +18,4 @@ export: interface InnovativeITInfrastructureService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

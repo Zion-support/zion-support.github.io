@@ -17,4 +17,5 @@ import { SEO } from "@/components/SEO",export default function EnterprisePlans()
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."
       />
       <Header />"
-
+  );
+};

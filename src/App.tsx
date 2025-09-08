@@ -1,11 +1,13 @@
-
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
 // Simple components
-import ErrorBoundary from './components/ErrorBoundary';import LoadingSpinner from './components/LoadingSpinner';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
+import { NotificationToast } from './components/NotificationToast';
 
 // Create QueryClient instance
 const queryClient = new QueryClient({
@@ -39,6 +41,7 @@ const About = () => (
     </div>
   </div>
 );
+
 // Simple Contact component
 const Contact = () => (
   <div className="min-h-screen bg-gradient-to-br from-green-900 to-blue-900 text-white flex items-center justify-center">
@@ -67,27 +70,12 @@ const App: React.FC = () => {
         <HelmetProvider>
           <Router>
             <div className="App">
-              <main className="main-content">                <Suspense fallback={<LoadingSpinner />}>
+              <main className="main-content">
+                <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/pricing" element={<Pricing />} />
-                    
-                    {/* Service Routes */}
-                    <Route path="/services/ai-services" element={<AIServices />} />
-                    <Route path="/services/it-services" element={<ITServices />} />
-                    <Route path="/services/micro-saas" element={<MicroSaaS />} />
-                    <Route path="/enhanced-micro-saas" element={<EnhancedMicroSAAS />} />
-                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                    <Route path="/services/cloud-solutions" element={<CloudMigration />} />
-                    <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-                    
-                    {/* Additional Routes */}
-                    <Route path="/faq" element={<FAQ />} />
-                    <Route path="/privacy" element={<Privacy />} />
-                    <Route path="/terms" element={<Terms />} />
-                    <Route path="/support" element={<Support />} />
                     
                     {/* 404 Route */}
                     <Route path="*" element={<NotFound />} />
@@ -95,6 +83,7 @@ const App: React.FC = () => {
                 </Suspense>
               </main>
             </div>
+            <NotificationToast />
           </Router>
         </HelmetProvider>
       </QueryClientProvider>

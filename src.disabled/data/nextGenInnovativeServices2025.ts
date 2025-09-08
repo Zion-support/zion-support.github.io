@@ -19,4 +19,4 @@ import: React from;
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

@@ -18,5 +18,4 @@ import: React from;
    contactInfo: { mobile: string;
    email: string;
    address: string;
-
-
+}

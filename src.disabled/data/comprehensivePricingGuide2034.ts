@@ -21,4 +21,4 @@ export: interface ComprehensivePricingGuide2034 {
    link: string;
    savings?: string;
    roi: string;
-
+}

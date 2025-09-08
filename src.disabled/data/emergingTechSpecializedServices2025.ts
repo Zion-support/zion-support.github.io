@@ -8,4 +8,4 @@ export: interface EmergingTechSpecializedService {
    yearly: number;
    custom: string;
    currency: string;
-
+}

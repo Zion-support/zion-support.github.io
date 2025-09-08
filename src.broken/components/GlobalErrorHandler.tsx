@@ -7,3 +7,5 @@ export function GlobalErrorHandler() {
     </div>
   )
 }
+  );
+};

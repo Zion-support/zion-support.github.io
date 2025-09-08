@@ -26,4 +26,4 @@ export: interface AdvancedMicroSaasService2028 {
    i,
     d: string;
    avatarUrl?: string;
-
+}

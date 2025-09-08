@@ -38,3 +38,5 @@ import _React from 'react'; import Head from 'next/head'; const "Discord": _Reac
 }; export default Discord;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+  );
+};

@@ -77,3 +77,5 @@ export function useLazyComponent<T extends ComponentType<any>>(
     fallback: fallback || <div>Loading...</div>
   }
 }
+  );
+};

@@ -7,3 +7,5 @@ export function LanguageThemeSelector() {
     </div>
   )
 }
+  );
+};

@@ -1,83 +1,90 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types/search';
-import { useDebounce } from '@/hooks/useDebounce';
+import React, { useState, useCallback } from 'react';
+import { useAnalytics } from '../context/AnalyticsContext';
 
 interface SearchBarProps {
-  value: string;
-  onChange: (val: string) => void;
-  onSelectSuggestion?: (val: string) => void;
   placeholder?: string;
+  onSearch?: (query: string) => void;
+  className?: string;
 }
 
-export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [focused, setFocused] = useState(false);
-  const debounced = useDebounce(value, 150);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+export const SearchBar: React.FC<SearchBarProps> = ({
+  placeholder = "Search...",
+  onSearch,
+  className = ""
+}) => {
+  const [query, setQuery] = useState('');
+  const { trackEvent } = useAnalytics();
 
-  useEffect(() => {
-    if (!debounced) {
-      setSuggestions([]);
-      return;
+  const handleSearch = useCallback((searchQuery: string) => {
+    if (searchQuery.trim()) {
+      trackEvent('search', { query: searchQuery });
+      onSearch?.(searchQuery);
     }
-    const controller = new AbortController();
-    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
-      .then(res => res.json())
-      .then(data => setSuggestions(data || []))
-      .catch(() => setSuggestions([]));
-    return () => controller.abort();
-  }, [debounced]);
+  }, [onSearch, trackEvent]);
 
-  useEffect(() => {
-    function outside(e: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        setFocused(false);
-      }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleSearch(query);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setQuery(value);
+    
+    // Auto-search as user types (debounced)
+    if (value.length > 2) {
+      const timeoutId = setTimeout(() => {
+        handleSearch(value);
+      }, 300);
+      
+      return () => clearTimeout(timeoutId);
     }
-    document.addEventListener('mousedown', outside);
-    return () => document.removeEventListener('mousedown', outside);
-  }, []);
+  };
 
-  const handleSelect = (text: string) => {
-    onChange(text);
-    if (onSelectSuggestion) onSelectSuggestion(text);
-    setFocused(false);
-    inputRef.current?.blur();
+  const handleClear = () => {
+    setQuery('');
+    trackEvent('click', { element: 'search_clear' });
   };
 
   return (
-    <div className="relative w-full" ref={containerRef}>
+    <form onSubmit={handleSubmit} className={`relative ${className}`}>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
-        <Input
-          ref={inputRef}
-          type="text"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onFocus={() => setFocused(true)}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-        />
-        {value && (
-          <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-            aria-label="Clear search"
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <svg
+            className="h-5 w-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <X className="h-4 w-4" />
-          </button>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
+        <input
+          type="text"
+          value={query}
+          onChange={handleInputChange}
+          placeholder={placeholder}
+          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+        />
+        {query && (
+          <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
+            <button
+              type="button"
+              onClick={handleClear}
+              className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         )}
       </div>
-      <AutocompleteSuggestions
-        suggestions={suggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelect}
-        visible={focused}
-      />
-    </div>
+    </form>
   );
-}
+};

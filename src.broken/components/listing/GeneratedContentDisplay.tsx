@@ -7,3 +7,5 @@ export function GeneratedContentDisplay() {
     </div>
   )
 }
+  );
+};

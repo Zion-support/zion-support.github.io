@@ -7,3 +7,5 @@ export function MobileFeatureShowcase() {
     </div>
   )
 }
+  );
+};

@@ -164,4 +164,4 @@ export const _Select = Select
 export const _SelectContent = SelectContent
 export const _SelectItem = SelectItem
 export const _SelectTrigger = SelectTrigger
-export const _SelectValue = SelectValue
+export const _SelectValue = SelectValue;

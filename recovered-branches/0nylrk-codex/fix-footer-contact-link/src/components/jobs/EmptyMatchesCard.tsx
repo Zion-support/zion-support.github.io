@@ -43,5 +43,5 @@ import { Sparkles, RefreshCcw } from "lucide-react";
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 }
-
-
+  );
+};
