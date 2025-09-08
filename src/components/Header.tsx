@@ -1,23 +1,9 @@
-import React from 'react';
-import { Link  } from 'react-router-dom.ts';
-
-export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-import Sidebar from './Sidebar';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Menu, 
-  X, 
-  Search, 
-  Phone, 
-  Mail, 
-  MapPin,
+  Menu,
+  X,
   ChevronDown,
   Brain,
   Shield,
@@ -40,19 +26,32 @@ import {
   Building,
   Users,
   Briefcase,
-  Rocket
+  Newspaper,
+  DollarSign
 } from 'lucide-react';
 
-interface HeaderProps {
-  onMenuClick?: () => void;
-}
-
-export function Header({ onMenuClick }: HeaderProps) {
+export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleDropdown = (dropdownName) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+  };
 
   const navigation = [
     {
@@ -107,7 +106,6 @@ export function Header({ onMenuClick }: HeaderProps) {
       name: 'Company',
       href: '/about',
       dropdown: true,
-      icon: Users,
       items: [
         { name: 'About Us', href: '/about' },
         { name: 'Leadership', href: '/leadership' },
@@ -121,7 +119,6 @@ export function Header({ onMenuClick }: HeaderProps) {
       name: 'Resources',
       href: '/resources',
       dropdown: true,
-      icon: BookOpen,
       items: [
         { name: 'Blog', href: '/blog' },
         { name: 'Case Studies', href: '/case-studies' },
@@ -149,9 +146,9 @@ export function Header({ onMenuClick }: HeaderProps) {
     { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href) => location.pathname === href;
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
@@ -171,166 +168,104 @@ export function Header({ onMenuClick }: HeaderProps) {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/90 backdrop-blur-md border-b border-cyan-500/20' 
-        : 'bg-transparent'
-    }`}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex-shrink-0"
-          >
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-white text-xl lg:text-2xl font-bold">Z</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-              </div>
-            </Link>
-          </motion.div>
+  // Simple Theme Toggle Component
+  const ThemeToggle = ({ size = "md" }) => {
+    const [isDark, setIsDark] = useState(true);
+    const sizeClasses = {
+      sm: "w-8 h-8",
+      md: "w-10 h-10",
+      lg: "w-12 h-12"
+    };
+    
+    return (
+      <button
+        onClick={() => setIsDark(!isDark)}
+        className={`${sizeClasses[size]} p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200`}
+        title="Toggle theme"
+      >
+        {isDark ? <Eye className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+      </button>
+    );
+  };
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-
-          {/* Search Bar */}
-          <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <form onSubmit={handleSearch} className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-            </form>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                {item.children ? (
-                  <button
-                    onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center space-x-1 px-4 py-2 text-white hover:text-zion-cyan transition-colors duration-200 font-medium"
-                    aria-expanded={activeDropdown === item.name}
-                    aria-haspopup="true"
+  // Main Navigation Component
+  const MainNavigation = () => (
+    <nav className="flex items-center space-x-8">
+      {navigation.map((item) => (
+        <div key={item.name} className="relative">
+          {item.dropdown ? (
+            <div>
+              <button
+                onClick={() => toggleDropdown(item.name)}
+                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <span>{item.name}</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  activeDropdown === item.name ? 'rotate-180' : ''
+                }`} />
+              </button>
+              
+              <AnimatePresence>
+                {activeDropdown === item.name && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-50"
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className="flex items-center space-x-1 px-4 py-2 text-white hover:text-zion-cyan transition-colors duration-200 font-medium"
-                  >
-                    {item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{item.name}</span>
-                  </Link>
+                    <div className="p-2">
+                      {item.items?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
                 )}
-                
-                {/* Dropdown Menu */}
-                {item.children && (
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-1 w-80 bg-background border border-border rounded-lg shadow-lg z-50">
-                        <div className="p-4">
-                          <div className="grid grid-cols-1 gap-2">
-                            {item.dropdownItems?.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                to={dropdownItem.href}
-                                className="px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                {dropdownItem.name}
-                              </Link>
-                            ))}
-                          </div>
-=======
-        { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation' },
-        { name: 'Financial Solutions', path: '/financial-solutions', description: 'Fintech solutions' },
-        { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', description: 'Smart manufacturing' },
-        { name: 'Retail Technology', path: '/solutions/retail', description: 'Digital retail transformation' }
-      ]
-    }
-  ];
-
-  const solutionCategories = [
-    {
-      title: 'Enterprise Solutions',
-      icon: Building,
-      description: 'Large-scale business transformation',
-      solutions: [
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Complete business modernization' },
-        { name: 'Enterprise AI', path: '/solutions/enterprise', description: 'AI-powered enterprise solutions' },
-        { name: 'Data Analytics', path: '/services/ai-business-intelligence', description: 'Business intelligence platform' }
-      ]
-    },
-    {
-      title: 'SMB Solutions',
-      icon: Users,
-      description: 'Scalable solutions for growing businesses',
-      solutions: [
-        { name: 'Micro SAAS', path: '/services/micro-saas-solutions', description: 'Custom software solutions' },
-        { name: 'Cloud Migration', path: '/cloud-devops', description: 'Affordable cloud solutions' },
-        { name: 'IT Support', path: '/services/it-infrastructure', description: 'Managed IT services' }
-      ]
-    },
-    {
-      title: 'Specialized Solutions',
-      icon: Target,
-      description: 'Industry-specific expertise',
-      solutions: [
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Medical technology innovation' },
-        { name: 'Financial Solutions', path: '/financial-solutions', description: 'Fintech and banking solutions' },
-        { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', description: 'Industry 4.0 transformation' },
-        { name: 'Retail Solutions', path: '/solutions/retail', description: 'Digital commerce solutions' },
-        { name: 'Government Solutions', path: '/solutions/enterprise', description: 'Public sector technology' }
-      ]
-    }
-  ];
-
-  const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
-
-=======
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
-  };
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Handle search logic here
-      console.log('Searching for:', searchQuery);
-    }
-  };
+              </AnimatePresence>
+            </div>
+          ) : (
+            <Link
+              to={item.href}
+              className={`text-gray-300 hover:text-white transition-colors duration-200 ${
+                isActive(item.href) ? 'text-cyan-400' : ''
+              }`}
+            >
+              {item.name}
+            </Link>
+          )}
+        </div>
+      ))}
+    </nav>
+  );
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-zion-slate-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-lg' 
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-              <Brain className="w-6 h-6 text-white" />
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Zap className="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Zion Tech Group
+              </h1>
+              <p className="text-xs text-cyan-400 tracking-wider">
+                Innovation Group
+              </p>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               ZION

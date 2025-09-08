@@ -1,39 +1,41 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Code, Database, Cloud, Shield, Brain, Globe, Building,
-  ArrowRight, ExternalLink, Download, Play, FileText,
-  Search, Filter, CheckCircle, AlertCircle, Info, Clock,
-  Users, Zap, Rocket, TrendingUp, Star, Eye, Copy,
-  Terminal, Key, Lock, Server, Wifi, Activity, BookOpen,
-  MessageCircle, Mail, Github, Bookmark, Share2
+import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { Code,
+  Search,
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Terminal,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Key,
+  Lock,
+  Brain,
+  Cloud,
+  Rocket,
+  BookOpen,
+  Users
 } from 'lucide-react';
 
 export default function API() {
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedVersion, setSelectedVersion] = useState('v2');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const apiCategories = [
-    { id: 'all', name: 'All APIs', icon: Code, count: 12 },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 4 },
-    { id: 'security', name: 'Security & Authentication', icon: Shield, count: 3 },
-    { id: 'cloud', name: 'Cloud Infrastructure', icon: Cloud, count: 2 },
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 3 }
-  ];
-
-  const apiVersions = [
-    { id: 'v2', name: 'v2.0 (Latest)', status: 'stable' },
-    { id: 'v1', name: 'v1.0', status: 'deprecated' },
-    { id: 'beta', name: 'Beta', status: 'beta' }
-  ];
-
-  const apiEndpoints = [
+  const endpoints = [
     {
-      id: 1,
-      name: 'AI Text Analysis',
-      category: 'ai',
-      endpoint: '/api/v2/ai/text/analyze',
+      id: 'auth',
+      name: 'Authentication',
       method: 'POST',
       description: 'Analyze text content using advanced AI algorithms for sentiment, entities, and key insights',
       version: 'v2',
@@ -74,38 +76,41 @@ export default function API() {
       category: 'data',
       endpoint: '/api/v2/data/analytics',
       method: 'GET',
-      description: 'Retrieve analytics data and insights from various data sources',
-      version: 'v2',
-      status: 'stable',
-      rateLimit: '2000 requests/hour',
-      auth: 'Bearer Token',
-      featured: false
+      path: '/api/v1/analytics',
+      description: 'Get analytics and metrics data',
+      category: 'analytics'
     },
     {
-      id: 5,
-      name: 'Cloud Resource Management',
-      category: 'cloud',
-      endpoint: '/api/v2/cloud/resources',
+      id: 'services',
+      name: 'Get Services',
       method: 'GET',
-      description: 'Manage and monitor cloud infrastructure resources',
-      version: 'v2',
-      status: 'stable',
-      rateLimit: '500 requests/hour',
-      auth: 'Bearer Token',
-      featured: false
+      path: '/api/v1/services',
+      description: 'Retrieve all available services',
+      category: 'services'
     },
     {
-      id: 6,
-      name: 'Security Threat Detection',
-      category: 'security',
-      endpoint: '/api/v2/security/threats',
+      id: 'ai-models',
+      name: 'AI Models',
       method: 'POST',
-      description: 'Detect and analyze security threats in real-time',
-      version: 'v2',
-      status: 'stable',
-      rateLimit: '300 requests/hour',
-      auth: 'Bearer Token',
-      featured: false
+      path: '/api/v1/ai/models',
+      description: 'Train and deploy AI models',
+      category: 'ai'
+    },
+    {
+      id: 'cloud-deploy',
+      name: 'Cloud Deployment',
+      method: 'POST',
+      path: '/api/v1/cloud/deploy',
+      description: 'Deploy applications to cloud infrastructure',
+      category: 'cloud'
+    },
+    {
+      id: 'security-scan',
+      name: 'Security Scan',
+      method: 'POST',
+      path: '/api/v1/security/scan',
+      description: 'Perform security vulnerability scan',
+      category: 'security'
     }
   ];
 
@@ -116,18 +121,59 @@ export default function API() {
       language: 'python',
       code: `import ziontech
 
-# Initialize client
-client = ziontech.Client(api_key='your_api_key')
-
-# Analyze text
-response = client.ai.text.analyze(
-    text="Zion Tech Group is revolutionizing AI technology",
-    analysis_type="sentiment"
-)
-
-print(response.sentiment)  # positive
-print(response.confidence)  # 0.95`,
-      featured: true
+  const responseExamples = {
+    auth: `{
+  "success": true,
+  "data": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "expires_in": 3600,
+    "user": {
+      "id": "user_123",
+      "email": "user@example.com",
+      "name": "John Doe"
+    }
+  }
+}`,
+    users: `{
+  "success": true,
+  "data": {
+    "users": [
+      {
+        "id": "user_123",
+        "email": "user@example.com",
+        "name": "John Doe",
+        "role": "admin"
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "limit": 10,
+      "total": 1
+    }
+  }
+}`,
+    projects: `{
+  "success": true,
+  "data": {
+    "project": {
+      "id": "proj_456",
+      "name": "My Project",
+      "description": "Project description",
+      "type": "web_application",
+      "status": "created",
+      "created_at": "2024-01-15T10:30:00Z"
+    }
+  }
+}`,
+    analytics: `{
+  "success": true,
+  "data": {
+    "metrics": {
+      "total_users": 1250,
+      "active_users": 890,
+      "total_projects": 456,
+      "success_rate": 98.5
     },
     {
       id: 2,
@@ -225,424 +271,292 @@ console.log(response.faces);`,
     return colors[method as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   };
 
-  const getStatusColor = (status: string) => {
-    const colors = {
-      stable: 'bg-green-100 text-green-800',
-      beta: 'bg-yellow-100 text-yellow-800',
-      deprecated: 'bg-red-100 text-red-800'
-    };
-    return colors[status as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+  const categories = [
+    { id: 'all', name: 'All APIs', count: endpoints.length },
+    { id: 'auth', name: 'Authentication', count: endpoints.filter(e => e.category === 'auth').length },
+    { id: 'users', name: 'User Management', count: endpoints.filter(e => e.category === 'users').length },
+    { id: 'projects', name: 'Projects', count: endpoints.filter(e => e.category === 'projects').length },
+    { id: 'analytics', name: 'Analytics', count: endpoints.filter(e => e.category === 'analytics').length },
+    { id: 'ai', name: 'AI Services', count: endpoints.filter(e => e.category === 'ai').length },
+    { id: 'cloud', name: 'Cloud Services', count: endpoints.filter(e => e.category === 'cloud').length },
+    { id: 'security', name: 'Security', count: endpoints.filter(e => e.category === 'security').length }
+  ];
+
+  const filteredEndpoints = endpoints.filter(endpoint => {
+    const matchesCategory = selectedCategory === 'all' || endpoint.category === selectedCategory;
+    const matchesSearch = endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const getMethodColor = (method: string) => {
+    switch (method) {
+      case 'GET':
+        return 'bg-green-500';
+      case 'POST':
+        return 'bg-blue-500';
+      case 'PUT':
+        return 'bg-yellow-500';
+      case 'DELETE':
+        return 'bg-red-500';
+      default:
+        return 'bg-gray-500';
+    }
   };
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    // You could add a toast notification here
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'auth':
+        return Key;
+      case 'users':
+        return User;
+      case 'projects':
+        return Target;
+      case 'analytics':
+        return TrendingUp;
+      case 'ai':
+        return Brain;
+      case 'cloud':
+        return Cloud;
+      case 'security':
+        return Shield;
+      default:
+        return Code;
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <SEO 
+        title="API Reference - Zion Tech Group"
+        description="Complete API documentation for Zion Tech Group services. RESTful APIs, authentication, endpoints, and code examples."
+        keywords={['API', 'documentation', 'REST API', 'GraphQL', 'endpoints', 'authentication', 'Zion Tech Group']}
+      />
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              API Documentation
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build powerful applications with Zion Tech Group's comprehensive APIs for AI, security, cloud, and data analytics
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#endpoints"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <Code className="w-5 h-5 mr-2" />
-                View Endpoints
-              </a>
-              <a
-                href="#sdks"
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download SDKs
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <div className="container mx-auto px-4 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center text-white mb-16"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            API Reference
+          </h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
+            Complete API documentation for all Zion Tech Group services. 
+            Integrate our AI, cloud, and security solutions into your applications.
+          </p>
+        </motion.div>
 
-      {/* Quick Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Code className="w-8 h-8 text-blue-400" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">12+</div>
-              <div className="text-gray-400">API Endpoints</div>
+        {/* Search and Filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12"
+        >
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
+            {/* Search Bar */}
+            <div className="relative w-full max-w-md">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search APIs..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+              />
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Download className="w-8 h-8 text-green-400" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">4</div>
-              <div className="text-gray-400">SDK Languages</div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-400" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">10K+</div>
-              <div className="text-gray-400">Active Developers</div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-yellow-400" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime SLA</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              {/* Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search APIs..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-
-              {/* Category Filter */}
-              <div>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white border-cyan-500'
+                      : 'bg-white/10 text-gray-300 border-white/20 hover:bg-white/20 hover:border-cyan-400/50'
+                  }`}
                 >
-                  {apiCategories.map((category) => (
-                    <option key={category.id} value={category.id} className="bg-slate-800 text-white">
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Version Filter */}
-              <div>
-                <select
-                  value={selectedVersion}
-                  onChange={(e) => setSelectedVersion(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {apiVersions.map((version) => (
-                    <option key={version.id} value={version.id} className="bg-slate-800 text-white">
-                      {version.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
+                  {category.name} ({category.count})
+                </button>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      {/* Featured Endpoints */}
-      {featuredEndpoints.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* API Endpoints */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">API Endpoints</h2>
+          <div className="space-y-6">
+            {filteredEndpoints.map((endpoint, index) => (
+              <motion.div
+                key={endpoint.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <getCategoryIcon category={endpoint.category} className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{endpoint.name}</h3>
+                      <p className="text-gray-400 text-sm">{endpoint.description}</p>
+                    </div>
+                  </div>
+                  <span className={`px-3 py-1 rounded-lg text-white text-sm font-medium ${getMethodColor(endpoint.method)}`}>
+                    {endpoint.method}
+                  </span>
+                </div>
+
+                <div className="bg-slate-800/50 rounded-lg p-4 mb-4">
+                  <code className="text-cyan-400 font-mono text-sm break-all">
+                    {endpoint.path}
+                  </code>
+                </div>
+
+                <div className="grid lg:grid-cols-2 gap-6">
+                  {/* Request Example */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Request Example</h4>
+                    <div className="bg-slate-800/50 rounded-lg p-4">
+                      <pre className="text-gray-300 text-xs overflow-x-auto">
+                        <code>{codeExamples[endpoint.id as keyof typeof codeExamples] || 'Example not available'}</code>
+                      </pre>
+                    </div>
+                  </div>
+
+                  {/* Response Example */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Response Example</h4>
+                    <div className="bg-slate-800/50 rounded-lg p-4">
+                      <pre className="text-gray-300 text-xs overflow-x-auto">
+                        <code>{responseExamples[endpoint.id as keyof typeof responseExamples] || 'Example not available'}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {filteredEndpoints.length === 0 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-16"
             >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured APIs</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {featuredEndpoints.map((endpoint) => (
-                  <motion.div
-                    key={endpoint.id}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 rounded-xl p-6 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all hover:bg-white/10"
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getMethodColor(endpoint.method)}`}>
-                        {endpoint.method}
-                      </span>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(endpoint.status)}`}>
-                        {endpoint.status}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{endpoint.name}</h3>
-                    <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                    <div className="bg-slate-800/50 rounded-lg p-3 mb-4 font-mono text-sm text-gray-300">
-                      {endpoint.endpoint}
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <span>Rate: {endpoint.rateLimit}</span>
-                      <span>Auth: {endpoint.auth}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No APIs found</h3>
+              <p className="text-gray-300 mb-4">
+                Try adjusting your search or filters to find relevant APIs.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('all');
+                }}
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                Clear all filters
+              </button>
             </motion.div>
+          )}
+        </motion.div>
+
+        {/* Quick Start Guide */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16"
+        >
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6">Quick Start Guide</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Key className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">1. Get API Key</h3>
+                <p className="text-gray-300 text-sm">Sign up and generate your API key from the dashboard</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">2. Make First Request</h3>
+                <p className="text-gray-300 text-sm">Use the authentication endpoint to get your access token</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Rocket className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">3. Start Building</h3>
+                <p className="text-gray-300 text-sm">Integrate our APIs into your applications</p>
+              </div>
+            </div>
           </div>
-        </section>
-      )}
+        </motion.div>
 
-      {/* All API Endpoints */}
-      <section id="endpoints" className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">All API Endpoints</h2>
-            <div className="space-y-4">
-              {regularEndpoints.map((endpoint) => (
-                <motion.div
-                  key={endpoint.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 rounded-xl p-6 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all hover:bg-white/10"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getMethodColor(endpoint.method)}`}>
-                        {endpoint.method}
-                      </span>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(endpoint.status)}`}>
-                        {endpoint.status}
-                      </span>
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      v{endpoint.version}
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{endpoint.name}</h3>
-                  <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                  <div className="bg-slate-800/50 rounded-lg p-3 mb-4 font-mono text-sm text-gray-300">
-                    {endpoint.endpoint}
-                  </div>
-                  <div className="flex items-center justify-between text-sm text-gray-400">
-                    <span>Rate: {endpoint.rateLimit}</span>
-                    <span>Auth: {endpoint.auth}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+        {/* Additional Resources */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Additional Resources</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a
+              href="/documentation"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <BookOpen className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
+              <p className="text-gray-300 text-sm">Comprehensive guides and tutorials</p>
+            </a>
 
-      {/* Code Examples */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Code Examples</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {codeExamples.filter(example => example.featured).map((example) => (
-                <motion.div
-                  key={example.id}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 rounded-xl p-6 backdrop-blur-sm border border-white/10"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-white">{example.title}</h3>
-                    <button
-                      onClick={() => copyToClipboard(example.code)}
-                      className="text-gray-400 hover:text-white transition-colors"
-                    >
-                      <Copy className="w-5 h-5" />
-                    </button>
-                  </div>
-                  <pre className="bg-slate-800/50 rounded-lg p-4 overflow-x-auto">
-                    <code className="text-sm text-gray-300">{example.code}</code>
-                  </pre>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            <a
+              href="/help"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <Terminal className="w-12 h-12 text-purple-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
+              <p className="text-gray-300 text-sm">Client libraries for popular languages</p>
+            </a>
 
-      {/* SDK Downloads */}
-      <section id="sdks" className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Official SDKs</h2>
-            <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Download our official SDKs to get started quickly with your preferred programming language
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {sdkDownloads.map((sdk) => (
-                <motion.div
-                  key={sdk.id}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 rounded-xl p-6 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all hover:bg-white/10"
-                >
-                  <div className="text-center mb-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">{sdk.name}</h3>
-                    <span className="text-sm text-gray-400">v{sdk.version}</span>
-                  </div>
-                  <p className="text-gray-300 mb-4 text-sm text-center">{sdk.description}</p>
-                  <div className="space-y-2 mb-4">
-                    {sdk.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>{sdk.size}</span>
-                    <span className="flex items-center gap-1">
-                      <Download className="w-4 h-4" />
-                      {sdk.downloads.toLocaleString()}
-                    </span>
-                  </div>
-                  <button className="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
-                    Download
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            <a
+              href="/contact"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <Users className="w-12 h-12 text-green-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">Support</h3>
+              <p className="text-gray-300 text-sm">Get help from our technical team</p>
+            </a>
 
-      {/* Authentication & Getting Started */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Getting Started</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-6">Authentication</h3>
-                <div className="space-y-4">
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <h4 className="text-lg font-medium text-white mb-2">API Keys</h4>
-                    <p className="text-gray-300 mb-3">Get your API key from the dashboard to start making requests.</p>
-                    <div className="bg-slate-800/50 rounded p-3 font-mono text-sm text-gray-300">
-                      Authorization: Bearer YOUR_API_KEY
-                    </div>
-                  </div>
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <h4 className="text-lg font-medium text-white mb-2">Rate Limits</h4>
-                    <p className="text-gray-300">Each endpoint has specific rate limits to ensure fair usage.</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-6">Quick Start</h3>
-                <div className="space-y-4">
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <h4 className="text-lg font-medium text-white mb-2">1. Get API Key</h4>
-                    <p className="text-gray-300">Sign up and generate your API key in the dashboard.</p>
-                  </div>
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <h4 className="text-lg font-medium text-white mb-2">2. Choose SDK</h4>
-                    <p className="text-gray-300">Download the SDK for your preferred programming language.</p>
-                  </div>
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <h4 className="text-lg font-medium text-white mb-2">3. Make Requests</h4>
-                    <p className="text-gray-300">Start building with our comprehensive API endpoints.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-12 max-w-3xl mx-auto">
-              Join thousands of developers building amazing applications with Zion Tech Group APIs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/dashboard"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <Key className="w-5 h-5 mr-2" />
-                Get API Key
-              </a>
-              <a
-                href="/documentation"
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                View Full Docs
-              </a>
-              <a
-                href="/support"
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Get Support
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            <a
+              href="/blog"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">Examples</h3>
+              <p className="text-gray-300 text-sm">Real-world integration examples</p>
+            </a>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }

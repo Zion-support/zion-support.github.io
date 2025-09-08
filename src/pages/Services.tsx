@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
+import { motion } from 'framer-motion';
+import { Brain, 
+  Cloud, 
   Shield, 
   Rocket, 
   Users, 
@@ -23,13 +13,17 @@ import {
   Zap, 
   Lock, 
   ShieldCheck,
-  TrendingUp,
-  CheckCircle,
-  Clock,
-  DollarSign,
-  Target,
-  Handshake,
-  Lightbulb
+  Bot,
+  GitFork,
+  Eye,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  MessageSquare,
+  FileText,
+  Search,
+  Clock
 } from 'lucide-react';
 
 export default function Services() {
