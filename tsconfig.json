@@ -14,7 +14,7 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"]
     },
-    "types": ["vite/client", "react", "react-router-dom", "node"],
+    "types": ["vite/client", "react", "react-router-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -40,17 +40,11 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
-    "noEmitOnError": false,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "noEmitOnError": false
   },
   "include": [
     "src/main.tsx",
     "src/App.tsx",
-    "src/index.css",
     "src/layout/AppLayout.tsx",
     "src/context/**/*.tsx",
     "src/components/ui/**/*.tsx",

@@ -52,6 +52,12 @@ export default defineConfig(({ mode }) => ({
     // Enable CSS code splitting
     cssCodeSplit: true,
   },
+  esbuild: {
+    target: 'esnext',
+    format: 'esm',
+    // Disable TypeScript checking during build
+    logLevel: 'error',
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
@@ -85,10 +91,6 @@ export default defineConfig(({ mode }) => ({
     exclude: ['@vite/client', '@vite/env'],
   },
   // Performance optimizations
-  esbuild: {
-    target: 'esnext',
-    format: 'esm',
-  },
   // CSS optimizations
   css: {
     devSourcemap: true,
