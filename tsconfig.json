@@ -7,20 +7,6 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-=======
-=======
->>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
       "@/*": ["./src/*"]
     },
     "types": [],
@@ -45,10 +31,6 @@
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-toml-configuration-error-4721
-=======
->>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
