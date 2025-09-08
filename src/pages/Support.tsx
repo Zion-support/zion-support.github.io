@@ -1,6 +1,28 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import { HelpCircle, 
+  MessageCircle, 
+  Mail, 
+  Phone, 
+  Clock, 
+  CheckCircle, 
+  Search, 
+  BookOpen, 
+  Video, 
+  Users, 
+  Zap, 
+  Shield,
+  Brain,
+  Cloud,
+  Rocket,
+  Heart,
+  Globe,
+  Lock,
+  Cpu,
+  Star
+ } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 
 const Support: React.FC = () => {

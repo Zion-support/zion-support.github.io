@@ -160,7 +160,7 @@ const Documentation: React.FC = () => {
       case 'advanced': return 'bg-red-500';
       default: return 'bg-gray-500';
     }
-  };
+  ];
 
   const getDifficultyText = (difficulty: string) => {
     switch (difficulty) {

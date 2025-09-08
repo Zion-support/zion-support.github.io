@@ -2,6 +2,18 @@
 import React, { Suspense, useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Rocket, 
+  TrendingUp, 
+  Star, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Award, 
+  Globe, 
+  Heart 
+} from 'lucide-react';
 
 import { SEO } from '@/components/SEO';
 import { HeroSection } from '@/components/HeroSection';
@@ -18,6 +30,28 @@ const FuturisticBackground = React.memo(() => {
       duration: 5 + i * 0.3
     })), []
   );
+  
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+          style={{ left: particle.left, top: particle.top }}
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: particle.duration,
+            repeat: Infinity,
+            delay: particle.delay,
+          }}
+        />
+      ))}
+    </div>
+  );
+});
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">

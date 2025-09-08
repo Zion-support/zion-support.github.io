@@ -316,8 +316,7 @@ const About: React.FC = () => {
     }
   ];
 
-  const About: React.FC = () => {
-    return (
+  return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
         title="About Us - Zion Tech Group"
@@ -649,5 +648,3 @@ const About: React.FC = () => {
     </div>
   );
 }
-
-export default About;

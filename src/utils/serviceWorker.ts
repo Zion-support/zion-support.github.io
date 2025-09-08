@@ -255,7 +255,7 @@ export function registerServiceWorker() {
       const registration = await this.getRegistration();
       if (registration) {
         await (registration as any).sync.register(tag);
-        // // // // // console.log('Background sync requested:', tag);
+        console.log('Background sync requested:', tag);
         return true;
       }
       return false;

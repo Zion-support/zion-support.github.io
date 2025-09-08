@@ -63,7 +63,7 @@ export default function Partners() {
             </motion.div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Partner Categories */}
@@ -139,7 +139,7 @@ export default function Partners() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
         <motion.div
@@ -153,24 +153,88 @@ export default function Partners() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+          </div>
+          
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {existingPartners.map((partner, index)  => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
               >
-                Become a Partner
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Contact Partnership Team
-              </a>
-            </div>
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-4xl">{partner.logo}</div>
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                      {partner.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                  <p className="text-slate-300 text-sm mb-4">{partner.description}</p>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-400 text-sm">Partner since {partner.year}</span>
+                    <Star className="w-4 h-4 text-amber-400" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
-      </div>
+      </section>
+
+      {/* Partnership Process */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Partnership Process
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Simple steps to become a Zion Tech Group partner
+            </p>
+          </motion.div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipProcess.map((step, index)  => (
+                <motion.div
+                  key={step.step}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center group"
+                >
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-2xl font-bold text-white">{step.step}</span>
+                    </div>
+                    
+                    {index < partnershipProcess.length - 1 && (
+                      <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 transform -translate-y-1/2 z-0"></div>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+                  <p className="text-slate-300 mb-4 leading-relaxed">{step.description}</p>
+                  <div className="text-cyan-400 text-sm font-medium">{step.duration}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

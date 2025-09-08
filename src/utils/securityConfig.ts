@@ -50,7 +50,7 @@ export const securityConfig = {
 };
 
 // Security middleware for Express/Node.js
-export const securityMiddleware = (req: any, res: any, next: anyany) => {
+export const securityMiddleware = (req: any, res: any, next: any) => {
   // Set security headers
   Object.entries(securityConfig.headers).forEach(([key, value]) => {
     res.setHeader(key, value);

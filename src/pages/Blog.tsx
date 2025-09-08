@@ -258,9 +258,9 @@ import { Search } from "lucide-react";
                         ))}
                       </div>
                     </div>
-                  </motion.article>
-                ))}
-              </div>
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </section>
         )}

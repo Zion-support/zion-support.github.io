@@ -1,9 +1,9 @@
-import React, { useState } from 'react.ts';
-import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-const Contact: React.FC = () => {
+function Contact(): JSX.Element {
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
@@ -304,7 +304,7 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 }
 
