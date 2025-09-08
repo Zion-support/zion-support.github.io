@@ -284,9 +284,9 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "meta-tags-audit-runner"
-  schedule = "13 */4 * * *"
+  name = "smart-redirects"
+  schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "orphan-pages-report-runner"
-  schedule = "29 */6 * * *"
+  name = "automation-catalog"
+  schedule = "*/10 * * * *" # every 10 minutes

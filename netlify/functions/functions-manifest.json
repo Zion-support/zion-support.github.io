@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:45:14.177Z",
+  "generatedAt": "2025-08-11T22:48:08.954Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -7,7 +7,8 @@
     "asset-size-report",
     "auto-discovery-runner",
     "auto-scheduler",
-    "automation-atlas-runner",
+    "automation-catalog",
+    "automation-guardian-runner",
     "automation-matrix",
     "autonomous-front-advertiser",
     "autonomous-innovation-generator",
@@ -92,7 +93,7 @@
     "site-crawler",
     "sitemap-prioritizer",
     "sitemap_runner",
-    "stale-content-refresher",
+    "smart-redirects",
     "todo-scanner-runner",
     "todo-summary-runner",
     "topic-cluster-builder-runner",
