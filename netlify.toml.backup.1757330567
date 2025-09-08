@@ -7,6 +7,10 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11.9"
+<<<<<<< HEAD
+  MISE_PYTHON_COMPILE = "false"
+=======
+>>>>>>> origin/cursor/install-project-dependencies-with-python-version-error-a7bc
 
 [[plugins]]
   package = "netlify-plugin-compress"
