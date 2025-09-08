@@ -201,12 +201,20 @@
   schedule = "53 */6 * * *"
 
 [[scheduled.functions]]
-  name = "ai-trends-radar-runner"
+  name = "redirect-healer"
   schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
-  name = "seo-audit-runner"
+  name = "sitemap-prioritizer"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "redirect-manager"
   schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "a11y-audit-runner"
+  schedule = "*/20 * * * *"
 
 [[scheduled.functions]]
   name = "todo-summary-runner"
@@ -236,3 +244,15 @@
 [[scheduled.functions]]
   name = "perf-budget-guardian"
   schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "branch-cleanup-runner"
+  schedule = "0 3 * * *" # daily at 03:00 UTC
+
+[[scheduled.functions]]
+  name = "unused-assets-report"
+  schedule = "23 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "i18n-extractor-runner"
+  schedule = "*/20 * * * *" # every 20 minutes
