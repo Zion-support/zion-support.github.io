@@ -5,21 +5,17 @@
 const fs = require('fs');
 const path = require('path');
 
-const outDir = path.resolve(process.cwd(), 'automation');
-const manifestPath = path.join(outDir, 'netlify-functions-manifest.json');
-try { fs.mkdirSync(outDir, { recursive: true }); } catch {}
+function main() {
+  const functionsDir = path.join(__dirname, '..', 'netlify', 'functions');
+  const files = fs.readdirSync(functionsDir).filter(f => f.endsWith('.js'));
+  const names = files.map(f => path.basename(f, '.js')).sort();
+  const manifest = {
+    generatedAt: new Date().toISOString(),
+    functions: names
+  };
+  const outPath = path.join(functionsDir, 'functions-manifest.json');
+  fs.writeFileSync(outPath, JSON.stringify(manifest, null, 2));
+  console.log('Wrote manifest with', names.length, 'functions to', outPath);
+}
 
-const manifest = { functions: [], generatedAt: new Date().toISOString() };
-try {
-	fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-	console.log('[netlify:manifest] wrote', manifestPath);
-} catch (e) {
-	console.log('[netlify:manifest] skipped (write failed)');
-  {/* Removed stray closing brace */}
-process.exit(0);
-const fs = require("$1");
-const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {  fs.mkdirSync(outDir, { "recursive": true }),"} catch {};
-;
-const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
+main();

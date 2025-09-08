@@ -221,33 +221,14 @@
   schedule = "45 */12 * * *"
 
 [[scheduled.functions]]
-  name = "ai-changelog-generator"
-  schedule = "5 */6 * * *"
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+# Newly added intelligent automations
+[[scheduled.functions]]
+  name = "seo-audit-runner"
+  schedule = "*/30 * * * *"
 
 [[scheduled.functions]]
-  name = "newsroom-generator"
-  schedule = "10 */6 * * *"
-
-[[scheduled.functions]]
-  name = "repo-knowledge-graph"
-  schedule = "20 */12 * * *"
-
-[[scheduled.functions]]
-  name = "repo-radar-metrics"
-  schedule = "25 */12 * * *"
-
-[[scheduled.functions]]
-  name = "image-optimizer"
-  schedule = "0 */12 * * *"
-
-[[scheduled.functions]]
-  name = "og-image-generator"
-  schedule = "30 */12 * * *"
-
-[[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
-
-[[scheduled.functions]]
-  name = "cache-warmer"
-  schedule = "*/5 * * * *" # every 5 minutes
+  name = "deps-auto-upgrade-runner"
+  schedule = "0 3 * * *"
