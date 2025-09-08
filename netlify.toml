@@ -1,16 +1,10 @@
 [build]
-<<<<<<< HEAD
   # Stable Next.js build using existing scripts; ensure deps installed deterministically
   command = "npm ci && npm run build"
   # Publish the Next.js build directory so the Netlify Next plugin runs correctly
   publish = ".next"
   # Increase build timeout for large site generation
   command_timeout = "30m"
-=======
-  # Use `npm ci` for deterministic installs, Next.js plugin expects .next
-  command = "npm ci && npm run build"
-  publish = ".next"
->>>>>>> d08df48694b5cf8c292b7ffde7c28e3bb65838ec
 
 [build.environment]
   NODE_VERSION = "20"
