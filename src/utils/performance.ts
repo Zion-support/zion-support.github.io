@@ -1,6 +1,5 @@
 /**
 
-<<<<<<< HEAD
 export interface PerformanceMetric {
   name: string;
   value: number;

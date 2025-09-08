@@ -1,6 +1,4 @@
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Comprehensive Error Handling Utility
  * Provides centralized error handling, logging, and user feedback
  */
