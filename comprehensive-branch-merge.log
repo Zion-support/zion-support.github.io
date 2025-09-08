@@ -1558,3 +1558,20 @@ fatal: couldn't find remote ref cursor/add-more-project-content-343b
 [2025-09-08T20:39:37.378Z] ✅ Success: Get git status
 [2025-09-08T20:39:37.378Z] 📄 Found 0 conflicted files
 [2025-09-08T20:39:37.378Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:39:37.469Z] ✅ Success: Add resolved files
+[2025-09-08T20:39:37.469Z] 🚀 Commit merge for cursor/add-more-project-content-343b: git commit -m "Resolve conflicts and merge cursor/add-more-project-content-343b"
+[2025-09-08T20:39:37.557Z] ✅ Success: Commit merge for cursor/add-more-project-content-343b
+[2025-09-08T20:39:37.557Z] ✅ Successfully resolved conflicts and merged: cursor/add-more-project-content-343b
+[2025-09-08T20:39:37.557Z] 🔄 Attempting to merge branch: cursor/add-more-project-content-3d4b
+[2025-09-08T20:39:37.557Z] 🚀 Fetch origin/cursor/add-more-project-content-3d4b: git fetch origin cursor/add-more-project-content-3d4b
+[2025-09-08T20:39:37.710Z] ❌ Error in Fetch origin/cursor/add-more-project-content-3d4b: Command failed: git fetch origin cursor/add-more-project-content-3d4b
+fatal: couldn't find remote ref cursor/add-more-project-content-3d4b
+
+[2025-09-08T20:39:37.711Z] ❌ Failed to merge cursor/add-more-project-content-3d4b: Command failed: git fetch origin cursor/add-more-project-content-3d4b
+fatal: couldn't find remote ref cursor/add-more-project-content-3d4b
+
+[2025-09-08T20:39:37.711Z] 🔧 Attempting to resolve conflicts for: cursor/add-more-project-content-3d4b
+[2025-09-08T20:39:37.711Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:39:37.869Z] ✅ Success: Get git status
+[2025-09-08T20:39:37.870Z] 📄 Found 0 conflicted files
+[2025-09-08T20:39:37.870Z] 🚀 Add resolved files: git add .
