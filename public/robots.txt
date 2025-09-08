@@ -4,25 +4,11 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-=======
-<<<<<<< HEAD
-# Sitemaps
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-<<<<<<< HEAD
-=======
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-# Disallow admin and development areas
+# Disallow admin and private areas
 Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
@@ -33,9 +19,13 @@ Allow: /solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /blog/
-Allow: /news/
 Allow: /case-studies/
+Allow: /white-papers/
+Allow: /webinars/
+Allow: /pricing/
+Allow: /partners/
+Allow: /careers/
+Allow: /resources/
 
-# Crawl delay (optional)
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5910
+# Crawl delay for respectful crawling
 Crawl-delay: 1

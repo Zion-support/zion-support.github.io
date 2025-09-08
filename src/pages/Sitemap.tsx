@@ -32,41 +32,81 @@ import {
 export default function Sitemap() {
   const serviceCategories = [
     {
-      title: "AI & Machine Learning",
-      icon: Brain,
-      color: "text-blue-500",
-      services: [
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
-        { name: "AI Project Management", href: "/services/ai-project-management" },
-        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
-        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
-        { name: "AI Healthcare Platform", href: "/services/ai-healthcare-platform" },
-        { name: "AI Quantum Hybrid", href: "/services/ai-quantum-hybrid-platform" },
-        { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
-        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
-        { name: "AI Customer Experience", href: "/services/ai-customer-experience-analytics" },
-        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management" },
-        { name: "AI Content Intelligence", href: "/services/ai-content-intelligence-platform" },
-        { name: "AI Autonomous Business", href: "/services/ai-autonomous-business-operations" }
+      title: 'Main Pages',
+      icon: Globe,
+      description: 'Core website pages and information',
+      links: [
+        { name: 'Home', path: '/', description: 'Main landing page', featured: true },
+        { name: 'About Us', path: '/about', description: 'Company information and mission', featured: true },
+        { name: 'Our Team', path: '/about#team', description: 'Meet our leadership and experts', featured: true },
+        { name: 'Contact', path: '/contact', description: 'Get in touch with us', featured: true },
+        { name: 'News', path: '/news', description: 'Latest updates and announcements', featured: true },
+        { name: 'Blog', path: '/blog', description: 'Industry insights and articles' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
+        { name: 'Partners', path: '/partners', description: 'Strategic partnerships' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        { name: 'Search', path: '/search', description: 'Search our content and services' }
       ]
     },
     {
-      title: "Cybersecurity",
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'Artificial intelligence and machine learning solutions',
+      links: [
+        { name: 'AI Services Overview', path: '/ai-services', description: 'Comprehensive AI solutions', featured: true },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
+        { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
+        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
+        { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
+        { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', description: 'AI-powered candidate evaluation' },
+        { name: 'AI Content Generator', path: '/services/ai-content-generator', description: 'Automated content creation' },
+        { name: 'AI Customer Support', path: '/services/ai-customer-support', description: 'Intelligent support automation' },
+        { name: 'AI Autonomous Research', path: '/services/ai-autonomous-research-assistant', description: 'Automated research capabilities' },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', description: 'Healthcare AI solutions' },
+        { name: 'AI Project Management', path: '/services/ai-project-management', description: 'AI-driven project management' },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Marketing automation with AI' }
+      ]
+    },
+    {
+      title: 'Quantum Computing',
+      icon: Atom,
+      description: 'Next-generation quantum computing solutions',
+      links: [
+        { name: 'Quantum Computing Services', path: '/services/quantum-computing', description: 'Quantum computing solutions', featured: true },
+        { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'AI and quantum computing integration' },
+        { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', description: 'Quantum-enhanced ML algorithms' },
+        { name: 'Quantum Financial Trading', path: '/services/quantum-ai-trading-platform', description: 'Quantum algorithms for finance' },
+        { name: 'Quantum Neural Networks', path: '/services/quantum-computing-elite', description: 'Quantum neural network solutions' },
+        { name: 'Quantum Edge Computing', path: '/services/quantum-computing-solutions', description: 'Edge computing with quantum capabilities' }
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Cloud infrastructure and DevOps automation',
+      links: [
+        { name: 'Cloud DevOps Services', path: '/services/cloud-devops', description: 'Cloud and DevOps solutions', featured: true },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
+        { name: 'FinOps Advisor', path: '/services/finops-advisor', description: 'Cloud cost optimization' },
+        { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', description: 'Financial operations automation' },
+        { name: 'Cloud Migration', path: '/services/cloud', description: 'Seamless cloud transitions' },
+        { name: 'Container Orchestration', path: '/services/infrastructure', description: 'Infrastructure management' },
+        { name: 'Infrastructure as Code', path: '/services/transformation', description: 'Automated infrastructure deployment' }
+      ]
+    },
+    {
+      title: 'Cybersecurity',
       icon: Shield,
-      color: "text-red-500",
-      services: [
-        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-platform" },
-        { name: "Security Headers & CSP", href: "/services/security-headers-csp" },
-        { name: "DSR Privacy Portal", href: "/services/dsr-portal" },
-        { name: "Zero Trust Network", href: "/services/zero-trust-network-access" },
-        { name: "SOC2 Compliance", href: "/services/soc2-compliance-automation" },
-        { name: "Threat Intelligence", href: "/services/ai-cyber-threat-intelligence" },
-        { name: "Privacy Management", href: "/services/privacy-management" },
-        { name: "Security Auditing", href: "/services/security-auditing" }
+      description: 'Advanced security and compliance solutions',
+      links: [
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Comprehensive security solutions', featured: true },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity', description: 'AI-powered threat detection' },
+        { name: 'Security Headers & CSP', path: '/services/security-headers-csp', description: 'Web security hardening' },
+        { name: 'DSR Privacy Portal', path: '/services/dsr-portal', description: 'GDPR/CCPA compliance portal' },
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', description: 'Zero trust security architecture' },
+        { name: 'Threat Intelligence', path: '/services/incident-response-platform', description: 'AI-powered threat analysis' },
+        { name: 'Mobile Security', path: '/services/ai-autonomous-research-assistant', description: 'Mobile device security' },
+        { name: 'Forensics & Investigation', path: '/services/ai-autonomous-research-assistant', description: 'Digital forensics with AI' }
       ]
     },
     {
@@ -100,28 +140,87 @@ export default function Sitemap() {
     {
       title: "Digital Transformation",
       icon: Rocket,
-      color: "text-green-500",
-      services: [
-        { name: "Digital Twin Solutions", href: "/services/digital-twin" },
-        { name: "IoT Edge Computing", href: "/services/iot-edge-computing" },
-        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
-        { name: "5G Enterprise Solutions", href: "/services/5g-enterprise-solutions" },
-        { name: "IT Consulting", href: "/services/it-consulting" },
-        { name: "Change Management", href: "/services/change-management" },
-        { name: "Process Automation", href: "/services/process-automation" }
+      description: 'Strategic technology consulting and transformation',
+      links: [
+        { name: 'Digital Transformation', path: '/services/digital-transformation', description: 'Strategic transformation consulting', featured: true },
+        { name: 'IT Consulting', path: '/services/it-consulting', description: 'Technology strategy and planning' },
+        { name: 'Digital Twin', path: '/services/digital-twin', description: 'Virtual system replicas' },
+        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Performance metrics and reporting' },
+        { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence and insights' },
+        { name: 'Process Optimization', path: '/services/ai-workflow-automation', description: 'Workflow and process improvement' },
+        { name: 'Change Management', path: '/services/transformation', description: 'Organizational change support' }
       ]
     },
     {
-      title: "Micro SaaS",
-      icon: Code,
-      color: "text-yellow-500",
-      services: [
-        { name: "Custom SaaS Development", href: "/services/micro-saas-solutions" },
-        { name: "API Development", href: "/services/api-development" },
-        { name: "Mobile App Development", href: "/services/mobile-development" },
-        { name: "Web Application Development", href: "/services/web-development" },
-        { name: "E-commerce Solutions", href: "/services/ecommerce-personalization" },
-        { name: "Platform Integration", href: "/services/platform-integration" }
+      title: 'Micro SaaS Solutions',
+      icon: Zap,
+      description: 'Affordable software solutions for small businesses',
+      links: [
+        { name: 'Micro SaaS Platform', path: '/services/micro-saas', description: 'Micro SaaS solutions overview', featured: true },
+        { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
+        { name: 'Helpdesk Platform', path: '/services/helpdesk-platform', description: 'Customer support system' },
+        { name: 'Project Management', path: '/services/ai-project-management', description: 'Project tracking and collaboration' },
+        { name: 'Inventory Management', path: '/services/ai-workflow-automation', description: 'Stock and inventory tracking' },
+        { name: 'Accounting Software', path: '/services/finops-advisor', description: 'Financial management tools' },
+        { name: 'HR Platform', path: '/services/ai-hr-platform', description: 'Human resources management' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: TrendingUp,
+      description: 'Cutting-edge and future technologies',
+      links: [
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', description: 'Smart device networks', featured: true },
+        { name: 'Blockchain Solutions', path: '/services/blockchain', description: 'Distributed ledger technology' },
+        { name: 'Space Technology', path: '/services/space-tech', description: 'Space and satellite solutions' },
+        { name: 'Metaverse Development', path: '/services/ai-quantum-hybrid-platform', description: 'Virtual world creation' },
+        { name: 'Sustainable Technology', path: '/services/sustainable-technology', description: 'Green technology solutions' },
+        { name: 'Green Computing', path: '/services/green-it', description: 'Energy-efficient computing' },
+        { name: '5G Solutions', path: '/services/5g-enterprise-solutions', description: 'Next-generation network infrastructure' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      icon: Building,
+      description: 'Industry-specific technology solutions',
+      links: [
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology solutions', featured: true },
+        { name: 'Financial Services', path: '/solutions/financial', description: 'Fintech and banking solutions' },
+        { name: 'Manufacturing', path: '/solutions/manufacturing', description: 'Industry 4.0 and smart manufacturing' },
+        { name: 'Retail & E-commerce', path: '/solutions/retail', description: 'Digital retail transformation' },
+        { name: 'Education Technology', path: '/solutions/education', description: 'EdTech and learning platforms' },
+        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector technology' },
+        { name: 'Energy & Utilities', path: '/solutions/energy', description: 'Energy sector technology' }
+      ]
+    },
+    {
+      title: 'Resources & Support',
+      icon: BookOpen,
+      description: 'Documentation, support, and learning resources',
+      links: [
+        { name: 'Help Center', path: '/help', description: 'Comprehensive help and support', featured: true },
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and examples' },
+        { name: 'Documentation', path: '/docs', description: 'Technical documentation' },
+        { name: 'API Reference', path: '/api', description: 'API documentation and guides' },
+        { name: 'Training Programs', path: '/training', description: 'Skill development courses' },
+        { name: 'Webinars', path: '/webinars', description: 'Educational webinars and events' },
+        { name: 'White Papers', path: '/white-papers', description: 'Industry research and insights' },
+        { name: 'Video Tutorials', path: '/tutorials', description: 'Step-by-step video guides' }
+      ]
+    },
+    {
+      title: 'Company & Legal',
+      icon: Users,
+      description: 'Company information and legal documents',
+      links: [
+        { name: 'Privacy Policy', path: '/privacy', description: 'Data privacy and protection', featured: true },
+        { name: 'Terms of Service', path: '/terms', description: 'Service terms and conditions' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage and management' },
+        { name: 'Accessibility', path: '/accessibility', description: 'Accessibility statement' },
+        { name: 'Sitemap', path: '/sitemap', description: 'Complete website structure' },
+        { name: 'Press Kit', path: '/press', description: 'Media resources and information' },
+        { name: 'Investor Relations', path: '/investors', description: 'Financial and investor information' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities and culture' }
       ]
     }
   ];
