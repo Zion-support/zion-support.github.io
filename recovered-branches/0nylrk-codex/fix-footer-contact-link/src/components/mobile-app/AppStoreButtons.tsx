@@ -41,3 +41,5 @@ import { cn } from "@/lib/utils",;
         onClick={handleAppStoreClick}
         target="_blank"
         rel="noopener noreferrer">;
+  );
+};

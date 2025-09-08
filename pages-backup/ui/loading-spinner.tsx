@@ -81,5 +81,3 @@ export const SkeletonLoader: React.FC<{
   w-3/4;`
   ': 'w-full`}`}      />));
   </div>
-
-

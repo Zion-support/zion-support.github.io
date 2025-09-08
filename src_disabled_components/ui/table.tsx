@@ -14,3 +14,4 @@ const Table = React.forwardRef<
 Table.displayName = "Table"
 
 export { Table }
+;

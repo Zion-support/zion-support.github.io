@@ -28,6 +28,5 @@
   'healthcare platform',
   'patient monitoring',
   'clinical decision support',
-
-
-
+  );
+};

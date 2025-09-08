@@ -14,3 +14,4 @@ const Menubar = React.forwardRef<
 Menubar.displayName = "Menubar"
 
 export { Menubar }
+;

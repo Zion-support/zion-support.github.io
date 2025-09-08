@@ -43,6 +43,5 @@
   ' : 'bg-purple-600 hover:bg-purple-700 text-white }`} onClick={(e) => { e.stopPropagation() toggleServiceSelection(service.id) }} > {isSelected ?,
   Remove
   ': 'Add to Comparison} </button> </div> </motion.div> ) })} </div> </div> </section> {}' {selectedServices.length > 0 && ('' <section className='py-16 px-4 bg-gradient-to-r from-purple-900/20 to-blue-900/20'>'' <div className='max-w-7xl mx-auto'>'' <div className='text-center mb-12'>'' <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'> Service Comparison' </h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Detailed comparison of selected services to help you make the best choice for your business. </p> </div>'' <div className='overflow-x-auto'>'' <table className='w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden'>' <thead>'' <tr className='bg-white/10'>'' <th className='px-6 py-4 text-left text-white font-semibold'>Features & Details</th>' {selectedServicesData.map((service) => ('' <th key={service?.id} className='px-6 py-4 text-center text-white font-semibold min-w-[250px]'>'' <div className='text-center'> <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-2 ${getCategoryColor(service?.category || '')}`}> {service?.category.replace(
-
-
-
+  );
+};

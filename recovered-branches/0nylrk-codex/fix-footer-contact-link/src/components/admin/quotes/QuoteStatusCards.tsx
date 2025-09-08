@@ -119,4 +119,3 @@ interface QuoteStatusCardsProps {
   }
 
 }
-

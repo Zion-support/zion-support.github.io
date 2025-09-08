@@ -107,3 +107,5 @@ const ContentRoutes = () =>: any {}
       <Route path="/blog/:slug" element={<BlogPost />} />;
 
       {/* Green IT Route */}
+  );
+};

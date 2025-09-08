@@ -7,3 +7,5 @@ export function MobileLaunchPage() {
     </div>
   )
 }
+  );
+};

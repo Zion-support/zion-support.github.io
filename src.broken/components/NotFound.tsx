@@ -7,3 +7,5 @@ export function App() {
     </div>
   )
 }
+  );
+};

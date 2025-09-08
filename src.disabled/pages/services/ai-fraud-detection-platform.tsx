@@ -31,4 +31,5 @@
   'contact' && ( <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className='max-w-4xl mx-auto'' >'' <h2 className='text-3xl md: text-4xl font-bold text-white text-center mb-12'> Ready to Protect Your Business? </h2>'' <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20>' <div className='grid grid-cols-1 m,
     d: grid-cols-2 gap-8 mb-8> <div>'' <h3 className='text-xl font-semibold text-white mb-4'> Contact Information' </h3>'' <div className='space-y-4>' <div className='flex items-center text-gray-300>' <Globe className='w-5 h-5 text-red-400 mr-3' /> <span>http,
     s:'''``
-
+  );
+};

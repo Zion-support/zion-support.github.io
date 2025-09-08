@@ -7,3 +7,5 @@ export function TalentCardSaveButton() {
     </div>
   )
 }
+  );
+};

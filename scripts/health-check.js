@@ -59,7 +59,7 @@ function checkFileContent(filePath, searchString, description) {
 
 function runHealthCheck() {
   log('\n🏥 Health Check Report', 'cyan');
-  log('==================================================', 'cyan');
+  log('=', 'cyan');
 
   let allChecksPassed = true;
 

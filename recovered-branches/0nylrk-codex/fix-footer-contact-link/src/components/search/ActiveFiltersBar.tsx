@@ -147,3 +147,5 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+  );
+};

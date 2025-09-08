@@ -46,3 +46,5 @@ return <Badge variant="outline">Activity</Badge>;"
       <CardHeader>
         <CardTitle>Recent Activity</CardTitle>
         <CardDescription>Latest actions from your team</CardDescription>
+  );
+};

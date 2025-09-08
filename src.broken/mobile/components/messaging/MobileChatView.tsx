@@ -7,3 +7,5 @@ export function MobileChatView() {
     </div>
   )
 }
+  );
+};

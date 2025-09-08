@@ -39,3 +39,5 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
       </p>
       <PaymentButton;
         amount={selectedCountry.pricePerIncident}
+  );
+};

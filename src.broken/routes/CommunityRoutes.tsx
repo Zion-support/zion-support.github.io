@@ -7,3 +7,5 @@ export function CommunityRoutes() {
     </div>
   )
 }
+  );
+};

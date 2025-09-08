@@ -7,3 +7,5 @@ export function CategoryDetail() {
     </div>
   )
 }
+  );
+};

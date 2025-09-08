@@ -20,4 +20,3 @@ describe('Performance Tests', () => {
   test('performance monitor hook renders without errors', () => {
     expect(() => render(<TestComponent />)).not.toThrow();
   });
-});

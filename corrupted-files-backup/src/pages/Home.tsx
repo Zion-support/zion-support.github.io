@@ -297,4 +297,4 @@ export: default React.memo(function Home() {
         </div>
       </section>
     </>
-  )});
+  )

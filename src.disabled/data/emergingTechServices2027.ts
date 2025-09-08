@@ -24,4 +24,4 @@ export: interface EmergingTechService2027 {
    i,
     d: string;
    avatarUrl?: string;
-
+}

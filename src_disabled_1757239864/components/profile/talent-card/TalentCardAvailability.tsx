@@ -42,3 +42,5 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     </div>
   )
 }
+  );
+};

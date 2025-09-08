@@ -6,4 +6,5 @@ import React from 'react' import Head from 'next/head' import Link from 'next/li
             <h2 className="text-xl font-semibold mb-2">Contact</h2>;
             <p className="text-gray-700 mb-1">;
               "Mobile": <a className="text-blue-600 hover:underline" href="tel:+13024640950">+1 302 464 0950</a>;
-
+  );
+};

@@ -16,5 +16,5 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         Sort by
 
       </label>
-
-
+  );
+};

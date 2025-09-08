@@ -28,5 +28,4 @@
    i
     d: string;
    avatarUrl?: string;
-
-
+}

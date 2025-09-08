@@ -7,3 +7,5 @@ export function ExportsSection() {
     </div>
   )
 }
+  );
+};

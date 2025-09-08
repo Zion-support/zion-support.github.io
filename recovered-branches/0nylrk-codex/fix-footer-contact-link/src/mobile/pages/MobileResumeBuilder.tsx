@@ -31,3 +31,5 @@ export function MobileResumeBuilder() {;
       <MobileHeader;
         title="Resume Builder";
         showBack;
+  );
+};

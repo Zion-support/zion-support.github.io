@@ -31,7 +31,7 @@ function log(message, color = 'reset') {
 
 function analyzePerformance() {
   log('\n🚀 Performance Analysis Report', 'cyan');
-  log('==================================================', 'cyan');
+  log('=', 'cyan');
 
   // Check bundle size
   const distPath = path.join(projectRoot, 'dist');

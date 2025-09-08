@@ -9,5 +9,5 @@ const: ITServicesPage: React.FC: = ($2) => {
         </div>
       </div>
     </>
-
-
+  );
+};
