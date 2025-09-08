@@ -27,41 +27,20 @@ const footerSections = [
       { name: 'AI Solutions', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
+      { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
-      { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-      { name: 'Healthcare Tech', href: '/services/healthcare-tech' },
-      { name: 'Financial Solutions', href: '/services/finops-advisor' }
+      { name: 'Edge & IoT', href: '/services/ai-iot-edge-computing-platform' }
     ]
   },
   {
     title: 'Solutions',
     links: [
       { name: 'Enterprise', href: '/enterprise' },
-      { name: 'Healthcare', href: '/industry-solutions' },
+      { name: 'Healthcare', href: '/healthcare' },
       { name: 'Financial', href: '/financial-solutions' },
       { name: 'Manufacturing', href: '/manufacturing-solutions' },
-      { name: 'Government', href: '/industry-solutions' },
-      { name: 'Retail', href: '/industry-solutions' },
-      { name: 'Education', href: '/industry-solutions' },
-      { name: 'Real Estate', href: '/industry-solutions' },
-      { name: 'Legal Tech', href: '/industry-solutions' },
-      { name: 'Energy & Utilities', href: '/industry-solutions' }
-    ]
-  },
-  {
-    title: 'Emerging Tech',
-    links: [
-      { name: 'Quantum AI', href: '/services/quantum-ai-platform' },
-      { name: 'Metaverse', href: '/services/metaverse-business-platform' },
-      { name: 'Space Tech', href: '/services/space-tech' },
-      { name: 'Biotechnology', href: '/services/ai-biotechnology-platform' },
-      { name: 'Climate Tech', href: '/services/ai-climate-technology' },
-      { name: 'Robotics', href: '/services/ai-robotics-automation' },
-      { name: 'AR/VR', href: '/services/ai-augmented-reality' },
-      { name: 'Voice AI', href: '/services/ai-voice-technology' }
+      { name: 'Government', href: '/government-solutions' },
+      { name: 'Retail', href: '/retail-solutions' }
     ]
   },
   {

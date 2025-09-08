@@ -31,13 +31,9 @@ const navigation: NavigationItem[] = [
       { name: 'AI Solutions', href: '/ai-services', description: 'Cutting-edge artificial intelligence services' },
       { name: 'IT Services', href: '/it-services', description: 'Enterprise technology infrastructure' },
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security protocols' },
+      { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', description: 'Advanced security protocols' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Scalable cloud infrastructure' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', description: 'Next-generation computing power' },
-      { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Decentralized technology solutions' },
-      { name: 'Healthcare Tech', href: '/services/healthcare-tech', description: 'Medical technology innovations' },
-      { name: 'Financial Solutions', href: '/services/finops-advisor', description: 'Fintech and banking solutions' }
+      { name: 'Edge & IoT', href: '/services/ai-iot-edge-computing-platform', description: 'Ultra-low latency solutions' }
     ]
   },
   {
@@ -46,30 +42,11 @@ const navigation: NavigationItem[] = [
     description: 'Industry-specific technology solutions',
     children: [
       { name: 'Enterprise', href: '/enterprise', description: 'Large-scale business solutions' },
-      { name: 'Healthcare', href: '/industry-solutions', description: 'Medical technology innovations' },
+      { name: 'Healthcare', href: '/healthcare', description: 'Medical technology innovations' },
       { name: 'Financial', href: '/financial-solutions', description: 'Fintech and banking solutions' },
       { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industrial automation' },
-      { name: 'Government', href: '/industry-solutions', description: 'Public sector technology' },
-      { name: 'Retail', href: '/industry-solutions', description: 'E-commerce and retail tech' },
-      { name: 'Education', href: '/industry-solutions', description: 'EdTech and learning solutions' },
-      { name: 'Real Estate', href: '/industry-solutions', description: 'Property technology solutions' },
-      { name: 'Legal Tech', href: '/industry-solutions', description: 'Legal technology innovations' },
-      { name: 'Energy & Utilities', href: '/industry-solutions', description: 'Smart energy solutions' }
-    ]
-  },
-  {
-    name: 'Emerging Tech',
-    href: '/emerging-tech',
-    description: 'Cutting-edge technology innovations',
-    children: [
-      { name: 'Quantum AI', href: '/services/quantum-ai-platform', description: 'Quantum computing with AI' },
-      { name: 'Metaverse', href: '/services/metaverse-business-platform', description: 'Virtual reality solutions' },
-      { name: 'Space Tech', href: '/services/space-tech', description: 'Space technology innovations' },
-      { name: 'Biotechnology', href: '/services/ai-biotechnology-platform', description: 'AI-powered biotech' },
-      { name: 'Climate Tech', href: '/services/ai-climate-technology', description: 'Environmental technology' },
-      { name: 'Robotics', href: '/services/ai-robotics-automation', description: 'AI robotics solutions' },
-      { name: 'AR/VR', href: '/services/ai-augmented-reality', description: 'Immersive technology' },
-      { name: 'Voice AI', href: '/services/ai-voice-technology', description: 'Voice technology solutions' }
+      { name: 'Government', href: '/government-solutions', description: 'Public sector technology' },
+      { name: 'Retail', href: '/retail-solutions', description: 'E-commerce and retail tech' }
     ]
   },
   {

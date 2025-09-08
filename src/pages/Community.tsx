@@ -1,428 +1,615 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { 
   Users, 
   MessageCircle, 
-  Search, 
-  TrendingUp, 
-  Star, 
-  Clock,
-  ThumbsUp,
-  BookOpen,
-  Lightbulb,
-  HelpCircle,
-  Award,
   Calendar,
   MapPin,
   Globe,
-  Filter,
-  Plus
+  Star,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  Linkedin,
+  Twitter,
+  Github,
+  Slack,
+  Discord,
+  BookOpen,
+  Video,
+  Code,
+  Zap,
+  Lightbulb,
+  Rocket,
+  Heart,
+  TrendingUp,
+  Users2,
+  Building2,
+  GraduationCap,
+  Shield,
+  Cloud,
+  Brain,
+  Target,
+  Clock
 } from 'lucide-react';
 
-export default function Community() {
-  const [activeTab, setActiveTab] = useState('forums');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const forumCategories = [
+const Community: React.FC = () => {
+  const communityEvents = [
     {
-      name: "AI & Automation",
-      description: "Discuss AI implementation, automation strategies, and best practices",
-      icon: TrendingUp,
-      color: "from-cyan-500 to-blue-500",
-      topics: 156,
-      posts: 892,
-      lastActivity: "2 hours ago"
+      name: 'AI Innovation Summit 2024',
+      description: 'Join industry leaders and innovators for a day of AI insights, networking, and collaboration.',
+      date: '2024-02-15',
+      time: '9:00 AM - 6:00 PM',
+      location: 'Middletown, DE & Virtual',
+      type: 'Conference',
+      attendees: 250,
+      price: 'Free',
+      featured: true,
+      icon: Rocket,
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      name: "IT Infrastructure",
-      description: "Share knowledge about cloud solutions, DevOps, and infrastructure management",
-      icon: BookOpen,
-      color: "from-purple-500 to-pink-500",
-      topics: 89,
-      posts: 445,
-      lastActivity: "1 day ago"
+      name: 'Cybersecurity Workshop Series',
+      description: 'Hands-on workshops covering the latest cybersecurity threats and defense strategies.',
+      date: '2024-02-22',
+      time: '2:00 PM - 5:00 PM',
+      location: 'Virtual',
+      type: 'Workshop',
+      attendees: 75,
+      price: '$49',
+      featured: false,
+      icon: Shield,
+      color: 'from-red-500 to-orange-500'
     },
     {
-      name: "Micro SaaS",
-      description: "Connect with other SaaS entrepreneurs and discuss growth strategies",
-      icon: Lightbulb,
-      color: "from-green-500 to-teal-500",
-      topics: 234,
-      posts: 1203,
-      lastActivity: "3 hours ago"
-    },
-    {
-      name: "General Discussion",
-      description: "General topics, networking, and community announcements",
-      icon: Users,
-      color: "from-orange-500 to-red-500",
-      topics: 67,
-      posts: 334,
-      lastActivity: "5 hours ago"
-    }
-  ];
-
-  const recentTopics = [
-    {
-      title: "Best practices for implementing AI in customer service",
-      author: "Sarah Chen",
-      category: "AI & Automation",
-      replies: 23,
-      views: 156,
-      lastReply: "1 hour ago",
-      isHot: true
-    },
-    {
-      title: "Cloud migration strategy for enterprise companies",
-      author: "Mike Rodriguez",
-      category: "IT Infrastructure",
-      replies: 18,
-      views: 89,
-      lastReply: "3 hours ago",
-      isHot: false
-    },
-    {
-      title: "Scaling from 0 to 1000 customers: Lessons learned",
-      author: "Alex Thompson",
-      category: "Micro SaaS",
-      replies: 45,
-      views: 234,
-      lastReply: "2 hours ago",
-      isHot: true
-    },
-    {
-      title: "Upcoming community events and meetups",
-      author: "Community Team",
-      category: "General Discussion",
-      replies: 12,
-      views: 67,
-      lastReply: "4 hours ago",
-      isHot: false
-    }
-  ];
-
-  const discussionTopics = [
-    {
-      title: "AI Implementation Workshop",
-      date: "Dec 15, 2024",
-      time: "2:00 PM EST",
-      type: "Virtual",
+      name: 'Cloud Architecture Meetup',
+      description: 'Monthly meetup for cloud architects and DevOps engineers to share best practices.',
+      date: '2024-03-01',
+      time: '6:00 PM - 8:00 PM',
+      location: 'Middletown, DE',
+      type: 'Meetup',
       attendees: 45,
-      description: "Learn how to successfully implement AI solutions in your business"
+      price: 'Free',
+      featured: false,
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: "Cloud Security Best Practices",
-      date: "Dec 20, 2024",
-      time: "1:00 PM EST",
-      type: "Virtual",
-      attendees: 32,
-      description: "Essential security practices for cloud infrastructure"
-    },
-    {
-      title: "SaaS Growth Strategies",
-      date: "Dec 25, 2024",
-      time: "3:00 PM EST",
-      type: "Virtual",
-      attendees: 28,
-      description: "Proven strategies for scaling your SaaS business"
+      name: 'Women in Tech Networking',
+      description: 'Empowering women in technology through networking, mentorship, and skill development.',
+      date: '2024-03-08',
+      time: '5:30 PM - 7:30 PM',
+      location: 'Middletown, DE',
+      type: 'Networking',
+      attendees: 60,
+      price: 'Free',
+      featured: false,
+      icon: Users2,
+      color: 'from-green-500 to-emerald-500'
     }
   ];
 
-  const topContributors = [
-    { name: "Sarah Chen", role: "AI Expert", posts: 156, points: 2847, avatar: "SC" },
-    { name: "Mike Rodriguez", role: "DevOps Engineer", posts: 134, points: 2156, avatar: "MR" },
-    { name: "Alex Thompson", role: "SaaS Founder", posts: 98, points: 1892, avatar: "AT" },
-    { name: "Emily Watson", role: "Cloud Architect", posts: 87, points: 1654, avatar: "EW" }
+  const communityGroups = [
+    {
+      name: 'AI & Machine Learning Enthusiasts',
+      description: 'Connect with fellow AI practitioners, share projects, and discuss the latest developments.',
+      members: 1250,
+      category: 'Technology',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      features: [
+        'Weekly AI challenges',
+        'Project showcase events',
+        'Expert Q&A sessions',
+        'Resource sharing'
+      ]
+    },
+    {
+      name: 'Cybersecurity Professionals',
+      description: 'Network with security experts and stay updated on the latest threats and solutions.',
+      members: 890,
+      category: 'Security',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      features: [
+        'Threat intelligence sharing',
+        'Security tool discussions',
+        'Incident response case studies',
+        'Compliance updates'
+      ]
+    },
+    {
+      name: 'Cloud & DevOps Engineers',
+      description: 'Share best practices, tools, and experiences in cloud computing and DevOps.',
+      members: 1100,
+      category: 'Infrastructure',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      features: [
+        'Architecture reviews',
+        'Tool comparisons',
+        'Best practice sharing',
+        'Troubleshooting sessions'
+      ]
+    },
+    {
+      name: 'Digital Transformation Leaders',
+      description: 'Connect with executives and leaders driving digital transformation initiatives.',
+      members: 450,
+      category: 'Leadership',
+      icon: TrendingUp,
+      color: 'from-green-500 to-emerald-500',
+      features: [
+        'Strategy discussions',
+        'Change management insights',
+        'ROI measurement',
+        'Industry benchmarking'
+      ]
+    }
+  ];
+
+  const mentorshipPrograms = [
+    {
+      name: 'Tech Career Mentorship',
+      description: 'Get guidance from experienced professionals to advance your technology career.',
+      mentors: 25,
+      mentees: 120,
+      duration: '6 months',
+      focus: 'Career Development',
+      icon: GraduationCap,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      name: 'Startup Mentorship',
+      description: 'Connect with successful entrepreneurs and business leaders for startup guidance.',
+      mentors: 15,
+      mentees: 45,
+      duration: '12 months',
+      focus: 'Business Strategy',
+      icon: Rocket,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      name: 'Technical Skills Mentorship',
+      description: 'Improve your technical skills with guidance from senior developers and architects.',
+      mentors: 40,
+      mentees: 200,
+      duration: '3 months',
+      focus: 'Technical Skills',
+      icon: Code,
+      color: 'from-green-500 to-emerald-500'
+    }
+  ];
+
+  const resources = [
+    {
+      name: 'Knowledge Base',
+      description: 'Comprehensive documentation, tutorials, and best practices.',
+      icon: BookOpen,
+      color: 'from-blue-500 to-cyan-500',
+      items: ['Technical guides', 'Best practices', 'Tutorials', 'FAQs']
+    },
+    {
+      name: 'Video Library',
+      description: 'Recorded webinars, training sessions, and expert interviews.',
+      icon: Video,
+      color: 'from-purple-500 to-pink-500',
+      items: ['Webinars', 'Training videos', 'Expert interviews', 'Case studies']
+    },
+    {
+      name: 'Code Repository',
+      description: 'Open-source projects, code samples, and development tools.',
+      icon: Code,
+      color: 'from-green-500 to-emerald-500',
+      items: ['Open source projects', 'Code samples', 'Templates', 'Tools']
+    },
+    {
+      name: 'Innovation Hub',
+      description: 'Ideas, prototypes, and collaborative innovation projects.',
+      icon: Lightbulb,
+      color: 'from-yellow-500 to-orange-500',
+      items: ['Innovation ideas', 'Prototypes', 'Collaborative projects', 'Hackathons']
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Users className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                {" "}Community
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                {' '}Community
               </span>
             </h1>
-            <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-              Connect with fellow professionals, share knowledge, and get expert advice on AI, IT infrastructure, 
-              and Micro SaaS solutions. Join thousands of members in our vibrant community.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Connect, collaborate, and grow with fellow technology professionals. 
+              Join our vibrant community of innovators, developers, and business leaders.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <Plus className="w-5 h-5 mr-2" />
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Join Community
               </button>
-              <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                <BookOpen className="w-5 h-5 mr-2" />
-                View Guidelines
+              <button className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
+                View Events
               </button>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Community Stats */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: '5,000+', label: 'Community Members', icon: Users, color: 'from-blue-500 to-cyan-500' },
+              { number: '50+', label: 'Events Per Year', icon: Calendar, color: 'from-purple-500 to-pink-500' },
+              { number: '100+', label: 'Expert Mentors', icon: Award, color: 'from-green-500 to-emerald-500' },
+              { number: '25+', label: 'Active Groups', icon: Users2, color: 'from-yellow-500 to-orange-500' }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Search and Navigation */}
-      <div className="bg-slate-800/50 border-b border-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search discussions, topics, or members..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-            </div>
+      {/* Upcoming Events */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Upcoming Events
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join us for exciting events, workshops, and networking opportunities.
+            </p>
+          </motion.div>
 
-            {/* Navigation Tabs */}
-            <div className="flex space-x-1 bg-slate-700/50 rounded-lg p-1">
-              {[
-                { id: 'forums', label: 'Forums', icon: MessageCircle },
-                { id: 'events', label: 'Events', icon: Calendar },
-                { id: 'members', label: 'Members', icon: Users },
-                { id: 'resources', label: 'Resources', icon: BookOpen }
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-all duration-200 ${
-                    activeTab === tab.id
-                      ? 'bg-cyan-500 text-white shadow-lg'
-                      : 'text-zinc-300 hover:text-white hover:bg-slate-600/50'
-                  }`}
-                >
-                  <tab.icon className="w-4 h-4" />
-                  <span>{tab.label}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {communityEvents.map((event, index) => (
+              <motion.div
+                key={event.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 ${
+                  event.featured ? 'ring-2 ring-blue-500/50' : ''
+                }`}
+              >
+                {event.featured && (
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
+                    Featured Event
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${event.color} rounded-xl flex items-center justify-center`}>
+                      <event.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <span className="px-3 py-1 bg-slate-700 text-blue-400 text-xs font-medium rounded-full">
+                        {event.type}
+                      </span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-3">{event.name}</h3>
+                  <p className="text-gray-300 mb-4">{event.description}</p>
+
+                  <div className="space-y-2 mb-4 text-sm text-gray-400">
+                    <div className="flex items-center space-x-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{new Date(event.date).toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="w-4 h-4" />
+                      <span>{event.location}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Users className="w-4 h-4" />
+                      <span>{event.attendees} attendees</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-blue-400">{event.price}</span>
+                    <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community Groups */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Community Groups
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join specialized groups based on your interests and expertise.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {communityGroups.map((group, index) => (
+              <motion.div
+                key={group.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${group.color} rounded-xl flex items-center justify-center`}>
+                    <group.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-right">
+                    <span className="px-3 py-1 bg-slate-700 text-blue-400 text-xs font-medium rounded-full">
+                      {group.category}
+                    </span>
+                    <div className="text-sm text-gray-400 mt-1">{group.members} members</div>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-3">{group.name}</h3>
+                <p className="text-gray-300 mb-4">{group.description}</p>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Group Features:</h4>
+                  <ul className="space-y-1">
+                    {group.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                  Join Group
                 </button>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Main Content Area */}
-          <div className="lg:col-span-3">
-            {activeTab === 'forums' && (
-              <div className="space-y-8">
-                {/* Forum Categories */}
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">Forum Categories</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {forumCategories.map((category, index) => (
-                      <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105">
-                        <div className="flex items-start space-x-4">
-                          <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                            <category.icon className="w-6 h-6 text-white" />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
-                            <p className="text-zinc-300 text-sm mb-4">{category.description}</p>
-                            <div className="flex items-center justify-between text-sm text-zinc-400">
-                              <span>{category.topics} topics</span>
-                              <span>{category.posts} posts</span>
-                              <span className="flex items-center">
-                                <Clock className="w-4 h-4 mr-1" />
-                                {category.lastActivity}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+      {/* Mentorship Programs */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Mentorship Programs
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Get guidance from experienced professionals and accelerate your growth.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {mentorshipPrograms.map((program, index) => (
+              <motion.div
+                key={program.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${program.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <program.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{program.name}</h3>
+                <p className="text-gray-300 mb-4">{program.description}</p>
+                
+                <div className="space-y-2 mb-6 text-sm text-gray-400">
+                  <div className="flex items-center justify-center space-x-2">
+                    <Users className="w-4 h-4" />
+                    <span>{program.mentors} mentors</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Users2 className="w-4 h-4" />
+                    <span>{program.mentees} mentees</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{program.duration}</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Target className="w-4 h-4" />
+                    <span>{program.focus}</span>
                   </div>
                 </div>
 
-                {/* Recent Topics */}
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">Recent Topics</h2>
-                  <div className="space-y-4">
-                    {recentTopics.map((topic, index) => (
-                      <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-cyan-500/40 transition-all duration-300">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-3 mb-2">
-                              <h3 className="text-lg font-semibold text-white hover:text-cyan-400 cursor-pointer transition-colors">
-                                {topic.title}
-                              </h3>
-                              {topic.isHot && (
-                                <span className="px-2 py-1 bg-red-500 text-white text-xs rounded-full flex items-center">
-                                  <TrendingUp className="w-3 h-3 mr-1" />
-                                  Hot
-                                </span>
-                              )}
-                            </div>
-                            <div className="flex items-center space-x-4 text-sm text-zinc-400">
-                              <span>by {topic.author}</span>
-                              <span>in {topic.category}</span>
-                              <span>{topic.replies} replies</span>
-                              <span>{topic.views} views</span>
-                              <span className="flex items-center">
-                                <Clock className="w-4 h-4 mr-1" />
-                                {topic.lastReply}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'events' && (
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
-                <div className="space-y-6">
-                  {upcomingEvents.map((event, index) => (
-                    <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
-                          <p className="text-zinc-300 mb-4">{event.description}</p>
-                          <div className="flex items-center space-x-6 text-sm text-zinc-400">
-                            <span className="flex items-center">
-                              <Calendar className="w-4 h-4 mr-2" />
-                              {event.date} at {event.time}
-                            </span>
-                            <span className="flex items-center">
-                              <Globe className="w-4 h-4 mr-2" />
-                              {event.type}
-                            </span>
-                            <span className="flex items-center">
-                              <Users className="w-4 h-4 mr-2" />
-                              {event.attendees} attending
-                            </span>
-                          </div>
-                        </div>
-                        <button className="px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
-                          Join
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'members' && (
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Top Contributors</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {topContributors.map((member, index) => (
-                    <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                          {member.avatar}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-white mb-1">{member.name}</h3>
-                          <p className="text-zinc-400 text-sm mb-2">{member.role}</p>
-                          <div className="flex items-center space-x-4 text-sm text-zinc-400">
-                            <span>{member.posts} posts</span>
-                            <span className="flex items-center">
-                              <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                              {member.points} points
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'resources' && (
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Community Resources</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600">
-                    <h3 className="text-lg font-semibold text-white mb-2">Community Guidelines</h3>
-                    <p className="text-zinc-300 text-sm mb-4">Learn about our community standards and best practices for participation.</p>
-                    <Link to="/help" className="text-cyan-400 hover:text-cyan-300 transition-colors">Read Guidelines →</Link>
-                  </div>
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600">
-                    <h3 className="text-lg font-semibold text-white mb-2">FAQ</h3>
-                    <p className="text-zinc-300 text-sm mb-4">Find answers to commonly asked questions about the community.</p>
-                    <Link to="/faq" className="text-cyan-400 hover:text-cyan-300 transition-colors">View FAQ →</Link>
-                  </div>
-                </div>
-              </div>
-            )}
+                <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                  Apply Now
+                </button>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="space-y-6">
-              {/* Quick Stats */}
-              <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600">
-                <h3 className="text-lg font-semibold text-white mb-4">Community Stats</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-zinc-400">Total Members</span>
-                    <span className="text-white font-semibold">12,847</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-zinc-400">Active Today</span>
-                    <span className="text-white font-semibold">1,234</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-zinc-400">Total Posts</span>
-                    <span className="text-white font-semibold">45,892</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-zinc-400">Topics</span>
-                    <span className="text-white font-semibold">8,456</span>
-                  </div>
+      {/* Community Resources */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Community Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Access valuable resources to support your learning and development.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {resources.map((resource, index) => (
+              <motion.div
+                key={resource.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <resource.icon className="w-8 h-8 text-white" />
                 </div>
-              </div>
-
-              {/* Quick Actions */}
-              <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600">
-                <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
-                <div className="space-y-3">
-                  <button className="w-full text-left px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
-                    <Plus className="w-4 h-4 inline mr-2" />
-                    New Topic
-                  </button>
-                  <button className="w-full text-left px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-500 transition-colors">
-                    <MessageCircle className="w-4 h-4 inline mr-2" />
-                    Start Discussion
-                  </button>
-                  <button className="w-full text-left px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-500 transition-colors">
-                    <HelpCircle className="w-4 h-4 inline mr-2" />
-                    Ask Question
-                  </button>
-                </div>
-              </div>
-
-              {/* Community Rules */}
-              <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600">
-                <h3 className="text-lg font-semibold text-white mb-4">Community Rules</h3>
-                <ul className="space-y-2 text-sm text-zinc-300">
-                  <li>• Be respectful and professional</li>
-                  <li>• Stay on topic and relevant</li>
-                  <li>• No spam or self-promotion</li>
-                  <li>• Help others and share knowledge</li>
-                  <li>• Follow community guidelines</li>
+                <h3 className="text-lg font-semibold text-white mb-3">{resource.name}</h3>
+                <p className="text-gray-300 mb-4">{resource.description}</p>
+                
+                <ul className="space-y-1 text-left">
+                  {resource.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center space-x-2">
+                      <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </li>
+                  ))}
                 </ul>
-              </div>
-            </div>
+
+                <button className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                  Explore
+                </button>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Get Involved */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Get Involved
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Ready to join our community? Choose how you'd like to get involved.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-xl font-semibold text-white mb-3">Join as a Member</h3>
+                <p className="text-gray-300 mb-4">Connect with peers, attend events, and access resources.</p>
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                  Become a Member
+                </button>
+              </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-xl font-semibold text-white mb-3">Become a Mentor</h3>
+                <p className="text-gray-300 mb-4">Share your expertise and help others grow in their careers.</p>
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300">
+                  Apply as Mentor
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Questions About Our Community?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get in touch with our community team for more information and support.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Community Team
+              </a>
+              <a
+                href="mailto:community@ziontechgroup.com"
+                className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+              >
+                Email Us
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Community;

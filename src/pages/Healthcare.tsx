@@ -1,84 +1,84 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+  Heart, 
   Shield, 
-  Building2, 
-  Users, 
+  Brain, 
   Database, 
   Cloud, 
+  Zap, 
+  Users, 
   Lock,
   Activity,
+  TrendingUp,
   CheckCircle,
-  ArrowRight,
-  Globe,
-  FileText,
-  Network
+  ArrowRight
 } from 'lucide-react';
 
-const GovernmentSolutions: React.FC = () => {
+const Healthcare: React.FC = () => {
   const features = [
     {
-      icon: Shield,
-      title: 'Federal Compliance',
-      description: 'FISMA, FedRAMP, and NIST compliance for government agencies'
+      icon: Brain,
+      title: 'AI-Powered Diagnostics',
+      description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis'
     },
     {
       icon: Database,
-      title: 'Secure Data Management',
-      description: 'Classified and sensitive data handling with military-grade encryption'
+      title: 'Secure Health Records',
+      description: 'HIPAA-compliant electronic health record management with blockchain security'
     },
     {
       icon: Cloud,
-      title: 'Government Cloud',
-      description: 'FedRAMP-authorized cloud solutions for federal agencies'
+      title: 'Cloud-Native Platform',
+      description: 'Scalable healthcare infrastructure built for modern medical practices'
     },
     {
-      icon: Lock,
-      title: 'Zero Trust Security',
-      description: 'Advanced cybersecurity frameworks for government networks'
+      icon: Shield,
+      title: 'Compliance & Security',
+      description: 'Enterprise-grade security meeting all healthcare regulatory requirements'
     },
     {
       icon: Activity,
       title: 'Real-time Monitoring',
-      description: 'Continuous security monitoring and threat detection systems'
+      description: 'Continuous patient monitoring with predictive analytics and alerts'
     },
     {
       icon: Users,
-      title: 'Citizen Services',
-      description: 'Digital transformation for improved public service delivery'
+      title: 'Patient Engagement',
+      description: 'Interactive patient portals and mobile health applications'
     }
   ];
 
   const solutions = [
     {
-      title: 'Cybersecurity Platform',
-      description: 'Comprehensive security solutions meeting federal requirements',
-      href: '/services/ai-cybersecurity-suite'
+      title: 'AI Healthcare Analytics Platform',
+      description: 'Comprehensive analytics solution for healthcare data insights',
+      href: '/services/ai-healthcare-analytics-platform'
     },
     {
-      title: 'Digital Transformation',
-      description: 'Modernization of government systems and processes',
-      href: '/digital-transformation'
+      title: 'Telemedicine Platform',
+      description: 'Secure video conferencing and remote patient care solutions',
+      href: '/services/telemedicine-platform'
     },
     {
-      title: 'Cloud Infrastructure',
-      description: 'Secure cloud solutions for government workloads',
-      href: '/cloud-solutions'
+      title: 'Medical Device Integration',
+      description: 'IoT connectivity for medical devices and equipment monitoring',
+      href: '/services/medical-device-integration'
     },
     {
-      title: 'AI-Powered Analytics',
-      description: 'Intelligent data analysis for government decision making',
-      href: '/services/ai-business-intelligence'
+      title: 'Clinical Decision Support',
+      description: 'AI-powered clinical decision support systems for healthcare providers',
+      href: '/services/clinical-decision-support'
     }
   ];
 
   const benefits = [
-    'Enhanced security and compliance with federal standards',
-    'Improved operational efficiency and cost savings',
-    'Better citizen engagement and service delivery',
-    'Modernized infrastructure and technology stack',
-    'Scalable solutions for agencies of all sizes',
-    '24/7 monitoring and support services'
+    'Improved patient outcomes through AI-powered diagnostics',
+    'Enhanced operational efficiency and reduced administrative burden',
+    'Better patient engagement and satisfaction',
+    'Comprehensive compliance with healthcare regulations',
+    'Scalable solutions for healthcare organizations of all sizes',
+    'Real-time data insights for informed decision making'
   ];
 
   return (
@@ -93,19 +93,19 @@ const GovernmentSolutions: React.FC = () => {
             className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center">
-                <Building2 className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center">
+                <Heart className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Government
+              Healthcare Technology
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                {' '}Technology Solutions
+                {' '}Solutions
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Secure, compliant, and innovative technology solutions designed specifically 
-              for federal, state, and local government agencies.
+              Transforming healthcare delivery through innovative AI-powered solutions, 
+              secure data management, and cutting-edge medical technology integration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -136,11 +136,11 @@ const GovernmentSolutions: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Government-First Technology
+              Advanced Healthcare Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our solutions are built with government requirements in mind, ensuring 
-              compliance, security, and scalability for public sector needs.
+              Our comprehensive healthcare solutions combine AI, security, and innovation 
+              to deliver better patient care and operational efficiency.
             </p>
           </motion.div>
 
@@ -154,8 +154,8 @@ const GovernmentSolutions: React.FC = () => {
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-red-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -176,11 +176,11 @@ const GovernmentSolutions: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Government Solutions
+              Healthcare Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover our specialized government technology solutions designed to 
-              meet the unique requirements of public sector organizations.
+              Discover our specialized healthcare technology solutions designed to 
+              meet the unique needs of modern medical practices.
             </p>
           </motion.div>
 
@@ -221,11 +221,11 @@ const GovernmentSolutions: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Benefits for Government Agencies
+              Why Choose Our Healthcare Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience the advantages of our government-focused technology solutions 
-              designed to improve efficiency and service delivery.
+              Experience the benefits of cutting-edge healthcare technology designed 
+              to improve patient care and operational efficiency.
             </p>
           </motion.div>
 
@@ -257,11 +257,11 @@ const GovernmentSolutions: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Modernize Your Government Agency?
+              Ready to Transform Your Healthcare Practice?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our secure and compliant technology solutions can 
-              transform your government operations and improve citizen services.
+              Let's discuss how our innovative healthcare technology solutions can 
+              improve patient care and streamline your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -284,4 +284,4 @@ const GovernmentSolutions: React.FC = () => {
   );
 };
 
-export default GovernmentSolutions;
+export default Healthcare;
