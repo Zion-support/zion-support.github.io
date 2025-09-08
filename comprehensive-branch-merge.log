@@ -24766,3 +24766,22 @@ fatal: couldn't find remote ref cursor/fix-netlify-build-and-merge-to-main-2e8d
 [2025-09-08T21:33:51.547Z] ✅ Success: Get git status
 [2025-09-08T21:33:51.547Z] 📄 Found 0 conflicted files
 [2025-09-08T21:33:51.547Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:33:51.648Z] ✅ Success: Add resolved files
+[2025-09-08T21:33:51.649Z] 🚀 Commit merge for cursor/fix-netlify-build-and-merge-to-main-2e8d: git commit -m "Resolve conflicts and merge cursor/fix-netlify-build-and-merge-to-main-2e8d"
+[2025-09-08T21:33:51.719Z] ✅ Success: Commit merge for cursor/fix-netlify-build-and-merge-to-main-2e8d
+[2025-09-08T21:33:51.719Z] ✅ Successfully resolved conflicts and merged: cursor/fix-netlify-build-and-merge-to-main-2e8d
+[2025-09-08T21:33:51.719Z] 🔄 Attempting to merge branch: cursor/fix-netlify-build-and-merge-to-main-3497
+[2025-09-08T21:33:51.719Z] 🚀 Fetch origin/cursor/fix-netlify-build-and-merge-to-main-3497: git fetch origin cursor/fix-netlify-build-and-merge-to-main-3497
+[2025-09-08T21:33:52.049Z] ✅ Success: Fetch origin/cursor/fix-netlify-build-and-merge-to-main-3497
+[2025-09-08T21:33:52.049Z] 🚀 Merge cursor/fix-netlify-build-and-merge-to-main-3497: git merge origin/cursor/fix-netlify-build-and-merge-to-main-3497 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-3497 into main"
+[2025-09-08T21:33:52.705Z] ❌ Error in Merge cursor/fix-netlify-build-and-merge-to-main-3497: Command failed: git merge origin/cursor/fix-netlify-build-and-merge-to-main-3497 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-3497 into main"
+fatal: Unable to write index.
+
+[2025-09-08T21:33:52.706Z] ❌ Failed to merge cursor/fix-netlify-build-and-merge-to-main-3497: Command failed: git merge origin/cursor/fix-netlify-build-and-merge-to-main-3497 --no-ff -m "Merge branch cursor/fix-netlify-build-and-merge-to-main-3497 into main"
+fatal: Unable to write index.
+
+[2025-09-08T21:33:52.706Z] 🔧 Attempting to resolve conflicts for: cursor/fix-netlify-build-and-merge-to-main-3497
+[2025-09-08T21:33:52.706Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:33:52.754Z] ✅ Success: Get git status
+[2025-09-08T21:33:52.754Z] 📄 Found 0 conflicted files
+[2025-09-08T21:33:52.754Z] 🚀 Add resolved files: git add .
