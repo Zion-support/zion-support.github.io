@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:13:23.023Z",
+  "generatedAt": "2025-08-11T22:46:31.008Z",
   "functions": [
     "a11y-alt-text-runner",
     "a11y-audit-runner",
@@ -86,6 +86,8 @@
     "dead-code-report",
     "deps-auto-upgrade-runner",
     "docs-index-runner",
+    "docs-knowledge-sync",
+    "docs-link-checker-runner",
     "docs-search-index-runner",
     "docs-toc-builder",
     "duplicate-assets-scanner",
@@ -155,7 +157,7 @@
     "newsroom-runner",
     "newsroom-scheduler",
     "og-image-update-runner",
-    "orphan-routes-detector",
+    "og-metadata-audit-runner",
     "readme-advertiser",
     "redirects-synthesizer",
     "repo-knowledge-graph-runner",
