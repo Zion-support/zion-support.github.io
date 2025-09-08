@@ -1,104 +1,91 @@
-import React, { Suspense } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-// import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { LanguageProvider } from './context/LanguageContext';
-import { WhitelabelProvider } from './context/WhitelabelContext';
-import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationProvider';
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
-import { AppLayout } from './layout/AppLayout';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner } from './components/LoadingSpinner';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { AppConfig } from './types/app';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { ThemeProvider } from './components/ThemeProvider';
+import ErrorBoundary from './components/ErrorBoundary';
+import ScrollToTop from './components/ScrollToTop';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import LoadingSpinner from './components/LoadingSpinner';
 
-// Initialize React Query client with better configuration
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: (failureCount, error: any) => {
-        // Don't retry on 4xx errors
-        if (error?.status >= 400 && error?.status < 500) {
-          return false;
-        }
-        return failureCount < 3;
-      },
-      refetchOnWindowFocus: false,
-      staleTime: 5 * 60 * 1000, // 5 minutes
-      gcTime: 10 * 60 * 1000, // 10 minutes
-    },
-    mutations: {
-      retry: 1,
-    },
-  },
-});
+// Pages - Lazy loaded for better performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
-// App configuration
-const appConfig: AppConfig = {
-  name: 'Zion Tech Group',
-  version: '1.0.0',
-  environment: (import.meta.env.MODE as any) || 'development',
-  apiUrl: import.meta.env.VITE_API_URL || '/api',
-  features: {
-    analytics: true,
-    notifications: true,
-    multiLanguage: true,
-    darkMode: true,
-  },
-};
+// Service Pages
+import AIServices from './pages/AIServices';
+import ITServices from './pages/ITServices';
+import MicroSaaS from './pages/MicroSaaS';
+import Cybersecurity from './pages/Cybersecurity';
+import CloudMigration from './pages/CloudMigration';
+import MobileDevelopment from './pages/MobileDevelopment';
 
-// Loading fallback component
-const AppLoadingFallback: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-purple flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto"></div>
-      <p className="mt-4 text-zion-slate-light">Loading Zion App...</p>
-    </div>
-  </div>
-);
-// Main App component
-const App: React.FC = () => {
+// Additional Pages
+import FAQ from './pages/FAQ';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Support from './pages/Support';
+
+function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <Router>
-            <LanguageProvider>
-              <WhitelabelProvider>
-                <AuthProvider>
-                  <NotificationProvider>
-                    <AnalyticsProvider>
-                      <ViewModeProvider>
-                        <Suspense fallback={<AppLoadingFallback />}>
-                          <AppLayout config={appConfig}>
-                            <Routes>
-                              <Route path="/" element={<Home />} />
-                              <Route path="/about" element={<About />} />
-                              <Route path="/contact" element={<Contact />} />
-                              <Route path="*" element={<NotFound />} />
-                            </Routes>
-                          </AppLayout>
-                        </Suspense>
-                        <PerformanceMonitor />
-                        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-                      </ViewModeProvider>
-                    </AnalyticsProvider>
-                  </NotificationProvider>
-                </AuthProvider>
-              </WhitelabelProvider>
-            </LanguageProvider>
-          </Router>
-        </QueryClientProvider>
+        <ThemeProvider>
+          <AccessibilityEnhancer>
+            <Router>
+              <ScrollToTop />
+              <PerformanceMonitor />
+              {/* SEO Meta Tags */}
+              <Helmet>
+                <title>Zion Tech Group - AI, IT & Micro SaaS Solutions</title>
+                <meta name="description" content="Leading provider of AI-powered solutions, IT services, and Micro SaaS products. Transform your business with cutting-edge technology." />
+                <meta name="keywords" content="AI services, IT solutions, Micro SaaS, cybersecurity, cloud migration, mobile development" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta property="og:title" content="Zion Tech Group - AI, IT & Micro SaaS Solutions" />
+                <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and Micro SaaS products." />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <link rel="canonical" href="https://ziontechgroup.com" />
+              </Helmet>
+              <div className="min-h-screen bg-background text-foreground" id="main-content">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    {/* Main Routes */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    
+                    {/* Service Routes */}
+                    <Route path="/services/ai-services" element={<AIServices />} />
+                    <Route path="/services/it-services" element={<ITServices />} />
+                    <Route path="/services/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                    <Route path="/services/cloud-solutions" element={<CloudMigration />} />
+                    <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+                    
+                    {/* Additional Routes */}
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/support" element={<Support />} />
+                    
+                    {/* 404 Route */}
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Suspense>
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </ThemeProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
-};
+}
 
 export default App;

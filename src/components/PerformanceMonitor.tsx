@@ -1,94 +1,60 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  bundleSize: number;
-  memoryUsage: number;
-  renderTime: number;
-}
-
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Only show in development
-    if (import.meta.env.MODE !== 'development') return;
+    // Monitor Core Web Vitals
+    if ('performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', lastEntry.startTime);
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      
-      // Estimate bundle size (this is a rough estimate)
-      const scripts = document.querySelectorAll('script[src]');
-      let bundleSize = 0;
-      scripts.forEach(script => {
-        const src = script.getAttribute('src');
-        if (src && src.includes('assets/')) {
-          // This is a rough estimate - in reality you'd need to fetch the actual file size
-          bundleSize += 200; // Estimated KB per script
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('FID:', entry.processingStart - entry.startTime);
         }
       });
+      fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // Memory usage (if available)
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-
-      // Render time (rough estimate)
-      const renderTime = performance.now();
-
-      setMetrics({
-        loadTime,
-        bundleSize,
-        memoryUsage: memoryUsage / 1024 / 1024, // Convert to MB
-        renderTime,
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        console.log('CLS:', clsValue);
       });
-    };
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    // Measure after component mount
-    const timeoutId = setTimeout(measurePerformance, 1000);
+      // Monitor navigation timing
+      const navObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            console.log('Page Load Time:', navEntry.loadEventEnd - navEntry.loadEventStart);
+            console.log('DOM Content Loaded:', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);
+          }
+        }
+      });
+      navObserver.observe({ entryTypes: ['navigation'] });
 
-    return () => clearTimeout(timeoutId);
+      // Cleanup observers
+      return () => {
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+        navObserver.disconnect();
+      };
+    }
   }, []);
 
-  if (import.meta.env.MODE !== 'development' || !metrics) {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-mono hover:bg-blue-700 transition-colors"
-      >
-        Perf
-      </button>
-      
-      {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-black bg-opacity-90 text-white p-4 rounded-lg font-mono text-xs min-w-64">
-          <h3 className="font-bold mb-2 text-green-400">Performance Metrics</h3>
-          <div className="space-y-1">
-            <div>Load Time: <span className="text-yellow-400">{metrics.loadTime.toFixed(2)}ms</span></div>
-            <div>Bundle Size: <span className="text-yellow-400">~{metrics.bundleSize}KB</span></div>
-            <div>Memory: <span className="text-yellow-400">{metrics.memoryUsage.toFixed(2)}MB</span></div>
-            <div>Render Time: <span className="text-yellow-400">{metrics.renderTime.toFixed(2)}ms</span></div>
-          </div>
-          <div className="mt-2 pt-2 border-t border-gray-600">
-            <div className="text-gray-400 text-xs">
-              Press 'P' to toggle
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+  return null; // This component doesn't render anything
 };
 
-// Keyboard shortcut to toggle performance monitor
-if (typeof window !== 'undefined') {
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'p' && e.ctrlKey) {
-      // This would need to be connected to the component state
-      console.log('Performance monitor toggle requested');
-    }
-  });
-}
+export default PerformanceMonitor;
