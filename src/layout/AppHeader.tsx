@@ -39,13 +39,12 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'AI Services', href: '/ai-services', current: false, hasDropdown: false },
-    { name: 'IT Services', href: '/it-services', current: false, hasDropdown: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false, hasDropdown: false },
-    { name: 'Pricing', href: '/pricing-guide', current: false, hasDropdown: false },
-    { name: 'Resources', href: '#', current: false, hasDropdown: true },
-    { name: 'About', href: '/about', current: false, hasDropdown: false },
-    { name: 'Contact', href: '/contact', current: false, hasDropdown: false },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
   ];
 
   const services = [

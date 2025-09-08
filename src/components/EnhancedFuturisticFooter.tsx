@@ -151,16 +151,17 @@ export function EnhancedFuturisticFooter() {
       title: 'Resources & Support',
       featured: true,
       links: [
-        { name: 'Documentation', href: '/docs', featured: true },
-        { name: 'Help Center', href: '/help', featured: true },
-        { name: 'FAQ & Support', href: '/faq', featured: true },
-        { name: 'Blog & Insights', href: '/blog', featured: true },
+        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Pricing Plans', href: '/pricing', featured: true },
         { name: 'Case Studies', href: '/case-studies', featured: true },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Community', href: '/community' },
-        { name: 'Training', href: '/training' },
-        { name: 'Events', href: '/events' }
+        { name: 'Blog & Insights', href: '/blog', featured: false },
+        { name: 'FAQ & Help Center', href: '/faq', featured: false },
+        { name: 'Documentation', href: '/docs', featured: false },
+        { name: 'API Reference', href: '/api-docs', featured: false },
+        { name: 'Developer Portal', href: '/developers', featured: false },
+        { name: 'Training & Certification', href: '/training', featured: false },
+        { name: 'Community Forum', href: '/community', featured: false },
+        { name: 'White Papers', href: '/whitepapers', featured: false }
       ]
     },
     {
@@ -191,13 +192,13 @@ export function EnhancedFuturisticFooter() {
     { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation' }
   ];
 
-  const companyLinks = [
-    { name: 'About Us', href: '/about', description: 'Our story and mission' },
-    { name: 'Team', href: '/team', description: 'Meet our experts' },
-    { name: 'Careers', href: '/careers', description: 'Join our team' },
-    { name: 'Blog', href: '/blog', description: 'Latest insights' },
-    { name: 'News', href: '/news', description: 'Company updates' },
-    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+  const quickActions = [
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
+    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: true },
+    { name: 'Case Studies', href: '/case-studies', icon: Target, featured: true },
+    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
+    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
+    { name: 'Join Community', href: '/community', icon: Users, featured: false }
   ];
 
   const supportLinks = [
