@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/Button"
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
-  [key: string]: any
+  [key: string]: unknown
 }
-type CarouselPlugin = any
+type CarouselPlugin = unknown
 
 type CarouselProps = {
   opts?: CarouselOptions
