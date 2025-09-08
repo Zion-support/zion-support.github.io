@@ -446,25 +446,20 @@
     "@supabase/supabase-js": "^2.39.0",
     "@tanstack/react-query": "^5.17.19",
     "@tanstack/react-query-devtools": "^5.87.3",
-<<<<<<< HEAD
     "@types/react-datepicker": "^6.2.0",
+    "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "chalk": "^5.5.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
-=======
-    "@vitejs/plugin-react": "^5.0.2",
-    "autoprefixer": "^10.4.21",
->>>>>>> 20733f414a81853e1036d49f4e9359f4b1112c29
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cron-parser": "^5.3.0",
     "dotenv": "^17.2.1",
     "events": "^3.3.0",
     "framer-motion": "^11.0.3",
-<<<<<<< HEAD
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -478,23 +473,15 @@
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
-=======
-    "lucide-react": "^0.323.0",
-    "postcss": "^8.5.6",
->>>>>>> 20733f414a81853e1036d49f4e9359f4b1112c29
     "react": "^18.2.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.4",
     "react-router-dom": "^6.22.0",
     "tailwind-merge": "^2.5.4",
-<<<<<<< HEAD
+    "tailwindcss": "^4.1.13",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0"
-=======
-    "tailwindcss": "^4.1.13",
-    "tailwindcss-animate": "^1.0.7"
->>>>>>> 20733f414a81853e1036d49f4e9359f4b1112c29
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -506,7 +493,6 @@
     "@testing-library/react": "^16.3.0",
     "@types/node": "^24.3.1",
     "@types/node-cron": "^3.0.11",
-<<<<<<< HEAD
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
@@ -531,8 +517,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.43.0",
-=======
->>>>>>> 20733f414a81853e1036d49f4e9359f4b1112c29
     "vite": "^6.3.6",
     "vite-plugin-pwa": "^0.20.5",
     "vitest": "^2.1.8"
