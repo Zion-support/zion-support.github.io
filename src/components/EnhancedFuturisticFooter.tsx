@@ -1,3 +1,75 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Star,
+  Shield,
+  Zap,
+  Brain,
+  Rocket,
+  Heart,
+  Crown,
+  Sparkles,
+  Flame,
+  Sun,
+  Moon,
+  Infinity,
+  Cloud,
+  Cpu,
+  Users,
+  Search,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  GitFork,
+  Atom,
+  Target,
+  TrendingUp,
+  Award,
+  Code,
+  Truck,
+  Building,
+  BarChart3,
+  PenTool,
+  Eye,
+  Server,
+  Smartphone,
+  Database,
+  Network,
+  Clock,
+  ShoppingCart,
+  Lock,
+  FileText,
+  Settings,
+  Key,
+  Globe2,
+  ShieldCheck,
+  Leaf,
+  Scale,
+  Building2,
+  Car,
+  Home,
+  Factory,
+  City,
+  CheckCircle,
+  ArrowUpRight,
+  Play,
+  MailIcon,
+  HeartHandshake
+} from 'lucide-react';
 
 export function EnhancedFuturisticFooter() {
 	const year = new Date().getFullYear();
@@ -40,12 +112,51 @@ export function EnhancedFuturisticFooter() {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' }
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading', featured: true },
+        { name: 'Neural Interface Platform', href: '/services#neural-interface', featured: true },
+        { name: 'Holographic Workspace Platform', href: '/services#holographic-workspace', featured: true },
+        { name: 'BioDigital Twin Platform', href: '/services#biodigital-twin', featured: true },
+        { name: 'Space Debris Tracking System', href: '/services#space-debris-tracking', featured: true },
+        { name: 'AI Ethics Guardian Platform', href: '/services#ai-ethics-guardian', featured: true },
+        { name: 'Metaverse Builder Platform', href: '/services#metaverse-builder', featured: true },
+        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
+        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
+        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' }
+      ]
+    },
+    {
+      title: 'AI & Analytics Services',
+      featured: true,
+      links: [
+        { name: 'All Services', href: '/services', featured: true },
+        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true }
+      ]
+    },
+    {
+      title: 'Infrastructure & Security',
+      featured: true,
+      links: [
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
+        { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', featured: true },
+        { name: 'Cybersecurity Solutions', href: '/services/cybersecurity', featured: true },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-access', featured: true },
+        { name: 'AI Ethics & Governance', href: '/services#ai-ethics-guardian', featured: true },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
+        { name: 'Space Technology', href: '/services/space-tech', featured: true }
       ]
     },
     {
@@ -53,12 +164,16 @@ export function EnhancedFuturisticFooter() {
       icon: Building,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
-        { name: 'Data Analytics', href: '/services/data-analytics' }
+        { name: 'Healthcare Solutions', href: '/solutions#healthcare', featured: false },
+        { name: 'Financial Services', href: '/solutions#financial', featured: false },
+        { name: 'Legal Services', href: '/solutions#legal', featured: false },
+        { name: 'Manufacturing', href: '/solutions#manufacturing', featured: false },
+        { name: 'Retail & E-commerce', href: '/solutions#retail', featured: false },
+        { name: 'Government & Public Sector', href: '/solutions#government', featured: false },
+        { name: 'Space & Aerospace', href: '/solutions#space', featured: false },
+        { name: 'Education & Training', href: '/training', featured: false },
+        { name: 'Research & Academia', href: '/research-development', featured: false },
+        { name: 'Energy & Sustainability', href: '/services/green-it', featured: false }
       ]
     },
     {
@@ -66,12 +181,16 @@ export function EnhancedFuturisticFooter() {
       icon: Zap,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'Services Overview', href: '/services-overview' },
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Twin', href: '/services/digital-twin' }
+        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
+        { name: 'Enterprise Solutions', href: '/solutions', featured: true },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
+        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true },
+        { name: 'AI Sales Intelligence', href: '/services#ai-sales-intelligence', featured: true },
+        { name: 'AI Innovation Management', href: '/services#ai-innovation-management', featured: true }
       ]
     },
     {
@@ -79,12 +198,17 @@ export function EnhancedFuturisticFooter() {
       icon: Server,
       color: 'from-orange-600 to-red-600',
       links: [
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Space Tech', href: '/services/space-tech' }
+        { name: 'Comprehensive Pricing 2027', href: '/pricing-guide-2027', featured: true },
+        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Blog & Insights', href: '/blog', featured: false },
+        { name: 'FAQ & Help Center', href: '/faq', featured: false },
+        { name: 'Documentation', href: '/docs', featured: false },
+        { name: 'API Reference', href: '/docs#api', featured: false },
+        { name: 'Developer Portal', href: '/developers', featured: false },
+        { name: 'Training & Certification', href: '/training', featured: false },
+        { name: 'Community Forum', href: '/community', featured: false },
+        { name: 'Success Stories', href: '/case-studies', featured: false },
+        { name: 'White Papers', href: '/white-papers', featured: false }
       ]
     },
     {
@@ -92,40 +216,16 @@ export function EnhancedFuturisticFooter() {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform' },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform' },
-        { name: 'AI Legal Research Platform', href: '/services/ai-legal-research-platform' },
-        { name: 'AI Education Platform', href: '/services/ai-education-platform' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' }
-      ]
-    },
-    {
-      title: 'Company & Support',
-      icon: Users,
-      color: 'from-indigo-600 to-purple-600',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News', href: '/news' },
-        { name: 'Contact', href: '/contact' }
-      ]
-    },
-    {
-      title: 'Quantum & Emerging Tech',
-      icon: Crown,
-      color: 'from-indigo-600 to-purple-600',
-      links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'About Zion Tech Group', href: '/about', featured: false },
+        { name: 'Our Team', href: '/about#team', featured: false },
+        { name: 'Careers', href: '/careers', featured: false },
+        { name: 'Contact Us', href: '/contact', featured: true },
+        { name: 'Request Quote', href: '/request-quote', featured: true },
+        { name: 'Schedule Demo', href: '/schedule-demo', featured: false },
+        { name: 'Partnerships', href: '/partners', featured: false },
+        { name: 'Press & Media', href: '/about#press', featured: false },
+        { name: 'Legal & Privacy', href: '/legal', featured: false },
+        { name: 'System Status', href: '/status', featured: false }
       ]
     }
   ];
@@ -149,13 +249,13 @@ export function EnhancedFuturisticFooter() {
     { name: 'Sitemap', href: '/sitemap' }
   ];
 
-  const companyLinks = [
-    { name: 'About Us', href: '/about', description: 'Our story and mission' },
-    { name: 'Team', href: '/team', description: 'Meet our experts' },
-    { name: 'Careers', href: '/careers', description: 'Join our team' },
-    { name: 'Blog', href: '/blog', description: 'Latest insights' },
-    { name: 'Press', href: '/press', description: 'Media resources' },
-    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+  const quickActions = [
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
+    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play, featured: false },
+    { name: 'Get Support', href: '/faq', icon: HelpCircle, featured: false },
+    { name: 'Join Community', href: '/community', icon: Users, featured: false },
+    { name: 'Partner Program', href: '/partners', icon: HeartHandshake, featured: false }
   ];
 
   const supportLinks = [
